@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TencentCloud", "TencentClou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TencentCloudExamples", "TencentCloudExamples\TencentCloudExamples.csproj", "{4697FD38-F706-4290-BA14-EC9FF98393C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TencentCloudTests", "TencentCloudTests\TencentCloudTests.csproj", "{7A5F6E8D-EE53-43BE-BA91-6636BDD0B553}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{4697FD38-F706-4290-BA14-EC9FF98393C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4697FD38-F706-4290-BA14-EC9FF98393C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4697FD38-F706-4290-BA14-EC9FF98393C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A5F6E8D-EE53-43BE-BA91-6636BDD0B553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A5F6E8D-EE53-43BE-BA91-6636BDD0B553}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A5F6E8D-EE53-43BE-BA91-6636BDD0B553}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A5F6E8D-EE53-43BE-BA91-6636BDD0B553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
