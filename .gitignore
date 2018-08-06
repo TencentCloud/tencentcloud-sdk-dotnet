@@ -1,0 +1,15 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/TencentCloud/bin/Debug
+/TencentCloud/obj
+/TencentCloudSdk/bin/Debug
+/TencentCloudSdk/obj
+/TencentCloudExamples/bin
+/TencentCloudExamples/obj
+/.vs/TencentCloudSdk/v15
+/.vs/TencentCloud/v15
+/TencentCloudTests/obj
+/.vs/TencentCloud/DesignTimeBuild
+/TencentCloudTests/bin/Debug
