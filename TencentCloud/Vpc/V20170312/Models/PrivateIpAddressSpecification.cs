@@ -60,6 +60,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IsWanIpBlocked")]
         public bool? IsWanIpBlocked{ get; set; }
 
+        /// <summary>
+        /// IP状态：
+        /// PENDING：生产中
+        /// MIGRATING：迁移中
+        /// DELETING：删除中
+        /// AVAILABLE：可用的
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +82,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressId", this.AddressId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsWanIpBlocked", this.IsWanIpBlocked);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

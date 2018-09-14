@@ -25,6 +25,12 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
+        /// 应用程序信息
+        /// </summary>
+        [JsonProperty("Application")]
+        public Application Application{ get; set; }
+
+        /// <summary>
         /// 任务名称，在一个作业内部唯一
         /// </summary>
         [JsonProperty("TaskName")]
@@ -37,30 +43,6 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? TaskInstanceNum{ get; set; }
 
         /// <summary>
-        /// 应用程序信息
-        /// </summary>
-        [JsonProperty("Application")]
-        public Application Application{ get; set; }
-
-        /// <summary>
-        /// 重定向信息
-        /// </summary>
-        [JsonProperty("RedirectInfo")]
-        public RedirectInfo RedirectInfo{ get; set; }
-
-        /// <summary>
-        /// 任务失败后的最大重试次数，默认为0
-        /// </summary>
-        [JsonProperty("MaxRetryCount")]
-        public ulong? MaxRetryCount{ get; set; }
-
-        /// <summary>
-        /// 任务启动后的超时时间，单位秒，默认为3600秒
-        /// </summary>
-        [JsonProperty("Timeout")]
-        public ulong? Timeout{ get; set; }
-
-        /// <summary>
         /// 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
         /// </summary>
         [JsonProperty("ComputeEnv")]
@@ -71,6 +53,12 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
+
+        /// <summary>
+        /// 重定向信息
+        /// </summary>
+        [JsonProperty("RedirectInfo")]
+        public RedirectInfo RedirectInfo{ get; set; }
 
         /// <summary>
         /// 重定向本地信息
@@ -114,20 +102,30 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("FailedAction")]
         public string FailedAction{ get; set; }
 
+        /// <summary>
+        /// 任务失败后的最大重试次数，默认为0
+        /// </summary>
+        [JsonProperty("MaxRetryCount")]
+        public ulong? MaxRetryCount{ get; set; }
+
+        /// <summary>
+        /// 任务启动后的超时时间，单位秒，默认为3600秒
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Application.", this.Application);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "TaskInstanceNum", this.TaskInstanceNum);
-            this.SetParamObj(map, prefix + "Application.", this.Application);
-            this.SetParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
-            this.SetParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
-            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamObj(map, prefix + "ComputeEnv.", this.ComputeEnv);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
             this.SetParamObj(map, prefix + "RedirectLocalInfo.", this.RedirectLocalInfo);
             this.SetParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);
             this.SetParamArrayObj(map, prefix + "OutputMappings.", this.OutputMappings);
@@ -135,6 +133,8 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
             this.SetParamArrayObj(map, prefix + "Authentications.", this.Authentications);
             this.SetParamSimple(map, prefix + "FailedAction", this.FailedAction);
+            this.SetParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

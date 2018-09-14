@@ -155,14 +155,11 @@ namespace TencentCloud.Cdb.V20170320
         /// <summary>
         /// 本接口(CreateDBInstance)用于创建包年包月的云数据库实例（包括主实例、灾备实例和只读实例），可通过传入实例规格、MySQL 版本号、购买时长和数量等信息创建云数据库实例。
         /// 
-        /// 您还可以使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询该实例的详细信息。
+        /// 该接口为异步接口，您还可以使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询该实例的详细信息。当该实例的Status为1，且TaskStatus为0，表示实例已经发货成功。
         /// 
         /// 1. 首先请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口查询可创建的实例规格信息，然后请使用[查询价格（包年包月）](https://cloud.tencent.com/document/api/236/1332)接口查询可创建实例的售卖价格；
-        /// 
         /// 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
-        /// 
         /// 3. 支持创建 MySQL5.5 、 MySQL5.6 、 MySQL5.7 版本；
-        /// 
         /// 4. 支持创建主实例、只读实例、灾备实例；
         /// </summary>
         /// <param name="req">参考<see cref="CreateDBInstanceRequest"/></param>
@@ -185,7 +182,7 @@ namespace TencentCloud.Cdb.V20170320
         /// <summary>
         /// 本接口(CreateDBInstanceHour)用于创建按量计费的实例，可通过传入实例规格、MySQL 版本号和数量等信息创建云数据库实例，支持主实例、灾备实例和只读实例的创建。
         /// 
-        /// 您还可以使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询该实例的详细信息。
+        /// 该接口为异步接口，您还可以使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872)接口查询该实例的详细信息。当该实例的Status为1，且TaskStatus为0，表示实例已经发货成功。
         /// 
         /// 1. 首先请使用[获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229)接口查询可创建的实例规格信息，然后请使用[查询价格（按量计费）](https://cloud.tencent.com/document/api/253/5176)接口查询可创建实例的售卖价格；
         /// 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
@@ -633,6 +630,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeRollbackRangeTime)用于查询云数据库实例可回档的时间范围。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRollbackRangeTimeRequest"/></param>
+        /// <returns>参考<see cref="DescribeRollbackRangeTimeResponse"/>实例</returns>
+        public async Task<DescribeRollbackRangeTimeResponse> DescribeRollbackRangeTime(DescribeRollbackRangeTimeRequest req)
+        {
+             JsonResponseModel<DescribeRollbackRangeTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRollbackRangeTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackRangeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeSlowLogs)用于获取云数据库实例的慢查询日志。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeSlowLogsRequest"/></param>
@@ -644,6 +661,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DescribeSlowLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeTables)用于查询云数据库实例的数据库表信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTablesRequest"/></param>
+        /// <returns>参考<see cref="DescribeTablesResponse"/>实例</returns>
+        public async Task<DescribeTablesResponse> DescribeTables(DescribeTablesRequest req)
+        {
+             JsonResponseModel<DescribeTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -786,6 +823,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "ModifyAccountPrivileges");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAutoRenewFlag)用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyAutoRenewFlagRequest"/></param>
+        /// <returns>参考<see cref="ModifyAutoRenewFlagResponse"/>实例</returns>
+        public async Task<ModifyAutoRenewFlagResponse> ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyAutoRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAutoRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAutoRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -970,6 +1027,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "RestartDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（StartBatchRollback）用于批量回档云数据库实例的库表。
+        /// </summary>
+        /// <param name="req">参考<see cref="StartBatchRollbackRequest"/></param>
+        /// <returns>参考<see cref="StartBatchRollbackResponse"/>实例</returns>
+        public async Task<StartBatchRollbackResponse> StartBatchRollback(StartBatchRollbackRequest req)
+        {
+             JsonResponseModel<StartBatchRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartBatchRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartBatchRollbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

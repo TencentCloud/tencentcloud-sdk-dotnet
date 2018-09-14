@@ -31,13 +31,23 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DestinationCidrBlock{ get; set; }
 
         /// <summary>
-        /// 下一跳类型，目前我们支持的类型有：CVM：公网网关类型的云主机；VPN：vpn网关； DIRECTCONNECT：专线网关；PEERCONNECTION：对等连接；SSLVPN：sslvpn网关；NAT：nat网关; NORMAL_CVM：普通云主机。
+        /// 下一跳类型，目前我们支持的类型有：
+        /// CVM：公网网关类型的云主机；
+        /// VPN：VPN网关；
+        /// DIRECTCONNECT：专线网关；
+        /// PEERCONNECTION：对等连接；
+        /// SSLVPN：sslvpn网关；
+        /// NAT：NAT网关; 
+        /// NORMAL_CVM：普通云主机；
+        /// EIP：云主机的公网IP；
+        /// CCN：云联网。
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }
 
         /// <summary>
         /// 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+        /// 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
@@ -60,6 +70,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
+        /// <summary>
+        /// 路由类型，目前我们支持的类型有：
+        /// USER：用户路由；
+        /// NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
+        /// CCN：云联网路由，系统默认下发，不可编辑与删除。
+        /// 用户只能添加和操作 USER 类型的路由。
+        /// </summary>
+        [JsonProperty("RouteType")]
+        public string RouteType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +92,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
             this.SetParamSimple(map, prefix + "RouteDescription", this.RouteDescription);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
         }
     }
 }

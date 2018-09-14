@@ -53,7 +53,27 @@ namespace TencentCloud.Aai.V20180522
         }
 
         /// <summary>
-        /// 识别60s内的短语音，当音频放在请求body中传输时整个请求大小不能超过1M，当音频以url方式传输时，音频时长不可超过60s。所有请求参数放在post的body中采用x-www-form-urlencoded（数据转换成一个字串（name1=value1&name2=value2…）进行urlencode后传输）编码传输。
+        /// 提供基于文本的基础聊天能力，可以让您的应用快速拥有具备深度语义理解的机器聊天功能。
+        /// </summary>
+        /// <param name="req">参考<see cref="ChatRequest"/></param>
+        /// <returns>参考<see cref="ChatResponse"/>实例</returns>
+        public async Task<ChatResponse> Chat(ChatRequest req)
+        {
+             JsonResponseModel<ChatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "Chat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 识别60s内的短语音，当音频放在请求body中传输时整个请求大小不能超过1M，当音频以url方式传输时，音频时长不可超过60s。所有请求参数放在post的body中采用x-www-form-urlencoded（数据转换成一个字串（name1=value1&name2=value2…）进行urlencode后）编码传输。
         /// </summary>
         /// <param name="req">参考<see cref="SentenceRecognitionRequest"/></param>
         /// <returns>参考<see cref="SentenceRecognitionResponse"/>实例</returns>
@@ -64,6 +84,26 @@ namespace TencentCloud.Aai.V20180522
              {
                  var strResp = await this.InternalRequest(req, "SentenceRecognition");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SentenceRecognitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口是实时流式识别，可同时返回语音识别文本及翻译文本，当前仅支持中文和英文。该接口可配合同传windows客户端，提供会议现场同传服务。
+        /// </summary>
+        /// <param name="req">参考<see cref="SimultaneousInterpretingRequest"/></param>
+        /// <returns>参考<see cref="SimultaneousInterpretingResponse"/>实例</returns>
+        public async Task<SimultaneousInterpretingResponse> SimultaneousInterpreting(SimultaneousInterpretingRequest req)
+        {
+             JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SimultaneousInterpreting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SimultaneousInterpretingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

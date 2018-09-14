@@ -43,7 +43,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public ulong? ApplyTime{ get; set; }
 
         /// <summary>
-        /// 代客类型，可能值为a/b
+        /// 代客类型，可能值为a/b/c
         /// </summary>
         [JsonProperty("ClientFlag")]
         public string ClientFlag{ get; set; }

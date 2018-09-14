@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专线通道ID
+        /// 专用通道ID
         /// </summary>
         [JsonProperty("DirectConnectTunnelIdSet")]
         public string[] DirectConnectTunnelIdSet{ get; set; }

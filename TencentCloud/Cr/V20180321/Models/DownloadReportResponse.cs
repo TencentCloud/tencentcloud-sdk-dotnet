@@ -25,10 +25,22 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 报告下载地址
+        /// 日报下载地址
         /// </summary>
-        [JsonProperty("ReportUrl")]
-        public string ReportUrl{ get; set; }
+        [JsonProperty("DailyReportUrl")]
+        public string DailyReportUrl{ get; set; }
+
+        /// <summary>
+        /// 结果下载地址
+        /// </summary>
+        [JsonProperty("ResultReportUrl")]
+        public string ResultReportUrl{ get; set; }
+
+        /// <summary>
+        /// 明细下载地址
+        /// </summary>
+        [JsonProperty("DetailReportUrl")]
+        public string DetailReportUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -42,7 +54,9 @@ namespace TencentCloud.Cr.V20180321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
+            this.SetParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
+            this.SetParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
+            this.SetParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页参数，偏移量。
+        /// 分页偏移量。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数，单次请求数量限制。
+        /// 分页大小，默认值为50，最小值为1，最大值为2000。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

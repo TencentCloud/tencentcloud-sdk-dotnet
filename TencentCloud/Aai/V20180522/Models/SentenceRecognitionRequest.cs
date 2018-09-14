@@ -31,13 +31,13 @@ namespace TencentCloud.Aai.V20180522.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。
+        /// 子服务类型。2，一句话识别。
         /// </summary>
         [JsonProperty("SubServiceType")]
         public ulong? SubServiceType{ get; set; }
 
         /// <summary>
-        /// 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。
+        /// 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
         /// </summary>
         [JsonProperty("EngSerViceType")]
         public string EngSerViceType{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Aai.V20180522.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码。音频数据要小于900k。
+        /// 语音数据，当SourceType 值为1时必须填写，为0可不写。要base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频数据要小于900k。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
-        /// 数据长度，当 SourceType 值为1时必须填写，为0可不写。
+        /// 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
         /// </summary>
         [JsonProperty("DataLen")]
         public long? DataLen{ get; set; }

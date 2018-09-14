@@ -25,13 +25,13 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专线通道ID
+        /// 专用通道ID
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }
 
         /// <summary>
-        /// 专线通道名称
+        /// 专用通道名称
         /// </summary>
         [JsonProperty("DirectConnectTunnelName")]
         public string DirectConnectTunnelName{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string CustomerAddress{ get; set; }
 
         /// <summary>
-        /// 专线通道带宽值，单位为M。
+        /// 专用通道带宽值，单位为M。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }

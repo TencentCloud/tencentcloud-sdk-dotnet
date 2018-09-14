@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，默认值为20，最大值为100。
+        /// 分页大小，默认值为20，最小值为1，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

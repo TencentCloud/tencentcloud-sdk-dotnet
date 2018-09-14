@@ -42,6 +42,16 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
+        /// <summary>
+        /// 数据盘是否随子机销毁。取值范围：
+        /// <li>TRUE：子机销毁时，销毁数据盘
+        /// <li>FALSE：子机销毁时，保留数据盘<br>
+        /// 默认取值：TRUE<br>
+        /// 该参数目前仅用于 `RunInstances` 接口。
+        /// </summary>
+        [JsonProperty("DeleteWithInstance")]
+        public bool? DeleteWithInstance{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +61,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         }
     }
 }

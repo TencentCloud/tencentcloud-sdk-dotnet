@@ -96,6 +96,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ImageSource")]
         public string ImageSource{ get; set; }
 
+        /// <summary>
+        /// 同步百分比
+        /// </summary>
+        [JsonProperty("SyncPercent")]
+        public long? SyncPercent{ get; set; }
+
+        /// <summary>
+        /// 镜像是否支持cloud-init
+        /// </summary>
+        [JsonProperty("IsSupportCloudinit")]
+        public bool? IsSupportCloudinit{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -114,6 +126,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "ImageCreator", this.ImageCreator);
             this.SetParamSimple(map, prefix + "ImageSource", this.ImageSource);
+            this.SetParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
+            this.SetParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
         }
     }
 }

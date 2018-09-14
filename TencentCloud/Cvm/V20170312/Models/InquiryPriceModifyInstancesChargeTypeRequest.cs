@@ -31,8 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例[计费类型](https://cloud.tencent.com//document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月
-        /// 。
+        /// 实例[计费类型](https://cloud.tencent.com//document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

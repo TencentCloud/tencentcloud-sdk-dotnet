@@ -93,7 +93,7 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 客户通过调用该接口上传需催收文档，格式需为csv或者excel格式。接口返回任务ID。
+        /// 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
         /// </summary>
         /// <param name="req">参考<see cref="UploadFileRequest"/></param>
         /// <returns>参考<see cref="UploadFileResponse"/>实例</returns>

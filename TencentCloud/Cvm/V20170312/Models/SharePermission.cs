@@ -27,14 +27,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// 镜像分享时间
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
 
         /// <summary>
         /// 镜像分享的账户ID
         /// </summary>
-        [JsonProperty("Account")]
-        public string Account{ get; set; }
+        [JsonProperty("AccountId")]
+        public string AccountId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "Account", this.Account);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "AccountId", this.AccountId);
         }
     }
 }

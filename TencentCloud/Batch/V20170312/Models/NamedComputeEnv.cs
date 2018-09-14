@@ -31,18 +31,6 @@ namespace TencentCloud.Batch.V20170312.Models
         public string EnvName{ get; set; }
 
         /// <summary>
-        /// 计算环境管理类型
-        /// </summary>
-        [JsonProperty("EnvType")]
-        public string EnvType{ get; set; }
-
-        /// <summary>
-        /// 计算环境具体参数
-        /// </summary>
-        [JsonProperty("EnvData")]
-        public EnvData EnvData{ get; set; }
-
-        /// <summary>
         /// 计算节点期望个数
         /// </summary>
         [JsonProperty("DesiredComputeNodeCount")]
@@ -53,6 +41,18 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         [JsonProperty("EnvDescription")]
         public string EnvDescription{ get; set; }
+
+        /// <summary>
+        /// 计算环境管理类型
+        /// </summary>
+        [JsonProperty("EnvType")]
+        public string EnvType{ get; set; }
+
+        /// <summary>
+        /// 计算环境具体参数
+        /// </summary>
+        [JsonProperty("EnvData")]
+        public EnvData EnvData{ get; set; }
 
         /// <summary>
         /// 数据盘挂载选项
@@ -97,10 +97,10 @@ namespace TencentCloud.Batch.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvName", this.EnvName);
-            this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
-            this.SetParamObj(map, prefix + "EnvData.", this.EnvData);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
             this.SetParamSimple(map, prefix + "EnvDescription", this.EnvDescription);
+            this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
+            this.SetParamObj(map, prefix + "EnvData.", this.EnvData);
             this.SetParamArrayObj(map, prefix + "MountDataDisks.", this.MountDataDisks);
             this.SetParamArrayObj(map, prefix + "Authentications.", this.Authentications);
             this.SetParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);

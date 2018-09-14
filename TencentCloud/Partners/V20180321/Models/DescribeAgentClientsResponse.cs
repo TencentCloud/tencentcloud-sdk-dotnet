@@ -25,7 +25,7 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 代客列表
+        /// 待审核代客列表
         /// </summary>
         [JsonProperty("AgentClientSet")]
         public AgentClientElem[] AgentClientSet{ get; set; }

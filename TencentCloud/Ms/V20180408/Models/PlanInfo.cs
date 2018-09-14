@@ -88,7 +88,7 @@ namespace TencentCloud.Ms.V20180408.Models
         /// 保护so的强度，
         /// </summary>
         [JsonProperty("SoType")]
-        public string SoType{ get; set; }
+        public string[] SoType{ get; set; }
 
         /// <summary>
         /// 防日志泄漏，0关闭，1开启
@@ -136,7 +136,7 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamSimple(map, prefix + "DexSig", this.DexSig);
             this.SetParamObj(map, prefix + "SoInfo.", this.SoInfo);
             this.SetParamSimple(map, prefix + "AntiVMP", this.AntiVMP);
-            this.SetParamSimple(map, prefix + "SoType", this.SoType);
+            this.SetParamArraySimple(map, prefix + "SoType.", this.SoType);
             this.SetParamSimple(map, prefix + "AntiLogLeak", this.AntiLogLeak);
             this.SetParamSimple(map, prefix + "AntiQemuRoot", this.AntiQemuRoot);
             this.SetParamSimple(map, prefix + "AntiAssets", this.AntiAssets);

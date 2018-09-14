@@ -25,28 +25,28 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 作业名称
-        /// </summary>
-        [JsonProperty("JobName")]
-        public string JobName{ get; set; }
-
-        /// <summary>
-        /// 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
-        /// </summary>
-        [JsonProperty("Priority")]
-        public ulong? Priority{ get; set; }
-
-        /// <summary>
         /// 任务信息
         /// </summary>
         [JsonProperty("Tasks")]
         public Task[] Tasks{ get; set; }
 
         /// <summary>
+        /// 作业名称
+        /// </summary>
+        [JsonProperty("JobName")]
+        public string JobName{ get; set; }
+
+        /// <summary>
         /// 作业描述
         /// </summary>
         [JsonProperty("JobDescription")]
         public string JobDescription{ get; set; }
+
+        /// <summary>
+        /// 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+        /// </summary>
+        [JsonProperty("Priority")]
+        public ulong? Priority{ get; set; }
 
         /// <summary>
         /// 依赖信息
@@ -78,10 +78,10 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobName", this.JobName);
-            this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "JobName", this.JobName);
             this.SetParamSimple(map, prefix + "JobDescription", this.JobDescription);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamArrayObj(map, prefix + "Dependences.", this.Dependences);
             this.SetParamArrayObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "TaskExecutionDependOn", this.TaskExecutionDependOn);

@@ -31,7 +31,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectId{ get; set; }
 
         /// <summary>
-        /// 专线通道名称
+        /// 专用通道名称
         /// </summary>
         [JsonProperty("DirectConnectTunnelName")]
         public string DirectConnectTunnelName{ get; set; }
@@ -44,9 +44,10 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectOwnerAccount{ get; set; }
 
         /// <summary>
-        /// 网络类型，分别为VPC、BMVPC
+        /// 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
         /// VPC：私有网络
         /// BMVPC：黑石网络
+        /// CCN：云联网
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -85,7 +86,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string RouteType{ get; set; }
 
         /// <summary>
-        /// BgpPeer，用户侧bgp信息，包括asn和AuthKey
+        /// BgpPeer，用户侧bgp信息，包括Asn和AuthKey
         /// </summary>
         [JsonProperty("BgpPeer")]
         public BgpPeer BgpPeer{ get; set; }

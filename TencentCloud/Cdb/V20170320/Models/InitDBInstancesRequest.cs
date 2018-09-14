@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值
+        /// 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例新的密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：!@#$%^*()）中的两种
+        /// 实例新的密码，密码规则：8-64个字符，至少包含字母、数字、字符（支持的字符：!@#$%^*()）中的两种。
         /// </summary>
         [JsonProperty("NewPassword")]
         public string NewPassword{ get; set; }
 
         /// <summary>
-        /// 实例的参数列表，目前支持设置“character_set_server”、“lower_case_table_names”参数。其中，“character_set_server”参数可选值为["utf8","latin1","gbk","utf8mb4"]；“lower_case_table_names”可选值为[“0”,“1”]
+        /// 实例的参数列表，目前支持设置“character_set_server”、“lower_case_table_names”参数。其中，“character_set_server”参数可选值为["utf8","latin1","gbk","utf8mb4"]；“lower_case_table_names”可选值为[“0”,“1”]。
         /// </summary>
         [JsonProperty("Parameters")]
         public ParamInfo[] Parameters{ get; set; }
 
         /// <summary>
-        /// 实例的端口
+        /// 实例的端口，取值范围为[1024, 65535]
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }

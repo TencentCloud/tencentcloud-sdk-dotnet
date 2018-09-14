@@ -61,7 +61,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，当前仅支持购买的时候指定一个数据盘。
+        /// 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定11块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含10块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }

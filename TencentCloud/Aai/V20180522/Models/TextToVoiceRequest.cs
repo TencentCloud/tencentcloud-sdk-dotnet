@@ -43,37 +43,37 @@ namespace TencentCloud.Aai.V20180522.Models
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// 音量大小，暂仅支持默认值1
+        /// 音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
         /// </summary>
         [JsonProperty("Volume")]
         public float? Volume{ get; set; }
 
         /// <summary>
-        /// 语速，暂仅支持默认值1
+        /// 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
         /// </summary>
         [JsonProperty("Speed")]
         public float? Speed{ get; set; }
 
         /// <summary>
-        /// 用户自定义项目id，默认为0
+        /// 项目id，用户自定义，默认为0
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 音色，1-默认音色
+        /// 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
         /// </summary>
         [JsonProperty("VoiceType")]
         public long? VoiceType{ get; set; }
 
         /// <summary>
-        /// 主语言类型<li>1-中文(包括粤语)，最大300字符</li><li>2-英文，最大支持600字符</li>
+        /// 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
         /// </summary>
         [JsonProperty("PrimaryLanguage")]
         public ulong? PrimaryLanguage{ get; set; }
 
         /// <summary>
-        /// 音频采样率：暂仅支持16k
+        /// 音频采样率，16000：16k，8000：8k，默认16k
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }

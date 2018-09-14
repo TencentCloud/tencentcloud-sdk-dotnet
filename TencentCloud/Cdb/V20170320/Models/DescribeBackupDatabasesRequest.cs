@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页大小，最大值为2000。
+        /// 分页大小，最小值为1，最大值为2000。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

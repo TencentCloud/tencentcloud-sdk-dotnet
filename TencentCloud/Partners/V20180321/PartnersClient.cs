@@ -53,6 +53,26 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 代理商支付订单接口，支持自付/代付
+        /// </summary>
+        /// <param name="req">参考<see cref="AgentPayDealsRequest"/></param>
+        /// <returns>参考<see cref="AgentPayDealsResponse"/>实例</returns>
+        public async Task<AgentPayDealsResponse> AgentPayDeals(AgentPayDealsRequest req)
+        {
+             JsonResponseModel<AgentPayDealsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AgentPayDeals");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AgentPayDealsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 代理商可以审核其名下申请中代客
         /// </summary>
         /// <param name="req">参考<see cref="AuditApplyClientRequest"/></param>
@@ -64,6 +84,26 @@ namespace TencentCloud.Partners.V20180321
              {
                  var strResp = await this.InternalRequest(req, "AuditApplyClient");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuditApplyClientResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询已审核客户列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAgentAuditedClientsRequest"/></param>
+        /// <returns>参考<see cref="DescribeAgentAuditedClientsResponse"/>实例</returns>
+        public async Task<DescribeAgentAuditedClientsResponse> DescribeAgentAuditedClients(DescribeAgentAuditedClientsRequest req)
+        {
+             JsonResponseModel<DescribeAgentAuditedClientsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentAuditedClients");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentAuditedClientsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

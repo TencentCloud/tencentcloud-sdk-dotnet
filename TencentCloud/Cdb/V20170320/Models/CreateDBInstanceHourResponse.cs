@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 短订单ID，用于调用云API相关接口，如[获取订单信息](https://cloud.tencent.com/document/api/403/4392)
+        /// 短订单ID
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }

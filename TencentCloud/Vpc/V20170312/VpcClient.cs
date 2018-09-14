@@ -53,6 +53,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 接口用于添加带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
+        /// </summary>
+        /// <param name="req">参考<see cref="AddBandwidthPackageResourcesRequest"/></param>
+        /// <returns>参考<see cref="AddBandwidthPackageResourcesResponse"/>实例</returns>
+        public async Task<AddBandwidthPackageResourcesResponse> AddBandwidthPackageResources(AddBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<AddBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
         /// * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
         /// * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过七天之前，它会一直与您的腾讯云账户保持关联。
@@ -115,6 +135,27 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "AssociateAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
+        /// 每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+        /// </summary>
+        /// <param name="req">参考<see cref="AttachCcnInstancesRequest"/></param>
+        /// <returns>参考<see cref="AttachCcnInstancesResponse"/>实例</returns>
+        public async Task<AttachCcnInstancesResponse> AttachCcnInstances(AttachCcnInstancesRequest req)
+        {
+             JsonResponseModel<AttachCcnInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachCcnInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachCcnInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -210,6 +251,47 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 接口支持创建[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[ip带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateBandwidthPackageRequest"/></param>
+        /// <returns>参考<see cref="CreateBandwidthPackageResponse"/>实例</returns>
+        public async Task<CreateBandwidthPackageResponse> CreateBandwidthPackage(CreateBandwidthPackageRequest req)
+        {
+             JsonResponseModel<CreateBandwidthPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBandwidthPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBandwidthPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateCcn）用于创建云联网（CCN）。<br />
+        /// 每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateCcnRequest"/></param>
+        /// <returns>参考<see cref="CreateCcnResponse"/>实例</returns>
+        public async Task<CreateCcnResponse> CreateCcn(CreateCcnRequest req)
+        {
+             JsonResponseModel<CreateCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateCustomerGateway）用于创建对端网关。
         /// </summary>
         /// <param name="req">参考<see cref="CreateCustomerGatewayRequest"/></param>
@@ -249,6 +331,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "CreateDefaultVpc");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDefaultVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateDirectConnectGateway）用于创建专线网关。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateDirectConnectGatewayRequest"/></param>
+        /// <returns>参考<see cref="CreateDirectConnectGatewayResponse"/>实例</returns>
+        public async Task<CreateDirectConnectGatewayResponse> CreateDirectConnectGateway(CreateDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<CreateDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateDirectConnectGatewayCcnRoutes）用于创建专线网关的云联网路由（IDC网段）
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateDirectConnectGatewayCcnRoutesRequest"/></param>
+        /// <returns>参考<see cref="CreateDirectConnectGatewayCcnRoutesResponse"/>实例</returns>
+        public async Task<CreateDirectConnectGatewayCcnRoutesResponse> CreateDirectConnectGatewayCcnRoutes(CreateDirectConnectGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<CreateDirectConnectGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDirectConnectGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectGatewayCcnRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -441,8 +563,6 @@ namespace TencentCloud.Vpc.V20170312
         /// <summary>
         /// 本接口(CreateVpc)用于创建私有网络(VPC)。
         /// * 用户可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）,如果规划VPC网段请参见VPC网段规划说明。
-        /// * 创建VPC时可同时把子网创建好，创建子网也请规划好子网网段及子网所在可用区，同一个VPC内子网网段不能重叠，不同可用区可以做跨可用区容灾，详见VPC可用区说明。
-        /// * 如果您同时创建了子网，系统会创建一个默认路由表，系统会把子网关联到这个默认路由表。
         /// * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要扩充请联系在线客服。
         /// </summary>
         /// <param name="req">参考<see cref="CreateVpcRequest"/></param>
@@ -543,6 +663,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[ip带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteBandwidthPackageRequest"/></param>
+        /// <returns>参考<see cref="DeleteBandwidthPackageResponse"/>实例</returns>
+        public async Task<DeleteBandwidthPackageResponse> DeleteBandwidthPackage(DeleteBandwidthPackageRequest req)
+        {
+             JsonResponseModel<DeleteBandwidthPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBandwidthPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBandwidthPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteCcn）用于删除云联网。
+        /// * 删除后，云联网关联的所有实例间路由将被删除，网络将会中断，请务必确认
+        /// * 删除云联网是不可逆的操作，请谨慎处理。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteCcnRequest"/></param>
+        /// <returns>参考<see cref="DeleteCcnResponse"/>实例</returns>
+        public async Task<DeleteCcnResponse> DeleteCcn(DeleteCcnRequest req)
+        {
+             JsonResponseModel<DeleteCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteCustomerGateway）用于删除对端网关。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteCustomerGatewayRequest"/></param>
@@ -554,6 +716,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DeleteCustomerGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomerGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDirectConnectGatewayCcnRoutes）用于删除专线网关的云联网路由（IDC网段）
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteDirectConnectGatewayCcnRoutesRequest"/></param>
+        /// <returns>参考<see cref="DeleteDirectConnectGatewayCcnRoutesResponse"/>实例</returns>
+        public async Task<DeleteDirectConnectGatewayCcnRoutesResponse> DeleteDirectConnectGatewayCcnRoutes(DeleteDirectConnectGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<DeleteDirectConnectGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDirectConnectGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectGatewayCcnRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -893,6 +1075,126 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 接口用于查询账户在当前地域的带宽包上限数量以及使用数量
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBandwidthPackageQuotaRequest"/></param>
+        /// <returns>参考<see cref="DescribeBandwidthPackageQuotaResponse"/>实例</returns>
+        public async Task<DescribeBandwidthPackageQuotaResponse> DescribeBandwidthPackageQuota(DescribeBandwidthPackageQuotaRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthPackageQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于查询带宽包详细信息，包括带宽包唯一标识ID，类型，计费模式，名称，资源信息等
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBandwidthPackagesRequest"/></param>
+        /// <returns>参考<see cref="DescribeBandwidthPackagesResponse"/>实例</returns>
+        public async Task<DescribeBandwidthPackagesResponse> DescribeBandwidthPackages(DescribeBandwidthPackagesRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCcnAttachedInstances）用于查询云联网实例下已关联的网络实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCcnAttachedInstancesRequest"/></param>
+        /// <returns>参考<see cref="DescribeCcnAttachedInstancesResponse"/>实例</returns>
+        public async Task<DescribeCcnAttachedInstancesResponse> DescribeCcnAttachedInstances(DescribeCcnAttachedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeCcnAttachedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcnAttachedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCcnRegionBandwidthLimits）用于查询云联网各地域出带宽上限，该接口只返回已关联网络实例包含的地域
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns>参考<see cref="DescribeCcnRegionBandwidthLimitsResponse"/>实例</returns>
+        public async Task<DescribeCcnRegionBandwidthLimitsResponse> DescribeCcnRegionBandwidthLimits(DescribeCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCcnRoutesRequest"/></param>
+        /// <returns>参考<see cref="DescribeCcnRoutesResponse"/>实例</returns>
+        public async Task<DescribeCcnRoutesResponse> DescribeCcnRoutes(DescribeCcnRoutesRequest req)
+        {
+             JsonResponseModel<DescribeCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCcns）用于查询云联网（CCN）列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCcnsRequest"/></param>
+        /// <returns>参考<see cref="DescribeCcnsResponse"/>实例</returns>
+        public async Task<DescribeCcnsResponse> DescribeCcns(DescribeCcnsRequest req)
+        {
+             JsonResponseModel<DescribeCcnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeClassicLinkInstances)用于私有网络和基础网络设备互通。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeClassicLinkInstancesRequest"/></param>
@@ -953,6 +1255,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDirectConnectGatewayCcnRoutes）用于查询专线网关的云联网路由（IDC网段）
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDirectConnectGatewayCcnRoutesRequest"/></param>
+        /// <returns>参考<see cref="DescribeDirectConnectGatewayCcnRoutesResponse"/>实例</returns>
+        public async Task<DescribeDirectConnectGatewayCcnRoutesResponse> DescribeDirectConnectGatewayCcnRoutes(DescribeDirectConnectGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<DescribeDirectConnectGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDirectConnectGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeNetworkInterfacesRequest"/></param>
@@ -964,6 +1286,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DescribeNetworkInterfaces");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRouteConflicts）用于查询自定义路由策略与云联网路由策略冲突列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRouteConflictsRequest"/></param>
+        /// <returns>参考<see cref="DescribeRouteConflictsResponse"/>实例</returns>
+        public async Task<DescribeRouteConflictsResponse> DescribeRouteConflicts(DescribeRouteConflictsRequest req)
+        {
+             JsonResponseModel<DescribeRouteConflictsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRouteConflicts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteConflictsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1173,6 +1515,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DetachCcnInstances）用于从云联网实例中解关联指定的网络实例。<br />
+        /// 解关联网络实例后，相应的路由策略会一并删除。
+        /// </summary>
+        /// <param name="req">参考<see cref="DetachCcnInstancesRequest"/></param>
+        /// <returns>参考<see cref="DetachCcnInstancesResponse"/>实例</returns>
+        public async Task<DetachCcnInstancesResponse> DetachCcnInstances(DetachCcnInstancesRequest req)
+        {
+             JsonResponseModel<DetachCcnInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachCcnInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachCcnInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DetachClassicLinkVpc)用于删除私有网络和基础网络设备互通。
         /// </summary>
         /// <param name="req">参考<see cref="DetachClassicLinkVpcRequest"/></param>
@@ -1204,6 +1567,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DetachNetworkInterface");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
+        /// </summary>
+        /// <param name="req">参考<see cref="DisableCcnRoutesRequest"/></param>
+        /// <returns>参考<see cref="DisableCcnRoutesResponse"/>实例</returns>
+        public async Task<DisableCcnRoutesResponse> DisableCcnRoutes(DisableCcnRoutesRequest req)
+        {
+             JsonResponseModel<DisableCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisableRoutes）用于禁用已启用的子网路由
+        /// </summary>
+        /// <param name="req">参考<see cref="DisableRoutesRequest"/></param>
+        /// <returns>参考<see cref="DisableRoutesResponse"/>实例</returns>
+        public async Task<DisableRoutesResponse> DisableRoutes(DisableRoutesRequest req)
+        {
+             JsonResponseModel<DisableRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1246,6 +1649,48 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DownloadCustomerGatewayConfiguration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadCustomerGatewayConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
+        /// 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableCcnRoutesRequest"/></param>
+        /// <returns>参考<see cref="EnableCcnRoutesResponse"/>实例</returns>
+        public async Task<EnableCcnRoutesResponse> EnableCcnRoutes(EnableCcnRoutesRequest req)
+        {
+             JsonResponseModel<EnableCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EnableRoutes）用于启用已禁用的子网路由。<br />
+        /// 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableRoutesRequest"/></param>
+        /// <returns>参考<see cref="EnableRoutesResponse"/>实例</returns>
+        public async Task<EnableRoutesResponse> EnableRoutes(EnableRoutesRequest req)
+        {
+             JsonResponseModel<EnableRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1409,6 +1854,66 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ModifyAddressTemplateGroupAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressTemplateGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，包括后付费EIP, 预付费EIP和带宽包EIP
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyAddressesBandwidthRequest"/></param>
+        /// <returns>参考<see cref="ModifyAddressesBandwidthResponse"/>实例</returns>
+        public async Task<ModifyAddressesBandwidthResponse> ModifyAddressesBandwidth(ModifyAddressesBandwidthRequest req)
+        {
+             JsonResponseModel<ModifyAddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口用于修改带宽包属性，包括带宽包名字等
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyBandwidthPackageAttributeRequest"/></param>
+        /// <returns>参考<see cref="ModifyBandwidthPackageAttributeResponse"/>实例</returns>
+        public async Task<ModifyBandwidthPackageAttributeResponse> ModifyBandwidthPackageAttribute(ModifyBandwidthPackageAttributeRequest req)
+        {
+             JsonResponseModel<ModifyBandwidthPackageAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBandwidthPackageAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBandwidthPackageAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyCcnAttributeRequest"/></param>
+        /// <returns>参考<see cref="ModifyCcnAttributeResponse"/>实例</returns>
+        public async Task<ModifyCcnAttributeResponse> ModifyCcnAttribute(ModifyCcnAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCcnAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCcnAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcnAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1689,6 +2194,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 接口用于删除带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
+        /// </summary>
+        /// <param name="req">参考<see cref="RemoveBandwidthPackageResourcesRequest"/></param>
+        /// <returns>参考<see cref="RemoveBandwidthPackageResourcesResponse"/>实例</returns>
+        public async Task<RemoveBandwidthPackageResourcesResponse> RemoveBandwidthPackageResources(RemoveBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<RemoveBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（RenewVpnGateway）用于预付费（包年包月）VPN网关续费。目前只支持IPSEC网关。
         /// </summary>
         /// <param name="req">参考<see cref="RenewVpnGatewayRequest"/></param>
@@ -1700,6 +2225,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "RenewVpnGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewVpnGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ReplaceDirectConnectGatewayCcnRoutes）根据路由ID（RouteId）修改指定的路由（Route），支持批量修改。
+        /// </summary>
+        /// <param name="req">参考<see cref="ReplaceDirectConnectGatewayCcnRoutesRequest"/></param>
+        /// <returns>参考<see cref="ReplaceDirectConnectGatewayCcnRoutesResponse"/>实例</returns>
+        public async Task<ReplaceDirectConnectGatewayCcnRoutesResponse> ReplaceDirectConnectGatewayCcnRoutes(ReplaceDirectConnectGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<ReplaceDirectConnectGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceDirectConnectGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceDirectConnectGatewayCcnRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1771,7 +2316,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。
+        /// 本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br />
         /// 注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
         /// </summary>
         /// <param name="req">参考<see cref="ResetRoutesRequest"/></param>
@@ -1823,6 +2368,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ResetVpnGatewayInternetMaxBandwidth");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetVpnGatewayInternetMaxBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SetCcnRegionBandwidthLimits）用于设置云联网（CCN）各地域出带宽上限，该接口只能设置已关联网络实例包含的地域的出带宽上限
+        /// </summary>
+        /// <param name="req">参考<see cref="SetCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns>参考<see cref="SetCcnRegionBandwidthLimitsResponse"/>实例</returns>
+        public async Task<SetCcnRegionBandwidthLimitsResponse> SetCcnRegionBandwidthLimits(SetCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<SetCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCcnRegionBandwidthLimitsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

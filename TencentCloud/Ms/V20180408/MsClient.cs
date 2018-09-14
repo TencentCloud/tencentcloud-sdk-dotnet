@@ -73,6 +73,26 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
+        /// 用户可以使用该接口自建资源，只支持白名单用户
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateResourceInstancesRequest"/></param>
+        /// <returns>参考<see cref="CreateResourceInstancesResponse"/>实例</returns>
+        public async Task<CreateResourceInstancesResponse> CreateResourceInstances(CreateResourceInstancesRequest req)
+        {
+             JsonResponseModel<CreateResourceInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateResourceInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourceInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
         /// </summary>
         /// <param name="req">参考<see cref="CreateScanInstancesRequest"/></param>

@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，专用宿主机（对于独享母机付费模式的子机创建）等属性。
+        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，专用宿主机（对于独享母机付费模式的实例创建）等属性。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例机型。不同实例机型指定了不同的资源规格。
-        /// <br><li>对于付费模式为PREPAID或POSTPAID_BY_HOUR的子机创建，具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。若不指定该参数，则默认机型为S1.SMALL1。<br><li>对于付费模式为CDHPAID的子机创建，该参数以"CDH_"为前缀，根据cpu和内存配置生成，具体形式为：CDH_XCXG，例如对于创建cpu为1核，内存为1G大小的专用宿主机的子机，该参数应该为CDH_1C1G。
+        /// <br><li>对于付费模式为PREPAID或POSTPAID\_BY\_HOUR的实例创建，具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。若不指定该参数，则默认机型为S1.SMALL1。<br><li>对于付费模式为CDHPAID的实例创建，该参数以"CDH_"为前缀，根据cpu和内存配置生成，具体形式为：CDH_XCXG，例如对于创建cpu为1核，内存为1G大小的专用宿主机的实例，该参数应该为CDH_1C1G。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘，当前仅支持购买的时候指定一个数据盘。
+        /// 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定11块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含10块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
@@ -140,7 +140,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 实例的市场相关选项，如竞价实例相关参数
+        /// 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
         /// </summary>
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }

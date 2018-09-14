@@ -53,7 +53,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 接受专线通道申请
+        /// 接受专用通道申请
         /// </summary>
         /// <param name="req">参考<see cref="AcceptDirectConnectTunnelRequest"/></param>
         /// <returns>参考<see cref="AcceptDirectConnectTunnelResponse"/>实例</returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 用于创建专线通道的接口
+        /// 用于创建专用通道的接口
         /// </summary>
         /// <param name="req">参考<see cref="CreateDirectConnectTunnelRequest"/></param>
         /// <returns>参考<see cref="CreateDirectConnectTunnelResponse"/>实例</returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 删除专线通道
+        /// 删除专用通道
         /// </summary>
         /// <param name="req">参考<see cref="DeleteDirectConnectTunnelRequest"/></param>
         /// <returns>参考<see cref="DeleteDirectConnectTunnelResponse"/>实例</returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 用于查询专线通道列表。
+        /// 用于查询专用通道列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDirectConnectTunnelsRequest"/></param>
         /// <returns>参考<see cref="DescribeDirectConnectTunnelsResponse"/>实例</returns>
@@ -133,7 +133,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 修改专线通道属性
+        /// 修改专用通道属性
         /// </summary>
         /// <param name="req">参考<see cref="ModifyDirectConnectTunnelAttributeRequest"/></param>
         /// <returns>参考<see cref="ModifyDirectConnectTunnelAttributeResponse"/>实例</returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// 拒绝专线通道申请
+        /// 拒绝专用通道申请
         /// </summary>
         /// <param name="req">参考<see cref="RejectDirectConnectTunnelRequest"/></param>
         /// <returns>参考<see cref="RejectDirectConnectTunnelResponse"/>实例</returns>

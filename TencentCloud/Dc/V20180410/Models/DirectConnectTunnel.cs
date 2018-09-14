@@ -38,6 +38,15 @@ namespace TencentCloud.Dc.V20180410.Models
 
         /// <summary>
         /// 专线通道状态
+        /// AVAILABLE:就绪或者已连接
+        /// PENDING:申请中
+        /// ALLOCATING:配置中
+        /// ALLOCATED:配置完成
+        /// ALTERING:修改中
+        /// DELETING:删除中
+        /// DELETED:删除完成
+        /// COMFIRMING:待接受
+        /// REJECTED:拒绝
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
@@ -55,7 +64,8 @@ namespace TencentCloud.Dc.V20180410.Models
         public string OwnerAccount{ get; set; }
 
         /// <summary>
-        /// 网络类型，分别为VPC、BMVPC VPC：私有网络 BMVPC：黑石网络
+        /// 网络类型，分别为VPC、BMVPC、CCN
+        ///  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }

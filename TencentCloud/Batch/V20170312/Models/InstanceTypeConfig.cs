@@ -25,10 +25,16 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 可用区。
+        /// 内存容量，单位：`GB`。
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("Mem")]
+        public long? Mem{ get; set; }
+
+        /// <summary>
+        /// CPU核数，单位：核。
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
 
         /// <summary>
         /// 实例机型。
@@ -37,40 +43,16 @@ namespace TencentCloud.Batch.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
+        /// 可用区。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
         /// 实例机型系列。
         /// </summary>
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }
-
-        /// <summary>
-        /// GPU核数，单位：核。
-        /// </summary>
-        [JsonProperty("GPU")]
-        public long? GPU{ get; set; }
-
-        /// <summary>
-        /// CPU核数，单位：核。
-        /// </summary>
-        [JsonProperty("CPU")]
-        public long? CPU{ get; set; }
-
-        /// <summary>
-        /// 内存容量，单位：`GB`。
-        /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
-
-        /// <summary>
-        /// 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-        /// </summary>
-        [JsonProperty("CbsSupport")]
-        public string CbsSupport{ get; set; }
-
-        /// <summary>
-        /// 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-        /// </summary>
-        [JsonProperty("InstanceTypeState")]
-        public string InstanceTypeState{ get; set; }
 
 
         /// <summary>
@@ -78,14 +60,11 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "Mem", this.Mem);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
-            this.SetParamSimple(map, prefix + "GPU", this.GPU);
-            this.SetParamSimple(map, prefix + "CPU", this.CPU);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "CbsSupport", this.CbsSupport);
-            this.SetParamSimple(map, prefix + "InstanceTypeState", this.InstanceTypeState);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例机型。不同实例机型指定了不同的资源规格，具体取值可参见附表实例资源规格对照表，也可以调用查询实例资源规格列表接口获得最新的规格表。
+        /// 实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[`DescribeInstanceTypeConfigs`](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例类型](https://cloud.tencent.com/document/product/213/11518)描述。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

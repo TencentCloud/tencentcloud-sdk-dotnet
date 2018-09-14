@@ -46,7 +46,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
         /// </summary>
         [JsonProperty("ServiceTemplate")]
-        public string[] ServiceTemplate{ get; set; }
+        public ServiceTemplateSpecification ServiceTemplate{ get; set; }
 
         /// <summary>
         /// 网段或IP(互斥)。
@@ -64,7 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// IP地址ID或者ID地址组ID。
         /// </summary>
         [JsonProperty("AddressTemplate")]
-        public string AddressTemplate{ get; set; }
+        public AddressTemplateSpecification AddressTemplate{ get; set; }
 
         /// <summary>
         /// ACCEPT 或 DROP。
@@ -87,10 +87,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "PolicyIndex", this.PolicyIndex);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamArraySimple(map, prefix + "ServiceTemplate.", this.ServiceTemplate);
+            this.SetParamObj(map, prefix + "ServiceTemplate.", this.ServiceTemplate);
             this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
-            this.SetParamSimple(map, prefix + "AddressTemplate", this.AddressTemplate);
+            this.SetParamObj(map, prefix + "AddressTemplate.", this.AddressTemplate);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
         }
