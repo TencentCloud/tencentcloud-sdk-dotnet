@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 
 namespace TencentCloud.Common.Http
 {
-    public class HttpConnection
+    public class HttpConnection: IDisposable
     {
         private IClient client;
 
@@ -69,5 +69,28 @@ namespace TencentCloud.Common.Http
             var response = await request.AsResponse();
             return response;
         }
+
+        #region IDisposable Support
+        private bool disposedValue = false; // 要检测冗余调用
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    client.Dispose();
+                }
+                client = null;
+                disposedValue = true;
+            }
+        }
+
+        // 添加此代码以正确实现可处置模式。
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion
     }
 }
