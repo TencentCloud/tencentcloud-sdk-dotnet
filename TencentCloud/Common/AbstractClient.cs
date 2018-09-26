@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TencentCloud.Common.Http;
 using TencentCloud.Common.Profile;
@@ -76,7 +77,7 @@ namespace TencentCloud.Common
         /// </summary>
         public string ApiVersion { get; set; }
 
-        protected async Task<string> InternalRequest(AbstractModel request, string actionName)
+        protected async Task<string> InternalRequest(AbstractModel request, string actionName, CancellationToken token = default(CancellationToken))
         {
             IResponse okRsp = null;
             string endpoint = this.Endpoint;
@@ -98,11 +99,11 @@ namespace TencentCloud.Common
                 {
                     if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
                     {
-                        okRsp = await conn.GetRequest($"{this.Path}", param);
+                        okRsp = await conn.GetRequest($"{this.Path}", param, token);
                     }
                     else if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
                     {
-                        okRsp = await conn.PostRequest(this.Path, param);
+                        okRsp = await conn.PostRequest(this.Path, param, token);
                     }
                 }
                 catch (Exception ex)

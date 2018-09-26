@@ -19,7 +19,8 @@ namespace TencentCloud.Cvm.V20170312
 {
 
    using Newtonsoft.Json;
-   using System.Threading.Tasks;
+    using System.Threading;
+    using System.Threading.Tasks;
    using TencentCloud.Common;
    using TencentCloud.Common.Profile;
    using TencentCloud.Cvm.V20170312.Models;
@@ -480,12 +481,12 @@ namespace TencentCloud.Cvm.V20170312
         /// </summary>
         /// <param name="req">参考<see cref="DescribeInstancesRequest"/></param>
         /// <returns>参考<see cref="DescribeInstancesResponse"/>实例</returns>
-        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
+        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req, CancellationToken token = default(CancellationToken))
         {
              JsonResponseModel<DescribeInstancesResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeInstances");
+                 var strResp = await this.InternalRequest(req, "DescribeInstances", token);
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
