@@ -62,10 +62,16 @@ namespace TencentCloud.Common.Http
             // set up
             HttpMethod method = new HttpMethod("POST");
             HttpRequestMessage message = new HttpRequestMessage(method, url);
-            var postbody = new FormUrlEncodedContent(param);
-            message.Content = postbody;
+            // System.UriFormatException: Invalid URI: The Uri string is too long.
+            // var postbody = new FormUrlEncodedContent(param);
+            StringBuilder bodysb = new StringBuilder();
+            foreach (KeyValuePair<string, string> kvp in param)
+            {
+                bodysb.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
+            }
+            message.Content = new StringContent(bodysb.ToString().TrimEnd('&'), Encoding.UTF8, "application/x-www-form-urlencoded");
 
-            IRequest request =  this.client.SendAsync(message);
+            IRequest request =  client.SendAsync(message);
             var response = await request.AsResponse();
             return response;
         }
