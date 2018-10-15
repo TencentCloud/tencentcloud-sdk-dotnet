@@ -53,6 +53,126 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
+        /// 创建集团门店管理员账号
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateAccountRequest"/></param>
+        /// <returns>参考<see cref="CreateAccountResponse"/>实例</returns>
+        public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest req)
+        {
+             JsonResponseModel<CreateAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传人脸图片
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateFacePictureRequest"/></param>
+        /// <returns>参考<see cref="CreateFacePictureResponse"/>实例</returns>
+        public async Task<CreateFacePictureResponse> CreateFacePicture(CreateFacePictureRequest req)
+        {
+             JsonResponseModel<CreateFacePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFacePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFacePictureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCameraPersonRequest"/></param>
+        /// <returns>参考<see cref="DescribeCameraPersonResponse"/>实例</returns>
+        public async Task<DescribeCameraPersonResponse> DescribeCameraPerson(DescribeCameraPersonRequest req)
+        {
+             JsonResponseModel<DescribeCameraPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCameraPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCameraPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过DescribeCameraPerson接口上报的收银台身份ID查询顾客的FaceID。查询最佳时间为收银台上报的次日1点后。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeFaceIdByTempIdRequest"/></param>
+        /// <returns>参考<see cref="DescribeFaceIdByTempIdResponse"/>实例</returns>
+        public async Task<DescribeFaceIdByTempIdResponse> DescribeFaceIdByTempId(DescribeFaceIdByTempIdRequest req)
+        {
+             JsonResponseModel<DescribeFaceIdByTempIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFaceIdByTempId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFaceIdByTempIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回当前门店历史网络状态数据
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeHistoryNetworkInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeHistoryNetworkInfoResponse"/>实例</returns>
+        public async Task<DescribeHistoryNetworkInfoResponse> DescribeHistoryNetworkInfo(DescribeHistoryNetworkInfoRequest req)
+        {
+             JsonResponseModel<DescribeHistoryNetworkInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHistoryNetworkInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryNetworkInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回当前门店最新网络状态数据
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeNetworkInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeNetworkInfoResponse"/>实例</returns>
+        public async Task<DescribeNetworkInfoResponse> DescribeNetworkInfo(DescribeNetworkInfoRequest req)
+        {
+             JsonResponseModel<DescribeNetworkInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
         /// </summary>
         /// <param name="req">参考<see cref="DescribePersonInfoRequest"/></param>
@@ -153,6 +273,146 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
+        /// 获取动线轨迹信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTrajectoryDataRequest"/></param>
+        /// <returns>参考<see cref="DescribeTrajectoryDataResponse"/>实例</returns>
+        public async Task<DescribeTrajectoryDataResponse> DescribeTrajectoryData(DescribeTrajectoryDataRequest req)
+        {
+             JsonResponseModel<DescribeTrajectoryDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrajectoryData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrajectoryDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定区域人流各年龄占比
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeZoneFlowAgeInfoByZoneIdRequest"/></param>
+        /// <returns>参考<see cref="DescribeZoneFlowAgeInfoByZoneIdResponse"/>实例</returns>
+        public async Task<DescribeZoneFlowAgeInfoByZoneIdResponse> DescribeZoneFlowAgeInfoByZoneId(DescribeZoneFlowAgeInfoByZoneIdRequest req)
+        {
+             JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZoneFlowAgeInfoByZoneId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取区域人流和停留时间
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeZoneFlowAndStayTimeRequest"/></param>
+        /// <returns>参考<see cref="DescribeZoneFlowAndStayTimeResponse"/>实例</returns>
+        public async Task<DescribeZoneFlowAndStayTimeResponse> DescribeZoneFlowAndStayTime(DescribeZoneFlowAndStayTimeRequest req)
+        {
+             JsonResponseModel<DescribeZoneFlowAndStayTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZoneFlowAndStayTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneFlowAndStayTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定区域每日客流量
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeZoneFlowDailyByZoneIdRequest"/></param>
+        /// <returns>参考<see cref="DescribeZoneFlowDailyByZoneIdResponse"/>实例</returns>
+        public async Task<DescribeZoneFlowDailyByZoneIdResponse> DescribeZoneFlowDailyByZoneId(DescribeZoneFlowDailyByZoneIdRequest req)
+        {
+             JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZoneFlowDailyByZoneId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定区域不同年龄段男女平均停留时间
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest"/></param>
+        /// <returns>参考<see cref="DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse"/>实例</returns>
+        public async Task<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse> DescribeZoneFlowGenderAvrStayTimeByZoneId(DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest req)
+        {
+             JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZoneFlowGenderAvrStayTimeByZoneId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定区域性别占比
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeZoneFlowGenderInfoByZoneIdRequest"/></param>
+        /// <returns>参考<see cref="DescribeZoneFlowGenderInfoByZoneIdResponse"/>实例</returns>
+        public async Task<DescribeZoneFlowGenderInfoByZoneIdResponse> DescribeZoneFlowGenderInfoByZoneId(DescribeZoneFlowGenderInfoByZoneIdRequest req)
+        {
+             JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZoneFlowGenderInfoByZoneId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定区域分时客流量
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeZoneFlowHourlyByZoneIdRequest"/></param>
+        /// <returns>参考<see cref="DescribeZoneFlowHourlyByZoneIdResponse"/>实例</returns>
+        public async Task<DescribeZoneFlowHourlyByZoneIdResponse> DescribeZoneFlowHourlyByZoneId(DescribeZoneFlowHourlyByZoneIdRequest req)
+        {
+             JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZoneFlowHourlyByZoneId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按天提供查询日期范围内，客户指定门店下的所有区域（优Mall部署时已配置区域）的累计客流人次和平均停留时间。支持的时间范围：过去365天，含当天。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeZoneTrafficInfoRequest"/></param>
@@ -164,6 +424,26 @@ namespace TencentCloud.Youmall.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeZoneTrafficInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZoneTrafficInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 标记到店顾客的身份类型，例如黑名单、白名单等
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyPersonTagInfoRequest"/></param>
+        /// <returns>参考<see cref="ModifyPersonTagInfoResponse"/>实例</returns>
+        public async Task<ModifyPersonTagInfoResponse> ModifyPersonTagInfo(ModifyPersonTagInfoRequest req)
+        {
+             JsonResponseModel<ModifyPersonTagInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPersonTagInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonTagInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

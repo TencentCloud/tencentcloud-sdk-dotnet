@@ -28,7 +28,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// 过滤条件
         /// </summary>
         [JsonProperty("Filters")]
-        public Filter Filters{ get; set; }
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

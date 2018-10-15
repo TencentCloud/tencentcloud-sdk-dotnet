@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// CVM实例类型
+        /// CVM实例类型，不能与InstanceTypes同时出现。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -96,6 +96,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
+        /// <summary>
+        /// CVM实例类型列表，不能与InstanceType同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+        /// </summary>
+        [JsonProperty("InstanceTypes")]
+        public string[] InstanceTypes{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -114,6 +120,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+            this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         }
     }
 }

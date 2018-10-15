@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public RunSecurityServiceEnabled SecurityService{ get; set; }
 
         /// <summary>
-        /// 开启云安全服务。若不指定该参数，则默认开启云监控服务。
+        /// 开启云监控服务。若不指定该参数，则默认开启云监控服务。
         /// </summary>
         [JsonProperty("MonitorService")]
         public RunMonitorServiceEnabled MonitorService{ get; set; }

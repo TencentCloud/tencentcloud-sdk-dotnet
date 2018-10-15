@@ -49,6 +49,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string DevicePrivateKey{ get; set; }
 
         /// <summary>
+        /// LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+        /// </summary>
+        [JsonProperty("LoraDevEui")]
+        public string LoraDevEui{ get; set; }
+
+        /// <summary>
         /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "DevicePsk", this.DevicePsk);
             this.SetParamSimple(map, prefix + "DeviceCert", this.DeviceCert);
             this.SetParamSimple(map, prefix + "DevicePrivateKey", this.DevicePrivateKey);
+            this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

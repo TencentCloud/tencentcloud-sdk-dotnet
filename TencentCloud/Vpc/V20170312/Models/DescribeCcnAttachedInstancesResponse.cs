@@ -31,10 +31,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 关联实例列表
+        /// 关联实例列表。
         /// </summary>
         [JsonProperty("InstanceSet")]
-        public CcnInstance[] InstanceSet{ get; set; }
+        public CcnAttachedInstance[] InstanceSet{ get; set; }
 
         /// <summary>
         /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。

@@ -37,6 +37,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string ProductId{ get; set; }
 
         /// <summary>
+        /// 产品属性
+        /// </summary>
+        [JsonProperty("ProductProperties")]
+        public ProductProperties ProductProperties{ get; set; }
+
+        /// <summary>
         /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         {
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

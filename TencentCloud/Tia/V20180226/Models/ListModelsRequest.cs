@@ -42,6 +42,12 @@ namespace TencentCloud.Tia.V20180226.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 模型类型
+        /// </summary>
+        [JsonProperty("ServType")]
+        public string ServType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Tia.V20180226.Models
             this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "ServType", this.ServType);
         }
     }
 }

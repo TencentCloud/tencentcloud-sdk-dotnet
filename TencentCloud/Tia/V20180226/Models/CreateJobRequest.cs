@@ -102,6 +102,12 @@ namespace TencentCloud.Tia.V20180226.Models
         [JsonProperty("Debug")]
         public bool? Debug{ get; set; }
 
+        /// <summary>
+        /// 运行任务的其他配置信息
+        /// </summary>
+        [JsonProperty("RuntimeConf")]
+        public string[] RuntimeConf{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -121,6 +127,7 @@ namespace TencentCloud.Tia.V20180226.Models
             this.SetParamSimple(map, prefix + "WorkerCount", this.WorkerCount);
             this.SetParamSimple(map, prefix + "ParameterServerCount", this.ParameterServerCount);
             this.SetParamSimple(map, prefix + "Debug", this.Debug);
+            this.SetParamArraySimple(map, prefix + "RuntimeConf.", this.RuntimeConf);
         }
     }
 }

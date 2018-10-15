@@ -60,6 +60,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+        /// </summary>
+        [JsonProperty("SoeAppId")]
+        public string SoeAppId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);
             this.SetParamSimple(map, prefix + "UserVoiceData", this.UserVoiceData);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
         }
     }
 }

@@ -31,34 +31,10 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 欲购买实例的数量，目前只支持购买1个实例
-        /// </summary>
-        [JsonProperty("Count")]
-        public long? Count{ get; set; }
-
-        /// <summary>
         /// 欲购买的时长，单位：月。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
-
-        /// <summary>
-        /// 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public long? ProjectId{ get; set; }
-
-        /// <summary>
-        /// 虚拟私有网络 ID，不传或传空表示创建为基础网络
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
-        /// 虚拟私有网络子网 ID，VpcId不为空时必填
-        /// </summary>
-        [JsonProperty("SubnetId")]
-        public string SubnetId{ get; set; }
 
         /// <summary>
         /// 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -88,6 +64,30 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? ShardCount{ get; set; }
 
         /// <summary>
+        /// 欲购买实例的数量，目前只支持购买1个实例
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
+        /// <summary>
+        /// 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 虚拟私有网络 ID，不传或传空表示创建为基础网络
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 虚拟私有网络子网 ID，VpcId不为空时必填
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
         /// 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
         /// </summary>
         [JsonProperty("DbVersionId")]
@@ -112,15 +112,15 @@ namespace TencentCloud.Dcdb.V20180411.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Period", this.Period);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
             this.SetParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
             this.SetParamSimple(map, prefix + "ShardNodeCount", this.ShardNodeCount);
             this.SetParamSimple(map, prefix + "ShardCount", this.ShardCount);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);

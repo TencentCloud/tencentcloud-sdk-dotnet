@@ -25,7 +25,7 @@ namespace TencentCloud.Ms.V20180408.Models
     {
         
         /// <summary>
-        /// 资源类别id数组
+        /// 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
         /// </summary>
         [JsonProperty("Pids")]
         public ulong?[] Pids{ get; set; }

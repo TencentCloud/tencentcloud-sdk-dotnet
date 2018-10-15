@@ -145,7 +145,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string MasterRegion{ get; set; }
 
         /// <summary>
-        /// 安全组参数
+        /// 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }

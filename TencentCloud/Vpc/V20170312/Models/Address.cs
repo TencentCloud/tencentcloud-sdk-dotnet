@@ -96,6 +96,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
 
+        /// <summary>
+        /// eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+        /// </summary>
+        [JsonProperty("CascadeRelease")]
+        public bool? CascadeRelease{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -114,6 +120,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IsBlocked", this.IsBlocked);
             this.SetParamSimple(map, prefix + "IsEipDirectConnection", this.IsEipDirectConnection);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
+            this.SetParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
         }
     }
 }

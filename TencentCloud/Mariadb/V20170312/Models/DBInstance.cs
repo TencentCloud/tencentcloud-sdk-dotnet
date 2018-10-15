@@ -127,12 +127,6 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 产品类型 Id
-        /// </summary>
-        [JsonProperty("Pid")]
-        public long? Pid{ get; set; }
-
-        /// <summary>
         /// 实例到期时间，格式为 2006-01-02 15:04:05
         /// </summary>
         [JsonProperty("PeriodEndTime")]
@@ -145,7 +139,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// TDSQL 版本信息，如 10.1.9
+        /// TDSQL 版本信息
         /// </summary>
         [JsonProperty("TdsqlVersion")]
         public string TdsqlVersion{ get; set; }
@@ -161,6 +155,78 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
+
+        /// <summary>
+        /// 字符串型的私有网络Id
+        /// </summary>
+        [JsonProperty("UniqueVpcId")]
+        public string UniqueVpcId{ get; set; }
+
+        /// <summary>
+        /// 字符串型的私有网络子网Id
+        /// </summary>
+        [JsonProperty("UniqueSubnetId")]
+        public string UniqueSubnetId{ get; set; }
+
+        /// <summary>
+        /// 原始实例ID（过时字段，请勿依赖该值）
+        /// </summary>
+        [JsonProperty("OriginSerialId")]
+        public string OriginSerialId{ get; set; }
+
+        /// <summary>
+        /// 节点数，2为一主一从，3为一主二从
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public ulong? NodeCount{ get; set; }
+
+        /// <summary>
+        /// 是否临时实例，0为否，非0为是
+        /// </summary>
+        [JsonProperty("IsTmp")]
+        public ulong? IsTmp{ get; set; }
+
+        /// <summary>
+        /// 独享集群Id，为空表示为普通实例
+        /// </summary>
+        [JsonProperty("ExclusterId")]
+        public string ExclusterId{ get; set; }
+
+        /// <summary>
+        /// 数字实例Id（过时字段，请勿依赖该值）
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 产品类型 Id
+        /// </summary>
+        [JsonProperty("Pid")]
+        public long? Pid{ get; set; }
+
+        /// <summary>
+        /// 最大 Qps 值
+        /// </summary>
+        [JsonProperty("Qps")]
+        public long? Qps{ get; set; }
+
+        /// <summary>
+        /// 付费模式
+        /// </summary>
+        [JsonProperty("Paymode")]
+        public string Paymode{ get; set; }
+
+        /// <summary>
+        /// 实例处于异步任务时的异步任务流程ID
+        /// </summary>
+        [JsonProperty("Locker")]
+        public long? Locker{ get; set; }
+
+        /// <summary>
+        /// 实例目前运行状态描述
+        /// </summary>
+        [JsonProperty("StatusDesc")]
+        public string StatusDesc{ get; set; }
 
 
         /// <summary>
@@ -185,12 +251,23 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
-            this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "TdsqlVersion", this.TdsqlVersion);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "UniqueVpcId", this.UniqueVpcId);
+            this.SetParamSimple(map, prefix + "UniqueSubnetId", this.UniqueSubnetId);
+            this.SetParamSimple(map, prefix + "OriginSerialId", this.OriginSerialId);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "IsTmp", this.IsTmp);
+            this.SetParamSimple(map, prefix + "ExclusterId", this.ExclusterId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
+            this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
+            this.SetParamSimple(map, prefix + "Locker", this.Locker);
+            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         }
     }
 }

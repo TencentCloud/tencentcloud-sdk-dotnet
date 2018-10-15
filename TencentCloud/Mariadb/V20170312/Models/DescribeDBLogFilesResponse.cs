@@ -51,14 +51,14 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// <summary>
         /// 如果是VPC网络的实例，做用本前缀加上URI为下载地址
         /// </summary>
-        [JsonProperty("Vpcprefix")]
-        public string Vpcprefix{ get; set; }
+        [JsonProperty("VpcPrefix")]
+        public string VpcPrefix{ get; set; }
 
         /// <summary>
         /// 如果是普通网络的实例，做用本前缀加上URI为下载地址
         /// </summary>
-        [JsonProperty("Normalprefix")]
-        public string Normalprefix{ get; set; }
+        [JsonProperty("NormalPrefix")]
+        public string NormalPrefix{ get; set; }
 
         /// <summary>
         /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -76,8 +76,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "Files.", this.Files);
-            this.SetParamSimple(map, prefix + "Vpcprefix", this.Vpcprefix);
-            this.SetParamSimple(map, prefix + "Normalprefix", this.Normalprefix);
+            this.SetParamSimple(map, prefix + "VpcPrefix", this.VpcPrefix);
+            this.SetParamSimple(map, prefix + "NormalPrefix", this.NormalPrefix);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

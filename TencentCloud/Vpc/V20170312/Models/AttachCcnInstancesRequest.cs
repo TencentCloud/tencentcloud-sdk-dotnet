@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Instances")]
         public CcnInstance[] Instances{ get; set; }
 
+        /// <summary>
+        /// CCN所属UIN（根账号），默认当前账号所属UIN
+        /// </summary>
+        [JsonProperty("CcnUin")]
+        public string CcnUin{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
+            this.SetParamSimple(map, prefix + "CcnUin", this.CcnUin);
         }
     }
 }

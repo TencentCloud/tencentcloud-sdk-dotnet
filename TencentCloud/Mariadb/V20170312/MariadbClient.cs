@@ -53,6 +53,26 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（CloneAccount）用于克隆实例账户。
+        /// </summary>
+        /// <param name="req">参考<see cref="CloneAccountRequest"/></param>
+        /// <returns>参考<see cref="CloneAccountResponse"/>实例</returns>
+        public async Task<CloneAccountResponse> CloneAccount(CloneAccountRequest req)
+        {
+             JsonResponseModel<CloneAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
         /// </summary>
         /// <param name="req">参考<see cref="CloseDBExtranetAccessRequest"/></param>
@@ -507,6 +527,26 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DescribeSaleInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSaleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSqlLogsRequest"/></param>
+        /// <returns>参考<see cref="DescribeSqlLogsResponse"/>实例</returns>
+        public async Task<DescribeSqlLogsResponse> DescribeSqlLogs(DescribeSqlLogsRequest req)
+        {
+             JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSqlLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSqlLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

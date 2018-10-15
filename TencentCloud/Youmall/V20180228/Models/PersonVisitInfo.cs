@@ -43,7 +43,7 @@ namespace TencentCloud.Youmall.V20180228.Models
         public ulong? InTime{ get; set; }
 
         /// <summary>
-        /// 抓拍到的头像，这里返回的是图片内容的Base64编码
+        /// 抓拍到的头像Base64内容，已弃用，返回默认空值
         /// </summary>
         [JsonProperty("CapturedPicture")]
         public string CapturedPicture{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("HairType")]
         public ulong? HairType{ get; set; }
 
+        /// <summary>
+        /// 抓拍到的头像Url，在有效期内可以访问下载
+        /// </summary>
+        [JsonProperty("CapturedPictureUrl")]
+        public string CapturedPictureUrl{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "MaskType", this.MaskType);
             this.SetParamSimple(map, prefix + "GlassType", this.GlassType);
             this.SetParamSimple(map, prefix + "HairType", this.HairType);
+            this.SetParamSimple(map, prefix + "CapturedPictureUrl", this.CapturedPictureUrl);
         }
     }
 }

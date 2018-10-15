@@ -34,7 +34,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
         /// </summary>
         [JsonProperty("Code")]
-        public ulong? Code{ get; set; }
+        public long? Code{ get; set; }
 
 
         /// <summary>

@@ -54,6 +54,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// 可用区，如：ap-guangzhou-2。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

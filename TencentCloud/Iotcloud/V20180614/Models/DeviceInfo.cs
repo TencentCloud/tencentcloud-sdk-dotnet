@@ -102,6 +102,18 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("LastUpdateTime")]
         public ulong? LastUpdateTime{ get; set; }
 
+        /// <summary>
+        /// LoRa设备的dev eui
+        /// </summary>
+        [JsonProperty("LoraDevEui")]
+        public string LoraDevEui{ get; set; }
+
+        /// <summary>
+        /// LoRa设备的Mote type
+        /// </summary>
+        [JsonProperty("LoraMoteType")]
+        public ulong? LoraMoteType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -121,6 +133,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "NbiotDeviceID", this.NbiotDeviceID);
             this.SetParamSimple(map, prefix + "ConnIP", this.ConnIP);
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+            this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
+            this.SetParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
         }
     }
 }

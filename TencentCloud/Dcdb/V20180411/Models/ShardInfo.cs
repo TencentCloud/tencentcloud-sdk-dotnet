@@ -37,7 +37,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string ShardSerialId{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -66,6 +66,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardId")]
         public long? ShardId{ get; set; }
 
+        /// <summary>
+        /// 节点数，2 为一主一从， 3 为一主二从
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public long? NodeCount{ get; set; }
+
+        /// <summary>
+        /// 产品类型 Id（过时字段，请勿依赖该值）
+        /// </summary>
+        [JsonProperty("Pid")]
+        public long? Pid{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +91,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "Pid", this.Pid);
         }
     }
 }

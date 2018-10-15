@@ -40,7 +40,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 密钥对所属的项目`ID`。
         /// </summary>
         [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
+        public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 密钥对描述信息。

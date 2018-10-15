@@ -108,6 +108,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RestrictState")]
         public string RestrictState{ get; set; }
 
+        /// <summary>
+        /// 可用区，如：ap-guangzhou-2
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -128,6 +134,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IsAddressBlocked", this.IsAddressBlocked);
             this.SetParamSimple(map, prefix + "NewPurchasePlan", this.NewPurchasePlan);
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

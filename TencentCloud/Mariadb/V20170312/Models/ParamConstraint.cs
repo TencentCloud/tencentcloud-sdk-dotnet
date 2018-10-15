@@ -42,6 +42,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Range")]
         public ConstraintRange Range{ get; set; }
 
+        /// <summary>
+        /// 约束类型为string时的可选值列表
+        /// </summary>
+        [JsonProperty("String")]
+        public string String{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Enum", this.Enum);
             this.SetParamObj(map, prefix + "Range.", this.Range);
+            this.SetParamSimple(map, prefix + "String", this.String);
         }
     }
 }

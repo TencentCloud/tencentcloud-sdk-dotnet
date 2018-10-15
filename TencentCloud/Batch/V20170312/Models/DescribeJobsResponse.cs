@@ -28,7 +28,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// 作业列表
         /// </summary>
         [JsonProperty("JobSet")]
-        public JobView JobSet{ get; set; }
+        public JobView[] JobSet{ get; set; }
 
         /// <summary>
         /// 符合条件的作业数量
@@ -48,7 +48,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "JobSet.", this.JobSet);
+            this.SetParamArrayObj(map, prefix + "JobSet.", this.JobSet);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

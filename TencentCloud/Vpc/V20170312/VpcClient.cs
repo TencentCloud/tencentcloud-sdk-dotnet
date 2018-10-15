@@ -53,6 +53,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（AcceptAttachCcnInstances）用于跨账号关联实例时，云联网所有者接受并同意关联操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="AcceptAttachCcnInstancesRequest"/></param>
+        /// <returns>参考<see cref="AcceptAttachCcnInstancesResponse"/>实例</returns>
+        public async Task<AcceptAttachCcnInstancesResponse> AcceptAttachCcnInstances(AcceptAttachCcnInstancesRequest req)
+        {
+             JsonResponseModel<AcceptAttachCcnInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AcceptAttachCcnInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcceptAttachCcnInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口用于添加带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
         /// </summary>
         /// <param name="req">参考<see cref="AddBandwidthPackageResourcesRequest"/></param>
@@ -165,7 +185,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(AttachClassicLinkVpc)用于私有网络和基础网络设备互通。
+        /// 本接口(AttachClassicLinkVpc)用于创建私有网络和基础网络设备互通。
         /// * 私有网络和基础网络设备必须在同一个地域。
         /// * 私有网络和基础网络的区别详见vpc产品文档-<a href="https://cloud.tencent.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">私有网络与基础网络</a>。
         /// </summary>
@@ -1195,7 +1215,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口(DescribeClassicLinkInstances)用于私有网络和基础网络设备互通。
+        /// 本接口(DescribeClassicLinkInstances)用于查询私有网络和基础网络设备互通列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeClassicLinkInstancesRequest"/></param>
         /// <returns>参考<see cref="DescribeClassicLinkInstancesResponse"/>实例</returns>
@@ -2172,6 +2192,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（RejectAttachCcnInstances）用于跨账号关联实例时，云联网所有者拒绝关联操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="RejectAttachCcnInstancesRequest"/></param>
+        /// <returns>参考<see cref="RejectAttachCcnInstancesResponse"/>实例</returns>
+        public async Task<RejectAttachCcnInstancesResponse> RejectAttachCcnInstances(RejectAttachCcnInstancesRequest req)
+        {
+             JsonResponseModel<RejectAttachCcnInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RejectAttachCcnInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectAttachCcnInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ReleaseAddresses) 用于释放一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
         /// * 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
         /// * 只有状态为 UNBIND 的 EIP 才能进行释放操作。
@@ -2307,6 +2347,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ReplaceSecurityGroupPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceSecurityGroupPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ResetAttachCcnInstances）用于跨账号关联实例申请过期时，重新申请关联操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="ResetAttachCcnInstancesRequest"/></param>
+        /// <returns>参考<see cref="ResetAttachCcnInstancesResponse"/>实例</returns>
+        public async Task<ResetAttachCcnInstancesResponse> ResetAttachCcnInstances(ResetAttachCcnInstancesRequest req)
+        {
+             JsonResponseModel<ResetAttachCcnInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetAttachCcnInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAttachCcnInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

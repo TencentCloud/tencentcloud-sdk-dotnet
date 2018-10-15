@@ -60,6 +60,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Imei")]
         public string Imei{ get; set; }
 
+        /// <summary>
+        /// LoRa设备的DevEui，当创建LoRa时，此字段必填
+        /// </summary>
+        [JsonProperty("LoraDevEui")]
+        public string LoraDevEui{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "DefinedPsk", this.DefinedPsk);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamSimple(map, prefix + "Imei", this.Imei);
+            this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
         }
     }
 }

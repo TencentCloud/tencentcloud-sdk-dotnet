@@ -150,6 +150,96 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardDetail")]
         public ShardInfo[] ShardDetail{ get; set; }
 
+        /// <summary>
+        /// 节点数，2 为一主一从， 3 为一主二从
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public long? NodeCount{ get; set; }
+
+        /// <summary>
+        /// 临时实例标记，0 为非临时实例
+        /// </summary>
+        [JsonProperty("IsTmp")]
+        public long? IsTmp{ get; set; }
+
+        /// <summary>
+        /// 独享集群Id，为空表示非独享集群实例
+        /// </summary>
+        [JsonProperty("ExclusterId")]
+        public string ExclusterId{ get; set; }
+
+        /// <summary>
+        /// 字符串型的私有网络Id
+        /// </summary>
+        [JsonProperty("UniqueVpcId")]
+        public string UniqueVpcId{ get; set; }
+
+        /// <summary>
+        /// 字符串型的私有网络子网Id
+        /// </summary>
+        [JsonProperty("UniqueSubnetId")]
+        public string UniqueSubnetId{ get; set; }
+
+        /// <summary>
+        /// 数字实例Id（过时字段，请勿依赖该值）
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 外网访问的域名，公网可解析
+        /// </summary>
+        [JsonProperty("WanDomain")]
+        public string WanDomain{ get; set; }
+
+        /// <summary>
+        /// 外网 IP 地址，公网可访问
+        /// </summary>
+        [JsonProperty("WanVip")]
+        public string WanVip{ get; set; }
+
+        /// <summary>
+        /// 外网端口
+        /// </summary>
+        [JsonProperty("WanPort")]
+        public long? WanPort{ get; set; }
+
+        /// <summary>
+        /// 产品类型 Id（过时字段，请勿依赖该值）
+        /// </summary>
+        [JsonProperty("Pid")]
+        public long? Pid{ get; set; }
+
+        /// <summary>
+        /// 实例最后更新时间，格式为 2006-01-02 15:04:05
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 数据库引擎
+        /// </summary>
+        [JsonProperty("DbEngine")]
+        public string DbEngine{ get; set; }
+
+        /// <summary>
+        /// 数据库引擎版本
+        /// </summary>
+        [JsonProperty("DbVersion")]
+        public string DbVersion{ get; set; }
+
+        /// <summary>
+        /// 付费模式
+        /// </summary>
+        [JsonProperty("Paymode")]
+        public string Paymode{ get; set; }
+
+        /// <summary>
+        /// 实例处于异步任务状态时，表示异步任务流程ID
+        /// </summary>
+        [JsonProperty("Locker")]
+        public long? Locker{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -177,6 +267,21 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "IsolatedTimestamp", this.IsolatedTimestamp);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamArrayObj(map, prefix + "ShardDetail.", this.ShardDetail);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "IsTmp", this.IsTmp);
+            this.SetParamSimple(map, prefix + "ExclusterId", this.ExclusterId);
+            this.SetParamSimple(map, prefix + "UniqueVpcId", this.UniqueVpcId);
+            this.SetParamSimple(map, prefix + "UniqueSubnetId", this.UniqueSubnetId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "WanDomain", this.WanDomain);
+            this.SetParamSimple(map, prefix + "WanVip", this.WanVip);
+            this.SetParamSimple(map, prefix + "WanPort", this.WanPort);
+            this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "DbEngine", this.DbEngine);
+            this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
+            this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
+            this.SetParamSimple(map, prefix + "Locker", this.Locker);
         }
     }
 }

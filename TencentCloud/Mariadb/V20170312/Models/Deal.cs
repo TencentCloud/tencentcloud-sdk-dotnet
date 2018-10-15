@@ -39,8 +39,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// <summary>
         /// 商品数量
         /// </summary>
-        [JsonProperty("Quantity")]
-        public long? Quantity{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
         /// <summary>
         /// 关联的流程 Id，可用于查询流程执行状态
@@ -54,6 +54,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 付费模式，0后付费/1预付费
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -62,9 +68,10 @@ namespace TencentCloud.Mariadb.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
-            this.SetParamSimple(map, prefix + "Quantity", this.Quantity);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

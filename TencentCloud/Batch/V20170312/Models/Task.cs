@@ -88,13 +88,13 @@ namespace TencentCloud.Batch.V20170312.Models
         /// 自定义环境变量
         /// </summary>
         [JsonProperty("EnvVars")]
-        public Authentication[] EnvVars{ get; set; }
+        public EnvVar[] EnvVars{ get; set; }
 
         /// <summary>
         /// 授权信息
         /// </summary>
         [JsonProperty("Authentications")]
-        public EnvVar[] Authentications{ get; set; }
+        public Authentication[] Authentications{ get; set; }
 
         /// <summary>
         /// TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
@@ -109,7 +109,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? MaxRetryCount{ get; set; }
 
         /// <summary>
-        /// 任务启动后的超时时间，单位秒，默认为3600秒
+        /// 任务启动后的超时时间，单位秒，默认为86400秒
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }

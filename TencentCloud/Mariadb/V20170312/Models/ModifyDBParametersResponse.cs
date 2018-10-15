@@ -33,8 +33,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// <summary>
         /// 参数修改结果
         /// </summary>
-        [JsonProperty("Config")]
-        public ParamModifyResult[] Config{ get; set; }
+        [JsonProperty("Result")]
+        public ParamModifyResult[] Result{ get; set; }
 
         /// <summary>
         /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
@@ -49,7 +49,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArrayObj(map, prefix + "Config.", this.Config);
+            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -54,7 +54,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 代金券ID列表，目前仅支持指定一张代金券。
         /// </summary>
         [JsonProperty("VoucherIds")]
-        public string VoucherIds{ get; set; }
+        public string[] VoucherIds{ get; set; }
 
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
-            this.SetParamSimple(map, prefix + "VoucherIds", this.VoucherIds);
+            this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         }
     }
 }

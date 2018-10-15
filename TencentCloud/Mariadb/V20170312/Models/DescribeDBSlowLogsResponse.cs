@@ -34,25 +34,25 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 所有语句锁时间总和
         /// </summary>
         [JsonProperty("LockTimeSum")]
-        public string LockTimeSum{ get; set; }
+        public float? LockTimeSum{ get; set; }
 
         /// <summary>
         /// 所有语句查询总次数
         /// </summary>
         [JsonProperty("QueryCount")]
-        public string QueryCount{ get; set; }
+        public long? QueryCount{ get; set; }
 
         /// <summary>
         /// 总记录数
         /// </summary>
         [JsonProperty("Total")]
-        public string Total{ get; set; }
+        public long? Total{ get; set; }
 
         /// <summary>
         /// 所有语句查询时间总和
         /// </summary>
         [JsonProperty("QueryTimeSum")]
-        public string QueryTimeSum{ get; set; }
+        public float? QueryTimeSum{ get; set; }
 
         /// <summary>
         /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。

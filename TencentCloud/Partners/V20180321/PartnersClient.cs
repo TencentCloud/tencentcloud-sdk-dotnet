@@ -73,6 +73,26 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 为合作伙伴提供转账给客户能力。仅支持合作伙伴为自己名下客户转账。
+        /// </summary>
+        /// <param name="req">参考<see cref="AgentTransferMoneyRequest"/></param>
+        /// <returns>参考<see cref="AgentTransferMoneyResponse"/>实例</returns>
+        public async Task<AgentTransferMoneyResponse> AgentTransferMoney(AgentTransferMoneyRequest req)
+        {
+             JsonResponseModel<AgentTransferMoneyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AgentTransferMoney");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AgentTransferMoneyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 代理商可以审核其名下申请中代客
         /// </summary>
         /// <param name="req">参考<see cref="AuditApplyClientRequest"/></param>
@@ -144,6 +164,26 @@ namespace TencentCloud.Partners.V20180321
              {
                  var strResp = await this.InternalRequest(req, "DescribeAgentClients");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentClientsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClientBalanceRequest"/></param>
+        /// <returns>参考<see cref="DescribeClientBalanceResponse"/>实例</returns>
+        public async Task<DescribeClientBalanceResponse> DescribeClientBalance(DescribeClientBalanceRequest req)
+        {
+             JsonResponseModel<DescribeClientBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClientBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientBalanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

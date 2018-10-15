@@ -287,6 +287,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeAsyncRequestInfo)用于查询云数据库实例异步任务的执行结果。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeAsyncRequestInfoResponse"/>实例</returns>
+        public async Task<DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeBackupConfig)用于查询数据库备份配置信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeBackupConfigRequest"/></param>
@@ -610,6 +630,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 该接口（DescribeInstanceParams）用于查询实例的参数列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceParamsResponse"/>实例</returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeProjectSecurityGroupsRequest"/></param>
@@ -751,8 +791,6 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// 本接口(IsolateDBInstance)用于销毁云数据库实例，销毁之后不能通过IP和端口访问数据库，按量计费实例销毁后直接下线。
-        /// 
-        /// 本接口不支持包年包月实例；
         /// </summary>
         /// <param name="req">参考<see cref="IsolateDBInstanceRequest"/></param>
         /// <returns>参考<see cref="IsolateDBInstanceResponse"/>实例</returns>

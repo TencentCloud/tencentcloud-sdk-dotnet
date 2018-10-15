@@ -60,6 +60,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
+        /// <summary>
+        /// 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+        /// </summary>
+        [JsonProperty("DelayThresh")]
+        public long? DelayThresh{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+        /// </summary>
+        [JsonProperty("PictureExpires")]
+        public ulong? PictureExpires{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "PictureExpires", this.PictureExpires);
         }
     }
 }

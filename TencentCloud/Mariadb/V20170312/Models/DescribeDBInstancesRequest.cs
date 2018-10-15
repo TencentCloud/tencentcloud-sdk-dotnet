@@ -49,22 +49,22 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 是否根据 VPC 网络来搜索，0 为否，1 为是
+        /// 是否根据 VPC 网络来搜索
         /// </summary>
         [JsonProperty("IsFilterVpc")]
-        public long? IsFilterVpc{ get; set; }
+        public bool? IsFilterVpc{ get; set; }
 
         /// <summary>
         /// 私有网络 ID， IsFilterVpc 为 1 时有效
         /// </summary>
         [JsonProperty("VpcId")]
-        public long? VpcId{ get; set; }
+        public string VpcId{ get; set; }
 
         /// <summary>
         /// 私有网络的子网 ID， IsFilterVpc 为 1 时有效
         /// </summary>
         [JsonProperty("SubnetId")]
-        public long? SubnetId{ get; set; }
+        public string SubnetId{ get; set; }
 
         /// <summary>
         /// 排序字段， projectId， createtime， instancename 三者之一
@@ -96,6 +96,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("OriginSerialIds")]
         public string[] OriginSerialIds{ get; set; }
 
+        /// <summary>
+        /// 标识是否使用ExclusterType字段, false不使用，true使用
+        /// </summary>
+        [JsonProperty("IsFilterExcluster")]
+        public bool? IsFilterExcluster{ get; set; }
+
+        /// <summary>
+        /// 1非独享集群，2独享集群， 0全部
+        /// </summary>
+        [JsonProperty("ExclusterType")]
+        public long? ExclusterType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -114,6 +126,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "OriginSerialIds.", this.OriginSerialIds);
+            this.SetParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
+            this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         }
     }
 }

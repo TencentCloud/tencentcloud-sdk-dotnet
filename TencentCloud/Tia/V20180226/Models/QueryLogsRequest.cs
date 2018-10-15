@@ -55,7 +55,7 @@ namespace TencentCloud.Tia.V20180226.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 加载更多使用，透传上次返回的context值，获取后续的日志内容
+        /// 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

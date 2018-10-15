@@ -49,10 +49,10 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 是否根据 VPC 网络来搜索，0 为否，1 为是
+        /// 是否根据 VPC 网络来搜索
         /// </summary>
         [JsonProperty("IsFilterVpc")]
-        public long?[] IsFilterVpc{ get; set; }
+        public bool? IsFilterVpc{ get; set; }
 
         /// <summary>
         /// 私有网络 ID， IsFilterVpc 为 1 时有效
@@ -90,6 +90,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 1非独享集群，2独享集群， 0全部
+        /// </summary>
+        [JsonProperty("ExclusterType")]
+        public long? ExclusterType{ get; set; }
+
+        /// <summary>
+        /// 标识是否使用ExclusterType字段, false不使用，true使用
+        /// </summary>
+        [JsonProperty("IsFilterExcluster")]
+        public bool? IsFilterExcluster{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,13 +112,15 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "SearchName", this.SearchName);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
-            this.SetParamArraySimple(map, prefix + "IsFilterVpc.", this.IsFilterVpc);
+            this.SetParamSimple(map, prefix + "IsFilterVpc", this.IsFilterVpc);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
+            this.SetParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
         }
     }
 }

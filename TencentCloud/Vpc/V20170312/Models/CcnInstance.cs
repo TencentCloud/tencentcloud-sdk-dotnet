@@ -37,28 +37,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceRegion{ get; set; }
 
         /// <summary>
-        /// 云联网实例ID
-        /// </summary>
-        [JsonProperty("CcnId")]
-        public string CcnId{ get; set; }
-
-        /// <summary>
         /// 关联实例类型，可选值：VPC、DIRECTCONNECT
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
-
-        /// <summary>
-        /// 关联实例名称
-        /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
-
-        /// <summary>
-        /// 关联实例CIDR
-        /// </summary>
-        [JsonProperty("CidrBlock")]
-        public string[] CidrBlock{ get; set; }
 
 
         /// <summary>
@@ -68,10 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamArraySimple(map, prefix + "CidrBlock.", this.CidrBlock);
         }
     }
 }

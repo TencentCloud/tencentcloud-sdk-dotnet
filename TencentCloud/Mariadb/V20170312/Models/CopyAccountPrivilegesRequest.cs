@@ -43,12 +43,6 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string SrcHost{ get; set; }
 
         /// <summary>
-        /// 源账号的 ReadOnly 属性
-        /// </summary>
-        [JsonProperty("SrcReadOnly")]
-        public string SrcReadOnly{ get; set; }
-
-        /// <summary>
         /// 目的用户名
         /// </summary>
         [JsonProperty("DstUserName")]
@@ -59,6 +53,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         [JsonProperty("DstHost")]
         public string DstHost{ get; set; }
+
+        /// <summary>
+        /// 源账号的 ReadOnly 属性
+        /// </summary>
+        [JsonProperty("SrcReadOnly")]
+        public string SrcReadOnly{ get; set; }
 
         /// <summary>
         /// 目的账号的 ReadOnly 属性
@@ -75,9 +75,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SrcUserName", this.SrcUserName);
             this.SetParamSimple(map, prefix + "SrcHost", this.SrcHost);
-            this.SetParamSimple(map, prefix + "SrcReadOnly", this.SrcReadOnly);
             this.SetParamSimple(map, prefix + "DstUserName", this.DstUserName);
             this.SetParamSimple(map, prefix + "DstHost", this.DstHost);
+            this.SetParamSimple(map, prefix + "SrcReadOnly", this.SrcReadOnly);
             this.SetParamSimple(map, prefix + "DstReadOnly", this.DstReadOnly);
         }
     }

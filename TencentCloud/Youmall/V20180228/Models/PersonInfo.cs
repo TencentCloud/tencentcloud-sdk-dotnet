@@ -31,7 +31,7 @@ namespace TencentCloud.Youmall.V20180228.Models
         public ulong? PersonId{ get; set; }
 
         /// <summary>
-        /// 人脸图片，这里返回的是图片内容的Base64编码
+        /// 人脸图片Base64内容，已弃用，返回默认空值
         /// </summary>
         [JsonProperty("PersonPicture")]
         public string PersonPicture{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("PersonType")]
         public ulong? PersonType{ get; set; }
 
+        /// <summary>
+        /// 人脸图片Url，在有效期内可以访问下载
+        /// </summary>
+        [JsonProperty("PersonPictureUrl")]
+        public string PersonPictureUrl{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "Gender", this.Gender);
             this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamSimple(map, prefix + "PersonType", this.PersonType);
+            this.SetParamSimple(map, prefix + "PersonPictureUrl", this.PersonPictureUrl);
         }
     }
 }

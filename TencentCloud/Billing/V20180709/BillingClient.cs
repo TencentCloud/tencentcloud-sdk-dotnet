@@ -53,6 +53,26 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 获取云账户余额信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAccountBalanceRequest"/></param>
+        /// <returns>参考<see cref="DescribeAccountBalanceResponse"/>实例</returns>
+        public async Task<DescribeAccountBalanceResponse> DescribeAccountBalance(DescribeAccountBalanceRequest req)
+        {
+             JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询账单明细数据
         /// </summary>
         /// <param name="req">参考<see cref="DescribeBillDetailRequest"/></param>

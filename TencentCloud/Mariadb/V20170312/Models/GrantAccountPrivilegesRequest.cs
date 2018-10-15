@@ -49,6 +49,16 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string DbName{ get; set; }
 
         /// <summary>
+        /// 全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
+        /// 库权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER 
+        /// 表/视图权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE VIEW，SHOW VIEW，TRIGGER 
+        /// 存储过程/函数权限： ALTER ROUTINE，EXECUTE 
+        /// 字段权限： INSERT，REFERENCES，SELECT，UPDATE
+        /// </summary>
+        [JsonProperty("Privileges")]
+        public string[] Privileges{ get; set; }
+
+        /// <summary>
         /// 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数
         /// </summary>
         [JsonProperty("Type")]
@@ -66,16 +76,6 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("ColName")]
         public string ColName{ get; set; }
 
-        /// <summary>
-        /// 全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
-        /// 库权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER 
-        /// 表/视图权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE VIEW，SHOW VIEW，TRIGGER 
-        /// 存储过程/函数权限： ALTER ROUTINE，EXECUTE 
-        /// 字段权限： INSERT，REFERENCES，SELECT，UPDATE
-        /// </summary>
-        [JsonProperty("Privileges")]
-        public string[] Privileges{ get; set; }
-
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,10 +86,10 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Object", this.Object);
             this.SetParamSimple(map, prefix + "ColName", this.ColName);
-            this.SetParamArraySimple(map, prefix + "Privileges.", this.Privileges);
         }
     }
 }

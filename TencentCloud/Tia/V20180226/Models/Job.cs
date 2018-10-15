@@ -150,6 +150,18 @@ namespace TencentCloud.Tia.V20180226.Models
         [JsonProperty("Debug")]
         public bool? Debug{ get; set; }
 
+        /// <summary>
+        /// Runtime的额外配置信息
+        /// </summary>
+        [JsonProperty("RuntimeConf")]
+        public string[] RuntimeConf{ get; set; }
+
+        /// <summary>
+        /// 任务Id
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -177,6 +189,8 @@ namespace TencentCloud.Tia.V20180226.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "Debug", this.Debug);
+            this.SetParamArraySimple(map, prefix + "RuntimeConf.", this.RuntimeConf);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

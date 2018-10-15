@@ -54,6 +54,18 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
+        /// <summary>
+        /// 产品所属平台，默认值是0
+        /// </summary>
+        [JsonProperty("Platform")]
+        public string Platform{ get; set; }
+
+        /// <summary>
+        /// LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+        /// </summary>
+        [JsonProperty("Appeui")]
+        public string Appeui{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +77,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
+            this.SetParamSimple(map, prefix + "Appeui", this.Appeui);
         }
     }
 }

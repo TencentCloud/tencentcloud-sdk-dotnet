@@ -31,12 +31,6 @@ namespace TencentCloud.Tia.V20180226.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 指定集群的名称
-        /// </summary>
-        [JsonProperty("Cluster")]
-        public string Cluster{ get; set; }
-
-        /// <summary>
         /// 要部署模型的路径名
         /// </summary>
         [JsonProperty("Model")]
@@ -49,28 +43,40 @@ namespace TencentCloud.Tia.V20180226.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 指定集群的名称（集群模式下必填）
+        /// </summary>
+        [JsonProperty("Cluster")]
+        public string Cluster{ get; set; }
+
+        /// <summary>
         /// 运行环境镜像的标签
         /// </summary>
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
         /// <summary>
-        /// 要部署的模型副本数目
+        /// 要部署的模型副本数目（集群模式下选填）
         /// </summary>
         [JsonProperty("Replicas")]
         public ulong? Replicas{ get; set; }
 
         /// <summary>
-        /// 暴露外网或内网，默认暴露外网
+        /// 暴露外网或内网，默认暴露外网（集群模式下选填）
         /// </summary>
         [JsonProperty("Expose")]
         public string Expose{ get; set; }
 
         /// <summary>
-        /// 要部署模型的机器配置
+        /// 部署模式（无服务器函数模式/集群模式）
         /// </summary>
         [JsonProperty("ServType")]
         public string ServType{ get; set; }
+
+        /// <summary>
+        /// 部署模型的其他配置信息
+        /// </summary>
+        [JsonProperty("RuntimeConf")]
+        public string[] RuntimeConf{ get; set; }
 
 
         /// <summary>
@@ -79,13 +85,14 @@ namespace TencentCloud.Tia.V20180226.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
             this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
             this.SetParamSimple(map, prefix + "Expose", this.Expose);
             this.SetParamSimple(map, prefix + "ServType", this.ServType);
+            this.SetParamArraySimple(map, prefix + "RuntimeConf.", this.RuntimeConf);
         }
     }
 }

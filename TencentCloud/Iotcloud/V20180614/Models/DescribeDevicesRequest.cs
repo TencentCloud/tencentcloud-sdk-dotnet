@@ -37,7 +37,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页的大小，数值范围 10-250
+        /// 分页的大小，数值范围 10-100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

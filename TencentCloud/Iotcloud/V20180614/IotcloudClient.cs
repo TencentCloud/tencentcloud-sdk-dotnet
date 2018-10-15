@@ -333,26 +333,6 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（GetDeviceShadow）用于查询虚拟设备信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="GetDeviceShadowRequest"/></param>
-        /// <returns>参考<see cref="GetDeviceShadowResponse"/>实例</returns>
-        public async Task<GetDeviceShadowResponse> GetDeviceShadow(GetDeviceShadowRequest req)
-        {
-             JsonResponseModel<GetDeviceShadowResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetDeviceShadow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceShadowResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（PublishMessage）用于向某个主题发消息。
         /// </summary>
         /// <param name="req">参考<see cref="PublishMessageRequest"/></param>

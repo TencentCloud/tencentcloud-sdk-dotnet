@@ -127,13 +127,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// 是否包含安全组信息
+        /// 是否包含安全组信息，可取值：0-不包含，1-包含
         /// </summary>
         [JsonProperty("WithSecurityGroup")]
         public long? WithSecurityGroup{ get; set; }
 
         /// <summary>
-        /// 是否包含独享集群信息
+        /// 是否包含独享集群信息，可取值：0-不包含，1-包含
         /// </summary>
         [JsonProperty("WithExCluster")]
         public long? WithExCluster{ get; set; }
@@ -157,19 +157,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// 是否包含灾备实例
+        /// 是否包含灾备实例，可取值：0-不包含，1-包含
         /// </summary>
         [JsonProperty("WithDr")]
         public long? WithDr{ get; set; }
 
         /// <summary>
-        /// 是否包含只读实例
+        /// 是否包含只读实例，可取值：0-不包含，1-包含
         /// </summary>
         [JsonProperty("WithRo")]
         public long? WithRo{ get; set; }
 
         /// <summary>
-        /// 是否包含主实例
+        /// 是否包含主实例，可取值：0-不包含，1-包含
         /// </summary>
         [JsonProperty("WithMaster")]
         public long? WithMaster{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Tia.V20180226.Models
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
 
+        /// <summary>
+        /// 模型类型
+        /// </summary>
+        [JsonProperty("ServType")]
+        public string ServType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Tia.V20180226.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
+            this.SetParamSimple(map, prefix + "ServType", this.ServType);
         }
     }
 }

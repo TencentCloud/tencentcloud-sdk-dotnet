@@ -43,7 +43,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string ShieldMd5{ get; set; }
 
         /// <summary>
-        /// 加固后的APP下载地址
+        /// 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
         /// </summary>
         [JsonProperty("AppUrl")]
         public string AppUrl{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string ItemId{ get; set; }
 
         /// <summary>
-        /// 加固版本，basic基础版，professional专业版
+        /// 加固版本，basic基础版，professional专业版，enterprise企业版
         /// </summary>
         [JsonProperty("ServiceEdition")]
         public string ServiceEdition{ get; set; }

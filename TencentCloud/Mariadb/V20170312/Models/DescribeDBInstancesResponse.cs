@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 符合条件的实例数量
         /// </summary>
         [JsonProperty("TotalCount")]
-        public ulong?[] TotalCount{ get; set; }
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 实例详细信息列表
@@ -48,7 +48,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TotalCount.", this.TotalCount);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

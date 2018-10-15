@@ -40,7 +40,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 下载Log时用到的统一资源标识符
         /// </summary>
         [JsonProperty("Uri")]
-        public ulong? Uri{ get; set; }
+        public string Uri{ get; set; }
 
 
         /// <summary>

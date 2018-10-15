@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// 数量，最大值为100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

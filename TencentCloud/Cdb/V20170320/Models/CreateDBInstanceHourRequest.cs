@@ -103,7 +103,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
+        /// 参数列表，参数格式如ParamList.0.Name=auto_increment_increment&ParamList.0.Value=1。可通过[查询参数列表](/document/product/236/6369)查询支持设置的参数
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamInfo[] ParamList{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupZone{ get; set; }
 
         /// <summary>
-        /// 安全组参数
+        /// 安全组参数，可使用[查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850)接口查询某个项目的安全组详情
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoGroup RoGroup{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，值为0或1
+        /// 自动续费标记，值为0或1。购买按量计费实例该字段无意义
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

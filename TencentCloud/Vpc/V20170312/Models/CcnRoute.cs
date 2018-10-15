@@ -72,6 +72,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
+        /// <summary>
+        /// 关联实例所属UIN（根账号）
+        /// </summary>
+        [JsonProperty("InstanceUin")]
+        public string InstanceUin{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
         }
     }
 }

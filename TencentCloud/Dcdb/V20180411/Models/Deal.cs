@@ -54,6 +54,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 付费模式，0后付费/1预付费
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }
