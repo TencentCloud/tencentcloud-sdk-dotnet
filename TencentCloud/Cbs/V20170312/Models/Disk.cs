@@ -154,7 +154,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还<br><li>2：云硬盘已过期<br><li>3：云盘不支持退还<br><li>8：超过可退还数量的限制。
         /// </summary>
         [JsonProperty("ReturnFailCode")]
-        public ulong? ReturnFailCode{ get; set; }
+        public long? ReturnFailCode{ get; set; }
 
         /// <summary>
         /// 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
@@ -173,6 +173,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
+
+        /// <summary>
+        /// 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+        /// </summary>
+        [JsonProperty("DifferDaysOfDeadline")]
+        public long? DifferDaysOfDeadline{ get; set; }
 
 
         /// <summary>
@@ -205,6 +211,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamArraySimple(map, prefix + "AutoSnapshotPolicyIds.", this.AutoSnapshotPolicyIds);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+            this.SetParamSimple(map, prefix + "DifferDaysOfDeadline", this.DifferDaysOfDeadline);
         }
     }
 }

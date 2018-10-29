@@ -28,7 +28,7 @@ namespace TencentCloud.Iot.V20180123.Models
         /// 设备列表
         /// </summary>
         [JsonProperty("Devices")]
-        public Device[] Devices{ get; set; }
+        public DeviceEntry[] Devices{ get; set; }
 
         /// <summary>
         /// 设备总数
@@ -37,7 +37,7 @@ namespace TencentCloud.Iot.V20180123.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }

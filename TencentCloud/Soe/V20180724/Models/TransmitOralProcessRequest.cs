@@ -25,25 +25,25 @@ namespace TencentCloud.Soe.V20180724.Models
     {
         
         /// <summary>
-        /// 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，非流式模式下无意义
+        /// 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
         /// </summary>
         [JsonProperty("SeqId")]
         public long? SeqId{ get; set; }
 
         /// <summary>
-        /// 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义
+        /// 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
         /// </summary>
         [JsonProperty("IsEnd")]
         public long? IsEnd{ get; set; }
 
         /// <summary>
-        /// 语音文件类型 	1:raw, 2:wav, 3:mp3(mp3格式目前仅支持16k采样率16bit编码单声道)
+        /// 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
         /// </summary>
         [JsonProperty("VoiceFileType")]
         public long? VoiceFileType{ get; set; }
 
         /// <summary>
-        /// 语音编码类型	1:pcm
+        /// 语音编码类型	1:pcm。
         /// </summary>
         [JsonProperty("VoiceEncodeType")]
         public long? VoiceEncodeType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public string UserVoiceData{ get; set; }
 
         /// <summary>
-        /// 语音段唯一标识，一个完整语音一个SessionId
+        /// 语音段唯一标识，一个完整语音一个SessionId。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
@@ -65,6 +65,12 @@ namespace TencentCloud.Soe.V20180724.Models
         /// </summary>
         [JsonProperty("SoeAppId")]
         public string SoeAppId{ get; set; }
+
+        /// <summary>
+        /// 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度。当InitOralProcess接口调用时此项为1时，此项必填1才可生效。
+        /// </summary>
+        [JsonProperty("IsLongLifeSession")]
+        public long? IsLongLifeSession{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "UserVoiceData", this.UserVoiceData);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
+            this.SetParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
         }
     }
 }

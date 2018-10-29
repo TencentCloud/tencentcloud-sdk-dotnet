@@ -42,6 +42,12 @@ namespace TencentCloud.Iot.V20180123.Models
         [JsonProperty("Length")]
         public ulong? Length{ get; set; }
 
+        /// <summary>
+        /// 关键字查询
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Length", this.Length);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }

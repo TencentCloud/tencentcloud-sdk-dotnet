@@ -395,7 +395,7 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
-        /// 用于修改计算环境的期望节点数量
+        /// 用于修改计算环境属性
         /// </summary>
         /// <param name="req">参考<see cref="ModifyComputeEnvRequest"/></param>
         /// <returns>参考<see cref="ModifyComputeEnvResponse"/>实例</returns>

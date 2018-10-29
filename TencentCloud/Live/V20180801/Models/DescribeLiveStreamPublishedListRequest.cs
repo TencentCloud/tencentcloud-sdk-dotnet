@@ -33,7 +33,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 结束时间。
         /// UTC 格式，例如：2016-06-30T19:00:00Z。
-        /// EndTime 和 StartTime 之间的间隔不能超过 30 天。
+        /// 不超过当前时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -41,6 +41,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 起始时间。 
         /// UTC 格式，例如：2016-06-29T19:00:00Z。
+        /// 和当前时间相隔不超过7天。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

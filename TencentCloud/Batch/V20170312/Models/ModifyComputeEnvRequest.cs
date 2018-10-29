@@ -36,6 +36,24 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("DesiredComputeNodeCount")]
         public long? DesiredComputeNodeCount{ get; set; }
 
+        /// <summary>
+        /// 计算环境名称
+        /// </summary>
+        [JsonProperty("EnvName")]
+        public string EnvName{ get; set; }
+
+        /// <summary>
+        /// 计算环境描述
+        /// </summary>
+        [JsonProperty("EnvDescription")]
+        public string EnvDescription{ get; set; }
+
+        /// <summary>
+        /// 计算环境属性数据
+        /// </summary>
+        [JsonProperty("EnvData")]
+        public ComputeEnvData EnvData{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +62,9 @@ namespace TencentCloud.Batch.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+            this.SetParamSimple(map, prefix + "EnvName", this.EnvName);
+            this.SetParamSimple(map, prefix + "EnvDescription", this.EnvDescription);
+            this.SetParamObj(map, prefix + "EnvData.", this.EnvData);
         }
     }
 }

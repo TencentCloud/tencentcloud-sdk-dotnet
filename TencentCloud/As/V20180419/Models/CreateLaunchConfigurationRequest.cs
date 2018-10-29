@@ -90,6 +90,20 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+        /// <br><li>POSTPAID_BY_HOUR：按小时后付费
+        /// <br><li>SPOTPAID：竞价付费
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+        /// </summary>
+        [JsonProperty("InstanceMarketOptions")]
+        public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -107,6 +121,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         }
     }
 }

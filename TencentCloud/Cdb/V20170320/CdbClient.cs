@@ -134,6 +134,8 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// 本接口(CreateDBImportJob)用于创建云数据库数据导入任务。
+        /// 
+        /// 注意，用户进行数据导入任务的文件，必须提前上传到腾讯云。用户可在控制台进行文件导入，也可使用[上传导入文件](https://cloud.tencent.com/document/api/236/8595)进行文件导入。
         /// </summary>
         /// <param name="req">参考<see cref="CreateDBImportJobRequest"/></param>
         /// <returns>参考<see cref="CreateDBImportJobResponse"/>实例</returns>
@@ -507,10 +509,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、访问地址、实例状态等来筛选实例。
-        /// 
-        /// 1. 不指定任何过滤条件, 则默认返回20条实例记录，单次请求最多支持返回100条实例记录；
-        /// 2. 支持查询主实例、灾备实例和只读实例信息列表。
+        /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDBInstancesRequest"/></param>
         /// <returns>参考<see cref="DescribeDBInstancesResponse"/>实例</returns>
@@ -741,6 +740,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DescribeTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeUploadedFilesRequest"/></param>
+        /// <returns>参考<see cref="DescribeUploadedFilesResponse"/>实例</returns>
+        public async Task<DescribeUploadedFilesResponse> DescribeUploadedFiles(DescribeUploadedFilesRequest req)
+        {
+             JsonResponseModel<DescribeUploadedFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUploadedFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadedFilesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1041,6 +1060,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "OpenWanService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenWanServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
+        /// </summary>
+        /// <param name="req">参考<see cref="RenewDBInstanceRequest"/></param>
+        /// <returns>参考<see cref="RenewDBInstanceResponse"/>实例</returns>
+        public async Task<RenewDBInstanceResponse> RenewDBInstance(RenewDBInstanceRequest req)
+        {
+             JsonResponseModel<RenewDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

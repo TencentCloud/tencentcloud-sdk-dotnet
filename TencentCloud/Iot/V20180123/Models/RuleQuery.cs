@@ -31,16 +31,22 @@ namespace TencentCloud.Iot.V20180123.Models
         public string Field{ get; set; }
 
         /// <summary>
+        /// 过滤规则
+        /// </summary>
+        [JsonProperty("Condition")]
+        public string Condition{ get; set; }
+
+        /// <summary>
         /// Topic
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// 过滤规则
+        /// 产品Id
         /// </summary>
-        [JsonProperty("Condition")]
-        public string Condition{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
 
         /// <summary>
@@ -49,8 +55,9 @@ namespace TencentCloud.Iot.V20180123.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Field", this.Field);
-            this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "Condition", this.Condition);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

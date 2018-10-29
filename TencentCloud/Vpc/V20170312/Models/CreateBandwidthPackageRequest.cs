@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BandwidthPackageCount")]
         public ulong? BandwidthPackageCount{ get; set; }
 
+        /// <summary>
+        /// 带宽包限速大小。单位：Mbps，-1表示不限速。
+        /// </summary>
+        [JsonProperty("InternetMaxBandwidth")]
+        public long? InternetMaxBandwidth{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
             this.SetParamSimple(map, prefix + "BandwidthPackageCount", this.BandwidthPackageCount);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidth", this.InternetMaxBandwidth);
         }
     }
 }

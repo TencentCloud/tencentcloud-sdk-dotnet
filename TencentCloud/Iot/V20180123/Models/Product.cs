@@ -37,12 +37,6 @@ namespace TencentCloud.Iot.V20180123.Models
         public string ProductKey{ get; set; }
 
         /// <summary>
-        /// 产品直连密钥
-        /// </summary>
-        [JsonProperty("ProductSecret")]
-        public string ProductSecret{ get; set; }
-
-        /// <summary>
         /// AppId
         /// </summary>
         [JsonProperty("AppId")]
@@ -106,7 +100,55 @@ namespace TencentCloud.Iot.V20180123.Models
         /// 数据模版
         /// </summary>
         [JsonProperty("DataTemplate")]
-        public Object DataTemplate{ get; set; }
+        public DataTemplate[] DataTemplate{ get; set; }
+
+        /// <summary>
+        /// 数据协议（native/template）
+        /// </summary>
+        [JsonProperty("DataProtocol")]
+        public string DataProtocol{ get; set; }
+
+        /// <summary>
+        /// 直连用户名
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
+        /// 直连密码
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
+        /// <summary>
+        /// 通信方式
+        /// </summary>
+        [JsonProperty("CommProtocol")]
+        public string CommProtocol{ get; set; }
+
+        /// <summary>
+        /// qps
+        /// </summary>
+        [JsonProperty("Qps")]
+        public ulong? Qps{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 产品的设备类型
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// 关联的产品列表
+        /// </summary>
+        [JsonProperty("AssociatedProducts")]
+        public string[] AssociatedProducts{ get; set; }
 
 
         /// <summary>
@@ -116,7 +158,6 @@ namespace TencentCloud.Iot.V20180123.Models
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "ProductKey", this.ProductKey);
-            this.SetParamSimple(map, prefix + "ProductSecret", this.ProductSecret);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
@@ -127,7 +168,15 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamObj(map, prefix + "DataTemplate.", this.DataTemplate);
+            this.SetParamArrayObj(map, prefix + "DataTemplate.", this.DataTemplate);
+            this.SetParamSimple(map, prefix + "DataProtocol", this.DataProtocol);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "CommProtocol", this.CommProtocol);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamArraySimple(map, prefix + "AssociatedProducts.", this.AssociatedProducts);
         }
     }
 }

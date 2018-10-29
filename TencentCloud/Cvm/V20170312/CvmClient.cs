@@ -937,10 +937,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口 (ModifyInstancesAttribute) 用于修改实例的属性（目前只支持修改实例的名称）。
+        /// 本接口 (ModifyInstancesAttribute) 用于修改实例的属性（目前只支持修改实例的名称和关联的安全组）。
         /// 
         /// * “实例名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行实例管理操作的依据。
         /// * 支持批量操作。每次请求批量实例的上限为100。
+        /// * 修改关联安全组时，子机原来关联的安全组会被解绑。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyInstancesAttributeRequest"/></param>
         /// <returns>参考<see cref="ModifyInstancesAttributeResponse"/>实例</returns>

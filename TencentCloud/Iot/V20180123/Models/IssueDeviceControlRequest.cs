@@ -42,6 +42,12 @@ namespace TencentCloud.Iot.V20180123.Models
         [JsonProperty("ControlData")]
         public string ControlData{ get; set; }
 
+        /// <summary>
+        /// 是否发送metadata字段
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public bool? Metadata{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "ControlData", this.ControlData);
+            this.SetParamSimple(map, prefix + "Metadata", this.Metadata);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ResourceSet")]
         public Resource[] ResourceSet{ get; set; }
 
+        /// <summary>
+        /// 带宽包限速大小。单位：Mbps，-1表示不限速。
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public long? Bandwidth{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }
     }
 }

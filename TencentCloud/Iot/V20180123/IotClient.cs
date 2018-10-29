@@ -153,27 +153,7 @@ namespace TencentCloud.Iot.V20180123
         }
 
         /// <summary>
-        /// 注册用户
-        /// </summary>
-        /// <param name="req">参考<see cref="AddUserRequest"/></param>
-        /// <returns>参考<see cref="AddUserResponse"/>实例</returns>
-        public async Task<AddUserResponse> AddUser(AddUserRequest req)
-        {
-             JsonResponseModel<AddUserResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 注册应用用户
+        /// 为APP提供用户注册功能
         /// </summary>
         /// <param name="req">参考<see cref="AppAddUserRequest"/></param>
         /// <returns>参考<see cref="AppAddUserResponse"/>实例</returns>
@@ -184,6 +164,266 @@ namespace TencentCloud.Iot.V20180123
              {
                  var strResp = await this.InternalRequest(req, "AppAddUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppAddUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户解除与设备的关联关系，解除后APP用户无法控制设备，获取设备数据
+        /// </summary>
+        /// <param name="req">参考<see cref="AppDeleteDeviceRequest"/></param>
+        /// <returns>参考<see cref="AppDeleteDeviceResponse"/>实例</returns>
+        public async Task<AppDeleteDeviceResponse> AppDeleteDevice(AppDeleteDeviceRequest req)
+        {
+             JsonResponseModel<AppDeleteDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppDeleteDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppDeleteDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取绑定设备的基本信息与数据模板定义
+        /// </summary>
+        /// <param name="req">参考<see cref="AppGetDeviceRequest"/></param>
+        /// <returns>参考<see cref="AppGetDeviceResponse"/>实例</returns>
+        public async Task<AppGetDeviceResponse> AppGetDevice(AppGetDeviceRequest req)
+        {
+             JsonResponseModel<AppGetDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppGetDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppGetDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取绑定设备数据，用于实时展示设备的最新数据
+        /// </summary>
+        /// <param name="req">参考<see cref="AppGetDeviceDataRequest"/></param>
+        /// <returns>参考<see cref="AppGetDeviceDataResponse"/>实例</returns>
+        public async Task<AppGetDeviceDataResponse> AppGetDeviceData(AppGetDeviceDataRequest req)
+        {
+             JsonResponseModel<AppGetDeviceDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppGetDeviceData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppGetDeviceDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取绑定设备的上下线状态
+        /// </summary>
+        /// <param name="req">参考<see cref="AppGetDeviceStatusesRequest"/></param>
+        /// <returns>参考<see cref="AppGetDeviceStatusesResponse"/>实例</returns>
+        public async Task<AppGetDeviceStatusesResponse> AppGetDeviceStatuses(AppGetDeviceStatusesRequest req)
+        {
+             JsonResponseModel<AppGetDeviceStatusesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppGetDeviceStatuses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppGetDeviceStatusesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户的绑定设备列表
+        /// </summary>
+        /// <param name="req">参考<see cref="AppGetDevicesRequest"/></param>
+        /// <returns>参考<see cref="AppGetDevicesResponse"/>实例</returns>
+        public async Task<AppGetDevicesResponse> AppGetDevices(AppGetDevicesRequest req)
+        {
+             JsonResponseModel<AppGetDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppGetDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppGetDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户token
+        /// </summary>
+        /// <param name="req">参考<see cref="AppGetTokenRequest"/></param>
+        /// <returns>参考<see cref="AppGetTokenResponse"/>实例</returns>
+        public async Task<AppGetTokenResponse> AppGetToken(AppGetTokenRequest req)
+        {
+             JsonResponseModel<AppGetTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppGetToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppGetTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <param name="req">参考<see cref="AppGetUserRequest"/></param>
+        /// <returns>参考<see cref="AppGetUserResponse"/>实例</returns>
+        public async Task<AppGetUserResponse> AppGetUser(AppGetUserRequest req)
+        {
+             JsonResponseModel<AppGetUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppGetUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppGetUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过APP控制设备
+        /// </summary>
+        /// <param name="req">参考<see cref="AppIssueDeviceControlRequest"/></param>
+        /// <returns>参考<see cref="AppIssueDeviceControlResponse"/>实例</returns>
+        public async Task<AppIssueDeviceControlResponse> AppIssueDeviceControl(AppIssueDeviceControlRequest req)
+        {
+             JsonResponseModel<AppIssueDeviceControlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppIssueDeviceControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppIssueDeviceControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置APP用户密码
+        /// </summary>
+        /// <param name="req">参考<see cref="AppResetPasswordRequest"/></param>
+        /// <returns>参考<see cref="AppResetPasswordResponse"/>实例</returns>
+        public async Task<AppResetPasswordResponse> AppResetPassword(AppResetPasswordRequest req)
+        {
+             JsonResponseModel<AppResetPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppResetPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppResetPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户绑定设备，绑定后可以在APP端进行控制。绑定设备前需调用“获取设备绑定签名”接口
+        /// </summary>
+        /// <param name="req">参考<see cref="AppSecureAddDeviceRequest"/></param>
+        /// <returns>参考<see cref="AppSecureAddDeviceResponse"/>实例</returns>
+        public async Task<AppSecureAddDeviceResponse> AppSecureAddDevice(AppSecureAddDeviceRequest req)
+        {
+             JsonResponseModel<AppSecureAddDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppSecureAddDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppSecureAddDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改设备别名，便于用户个性化定义设备的名称
+        /// </summary>
+        /// <param name="req">参考<see cref="AppUpdateDeviceRequest"/></param>
+        /// <returns>参考<see cref="AppUpdateDeviceResponse"/>实例</returns>
+        public async Task<AppUpdateDeviceResponse> AppUpdateDevice(AppUpdateDeviceRequest req)
+        {
+             JsonResponseModel<AppUpdateDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppUpdateDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppUpdateDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户信息
+        /// </summary>
+        /// <param name="req">参考<see cref="AppUpdateUserRequest"/></param>
+        /// <returns>参考<see cref="AppUpdateUserResponse"/>实例</returns>
+        public async Task<AppUpdateUserResponse> AppUpdateUser(AppUpdateUserRequest req)
+        {
+             JsonResponseModel<AppUpdateUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AppUpdateUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AppUpdateUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关联子设备产品和网关产品
+        /// </summary>
+        /// <param name="req">参考<see cref="AssociateSubDeviceToGatewayProductRequest"/></param>
+        /// <returns>参考<see cref="AssociateSubDeviceToGatewayProductResponse"/>实例</returns>
+        public async Task<AssociateSubDeviceToGatewayProductResponse> AssociateSubDeviceToGatewayProduct(AssociateSubDeviceToGatewayProductRequest req)
+        {
+             JsonResponseModel<AssociateSubDeviceToGatewayProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateSubDeviceToGatewayProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateSubDeviceToGatewayProductResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,7 +533,7 @@ namespace TencentCloud.Iot.V20180123
         }
 
         /// <summary>
-        /// 批量获取设备某一段时间范围的设备上报数据。该接口只允许使用数据模板类型的产品通过REST API方式同步设备上报数据至用户的应用系统。
+        /// 批量获取设备某一段时间范围的设备上报数据。该接口适用于使用高级版类型的产品
         /// </summary>
         /// <param name="req">参考<see cref="GetDataHistoryRequest"/></param>
         /// <returns>参考<see cref="GetDataHistoryResponse"/>实例</returns>
@@ -304,6 +544,26 @@ namespace TencentCloud.Iot.V20180123
              {
                  var strResp = await this.InternalRequest(req, "GetDataHistory");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDataHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备的调试日志，用于定位问题
+        /// </summary>
+        /// <param name="req">参考<see cref="GetDebugLogRequest"/></param>
+        /// <returns>参考<see cref="GetDebugLogResponse"/>实例</returns>
+        public async Task<GetDebugLogResponse> GetDebugLog(GetDebugLogRequest req)
+        {
+             JsonResponseModel<GetDebugLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDebugLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDebugLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -353,7 +613,7 @@ namespace TencentCloud.Iot.V20180123
         }
 
         /// <summary>
-        /// 批量获取设备与云端的详细通信日志，该接口适用于使用数据模板类型的产品。
+        /// 批量获取设备与云端的详细通信日志，该接口适用于使用高级版类型的产品。
         /// </summary>
         /// <param name="req">参考<see cref="GetDeviceLogRequest"/></param>
         /// <returns>参考<see cref="GetDeviceLogResponse"/>实例</returns>
@@ -364,6 +624,46 @@ namespace TencentCloud.Iot.V20180123
              {
                  var strResp = await this.InternalRequest(req, "GetDeviceLog");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备绑定签名，用于用户绑定某个设备的应用场景
+        /// </summary>
+        /// <param name="req">参考<see cref="GetDeviceSignaturesRequest"/></param>
+        /// <returns>参考<see cref="GetDeviceSignaturesResponse"/>实例</returns>
+        public async Task<GetDeviceSignaturesResponse> GetDeviceSignatures(GetDeviceSignaturesRequest req)
+        {
+             JsonResponseModel<GetDeviceSignaturesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDeviceSignatures");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceSignaturesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某段时间范围内产品的在线、激活设备数
+        /// </summary>
+        /// <param name="req">参考<see cref="GetDeviceStatisticsRequest"/></param>
+        /// <returns>参考<see cref="GetDeviceStatisticsResponse"/>实例</returns>
+        public async Task<GetDeviceStatisticsResponse> GetDeviceStatistics(GetDeviceStatisticsRequest req)
+        {
+             JsonResponseModel<GetDeviceStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDeviceStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,27 +833,7 @@ namespace TencentCloud.Iot.V20180123
         }
 
         /// <summary>
-        /// 获取用户信息
-        /// </summary>
-        /// <param name="req">参考<see cref="GetUserRequest"/></param>
-        /// <returns>参考<see cref="GetUserResponse"/>实例</returns>
-        public async Task<GetUserResponse> GetUser(GetUserRequest req)
-        {
-             JsonResponseModel<GetUserResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 提供下发控制指令到指定设备的能力，该接口适用于使用数据模板类型的产品。
+        /// 提供下发控制指令到指定设备的能力，该接口适用于使用高级版类型的产品。
         /// </summary>
         /// <param name="req">参考<see cref="IssueDeviceControlRequest"/></param>
         /// <returns>参考<see cref="IssueDeviceControlResponse"/>实例</returns>
@@ -573,7 +853,7 @@ namespace TencentCloud.Iot.V20180123
         }
 
         /// <summary>
-        /// 提供向指定的Topic发布消息的能力，常用于向设备下发控制指令；该接口只适用于数据协议为“自定义”类型的产品，使用数据模板类型的产品需使用IssueDeviceControl接口
+        /// 提供向指定的Topic发布消息的能力，常用于向设备下发控制指令。该接口只适用于产品版本为“基础版”类型的产品，使用高级版的产品需使用“下发设备控制指令”接口
         /// </summary>
         /// <param name="req">参考<see cref="PublishMsgRequest"/></param>
         /// <returns>参考<see cref="PublishMsgResponse"/>实例</returns>
@@ -604,6 +884,26 @@ namespace TencentCloud.Iot.V20180123
              {
                  var strResp = await this.InternalRequest(req, "ResetDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消子设备产品与网关设备产品的关联
+        /// </summary>
+        /// <param name="req">参考<see cref="UnassociateSubDeviceFromGatewayProductRequest"/></param>
+        /// <returns>参考<see cref="UnassociateSubDeviceFromGatewayProductResponse"/>实例</returns>
+        public async Task<UnassociateSubDeviceFromGatewayProductResponse> UnassociateSubDeviceFromGatewayProduct(UnassociateSubDeviceFromGatewayProductRequest req)
+        {
+             JsonResponseModel<UnassociateSubDeviceFromGatewayProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnassociateSubDeviceFromGatewayProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnassociateSubDeviceFromGatewayProductResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

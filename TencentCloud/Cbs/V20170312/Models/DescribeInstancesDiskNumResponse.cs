@@ -25,19 +25,13 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 当前云服务器已挂载弹性云盘数量。
+        /// 各个云服务器已挂载和可挂载弹性云盘的数量。
         /// </summary>
-        [JsonProperty("AttachedDiskCount")]
-        public ulong? AttachedDiskCount{ get; set; }
+        [JsonProperty("AttachDetail")]
+        public AttachDetail[] AttachDetail{ get; set; }
 
         /// <summary>
-        /// 当前云服务器最大可挂载弹性云盘数量。
-        /// </summary>
-        [JsonProperty("MaxAttachCount")]
-        public ulong? MaxAttachCount{ get; set; }
-
-        /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -48,8 +42,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AttachedDiskCount", this.AttachedDiskCount);
-            this.SetParamSimple(map, prefix + "MaxAttachCount", this.MaxAttachCount);
+            this.SetParamArrayObj(map, prefix + "AttachDetail.", this.AttachDetail);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

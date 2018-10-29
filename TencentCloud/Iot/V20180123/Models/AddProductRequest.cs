@@ -37,22 +37,34 @@ namespace TencentCloud.Iot.V20180123.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 鉴权模式（1：动态令牌，推荐使用动态令牌）
+        /// 数据模版
+        /// </summary>
+        [JsonProperty("DataTemplate")]
+        public DataTemplate[] DataTemplate{ get; set; }
+
+        /// <summary>
+        /// 产品版本（native表示基础版，template表示高级版，默认值为template）
+        /// </summary>
+        [JsonProperty("DataProtocol")]
+        public string DataProtocol{ get; set; }
+
+        /// <summary>
+        /// 设备认证方式（1：动态令牌，2：签名直连鉴权）
         /// </summary>
         [JsonProperty("AuthType")]
         public ulong? AuthType{ get; set; }
 
         /// <summary>
-        /// 数据模版（json数组）
+        /// 通信方式（other/wifi/cellular/nb-iot）
         /// </summary>
-        [JsonProperty("DataTemplate")]
-        public string[] DataTemplate{ get; set; }
+        [JsonProperty("CommProtocol")]
+        public string CommProtocol{ get; set; }
 
         /// <summary>
-        /// 数据协议（native表示自定义，template表示数据模板，默认值为template）
+        /// 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
         /// </summary>
-        [JsonProperty("DataProtocol")]
-        public string DataProtocol{ get; set; }
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
 
 
         /// <summary>
@@ -62,9 +74,11 @@ namespace TencentCloud.Iot.V20180123.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
-            this.SetParamArraySimple(map, prefix + "DataTemplate.", this.DataTemplate);
+            this.SetParamArrayObj(map, prefix + "DataTemplate.", this.DataTemplate);
             this.SetParamSimple(map, prefix + "DataProtocol", this.DataProtocol);
+            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
+            this.SetParamSimple(map, prefix + "CommProtocol", this.CommProtocol);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
         }
     }
 }

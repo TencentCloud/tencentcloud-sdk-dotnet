@@ -43,12 +43,6 @@ namespace TencentCloud.Iot.V20180123.Models
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 绑定设备列表
-        /// </summary>
-        [JsonProperty("Devices")]
-        public Object[] Devices{ get; set; }
-
-        /// <summary>
         /// 创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -69,7 +63,6 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
-            this.SetParamArrayObj(map, prefix + "Devices.", this.Devices);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

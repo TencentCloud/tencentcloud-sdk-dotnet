@@ -31,7 +31,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 被评估语音对应的文本
+        /// 被评估语音对应的文本，不支持ascii大于128以上的字符，会统一替换成空格。
         /// </summary>
         [JsonProperty("RefText")]
         public string RefText{ get; set; }
@@ -54,6 +54,18 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("ScoreCoeff")]
         public float? ScoreCoeff{ get; set; }
 
+        /// <summary>
+        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+        /// </summary>
+        [JsonProperty("SoeAppId")]
+        public string SoeAppId{ get; set; }
+
+        /// <summary>
+        /// 长效session标识，当该参数为1时，session的持续时间为300s，但会一定程度上影响第一个数据包的返回速度，且TransmitOralProcess必须同时为1才可生效。
+        /// </summary>
+        [JsonProperty("IsLongLifeSession")]
+        public long? IsLongLifeSession{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +77,8 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "WorkMode", this.WorkMode);
             this.SetParamSimple(map, prefix + "EvalMode", this.EvalMode);
             this.SetParamSimple(map, prefix + "ScoreCoeff", this.ScoreCoeff);
+            this.SetParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
+            this.SetParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
         }
     }
 }

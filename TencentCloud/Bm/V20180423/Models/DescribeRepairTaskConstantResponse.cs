@@ -27,11 +27,11 @@ namespace TencentCloud.Bm.V20180423.Models
         /// <summary>
         /// 故障类型ID与对应中文名列表
         /// </summary>
-        [JsonProperty("TaskTypeList")]
-        public TaskType[] TaskTypeList{ get; set; }
+        [JsonProperty("TaskTypeSet")]
+        public TaskType[] TaskTypeSet{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -42,7 +42,7 @@ namespace TencentCloud.Bm.V20180423.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TaskTypeList.", this.TaskTypeList);
+            this.SetParamArrayObj(map, prefix + "TaskTypeSet.", this.TaskTypeSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

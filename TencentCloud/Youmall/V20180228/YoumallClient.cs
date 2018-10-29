@@ -73,7 +73,7 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
-        /// 上传人脸图片
+        /// 通过上传指定规格的人脸图片，创建黑名单用户或者白名单用户。
         /// </summary>
         /// <param name="req">参考<see cref="CreateFacePictureRequest"/></param>
         /// <returns>参考<see cref="CreateFacePictureResponse"/>实例</returns>
@@ -104,6 +104,46 @@ namespace TencentCloud.Youmall.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeCameraPerson");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCameraPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。停留时间为多次进出场的停留时间之和。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClusterPersonArrivedMallRequest"/></param>
+        /// <returns>参考<see cref="DescribeClusterPersonArrivedMallResponse"/>实例</returns>
+        public async Task<DescribeClusterPersonArrivedMallResponse> DescribeClusterPersonArrivedMall(DescribeClusterPersonArrivedMallRequest req)
+        {
+             JsonResponseModel<DescribeClusterPersonArrivedMallResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterPersonArrivedMall");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPersonArrivedMallResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClusterPersonTraceRequest"/></param>
+        /// <returns>参考<see cref="DescribeClusterPersonTraceResponse"/>实例</returns>
+        public async Task<DescribeClusterPersonTraceResponse> DescribeClusterPersonTrace(DescribeClusterPersonTraceRequest req)
+        {
+             JsonResponseModel<DescribeClusterPersonTraceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterPersonTrace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterPersonTraceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -173,6 +213,47 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
+        /// 查询指定某一卖场的用户信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePersonRequest"/></param>
+        /// <returns>参考<see cref="DescribePersonResponse"/>实例</returns>
+        public async Task<DescribePersonResponse> DescribePerson(DescribePersonRequest req)
+        {
+             JsonResponseModel<DescribePersonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 输出开始时间到结束时间段内的进出场数据。不做按天聚合的情况下，每次进出场，产生一条进出场数据。
+        /// 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePersonArrivedMallRequest"/></param>
+        /// <returns>参考<see cref="DescribePersonArrivedMallResponse"/>实例</returns>
+        public async Task<DescribePersonArrivedMallResponse> DescribePersonArrivedMall(DescribePersonArrivedMallRequest req)
+        {
+             JsonResponseModel<DescribePersonArrivedMallResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePersonArrivedMall");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonArrivedMallResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
         /// </summary>
         /// <param name="req">参考<see cref="DescribePersonInfoRequest"/></param>
@@ -184,6 +265,46 @@ namespace TencentCloud.Youmall.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribePersonInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 输出开始时间到结束时间段内的进出场数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePersonTraceRequest"/></param>
+        /// <returns>参考<see cref="DescribePersonTraceResponse"/>实例</returns>
+        public async Task<DescribePersonTraceResponse> DescribePersonTrace(DescribePersonTraceRequest req)
+        {
+             JsonResponseModel<DescribePersonTraceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePersonTrace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonTraceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询客户单次到场轨迹明细
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePersonTraceDetailRequest"/></param>
+        /// <returns>参考<see cref="DescribePersonTraceDetailResponse"/>实例</returns>
+        public async Task<DescribePersonTraceDetailResponse> DescribePersonTraceDetail(DescribePersonTraceDetailRequest req)
+        {
+             JsonResponseModel<DescribePersonTraceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePersonTraceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonTraceDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -36,6 +36,25 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
+        /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 返回数量。默认取值100，最大取值1000。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 过滤条件，详情如下：
+        /// <li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +63,9 @@ namespace TencentCloud.Batch.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

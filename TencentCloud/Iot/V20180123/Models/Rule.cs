@@ -58,7 +58,7 @@ namespace TencentCloud.Iot.V20180123.Models
         /// 转发
         /// </summary>
         [JsonProperty("Actions")]
-        public Object[] Actions{ get; set; }
+        public Action[] Actions{ get; set; }
 
         /// <summary>
         /// 已启动
@@ -84,6 +84,18 @@ namespace TencentCloud.Iot.V20180123.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 消息顺序
+        /// </summary>
+        [JsonProperty("MsgOrder")]
+        public ulong? MsgOrder{ get; set; }
+
+        /// <summary>
+        /// 数据类型（0：文本，1：二进制）
+        /// </summary>
+        [JsonProperty("DataType")]
+        public ulong? DataType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,6 +112,8 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "Deleted", this.Deleted);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "MsgOrder", this.MsgOrder);
+            this.SetParamSimple(map, prefix + "DataType", this.DataType);
         }
     }
 }

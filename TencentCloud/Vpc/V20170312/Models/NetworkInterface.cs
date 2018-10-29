@@ -73,7 +73,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string MacAddress{ get; set; }
 
         /// <summary>
-        /// 取值范围：PENDING|AVAILABLE|ATTACHING|DETACHING|DELETING。
+        /// 弹性网卡状态：
+        /// <li>`PENDING`：创建中</li>
+        /// <li>`AVAILABLE`：可用的</li>
+        /// <li>`ATTACHING`：绑定中</li>
+        /// <li>`DETACHING`：解绑中</li>
+        /// <li>`DELETING`：删除中</li>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

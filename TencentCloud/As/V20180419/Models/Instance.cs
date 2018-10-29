@@ -76,7 +76,7 @@ namespace TencentCloud.As.V20180419.Models
         /// 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
         /// </summary>
         [JsonProperty("CreationType")]
-        public string[] CreationType{ get; set; }
+        public string CreationType{ get; set; }
 
         /// <summary>
         /// 实例加入时间
@@ -98,7 +98,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
             this.SetParamSimple(map, prefix + "ProtectedFromScaleIn", this.ProtectedFromScaleIn);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamArraySimple(map, prefix + "CreationType.", this.CreationType);
+            this.SetParamSimple(map, prefix + "CreationType", this.CreationType);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
         }
     }

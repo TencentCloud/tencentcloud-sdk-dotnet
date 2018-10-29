@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// u8ba1u7b97u73afu5883ID
+        /// 计算环境ID
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }

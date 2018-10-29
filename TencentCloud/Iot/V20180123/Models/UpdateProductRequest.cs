@@ -43,10 +43,10 @@ namespace TencentCloud.Iot.V20180123.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 数据模版（json）
+        /// 数据模版
         /// </summary>
         [JsonProperty("DataTemplate")]
-        public string DataTemplate{ get; set; }
+        public DataTemplate[] DataTemplate{ get; set; }
 
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "DataTemplate", this.DataTemplate);
+            this.SetParamArrayObj(map, prefix + "DataTemplate.", this.DataTemplate);
         }
     }
 }

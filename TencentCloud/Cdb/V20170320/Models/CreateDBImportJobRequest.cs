@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 文件名称。
+        /// 文件名称。该文件是指用户已上传到腾讯云的文件。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }

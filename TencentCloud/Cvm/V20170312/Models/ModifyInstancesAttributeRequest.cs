@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 指定实例的安全组Id列表。
+        /// 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
         /// </summary>
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }

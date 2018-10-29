@@ -28,16 +28,22 @@ namespace TencentCloud.Iot.V20180123.Models
         /// 设备日志
         /// </summary>
         [JsonProperty("DeviceLog")]
-        public Object[] DeviceLog{ get; set; }
+        public DeviceLogEntry[] DeviceLog{ get; set; }
 
         /// <summary>
         /// 查询游标
         /// </summary>
         [JsonProperty("ScrollId")]
-        public string[] ScrollId{ get; set; }
+        public string ScrollId{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 游标超时
+        /// </summary>
+        [JsonProperty("ScrollTimeout")]
+        public ulong? ScrollTimeout{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -49,7 +55,8 @@ namespace TencentCloud.Iot.V20180123.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "DeviceLog.", this.DeviceLog);
-            this.SetParamArraySimple(map, prefix + "ScrollId.", this.ScrollId);
+            this.SetParamSimple(map, prefix + "ScrollId", this.ScrollId);
+            this.SetParamSimple(map, prefix + "ScrollTimeout", this.ScrollTimeout);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

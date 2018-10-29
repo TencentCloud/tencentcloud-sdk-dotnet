@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 外网状态
+        /// 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
         /// </summary>
         [JsonProperty("WanStatus")]
         public long? WanStatus{ get; set; }
@@ -37,31 +37,31 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 初始化标志
+        /// 初始化标志，可能的返回值为：0-未初始化；1-已初始化
         /// </summary>
         [JsonProperty("InitFlag")]
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// 只读vip信息
+        /// 只读vip信息。单独开通只读实例访问的只读实例才有该字段
         /// </summary>
         [JsonProperty("RoVipInfo")]
         public RoVipInfo RoVipInfo{ get; set; }
 
         /// <summary>
-        /// 内存容量
+        /// 内存容量，单位为MB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 私有网络ID
+        /// 私有网络ID，例如：51102
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 硬盘容量
+        /// 硬盘容量，单位为GB
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// 自动续费标志
+        /// 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
@@ -97,19 +97,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// 只读组信息
+        /// 只读组详细信息
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// 子网ID，例如：2333
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// 实例到期时间
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
@@ -145,13 +145,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// 主实例信息
+        /// 主实例详细信息
         /// </summary>
         [JsonProperty("MasterInfo")]
         public MasterInfo MasterInfo{ get; set; }
 
         /// <summary>
-        /// 实例售卖机型
+        /// 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -169,7 +169,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 灾备实例信息
+        /// 灾备实例详细信息
         /// </summary>
         [JsonProperty("DrInfo")]
         public DrInfo[] DrInfo{ get; set; }
@@ -187,13 +187,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// 付费类型
+        /// 付费类型，可能的返回值：0-包年包月；1-按量计费
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 实例创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -211,19 +211,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// 是否锁定标记
         /// </summary>
         [JsonProperty("CdbError")]
         public long? CdbError{ get; set; }
 
         /// <summary>
-        /// 私有网络描述符
+        /// 私有网络描述符，例如：“vpc-5v8wn9mg”
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 子网描述符
+        /// 子网描述符，例如：“subnet-1typ0s7d”
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }

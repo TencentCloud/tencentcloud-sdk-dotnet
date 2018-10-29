@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong?[] Status{ get; set; }
 
         /// <summary>
-        /// 记录偏移量，默认值为0
+        /// 偏移量，默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -115,25 +115,25 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long?[] CdbErrors{ get; set; }
 
         /// <summary>
-        /// 排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+        /// 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，目前支持："ASC"或者"DESC"
+        /// 返回结果集排序方式，目前支持："ASC"或者"DESC"
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// 是否包含安全组信息，可取值：0-不包含，1-包含
+        /// 是否包含安全组详细信息，可取值：0-不包含，1-包含
         /// </summary>
         [JsonProperty("WithSecurityGroup")]
         public long? WithSecurityGroup{ get; set; }
 
         /// <summary>
-        /// 是否包含独享集群信息，可取值：0-不包含，1-包含
+        /// 是否包含独享集群详细信息，可取值：0-不包含，1-包含
         /// </summary>
         [JsonProperty("WithExCluster")]
         public long? WithExCluster{ get; set; }

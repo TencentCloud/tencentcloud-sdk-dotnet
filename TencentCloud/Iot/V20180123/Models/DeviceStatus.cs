@@ -36,6 +36,24 @@ namespace TencentCloud.Iot.V20180123.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 首次上线时间
+        /// </summary>
+        [JsonProperty("FirstOnline")]
+        public string FirstOnline{ get; set; }
+
+        /// <summary>
+        /// 最后上线时间
+        /// </summary>
+        [JsonProperty("LastOnline")]
+        public string LastOnline{ get; set; }
+
+        /// <summary>
+        /// 上线次数
+        /// </summary>
+        [JsonProperty("OnlineTimes")]
+        public ulong? OnlineTimes{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +62,9 @@ namespace TencentCloud.Iot.V20180123.Models
         {
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "FirstOnline", this.FirstOnline);
+            this.SetParamSimple(map, prefix + "LastOnline", this.LastOnline);
+            this.SetParamSimple(map, prefix + "OnlineTimes", this.OnlineTimes);
         }
     }
 }

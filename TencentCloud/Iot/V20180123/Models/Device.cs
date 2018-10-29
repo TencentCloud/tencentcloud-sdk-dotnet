@@ -55,10 +55,10 @@ namespace TencentCloud.Iot.V20180123.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 设备信息
+        /// 设备信息（json）
         /// </summary>
         [JsonProperty("DeviceInfo")]
-        public Object DeviceInfo{ get; set; }
+        public string DeviceInfo{ get; set; }
 
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "DeviceSecret", this.DeviceSecret);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamObj(map, prefix + "DeviceInfo.", this.DeviceInfo);
+            this.SetParamSimple(map, prefix + "DeviceInfo", this.DeviceInfo);
         }
     }
 }

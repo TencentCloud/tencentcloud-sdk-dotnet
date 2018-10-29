@@ -53,6 +53,86 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 为预授权规则绑定标签
+        /// </summary>
+        /// <param name="req">参考<see cref="BindPsaTagRequest"/></param>
+        /// <returns>参考<see cref="BindPsaTagResponse"/>实例</returns>
+        public async Task<BindPsaTagResponse> BindPsaTag(BindPsaTagRequest req)
+        {
+             JsonResponseModel<BindPsaTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindPsaTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindPsaTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建预授权规则
+        /// </summary>
+        /// <param name="req">参考<see cref="CreatePsaRegulationRequest"/></param>
+        /// <returns>参考<see cref="CreatePsaRegulationResponse"/>实例</returns>
+        public async Task<CreatePsaRegulationResponse> CreatePsaRegulation(CreatePsaRegulationRequest req)
+        {
+             JsonResponseModel<CreatePsaRegulationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePsaRegulation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePsaRegulationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除预授权规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DeletePsaRegulationRequest"/></param>
+        /// <returns>参考<see cref="DeletePsaRegulationResponse"/>实例</returns>
+        public async Task<DeletePsaRegulationResponse> DeletePsaRegulation(DeletePsaRegulationRequest req)
+        {
+             JsonResponseModel<DeletePsaRegulationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePsaRegulation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePsaRegulationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取预授权规则列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePsaRegulationsRequest"/></param>
+        /// <returns>参考<see cref="DescribePsaRegulationsResponse"/>实例</returns>
+        public async Task<DescribePsaRegulationsResponse> DescribePsaRegulations(DescribePsaRegulationsRequest req)
+        {
+             JsonResponseModel<DescribePsaRegulationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePsaRegulations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePsaRegulationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 维修任务配置获取
         /// </summary>
         /// <param name="req">参考<see cref="DescribeRepairTaskConstantRequest"/></param>
@@ -121,6 +201,26 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 允许修改规则信息及关联故障类型
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyPsaRegulationRequest"/></param>
+        /// <returns>参考<see cref="ModifyPsaRegulationResponse"/>实例</returns>
+        public async Task<ModifyPsaRegulationResponse> ModifyPsaRegulation(ModifyPsaRegulationRequest req)
+        {
+             JsonResponseModel<ModifyPsaRegulationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPsaRegulation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPsaRegulationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于操作维修任务<br>
         /// 入参TaskId为维修任务ID<br>
         /// 入参Operate表示对维修任务的操作，支持如下取值：<br>
@@ -152,6 +252,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "RepairTaskControl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RepairTaskControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解除标签与预授权规则的绑定
+        /// </summary>
+        /// <param name="req">参考<see cref="UnbindPsaTagRequest"/></param>
+        /// <returns>参考<see cref="UnbindPsaTagResponse"/>实例</returns>
+        public async Task<UnbindPsaTagResponse> UnbindPsaTag(UnbindPsaTagRequest req)
+        {
+             JsonResponseModel<UnbindPsaTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindPsaTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindPsaTagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

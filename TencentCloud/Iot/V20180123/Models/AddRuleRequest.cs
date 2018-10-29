@@ -43,10 +43,16 @@ namespace TencentCloud.Iot.V20180123.Models
         public RuleQuery Query{ get; set; }
 
         /// <summary>
-        /// 转发
+        /// 转发动作列表
         /// </summary>
         [JsonProperty("Actions")]
-        public Object[] Actions{ get; set; }
+        public Action[] Actions{ get; set; }
+
+        /// <summary>
+        /// 数据类型（0：文本，1：二进制）
+        /// </summary>
+        [JsonProperty("DataType")]
+        public ulong? DataType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "Query.", this.Query);
             this.SetParamArrayObj(map, prefix + "Actions.", this.Actions);
+            this.SetParamSimple(map, prefix + "DataType", this.DataType);
         }
     }
 }
