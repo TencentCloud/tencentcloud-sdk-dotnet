@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.3</VersionPrefix>
+    <VersionPrefix>3.0.4</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -231,8 +231,14 @@
     <Compile Include="Bm\V20180423\Models\BindPsaTagResponse.cs" />
     <Compile Include="Bm\V20180423\Models\CreatePsaRegulationRequest.cs" />
     <Compile Include="Bm\V20180423\Models\CreatePsaRegulationResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\CreateSpotDeviceRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\CreateSpotDeviceResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\CreateUserCmdRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\CreateUserCmdResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DeletePsaRegulationRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DeletePsaRegulationResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDevicesResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribePsaRegulationsRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribePsaRegulationsResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeRepairTaskConstantRequest.cs" />
@@ -241,6 +247,7 @@
     <Compile Include="Bm\V20180423\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeTaskOperationLogRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeTaskOperationLogResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DeviceInfo.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPsaRegulationRequest.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPsaRegulationResponse.cs" />
     <Compile Include="Bm\V20180423\Models\PsaRegulation.cs" />

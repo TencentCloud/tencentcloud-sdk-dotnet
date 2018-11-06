@@ -93,6 +93,46 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 创建黑石竞价实例
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateSpotDeviceRequest"/></param>
+        /// <returns>参考<see cref="CreateSpotDeviceResponse"/>实例</returns>
+        public async Task<CreateSpotDeviceResponse> CreateSpotDevice(CreateSpotDeviceRequest req)
+        {
+             JsonResponseModel<CreateSpotDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSpotDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSpotDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义脚本
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateUserCmdRequest"/></param>
+        /// <returns>参考<see cref="CreateUserCmdResponse"/>实例</returns>
+        public async Task<CreateUserCmdResponse> CreateUserCmd(CreateUserCmdRequest req)
+        {
+             JsonResponseModel<CreateUserCmdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUserCmd");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserCmdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除预授权规则
         /// </summary>
         /// <param name="req">参考<see cref="DeletePsaRegulationRequest"/></param>
@@ -104,6 +144,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "DeletePsaRegulation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePsaRegulationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询物理服务器，可以按照实例，业务IP等过滤
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDevicesRequest"/></param>
+        /// <returns>参考<see cref="DescribeDevicesResponse"/>实例</returns>
+        public async Task<DescribeDevicesResponse> DescribeDevices(DescribeDevicesRequest req)
+        {
+             JsonResponseModel<DescribeDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
