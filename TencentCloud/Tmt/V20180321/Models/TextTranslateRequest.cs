@@ -25,7 +25,7 @@ namespace TencentCloud.Tmt.V20180321.Models
     {
         
         /// <summary>
-        /// 待翻译的文本
+        /// 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
         /// </summary>
         [JsonProperty("SourceText")]
         public string SourceText{ get; set; }

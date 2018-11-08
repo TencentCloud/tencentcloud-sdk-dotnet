@@ -25,7 +25,11 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件
+        /// 过滤条件。
+        /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+        /// <li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
+        /// <li> instance-type - String - 是否必填：否 - （过滤条件）按照机型过滤。</li>
+        /// <li> instance-charge-type - String - 是否必填：否 -（过滤条件）按照实例计费模式过滤。 ( POSTPAID_BY_HOUR：表示后付费，即按量计费机型 | SPOTPAID：表示竞价付费机型。 )  </li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

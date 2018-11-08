@@ -25,43 +25,49 @@ namespace TencentCloud.Yunjing.V20180228.Models
     {
         
         /// <summary>
-        /// 服务器在线数
+        /// 服务器在线数。
         /// </summary>
         [JsonProperty("OnlineMachineNum")]
         public ulong? OnlineMachineNum{ get; set; }
 
         /// <summary>
-        /// 专业服务器数
+        /// 专业服务器数。
         /// </summary>
         [JsonProperty("ProVersionMachineNum")]
         public ulong? ProVersionMachineNum{ get; set; }
 
         /// <summary>
-        /// 木马文件数
+        /// 木马文件数。
         /// </summary>
         [JsonProperty("MalwareNum")]
         public ulong? MalwareNum{ get; set; }
 
         /// <summary>
-        /// 异地登录数
+        /// 异地登录数。
         /// </summary>
         [JsonProperty("NonlocalLoginNum")]
         public ulong? NonlocalLoginNum{ get; set; }
 
         /// <summary>
-        /// 暴力破解成功数
+        /// 暴力破解成功数。
         /// </summary>
         [JsonProperty("BruteAttackSuccessNum")]
         public ulong? BruteAttackSuccessNum{ get; set; }
 
         /// <summary>
-        /// 漏洞数
+        /// 漏洞数。
         /// </summary>
         [JsonProperty("VulNum")]
         public ulong? VulNum{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 安全基线数。
+        /// </summary>
+        [JsonProperty("BaseLineNum")]
+        public ulong? BaseLineNum{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -78,6 +84,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "NonlocalLoginNum", this.NonlocalLoginNum);
             this.SetParamSimple(map, prefix + "BruteAttackSuccessNum", this.BruteAttackSuccessNum);
             this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
+            this.SetParamSimple(map, prefix + "BaseLineNum", this.BaseLineNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -73,6 +73,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (CreateProcessTask) 用于创建实时拉取进程任务。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateProcessTaskRequest"/></param>
+        /// <returns>参考<see cref="CreateProcessTaskResponse"/>实例</returns>
+        public async Task<CreateProcessTaskResponse> CreateProcessTask(CreateProcessTaskRequest req)
+        {
+             JsonResponseModel<CreateProcessTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProcessTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProcessTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（CreateUsualLoginPlaces）用于添加常用登录地。
         /// </summary>
         /// <param name="req">参考<see cref="CreateUsualLoginPlacesRequest"/></param>
@@ -193,6 +213,46 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAccountStatisticsRequest"/></param>
+        /// <returns>参考<see cref="DescribeAccountStatisticsResponse"/>实例</returns>
+        public async Task<DescribeAccountStatisticsResponse> DescribeAccountStatistics(DescribeAccountStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeAccountStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeAccounts) 用于获取帐号列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAccountsRequest"/></param>
+        /// <returns>参考<see cref="DescribeAccountsResponse"/>实例</returns>
+        public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest req)
+        {
+             JsonResponseModel<DescribeAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeAgentVuls) 用于获取主机的漏洞列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAgentVulsRequest"/></param>
@@ -244,6 +304,86 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeBruteAttacks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBruteAttacksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeComponentInfo) 用于获取组件信息数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeComponentInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeComponentInfoResponse"/>实例</returns>
+        public async Task<DescribeComponentInfoResponse> DescribeComponentInfo(DescribeComponentInfoRequest req)
+        {
+             JsonResponseModel<DescribeComponentInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeComponentInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComponentInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeComponentStatisticsRequest"/></param>
+        /// <returns>参考<see cref="DescribeComponentStatisticsResponse"/>实例</returns>
+        public async Task<DescribeComponentStatisticsResponse> DescribeComponentStatistics(DescribeComponentStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeComponentStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeComponentStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComponentStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeComponents) 用于获取组件列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeComponentsRequest"/></param>
+        /// <returns>参考<see cref="DescribeComponentsResponse"/>实例</returns>
+        public async Task<DescribeComponentsResponse> DescribeComponents(DescribeComponentsRequest req)
+        {
+             JsonResponseModel<DescribeComponentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeComponents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComponentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeHistoryAccountsRequest"/></param>
+        /// <returns>参考<see cref="DescribeHistoryAccountsResponse"/>实例</returns>
+        public async Task<DescribeHistoryAccountsResponse> DescribeHistoryAccounts(DescribeHistoryAccountsRequest req)
+        {
+             JsonResponseModel<DescribeHistoryAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHistoryAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryAccountsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -353,6 +493,46 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeOpenPortStatisticsRequest"/></param>
+        /// <returns>参考<see cref="DescribeOpenPortStatisticsResponse"/>实例</returns>
+        public async Task<DescribeOpenPortStatisticsResponse> DescribeOpenPortStatistics(DescribeOpenPortStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeOpenPortStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOpenPortStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOpenPortStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeOpenPorts) 用于获取端口列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeOpenPortsRequest"/></param>
+        /// <returns>参考<see cref="DescribeOpenPortsResponse"/>实例</returns>
+        public async Task<DescribeOpenPortsResponse> DescribeOpenPorts(DescribeOpenPortsRequest req)
+        {
+             JsonResponseModel<DescribeOpenPortsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOpenPorts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOpenPortsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于（DescribeOverviewStatistics）获取概览统计数据。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeOverviewStatisticsRequest"/></param>
@@ -384,6 +564,106 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeProVersionInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProVersionInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeProcessStatistics) 用于获取进程统计列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProcessStatisticsRequest"/></param>
+        /// <returns>参考<see cref="DescribeProcessStatisticsResponse"/>实例</returns>
+        public async Task<DescribeProcessStatisticsResponse> DescribeProcessStatistics(DescribeProcessStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeProcessStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProcessStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProcessStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeProcessTaskStatus) 用于获取实时拉取进程任务状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProcessTaskStatusRequest"/></param>
+        /// <returns>参考<see cref="DescribeProcessTaskStatusResponse"/>实例</returns>
+        public async Task<DescribeProcessTaskStatusResponse> DescribeProcessTaskStatus(DescribeProcessTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeProcessTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProcessTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProcessTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeProcesses) 用于获取进程列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProcessesRequest"/></param>
+        /// <returns>参考<see cref="DescribeProcessesResponse"/>实例</returns>
+        public async Task<DescribeProcessesResponse> DescribeProcesses(DescribeProcessesRequest req)
+        {
+             JsonResponseModel<DescribeProcessesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProcesses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProcessesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeSecurityDynamics) 用于获取安全事件消息数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSecurityDynamicsRequest"/></param>
+        /// <returns>参考<see cref="DescribeSecurityDynamicsResponse"/>实例</returns>
+        public async Task<DescribeSecurityDynamicsResponse> DescribeSecurityDynamics(DescribeSecurityDynamicsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityDynamicsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityDynamics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityDynamicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSecurityTrendsRequest"/></param>
+        /// <returns>参考<see cref="DescribeSecurityTrendsResponse"/>实例</returns>
+        public async Task<DescribeSecurityTrendsResponse> DescribeSecurityTrends(DescribeSecurityTrendsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityTrendsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityTrends");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityTrendsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -464,6 +744,126 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeVuls");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeWeeklyReportBruteAttacks) 用于获取专业周报密码破解数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWeeklyReportBruteAttacksRequest"/></param>
+        /// <returns>参考<see cref="DescribeWeeklyReportBruteAttacksResponse"/>实例</returns>
+        public async Task<DescribeWeeklyReportBruteAttacksResponse> DescribeWeeklyReportBruteAttacks(DescribeWeeklyReportBruteAttacksRequest req)
+        {
+             JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWeeklyReportBruteAttacks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWeeklyReportBruteAttacksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeWeeklyReportInfo) 用于获取专业周报详情数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWeeklyReportInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeWeeklyReportInfoResponse"/>实例</returns>
+        public async Task<DescribeWeeklyReportInfoResponse> DescribeWeeklyReportInfo(DescribeWeeklyReportInfoRequest req)
+        {
+             JsonResponseModel<DescribeWeeklyReportInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWeeklyReportInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWeeklyReportInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeWeeklyReportMalwares) 用于获取专业周报木马数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWeeklyReportMalwaresRequest"/></param>
+        /// <returns>参考<see cref="DescribeWeeklyReportMalwaresResponse"/>实例</returns>
+        public async Task<DescribeWeeklyReportMalwaresResponse> DescribeWeeklyReportMalwares(DescribeWeeklyReportMalwaresRequest req)
+        {
+             JsonResponseModel<DescribeWeeklyReportMalwaresResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWeeklyReportMalwares");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWeeklyReportMalwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeWeeklyReportNonlocalLoginPlaces) 用于获取专业周报异地登录数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWeeklyReportNonlocalLoginPlacesRequest"/></param>
+        /// <returns>参考<see cref="DescribeWeeklyReportNonlocalLoginPlacesResponse"/>实例</returns>
+        public async Task<DescribeWeeklyReportNonlocalLoginPlacesResponse> DescribeWeeklyReportNonlocalLoginPlaces(DescribeWeeklyReportNonlocalLoginPlacesRequest req)
+        {
+             JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWeeklyReportNonlocalLoginPlaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWeeklyReportNonlocalLoginPlacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeWeeklyReportVuls) 用于专业版周报漏洞数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWeeklyReportVulsRequest"/></param>
+        /// <returns>参考<see cref="DescribeWeeklyReportVulsResponse"/>实例</returns>
+        public async Task<DescribeWeeklyReportVulsResponse> DescribeWeeklyReportVuls(DescribeWeeklyReportVulsRequest req)
+        {
+             JsonResponseModel<DescribeWeeklyReportVulsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWeeklyReportVuls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWeeklyReportVulsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeWeeklyReports) 用于获取周报列表数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWeeklyReportsRequest"/></param>
+        /// <returns>参考<see cref="DescribeWeeklyReportsResponse"/>实例</returns>
+        public async Task<DescribeWeeklyReportsResponse> DescribeWeeklyReports(DescribeWeeklyReportsRequest req)
+        {
+             JsonResponseModel<DescribeWeeklyReportsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWeeklyReports");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWeeklyReportsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

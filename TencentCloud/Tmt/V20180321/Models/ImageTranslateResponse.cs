@@ -43,13 +43,13 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Target{ get; set; }
 
         /// <summary>
-        /// 图片翻译结果
+        /// 图片翻译结果，翻译结果按识别的文本每一行独立翻译，后续会推出按段落划分并翻译的版本
         /// </summary>
         [JsonProperty("ImageRecord")]
         public ImageRecord ImageRecord{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }

@@ -32,6 +32,7 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 过滤条件
+        /// <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

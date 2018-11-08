@@ -375,6 +375,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于获取任务多个实例标准输出和标准错误日志。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTaskLogsRequest"/></param>
+        /// <returns>参考<see cref="DescribeTaskLogsResponse"/>实例</returns>
+        public async Task<DescribeTaskLogsResponse> DescribeTaskLogs(DescribeTaskLogsRequest req)
+        {
+             JsonResponseModel<DescribeTaskLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询任务模板信息
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTaskTemplatesRequest"/></param>

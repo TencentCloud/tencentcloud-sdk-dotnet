@@ -32,6 +32,9 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 过滤条件
+        /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+        /// <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
+        /// <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -32,6 +32,10 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 过滤条件
+        /// <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
+        /// <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
+        /// <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
+        /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -25,7 +25,9 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件
+        /// 过滤条件。
+        /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+        /// <li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

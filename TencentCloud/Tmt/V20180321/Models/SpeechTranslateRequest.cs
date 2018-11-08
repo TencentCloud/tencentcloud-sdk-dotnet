@@ -49,13 +49,13 @@ namespace TencentCloud.Tmt.V20180321.Models
         public long? AudioFormat{ get; set; }
 
         /// <summary>
-        /// 语音分片后的第几片
+        /// 语音分片的序号，从0开始
         /// </summary>
         [JsonProperty("Seq")]
         public long? Seq{ get; set; }
 
         /// <summary>
-        /// 是否最后一片
+        /// 是否最后一片语音分片，0-否，1-是
         /// </summary>
         [JsonProperty("IsEnd")]
         public long? IsEnd{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// 项目id，用户可自定义
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

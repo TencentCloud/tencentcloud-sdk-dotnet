@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.4</VersionPrefix>
+    <VersionPrefix>3.0.5</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,6 +155,8 @@
     <Compile Include="Batch\V20170312\Models\DescribeJobSubmitInfoResponse.cs" />
     <Compile Include="Batch\V20170312\Models\DescribeJobsRequest.cs" />
     <Compile Include="Batch\V20170312\Models\DescribeJobsResponse.cs" />
+    <Compile Include="Batch\V20170312\Models\DescribeTaskLogsRequest.cs" />
+    <Compile Include="Batch\V20170312\Models\DescribeTaskLogsResponse.cs" />
     <Compile Include="Batch\V20170312\Models\DescribeTaskRequest.cs" />
     <Compile Include="Batch\V20170312\Models\DescribeTaskResponse.cs" />
     <Compile Include="Batch\V20170312\Models\DescribeTaskTemplatesRequest.cs" />
@@ -197,6 +199,7 @@
     <Compile Include="Batch\V20170312\Models\SubmitJobResponse.cs" />
     <Compile Include="Batch\V20170312\Models\SystemDisk.cs" />
     <Compile Include="Batch\V20170312\Models\Task.cs" />
+    <Compile Include="Batch\V20170312\Models\TaskInstanceLog.cs" />
     <Compile Include="Batch\V20170312\Models\TaskInstanceMetrics.cs" />
     <Compile Include="Batch\V20170312\Models\TaskInstanceView.cs" />
     <Compile Include="Batch\V20170312\Models\TaskMetrics.cs" />
@@ -1199,6 +1202,18 @@
     <Compile Include="Mariadb\V20170312\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZoneChooseInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZonesInfo.cs" />
+    <Compile Include="Monitor\V20180724\MonitorClient.cs" />
+    <Compile Include="Monitor\V20180724\Models\DataPoint.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeBaseMetricsRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeBaseMetricsResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\Dimension.cs" />
+    <Compile Include="Monitor\V20180724\Models\DimensionsDesc.cs" />
+    <Compile Include="Monitor\V20180724\Models\GetMonitorDataRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\GetMonitorDataResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\Instance.cs" />
+    <Compile Include="Monitor\V20180724\Models\MetricObjectMeaning.cs" />
+    <Compile Include="Monitor\V20180724\Models\MetricSet.cs" />
+    <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Ms\V20180408\MsClient.cs" />
     <Compile Include="Ms\V20180408\Models\AdInfo.cs" />
     <Compile Include="Ms\V20180408\Models\AppDetailInfo.cs" />
@@ -1966,10 +1981,16 @@
     <Compile Include="Youmall\V20180228\Models\ZoneTrafficInfo.cs" />
     <Compile Include="Youmall\V20180228\Models\ZoneTrafficInfoDetail.cs" />
     <Compile Include="Yunjing\V20180228\YunjingClient.cs" />
+    <Compile Include="Yunjing\V20180228\Models\Account.cs" />
+    <Compile Include="Yunjing\V20180228\Models\AccountStatistics.cs" />
     <Compile Include="Yunjing\V20180228\Models\AgentVul.cs" />
     <Compile Include="Yunjing\V20180228\Models\BruteAttack.cs" />
     <Compile Include="Yunjing\V20180228\Models\CloseProVersionRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\CloseProVersionResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\Component.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ComponentStatistics.cs" />
+    <Compile Include="Yunjing\V20180228\Models\CreateProcessTaskRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\CreateProcessTaskResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\CreateUsualLoginPlacesRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\CreateUsualLoginPlacesResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteBruteAttacksRequest.cs" />
@@ -1982,12 +2003,24 @@
     <Compile Include="Yunjing\V20180228\Models\DeleteNonlocalLoginPlacesResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteUsualLoginPlacesRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteUsualLoginPlacesResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeAccountStatisticsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeAccountStatisticsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeAgentVulsRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeAgentVulsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeAlarmAttributeRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeAlarmAttributeResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeBruteAttacksRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeBruteAttacksResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeComponentInfoRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeComponentInfoResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeComponentStatisticsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeComponentStatisticsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeComponentsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeComponentsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeHistoryAccountsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeHistoryAccountsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeImpactedHostsRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeImpactedHostsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeMachineInfoRequest.cs" />
@@ -1998,10 +2031,24 @@
     <Compile Include="Yunjing\V20180228\Models\DescribeMalwaresResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeNonlocalLoginPlacesRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeNonlocalLoginPlacesResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeOpenPortStatisticsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeOpenPortStatisticsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeOpenPortsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeOpenPortsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeOverviewStatisticsRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeOverviewStatisticsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeProVersionInfoRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeProVersionInfoResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeProcessStatisticsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeProcessStatisticsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeProcessTaskStatusRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeProcessTaskStatusResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeProcessesRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeProcessesResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeSecurityDynamicsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeSecurityDynamicsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeSecurityTrendsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeSecurityTrendsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeUsualLoginPlacesRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeUsualLoginPlacesResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeVulInfoRequest.cs" />
@@ -2010,7 +2057,20 @@
     <Compile Include="Yunjing\V20180228\Models\DescribeVulScanResultResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeVulsRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeVulsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportBruteAttacksRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportBruteAttacksResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportInfoRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportInfoResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportMalwaresRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportMalwaresResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportNonlocalLoginPlacesRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportNonlocalLoginPlacesResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportVulsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportVulsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\Filter.cs" />
+    <Compile Include="Yunjing\V20180228\Models\HistoryAccount.cs" />
     <Compile Include="Yunjing\V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\ImpactedHost.cs" />
@@ -2023,11 +2083,17 @@
     <Compile Include="Yunjing\V20180228\Models\ModifyAutoOpenProVersionConfigRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\ModifyAutoOpenProVersionConfigResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\NonLocalLoginPlace.cs" />
+    <Compile Include="Yunjing\V20180228\Models\OpenPort.cs" />
+    <Compile Include="Yunjing\V20180228\Models\OpenPortStatistics.cs" />
     <Compile Include="Yunjing\V20180228\Models\Place.cs" />
+    <Compile Include="Yunjing\V20180228\Models\Process.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\RescanImpactedHostRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RescanImpactedHostResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\SecurityDynamic.cs" />
+    <Compile Include="Yunjing\V20180228\Models\SecurityTrend.cs" />
     <Compile Include="Yunjing\V20180228\Models\SeparateMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\SeparateMalwaresResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\TrustMalwaresRequest.cs" />
@@ -2036,5 +2102,10 @@
     <Compile Include="Yunjing\V20180228\Models\UntrustMalwaresResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\UsualPlace.cs" />
     <Compile Include="Yunjing\V20180228\Models\Vul.cs" />
+    <Compile Include="Yunjing\V20180228\Models\WeeklyReport.cs" />
+    <Compile Include="Yunjing\V20180228\Models\WeeklyReportBruteAttack.cs" />
+    <Compile Include="Yunjing\V20180228\Models\WeeklyReportMalware.cs" />
+    <Compile Include="Yunjing\V20180228\Models\WeeklyReportNonlocalLoginPlace.cs" />
+    <Compile Include="Yunjing\V20180228\Models\WeeklyReportVul.cs" />
   </ItemGroup>
 </Project>
