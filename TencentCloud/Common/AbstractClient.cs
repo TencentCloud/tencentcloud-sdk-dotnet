@@ -174,7 +174,7 @@ namespace TencentCloud.Common
                 endpoint = this.Profile.HttpProfile.Endpoint;
             }
 
-            string sigInParam = SignHelper.MakeSignPlainText(new SortedDictionary<string, string>(param),
+            string sigInParam = SignHelper.MakeSignPlainText(new SortedDictionary<string, string>(param, StringComparer.Ordinal),
                 this.Profile.HttpProfile.ReqMethod, endpoint, this.Path);
             string sigOutParam = SignHelper.Sign(this.Credential.SecretKey, sigInParam, this.Profile.SignMethod);
             param.Add("Signature", sigOutParam);
