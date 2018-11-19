@@ -55,7 +55,10 @@ namespace TencentCloud.Live.V20180801.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间。
+        /// 结束时间，注意：
+        /// 1. 结束时间必须大于开始时间；
+        /// 2. 结束时间和开始时间必须大于当前时间；
+        /// 3. 结束时间 和 开始时间 间隔必须小于七天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

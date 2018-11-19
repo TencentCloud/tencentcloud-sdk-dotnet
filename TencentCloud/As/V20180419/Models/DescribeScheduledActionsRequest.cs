@@ -32,9 +32,9 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 过滤条件。
-        /// * scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。
-        /// * scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。
-        /// * auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。
+        /// <li> scheduled-action-id - String - 是否必填：否 -（过滤条件）按照定时任务ID过滤。</li>
+        /// <li> scheduled-action-name - String - 是否必填：否 - （过滤条件） 按照定时任务名称过滤。</li>
+        /// <li> auto-scaling-group-id - String - 是否必填：否 - （过滤条件） 按照伸缩组ID过滤。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -84,6 +84,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
+        /// <summary>
+        /// 实例类型
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,6 +106,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "CreationType", this.CreationType);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

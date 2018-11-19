@@ -37,31 +37,34 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 您的加速域名。
+        /// 推流域名。多域名推流必须设置。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+        /// 任务起始时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，录制视频为精彩视频时，忽略此字段。如 2017-01-01 10:10:01
+        /// 任务结束时间。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 录制类型。其值为“video”,“audio”，不区分大小写，默认为“video”。
+        /// 录制类型。不区分大小写。
+        /// “video” : 音视频录制【默认】。
+        /// “audio” : 纯音频录制。
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// 录制文件格式。其值为“flv”,“hls”,”mp4”,“aac”,”mp3”，不区分大小写，默认为“flv”。
+        /// 录制文件格式。不区分大小写。其值为：
+        /// “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
         /// </summary>
         [JsonProperty("FileFormat")]
         public string FileFormat{ get; set; }

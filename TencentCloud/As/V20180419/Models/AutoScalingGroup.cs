@@ -144,6 +144,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ZoneSet")]
         public string[] ZoneSet{ get; set; }
 
+        /// <summary>
+        /// 重试策略
+        /// </summary>
+        [JsonProperty("RetryPolicy")]
+        public string RetryPolicy{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -170,6 +176,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "TerminationPolicySet.", this.TerminationPolicySet);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArraySimple(map, prefix + "ZoneSet.", this.ZoneSet);
+            this.SetParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
         }
     }
 }

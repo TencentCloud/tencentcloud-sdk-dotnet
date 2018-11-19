@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.5</VersionPrefix>
+    <VersionPrefix>3.0.6</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1068,6 +1068,10 @@
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveWatermarkResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLivePushAuthKeyRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLivePushAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamOnlineInfoRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamOnlineInfoResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamOnlineListRequest.cs" />
@@ -1084,12 +1088,18 @@
     <Compile Include="Live\V20180801\Models\DropLiveStreamResponse.cs" />
     <Compile Include="Live\V20180801\Models\ForbidLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\ForbidLiveStreamResponse.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePushAuthKeyRequest.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePushAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyPullStreamConfigRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyPullStreamConfigResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyPullStreamStatusRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyPullStreamStatusResponse.cs" />
+    <Compile Include="Live\V20180801\Models\PlayAuthKeyInfo.cs" />
     <Compile Include="Live\V20180801\Models\PublishTimeInfo.cs" />
     <Compile Include="Live\V20180801\Models\PullStreamConfig.cs" />
+    <Compile Include="Live\V20180801\Models\PushAuthKeyInfo.cs" />
     <Compile Include="Live\V20180801\Models\ResumeDelayLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\ResumeDelayLiveStreamResponse.cs" />
     <Compile Include="Live\V20180801\Models\ResumeLiveStreamRequest.cs" />
@@ -1907,6 +1917,8 @@
     <Compile Include="Youmall\V20180228\Models\CreateFacePictureRequest.cs" />
     <Compile Include="Youmall\V20180228\Models\CreateFacePictureResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\DailyTracePoint.cs" />
+    <Compile Include="Youmall\V20180228\Models\DeletePersonFeatureRequest.cs" />
+    <Compile Include="Youmall\V20180228\Models\DeletePersonFeatureResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribeCameraPersonRequest.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribeCameraPersonResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribeClusterPersonArrivedMallRequest.cs" />
@@ -1957,6 +1969,8 @@
     <Compile Include="Youmall\V20180228\Models\HourTrafficInfoDetail.cs" />
     <Compile Include="Youmall\V20180228\Models\ModifyPersonTagInfoRequest.cs" />
     <Compile Include="Youmall\V20180228\Models\ModifyPersonTagInfoResponse.cs" />
+    <Compile Include="Youmall\V20180228\Models\ModifyPersonTypeRequest.cs" />
+    <Compile Include="Youmall\V20180228\Models\ModifyPersonTypeResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\NetworkAndShopInfo.cs" />
     <Compile Include="Youmall\V20180228\Models\NetworkHistoryInfo.cs" />
     <Compile Include="Youmall\V20180228\Models\NetworkInfo.cs" />

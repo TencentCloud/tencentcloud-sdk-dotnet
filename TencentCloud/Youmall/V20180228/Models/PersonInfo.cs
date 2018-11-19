@@ -40,25 +40,34 @@ namespace TencentCloud.Youmall.V20180228.Models
         /// 性别：0男1女
         /// </summary>
         [JsonProperty("Gender")]
-        public ulong? Gender{ get; set; }
+        public long? Gender{ get; set; }
 
         /// <summary>
         /// 年龄
         /// </summary>
         [JsonProperty("Age")]
-        public ulong? Age{ get; set; }
+        public long? Age{ get; set; }
 
         /// <summary>
-        /// 身份类型：0-普通顾客，1~10黑名单，11~20白名单，11店员
+        /// 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
         /// </summary>
         [JsonProperty("PersonType")]
-        public ulong? PersonType{ get; set; }
+        public long? PersonType{ get; set; }
 
         /// <summary>
         /// 人脸图片Url，在有效期内可以访问下载
         /// </summary>
         [JsonProperty("PersonPictureUrl")]
         public string PersonPictureUrl{ get; set; }
+
+        /// <summary>
+        /// 身份子类型:
+        /// PersonType=0时(普通顾客)，0普通顾客
+        /// PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
+        /// PersonType=2时(黑名单)，0普通黑名单，1小偷)
+        /// </summary>
+        [JsonProperty("PersonSubType")]
+        public long? PersonSubType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +81,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamSimple(map, prefix + "PersonType", this.PersonType);
             this.SetParamSimple(map, prefix + "PersonPictureUrl", this.PersonPictureUrl);
+            this.SetParamSimple(map, prefix + "PersonSubType", this.PersonSubType);
         }
     }
 }

@@ -93,6 +93,26 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
+        /// 删除顾客特征，仅支持删除黑名单或者白名单用户特征。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeletePersonFeatureRequest"/></param>
+        /// <returns>参考<see cref="DeletePersonFeatureResponse"/>实例</returns>
+        public async Task<DeletePersonFeatureResponse> DeletePersonFeature(DeletePersonFeatureRequest req)
+        {
+             JsonResponseModel<DeletePersonFeatureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePersonFeature");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePersonFeatureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
         /// </summary>
         /// <param name="req">参考<see cref="DescribeCameraPersonRequest"/></param>
@@ -565,6 +585,26 @@ namespace TencentCloud.Youmall.V20180228
              {
                  var strResp = await this.InternalRequest(req, "ModifyPersonTagInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonTagInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改顾客身份类型接口
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyPersonTypeRequest"/></param>
+        /// <returns>参考<see cref="ModifyPersonTypeResponse"/>实例</returns>
+        public async Task<ModifyPersonTypeResponse> ModifyPersonType(ModifyPersonTypeRequest req)
+        {
+             JsonResponseModel<ModifyPersonTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPersonType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonTypeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

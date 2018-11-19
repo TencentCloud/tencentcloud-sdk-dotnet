@@ -21,44 +21,26 @@ namespace TencentCloud.Youmall.V20180228.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateFacePictureRequest : AbstractModel
+    public class DeletePersonFeatureRequest : AbstractModel
     {
         
         /// <summary>
-        /// 集团ID
+        /// 公司ID
         /// </summary>
         [JsonProperty("CompanyId")]
         public string CompanyId{ get; set; }
 
         /// <summary>
-        /// 店铺ID
+        /// 门店ID
         /// </summary>
         [JsonProperty("ShopId")]
         public long? ShopId{ get; set; }
 
         /// <summary>
-        /// 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+        /// 顾客ID
         /// </summary>
-        [JsonProperty("PersonType")]
-        public long? PersonType{ get; set; }
-
-        /// <summary>
-        /// 图片BASE编码
-        /// </summary>
-        [JsonProperty("Picture")]
-        public string Picture{ get; set; }
-
-        /// <summary>
-        /// 图片名称
-        /// </summary>
-        [JsonProperty("PictureName")]
-        public string PictureName{ get; set; }
-
-        /// <summary>
-        /// 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
-        /// </summary>
-        [JsonProperty("IsForceUpload")]
-        public bool? IsForceUpload{ get; set; }
+        [JsonProperty("PersonId")]
+        public long? PersonId{ get; set; }
 
 
         /// <summary>
@@ -68,10 +50,7 @@ namespace TencentCloud.Youmall.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "CompanyId", this.CompanyId);
             this.SetParamSimple(map, prefix + "ShopId", this.ShopId);
-            this.SetParamSimple(map, prefix + "PersonType", this.PersonType);
-            this.SetParamSimple(map, prefix + "Picture", this.Picture);
-            this.SetParamSimple(map, prefix + "PictureName", this.PictureName);
-            this.SetParamSimple(map, prefix + "IsForceUpload", this.IsForceUpload);
+            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
         }
     }
 }

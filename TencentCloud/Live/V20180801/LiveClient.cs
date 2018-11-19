@@ -93,8 +93,19 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 录制文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播服务，录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 对应文档。
-        /// 创建直播录制。该接口支持两种录制模式：定时录制模式与实时视频录制模式。定时录制需要传入开始与结束时间，录制任务根据时间自动开始与结束；实时视频录制忽略传入的开始时间，在录制任务创建后立即开始录制，录制时长支持最大为30分钟，如果传入的结束时间与当前时间差大于30分钟，则按30分钟计算，实时视频录制主要用于录制精彩视频场景，时长建议控制在5分钟以内。注意：调用接口超时设置应大于3秒，小于3秒重试以及频繁调用都有可能产生重复录制任务。
+        /// - 使用前提
+        ///   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
+        ///   2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 [对应文档](https://cloud.tencent.com/document/product/266/2838)。
+        /// 
+        /// - 模式说明
+        ///   该接口支持两种录制模式：
+        ///   1. 定时录制模式。
+        ///     需要传入开始时间与结束时间，录制任务根据时间自动开始与结束。
+        ///   2. 实时视频录制模式。
+        ///     忽略传入的开始时间，在录制任务创建后立即开始录制，录制时长支持最大为30分钟，如果传入的结束时间与当前时间差大于30分钟，则按30分钟计算，实时视频录制主要用于录制精彩视频场景，时长建议控制在5分钟以内。
+        /// 
+        /// - 注意事项
+        ///   1. 调用接口超时设置应大于3秒，小于3秒重试以及频繁调用都有可能产生重复录制任务。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveRecordRequest"/></param>
         /// <returns>参考<see cref="CreateLiveRecordResponse"/>实例</returns>
@@ -165,6 +176,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DeleteLiveWatermark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询播放鉴权key
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLivePlayAuthKeyRequest"/></param>
+        /// <returns>参考<see cref="DescribeLivePlayAuthKeyResponse"/>实例</returns>
+        public async Task<DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest req)
+        {
+             JsonResponseModel<DescribeLivePlayAuthKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePlayAuthKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询直播推流鉴权key
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLivePushAuthKeyRequest"/></param>
+        /// <returns>参考<see cref="DescribeLivePushAuthKeyResponse"/>实例</returns>
+        public async Task<DescribeLivePushAuthKeyResponse> DescribeLivePushAuthKey(DescribeLivePushAuthKeyRequest req)
+        {
+             JsonResponseModel<DescribeLivePushAuthKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePushAuthKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePushAuthKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -325,6 +376,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "ForbidLiveStream");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForbidLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改播放鉴权key
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyLivePlayAuthKeyRequest"/></param>
+        /// <returns>参考<see cref="ModifyLivePlayAuthKeyResponse"/>实例</returns>
+        public async Task<ModifyLivePlayAuthKeyResponse> ModifyLivePlayAuthKey(ModifyLivePlayAuthKeyRequest req)
+        {
+             JsonResponseModel<ModifyLivePlayAuthKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLivePlayAuthKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改直播推流鉴权key
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyLivePushAuthKeyRequest"/></param>
+        /// <returns>参考<see cref="ModifyLivePushAuthKeyResponse"/>实例</returns>
+        public async Task<ModifyLivePushAuthKeyResponse> ModifyLivePushAuthKey(ModifyLivePushAuthKeyRequest req)
+        {
+             JsonResponseModel<ModifyLivePushAuthKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLivePushAuthKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePushAuthKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
