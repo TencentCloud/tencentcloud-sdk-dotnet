@@ -31,25 +31,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例串号
+        /// 实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// appid
+        /// 用户的Appid
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
 
         /// <summary>
-        /// 项目id
+        /// 项目Id
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+        /// 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// vpc网络id
+        /// vpc网络id 如：75101
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// vpc网络下子网id
+        /// vpc网络下子网id 如：46315
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离
+        /// 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? SizeUsed{ get; set; }
 
         /// <summary>
-        /// 实例类型，1：集群版；2：主从版
+        /// 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；7：Redis4.0集群版；
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -125,6 +125,36 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
+
+        /// <summary>
+        /// 引擎：社区版Redis、腾讯云CKV
+        /// </summary>
+        [JsonProperty("Engine")]
+        public string Engine{ get; set; }
+
+        /// <summary>
+        /// 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public string ProductType{ get; set; }
+
+        /// <summary>
+        /// vpc网络id 如：vpc-fk33jsf43kgv
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// vpc网络下子网id 如：subnet-fd3j6l35mm0
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// 计费模式：0-按量计费，1-包年包月
+        /// </summary>
+        [JsonProperty("BillingMode")]
+        public long? BillingMode{ get; set; }
 
 
         /// <summary>
@@ -149,6 +179,11 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
+            this.SetParamSimple(map, prefix + "Engine", this.Engine);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
         }
     }
 }

@@ -60,6 +60,24 @@ namespace TencentCloud.Ms.V20180408.Models
         [JsonProperty("TaskTime")]
         public ulong? TaskTime{ get; set; }
 
+        /// <summary>
+        /// 状态码，成功返回0，失败返回错误码
+        /// </summary>
+        [JsonProperty("StatusCode")]
+        public ulong? StatusCode{ get; set; }
+
+        /// <summary>
+        /// 状态描述
+        /// </summary>
+        [JsonProperty("StatusDesc")]
+        public string StatusDesc{ get; set; }
+
+        /// <summary>
+        /// 状态操作指引
+        /// </summary>
+        [JsonProperty("StatusRef")]
+        public string StatusRef{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +90,9 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamObj(map, prefix + "VulInfo.", this.VulInfo);
             this.SetParamObj(map, prefix + "AdInfo.", this.AdInfo);
             this.SetParamSimple(map, prefix + "TaskTime", this.TaskTime);
+            this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
+            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "StatusRef", this.StatusRef);
         }
     }
 }

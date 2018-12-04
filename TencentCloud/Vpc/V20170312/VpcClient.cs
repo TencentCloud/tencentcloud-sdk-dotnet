@@ -117,7 +117,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（AssignPrivateIpAddresses）用于弹性网卡申请内网 IP。
-        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="https://cloud.tencent.com/document/product/215/6513">弹性网卡使用限制</a>。
+        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
         /// * 可以指定内网IP地址申请，内网IP地址类型不能为主IP，主IP已存在，不能修改，内网IP必须要弹性网卡所在子网内，而且不能被占用。
         /// * 在弹性网卡上申请一个到多个辅助内网IP，接口会在弹性网卡所在子网网段内返回指定数量的辅助内网IP。
         /// </summary>
@@ -400,9 +400,30 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateHaVipRequest"/></param>
+        /// <returns>参考<see cref="CreateHaVipResponse"/>实例</returns>
+        public async Task<CreateHaVipResponse> CreateHaVip(CreateHaVipRequest req)
+        {
+             JsonResponseModel<CreateHaVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHaVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHaVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateNetworkInterface）用于创建弹性网卡。
         /// * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
         /// * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
+        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
         /// * 创建弹性网卡同时可以绑定已有安全组。
         /// </summary>
         /// <param name="req">参考<see cref="CreateNetworkInterfaceRequest"/></param>
@@ -745,6 +766,29 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DeleteDirectConnectGateway）用于删除专线网关。
+        /// <li>如果是 NAT 网关，删除专线网关后，NAT 规则以及 ACL 策略都被清理了。</li>
+        /// <li>删除专线网关后，系统会删除路由表中跟该专线网关相关的路由策略。</li>
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteDirectConnectGatewayRequest"/></param>
+        /// <returns>参考<see cref="DeleteDirectConnectGatewayResponse"/>实例</returns>
+        public async Task<DeleteDirectConnectGatewayResponse> DeleteDirectConnectGateway(DeleteDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<DeleteDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteDirectConnectGatewayCcnRoutes）用于删除专线网关的云联网路由（IDC网段）
         /// </summary>
         /// <param name="req">参考<see cref="DeleteDirectConnectGatewayCcnRoutesRequest"/></param>
@@ -765,7 +809,28 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteNetworkInterface）用于创建弹性网卡。
+        /// 本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteHaVipRequest"/></param>
+        /// <returns>参考<see cref="DeleteHaVipResponse"/>实例</returns>
+        public async Task<DeleteHaVipResponse> DeleteHaVip(DeleteHaVipRequest req)
+        {
+             JsonResponseModel<DeleteHaVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteHaVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHaVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNetworkInterface）用于删除弹性网卡。
         /// * 弹性网卡上绑定了云主机时，不能被删除。
         /// * 删除指定弹性网卡，弹性网卡必须先和子机解绑才能删除。删除之后弹性网卡上所有内网IP都将被退还。
         /// </summary>
@@ -1295,6 +1360,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDirectConnectGateways）用于查询专线网关。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDirectConnectGatewaysRequest"/></param>
+        /// <returns>参考<see cref="DescribeDirectConnectGatewaysResponse"/>实例</returns>
+        public async Task<DescribeDirectConnectGatewaysResponse> DescribeDirectConnectGateways(DescribeDirectConnectGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeDirectConnectGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDirectConnectGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeHaVipsRequest"/></param>
+        /// <returns>参考<see cref="DescribeHaVipsResponse"/>实例</returns>
+        public async Task<DescribeHaVipsResponse> DescribeHaVips(DescribeHaVipsRequest req)
+        {
+             JsonResponseModel<DescribeHaVipsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHaVips");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHaVipsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeNetworkInterfacesRequest"/></param>
@@ -1720,6 +1825,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// </summary>
+        /// <param name="req">参考<see cref="HaVipAssociateAddressIpRequest"/></param>
+        /// <returns>参考<see cref="HaVipAssociateAddressIpResponse"/>实例</returns>
+        public async Task<HaVipAssociateAddressIpResponse> HaVipAssociateAddressIp(HaVipAssociateAddressIpRequest req)
+        {
+             JsonResponseModel<HaVipAssociateAddressIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "HaVipAssociateAddressIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HaVipAssociateAddressIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// </summary>
+        /// <param name="req">参考<see cref="HaVipDisassociateAddressIpRequest"/></param>
+        /// <returns>参考<see cref="HaVipDisassociateAddressIpResponse"/>实例</returns>
+        public async Task<HaVipDisassociateAddressIpResponse> HaVipDisassociateAddressIp(HaVipDisassociateAddressIpRequest req)
+        {
+             JsonResponseModel<HaVipDisassociateAddressIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "HaVipDisassociateAddressIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HaVipDisassociateAddressIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
         /// </summary>
         /// <param name="req">参考<see cref="InquiryPriceCreateVpnGatewayRequest"/></param>
@@ -1954,6 +2101,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ModifyCustomerGatewayAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDirectConnectGatewayAttribute）用于修改专线网关属性
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyDirectConnectGatewayAttributeRequest"/></param>
+        /// <returns>参考<see cref="ModifyDirectConnectGatewayAttributeResponse"/>实例</returns>
+        public async Task<ModifyDirectConnectGatewayAttributeResponse> ModifyDirectConnectGatewayAttribute(ModifyDirectConnectGatewayAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectGatewayAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectGatewayAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyHaVipAttributeRequest"/></param>
+        /// <returns>参考<see cref="ModifyHaVipAttributeResponse"/>实例</returns>
+        public async Task<ModifyHaVipAttributeResponse> ModifyHaVipAttribute(ModifyHaVipAttributeRequest req)
+        {
+             JsonResponseModel<ModifyHaVipAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHaVipAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHaVipAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

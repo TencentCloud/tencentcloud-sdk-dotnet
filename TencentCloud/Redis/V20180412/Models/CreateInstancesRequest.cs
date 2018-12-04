@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例类型：2 – 主从版，5-单机版
+        /// 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表 查询
+        /// 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 基础网络下， subnetId无效； vpc子网下，取值以查询查询子网列表
+        /// 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -102,6 +102,24 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
 
+        /// <summary>
+        /// 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// </summary>
+        [JsonProperty("RedisShardNum")]
+        public long? RedisShardNum{ get; set; }
+
+        /// <summary>
+        /// 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// </summary>
+        [JsonProperty("RedisReplicasNum")]
+        public long? RedisReplicasNum{ get; set; }
+
+        /// <summary>
+        /// 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// </summary>
+        [JsonProperty("ReplicasReadonly")]
+        public bool? ReplicasReadonly{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -121,6 +139,9 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIdList.", this.SecurityGroupIdList);
             this.SetParamSimple(map, prefix + "VPort", this.VPort);
+            this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
+            this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
+            this.SetParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
         }
     }
 }

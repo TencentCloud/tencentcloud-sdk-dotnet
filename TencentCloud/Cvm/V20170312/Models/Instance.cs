@@ -162,6 +162,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 实例的关机计费模式。
+        /// 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+        /// </summary>
+        [JsonProperty("StopChargingMode")]
+        public string StopChargingMode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -191,6 +198,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "StopChargingMode", this.StopChargingMode);
         }
     }
 }

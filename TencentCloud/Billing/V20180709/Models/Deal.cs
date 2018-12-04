@@ -78,6 +78,48 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("GoodsCategoryId")]
         public long? GoodsCategoryId{ get; set; }
 
+        /// <summary>
+        /// 产品详情
+        /// </summary>
+        [JsonProperty("ProductInfo")]
+        public ProductInfo[] ProductInfo{ get; set; }
+
+        /// <summary>
+        /// 时长
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public float? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// 时间单位
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// 货币单位
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
+        /// <summary>
+        /// 折扣率
+        /// </summary>
+        [JsonProperty("Policy")]
+        public float? Policy{ get; set; }
+
+        /// <summary>
+        /// 单价（分）
+        /// </summary>
+        [JsonProperty("Price")]
+        public float? Price{ get; set; }
+
+        /// <summary>
+        /// 原价（分）
+        /// </summary>
+        [JsonProperty("TotalCost")]
+        public float? TotalCost{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +135,13 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherDecline", this.VoucherDecline);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "GoodsCategoryId", this.GoodsCategoryId);
+            this.SetParamArrayObj(map, prefix + "ProductInfo.", this.ProductInfo);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamSimple(map, prefix + "Policy", this.Policy);
+            this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
         }
     }
 }

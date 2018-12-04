@@ -114,6 +114,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ComponentSet")]
         public BillDetailComponent[] ComponentSet{ get; set; }
 
+        /// <summary>
+        /// 支付者UIN
+        /// </summary>
+        [JsonProperty("PayerUin")]
+        public string PayerUin{ get; set; }
+
+        /// <summary>
+        /// 使用者UIN
+        /// </summary>
+        [JsonProperty("OwnerUin")]
+        public string OwnerUin{ get; set; }
+
+        /// <summary>
+        /// 操作者UIN
+        /// </summary>
+        [JsonProperty("OperateUin")]
+        public string OperateUin{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -135,6 +153,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "FeeBeginTime", this.FeeBeginTime);
             this.SetParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
             this.SetParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
+            this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+            this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
         }
     }
 }

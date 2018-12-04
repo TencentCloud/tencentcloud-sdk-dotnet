@@ -53,6 +53,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 提交黑名单申请。
+        /// </summary>
+        /// <param name="req">参考<see cref="ApplyBlackListRequest"/></param>
+        /// <returns>参考<see cref="ApplyBlackListResponse"/>实例</returns>
+        public async Task<ApplyBlackListResponse> ApplyBlackList(ApplyBlackListRequest req)
+        {
+             JsonResponseModel<ApplyBlackListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyBlackList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyBlackListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录音，返回录音列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRecordsRequest"/></param>
+        /// <returns>参考<see cref="DescribeRecordsResponse"/>实例</returns>
+        public async Task<DescribeRecordsResponse> DescribeRecords(DescribeRecordsRequest req)
+        {
+             JsonResponseModel<DescribeRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTaskStatusRequest"/></param>
@@ -84,6 +124,26 @@ namespace TencentCloud.Cr.V20180321
              {
                  var strResp = await this.InternalRequest(req, "DownloadReport");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 客户通过调用该接口上传需催收文档或还款文档，接口返回任务ID。
+        /// </summary>
+        /// <param name="req">参考<see cref="UploadDataFileRequest"/></param>
+        /// <returns>参考<see cref="UploadDataFileResponse"/>实例</returns>
+        public async Task<UploadDataFileResponse> UploadDataFile(UploadDataFileRequest req)
+        {
+             JsonResponseModel<UploadDataFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadDataFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadDataFileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -43,7 +43,19 @@ namespace TencentCloud.Ms.V20180408.Models
         public ShieldInfo ShieldInfo{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 状态描述
+        /// </summary>
+        [JsonProperty("StatusDesc")]
+        public string StatusDesc{ get; set; }
+
+        /// <summary>
+        /// 状态指引
+        /// </summary>
+        [JsonProperty("StatusRef")]
+        public string StatusRef{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -57,6 +69,8 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamObj(map, prefix + "AppDetailInfo.", this.AppDetailInfo);
             this.SetParamObj(map, prefix + "ShieldInfo.", this.ShieldInfo);
+            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "StatusRef", this.StatusRef);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

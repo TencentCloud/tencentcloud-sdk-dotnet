@@ -25,37 +25,37 @@ namespace TencentCloud.Tbaas.V20180416.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名，固定字段：transaction
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名，固定地段：invoke
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// cluster标识
+        /// 区块链网络ID，可在区块链网络详情或列表中获取
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 通道名称
+        /// 业务所属通道名称，可在通道详情或列表中获取
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 节点名称
+        /// 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
         /// </summary>
         [JsonProperty("PeerName")]
         public string PeerName{ get; set; }
 
         /// <summary>
-        /// 节点所属组织名称
+        /// 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
         /// </summary>
         [JsonProperty("PeerGroup")]
         public string PeerGroup{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public float? ScoreCoeff{ get; set; }
 
         /// <summary>
-        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
         /// </summary>
         [JsonProperty("SoeAppId")]
         public string SoeAppId{ get; set; }
@@ -65,6 +65,12 @@ namespace TencentCloud.Soe.V20180724.Models
         /// </summary>
         [JsonProperty("IsLongLifeSession")]
         public long? IsLongLifeSession{ get; set; }
+
+        /// <summary>
+        /// 音频存储模式，0：不存储，1：存储到公共对象存储
+        /// </summary>
+        [JsonProperty("StorageMode")]
+        public long? StorageMode{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "ScoreCoeff", this.ScoreCoeff);
             this.SetParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
             this.SetParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
+            this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
         }
     }
 }

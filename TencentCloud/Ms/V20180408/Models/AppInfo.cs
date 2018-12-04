@@ -31,7 +31,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string AppUrl{ get; set; }
 
         /// <summary>
-        /// app的md5
+        /// app的md5，需要正确传递
         /// </summary>
         [JsonProperty("AppMd5")]
         public string AppMd5{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// app的包名
+        /// app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
         /// </summary>
         [JsonProperty("AppPkgName")]
         public string AppPkgName{ get; set; }

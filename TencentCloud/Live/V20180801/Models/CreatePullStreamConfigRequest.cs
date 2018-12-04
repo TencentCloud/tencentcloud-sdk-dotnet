@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string FromUrl{ get; set; }
 
         /// <summary>
-        /// 目的Url。
+        /// 目的Url，目前限制该目标地址为腾讯域名。
         /// </summary>
         [JsonProperty("ToUrl")]
         public string ToUrl{ get; set; }

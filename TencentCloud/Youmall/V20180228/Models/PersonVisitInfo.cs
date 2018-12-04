@@ -72,6 +72,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("CapturedPictureUrl")]
         public string CapturedPictureUrl{ get; set; }
 
+        /// <summary>
+        /// 抓拍头像的场景图信息
+        /// </summary>
+        [JsonProperty("SceneInfo")]
+        public SceneInfo SceneInfo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "GlassType", this.GlassType);
             this.SetParamSimple(map, prefix + "HairType", this.HairType);
             this.SetParamSimple(map, prefix + "CapturedPictureUrl", this.CapturedPictureUrl);
+            this.SetParamObj(map, prefix + "SceneInfo.", this.SceneInfo);
         }
     }
 }

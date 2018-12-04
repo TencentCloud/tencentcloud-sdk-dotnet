@@ -73,6 +73,26 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
+        /// 获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateCosSecKeyInstanceRequest"/></param>
+        /// <returns>参考<see cref="CreateCosSecKeyInstanceResponse"/>实例</returns>
+        public async Task<CreateCosSecKeyInstanceResponse> CreateCosSecKeyInstance(CreateCosSecKeyInstanceRequest req)
+        {
+             JsonResponseModel<CreateCosSecKeyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCosSecKeyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosSecKeyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户可以使用该接口自建资源，只支持白名单用户
         /// </summary>
         /// <param name="req">参考<see cref="CreateResourceInstancesRequest"/></param>

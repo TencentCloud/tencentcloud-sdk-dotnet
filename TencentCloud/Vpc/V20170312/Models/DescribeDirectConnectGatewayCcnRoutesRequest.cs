@@ -25,10 +25,30 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 专线网关ID，形如：dcg-prpqlmg1
+        /// 专线网关ID，形如：`dcg-prpqlmg1`。
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }
+
+        /// <summary>
+        /// 云联网路由学习类型，可选值：
+        /// <li>`BGP` - 自动学习。</li>
+        /// <li>`STATIC` - 静态，即用户配置，默认值。</li>
+        /// </summary>
+        [JsonProperty("CcnRouteType")]
+        public string CcnRouteType{ get; set; }
+
+        /// <summary>
+        /// 偏移量。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 返回数量。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -37,6 +57,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
+            this.SetParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

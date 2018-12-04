@@ -54,6 +54,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("PosId")]
         public string PosId{ get; set; }
 
+        /// <summary>
+        /// 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+        /// </summary>
+        [JsonProperty("PictureExpires")]
+        public long? PictureExpires{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "TempId", this.TempId);
             this.SetParamSimple(map, prefix + "CameraId", this.CameraId);
             this.SetParamSimple(map, prefix + "PosId", this.PosId);
+            this.SetParamSimple(map, prefix + "PictureExpires", this.PictureExpires);
         }
     }
 }

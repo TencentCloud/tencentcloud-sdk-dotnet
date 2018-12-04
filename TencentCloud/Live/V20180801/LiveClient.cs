@@ -125,7 +125,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 添加拉流配置
+        /// 添加拉流配置，目前限制添加10条任务。
         /// </summary>
         /// <param name="req">参考<see cref="CreatePullStreamConfigRequest"/></param>
         /// <returns>参考<see cref="CreatePullStreamConfigResponse"/>实例</returns>

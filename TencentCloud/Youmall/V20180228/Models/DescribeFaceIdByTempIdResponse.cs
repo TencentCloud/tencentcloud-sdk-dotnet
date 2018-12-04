@@ -61,6 +61,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         public long? FaceId{ get; set; }
 
         /// <summary>
+        /// 顾客属性信息
+        /// </summary>
+        [JsonProperty("PersonInfo")]
+        public PersonInfo PersonInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "PosId", this.PosId);
             this.SetParamSimple(map, prefix + "TempId", this.TempId);
             this.SetParamSimple(map, prefix + "FaceId", this.FaceId);
+            this.SetParamObj(map, prefix + "PersonInfo.", this.PersonInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

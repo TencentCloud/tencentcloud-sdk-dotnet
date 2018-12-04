@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 外网状态，可能的返回值为：0-未开通外网；1-已开通外网
+        /// 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
         /// </summary>
         [JsonProperty("WanStatus")]
         public long? WanStatus{ get; set; }
@@ -228,6 +228,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
+        /// <summary>
+        /// 物理ID
+        /// </summary>
+        [JsonProperty("PhysicalId")]
+        public string PhysicalId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -268,6 +274,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "CdbError", this.CdbError);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "PhysicalId", this.PhysicalId);
         }
     }
 }

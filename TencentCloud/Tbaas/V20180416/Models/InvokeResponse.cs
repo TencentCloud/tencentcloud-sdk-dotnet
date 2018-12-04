@@ -31,13 +31,13 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string Txid{ get; set; }
 
         /// <summary>
-        /// 返回内容
+        /// 交易执行结果
         /// </summary>
         [JsonProperty("Events")]
         public string Events{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }

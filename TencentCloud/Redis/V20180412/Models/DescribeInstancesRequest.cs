@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例列表大小
+        /// 实例列表的大小，参数默认值20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 实例Id
+        /// 实例Id，如：crs-6ubhgouj
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络
+        /// 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
         /// </summary>
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }
 
         /// <summary>
-        /// 子网ID数组，数组下标从0开始
+        /// 子网ID数组，数组下标从0开始，如：56854
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
@@ -79,16 +79,28 @@ namespace TencentCloud.Redis.V20180412.Models
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 查询的Region的列表。
-        /// </summary>
-        [JsonProperty("RegionIds")]
-        public long?[] RegionIds{ get; set; }
-
-        /// <summary>
         /// 实例名称
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+        /// </summary>
+        [JsonProperty("UniqVpcIds")]
+        public string[] UniqVpcIds{ get; set; }
+
+        /// <summary>
+        /// 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+        /// </summary>
+        [JsonProperty("UniqSubnetIds")]
+        public string[] UniqSubnetIds{ get; set; }
+
+        /// <summary>
+        /// 地域ID，已经弃用，可通过公共参数Region查询对应地域
+        /// </summary>
+        [JsonProperty("RegionIds")]
+        public long?[] RegionIds{ get; set; }
 
 
         /// <summary>
@@ -105,8 +117,10 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
-            this.SetParamArraySimple(map, prefix + "RegionIds.", this.RegionIds);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamArraySimple(map, prefix + "UniqVpcIds.", this.UniqVpcIds);
+            this.SetParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
+            this.SetParamArraySimple(map, prefix + "RegionIds.", this.RegionIds);
         }
     }
 }

@@ -25,16 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 路由ID
+        /// 路由ID。
         /// </summary>
         [JsonProperty("RouteId")]
         public string RouteId{ get; set; }
 
         /// <summary>
-        /// IDC网段
+        /// IDC网段。
         /// </summary>
         [JsonProperty("DestinationCidrBlock")]
         public string DestinationCidrBlock{ get; set; }
+
+        /// <summary>
+        /// `BGP`的`AS-Path`属性。
+        /// </summary>
+        [JsonProperty("ASPath")]
+        public string[] ASPath{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
             this.SetParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
+            this.SetParamArraySimple(map, prefix + "ASPath.", this.ASPath);
         }
     }
 }

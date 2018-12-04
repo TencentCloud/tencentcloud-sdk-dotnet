@@ -60,18 +60,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
-        /// <summary>
-        /// 是否支持云硬盘。取值范围：<br><li>`TRUE`：表示支持云硬盘；<br><li>`FALSE`：表示不支持云硬盘。
-        /// </summary>
-        [JsonProperty("CbsSupport")]
-        public string CbsSupport{ get; set; }
-
-        /// <summary>
-        /// 机型状态。取值范围：<br><li>`AVAILABLE`：表示机型可用；<br><li>`UNAVAILABLE`：表示机型不可用。
-        /// </summary>
-        [JsonProperty("InstanceTypeState")]
-        public string InstanceTypeState{ get; set; }
-
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -84,8 +72,6 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "GPU", this.GPU);
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "CbsSupport", this.CbsSupport);
-            this.SetParamSimple(map, prefix + "InstanceTypeState", this.InstanceTypeState);
         }
     }
 }

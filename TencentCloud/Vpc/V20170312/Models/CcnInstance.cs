@@ -25,19 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 关联实例ID
+        /// 关联实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 关联实例ID所属大区，例如：ap-guangzhou
+        /// 关联实例ID所属大区，例如：ap-guangzhou。
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
 
         /// <summary>
-        /// 关联实例类型，可选值：VPC、DIRECTCONNECT
+        /// 关联实例类型，可选值：
+        /// <li>`VPC`：私有网络</li>
+        /// <li>`DIRECTCONNECT`：专线网关</li>
+        /// <li>`BMVPC`：黑石私有网络</li>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

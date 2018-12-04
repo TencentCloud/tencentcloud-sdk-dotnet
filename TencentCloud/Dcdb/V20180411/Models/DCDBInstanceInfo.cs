@@ -240,6 +240,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Locker")]
         public long? Locker{ get; set; }
 
+        /// <summary>
+        /// 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+        /// </summary>
+        [JsonProperty("WanStatus")]
+        public long? WanStatus{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -282,6 +288,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
             this.SetParamSimple(map, prefix + "Locker", this.Locker);
+            this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
         }
     }
 }

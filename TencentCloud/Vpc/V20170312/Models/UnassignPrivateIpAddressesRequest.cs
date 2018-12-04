@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 指定的内网IP信息。
+        /// 指定的内网IP信息，单次最多指定10个。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }

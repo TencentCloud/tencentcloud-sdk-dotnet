@@ -25,49 +25,49 @@ namespace TencentCloud.Tbaas.V20180416.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名，固定字段：transaction
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名，固定地段：query
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// cluster标识
+        /// 区块链网络ID，可在区块链网络详情或列表中获取
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 合约名称
+        /// 业务所属智能合约名称，可在智能合约详情或列表中获取
         /// </summary>
         [JsonProperty("ChaincodeName")]
         public string ChaincodeName{ get; set; }
 
         /// <summary>
-        /// 通道名称
+        /// 业务所属通道名称，可在通道详情或列表中获取
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 使用的节点名称及对应组织名称
+        /// 执行该查询交易的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
         /// </summary>
         [JsonProperty("Peers")]
         public PeerSet[] Peers{ get; set; }
 
         /// <summary>
-        /// 函数名
+        /// 该笔交易查询需要调用的智能合约中的函数名称
         /// </summary>
         [JsonProperty("FuncName")]
         public string FuncName{ get; set; }
 
         /// <summary>
-        /// 函数参数列表
+        /// 被调用的函数参数列表
         /// </summary>
         [JsonProperty("Args")]
         public string[] Args{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 已绑定安全组的网段或IP。
+        /// 安全组实例ID，例如：sg-ohuuioma。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }

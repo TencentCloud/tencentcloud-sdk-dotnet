@@ -37,18 +37,6 @@ namespace TencentCloud.Youmall.V20180228.Models
         public ulong? ShopId{ get; set; }
 
         /// <summary>
-        /// 开始日期，格式yyyy-MM-dd
-        /// </summary>
-        [JsonProperty("StartDate")]
-        public string StartDate{ get; set; }
-
-        /// <summary>
-        /// 结束日期，格式yyyy-MM-dd
-        /// </summary>
-        [JsonProperty("EndDate")]
-        public string EndDate{ get; set; }
-
-        /// <summary>
         /// 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
         /// </summary>
         [JsonProperty("Offset")]
@@ -61,10 +49,34 @@ namespace TencentCloud.Youmall.V20180228.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+        /// </summary>
+        [JsonProperty("StartDate")]
+        public string StartDate{ get; set; }
+
+        /// <summary>
+        /// 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+        /// </summary>
+        [JsonProperty("EndDate")]
+        public string EndDate{ get; set; }
+
+        /// <summary>
         /// 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
         /// </summary>
         [JsonProperty("PictureExpires")]
         public ulong? PictureExpires{ get; set; }
+
+        /// <summary>
+        /// 开始时间，格式yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [JsonProperty("StartDateTime")]
+        public string StartDateTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间，格式yyyy-MM-dd HH:mm:ss
+        /// </summary>
+        [JsonProperty("EndDateTime")]
+        public string EndDateTime{ get; set; }
 
 
         /// <summary>
@@ -74,11 +86,13 @@ namespace TencentCloud.Youmall.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "CompanyId", this.CompanyId);
             this.SetParamSimple(map, prefix + "ShopId", this.ShopId);
-            this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
-            this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
+            this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
             this.SetParamSimple(map, prefix + "PictureExpires", this.PictureExpires);
+            this.SetParamSimple(map, prefix + "StartDateTime", this.StartDateTime);
+            this.SetParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
         }
     }
 }

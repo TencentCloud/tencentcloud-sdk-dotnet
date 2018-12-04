@@ -25,16 +25,28 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 升级的实例Id
+        /// 实例Id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 规格 单位 MB
+        /// 分片大小 单位 MB
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
+
+        /// <summary>
+        /// 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// </summary>
+        [JsonProperty("RedisShardNum")]
+        public ulong? RedisShardNum{ get; set; }
+
+        /// <summary>
+        /// 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// </summary>
+        [JsonProperty("RedisReplicasNum")]
+        public ulong? RedisReplicasNum{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
+            this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 起始时间，如 2018-01-01 00:00:00
+        /// 起始时间，如2018-09-22T19:51:23+08:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

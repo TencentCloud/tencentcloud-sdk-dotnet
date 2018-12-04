@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceDescription{ get; set; }
 
         /// <summary>
-        /// 新申请的内网IP地址个数。
+        /// 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
         /// </summary>
         [JsonProperty("SecondaryPrivateIpAddressCount")]
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 指定内网IP信息。
+        /// 指定的内网IP信息，单次最多指定10个。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }

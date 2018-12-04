@@ -133,6 +133,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询订单信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceDealDetailRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceDealDetailResponse"/>实例</returns>
+        public async Task<DescribeInstanceDealDetailResponse> DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req)
+        {
+             JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceDealDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDealDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询Redis实例列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeInstancesRequest"/></param>
@@ -144,6 +164,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口查询指定可用区和实例类型下 Redis 的售卖规格， 如果用户不在购买白名单中，将不能查询该可用区或该类型的售卖规格详情。申请购买某地域白名单可以提交工单
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProductInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeProductInfoResponse"/>实例</returns>
+        public async Task<DescribeProductInfoResponse> DescribeProductInfo(DescribeProductInfoRequest req)
+        {
+             JsonResponseModel<DescribeProductInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProductInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询任务结果
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeTaskInfoResponse"/>实例</returns>
+        public async Task<DescribeTaskInfoResponse> DescribeTaskInfo(DescribeTaskInfoRequest req)
+        {
+             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

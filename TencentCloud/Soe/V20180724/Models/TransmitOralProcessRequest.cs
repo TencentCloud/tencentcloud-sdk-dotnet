@@ -25,7 +25,7 @@ namespace TencentCloud.Soe.V20180724.Models
     {
         
         /// <summary>
-        /// 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1时切为非流式模式时无意义。
+        /// 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
         /// </summary>
         [JsonProperty("SeqId")]
         public long? SeqId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? VoiceEncodeType{ get; set; }
 
         /// <summary>
-        /// 当前数据包数据, 流式模式下数据包大小可以按需设置，数据包大小必须 >= 4K，编码格式要求为BASE64。
+        /// 当前数据包数据, 流式模式下数据包大小可以按需设置，数据包大小必须 >= 4K，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
         /// </summary>
         [JsonProperty("UserVoiceData")]
         public string UserVoiceData{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，需要结合[控制台](https://console.cloud.tencent.com/soe)使用。
+        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
         /// </summary>
         [JsonProperty("SoeAppId")]
         public string SoeAppId{ get; set; }

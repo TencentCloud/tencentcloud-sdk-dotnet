@@ -60,6 +60,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Reboot")]
         public string Reboot{ get; set; }
 
+        /// <summary>
+        /// DryRun
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "ForcePoweroff", this.ForcePoweroff);
             this.SetParamSimple(map, prefix + "Sysprep", this.Sysprep);
             this.SetParamSimple(map, prefix + "Reboot", this.Reboot);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

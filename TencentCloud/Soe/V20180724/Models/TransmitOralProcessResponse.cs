@@ -55,6 +55,12 @@ namespace TencentCloud.Soe.V20180724.Models
         public string SessionId{ get; set; }
 
         /// <summary>
+        /// 保存语音音频文件下载地址
+        /// </summary>
+        [JsonProperty("AudioUrl")]
+        public string AudioUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "PronCompletion", this.PronCompletion);
             this.SetParamArrayObj(map, prefix + "Words.", this.Words);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

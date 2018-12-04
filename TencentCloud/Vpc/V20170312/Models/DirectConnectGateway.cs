@@ -25,57 +25,79 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 专线网关ID
+        /// 专线网关`ID`。
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }
 
         /// <summary>
-        /// 专线网关名称
+        /// 专线网关名称。
         /// </summary>
         [JsonProperty("DirectConnectGatewayName")]
         public string DirectConnectGatewayName{ get; set; }
 
         /// <summary>
-        /// VPC实例ID
+        /// 专线网关关联`VPC`实例`ID`。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 关联网络类型，可选值：
-        /// <li>VPC - 私有网络</li>
-        /// <li>CCN - 云联网</li>
+        /// 关联网络类型：
+        /// <li>`VPC` - 私有网络</li>
+        /// <li>`CCN` - 云联网</li>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-        /// <li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+        /// 关联网络实例`ID`：
+        /// <li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
+        /// <li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
         /// </summary>
         [JsonProperty("NetworkInstanceId")]
         public string NetworkInstanceId{ get; set; }
 
         /// <summary>
-        /// 网关类型，可选值：
-        /// <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
-        /// <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+        /// 网关类型：
+        /// <li>NORMAL - 标准型，注：云联网只支持标准型</li>
+        /// <li>NAT - NAT型</li>
+        /// NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }
 
         /// <summary>
-        /// 专线通道数
-        /// </summary>
-        [JsonProperty("DirectConnectTunnelCount")]
-        public ulong? DirectConnectTunnelCount{ get; set; }
-
-        /// <summary>
-        /// 创建时间
+        /// 创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 专线网关IP。
+        /// </summary>
+        [JsonProperty("DirectConnectGatewayIp")]
+        public string DirectConnectGatewayIp{ get; set; }
+
+        /// <summary>
+        /// 专线网关关联`CCN`实例`ID`。
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
+
+        /// <summary>
+        /// 云联网路由学习类型：
+        /// <li>`BGP` - 自动学习。</li>
+        /// <li>`STATIC` - 静态，即用户配置。</li>
+        /// </summary>
+        [JsonProperty("CcnRouteType")]
+        public string CcnRouteType{ get; set; }
+
+        /// <summary>
+        /// 是否启用BGP。
+        /// </summary>
+        [JsonProperty("EnableBGP")]
+        public bool? EnableBGP{ get; set; }
 
 
         /// <summary>
@@ -89,8 +111,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
             this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
-            this.SetParamSimple(map, prefix + "DirectConnectTunnelCount", this.DirectConnectTunnelCount);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "DirectConnectGatewayIp", this.DirectConnectGatewayIp);
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
+            this.SetParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
+            this.SetParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
         }
     }
 }
