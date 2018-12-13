@@ -109,13 +109,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public ulong? RowsSentSum{ get; set; }
 
         /// <summary>
-        /// 首次执行时间
+        /// 最后执行时间
         /// </summary>
         [JsonProperty("TsMax")]
         public string TsMax{ get; set; }
 
         /// <summary>
-        /// 最后执行时间
+        /// 首次执行时间
         /// </summary>
         [JsonProperty("TsMin")]
         public string TsMin{ get; set; }

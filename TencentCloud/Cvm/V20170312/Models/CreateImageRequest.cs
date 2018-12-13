@@ -25,16 +25,16 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 需要制作镜像的实例ID
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
         /// 镜像名称
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
+
+        /// <summary>
+        /// 需要制作镜像的实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 镜像描述
@@ -61,6 +61,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Reboot{ get; set; }
 
         /// <summary>
+        /// 实例需要制作镜像的数据盘Id
+        /// </summary>
+        [JsonProperty("DataDiskIds")]
+        public string[] DataDiskIds{ get; set; }
+
+        /// <summary>
+        /// 需要制作镜像的快照Id,必须包含一个系统盘快照
+        /// </summary>
+        [JsonProperty("SnapshotIds")]
+        public string[] SnapshotIds{ get; set; }
+
+        /// <summary>
         /// DryRun
         /// </summary>
         [JsonProperty("DryRun")]
@@ -72,12 +84,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
             this.SetParamSimple(map, prefix + "ForcePoweroff", this.ForcePoweroff);
             this.SetParamSimple(map, prefix + "Sysprep", this.Sysprep);
             this.SetParamSimple(map, prefix + "Reboot", this.Reboot);
+            this.SetParamArraySimple(map, prefix + "DataDiskIds.", this.DataDiskIds);
+            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }

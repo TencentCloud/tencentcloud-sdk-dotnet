@@ -294,6 +294,26 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
+        /// 通过上传人脸图片检索系统face id、顾客身份信息及底图
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePersonInfoByFacePictureRequest"/></param>
+        /// <returns>参考<see cref="DescribePersonInfoByFacePictureResponse"/>实例</returns>
+        public async Task<DescribePersonInfoByFacePictureResponse> DescribePersonInfoByFacePicture(DescribePersonInfoByFacePictureRequest req)
+        {
+             JsonResponseModel<DescribePersonInfoByFacePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePersonInfoByFacePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonInfoByFacePictureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 输出开始时间到结束时间段内的进出场数据。
         /// </summary>
         /// <param name="req">参考<see cref="DescribePersonTraceRequest"/></param>

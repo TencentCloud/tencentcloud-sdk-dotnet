@@ -36,6 +36,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
+        /// <summary>
+        /// 删除LoRa设备以及LoRa网关设备需要skey
+        /// </summary>
+        [JsonProperty("Skey")]
+        public string Skey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "Skey", this.Skey);
         }
     }
 }

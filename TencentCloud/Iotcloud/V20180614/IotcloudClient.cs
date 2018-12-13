@@ -153,6 +153,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（CreateTopicRule）用于创建一个规则
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="CreateTopicRuleResponse"/>实例</returns>
+        public async Task<CreateTopicRuleResponse> CreateTopicRule(CreateTopicRuleRequest req)
+        {
+             JsonResponseModel<CreateTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteDevice）用于删除物联网通信设备。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteDeviceRequest"/></param>
@@ -184,6 +204,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = await this.InternalRequest(req, "DeleteProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteTopicRule）用于删除规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="DeleteTopicRuleResponse"/>实例</returns>
+        public async Task<DeleteTopicRuleResponse> DeleteTopicRule(DeleteTopicRuleRequest req)
+        {
+             JsonResponseModel<DeleteTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDevice）用于查看设备信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceResponse"/>实例</returns>
+        public async Task<DescribeDeviceResponse> DescribeDevice(DescribeDeviceRequest req)
+        {
+             JsonResponseModel<DescribeDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,6 +393,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（DisableTopicRule）用于禁用规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DisableTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="DisableTopicRuleResponse"/>实例</returns>
+        public async Task<DisableTopicRuleResponse> DisableTopicRule(DisableTopicRuleRequest req)
+        {
+             JsonResponseModel<DisableTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EnableTopicRule）用于启用规则
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="EnableTopicRuleResponse"/>实例</returns>
+        public async Task<EnableTopicRuleResponse> EnableTopicRule(EnableTopicRuleRequest req)
+        {
+             JsonResponseModel<EnableTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（PublishMessage）用于向某个主题发消息。
         /// </summary>
         /// <param name="req">参考<see cref="PublishMessageRequest"/></param>
@@ -344,6 +444,26 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = await this.InternalRequest(req, "PublishMessage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ReplaceTopicRule）用于修改替换规则
+        /// </summary>
+        /// <param name="req">参考<see cref="ReplaceTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="ReplaceTopicRuleResponse"/>实例</returns>
+        public async Task<ReplaceTopicRuleResponse> ReplaceTopicRule(ReplaceTopicRuleRequest req)
+        {
+             JsonResponseModel<ReplaceTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceTopicRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

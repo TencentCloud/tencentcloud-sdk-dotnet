@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.7</VersionPrefix>
+    <VersionPrefix>3.0.8</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -102,6 +102,8 @@
     <Compile Include="As\V20180419\Models\ModifyAutoScalingGroupResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyDesiredCapacityRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyDesiredCapacityResponse.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesRequest.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyScheduledActionRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyScheduledActionResponse.cs" />
     <Compile Include="As\V20180419\Models\RemoveInstancesRequest.cs" />
@@ -241,6 +243,10 @@
     <Compile Include="Bm\V20180423\Models\CreateUserCmdResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DeletePsaRegulationRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DeletePsaRegulationResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DeleteUserCmdsRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DeleteUserCmdsResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDevicePriceInfoRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDevicePriceInfoResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeDevicesRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeDevicesResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribePsaRegulationsRequest.cs" />
@@ -251,18 +257,43 @@
     <Compile Include="Bm\V20180423\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeTaskOperationLogRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeTaskOperationLogResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeUserCmdTaskInfoRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeUserCmdTaskInfoResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeUserCmdTasksRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeUserCmdTasksResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeUserCmdsRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeUserCmdsResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DeviceAlias.cs" />
     <Compile Include="Bm\V20180423\Models\DeviceInfo.cs" />
+    <Compile Include="Bm\V20180423\Models\DevicePriceInfo.cs" />
+    <Compile Include="Bm\V20180423\Models\FailedTaskInfo.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyDeviceAliasesRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyDeviceAliasesResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyPayModePre2PostRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyPayModePre2PostResponse.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPsaRegulationRequest.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPsaRegulationResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyUserCmdRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyUserCmdResponse.cs" />
     <Compile Include="Bm\V20180423\Models\PsaRegulation.cs" />
+    <Compile Include="Bm\V20180423\Models\RebootDevicesRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\RebootDevicesResponse.cs" />
     <Compile Include="Bm\V20180423\Models\RepairTaskControlRequest.cs" />
     <Compile Include="Bm\V20180423\Models\RepairTaskControlResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\ResetDevicePasswordRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\ResetDevicePasswordResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\RunUserCmdRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\RunUserCmdResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\SuccessTaskInfo.cs" />
     <Compile Include="Bm\V20180423\Models\Tag.cs" />
     <Compile Include="Bm\V20180423\Models\TaskInfo.cs" />
     <Compile Include="Bm\V20180423\Models\TaskOperationLog.cs" />
     <Compile Include="Bm\V20180423\Models\TaskType.cs" />
     <Compile Include="Bm\V20180423\Models\UnbindPsaTagRequest.cs" />
     <Compile Include="Bm\V20180423\Models\UnbindPsaTagResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\UserCmd.cs" />
+    <Compile Include="Bm\V20180423\Models\UserCmdTask.cs" />
+    <Compile Include="Bm\V20180423\Models\UserCmdTaskInfo.cs" />
     <Compile Include="Cbs\V20170312\CbsClient.cs" />
     <Compile Include="Cbs\V20170312\Models\ApplySnapshotRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ApplySnapshotResponse.cs" />
@@ -480,10 +511,15 @@
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpVisitRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpVisitResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeMapInfoRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeMapInfoResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeOriginDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeOriginDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribePayTypeRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribePayTypeResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\MapInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\ResourceData.cs" />
     <Compile Include="Cdn\V20180606\Models\ResourceOriginData.cs" />
     <Compile Include="Cdn\V20180606\Models\SummarizedData.cs" />
@@ -582,6 +618,8 @@
     <Compile Include="Cvm\V20170312\Models\AllocateHostsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\AssociateInstancesKeyPairsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\AssociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ChargePrepaid.cs" />
     <Compile Include="Cvm\V20170312\Models\CreateDisasterRecoverGroupRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\CreateDisasterRecoverGroupResponse.cs" />
@@ -634,6 +672,8 @@
     <Compile Include="Cvm\V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DisassociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DisasterRecoverGroup.cs" />
     <Compile Include="Cvm\V20170312\Models\EnhancedService.cs" />
     <Compile Include="Cvm\V20170312\Models\Externals.cs" />
@@ -1000,6 +1040,11 @@
     <Compile Include="Facefusion\V20181201\Models\FaceFusionResponse.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewDetail.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewResult.cs" />
+    <Compile Include="Faceid\V20180301\FaceidClient.cs" />
+    <Compile Include="Faceid\V20180301\Models\DetectAuthRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\DetectAuthResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetDetectInfoRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetDetectInfoResponse.cs" />
     <Compile Include="Hcm\V20181106\HcmClient.cs" />
     <Compile Include="Hcm\V20181106\Models\EvaluationRequest.cs" />
     <Compile Include="Hcm\V20181106\Models\EvaluationResponse.cs" />
@@ -1135,10 +1180,16 @@
     <Compile Include="Iotcloud\V20180614\Models\CreateProductResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateTaskRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateTaskResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\CreateTopicRuleRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\CreateTopicRuleResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteDeviceRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteDeviceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteProductRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteProductResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DeleteTopicRuleRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DeleteTopicRuleResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceShadowRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceShadowResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDevicesRequest.cs" />
@@ -1155,6 +1206,10 @@
     <Compile Include="Iotcloud\V20180614\Models\DescribeTasksResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceTag.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DisableTopicRuleRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DisableTopicRuleResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\EnableTopicRuleRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\EnableTopicRuleResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\Filter.cs" />
     <Compile Include="Iotcloud\V20180614\Models\MultiDevicesInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ProductInfo.cs" />
@@ -1162,8 +1217,11 @@
     <Compile Include="Iotcloud\V20180614\Models\ProductProperties.cs" />
     <Compile Include="Iotcloud\V20180614\Models\PublishMessageRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\PublishMessageResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\ReplaceTopicRuleRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\ReplaceTopicRuleResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\Task.cs" />
     <Compile Include="Iotcloud\V20180614\Models\TaskInfo.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\TopicRulePayload.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceShadowRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceShadowResponse.cs" />
     <Compile Include="Live\V20180801\LiveClient.cs" />
@@ -1179,6 +1237,8 @@
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveWatermarkResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DeletePullStreamConfigRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DeletePullStreamConfigResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePushAuthKeyRequest.cs" />
@@ -1565,6 +1625,7 @@
     <Compile Include="Soe\V20180724\Models\InitOralProcessRequest.cs" />
     <Compile Include="Soe\V20180724\Models\InitOralProcessResponse.cs" />
     <Compile Include="Soe\V20180724\Models\PhoneInfo.cs" />
+    <Compile Include="Soe\V20180724\Models\SentenceInfo.cs" />
     <Compile Include="Soe\V20180724\Models\TransmitOralProcessRequest.cs" />
     <Compile Include="Soe\V20180724\Models\TransmitOralProcessResponse.cs" />
     <Compile Include="Soe\V20180724\Models\WordRsp.cs" />
@@ -2075,6 +2136,8 @@
     <Compile Include="Youmall\V20180228\Models\DescribeNetworkInfoResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribePersonArrivedMallRequest.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribePersonArrivedMallResponse.cs" />
+    <Compile Include="Youmall\V20180228\Models\DescribePersonInfoByFacePictureRequest.cs" />
+    <Compile Include="Youmall\V20180228\Models\DescribePersonInfoByFacePictureResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribePersonInfoRequest.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribePersonInfoResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\DescribePersonRequest.cs" />
@@ -2142,6 +2205,7 @@
     <Compile Include="Yunjing\V20180228\Models\AccountStatistics.cs" />
     <Compile Include="Yunjing\V20180228\Models\AgentVul.cs" />
     <Compile Include="Yunjing\V20180228\Models\BruteAttack.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ChargePrepaid.cs" />
     <Compile Include="Yunjing\V20180228\Models\CloseProVersionRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\CloseProVersionResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\Component.cs" />
@@ -2154,6 +2218,8 @@
     <Compile Include="Yunjing\V20180228\Models\DeleteBruteAttacksResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteMachineRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteMachineResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DeleteMaliciousRequestsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DeleteMaliciousRequestsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteMalwaresResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DeleteNonlocalLoginPlacesRequest.cs" />
@@ -2184,6 +2250,8 @@
     <Compile Include="Yunjing\V20180228\Models\DescribeMachineInfoResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeMachinesRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeMachinesResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeMaliciousRequestsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\DescribeMaliciousRequestsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeMalwaresResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeNonlocalLoginPlacesRequest.cs" />
@@ -2226,12 +2294,17 @@
     <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportVulsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportsRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\DescribeWeeklyReportsResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ExportMaliciousRequestsRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ExportMaliciousRequestsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\Filter.cs" />
     <Compile Include="Yunjing\V20180228\Models\HistoryAccount.cs" />
     <Compile Include="Yunjing\V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\ImpactedHost.cs" />
+    <Compile Include="Yunjing\V20180228\Models\InquiryPriceOpenProVersionPrepaidRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\InquiryPriceOpenProVersionPrepaidResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\Machine.cs" />
+    <Compile Include="Yunjing\V20180228\Models\MaliciousRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\Malware.cs" />
     <Compile Include="Yunjing\V20180228\Models\MisAlarmNonlocalLoginPlacesRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\MisAlarmNonlocalLoginPlacesResponse.cs" />
@@ -2239,22 +2312,33 @@
     <Compile Include="Yunjing\V20180228\Models\ModifyAlarmAttributeResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\ModifyAutoOpenProVersionConfigRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\ModifyAutoOpenProVersionConfigResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\NonLocalLoginPlace.cs" />
     <Compile Include="Yunjing\V20180228\Models\OpenPort.cs" />
     <Compile Include="Yunjing\V20180228\Models\OpenPortStatistics.cs" />
+    <Compile Include="Yunjing\V20180228\Models\OpenProVersionPrepaidRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\OpenProVersionPrepaidResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\Place.cs" />
+    <Compile Include="Yunjing\V20180228\Models\ProVersionMachine.cs" />
     <Compile Include="Yunjing\V20180228\Models\Process.cs" />
     <Compile Include="Yunjing\V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\RenewProVersionRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\RenewProVersionResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\RescanImpactedHostRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RescanImpactedHostResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="Yunjing\V20180228\Models\SecurityTrend.cs" />
     <Compile Include="Yunjing\V20180228\Models\SeparateMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\SeparateMalwaresResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\TrustMaliciousRequestRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\TrustMaliciousRequestResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\TrustMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\TrustMalwaresResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\UntrustMaliciousRequestRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\UntrustMaliciousRequestResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\UntrustMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\UntrustMalwaresResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\UsualPlace.cs" />

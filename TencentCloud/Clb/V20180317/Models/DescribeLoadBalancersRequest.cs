@@ -38,7 +38,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// 1：应用型，0：传统型，-1：全部类型。
+        /// 1：应用型，0：传统型。
         /// </summary>
         [JsonProperty("Forward")]
         public long? Forward{ get; set; }

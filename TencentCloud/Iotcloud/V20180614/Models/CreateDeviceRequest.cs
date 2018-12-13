@@ -66,6 +66,18 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("LoraDevEui")]
         public string LoraDevEui{ get; set; }
 
+        /// <summary>
+        /// LoRa设备的MoteType
+        /// </summary>
+        [JsonProperty("LoraMoteType")]
+        public ulong? LoraMoteType{ get; set; }
+
+        /// <summary>
+        /// 创建LoRa设备需要skey
+        /// </summary>
+        [JsonProperty("Skey")]
+        public string Skey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +91,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamSimple(map, prefix + "Imei", this.Imei);
             this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
+            this.SetParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+            this.SetParamSimple(map, prefix + "Skey", this.Skey);
         }
     }
 }

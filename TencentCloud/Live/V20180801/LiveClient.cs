@@ -185,6 +185,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 删除直播拉流配置
+        /// </summary>
+        /// <param name="req">参考<see cref="DeletePullStreamConfigRequest"/></param>
+        /// <returns>参考<see cref="DeletePullStreamConfigResponse"/>实例</returns>
+        public async Task<DeletePullStreamConfigResponse> DeletePullStreamConfig(DeletePullStreamConfigRequest req)
+        {
+             JsonResponseModel<DeletePullStreamConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePullStreamConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePullStreamConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询播放鉴权key
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLivePlayAuthKeyRequest"/></param>

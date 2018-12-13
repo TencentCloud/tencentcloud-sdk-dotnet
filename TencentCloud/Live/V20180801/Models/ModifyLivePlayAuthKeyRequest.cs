@@ -48,6 +48,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AuthDelta")]
         public ulong? AuthDelta{ get; set; }
 
+        /// <summary>
+        /// 鉴权backkey。
+        /// </summary>
+        [JsonProperty("AuthBackKey")]
+        public string AuthBackKey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "AuthKey", this.AuthKey);
             this.SetParamSimple(map, prefix + "AuthDelta", this.AuthDelta);
+            this.SetParamSimple(map, prefix + "AuthBackKey", this.AuthBackKey);
         }
     }
 }

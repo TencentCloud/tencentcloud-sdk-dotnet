@@ -31,7 +31,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名，固定地段：query
+        /// 操作名，固定字段：query
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

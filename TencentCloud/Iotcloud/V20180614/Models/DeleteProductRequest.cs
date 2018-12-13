@@ -30,6 +30,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
+        /// <summary>
+        /// 删除LoRa产品需要skey
+        /// </summary>
+        [JsonProperty("Skey")]
+        public string Skey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +43,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "Skey", this.Skey);
         }
     }
 }

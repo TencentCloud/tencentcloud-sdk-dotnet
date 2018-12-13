@@ -411,6 +411,29 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（ModifyLaunchConfigurationAttributes）用于修改启动配置部分属性。
+        /// 
+        /// * 修改启动配置后，已经使用该启动配置扩容的存量实例不会发生变更，此后使用该启动配置的新增实例会按照新的配置进行扩容。
+        /// * 本接口支持修改部分简单类型。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyLaunchConfigurationAttributesRequest"/></param>
+        /// <returns>参考<see cref="ModifyLaunchConfigurationAttributesResponse"/>实例</returns>
+        public async Task<ModifyLaunchConfigurationAttributesResponse> ModifyLaunchConfigurationAttributes(ModifyLaunchConfigurationAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLaunchConfigurationAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLaunchConfigurationAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyScheduledAction）用于修改定时任务。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyScheduledActionRequest"/></param>

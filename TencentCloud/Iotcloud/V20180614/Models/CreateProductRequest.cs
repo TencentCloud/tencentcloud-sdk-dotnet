@@ -36,6 +36,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("ProductProperties")]
         public ProductProperties ProductProperties{ get; set; }
 
+        /// <summary>
+        /// 创建LoRa产品需要的Skey
+        /// </summary>
+        [JsonProperty("Skey")]
+        public string Skey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         {
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
+            this.SetParamSimple(map, prefix + "Skey", this.Skey);
         }
     }
 }

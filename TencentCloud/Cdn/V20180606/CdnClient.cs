@@ -105,6 +105,26 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DescribeMapInfo 用于查询省份对应的 ID，运营商对应的 ID 信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeMapInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeMapInfoResponse"/>实例</returns>
+        public async Task<DescribeMapInfoResponse> DescribeMapInfo(DescribeMapInfoRequest req)
+        {
+             JsonResponseModel<DescribeMapInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMapInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMapInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeOriginData 用于查询 CDN 实时回源监控数据，支持以下指标查询：
         /// 
         /// + 回源流量（单位为 byte）
@@ -126,6 +146,26 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = await this.InternalRequest(req, "DescribeOriginData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOriginDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribePayType 用于查询用户的计费类型，计费周期等信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePayTypeRequest"/></param>
+        /// <returns>参考<see cref="DescribePayTypeResponse"/>实例</returns>
+        public async Task<DescribePayTypeResponse> DescribePayType(DescribePayTypeRequest req)
+        {
+             JsonResponseModel<DescribePayTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePayType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePayTypeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

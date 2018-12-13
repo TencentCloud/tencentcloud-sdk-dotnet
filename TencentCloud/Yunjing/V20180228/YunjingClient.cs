@@ -153,6 +153,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (DeleteMaliciousRequests) 用于删除恶意请求记录。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteMaliciousRequestsRequest"/></param>
+        /// <returns>参考<see cref="DeleteMaliciousRequestsResponse"/>实例</returns>
+        public async Task<DeleteMaliciousRequestsResponse> DeleteMaliciousRequests(DeleteMaliciousRequestsRequest req)
+        {
+             JsonResponseModel<DeleteMaliciousRequestsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMaliciousRequests");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMaliciousRequestsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DeleteMalwares) 用于删除木马记录。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteMalwaresRequest"/></param>
@@ -444,6 +464,26 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeMachines");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeMaliciousRequests) 用于获取恶意请求数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeMaliciousRequestsRequest"/></param>
+        /// <returns>参考<see cref="DescribeMaliciousRequestsResponse"/>实例</returns>
+        public async Task<DescribeMaliciousRequestsResponse> DescribeMaliciousRequests(DescribeMaliciousRequestsRequest req)
+        {
+             JsonResponseModel<DescribeMaliciousRequestsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMaliciousRequests");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaliciousRequestsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -873,6 +913,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (ExportMaliciousRequests) 用于导出下载恶意请求文件。
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportMaliciousRequestsRequest"/></param>
+        /// <returns>参考<see cref="ExportMaliciousRequestsResponse"/>实例</returns>
+        public async Task<ExportMaliciousRequestsResponse> ExportMaliciousRequests(ExportMaliciousRequestsRequest req)
+        {
+             JsonResponseModel<ExportMaliciousRequestsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportMaliciousRequests");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportMaliciousRequestsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (IngoreImpactedHosts) 用于忽略漏洞。
         /// </summary>
         /// <param name="req">参考<see cref="IgnoreImpactedHostsRequest"/></param>
@@ -884,6 +944,26 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "IgnoreImpactedHosts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<IgnoreImpactedHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
+        /// </summary>
+        /// <param name="req">参考<see cref="InquiryPriceOpenProVersionPrepaidRequest"/></param>
+        /// <returns>参考<see cref="InquiryPriceOpenProVersionPrepaidResponse"/>实例</returns>
+        public async Task<InquiryPriceOpenProVersionPrepaidResponse> InquiryPriceOpenProVersionPrepaid(InquiryPriceOpenProVersionPrepaidRequest req)
+        {
+             JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceOpenProVersionPrepaid");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -953,6 +1033,46 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyProVersionRenewFlagRequest"/></param>
+        /// <returns>参考<see cref="ModifyProVersionRenewFlagResponse"/>实例</returns>
+        public async Task<ModifyProVersionRenewFlagResponse> ModifyProVersionRenewFlag(ModifyProVersionRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyProVersionRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyProVersionRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProVersionRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
+        /// </summary>
+        /// <param name="req">参考<see cref="OpenProVersionPrepaidRequest"/></param>
+        /// <returns>参考<see cref="OpenProVersionPrepaidResponse"/>实例</returns>
+        public async Task<OpenProVersionPrepaidResponse> OpenProVersionPrepaid(OpenProVersionPrepaidRequest req)
+        {
+             JsonResponseModel<OpenProVersionPrepaidResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenProVersionPrepaid");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProVersionPrepaidResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
         /// </summary>
         /// <param name="req">参考<see cref="RecoverMalwaresRequest"/></param>
@@ -964,6 +1084,26 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "RecoverMalwares");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecoverMalwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (RenewProVersion) 用于续费专业版(包年包月)。
+        /// </summary>
+        /// <param name="req">参考<see cref="RenewProVersionRequest"/></param>
+        /// <returns>参考<see cref="RenewProVersionResponse"/>实例</returns>
+        public async Task<RenewProVersionResponse> RenewProVersion(RenewProVersionRequest req)
+        {
+             JsonResponseModel<RenewProVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewProVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewProVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1013,6 +1153,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (TrustMaliciousRequest) 用于恶意请求添加信任。
+        /// </summary>
+        /// <param name="req">参考<see cref="TrustMaliciousRequestRequest"/></param>
+        /// <returns>参考<see cref="TrustMaliciousRequestResponse"/>实例</returns>
+        public async Task<TrustMaliciousRequestResponse> TrustMaliciousRequest(TrustMaliciousRequestRequest req)
+        {
+             JsonResponseModel<TrustMaliciousRequestResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TrustMaliciousRequest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TrustMaliciousRequestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(TrustMalwares)将被识别木马文件设为信任。
         /// </summary>
         /// <param name="req">参考<see cref="TrustMalwaresRequest"/></param>
@@ -1024,6 +1184,26 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "TrustMalwares");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TrustMalwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (UntrustMaliciousRequest) 用于取消信任恶意请求。
+        /// </summary>
+        /// <param name="req">参考<see cref="UntrustMaliciousRequestRequest"/></param>
+        /// <returns>参考<see cref="UntrustMaliciousRequestResponse"/>实例</returns>
+        public async Task<UntrustMaliciousRequestResponse> UntrustMaliciousRequest(UntrustMaliciousRequestRequest req)
+        {
+             JsonResponseModel<UntrustMaliciousRequestResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UntrustMaliciousRequest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UntrustMaliciousRequestResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

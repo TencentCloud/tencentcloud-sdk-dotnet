@@ -99,6 +99,26 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns>参考<see cref="AssociateSecurityGroupsResponse"/>实例</returns>
+        public async Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
         /// </summary>
         /// <param name="req">参考<see cref="CreateDisasterRecoverGroupRequest"/></param>
@@ -637,6 +657,26 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DisassociateInstancesKeyPairs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DisassociateSecurityGroups) 用于解绑实例的指定安全组。
+        /// </summary>
+        /// <param name="req">参考<see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns>参考<see cref="DisassociateSecurityGroupsResponse"/>实例</returns>
+        public async Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

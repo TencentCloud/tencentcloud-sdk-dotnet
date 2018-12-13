@@ -31,13 +31,7 @@ namespace TencentCloud.Youmall.V20180228.Models
         public string CompanyId{ get; set; }
 
         /// <summary>
-        /// 店铺ID
-        /// </summary>
-        [JsonProperty("ShopId")]
-        public long? ShopId{ get; set; }
-
-        /// <summary>
-        /// 人物类型（0表示普通顾客，1 白名单，2 表示黑名单）
+        /// 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
         /// </summary>
         [JsonProperty("PersonType")]
         public long? PersonType{ get; set; }
@@ -55,6 +49,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         public string PictureName{ get; set; }
 
         /// <summary>
+        /// 店铺ID，如果不填表示操作集团身份库
+        /// </summary>
+        [JsonProperty("ShopId")]
+        public long? ShopId{ get; set; }
+
+        /// <summary>
         /// 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
         /// </summary>
         [JsonProperty("IsForceUpload")]
@@ -67,10 +67,10 @@ namespace TencentCloud.Youmall.V20180228.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CompanyId", this.CompanyId);
-            this.SetParamSimple(map, prefix + "ShopId", this.ShopId);
             this.SetParamSimple(map, prefix + "PersonType", this.PersonType);
             this.SetParamSimple(map, prefix + "Picture", this.Picture);
             this.SetParamSimple(map, prefix + "PictureName", this.PictureName);
+            this.SetParamSimple(map, prefix + "ShopId", this.ShopId);
             this.SetParamSimple(map, prefix + "IsForceUpload", this.IsForceUpload);
         }
     }

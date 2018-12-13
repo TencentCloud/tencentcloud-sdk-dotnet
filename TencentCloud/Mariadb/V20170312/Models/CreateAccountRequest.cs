@@ -60,6 +60,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 根据传入时间判断备机不可用
+        /// </summary>
+        [JsonProperty("DelayThresh")]
+        public long? DelayThresh{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
         }
     }
 }

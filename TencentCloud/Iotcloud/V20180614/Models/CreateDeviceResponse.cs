@@ -55,7 +55,25 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string LoraDevEui{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+        /// </summary>
+        [JsonProperty("LoraMoteType")]
+        public ulong? LoraMoteType{ get; set; }
+
+        /// <summary>
+        /// LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+        /// </summary>
+        [JsonProperty("LoraAppKey")]
+        public string LoraAppKey{ get; set; }
+
+        /// <summary>
+        /// LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+        /// </summary>
+        [JsonProperty("LoraNwkKey")]
+        public string LoraNwkKey{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -71,6 +89,9 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "DeviceCert", this.DeviceCert);
             this.SetParamSimple(map, prefix + "DevicePrivateKey", this.DevicePrivateKey);
             this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
+            this.SetParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+            this.SetParamSimple(map, prefix + "LoraAppKey", this.LoraAppKey);
+            this.SetParamSimple(map, prefix + "LoraNwkKey", this.LoraNwkKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

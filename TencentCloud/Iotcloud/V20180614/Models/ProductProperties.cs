@@ -66,6 +66,18 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Appeui")]
         public string Appeui{ get; set; }
 
+        /// <summary>
+        /// 产品绑定的物模型ID，-1表示不绑定
+        /// </summary>
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
+
+        /// <summary>
+        /// 产品绑定的物模型名称
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +91,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "Appeui", this.Appeui);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
         }
     }
 }

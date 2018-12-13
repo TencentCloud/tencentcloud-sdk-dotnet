@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 认证类型，unidirectional：单向认证，mutual：双向认证
+        /// 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }

@@ -112,6 +112,17 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
+        /// <summary>
+        /// 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+        /// <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
+        /// <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
+        /// 
+        /// 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
+        /// 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
+        /// </summary>
+        [JsonProperty("InstanceTypesCheckPolicy")]
+        public string InstanceTypesCheckPolicy{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -132,6 +143,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
+            this.SetParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
         }
     }
 }

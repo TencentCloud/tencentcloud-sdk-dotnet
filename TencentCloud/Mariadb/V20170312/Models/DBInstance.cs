@@ -228,6 +228,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
+        /// <summary>
+        /// 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+        /// </summary>
+        [JsonProperty("WanStatus")]
+        public long? WanStatus{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -268,6 +274,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
             this.SetParamSimple(map, prefix + "Locker", this.Locker);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
         }
     }
 }

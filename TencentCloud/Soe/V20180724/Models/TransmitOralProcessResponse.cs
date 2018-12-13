@@ -61,6 +61,12 @@ namespace TencentCloud.Soe.V20180724.Models
         public string AudioUrl{ get; set; }
 
         /// <summary>
+        /// 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
+        /// </summary>
+        [JsonProperty("SentenceInfoSet")]
+        public SentenceInfo[] SentenceInfoSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Words.", this.Words);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+            this.SetParamArrayObj(map, prefix + "SentenceInfoSet.", this.SentenceInfoSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
