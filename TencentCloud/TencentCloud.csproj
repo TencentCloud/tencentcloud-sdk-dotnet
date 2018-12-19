@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.8</VersionPrefix>
+    <VersionPrefix>3.0.9</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="Aai\V20180522\Models\TextToVoiceRequest.cs" />
     <Compile Include="Aai\V20180522\Models\TextToVoiceResponse.cs" />
     <Compile Include="As\V20180419\AsClient.cs" />
+    <Compile Include="As\V20180419\Models\Activity.cs" />
+    <Compile Include="As\V20180419\Models\ActivtyRelatedInstance.cs" />
     <Compile Include="As\V20180419\Models\AttachInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\AttachInstancesResponse.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroup.cs" />
@@ -75,6 +77,8 @@
     <Compile Include="As\V20180419\Models\DeleteScheduledActionResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAccountLimitsRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeAccountLimitsResponse.cs" />
+    <Compile Include="As\V20180419\Models\DescribeAutoScalingActivitiesRequest.cs" />
+    <Compile Include="As\V20180419\Models\DescribeAutoScalingActivitiesResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupsRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupsResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingInstancesRequest.cs" />
@@ -1045,6 +1049,11 @@
     <Compile Include="Faceid\V20180301\Models\DetectAuthResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoResponse.cs" />
+    <Compile Include="Habo\V20181203\HaboClient.cs" />
+    <Compile Include="Habo\V20181203\Models\DescribeStatusRequest.cs" />
+    <Compile Include="Habo\V20181203\Models\DescribeStatusResponse.cs" />
+    <Compile Include="Habo\V20181203\Models\StartAnalyseRequest.cs" />
+    <Compile Include="Habo\V20181203\Models\StartAnalyseResponse.cs" />
     <Compile Include="Hcm\V20181106\HcmClient.cs" />
     <Compile Include="Hcm\V20181106\Models\EvaluationRequest.cs" />
     <Compile Include="Hcm\V20181106\Models\EvaluationResponse.cs" />
@@ -1800,6 +1809,18 @@
     <Compile Include="Tia\V20180226\Models\ModelInfo.cs" />
     <Compile Include="Tia\V20180226\Models\QueryLogsRequest.cs" />
     <Compile Include="Tia\V20180226\Models\QueryLogsResponse.cs" />
+    <Compile Include="Tics\V20181115\TicsClient.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeDomainInfoRequest.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeDomainInfoResponse.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeFileInfoRequest.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeFileInfoResponse.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeIpInfoRequest.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeIpInfoResponse.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeThreatInfoRequest.cs" />
+    <Compile Include="Tics\V20181115\Models\DescribeThreatInfoResponse.cs" />
+    <Compile Include="Tics\V20181115\Models\FileInfoType.cs" />
+    <Compile Include="Tics\V20181115\Models\IntelligenceType.cs" />
+    <Compile Include="Tics\V20181115\Models\TagType.cs" />
     <Compile Include="Tmt\V20180321\TmtClient.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageRecord.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageTranslateRequest.cs" />
@@ -1811,6 +1832,47 @@
     <Compile Include="Tmt\V20180321\Models\SpeechTranslateResponse.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateResponse.cs" />
+    <Compile Include="Vod\V20180717\VodClient.cs" />
+    <Compile Include="Vod\V20180717\Models\ApplyUploadRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ApplyUploadResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CommitUploadRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CommitUploadResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateClassRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateClassResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteClassRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteClassResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteMediaRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteMediaResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAllClassRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAllClassResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeMediaInfosResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaAnimatedGraphicsInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaAnimatedGraphicsItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaAudioStreamItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaBasicInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaClassInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaDeleteItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaImageSpriteInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaImageSpriteItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaKeyFrameDescInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaKeyFrameDescItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaMetaData.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSampleSnapshotInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSampleSnapshotItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSnapshotByTimeOffsetInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSnapshotByTimeOffsetItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSnapshotByTimePicInfoItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSourceData.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaTranscodeInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaTranscodeItem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaVideoStreamItem.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyClassRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyClassResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyMediaInfoRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyMediaInfoResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\TempCertificate.cs" />
     <Compile Include="Vpc\V20170312\VpcClient.cs" />
     <Compile Include="Vpc\V20170312\Models\AcceptAttachCcnInstancesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AcceptAttachCcnInstancesResponse.cs" />
