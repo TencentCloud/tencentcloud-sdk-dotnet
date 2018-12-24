@@ -25,13 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 要解绑的`安全组ID`，类似sg-efil73jd，支持解绑多个安全组。
+        /// 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 被解绑的`实例ID`，类似ins-lesecurk 。
+        /// 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

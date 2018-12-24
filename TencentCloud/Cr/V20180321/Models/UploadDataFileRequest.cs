@@ -49,13 +49,13 @@ namespace TencentCloud.Cr.V20180321.Models
         public string UploadModel{ get; set; }
 
         /// <summary>
-        /// 文件，文件与文件地址上传只可选用一种，使用 Content-Type: multipart/form-data 协议来上传二进制流文件。
+        /// 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
         /// </summary>
         [JsonProperty("File")]
         public string File{ get; set; }
 
         /// <summary>
-        /// 文件上传地址
+        /// 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }

@@ -25,19 +25,20 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 业务流水号
+        /// 人脸核身流程的标识，调用DetectAuth接口时生成。
         /// </summary>
         [JsonProperty("BizToken")]
         public string BizToken{ get; set; }
 
         /// <summary>
-        /// 规则Id。
+        /// 用于细分客户使用场景，由腾讯侧在线下对接时分配。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 指定需要拉取何种信息（0：全部；1：文本类；2：身份证正反面；3：截帧（最佳帧）；4：视频）。可拼接。如 134表示拉取文本类、截帧（最佳帧）、视频
+        /// 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+        /// 如 134表示拉取文本类、视频最佳截图照片、视频。
         /// </summary>
         [JsonProperty("InfoType")]
         public string InfoType{ get; set; }

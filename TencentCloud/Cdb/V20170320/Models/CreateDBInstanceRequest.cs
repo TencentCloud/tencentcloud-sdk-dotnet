@@ -162,6 +162,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
+        /// <summary>
+        /// 实例要绑定的标签
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfo[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -191,6 +197,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
             this.SetParamObj(map, prefix + "RoGroup.", this.RoGroup);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

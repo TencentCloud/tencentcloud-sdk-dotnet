@@ -43,7 +43,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 对应子类审核建议: block,review,pass
+        /// 此字段为保留字段，目前统一返回pass。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }

@@ -42,6 +42,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("StopType")]
         public string StopType{ get; set; }
 
+        /// <summary>
+        /// 按量计费实例关机收费模式。
+        /// 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<br>默认取值：KEEP_CHARGING。
+        /// 该参数只针对部分按量计费云硬盘实例生效，详情参考[按量计费实例关机不收费说明](https://cloud.tencent.com/document/product/213/19918)
+        /// </summary>
+        [JsonProperty("StoppedMode")]
+        public string StoppedMode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +59,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
             this.SetParamSimple(map, prefix + "StopType", this.StopType);
+            this.SetParamSimple(map, prefix + "StoppedMode", this.StoppedMode);
         }
     }
 }

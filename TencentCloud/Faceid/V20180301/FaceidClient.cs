@@ -53,7 +53,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 实名核身鉴权。用于获取一次核身流程的BizToken。如果是微信平台，会同时返回一个URL，用作微信平台的跳转。
+        /// 每次开始核身前，需先调用本接口获取BizToken，用来串联核身流程，在核身完成后，用于获取验证结果信息。
         /// </summary>
         /// <param name="req">参考<see cref="DetectAuthRequest"/></param>
         /// <returns>参考<see cref="DetectAuthResponse"/>实例</returns>
@@ -73,7 +73,27 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 获取实名核身结果信息
+        /// 使用动作活体检测模式前，需调用本接口获取动作顺序。
+        /// </summary>
+        /// <param name="req">参考<see cref="GetActionSequenceRequest"/></param>
+        /// <returns>参考<see cref="GetActionSequenceResponse"/>实例</returns>
+        public async Task<GetActionSequenceResponse> GetActionSequence(GetActionSequenceRequest req)
+        {
+             JsonResponseModel<GetActionSequenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetActionSequence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetActionSequenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
         /// </summary>
         /// <param name="req">参考<see cref="GetDetectInfoRequest"/></param>
         /// <returns>参考<see cref="GetDetectInfoResponse"/>实例</returns>
@@ -84,6 +104,86 @@ namespace TencentCloud.Faceid.V20180301
              {
                  var strResp = await this.InternalRequest(req, "GetDetectInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDetectInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用数字活体检测模式前，需调用本接口获取数字验证码。
+        /// </summary>
+        /// <param name="req">参考<see cref="GetLiveCodeRequest"/></param>
+        /// <returns>参考<see cref="GetLiveCodeResponse"/>实例</returns>
+        public async Task<GetLiveCodeResponse> GetLiveCode(GetLiveCodeRequest req)
+        {
+             JsonResponseModel<GetLiveCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetLiveCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLiveCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
+        /// </summary>
+        /// <param name="req">参考<see cref="ImageRecognitionRequest"/></param>
+        /// <returns>参考<see cref="ImageRecognitionResponse"/>实例</returns>
+        public async Task<ImageRecognitionResponse> ImageRecognition(ImageRecognitionRequest req)
+        {
+             JsonResponseModel<ImageRecognitionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImageRecognition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageRecognitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入视频和照片，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
+        /// </summary>
+        /// <param name="req">参考<see cref="LivenessCompareRequest"/></param>
+        /// <returns>参考<see cref="LivenessCompareResponse"/>实例</returns>
+        public async Task<LivenessCompareResponse> LivenessCompare(LivenessCompareRequest req)
+        {
+             JsonResponseModel<LivenessCompareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LivenessCompare");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LivenessCompareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入视频和身份信息，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与公安权威库的证件照是否属于同一个人。
+        /// </summary>
+        /// <param name="req">参考<see cref="LivenessRecognitionRequest"/></param>
+        /// <returns>参考<see cref="LivenessRecognitionResponse"/>实例</returns>
+        public async Task<LivenessRecognitionResponse> LivenessRecognition(LivenessRecognitionRequest req)
+        {
+             JsonResponseModel<LivenessRecognitionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LivenessRecognition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LivenessRecognitionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

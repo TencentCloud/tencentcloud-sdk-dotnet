@@ -334,5 +334,25 @@ namespace TencentCloud.Ms.V20180408
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取用户基础信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeUserBaseInfoInstanceRequest"/></param>
+        /// <returns>参考<see cref="DescribeUserBaseInfoInstanceResponse"/>实例</returns>
+        public async Task<DescribeUserBaseInfoInstanceResponse> DescribeUserBaseInfoInstance(DescribeUserBaseInfoInstanceRequest req)
+        {
+             JsonResponseModel<DescribeUserBaseInfoInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserBaseInfoInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserBaseInfoInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

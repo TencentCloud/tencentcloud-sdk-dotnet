@@ -25,13 +25,14 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 用于跳转的URL。只能于微信中打开。
+        /// 用于发起核身流程的URL，仅微信H5场景使用。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 业务流水号。在获取认证信息接口中作为BizToken传入
+        /// 一次核身流程的标识，有效时间为7,200秒；
+        /// 完成核身后，可用该标识获取验证结果信息。
         /// </summary>
         [JsonProperty("BizToken")]
         public string BizToken{ get; set; }

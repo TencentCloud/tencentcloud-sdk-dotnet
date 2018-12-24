@@ -200,6 +200,106 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// DeregisterTargetsFromClassicalLB用于解绑后端服务器
+        /// </summary>
+        /// <param name="req">参考<see cref="DeregisterTargetsFromClassicalLBRequest"/></param>
+        /// <returns>参考<see cref="DeregisterTargetsFromClassicalLBResponse"/>实例</returns>
+        public async Task<DeregisterTargetsFromClassicalLBResponse> DeregisterTargetsFromClassicalLB(DeregisterTargetsFromClassicalLBRequest req)
+        {
+             JsonResponseModel<DeregisterTargetsFromClassicalLBResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeregisterTargetsFromClassicalLB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterTargetsFromClassicalLBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeClassicalLBByInstanceId用于通过后端实例ID获取传统型负载均衡ID列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClassicalLBByInstanceIdRequest"/></param>
+        /// <returns>参考<see cref="DescribeClassicalLBByInstanceIdResponse"/>实例</returns>
+        public async Task<DescribeClassicalLBByInstanceIdResponse> DescribeClassicalLBByInstanceId(DescribeClassicalLBByInstanceIdRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBByInstanceIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClassicalLBByInstanceId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBByInstanceIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeClassicalLBHealthStatus用于获取传统型负载均衡后端的健康状态
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClassicalLBHealthStatusRequest"/></param>
+        /// <returns>参考<see cref="DescribeClassicalLBHealthStatusResponse"/>实例</returns>
+        public async Task<DescribeClassicalLBHealthStatusResponse> DescribeClassicalLBHealthStatus(DescribeClassicalLBHealthStatusRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBHealthStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClassicalLBHealthStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBHealthStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeClassicalLBListeners用于获取传统型负载均衡信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClassicalLBListenersRequest"/></param>
+        /// <returns>参考<see cref="DescribeClassicalLBListenersResponse"/>实例</returns>
+        public async Task<DescribeClassicalLBListenersResponse> DescribeClassicalLBListeners(DescribeClassicalLBListenersRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClassicalLBListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeClassicalLBTargets用于获取传统型负载均衡绑定的后端服务
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClassicalLBTargetsRequest"/></param>
+        /// <returns>参考<see cref="DescribeClassicalLBTargetsResponse"/>实例</returns>
+        public async Task<DescribeClassicalLBTargetsResponse> DescribeClassicalLBTargets(DescribeClassicalLBTargetsRequest req)
+        {
+             JsonResponseModel<DescribeClassicalLBTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClassicalLBTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或者端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，默认返该负载均衡器下的默认数据长度（20 个）的监听器。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeListenersRequest"/></param>
@@ -418,6 +518,26 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "RegisterTargets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// RegisterTargetsWithClassicalLB用于绑定后端服务到传统型负载均衡
+        /// </summary>
+        /// <param name="req">参考<see cref="RegisterTargetsWithClassicalLBRequest"/></param>
+        /// <returns>参考<see cref="RegisterTargetsWithClassicalLBResponse"/>实例</returns>
+        public async Task<RegisterTargetsWithClassicalLBResponse> RegisterTargetsWithClassicalLB(RegisterTargetsWithClassicalLBRequest req)
+        {
+             JsonResponseModel<RegisterTargetsWithClassicalLBResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RegisterTargetsWithClassicalLB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

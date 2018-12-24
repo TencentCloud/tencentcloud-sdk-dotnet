@@ -37,10 +37,10 @@ namespace TencentCloud.Cr.V20180321.Models
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 任务ID，形如abc-a0b1c2xyz
         /// </summary>
         [JsonProperty("TaskId")]
-        public long? TaskId{ get; set; }
+        public string TaskId{ get; set; }
 
 
         /// <summary>

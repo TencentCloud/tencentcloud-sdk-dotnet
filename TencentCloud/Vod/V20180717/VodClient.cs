@@ -247,5 +247,27 @@ namespace TencentCloud.Vod.V20180717
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 搜索媒体信息，支持文本模糊搜索及条件过滤。
+        /// <li>该接口单次请求最多返回100条数据。</li>
+        /// <li>搜索结果超过 5000条，不再支持分页查询超过 5000 部分的数据。</li>
+        /// </summary>
+        /// <param name="req">参考<see cref="SearchMediaRequest"/></param>
+        /// <returns>参考<see cref="SearchMediaResponse"/>实例</returns>
+        public async Task<SearchMediaResponse> SearchMedia(SearchMediaRequest req)
+        {
+             JsonResponseModel<SearchMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

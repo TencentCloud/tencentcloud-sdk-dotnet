@@ -273,6 +273,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 修改实例相关信息（目前支持：实例重命名）
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyInstanceRequest"/></param>
+        /// <returns>参考<see cref="ModifyInstanceResponse"/>实例</returns>
+        public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest req)
+        {
+             JsonResponseModel<ModifyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 续费实例
         /// </summary>
         /// <param name="req">参考<see cref="RenewInstanceRequest"/></param>

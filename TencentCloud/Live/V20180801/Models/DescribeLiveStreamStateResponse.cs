@@ -25,7 +25,10 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 流状态
+        /// 流状态，
+        /// active：活跃，
+        /// inactive：非活跃，
+        /// forbid：禁播。
         /// </summary>
         [JsonProperty("StreamState")]
         public string StreamState{ get; set; }

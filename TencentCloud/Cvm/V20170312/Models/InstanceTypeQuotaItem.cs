@@ -85,7 +85,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public LocalDiskType[] LocalDiskTypeList{ get; set; }
 
         /// <summary>
-        /// 实例是否售卖。
+        /// 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

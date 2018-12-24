@@ -37,7 +37,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string ModelId{ get; set; }
 
         /// <summary>
-        /// 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理。图片大小不超过 500k，分辨率不超过 1080*1080。
+        /// 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public long? PornDetect{ get; set; }
 
         /// <summary>
-        /// 0表示不需要鉴政治，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
+        /// 0表示不需要鉴政，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
         /// </summary>
         [JsonProperty("CelebrityIdentify")]
         public long? CelebrityIdentify{ get; set; }

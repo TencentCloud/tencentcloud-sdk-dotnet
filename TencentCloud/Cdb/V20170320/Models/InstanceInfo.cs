@@ -234,6 +234,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("PhysicalId")]
         public string PhysicalId{ get; set; }
 
+        /// <summary>
+        /// 核心数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -275,6 +281,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "PhysicalId", this.PhysicalId);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

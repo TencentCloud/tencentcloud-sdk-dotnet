@@ -455,6 +455,27 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于重试作业中失败的任务实例。
+        /// 当且仅当作业处于“FAILED”状态，支持重试操作。重试操作成功后，作业会按照“DAG”中指定的任务依赖关系，依次重试各个任务中失败的任务实例。任务实例的历史信息将被重置，如同首次运行一样，参与后续的调度和执行。
+        /// </summary>
+        /// <param name="req">参考<see cref="RetryJobsRequest"/></param>
+        /// <returns>参考<see cref="RetryJobsResponse"/>实例</returns>
+        public async Task<RetryJobsResponse> RetryJobs(RetryJobsRequest req)
+        {
+             JsonResponseModel<RetryJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RetryJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetryJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于提交一个作业
         /// </summary>
         /// <param name="req">参考<see cref="SubmitJobRequest"/></param>

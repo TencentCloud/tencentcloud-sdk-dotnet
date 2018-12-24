@@ -31,7 +31,7 @@ namespace TencentCloud.Cr.V20180321.Models
         public string TaskResult{ get; set; }
 
         /// <summary>
-        /// 任务类型，010代表上传任务
+        /// 任务类型，001为报告下载，002为数据上传，003为还款数据上传。
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

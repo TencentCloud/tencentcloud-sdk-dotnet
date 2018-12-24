@@ -49,7 +49,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 此字段为保留字段，目前统一返回pass。请使用FusefaceReviewDetail中的“Suggestion”字段
+        /// 此字段为保留字段，目前统一返回pass。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }

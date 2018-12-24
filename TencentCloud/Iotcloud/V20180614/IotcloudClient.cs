@@ -153,6 +153,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTopicPolicyRequest"/></param>
+        /// <returns>参考<see cref="CreateTopicPolicyResponse"/>实例</returns>
+        public async Task<CreateTopicPolicyResponse> CreateTopicPolicy(CreateTopicPolicyRequest req)
+        {
+             JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateTopicRule）用于创建一个规则
         /// </summary>
         /// <param name="req">参考<see cref="CreateTopicRuleRequest"/></param>
@@ -484,6 +504,26 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = await this.InternalRequest(req, "UpdateDeviceShadow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateTopicPolicy）用于更新Topic信息
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateTopicPolicyRequest"/></param>
+        /// <returns>参考<see cref="UpdateTopicPolicyResponse"/>实例</returns>
+        public async Task<UpdateTopicPolicyResponse> UpdateTopicPolicy(UpdateTopicPolicyRequest req)
+        {
+             JsonResponseModel<UpdateTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateTopicPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

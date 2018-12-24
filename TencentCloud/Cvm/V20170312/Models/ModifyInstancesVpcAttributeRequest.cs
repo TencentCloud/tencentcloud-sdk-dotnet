@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 待操作的实例ID数组。可通过[`DescribeInstances`](document/api/213/9388)接口返回值中的`InstanceId`获取。
+        /// 待操作的实例ID数组。可通过[`DescribeInstances`](document/api/213/15728)接口返回值中的`InstanceId`获取。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

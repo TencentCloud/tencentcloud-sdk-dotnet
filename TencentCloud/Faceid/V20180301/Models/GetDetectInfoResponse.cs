@@ -55,7 +55,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         ///     "OcrFront": null,
         ///     "OcrBack": null
         ///   },
-        ///   // 最佳帧照片Base64
+        ///   // 视频最佳帧截图Base64
         ///   "BestFrame": {
         ///     "BestFrame": null
         ///   },

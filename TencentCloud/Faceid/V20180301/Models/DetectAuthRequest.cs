@@ -25,19 +25,20 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 规则Id。a-zA-Z0-9组合。最长长度32位。
+        /// 用于细分客户使用场景，由腾讯侧在线下对接时分配。
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 终端类型。可选值有：weixinh5, weixinh5native, h5, tinyappsdk, iossdk, androidsdk。只有值为"weixinh5"时会返回跳转URL。
+        /// 本接口不需要传递此参数。
         /// </summary>
         [JsonProperty("TerminalType")]
         public string TerminalType{ get; set; }
 
         /// <summary>
-        /// 身份证号或者是客户系统内部的唯一用户id。（传uid的时候只能使用ImageBase64传的照片进行一比一）a-zA-Z0-9组合。最长长度32位。
+        /// 身份标识（与公安权威库比对时必须是身份证号）。
+        /// 规则：a-zA-Z0-9组合。最长长度32位。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
@@ -49,19 +50,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 回调地址。最长长度1024位。
+        /// 认证结束后重定向的回调链接地址。最长长度1024位。
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }
 
         /// <summary>
-        /// 额外参数，会在getDetectInfo时带回去。最长长度1024位。
+        /// 透传字段，在获取验证结果时返回。
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 用于一比一时的照片base64。此时必须传入IdCard。
+        /// 用于人脸比对的照片，图片的BASE64值；
+        /// BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
