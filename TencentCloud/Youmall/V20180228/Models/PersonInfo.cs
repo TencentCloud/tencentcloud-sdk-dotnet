@@ -69,6 +69,18 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("PersonSubType")]
         public long? PersonSubType{ get; set; }
 
+        /// <summary>
+        /// 到访次数，-1表示未知
+        /// </summary>
+        [JsonProperty("VisitTimes")]
+        public long? VisitTimes{ get; set; }
+
+        /// <summary>
+        /// 到访天数，-1表示未知
+        /// </summary>
+        [JsonProperty("VisitDays")]
+        public long? VisitDays{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -82,6 +94,8 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "PersonType", this.PersonType);
             this.SetParamSimple(map, prefix + "PersonPictureUrl", this.PersonPictureUrl);
             this.SetParamSimple(map, prefix + "PersonSubType", this.PersonSubType);
+            this.SetParamSimple(map, prefix + "VisitTimes", this.VisitTimes);
+            this.SetParamSimple(map, prefix + "VisitDays", this.VisitDays);
         }
     }
 }

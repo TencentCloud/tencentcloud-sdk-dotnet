@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.10</VersionPrefix>
+    <VersionPrefix>3.0.11</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -251,10 +251,20 @@
     <Compile Include="Bm\V20180423\Models\DeletePsaRegulationResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DeleteUserCmdsRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DeleteUserCmdsResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDeviceClassRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDeviceClassResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDeviceInventoryRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDeviceInventoryResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDeviceOperationLogRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDeviceOperationLogResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDevicePositionRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeDevicePositionResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeDevicePriceInfoRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeDevicePriceInfoResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeDevicesRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeOsInfoRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\DescribeOsInfoResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribePsaRegulationsRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribePsaRegulationsResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeRepairTaskConstantRequest.cs" />
@@ -270,17 +280,25 @@
     <Compile Include="Bm\V20180423\Models\DescribeUserCmdsRequest.cs" />
     <Compile Include="Bm\V20180423\Models\DescribeUserCmdsResponse.cs" />
     <Compile Include="Bm\V20180423\Models\DeviceAlias.cs" />
+    <Compile Include="Bm\V20180423\Models\DeviceClass.cs" />
     <Compile Include="Bm\V20180423\Models\DeviceInfo.cs" />
+    <Compile Include="Bm\V20180423\Models\DeviceOperationLog.cs" />
+    <Compile Include="Bm\V20180423\Models\DevicePositionInfo.cs" />
     <Compile Include="Bm\V20180423\Models\DevicePriceInfo.cs" />
     <Compile Include="Bm\V20180423\Models\FailedTaskInfo.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyDeviceAliasesRequest.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyDeviceAliasesResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyDeviceAutoRenewFlagRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\ModifyDeviceAutoRenewFlagResponse.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPayModePre2PostRequest.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPayModePre2PostResponse.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPsaRegulationRequest.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyPsaRegulationResponse.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyUserCmdRequest.cs" />
     <Compile Include="Bm\V20180423\Models\ModifyUserCmdResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\OfflineDevicesRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\OfflineDevicesResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\OsInfo.cs" />
     <Compile Include="Bm\V20180423\Models\PsaRegulation.cs" />
     <Compile Include="Bm\V20180423\Models\RebootDevicesRequest.cs" />
     <Compile Include="Bm\V20180423\Models\RebootDevicesResponse.cs" />
@@ -290,6 +308,8 @@
     <Compile Include="Bm\V20180423\Models\ResetDevicePasswordResponse.cs" />
     <Compile Include="Bm\V20180423\Models\RunUserCmdRequest.cs" />
     <Compile Include="Bm\V20180423\Models\RunUserCmdResponse.cs" />
+    <Compile Include="Bm\V20180423\Models\SetOutBandVpnAuthPasswordRequest.cs" />
+    <Compile Include="Bm\V20180423\Models\SetOutBandVpnAuthPasswordResponse.cs" />
     <Compile Include="Bm\V20180423\Models\SuccessTaskInfo.cs" />
     <Compile Include="Bm\V20180423\Models\Tag.cs" />
     <Compile Include="Bm\V20180423\Models\TaskInfo.cs" />
@@ -320,6 +340,8 @@
     <Compile Include="Cbs\V20170312\Models\DescribeDisksResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeInstancesDiskNumRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeInstancesDiskNumResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\DescribeSnapshotOperationLogsRequest.cs" />
+    <Compile Include="Cbs\V20170312\Models\DescribeSnapshotOperationLogsResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeSnapshotsRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\DetachDisksRequest.cs" />
@@ -349,6 +371,7 @@
     <Compile Include="Cbs\V20170312\Models\ResizeDiskRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ResizeDiskResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\Snapshot.cs" />
+    <Compile Include="Cbs\V20170312\Models\SnapshotOperationLog.cs" />
     <Compile Include="Cbs\V20170312\Models\Tag.cs" />
     <Compile Include="Cbs\V20170312\Models\TerminateDisksRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\TerminateDisksResponse.cs" />
@@ -2006,6 +2029,8 @@
     <Compile Include="Vpc\V20170312\Models\CreateServiceTemplateResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateSubnetRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateSubnetResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateSubnetsRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateSubnetsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpcRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpcResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnConnectionRequest.cs" />
@@ -2237,6 +2262,7 @@
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Subnet.cs" />
+    <Compile Include="Vpc\V20170312\Models\SubnetInput.cs" />
     <Compile Include="Vpc\V20170312\Models\TransformAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\TransformAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\UnassignPrivateIpAddressesRequest.cs" />
@@ -2304,6 +2330,8 @@
     <Compile Include="Youmall\V20180228\Models\DescribeZoneTrafficInfoResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\GenderAgeTrafficDetail.cs" />
     <Compile Include="Youmall\V20180228\Models\HourTrafficInfoDetail.cs" />
+    <Compile Include="Youmall\V20180228\Models\ModifyPersonFeatureInfoRequest.cs" />
+    <Compile Include="Youmall\V20180228\Models\ModifyPersonFeatureInfoResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\ModifyPersonTagInfoRequest.cs" />
     <Compile Include="Youmall\V20180228\Models\ModifyPersonTagInfoResponse.cs" />
     <Compile Include="Youmall\V20180228\Models\ModifyPersonTypeRequest.cs" />

@@ -67,7 +67,7 @@ namespace TencentCloud.Aai.V20180522.Models
         public long? VoiceType{ get; set; }
 
         /// <summary>
-        /// 主语言类型<li>1-中文(包括粤语)，最大100字符</li><li>2-英文，最大支持400字符</li>
+        /// 主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
         /// </summary>
         [JsonProperty("PrimaryLanguage")]
         public ulong? PrimaryLanguage{ get; set; }

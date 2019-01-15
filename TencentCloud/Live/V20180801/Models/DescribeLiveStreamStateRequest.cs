@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 您的加速域名。
+        /// 您的推流域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }

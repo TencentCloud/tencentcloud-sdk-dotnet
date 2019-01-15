@@ -78,6 +78,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DhcpOptionsId")]
         public string DhcpOptionsId{ get; set; }
 
+        /// <summary>
+        /// 是否开启DHCP。
+        /// </summary>
+        [JsonProperty("EnableDhcp")]
+        public bool? EnableDhcp{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "DnsServerSet.", this.DnsServerSet);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "DhcpOptionsId", this.DhcpOptionsId);
+            this.SetParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
         }
     }
 }

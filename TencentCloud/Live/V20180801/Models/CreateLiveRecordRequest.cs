@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 直播流所属应用名称。
+        /// 推流App名。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 任务起始时间，中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。录制视频为精彩视频时，忽略此字段。
+        /// 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 任务结束时间，中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。若指定精彩视频录制，结束时间不超过当前时间+30分钟，如果超过或小于起始时间，则实际结束时间为当前时间+30分钟。
+        /// 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -70,22 +70,22 @@ namespace TencentCloud.Live.V20180801.Models
         public string FileFormat{ get; set; }
 
         /// <summary>
-        /// 精彩视频标志。0：普通视频【默认】；1：精彩视频。
+        /// 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
         /// </summary>
         [JsonProperty("Highlight")]
         public long? Highlight{ get; set; }
 
         /// <summary>
-        /// A+B=C混流标志。0：非A+B=C混流录制【默认】；1：标示为A+B=C混流录制。
+        /// 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
         /// </summary>
         [JsonProperty("MixStream")]
         public long? MixStream{ get; set; }
 
         /// <summary>
-        /// 录制流参数，当前支持以下参数： 
-        /// interval 录制分片时长，单位 秒，0 - 7200
-        /// storage_time 录制文件存储时长，单位 秒
-        /// eg. interval=3600&storage_time=7200
+        /// 录制流参数。当前支持以下参数：
+        /// record_interval - 录制分片时长，单位 秒，1800 - 7200
+        /// storage_time - 录制文件存储时长，单位 秒
+        /// eg. record_interval=3600&storage_time=7200
         /// 注：参数需要url encode。
         /// </summary>
         [JsonProperty("StreamParam")]

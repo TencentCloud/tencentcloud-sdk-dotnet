@@ -36,6 +36,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BandwidthLimit")]
         public ulong? BandwidthLimit{ get; set; }
 
+        /// <summary>
+        /// 是否黑石地域，默认`false`。
+        /// </summary>
+        [JsonProperty("IsBm")]
+        public bool? IsBm{ get; set; }
+
+        /// <summary>
+        /// 目的地域，例如：ap-shanghai
+        /// </summary>
+        [JsonProperty("DstRegion")]
+        public string DstRegion{ get; set; }
+
+        /// <summary>
+        /// 目的地域是否为黑石地域，默认`false`。
+        /// </summary>
+        [JsonProperty("DstIsBm")]
+        public bool? DstIsBm{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +62,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+            this.SetParamSimple(map, prefix + "IsBm", this.IsBm);
+            this.SetParamSimple(map, prefix + "DstRegion", this.DstRegion);
+            this.SetParamSimple(map, prefix + "DstIsBm", this.DstIsBm);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 需要将云盘的到期时间与挂载的子机对齐时，可传入该参数。该参数表示子机当前的到期时间，此时Period如果传入，则表示子机需要续费的时长，云盘会自动按对齐到子机续费后的到期时间续费。
+        /// 需要将云盘的到期时间与挂载的子机对齐时，可传入该参数。该参数表示子机当前的到期时间，此时Period如果传入，则表示子机需要续费的时长，云盘会自动按对齐到子机续费后的到期时间续费，示例取值：2018-03-30 20:15:03。
         /// </summary>
         [JsonProperty("CurInstanceDeadline")]
         public string CurInstanceDeadline{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 实例类型列表，不同实例机型指定了不同的资源规格，最多支持5中实例机型。
+        /// 实例类型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
         /// 启动配置，通过 InstanceType 表示单一实例类型，通过 InstanceTypes 表示多实例类型。指定 InstanceTypes 成功启动配置后，原有的 InstanceType 自动失效。
         /// </summary>
         [JsonProperty("InstanceTypes")]

@@ -54,6 +54,12 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("Time")]
         public long? Time{ get; set; }
 
+        /// <summary>
+        /// 当前的person基本信息，图片以FacePic为准，结构体内未填
+        /// </summary>
+        [JsonProperty("PersonInfo")]
+        public PersonInfo PersonInfo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "IdType", this.IdType);
             this.SetParamSimple(map, prefix + "FacePic", this.FacePic);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamObj(map, prefix + "PersonInfo.", this.PersonInfo);
         }
     }
 }

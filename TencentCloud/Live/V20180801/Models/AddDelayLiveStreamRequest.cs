@@ -48,6 +48,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("DelayTime")]
         public ulong? DelayTime{ get; set; }
 
+        /// <summary>
+        /// 延播设置的过期时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+        /// 注意：默认7天后过期，且最长支持7天内生效。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +65,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

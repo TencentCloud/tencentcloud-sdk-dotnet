@@ -108,6 +108,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("CopyFromRemote")]
         public bool? CopyFromRemote{ get; set; }
 
+        /// <summary>
+        /// 快照关联的镜像ID列表。
+        /// </summary>
+        [JsonProperty("ImageIds")]
+        public string[] ImageIds{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -128,6 +134,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
             this.SetParamArraySimple(map, prefix + "CopyingToRegions.", this.CopyingToRegions);
             this.SetParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
+            this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
         }
     }
 }

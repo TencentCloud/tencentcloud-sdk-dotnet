@@ -31,7 +31,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，会统一替换成空格，中文评估使用 utf-8 编码，自由说模式该值传空。
+        /// 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值传空。
         /// </summary>
         [JsonProperty("RefText")]
         public string RefText{ get; set; }

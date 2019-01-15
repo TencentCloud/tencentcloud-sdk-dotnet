@@ -36,6 +36,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
+        /// <summary>
+        /// 数据盘快照 ID，类似 `snap-l8psqwnt`。
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         }
     }
 }

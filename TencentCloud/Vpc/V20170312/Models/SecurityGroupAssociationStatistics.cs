@@ -60,6 +60,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CLB")]
         public ulong? CLB{ get; set; }
 
+        /// <summary>
+        /// 全量实例的绑定统计。
+        /// </summary>
+        [JsonProperty("InstanceStatistics")]
+        public string[] InstanceStatistics{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ENI", this.ENI);
             this.SetParamSimple(map, prefix + "SG", this.SG);
             this.SetParamSimple(map, prefix + "CLB", this.CLB);
+            this.SetParamArraySimple(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
         }
     }
 }

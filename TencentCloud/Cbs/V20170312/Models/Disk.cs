@@ -73,7 +73,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中。
+        /// 云盘状态。取值范围：<br><li>UNATTACHED：未挂载<br><li>ATTACHING：挂载中<br><li>ATTACHED：已挂载<br><li>DETACHING：解挂中<br><li>EXPANDING：扩容中<br><li>ROLLBACKING：回滚中<br><li>TORECYCLE：待回收<br><li>DUMPING：拷贝硬盘中。
         /// </summary>
         [JsonProperty("DiskState")]
         public string DiskState{ get; set; }
@@ -180,6 +180,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DifferDaysOfDeadline")]
         public long? DifferDaysOfDeadline{ get; set; }
 
+        /// <summary>
+        /// 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中<br><li>true:表示云盘已发起类型变更，正处于迁移中。
+        /// </summary>
+        [JsonProperty("Migrating")]
+        public bool? Migrating{ get; set; }
+
+        /// <summary>
+        /// 云盘类型变更的迁移进度，取值0到100。
+        /// </summary>
+        [JsonProperty("MigratePercent")]
+        public ulong? MigratePercent{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -212,6 +224,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "DifferDaysOfDeadline", this.DifferDaysOfDeadline);
+            this.SetParamSimple(map, prefix + "Migrating", this.Migrating);
+            this.SetParamSimple(map, prefix + "MigratePercent", this.MigratePercent);
         }
     }
 }

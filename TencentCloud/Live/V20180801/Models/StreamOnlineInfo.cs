@@ -36,6 +36,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PublishTimeList")]
         public PublishTimeInfo[] PublishTimeList{ get; set; }
 
+        /// <summary>
+        /// 应用名称。
+        /// </summary>
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamArrayObj(map, prefix + "PublishTimeList.", this.PublishTimeList);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
         }
     }
 }

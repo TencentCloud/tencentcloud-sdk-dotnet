@@ -37,7 +37,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// 后付费云盘的单价，单位：元。
+        /// 后付费云盘原单价，单位：元。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
+
+        /// <summary>
+        /// 后付费云盘折扣单价，单位：元。
+        /// </summary>
+        [JsonProperty("UnitPriceDiscount")]
+        public float? UnitPriceDiscount{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
             this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
             this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
+            this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
         }
     }
 }

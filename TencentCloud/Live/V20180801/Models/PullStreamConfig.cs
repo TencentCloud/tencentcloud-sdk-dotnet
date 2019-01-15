@@ -56,12 +56,17 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 开始时间。
+        /// UTC格式时间，
+        /// 例如：2019-01-08T10:00:00Z。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// 结束时间。
+        /// 
+        /// UTC格式时间，
+        /// 例如：2019-01-08T10:00:00Z。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

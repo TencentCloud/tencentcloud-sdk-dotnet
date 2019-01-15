@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnDescription")]
         public string CcnDescription{ get; set; }
 
+        /// <summary>
+        /// CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+        /// </summary>
+        [JsonProperty("QosLevel")]
+        public string QosLevel{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "CcnName", this.CcnName);
             this.SetParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
+            this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
         }
     }
 }

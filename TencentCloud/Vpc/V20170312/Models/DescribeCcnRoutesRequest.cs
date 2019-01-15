@@ -38,7 +38,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 过滤条件，参数不支持同时指定RouteIds和Filters。
-        /// <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
         /// <li>route-id - String -（过滤条件）路由策略ID。</li>
         /// <li>cidr-block - String -（过滤条件）目的端。</li>
         /// <li>instance-type - String -（过滤条件）下一跳类型。</li>

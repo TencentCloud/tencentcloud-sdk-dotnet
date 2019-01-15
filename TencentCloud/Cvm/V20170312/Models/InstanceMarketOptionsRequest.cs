@@ -25,16 +25,16 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 市场选项类型，当前只支持取值：spot
-        /// </summary>
-        [JsonProperty("MarketType")]
-        public string MarketType{ get; set; }
-
-        /// <summary>
         /// 竞价相关选项
         /// </summary>
         [JsonProperty("SpotOptions")]
         public SpotMarketOptions SpotOptions{ get; set; }
+
+        /// <summary>
+        /// 市场选项类型，当前只支持取值：spot
+        /// </summary>
+        [JsonProperty("MarketType")]
+        public string MarketType{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MarketType", this.MarketType);
             this.SetParamObj(map, prefix + "SpotOptions.", this.SpotOptions);
+            this.SetParamSimple(map, prefix + "MarketType", this.MarketType);
         }
     }
 }

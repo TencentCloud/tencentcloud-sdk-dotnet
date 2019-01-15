@@ -31,7 +31,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 姓名。中文请使用UTF-8编码。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -51,8 +51,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string LivenessType{ get; set; }
 
         /// <summary>
-        /// 数字模式传参：唇语验证码(1234)，需先获取唇语验证码；
-        /// 动作模式传参：传动作顺序(12,21)，需先获取动作顺序；
+        /// 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+        /// 动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
         /// 静默模式传参：空。
         /// </summary>
         [JsonProperty("ValidateData")]

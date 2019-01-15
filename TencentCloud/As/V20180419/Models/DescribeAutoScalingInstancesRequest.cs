@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 待查询的云主机（CVM）实例ID。参数不支持同时指定InstanceIds和Filters。
+        /// 待查询云服务器（CVM）的实例ID。参数不支持同时指定InstanceIds和Filters。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

@@ -76,8 +76,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>`EXPIRED`：已过期</li>
         /// <li>`REJECTED`：已拒绝</li>
         /// <li>`DELETED`：已删除</li>
+        /// <li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
         /// <li>`ATTACHING`：关联中</li>
         /// <li>`DETACHING`：解关联中</li>
+        /// <li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

@@ -44,7 +44,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 姓名。最长长度32位。
+        /// 姓名。最长长度32位。中文请使用UTF-8编码。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

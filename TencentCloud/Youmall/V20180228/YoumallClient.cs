@@ -594,6 +594,26 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
+        /// 支持修改黑白名单类型的顾客特征
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyPersonFeatureInfoRequest"/></param>
+        /// <returns>参考<see cref="ModifyPersonFeatureInfoResponse"/>实例</returns>
+        public async Task<ModifyPersonFeatureInfoResponse> ModifyPersonFeatureInfo(ModifyPersonFeatureInfoRequest req)
+        {
+             JsonResponseModel<ModifyPersonFeatureInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPersonFeatureInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonFeatureInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 标记到店顾客的身份类型，例如黑名单、白名单等
         /// </summary>
         /// <param name="req">参考<see cref="ModifyPersonTagInfoRequest"/></param>

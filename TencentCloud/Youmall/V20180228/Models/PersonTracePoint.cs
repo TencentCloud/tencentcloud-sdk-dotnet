@@ -60,6 +60,18 @@ namespace TencentCloud.Youmall.V20180228.Models
         [JsonProperty("CapPic")]
         public string CapPic{ get; set; }
 
+        /// <summary>
+        /// 购物袋类型
+        /// </summary>
+        [JsonProperty("ShoppingBagType")]
+        public ulong? ShoppingBagType{ get; set; }
+
+        /// <summary>
+        /// 购物袋数量
+        /// </summary>
+        [JsonProperty("ShoppingBagCount")]
+        public ulong? ShoppingBagCount{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +84,8 @@ namespace TencentCloud.Youmall.V20180228.Models
             this.SetParamSimple(map, prefix + "TraceEventType", this.TraceEventType);
             this.SetParamSimple(map, prefix + "TraceEventTime", this.TraceEventTime);
             this.SetParamSimple(map, prefix + "CapPic", this.CapPic);
+            this.SetParamSimple(map, prefix + "ShoppingBagType", this.ShoppingBagType);
+            this.SetParamSimple(map, prefix + "ShoppingBagCount", this.ShoppingBagCount);
         }
     }
 }

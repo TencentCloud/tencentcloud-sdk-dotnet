@@ -37,8 +37,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>direct-connect-gateway-ip - String - 专线网关`IP`。</li>
         /// <li>gateway-type - String - 网关类型，可选值：`NORMAL`（普通型）、`NAT`（NAT型）。</li>
         /// <li>network-type- String - 网络类型，可选值：`VPC`（私有网络类型）、`CCN`（云联网类型）。</li>
-        /// <li>ccn-id - String - 专线网关所在私有网络`ID`。</li>
-        /// <li>vpc-id - String - 专线网关所在云联网`ID`。</li>
+        /// <li>ccn-id - String - 专线网关所在云联网`ID`。</li>
+        /// <li>vpc-id - String - 专线网关所在私有网络`ID`。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

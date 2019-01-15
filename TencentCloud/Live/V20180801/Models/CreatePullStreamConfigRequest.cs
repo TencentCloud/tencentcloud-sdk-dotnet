@@ -50,6 +50,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 开始时间。
+        /// 使用UTC格式时间，
+        /// 例如：2019-01-08T10:00:00Z。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -59,6 +61,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// 1. 结束时间必须大于开始时间；
         /// 2. 结束时间和开始时间必须大于当前时间；
         /// 3. 结束时间 和 开始时间 间隔必须小于七天。
+        /// 使用UTC格式时间，
+        /// 例如：2019-01-08T10:00:00Z。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
