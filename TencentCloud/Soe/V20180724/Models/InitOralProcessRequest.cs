@@ -84,6 +84,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("ServerType")]
         public long? ServerType{ get; set; }
 
+        /// <summary>
+        /// 异步模式标识，0：同步模式，1：异步模式。
+        /// </summary>
+        [JsonProperty("IsAsync")]
+        public long? IsAsync{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,6 +106,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
             this.SetParamSimple(map, prefix + "SentenceInfoEnabled", this.SentenceInfoEnabled);
             this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
+            this.SetParamSimple(map, prefix + "IsAsync", this.IsAsync);
         }
     }
 }

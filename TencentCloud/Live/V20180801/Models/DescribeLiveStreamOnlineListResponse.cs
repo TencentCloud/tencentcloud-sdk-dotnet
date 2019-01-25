@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 正在推送流的信息列表
+        /// 正在推送流的信息列表。
         /// </summary>
         [JsonProperty("OnlineInfo")]
         public StreamOnlineInfo[] OnlineInfo{ get; set; }

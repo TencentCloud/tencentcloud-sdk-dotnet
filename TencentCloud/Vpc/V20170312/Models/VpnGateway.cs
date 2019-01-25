@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PublicIpAddress{ get; set; }
 
         /// <summary>
-        /// 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费
+        /// 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

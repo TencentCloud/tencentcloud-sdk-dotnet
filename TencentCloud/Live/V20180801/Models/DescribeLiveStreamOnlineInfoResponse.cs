@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页大小
+        /// 每页大小。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalPage{ get; set; }
 
         /// <summary>
-        /// 流信息列表
+        /// 流信息列表。
         /// </summary>
         [JsonProperty("StreamInfoList")]
         public StreamInfo[] StreamInfoList{ get; set; }

@@ -66,6 +66,12 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("HasOverdueBill")]
         public ulong? HasOverdueBill{ get; set; }
 
+        /// <summary>
+        /// 1:待代理商审核;2:待腾讯云审核
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "Mail", this.Mail);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

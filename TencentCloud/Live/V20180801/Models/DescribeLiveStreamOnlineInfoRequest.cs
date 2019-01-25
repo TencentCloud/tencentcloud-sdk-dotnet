@@ -26,7 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 取得第几页。
-        /// 默认值：1
+        /// 默认值：1。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
@@ -34,14 +34,14 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 分页大小。
         /// 最大值：100。
-        /// 取值范围：10~100 之前的任意整数。
-        /// 默认值：10
+        /// 取值范围：1~100 之前的任意整数。
+        /// 默认值：10。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 0:未开始推流 1:正在推流 2:服务出错 3:已关闭。
+        /// 0:未开始推流 1:正在推流
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

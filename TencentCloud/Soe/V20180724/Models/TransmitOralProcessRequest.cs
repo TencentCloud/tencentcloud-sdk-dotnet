@@ -72,6 +72,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("IsLongLifeSession")]
         public long? IsLongLifeSession{ get; set; }
 
+        /// <summary>
+        /// 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 的评估结果。
+        /// </summary>
+        [JsonProperty("IsQuery")]
+        public long? IsQuery{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SoeAppId", this.SoeAppId);
             this.SetParamSimple(map, prefix + "IsLongLifeSession", this.IsLongLifeSession);
+            this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
         }
     }
 }

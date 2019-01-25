@@ -60,6 +60,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LaunchConfigurationName")]
         public string LaunchConfigurationName{ get; set; }
 
+        /// <summary>
+        /// 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -71,6 +77,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
             this.SetParamSimple(map, prefix + "LaunchConfigurationName", this.LaunchConfigurationName);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
         }
     }
 }

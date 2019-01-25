@@ -92,5 +92,25 @@ namespace TencentCloud.Soe.V20180724
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 初始化并传输音频数据，分片传输时，尽量保证SeqId顺序传输。音频源目前仅支持16k采样率16bit单声道编码方式，如有不一致可能导致评估不准确或失败。
+        /// </summary>
+        /// <param name="req">参考<see cref="TransmitOralProcessWithInitRequest"/></param>
+        /// <returns>参考<see cref="TransmitOralProcessWithInitResponse"/>实例</returns>
+        public async Task<TransmitOralProcessWithInitResponse> TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req)
+        {
+             JsonResponseModel<TransmitOralProcessWithInitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TransmitOralProcessWithInit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransmitOralProcessWithInitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

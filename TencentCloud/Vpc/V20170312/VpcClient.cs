@@ -93,6 +93,28 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 1. 该接口用于在转换实例下添加IPV6转换规则。
+        /// 2. 支持在同一个转换实例下批量添加转换规则，一个账户在一个地域最多50个。
+        /// 3. 一个完整的转换规则包括vip6:vport6:protocol:vip:vport，其中vip6:vport6:protocol必须是唯一。
+        /// </summary>
+        /// <param name="req">参考<see cref="AddIp6RulesRequest"/></param>
+        /// <returns>参考<see cref="AddIp6RulesResponse"/>实例</returns>
+        public async Task<AddIp6RulesResponse> AddIp6Rules(AddIp6RulesRequest req)
+        {
+             JsonResponseModel<AddIp6RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddIp6Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddIp6RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
         /// * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
         /// * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过七天之前，它会一直与您的腾讯云账户保持关联。
@@ -412,6 +434,27 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "CreateHaVip");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHaVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. 该接口用于创建IPV6转换IPV4实例，支持批量
+        /// 2. 同一个账户在在一个地域最多允许创建10个转换实例
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateIp6TranslatorsRequest"/></param>
+        /// <returns>参考<see cref="CreateIp6TranslatorsResponse"/>实例</returns>
+        public async Task<CreateIp6TranslatorsResponse> CreateIp6Translators(CreateIp6TranslatorsRequest req)
+        {
+             JsonResponseModel<CreateIp6TranslatorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIp6Translators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIp6TranslatorsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -847,6 +890,27 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DeleteHaVip");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHaVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. 该接口用于释放IPV6转换实例，支持批量。
+        /// 2.  如果IPV6转换实例建立有转换规则，会一并删除。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteIp6TranslatorsRequest"/></param>
+        /// <returns>参考<see cref="DeleteIp6TranslatorsResponse"/>实例</returns>
+        public async Task<DeleteIp6TranslatorsResponse> DeleteIp6Translators(DeleteIp6TranslatorsRequest req)
+        {
+             JsonResponseModel<DeleteIp6TranslatorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIp6Translators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIp6TranslatorsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1426,6 +1490,47 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询账户在指定地域IPV6转换实例和规则的配额
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeIp6TranslatorQuotaRequest"/></param>
+        /// <returns>参考<see cref="DescribeIp6TranslatorQuotaResponse"/>实例</returns>
+        public async Task<DescribeIp6TranslatorQuotaResponse> DescribeIp6TranslatorQuota(DescribeIp6TranslatorQuotaRequest req)
+        {
+             JsonResponseModel<DescribeIp6TranslatorQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIp6TranslatorQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIp6TranslatorQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. 该接口用于查询账户下的IPV6转换实例及其绑定的转换规则信息
+        /// 2. 支持过滤查询
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeIp6TranslatorsRequest"/></param>
+        /// <returns>参考<see cref="DescribeIp6TranslatorsResponse"/>实例</returns>
+        public async Task<DescribeIp6TranslatorsResponse> DescribeIp6Translators(DescribeIp6TranslatorsRequest req)
+        {
+             JsonResponseModel<DescribeIp6TranslatorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIp6Translators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIp6TranslatorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeNetworkInterfacesRequest"/></param>
@@ -1597,6 +1702,27 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DescribeSubnets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeVpcPrivateIpAddresses）用于查询VPC内网IP信息。<br />
+        /// 只能查询已使用的IP信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeVpcPrivateIpAddressesRequest"/></param>
+        /// <returns>参考<see cref="DescribeVpcPrivateIpAddressesResponse"/>实例</returns>
+        public async Task<DescribeVpcPrivateIpAddressesResponse> DescribeVpcPrivateIpAddresses(DescribeVpcPrivateIpAddressesRequest req)
+        {
+             JsonResponseModel<DescribeVpcPrivateIpAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcPrivateIpAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcPrivateIpAddressesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2178,6 +2304,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 该接口用于修改IPV6转换规则，当前仅支持修改转换规则名称，IPV4地址和IPV4端口号
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyIp6RuleRequest"/></param>
+        /// <returns>参考<see cref="ModifyIp6RuleResponse"/>实例</returns>
+        public async Task<ModifyIp6RuleResponse> ModifyIp6Rule(ModifyIp6RuleRequest req)
+        {
+             JsonResponseModel<ModifyIp6RuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIp6Rule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIp6RuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改IP6转换实例属性，当前仅支持修改实例名称。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyIp6TranslatorRequest"/></param>
+        /// <returns>参考<see cref="ModifyIp6TranslatorResponse"/>实例</returns>
+        public async Task<ModifyIp6TranslatorResponse> ModifyIp6Translator(ModifyIp6TranslatorRequest req)
+        {
+             JsonResponseModel<ModifyIp6TranslatorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIp6Translator");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIp6TranslatorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyNetworkInterfaceAttributeRequest"/></param>
@@ -2460,6 +2626,27 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "RemoveBandwidthPackageResources");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. 该接口用于删除IPV6转换规则
+        /// 2. 支持批量删除同一个转换实例下的多个转换规则
+        /// </summary>
+        /// <param name="req">参考<see cref="RemoveIp6RulesRequest"/></param>
+        /// <returns>参考<see cref="RemoveIp6RulesResponse"/>实例</returns>
+        public async Task<RemoveIp6RulesResponse> RemoveIp6Rules(RemoveIp6RulesRequest req)
+        {
+             JsonResponseModel<RemoveIp6RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveIp6Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveIp6RulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

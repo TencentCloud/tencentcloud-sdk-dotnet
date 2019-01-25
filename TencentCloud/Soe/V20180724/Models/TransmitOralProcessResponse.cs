@@ -67,6 +67,12 @@ namespace TencentCloud.Soe.V20180724.Models
         public SentenceInfo[] SentenceInfoSet{ get; set; }
 
         /// <summary>
+        /// 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamArrayObj(map, prefix + "SentenceInfoSet.", this.SentenceInfoSet);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

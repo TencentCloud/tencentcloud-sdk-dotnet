@@ -454,6 +454,30 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（ModifyLoadBalancers）用于修改伸缩组的负载均衡器。
+        /// 
+        /// * 本接口用于为伸缩组指定新的负载均衡器配置，采用“完全覆盖”风格，无论之前配置如何，统一按照接口参数配置为新的负载均衡器。
+        /// * 如果要为伸缩组清空负载均衡器，则在调用本接口时仅指定伸缩组ID，不指定具体负载均衡器。
+        /// * 本接口会立即修改伸缩组的负载均衡器，并生成一个伸缩活动，异步修改存量实例的负载均衡器。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyLoadBalancersRequest"/></param>
+        /// <returns>参考<see cref="ModifyLoadBalancersResponse"/>实例</returns>
+        public async Task<ModifyLoadBalancersResponse> ModifyLoadBalancers(ModifyLoadBalancersRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyScheduledAction）用于修改定时任务。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyScheduledActionRequest"/></param>

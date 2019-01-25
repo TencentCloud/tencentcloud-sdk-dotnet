@@ -209,6 +209,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 该接口（CreateParamTemplate）用于创建参数模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateParamTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateParamTemplateResponse"/>实例</returns>
+        public async Task<CreateParamTemplateResponse> CreateParamTemplate(CreateParamTemplateRequest req)
+        {
+             JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteAccounts)用于删除云数据库的账户。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteAccountsRequest"/></param>
@@ -240,6 +260,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DeleteBackup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DeleteParamTemplate）用于删除参数模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteParamTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteParamTemplateResponse"/>实例</returns>
+        public async Task<DeleteParamTemplateResponse> DeleteParamTemplate(DeleteParamTemplateRequest req)
+        {
+             JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -530,6 +570,8 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// 本接口(DescribeDBPrice)用于查询云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。
+        /// 
+        /// 注意：对某个地域进行询价，请使用对应地域的接入点，接入点信息请参照<a href="https://cloud.tencent.com/document/api/236/15832">服务地址</a>文档。例如：对广州地域进行询价，请把请求发到：cdb.ap-guangzhou.tencentcloudapi.com。同理对上海地域询价，把请求发到：cdb.ap-shanghai.tencentcloudapi.com
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDBPriceRequest"/></param>
         /// <returns>参考<see cref="DescribeDBPriceResponse"/>实例</returns>
@@ -629,6 +671,66 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 该接口（DescribeDefaultParams）用于查询默认的可设置参数列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDefaultParamsRequest"/></param>
+        /// <returns>参考<see cref="DescribeDefaultParamsResponse"/>实例</returns>
+        public async Task<DescribeDefaultParamsResponse> DescribeDefaultParams(DescribeDefaultParamsRequest req)
+        {
+             JsonResponseModel<DescribeDefaultParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDefaultParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDeviceMonitorInfo）用于查询云数据库物理机当天的监控信息，暂只支持内存488G、硬盘6T的实例查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceMonitorInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceMonitorInfoResponse"/>实例</returns>
+        public async Task<DescribeDeviceMonitorInfoResponse> DescribeDeviceMonitorInfo(DescribeDeviceMonitorInfoRequest req)
+        {
+             JsonResponseModel<DescribeDeviceMonitorInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeviceMonitorInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceMonitorInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceParamRecordsRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceParamRecordsResponse"/>实例</returns>
+        public async Task<DescribeInstanceParamRecordsResponse> DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParamRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DescribeInstanceParams）用于查询实例的参数列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeInstanceParamsRequest"/></param>
@@ -640,6 +742,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DescribeParamTemplateInfo）用于查询参数模板详情。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeParamTemplateInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeParamTemplateInfoResponse"/>实例</returns>
+        public async Task<DescribeParamTemplateInfoResponse> DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplateInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplateInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DescribeParamTemplates）查询参数模板列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeParamTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeParamTemplatesResponse"/>实例</returns>
+        public async Task<DescribeParamTemplatesResponse> DescribeParamTemplates(DescribeParamTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -709,6 +851,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeSupportedPrivileges)用于查询云数据库的支持的权限信息，包括全局权限，数据库权限，表权限以及列权限。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSupportedPrivilegesRequest"/></param>
+        /// <returns>参考<see cref="DescribeSupportedPrivilegesResponse"/>实例</returns>
+        public async Task<DescribeSupportedPrivilegesResponse> DescribeSupportedPrivileges(DescribeSupportedPrivilegesRequest req)
+        {
+             JsonResponseModel<DescribeSupportedPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSupportedPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportedPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeTables)用于查询云数据库实例的数据库表信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTablesRequest"/></param>
@@ -720,6 +882,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DescribeTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例绑定的标签
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTagsOfInstanceIdsRequest"/></param>
+        /// <returns>参考<see cref="DescribeTagsOfInstanceIdsResponse"/>实例</returns>
+        public async Task<DescribeTagsOfInstanceIdsResponse> DescribeTagsOfInstanceIds(DescribeTagsOfInstanceIdsRequest req)
+        {
+             JsonResponseModel<DescribeTagsOfInstanceIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagsOfInstanceIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagsOfInstanceIdsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -800,6 +982,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "InitDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(InquiryPriceUpgradeInstances)用于查询云数据库实例升级的价格，支持查询按量计费或者包年包月实例的升级价格，实例类型支持主实例、灾备实例和只读实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="InquiryPriceUpgradeInstancesRequest"/></param>
+        /// <returns>参考<see cref="InquiryPriceUpgradeInstancesResponse"/>实例</returns>
+        public async Task<InquiryPriceUpgradeInstancesResponse> InquiryPriceUpgradeInstances(InquiryPriceUpgradeInstancesRequest req)
+        {
+             JsonResponseModel<InquiryPriceUpgradeInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceUpgradeInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpgradeInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1029,6 +1231,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 可以对实例标签进行添加、修改或者删除
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyInstanceTagRequest"/></param>
+        /// <returns>参考<see cref="ModifyInstanceTagResponse"/>实例</returns>
+        public async Task<ModifyInstanceTagResponse> ModifyInstanceTag(ModifyInstanceTagRequest req)
+        {
+             JsonResponseModel<ModifyInstanceTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（ModifyParamTemplate）用于修改参数模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyParamTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyParamTemplateResponse"/>实例</returns>
+        public async Task<ModifyParamTemplateResponse> ModifyParamTemplate(ModifyParamTemplateRequest req)
+        {
+             JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyParamTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(OpenDBInstanceGTID)用于开启云数据库实例的GTID，只支持版本为5.6以及以上的实例。
         /// </summary>
         /// <param name="req">参考<see cref="OpenDBInstanceGTIDRequest"/></param>
@@ -1049,7 +1291,9 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(OpenWanService)用于开通实例外网访问
+        /// 本接口(OpenWanService)用于开通实例外网访问。
+        /// 
+        /// 注意，实例开通外网访问之前，需要先将实例进行[实例初始化](https://cloud.tencent.com/document/api/236/15873)操作。
         /// </summary>
         /// <param name="req">参考<see cref="OpenWanServiceRequest"/></param>
         /// <returns>参考<see cref="OpenWanServiceResponse"/>实例</returns>

@@ -37,6 +37,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         public float? Sim{ get; set; }
 
         /// <summary>
+        /// 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        /// </summary>
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
+
+        /// <summary>
+        /// 业务错误描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +62,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
             this.SetParamSimple(map, prefix + "Sim", this.Sim);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

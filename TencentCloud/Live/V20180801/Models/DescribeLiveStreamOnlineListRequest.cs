@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 您的加速域名。
+        /// 推流域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
@@ -45,10 +45,16 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 每页大小，最大100。 
         /// 取值：1~100之前的任意整数。
-        /// 默认值：10
+        /// 默认值：10。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// 流名称，精确查询。
+        /// </summary>
+        [JsonProperty("StreamName")]
+        public string StreamName{ get; set; }
 
 
         /// <summary>
@@ -60,6 +66,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
         }
     }
 }

@@ -54,17 +54,16 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 取得第几页。
-        /// 默认值：1
+        /// 默认值：1。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
         /// 分页大小。
-        /// 
         /// 最大值：100。
         /// 取值范围：1~100 之前的任意整数。
-        /// 默认值：10
+        /// 默认值：10。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

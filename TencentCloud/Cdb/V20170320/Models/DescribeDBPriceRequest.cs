@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 可用区信息，格式如"ap-guangzhou-1"
+        /// 可用区信息，格式如"ap-guangzhou-2"。具体能设置的值请通过<a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a>接口查询。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
