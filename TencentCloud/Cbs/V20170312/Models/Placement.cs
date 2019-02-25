@@ -36,6 +36,24 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
+        /// <summary>
+        /// 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+        /// </summary>
+        [JsonProperty("CageId")]
+        public string CageId{ get; set; }
+
+        /// <summary>
+        /// 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+        /// </summary>
+        [JsonProperty("CdcName")]
+        public string CdcName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +62,9 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "CageId", this.CageId);
+            this.SetParamSimple(map, prefix + "CdcName", this.CdcName);
         }
     }
 }

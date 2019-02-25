@@ -31,19 +31,19 @@ namespace TencentCloud.Tia.V20180226.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 运行任务的集群
+        /// 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
 
         /// <summary>
-        /// 运行任务的环境
+        /// 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
         /// </summary>
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
         /// <summary>
-        /// 挂载的路径，支持nfs,cos(cos只在tia运行环境中支持)
+        /// 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
         /// </summary>
         [JsonProperty("PackageDir")]
         public string[] PackageDir{ get; set; }
@@ -61,43 +61,43 @@ namespace TencentCloud.Tia.V20180226.Models
         public string[] Args{ get; set; }
 
         /// <summary>
-        /// 运行任务的配置信息
+        /// 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
         /// </summary>
         [JsonProperty("ScaleTier")]
         public string ScaleTier{ get; set; }
 
         /// <summary>
-        /// （ScaleTier为Custom时）master机器类型
+        /// Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
         /// </summary>
         [JsonProperty("MasterType")]
         public string MasterType{ get; set; }
 
         /// <summary>
-        /// （ScaleTier为Custom时）worker机器类型
+        /// Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
         /// </summary>
         [JsonProperty("WorkerType")]
         public string WorkerType{ get; set; }
 
         /// <summary>
-        /// （ScaleTier为Custom时）parameter server机器类型
+        /// Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
         /// </summary>
         [JsonProperty("ParameterServerType")]
         public string ParameterServerType{ get; set; }
 
         /// <summary>
-        /// （ScaleTier为Custom时）worker机器数量
+        /// Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
         /// </summary>
         [JsonProperty("WorkerCount")]
         public ulong? WorkerCount{ get; set; }
 
         /// <summary>
-        /// （ScaleTier为Custom时）parameter server机器数量
+        /// Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
         /// </summary>
         [JsonProperty("ParameterServerCount")]
         public ulong? ParameterServerCount{ get; set; }
 
         /// <summary>
-        /// 启动debug mode，默认为false
+        /// 启动 debug 模式，默认为 false
         /// </summary>
         [JsonProperty("Debug")]
         public bool? Debug{ get; set; }

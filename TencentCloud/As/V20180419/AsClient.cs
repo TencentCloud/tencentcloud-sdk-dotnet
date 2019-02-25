@@ -117,6 +117,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（CreateNotificationConfiguration）用于创建通知。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateNotificationConfigurationRequest"/></param>
+        /// <returns>参考<see cref="CreateNotificationConfigurationResponse"/>实例</returns>
+        public async Task<CreateNotificationConfigurationResponse> CreateNotificationConfiguration(CreateNotificationConfigurationRequest req)
+        {
+             JsonResponseModel<CreateNotificationConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNotificationConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotificationConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateScalingPolicy）用于创建告警触发策略。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateScalingPolicyRequest"/></param>
+        /// <returns>参考<see cref="CreateScalingPolicyResponse"/>实例</returns>
+        public async Task<CreateScalingPolicyResponse> CreateScalingPolicy(CreateScalingPolicyRequest req)
+        {
+             JsonResponseModel<CreateScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateScheduledAction）用于创建定时任务。
         /// </summary>
         /// <param name="req">参考<see cref="CreateScheduledActionRequest"/></param>
@@ -170,6 +210,46 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = await this.InternalRequest(req, "DeleteLaunchConfiguration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNotificationConfiguration）用于删除特定的通知。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteNotificationConfigurationRequest"/></param>
+        /// <returns>参考<see cref="DeleteNotificationConfigurationResponse"/>实例</returns>
+        public async Task<DeleteNotificationConfigurationResponse> DeleteNotificationConfiguration(DeleteNotificationConfigurationRequest req)
+        {
+             JsonResponseModel<DeleteNotificationConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNotificationConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNotificationConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteScalingPolicy）用于删除告警触发策略。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteScalingPolicyRequest"/></param>
+        /// <returns>参考<see cref="DeleteScalingPolicyResponse"/>实例</returns>
+        public async Task<DeleteScalingPolicyResponse> DeleteScalingPolicy(DeleteScalingPolicyRequest req)
+        {
+             JsonResponseModel<DeleteScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScalingPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -299,6 +379,49 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = await this.InternalRequest(req, "DescribeLaunchConfigurations");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchConfigurationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeNotificationConfigurations) 用于查询一个或多个通知的详细信息。
+        /// 
+        /// 可以根据通知ID、伸缩组ID等信息来查询通知的详细信息。过滤信息详细请见过滤器`Filter`。
+        /// 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的通知。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeNotificationConfigurationsRequest"/></param>
+        /// <returns>参考<see cref="DescribeNotificationConfigurationsResponse"/>实例</returns>
+        public async Task<DescribeNotificationConfigurationsResponse> DescribeNotificationConfigurations(DescribeNotificationConfigurationsRequest req)
+        {
+             JsonResponseModel<DescribeNotificationConfigurationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNotificationConfigurations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotificationConfigurationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeScalingPolicies）用于查询告警触发策略。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeScalingPoliciesRequest"/></param>
+        /// <returns>参考<see cref="DescribeScalingPoliciesResponse"/>实例</returns>
+        public async Task<DescribeScalingPoliciesResponse> DescribeScalingPolicies(DescribeScalingPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeScalingPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScalingPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScalingPoliciesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -478,6 +601,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（ModifyNotificationConfiguration）用于修改通知。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyNotificationConfigurationRequest"/></param>
+        /// <returns>参考<see cref="ModifyNotificationConfigurationResponse"/>实例</returns>
+        public async Task<ModifyNotificationConfigurationResponse> ModifyNotificationConfiguration(ModifyNotificationConfigurationRequest req)
+        {
+             JsonResponseModel<ModifyNotificationConfigurationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNotificationConfiguration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNotificationConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyScalingPolicy）用于修改告警触发策略。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyScalingPolicyRequest"/></param>
+        /// <returns>参考<see cref="ModifyScalingPolicyResponse"/>实例</returns>
+        public async Task<ModifyScalingPolicyResponse> ModifyScalingPolicy(ModifyScalingPolicyRequest req)
+        {
+             JsonResponseModel<ModifyScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyScheduledAction）用于修改定时任务。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyScheduledActionRequest"/></param>
@@ -509,6 +672,27 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = await this.InternalRequest(req, "RemoveInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SetInstancesProtection）用于设置实例移除保护。
+        /// 子机设置为移除保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此子机缩容操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="SetInstancesProtectionRequest"/></param>
+        /// <returns>参考<see cref="SetInstancesProtectionResponse"/>实例</returns>
+        public async Task<SetInstancesProtectionResponse> SetInstancesProtection(SetInstancesProtectionRequest req)
+        {
+             JsonResponseModel<SetInstancesProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetInstancesProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetInstancesProtectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

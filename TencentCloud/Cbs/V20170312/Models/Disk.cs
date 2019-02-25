@@ -79,7 +79,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskState{ get; set; }
 
         /// <summary>
-        /// 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+        /// 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tia.V20180226.Models
     {
         
         /// <summary>
-        /// Model数组，用以显示所有模型的信息
+        /// Model 数组，用以显示所有模型的信息
         /// </summary>
         [JsonProperty("Models")]
         public ModelInfo[] Models{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }

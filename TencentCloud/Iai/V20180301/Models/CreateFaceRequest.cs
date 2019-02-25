@@ -32,6 +32,7 @@ namespace TencentCloud.Iai.V20180301.Models
 
         /// <summary>
         /// 图片 base64 数据。人员人脸总数量不可超过5张。
+        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Images")]
@@ -42,6 +43,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。 
         /// 人员人脸总数量不可超过5张。
+        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Urls")]

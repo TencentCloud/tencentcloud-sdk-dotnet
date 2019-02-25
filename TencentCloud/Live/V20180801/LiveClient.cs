@@ -180,7 +180,7 @@ namespace TencentCloud.Live.V20180801
         /// 
         /// - 模式说明
         ///   该接口支持两种录制模式：
-        ///   1. 定时录制模式。
+        ///   1. 定时录制模式【默认模式】。
         ///     需要传入开始时间与结束时间，录制任务根据时间自动开始与结束。
         ///   2. 实时视频录制模式。
         ///     忽略传入的开始时间，在录制任务创建后立即开始录制，录制时长支持最大为30分钟，如果传入的结束时间与当前时间差大于30分钟，则按30分钟计算，实时视频录制主要用于录制精彩视频场景，时长建议控制在5分钟以内。
@@ -746,6 +746,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 获取禁推流列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveForbidStreamListRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveForbidStreamListResponse"/>实例</returns>
+        public async Task<DescribeLiveForbidStreamListResponse> DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req)
+        {
+             JsonResponseModel<DescribeLiveForbidStreamListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveForbidStreamList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveForbidStreamListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询播放鉴权key
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLivePlayAuthKeyRequest"/></param>
@@ -897,6 +917,26 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DescribeLiveSnapshotTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询推断流事件
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveStreamEventListRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveStreamEventListResponse"/>实例</returns>
+        public async Task<DescribeLiveStreamEventListResponse> DescribeLiveStreamEventList(DescribeLiveStreamEventListRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveStreamEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamEventListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

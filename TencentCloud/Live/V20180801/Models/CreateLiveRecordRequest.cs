@@ -43,40 +43,45 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 录制开始时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+        /// 录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+        /// 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 录制结束时间。非精彩视频录制，必须设置该字段。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。如果通过Highlight参数，设置录制为精彩视频录制，结束时间不应超过当前时间+30分钟，如果结束时间超过当前时间+30分钟或小于当前时间，则实际结束时间为当前时间+30分钟。
+        /// 录制结束时间。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+        /// 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 录制类型。不区分大小写。
+        /// 录制类型。
         /// “video” : 音视频录制【默认】。
         /// “audio” : 纯音频录制。
+        /// 在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// 录制文件格式。不区分大小写。其值为：
+        /// 录制文件格式。其值为：
         /// “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+        /// 在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
         /// </summary>
         [JsonProperty("FileFormat")]
         public string FileFormat{ get; set; }
 
         /// <summary>
-        /// 开启精彩视频录制标志；0：不开启精彩视频录制【默认】；1：开启精彩视频录制。
+        /// 开启实时视频录制模式标志。0：不开启实时视频录制模式，即采用定时录制模式【默认】；1：开启实时视频录制模式。
         /// </summary>
         [JsonProperty("Highlight")]
         public long? Highlight{ get; set; }
 
         /// <summary>
         /// 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+        /// 在定时录制模式或实时视频录制模式下，该参数均有效。
         /// </summary>
         [JsonProperty("MixStream")]
         public long? MixStream{ get; set; }
@@ -85,8 +90,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// 录制流参数。当前支持以下参数：
         /// record_interval - 录制分片时长，单位 秒，1800 - 7200
         /// storage_time - 录制文件存储时长，单位 秒
-        /// eg. record_interval=3600&storage_time=7200
+        /// eg. record_interval=3600&storage_time=2592000
         /// 注：参数需要url encode。
+        /// 在定时录制模式或实时视频录制模式下，该参数均有效。
         /// </summary>
         [JsonProperty("StreamParam")]
         public string StreamParam{ get; set; }

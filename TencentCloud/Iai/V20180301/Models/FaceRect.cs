@@ -28,13 +28,13 @@ namespace TencentCloud.Iai.V20180301.Models
         /// 人脸位置左上角横坐标
         /// </summary>
         [JsonProperty("X")]
-        public ulong? X{ get; set; }
+        public long? X{ get; set; }
 
         /// <summary>
         /// 人脸位置左上角纵坐标
         /// </summary>
         [JsonProperty("Y")]
-        public ulong? Y{ get; set; }
+        public long? Y{ get; set; }
 
         /// <summary>
         /// 人脸宽度

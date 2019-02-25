@@ -133,6 +133,26 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 传入姓名和身份证号，校验两者的真实性和一致性。
+        /// </summary>
+        /// <param name="req">参考<see cref="IdCardVerificationRequest"/></param>
+        /// <returns>参考<see cref="IdCardVerificationResponse"/>实例</returns>
+        public async Task<IdCardVerificationResponse> IdCardVerification(IdCardVerificationRequest req)
+        {
+             JsonResponseModel<IdCardVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IdCardVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IdCardVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
         /// </summary>
         /// <param name="req">参考<see cref="ImageRecognitionRequest"/></param>

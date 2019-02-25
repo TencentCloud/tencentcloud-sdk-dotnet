@@ -51,8 +51,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// <summary>
         /// 是否启用IPVS(默认不开启)
         /// </summary>
-        [JsonProperty("IPVS")]
-        public bool? IPVS{ get; set; }
+        [JsonProperty("Ipvs")]
+        public bool? Ipvs{ get; set; }
 
         /// <summary>
         /// 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
@@ -70,7 +70,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "IgnoreClusterCIDRConflict", this.IgnoreClusterCIDRConflict);
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
             this.SetParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
-            this.SetParamSimple(map, prefix + "IPVS", this.IPVS);
+            this.SetParamSimple(map, prefix + "Ipvs", this.Ipvs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }

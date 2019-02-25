@@ -25,25 +25,25 @@ namespace TencentCloud.Tia.V20180226.Models
     {
         
         /// <summary>
-        /// 部署模型的集群
+        /// 部署模型的集群， `集群模式` 必填
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
 
         /// <summary>
-        /// 分页参数，返回数量
+        /// 分页参数，返回数量上限
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页参数，起始位置
+        /// 分页参数，分页起始位置
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 模型类型
+        /// 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
         /// </summary>
         [JsonProperty("ServType")]
         public string ServType{ get; set; }

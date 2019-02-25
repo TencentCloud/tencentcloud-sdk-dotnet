@@ -40,7 +40,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// 集群描述
         /// </summary>
         [JsonProperty("ClusterDescription")]
-        public string[] ClusterDescription{ get; set; }
+        public string ClusterDescription{ get; set; }
 
         /// <summary>
         /// 集群版本（默认值为1.10.5）
@@ -66,6 +66,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterNetworkSettings")]
         public ClusterNetworkSettings ClusterNetworkSettings{ get; set; }
 
+        /// <summary>
+        /// 集群当前node数量
+        /// </summary>
+        [JsonProperty("ClusterNodeNum")]
+        public ulong? ClusterNodeNum{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -74,11 +80,12 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
-            this.SetParamArraySimple(map, prefix + "ClusterDescription.", this.ClusterDescription);
+            this.SetParamSimple(map, prefix + "ClusterDescription", this.ClusterDescription);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
             this.SetParamSimple(map, prefix + "ClusterOs", this.ClusterOs);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamObj(map, prefix + "ClusterNetworkSettings.", this.ClusterNetworkSettings);
+            this.SetParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
         }
     }
 }

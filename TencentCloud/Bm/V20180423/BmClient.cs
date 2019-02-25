@@ -73,6 +73,47 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 购买黑石物理机
+        /// </summary>
+        /// <param name="req">参考<see cref="BuyDevicesRequest"/></param>
+        /// <returns>参考<see cref="BuyDevicesResponse"/>实例</returns>
+        public async Task<BuyDevicesResponse> BuyDevices(BuyDevicesRequest req)
+        {
+             JsonResponseModel<BuyDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BuyDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BuyDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义镜像<br>
+        /// 每个AppId在每个可用区最多保留20个自定义镜像
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateCustomImageRequest"/></param>
+        /// <returns>参考<see cref="CreateCustomImageResponse"/>实例</returns>
+        public async Task<CreateCustomImageResponse> CreateCustomImage(CreateCustomImageRequest req)
+        {
+             JsonResponseModel<CreateCustomImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建预授权规则
         /// </summary>
         /// <param name="req">参考<see cref="CreatePsaRegulationRequest"/></param>
@@ -133,6 +174,27 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 删除自定义镜像<br>
+        /// 正用于部署或重装中的镜像被删除后，镜像文件将保留一段时间，直到部署或重装结束
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteCustomImagesRequest"/></param>
+        /// <returns>参考<see cref="DeleteCustomImagesResponse"/>实例</returns>
+        public async Task<DeleteCustomImagesResponse> DeleteCustomImages(DeleteCustomImagesRequest req)
+        {
+             JsonResponseModel<DeleteCustomImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除预授权规则
         /// </summary>
         /// <param name="req">参考<see cref="DeletePsaRegulationRequest"/></param>
@@ -173,6 +235,46 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 查询自定义镜像制作进度
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCustomImageProcessRequest"/></param>
+        /// <returns>参考<see cref="DescribeCustomImageProcessResponse"/>实例</returns>
+        public async Task<DescribeCustomImageProcessResponse> DescribeCustomImageProcess(DescribeCustomImageProcessRequest req)
+        {
+             JsonResponseModel<DescribeCustomImageProcessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomImageProcess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomImageProcessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看自定义镜像列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCustomImagesRequest"/></param>
+        /// <returns>参考<see cref="DescribeCustomImagesResponse"/>实例</returns>
+        public async Task<DescribeCustomImagesResponse> DescribeCustomImages(DescribeCustomImagesRequest req)
+        {
+             JsonResponseModel<DescribeCustomImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取获取设备类型
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDeviceClassRequest"/></param>
@@ -184,6 +286,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "DescribeDeviceClass");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceClassResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询机型支持的RAID方式， 并返回系统盘的分区和逻辑盘的列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceClassPartitionRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceClassPartitionResponse"/>实例</returns>
+        public async Task<DescribeDeviceClassPartitionResponse> DescribeDeviceClassPartition(DescribeDeviceClassPartitionRequest req)
+        {
+             JsonResponseModel<DescribeDeviceClassPartitionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeviceClassPartition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceClassPartitionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -224,6 +346,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "DescribeDeviceOperationLog");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceOperationLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取物理机的分区格式
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDevicePartitionRequest"/></param>
+        /// <returns>参考<see cref="DescribeDevicePartitionResponse"/>实例</returns>
+        public async Task<DescribeDevicePartitionResponse> DescribeDevicePartition(DescribeDevicePartitionRequest req)
+        {
+             JsonResponseModel<DescribeDevicePartitionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDevicePartition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicePartitionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -284,6 +426,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "DescribeDevices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取异步操作状态的完成状态
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeOperationResultRequest"/></param>
+        /// <returns>参考<see cref="DescribeOperationResultResponse"/>实例</returns>
+        public async Task<DescribeOperationResultResponse> DescribeOperationResult(DescribeOperationResultRequest req)
+        {
+             JsonResponseModel<DescribeOperationResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOperationResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOperationResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -461,6 +623,26 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 用于修改自定义镜像名或描述
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyCustomImageAttributeRequest"/></param>
+        /// <returns>参考<see cref="ModifyCustomImageAttributeResponse"/>实例</returns>
+        public async Task<ModifyCustomImageAttributeResponse> ModifyCustomImageAttribute(ModifyCustomImageAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCustomImageAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomImageAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomImageAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改服务器名称
         /// </summary>
         /// <param name="req">参考<see cref="ModifyDeviceAliasesRequest"/></param>
@@ -492,6 +674,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "ModifyDeviceAutoRenewFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceAutoRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改物理机内网IP（不重装系统）
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyLanIpRequest"/></param>
+        /// <returns>参考<see cref="ModifyLanIpResponse"/>实例</returns>
+        public async Task<ModifyLanIpResponse> ModifyLanIp(ModifyLanIpRequest req)
+        {
+             JsonResponseModel<ModifyLanIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLanIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLanIpResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -692,6 +894,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "SetOutBandVpnAuthPassword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetOutBandVpnAuthPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭服务器
+        /// </summary>
+        /// <param name="req">参考<see cref="ShutdownDevicesRequest"/></param>
+        /// <returns>参考<see cref="ShutdownDevicesResponse"/>实例</returns>
+        public async Task<ShutdownDevicesResponse> ShutdownDevices(ShutdownDevicesRequest req)
+        {
+             JsonResponseModel<ShutdownDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ShutdownDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ShutdownDevicesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

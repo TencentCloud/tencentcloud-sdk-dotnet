@@ -37,13 +37,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 周期类型，byUsedTime按计费周期/byPayTime按扣费周期
+        /// 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。
         /// </summary>
         [JsonProperty("PeriodType")]
         public string PeriodType{ get; set; }
 
         /// <summary>
-        /// 月份，格式为yyyy-mm
+        /// 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }

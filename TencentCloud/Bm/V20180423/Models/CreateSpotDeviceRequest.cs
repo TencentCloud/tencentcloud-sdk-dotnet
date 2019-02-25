@@ -31,7 +31,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 计算单元类型
+        /// 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
         /// </summary>
         [JsonProperty("ComputeType")]
         public string ComputeType{ get; set; }

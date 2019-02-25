@@ -61,7 +61,7 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationName{ get; set; }
 
         /// <summary>
-        /// 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串''
+        /// 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }

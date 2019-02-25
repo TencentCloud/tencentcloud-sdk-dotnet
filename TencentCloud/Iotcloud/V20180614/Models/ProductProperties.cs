@@ -31,7 +31,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string ProductDescription{ get; set; }
 
         /// <summary>
-        /// 加密类型，1表示非对称加密，2表示对称加密。如不填写，默认值是1
+        /// 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
         /// </summary>
         [JsonProperty("EncryptionType")]
         public string EncryptionType{ get; set; }
@@ -43,7 +43,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 产品类型，0表示正常设备，2表示NB-IoT设备，默认值是0
+        /// 产品类型，各个类型值代表的节点-类型如下：
+        /// 0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
         /// </summary>
         [JsonProperty("ProductType")]
         public ulong? ProductType{ get; set; }
@@ -78,6 +79,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
+        /// <summary>
+        /// 产品秘钥，suite产品才会有
+        /// </summary>
+        [JsonProperty("ProductKey")]
+        public string ProductKey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +100,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "Appeui", this.Appeui);
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
+            this.SetParamSimple(map, prefix + "ProductKey", this.ProductKey);
         }
     }
 }

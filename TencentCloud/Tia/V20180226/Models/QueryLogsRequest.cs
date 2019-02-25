@@ -25,37 +25,37 @@ namespace TencentCloud.Tia.V20180226.Models
     {
         
         /// <summary>
-        /// 任务名称
+        /// 任务的名称
         /// </summary>
         [JsonProperty("JobName")]
         public string JobName{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// 任务所在集群的名称
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
 
         /// <summary>
-        /// 查询日志的开始时间
+        /// 查询日志的开始时间，格式：2019-01-01 00:00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询日志的结束时间
+        /// 查询日志的结束时间，格式：2019-01-01 00:00:00
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 单次要返回的日志条数
+        /// 单次要返回的日志条数上限
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 加载更多使用，透传上次返回的context值，获取后续的日志内容，使用context翻页最多能获取10000条日志
+        /// 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

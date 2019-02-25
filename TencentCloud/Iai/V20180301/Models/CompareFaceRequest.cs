@@ -25,13 +25,17 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// A 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// A 图片 base64 数据。
+        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("ImageA")]
         public string ImageA{ get; set; }
 
         /// <summary>
-        /// B 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// B 图片 base64 数据。
+        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("ImageB")]
         public string ImageB{ get; set; }
@@ -40,6 +44,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。
+        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("UrlA")]
@@ -49,6 +54,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。
+        /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("UrlB")]

@@ -31,13 +31,13 @@ namespace TencentCloud.Tia.V20180226.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模型所在集群名称
+        /// 模型所在集群名称，`集群模式` 必填
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
 
         /// <summary>
-        /// 模型类型
+        /// 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
         /// </summary>
         [JsonProperty("ServType")]
         public string ServType{ get; set; }

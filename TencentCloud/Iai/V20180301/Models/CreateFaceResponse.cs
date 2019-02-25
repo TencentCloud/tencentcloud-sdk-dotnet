@@ -37,7 +37,7 @@ namespace TencentCloud.Iai.V20180301.Models
         public string[] SucFaceIds{ get; set; }
 
         /// <summary>
-        /// 每张人脸图片添加结果的返回码
+        /// 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
         /// </summary>
         [JsonProperty("RetCode")]
         public long?[] RetCode{ get; set; }

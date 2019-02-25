@@ -109,10 +109,16 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? CopyFromRemote{ get; set; }
 
         /// <summary>
-        /// 快照关联的镜像ID列表。
+        /// 快照关联的镜像列表。
         /// </summary>
-        [JsonProperty("ImageIds")]
-        public string[] ImageIds{ get; set; }
+        [JsonProperty("Images")]
+        public Image[] Images{ get; set; }
+
+        /// <summary>
+        /// 快照关联的镜像个数。
+        /// </summary>
+        [JsonProperty("ImageCount")]
+        public ulong? ImageCount{ get; set; }
 
 
         /// <summary>
@@ -134,7 +140,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
             this.SetParamArraySimple(map, prefix + "CopyingToRegions.", this.CopyingToRegions);
             this.SetParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
-            this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+            this.SetParamArrayObj(map, prefix + "Images.", this.Images);
+            this.SetParamSimple(map, prefix + "ImageCount", this.ImageCount);
         }
     }
 }

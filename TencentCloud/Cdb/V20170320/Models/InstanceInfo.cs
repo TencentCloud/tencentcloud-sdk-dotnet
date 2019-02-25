@@ -240,6 +240,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
+        /// <summary>
+        /// 每秒查询数量
+        /// </summary>
+        [JsonProperty("Qps")]
+        public long? Qps{ get; set; }
+
+        /// <summary>
+        /// 可用区中文名称
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -282,6 +294,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "PhysicalId", this.PhysicalId);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

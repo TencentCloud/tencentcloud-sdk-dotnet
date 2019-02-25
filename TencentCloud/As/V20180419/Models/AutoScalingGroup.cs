@@ -52,13 +52,13 @@ namespace TencentCloud.As.V20180419.Models
         /// 默认冷却时间，单位秒
         /// </summary>
         [JsonProperty("DefaultCooldown")]
-        public ulong? DefaultCooldown{ get; set; }
+        public long? DefaultCooldown{ get; set; }
 
         /// <summary>
         /// 期望实例数
         /// </summary>
         [JsonProperty("DesiredCapacity")]
-        public ulong? DesiredCapacity{ get; set; }
+        public long? DesiredCapacity{ get; set; }
 
         /// <summary>
         /// 启用状态，取值包括`ENABLED`和`DISABLED`
@@ -76,13 +76,13 @@ namespace TencentCloud.As.V20180419.Models
         /// 实例数量
         /// </summary>
         [JsonProperty("InstanceCount")]
-        public ulong? InstanceCount{ get; set; }
+        public long? InstanceCount{ get; set; }
 
         /// <summary>
         /// 状态为`IN_SERVICE`实例的数量
         /// </summary>
         [JsonProperty("InServiceInstanceCount")]
-        public ulong? InServiceInstanceCount{ get; set; }
+        public long? InServiceInstanceCount{ get; set; }
 
         /// <summary>
         /// 启动配置ID
@@ -106,19 +106,19 @@ namespace TencentCloud.As.V20180419.Models
         /// 最大实例数
         /// </summary>
         [JsonProperty("MaxSize")]
-        public ulong?[] MaxSize{ get; set; }
+        public long? MaxSize{ get; set; }
 
         /// <summary>
         /// 最小实例数
         /// </summary>
         [JsonProperty("MinSize")]
-        public ulong?[] MinSize{ get; set; }
+        public long? MinSize{ get; set; }
 
         /// <summary>
         /// 项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
-        public ulong?[] ProjectId{ get; set; }
+        public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 子网ID列表
@@ -169,9 +169,9 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
             this.SetParamSimple(map, prefix + "LaunchConfigurationName", this.LaunchConfigurationName);
             this.SetParamArraySimple(map, prefix + "LoadBalancerIdSet.", this.LoadBalancerIdSet);
-            this.SetParamArraySimple(map, prefix + "MaxSize.", this.MaxSize);
-            this.SetParamArraySimple(map, prefix + "MinSize.", this.MinSize);
-            this.SetParamArraySimple(map, prefix + "ProjectId.", this.ProjectId);
+            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
+            this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "SubnetIdSet.", this.SubnetIdSet);
             this.SetParamArraySimple(map, prefix + "TerminationPolicySet.", this.TerminationPolicySet);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);

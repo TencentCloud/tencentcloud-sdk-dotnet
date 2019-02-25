@@ -102,6 +102,24 @@ namespace TencentCloud.Tia.V20180226.Models
         [JsonProperty("Replicas")]
         public ulong? Replicas{ get; set; }
 
+        /// <summary>
+        /// 模型Id
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 创建任务的Uin
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+        /// </summary>
+        [JsonProperty("DelTime")]
+        public string DelTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -121,6 +139,9 @@ namespace TencentCloud.Tia.V20180226.Models
             this.SetParamSimple(map, prefix + "ServType", this.ServType);
             this.SetParamSimple(map, prefix + "Expose", this.Expose);
             this.SetParamSimple(map, prefix + "Replicas", this.Replicas);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "DelTime", this.DelTime);
         }
     }
 }
