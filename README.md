@@ -8,7 +8,7 @@
 
 1. 依赖环境：.NET Framework 4.5+ 和 .NET Core 2.1。
 2. 从 腾讯云控制台 开通相应产品。
-3. 获取 SecretID 、 SecretKey 以及调用地址（ endpoint ）， endpoint 一般形式为 *.tencentcloudapi.com ，如 CVM 的调用地址为 cvm.tencentcloudapi.com ，具体参考各产品说明。
+3. 获取 SecretID 、 SecretKey 以及调用地址（ endpoint ）， endpoint 一般形式为 \*.tencentcloudapi.com ，如 CVM 的调用地址为 cvm.tencentcloudapi.com ，具体参考各产品说明。
 4. 下载相关资料并做好相关文件配置。
 
 # 获取安装
@@ -135,6 +135,10 @@ namespace TencentCloudExamples
 ```
 
 更多示例参见 [github](https://github.com/TencentCloud/tencentcloud-sdk-dotnet) TencentCloudExamples 目录。
+
+## 同步调用与异步调用
+
+目前 SDK 中仅提供了异步调用接口，在示例中由于是控制台应用程序，所以可以使用同步方式调用异步接口，即`ConfigureAwait(false).GetAwaiter().GetResult()`。在开发 ASP 应用程序，或者 Windows Forms 应用程序时，UI 控件的响应方法中，不能使用同步方式调用异步接口，否则会造成界面停止响应。解决的办法是将 UI 控件的响应方法改为异步，在方法中也异步地调用接口。
 
 # 旧版SDK
 
