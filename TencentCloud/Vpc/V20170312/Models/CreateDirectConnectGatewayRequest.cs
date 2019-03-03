@@ -40,7 +40,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-        /// <li>NetworkType 为 NAT 时，这里传值为云联网实例ID</li>
+        /// <li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
         /// </summary>
         [JsonProperty("NetworkInstanceId")]
         public string NetworkInstanceId{ get; set; }

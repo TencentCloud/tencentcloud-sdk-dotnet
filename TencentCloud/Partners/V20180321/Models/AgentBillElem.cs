@@ -76,7 +76,7 @@ namespace TencentCloud.Partners.V20180321.Models
         /// 支付金额，单位分
         /// </summary>
         [JsonProperty("Amt")]
-        public ulong? Amt{ get; set; }
+        public long? Amt{ get; set; }
 
         /// <summary>
         /// agentpay：代付；selfpay：自付

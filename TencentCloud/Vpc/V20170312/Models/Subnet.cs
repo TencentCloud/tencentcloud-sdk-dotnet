@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。
+        /// `VPC`实例`ID`。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网实例ID，例如：subnet-bthucmmy。
+        /// 子网实例`ID`，例如：subnet-bthucmmy。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// 子网的CIDR。
+        /// 子网的 `IPv4` `CIDR`。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
@@ -79,10 +79,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 可用IP数。
+        /// 可用`IP`数。
         /// </summary>
         [JsonProperty("AvailableIpAddressCount")]
         public ulong? AvailableIpAddressCount{ get; set; }
+
+        /// <summary>
+        /// 子网的 `IPv6` `CIDR`。
+        /// </summary>
+        [JsonProperty("Ipv6CidrBlock")]
+        public string Ipv6CidrBlock{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "AvailableIpAddressCount", this.AvailableIpAddressCount);
+            this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         }
     }
 }

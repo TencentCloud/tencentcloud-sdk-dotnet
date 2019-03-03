@@ -46,60 +46,6 @@ namespace TencentCloud.Sts.V20180813.Models
         [JsonProperty("DurationSeconds")]
         public ulong? DurationSeconds{ get; set; }
 
-        /// <summary>
-        /// 兼容uin名单
-        /// </summary>
-        [JsonProperty("OpenUin")]
-        public ulong? OpenUin{ get; set; }
-
-        /// <summary>
-        /// 兼容OwnerUin名单
-        /// </summary>
-        [JsonProperty("OpenOwnerUin")]
-        public ulong? OpenOwnerUin{ get; set; }
-
-        /// <summary>
-        /// ua
-        /// </summary>
-        [JsonProperty("Ua")]
-        public string Ua{ get; set; }
-
-        /// <summary>
-        /// mfa
-        /// </summary>
-        [JsonProperty("Mfa")]
-        public ulong? Mfa{ get; set; }
-
-        /// <summary>
-        /// interfaceName
-        /// </summary>
-        [JsonProperty("InterfaceName")]
-        public string InterfaceName{ get; set; }
-
-        /// <summary>
-        /// extraInfo
-        /// </summary>
-        [JsonProperty("ExtraInfo")]
-        public string ExtraInfo{ get; set; }
-
-        /// <summary>
-        /// thUin
-        /// </summary>
-        [JsonProperty("ThUin")]
-        public ulong? ThUin{ get; set; }
-
-        /// <summary>
-        /// thOwnerUin
-        /// </summary>
-        [JsonProperty("ThOwnerUin")]
-        public ulong? ThOwnerUin{ get; set; }
-
-        /// <summary>
-        /// codeMode
-        /// </summary>
-        [JsonProperty("CodeMode")]
-        public string CodeMode{ get; set; }
-
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -109,15 +55,6 @@ namespace TencentCloud.Sts.V20180813.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
-            this.SetParamSimple(map, prefix + "OpenUin", this.OpenUin);
-            this.SetParamSimple(map, prefix + "OpenOwnerUin", this.OpenOwnerUin);
-            this.SetParamSimple(map, prefix + "Ua", this.Ua);
-            this.SetParamSimple(map, prefix + "Mfa", this.Mfa);
-            this.SetParamSimple(map, prefix + "InterfaceName", this.InterfaceName);
-            this.SetParamSimple(map, prefix + "ExtraInfo", this.ExtraInfo);
-            this.SetParamSimple(map, prefix + "ThUin", this.ThUin);
-            this.SetParamSimple(map, prefix + "ThOwnerUin", this.ThOwnerUin);
-            this.SetParamSimple(map, prefix + "CodeMode", this.CodeMode);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 水印Id。
+        /// 水印Id，即调用[AddLiveWatermark](/document/product/267/30154)接口返回的WatermarkId。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

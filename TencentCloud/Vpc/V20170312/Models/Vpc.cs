@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Vpc名称。
+        /// `VPC`名称。
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// VPC实例ID，例如：vpc-azd4dt1c。
+        /// `VPC`实例`ID`，例如：vpc-azd4dt1c。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+        /// `VPC`的`IPv4` `CIDR`。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// 是否默认VPC。
+        /// 是否默认`VPC`。
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
@@ -61,28 +61,34 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// DNS列表
+        /// `DNS`列表。
         /// </summary>
         [JsonProperty("DnsServerSet")]
         public string[] DnsServerSet{ get; set; }
 
         /// <summary>
-        /// DHCP域名选项值
+        /// `DHCP`域名选项值。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// DHCP选项集ID
+        /// `DHCP`选项集`ID`。
         /// </summary>
         [JsonProperty("DhcpOptionsId")]
         public string DhcpOptionsId{ get; set; }
 
         /// <summary>
-        /// 是否开启DHCP。
+        /// 是否开启`DHCP`。
         /// </summary>
         [JsonProperty("EnableDhcp")]
         public bool? EnableDhcp{ get; set; }
+
+        /// <summary>
+        /// `VPC`的`IPv6` `CIDR`。
+        /// </summary>
+        [JsonProperty("Ipv6CidrBlock")]
+        public string Ipv6CidrBlock{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "DhcpOptionsId", this.DhcpOptionsId);
             this.SetParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
+            this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         }
     }
 }

@@ -107,6 +107,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// `IPv6`地址列表。
+        /// </summary>
+        [JsonProperty("Ipv6AddressSet")]
+        public Ipv6Address[] Ipv6AddressSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -126,6 +132,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamObj(map, prefix + "Attachment.", this.Attachment);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Cr.V20180321.Models
         [JsonProperty("BlackList")]
         public SingleBlackApply[] BlackList{ get; set; }
 
+        /// <summary>
+        /// 实例ID，不传默认为系统分配的初始实例
+        /// </summary>
+        [JsonProperty("InstId")]
+        public string InstId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamArrayObj(map, prefix + "BlackList.", this.BlackList);
+            this.SetParamSimple(map, prefix + "InstId", this.InstId);
         }
     }
 }

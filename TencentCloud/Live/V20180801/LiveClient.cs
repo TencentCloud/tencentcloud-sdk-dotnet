@@ -74,7 +74,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 添加水印
+        /// 添加水印，成功返回水印id后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印id绑定到流使用。
         /// </summary>
         /// <param name="req">参考<see cref="AddLiveWatermarkRequest"/></param>
         /// <returns>参考<see cref="AddLiveWatermarkResponse"/>实例</returns>
@@ -114,7 +114,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建回调规则
+        /// 创建回调规则，需要先调用[CreateLiveCallbackTemplate](/document/product/267/32637)接口创建回调模板，将返回的模板id绑定到域名/路径进行使用。
+        /// <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveCallbackRuleRequest"/></param>
         /// <returns>参考<see cref="CreateLiveCallbackRuleResponse"/>实例</returns>
@@ -134,7 +135,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建回调模板
+        /// 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板id绑定到域名/路径使用。
+        /// <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveCallbackTemplateRequest"/></param>
         /// <returns>参考<see cref="CreateLiveCallbackTemplateResponse"/>实例</returns>
@@ -206,7 +208,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建录制规则
+        /// 创建录制规则，需要先调用[CreateLiveRecordTemplate](/document/product/267/32614)接口创建录制模板，将返回的模板id绑定到流使用。
+        /// <br>录制相关文档：[直播录制](/document/product/267/32739)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveRecordRuleRequest"/></param>
         /// <returns>参考<see cref="CreateLiveRecordRuleResponse"/>实例</returns>
@@ -226,7 +229,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建录制模板
+        /// 创建录制模板，成功返回模板id后，需要调用[CreateLiveRecordRule](/document/product/267/32615)接口，将模板id绑定到流进行使用。
+        /// <br>录制相关文档：[直播录制](/document/product/267/32739)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveRecordTemplateRequest"/></param>
         /// <returns>参考<see cref="CreateLiveRecordTemplateResponse"/>实例</returns>
@@ -246,7 +250,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建截图规则
+        /// 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板id绑定到流进行使用。
+        /// <br>截图相关文档：[直播截图](/document/product/267/32737)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveSnapshotRuleRequest"/></param>
         /// <returns>参考<see cref="CreateLiveSnapshotRuleResponse"/>实例</returns>
@@ -266,7 +271,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建截图模板
+        /// 创建截图模板，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
+        /// <br>截图相关文档：[直播截图](/document/product/267/32737)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveSnapshotTemplateRequest"/></param>
         /// <returns>参考<see cref="CreateLiveSnapshotTemplateResponse"/>实例</returns>
@@ -286,7 +292,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建转码规则
+        /// 创建转码规则，需要先调用[CreateLiveTranscodeTemplate](/document/product/267/32646)接口创建转码模板，将返回的模板id绑定到流使用。
+        /// <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveTranscodeRuleRequest"/></param>
         /// <returns>参考<see cref="CreateLiveTranscodeRuleResponse"/>实例</returns>
@@ -306,7 +313,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建转码模板
+        /// 创建转码模板，成功返回模板id后，需要调用[CreateLiveTranscodeRule](/document/product/267/32647)接口，将返回的模板id绑定到流使用。
+        /// <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveTranscodeTemplateRequest"/></param>
         /// <returns>参考<see cref="CreateLiveTranscodeTemplateResponse"/>实例</returns>
@@ -326,7 +334,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建水印规则
+        /// 创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
         /// </summary>
         /// <param name="req">参考<see cref="CreateLiveWatermarkRuleRequest"/></param>
         /// <returns>参考<see cref="CreateLiveWatermarkRuleResponse"/>实例</returns>

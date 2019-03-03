@@ -78,6 +78,12 @@ namespace TencentCloud.Cr.V20180321.Models
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
+        /// <summary>
+        /// 实例ID，不传默认为系统分配的初始实例
+        /// </summary>
+        [JsonProperty("InstId")]
+        public string InstId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +99,7 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "EndBizDate", this.EndBizDate);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "InstId", this.InstId);
         }
     }
 }

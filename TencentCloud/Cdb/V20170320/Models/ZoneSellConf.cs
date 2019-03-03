@@ -102,6 +102,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ZoneConf")]
         public ZoneConf ZoneConf{ get; set; }
 
+        /// <summary>
+        /// 可支持的灾备可用区信息
+        /// </summary>
+        [JsonProperty("DrZone")]
+        public string[] DrZone{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "SellType.", this.SellType);
             this.SetParamObj(map, prefix + "ZoneConf.", this.ZoneConf);
+            this.SetParamArraySimple(map, prefix + "DrZone.", this.DrZone);
         }
     }
 }

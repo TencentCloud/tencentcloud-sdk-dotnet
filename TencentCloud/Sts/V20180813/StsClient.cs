@@ -73,7 +73,7 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        /// 获取临时证书
+        /// 获取联合身份临时访问凭证
         /// </summary>
         /// <param name="req">参考<see cref="GetFederationTokenRequest"/></param>
         /// <returns>参考<see cref="GetFederationTokenResponse"/>实例</returns>

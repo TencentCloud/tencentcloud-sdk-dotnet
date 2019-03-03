@@ -66,6 +66,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }
 
+        /// <summary>
+        /// 付费类型，PREPAID为预付费，POSTPAID为后付费。
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+        /// </summary>
+        [JsonProperty("BandwidthLimitType")]
+        public string BandwidthLimitType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +91,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         }
     }
 }

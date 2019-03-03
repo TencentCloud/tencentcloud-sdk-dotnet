@@ -1470,6 +1470,28 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeGatewayFlowMonitorDetail）用于查询网关流量监控明细。
+        /// * 只支持单个网关实例查询。即入参 `VpnId` `DirectConnectGatewayId` `PeeringConnectionId` `NatId` 最多只支持传一个，且必须传一个。
+        /// * 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeGatewayFlowMonitorDetailRequest"/></param>
+        /// <returns>参考<see cref="DescribeGatewayFlowMonitorDetailResponse"/>实例</returns>
+        public async Task<DescribeGatewayFlowMonitorDetailResponse> DescribeGatewayFlowMonitorDetail(DescribeGatewayFlowMonitorDetailRequest req)
+        {
+             JsonResponseModel<DescribeGatewayFlowMonitorDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewayFlowMonitorDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayFlowMonitorDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeHaVipsRequest"/></param>

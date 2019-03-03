@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Hcm.V20181106.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Item : AbstractModel
+    public class ConcatTask2017 : AbstractModel
     {
         
         /// <summary>
-        /// 识别的算式是否正确
+        /// 视频拼接任务 ID。
         /// </summary>
-        [JsonProperty("Item")]
-        public string Item{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 识别的算式
+        /// 视频拼接源文件信息。
         /// </summary>
-        [JsonProperty("ItemString")]
-        public string ItemString{ get; set; }
-
-        /// <summary>
-        /// 识别的算式在图片上的位置信息
-        /// </summary>
-        [JsonProperty("ItemCoord")]
-        public ItemCoord ItemCoord{ get; set; }
+        [JsonProperty("FileInfoSet")]
+        public ConcatFileInfo2017[] FileInfoSet{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Hcm.V20181106.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Item", this.Item);
-            this.SetParamSimple(map, prefix + "ItemString", this.ItemString);
-            this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "FileInfoSet.", this.FileInfoSet);
         }
     }
 }

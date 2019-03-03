@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Drm.V20181115.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Key : AbstractModel
+    public class EditMediaFileInfo : AbstractModel
     {
         
         /// <summary>
-        /// 加密track类型。
+        /// 视频的 ID。
         /// </summary>
-        [JsonProperty("Track")]
-        public string Track{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
-        /// 密钥ID。
+        /// 视频剪辑的起始偏移时间偏移，单位：秒。
         /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
+        [JsonProperty("StartTimeOffset")]
+        public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+        /// 视频剪辑的起始结束时间偏移，单位：秒。
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
-
-        /// <summary>
-        /// 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
-        /// </summary>
-        [JsonProperty("Iv")]
-        public string Iv{ get; set; }
+        [JsonProperty("EndTimeOffset")]
+        public float? EndTimeOffset{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Drm.V20181115.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Track", this.Track);
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Iv", this.Iv);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }
     }
 }

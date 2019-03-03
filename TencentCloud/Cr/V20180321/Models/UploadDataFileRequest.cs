@@ -60,6 +60,12 @@ namespace TencentCloud.Cr.V20180321.Models
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
+        /// <summary>
+        /// 实例ID，不传默认为系统分配的初始实例。
+        /// </summary>
+        [JsonProperty("InstId")]
+        public string InstId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "UploadModel", this.UploadModel);
             this.SetParamSimple(map, prefix + "File", this.File);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "InstId", this.InstId);
         }
     }
 }

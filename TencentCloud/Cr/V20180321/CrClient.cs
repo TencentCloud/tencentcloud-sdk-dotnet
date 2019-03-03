@@ -53,7 +53,8 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 提交黑名单申请。
+        /// 加入黑名单的客户，将停止拨打。用于：
+        /// 将客户进行黑名单的增加和移除，用于对某些客户阶段性停催。
         /// </summary>
         /// <param name="req">参考<see cref="ApplyBlackListRequest"/></param>
         /// <returns>参考<see cref="ApplyBlackListResponse"/>实例</returns>
@@ -73,7 +74,7 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 查询录音，返回录音列表。
+        /// 用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeRecordsRequest"/></param>
         /// <returns>参考<see cref="DescribeRecordsResponse"/>实例</returns>
@@ -93,7 +94,7 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 客户调用该接口查看任务执行状态。输入任务ID，输出任务执行状态或者结果
+        /// 根据上传文件接口的输出参数DataResId，获取相关上传结果。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTaskStatusRequest"/></param>
         /// <returns>参考<see cref="DescribeTaskStatusResponse"/>实例</returns>
@@ -113,7 +114,7 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 客户调用该接口下载指定日期的催收报告
+        /// 用于下载当日催收结果报表，当日23:00后，可获取当日催收结果。
         /// </summary>
         /// <param name="req">参考<see cref="DownloadReportRequest"/></param>
         /// <returns>参考<see cref="DownloadReportResponse"/>实例</returns>
@@ -133,7 +134,10 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 客户通过调用该接口上传需催收文档或还款文档，接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
+        /// 该接口包含上传：
+        /// 1、入催文件 — 用于每天入催文件的上传；
+        /// 2、还款文件 — 实时上传当前已还款客户，用于还款客户的实时停催；
+        /// 接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
         /// </summary>
         /// <param name="req">参考<see cref="UploadDataFileRequest"/></param>
         /// <returns>参考<see cref="UploadDataFileResponse"/>实例</returns>
