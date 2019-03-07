@@ -55,6 +55,28 @@ namespace TencentCloud.Common
             return signRet;
         }
 
+        public static string SHA256Hex(string s)
+        {
+            using (SHA256 algo = SHA256.Create())
+            {
+                byte[] hashbytes = algo.ComputeHash(Encoding.UTF8.GetBytes(s));
+                StringBuilder builder = new StringBuilder();
+                for ( int i = 0; i < hashbytes.Length; ++i )
+                {
+                    builder.Append(hashbytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        public static byte [] HmacSHA256(byte [] key, byte [] msg)
+        {
+            using (HMACSHA256 mac = new HMACSHA256(key))
+            {
+                return mac.ComputeHash(msg);
+            }
+        }
+
         private static string BuildParamStr(SortedDictionary<string, string> requestParams, string requestMethod = "GET")
         {
             string retStr = "";

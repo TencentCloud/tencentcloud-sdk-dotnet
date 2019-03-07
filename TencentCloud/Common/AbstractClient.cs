@@ -78,44 +78,29 @@ namespace TencentCloud.Common
 
         protected async Task<string> InternalRequest(AbstractModel request, string actionName)
         {
-            IResponse okRsp = null;
-            string endpoint = this.Endpoint;
-            if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint)) {
-                endpoint = this.Profile.HttpProfile.Endpoint;
-            }
-            Dictionary<string, string> param = new Dictionary<string, string>();
-            request.ToMap(param, "");
-            // inplace change
-            this.FormatRequestData(actionName, param);
-            HttpConnection conn = new HttpConnection($"{this.Profile.HttpProfile.Protocol }{endpoint}",this.Profile.HttpProfile.Timeout,this.Profile.HttpProfile.WebProxy);
-
             if ((this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_GET) && (this.Profile.HttpProfile.ReqMethod != HttpProfile.REQ_POST))
             {
                 throw new TencentCloudSDKException("Method only support (GET, POST)");
             }
-            try
+
+            IResponse response = null;
+            if (ClientProfile.SIGN_SHA1.Equals(this.Profile.SignMethod)
+                || ClientProfile.SIGN_SHA256.Equals(this.Profile.SignMethod))
             {
-                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
-                {
-                    okRsp = await conn.GetRequest($"{this.Path}", param);
-                }
-                else if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
-                {
-                    okRsp = await conn.PostRequest(this.Path, param);
-                }
-            }
-            catch(Exception ex)
+                response = await RequestV1(request, actionName);
+            } else
             {
-                throw new TencentCloudSDKException($"The request with exception: {ex.Message }");
+                response = await RequestV3(request, actionName);
             }
 
-            if ((int)okRsp.Status != HTTP_RSP_OK) {
-                throw new TencentCloudSDKException(okRsp.Status +  await okRsp.Message.Content.ReadAsStringAsync());
+            if ((int)response.Status != HTTP_RSP_OK)
+            {
+                throw new TencentCloudSDKException(response.Status + await response.Message.Content.ReadAsStringAsync());
             }
             string strResp = null;
             try
             {
-                strResp =  await okRsp.AsString();
+                strResp = await response.AsString();
             }
             catch (ApiException ex)
             {
@@ -132,11 +117,150 @@ namespace TencentCloud.Common
             {
                 throw new TencentCloudSDKException(e.Message);
             }
-            if (errResp.Response.Error != null) {
+            if (errResp.Response.Error != null)
+            {
                 throw new TencentCloudSDKException($"code:{errResp.Response.Error.Code} message:{errResp.Response.Error.Message} ",
                         errResp.Response.RequestId);
             }
             return strResp;
+        }
+
+        private async Task<IResponse> RequestV3(AbstractModel request, string actionName)
+        {
+            string endpoint = this.Endpoint;
+            if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint))
+            {
+                endpoint = this.Profile.HttpProfile.Endpoint;
+            }
+            string httpRequestMethod = this.Profile.HttpProfile.ReqMethod;
+            string canonicalURI = "/";
+            string canonicalQueryString = "";
+            string requestPayload = "";
+            string contentType = "application/x-www-form-urlencoded";
+            if (HttpProfile.REQ_GET.Equals(httpRequestMethod))
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>();
+                request.ToMap(param, "");
+                StringBuilder urlBuilder = new StringBuilder();
+                foreach (KeyValuePair<string, string> kvp in param)
+                {
+                    urlBuilder.Append($"{WebUtility.UrlEncode(kvp.Key)}={WebUtility.UrlEncode(kvp.Value)}&");
+                }
+                canonicalQueryString = urlBuilder.ToString().TrimEnd('&');
+            } else
+            {
+                requestPayload = JsonConvert.SerializeObject(request,
+                    Newtonsoft.Json.Formatting.None,
+                    new JsonSerializerSettings{NullValueHandling=NullValueHandling.Ignore});
+                contentType = "application/json";
+            }
+            // HttpContent->StringContent will add charset to utf-8 in content-type,
+            // which leads to authentication failure in API...
+            string canonicalHeaders = "content-type:" + contentType + "; charset=utf-8\nhost:" + endpoint + "\n";
+            string signedHeaders = "content-type;host";
+            string hashedRequestPayload = SignHelper.SHA256Hex(requestPayload);
+            string canonicalRequest = httpRequestMethod + "\n"
+                + canonicalURI + "\n"
+                + canonicalQueryString + "\n"
+                + canonicalHeaders + "\n"
+                + signedHeaders + "\n"
+                + hashedRequestPayload;
+            //Console.WriteLine(canonicalRequest);
+
+            string algorithm = "TC3-HMAC-SHA256";
+            long timestamp = ToTimestamp() / 1000;
+            string requestTimestamp = timestamp.ToString();
+            string date = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(timestamp).ToString("yyyy-MM-dd");
+            string service = endpoint.Split('.')[0];
+            string credentialScope = date + "/" + service + "/" + "tc3_request";
+            string hashedCanonicalRequest = SignHelper.SHA256Hex(canonicalRequest);
+            string stringToSign = algorithm + "\n"
+                + requestTimestamp + "\n"
+                + credentialScope + "\n"
+                + hashedCanonicalRequest;
+            //Console.WriteLine(stringToSign);
+
+            byte[] tc3SecretKey = Encoding.UTF8.GetBytes("TC3" + Credential.SecretKey);
+            byte[] secretDate = SignHelper.HmacSHA256(tc3SecretKey, Encoding.UTF8.GetBytes(date));
+            byte[] secretService = SignHelper.HmacSHA256(secretDate, Encoding.UTF8.GetBytes(service));
+            byte[] secretSigning = SignHelper.HmacSHA256(secretService, Encoding.UTF8.GetBytes("tc3_request"));
+            byte[] signatureBytes = SignHelper.HmacSHA256(secretSigning, Encoding.UTF8.GetBytes(stringToSign));
+            string signature = BitConverter.ToString(signatureBytes).Replace("-", "").ToLower();
+            //Console.WriteLine(signature);
+
+            string authorization = algorithm + " "
+                + "Credential=" + Credential.SecretId + "/" + credentialScope + ", "
+                + "SignedHeaders=" + signedHeaders + ", "
+                + "Signature=" + signature;
+            //Console.WriteLine(authorization);
+
+            Dictionary<string, string> headers = new Dictionary<string, string>();
+            headers.Add("Authorization", authorization);
+            headers.Add("Host", endpoint);
+            headers.Add("Content-Type", contentType);
+            headers.Add("X-TC-Action", actionName);
+            headers.Add("X-TC-Timestamp", requestTimestamp);
+            headers.Add("X-TC-Version", this.ApiVersion);
+            headers.Add("X-TC-Region", this.Region);
+            headers.Add("X-TC-RequestClient", this.SdkVersion);
+            if (!string.IsNullOrEmpty(this.Credential.Token))
+            {
+                headers.Add("X-TC-Token", this.Credential.Token);
+            }
+
+            HttpConnection conn = new HttpConnection(
+                $"{this.Profile.HttpProfile.Protocol }{endpoint}",
+                this.Profile.HttpProfile.Timeout,
+                this.Profile.HttpProfile.WebProxy);
+            try
+            {
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
+                {
+                    return await conn.GetRequest(this.Path, canonicalQueryString, headers);
+                } else
+                {
+                    return await conn.PostRequest(this.Path, requestPayload, headers);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new TencentCloudSDKException($"The request with exception: {e.Message}");
+            }
+        }
+
+        private async Task<IResponse> RequestV1(AbstractModel request, string actionName)
+        {
+            IResponse response = null;
+            string endpoint = this.Endpoint;
+            if (!string.IsNullOrEmpty(this.Profile.HttpProfile.Endpoint)) {
+                endpoint = this.Profile.HttpProfile.Endpoint;
+            }
+            Dictionary<string, string> param = new Dictionary<string, string>();
+            request.ToMap(param, "");
+            // inplace change
+            this.FormatRequestData(actionName, param);
+            HttpConnection conn = new HttpConnection(
+                $"{this.Profile.HttpProfile.Protocol }{endpoint}",
+                this.Profile.HttpProfile.Timeout,
+                this.Profile.HttpProfile.WebProxy);
+
+            try
+            {
+                if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_GET)
+                {
+                    response = await conn.GetRequest($"{this.Path}", param);
+                }
+                else if (this.Profile.HttpProfile.ReqMethod == HttpProfile.REQ_POST)
+                {
+                    response = await conn.PostRequest(this.Path, param);
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new TencentCloudSDKException($"The request with exception: {ex.Message }");
+            }
+
+            return response;
         }
 
         private Dictionary<string, string> FormatRequestData(string action, Dictionary<string, string> param)

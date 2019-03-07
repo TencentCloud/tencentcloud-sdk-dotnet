@@ -57,6 +57,38 @@ namespace TencentCloud.Common.Http
             return response;
         }
 
+        public async Task<IResponse> GetRequest(string path, string queryString, Dictionary<string, string> headers)
+        {
+            StringBuilder urlBuilder = new StringBuilder($"{client.BaseClient.BaseAddress.AbsoluteUri.TrimEnd('/')}{path}?{queryString}");
+            IRequest request = client.GetAsync(urlBuilder.ToString());
+            request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
+            headers.Remove("Authorization");
+            StringContent body = new StringContent("", Encoding.UTF8, headers["Content-Type"]);
+            request = request.WithBodyContent(body);
+            headers.Remove("Content-Type");
+            foreach (KeyValuePair<string, string> kvp in headers)
+            {
+                request = request.WithHeader(kvp.Key, kvp.Value);
+            }
+            return await request;
+        }
+
+        public async Task<IResponse> PostRequest(string path, string payload, Dictionary<string, string> headers)
+        {
+            StringBuilder urlBuilder = new StringBuilder($"{client.BaseClient.BaseAddress.AbsoluteUri.TrimEnd('/')}{path}");
+            IRequest request = client.PostAsync(urlBuilder.ToString());
+            request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
+            headers.Remove("Authorization");
+            StringContent body = new StringContent(payload, Encoding.UTF8, headers["Content-Type"]);
+            request = request.WithBodyContent(body);
+            headers.Remove("Content-Type");
+            foreach (KeyValuePair<string, string> kvp in headers)
+            {
+                request = request.WithHeader(kvp.Key, kvp.Value);
+            }
+            return await request.AsResponse();
+        }
+
         public async Task<IResponse> PostRequest(string url, Dictionary<string, string> param)
         {
             // set up

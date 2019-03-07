@@ -64,5 +64,10 @@ namespace TencentCloud.Common.Profile
         /// HmacSHA256签名方法
         /// </summary>
         public static string SIGN_SHA256 = "HmacSHA256";
+
+        /// <summary>
+        /// TC3-HMAC-SHA256 签名方法
+        /// </summary>
+        public static string SIGN_TC3SHA256 = "TC3-HMAC-SHA256";
     }
 }
