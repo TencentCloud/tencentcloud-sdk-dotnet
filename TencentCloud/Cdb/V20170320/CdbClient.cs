@@ -163,6 +163,7 @@ namespace TencentCloud.Cdb.V20170320
         /// 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
         /// 3. 支持创建 MySQL5.5 、 MySQL5.6 、 MySQL5.7 版本；
         /// 4. 支持创建主实例、只读实例、灾备实例；
+        /// 5. 当入参指定Port或ParamList时，该实例会进行初始化操作；
         /// </summary>
         /// <param name="req">参考<see cref="CreateDBInstanceRequest"/></param>
         /// <returns>参考<see cref="CreateDBInstanceResponse"/>实例</returns>
@@ -190,6 +191,7 @@ namespace TencentCloud.Cdb.V20170320
         /// 2. 单次创建实例最大支持 100 个，实例时长最大支持 36 个月；
         /// 3. 支持创建 MySQL5.5、MySQL5.6和MySQL5.7 版本；
         /// 4. 支持创建主实例、灾备实例和只读实例；
+        /// 5. 当入参指定Port或ParamList时，该实例会进行初始化操作；
         /// </summary>
         /// <param name="req">参考<see cref="CreateDBInstanceHourRequest"/></param>
         /// <returns>参考<see cref="CreateDBInstanceHourResponse"/>实例</returns>

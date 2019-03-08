@@ -212,18 +212,21 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 付费模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
 
         /// <summary>
         /// 实例处于异步任务时的异步任务流程ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locker")]
         public long? Locker{ get; set; }
 
         /// <summary>
         /// 实例目前运行状态描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
@@ -233,6 +236,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         [JsonProperty("WanStatus")]
         public long? WanStatus{ get; set; }
+
+        /// <summary>
+        /// 该实例是否支持审计。1-支持；0-不支持
+        /// </summary>
+        [JsonProperty("IsAuditSupported")]
+        public ulong? IsAuditSupported{ get; set; }
+
+        /// <summary>
+        /// 机器型号
+        /// </summary>
+        [JsonProperty("Machine")]
+        public string Machine{ get; set; }
 
 
         /// <summary>
@@ -275,6 +290,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Locker", this.Locker);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
             this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
+            this.SetParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
+            this.SetParamSimple(map, prefix + "Machine", this.Machine);
         }
     }
 }

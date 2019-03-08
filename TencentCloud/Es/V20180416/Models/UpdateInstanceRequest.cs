@@ -78,6 +78,30 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
+        /// <summary>
+        /// 专用主节点个数
+        /// </summary>
+        [JsonProperty("MasterNodeNum")]
+        public ulong? MasterNodeNum{ get; set; }
+
+        /// <summary>
+        /// 专用主节点规格
+        /// </summary>
+        [JsonProperty("MasterNodeType")]
+        public string MasterNodeType{ get; set; }
+
+        /// <summary>
+        /// 专用主节点磁盘大小
+        /// </summary>
+        [JsonProperty("MasterNodeDiskSize")]
+        public ulong? MasterNodeDiskSize{ get; set; }
+
+        /// <summary>
+        /// 更新配置时是否强制重启
+        /// </summary>
+        [JsonProperty("ForceRestart")]
+        public bool? ForceRestart{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -92,6 +116,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "EsAcl.", this.EsAcl);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "MasterNodeNum", this.MasterNodeNum);
+            this.SetParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
+            this.SetParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
+            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         }
     }
 }

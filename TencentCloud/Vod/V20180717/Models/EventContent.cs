@@ -50,66 +50,77 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileUploadEvent")]
         public FileUploadTask FileUploadEvent{ get; set; }
 
         /// <summary>
         /// 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcedureStateChangeEvent")]
         public ProcedureTask ProcedureStateChangeEvent{ get; set; }
 
         /// <summary>
         /// 文件删除事件，当事件类型为 FileDeleted 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileDeleteEvent")]
         public FileDeleteTask FileDeleteEvent{ get; set; }
 
         /// <summary>
         /// 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PullCompleteEvent")]
         public PullFileTask PullCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EditMediaCompleteEvent")]
         public EditMediaTask EditMediaCompleteEvent{ get; set; }
 
         /// <summary>
         /// 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatPublishComplete")]
         public WechatPublishTask WechatPublishComplete{ get; set; }
 
         /// <summary>
         /// 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeCompleteEvent")]
         public TranscodeTask2017 TranscodeCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConcatCompleteEvent")]
         public ConcatTask2017 ConcatCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClipCompleteEvent")]
         public ClipTask2017 ClipCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateImageSpriteCompleteEvent")]
         public CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetCompleteEvent")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent{ get; set; }

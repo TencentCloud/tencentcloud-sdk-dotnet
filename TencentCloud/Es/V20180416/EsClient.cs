@@ -133,7 +133,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// 对已存在的集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作 
+        /// 对已存在的集群进行扩缩容，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作
         /// </summary>
         /// <param name="req">参考<see cref="UpdateInstanceRequest"/></param>
         /// <returns>参考<see cref="UpdateInstanceResponse"/>实例</returns>

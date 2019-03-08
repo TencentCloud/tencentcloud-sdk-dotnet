@@ -68,48 +68,56 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcedureTask")]
         public ProcedureTask ProcedureTask{ get; set; }
 
         /// <summary>
         /// 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EditMediaTask")]
         public EditMediaTask EditMediaTask{ get; set; }
 
         /// <summary>
         /// 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatPublishTask")]
         public WechatPublishTask WechatPublishTask{ get; set; }
 
         /// <summary>
         /// 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTask2017 TranscodeTask{ get; set; }
 
         /// <summary>
         /// 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConcatTask")]
         public ConcatTask2017 ConcatTask{ get; set; }
 
         /// <summary>
         /// 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClipTask")]
         public ClipTask2017 ClipTask{ get; set; }
 
         /// <summary>
         /// 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateImageSpriteTask")]
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }

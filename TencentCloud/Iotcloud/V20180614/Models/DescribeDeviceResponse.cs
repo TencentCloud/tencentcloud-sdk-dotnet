@@ -37,7 +37,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ulong? Online{ get; set; }
 
         /// <summary>
-        /// 设备登陆时间
+        /// 设备登录时间
         /// </summary>
         [JsonProperty("LoginTime")]
         public ulong? LoginTime{ get; set; }

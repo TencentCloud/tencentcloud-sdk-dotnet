@@ -114,6 +114,34 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("LoraMoteType")]
         public ulong? LoraMoteType{ get; set; }
 
+        /// <summary>
+        /// 首次上线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstOnlineTime")]
+        public ulong? FirstOnlineTime{ get; set; }
+
+        /// <summary>
+        /// 最近下线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastOfflineTime")]
+        public ulong? LastOfflineTime{ get; set; }
+
+        /// <summary>
+        /// 设备创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// 设备日志级别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogLevel")]
+        public ulong? LogLevel{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -135,6 +163,10 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
             this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
             this.SetParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+            this.SetParamSimple(map, prefix + "FirstOnlineTime", this.FirstOnlineTime);
+            this.SetParamSimple(map, prefix + "LastOfflineTime", this.LastOfflineTime);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
         }
     }
 }

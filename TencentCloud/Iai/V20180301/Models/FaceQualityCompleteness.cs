@@ -27,6 +27,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// <summary>
         /// 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
         /// 参考范围：[0,80]表示发生遮挡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Eyebrow")]
         public long? Eyebrow{ get; set; }
@@ -34,6 +35,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// <summary>
         /// 眼睛的遮挡分数[0,100],分数越高遮挡越少。 
         /// 参考范围：[0,80]表示发生遮挡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Eye")]
         public long? Eye{ get; set; }
@@ -41,6 +43,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// <summary>
         /// 鼻子的遮挡分数[0,100],分数越高遮挡越少。 
         /// 参考范围：[0,60]表示发生遮挡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Nose")]
         public long? Nose{ get; set; }
@@ -48,6 +51,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// <summary>
         /// 脸颊的遮挡分数[0,100],分数越高遮挡越少。 
         /// 参考范围：[0,70]表示发生遮挡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cheek")]
         public long? Cheek{ get; set; }
@@ -55,6 +59,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// <summary>
         /// 嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
         /// 参考范围：[0,50]表示发生遮挡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mouth")]
         public long? Mouth{ get; set; }
@@ -62,6 +67,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// <summary>
         /// 下巴的遮挡分数[0,100],分数越高遮挡越少。 
         /// 参考范围：[0,70]表示发生遮挡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Chin")]
         public long? Chin{ get; set; }

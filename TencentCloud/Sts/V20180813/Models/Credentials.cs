@@ -31,13 +31,13 @@ namespace TencentCloud.Sts.V20180813.Models
         public string Token{ get; set; }
 
         /// <summary>
-        /// 临时证书秘钥ID
+        /// 临时证书密钥ID
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// 临时证书秘钥Key
+        /// 临时证书密钥Key
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }

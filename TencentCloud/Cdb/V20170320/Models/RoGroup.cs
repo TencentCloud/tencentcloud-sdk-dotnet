@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string RoGroupName{ get; set; }
 
         /// <summary>
-        /// 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阀值，只读实例将被隔离。可选值：1-启用；0-不启用
+        /// 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
         /// </summary>
         [JsonProperty("RoOfflineDelay")]
         public long? RoOfflineDelay{ get; set; }
 
         /// <summary>
-        /// 延迟阀值
+        /// 延迟阈值
         /// </summary>
         [JsonProperty("RoMaxDelayTime")]
         public long? RoMaxDelayTime{ get; set; }

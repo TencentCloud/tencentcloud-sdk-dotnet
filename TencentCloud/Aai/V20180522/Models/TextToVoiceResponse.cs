@@ -25,7 +25,7 @@ namespace TencentCloud.Aai.V20180522.Models
     {
         
         /// <summary>
-        /// base编码的wav音频
+        /// base64编码的wav音频
         /// </summary>
         [JsonProperty("Audio")]
         public string Audio{ get; set; }

@@ -46,11 +46,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// bandwidth：带宽，单位为 bps
         /// request：请求数，单位为 次
         /// fluxHitRate：流量命中率，单位为 %
-        /// statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 个
-        /// 2XX：返回 2XX 状态码汇总及各 2 开头状态码数据，单位为 个
-        /// 3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
-        /// 4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
-        /// 5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
+        /// statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 个
+        /// 2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 个
+        /// 3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 个
+        /// 4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 个
+        /// 5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
         /// 支持指定具体状态码查询，若未产生过，则返回为空
         /// </summary>
         [JsonProperty("Metric")]
@@ -116,6 +116,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("DataSource")]
         public string DataSource{ get; set; }
 
+        /// <summary>
+        /// 指定IP协议查询，不填充表示查询所有协议
+        /// all：所有协议
+        /// ipv4：指定查询 ipv4对应指标
+        /// ipv6：指定查询 ipv6 对应指标
+        /// </summary>
+        [JsonProperty("IpProtocol")]
+        public string IpProtocol{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -133,6 +142,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "District", this.District);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
+            this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         }
     }
 }

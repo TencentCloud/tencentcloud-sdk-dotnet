@@ -60,6 +60,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }
 
+        /// <summary>
+        /// 专用主节点磁盘类型
+        /// </summary>
+        [JsonProperty("MasterNodeDiskType")]
+        public string MasterNodeDiskType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "MasterNodeCpuNum", this.MasterNodeCpuNum);
             this.SetParamSimple(map, prefix + "MasterNodeMemSize", this.MasterNodeMemSize);
             this.SetParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
+            this.SetParamSimple(map, prefix + "MasterNodeDiskType", this.MasterNodeDiskType);
         }
     }
 }

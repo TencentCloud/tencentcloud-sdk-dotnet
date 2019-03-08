@@ -26,18 +26,21 @@ namespace TencentCloud.Cvm.V20170312.Models
         
         /// <summary>
         /// 释放地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReleaseAddress")]
         public bool? ReleaseAddress{ get; set; }
 
         /// <summary>
         /// 不支持的网络类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnsupportNetworks")]
         public string[] UnsupportNetworks{ get; set; }
 
         /// <summary>
         /// HDD本地存储属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageBlockAttr")]
         public StorageBlock StorageBlockAttr{ get; set; }

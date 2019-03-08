@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupName{ get; set; }
 
         /// <summary>
-        /// 伸缩组状态
+        /// 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
         /// </summary>
         [JsonProperty("AutoScalingGroupStatus")]
         public string AutoScalingGroupStatus{ get; set; }
@@ -150,6 +150,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("RetryPolicy")]
         public string RetryPolicy{ get; set; }
 
+        /// <summary>
+        /// 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+        /// </summary>
+        [JsonProperty("InActivityStatus")]
+        public string InActivityStatus{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -177,6 +183,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArraySimple(map, prefix + "ZoneSet.", this.ZoneSet);
             this.SetParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
+            this.SetParamSimple(map, prefix + "InActivityStatus", this.InActivityStatus);
         }
     }
 }

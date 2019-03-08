@@ -86,6 +86,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 自定义数据。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
@@ -124,6 +125,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }

@@ -98,12 +98,14 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 同步百分比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SyncPercent")]
         public long? SyncPercent{ get; set; }
 
         /// <summary>
         /// 镜像是否支持cloud-init
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsSupportCloudinit")]
         public bool? IsSupportCloudinit{ get; set; }

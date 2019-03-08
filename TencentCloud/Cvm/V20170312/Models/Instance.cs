@@ -92,6 +92,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例主网卡的公网`IP`列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }

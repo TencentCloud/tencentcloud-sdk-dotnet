@@ -315,6 +315,26 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 查询设备硬件配置信息，如 CPU 型号，内存大小，磁盘大小和数量
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceHardwareInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceHardwareInfoResponse"/>实例</returns>
+        public async Task<DescribeDeviceHardwareInfoResponse> DescribeDeviceHardwareInfo(DescribeDeviceHardwareInfoRequest req)
+        {
+             JsonResponseModel<DescribeDeviceHardwareInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeviceHardwareInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceHardwareInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询设备库存
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDeviceInventoryRequest"/></param>
@@ -435,6 +455,46 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 查询自定义机型部件信息，包括CpuId对应的型号，DiskTypeId对应的磁盘类型
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeHardwareSpecificationRequest"/></param>
+        /// <returns>参考<see cref="DescribeHardwareSpecificationResponse"/>实例</returns>
+        public async Task<DescribeHardwareSpecificationResponse> DescribeHardwareSpecification(DescribeHardwareSpecificationRequest req)
+        {
+             JsonResponseModel<DescribeHardwareSpecificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHardwareSpecification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHardwareSpecificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询托管设备带外信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeHostedDeviceOutBandInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeHostedDeviceOutBandInfoResponse"/>实例</returns>
+        public async Task<DescribeHostedDeviceOutBandInfoResponse> DescribeHostedDeviceOutBandInfo(DescribeHostedDeviceOutBandInfoRequest req)
+        {
+             JsonResponseModel<DescribeHostedDeviceOutBandInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostedDeviceOutBandInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostedDeviceOutBandInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取异步操作状态的完成状态
         /// </summary>
         /// <param name="req">参考<see cref="DescribeOperationResultRequest"/></param>
@@ -486,6 +546,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "DescribePsaRegulations");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePsaRegulationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询地域以及可用区
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRegionsRequest"/></param>
+        /// <returns>参考<see cref="DescribeRegionsResponse"/>实例</returns>
+        public async Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
+        {
+             JsonResponseModel<DescribeRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -763,7 +843,7 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
-        /// 用于销毁可退还的服务器
+        /// 销毁黑石物理机实例：可以销毁物理机列表中的竞价实例，或回收站列表中所有计费模式的实例
         /// </summary>
         /// <param name="req">参考<see cref="OfflineDevicesRequest"/></param>
         /// <returns>参考<see cref="OfflineDevicesResponse"/>实例</returns>
@@ -794,6 +874,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "RebootDevices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebootDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复回收站中的物理机（仅限后付费的物理机）
+        /// </summary>
+        /// <param name="req">参考<see cref="RecoverDevicesRequest"/></param>
+        /// <returns>参考<see cref="RecoverDevicesResponse"/>实例</returns>
+        public async Task<RecoverDevicesResponse> RecoverDevices(RecoverDevicesRequest req)
+        {
+             JsonResponseModel<RecoverDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecoverDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecoverDevicesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -854,6 +954,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "ResetDevicePassword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDevicePasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 退回物理机至回收站，支持批量退还不同计费模式的物理机（包括预付费、后付费、预付费转后付费）
+        /// </summary>
+        /// <param name="req">参考<see cref="ReturnDevicesRequest"/></param>
+        /// <returns>参考<see cref="ReturnDevicesResponse"/>实例</returns>
+        public async Task<ReturnDevicesResponse> ReturnDevices(ReturnDevicesRequest req)
+        {
+             JsonResponseModel<ReturnDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReturnDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReturnDevicesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

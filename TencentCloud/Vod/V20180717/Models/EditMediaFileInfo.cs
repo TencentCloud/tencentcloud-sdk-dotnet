@@ -32,12 +32,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频剪辑的起始偏移时间偏移，单位：秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
         /// 视频剪辑的起始结束时间偏移，单位：秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

@@ -26,30 +26,35 @@ namespace TencentCloud.Cbs.V20170312.Models
         
         /// <summary>
         /// 预付费云盘预支费用的原价，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
         /// 预付费云盘预支费用的折扣价，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
         /// 后付费云盘原单价，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
         /// 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
 
         /// <summary>
         /// 后付费云盘折扣单价，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }

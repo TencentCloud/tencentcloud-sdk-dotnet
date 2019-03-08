@@ -73,7 +73,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] SnapshotIds{ get; set; }
 
         /// <summary>
-        /// DryRun
+        /// 检测请求的合法性，但不会对操作的资源产生任何影响
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

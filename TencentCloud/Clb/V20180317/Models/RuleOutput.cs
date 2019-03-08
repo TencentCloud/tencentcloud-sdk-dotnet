@@ -32,12 +32,14 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 转发规则的域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// 转发规则的路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -50,12 +52,14 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 健康检查信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
         /// 证书信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateOutput Certificate{ get; set; }

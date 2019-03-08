@@ -44,12 +44,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaStoragePath")]
         public string MediaStoragePath{ get; set; }
 
         /// <summary>
         /// 封面存储路径，用于上传接口存储封面的对象键（Key）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverStoragePath")]
         public string CoverStoragePath{ get; set; }

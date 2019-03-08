@@ -38,12 +38,14 @@ namespace TencentCloud.Iai.V20180301.Models
 
         /// <summary>
         /// 人员库自定义描述字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupExDescriptions")]
         public string[] GroupExDescriptions{ get; set; }
 
         /// <summary>
         /// 人员库信息备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

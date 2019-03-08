@@ -32,6 +32,7 @@ namespace TencentCloud.Iai.V20180301.Models
 
         /// <summary>
         /// 人员库总数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupNum")]
         public ulong? GroupNum{ get; set; }

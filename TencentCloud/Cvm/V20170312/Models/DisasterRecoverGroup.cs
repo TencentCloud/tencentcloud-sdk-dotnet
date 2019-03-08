@@ -56,12 +56,14 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 分散置放群组内，云主机id列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
         /// 分散置放群组创建时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

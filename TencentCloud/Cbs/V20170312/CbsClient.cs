@@ -100,6 +100,52 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口（BindAutoSnapshotPolicy）用于绑定云硬盘到指定的定期快照策略。
+        /// 
+        /// * 每个地域下的定期快照策略配额限制请参考文档[定期快照](/document/product/362/8191)。
+        /// * 当已绑定定期快照策略的云硬盘处于未使用状态（即弹性云盘未挂载或非弹性云盘的主机处于关机状态）将不会创建定期快照。
+        /// </summary>
+        /// <param name="req">参考<see cref="BindAutoSnapshotPolicyRequest"/></param>
+        /// <returns>参考<see cref="BindAutoSnapshotPolicyResponse"/>实例</returns>
+        public async Task<BindAutoSnapshotPolicyResponse> BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateAutoSnapshotPolicy）用于创建定期快照策略。
+        /// 
+        /// * 每个地域可创建的定期快照策略数量限制请参考文档[定期快照](/document/product/362/8191)。
+        /// * 每个地域可创建的快照有数量和容量的限制，具体请见腾讯云控制台快照页面提示，如果快照超配额，定期快照创建会失败。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateAutoSnapshotPolicyRequest"/></param>
+        /// <returns>参考<see cref="CreateAutoSnapshotPolicyResponse"/>实例</returns>
+        public async Task<CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateDisks）用于创建云硬盘。
         /// 
         /// * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
@@ -147,6 +193,28 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口（DeleteAutoSnapshotPolicies）用于删除定期快照策略。
+        /// 
+        /// *  支持批量操作。如果多个定期快照策略存在无法删除的，则操作不执行，以特定错误码返回。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteAutoSnapshotPoliciesRequest"/></param>
+        /// <returns>参考<see cref="DeleteAutoSnapshotPoliciesResponse"/>实例</returns>
+        public async Task<DeleteAutoSnapshotPoliciesResponse> DeleteAutoSnapshotPolicies(DeleteAutoSnapshotPoliciesRequest req)
+        {
+             JsonResponseModel<DeleteAutoSnapshotPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAutoSnapshotPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAutoSnapshotPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteSnapshots）用于删除快照。
         /// 
         /// * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
@@ -161,6 +229,49 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DeleteSnapshots");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAutoSnapshotPolicies）用于查询定期快照策略。
+        /// 
+        /// * 可以根据定期快照策略ID、名称或者状态等信息来查询定期快照策略的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的定期快照策略表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAutoSnapshotPoliciesRequest"/></param>
+        /// <returns>参考<see cref="DescribeAutoSnapshotPoliciesResponse"/>实例</returns>
+        public async Task<DescribeAutoSnapshotPoliciesResponse> DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoSnapshotPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDiskAssociatedAutoSnapshotPolicy）用于查询云盘绑定的定期快照策略。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDiskAssociatedAutoSnapshotPolicyRequest"/></param>
+        /// <returns>参考<see cref="DescribeDiskAssociatedAutoSnapshotPolicyResponse"/>实例</returns>
+        public async Task<DescribeDiskAssociatedAutoSnapshotPolicyResponse> DescribeDiskAssociatedAutoSnapshotPolicy(DescribeDiskAssociatedAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskAssociatedAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -396,11 +507,6 @@ namespace TencentCloud.Cbs.V20170312
         /// * 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
         /// * “云硬盘名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行云盘管理操作的依据。
         /// * 支持批量操作，如果传入多个云盘ID，则所有云盘修改为同一属性。如果存在不允许操作的云盘，则操作不执行，以特定错误码返回。
-        /// * 支持修改弹性云盘的云盘类型，不支持非弹性云盘（[DescribeDisks](/document/product/362/16315)接口的返回字段Portable为true表示弹性云盘），且当前仅支持云盘类型升级，不支持降级，具体如下:
-        ///     * CLOUD_BASIC变更为CLOUD_PREMIUM；
-        ///     * CLOUD_BASIC变更为CLOUD_SSD；
-        ///     * CLOUD_PREMIUM变更为CLOUD_SSD。
-        /// * 云盘处于“迁移中”不影响正常的读写以及读写速率，在云盘容量较大的情况下，整个迁移任务耗时较长，目前不支持任务成功发起后取消任务。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyDiskAttributesRequest"/></param>
         /// <returns>参考<see cref="ModifyDiskAttributesResponse"/>实例</returns>
@@ -524,6 +630,29 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = await this.InternalRequest(req, "TerminateDisks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnbindAutoSnapshotPolicy）用于解除云硬盘绑定的定期快照策略。
+        /// 
+        /// * 支持批量操作，可一次解除多个云盘与同一定期快照策略的绑定。 
+        /// * 如果传入的云盘未绑定到当前定期快照策略，接口将自动跳过，仅解绑与当前定期快照策略绑定的云盘。
+        /// </summary>
+        /// <param name="req">参考<see cref="UnbindAutoSnapshotPolicyRequest"/></param>
+        /// <returns>参考<see cref="UnbindAutoSnapshotPolicyResponse"/>实例</returns>
+        public async Task<UnbindAutoSnapshotPolicyResponse> UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req)
+        {
+             JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindAutoSnapshotPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

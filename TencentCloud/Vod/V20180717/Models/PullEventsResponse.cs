@@ -26,6 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 事件列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventSet")]
         public EventContent[] EventSet{ get; set; }

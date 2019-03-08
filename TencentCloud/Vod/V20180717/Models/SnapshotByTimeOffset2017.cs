@@ -28,18 +28,21 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 错误码
         /// <li>0：成功；</li>
         /// <li>其他值：失败。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public string ErrCode{ get; set; }
 
         /// <summary>
         /// 截图的具体时间点，单位：毫秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeOffset")]
         public ulong? TimeOffset{ get; set; }
 
         /// <summary>
         /// 截图输出文件地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

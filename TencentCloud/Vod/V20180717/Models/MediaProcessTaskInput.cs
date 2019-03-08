@@ -26,36 +26,42 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 视频转码任务列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTaskSet")]
         public TranscodeTaskInput[] TranscodeTaskSet{ get; set; }
 
         /// <summary>
         /// 视频转动图任务列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnimatedGraphicTaskSet")]
         public AnimatedGraphicTaskInput[] AnimatedGraphicTaskSet{ get; set; }
 
         /// <summary>
         /// 对视频按时间点截图任务列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTaskSet")]
         public SnapshotByTimeOffsetTaskInput[] SnapshotByTimeOffsetTaskSet{ get; set; }
 
         /// <summary>
         /// 对视频采样截图任务列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleSnapshotTaskSet")]
         public SampleSnapshotTaskInput[] SampleSnapshotTaskSet{ get; set; }
 
         /// <summary>
         /// 对视频截雪碧图任务列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSpriteTaskSet")]
         public ImageSpriteTaskInput[] ImageSpriteTaskSet{ get; set; }
 
         /// <summary>
         /// 对视频截图做封面任务列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverBySnapshotTaskSet")]
         public CoverBySnapshotTaskInput[] CoverBySnapshotTaskSet{ get; set; }

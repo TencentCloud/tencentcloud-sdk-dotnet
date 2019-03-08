@@ -26,6 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 各规格的转码信息集合，每个元素代表一个规格的转码结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeSet")]
         public MediaTranscodeItem[] TranscodeSet{ get; set; }

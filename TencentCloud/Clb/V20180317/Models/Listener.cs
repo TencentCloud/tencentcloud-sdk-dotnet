@@ -44,42 +44,49 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 监听器绑定的证书信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateOutput Certificate{ get; set; }
 
         /// <summary>
         /// 监听器的健康检查信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
         /// 请求调度方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
         /// 会话保持时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
         /// 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
 
         /// <summary>
         /// 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rules")]
         public RuleOutput[] Rules{ get; set; }
 
         /// <summary>
         /// 监听器的名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }

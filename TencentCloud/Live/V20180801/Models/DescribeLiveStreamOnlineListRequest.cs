@@ -44,7 +44,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 每页大小，最大100。 
-        /// 取值：1~100之前的任意整数。
+        /// 取值：10~100之间的任意整数。
         /// 默认值：10。
         /// </summary>
         [JsonProperty("PageSize")]

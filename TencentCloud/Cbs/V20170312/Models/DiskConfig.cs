@@ -68,12 +68,14 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// 实例机型。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
         /// 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }

@@ -136,6 +136,30 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
+        /// <summary>
+        /// 是否创建专用主节点
+        /// </summary>
+        [JsonProperty("EnableDedicatedMaster")]
+        public bool? EnableDedicatedMaster{ get; set; }
+
+        /// <summary>
+        /// 专用主节点个数
+        /// </summary>
+        [JsonProperty("MasterNodeNum")]
+        public ulong? MasterNodeNum{ get; set; }
+
+        /// <summary>
+        /// 专用主节点类型
+        /// </summary>
+        [JsonProperty("MasterNodeType")]
+        public string MasterNodeType{ get; set; }
+
+        /// <summary>
+        /// 专用主节点磁盘大小
+        /// </summary>
+        [JsonProperty("MasterNodeDiskSize")]
+        public ulong? MasterNodeDiskSize{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -158,6 +182,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+            this.SetParamSimple(map, prefix + "EnableDedicatedMaster", this.EnableDedicatedMaster);
+            this.SetParamSimple(map, prefix + "MasterNodeNum", this.MasterNodeNum);
+            this.SetParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
+            this.SetParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
         }
     }
 }

@@ -32,12 +32,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 错误码，0：成功，其他值：失败。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 错误信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -50,6 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 内容审核鉴政任务输出。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalTaskOutput Output{ get; set; }

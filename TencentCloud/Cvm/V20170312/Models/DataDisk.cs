@@ -48,6 +48,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li>FALSE：子机销毁时，保留数据盘<br>
         /// 默认取值：TRUE<br>
         /// 该参数目前仅用于 `RunInstances` 接口。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }

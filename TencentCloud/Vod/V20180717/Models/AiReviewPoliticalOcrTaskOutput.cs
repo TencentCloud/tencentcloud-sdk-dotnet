@@ -41,6 +41,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }

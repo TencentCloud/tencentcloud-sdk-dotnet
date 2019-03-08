@@ -210,6 +210,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("MasterNodeInfo")]
         public MasterNodeInfo MasterNodeInfo{ get; set; }
 
+        /// <summary>
+        /// cos自动备份配置
+        /// </summary>
+        [JsonProperty("CosBackup")]
+        public CosBackup CosBackup{ get; set; }
+
+        /// <summary>
+        /// 是否允许cos自动备份
+        /// </summary>
+        [JsonProperty("AllowCosBackup")]
+        public bool? AllowCosBackup{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -247,6 +259,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamObj(map, prefix + "IkConfig.", this.IkConfig);
             this.SetParamObj(map, prefix + "MasterNodeInfo.", this.MasterNodeInfo);
+            this.SetParamObj(map, prefix + "CosBackup.", this.CosBackup);
+            this.SetParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
         }
     }
 }

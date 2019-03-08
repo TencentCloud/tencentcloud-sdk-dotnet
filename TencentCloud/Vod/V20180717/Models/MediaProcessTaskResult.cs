@@ -38,36 +38,42 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public MediaProcessTaskTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
         /// 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask{ get; set; }
 
         /// <summary>
         /// 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleSnapshotTask")]
         public MediaProcessTaskSampleSnapshotResult SampleSnapshotTask{ get; set; }
 
         /// <summary>
         /// 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public MediaProcessTaskImageSpriteResult ImageSpriteTask{ get; set; }
 
         /// <summary>
         /// 对视频截图做封面任务的查询结果，当任务类型为 CoverBySnapshot 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverBySnapshotTask")]
         public MediaProcessTaskCoverBySnapshotResult CoverBySnapshotTask{ get; set; }

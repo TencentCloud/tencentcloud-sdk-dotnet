@@ -26,12 +26,14 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 任务概要列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskSet")]
         public TaskSimpleInfo[] TaskSet{ get; set; }
 
         /// <summary>
         /// 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

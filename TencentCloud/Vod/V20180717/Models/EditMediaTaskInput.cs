@@ -32,12 +32,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileInfoSet")]
         public EditMediaFileInfo[] FileInfoSet{ get; set; }
 
         /// <summary>
         /// 输入的流信息，当 InputType 为 Stream 时，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamInfoSet")]
         public EditMediaStreamInfo[] StreamInfoSet{ get; set; }

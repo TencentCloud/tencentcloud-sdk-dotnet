@@ -30,12 +30,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
         /// <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
         /// <li>Unknown：未知来源。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
         /// 用户创建文件时透传的字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }

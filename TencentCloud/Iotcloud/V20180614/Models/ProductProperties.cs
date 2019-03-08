@@ -80,7 +80,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 产品秘钥，suite产品才会有
+        /// 产品密钥，suite产品才会有
         /// </summary>
         [JsonProperty("ProductKey")]
         public string ProductKey{ get; set; }

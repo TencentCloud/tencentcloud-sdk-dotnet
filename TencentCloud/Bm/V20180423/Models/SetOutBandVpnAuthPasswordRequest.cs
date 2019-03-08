@@ -31,7 +31,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 操作字段，取值为：create（创建）或update（修改）
+        /// 操作字段，取值为：Create（创建）或Update（修改）
         /// </summary>
         [JsonProperty("Operate")]
         public string Operate{ get; set; }

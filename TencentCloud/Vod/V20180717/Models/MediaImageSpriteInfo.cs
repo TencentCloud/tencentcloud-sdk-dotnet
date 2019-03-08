@@ -26,6 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSpriteSet")]
         public MediaImageSpriteItem[] ImageSpriteSet{ get; set; }

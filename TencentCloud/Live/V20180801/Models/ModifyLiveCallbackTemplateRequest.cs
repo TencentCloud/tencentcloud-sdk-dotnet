@@ -72,6 +72,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PornCensorshipNotifyUrl")]
         public string PornCensorshipNotifyUrl{ get; set; }
 
+        /// <summary>
+        /// 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+        /// </summary>
+        [JsonProperty("CallbackKey")]
+        public string CallbackKey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "RecordNotifyUrl", this.RecordNotifyUrl);
             this.SetParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
+            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         }
     }
 }

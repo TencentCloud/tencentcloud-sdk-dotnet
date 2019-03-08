@@ -42,36 +42,40 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 错误码
         /// <li>0：成功；</li>
         /// <li>其他值：失败。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 错误信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// 媒体文件 ID
-        /// <li>若流程由 [ProcessMedia](http://139.199.214.26/document/product/266/30248) 发起，该字段表示 [MediaInfo](http://139.199.214.26/document/product/266/16694?!preview&preview_docmenu=1&lang=cn&!document=1#MediaInfo) 的 FileId；</li>
-        /// <li>若流程由 [ProcessMediaByUrl](http://139.199.214.26/document/product/266/31058?!document=1&!preview) 发起，该字段表示 [MediaInputInfo](http://139.199.214.26/document/product/266/16694?!preview&preview_docmenu=1&lang=cn&!document=1#MediaInputInfo) 的 Id。</li>
+        /// <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
+        /// <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
         /// 媒体文件名称
-        /// <li>若流程由 [ProcessMedia](http://139.199.214.26/document/product/266/30248) 发起，该字段表示 [MediaInfo](http://139.199.214.26/document/product/266/16694?!preview&preview_docmenu=1&lang=cn&!document=1#MediaInfo) 的 BasicInfo.Name；</li>
-        /// <li>若流程由 [ProcessMediaByUrl](http://139.199.214.26/document/product/266/31058?!document=1&!preview) 发起，该字段表示 [MediaInputInfo](http://139.199.214.26/document/product/266/16694?!preview&preview_docmenu=1&lang=cn&!document=1#MediaInputInfo) 的 Name。</li>
+        /// <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
+        /// <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
         /// 媒体文件地址
-        /// <li>若流程由 [ProcessMedia](http://139.199.214.26/document/product/266/30248) 发起，该字段表示 [MediaInfo](http://139.199.214.26/document/product/266/16694?!preview&preview_docmenu=1&lang=cn&!document=1#MediaInfo) 的 BasicInfo.MediaUrl；</li>
-        /// <li>若流程由 [ProcessMediaByUrl](http://139.199.214.26/document/product/266/31058?!document=1&!preview) 发起，该字段表示 [MediaInputInfo](http://139.199.214.26/document/product/266/16694?!preview&preview_docmenu=1&lang=cn&!document=1#MediaInputInfo) 的 Url。</li>
+        /// <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
+        /// <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
@@ -84,24 +88,28 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频处理任务的执行状态与结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaProcessResultSet")]
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
         /// <summary>
         /// 视频内容审核任务的执行状态与结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiContentReviewResultSet")]
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }
 
         /// <summary>
         /// 视频内容分析任务的执行状态与结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiAnalysisResultSet")]
         public AiAnalysisResult[] AiAnalysisResultSet{ get; set; }
 
         /// <summary>
         /// 任务流的优先级，取值范围为 [-10, 10]。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
@@ -111,6 +119,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
         /// <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
         /// <li>None：不接受该任务流回调。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TasksNotifyMode")]
         public string TasksNotifyMode{ get; set; }

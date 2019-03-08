@@ -61,6 +61,7 @@ namespace TencentCloud.Iai.V20180301.Models
 
         /// <summary>
         /// 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaceQualityInfo")]
         public FaceQualityInfo FaceQualityInfo{ get; set; }

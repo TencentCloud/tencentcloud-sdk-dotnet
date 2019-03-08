@@ -25,7 +25,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
     {
         
         /// <summary>
-        /// 规则的SQL语句，base64编码
+        /// 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
         /// </summary>
         [JsonProperty("Sql")]
         public string Sql{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 规则不生效
+        /// 是否禁用规则
         /// </summary>
         [JsonProperty("RuleDisabled")]
         public bool? RuleDisabled{ get; set; }

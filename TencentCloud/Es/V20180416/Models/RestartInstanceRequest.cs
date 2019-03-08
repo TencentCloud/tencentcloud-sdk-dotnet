@@ -30,6 +30,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 是否强制重启
+        /// </summary>
+        [JsonProperty("ForceRestart")]
+        public bool? ForceRestart{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +43,7 @@ namespace TencentCloud.Es.V20180416.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         }
     }
 }

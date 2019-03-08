@@ -38,6 +38,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 约束类型为section时的范围
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Range")]
         public ConstraintRange Range{ get; set; }

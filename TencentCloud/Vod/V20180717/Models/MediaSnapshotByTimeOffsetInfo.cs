@@ -26,6 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetSet")]
         public MediaSnapshotByTimeOffsetItem[] SnapshotByTimeOffsetSet{ get; set; }

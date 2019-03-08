@@ -59,10 +59,10 @@ namespace TencentCloud.Cdn.V20180606
         /// + 带宽（单位为 bps）
         /// + 请求数（单位为 次）
         /// + 流量命中率（单位为 %，小数点后保留两位）
-        /// + 状态码 2XX 汇总及各 2 开头状态码明细（单位为 个）
-        /// + 状态码 3XX 汇总及各 3 开头状态码明细（单位为 个）
-        /// + 状态码 4XX 汇总及各 4 开头状态码明细（单位为 个）
-        /// + 状态码 5XX 汇总及各 5 开头状态码明细（单位为 个）
+        /// + 状态码 2xx 汇总及各 2 开头状态码明细（单位为 个）
+        /// + 状态码 3xx 汇总及各 3 开头状态码明细（单位为 个）
+        /// + 状态码 4xx 汇总及各 4 开头状态码明细（单位为 个）
+        /// + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
         /// </summary>
         /// <param name="req">参考<see cref="DescribeCdnDataRequest"/></param>
         /// <returns>参考<see cref="DescribeCdnDataResponse"/>实例</returns>
@@ -132,10 +132,10 @@ namespace TencentCloud.Cdn.V20180606
         /// + 回源请求数（单位为 次）
         /// + 回源失败请求数（单位为 次）
         /// + 回源失败率（单位为 %，小数点后保留两位）
-        /// + 回源状态码 2XX 汇总及各 2 开头回源状态码明细（单位为 个）
-        /// + 回源状态码 3XX 汇总及各 3 开头回源状态码明细（单位为 个）
-        /// + 回源状态码 4XX 汇总及各 4 开头回源状态码明细（单位为 个）
-        /// + 回源状态码 5XX 汇总及各 5 开头回源状态码明细（单位为 个）
+        /// + 回源状态码 2xx 汇总及各 2 开头回源状态码明细（单位为 个）
+        /// + 回源状态码 3xx 汇总及各 3 开头回源状态码明细（单位为 个）
+        /// + 回源状态码 4xx 汇总及各 4 开头回源状态码明细（单位为 个）
+        /// + 回源状态码 5xx 汇总及各 5 开头回源状态码明细（单位为 个）
         /// </summary>
         /// <param name="req">参考<see cref="DescribeOriginDataRequest"/></param>
         /// <returns>参考<see cref="DescribeOriginDataResponse"/>实例</returns>
@@ -175,12 +175,72 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，全网访问会直接返回 403。（接口尚在内测中，暂未全量开放使用）
+        /// </summary>
+        /// <param name="req">参考<see cref="DisableCachesRequest"/></param>
+        /// <returns>参考<see cref="DisableCachesResponse"/>实例</returns>
+        public async Task<DisableCachesResponse> DisableCaches(DisableCachesRequest req)
+        {
+             JsonResponseModel<DisableCachesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableCaches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableCachesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableCachesRequest"/></param>
+        /// <returns>参考<see cref="EnableCachesResponse"/>实例</returns>
+        public async Task<EnableCachesResponse> EnableCaches(EnableCachesRequest req)
+        {
+             JsonResponseModel<EnableCachesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableCaches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableCachesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GetDisableRecords 用户查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
+        /// </summary>
+        /// <param name="req">参考<see cref="GetDisableRecordsRequest"/></param>
+        /// <returns>参考<see cref="GetDisableRecordsResponse"/>实例</returns>
+        public async Task<GetDisableRecordsResponse> GetDisableRecords(GetDisableRecordsRequest req)
+        {
+             JsonResponseModel<GetDisableRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDisableRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDisableRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
         /// 
         /// + 依据总流量、总请求数对访问 URL 排序，从大至小返回 TOP 1000 URL
-        /// + 依据总流量、总请求数对客户端省份排序，从大至小返回省份列表
+        /// + 依据总流量、总请求数对客户端省份排序，从大至小返回省份列表
         /// + 依据总流量、总请求数对客户端运营商排序，从大至小返回运营商列表
-        /// + 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
+        /// + 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
         /// + 依据总回源流量、回源峰值带宽、总回源请求数、平均回源失败率、2XX/3XX/4XX/5XX 回源状态码对域名排序，从大至小返回域名列表
         /// </summary>
         /// <param name="req">参考<see cref="ListTopDataRequest"/></param>

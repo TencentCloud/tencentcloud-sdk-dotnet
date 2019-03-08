@@ -50,24 +50,28 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// 云服务器的外网 IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
         /// 云服务器的内网 IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
         /// 云服务器实例名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// 云服务器被绑定到监听器的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegisteredTime")]
         public string RegisteredTime{ get; set; }
