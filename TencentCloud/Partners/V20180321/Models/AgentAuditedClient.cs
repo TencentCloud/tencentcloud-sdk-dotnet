@@ -90,6 +90,18 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("HasOverdueBill")]
         public ulong? HasOverdueBill{ get; set; }
 
+        /// <summary>
+        /// 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+        /// </summary>
+        [JsonProperty("ClientType")]
+        public string ClientType{ get; set; }
+
+        /// <summary>
+        /// 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+        /// </summary>
+        [JsonProperty("ProjectType")]
+        public string ProjectType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -107,6 +119,8 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "LastMonthAmt", this.LastMonthAmt);
             this.SetParamSimple(map, prefix + "ThisMonthAmt", this.ThisMonthAmt);
             this.SetParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
+            this.SetParamSimple(map, prefix + "ClientType", this.ClientType);
+            this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
         }
     }
 }

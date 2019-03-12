@@ -78,6 +78,18 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+        /// </summary>
+        [JsonProperty("ClientType")]
+        public string ClientType{ get; set; }
+
+        /// <summary>
+        /// 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+        /// </summary>
+        [JsonProperty("ProjectType")]
+        public string ProjectType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +105,8 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "ClientRemark", this.ClientRemark);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ClientType", this.ClientType);
+            this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
         }
     }
 }
