@@ -37,7 +37,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 实例版本,当前只支持5.6.4
+        /// 实例版本,支持"5.6.4"、"6.4.3"
         /// </summary>
         [JsonProperty("EsVersion")]
         public string EsVersion{ get; set; }
@@ -108,10 +108,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 节点存储类型,取值范围:  
-        /// LOCAL_BASIC: 本地硬盘  
-        /// LOCAL_SSD: 本地SSD硬盘，默认值  
-        /// CLOUD_BASIC: 普通云硬盘  
+        /// 节点存储类型,取值范围:    
         /// CLOUD_PREMIUM: 高硬能云硬盘  
         /// CLOUD_SSD: SSD云硬盘
         /// </summary>
@@ -149,16 +146,22 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
-        /// 专用主节点类型
+        /// 专用主节点类型，与NodeType支持的规格相同
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
-        /// 专用主节点磁盘大小
+        /// 专用主节点磁盘大小，单位GB（系统默认配置50GB，暂不支持自定义）
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }
+
+        /// <summary>
+        /// 配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
+        /// </summary>
+        [JsonProperty("ClusterNameInConf")]
+        public string ClusterNameInConf{ get; set; }
 
 
         /// <summary>
@@ -186,6 +189,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "MasterNodeNum", this.MasterNodeNum);
             this.SetParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
             this.SetParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
+            this.SetParamSimple(map, prefix + "ClusterNameInConf", this.ClusterNameInConf);
         }
     }
 }

@@ -139,6 +139,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义转码模板，数量上限：1000。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTranscodeTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateTranscodeTemplateResponse"/>实例</returns>
+        public async Task<CreateTranscodeTemplateResponse> CreateTranscodeTemplate(CreateTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<CreateTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户自定义水印模板，数量上限：1000。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateWatermarkTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateWatermarkTemplateResponse"/>实例</returns>
+        public async Task<CreateWatermarkTemplateResponse> CreateWatermarkTemplate(CreateWatermarkTemplateRequest req)
+        {
+             JsonResponseModel<CreateWatermarkTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWatermarkTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWatermarkTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
         /// * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
         /// </summary>
@@ -172,6 +212,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DeleteMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义转码模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteTranscodeTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteTranscodeTemplateResponse"/>实例</returns>
+        public async Task<DeleteTranscodeTemplateResponse> DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<DeleteTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义水印模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteWatermarkTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteWatermarkTemplateResponse"/>实例</returns>
+        public async Task<DeleteWatermarkTemplateResponse> DeleteWatermarkTemplate(DeleteWatermarkTemplateRequest req)
+        {
+             JsonResponseModel<DeleteWatermarkTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWatermarkTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWatermarkTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -272,6 +352,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTranscodeTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeTranscodeTemplatesResponse"/>实例</returns>
+        public async Task<DescribeTranscodeTemplatesResponse> DescribeTranscodeTemplates(DescribeTranscodeTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTranscodeTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户自定义水印模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWatermarkTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeWatermarkTemplatesResponse"/>实例</returns>
+        public async Task<DescribeWatermarkTemplatesResponse> DescribeWatermarkTemplates(DescribeWatermarkTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeWatermarkTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWatermarkTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWatermarkTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
         /// 
         /// 腾讯云点播支持两种即时剪辑模式：
@@ -346,6 +466,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "ModifyMediaInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户自定义转码模板信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyTranscodeTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyTranscodeTemplateResponse"/>实例</returns>
+        public async Task<ModifyTranscodeTemplateResponse> ModifyTranscodeTemplate(ModifyTranscodeTemplateRequest req)
+        {
+             JsonResponseModel<ModifyTranscodeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTranscodeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户自定义水印模板，水印类型不允许修改。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyWatermarkTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyWatermarkTemplateResponse"/>实例</returns>
+        public async Task<ModifyWatermarkTemplateResponse> ModifyWatermarkTemplate(ModifyWatermarkTemplateRequest req)
+        {
+             JsonResponseModel<ModifyWatermarkTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWatermarkTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWatermarkTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

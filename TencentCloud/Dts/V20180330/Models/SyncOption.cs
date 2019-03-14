@@ -37,13 +37,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public ulong? RunMode{ get; set; }
 
         /// <summary>
-        /// 同步模式， 3-增量同步
+        /// 同步模式， 3-全量且增量同步
         /// </summary>
         [JsonProperty("SyncType")]
         public ulong? SyncType{ get; set; }
 
         /// <summary>
-        /// 数据一致性检测， 1-不配置
+        /// 数据一致性检测， 1-无需配置
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public ulong? ConsistencyType{ get; set; }

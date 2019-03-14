@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.16</VersionPrefix>
+    <VersionPrefix>3.0.17</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1381,15 +1381,25 @@
     <Compile Include="Es\V20180416\Models\CreateInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\DeleteInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeInstanceLogsRequest.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeInstanceLogsResponse.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeInstanceOperationsRequest.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeInstanceOperationsResponse.cs" />
     <Compile Include="Es\V20180416\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Es\V20180416\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Es\V20180416\Models\DictInfo.cs" />
     <Compile Include="Es\V20180416\Models\EsAcl.cs" />
     <Compile Include="Es\V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="Es\V20180416\Models\InstanceInfo.cs" />
+    <Compile Include="Es\V20180416\Models\InstanceLog.cs" />
+    <Compile Include="Es\V20180416\Models\KeyValue.cs" />
     <Compile Include="Es\V20180416\Models\MasterNodeInfo.cs" />
+    <Compile Include="Es\V20180416\Models\Operation.cs" />
+    <Compile Include="Es\V20180416\Models\OperationDetail.cs" />
     <Compile Include="Es\V20180416\Models\RestartInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\RestartInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\SubTaskDetail.cs" />
+    <Compile Include="Es\V20180416\Models\TaskDetail.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="Facefusion\V20181201\FacefusionClient.cs" />
@@ -2464,6 +2474,7 @@
     <Compile Include="Vod\V20180717\Models\AnimatedGraphicTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\ApplyUploadRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ApplyUploadResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\AudioTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ClipFileInfo2017.cs" />
     <Compile Include="Vod\V20180717\Models\ClipTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\CommitUploadRequest.cs" />
@@ -2477,10 +2488,18 @@
     <Compile Include="Vod\V20180717\Models\CreateClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTask2017.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateWatermarkTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteMediaResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteWatermarkTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAllClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -2489,6 +2508,10 @@
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTasksRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeTranscodeTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeTranscodeTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeWatermarkTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeWatermarkTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaFileInfo.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaStreamInfo.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaTask.cs" />
@@ -2498,6 +2521,8 @@
     <Compile Include="Vod\V20180717\Models\FileDeleteTask.cs" />
     <Compile Include="Vod\V20180717\Models\FileUploadTask.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageWatermarkInput.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipResponse.cs" />
     <Compile Include="Vod\V20180717\Models\MediaAiAnalysisClassificationItem.cs" />
@@ -2542,6 +2567,10 @@
     <Compile Include="Vod\V20180717\Models\ModifyClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyTranscodeTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyTranscodeTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyWatermarkTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ProcedureTask.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaByUrlRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaByUrlResponse.cs" />
@@ -2561,10 +2590,14 @@
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
     <Compile Include="Vod\V20180717\Models\TaskSimpleInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TempCertificate.cs" />
+    <Compile Include="Vod\V20180717\Models\TextWatermarkTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodePlayInfo2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\TranscodeTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\VideoTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\WatermarkInput.cs" />
+    <Compile Include="Vod\V20180717\Models\WatermarkTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\WechatPublishTask.cs" />
     <Compile Include="Vpc\V20170312\VpcClient.cs" />
     <Compile Include="Vpc\V20170312\Models\AcceptAttachCcnInstancesRequest.cs" />

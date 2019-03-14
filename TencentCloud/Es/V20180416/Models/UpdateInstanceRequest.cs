@@ -43,7 +43,10 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 修改后的配置项, JSON格式字符串
+        /// 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
+        /// action.destructive_requires_name
+        /// indices.fielddata.cache.size
+        /// indices.query.bool.max_clause_count
         /// </summary>
         [JsonProperty("EsConfig")]
         public string EsConfig{ get; set; }
@@ -85,13 +88,13 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
-        /// 专用主节点规格
+        /// 专用主节点规格，与NodeType支持的规格相同
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
-        /// 专用主节点磁盘大小
+        /// 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }
@@ -101,6 +104,12 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
+
+        /// <summary>
+        /// COS自动备份信息
+        /// </summary>
+        [JsonProperty("CosBackup")]
+        public CosBackup CosBackup{ get; set; }
 
 
         /// <summary>
@@ -120,6 +129,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "MasterNodeType", this.MasterNodeType);
             this.SetParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+            this.SetParamObj(map, prefix + "CosBackup.", this.CosBackup);
         }
     }
 }

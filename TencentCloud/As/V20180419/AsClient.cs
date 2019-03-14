@@ -454,7 +454,7 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// 本接口（DettachInstances）用于从伸缩组移出 CVM 实例，本接口不会被销毁实例。
+        /// 本接口（DetachInstances）用于从伸缩组移出 CVM 实例，本接口不会销毁实例。
         /// </summary>
         /// <param name="req">参考<see cref="DetachInstancesRequest"/></param>
         /// <returns>参考<see cref="DetachInstancesResponse"/>实例</returns>

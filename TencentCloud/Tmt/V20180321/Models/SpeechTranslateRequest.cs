@@ -72,6 +72,12 @@ namespace TencentCloud.Tmt.V20180321.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "IsEnd", this.IsEnd);
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

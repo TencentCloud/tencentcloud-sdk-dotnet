@@ -120,6 +120,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("IsQuery")]
         public long? IsQuery{ get; set; }
 
+        /// <summary>
+        /// 输入文本模式，0: 普通文本，1: 音素结构文本
+        /// </summary>
+        [JsonProperty("TextMode")]
+        public long? TextMode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -142,6 +148,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
             this.SetParamSimple(map, prefix + "IsAsync", this.IsAsync);
             this.SetParamSimple(map, prefix + "IsQuery", this.IsQuery);
+            this.SetParamSimple(map, prefix + "TextMode", this.TextMode);
         }
     }
 }

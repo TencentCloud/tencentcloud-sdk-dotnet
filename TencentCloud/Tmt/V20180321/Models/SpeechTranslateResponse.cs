@@ -67,6 +67,12 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Target{ get; set; }
 
         /// <summary>
+        /// 当请求的Mode参数填写bvad是，启动VadSeq。此时Seq会被设置为后台vad（静音检测）后的新序号，而VadSeq代表客户端原始Seq值
+        /// </summary>
+        [JsonProperty("VadSeq")]
+        public long? VadSeq{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "Seq", this.Seq);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Target", this.Target);
+            this.SetParamSimple(map, prefix + "VadSeq", this.VadSeq);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

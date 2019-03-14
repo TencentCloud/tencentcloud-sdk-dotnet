@@ -37,7 +37,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Scene{ get; set; }
 
         /// <summary>
-        /// 图片数据的Base64字符串
+        /// 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

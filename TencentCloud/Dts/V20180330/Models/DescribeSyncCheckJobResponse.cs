@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// 任务校验状态
+        /// 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public SyncCheckStepInfo[] StepInfo{ get; set; }
 
         /// <summary>
-        /// 校验标志
+        /// 校验标志：0（尚未校验成功） ， 1（校验成功）
         /// </summary>
         [JsonProperty("CheckFlag")]
         public long? CheckFlag{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
