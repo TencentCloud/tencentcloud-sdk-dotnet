@@ -139,6 +139,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义的任务流模板，模板上限：50。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateProcedureTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateProcedureTemplateResponse"/>实例</returns>
+        public async Task<CreateProcedureTemplateResponse> CreateProcedureTemplate(CreateProcedureTemplateRequest req)
+        {
+             JsonResponseModel<CreateProcedureTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProcedureTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义转码模板，数量上限：1000。
         /// </summary>
         /// <param name="req">参考<see cref="CreateTranscodeTemplateRequest"/></param>
@@ -212,6 +232,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DeleteMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定名字的任务流模板
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteProcedureTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteProcedureTemplateResponse"/>实例</returns>
+        public async Task<DeleteProcedureTemplateResponse> DeleteProcedureTemplate(DeleteProcedureTemplateRequest req)
+        {
+             JsonResponseModel<DeleteProcedureTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteProcedureTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProcedureTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -310,7 +350,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）
+        /// 根据任务流模板名字，获取任务流模板详情列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProcedureTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeProcedureTemplatesResponse"/>实例</returns>
+        public async Task<DescribeProcedureTemplatesResponse> DescribeProcedureTemplates(DescribeProcedureTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeProcedureTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProcedureTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProcedureTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTaskDetailRequest"/></param>
         /// <returns>参考<see cref="DescribeTaskDetailResponse"/>实例</returns>
@@ -399,7 +459,7 @@ namespace TencentCloud.Vod.V20180717
         /// - 剪辑不固化：剪辑得到的视频附属于直播录制文件，没有独立 FileId；适用于将精彩片段**临时分享**的场景。
         /// 
         /// 注意：
-        /// - 使用直播即时剪辑功能的前提是：目标直播流开启了[时移回看](https://cloud.tencent.com/document/product/267/18472)功能。
+        /// - 使用直播即时剪辑功能的前提是：目标直播流开启了[时移回看](https://cloud.tencent.com/document/product/267/32742#.E5.BC.80.E9.80.9A.E6.AD.A5.E9.AA.A4)功能。
         /// - 直播即时剪辑是基于直播录制生成的 m3u8 文件进行的，故而其最小剪辑精度为一个 ts 切片，无法实现秒级或者更为精确的剪辑精度。
         /// 
         /// 
@@ -522,8 +582,9 @@ namespace TencentCloud.Vod.V20180717
         /// 4. 对视频采样截图；
         /// 5. 对视频截图雪碧图；
         /// 6. 对视频截取一张图做封面；
-        /// 7. 智能内容审核（鉴黄、鉴恐、鉴政）；
-        /// 8. 智能内容分析（标签、分类、封面）。
+        /// 7. 对视频转自适应码流（并加密）；
+        /// 8. 智能内容审核（鉴黄、鉴恐、鉴政）；
+        /// 9. 智能内容分析（标签、分类、封面）。
         /// </summary>
         /// <param name="req">参考<see cref="ProcessMediaRequest"/></param>
         /// <returns>参考<see cref="ProcessMediaResponse"/>实例</returns>
@@ -580,6 +641,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "PullEvents");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新设置已存在的任务流模板的任务内容
+        /// </summary>
+        /// <param name="req">参考<see cref="ResetProcedureTemplateRequest"/></param>
+        /// <returns>参考<see cref="ResetProcedureTemplateResponse"/>实例</returns>
+        public async Task<ResetProcedureTemplateResponse> ResetProcedureTemplate(ResetProcedureTemplateRequest req)
+        {
+             JsonResponseModel<ResetProcedureTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetProcedureTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetProcedureTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

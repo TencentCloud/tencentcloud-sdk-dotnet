@@ -43,13 +43,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 以升序还是降序的方式对日志进行排序，可选值 desc和 acs
+        /// 以升序还是降序的方式对日志进行排序，可选值 desc和 asc
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 根据某个字段排序日志,支持以下字段：startTime、functionName、requestId、duration和 memUsage
+        /// 根据某个字段排序日志,支持以下字段：function_name, duration, mem_usage, start_time
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
@@ -58,7 +58,7 @@ namespace TencentCloud.Scf.V20180416.Models
         /// 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
         /// </summary>
         [JsonProperty("Filter")]
-        public Filter Filter{ get; set; }
+        public LogFilter Filter{ get; set; }
 
         /// <summary>
         /// 函数的版本

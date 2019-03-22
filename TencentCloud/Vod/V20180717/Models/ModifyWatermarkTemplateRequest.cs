@@ -44,11 +44,11 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 原点位置，可选值：
-        /// <li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
-        /// <li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
-        /// <li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-        /// <li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-        /// 目前，当 Type 为 image，该字段仅支持 topLeft。
+        /// <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
+        /// <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+        /// <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+        /// <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
+        /// 目前，当 Type 为 image，该字段仅支持 TopLeft。
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }
@@ -73,13 +73,19 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 图片水印模板，该字段仅对图片水印模板有效。
         /// </summary>
         [JsonProperty("ImageTemplate")]
-        public ImageWatermarkInput ImageTemplate{ get; set; }
+        public ImageWatermarkInputForUpdate ImageTemplate{ get; set; }
 
         /// <summary>
         /// 文字水印模板，该字段仅对文字水印模板有效。
         /// </summary>
         [JsonProperty("TextTemplate")]
-        public TextWatermarkTemplate TextTemplate{ get; set; }
+        public TextWatermarkTemplateInputForUpdate TextTemplate{ get; set; }
+
+        /// <summary>
+        /// SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+        /// </summary>
+        [JsonProperty("SvgTemplate")]
+        public SvgWatermarkInputForUpdate SvgTemplate{ get; set; }
 
         /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -101,6 +107,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "YPos", this.YPos);
             this.SetParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
             this.SetParamObj(map, prefix + "TextTemplate.", this.TextTemplate);
+            this.SetParamObj(map, prefix + "SvgTemplate.", this.SvgTemplate);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

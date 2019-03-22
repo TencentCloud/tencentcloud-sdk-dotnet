@@ -139,7 +139,49 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 是否自动安装依赖
+        /// </summary>
+        [JsonProperty("InstallDependency")]
+        public string InstallDependency{ get; set; }
+
+        /// <summary>
+        /// 函数状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 状态描述
+        /// </summary>
+        [JsonProperty("StatusDesc")]
+        public string StatusDesc{ get; set; }
+
+        /// <summary>
+        /// 日志投递到的Cls日志集
+        /// </summary>
+        [JsonProperty("ClsLogsetId")]
+        public string ClsLogsetId{ get; set; }
+
+        /// <summary>
+        /// 日志投递到的Cls Topic
+        /// </summary>
+        [JsonProperty("ClsTopicId")]
+        public string ClsTopicId{ get; set; }
+
+        /// <summary>
+        /// 函数ID
+        /// </summary>
+        [JsonProperty("FunctionId")]
+        public string FunctionId{ get; set; }
+
+        /// <summary>
+        /// 函数的标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -169,6 +211,13 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ErrNo", this.ErrNo);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+            this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+            this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

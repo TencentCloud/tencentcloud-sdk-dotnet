@@ -48,6 +48,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("CosBucketRegion")]
         public string CosBucketRegion{ get; set; }
 
+        /// <summary>
+        /// 如果是通过Demo创建的话，需要传入DemoId
+        /// </summary>
+        [JsonProperty("DemoId")]
+        public string DemoId{ get; set; }
+
+        /// <summary>
+        /// 如果是从TempCos创建的话，需要传入TempCosObjectName
+        /// </summary>
+        [JsonProperty("TempCosObjectName")]
+        public string TempCosObjectName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +70,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "CosObjectName", this.CosObjectName);
             this.SetParamSimple(map, prefix + "ZipFile", this.ZipFile);
             this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+            this.SetParamSimple(map, prefix + "DemoId", this.DemoId);
+            this.SetParamSimple(map, prefix + "TempCosObjectName", this.TempCosObjectName);
         }
     }
 }

@@ -32,6 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>SampleSnapshot：采样截图</li>
         /// <li>ImageSprites：雪碧图</li>
         /// <li>CoverBySnapshot：截图做封面</li>
+        /// <li>AdaptiveDynamicStreaming：自适应码流</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -78,6 +79,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CoverBySnapshotTask")]
         public MediaProcessTaskCoverBySnapshotResult CoverBySnapshotTask{ get; set; }
 
+        /// <summary>
+        /// 对视频转自适应码流任务的查询结果，当任务类型为 AdaptiveDynamicStreaming 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdaptiveDynamicStreamingTask")]
+        public MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -91,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "SampleSnapshotTask.", this.SampleSnapshotTask);
             this.SetParamObj(map, prefix + "ImageSpriteTask.", this.ImageSpriteTask);
             this.SetParamObj(map, prefix + "CoverBySnapshotTask.", this.CoverBySnapshotTask);
+            this.SetParamObj(map, prefix + "AdaptiveDynamicStreamingTask.", this.AdaptiveDynamicStreamingTask);
         }
     }
 }

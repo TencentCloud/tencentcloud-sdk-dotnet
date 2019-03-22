@@ -61,7 +61,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
         public long? HealthNum{ get; set; }
 
         /// <summary>
-        /// 不健康阀值。
+        /// 不健康阈值。
         /// </summary>
         [JsonProperty("UnhealthNum")]
         public long? UnhealthNum{ get; set; }

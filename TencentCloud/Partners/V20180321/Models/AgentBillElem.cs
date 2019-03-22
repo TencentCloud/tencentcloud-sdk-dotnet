@@ -84,6 +84,20 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("PayerMode")]
         public string PayerMode{ get; set; }
 
+        /// <summary>
+        /// 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientType")]
+        public string ClientType{ get; set; }
+
+        /// <summary>
+        /// 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectType")]
+        public string ProjectType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,6 +114,8 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "SettleMonth", this.SettleMonth);
             this.SetParamSimple(map, prefix + "Amt", this.Amt);
             this.SetParamSimple(map, prefix + "PayerMode", this.PayerMode);
+            this.SetParamSimple(map, prefix + "ClientType", this.ClientType);
+            this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
         }
     }
 }

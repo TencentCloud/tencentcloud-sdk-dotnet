@@ -31,8 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 水印图片地址，仅当 Type 为 image，该字段有值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 水印图片地址，仅当 Type 为 image，该字段有效。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }

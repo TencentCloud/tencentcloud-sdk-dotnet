@@ -25,10 +25,16 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+        /// 需要过滤的字段。
         /// </summary>
-        [JsonProperty("RetCode")]
-        public string RetCode{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 字段的过滤值。
+        /// </summary>
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RetCode", this.RetCode);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

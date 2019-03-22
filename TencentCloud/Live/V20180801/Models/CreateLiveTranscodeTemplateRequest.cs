@@ -37,15 +37,15 @@ namespace TencentCloud.Live.V20180801.Models
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 视频编码：
-        /// h264/h265。默认h264
+        /// 视频编码：h264/h265，默认h264。
+        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("Vcodec")]
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// 音频编码：
-        /// aac/mp3。默认原始音频格式
+        /// 音频编码：aac，默认原始音频格式。
+        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
@@ -70,12 +70,14 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 是否保留视频，0：否，1：是。默认1。
+        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("NeedVideo")]
         public long? NeedVideo{ get; set; }
 
         /// <summary>
         /// 是否保留音频，0：否，1：是。默认1。
+        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("NeedAudio")]
         public long? NeedAudio{ get; set; }

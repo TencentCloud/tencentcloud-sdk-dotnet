@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 标签绑定的资源类型，当前仅支持类型："instance"
+        /// 标签绑定的资源类型，当前支持类型："instance"和"host"
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

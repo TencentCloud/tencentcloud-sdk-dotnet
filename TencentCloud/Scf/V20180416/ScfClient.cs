@@ -53,6 +53,32 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 复制一个函数，可以选择将复制出的新函数放置在同一个namespace或另一个namespace。
+        /// 注：本接口**不会**复制函数的以下对象或属性：
+        /// 1. 函数的触发器
+        /// 2. 除了$LATEST以外的其它版本
+        /// 3. 函数配置的日志投递到的CLS目标
+        /// 
+        /// 如有需要，您可以在复制后手动修改新函数。
+        /// </summary>
+        /// <param name="req">参考<see cref="CopyFunctionRequest"/></param>
+        /// <returns>参考<see cref="CopyFunctionResponse"/>实例</returns>
+        public async Task<CopyFunctionResponse> CopyFunction(CopyFunctionRequest req)
+        {
+             JsonResponseModel<CopyFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CopyFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据传入参数创建新的函数。
         /// </summary>
         /// <param name="req">参考<see cref="CreateFunctionRequest"/></param>
@@ -153,7 +179,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 该接口根据设置的日志查询条件返回函数日志。
+        /// 该接口根据指定的日志查询条件返回函数运行日志。
         /// </summary>
         /// <param name="req">参考<see cref="GetFunctionLogsRequest"/></param>
         /// <returns>参考<see cref="GetFunctionLogsResponse"/>实例</returns>

@@ -54,6 +54,21 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
+        /// <summary>
+        /// 函数描述，支持模糊搜索
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 过滤条件。
+        /// - tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+        /// 
+        /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +80,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

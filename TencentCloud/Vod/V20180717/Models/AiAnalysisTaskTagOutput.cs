@@ -29,7 +29,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
-        public MediaAiAnalysisTagItem TagSet{ get; set; }
+        public MediaAiAnalysisTagItem[] TagSet{ get; set; }
 
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Hcm.V20181106.Models
         [JsonProperty("ItemCoord")]
         public ItemCoord ItemCoord{ get; set; }
 
+        /// <summary>
+        /// 推荐的答案
+        /// </summary>
+        [JsonProperty("Answer")]
+        public string Answer{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "Item", this.Item);
             this.SetParamSimple(map, prefix + "ItemString", this.ItemString);
             this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
+            this.SetParamSimple(map, prefix + "Answer", this.Answer);
         }
     }
 }

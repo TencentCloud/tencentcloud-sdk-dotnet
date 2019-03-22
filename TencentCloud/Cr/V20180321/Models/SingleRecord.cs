@@ -62,12 +62,14 @@ namespace TencentCloud.Cr.V20180321.Models
 
         /// <summary>
         /// 产品ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
         /// 录音下载链接。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecordCosUrl")]
         public string RecordCosUrl{ get; set; }

@@ -60,6 +60,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Procedure")]
         public string Procedure{ get; set; }
 
+        /// <summary>
+        /// 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+        /// </summary>
+        [JsonProperty("MetaDataRequired")]
+        public ulong? MetaDataRequired{ get; set; }
+
+        /// <summary>
+        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +84,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
+            this.SetParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

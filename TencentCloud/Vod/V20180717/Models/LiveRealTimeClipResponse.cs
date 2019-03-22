@@ -45,6 +45,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string VodTaskId{ get; set; }
 
         /// <summary>
+        /// 剪辑后的视频元信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -59,6 +66,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "VodTaskId", this.VodTaskId);
+            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -55,7 +55,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string ZipFile{ get; set; }
 
         /// <summary>
-        /// 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+        /// 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
         /// </summary>
         [JsonProperty("CosBucketRegion")]
         public string CosBucketRegion{ get; set; }

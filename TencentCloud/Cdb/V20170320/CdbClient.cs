@@ -53,6 +53,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(AddTimeWindow)用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="AddTimeWindowRequest"/></param>
+        /// <returns>参考<see cref="AddTimeWindowResponse"/>实例</returns>
+        public async Task<AddTimeWindowResponse> AddTimeWindow(AddTimeWindowRequest req)
+        {
+             JsonResponseModel<AddTimeWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddTimeWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddTimeWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
         /// </summary>
         /// <param name="req">参考<see cref="AssociateSecurityGroupsRequest"/></param>
@@ -282,6 +302,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DeleteParamTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteTimeWindow)用于删除云数据库实例的维护时间窗口。删除实例维护时间窗口之后，默认的维护时间窗为 03:00-04:00，即当选择在维护时间窗口内切换访问新实例时，默认会在03:00-04:00点进行切换访问新实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteTimeWindowRequest"/></param>
+        /// <returns>参考<see cref="DeleteTimeWindowResponse"/>实例</returns>
+        public async Task<DeleteTimeWindowResponse> DeleteTimeWindow(DeleteTimeWindowRequest req)
+        {
+             JsonResponseModel<DeleteTimeWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTimeWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTimeWindowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -933,6 +973,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeTimeWindow)用于查询云数据库实例的维护时间窗口。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTimeWindowRequest"/></param>
+        /// <returns>参考<see cref="DescribeTimeWindowResponse"/>实例</returns>
+        public async Task<DescribeTimeWindowResponse> DescribeTimeWindow(DescribeTimeWindowRequest req)
+        {
+             JsonResponseModel<DescribeTimeWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimeWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimeWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeUploadedFilesRequest"/></param>
@@ -1264,6 +1324,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "ModifyParamTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyTimeWindowRequest"/></param>
+        /// <returns>参考<see cref="ModifyTimeWindowResponse"/>实例</returns>
+        public async Task<ModifyTimeWindowResponse> ModifyTimeWindow(ModifyTimeWindowRequest req)
+        {
+             JsonResponseModel<ModifyTimeWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTimeWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTimeWindowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

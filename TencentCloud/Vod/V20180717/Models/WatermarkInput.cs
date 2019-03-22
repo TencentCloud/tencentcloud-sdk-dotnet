@@ -32,9 +32,17 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
+
+        /// <summary>
+        /// SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SvgContent")]
+        public string SvgContent{ get; set; }
 
 
         /// <summary>
@@ -44,6 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
+            this.SetParamSimple(map, prefix + "SvgContent", this.SvgContent);
         }
     }
 }

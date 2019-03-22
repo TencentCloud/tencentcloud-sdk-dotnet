@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg。其中，mp3、flac、ogg 为纯音频文件。
+        /// 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
@@ -68,13 +68,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 视频流配置参数。
         /// </summary>
         [JsonProperty("VideoTemplate")]
-        public VideoTemplateInfo VideoTemplate{ get; set; }
+        public VideoTemplateInfoForUpdate VideoTemplate{ get; set; }
 
         /// <summary>
         /// 音频流配置参数。
         /// </summary>
         [JsonProperty("AudioTemplate")]
-        public AudioTemplateInfo AudioTemplate{ get; set; }
+        public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。

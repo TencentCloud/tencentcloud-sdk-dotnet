@@ -66,6 +66,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("CoverBySnapshotTaskSet")]
         public CoverBySnapshotTaskInput[] CoverBySnapshotTaskSet{ get; set; }
 
+        /// <summary>
+        /// 对视频转自适应码流任务列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdaptiveDynamicStreamingTaskSet")]
+        public AdaptiveDynamicStreamingTaskInput[] AdaptiveDynamicStreamingTaskSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -78,6 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "SampleSnapshotTaskSet.", this.SampleSnapshotTaskSet);
             this.SetParamArrayObj(map, prefix + "ImageSpriteTaskSet.", this.ImageSpriteTaskSet);
             this.SetParamArrayObj(map, prefix + "CoverBySnapshotTaskSet.", this.CoverBySnapshotTaskSet);
+            this.SetParamArrayObj(map, prefix + "AdaptiveDynamicStreamingTaskSet.", this.AdaptiveDynamicStreamingTaskSet);
         }
     }
 }

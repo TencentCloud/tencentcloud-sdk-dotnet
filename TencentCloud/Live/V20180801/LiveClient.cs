@@ -74,6 +74,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 添加域名，一次只能提交一个域名。域名必须已备案。
+        /// </summary>
+        /// <param name="req">参考<see cref="AddLiveDomainRequest"/></param>
+        /// <returns>参考<see cref="AddLiveDomainResponse"/>实例</returns>
+        public async Task<AddLiveDomainResponse> AddLiveDomain(AddLiveDomainRequest req)
+        {
+             JsonResponseModel<AddLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加水印，成功返回水印id后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印id绑定到流使用。
         /// </summary>
         /// <param name="req">参考<see cref="AddLiveWatermarkRequest"/></param>
@@ -167,6 +187,26 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "CreateLiveCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于新增直播推流和播放的域名映射
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateLiveDomainStrategyRequest"/></param>
+        /// <returns>参考<see cref="CreateLiveDomainStrategyResponse"/>实例</returns>
+        public async Task<CreateLiveDomainStrategyResponse> CreateLiveDomainStrategy(CreateLiveDomainStrategyRequest req)
+        {
+             JsonResponseModel<CreateLiveDomainStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveDomainStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveDomainStrategyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -425,6 +465,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DeleteLiveCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除已添加的直播域名
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteLiveDomainRequest"/></param>
+        /// <returns>参考<see cref="DeleteLiveDomainResponse"/>实例</returns>
+        public async Task<DeleteLiveDomainResponse> DeleteLiveDomain(DeleteLiveDomainRequest req)
+        {
+             JsonResponseModel<DeleteLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于删除已新增的播放和推流域名映射关系
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteLiveDomainStrategyRequest"/></param>
+        /// <returns>参考<see cref="DeleteLiveDomainStrategyResponse"/>实例</returns>
+        public async Task<DeleteLiveDomainStrategyResponse> DeleteLiveDomainStrategy(DeleteLiveDomainStrategyRequest req)
+        {
+             JsonResponseModel<DeleteLiveDomainStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveDomainStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveDomainStrategyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -734,6 +814,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询直播域名信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveDomainRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveDomainResponse"/>实例</returns>
+        public async Task<DescribeLiveDomainResponse> DescribeLiveDomain(DescribeLiveDomainRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取域名证书信息
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveDomainCertRequest"/></param>
@@ -745,6 +845,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DescribeLiveDomainCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询已有域名策略
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveDomainStrategysRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveDomainStrategysResponse"/>实例</returns>
+        public async Task<DescribeLiveDomainStrategysResponse> DescribeLiveDomainStrategys(DescribeLiveDomainStrategysRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainStrategysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainStrategys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainStrategysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据域名状态、类型等信息查询用户的域名信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveDomainsRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveDomainsResponse"/>实例</returns>
+        public async Task<DescribeLiveDomainsResponse> DescribeLiveDomains(DescribeLiveDomainsRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1034,6 +1174,27 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 支持查询某天的转码详细信息。
+        /// 注意：当前只支持查询近30天内某天的详细数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveTranscodeDetailInfoResponse"/>实例</returns>
+        public async Task<DescribeLiveTranscodeDetailInfoResponse> DescribeLiveTranscodeDetailInfo(DescribeLiveTranscodeDetailInfoRequest req)
+        {
+             JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTranscodeDetailInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取转码规则列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveTranscodeRulesRequest"/></param>
@@ -1174,6 +1335,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeStreamPlayInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeStreamPlayInfoListResponse"/>实例</returns>
+        public async Task<DescribeStreamPlayInfoListResponse> DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 断开推流连接，但可以重新推流
         /// </summary>
         /// <param name="req">参考<see cref="DropLiveStreamRequest"/></param>
@@ -1185,6 +1366,46 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DropLiveStream");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用状态为停用的直播域名
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableLiveDomainRequest"/></param>
+        /// <returns>参考<see cref="EnableLiveDomainResponse"/>实例</returns>
+        public async Task<EnableLiveDomainResponse> EnableLiveDomain(EnableLiveDomainRequest req)
+        {
+             JsonResponseModel<EnableLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用使用某个直播域名
+        /// </summary>
+        /// <param name="req">参考<see cref="ForbidLiveDomainRequest"/></param>
+        /// <returns>参考<see cref="ForbidLiveDomainResponse"/>实例</returns>
+        public async Task<ForbidLiveDomainResponse> ForbidLiveDomain(ForbidLiveDomainRequest req)
+        {
+             JsonResponseModel<ForbidLiveDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ForbidLiveDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForbidLiveDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1285,6 +1506,26 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "ModifyLivePlayAuthKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改播放域名信息
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyLivePlayDomainRequest"/></param>
+        /// <returns>参考<see cref="ModifyLivePlayDomainResponse"/>实例</returns>
+        public async Task<ModifyLivePlayDomainResponse> ModifyLivePlayDomain(ModifyLivePlayDomainRequest req)
+        {
+             JsonResponseModel<ModifyLivePlayDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLivePlayDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePlayDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -78,6 +78,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("VpcConfig")]
         public VpcConfig VpcConfig{ get; set; }
 
+        /// <summary>
+        /// 函数日志投递到的CLS LogsetID
+        /// </summary>
+        [JsonProperty("ClsLogsetId")]
+        public string ClsLogsetId{ get; set; }
+
+        /// <summary>
+        /// 函数日志投递到的CLS TopicID
+        /// </summary>
+        [JsonProperty("ClsTopicId")]
+        public string ClsTopicId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +105,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "Environment.", this.Environment);
             this.SetParamSimple(map, prefix + "Runtime", this.Runtime);
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+            this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+            this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         }
     }
 }

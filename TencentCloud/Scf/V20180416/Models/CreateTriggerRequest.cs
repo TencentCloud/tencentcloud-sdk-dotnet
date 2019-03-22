@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// 触发器类型，目前支持 cos 、cmq、 timers、 ckafka类型
+        /// 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
+        /// <summary>
+        /// 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+        /// </summary>
+        [JsonProperty("Enable")]
+        public string Enable{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }
     }
 }

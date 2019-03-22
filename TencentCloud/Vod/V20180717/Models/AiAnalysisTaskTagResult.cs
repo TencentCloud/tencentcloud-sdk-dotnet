@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]
-        public AiAnalysisTaskTagOutput[] Output{ get; set; }
+        public AiAnalysisTaskTagOutput Output{ get; set; }
 
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
-            this.SetParamArrayObj(map, prefix + "Output.", this.Output);
+            this.SetParamObj(map, prefix + "Output.", this.Output);
         }
     }
 }

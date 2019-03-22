@@ -74,6 +74,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 提交信审外呼申请，返回当次请求日期。
+        /// </summary>
+        /// <param name="req">参考<see cref="ApplyCreditAuditRequest"/></param>
+        /// <returns>参考<see cref="ApplyCreditAuditResponse"/>实例</returns>
+        public async Task<ApplyCreditAuditResponse> ApplyCreditAudit(ApplyCreditAuditRequest req)
+        {
+             JsonResponseModel<ApplyCreditAuditResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyCreditAudit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCreditAuditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据信审任务ID和请求日期，获取相关信审结果。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCreditResultRequest"/></param>
+        /// <returns>参考<see cref="DescribeCreditResultResponse"/>实例</returns>
+        public async Task<DescribeCreditResultResponse> DescribeCreditResult(DescribeCreditResultRequest req)
+        {
+             JsonResponseModel<DescribeCreditResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCreditResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCreditResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeRecordsRequest"/></param>
@@ -114,7 +154,7 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 用于下载当日催收结果报表，当日23:00后，可获取当日催收结果。
+        /// 用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
         /// </summary>
         /// <param name="req">参考<see cref="DownloadReportRequest"/></param>
         /// <returns>参考<see cref="DownloadReportResponse"/>实例</returns>

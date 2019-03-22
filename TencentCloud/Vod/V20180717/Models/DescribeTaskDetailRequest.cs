@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频处理任务的任务 ID
+        /// 视频处理任务的任务 ID。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

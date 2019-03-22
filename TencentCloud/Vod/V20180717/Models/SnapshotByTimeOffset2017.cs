@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
-        public string ErrCode{ get; set; }
+        public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 截图的具体时间点，单位：毫秒。

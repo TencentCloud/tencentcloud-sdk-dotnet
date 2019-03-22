@@ -25,22 +25,46 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 日报下载地址
+        /// 催收日报下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DailyReportUrl")]
         public string DailyReportUrl{ get; set; }
 
         /// <summary>
-        /// 结果下载地址
+        /// 催收结果下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultReportUrl")]
         public string ResultReportUrl{ get; set; }
 
         /// <summary>
-        /// 明细下载地址
+        /// 催收明细下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailReportUrl")]
         public string DetailReportUrl{ get; set; }
+
+        /// <summary>
+        /// 回访日报下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CallbackDailyReportUrl")]
+        public string CallbackDailyReportUrl{ get; set; }
+
+        /// <summary>
+        /// 回访结果下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CallbackResultReportUrl")]
+        public string CallbackResultReportUrl{ get; set; }
+
+        /// <summary>
+        /// 回访明细下载地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CallbackDetailReportUrl")]
+        public string CallbackDetailReportUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +81,9 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);
             this.SetParamSimple(map, prefix + "ResultReportUrl", this.ResultReportUrl);
             this.SetParamSimple(map, prefix + "DetailReportUrl", this.DetailReportUrl);
+            this.SetParamSimple(map, prefix + "CallbackDailyReportUrl", this.CallbackDailyReportUrl);
+            this.SetParamSimple(map, prefix + "CallbackResultReportUrl", this.CallbackResultReportUrl);
+            this.SetParamSimple(map, prefix + "CallbackDetailReportUrl", this.CallbackDetailReportUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

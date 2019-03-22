@@ -25,7 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 触发器信息
+        /// </summary>
+        [JsonProperty("TriggerInfo")]
+        public Trigger TriggerInfo{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -36,6 +42,7 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "TriggerInfo.", this.TriggerInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

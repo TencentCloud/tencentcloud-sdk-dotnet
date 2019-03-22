@@ -87,8 +87,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("WechatPublishComplete")]
-        public WechatPublishTask WechatPublishComplete{ get; set; }
+        [JsonProperty("WechatPublishCompleteEvent")]
+        public WechatPublishTask WechatPublishCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
@@ -138,7 +138,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "FileDeleteEvent.", this.FileDeleteEvent);
             this.SetParamObj(map, prefix + "PullCompleteEvent.", this.PullCompleteEvent);
             this.SetParamObj(map, prefix + "EditMediaCompleteEvent.", this.EditMediaCompleteEvent);
-            this.SetParamObj(map, prefix + "WechatPublishComplete.", this.WechatPublishComplete);
+            this.SetParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
             this.SetParamObj(map, prefix + "TranscodeCompleteEvent.", this.TranscodeCompleteEvent);
             this.SetParamObj(map, prefix + "ConcatCompleteEvent.", this.ConcatCompleteEvent);
             this.SetParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);

@@ -60,6 +60,30 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// 函数状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 函数状态详情
+        /// </summary>
+        [JsonProperty("StatusDesc")]
+        public string StatusDesc{ get; set; }
+
+        /// <summary>
+        /// 函数描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 函数标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +96,10 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
             this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

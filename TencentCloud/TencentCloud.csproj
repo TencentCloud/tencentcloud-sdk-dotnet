@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.17</VersionPrefix>
+    <VersionPrefix>3.0.18</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -646,6 +646,8 @@
     <Compile Include="Cdb\V20170320\CdbClient.cs" />
     <Compile Include="Cdb\V20170320\Models\Account.cs" />
     <Compile Include="Cdb\V20170320\Models\AccountInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\AddTimeWindowRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\AddTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupConfig.cs" />
@@ -675,6 +677,8 @@
     <Compile Include="Cdb\V20170320\Models\DeleteBackupResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteParamTemplateResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteTimeWindowRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAccountPrivilegesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAccountPrivilegesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAccountsRequest.cs" />
@@ -739,6 +743,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeTagsOfInstanceIdsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeTasksRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeTimeWindowRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeUploadedFilesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeUploadedFilesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeviceCpuInfo.cs" />
@@ -785,6 +791,8 @@
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceTagResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OpenDBInstanceGTIDRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\OpenDBInstanceGTIDResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OpenWanServiceRequest.cs" />
@@ -865,6 +873,20 @@
     <Compile Include="Cdn\V20180606\Models\TopData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopDetailData.cs" />
     <Compile Include="Cdn\V20180606\Models\UrlRecord.cs" />
+    <Compile Include="Cds\V20180420\CdsClient.cs" />
+    <Compile Include="Cds\V20180420\Models\CdsAuditInstance.cs" />
+    <Compile Include="Cds\V20180420\Models\DbauditTypesInfo.cs" />
+    <Compile Include="Cds\V20180420\Models\DescribeDbauditInstanceTypeRequest.cs" />
+    <Compile Include="Cds\V20180420\Models\DescribeDbauditInstanceTypeResponse.cs" />
+    <Compile Include="Cds\V20180420\Models\DescribeDbauditInstancesRequest.cs" />
+    <Compile Include="Cds\V20180420\Models\DescribeDbauditInstancesResponse.cs" />
+    <Compile Include="Cds\V20180420\Models\DescribeDbauditUsedRegionsRequest.cs" />
+    <Compile Include="Cds\V20180420\Models\DescribeDbauditUsedRegionsResponse.cs" />
+    <Compile Include="Cds\V20180420\Models\InquiryPriceDbauditInstanceRequest.cs" />
+    <Compile Include="Cds\V20180420\Models\InquiryPriceDbauditInstanceResponse.cs" />
+    <Compile Include="Cds\V20180420\Models\ModifyDbauditInstancesRenewFlagRequest.cs" />
+    <Compile Include="Cds\V20180420\Models\ModifyDbauditInstancesRenewFlagResponse.cs" />
+    <Compile Include="Cds\V20180420\Models\RegionInfo.cs" />
     <Compile Include="Cis\V20180408\CisClient.cs" />
     <Compile Include="Cis\V20180408\Models\Container.cs" />
     <Compile Include="Cis\V20180408\Models\ContainerInstance.cs" />
@@ -956,6 +978,10 @@
     <Compile Include="Cr\V20180321\CrClient.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyBlackListRequest.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyBlackListResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\ApplyCreditAuditRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\ApplyCreditAuditResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\DescribeCreditResultRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\DescribeCreditResultResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DescribeRecordsRequest.cs" />
     <Compile Include="Cr\V20180321\Models\DescribeRecordsResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DescribeTaskStatusRequest.cs" />
@@ -1408,6 +1434,8 @@
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewDetail.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewResult.cs" />
     <Compile Include="Faceid\V20180301\FaceidClient.cs" />
+    <Compile Include="Faceid\V20180301\Models\BankCardVerificationRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\BankCardVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectAuthRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectAuthResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetActionSequenceRequest.cs" />
@@ -1494,6 +1522,22 @@
     <Compile Include="Iai\V20180301\Models\SearchFacesResponse.cs" />
     <Compile Include="Iai\V20180301\Models\VerifyFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\VerifyFaceResponse.cs" />
+    <Compile Include="Ic\V20190307\IcClient.cs" />
+    <Compile Include="Ic\V20190307\Models\AppInfo.cs" />
+    <Compile Include="Ic\V20190307\Models\CardInfo.cs" />
+    <Compile Include="Ic\V20190307\Models\CardList.cs" />
+    <Compile Include="Ic\V20190307\Models\DescribeAppRequest.cs" />
+    <Compile Include="Ic\V20190307\Models\DescribeAppResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\DescribeCardRequest.cs" />
+    <Compile Include="Ic\V20190307\Models\DescribeCardResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\DescribeCardsRequest.cs" />
+    <Compile Include="Ic\V20190307\Models\DescribeCardsResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\SendMultiSmsRequest.cs" />
+    <Compile Include="Ic\V20190307\Models\SendMultiSmsResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\SendSmsRequest.cs" />
+    <Compile Include="Ic\V20190307\Models\SendSmsResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\SmsRet.cs" />
+    <Compile Include="Ic\V20190307\Models\SmsSid.cs" />
     <Compile Include="Iot\V20180123\IotClient.cs" />
     <Compile Include="Iot\V20180123\Models\Action.cs" />
     <Compile Include="Iot\V20180123\Models\ActivateRuleRequest.cs" />
@@ -1676,6 +1720,8 @@
     <Compile Include="Live\V20180801\LiveClient.cs" />
     <Compile Include="Live\V20180801\Models\AddDelayLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\AddDelayLiveStreamResponse.cs" />
+    <Compile Include="Live\V20180801\Models\AddLiveDomainRequest.cs" />
+    <Compile Include="Live\V20180801\Models\AddLiveDomainResponse.cs" />
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkResponse.cs" />
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertRequest.cs" />
@@ -1689,6 +1735,8 @@
     <Compile Include="Live\V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveCertResponse.cs" />
+    <Compile Include="Live\V20180801\Models\CreateLiveDomainStrategyRequest.cs" />
+    <Compile Include="Live\V20180801\Models\CreateLiveDomainStrategyResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordRuleRequest.cs" />
@@ -1707,12 +1755,17 @@
     <Compile Include="Live\V20180801\Models\CreateLiveWatermarkRuleResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreatePullStreamConfigRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreatePullStreamConfigResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DayStreamPlayInfo.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveCallbackRuleRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveCallbackRuleResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveCallbackTemplateRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveCallbackTemplateResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveCertResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteLiveDomainRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteLiveDomainResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteLiveDomainStrategyRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteLiveDomainStrategyResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordRuleRequest.cs" />
@@ -1745,6 +1798,12 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveCertsResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainCertResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainStrategysRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainStrategysResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainsRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveDomainsResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveForbidStreamListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveForbidStreamListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
@@ -1773,6 +1832,8 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamPublishedListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamStateRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamStateResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeDetailInfoRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeDetailInfoResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeRulesRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeRulesResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeTemplateRequest.cs" />
@@ -1787,9 +1848,16 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarksResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeStreamPlayInfoListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeStreamPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DomainCertInfo.cs" />
+    <Compile Include="Live\V20180801\Models\DomainInfo.cs" />
     <Compile Include="Live\V20180801\Models\DropLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\DropLiveStreamResponse.cs" />
+    <Compile Include="Live\V20180801\Models\EnableLiveDomainRequest.cs" />
+    <Compile Include="Live\V20180801\Models\EnableLiveDomainResponse.cs" />
+    <Compile Include="Live\V20180801\Models\ForbidLiveDomainRequest.cs" />
+    <Compile Include="Live\V20180801\Models\ForbidLiveDomainResponse.cs" />
     <Compile Include="Live\V20180801\Models\ForbidLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\ForbidLiveStreamResponse.cs" />
     <Compile Include="Live\V20180801\Models\ForbidStreamInfo.cs" />
@@ -1801,6 +1869,8 @@
     <Compile Include="Live\V20180801\Models\ModifyLiveDomainCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePlayDomainRequest.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePlayDomainResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePushAuthKeyRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePushAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLiveRecordTemplateRequest.cs" />
@@ -1829,11 +1899,13 @@
     <Compile Include="Live\V20180801\Models\SnapshotTemplateInfo.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordResponse.cs" />
+    <Compile Include="Live\V20180801\Models\StrategyInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamEventInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamNameInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamOnlineInfo.cs" />
     <Compile Include="Live\V20180801\Models\TemplateInfo.cs" />
+    <Compile Include="Live\V20180801\Models\TranscodeDetailInfo.cs" />
     <Compile Include="Live\V20180801\Models\UnBindLiveDomainCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\UnBindLiveDomainCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\UpdateLiveWatermarkRequest.cs" />
@@ -2171,6 +2243,8 @@
     <Compile Include="Redis\V20180412\Models\ZoneCapacityConf.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
+    <Compile Include="Scf\V20180416\Models\CopyFunctionRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\CopyFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\CreateFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CreateFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\CreateTriggerRequest.cs" />
@@ -2191,7 +2265,9 @@
     <Compile Include="Scf\V20180416\Models\InvokeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\LogFilter.cs" />
     <Compile Include="Scf\V20180416\Models\Result.cs" />
+    <Compile Include="Scf\V20180416\Models\Tag.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeResponse.cs" />
@@ -2437,6 +2513,8 @@
     <Compile Include="Tmt\V20180321\Models\TextTranslateRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateResponse.cs" />
     <Compile Include="Vod\V20180717\VodClient.cs" />
+    <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingInfoItem.cs" />
+    <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisResult.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisTaskClassificationInput.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisTaskClassificationOutput.cs" />
@@ -2450,6 +2528,7 @@
     <Compile Include="Vod\V20180717\Models\AiAnalysisTaskTagResult.cs" />
     <Compile Include="Vod\V20180717\Models\AiContentReviewResult.cs" />
     <Compile Include="Vod\V20180717\Models\AiContentReviewTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\AiRecognitionTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\AiReviewPoliticalAsrTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\AiReviewPoliticalAsrTaskOutput.cs" />
     <Compile Include="Vod\V20180717\Models\AiReviewPoliticalOcrTaskInput.cs" />
@@ -2475,6 +2554,7 @@
     <Compile Include="Vod\V20180717\Models\ApplyUploadRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ApplyUploadResponse.cs" />
     <Compile Include="Vod\V20180717\Models\AudioTemplateInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ClipFileInfo2017.cs" />
     <Compile Include="Vod\V20180717\Models\ClipTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\CommitUploadRequest.cs" />
@@ -2488,6 +2568,8 @@
     <Compile Include="Vod\V20180717\Models\CreateClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTask2017.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateProcedureTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateProcedureTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateWatermarkTemplateRequest.cs" />
@@ -2496,6 +2578,8 @@
     <Compile Include="Vod\V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteMediaResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteProcedureTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteProcedureTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteWatermarkTemplateRequest.cs" />
@@ -2504,6 +2588,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTasksRequest.cs" />
@@ -2522,6 +2608,7 @@
     <Compile Include="Vod\V20180717\Models\FileUploadTask.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInput.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipResponse.cs" />
@@ -2546,6 +2633,7 @@
     <Compile Include="Vod\V20180717\Models\MediaKeyFrameDescItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaMetaData.cs" />
     <Compile Include="Vod\V20180717\Models\MediaOutputInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaProcessTaskAdaptiveDynamicStreamingResult.cs" />
     <Compile Include="Vod\V20180717\Models\MediaProcessTaskAnimatedGraphicResult.cs" />
     <Compile Include="Vod\V20180717\Models\MediaProcessTaskCoverBySnapshotResult.cs" />
     <Compile Include="Vod\V20180717\Models\MediaProcessTaskImageSpriteResult.cs" />
@@ -2572,6 +2660,7 @@
     <Compile Include="Vod\V20180717\Models\ModifyWatermarkTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ProcedureTask.cs" />
+    <Compile Include="Vod\V20180717\Models\ProcedureTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaByUrlRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaByUrlResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaRequest.cs" />
@@ -2579,6 +2668,8 @@
     <Compile Include="Vod\V20180717\Models\PullEventsRequest.cs" />
     <Compile Include="Vod\V20180717\Models\PullEventsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\PullFileTask.cs" />
+    <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaResponse.cs" />
@@ -2588,14 +2679,18 @@
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
+    <Compile Include="Vod\V20180717\Models\SvgWatermarkInput.cs" />
+    <Compile Include="Vod\V20180717\Models\SvgWatermarkInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TaskSimpleInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TempCertificate.cs" />
-    <Compile Include="Vod\V20180717\Models\TextWatermarkTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\TextWatermarkTemplateInput.cs" />
+    <Compile Include="Vod\V20180717\Models\TextWatermarkTemplateInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodePlayInfo2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\VideoTemplateInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\VideoTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\WatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\WatermarkTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\WechatPublishTask.cs" />

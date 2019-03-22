@@ -54,6 +54,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
+        /// <summary>
+        /// 使能开关
+        /// </summary>
+        [JsonProperty("Enable")]
+        public long? Enable{ get; set; }
+
+        /// <summary>
+        /// 客户自定义参数
+        /// </summary>
+        [JsonProperty("CustomArgument")]
+        public string CustomArgument{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +77,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
             this.SetParamSimple(map, prefix + "TriggerName", this.TriggerName);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
         }
     }
 }
