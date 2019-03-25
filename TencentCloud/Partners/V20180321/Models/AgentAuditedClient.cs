@@ -76,13 +76,13 @@ namespace TencentCloud.Partners.V20180321.Models
         /// 上月消费金额
         /// </summary>
         [JsonProperty("LastMonthAmt")]
-        public ulong? LastMonthAmt{ get; set; }
+        public long? LastMonthAmt{ get; set; }
 
         /// <summary>
         /// 本月消费金额
         /// </summary>
         [JsonProperty("ThisMonthAmt")]
-        public ulong? ThisMonthAmt{ get; set; }
+        public long? ThisMonthAmt{ get; set; }
 
         /// <summary>
         /// 是否欠费,0：不欠费；1：欠费
