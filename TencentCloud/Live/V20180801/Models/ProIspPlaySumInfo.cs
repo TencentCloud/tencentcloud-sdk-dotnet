@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbm.V20180129.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBrandCommentCountResponse : AbstractModel
+    public class ProIspPlaySumInfo : AbstractModel
     {
         
         /// <summary>
-        /// 按天统计好评/差评数
+        /// 省份/运营商。
         /// </summary>
-        [JsonProperty("CommentSet")]
-        public Comment[] CommentSet{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 总流量，单位：MB。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TotalFlux")]
+        public float? TotalFlux{ get; set; }
+
+        /// <summary>
+        /// 总请求数。
+        /// </summary>
+        [JsonProperty("TotalRequest")]
+        public ulong? TotalRequest{ get; set; }
+
+        /// <summary>
+        /// 平均下载流量，单位：MB/s
+        /// </summary>
+        [JsonProperty("AvgFluxPerSecond")]
+        public float? AvgFluxPerSecond{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Tbm.V20180129.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "CommentSet.", this.CommentSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "TotalFlux", this.TotalFlux);
+            this.SetParamSimple(map, prefix + "TotalRequest", this.TotalRequest);
+            this.SetParamSimple(map, prefix + "AvgFluxPerSecond", this.AvgFluxPerSecond);
         }
     }
 }

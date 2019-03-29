@@ -25,37 +25,38 @@ namespace TencentCloud.Aai.V20180522.Models
     {
         
         /// <summary>
-        /// 合成语音的源文本
+        /// 合成语音的源文本，中文最大支持100个汉字（标点符号算一个汉字）；英文最大支持400个字母（标点符号算一个字母）。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复
+        /// 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 模型类型，1-默认模型
+        /// 模型类型，1-默认模型。
         /// </summary>
         [JsonProperty("ModelType")]
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// 音量大小，范围：[0，10]，分别对应10个等级的音量，默认为0
+        /// 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+        /// 输入除以上整数之外的其他参数不生效，按默认值处理。
         /// </summary>
         [JsonProperty("Volume")]
         public float? Volume{ get; set; }
 
         /// <summary>
-        /// 语速，范围：[-2，2]，分别对应不同语速：0.6倍，0.8倍，1.0倍，1.2倍，1.5倍，默认为0
+        /// 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>输入除以上整数之外的其他参数不生效，按默认值处理。
         /// </summary>
         [JsonProperty("Speed")]
         public float? Speed{ get; set; }
 
         /// <summary>
-        /// 项目id，用户自定义，默认为0
+        /// 项目id，用户自定义，默认为0。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -67,13 +68,13 @@ namespace TencentCloud.Aai.V20180522.Models
         public long? VoiceType{ get; set; }
 
         /// <summary>
-        /// 主语言类型<li>1-中文，最大100个汉字（标点符号算一个汉子）</li><li>2-英文，最大支持400个字母（标点符号算一个字母）</li>
+        /// 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
         /// </summary>
         [JsonProperty("PrimaryLanguage")]
         public ulong? PrimaryLanguage{ get; set; }
 
         /// <summary>
-        /// 音频采样率，16000：16k，8000：8k，默认16k
+        /// 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }

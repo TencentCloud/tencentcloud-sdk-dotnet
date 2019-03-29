@@ -196,26 +196,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 该接口用于新增直播推流和播放的域名映射
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateLiveDomainStrategyRequest"/></param>
-        /// <returns>参考<see cref="CreateLiveDomainStrategyResponse"/>实例</returns>
-        public async Task<CreateLiveDomainStrategyResponse> CreateLiveDomainStrategy(CreateLiveDomainStrategyRequest req)
-        {
-             JsonResponseModel<CreateLiveDomainStrategyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLiveDomainStrategy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveDomainStrategyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// - 使用前提
         ///   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
         ///   2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 [对应文档](https://cloud.tencent.com/document/product/266/2838)。
@@ -485,26 +465,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DeleteLiveDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveDomainResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口用于删除已新增的播放和推流域名映射关系
-        /// </summary>
-        /// <param name="req">参考<see cref="DeleteLiveDomainStrategyRequest"/></param>
-        /// <returns>参考<see cref="DeleteLiveDomainStrategyResponse"/>实例</returns>
-        public async Task<DeleteLiveDomainStrategyResponse> DeleteLiveDomainStrategy(DeleteLiveDomainStrategyRequest req)
-        {
-             JsonResponseModel<DeleteLiveDomainStrategyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteLiveDomainStrategy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveDomainStrategyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -854,26 +814,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 该接口用于查询已有域名策略
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeLiveDomainStrategysRequest"/></param>
-        /// <returns>参考<see cref="DescribeLiveDomainStrategysResponse"/>实例</returns>
-        public async Task<DescribeLiveDomainStrategysResponse> DescribeLiveDomainStrategys(DescribeLiveDomainStrategysRequest req)
-        {
-             JsonResponseModel<DescribeLiveDomainStrategysResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainStrategys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainStrategysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 根据域名状态、类型等信息查询用户的域名信息
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveDomainsRequest"/></param>
@@ -1154,6 +1094,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询所有实时流的推流信息，包括客户端IP，服务端IP，帧率，码率，域名，开始推流时间。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveStreamPushInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveStreamPushInfoListResponse"/>实例</returns>
+        public async Task<DescribeLiveStreamPushInfoListResponse> DescribeLiveStreamPushInfoList(DescribeLiveStreamPushInfoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamPushInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveStreamPushInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamPushInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 返回直播中、无推流或者禁播等状态
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveStreamStateRequest"/></param>
@@ -1315,6 +1275,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProIspPlaySumInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeProIspPlaySumInfoListResponse"/>实例</returns>
+        public async Task<DescribeProIspPlaySumInfoListResponse> DescribeProIspPlaySumInfoList(DescribeProIspPlaySumInfoListRequest req)
+        {
+             JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProIspPlaySumInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某省份某运营商下行播放数据，包括带宽，流量，请求数，并发连接数信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProvinceIspPlayInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeProvinceIspPlayInfoListResponse"/>实例</returns>
+        public async Task<DescribeProvinceIspPlayInfoListResponse> DescribeProvinceIspPlayInfoList(DescribeProvinceIspPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeProvinceIspPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProvinceIspPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProvinceIspPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询拉流配置
         /// </summary>
         /// <param name="req">参考<see cref="DescribePullStreamConfigsRequest"/></param>
@@ -1326,6 +1326,26 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DescribePullStreamConfigs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePullStreamConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询天维度每条流的播放数据，包括总流量等。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeStreamDayPlayInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeStreamDayPlayInfoListResponse"/>实例</returns>
+        public async Task<DescribeStreamDayPlayInfoListResponse> DescribeStreamDayPlayInfoList(DescribeStreamDayPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamDayPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

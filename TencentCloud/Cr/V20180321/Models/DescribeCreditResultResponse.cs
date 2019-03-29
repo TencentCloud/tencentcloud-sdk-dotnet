@@ -25,17 +25,7 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 呼叫结果，取值范围：
-        /// <li>NON：接通
-        /// <li>DBU：号码忙
-        /// <li>DRF：不在服务区
-        /// <li>ANA：欠费未接听
-        /// <li>REJ：拒接
-        /// <li>SHU：关机
-        /// <li>NAN：空号
-        /// <li>HAL：停机
-        /// <li>DAD：未接听
-        /// <li>EXE：其他异常
+        /// <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
         /// </summary>
         [JsonProperty("ResultCode")]
         public string ResultCode{ get; set; }

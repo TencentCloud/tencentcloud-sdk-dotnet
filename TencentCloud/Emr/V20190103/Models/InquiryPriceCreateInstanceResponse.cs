@@ -15,44 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbm.V20180129.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIndustryNewsResponse : AbstractModel
+    public class InquiryPriceCreateInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总计文章数量
+        /// 询价结果
         /// </summary>
-        [JsonProperty("NewsCount")]
-        public ulong? NewsCount{ get; set; }
-
-        /// <summary>
-        /// 总计来源数量
-        /// </summary>
-        [JsonProperty("FromCount")]
-        public ulong? FromCount{ get; set; }
-
-        /// <summary>
-        /// 总计疑似负面数量
-        /// </summary>
-        [JsonProperty("AdverseCount")]
-        public ulong? AdverseCount{ get; set; }
-
-        /// <summary>
-        /// 文章列表
-        /// </summary>
-        [JsonProperty("NewsSet")]
-        public IndustryNews[] NewsSet{ get; set; }
-
-        /// <summary>
-        /// 按天统计的数量列表
-        /// </summary>
-        [JsonProperty("DateCountSet")]
-        public DateCount[] DateCountSet{ get; set; }
+        [JsonProperty("Result")]
+        public InquiryPriceResult Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +42,7 @@ namespace TencentCloud.Tbm.V20180129.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NewsCount", this.NewsCount);
-            this.SetParamSimple(map, prefix + "FromCount", this.FromCount);
-            this.SetParamSimple(map, prefix + "AdverseCount", this.AdverseCount);
-            this.SetParamArrayObj(map, prefix + "NewsSet.", this.NewsSet);
-            this.SetParamArrayObj(map, prefix + "DateCountSet.", this.DateCountSet);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

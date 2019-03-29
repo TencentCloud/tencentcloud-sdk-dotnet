@@ -68,12 +68,14 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 付费类型，PREPAID为预付费，POSTPAID为后付费。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
         /// 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthLimitType")]
         public string BandwidthLimitType{ get; set; }

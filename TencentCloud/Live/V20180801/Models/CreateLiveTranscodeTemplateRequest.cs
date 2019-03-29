@@ -63,7 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 高，默认0。
+        /// 款，默认0。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -83,7 +83,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// 宽，默认0。
+        /// 高，默认0。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

@@ -67,6 +67,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PlayType")]
         public long? PlayType{ get; set; }
 
+        /// <summary>
+        /// 0：普通直播，
+        /// 1：慢直播。
+        /// </summary>
+        [JsonProperty("IsDelayLive")]
+        public long? IsDelayLive{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -80,6 +87,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BCName", this.BCName);
             this.SetParamSimple(map, prefix + "TargetDomain", this.TargetDomain);
             this.SetParamSimple(map, prefix + "PlayType", this.PlayType);
+            this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         }
     }
 }

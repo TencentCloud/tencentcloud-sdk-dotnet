@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbm.V20180129.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIndustryNewsResponse : AbstractModel
+    public class DescribeStreamDayPlayInfoListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总计文章数量
+        /// 播放数据信息列表。
         /// </summary>
-        [JsonProperty("NewsCount")]
-        public ulong? NewsCount{ get; set; }
+        [JsonProperty("DataInfoList")]
+        public PlayDataInfoByStream[] DataInfoList{ get; set; }
 
         /// <summary>
-        /// 总计来源数量
+        /// 总数量。
         /// </summary>
-        [JsonProperty("FromCount")]
-        public ulong? FromCount{ get; set; }
+        [JsonProperty("TotalNum")]
+        public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// 总计疑似负面数量
+        /// 总页数。
         /// </summary>
-        [JsonProperty("AdverseCount")]
-        public ulong? AdverseCount{ get; set; }
+        [JsonProperty("TotalPage")]
+        public ulong? TotalPage{ get; set; }
 
         /// <summary>
-        /// 文章列表
+        /// 当前数据所处页码。
         /// </summary>
-        [JsonProperty("NewsSet")]
-        public IndustryNews[] NewsSet{ get; set; }
+        [JsonProperty("PageNum")]
+        public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 按天统计的数量列表
+        /// 每页个数。
         /// </summary>
-        [JsonProperty("DateCountSet")]
-        public DateCount[] DateCountSet{ get; set; }
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +66,11 @@ namespace TencentCloud.Tbm.V20180129.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NewsCount", this.NewsCount);
-            this.SetParamSimple(map, prefix + "FromCount", this.FromCount);
-            this.SetParamSimple(map, prefix + "AdverseCount", this.AdverseCount);
-            this.SetParamArrayObj(map, prefix + "NewsSet.", this.NewsSet);
-            this.SetParamArrayObj(map, prefix + "DateCountSet.", this.DateCountSet);
+            this.SetParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
+            this.SetParamSimple(map, prefix + "TotalPage", this.TotalPage);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

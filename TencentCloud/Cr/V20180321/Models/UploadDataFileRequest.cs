@@ -43,7 +43,7 @@ namespace TencentCloud.Cr.V20180321.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 上传类型，不填默认催收文件，催收文件为data，还款文件为repay。
+        /// <p>上传类型，不填默认催收文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：催收文件</li><li>repay：还款文件</li><li>callback：回访文件</li></ul>
         /// </summary>
         [JsonProperty("UploadModel")]
         public string UploadModel{ get; set; }

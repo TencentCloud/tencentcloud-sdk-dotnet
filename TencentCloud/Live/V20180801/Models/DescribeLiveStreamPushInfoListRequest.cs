@@ -15,26 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbm.V20180129.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBrandCommentCountResponse : AbstractModel
+    public class DescribeLiveStreamPushInfoListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 按天统计好评/差评数
+        /// 推流域名。
         /// </summary>
-        [JsonProperty("CommentSet")]
-        public Comment[] CommentSet{ get; set; }
+        [JsonProperty("PushDomain")]
+        public string PushDomain{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 推流路径。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
+
+        /// <summary>
+        /// 页数，
+        /// 范围[1,10000]，
+        /// 默认值：1。
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public ulong? PageNum{ get; set; }
+
+        /// <summary>
+        /// 每页个数，
+        /// 范围：[1,1000]，
+        /// 默认值： 200。
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
 
 
         /// <summary>
@@ -42,8 +58,10 @@ namespace TencentCloud.Tbm.V20180129.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "CommentSet.", this.CommentSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "PushDomain", this.PushDomain);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

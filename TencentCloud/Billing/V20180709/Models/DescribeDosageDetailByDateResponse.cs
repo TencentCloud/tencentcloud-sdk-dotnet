@@ -15,44 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbm.V20180129.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIndustryNewsResponse : AbstractModel
+    public class DescribeDosageDetailByDateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总计文章数量
+        /// 计量单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("NewsCount")]
-        public ulong? NewsCount{ get; set; }
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
 
         /// <summary>
-        /// 总计来源数量
+        /// 用量数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FromCount")]
-        public ulong? FromCount{ get; set; }
+        [JsonProperty("DetailSets")]
+        public DetailSet[] DetailSets{ get; set; }
 
         /// <summary>
-        /// 总计疑似负面数量
+        /// 错误码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AdverseCount")]
-        public ulong? AdverseCount{ get; set; }
+        [JsonProperty("RetCode")]
+        public long? RetCode{ get; set; }
 
         /// <summary>
-        /// 文章列表
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("NewsSet")]
-        public IndustryNews[] NewsSet{ get; set; }
-
-        /// <summary>
-        /// 按天统计的数量列表
-        /// </summary>
-        [JsonProperty("DateCountSet")]
-        public DateCount[] DateCountSet{ get; set; }
+        [JsonProperty("RetMsg")]
+        public string RetMsg{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +64,10 @@ namespace TencentCloud.Tbm.V20180129.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NewsCount", this.NewsCount);
-            this.SetParamSimple(map, prefix + "FromCount", this.FromCount);
-            this.SetParamSimple(map, prefix + "AdverseCount", this.AdverseCount);
-            this.SetParamArrayObj(map, prefix + "NewsSet.", this.NewsSet);
-            this.SetParamArrayObj(map, prefix + "DateCountSet.", this.DateCountSet);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamArrayObj(map, prefix + "DetailSets.", this.DetailSets);
+            this.SetParamSimple(map, prefix + "RetCode", this.RetCode);
+            this.SetParamSimple(map, prefix + "RetMsg", this.RetMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

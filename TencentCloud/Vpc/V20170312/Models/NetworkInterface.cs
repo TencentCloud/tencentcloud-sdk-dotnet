@@ -91,6 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 绑定的云服务器对象。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Attachment")]
         public NetworkInterfaceAttachment Attachment{ get; set; }

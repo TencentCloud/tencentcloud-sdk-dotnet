@@ -64,7 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// 全量实例的绑定统计。
         /// </summary>
         [JsonProperty("InstanceStatistics")]
-        public string[] InstanceStatistics{ get; set; }
+        public InstanceStatistic[] InstanceStatistics{ get; set; }
 
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ENI", this.ENI);
             this.SetParamSimple(map, prefix + "SG", this.SG);
             this.SetParamSimple(map, prefix + "CLB", this.CLB);
-            this.SetParamArraySimple(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
+            this.SetParamArrayObj(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
         }
     }
 }

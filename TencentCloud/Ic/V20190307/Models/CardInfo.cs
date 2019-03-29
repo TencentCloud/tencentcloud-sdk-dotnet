@@ -186,7 +186,7 @@ namespace TencentCloud.Ic.V20190307.Models
         public long? AllowArrears{ get; set; }
 
         /// <summary>
-        /// 是否开通短息
+        /// 是否开通短信0:未开短信 1:开通短信
         /// </summary>
         [JsonProperty("NeedSms")]
         public long? NeedSms{ get; set; }

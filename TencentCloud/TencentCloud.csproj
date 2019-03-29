@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.19</VersionPrefix>
+    <VersionPrefix>3.0.20</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -258,6 +258,10 @@
     <Compile Include="Billing\V20180709\Models\DescribeBillResourceSummaryResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDealsByCondRequest.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDealsByCondResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeDosageDetailByDateRequest.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeDosageDetailByDateResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DetailPoint.cs" />
+    <Compile Include="Billing\V20180709\Models\DetailSet.cs" />
     <Compile Include="Billing\V20180709\Models\PayDealsRequest.cs" />
     <Compile Include="Billing\V20180709\Models\PayDealsResponse.cs" />
     <Compile Include="Billing\V20180709\Models\ProductInfo.cs" />
@@ -1401,6 +1405,14 @@
     <Compile Include="Dts\V20180330\Models\SyncJobInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SyncOption.cs" />
     <Compile Include="Dts\V20180330\Models\SyncStepDetailInfo.cs" />
+    <Compile Include="Emr\V20190103\EmrClient.cs" />
+    <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\InquiryPriceResult.cs" />
+    <Compile Include="Emr\V20190103\Models\NodeSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\Placement.cs" />
+    <Compile Include="Emr\V20190103\Models\ResourceSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\VPCSettings.cs" />
     <Compile Include="Es\V20180416\EsClient.cs" />
     <Compile Include="Es\V20180416\Models\CosBackup.cs" />
     <Compile Include="Es\V20180416\Models\CreateInstanceRequest.cs" />
@@ -1735,8 +1747,6 @@
     <Compile Include="Live\V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveCertResponse.cs" />
-    <Compile Include="Live\V20180801\Models\CreateLiveDomainStrategyRequest.cs" />
-    <Compile Include="Live\V20180801\Models\CreateLiveDomainStrategyResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordRuleRequest.cs" />
@@ -1764,8 +1774,6 @@
     <Compile Include="Live\V20180801\Models\DeleteLiveCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveDomainRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveDomainResponse.cs" />
-    <Compile Include="Live\V20180801\Models\DeleteLiveDomainStrategyRequest.cs" />
-    <Compile Include="Live\V20180801\Models\DeleteLiveDomainStrategyResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordRuleRequest.cs" />
@@ -1800,8 +1808,6 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainResponse.cs" />
-    <Compile Include="Live\V20180801\Models\DescribeLiveDomainStrategysRequest.cs" />
-    <Compile Include="Live\V20180801\Models\DescribeLiveDomainStrategysResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainsRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveDomainsResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveForbidStreamListRequest.cs" />
@@ -1830,6 +1836,8 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamOnlineListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamPublishedListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamPublishedListResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveStreamPushInfoListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveStreamPushInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamStateRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveStreamStateResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeDetailInfoRequest.cs" />
@@ -1846,8 +1854,14 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarkRulesResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarksRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarksResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeProIspPlaySumInfoListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeProIspPlaySumInfoListResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeProvinceIspPlayInfoListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeProvinceIspPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeStreamDayPlayInfoListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeStreamDayPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeStreamPlayInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeStreamPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DomainCertInfo.cs" />
@@ -1884,9 +1898,13 @@
     <Compile Include="Live\V20180801\Models\ModifyPullStreamStatusRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyPullStreamStatusResponse.cs" />
     <Compile Include="Live\V20180801\Models\PlayAuthKeyInfo.cs" />
+    <Compile Include="Live\V20180801\Models\PlayDataInfoByStream.cs" />
+    <Compile Include="Live\V20180801\Models\PlayStatInfo.cs" />
+    <Compile Include="Live\V20180801\Models\ProIspPlaySumInfo.cs" />
     <Compile Include="Live\V20180801\Models\PublishTimeInfo.cs" />
     <Compile Include="Live\V20180801\Models\PullStreamConfig.cs" />
     <Compile Include="Live\V20180801\Models\PushAuthKeyInfo.cs" />
+    <Compile Include="Live\V20180801\Models\PushDataInfo.cs" />
     <Compile Include="Live\V20180801\Models\RecordParam.cs" />
     <Compile Include="Live\V20180801\Models\RecordTemplateInfo.cs" />
     <Compile Include="Live\V20180801\Models\ResumeDelayLiveStreamRequest.cs" />
@@ -1899,7 +1917,6 @@
     <Compile Include="Live\V20180801\Models\SnapshotTemplateInfo.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordResponse.cs" />
-    <Compile Include="Live\V20180801\Models\StrategyInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamEventInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamNameInfo.cs" />
@@ -2915,6 +2932,7 @@
     <Compile Include="Vpc\V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="Vpc\V20170312\Models\InstanceStatistic.cs" />
     <Compile Include="Vpc\V20170312\Models\Ip6Rule.cs" />
     <Compile Include="Vpc\V20170312\Models\Ip6RuleInfo.cs" />
     <Compile Include="Vpc\V20170312\Models\Ip6Translator.cs" />

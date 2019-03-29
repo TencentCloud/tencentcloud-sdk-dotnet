@@ -254,7 +254,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建IP地址模版
+        /// 本接口（CreateAddressTemplate）用于创建IP地址模版
         /// </summary>
         /// <param name="req">参考<see cref="CreateAddressTemplateRequest"/></param>
         /// <returns>参考<see cref="CreateAddressTemplateResponse"/>实例</returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建IP地址模版集合
+        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模版集合
         /// </summary>
         /// <param name="req">参考<see cref="CreateAddressTemplateGroupRequest"/></param>
         /// <returns>参考<see cref="CreateAddressTemplateGroupResponse"/>实例</returns>
@@ -581,7 +581,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建协议端口模板
+        /// 本接口（CreateServiceTemplate）用于创建协议端口模板
         /// </summary>
         /// <param name="req">参考<see cref="CreateServiceTemplateRequest"/></param>
         /// <returns>参考<see cref="CreateServiceTemplateResponse"/>实例</returns>
@@ -601,7 +601,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建协议端口模板集合
+        /// 本接口（CreateServiceTemplateGroup）用于创建协议端口模板集合
         /// </summary>
         /// <param name="req">参考<see cref="CreateServiceTemplateGroupRequest"/></param>
         /// <returns>参考<see cref="CreateServiceTemplateGroupResponse"/>实例</returns>
@@ -733,7 +733,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除IP地址模板
+        /// 本接口（DeleteAddressTemplate）用于删除IP地址模板
         /// </summary>
         /// <param name="req">参考<see cref="DeleteAddressTemplateRequest"/></param>
         /// <returns>参考<see cref="DeleteAddressTemplateResponse"/>实例</returns>
@@ -753,7 +753,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除IP地址模板集合
+        /// 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
         /// </summary>
         /// <param name="req">参考<see cref="DeleteAddressTemplateGroupRequest"/></param>
         /// <returns>参考<see cref="DeleteAddressTemplateGroupResponse"/>实例</returns>
@@ -1026,7 +1026,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除协议端口模板
+        /// 本接口（DeleteServiceTemplate）用于删除协议端口模板
         /// </summary>
         /// <param name="req">参考<see cref="DeleteServiceTemplateRequest"/></param>
         /// <returns>参考<see cref="DeleteServiceTemplateResponse"/>实例</returns>
@@ -1046,7 +1046,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 删除协议端口模板集合
+        /// 本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合
         /// </summary>
         /// <param name="req">参考<see cref="DeleteServiceTemplateGroupRequest"/></param>
         /// <returns>参考<see cref="DeleteServiceTemplateGroupResponse"/>实例</returns>
@@ -1189,7 +1189,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询IP地址模板集合
+        /// 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAddressTemplateGroupsRequest"/></param>
         /// <returns>参考<see cref="DescribeAddressTemplateGroupsResponse"/>实例</returns>
@@ -1209,7 +1209,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询IP地址模板
+        /// 本接口（DescribeAddressTemplates）用于查询IP地址模板
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAddressTemplatesRequest"/></param>
         /// <returns>参考<see cref="DescribeAddressTemplatesResponse"/>实例</returns>
@@ -1673,7 +1673,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询协议端口模板集合
+        /// 本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合
         /// </summary>
         /// <param name="req">参考<see cref="DescribeServiceTemplateGroupsRequest"/></param>
         /// <returns>参考<see cref="DescribeServiceTemplateGroupsResponse"/>实例</returns>
@@ -1693,7 +1693,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查询协议端口模板
+        /// 本接口（DescribeServiceTemplates）用于查询协议端口模板
         /// </summary>
         /// <param name="req">参考<see cref="DescribeServiceTemplatesRequest"/></param>
         /// <returns>参考<see cref="DescribeServiceTemplatesResponse"/>实例</returns>
@@ -2166,7 +2166,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改IP地址模板
+        /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
         /// </summary>
         /// <param name="req">参考<see cref="ModifyAddressTemplateAttributeRequest"/></param>
         /// <returns>参考<see cref="ModifyAddressTemplateAttributeResponse"/>实例</returns>
@@ -2186,7 +2186,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改IP地址模板集合
+        /// 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合
         /// </summary>
         /// <param name="req">参考<see cref="ModifyAddressTemplateGroupAttributeRequest"/></param>
         /// <returns>参考<see cref="ModifyAddressTemplateGroupAttributeResponse"/>实例</returns>
@@ -2206,7 +2206,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 接口用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，包括后付费EIP, 预付费EIP和带宽包EIP
+        /// 本接口（ModifyAddressesBandwidth）用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，包括后付费EIP, 预付费EIP和带宽包EIP
         /// </summary>
         /// <param name="req">参考<see cref="ModifyAddressesBandwidthRequest"/></param>
         /// <returns>参考<see cref="ModifyAddressesBandwidthResponse"/>实例</returns>
@@ -2475,7 +2475,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改协议端口模板
+        /// 本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板
         /// </summary>
         /// <param name="req">参考<see cref="ModifyServiceTemplateAttributeRequest"/></param>
         /// <returns>参考<see cref="ModifyServiceTemplateAttributeResponse"/>实例</returns>

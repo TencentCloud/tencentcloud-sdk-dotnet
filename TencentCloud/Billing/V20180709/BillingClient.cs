@@ -133,6 +133,26 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 按日期获取产品用量明细
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDosageDetailByDateRequest"/></param>
+        /// <returns>参考<see cref="DescribeDosageDetailByDateResponse"/>实例</returns>
+        public async Task<DescribeDosageDetailByDateResponse> DescribeDosageDetailByDate(DescribeDosageDetailByDateRequest req)
+        {
+             JsonResponseModel<DescribeDosageDetailByDateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDosageDetailByDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支付订单
         /// </summary>
         /// <param name="req">参考<see cref="PayDealsRequest"/></param>

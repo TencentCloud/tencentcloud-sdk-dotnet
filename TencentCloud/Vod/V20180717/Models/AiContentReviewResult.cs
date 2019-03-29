@@ -52,7 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewTaskTerrorismResult TerrorismTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Political 时有效。
+        /// 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoliticalTask")]
