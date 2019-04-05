@@ -21,20 +21,29 @@ namespace TencentCloud.Live.V20180801.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLiveDomainStrategyRequest : AbstractModel
+    public class DescribeLogDownloadListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 推流域名。
+        /// 开始时间，北京时间。
+        /// 格式：yyyy-mm-dd HH:MM:SS。
         /// </summary>
-        [JsonProperty("PushDomainName")]
-        public string PushDomainName{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// 播放域名。
+        /// 结束时间，北京时间。
+        /// 格式：yyyy-mm-dd HH:MM:SS。
+        /// 注意：结束时间 - 开始时间 <=7天。
         /// </summary>
-        [JsonProperty("PlayDomainName")]
-        public string PlayDomainName{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 域名列表。
+        /// </summary>
+        [JsonProperty("PlayDomains")]
+        public string[] PlayDomains{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PushDomainName", this.PushDomainName);
-            this.SetParamSimple(map, prefix + "PlayDomainName", this.PlayDomainName);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
         }
     }
 }

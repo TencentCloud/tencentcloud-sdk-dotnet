@@ -64,7 +64,7 @@ namespace TencentCloud.Ic.V20190307.Models
         public long? Teleoperator{ get; set; }
 
         /// <summary>
-        /// 卡片状态
+        /// 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
         /// </summary>
         [JsonProperty("CardStatus")]
         public long? CardStatus{ get; set; }

@@ -21,14 +21,20 @@ namespace TencentCloud.Live.V20180801.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveDomainStrategysResponse : AbstractModel
+    public class DescribeLogDownloadListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 域名策略信息。
+        /// 日志信息列表。
         /// </summary>
-        [JsonProperty("StrategyList")]
-        public StrategyInfo[] StrategyList{ get; set; }
+        [JsonProperty("LogInfoList")]
+        public LogInfo[] LogInfoList{ get; set; }
+
+        /// <summary>
+        /// 总条数。
+        /// </summary>
+        [JsonProperty("TotalNum")]
+        public ulong? TotalNum{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +48,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "StrategyList.", this.StrategyList);
+            this.SetParamArrayObj(map, prefix + "LogInfoList.", this.LogInfoList);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

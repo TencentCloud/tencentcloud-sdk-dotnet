@@ -36,12 +36,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
-        /// <summary>
-        /// 是否对运行中的实例选择强制关机。建议对运行中的实例先手动关机，然后再重置用户密码。取值范围：<br><li>TRUE：表示在正常关机失败后进行强制关机<br><li>FALSE：表示在正常关机失败后不进行强制关机<br><br>默认取值：FALSE。<br><br>强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
-        /// </summary>
-        [JsonProperty("ForceStop")]
-        public bool? ForceStop{ get; set; }
-
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -50,7 +44,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
-            this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
         }
     }
 }

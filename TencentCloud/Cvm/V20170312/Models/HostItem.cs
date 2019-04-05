@@ -96,6 +96,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HostResource")]
         public HostResource HostResource{ get; set; }
 
+        /// <summary>
+        /// 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CageId")]
+        public string CageId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -114,6 +121,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HostState", this.HostState);
             this.SetParamSimple(map, prefix + "HostIp", this.HostIp);
             this.SetParamObj(map, prefix + "HostResource.", this.HostResource);
+            this.SetParamSimple(map, prefix + "CageId", this.CageId);
         }
     }
 }

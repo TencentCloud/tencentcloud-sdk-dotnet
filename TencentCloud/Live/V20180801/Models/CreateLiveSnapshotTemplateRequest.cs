@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板名称。非空的字符串
+        /// 模板名称。非空的字符串。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Live.V20180801.Models
         public long? SnapshotInterval{ get; set; }
 
         /// <summary>
-        /// 截图宽度。默认：0（原始高）
+        /// 截图宽度。默认：0（原始宽）。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 截图高度。默认：0（原始宽）
+        /// 截图高度。默认：0（原始高）。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 是否开启鉴黄，0：不开启，1：开启。默认：0.
+        /// 是否开启鉴黄，0：不开启，1：开启。默认：0。
         /// </summary>
         [JsonProperty("PornFlag")]
         public long? PornFlag{ get; set; }

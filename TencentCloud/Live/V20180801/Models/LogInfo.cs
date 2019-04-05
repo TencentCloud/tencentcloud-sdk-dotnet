@@ -21,14 +21,26 @@ namespace TencentCloud.Live.V20180801.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLiveDomainStrategyResponse : AbstractModel
+    public class LogInfo : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 日志名称。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LogName")]
+        public string LogName{ get; set; }
+
+        /// <summary>
+        /// 日志Url。
+        /// </summary>
+        [JsonProperty("LogUrl")]
+        public string LogUrl{ get; set; }
+
+        /// <summary>
+        /// 日志生成时间
+        /// </summary>
+        [JsonProperty("LogTime")]
+        public string LogTime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "LogName", this.LogName);
+            this.SetParamSimple(map, prefix + "LogUrl", this.LogUrl);
+            this.SetParamSimple(map, prefix + "LogTime", this.LogTime);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.20</VersionPrefix>
+    <VersionPrefix>3.0.21</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1854,6 +1854,8 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarkRulesResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarksRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarksResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLogDownloadListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLogDownloadListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeProIspPlaySumInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeProIspPlaySumInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeProvinceIspPlayInfoListRequest.cs" />
@@ -1875,6 +1877,7 @@
     <Compile Include="Live\V20180801\Models\ForbidLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\ForbidLiveStreamResponse.cs" />
     <Compile Include="Live\V20180801\Models\ForbidStreamInfo.cs" />
+    <Compile Include="Live\V20180801\Models\LogInfo.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLiveCallbackTemplateRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLiveCallbackTemplateResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLiveCertRequest.cs" />

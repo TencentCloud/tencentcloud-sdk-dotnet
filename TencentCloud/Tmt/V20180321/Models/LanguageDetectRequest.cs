@@ -25,7 +25,7 @@ namespace TencentCloud.Tmt.V20180321.Models
     {
         
         /// <summary>
-        /// 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败
+        /// 待识别的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败。单次请求的文本长度需要低于2000。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

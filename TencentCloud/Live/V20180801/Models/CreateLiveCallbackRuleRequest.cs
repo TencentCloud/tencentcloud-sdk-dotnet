@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 模板ID
+        /// 模板ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

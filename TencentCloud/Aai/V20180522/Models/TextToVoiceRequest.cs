@@ -25,7 +25,7 @@ namespace TencentCloud.Aai.V20180522.Models
     {
         
         /// <summary>
-        /// 合成语音的源文本，中文最大支持100个汉字（标点符号算一个汉字）；英文最大支持400个字母（标点符号算一个字母）。
+        /// 合成语音的源文本，按UTF-8编码统一计算，中文最大支持350字符，英文最大支持500字符
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Aai.V20180522.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 音色<li>0-女声1，亲和风格(默认)</li><li>1-男声1，成熟风格</li><li>2-男声2，成熟风格</li>
+        /// 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
         /// </summary>
         [JsonProperty("VoiceType")]
         public long? VoiceType{ get; set; }

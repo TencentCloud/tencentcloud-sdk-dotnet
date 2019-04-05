@@ -1275,6 +1275,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 批量获取日志URL。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLogDownloadListRequest"/></param>
+        /// <returns>参考<see cref="DescribeLogDownloadListResponse"/>实例</returns>
+        public async Task<DescribeLogDownloadListResponse> DescribeLogDownloadList(DescribeLogDownloadListRequest req)
+        {
+             JsonResponseModel<DescribeLogDownloadListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogDownloadList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogDownloadListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeProIspPlaySumInfoListRequest"/></param>

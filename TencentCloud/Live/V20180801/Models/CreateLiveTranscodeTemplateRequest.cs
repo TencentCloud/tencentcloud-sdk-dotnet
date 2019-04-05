@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 视频码率。
+        /// 视频码率。范围：100-8000。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// 音频码率：默认0。0-500
+        /// 音频码率：默认0。0-500。
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 款，默认0。
+        /// 宽，默认0。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }

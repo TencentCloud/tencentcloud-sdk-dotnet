@@ -128,7 +128,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ActionTimer ActionTimer{ get; set; }
 
         /// <summary>
-        /// 容灾组id，仅支持指定一个。
+        /// 置放群组id，仅支持指定一个。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
