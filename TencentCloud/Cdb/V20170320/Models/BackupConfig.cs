@@ -46,7 +46,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// 第二个从库访问端口
         /// </summary>
         [JsonProperty("Vport")]
-        public string Vport{ get; set; }
+        public ulong? Vport{ get; set; }
 
 
         /// <summary>

@@ -24,12 +24,19 @@ namespace TencentCloud.Live.V20180801.Models
     public class DescribeLiveRecordTemplatesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 是否属于慢直播模板
+        /// </summary>
+        [JsonProperty("IsDelayLive")]
+        public long? IsDelayLive{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         }
     }
 }

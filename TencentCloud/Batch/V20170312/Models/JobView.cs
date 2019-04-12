@@ -50,6 +50,7 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 位置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
@@ -62,6 +63,7 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

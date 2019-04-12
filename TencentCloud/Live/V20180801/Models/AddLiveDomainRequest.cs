@@ -25,22 +25,34 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 域名名称
+        /// 域名名称。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 域名类型。0-推流域名，1-播放域名
+        /// 域名类型，
+        /// 0：推流域名，
+        /// 1：播放域名。
         /// </summary>
         [JsonProperty("DomainType")]
         public ulong? DomainType{ get; set; }
 
         /// <summary>
-        /// 拉流域名类型。1-国内；2-全球；3-境外
+        /// 拉流域名类型：
+        /// 1：国内，
+        /// 2：全球，
+        /// 3：境外。
         /// </summary>
         [JsonProperty("PlayType")]
         public ulong? PlayType{ get; set; }
+
+        /// <summary>
+        /// 默认 0 ：普通直播，
+        /// 1：慢直播。
+        /// </summary>
+        [JsonProperty("IsDelayLive")]
+        public long? IsDelayLive{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "DomainType", this.DomainType);
             this.SetParamSimple(map, prefix + "PlayType", this.PlayType);
+            this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         }
     }
 }

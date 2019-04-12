@@ -162,6 +162,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
+        /// <summary>
+        /// 扩展字段3
+        /// </summary>
+        [JsonProperty("ExtendField3")]
+        public string ExtendField3{ get; set; }
+
+        /// <summary>
+        /// 扩展字段4
+        /// </summary>
+        [JsonProperty("ExtendField4")]
+        public string ExtendField4{ get; set; }
+
+        /// <summary>
+        /// 扩展字段5
+        /// </summary>
+        [JsonProperty("ExtendField5")]
+        public string ExtendField5{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -191,6 +209,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "ExtendField3", this.ExtendField3);
+            this.SetParamSimple(map, prefix + "ExtendField4", this.ExtendField4);
+            this.SetParamSimple(map, prefix + "ExtendField5", this.ExtendField5);
         }
     }
 }

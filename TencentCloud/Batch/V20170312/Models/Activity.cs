@@ -74,12 +74,14 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 活动结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// 云服务器实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -203,6 +203,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("MigratePercent")]
         public ulong? MigratePercent{ get; set; }
 
+        /// <summary>
+        /// 云盘是否为共享型云盘。
+        /// </summary>
+        [JsonProperty("Shareable")]
+        public bool? Shareable{ get; set; }
+
+        /// <summary>
+        /// 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
+        /// </summary>
+        [JsonProperty("InstanceIdList")]
+        public string[] InstanceIdList{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -237,6 +249,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DifferDaysOfDeadline", this.DifferDaysOfDeadline);
             this.SetParamSimple(map, prefix + "Migrating", this.Migrating);
             this.SetParamSimple(map, prefix + "MigratePercent", this.MigratePercent);
+            this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
+            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         }
     }
 }

@@ -60,6 +60,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AacParam")]
         public RecordParam AacParam{ get; set; }
 
+        /// <summary>
+        /// 0：普通直播，
+        /// 1：慢直播。
+        /// </summary>
+        [JsonProperty("IsDelayLive")]
+        public long? IsDelayLive{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +79,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamObj(map, prefix + "HlsParam.", this.HlsParam);
             this.SetParamObj(map, prefix + "Mp4Param.", this.Mp4Param);
             this.SetParamObj(map, prefix + "AacParam.", this.AacParam);
+            this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         }
     }
 }

@@ -50,6 +50,7 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// 扩展属性。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Externals")]
         public Externals Externals{ get; set; }

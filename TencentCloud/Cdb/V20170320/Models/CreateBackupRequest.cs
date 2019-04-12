@@ -36,6 +36,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
+        /// <summary>
+        /// 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
+        /// 例：如果需要备份 db1 库的 tb1、tb2表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]
+        /// </summary>
+        [JsonProperty("BackupDBTableList")]
+        public BackupItem[] BackupDBTableList{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +51,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
         }
     }
 }

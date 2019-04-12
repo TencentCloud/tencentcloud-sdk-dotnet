@@ -114,6 +114,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
+        /// <summary>
+        /// 任务最大并发数限制，默认没有限制。
+        /// </summary>
+        [JsonProperty("MaxConcurrentNum")]
+        public ulong? MaxConcurrentNum{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -135,6 +141,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "FailedAction", this.FailedAction);
             this.SetParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "MaxConcurrentNum", this.MaxConcurrentNum);
         }
     }
 }

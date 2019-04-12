@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 选定周一到周日中需要创建快照的日期，取值范围：[0, 6]。0表示周一触发，依此类推。
+        /// 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public ulong?[] DayOfWeek{ get; set; }

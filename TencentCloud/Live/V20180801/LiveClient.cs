@@ -774,7 +774,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 查询直播域名信息
+        /// 查询直播域名信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveDomainRequest"/></param>
         /// <returns>参考<see cref="DescribeLiveDomainResponse"/>实例</returns>

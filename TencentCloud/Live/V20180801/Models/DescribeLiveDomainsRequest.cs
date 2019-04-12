@@ -48,6 +48,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
+        /// <summary>
+        /// 0 普通直播 1慢直播 默认0
+        /// </summary>
+        [JsonProperty("IsDelayLive")]
+        public ulong? IsDelayLive{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "DomainType", this.DomainType);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         }
     }
 }
