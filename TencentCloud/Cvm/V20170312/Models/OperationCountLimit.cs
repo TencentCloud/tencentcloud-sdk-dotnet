@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssumeRoleRequest : AbstractModel
+    public class OperationCountLimit : AbstractModel
     {
         
         /// <summary>
-        /// 角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
+        /// 实例操作。
         /// </summary>
-        [JsonProperty("RoleArn")]
-        public string RoleArn{ get; set; }
+        [JsonProperty("Operation")]
+        public string Operation{ get; set; }
 
         /// <summary>
-        /// 临时会话名称，由用户自定义名称
+        /// 实例ID。
         /// </summary>
-        [JsonProperty("RoleSessionName")]
-        public string RoleSessionName{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+        /// 当前已使用次数，如果返回值为-1表示该操作无次数限制。
         /// </summary>
-        [JsonProperty("DurationSeconds")]
-        public ulong? DurationSeconds{ get; set; }
+        [JsonProperty("CurrentCount")]
+        public long? CurrentCount{ get; set; }
+
+        /// <summary>
+        /// 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
+        /// </summary>
+        [JsonProperty("LimitCount")]
+        public long? LimitCount{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
-            this.SetParamSimple(map, prefix + "RoleSessionName", this.RoleSessionName);
-            this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "CurrentCount", this.CurrentCount);
+            this.SetParamSimple(map, prefix + "LimitCount", this.LimitCount);
         }
     }
 }

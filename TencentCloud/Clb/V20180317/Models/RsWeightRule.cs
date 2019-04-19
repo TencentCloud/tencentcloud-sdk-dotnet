@@ -21,15 +21,9 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RegisterTargetsRequest : AbstractModel
+    public class RsWeightRule : AbstractModel
     {
         
-        /// <summary>
-        /// 负载均衡实例 ID
-        /// </summary>
-        [JsonProperty("LoadBalancerId")]
-        public string LoadBalancerId{ get; set; }
-
         /// <summary>
         /// 负载均衡监听器 ID
         /// </summary>
@@ -37,16 +31,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要注册的后端机器列表，数组长度最大支持20
-        /// </summary>
-        [JsonProperty("Targets")]
-        public Target[] Targets{ get; set; }
-
-        /// <summary>
-        /// 转发规则的ID，当注册机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+        /// 转发规则的ID
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
+
+        /// <summary>
+        /// 要修改权重的后端机器列表
+        /// </summary>
+        [JsonProperty("Targets")]
+        public Target[] Targets{ get; set; }
 
         /// <summary>
         /// 目标规则的域名，提供LocationId参数时本参数不生效
@@ -60,18 +54,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 后端云服务器新的转发权重，取值范围：0~100。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public long? Weight{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
-            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

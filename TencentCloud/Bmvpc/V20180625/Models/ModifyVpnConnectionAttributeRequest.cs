@@ -55,7 +55,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         public SecurityPolicyDatabase[] SecurityPolicyDatabases{ get; set; }
 
         /// <summary>
-        /// IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自保护机制，用户配置网络安全协议。
+        /// IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
         /// </summary>
         [JsonProperty("IKEOptionsSpecification")]
         public IKEOptionsSpecification IKEOptionsSpecification{ get; set; }

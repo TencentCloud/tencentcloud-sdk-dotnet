@@ -133,6 +133,48 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例的标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的安全组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecureGroups")]
+        public string[] SecureGroups{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例绑定的后端设备的基本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetRegionInfo")]
+        public TargetRegionInfo TargetRegionInfo{ get; set; }
+
+        /// <summary>
+        /// anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnycastZone")]
+        public string AnycastZone{ get; set; }
+
+        /// <summary>
+        /// IP版本，ipv4 | ipv6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddressIPVersion")]
+        public string AddressIPVersion{ get; set; }
+
+        /// <summary>
+        /// 数值形式的私有网络 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NumericalVpcId")]
+        public ulong? NumericalVpcId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -155,6 +197,12 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Isolation", this.Isolation);
             this.SetParamSimple(map, prefix + "Log", this.Log);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
+            this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
+            this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+            this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+            this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         }
     }
 }

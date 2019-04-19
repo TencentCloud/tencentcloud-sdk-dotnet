@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssumeRoleRequest : AbstractModel
+    public class TargetRegionInfo : AbstractModel
     {
         
         /// <summary>
-        /// 角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
+        /// Target所属地域
         /// </summary>
-        [JsonProperty("RoleArn")]
-        public string RoleArn{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// 临时会话名称，由用户自定义名称
+        /// Target所属VPC网络
         /// </summary>
-        [JsonProperty("RoleSessionName")]
-        public string RoleSessionName{ get; set; }
-
-        /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
-        /// </summary>
-        [JsonProperty("DurationSeconds")]
-        public ulong? DurationSeconds{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
-            this.SetParamSimple(map, prefix + "RoleSessionName", this.RoleSessionName);
-            this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

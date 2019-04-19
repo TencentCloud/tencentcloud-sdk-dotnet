@@ -60,6 +60,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HostChargeType", this.HostChargeType);
             this.SetParamSimple(map, prefix + "HostType", this.HostType);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

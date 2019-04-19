@@ -115,6 +115,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("WithRs")]
         public long? WithRs{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例所属网络，如 vpc-bhqkbhdx
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -136,6 +142,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "WithRs", this.WithRs);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

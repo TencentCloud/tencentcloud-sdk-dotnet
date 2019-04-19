@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 转发规则的 ID，作为输入时无需此字段
+        /// 转发规则的 ID
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
@@ -70,6 +70,43 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
+        /// <summary>
+        /// 转发规则所属的监听器 ID
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
+        /// 转发规则的重定向目标信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RewriteTarget")]
+        public RewriteTarget RewriteTarget{ get; set; }
+
+        /// <summary>
+        /// 是否开启gzip
+        /// </summary>
+        [JsonProperty("HttpGzip")]
+        public bool? HttpGzip{ get; set; }
+
+        /// <summary>
+        /// 转发规则是否为自动创建
+        /// </summary>
+        [JsonProperty("BeAutoCreated")]
+        public bool? BeAutoCreated{ get; set; }
+
+        /// <summary>
+        /// 是否作为默认域名
+        /// </summary>
+        [JsonProperty("DefaultServer")]
+        public bool? DefaultServer{ get; set; }
+
+        /// <summary>
+        /// 是否开启Http2
+        /// </summary>
+        [JsonProperty("Http2")]
+        public bool? Http2{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -83,6 +120,12 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamObj(map, prefix + "RewriteTarget.", this.RewriteTarget);
+            this.SetParamSimple(map, prefix + "HttpGzip", this.HttpGzip);
+            this.SetParamSimple(map, prefix + "BeAutoCreated", this.BeAutoCreated);
+            this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+            this.SetParamSimple(map, prefix + "Http2", this.Http2);
         }
     }
 }

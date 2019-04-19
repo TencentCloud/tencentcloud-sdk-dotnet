@@ -15,32 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssumeRoleRequest : AbstractModel
+    public class RewriteTarget : AbstractModel
     {
         
         /// <summary>
-        /// 角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
+        /// 重定向目标的监听器ID
+        /// 注意：此字段可能返回 null，表示无重定向。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RoleArn")]
-        public string RoleArn{ get; set; }
+        [JsonProperty("TargetListenerId")]
+        public string TargetListenerId{ get; set; }
 
         /// <summary>
-        /// 临时会话名称，由用户自定义名称
+        /// 重定向目标的转发规则ID
+        /// 注意：此字段可能返回 null，表示无重定向。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RoleSessionName")]
-        public string RoleSessionName{ get; set; }
-
-        /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
-        /// </summary>
-        [JsonProperty("DurationSeconds")]
-        public ulong? DurationSeconds{ get; set; }
+        [JsonProperty("TargetLocationId")]
+        public string TargetLocationId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +46,8 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
-            this.SetParamSimple(map, prefix + "RoleSessionName", this.RoleSessionName);
-            this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamSimple(map, prefix + "TargetListenerId", this.TargetListenerId);
+            this.SetParamSimple(map, prefix + "TargetLocationId", this.TargetLocationId);
         }
     }
 }

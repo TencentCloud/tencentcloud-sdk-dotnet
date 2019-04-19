@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssumeRoleRequest : AbstractModel
+    public class DescribeInstancesOperationLimitRequest : AbstractModel
     {
         
         /// <summary>
-        /// 角色的资源描述。例如：qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
+        /// 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
         /// </summary>
-        [JsonProperty("RoleArn")]
-        public string RoleArn{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 临时会话名称，由用户自定义名称
+        /// 实例操作。
+        /// <li> INSTANCE_DEGRADE：实例降配操作</li>
         /// </summary>
-        [JsonProperty("RoleSessionName")]
-        public string RoleSessionName{ get; set; }
-
-        /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
-        /// </summary>
-        [JsonProperty("DurationSeconds")]
-        public ulong? DurationSeconds{ get; set; }
+        [JsonProperty("Operation")]
+        public string Operation{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
-            this.SetParamSimple(map, prefix + "RoleSessionName", this.RoleSessionName);
-            this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
         }
     }
 }

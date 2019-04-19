@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.22</VersionPrefix>
+    <VersionPrefix>3.0.23</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1051,6 +1051,8 @@
     <Compile Include="Cis\V20180408\Models\Price.cs" />
     <Compile Include="Clb\V20180317\ClbClient.cs" />
     <Compile Include="Clb\V20180317\Models\Backend.cs" />
+    <Compile Include="Clb\V20180317\Models\BatchModifyTargetWeightRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\BatchModifyTargetWeightResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CertificateInput.cs" />
     <Compile Include="Clb\V20180317\Models\CertificateOutput.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalHealth.cs" />
@@ -1110,10 +1112,14 @@
     <Compile Include="Clb\V20180317\Models\RegisterTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\RegisterTargetsWithClassicalLBRequest.cs" />
     <Compile Include="Clb\V20180317\Models\RegisterTargetsWithClassicalLBResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\RewriteTarget.cs" />
+    <Compile Include="Clb\V20180317\Models\RsWeightRule.cs" />
     <Compile Include="Clb\V20180317\Models\RuleInput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleOutput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleTargets.cs" />
+    <Compile Include="Clb\V20180317\Models\TagInfo.cs" />
     <Compile Include="Clb\V20180317\Models\Target.cs" />
+    <Compile Include="Clb\V20180317\Models\TargetRegionInfo.cs" />
     <Compile Include="Cr\V20180321\CrClient.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyBlackListRequest.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyBlackListResponse.cs" />
@@ -1177,6 +1183,8 @@
     <Compile Include="Cvm\V20170312\Models\DescribeInstanceTypeConfigsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstanceVncUrlRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstanceVncUrlResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeInstancesOperationLimitRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeInstancesOperationLimitResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstancesStatusRequest.cs" />
@@ -1255,6 +1263,7 @@
     <Compile Include="Cvm\V20170312\Models\ModifyInstancesVpcAttributeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyKeyPairAttributeRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyKeyPairAttributeResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\OperationCountLimit.cs" />
     <Compile Include="Cvm\V20170312\Models\OsVersion.cs" />
     <Compile Include="Cvm\V20170312\Models\Placement.cs" />
     <Compile Include="Cvm\V20170312\Models\Price.cs" />

@@ -53,6 +53,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// BatchModifyTargetWeight接口用于批量修改监听器绑定的后端机器的转发权重，当前接口只支持应用型HTTP/HTTPS监听器。
+        /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+        /// </summary>
+        /// <param name="req">参考<see cref="BatchModifyTargetWeightRequest"/></param>
+        /// <returns>参考<see cref="BatchModifyTargetWeightResponse"/>实例</returns>
+        public async Task<BatchModifyTargetWeightResponse> BatchModifyTargetWeight(BatchModifyTargetWeightRequest req)
+        {
+             JsonResponseModel<BatchModifyTargetWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchModifyTargetWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在一个负载均衡实例下创建监听器。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>

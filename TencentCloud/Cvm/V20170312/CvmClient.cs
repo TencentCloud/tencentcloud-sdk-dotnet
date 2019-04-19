@@ -516,6 +516,28 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
+        /// 
+        /// * 目前支持调整配置操作限制次数查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstancesOperationLimitRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstancesOperationLimitResponse"/>实例</returns>
+        public async Task<DescribeInstancesOperationLimitResponse> DescribeInstancesOperationLimit(DescribeInstancesOperationLimitRequest req)
+        {
+             JsonResponseModel<DescribeInstancesOperationLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesOperationLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesOperationLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeInstancesStatus) 用于查询一个或多个实例的状态。
         /// 
         /// * 可以根据实例`ID`来查询实例的状态。
