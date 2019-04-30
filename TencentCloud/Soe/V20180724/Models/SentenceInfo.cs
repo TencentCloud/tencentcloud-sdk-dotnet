@@ -37,7 +37,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public WordRsp[] Words{ get; set; }
 
         /// <summary>
-        /// 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值。当为流式模式且请求中IsEnd未置1时，取值无意义
+        /// 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
         /// </summary>
         [JsonProperty("PronAccuracy")]
         public float? PronAccuracy{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("PronCompletion")]
         public float? PronCompletion{ get; set; }
 
+        /// <summary>
+        /// 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+        /// </summary>
+        [JsonProperty("SuggestedScore")]
+        public float? SuggestedScore{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "PronAccuracy", this.PronAccuracy);
             this.SetParamSimple(map, prefix + "PronFluency", this.PronFluency);
             this.SetParamSimple(map, prefix + "PronCompletion", this.PronCompletion);
+            this.SetParamSimple(map, prefix + "SuggestedScore", this.SuggestedScore);
         }
     }
 }

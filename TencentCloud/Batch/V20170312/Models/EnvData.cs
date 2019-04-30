@@ -49,7 +49,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// 私有网络相关信息配置
+        /// 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
         /// </summary>
         [JsonProperty("VirtualPrivateCloud")]
         public VirtualPrivateCloud VirtualPrivateCloud{ get; set; }
@@ -108,6 +108,18 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("InstanceTypeOptions")]
         public InstanceTypeOptions InstanceTypeOptions{ get; set; }
 
+        /// <summary>
+        /// 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+        /// </summary>
+        [JsonProperty("VirtualPrivateClouds")]
+        public VirtualPrivateCloud[] VirtualPrivateClouds{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -128,6 +140,8 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamObj(map, prefix + "InstanceTypeOptions.", this.InstanceTypeOptions);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamArrayObj(map, prefix + "VirtualPrivateClouds.", this.VirtualPrivateClouds);
         }
     }
 }

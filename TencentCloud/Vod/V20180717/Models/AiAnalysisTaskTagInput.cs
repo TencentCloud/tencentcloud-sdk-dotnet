@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频智能分类模板 ID ，固定为 10 。
+        /// 视频智能标签模板 ID。
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

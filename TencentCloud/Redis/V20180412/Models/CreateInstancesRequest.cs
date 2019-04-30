@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// 购买时长，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+        /// 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 自动续费表示。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+        /// 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }
 
+        /// <summary>
+        /// 实例名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -142,6 +148,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
             this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
             this.SetParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
         }
     }
 }

@@ -241,6 +241,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+        /// </summary>
+        [JsonProperty("FileSystem")]
+        public string FileSystem{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -283,6 +289,7 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "DataDiskTypeId", this.DataDiskTypeId);
             this.SetParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
         }
     }
 }

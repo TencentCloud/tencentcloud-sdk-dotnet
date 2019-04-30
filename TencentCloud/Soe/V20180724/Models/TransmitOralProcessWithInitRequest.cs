@@ -49,7 +49,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? VoiceEncodeType{ get; set; }
 
         /// <summary>
-        /// 当前数据包数据, 流式模式下数据包大小可以按需设置，数据包大小必须 >= 4K，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+        /// 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
         /// </summary>
         [JsonProperty("UserVoiceData")]
         public string UserVoiceData{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? WorkMode{ get; set; }
 
         /// <summary>
-        /// 评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+        /// 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
         /// </summary>
         [JsonProperty("EvalMode")]
         public long? EvalMode{ get; set; }

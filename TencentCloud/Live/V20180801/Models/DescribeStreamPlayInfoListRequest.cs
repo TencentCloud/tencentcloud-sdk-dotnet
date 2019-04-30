@@ -25,14 +25,14 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 开始时间，北京时间，
+        /// 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
         /// 当前时间 和 开始时间 间隔不超过30天。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，北京时间，
+        /// 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
         /// 结束时间 和 开始时间  必须在同一天内。
         /// </summary>
         [JsonProperty("EndTime")]
@@ -52,6 +52,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
+        /// <summary>
+        /// 播放路径，精确匹配，不支持。
+        /// 若不填，则为查询总体播放数据。
+        /// </summary>
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -62,6 +69,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
         }
     }
 }

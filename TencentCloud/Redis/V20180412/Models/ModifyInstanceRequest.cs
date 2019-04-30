@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 修改实例操作，如填写：rename（表示实例重命名）
+        /// 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -42,6 +42,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
+        /// <summary>
+        /// 项目Id
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +63,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 指标名称
+        /// 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](<https://cloud.tencent.com/document/product/248/30384>)文档
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

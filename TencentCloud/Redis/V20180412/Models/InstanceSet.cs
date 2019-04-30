@@ -103,7 +103,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public float? Size{ get; set; }
 
         /// <summary>
-        /// 实例当前已使用容量，单位：MB
+        /// 该字段已废弃
         /// </summary>
         [JsonProperty("SizeUsed")]
         public float? SizeUsed{ get; set; }
@@ -156,6 +156,86 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
+        /// <summary>
+        /// 实例运行状态描述：如”实例运行中“
+        /// </summary>
+        [JsonProperty("InstanceTitle")]
+        public string InstanceTitle{ get; set; }
+
+        /// <summary>
+        /// 计划下线时间
+        /// </summary>
+        [JsonProperty("OfflineTime")]
+        public string OfflineTime{ get; set; }
+
+        /// <summary>
+        /// 流程中的实例，返回子状态
+        /// </summary>
+        [JsonProperty("SubStatus")]
+        public long? SubStatus{ get; set; }
+
+        /// <summary>
+        /// 反亲和性标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string[] Tags{ get; set; }
+
+        /// <summary>
+        /// 实例节点信息
+        /// </summary>
+        [JsonProperty("InstanceNode")]
+        public InstanceNode[] InstanceNode{ get; set; }
+
+        /// <summary>
+        /// 分片大小
+        /// </summary>
+        [JsonProperty("RedisShardSize")]
+        public long? RedisShardSize{ get; set; }
+
+        /// <summary>
+        /// 分片数量
+        /// </summary>
+        [JsonProperty("RedisShardNum")]
+        public long? RedisShardNum{ get; set; }
+
+        /// <summary>
+        /// 副本数量
+        /// </summary>
+        [JsonProperty("RedisReplicasNum")]
+        public long? RedisReplicasNum{ get; set; }
+
+        /// <summary>
+        /// 计费Id
+        /// </summary>
+        [JsonProperty("PriceId")]
+        public long? PriceId{ get; set; }
+
+        /// <summary>
+        /// 隔离时间
+        /// </summary>
+        [JsonProperty("CloseTime")]
+        public string CloseTime{ get; set; }
+
+        /// <summary>
+        /// 从节点读取权重
+        /// </summary>
+        [JsonProperty("SlaveReadWeight")]
+        public long? SlaveReadWeight{ get; set; }
+
+        /// <summary>
+        /// 实例关联的标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public InstanceTagInfo[] InstanceTags{ get; set; }
+
+        /// <summary>
+        /// 项目名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -184,6 +264,19 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
+            this.SetParamSimple(map, prefix + "InstanceTitle", this.InstanceTitle);
+            this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+            this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
+            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "InstanceNode.", this.InstanceNode);
+            this.SetParamSimple(map, prefix + "RedisShardSize", this.RedisShardSize);
+            this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
+            this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
+            this.SetParamSimple(map, prefix + "PriceId", this.PriceId);
+            this.SetParamSimple(map, prefix + "CloseTime", this.CloseTime);
+            this.SetParamSimple(map, prefix + "SlaveReadWeight", this.SlaveReadWeight);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
         }
     }
 }

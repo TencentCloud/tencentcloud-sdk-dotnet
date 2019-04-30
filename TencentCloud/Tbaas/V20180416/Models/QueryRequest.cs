@@ -67,6 +67,12 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string FuncName{ get; set; }
 
         /// <summary>
+        /// 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
         /// 被调用的函数参数列表
         /// </summary>
         [JsonProperty("Args")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
             this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
             this.SetParamArrayObj(map, prefix + "Peers.", this.Peers);
             this.SetParamSimple(map, prefix + "FuncName", this.FuncName);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamArraySimple(map, prefix + "Args.", this.Args);
         }
     }

@@ -55,16 +55,16 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
-        /// <li>当字符串以 % 结尾，表示水印 Left 为视频宽度指定百分比的位置，如 10% 表示 Left 为视频宽度的 10%；</li>
-        /// <li>当字符串以 px 结尾，表示水印 Left 为视频宽度指定像素的位置，如 100px 表示 Left 为 100 像素。</li>
+        /// <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
+        /// <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
         /// 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
-        /// <li>当字符串以 % 结尾，表示水印 Top 为视频高度指定百分比的位置，如 10% 表示 Top 为视频高度的 10%；</li>
-        /// <li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li>
+        /// <li>当字符串以 % 结尾，表示水印 YPos 为视频高度指定百分比，如 10% 表示 YPos 为视频高度的 10%；</li>
+        /// <li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }

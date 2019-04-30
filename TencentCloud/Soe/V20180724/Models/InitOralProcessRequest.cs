@@ -43,7 +43,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? WorkMode{ get; set; }
 
         /// <summary>
-        /// 评估模式，0：词模式，,1：:句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+        /// 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
         /// </summary>
         [JsonProperty("EvalMode")]
         public long? EvalMode{ get; set; }

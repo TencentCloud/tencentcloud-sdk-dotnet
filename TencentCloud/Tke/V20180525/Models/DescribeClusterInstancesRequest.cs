@@ -46,7 +46,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// 需要获取的节点实例Id列表(默认为空，表示拉取集群下所有节点实例)
         /// </summary>
         [JsonProperty("InstanceIds")]
-        public string InstanceIds{ get; set; }
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

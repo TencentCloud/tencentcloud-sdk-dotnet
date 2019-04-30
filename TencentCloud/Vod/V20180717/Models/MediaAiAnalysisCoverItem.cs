@@ -26,14 +26,12 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 智能封面地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
 
         /// <summary>
         /// 智能封面的可信度，取值范围是 0 到 100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

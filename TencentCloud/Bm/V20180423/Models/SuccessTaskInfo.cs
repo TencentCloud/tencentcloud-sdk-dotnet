@@ -36,6 +36,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
+        /// <summary>
+        /// 黑石自定义脚本运行任务ID
+        /// </summary>
+        [JsonProperty("CmdTaskId")]
+        public string CmdTaskId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Bm.V20180423.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "CmdTaskId", this.CmdTaskId);
         }
     }
 }

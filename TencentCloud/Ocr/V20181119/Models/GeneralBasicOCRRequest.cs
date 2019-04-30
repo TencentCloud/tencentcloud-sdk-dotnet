@@ -42,6 +42,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 保留字段。
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -50,6 +56,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

@@ -73,6 +73,28 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（CompleteLifecycleAction）用于完成生命周期动作。
+        /// 
+        /// * 用户通过调用本接口，指定一个具体的生命周期挂钩的结果（“CONITNUE”或者“ABANDON”）。如果一直不调用本接口，则生命周期挂钩会在超时后按照“DefaultResult”进行处理。
+        /// </summary>
+        /// <param name="req">参考<see cref="CompleteLifecycleActionRequest"/></param>
+        /// <returns>参考<see cref="CompleteLifecycleActionResponse"/>实例</returns>
+        public async Task<CompleteLifecycleActionResponse> CompleteLifecycleAction(CompleteLifecycleActionRequest req)
+        {
+             JsonResponseModel<CompleteLifecycleActionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CompleteLifecycleAction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompleteLifecycleActionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateAutoScalingGroup）用于创建伸缩组
         /// </summary>
         /// <param name="req">参考<see cref="CreateAutoScalingGroupRequest"/></param>
@@ -117,6 +139,44 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（CreateLifecycleHook）用于创建生命周期挂钩。
+        /// 
+        /// * 您可以为生命周期挂钩配置消息通知，弹性伸缩会通知您的CMQ消息队列，通知内容形如：
+        /// 
+        /// ```
+        /// {
+        /// 	"Service": "Tencent Cloud Auto Scaling",
+        /// 	"Time": "2019-03-14T10:15:11Z",
+        /// 	"AppId": "1251783334",
+        /// 	"ActivityId": "asa-fznnvrja",
+        /// 	"AutoScalingGroupId": "asg-rrrrtttt",
+        /// 	"LifecycleHookId": "ash-xxxxyyyy",
+        /// 	"LifecycleHookName": "my-hook",
+        /// 	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
+        /// 	"InstanceId": "ins-aaaabbbb",
+        /// 	"LifecycleTransition": "INSTANCE_LAUNCHING",
+        /// 	"NotificationMetadata": ""
+        /// }
+        /// ```
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateLifecycleHookRequest"/></param>
+        /// <returns>参考<see cref="CreateLifecycleHookResponse"/>实例</returns>
+        public async Task<CreateLifecycleHookResponse> CreateLifecycleHook(CreateLifecycleHookRequest req)
+        {
+             JsonResponseModel<CreateLifecycleHookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLifecycleHook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLifecycleHookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateNotificationConfiguration）用于创建通知。
         /// </summary>
         /// <param name="req">参考<see cref="CreateNotificationConfigurationRequest"/></param>
@@ -128,6 +188,26 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = await this.InternalRequest(req, "CreateNotificationConfiguration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNotificationConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreatePaiInstanceRequest"/></param>
+        /// <returns>参考<see cref="CreatePaiInstanceResponse"/>实例</returns>
+        public async Task<CreatePaiInstanceResponse> CreatePaiInstance(CreatePaiInstanceRequest req)
+        {
+             JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePaiInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePaiInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -210,6 +290,26 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = await this.InternalRequest(req, "DeleteLaunchConfiguration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteLifecycleHook）用于删除生命周期挂钩。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteLifecycleHookRequest"/></param>
+        /// <returns>参考<see cref="DeleteLifecycleHookResponse"/>实例</returns>
+        public async Task<DeleteLifecycleHookResponse> DeleteLifecycleHook(DeleteLifecycleHookRequest req)
+        {
+             JsonResponseModel<DeleteLifecycleHookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLifecycleHook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLifecycleHookResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -388,6 +488,29 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（DescribeLifecycleHooks）用于查询生命周期挂钩信息。
+        /// 
+        /// * 可以根据伸缩组ID、生命周期挂钩ID或者生命周期挂钩名称等信息来查询生命周期挂钩的详细信息。过滤信息详细请见过滤器`Filter`。
+        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的生命周期挂钩。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLifecycleHooksRequest"/></param>
+        /// <returns>参考<see cref="DescribeLifecycleHooksResponse"/>实例</returns>
+        public async Task<DescribeLifecycleHooksResponse> DescribeLifecycleHooks(DescribeLifecycleHooksRequest req)
+        {
+             JsonResponseModel<DescribeLifecycleHooksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLifecycleHooks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLifecycleHooksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeNotificationConfigurations) 用于查询一个或多个通知的详细信息。
         /// 
         /// 可以根据通知ID、伸缩组ID等信息来查询通知的详细信息。过滤信息详细请见过滤器`Filter`。
@@ -402,6 +525,29 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = await this.InternalRequest(req, "DescribeNotificationConfigurations");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNotificationConfigurationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribePaiInstances）用于查询PAI实例信息。
+        /// 
+        /// * 可以根据实例ID、实例域名等信息来查询PAI实例的详细信息。过滤信息详细请见过滤器`Filter`。
+        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的PAI实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePaiInstancesRequest"/></param>
+        /// <returns>参考<see cref="DescribePaiInstancesResponse"/>实例</returns>
+        public async Task<DescribePaiInstancesResponse> DescribePaiInstances(DescribePaiInstancesRequest req)
+        {
+             JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePaiInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePaiInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -661,6 +807,26 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（PreviewPaiDomainName）用于预览PAI实例域名。
+        /// </summary>
+        /// <param name="req">参考<see cref="PreviewPaiDomainNameRequest"/></param>
+        /// <returns>参考<see cref="PreviewPaiDomainNameResponse"/>实例</returns>
+        public async Task<PreviewPaiDomainNameResponse> PreviewPaiDomainName(PreviewPaiDomainNameRequest req)
+        {
+             JsonResponseModel<PreviewPaiDomainNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PreviewPaiDomainName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PreviewPaiDomainNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（RemoveInstances）用于从伸缩组删除 CVM 实例。根据当前的产品逻辑，如果实例由弹性伸缩自动创建，则实例会被销毁；如果实例系创建后加入伸缩组的，则会从伸缩组中移除，保留实例。
         /// </summary>
         /// <param name="req">参考<see cref="RemoveInstancesRequest"/></param>
@@ -693,6 +859,28 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = await this.InternalRequest(req, "SetInstancesProtection");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetInstancesProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeLifecycleHook）用于升级生命周期挂钩。
+        /// 
+        /// * 本接口用于升级生命周期挂钩，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。
+        /// </summary>
+        /// <param name="req">参考<see cref="UpgradeLifecycleHookRequest"/></param>
+        /// <returns>参考<see cref="UpgradeLifecycleHookResponse"/>实例</returns>
+        public async Task<UpgradeLifecycleHookResponse> UpgradeLifecycleHook(UpgradeLifecycleHookRequest req)
+        {
+             JsonResponseModel<UpgradeLifecycleHookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeLifecycleHook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeLifecycleHookResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

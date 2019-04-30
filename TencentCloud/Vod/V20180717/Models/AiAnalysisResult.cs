@@ -28,8 +28,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 任务的类型，可以取的值有：
         /// <li>Classification：智能分类</li>
         /// <li>Cover：智能封面</li>
-        /// <li>Description：智能描述</li>
-        /// <li>Highlight：智能精彩片断</li>
         /// <li>Tag：智能标签</li>
         /// <li>FrameTag：智能按帧标签</li>
         /// </summary>
@@ -57,6 +55,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrameTagTask")]
+        public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -67,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ClassificationTask.", this.ClassificationTask);
             this.SetParamObj(map, prefix + "CoverTask.", this.CoverTask);
             this.SetParamObj(map, prefix + "TagTask.", this.TagTask);
+            this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
         }
     }
 }

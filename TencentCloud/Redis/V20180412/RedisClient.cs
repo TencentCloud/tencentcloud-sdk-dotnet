@@ -53,6 +53,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 回收站实例立即下线
+        /// </summary>
+        /// <param name="req">参考<see cref="CleanUpInstanceRequest"/></param>
+        /// <returns>参考<see cref="CleanUpInstanceResponse"/>实例</returns>
+        public async Task<CleanUpInstanceResponse> CleanUpInstance(CleanUpInstanceRequest req)
+        {
+             JsonResponseModel<CleanUpInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CleanUpInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CleanUpInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 清空Redis实例的实例数据。
         /// </summary>
         /// <param name="req">参考<see cref="ClearInstanceRequest"/></param>
@@ -113,6 +133,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询备份Rdb下载地址
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBackupUrlRequest"/></param>
+        /// <returns>参考<see cref="DescribeBackupUrlResponse"/>实例</returns>
+        public async Task<DescribeBackupUrlResponse> DescribeBackupUrl(DescribeBackupUrlRequest req)
+        {
+             JsonResponseModel<DescribeBackupUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询 CRS 实例备份列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeInstanceBackupsRequest"/></param>
@@ -144,6 +184,86 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceDealDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDealDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询参数修改历史列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceParamRecordsRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceParamRecordsResponse"/>实例</returns>
+        public async Task<DescribeInstanceParamRecordsResponse> DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParamRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例参数列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceParamsResponse"/>实例</returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例安全组信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceSecurityGroupRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceSecurityGroupResponse"/>实例</returns>
+        public async Task<DescribeInstanceSecurityGroupResponse> DescribeInstanceSecurityGroup(DescribeInstanceSecurityGroupRequest req)
+        {
+             JsonResponseModel<DescribeInstanceSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群版实例分片信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceShardsRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceShardsResponse"/>实例</returns>
+        public async Task<DescribeInstanceShardsResponse> DescribeInstanceShards(DescribeInstanceShardsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceShardsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceShards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceShardsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -193,6 +313,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询项目安全组信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProjectSecurityGroupRequest"/></param>
+        /// <returns>参考<see cref="DescribeProjectSecurityGroupResponse"/>实例</returns>
+        public async Task<DescribeProjectSecurityGroupResponse> DescribeProjectSecurityGroup(DescribeProjectSecurityGroupRequest req)
+        {
+             JsonResponseModel<DescribeProjectSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProjectSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询任务结果
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTaskInfoRequest"/></param>
@@ -204,6 +344,86 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按量计费实例销毁
+        /// </summary>
+        /// <param name="req">参考<see cref="DestroyPostpaidInstanceRequest"/></param>
+        /// <returns>参考<see cref="DestroyPostpaidInstanceResponse"/>实例</returns>
+        public async Task<DestroyPostpaidInstanceResponse> DestroyPostpaidInstance(DestroyPostpaidInstanceRequest req)
+        {
+             JsonResponseModel<DestroyPostpaidInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyPostpaidInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyPostpaidInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包年包月实例退还
+        /// </summary>
+        /// <param name="req">参考<see cref="DestroyPrepaidInstanceRequest"/></param>
+        /// <returns>参考<see cref="DestroyPrepaidInstanceResponse"/>实例</returns>
+        public async Task<DestroyPrepaidInstanceResponse> DestroyPrepaidInstance(DestroyPrepaidInstanceRequest req)
+        {
+             JsonResponseModel<DestroyPrepaidInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyPrepaidInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyPrepaidInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用读写分离
+        /// </summary>
+        /// <param name="req">参考<see cref="DisableReplicaReadonlyRequest"/></param>
+        /// <returns>参考<see cref="DisableReplicaReadonlyResponse"/>实例</returns>
+        public async Task<DisableReplicaReadonlyResponse> DisableReplicaReadonly(DisableReplicaReadonlyRequest req)
+        {
+             JsonResponseModel<DisableReplicaReadonlyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableReplicaReadonly");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableReplicaReadonlyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用读写分离
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableReplicaReadonlyRequest"/></param>
+        /// <returns>参考<see cref="EnableReplicaReadonlyResponse"/>实例</returns>
+        public async Task<EnableReplicaReadonlyResponse> EnableReplicaReadonly(EnableReplicaReadonlyRequest req)
+        {
+             JsonResponseModel<EnableReplicaReadonlyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableReplicaReadonly");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableReplicaReadonlyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,6 +513,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 修改实例参数
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyInstanceParamsRequest"/></param>
+        /// <returns>参考<see cref="ModifyInstanceParamsResponse"/>实例</returns>
+        public async Task<ModifyInstanceParamsResponse> ModifyInstanceParams(ModifyInstanceParamsRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例网络配置
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyNetworkConfigRequest"/></param>
+        /// <returns>参考<see cref="ModifyNetworkConfigResponse"/>实例</returns>
+        public async Task<ModifyNetworkConfigResponse> ModifyNetworkConfig(ModifyNetworkConfigRequest req)
+        {
+             JsonResponseModel<ModifyNetworkConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNetworkConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 续费实例
         /// </summary>
         /// <param name="req">参考<see cref="RenewInstanceRequest"/></param>
@@ -324,6 +584,26 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "ResetPassword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复 CRS 实例
+        /// </summary>
+        /// <param name="req">参考<see cref="RestoreInstanceRequest"/></param>
+        /// <returns>参考<see cref="RestoreInstanceResponse"/>实例</returns>
+        public async Task<RestoreInstanceResponse> RestoreInstance(RestoreInstanceRequest req)
+        {
+             JsonResponseModel<RestoreInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestoreInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

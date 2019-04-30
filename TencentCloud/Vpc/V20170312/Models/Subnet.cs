@@ -90,6 +90,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }
 
+        /// <summary>
+        /// 关联`ACL`ID
+        /// </summary>
+        [JsonProperty("NetworkAclId")]
+        public string NetworkAclId{ get; set; }
+
+        /// <summary>
+        /// 是否为 `SNAT` 地址池子网。
+        /// </summary>
+        [JsonProperty("IsRemoteVpcSnat")]
+        public bool? IsRemoteVpcSnat{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -107,6 +119,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "AvailableIpAddressCount", this.AvailableIpAddressCount);
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
+            this.SetParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
+            this.SetParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
         }
     }
 }

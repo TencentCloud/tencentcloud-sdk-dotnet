@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频内容分析模板 ID ，固定为 10，同时进行智能分类、智能标签分析、智能封面分析。
+        /// 视频内容分析模板 ID。
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

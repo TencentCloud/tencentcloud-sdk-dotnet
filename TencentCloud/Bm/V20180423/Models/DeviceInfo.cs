@@ -43,25 +43,26 @@ namespace TencentCloud.Bm.V20180423.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 设备状态ID
+        /// 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
         /// </summary>
         [JsonProperty("DeviceStatus")]
         public ulong? DeviceStatus{ get; set; }
 
         /// <summary>
-        /// 设备操作状态
+        /// 设备操作状态ID，取值：
+        /// <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
         /// </summary>
         [JsonProperty("OperateStatus")]
         public ulong? OperateStatus{ get; set; }
 
         /// <summary>
-        /// 操作系统ID
+        /// 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
         /// </summary>
         [JsonProperty("OsTypeId")]
         public ulong? OsTypeId{ get; set; }
 
         /// <summary>
-        /// RAID类型ID
+        /// RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
         /// </summary>
         [JsonProperty("RaidId")]
         public ulong? RaidId{ get; set; }

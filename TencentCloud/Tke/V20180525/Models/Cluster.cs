@@ -72,6 +72,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterNodeNum")]
         public ulong? ClusterNodeNum{ get; set; }
 
+        /// <summary>
+        /// 集群所属的项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamObj(map, prefix + "ClusterNetworkSettings.", this.ClusterNetworkSettings);
             this.SetParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

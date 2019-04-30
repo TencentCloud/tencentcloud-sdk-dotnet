@@ -68,18 +68,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string YPos{ get; set; }
 
         /// <summary>
-        /// 图片水印模板，仅当 Type 为 image，该字段有值。
+        /// 图片水印模板，仅当 Type 为 image，该字段有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageTemplate")]
         public ImageWatermarkTemplate ImageTemplate{ get; set; }
 
         /// <summary>
-        /// 文字水印模板，仅当 Type 为 text，该字段有值。
+        /// 文字水印模板，仅当 Type 为 text，该字段有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextTemplate")]
         public TextWatermarkTemplateInput TextTemplate{ get; set; }
+
+        /// <summary>
+        /// SVG 水印模板，当 Type 为 svg，该字段有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SvgTemplate")]
+        public SvgWatermarkInput SvgTemplate{ get; set; }
 
         /// <summary>
         /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -117,6 +124,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "YPos", this.YPos);
             this.SetParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
             this.SetParamObj(map, prefix + "TextTemplate.", this.TextTemplate);
+            this.SetParamObj(map, prefix + "SvgTemplate.", this.SvgTemplate);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);

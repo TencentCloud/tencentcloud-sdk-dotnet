@@ -73,7 +73,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ValidDate{ get; set; }
 
         /// <summary>
-        /// 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回。目前支持的扩展字段为：
+        /// 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
         /// IdCard身份证照片，请求CropIdCard时返回；
         /// Portrait人像照片，请求CropPortrait时返回；
         /// WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。

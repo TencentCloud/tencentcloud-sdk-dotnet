@@ -73,6 +73,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }
 
+        /// <summary>
+        /// HLS录制定制参数
+        /// </summary>
+        [JsonProperty("HlsSpecialParam")]
+        public HlsSpecialParam HlsSpecialParam{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -87,6 +93,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamObj(map, prefix + "Mp4Param.", this.Mp4Param);
             this.SetParamObj(map, prefix + "AacParam.", this.AacParam);
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+            this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         }
     }
 }

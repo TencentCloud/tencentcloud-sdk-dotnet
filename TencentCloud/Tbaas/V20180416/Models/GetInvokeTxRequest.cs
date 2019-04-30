@@ -66,6 +66,12 @@ namespace TencentCloud.Tbaas.V20180416.Models
         [JsonProperty("TxId")]
         public string TxId{ get; set; }
 
+        /// <summary>
+        /// 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
             this.SetParamSimple(map, prefix + "PeerName", this.PeerName);
             this.SetParamSimple(map, prefix + "PeerGroup", this.PeerGroup);
             this.SetParamSimple(map, prefix + "TxId", this.TxId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
         }
     }
 }

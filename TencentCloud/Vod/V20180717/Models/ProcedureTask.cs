@@ -108,6 +108,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisResult[] AiAnalysisResultSet{ get; set; }
 
         /// <summary>
+        /// 视频内容识别任务的执行状态与结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AiRecognitionResultSet")]
+        public AiRecognitionResult[] AiRecognitionResultSet{ get; set; }
+
+        /// <summary>
         /// 任务流的优先级，取值范围为 [-10, 10]。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -155,6 +162,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "MediaProcessResultSet.", this.MediaProcessResultSet);
             this.SetParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
             this.SetParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
+            this.SetParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);

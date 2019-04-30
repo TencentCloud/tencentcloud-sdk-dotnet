@@ -58,7 +58,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
         /// </summary>
         [JsonProperty("Status")]
-        public string[] Status{ get; set; }
+        public long?[] Status{ get; set; }
 
 
         /// <summary>

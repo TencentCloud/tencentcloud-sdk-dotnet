@@ -136,6 +136,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
+        /// <summary>
+        /// 标签列表。
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public InstanceTag[] InstanceTags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -160,6 +166,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         }
     }
 }

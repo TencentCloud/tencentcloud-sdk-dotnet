@@ -31,6 +31,12 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
+        /// 模板Id。
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public long? TemplateId{ get; set; }
+
+        /// <summary>
         /// 推流路径。
         /// </summary>
         [JsonProperty("AppName")]
@@ -38,15 +44,10 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 流名称。
+        /// 注：如果本参数设置为非空字符串，规则将只对此推流起作用。
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
-
-        /// <summary>
-        /// 模板Id。
-        /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
 
 
         /// <summary>
@@ -55,9 +56,9 @@ namespace TencentCloud.Live.V20180801.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

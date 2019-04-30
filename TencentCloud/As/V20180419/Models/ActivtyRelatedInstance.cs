@@ -32,6 +32,8 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例在伸缩活动中的状态。取值如下：
+        /// <li>INIT：初始化中
+        /// <li>RUNNING：实例操作中
         /// <li>SUCCESSFUL：活动成功
         /// <li>FAILED：活动失败
         /// </summary>

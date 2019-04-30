@@ -116,6 +116,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义视频内容分析模板，数量上限：50。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateAIAnalysisTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateAIAnalysisTemplateResponse"/>实例</returns>
+        public async Task<CreateAIAnalysisTemplateResponse> CreateAIAnalysisTemplate(CreateAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<CreateAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 用于对媒体进行分类管理；
         /// * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
         /// * 分类层次不可超过 4 层。
@@ -190,6 +210,28 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "CreateWatermarkTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWatermarkTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义视频内容分析模板。
+        /// 
+        /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteAIAnalysisTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteAIAnalysisTemplateResponse"/>实例</returns>
+        public async Task<DeleteAIAnalysisTemplateResponse> DeleteAIAnalysisTemplate(DeleteAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -292,6 +334,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DeleteWatermarkTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWatermarkTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据视频内容分析模板唯一标识，获取视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义视频内容分析模板及[系统预置视频内容分析模板]
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAIAnalysisTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeAIAnalysisTemplatesResponse"/>实例</returns>
+        public async Task<DescribeAIAnalysisTemplatesResponse> DescribeAIAnalysisTemplates(DescribeAIAnalysisTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAIAnalysisTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIAnalysisTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -495,6 +557,28 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改用户自定义视频内容分析模板。
+        /// 
+        /// 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyAIAnalysisTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyAIAnalysisTemplateResponse"/>实例</returns>
+        public async Task<ModifyAIAnalysisTemplateResponse> ModifyAIAnalysisTemplate(ModifyAIAnalysisTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAIAnalysisTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAIAnalysisTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改媒体分类属性。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyClassRequest"/></param>
@@ -630,7 +714,7 @@ namespace TencentCloud.Vod.V20180717
         /// * 该接口用于从点播服务端获取事件通知，详见[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)；
         /// * 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
         /// * 请求最多挂起 5 秒，建议请求方将超时时间设置为 10 秒；
-        /// * 若该接口有事件返回，调用方必须再调用[确认事件通知]接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
+        /// * 若该接口有事件返回，调用方必须再调用[确认事件通知](https://cloud.tencent.com/document/product/266/33434)接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
         /// </summary>
         /// <param name="req">参考<see cref="PullEventsRequest"/></param>
         /// <returns>参考<see cref="PullEventsResponse"/>实例</returns>

@@ -1043,6 +1043,26 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 开启服务器
+        /// </summary>
+        /// <param name="req">参考<see cref="StartDevicesRequest"/></param>
+        /// <returns>参考<see cref="StartDevicesResponse"/>实例</returns>
+        public async Task<StartDevicesResponse> StartDevices(StartDevicesRequest req)
+        {
+             JsonResponseModel<StartDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解除标签与预授权规则的绑定
         /// </summary>
         /// <param name="req">参考<see cref="UnbindPsaTagRequest"/></param>

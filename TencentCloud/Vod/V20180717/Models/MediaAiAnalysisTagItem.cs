@@ -26,14 +26,12 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 标签名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
         /// 标签的可信度，取值范围是 0 到 100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

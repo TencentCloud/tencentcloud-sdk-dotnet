@@ -123,6 +123,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceTypesCheckPolicy")]
         public string InstanceTypesCheckPolicy{ get; set; }
 
+        /// <summary>
+        /// 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public InstanceTag[] InstanceTags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -144,6 +150,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         }
     }
 }
