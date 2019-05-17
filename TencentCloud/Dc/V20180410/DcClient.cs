@@ -73,6 +73,29 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// 申请物理专线接入。
+        /// 调用该接口时，请注意：
+        /// 账号要进行实名认证，否则不允许申请物理专线；
+        /// 若账户下存在欠费状态的物理专线，则不能申请更多的物理专线。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateDirectConnectRequest"/></param>
+        /// <returns>参考<see cref="CreateDirectConnectResponse"/>实例</returns>
+        public async Task<CreateDirectConnectResponse> CreateDirectConnect(CreateDirectConnectRequest req)
+        {
+             JsonResponseModel<CreateDirectConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDirectConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于创建专用通道的接口
         /// </summary>
         /// <param name="req">参考<see cref="CreateDirectConnectTunnelRequest"/></param>
@@ -84,6 +107,27 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = await this.InternalRequest(req, "CreateDirectConnectTunnel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDirectConnectTunnelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除物理专线。
+        /// 只能删除处于状态的物理专线。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteDirectConnectRequest"/></param>
+        /// <returns>参考<see cref="DeleteDirectConnectResponse"/>实例</returns>
+        public async Task<DeleteDirectConnectResponse> DeleteDirectConnect(DeleteDirectConnectRequest req)
+        {
+             JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDirectConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDirectConnectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -113,6 +157,26 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// 查询物理专线接入点
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAccessPointsRequest"/></param>
+        /// <returns>参考<see cref="DescribeAccessPointsResponse"/>实例</returns>
+        public async Task<DescribeAccessPointsResponse> DescribeAccessPoints(DescribeAccessPointsRequest req)
+        {
+             JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccessPoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessPointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询专用通道列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDirectConnectTunnelsRequest"/></param>
@@ -124,6 +188,46 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = await this.InternalRequest(req, "DescribeDirectConnectTunnels");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectTunnelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询物理专线列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDirectConnectsRequest"/></param>
+        /// <returns>参考<see cref="DescribeDirectConnectsResponse"/>实例</returns>
+        public async Task<DescribeDirectConnectsResponse> DescribeDirectConnects(DescribeDirectConnectsRequest req)
+        {
+             JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDirectConnects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改物理专线的属性。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyDirectConnectAttributeRequest"/></param>
+        /// <returns>参考<see cref="ModifyDirectConnectAttributeResponse"/>实例</returns>
+        public async Task<ModifyDirectConnectAttributeResponse> ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

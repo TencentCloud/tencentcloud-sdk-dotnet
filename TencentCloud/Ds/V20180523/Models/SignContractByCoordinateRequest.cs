@@ -25,13 +25,13 @@ namespace TencentCloud.Ds.V20180523.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名ContractMng
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名SignContractByCoordinate
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ds.V20180523.Models
         public string Position{ get; set; }
 
         /// <summary>
-        /// 签署坐标，坐标不得超过合同文件边界
+        /// 签署坐标，坐标原点在文件左下角，坐标单位为磅，坐标不得超过合同文件边界
         /// </summary>
         [JsonProperty("SignLocations")]
         public SignLocation[] SignLocations{ get; set; }
@@ -71,6 +71,18 @@ namespace TencentCloud.Ds.V20180523.Models
         /// </summary>
         [JsonProperty("SealResId")]
         public string SealResId{ get; set; }
+
+        /// <summary>
+        /// 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+        /// </summary>
+        [JsonProperty("CertType")]
+        public long? CertType{ get; set; }
+
+        /// <summary>
+        /// 签名图片，base64编码
+        /// </summary>
+        [JsonProperty("ImageData")]
+        public string ImageData{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamSimple(map, prefix + "Position", this.Position);
             this.SetParamArrayObj(map, prefix + "SignLocations.", this.SignLocations);
             this.SetParamSimple(map, prefix + "SealResId", this.SealResId);
+            this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "ImageData", this.ImageData);
         }
     }
 }

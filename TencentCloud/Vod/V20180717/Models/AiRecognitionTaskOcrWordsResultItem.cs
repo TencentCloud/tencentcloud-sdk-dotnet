@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 文本识别词。
+        /// 文本关键词。
         /// </summary>
         [JsonProperty("Word")]
         public string Word{ get; set; }
 
         /// <summary>
-        /// 文本文字识别结果集。
+        /// 文本关键出现的片段列表。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskOcrWordsSegmentItem[] SegmentSet{ get; set; }

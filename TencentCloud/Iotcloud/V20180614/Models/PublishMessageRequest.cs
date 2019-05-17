@@ -49,7 +49,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 服务质量等级，取值为0， 1
+        /// 服务质量等级，取值为0或1
         /// </summary>
         [JsonProperty("Qos")]
         public ulong? Qos{ get; set; }

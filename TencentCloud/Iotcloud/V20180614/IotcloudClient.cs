@@ -93,6 +93,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 创建lora类型的设备
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateLoraDeviceRequest"/></param>
+        /// <returns>参考<see cref="CreateLoraDeviceResponse"/>实例</returns>
+        public async Task<CreateLoraDeviceResponse> CreateLoraDevice(CreateLoraDeviceRequest req)
+        {
+             JsonResponseModel<CreateLoraDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLoraDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoraDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateMultiDevice）用于批量创建物联云设备。
         /// </summary>
         /// <param name="req">参考<see cref="CreateMultiDeviceRequest"/></param>
@@ -213,6 +233,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 删除lora类型的设备
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteLoraDeviceRequest"/></param>
+        /// <returns>参考<see cref="DeleteLoraDeviceResponse"/>实例</returns>
+        public async Task<DeleteLoraDeviceResponse> DeleteLoraDevice(DeleteLoraDeviceRequest req)
+        {
+             JsonResponseModel<DeleteLoraDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoraDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoraDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteProduct）用于删除一个物联网通信产品。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteProductRequest"/></param>
@@ -304,6 +344,26 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = await this.InternalRequest(req, "DescribeDevices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取lora类型设备的详细信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLoraDeviceRequest"/></param>
+        /// <returns>参考<see cref="DescribeLoraDeviceResponse"/>实例</returns>
+        public async Task<DescribeLoraDeviceResponse> DescribeLoraDevice(DescribeLoraDeviceRequest req)
+        {
+             JsonResponseModel<DescribeLoraDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoraDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoraDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -453,6 +513,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 模拟lora类型的设备端向服务器端发送消息
+        /// </summary>
+        /// <param name="req">参考<see cref="PublishAsDeviceRequest"/></param>
+        /// <returns>参考<see cref="PublishAsDeviceResponse"/>实例</returns>
+        public async Task<PublishAsDeviceResponse> PublishAsDevice(PublishAsDeviceRequest req)
+        {
+             JsonResponseModel<PublishAsDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishAsDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishAsDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（PublishMessage）用于向某个主题发消息。
         /// </summary>
         /// <param name="req">参考<see cref="PublishMessageRequest"/></param>
@@ -464,6 +544,26 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = await this.InternalRequest(req, "PublishMessage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务器端下发消息给lora类型的设备
+        /// </summary>
+        /// <param name="req">参考<see cref="PublishToDeviceRequest"/></param>
+        /// <returns>参考<see cref="PublishToDeviceResponse"/>实例</returns>
+        public async Task<PublishToDeviceResponse> PublishToDevice(PublishToDeviceRequest req)
+        {
+             JsonResponseModel<PublishToDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishToDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishToDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

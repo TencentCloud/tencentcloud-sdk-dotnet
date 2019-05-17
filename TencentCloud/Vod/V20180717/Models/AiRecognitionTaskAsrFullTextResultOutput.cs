@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 语音全文识别结果集。
+        /// 语音全文识别片段列表。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }

@@ -70,14 +70,12 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 是否保留视频，0：否，1：是。默认1。
-        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("NeedVideo")]
         public long? NeedVideo{ get; set; }
 
         /// <summary>
         /// 是否保留音频，0：否，1：是。默认1。
-        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("NeedAudio")]
         public long? NeedAudio{ get; set; }

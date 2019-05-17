@@ -42,6 +42,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Uri")]
         public string Uri{ get; set; }
 
+        /// <summary>
+        /// 文件名
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Mtime", this.Mtime);
             this.SetParamSimple(map, prefix + "Length", this.Length);
             this.SetParamSimple(map, prefix + "Uri", this.Uri);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
         }
     }
 }

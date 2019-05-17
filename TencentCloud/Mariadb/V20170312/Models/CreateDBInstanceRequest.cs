@@ -76,13 +76,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 虚拟私有网络 ID，不传或传 0 表示创建为基础网络
+        /// 虚拟私有网络 ID，不传表示创建为基础网络
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 虚拟私有网络子网 ID，VpcId 不为0时必填
+        /// 虚拟私有网络子网 ID，VpcId 不为空时必填
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -94,7 +94,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+        /// 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }

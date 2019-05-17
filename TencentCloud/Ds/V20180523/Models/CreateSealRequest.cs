@@ -25,13 +25,13 @@ namespace TencentCloud.Ds.V20180523.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名SealMng
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名CreateSeal
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Ds.V20180523.Models
         [JsonProperty("ImgUrl")]
         public string ImgUrl{ get; set; }
 
+        /// <summary>
+        /// 图片数据，base64编码
+        /// </summary>
+        [JsonProperty("ImgData")]
+        public string ImgData{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "AccountResId", this.AccountResId);
             this.SetParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+            this.SetParamSimple(map, prefix + "ImgData", this.ImgData);
         }
     }
 }

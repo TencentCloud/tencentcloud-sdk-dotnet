@@ -85,6 +85,24 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("ProductKey")]
         public string ProductKey{ get; set; }
 
+        /// <summary>
+        /// 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+        /// </summary>
+        [JsonProperty("RegisterType")]
+        public ulong? RegisterType{ get; set; }
+
+        /// <summary>
+        /// 动态注册产品秘钥
+        /// </summary>
+        [JsonProperty("ProductSecret")]
+        public string ProductSecret{ get; set; }
+
+        /// <summary>
+        /// RegisterType为2时，设备动态创建的限制数量
+        /// </summary>
+        [JsonProperty("RegisterLimit")]
+        public ulong? RegisterLimit{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -101,6 +119,9 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ProductKey", this.ProductKey);
+            this.SetParamSimple(map, prefix + "RegisterType", this.RegisterType);
+            this.SetParamSimple(map, prefix + "ProductSecret", this.ProductSecret);
+            this.SetParamSimple(map, prefix + "RegisterLimit", this.RegisterLimit);
         }
     }
 }

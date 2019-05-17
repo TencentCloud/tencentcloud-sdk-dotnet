@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Target所属地域
+        /// Target所属地域，如 ap-guangzhou
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Target所属VPC网络
+        /// Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

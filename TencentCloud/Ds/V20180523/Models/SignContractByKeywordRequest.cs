@@ -25,13 +25,13 @@ namespace TencentCloud.Ds.V20180523.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名ContractMng
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名SignContractByKeyword
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -61,16 +61,28 @@ namespace TencentCloud.Ds.V20180523.Models
         public string Position{ get; set; }
 
         /// <summary>
+        /// 签署关键字，偏移坐标原点为关键字中心
+        /// </summary>
+        [JsonProperty("SignKeyword")]
+        public SignKeyword SignKeyword{ get; set; }
+
+        /// <summary>
         /// 签章ID
         /// </summary>
         [JsonProperty("SealResId")]
         public string SealResId{ get; set; }
 
         /// <summary>
-        /// 签署关键字，坐标和范围不得超过合同文件边界
+        /// 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
         /// </summary>
-        [JsonProperty("SignKeyword")]
-        public SignKeyword SignKeyword{ get; set; }
+        [JsonProperty("CertType")]
+        public long? CertType{ get; set; }
+
+        /// <summary>
+        /// 签名图片，base64编码
+        /// </summary>
+        [JsonProperty("ImageData")]
+        public string ImageData{ get; set; }
 
 
         /// <summary>
@@ -84,8 +96,10 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamSimple(map, prefix + "AccountResId", this.AccountResId);
             this.SetParamSimple(map, prefix + "AuthorizationTime", this.AuthorizationTime);
             this.SetParamSimple(map, prefix + "Position", this.Position);
-            this.SetParamSimple(map, prefix + "SealResId", this.SealResId);
             this.SetParamObj(map, prefix + "SignKeyword.", this.SignKeyword);
+            this.SetParamSimple(map, prefix + "SealResId", this.SealResId);
+            this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "ImageData", this.ImageData);
         }
     }
 }

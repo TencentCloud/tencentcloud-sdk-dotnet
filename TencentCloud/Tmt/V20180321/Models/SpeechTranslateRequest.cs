@@ -67,7 +67,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// 项目id，用户可自定义
+        /// 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

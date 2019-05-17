@@ -249,6 +249,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Machine")]
         public string Machine{ get; set; }
 
+        /// <summary>
+        /// 是否支持数据加密。1-支持；0-不支持
+        /// </summary>
+        [JsonProperty("IsEncryptSupported")]
+        public long? IsEncryptSupported{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -292,6 +298,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
             this.SetParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
             this.SetParamSimple(map, prefix + "Machine", this.Machine);
+            this.SetParamSimple(map, prefix + "IsEncryptSupported", this.IsEncryptSupported);
         }
     }
 }

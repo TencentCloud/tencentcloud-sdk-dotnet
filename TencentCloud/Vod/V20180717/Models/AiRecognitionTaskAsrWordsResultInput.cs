@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 用户自定义语音识别模板 ID。
+        /// 语音关键词识别模板 ID。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

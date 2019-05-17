@@ -27,10 +27,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 任务的类型，取值范围：
         /// <li>FaceRecognition：人脸识别，</li>
+        /// <li>AsrWordsRecognition：语音关键词识别，</li>
+        /// <li>OcrWordsRecognition：文本关键词识别，</li>
         /// <li>AsrFullTextRecognition：语音全文识别，</li>
         /// <li>OcrFullTextRecognition：文本全文识别，</li>
-        /// <li>AsrWordsRecognition：用户自定义语音识别，</li>
-        /// <li>OcrWordsRecognition：用户自定义文本识别，</li>
         /// <li>HeadTailRecognition：视频片头片尾识别，</li>
         /// <li>ObjectRecognition：物体识别。</li>
         /// </summary>
@@ -42,8 +42,16 @@ namespace TencentCloud.Vod.V20180717.Models
         ///  FaceRecognition 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FaceRecognitionTask")]
-        public AiRecognitionTaskFaceResult FaceRecognitionTask{ get; set; }
+        [JsonProperty("FaceTask")]
+        public AiRecognitionTaskFaceResult FaceTask{ get; set; }
+
+        /// <summary>
+        /// 语音关键词识别结果，当 Type 为
+        ///  AsrWordsRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsrWordsTask")]
+        public AiRecognitionTaskAsrWordsResult AsrWordsTask{ get; set; }
 
         /// <summary>
         /// 语音全文识别结果，当 Type 为
@@ -54,28 +62,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
+        /// 文本关键词识别结果，当 Type 为
+        ///  OcrWordsRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OcrWordsTask")]
+        public AiRecognitionTaskOcrWordsResult OcrWordsTask{ get; set; }
+
+        /// <summary>
         /// 文本全文识别结果，当 Type 为
         ///  OcrFullTextRecognition 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
-
-        /// <summary>
-        /// 用户自定义语音识别结果集，当 Type 为
-        ///  AsrWordsRecognition 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("AsrWordsTask")]
-        public AiRecognitionTaskAsrWordsResult AsrWordsTask{ get; set; }
-
-        /// <summary>
-        /// 用户自定义文本识别结果集，当 Type 为
-        ///  OcrWordsRecognition 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("OcrWordsTask")]
-        public AiRecognitionTaskOcrWordsResult OcrWordsTask{ get; set; }
 
         /// <summary>
         /// 视频片头片尾识别结果，当 Type 为
@@ -100,11 +100,11 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamObj(map, prefix + "FaceRecognitionTask.", this.FaceRecognitionTask);
-            this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
-            this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
+            this.SetParamObj(map, prefix + "FaceTask.", this.FaceTask);
             this.SetParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
+            this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
             this.SetParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
+            this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
             this.SetParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
             this.SetParamObj(map, prefix + "ObjectTask.", this.ObjectTask);
         }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 用户自定义文本识别结果集。
+        /// 文本关键词识别结果集。
         /// </summary>
         [JsonProperty("ResultSet")]
         public AiRecognitionTaskOcrWordsResultItem[] ResultSet{ get; set; }

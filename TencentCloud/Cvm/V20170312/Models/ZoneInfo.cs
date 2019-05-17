@@ -43,7 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 可用区状态
+        /// 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
         /// </summary>
         [JsonProperty("ZoneState")]
         public string ZoneState{ get; set; }

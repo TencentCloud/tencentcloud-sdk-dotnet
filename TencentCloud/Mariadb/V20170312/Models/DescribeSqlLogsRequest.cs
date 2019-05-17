@@ -37,7 +37,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 拉取数量（0-1000，为0时拉取总数信息）。
+        /// 拉取数量（0-10000，为0时拉取总数信息）。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -32,6 +32,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/9418) ，取返回信息中的`ImageId`字段。</li>
+        /// <br>默认取值：默认使用当前镜像。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
@@ -54,6 +55,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("EnhancedService")]
         public EnhancedService EnhancedService{ get; set; }
 
+        /// <summary>
+        /// 重装系统时，可以指定修改实例的HostName。
+        /// </summary>
+        [JsonProperty("HostName")]
+        public string HostName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +72,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+            this.SetParamSimple(map, prefix + "HostName", this.HostName);
         }
     }
 }

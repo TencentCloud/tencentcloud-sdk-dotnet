@@ -25,13 +25,13 @@ namespace TencentCloud.Ds.V20180523.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名ContractMng
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名CreateContractByUpload
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -55,16 +55,22 @@ namespace TencentCloud.Ds.V20180523.Models
         public string ContractName{ get; set; }
 
         /// <summary>
+        /// 合同发起方帐号ID
+        /// </summary>
+        [JsonProperty("Initiator")]
+        public string Initiator{ get; set; }
+
+        /// <summary>
         /// 备注
         /// </summary>
         [JsonProperty("Remarks")]
         public string Remarks{ get; set; }
 
         /// <summary>
-        /// 合同发起方帐号ID
+        /// 过期时间
         /// </summary>
-        [JsonProperty("Initiator")]
-        public string Initiator{ get; set; }
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
 
 
         /// <summary>
@@ -77,8 +83,9 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamArrayObj(map, prefix + "SignInfos.", this.SignInfos);
             this.SetParamSimple(map, prefix + "ContractFile", this.ContractFile);
             this.SetParamSimple(map, prefix + "ContractName", this.ContractName);
-            this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
             this.SetParamSimple(map, prefix + "Initiator", this.Initiator);
+            this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }
 }

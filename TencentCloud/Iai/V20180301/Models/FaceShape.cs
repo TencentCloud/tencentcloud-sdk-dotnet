@@ -31,25 +31,25 @@ namespace TencentCloud.Iai.V20180301.Models
         public Point[] FaceProfile{ get; set; }
 
         /// <summary>
-        /// 描述左测眼睛轮廓的 8 点。
+        /// 描述左侧眼睛轮廓的 8 点。
         /// </summary>
         [JsonProperty("LeftEye")]
         public Point[] LeftEye{ get; set; }
 
         /// <summary>
-        /// 描述右测眼睛轮廓的 8 点。
+        /// 描述右侧眼睛轮廓的 8 点。
         /// </summary>
         [JsonProperty("RightEye")]
         public Point[] RightEye{ get; set; }
 
         /// <summary>
-        /// 描述左测眉毛轮廓的 8 点。
+        /// 描述左侧眉毛轮廓的 8 点。
         /// </summary>
         [JsonProperty("LeftEyeBrow")]
         public Point[] LeftEyeBrow{ get; set; }
 
         /// <summary>
-        /// 描述右测眉毛轮廓的 8 点。
+        /// 描述右侧眉毛轮廓的 8 点。
         /// </summary>
         [JsonProperty("RightEyeBrow")]
         public Point[] RightEyeBrow{ get; set; }

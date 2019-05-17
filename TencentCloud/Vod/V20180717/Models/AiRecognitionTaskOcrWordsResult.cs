@@ -43,13 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 用户自定义文本识别任务输入信息。
+        /// 文本关键词识别任务输入信息。
         /// </summary>
         [JsonProperty("Input")]
         public AiRecognitionTaskOcrWordsResultInput Input{ get; set; }
 
         /// <summary>
-        /// 用户自定义文本识别任务输出信息。
+        /// 文本关键词识别任务输出信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]

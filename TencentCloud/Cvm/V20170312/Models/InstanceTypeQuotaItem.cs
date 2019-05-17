@@ -80,7 +80,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// 本地磁盘规格列表。
+        /// 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
         /// </summary>
         [JsonProperty("LocalDiskTypeList")]
         public LocalDiskType[] LocalDiskTypeList{ get; set; }

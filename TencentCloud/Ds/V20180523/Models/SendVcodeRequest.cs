@@ -25,13 +25,13 @@ namespace TencentCloud.Ds.V20180523.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名VerifyCode
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名SendVcode
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

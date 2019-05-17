@@ -46,67 +46,67 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 平均的锁时间
         /// </summary>
         [JsonProperty("LockTimeAvg")]
-        public float? LockTimeAvg{ get; set; }
+        public string LockTimeAvg{ get; set; }
 
         /// <summary>
         /// 最大锁时间
         /// </summary>
         [JsonProperty("LockTimeMax")]
-        public float? LockTimeMax{ get; set; }
+        public string LockTimeMax{ get; set; }
 
         /// <summary>
         /// 最小锁时间
         /// </summary>
         [JsonProperty("LockTimeMin")]
-        public float? LockTimeMin{ get; set; }
+        public string LockTimeMin{ get; set; }
 
         /// <summary>
         /// 锁时间总和
         /// </summary>
         [JsonProperty("LockTimeSum")]
-        public float? LockTimeSum{ get; set; }
+        public string LockTimeSum{ get; set; }
 
         /// <summary>
         /// 查询次数
         /// </summary>
         [JsonProperty("QueryCount")]
-        public long? QueryCount{ get; set; }
+        public string QueryCount{ get; set; }
 
         /// <summary>
         /// 平均查询时间
         /// </summary>
         [JsonProperty("QueryTimeAvg")]
-        public float? QueryTimeAvg{ get; set; }
+        public string QueryTimeAvg{ get; set; }
 
         /// <summary>
         /// 最大查询时间
         /// </summary>
         [JsonProperty("QueryTimeMax")]
-        public float? QueryTimeMax{ get; set; }
+        public string QueryTimeMax{ get; set; }
 
         /// <summary>
         /// 最小查询时间
         /// </summary>
         [JsonProperty("QueryTimeMin")]
-        public float? QueryTimeMin{ get; set; }
+        public string QueryTimeMin{ get; set; }
 
         /// <summary>
         /// 查询时间总和
         /// </summary>
         [JsonProperty("QueryTimeSum")]
-        public float? QueryTimeSum{ get; set; }
+        public string QueryTimeSum{ get; set; }
 
         /// <summary>
         /// 扫描行数
         /// </summary>
         [JsonProperty("RowsExaminedSum")]
-        public ulong? RowsExaminedSum{ get; set; }
+        public string RowsExaminedSum{ get; set; }
 
         /// <summary>
         /// 发送行数
         /// </summary>
         [JsonProperty("RowsSentSum")]
-        public ulong? RowsSentSum{ get; set; }
+        public string RowsSentSum{ get; set; }
 
         /// <summary>
         /// 最后执行时间

@@ -103,10 +103,16 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public bool? IsFilterExcluster{ get; set; }
 
         /// <summary>
-        /// 1非独享集群，2独享集群， 0全部
+        /// 实例所属独享集群类型。取值范围：1-非独享集群，2-独享集群， 0-全部
         /// </summary>
         [JsonProperty("ExclusterType")]
         public long? ExclusterType{ get; set; }
+
+        /// <summary>
+        /// 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+        /// </summary>
+        [JsonProperty("ExclusterIds")]
+        public string[] ExclusterIds{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamArraySimple(map, prefix + "OriginSerialIds.", this.OriginSerialIds);
             this.SetParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
+            this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
         }
     }
 }

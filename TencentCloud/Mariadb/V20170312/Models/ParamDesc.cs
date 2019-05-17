@@ -37,7 +37,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+        /// 设置过的值，参数生效后，该值和value一样。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetValue")]
@@ -55,6 +55,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Constraint")]
         public ParamConstraint Constraint{ get; set; }
 
+        /// <summary>
+        /// 是否有设置过值，false:没有设置过值，true:有设置过值。
+        /// </summary>
+        [JsonProperty("HaveSetValue")]
+        public bool? HaveSetValue{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -66,6 +72,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "SetValue", this.SetValue);
             this.SetParamSimple(map, prefix + "Default", this.Default);
             this.SetParamObj(map, prefix + "Constraint.", this.Constraint);
+            this.SetParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
         }
     }
 }

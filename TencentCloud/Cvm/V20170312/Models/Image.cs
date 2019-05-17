@@ -110,6 +110,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("IsSupportCloudinit")]
         public bool? IsSupportCloudinit{ get; set; }
 
+        /// <summary>
+        /// 镜像关联的快照信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnapshotSet")]
+        public Snapshot[] SnapshotSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -130,6 +137,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "ImageSource", this.ImageSource);
             this.SetParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
             this.SetParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
+            this.SetParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
         }
     }
 }

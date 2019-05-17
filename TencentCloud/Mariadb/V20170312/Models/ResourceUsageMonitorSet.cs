@@ -46,7 +46,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 磁盘可用空间,单位GB
         /// </summary>
         [JsonProperty("DataDiskAvailable")]
-        public MonitorIntData DataDiskAvailable{ get; set; }
+        public MonitorData DataDiskAvailable{ get; set; }
 
 
         /// <summary>

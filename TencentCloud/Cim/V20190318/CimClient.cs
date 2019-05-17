@@ -53,7 +53,7 @@ namespace TencentCloud.Cim.V20190318
         }
 
         /// <summary>
-        /// 获取云通信IM中腾讯云账号对应的sdkappid
+        /// 获取云通信IM中腾讯云账号对应的SDKAppID
         /// </summary>
         /// <param name="req">参考<see cref="DescribeSdkAppidRequest"/></param>
         /// <returns>参考<see cref="DescribeSdkAppidResponse"/>实例</returns>

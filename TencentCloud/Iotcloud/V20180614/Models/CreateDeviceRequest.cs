@@ -78,6 +78,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Skey")]
         public string Skey{ get; set; }
 
+        /// <summary>
+        /// LoRa设备的AppKey
+        /// </summary>
+        [JsonProperty("LoraAppKey")]
+        public string LoraAppKey{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +99,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
             this.SetParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
             this.SetParamSimple(map, prefix + "Skey", this.Skey);
+            this.SetParamSimple(map, prefix + "LoraAppKey", this.LoraAppKey);
         }
     }
 }

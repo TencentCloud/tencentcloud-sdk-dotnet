@@ -25,7 +25,7 @@ namespace TencentCloud.Cim.V20190318.Models
     {
         
         /// <summary>
-        /// 表示appid对应的SdkAppid的数据
+        /// 表示 appid 对应的 SdkAppid 的数据
         /// </summary>
         [JsonProperty("SdkAppids")]
         public long?[] SdkAppids{ get; set; }

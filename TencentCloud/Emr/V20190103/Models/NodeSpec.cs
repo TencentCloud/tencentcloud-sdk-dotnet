@@ -80,6 +80,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
+        /// <summary>
+        /// 多云盘参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultiDisks")]
+        public MultiDisk[] MultiDisks{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -94,6 +101,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "RootDiskVolume", this.RootDiskVolume);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
+            this.SetParamArrayObj(map, prefix + "MultiDisks.", this.MultiDisks);
         }
     }
 }

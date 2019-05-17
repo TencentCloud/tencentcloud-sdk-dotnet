@@ -28,43 +28,43 @@ namespace TencentCloud.Batch.V20170312.Models
         /// 已经完成提交的计算节点数量
         /// </summary>
         [JsonProperty("SubmittedCount")]
-        public string SubmittedCount{ get; set; }
+        public ulong? SubmittedCount{ get; set; }
 
         /// <summary>
         /// 创建中的计算节点数量
         /// </summary>
         [JsonProperty("CreatingCount")]
-        public string CreatingCount{ get; set; }
+        public ulong? CreatingCount{ get; set; }
 
         /// <summary>
         /// 创建失败的计算节点数量
         /// </summary>
         [JsonProperty("CreationFailedCount")]
-        public string CreationFailedCount{ get; set; }
+        public ulong? CreationFailedCount{ get; set; }
 
         /// <summary>
         /// 完成创建的计算节点数量
         /// </summary>
         [JsonProperty("CreatedCount")]
-        public string CreatedCount{ get; set; }
+        public ulong? CreatedCount{ get; set; }
 
         /// <summary>
         /// 运行中的计算节点数量
         /// </summary>
         [JsonProperty("RunningCount")]
-        public string RunningCount{ get; set; }
+        public ulong? RunningCount{ get; set; }
 
         /// <summary>
         /// 销毁中的计算节点数量
         /// </summary>
         [JsonProperty("DeletingCount")]
-        public string DeletingCount{ get; set; }
+        public ulong? DeletingCount{ get; set; }
 
         /// <summary>
         /// 异常的计算节点数量
         /// </summary>
         [JsonProperty("AbnormalCount")]
-        public string AbnormalCount{ get; set; }
+        public ulong? AbnormalCount{ get; set; }
 
 
         /// <summary>

@@ -42,6 +42,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ForceStop")]
         public bool? ForceStop{ get; set; }
 
+        /// <summary>
+        /// 是否保留主机名。默认为FALSE。
+        /// </summary>
+        [JsonProperty("ReserveHostName")]
+        public bool? ReserveHostName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
             this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
+            this.SetParamSimple(map, prefix + "ReserveHostName", this.ReserveHostName);
         }
     }
 }

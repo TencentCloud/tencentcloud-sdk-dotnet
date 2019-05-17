@@ -32,12 +32,14 @@ namespace TencentCloud.Mariadb.V20170312.Models
 
         /// <summary>
         /// 备机1性能监控数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Slave1")]
         public PerformanceMonitorSet Slave1{ get; set; }
 
         /// <summary>
         /// 备机2性能监控数据，如果实例是一主一从，则没有该字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Slave2")]
         public PerformanceMonitorSet Slave2{ get; set; }

@@ -55,19 +55,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// 类型（0-定时；1-临时）
+        /// 类型（0-定时）
         /// </summary>
         [JsonProperty("Way")]
         public long? Way{ get; set; }
 
         /// <summary>
-        /// 备份方式（1-完整；2-日志；3-差异）
+        /// 备份方式（1-完整）
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 状态（0-创建中；1-成功；2-失败）
+        /// 状态（1-创建中；2-成功；3-失败）
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

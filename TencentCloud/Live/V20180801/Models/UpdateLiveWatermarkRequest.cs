@@ -54,6 +54,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("WatermarkName")]
         public string WatermarkName{ get; set; }
 
+        /// <summary>
+        /// 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+        /// </summary>
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
+
+        /// <summary>
+        /// 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+        /// </summary>
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +77,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "XPosition", this.XPosition);
             this.SetParamSimple(map, prefix + "YPosition", this.YPosition);
             this.SetParamSimple(map, prefix + "WatermarkName", this.WatermarkName);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
         }
     }
 }

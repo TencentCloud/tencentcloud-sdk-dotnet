@@ -142,6 +142,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceTags")]
         public InstanceTag[] InstanceTags{ get; set; }
 
+        /// <summary>
+        /// 版本号。
+        /// </summary>
+        [JsonProperty("VersionNumber")]
+        public long? VersionNumber{ get; set; }
+
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -167,6 +179,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 子用户用户 ID
+        /// 子用户 UIN
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
@@ -55,6 +55,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public string SecretKey{ get; set; }
 
         /// <summary>
+        /// 子用户 UID
+        /// </summary>
+        [JsonProperty("Uid")]
+        public ulong? Uid{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
             this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

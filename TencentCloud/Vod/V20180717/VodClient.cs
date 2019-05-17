@@ -54,7 +54,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// * 该接口用于申请媒体文件（和封面文件）的上传，获取文件上传到腾讯云点播的元信息（包括上传路径、上传签名等），用于后续上传接口。
-        /// * 上传流程请参考[服务端上传综述](https://cloud.tencent.com/document/product/266/9759#.E4.B8.8A.E4.BC.A0.E6.B5.81.E7.A8.8B)。
+        /// * 上传流程请参考[服务端上传综述](https://cloud.tencent.com/document/product/266/9759)。
         /// </summary>
         /// <param name="req">参考<see cref="ApplyUploadRequest"/></param>
         /// <returns>参考<see cref="ApplyUploadResponse"/>实例</returns>
@@ -136,6 +136,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义视频内容识别模板，数量上限：50。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateAIRecognitionTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateAIRecognitionTemplateResponse"/>实例</returns>
+        public async Task<CreateAIRecognitionTemplateResponse> CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req)
+        {
+             JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAIRecognitionTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 用于对媒体进行分类管理；
         /// * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
         /// * 分类层次不可超过 4 层。
@@ -150,6 +170,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "CreateClass");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClassResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户自定义视频内容审核模板，数量上限：50。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateContentReviewTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateContentReviewTemplateResponse"/>实例</returns>
+        public async Task<CreateContentReviewTemplateResponse> CreateContentReviewTemplate(CreateContentReviewTemplateRequest req)
+        {
+             JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateContentReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreatePersonSampleRequest"/></param>
+        /// <returns>参考<see cref="CreatePersonSampleResponse"/>实例</returns>
+        public async Task<CreatePersonSampleResponse> CreatePersonSample(CreatePersonSampleRequest req)
+        {
+             JsonResponseModel<CreatePersonSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePersonSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -219,6 +279,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行内容审核、内容识别等视频处理。关键词样本不可重复创建，如需变更，可先删除后，重新创建。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateWordSamplesRequest"/></param>
+        /// <returns>参考<see cref="CreateWordSamplesResponse"/>实例</returns>
+        public async Task<CreateWordSamplesResponse> CreateWordSamples(CreateWordSamplesRequest req)
+        {
+             JsonResponseModel<CreateWordSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWordSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWordSamplesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除用户自定义视频内容分析模板。
         /// 
         /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
@@ -232,6 +312,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DeleteAIAnalysisTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIAnalysisTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义视频内容识别模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteAIRecognitionTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteAIRecognitionTemplateResponse"/>实例</returns>
+        public async Task<DeleteAIRecognitionTemplateResponse> DeleteAIRecognitionTemplate(DeleteAIRecognitionTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAIRecognitionTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAIRecognitionTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -262,6 +362,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 删除用户自定义视频内容审核模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteContentReviewTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteContentReviewTemplateResponse"/>实例</returns>
+        public async Task<DeleteContentReviewTemplateResponse> DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req)
+        {
+             JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteContentReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 删除媒体及其对应的视频处理文件（如转码视频、雪碧图、截图、微信发布视频等）；
         /// * 可单独删除指定 ID 的视频文件下的转码，或者微信发布文件；
         /// </summary>
@@ -274,6 +394,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DeleteMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于根据人物 ID，删除人物样本。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeletePersonSampleRequest"/></param>
+        /// <returns>参考<see cref="DeletePersonSampleResponse"/>实例</returns>
+        public async Task<DeletePersonSampleResponse> DeletePersonSample(DeletePersonSampleRequest req)
+        {
+             JsonResponseModel<DeletePersonSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePersonSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePersonSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -343,6 +483,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于批量删除关键词样本。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteWordSamplesRequest"/></param>
+        /// <returns>参考<see cref="DeleteWordSamplesResponse"/>实例</returns>
+        public async Task<DeleteWordSamplesResponse> DeleteWordSamples(DeleteWordSamplesRequest req)
+        {
+             JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWordSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWordSamplesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据视频内容分析模板唯一标识，获取视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义视频内容分析模板及[系统预置视频内容分析模板]
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAIAnalysisTemplatesRequest"/></param>
@@ -354,6 +514,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeAIAnalysisTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIAnalysisTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据视频内容识别模板唯一标识，获取视频内容识别模板详情列表。返回结果包含符合条件的所有用户自定义视频内容识别模板及[系统预置视频内容识别模板]
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAIRecognitionTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeAIRecognitionTemplatesResponse"/>实例</returns>
+        public async Task<DescribeAIRecognitionTemplatesResponse> DescribeAIRecognitionTemplates(DescribeAIRecognitionTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAIRecognitionTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIRecognitionTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -383,6 +563,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板]。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeContentReviewTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeContentReviewTemplatesResponse"/>实例</returns>
+        public async Task<DescribeContentReviewTemplatesResponse> DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeContentReviewTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeContentReviewTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeContentReviewTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 1. 该接口可以获取多个视频的多种信息，包括：
         ///     1. 基础信息（basicInfo）：包括视频名称、大小、时长、封面图片等。
         ///     2. 元信息（metaData）：包括视频流信息、音频流信息等。
@@ -403,6 +603,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeMediaInfos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePersonSamplesRequest"/></param>
+        /// <returns>参考<see cref="DescribePersonSamplesResponse"/>实例</returns>
+        public async Task<DescribePersonSamplesResponse> DescribePersonSamples(DescribePersonSamplesRequest req)
+        {
+             JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePersonSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -474,7 +694,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/11701#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        /// 根据转码模板唯一标识，获取转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置转码模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTranscodeTemplatesRequest"/></param>
         /// <returns>参考<see cref="DescribeTranscodeTemplatesResponse"/>实例</returns>
@@ -514,6 +734,56 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWordSamplesRequest"/></param>
+        /// <returns>参考<see cref="DescribeWordSamplesResponse"/>实例</returns>
+        public async Task<DescribeWordSamplesResponse> DescribeWordSamples(DescribeWordSamplesRequest req)
+        {
+             JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWordSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWordSamplesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
+        /// 
+        /// 1. 对点播中的一个文件进行剪辑，生成一个新的视频；
+        /// 2. 对点播中的多个文件进行拼接，生成一个新的视频；
+        /// 3. 对点播中的多个文件进行剪辑，然后再拼接，生成一个新的视频；
+        /// 4. 对点播中的一个流，直接生成一个新的视频；
+        /// 5. 对点播中的一个流进行剪辑，生成一个新的视频；
+        /// 6. 对点播中的多个流进行拼接，生成一个新的视频；
+        /// 7. 对点播中的多个流进行剪辑，然后拼接，生成一个新的视频。
+        /// 
+        /// 对于生成的新视频，还可以指定生成后的视频是否要执行任务流。
+        /// </summary>
+        /// <param name="req">参考<see cref="EditMediaRequest"/></param>
+        /// <returns>参考<see cref="EditMediaResponse"/>实例</returns>
+        public async Task<EditMediaResponse> EditMedia(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
         /// 
         /// 腾讯云点播支持两种即时剪辑模式：
@@ -521,7 +791,7 @@ namespace TencentCloud.Vod.V20180717
         /// - 剪辑不固化：剪辑得到的视频附属于直播录制文件，没有独立 FileId；适用于将精彩片段**临时分享**的场景。
         /// 
         /// 注意：
-        /// - 使用直播即时剪辑功能的前提是：目标直播流开启了[时移回看](https://cloud.tencent.com/document/product/267/32742#.E5.BC.80.E9.80.9A.E6.AD.A5.E9.AA.A4)功能。
+        /// - 使用直播即时剪辑功能的前提是：目标直播流开启了[时移回看](https://cloud.tencent.com/document/product/267/32742)功能。
         /// - 直播即时剪辑是基于直播录制生成的 m3u8 文件进行的，故而其最小剪辑精度为一个 ts 切片，无法实现秒级或者更为精确的剪辑精度。
         /// 
         /// 
@@ -579,6 +849,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改用户自定义视频内容识别模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyAIRecognitionTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyAIRecognitionTemplateResponse"/>实例</returns>
+        public async Task<ModifyAIRecognitionTemplateResponse> ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAIRecognitionTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改媒体分类属性。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyClassRequest"/></param>
@@ -599,6 +889,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改用户自定义视频内容审核模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyContentReviewTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyContentReviewTemplateResponse"/>实例</returns>
+        public async Task<ModifyContentReviewTemplateResponse> ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req)
+        {
+             JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyContentReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面等。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyMediaInfoRequest"/></param>
@@ -610,6 +920,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "ModifyMediaInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于根据人物 ID，修改人物样本信息，包括名称、描述的修改，以及人脸、标签的添加、删除、重置操作。人脸删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyPersonSampleRequest"/></param>
+        /// <returns>参考<see cref="ModifyPersonSampleResponse"/>实例</returns>
+        public async Task<ModifyPersonSampleResponse> ModifyPersonSample(ModifyPersonSampleRequest req)
+        {
+             JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPersonSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -659,6 +989,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyWordSampleRequest"/></param>
+        /// <returns>参考<see cref="ModifyWordSampleResponse"/>实例</returns>
+        public async Task<ModifyWordSampleResponse> ModifyWordSample(ModifyWordSampleRequest req)
+        {
+             JsonResponseModel<ModifyWordSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWordSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWordSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对点播中的音视频媒体发起处理任务，功能包括：
         /// 1. 视频转码（带水印）；
         /// 2. 视频转动图；
@@ -668,7 +1018,8 @@ namespace TencentCloud.Vod.V20180717
         /// 6. 对视频截取一张图做封面；
         /// 7. 对视频转自适应码流（并加密）；
         /// 8. 智能内容审核（鉴黄、鉴恐、鉴政）；
-        /// 9. 智能内容分析（标签、分类、封面）。
+        /// 9. 智能内容分析（标签、分类、封面、按帧标签）；
+        /// 10. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
         /// </summary>
         /// <param name="req">参考<see cref="ProcessMediaRequest"/></param>
         /// <returns>参考<see cref="ProcessMediaResponse"/>实例</returns>
@@ -688,10 +1039,34 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 使用任务流模板，对点播中的视频发起处理任务。
+        /// 有两种方式创建任务流模板：
+        /// 1. 在控制台上创建和修改任务流模板；
+        /// 2. 通过任务流模板接口创建任务流模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ProcessMediaByProcedureRequest"/></param>
+        /// <returns>参考<see cref="ProcessMediaByProcedureResponse"/>实例</returns>
+        public async Task<ProcessMediaByProcedureResponse> ProcessMediaByProcedure(ProcessMediaByProcedureRequest req)
+        {
+             JsonResponseModel<ProcessMediaByProcedureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ProcessMediaByProcedure");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessMediaByProcedureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对来源为 URL 的音视频媒体发起处理任务，功能包括：
         /// 
         /// 1. 智能内容审核（鉴黄、鉴恐、鉴政）；
-        /// 2. 智能内容分析（标签、分类、封面）。
+        /// 2. 智能内容分析（标签、分类、封面、按帧标签）；
+        /// 3. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
         /// </summary>
         /// <param name="req">参考<see cref="ProcessMediaByUrlRequest"/></param>
         /// <returns>参考<see cref="ProcessMediaByUrlResponse"/>实例</returns>

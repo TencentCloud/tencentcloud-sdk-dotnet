@@ -53,6 +53,26 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 系统自动为已存在的HTTPS:443监听器创建HTTP监听器进行转发，默认使用80端口。创建成功后可以通过HTTP:80地址自动跳转为HTTPS:443地址进行访问。
+        /// </summary>
+        /// <param name="req">参考<see cref="AutoRewriteRequest"/></param>
+        /// <returns>参考<see cref="AutoRewriteResponse"/>实例</returns>
+        public async Task<AutoRewriteResponse> AutoRewrite(AutoRewriteRequest req)
+        {
+             JsonResponseModel<AutoRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AutoRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AutoRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// BatchModifyTargetWeight接口用于批量修改监听器绑定的后端机器的转发权重，当前接口只支持应用型HTTP/HTTPS监听器。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>
@@ -170,6 +190,26 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "DeleteLoadBalancer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteRewrite 接口支持删除指定转发规则之间的重定向关系。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteRewriteRequest"/></param>
+        /// <returns>参考<see cref="DeleteRewriteResponse"/>实例</returns>
+        public async Task<DeleteRewriteResponse> DeleteRewrite(DeleteRewriteRequest req)
+        {
+             JsonResponseModel<DeleteRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRewriteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -361,6 +401,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRewriteRequest"/></param>
+        /// <returns>参考<see cref="DescribeRewriteResponse"/>实例</returns>
+        public async Task<DescribeRewriteResponse> DescribeRewrite(DescribeRewriteRequest req)
+        {
+             JsonResponseModel<DescribeRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeTargetHealth 接口用来获取应用型负载均衡后端的健康检查结果。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTargetHealthRequest"/></param>
+        /// <returns>参考<see cref="DescribeTargetHealthResponse"/>实例</returns>
+        public async Task<DescribeTargetHealthResponse> DescribeTargetHealth(DescribeTargetHealthRequest req)
+        {
+             JsonResponseModel<DescribeTargetHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTargetHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeTargets 接口用来查询应用型负载均衡实例的某些监听器后端绑定的机器列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTargetsRequest"/></param>
@@ -392,6 +472,26 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户手动配置原访问地址和重定向地址，系统自动将原访问地址的请求重定向至对应路径的目的地址。同一域名下可以配置多条路径作为重定向策略，实现http/https之间请求的自动跳转。
+        /// </summary>
+        /// <param name="req">参考<see cref="ManualRewriteRequest"/></param>
+        /// <returns>参考<see cref="ManualRewriteResponse"/>实例</returns>
+        public async Task<ManualRewriteResponse> ManualRewrite(ManualRewriteRequest req)
+        {
+             JsonResponseModel<ManualRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManualRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualRewriteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -443,7 +543,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 修改负载均衡实例的属性，目前仅用于修改负载均衡实例的名称。
+        /// 修改负载均衡实例的属性，支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyLoadBalancerAttributesRequest"/></param>
@@ -559,6 +659,28 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = await this.InternalRequest(req, "RegisterTargetsWithClassicalLB");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterTargetsWithClassicalLBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SetLoadBalancerSecurityGroups 接口支持对一个负载均衡实例执行设置（绑定、解绑）安全组操作，查询一个负载均衡实例目前已绑定的安全组，可使用 DescribeLoadBalancers 接口。
+        /// 绑定操作时，入参需要传入负载均衡实例要绑定的所有安全组（已绑定的+新增绑定的）。
+        /// 解绑操作时，入参需要传入负载均衡实例执行解绑后所绑定的所有安全组；如果要解绑所有安全组，可传入空数组。
+        /// </summary>
+        /// <param name="req">参考<see cref="SetLoadBalancerSecurityGroupsRequest"/></param>
+        /// <returns>参考<see cref="SetLoadBalancerSecurityGroupsResponse"/>实例</returns>
+        public async Task<SetLoadBalancerSecurityGroupsResponse> SetLoadBalancerSecurityGroups(SetLoadBalancerSecurityGroupsRequest req)
+        {
+             JsonResponseModel<SetLoadBalancerSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetLoadBalancerSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,13 +25,13 @@ namespace TencentCloud.Ds.V20180523.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名AccountMng
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名CreateEnterpriseAccount
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ds.V20180523.Models
         public string IdentNo{ get; set; }
 
         /// <summary>
-        /// 企业联系电话
+        /// 企业联系人手机号
         /// </summary>
         [JsonProperty("MobilePhone")]
         public string MobilePhone{ get; set; }

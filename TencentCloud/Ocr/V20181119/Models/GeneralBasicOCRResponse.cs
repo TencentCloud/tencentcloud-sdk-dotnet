@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 检测到的文本信息，具体内容请点击左侧链接
+        /// 检测到的文本信息，具体内容请点击左侧链接。
         /// </summary>
         [JsonProperty("TextDetections")]
         public TextDetection[] TextDetections{ get; set; }

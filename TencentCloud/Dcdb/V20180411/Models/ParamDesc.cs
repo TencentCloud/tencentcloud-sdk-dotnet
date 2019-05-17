@@ -38,6 +38,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SetValue")]
         public string SetValue{ get; set; }

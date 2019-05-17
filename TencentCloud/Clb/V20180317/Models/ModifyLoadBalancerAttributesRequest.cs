@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
+        /// <summary>
+        /// 负载均衡绑定的后端服务的地域信息
+        /// </summary>
+        [JsonProperty("TargetRegionInfo")]
+        public TargetRegionInfo TargetRegionInfo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+            this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
         }
     }
 }

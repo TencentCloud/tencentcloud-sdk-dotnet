@@ -85,7 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 登陆配置
+        /// 登录配置
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
+        /// <summary>
+        /// 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+        /// </summary>
+        [JsonProperty("NeedMasterWan")]
+        public string NeedMasterWan{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -142,6 +148,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SgId", this.SgId);
             this.SetParamObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamSimple(map, prefix + "NeedMasterWan", this.NeedMasterWan);
         }
     }
 }

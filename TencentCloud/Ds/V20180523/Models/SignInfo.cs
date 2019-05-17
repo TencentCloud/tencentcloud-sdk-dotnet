@@ -60,6 +60,12 @@ namespace TencentCloud.Ds.V20180523.Models
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
 
+        /// <summary>
+        /// 签名域的标签值
+        /// </summary>
+        [JsonProperty("SignLocation")]
+        public string SignLocation{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamSimple(map, prefix + "SealId", this.SealId);
             this.SetParamSimple(map, prefix + "ImageData", this.ImageData);
             this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamSimple(map, prefix + "SignLocation", this.SignLocation);
         }
     }
 }

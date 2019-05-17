@@ -115,6 +115,13 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ulong? LoraMoteType{ get; set; }
 
         /// <summary>
+        /// 设备的sdk日志等级
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogLevel")]
+        public ulong? LogLevel{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -141,6 +148,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "NbiotDeviceID", this.NbiotDeviceID);
             this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
             this.SetParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
+            this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

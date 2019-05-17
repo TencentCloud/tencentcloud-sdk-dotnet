@@ -35,7 +35,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
-        public DBBackupTimeConfig Items{ get; set; }
+        public DBBackupTimeConfig[] Items{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,7 +50,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamObj(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -236,6 +236,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
 
         /// <summary>
         /// 实例处于异步任务状态时，表示异步任务流程ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Locker")]
         public long? Locker{ get; set; }
@@ -245,6 +246,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         [JsonProperty("WanStatus")]
         public long? WanStatus{ get; set; }
+
+        /// <summary>
+        /// 该实例是否支持审计。1-支持；0-不支持
+        /// </summary>
+        [JsonProperty("IsAuditSupported")]
+        public ulong? IsAuditSupported{ get; set; }
 
 
         /// <summary>
@@ -289,6 +296,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
             this.SetParamSimple(map, prefix + "Locker", this.Locker);
             this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
+            this.SetParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
         }
     }
 }

@@ -88,7 +88,11 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17
+        /// 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+        /// 10.0.10 - Mariadb 10.0.10；
+        /// 10.1.9 - Mariadb 10.1.9；
+        /// 5.7.17 - Percona 5.7.17。
+        /// 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }

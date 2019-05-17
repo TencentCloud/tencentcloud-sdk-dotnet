@@ -73,7 +73,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string PrivateAddressIp{ get; set; }
 
         /// <summary>
-        /// 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离装填
+        /// 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
         /// </summary>
         [JsonProperty("IsArrears")]
         public bool? IsArrears{ get; set; }

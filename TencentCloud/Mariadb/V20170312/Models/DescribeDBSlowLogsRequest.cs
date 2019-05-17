@@ -72,6 +72,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
+        /// <summary>
+        /// 是否查询从机的慢查询，0-主机; 1-从机
+        /// </summary>
+        [JsonProperty("Slave")]
+        public long? Slave{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Db", this.Db);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamSimple(map, prefix + "Slave", this.Slave);
         }
     }
 }

@@ -25,58 +25,62 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 姓名（正面）
+        /// 姓名（人像面）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 性别（正面）
+        /// 性别（人像面）
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// 民族（正面）
+        /// 民族（人像面）
         /// </summary>
         [JsonProperty("Nation")]
         public string Nation{ get; set; }
 
         /// <summary>
-        /// 出生日期（正面）
+        /// 出生日期（人像面）
         /// </summary>
         [JsonProperty("Birth")]
         public string Birth{ get; set; }
 
         /// <summary>
-        /// 地址（正面）
+        /// 地址（人像面）
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// 身份证号（正面）
+        /// 身份证号（人像面）
         /// </summary>
         [JsonProperty("IdNum")]
         public string IdNum{ get; set; }
 
         /// <summary>
-        /// 发证机关（反面）
+        /// 发证机关（国徽面）
         /// </summary>
         [JsonProperty("Authority")]
         public string Authority{ get; set; }
 
         /// <summary>
-        /// 证件有效期（反面）
+        /// 证件有效期（国徽面）
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }
 
         /// <summary>
         /// 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3。目前支持的扩展字段为：
-        /// IdCard身份证照片，请求CropIdCard时返回；
-        /// Portrait人像照片，请求CropPortrait时返回；
-        /// WarnInfos告警信息（Code告警码，Msg告警信息），识别出翻拍件或复印件时返回。
+        /// IdCard，身份证照片，请求 CropIdCard 时返回；
+        /// Portrait，人像照片，请求 CropPortrait 时返回；
+        /// WarnInfos，告警信息（Code - 告警码，Msg - 告警信息内容），识别出翻拍件或复印件时返回。
+        /// 
+        /// Code 告警码列表和释义：
+        /// -9103	身份证翻拍告警，
+        /// -9102	身份证复印件告警。
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }

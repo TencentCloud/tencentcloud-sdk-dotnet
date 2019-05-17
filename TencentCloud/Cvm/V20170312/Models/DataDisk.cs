@@ -53,6 +53,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
+        /// <summary>
+        /// 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -63,6 +70,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         }
     }
 }

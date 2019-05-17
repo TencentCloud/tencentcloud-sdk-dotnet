@@ -116,10 +116,17 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? WithRs{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例所属网络，如 vpc-bhqkbhdx
+        /// 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
+        /// 基础网络不支持通过VpcId查询。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 安全组ID，如 sg-m1cc9123
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
 
 
         /// <summary>
@@ -143,6 +150,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "WithRs", this.WithRs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         }
     }
 }
