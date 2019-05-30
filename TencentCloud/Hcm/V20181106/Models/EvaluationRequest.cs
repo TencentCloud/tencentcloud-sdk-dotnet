@@ -37,7 +37,7 @@ namespace TencentCloud.Hcm.V20181106.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppId 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+        /// 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
         /// </summary>
         [JsonProperty("HcmAppid")]
         public string HcmAppid{ get; set; }
@@ -47,6 +47,18 @@ namespace TencentCloud.Hcm.V20181106.Models
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
+
+        /// <summary>
+        /// 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+        /// </summary>
+        [JsonProperty("SupportHorizontalImage")]
+        public bool? SupportHorizontalImage{ get; set; }
+
+        /// <summary>
+        /// 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+        /// </summary>
+        [JsonProperty("RejectNonArithmeticImage")]
+        public bool? RejectNonArithmeticImage{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "HcmAppid", this.HcmAppid);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "SupportHorizontalImage", this.SupportHorizontalImage);
+            this.SetParamSimple(map, prefix + "RejectNonArithmeticImage", this.RejectNonArithmeticImage);
         }
     }
 }

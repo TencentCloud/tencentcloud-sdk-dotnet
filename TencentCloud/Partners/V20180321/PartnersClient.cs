@@ -173,6 +173,46 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAgentDealsCacheRequest"/></param>
+        /// <returns>参考<see cref="DescribeAgentDealsCacheResponse"/>实例</returns>
+        public async Task<DescribeAgentDealsCacheResponse> DescribeAgentDealsCache(DescribeAgentDealsCacheRequest req)
+        {
+             JsonResponseModel<DescribeAgentDealsCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentDealsCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentDealsCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可以查询代理商代付的所有订单
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAgentPayDealsRequest"/></param>
+        /// <returns>参考<see cref="DescribeAgentPayDealsResponse"/>实例</returns>
+        public async Task<DescribeAgentPayDealsResponse> DescribeAgentPayDeals(DescribeAgentPayDealsRequest req)
+        {
+             JsonResponseModel<DescribeAgentPayDealsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentPayDeals");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentPayDealsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
         /// </summary>
         /// <param name="req">参考<see cref="DescribeClientBalanceRequest"/></param>
@@ -204,6 +244,26 @@ namespace TencentCloud.Partners.V20180321
              {
                  var strResp = await this.InternalRequest(req, "DescribeRebateInfos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRebateInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 代理商查询名下业务员列表信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSalesmansRequest"/></param>
+        /// <returns>参考<see cref="DescribeSalesmansResponse"/>实例</returns>
+        public async Task<DescribeSalesmansResponse> DescribeSalesmans(DescribeSalesmansRequest req)
+        {
+             JsonResponseModel<DescribeSalesmansResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSalesmans");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSalesmansResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

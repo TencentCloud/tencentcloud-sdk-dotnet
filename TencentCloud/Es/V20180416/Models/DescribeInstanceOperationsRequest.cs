@@ -31,13 +31,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 起始时间
+        /// 起始时间, e.g. "2019-03-07 16:30:39"
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间, e.g. "2019-03-30 20:18:03"
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

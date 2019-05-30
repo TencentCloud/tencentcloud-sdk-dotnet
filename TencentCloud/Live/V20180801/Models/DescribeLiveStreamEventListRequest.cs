@@ -41,7 +41,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 应用名称。
+        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

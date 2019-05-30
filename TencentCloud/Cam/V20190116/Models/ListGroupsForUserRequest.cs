@@ -31,13 +31,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? Uid{ get; set; }
 
         /// <summary>
-        /// 每页数量。
+        /// 每页数量。默认为20。
         /// </summary>
         [JsonProperty("Rp")]
         public ulong? Rp{ get; set; }
 
         /// <summary>
-        /// 页码。
+        /// 页码。默认为1。
         /// </summary>
         [JsonProperty("Page")]
         public ulong? Page{ get; set; }

@@ -40,6 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
         /// <li>sampleSnapshotInfo（采样截图信息）。</li>
         /// <li>keyFrameDescInfo（打点信息）。</li>
+        /// <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }

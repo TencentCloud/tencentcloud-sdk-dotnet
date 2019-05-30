@@ -66,6 +66,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("SysDataSpace")]
         public ulong? SysDataSpace{ get; set; }
 
+        /// <summary>
+        /// 硬盘大小详情
+        /// </summary>
+        [JsonProperty("DeviceDiskSizeInfoSet")]
+        public DeviceDiskSizeInfo[] DeviceDiskSizeInfoSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "SysSwaporuefiSpace", this.SysSwaporuefiSpace);
             this.SetParamSimple(map, prefix + "SysUsrlocalSpace", this.SysUsrlocalSpace);
             this.SetParamSimple(map, prefix + "SysDataSpace", this.SysDataSpace);
+            this.SetParamArrayObj(map, prefix + "DeviceDiskSizeInfoSet.", this.DeviceDiskSizeInfoSet);
         }
     }
 }

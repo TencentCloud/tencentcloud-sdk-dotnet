@@ -25,7 +25,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
     {
         
         /// <summary>
-        /// 产品ID
+        /// 产品自身id
         /// </summary>
         [JsonProperty("ProductID")]
         public string ProductID{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ulong? Privilege{ get; set; }
 
         /// <summary>
-        /// 代理订阅信息
+        /// 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
         /// </summary>
         [JsonProperty("BrokerSubscribe")]
         public BrokerSubscribe BrokerSubscribe{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
     {
         
         /// <summary>
-        /// 交易编号
+        /// 交易ID
         /// </summary>
         [JsonProperty("Txid")]
         public string Txid{ get; set; }

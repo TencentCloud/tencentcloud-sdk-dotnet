@@ -31,13 +31,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 一个或多个集群实例ID
+        /// 集群实例ID列表
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 一个或多个集群实例名称
+        /// 集群实例名称列表
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段：1，实例ID；2，实例名称；3，可用区；4，创建时间，若orderKey未传递则按创建时间降序排序
+        /// 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
         /// </summary>
         [JsonProperty("OrderByKey")]
         public ulong? OrderByKey{ get; set; }
 
         /// <summary>
-        /// 排序方式：0，升序；1，降序；若传递了orderByKey未传递orderByType, 则默认升序
+        /// 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
         /// </summary>
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }

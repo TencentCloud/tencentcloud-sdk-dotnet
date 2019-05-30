@@ -30,6 +30,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
 
+        /// <summary>
+        /// 对于非共享型云盘，会忽略该参数；对于共享型云盘，该参数表示要从哪个CVM实例上解挂云盘。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

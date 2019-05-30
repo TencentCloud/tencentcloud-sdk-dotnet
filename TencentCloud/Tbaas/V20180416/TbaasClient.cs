@@ -53,6 +53,46 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 查看当前网络下的所有区块列表，分页展示
+        /// </summary>
+        /// <param name="req">参考<see cref="GetBlockListRequest"/></param>
+        /// <returns>参考<see cref="GetBlockListResponse"/>实例</returns>
+        public async Task<GetBlockListResponse> GetBlockList(GetBlockListRequest req)
+        {
+             JsonResponseModel<GetBlockListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetBlockList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBlockListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取区块链网络概要
+        /// </summary>
+        /// <param name="req">参考<see cref="GetClusterSummaryRequest"/></param>
+        /// <returns>参考<see cref="GetClusterSummaryResponse"/>实例</returns>
+        public async Task<GetClusterSummaryResponse> GetClusterSummary(GetClusterSummaryRequest req)
+        {
+             JsonResponseModel<GetClusterSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetClusterSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetClusterSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Invoke异步调用结果查询
         /// </summary>
         /// <param name="req">参考<see cref="GetInvokeTxRequest"/></param>
@@ -64,6 +104,26 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = await this.InternalRequest(req, "GetInvokeTx");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetInvokeTxResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取最新交易列表
+        /// </summary>
+        /// <param name="req">参考<see cref="GetLatesdTransactionListRequest"/></param>
+        /// <returns>参考<see cref="GetLatesdTransactionListResponse"/>实例</returns>
+        public async Task<GetLatesdTransactionListResponse> GetLatesdTransactionList(GetLatesdTransactionListRequest req)
+        {
+             JsonResponseModel<GetLatesdTransactionListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetLatesdTransactionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLatesdTransactionListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

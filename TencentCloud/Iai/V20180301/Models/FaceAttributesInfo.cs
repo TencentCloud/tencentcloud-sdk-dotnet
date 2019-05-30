@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// 性别 [0(female)~100(male)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 性别 [0(female，女性)~100(male，男性)]。 NeedFaceAttributes 不为 1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Iai.V20180301.Models
         public long? Age{ get; set; }
 
         /// <summary>
-        /// 微笑[0(normal)~50(smile)~100(laugh)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+        /// 微笑[0(normal，正常)~50(smile，微笑)~100(laugh，大笑)]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
         /// </summary>
         [JsonProperty("Expression")]
         public long? Expression{ get; set; }

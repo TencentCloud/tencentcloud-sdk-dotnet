@@ -103,7 +103,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询实例的可设置参数列表](https://cloud.tencent.com/document/api/236/20411)查询支持设置的参数
+        /// 参数列表，参数格式如ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过[查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662)查询支持设置的参数
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamInfo[] ParamList{ get; set; }

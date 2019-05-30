@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20180416.Models
         public bool? IsAutoBackup{ get; set; }
 
         /// <summary>
-        /// 自动备份时间
+        /// 自动备份执行时间（精确到小时）, e.g. "22:00"
         /// </summary>
         [JsonProperty("BackupTime")]
         public string BackupTime{ get; set; }

@@ -30,6 +30,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
+        /// <summary>
+        /// 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WatermarkSet")]
+        public WatermarkInput[] WatermarkSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         }
     }
 }

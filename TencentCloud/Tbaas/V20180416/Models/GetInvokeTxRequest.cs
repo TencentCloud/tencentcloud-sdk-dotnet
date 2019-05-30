@@ -61,7 +61,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string PeerGroup{ get; set; }
 
         /// <summary>
-        /// 事务ID
+        /// 交易ID
         /// </summary>
         [JsonProperty("TxId")]
         public string TxId{ get; set; }

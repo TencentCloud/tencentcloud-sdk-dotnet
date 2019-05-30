@@ -97,7 +97,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 节点规格:  ES.S1.SMALL2 : 1核2G  ES.S1.MEDIUM4 : 2核4G  ES.S1.MEDIUM8 : 2核8G  ES.S1.LARGE16 : 4核16G  ES.S1.2XLARGE32 : 8核32G  ES.S1.3XLARGE32 : 12核32G  ES.S1.6XLARGE32 : 24核32G
+        /// 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
@@ -222,6 +222,18 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("AllowCosBackup")]
         public bool? AllowCosBackup{ get; set; }
 
+        /// <summary>
+        /// 实例拥有的标签列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
+
+        /// <summary>
+        /// License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public string LicenseType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -261,6 +273,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "MasterNodeInfo.", this.MasterNodeInfo);
             this.SetParamObj(map, prefix + "CosBackup.", this.CosBackup);
             this.SetParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }
     }
 }

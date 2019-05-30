@@ -279,7 +279,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行内容审核、内容识别等视频处理。关键词样本不可重复创建，如需变更，可先删除后，重新创建。
+        /// 该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行内容审核、内容识别等视频处理。
         /// </summary>
         /// <param name="req">参考<see cref="CreateWordSamplesRequest"/></param>
         /// <returns>参考<see cref="CreateWordSamplesResponse"/>实例</returns>
@@ -592,6 +592,7 @@ namespace TencentCloud.Vod.V20180717
         ///     6. 雪碧图信息（imageSpriteInfo）：对视频截取雪碧图之后，雪碧图的相关信息。
         ///     7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，各个截图的信息。
         ///     8. 视频打点信息（keyFrameDescInfo）：对视频设置的各个打点信息。
+        ///     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
         /// 2. 可以指定回包只返回部分信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeMediaInfosRequest"/></param>

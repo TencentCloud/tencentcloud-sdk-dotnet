@@ -81,6 +81,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaKeyFrameDescInfo KeyFrameDescInfo{ get; set; }
 
         /// <summary>
+        /// 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdaptiveDynamicStreamingInfo")]
+        public MediaAdaptiveDynamicStreamingInfo AdaptiveDynamicStreamingInfo{ get; set; }
+
+        /// <summary>
         /// 媒体文件唯一标识 ID。
         /// </summary>
         [JsonProperty("FileId")]
@@ -100,6 +107,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ImageSpriteInfo.", this.ImageSpriteInfo);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetInfo.", this.SnapshotByTimeOffsetInfo);
             this.SetParamObj(map, prefix + "KeyFrameDescInfo.", this.KeyFrameDescInfo);
+            this.SetParamObj(map, prefix + "AdaptiveDynamicStreamingInfo.", this.AdaptiveDynamicStreamingInfo);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }

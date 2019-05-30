@@ -25,16 +25,23 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 任务结果
+        /// 任务结果，例如上传成功时返回“File Uploading Task Success.”
         /// </summary>
         [JsonProperty("TaskResult")]
         public string TaskResult{ get; set; }
 
         /// <summary>
-        /// <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li></ul>
+        /// <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
+
+        /// <summary>
+        /// 过滤文件下载链接，有过滤数据时才存在。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskFileUrl")]
+        public string TaskFileUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Cr.V20180321.Models
         {
             this.SetParamSimple(map, prefix + "TaskResult", this.TaskResult);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "TaskFileUrl", this.TaskFileUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

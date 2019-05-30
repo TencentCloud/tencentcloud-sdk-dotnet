@@ -43,7 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? Threshold{ get; set; }
 
         /// <summary>
-        /// 时间周期。单位：秒
+        /// 时间周期，单位：秒，取值枚举值为60、300。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

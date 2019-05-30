@@ -25,16 +25,22 @@ namespace TencentCloud.Tbaas.V20180416.Models
     {
         
         /// <summary>
-        /// 状态码
+        /// 交易执行状态码
         /// </summary>
         [JsonProperty("TxValidationCode")]
         public long? TxValidationCode{ get; set; }
 
         /// <summary>
-        /// 消息
+        /// 交易执行消息
         /// </summary>
         [JsonProperty("TxValidationMsg")]
         public string TxValidationMsg{ get; set; }
+
+        /// <summary>
+        /// 交易所在区块ID
+        /// </summary>
+        [JsonProperty("BlockId")]
+        public long? BlockId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "TxValidationCode", this.TxValidationCode);
             this.SetParamSimple(map, prefix + "TxValidationMsg", this.TxValidationMsg);
+            this.SetParamSimple(map, prefix + "BlockId", this.BlockId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

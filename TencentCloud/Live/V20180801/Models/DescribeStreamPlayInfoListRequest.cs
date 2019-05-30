@@ -53,7 +53,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 播放路径，精确匹配，不支持。
+        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
         /// 若不填，则为查询总体播放数据。
         /// </summary>
         [JsonProperty("AppName")]

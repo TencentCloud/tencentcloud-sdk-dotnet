@@ -31,43 +31,49 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日志类型
+        /// 日志类型，默认值为1
+        /// <li>1, 主日志</li>
+        /// <li>2, 搜索慢日志</li>
+        /// <li>3, 索引慢日志</li>
+        /// <li>4, GC日志</li>
         /// </summary>
         [JsonProperty("LogType")]
         public ulong? LogType{ get; set; }
 
         /// <summary>
-        /// 搜索词
+        /// 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 日志开始时间
+        /// 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 日志结束时间
+        /// 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 分页起始值
+        /// 分页起始值, 默认值为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// 分页大小，默认值为100，最大值100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 时间排序方式
+        /// 时间排序方式，默认值为0
+        /// <li>0, 降序</li>
+        /// <li>1, 升序</li>
         /// </summary>
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }

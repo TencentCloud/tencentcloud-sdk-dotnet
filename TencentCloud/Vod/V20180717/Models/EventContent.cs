@@ -37,7 +37,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>FileDeleted：视频删除完成；</li>
         /// <li>PullComplete：视频转拉完成；</li>
         /// <li>EditMediaComplete：视频编辑完成；</li>
-        /// <li>WechatPublishComplete：微信发布完成。</li>
+        /// <li>WechatPublishComplete：微信发布完成；</li>
+        /// <li>ComposeMediaComplete：制作媒体文件完成；</li>
+        /// <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
         /// <b>兼容 2017 版的事件类型：</b>
         /// <li>TranscodeComplete：视频转码完成；</li>
         /// <li>ConcatComplete：视频拼接完成；</li>
@@ -125,6 +127,20 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SnapshotByTimeOffsetCompleteEvent")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComposeMediaCompleteEvent")]
+        public ComposeMediaTask ComposeMediaCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// 微信小程序视频发布完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatMiniProgramPublishEvent")]
+        public WechatMiniProgramPublishTask WechatMiniProgramPublishEvent{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -144,6 +160,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);
             this.SetParamObj(map, prefix + "CreateImageSpriteCompleteEvent.", this.CreateImageSpriteCompleteEvent);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
+            this.SetParamObj(map, prefix + "ComposeMediaCompleteEvent.", this.ComposeMediaCompleteEvent);
+            this.SetParamObj(map, prefix + "WechatMiniProgramPublishEvent.", this.WechatMiniProgramPublishEvent);
         }
     }
 }

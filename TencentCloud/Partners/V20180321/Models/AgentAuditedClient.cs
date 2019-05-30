@@ -102,6 +102,20 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("ProjectType")]
         public string ProjectType{ get; set; }
 
+        /// <summary>
+        /// 业务员ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SalesUin")]
+        public string SalesUin{ get; set; }
+
+        /// <summary>
+        /// 业务员姓名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SalesName")]
+        public string SalesName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -121,6 +135,8 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
             this.SetParamSimple(map, prefix + "ClientType", this.ClientType);
             this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
+            this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
+            this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
         }
     }
 }

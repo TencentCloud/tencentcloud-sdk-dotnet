@@ -313,6 +313,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceClientKeyRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceClientKeyResponse"/>实例</returns>
+        public async Task<DescribeDeviceClientKeyResponse> DescribeDeviceClientKey(DescribeDeviceClientKeyRequest req)
+        {
+             JsonResponseModel<DescribeDeviceClientKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeviceClientKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceClientKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDeviceShadowRequest"/></param>
@@ -584,6 +604,26 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = await this.InternalRequest(req, "ReplaceTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置设备的连接状态
+        /// </summary>
+        /// <param name="req">参考<see cref="ResetDeviceStateRequest"/></param>
+        /// <returns>参考<see cref="ResetDeviceStateResponse"/>实例</returns>
+        public async Task<ResetDeviceStateResponse> ResetDeviceState(ResetDeviceStateRequest req)
+        {
+             JsonResponseModel<ResetDeviceStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetDeviceState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

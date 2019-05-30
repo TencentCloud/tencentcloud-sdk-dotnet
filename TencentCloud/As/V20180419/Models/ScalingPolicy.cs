@@ -52,7 +52,7 @@ namespace TencentCloud.As.V20180419.Models
         /// 告警触发后，期望实例数的调整值。
         /// </summary>
         [JsonProperty("AdjustmentValue")]
-        public string AdjustmentValue{ get; set; }
+        public long? AdjustmentValue{ get; set; }
 
         /// <summary>
         /// 冷却时间。

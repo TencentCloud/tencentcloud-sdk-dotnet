@@ -48,6 +48,12 @@ namespace TencentCloud.Cr.V20180321.Models
         [JsonProperty("BlackDescription")]
         public string BlackDescription{ get; set; }
 
+        /// <summary>
+        /// 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+        /// </summary>
+        [JsonProperty("BlackValidDate")]
+        public string BlackValidDate{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
             this.SetParamSimple(map, prefix + "BlackValue", this.BlackValue);
             this.SetParamSimple(map, prefix + "BlackDescription", this.BlackDescription);
+            this.SetParamSimple(map, prefix + "BlackValidDate", this.BlackValidDate);
         }
     }
 }

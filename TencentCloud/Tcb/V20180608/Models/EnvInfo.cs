@@ -39,7 +39,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string Source{ get; set; }
 
         /// <summary>
-        /// 备注名
+        /// 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
@@ -84,24 +84,14 @@ namespace TencentCloud.Tcb.V20180608.Models
         public FunctionInfo[] Functions{ get; set; }
 
         /// <summary>
-        /// 套餐ID。包含以下取值：
-        /// <li>baisc ：表示基础版</li>
-        /// <li>professional ：表示专业版</li>
-        /// <li>business ： 表示企业版</li>
-        /// <li>flagship：表示旗舰版</li>
-        /// <li>supremacy：表示至尊版</li>
+        /// tcb产品套餐ID，参考DescribePackages接口的返回值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// 套餐中文名称。包含以下取值：
-        /// <li>基础版</li>
-        /// <li>专业版</li>
-        /// <li>企业版</li>
-        /// <li>旗舰版</li>
-        /// <li>至尊版</li>
+        /// 套餐中文名称，参考DescribePackages接口的返回值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageName")]

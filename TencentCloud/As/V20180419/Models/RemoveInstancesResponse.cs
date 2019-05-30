@@ -25,6 +25,12 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
+        /// 伸缩活动ID
+        /// </summary>
+        [JsonProperty("ActivityId")]
+        public string ActivityId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

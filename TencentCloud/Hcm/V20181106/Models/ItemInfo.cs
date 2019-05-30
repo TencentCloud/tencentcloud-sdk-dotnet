@@ -43,10 +43,17 @@ namespace TencentCloud.Hcm.V20181106.Models
         public ItemCoord ItemCoord{ get; set; }
 
         /// <summary>
-        /// 推荐的答案
+        /// 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
         /// </summary>
         [JsonProperty("Answer")]
         public string Answer{ get; set; }
+
+        /// <summary>
+        /// 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpressionType")]
+        public string ExpressionType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +65,7 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "ItemString", this.ItemString);
             this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
             this.SetParamSimple(map, prefix + "Answer", this.Answer);
+            this.SetParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
         }
     }
 }

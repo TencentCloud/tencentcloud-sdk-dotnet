@@ -32,6 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+        /// 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
         /// </summary>
         [JsonProperty("FaceContents")]
         public string[] FaceContents{ get; set; }

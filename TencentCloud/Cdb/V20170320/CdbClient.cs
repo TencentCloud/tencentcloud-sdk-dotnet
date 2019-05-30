@@ -411,7 +411,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupDatabases)用于查询备份数据库列表。
+        /// 本接口(DescribeBackupDatabases)用于查询备份数据库列表 (将废弃)。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeBackupDatabasesRequest"/></param>
         /// <returns>参考<see cref="DescribeBackupDatabasesResponse"/>实例</returns>
@@ -431,7 +431,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名。
+        /// 本接口(DescribeBackupTables)用于查询指定的数据库的备份数据表名 (将废弃)。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeBackupTablesRequest"/></param>
         /// <returns>参考<see cref="DescribeBackupTablesResponse"/>实例</returns>

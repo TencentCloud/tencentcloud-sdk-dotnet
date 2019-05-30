@@ -25,82 +25,73 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 要操作的实例ID
+        /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 修改后的实例名称, 1-50 个英文、汉字、数字、连接线-或下划线_
+        /// 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 横向扩缩容后的节点个数
+        /// 节点个数（2-50个）
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 修改后的配置项, JSON格式字符串。当前仅支持以下配置项：
-        /// action.destructive_requires_name
-        /// indices.fielddata.cache.size
-        /// indices.query.bool.max_clause_count
+        /// 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
         /// </summary>
         [JsonProperty("EsConfig")]
         public string EsConfig{ get; set; }
 
         /// <summary>
-        /// 重置后的Kibana密码, 8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号
+        /// 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// 修改后的访问控制列表
+        /// 访问控制列表
         /// </summary>
         [JsonProperty("EsAcl")]
         public EsAcl EsAcl{ get; set; }
 
         /// <summary>
-        /// 磁盘大小,单位GB
+        /// 磁盘大小（单位GB）
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 节点规格: 
-        /// ES.S1.SMALL2: 1 核 2G
-        /// ES.S1.MEDIUM4: 2 核 4G 
-        /// ES.S1.MEDIUM8: 2 核 8G 
-        /// ES.S1.LARGE16: 4 核 16G 
-        /// ES.S1.2XLARGE32: 8 核 32G 
-        /// ES.S1.4XLARGE64: 16 核 64G
+        /// 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 专用主节点个数
+        /// 专用主节点个数（只支持3个或5个）
         /// </summary>
         [JsonProperty("MasterNodeNum")]
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
-        /// 专用主节点规格，与NodeType支持的规格相同
+        /// 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
-        /// 专用主节点磁盘大小， 单位GB（系统默认配置为50GB,暂不支持自定义）
+        /// 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
         public ulong? MasterNodeDiskSize{ get; set; }
 
         /// <summary>
-        /// 更新配置时是否强制重启
+        /// 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }

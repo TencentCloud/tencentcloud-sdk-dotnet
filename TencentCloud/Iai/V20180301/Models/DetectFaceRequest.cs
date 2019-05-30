@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为30。 
+        /// 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为120。 
         /// 此参数用于控制处理待检测图片中的人脸个数，值越小，处理速度越快。
         /// </summary>
         [JsonProperty("MaxFaceNum")]
@@ -63,7 +63,8 @@ namespace TencentCloud.Iai.V20180301.Models
 
         /// <summary>
         /// 是否开启质量检测。0 为关闭，1 为开启。默认为 0。 
-        /// 非 1 值均视为不进行质量检测。  
+        /// 非 1 值均视为不进行质量检测。
+        /// 最多返回面积最大的 5 张人脸质量分信息，超过 5 张人脸（第 6 张及以后的人脸）的 FaceQualityInfo不具备参考意义。  
         /// 建议：人脸入库操作建议开启此功能。
         /// </summary>
         [JsonProperty("NeedQualityDetection")]

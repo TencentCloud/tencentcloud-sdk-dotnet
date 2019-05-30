@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境唯一标识
+        /// 环境ID
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }

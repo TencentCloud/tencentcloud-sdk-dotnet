@@ -31,7 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string InquiryType{ get; set; }
 
         /// <summary>
-        /// 查询一个或多个[可用区](/document/api/213/9452#zone)下的配置。
+        /// 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }

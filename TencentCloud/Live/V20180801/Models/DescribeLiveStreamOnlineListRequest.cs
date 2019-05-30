@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 应用名称。
+        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 流名称，精确查询。
+        /// 流名称，用于精确查询。
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }

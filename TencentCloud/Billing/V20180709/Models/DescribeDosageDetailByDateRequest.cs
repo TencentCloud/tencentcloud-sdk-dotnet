@@ -31,13 +31,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 查询账单结束日期，如 2019-01-01
+        /// 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 视频业务：
+        /// 互动直播：
         /// 10194   互动直播-核心机房           :
         /// 10195   互动直播-边缘机房
         /// 
@@ -51,13 +51,19 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 
         /// 100967：弹性公网IP-按流量计费
         /// 101065：公网负载均衡-按流量计费
+        /// 
+        /// 视频直播
+        /// 10226 视频直播流量(国内)
+        /// 10227 视频直播带宽(国内)
+        /// 100763 视频直播流量(海外)
+        /// 100762 视频直播宽带(海外)
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
         /// 查询域名 例如 www.qq.com
-        /// 非CDN业务查询时可以设置为空
+        /// 非CDN业务查询时值为空
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

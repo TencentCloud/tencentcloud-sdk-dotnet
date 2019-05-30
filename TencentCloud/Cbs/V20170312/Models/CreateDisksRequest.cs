@@ -91,12 +91,6 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 可选参数。传入True时，新创建的云盘将设置为随云主机销毁模式，仅对按量计费云硬盘有效。
-        /// </summary>
-        [JsonProperty("DeleteWithInstance")]
-        public bool? DeleteWithInstance{ get; set; }
-
-        /// <summary>
         /// 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
         /// </summary>
         [JsonProperty("Shareable")]
@@ -119,7 +113,6 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
         }
     }
