@@ -108,6 +108,48 @@ namespace TencentCloud.Bmlb.V20180625.Models
         [JsonProperty("AddTimestamp")]
         public string AddTimestamp{ get; set; }
 
+        /// <summary>
+        /// 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+        /// </summary>
+        [JsonProperty("CustomHealthSwitch")]
+        public long? CustomHealthSwitch{ get; set; }
+
+        /// <summary>
+        /// 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+        /// </summary>
+        [JsonProperty("InputType")]
+        public string InputType{ get; set; }
+
+        /// <summary>
+        /// 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+        /// </summary>
+        [JsonProperty("LineSeparatorType")]
+        public long? LineSeparatorType{ get; set; }
+
+        /// <summary>
+        /// 自定义探测请求内容。
+        /// </summary>
+        [JsonProperty("HealthRequest")]
+        public string HealthRequest{ get; set; }
+
+        /// <summary>
+        /// 自定义探测返回内容。
+        /// </summary>
+        [JsonProperty("HealthResponse")]
+        public string HealthResponse{ get; set; }
+
+        /// <summary>
+        /// 是否开启toa：1（开启）、0（关闭）。
+        /// </summary>
+        [JsonProperty("ToaFlag")]
+        public long? ToaFlag{ get; set; }
+
+        /// <summary>
+        /// 转发后端服务器调度类型。
+        /// </summary>
+        [JsonProperty("BalanceMode")]
+        public string BalanceMode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -128,6 +170,13 @@ namespace TencentCloud.Bmlb.V20180625.Models
             this.SetParamSimple(map, prefix + "UnhealthNum", this.UnhealthNum);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AddTimestamp", this.AddTimestamp);
+            this.SetParamSimple(map, prefix + "CustomHealthSwitch", this.CustomHealthSwitch);
+            this.SetParamSimple(map, prefix + "InputType", this.InputType);
+            this.SetParamSimple(map, prefix + "LineSeparatorType", this.LineSeparatorType);
+            this.SetParamSimple(map, prefix + "HealthRequest", this.HealthRequest);
+            this.SetParamSimple(map, prefix + "HealthResponse", this.HealthResponse);
+            this.SetParamSimple(map, prefix + "ToaFlag", this.ToaFlag);
+            this.SetParamSimple(map, prefix + "BalanceMode", this.BalanceMode);
         }
     }
 }

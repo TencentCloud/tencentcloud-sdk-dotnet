@@ -35,6 +35,9 @@ namespace TencentCloud.As.V20180419.Models
         /// <li> auto-scaling-group-id - String - 是否必填：否 -（过滤条件）按照伸缩组ID过滤。</li>
         /// <li> auto-scaling-group-name - String - 是否必填：否 -（过滤条件）按照伸缩组名称过滤。</li>
         /// <li> launch-configuration-id - String - 是否必填：否 -（过滤条件）按照启动配置ID过滤。</li>
+        /// <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
+        /// <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
+        /// <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2</li>
         /// 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`AutoScalingGroupIds`和`Filters`。
         /// </summary>
         [JsonProperty("Filters")]

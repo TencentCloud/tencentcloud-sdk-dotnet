@@ -28,7 +28,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
         /// 任务ID。该接口为异步任务，可根据本参数调用[DescribeLoadBalancerTaskResult](/document/product/386/9308)接口来查询任务操作结果
         /// </summary>
         [JsonProperty("TaskId")]
-        public long? TaskId{ get; set; }
+        public string TaskId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

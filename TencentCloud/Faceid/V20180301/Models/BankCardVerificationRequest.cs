@@ -42,6 +42,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("BankCard")]
         public string BankCard{ get; set; }
 
+        /// <summary>
+        /// 证件类型（不填默认0）
+        /// 0 身份证
+        /// 1 军官证
+        /// 2 护照
+        /// 3 港澳证
+        /// 4 台胞证
+        /// 5 警官证
+        /// 6 士兵证
+        /// 7 其它证件
+        /// </summary>
+        [JsonProperty("CertType")]
+        public long? CertType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +65,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "BankCard", this.BankCard);
+            this.SetParamSimple(map, prefix + "CertType", this.CertType);
         }
     }
 }

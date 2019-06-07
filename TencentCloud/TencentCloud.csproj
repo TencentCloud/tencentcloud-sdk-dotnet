@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.26</VersionPrefix>
+    <VersionPrefix>3.0.27</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -159,6 +159,7 @@
     <Compile Include="As\V20180419\Models\SetInstancesProtectionResponse.cs" />
     <Compile Include="As\V20180419\Models\SpotMarketOptions.cs" />
     <Compile Include="As\V20180419\Models\SystemDisk.cs" />
+    <Compile Include="As\V20180419\Models\Tag.cs" />
     <Compile Include="As\V20180419\Models\TargetAttribute.cs" />
     <Compile Include="As\V20180419\Models\UpgradeLaunchConfigurationRequest.cs" />
     <Compile Include="As\V20180419\Models\UpgradeLaunchConfigurationResponse.cs" />
@@ -1247,6 +1248,38 @@
     <Compile Include="Clb\V20180317\Models\Target.cs" />
     <Compile Include="Clb\V20180317\Models\TargetHealth.cs" />
     <Compile Include="Clb\V20180317\Models\TargetRegionInfo.cs" />
+    <Compile Include="Cloudaudit\V20190319\CloudauditClient.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\AttributeKeyDetail.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\AuditSummary.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CmqRegionInfo.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CosRegionInfo.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\Event.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListAuditsRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListAuditsResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\LookupAttribute.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\Resource.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StartLoggingRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StartLoggingResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StopLoggingRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\StopLoggingResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\UpdateAuditRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\UpdateAuditResponse.cs" />
     <Compile Include="Cms\V20190321\CmsClient.cs" />
     <Compile Include="Cms\V20190321\Models\AudioModerationRequest.cs" />
     <Compile Include="Cms\V20190321\Models\AudioModerationResponse.cs" />
@@ -1803,6 +1836,8 @@
     <Compile Include="Faceid\V20180301\Models\LivenessCompareResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\LivenessRecognitionRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\LivenessRecognitionResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\LivenessRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\LivenessResponse.cs" />
     <Compile Include="Habo\V20181203\HaboClient.cs" />
     <Compile Include="Habo\V20181203\Models\DescribeStatusRequest.cs" />
     <Compile Include="Habo\V20181203\Models\DescribeStatusResponse.cs" />
@@ -2916,6 +2951,31 @@
     <Compile Include="Sts\V20180813\Models\Credentials.cs" />
     <Compile Include="Sts\V20180813\Models\GetFederationTokenRequest.cs" />
     <Compile Include="Sts\V20180813\Models\GetFederationTokenResponse.cs" />
+    <Compile Include="Tag\V20180813\TagClient.cs" />
+    <Compile Include="Tag\V20180813\Models\AddResourceTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\AddResourceTagResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\CreateTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\CreateTagResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DeleteResourceTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DeleteResourceTagResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DeleteTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DeleteTagResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagKeysRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagKeysResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagValuesRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagValuesResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagsRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\ModifyResourceTagsRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\ModifyResourceTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\Tag.cs" />
+    <Compile Include="Tag\V20180813\Models\TagKeyObject.cs" />
+    <Compile Include="Tag\V20180813\Models\TagResource.cs" />
+    <Compile Include="Tag\V20180813\Models\TagWithDelete.cs" />
+    <Compile Include="Tag\V20180813\Models\UpdateResourceTagValueRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\UpdateResourceTagValueResponse.cs" />
     <Compile Include="Tav\V20190118\TavClient.cs" />
     <Compile Include="Tav\V20190118\Models\GetLocalEngineRequest.cs" />
     <Compile Include="Tav\V20190118\Models\GetLocalEngineResponse.cs" />
@@ -3182,6 +3242,8 @@
     <Compile Include="Vod\V20180717\Models\CommitUploadRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CommitUploadResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ComposeMediaOutput.cs" />
+    <Compile Include="Vod\V20180717\Models\ComposeMediaRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ComposeMediaResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ComposeMediaTask.cs" />
     <Compile Include="Vod\V20180717\Models\ComposeMediaTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\ComposeMediaTaskOutput.cs" />
@@ -3247,6 +3309,8 @@
     <Compile Include="Vod\V20180717\Models\DescribePersonSamplesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTasksRequest.cs" />
@@ -3390,6 +3454,7 @@
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
+    <Compile Include="Vod\V20180717\Models\StatDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\StickerTrackItem.cs" />
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInputForUpdate.cs" />
@@ -3421,7 +3486,6 @@
     <Compile Include="Vod\V20180717\Models\VideoTrackItem.cs" />
     <Compile Include="Vod\V20180717\Models\WatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\WatermarkTemplate.cs" />
-    <Compile Include="Vod\V20180717\Models\WechatMiniProgramPublishTask.cs" />
     <Compile Include="Vod\V20180717\Models\WechatPublishTask.cs" />
     <Compile Include="Vpc\V20170312\VpcClient.cs" />
     <Compile Include="Vpc\V20170312\Models\AcceptAttachCcnInstancesRequest.cs" />
@@ -4021,5 +4085,10 @@
     <Compile Include="Yunjing\V20180228\Models\WeeklyReportMalware.cs" />
     <Compile Include="Yunjing\V20180228\Models\WeeklyReportNonlocalLoginPlace.cs" />
     <Compile Include="Yunjing\V20180228\Models\WeeklyReportVul.cs" />
+    <Compile Include="Yunsou\V20180504\YunsouClient.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataManipulationRequest.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataManipulationResponse.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataSearchRequest.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataSearchResponse.cs" />
   </ItemGroup>
 </Project>

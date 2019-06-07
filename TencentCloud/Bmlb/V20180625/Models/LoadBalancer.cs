@@ -180,12 +180,6 @@ namespace TencentCloud.Bmlb.V20180625.Models
         [JsonProperty("BzL7Metrics")]
         public string BzL7Metrics{ get; set; }
 
-        /// <summary>
-        /// Isp类型。5:腾讯CAP;7:内网。
-        /// </summary>
-        [JsonProperty("IspId")]
-        public string IspId{ get; set; }
-
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -218,7 +212,6 @@ namespace TencentCloud.Bmlb.V20180625.Models
             this.SetParamSimple(map, prefix + "BzPayMode", this.BzPayMode);
             this.SetParamSimple(map, prefix + "BzL4Metrics", this.BzL4Metrics);
             this.SetParamSimple(map, prefix + "BzL7Metrics", this.BzL7Metrics);
-            this.SetParamSimple(map, prefix + "IspId", this.IspId);
         }
     }
 }

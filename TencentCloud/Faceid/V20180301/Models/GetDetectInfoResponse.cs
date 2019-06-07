@@ -30,7 +30,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         ///   // 文本类信息
         ///   "Text": {
         ///     "ErrCode": null,      // 本次核身最终结果。0为成功
-        ///     "ErrMsg": null,       // 本次核身的错误信息。
+        ///     "ErrMsg": null,       // 本次核身最终结果信息描述。
         ///     "IdCard": "",         // 本次核身最终获得的身份证号。
         ///     "Name": "",           // 本次核身最终获得的姓名。
         ///     "OcrNation": null,    // ocr阶段获取的民族
@@ -45,6 +45,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         ///     "LiveMsg": null,      // 活体检测阶段的错误信息
         ///     "Comparestatus": null,// 一比一阶段的错误码。0为成功
         ///     "Comparemsg": null,   // 一比一阶段的错误信息
+        ///     "Location": null, // 地理位置信息
         ///     "Extra": "",          // DetectAuth结果传进来的Extra信息
         ///     "Detail": {           // 活体一比一信息详情
         ///       "LivenessData": []

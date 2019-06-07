@@ -123,6 +123,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ZonesCheckPolicy")]
         public string ZonesCheckPolicy{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -144,6 +150,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

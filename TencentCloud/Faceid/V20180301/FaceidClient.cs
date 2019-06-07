@@ -73,7 +73,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 每次开始核身前，需先调用本接口获取BizToken，用来串联核身流程，在核身完成后，用于获取验证结果信息。
+        /// 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
         /// </summary>
         /// <param name="req">参考<see cref="DetectAuthRequest"/></param>
         /// <returns>参考<see cref="DetectAuthResponse"/>实例</returns>
@@ -184,6 +184,26 @@ namespace TencentCloud.Faceid.V20180301
              {
                  var strResp = await this.InternalRequest(req, "ImageRecognition");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageRecognitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 活体检测
+        /// </summary>
+        /// <param name="req">参考<see cref="LivenessRequest"/></param>
+        /// <returns>参考<see cref="LivenessResponse"/>实例</returns>
+        public async Task<LivenessResponse> Liveness(LivenessRequest req)
+        {
+             JsonResponseModel<LivenessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "Liveness");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LivenessResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,13 +25,13 @@ namespace TencentCloud.Msp.V20180319.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务ID，例如msp-jitoh33n
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目ID，例如10005
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

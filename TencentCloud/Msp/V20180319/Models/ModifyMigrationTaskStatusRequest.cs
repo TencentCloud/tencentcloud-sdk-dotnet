@@ -25,13 +25,13 @@ namespace TencentCloud.Msp.V20180319.Models
     {
         
         /// <summary>
-        /// 任务状态
+        /// 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 任务ID，例如msp-jitoh33n
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

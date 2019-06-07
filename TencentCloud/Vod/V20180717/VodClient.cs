@@ -94,6 +94,30 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于制作媒体文件，可以
+        /// 
+        /// 1. 对一个媒体文件进行剪辑，生成一个新的媒体文件；
+        /// 2. 对多个媒体文件进行裁剪拼接，生成一个新的媒体文件；
+        /// 3. 对多个媒体文件的媒体流进行裁剪拼接，生成一个新的媒体文件；
+        /// </summary>
+        /// <param name="req">参考<see cref="ComposeMediaRequest"/></param>
+        /// <returns>参考<see cref="ComposeMediaResponse"/>实例</returns>
+        public async Task<ComposeMediaResponse> ComposeMedia(ComposeMediaRequest req)
+        {
+             JsonResponseModel<ComposeMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ComposeMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ComposeMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 开发者调用拉取事件通知，获取到事件后，必须调用该接口来确认消息已经收到；
         /// * 开发者获取到事件句柄后，等待确认的有效时间为 30 秒，超出 30 秒会报参数错误（4000）；
         /// * 更多参考[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)。
@@ -644,6 +668,29 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeProcedureTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProcedureTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
+        /// 
+        /// 1. 可以查询最近 90 天内的转码时长统计数据。
+        /// 2. 查询时间跨度不超过 60 天。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeReviewDetailsRequest"/></param>
+        /// <returns>参考<see cref="DescribeReviewDetailsResponse"/>实例</returns>
+        public async Task<DescribeReviewDetailsResponse> DescribeReviewDetails(DescribeReviewDetailsRequest req)
+        {
+             JsonResponseModel<DescribeReviewDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReviewDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReviewDetailsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

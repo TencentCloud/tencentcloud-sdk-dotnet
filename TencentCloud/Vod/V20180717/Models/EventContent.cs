@@ -134,13 +134,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ComposeMediaCompleteEvent")]
         public ComposeMediaTask ComposeMediaCompleteEvent{ get; set; }
 
-        /// <summary>
-        /// 微信小程序视频发布完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("WechatMiniProgramPublishEvent")]
-        public WechatMiniProgramPublishTask WechatMiniProgramPublishEvent{ get; set; }
-
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -161,7 +154,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CreateImageSpriteCompleteEvent.", this.CreateImageSpriteCompleteEvent);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
             this.SetParamObj(map, prefix + "ComposeMediaCompleteEvent.", this.ComposeMediaCompleteEvent);
-            this.SetParamObj(map, prefix + "WechatMiniProgramPublishEvent.", this.WechatMiniProgramPublishEvent);
         }
     }
 }

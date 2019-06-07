@@ -27,7 +27,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 音频流的编码格式，可选值：
         /// <li>libfdk_aac：适合 mp4 文件。</li>
-        /// <li>libmp3lame：适合 mp3 文件。</li>
         /// 默认值：libfdk_aac。
         /// </summary>
         [JsonProperty("Codec")]

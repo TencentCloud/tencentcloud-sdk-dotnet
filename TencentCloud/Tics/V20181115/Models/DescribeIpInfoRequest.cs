@@ -25,7 +25,7 @@ namespace TencentCloud.Tics.V20181115.Models
     {
         
         /// <summary>
-        /// 要查询的域名
+        /// 要查询的IP
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

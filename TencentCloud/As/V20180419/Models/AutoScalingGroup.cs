@@ -156,6 +156,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InActivityStatus")]
         public string InActivityStatus{ get; set; }
 
+        /// <summary>
+        /// 伸缩组标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -184,6 +190,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "ZoneSet.", this.ZoneSet);
             this.SetParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "InActivityStatus", this.InActivityStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
