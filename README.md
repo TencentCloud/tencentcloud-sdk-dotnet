@@ -140,6 +140,8 @@ namespace TencentCloudExamples
 
 目前 SDK 中仅提供了异步调用接口，在示例中由于是控制台应用程序，所以可以使用同步方式调用异步接口，即`ConfigureAwait(false).GetAwaiter().GetResult()`。在开发 ASP 应用程序，或者 Windows Forms 应用程序时，UI 控件的响应方法中，不能使用同步方式调用异步接口，否则会造成界面停止响应。解决的办法是将 UI 控件的响应方法改为异步，在方法中也异步地调用接口。
 
+源码可以参考这篇文章：[https://cloud.tencent.com/developer/article/1395819](https://cloud.tencent.com/developer/article/1395819)
+
 # 旧版SDK
 
 我们推荐您使用新版 SDK ， 如果需要旧版 SDK ，请访问 [qcloudapi sdk for dotnet](https://github.com/qcloudapi/qcloudapi-sdk-dotnet)
