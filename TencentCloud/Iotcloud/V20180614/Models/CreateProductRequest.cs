@@ -37,7 +37,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ProductProperties ProductProperties{ get; set; }
 
         /// <summary>
-        /// 创建LoRa产品需要的Skey
+        /// 创建CLAA产品时，需要Skey
         /// </summary>
         [JsonProperty("Skey")]
         public string Skey{ get; set; }

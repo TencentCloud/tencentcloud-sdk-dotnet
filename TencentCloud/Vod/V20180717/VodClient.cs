@@ -679,8 +679,8 @@ namespace TencentCloud.Vod.V20180717
         /// <summary>
         /// 该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
         /// 
-        /// 1. 可以查询最近 90 天内的转码时长统计数据。
-        /// 2. 查询时间跨度不超过 60 天。
+        /// 1. 可以查询最近90天内的视频内容审核时长统计数据。
+        /// 2. 查询时间跨度不超过60天。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeReviewDetailsRequest"/></param>
         /// <returns>参考<see cref="DescribeReviewDetailsResponse"/>实例</returns>
@@ -823,6 +823,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "EditMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
+        /// </summary>
+        /// <param name="req">参考<see cref="ExecuteFunctionRequest"/></param>
+        /// <returns>参考<see cref="ExecuteFunctionResponse"/>实例</returns>
+        public async Task<ExecuteFunctionResponse> ExecuteFunction(ExecuteFunctionRequest req)
+        {
+             JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExecuteFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteFunctionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1134,7 +1154,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// * 该接口用于从点播服务端获取事件通知，详见[服务端事件通知](https://cloud.tencent.com/document/product/266/7829)；
+        /// * 该接口用于业务服务器以[可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)的方式获取事件通知；
         /// * 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
         /// * 请求最多挂起 5 秒，建议请求方将超时时间设置为 10 秒；
         /// * 若该接口有事件返回，调用方必须再调用[确认事件通知](https://cloud.tencent.com/document/product/266/33434)接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
@@ -1148,6 +1168,48 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "PullEvents");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于将一个网络上的视频拉取到云点播平台。
+        /// </summary>
+        /// <param name="req">参考<see cref="PullUploadRequest"/></param>
+        /// <returns>参考<see cref="PullUploadResponse"/>实例</returns>
+        public async Task<PullUploadResponse> PullUpload(PullUploadRequest req)
+        {
+             JsonResponseModel<PullUploadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PullUpload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullUploadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. 预热指定的 URL 列表。
+        /// 2. URL 的域名必须已在云点播中注册。
+        /// 3. 单次请求最多指定20个 URL。
+        /// </summary>
+        /// <param name="req">参考<see cref="PushUrlCacheRequest"/></param>
+        /// <returns>参考<see cref="PushUrlCacheResponse"/>实例</returns>
+        public async Task<PushUrlCacheResponse> PushUrlCache(PushUrlCacheRequest req)
+        {
+             JsonResponseModel<PushUrlCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PushUrlCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PushUrlCacheResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

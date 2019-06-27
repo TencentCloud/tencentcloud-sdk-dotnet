@@ -43,12 +43,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public LookupAttribute[] LookupAttributes{ get; set; }
 
         /// <summary>
-        /// 是否调用新的查询接口
-        /// </summary>
-        [JsonProperty("IsApiV3")]
-        public long? IsApiV3{ get; set; }
-
-        /// <summary>
         /// 返回日志的最大条数
         /// </summary>
         [JsonProperty("MaxResults")]
@@ -69,7 +63,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
-            this.SetParamSimple(map, prefix + "IsApiV3", this.IsApiV3);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
         }

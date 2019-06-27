@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束日期，需大于开始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// 结束日期，需大于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

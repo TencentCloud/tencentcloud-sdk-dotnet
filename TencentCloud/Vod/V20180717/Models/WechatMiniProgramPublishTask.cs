@@ -67,7 +67,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 微信小程序视频发布状态，取值：
-        /// <li>Pass：成功；</li>
+        /// <li>Pass：发布成功；</li>
+        /// <li>Failed：发布失败；</li>
         /// <li>Rejected：审核未通过。</li>
         /// </summary>
         [JsonProperty("PublishResult")]

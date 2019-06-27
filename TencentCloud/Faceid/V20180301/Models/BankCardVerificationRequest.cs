@@ -43,7 +43,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string BankCard{ get; set; }
 
         /// <summary>
-        /// 证件类型（不填默认0）
+        /// 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
         /// 0 身份证
         /// 1 军官证
         /// 2 护照

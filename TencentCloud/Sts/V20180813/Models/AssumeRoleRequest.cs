@@ -42,6 +42,16 @@ namespace TencentCloud.Sts.V20180813.Models
         [JsonProperty("DurationSeconds")]
         public ulong? DurationSeconds{ get; set; }
 
+        /// <summary>
+        /// 策略描述
+        /// 注意：
+        /// 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照云 API 规范再 urlencode 一次）。
+        /// 2、策略语法参照 CAM 策略语法。
+        /// 3、策略中不能包含 principal 元素。
+        /// </summary>
+        [JsonProperty("Policy")]
+        public string Policy{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +61,7 @@ namespace TencentCloud.Sts.V20180813.Models
             this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
             this.SetParamSimple(map, prefix + "RoleSessionName", this.RoleSessionName);
             this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamSimple(map, prefix + "Policy", this.Policy);
         }
     }
 }

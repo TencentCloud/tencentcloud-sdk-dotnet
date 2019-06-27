@@ -53,6 +53,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 银行卡二要素核验
+        /// </summary>
+        /// <param name="req">参考<see cref="BankCard2EVerificationRequest"/></param>
+        /// <returns>参考<see cref="BankCard2EVerificationResponse"/>实例</returns>
+        public async Task<BankCard2EVerificationResponse> BankCard2EVerification(BankCard2EVerificationRequest req)
+        {
+             JsonResponseModel<BankCard2EVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BankCard2EVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BankCard2EVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 银行卡四要素核验
+        /// </summary>
+        /// <param name="req">参考<see cref="BankCard4EVerificationRequest"/></param>
+        /// <returns>参考<see cref="BankCard4EVerificationResponse"/>实例</returns>
+        public async Task<BankCard4EVerificationResponse> BankCard4EVerification(BankCard4EVerificationRequest req)
+        {
+             JsonResponseModel<BankCard4EVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BankCard4EVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BankCard4EVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 银行卡核验
         /// </summary>
         /// <param name="req">参考<see cref="BankCardVerificationRequest"/></param>

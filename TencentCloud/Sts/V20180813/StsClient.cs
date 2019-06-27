@@ -73,6 +73,26 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
+        /// 本接口（AssumeRoleWithSAML）用于根据 SAML 断言申请角色临时凭证。
+        /// </summary>
+        /// <param name="req">参考<see cref="AssumeRoleWithSAMLRequest"/></param>
+        /// <returns>参考<see cref="AssumeRoleWithSAMLResponse"/>实例</returns>
+        public async Task<AssumeRoleWithSAMLResponse> AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req)
+        {
+             JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssumeRoleWithSAML");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleWithSAMLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取联合身份临时访问凭证
         /// </summary>
         /// <param name="req">参考<see cref="GetFederationTokenRequest"/></param>

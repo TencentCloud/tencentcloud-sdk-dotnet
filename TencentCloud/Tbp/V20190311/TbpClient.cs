@@ -53,46 +53,6 @@ namespace TencentCloud.Tbp.V20190311
         }
 
         /// <summary>
-        /// 机器人会话接口，接收音频信息，传递给后台机器人
-        /// </summary>
-        /// <param name="req">参考<see cref="PostAudioRequest"/></param>
-        /// <returns>参考<see cref="PostAudioResponse"/>实例</returns>
-        public async Task<PostAudioResponse> PostAudio(PostAudioRequest req)
-        {
-             JsonResponseModel<PostAudioResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PostAudio");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostAudioResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 机器人会话接口，接收文本信息，传递给后台机器人
-        /// </summary>
-        /// <param name="req">参考<see cref="PostTextRequest"/></param>
-        /// <returns>参考<see cref="PostTextResponse"/>实例</returns>
-        public async Task<PostTextResponse> PostText(PostTextRequest req)
-        {
-             JsonResponseModel<PostTextResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PostText");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostTextResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 对当前机器人的会话状态进行复位
         /// </summary>
         /// <param name="req">参考<see cref="ResetRequest"/></param>
@@ -104,6 +64,46 @@ namespace TencentCloud.Tbp.V20190311
              {
                  var strResp = await this.InternalRequest(req, "Reset");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接收调用侧的文本输入，返回应答文本。
+        /// </summary>
+        /// <param name="req">参考<see cref="TextProcessRequest"/></param>
+        /// <returns>参考<see cref="TextProcessResponse"/>实例</returns>
+        public async Task<TextProcessResponse> TextProcess(TextProcessRequest req)
+        {
+             JsonResponseModel<TextProcessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TextProcess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextProcessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 会话重置接口
+        /// </summary>
+        /// <param name="req">参考<see cref="TextResetRequest"/></param>
+        /// <returns>参考<see cref="TextResetResponse"/>实例</returns>
+        public async Task<TextResetResponse> TextReset(TextResetRequest req)
+        {
+             JsonResponseModel<TextResetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TextReset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextResetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

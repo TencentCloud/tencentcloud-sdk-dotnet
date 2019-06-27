@@ -48,7 +48,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// <summary>
         /// 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
         /// MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-        /// 当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索。
+        /// 当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
         /// </summary>
         [JsonProperty("MaxFaceNum")]
         public ulong? MaxFaceNum{ get; set; }

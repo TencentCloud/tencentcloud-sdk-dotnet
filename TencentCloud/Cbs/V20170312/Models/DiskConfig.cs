@@ -61,7 +61,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? MinDiskSize{ get; set; }
 
         /// <summary>
-        /// 所在[可用区](/document/api/213/9452#zone)。
+        /// 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

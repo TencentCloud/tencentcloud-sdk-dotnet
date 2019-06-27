@@ -62,7 +62,7 @@ namespace TencentCloud.Aai.V20180522.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 音色<li>0-亲和女声默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+        /// 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>3-活力男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
         /// </summary>
         [JsonProperty("VoiceType")]
         public long? VoiceType{ get; set; }
@@ -79,6 +79,12 @@ namespace TencentCloud.Aai.V20180522.Models
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }
 
+        /// <summary>
+        /// 返回音频格式，可取值：wav（默认），mp3
+        /// </summary>
+        [JsonProperty("Codec")]
+        public string Codec{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -94,6 +100,7 @@ namespace TencentCloud.Aai.V20180522.Models
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
             this.SetParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
+            this.SetParamSimple(map, prefix + "Codec", this.Codec);
         }
     }
 }

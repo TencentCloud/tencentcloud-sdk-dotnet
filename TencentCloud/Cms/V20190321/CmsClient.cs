@@ -54,8 +54,6 @@ namespace TencentCloud.Cms.V20190321
 
         /// <summary>
         /// 音频内容检测（Audio Moderation, AM）服务使用了波形分析、声纹分析等技术，能识别涉黄、涉政、涉恐等违规音频，同时支持用户配置音频黑库，打击自定义的违规内容。
-        /// 
-        /// 通过API直接上传音频即可进行检测，对于高危部分直接屏蔽，可疑部分人工复审，从而节省审核人力，释放业务风险。
         /// </summary>
         /// <param name="req">参考<see cref="AudioModerationRequest"/></param>
         /// <returns>参考<see cref="AudioModerationResponse"/>实例</returns>
@@ -66,6 +64,46 @@ namespace TencentCloud.Cms.V20190321
              {
                  var strResp = await this.InternalRequest(req, "AudioModeration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AudioModerationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增文本类型样本库
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTextSampleRequest"/></param>
+        /// <returns>参考<see cref="CreateTextSampleResponse"/>实例</returns>
+        public async Task<CreateTextSampleResponse> CreateTextSample(CreateTextSampleRequest req)
+        {
+             JsonResponseModel<CreateTextSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTextSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTextSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除文字样本库，暂时只支持单个删除
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteTextSampleRequest"/></param>
+        /// <returns>参考<see cref="DeleteTextSampleResponse"/>实例</returns>
+        public async Task<DeleteTextSampleResponse> DeleteTextSample(DeleteTextSampleRequest req)
+        {
+             JsonResponseModel<DeleteTextSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTextSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTextSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -95,8 +133,27 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
+        /// 支持批量查询文字样本库
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTextSampleRequest"/></param>
+        /// <returns>参考<see cref="DescribeTextSampleResponse"/>实例</returns>
+        public async Task<DescribeTextSampleResponse> DescribeTextSample(DescribeTextSampleRequest req)
+        {
+             JsonResponseModel<DescribeTextSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTextSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
-        /// 通过API获取检测的标签及置信度，可直接采信高置信度的结果，人工复审低置信度的结果，从而降低人工成本，提高审核效率。
         /// </summary>
         /// <param name="req">参考<see cref="ImageModerationRequest"/></param>
         /// <returns>参考<see cref="ImageModerationResponse"/>实例</returns>
@@ -117,7 +174,6 @@ namespace TencentCloud.Cms.V20190321
 
         /// <summary>
         /// 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
-        /// 通过API接口，能检测内容的危险等级，对于高危部分直接过滤，可疑部分人工复审，从而节省审核人力，释放业务风险。
         /// </summary>
         /// <param name="req">参考<see cref="TextModerationRequest"/></param>
         /// <returns>参考<see cref="TextModerationResponse"/>实例</returns>
@@ -138,7 +194,6 @@ namespace TencentCloud.Cms.V20190321
 
         /// <summary>
         /// 视频内容检测（Video Moderation, VM）服务能识别涉黄、涉政、涉恐等违规视频，同时支持用户配置视频黑库，打击自定义的违规内容。
-        /// 通过API直接上传视频即可进行检测，对于高危部分直接过滤，可疑部分人工复审，从而节省审核人力，释放业务风险。
         /// </summary>
         /// <param name="req">参考<see cref="VideoModerationRequest"/></param>
         /// <returns>参考<see cref="VideoModerationResponse"/>实例</returns>

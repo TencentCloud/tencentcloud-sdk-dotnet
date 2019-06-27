@@ -29,7 +29,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Procedure：视频处理任务；</li>
         /// <li>EditMedia：视频编辑任务；</li>
         /// <li>WechatPublish：微信发布任务；</li>
-        /// <li>ComposeMedia：制作媒体文件任务。</li>
+        /// <li>ComposeMedia：制作媒体文件任务；</li>
+        /// <li>PullUpload：拉取上传媒体文件任务。</li>
+        /// 
         /// 兼容 2017 版的任务类型：
         /// <li>Transcode：视频转码任务；</li>
         /// <li>SnapshotByTimeOffset：视频截图任务；</li>
@@ -89,6 +91,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public WechatPublishTask WechatPublishTask{ get; set; }
 
         /// <summary>
+        /// 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComposeMediaTask")]
+        public ComposeMediaTask ComposeMediaTask{ get; set; }
+
+        /// <summary>
+        /// 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PullUploadTask")]
+        public PullUploadTask PullUploadTask{ get; set; }
+
+        /// <summary>
         /// 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -124,13 +140,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ComposeMediaTask")]
-        public ComposeMediaTask ComposeMediaTask{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -150,12 +159,13 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ProcedureTask.", this.ProcedureTask);
             this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
             this.SetParamObj(map, prefix + "WechatPublishTask.", this.WechatPublishTask);
+            this.SetParamObj(map, prefix + "ComposeMediaTask.", this.ComposeMediaTask);
+            this.SetParamObj(map, prefix + "PullUploadTask.", this.PullUploadTask);
             this.SetParamObj(map, prefix + "TranscodeTask.", this.TranscodeTask);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamObj(map, prefix + "ConcatTask.", this.ConcatTask);
             this.SetParamObj(map, prefix + "ClipTask.", this.ClipTask);
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
-            this.SetParamObj(map, prefix + "ComposeMediaTask.", this.ComposeMediaTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

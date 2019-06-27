@@ -79,7 +79,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public long? IsCreateNewQueue{ get; set; }
 
         /// <summary>
-        /// 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID做为日志前缀。
+        /// 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID作为日志前缀。
         /// </summary>
         [JsonProperty("LogFilePrefix")]
         public string LogFilePrefix{ get; set; }

@@ -25,7 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 字体类型，目前仅支持 arial.ttf。
+        /// 字体类型，目前可以支持两种：
+        /// <li>simkai.ttf：可以支持中文和英文；</li>
+        /// <li>arial.ttf：仅支持英文。</li>
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }

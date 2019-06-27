@@ -73,7 +73,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 识别模式，不填则由调用放进行vad(静音检测)，填bvad则由服务放进行vad，前者适合段语音翻译（收到所有语音分片后翻译），后者适合长语音翻译（在完成一个断句识别后就会返回部分结果）
+        /// 识别模式，该参数已废弃
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

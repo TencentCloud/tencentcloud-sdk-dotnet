@@ -660,6 +660,29 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（ExecuteScalingPolicy）用于执行伸缩策略。
+        /// 
+        /// * 可以根据伸缩策略ID执行伸缩策略。
+        /// * 伸缩策略所属伸缩组处于伸缩活动时，会拒绝执行伸缩策略。
+        /// </summary>
+        /// <param name="req">参考<see cref="ExecuteScalingPolicyRequest"/></param>
+        /// <returns>参考<see cref="ExecuteScalingPolicyResponse"/>实例</returns>
+        public async Task<ExecuteScalingPolicyResponse> ExecuteScalingPolicy(ExecuteScalingPolicyRequest req)
+        {
+             JsonResponseModel<ExecuteScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExecuteScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyAutoScalingGroup）用于修改伸缩组。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyAutoScalingGroupRequest"/></param>

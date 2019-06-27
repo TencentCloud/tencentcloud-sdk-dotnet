@@ -35,7 +35,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
         /// <li>violation_photo：违规图标；</li>
-        /// <li>politician：政治人物。</li>
+        /// <li>politician：政治人物；</li>
+        /// <li>entertainment：娱乐明星；</li>
+        /// <li>sport：体育明星。</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

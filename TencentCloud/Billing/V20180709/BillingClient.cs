@@ -93,7 +93,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// 查询账单资源汇总数据
+        /// 查询账单资源汇总数据 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeBillResourceSummaryRequest"/></param>
         /// <returns>参考<see cref="DescribeBillResourceSummaryResponse"/>实例</returns>
@@ -104,6 +104,86 @@ namespace TencentCloud.Billing.V20180709
              {
                  var strResp = await this.InternalRequest(req, "DescribeBillResourceSummary");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取按付费模式汇总费用分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBillSummaryByPayModeRequest"/></param>
+        /// <returns>参考<see cref="DescribeBillSummaryByPayModeResponse"/>实例</returns>
+        public async Task<DescribeBillSummaryByPayModeResponse> DescribeBillSummaryByPayMode(DescribeBillSummaryByPayModeRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByPayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取产品汇总费用分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBillSummaryByProductRequest"/></param>
+        /// <returns>参考<see cref="DescribeBillSummaryByProductResponse"/>实例</returns>
+        public async Task<DescribeBillSummaryByProductResponse> DescribeBillSummaryByProduct(DescribeBillSummaryByProductRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取按项目汇总费用分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBillSummaryByProjectRequest"/></param>
+        /// <returns>参考<see cref="DescribeBillSummaryByProjectResponse"/>实例</returns>
+        public async Task<DescribeBillSummaryByProjectResponse> DescribeBillSummaryByProject(DescribeBillSummaryByProjectRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取按地域汇总费用分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBillSummaryByRegionRequest"/></param>
+        /// <returns>参考<see cref="DescribeBillSummaryByRegionResponse"/>实例</returns>
+        public async Task<DescribeBillSummaryByRegionResponse> DescribeBillSummaryByRegion(DescribeBillSummaryByRegionRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByRegionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

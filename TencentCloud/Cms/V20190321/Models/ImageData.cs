@@ -44,6 +44,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public long? EvilType{ get; set; }
 
         /// <summary>
+        /// 图片性感详情
+        /// </summary>
+        [JsonProperty("HotDetect")]
+        public ImageHotDetect HotDetect{ get; set; }
+
+        /// <summary>
         /// 图片违法详情
         /// </summary>
         [JsonProperty("IllegalDetect")]
@@ -81,6 +87,7 @@ namespace TencentCloud.Cms.V20190321.Models
         {
             this.SetParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
+            this.SetParamObj(map, prefix + "HotDetect.", this.HotDetect);
             this.SetParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
             this.SetParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
             this.SetParamObj(map, prefix + "PornDetect.", this.PornDetect);

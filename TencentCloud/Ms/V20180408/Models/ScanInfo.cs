@@ -31,7 +31,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// VULSCAN-漏洞扫描信息，VIRUSSCAN-返回病毒扫描信息， ADSCAN-广告扫描信息，PLUGINSCAN-插件扫描信息，可以自由组合
+        /// VULSCAN-漏洞扫描信息，VIRUSSCAN-返回病毒扫描信息， ADSCAN-广告扫描信息，PLUGINSCAN-插件扫描信息，PERMISSION-系统权限信息，SENSITIVE-敏感词信息，可以自由组合
         /// </summary>
         [JsonProperty("ScanTypes")]
         public string[] ScanTypes{ get; set; }

@@ -26,7 +26,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// 映射查询类别：
-        /// ips：运营商映射查询
+        /// isp：运营商映射查询
         /// district：省份映射查询
         /// </summary>
         [JsonProperty("Name")]

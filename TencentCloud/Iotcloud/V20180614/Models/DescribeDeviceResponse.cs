@@ -122,6 +122,41 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ulong? LogLevel{ get; set; }
 
         /// <summary>
+        /// 首次上线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstOnlineTime")]
+        public ulong? FirstOnlineTime{ get; set; }
+
+        /// <summary>
+        /// 最近下线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastOfflineTime")]
+        public ulong? LastOfflineTime{ get; set; }
+
+        /// <summary>
+        /// 设备创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CertState")]
+        public ulong? CertState{ get; set; }
+
+        /// <summary>
+        /// 设备启用状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableState")]
+        public ulong? EnableState{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -149,6 +184,11 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "LoraDevEui", this.LoraDevEui);
             this.SetParamSimple(map, prefix + "LoraMoteType", this.LoraMoteType);
             this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
+            this.SetParamSimple(map, prefix + "FirstOnlineTime", this.FirstOnlineTime);
+            this.SetParamSimple(map, prefix + "LastOfflineTime", this.LastOfflineTime);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "CertState", this.CertState);
+            this.SetParamSimple(map, prefix + "EnableState", this.EnableState);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

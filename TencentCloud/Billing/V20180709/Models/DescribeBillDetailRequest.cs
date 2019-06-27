@@ -60,6 +60,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 是否需要访问列表的总记录数，用于前端分页
+        /// 1-表示需要， 0-表示不需要
+        /// </summary>
+        [JsonProperty("NeedRecordNum")]
+        public long? NeedRecordNum{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +79,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Month", this.Month);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
         }
     }
 }

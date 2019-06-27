@@ -53,6 +53,27 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
+        /// 本接口(AssignProject)用于指定云数据库实例的所属项目。
+        /// 
+        /// </summary>
+        /// <param name="req">参考<see cref="AssignProjectRequest"/></param>
+        /// <returns>参考<see cref="AssignProjectResponse"/>实例</returns>
+        public async Task<AssignProjectResponse> AssignProject(AssignProjectRequest req)
+        {
+             JsonResponseModel<AssignProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。
         /// </summary>
         /// <param name="req">参考<see cref="CreateDBInstanceRequest"/></param>
@@ -84,6 +105,127 @@ namespace TencentCloud.Mongodb.V20180408
              {
                  var strResp = await this.InternalRequest(req, "CreateDBInstanceHour");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceHourResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns>参考<see cref="DescribeDBInstancesResponse"/>实例</returns>
+        public async Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSlowLogs)用于获取云数据库实例的慢查询日志。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSlowLogRequest"/></param>
+        /// <returns>参考<see cref="DescribeSlowLogResponse"/>实例</returns>
+        public async Task<DescribeSlowLogResponse> DescribeSlowLog(DescribeSlowLogRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeSpecInfo)用于查询实例的售卖规格。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSpecInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeSpecInfoResponse"/>实例</returns>
+        public async Task<DescribeSpecInfoResponse> DescribeSpecInfo(DescribeSpecInfoRequest req)
+        {
+             JsonResponseModel<DescribeSpecInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpecInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(RenameInstance)用于修改云数据库实例的名称。
+        /// </summary>
+        /// <param name="req">参考<see cref="RenameInstanceRequest"/></param>
+        /// <returns>参考<see cref="RenameInstanceResponse"/>实例</returns>
+        public async Task<RenameInstanceResponse> RenameInstance(RenameInstanceRequest req)
+        {
+             JsonResponseModel<RenameInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenameInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenameInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SetAutoRenew)用于设置包年包月云数据库实例的续费选项。
+        /// </summary>
+        /// <param name="req">参考<see cref="SetAutoRenewRequest"/></param>
+        /// <returns>参考<see cref="SetAutoRenewResponse"/>实例</returns>
+        public async Task<SetAutoRenewResponse> SetAutoRenew(SetAutoRenewRequest req)
+        {
+             JsonResponseModel<SetAutoRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetAutoRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoRenewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SetPassword)用于设置云数据库账户的密码。
+        /// 
+        /// </summary>
+        /// <param name="req">参考<see cref="SetPasswordRequest"/></param>
+        /// <returns>参考<see cref="SetPasswordResponse"/>实例</returns>
+        public async Task<SetPasswordResponse> SetPassword(SetPasswordRequest req)
+        {
+             JsonResponseModel<SetPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetPasswordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

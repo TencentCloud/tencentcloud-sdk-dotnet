@@ -25,6 +25,18 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
+        /// 新增的实例个数。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 路由表对象。
+        /// </summary>
+        [JsonProperty("RouteTableSet")]
+        public RouteTable[] RouteTableSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "RouteTableSet.", this.RouteTableSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

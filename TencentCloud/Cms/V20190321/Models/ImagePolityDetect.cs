@@ -56,6 +56,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public string[] Keywords{ get; set; }
 
         /// <summary>
+        /// 命中的政治物品名称
+        /// </summary>
+        [JsonProperty("PolityItems")]
+        public string[] PolityItems{ get; set; }
+
+        /// <summary>
         /// 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
         /// </summary>
         [JsonProperty("Score")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
             this.SetParamArraySimple(map, prefix + "FaceNames.", this.FaceNames);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamArraySimple(map, prefix + "PolityItems.", this.PolityItems);
             this.SetParamSimple(map, prefix + "Score", this.Score);
         }
     }

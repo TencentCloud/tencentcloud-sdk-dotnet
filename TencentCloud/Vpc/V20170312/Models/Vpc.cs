@@ -90,6 +90,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Ipv6CidrBlock")]
         public string Ipv6CidrBlock{ get; set; }
 
+        /// <summary>
+        /// 标签键值对
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -107,6 +113,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DhcpOptionsId", this.DhcpOptionsId);
             this.SetParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

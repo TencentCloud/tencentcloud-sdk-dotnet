@@ -78,6 +78,18 @@ namespace TencentCloud.Ms.V20180408.Models
         [JsonProperty("StatusRef")]
         public string StatusRef{ get; set; }
 
+        /// <summary>
+        /// 系统权限信息
+        /// </summary>
+        [JsonProperty("PermissionInfo")]
+        public ScanPermissionList PermissionInfo{ get; set; }
+
+        /// <summary>
+        /// 敏感词列表
+        /// </summary>
+        [JsonProperty("SensitiveInfo")]
+        public ScanSensitiveList SensitiveInfo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +105,8 @@ namespace TencentCloud.Ms.V20180408.Models
             this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
             this.SetParamSimple(map, prefix + "StatusRef", this.StatusRef);
+            this.SetParamObj(map, prefix + "PermissionInfo.", this.PermissionInfo);
+            this.SetParamObj(map, prefix + "SensitiveInfo.", this.SensitiveInfo);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// app的包名，如果是专业版加固和企业版本加固，需要正确的传递此字段
+        /// app的包名，需要正确的传递此字段
         /// </summary>
         [JsonProperty("AppPkgName")]
         public string AppPkgName{ get; set; }
