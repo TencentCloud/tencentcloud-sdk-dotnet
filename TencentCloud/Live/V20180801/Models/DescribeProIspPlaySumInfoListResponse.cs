@@ -43,37 +43,37 @@ namespace TencentCloud.Live.V20180801.Models
         public string StatType{ get; set; }
 
         /// <summary>
-        /// 每页的记录数
+        /// 每页的记录数。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 页号
+        /// 页号。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 总记录数
+        /// 总记录数。
         /// </summary>
         [JsonProperty("TotalNum")]
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
-        /// 总页数
+        /// 总页数。
         /// </summary>
         [JsonProperty("TotalPage")]
         public ulong? TotalPage{ get; set; }
 
         /// <summary>
-        /// 省份或运营商汇总数据列表
+        /// 省份或运营商汇总数据列表。
         /// </summary>
         [JsonProperty("DataInfoList")]
         public ProIspPlaySumInfo[] DataInfoList{ get; set; }
 
         /// <summary>
-        /// 平均带宽
+        /// 平均带宽。
         /// </summary>
         [JsonProperty("AvgFluxPerSecond")]
         public float? AvgFluxPerSecond{ get; set; }

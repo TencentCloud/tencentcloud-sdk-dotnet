@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 新的别名，1-64个字符或数字的组合
+        /// 新的别名，1-60个字符或数字的组合
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

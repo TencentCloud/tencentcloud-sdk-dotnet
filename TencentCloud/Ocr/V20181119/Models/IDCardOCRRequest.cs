@@ -56,6 +56,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// CropIdCard，身份证照片裁剪，bool 类型，
         /// CropPortrait，人像照片裁剪，bool 类型，
         /// CopyWarn，复印件告警，bool 类型，
+        /// BorderCheckWarn，遮挡告警，bool 类型，
         /// ReshootWarn，翻拍告警，bool 类型。
         /// 
         /// SDK 设置方式参考：

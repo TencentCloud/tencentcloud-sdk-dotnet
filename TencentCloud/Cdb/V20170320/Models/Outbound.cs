@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 策略，ACCEPT或者DROP
+        /// 策略，ACCEPT 或者 DROP
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 目的Ip或Ip段，例如172.16.0.0/12
+        /// 目的 IP 或 IP 段，例如172.16.0.0/12
         /// </summary>
         [JsonProperty("CidrIp")]
         public string CidrIp{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string PortRange{ get; set; }
 
         /// <summary>
-        /// 网络协议，支持udp、tcp等
+        /// 网络协议，支持 UDP、TCP等
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
         /// <summary>
-        /// 规则限定的方向，进站规则为OUTPUT
+        /// 规则限定的方向，进站规则为 OUTPUT
         /// </summary>
         [JsonProperty("Dir")]
         public string Dir{ get; set; }

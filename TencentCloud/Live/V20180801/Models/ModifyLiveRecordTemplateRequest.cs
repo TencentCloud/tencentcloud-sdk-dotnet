@@ -72,6 +72,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("HlsSpecialParam")]
         public HlsSpecialParam HlsSpecialParam{ get; set; }
 
+        /// <summary>
+        /// Mp3录制参数，开启Mp3录制时设置。
+        /// </summary>
+        [JsonProperty("Mp3Param")]
+        public RecordParam Mp3Param{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamObj(map, prefix + "Mp4Param.", this.Mp4Param);
             this.SetParamObj(map, prefix + "AacParam.", this.AacParam);
             this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
+            this.SetParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
         }
     }
 }

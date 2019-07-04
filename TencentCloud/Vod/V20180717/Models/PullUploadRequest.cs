@@ -56,10 +56,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 指定上传园区，仅适用于对上传地域有特殊需求的用户。目前支持的园区：
+        /// 指定上传园区，目前支持的园区：
         /// <li>ap-chongqing：重庆园区，</li>
         /// <li>ap-beijing：北京园区，</li>
         /// <li>ap-shanghai：上海园区。</li>
+        /// 注意：不填此参数默认上传至重庆园区。
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }

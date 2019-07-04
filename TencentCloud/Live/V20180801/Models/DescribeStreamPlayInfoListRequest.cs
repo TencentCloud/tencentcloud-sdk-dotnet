@@ -55,6 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
         /// 若不填，则为查询总体播放数据。
+        /// 注意：按AppName查询，需要联系客服同学提单支持。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

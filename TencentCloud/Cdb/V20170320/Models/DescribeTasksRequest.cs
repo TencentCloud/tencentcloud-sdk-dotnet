@@ -25,49 +25,49 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值
+        /// 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 异步任务请求ID，执行 CDB 相关操作返回的 AsyncRequestId
+        /// 异步任务请求 ID，执行 CDB 相关操作返回的 AsyncRequestId。
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }
 
         /// <summary>
-        /// 任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例；
+        /// 任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例。
         /// </summary>
         [JsonProperty("TaskTypes")]
         public long?[] TaskTypes{ get; set; }
 
         /// <summary>
-        /// 任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停；
+        /// 任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停。
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long?[] TaskStatus{ get; set; }
 
         /// <summary>
-        /// 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
+        /// 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
         /// </summary>
         [JsonProperty("StartTimeBegin")]
         public string StartTimeBegin{ get; set; }
 
         /// <summary>
-        /// 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01
+        /// 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
         /// </summary>
         [JsonProperty("StartTimeEnd")]
         public string StartTimeEnd{ get; set; }
 
         /// <summary>
-        /// 记录偏移量，默认值为0
+        /// 记录偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，默认值为20，最大值为100
+        /// 单次请求返回的数量，默认值为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -35,7 +35,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 录制存储时长。
-        /// 单位秒，取值范围： 0-5184000。
+        /// 单位秒，取值范围： 0-93312000。
         /// 0表示永久存储。
         /// </summary>
         [JsonProperty("StorageTime")]

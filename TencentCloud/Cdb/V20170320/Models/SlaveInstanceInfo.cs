@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 虚拟Ip信息
+        /// 虚拟 IP 信息
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }

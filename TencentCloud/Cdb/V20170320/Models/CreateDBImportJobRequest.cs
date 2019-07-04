@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例的ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+        /// 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string User{ get; set; }
 
         /// <summary>
-        /// 云数据库实例User账号的密码。
+        /// 云数据库实例 User 账号的密码。
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

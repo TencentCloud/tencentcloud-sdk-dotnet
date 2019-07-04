@@ -679,6 +679,67 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 直播计费带宽和流量数据查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBillBandwidthAndFluxListRequest"/></param>
+        /// <returns>参考<see cref="DescribeBillBandwidthAndFluxListResponse"/>实例</returns>
+        public async Task<DescribeBillBandwidthAndFluxListResponse> DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req)
+        {
+             JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillBandwidthAndFluxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询按省份和运营商分组的下行播放数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeGroupProIspPlayInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeGroupProIspPlayInfoListResponse"/>实例</returns>
+        public async Task<DescribeGroupProIspPlayInfoListResponse> DescribeGroupProIspPlayInfoList(DescribeGroupProIspPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeGroupProIspPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupProIspPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某段时间内5分钟粒度的各播放http状态码的个数。
+        /// 备注：数据延迟1小时，如10:00-10:59点的数据12点才能查到。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeHttpStatusInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeHttpStatusInfoListResponse"/>实例</returns>
+        public async Task<DescribeHttpStatusInfoListResponse> DescribeHttpStatusInfoList(DescribeHttpStatusInfoListRequest req)
+        {
+             JsonResponseModel<DescribeHttpStatusInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHttpStatusInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHttpStatusInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取回调规则列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveCallbackRulesRequest"/></param>
@@ -779,6 +840,26 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 获取直播延播列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveDelayInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveDelayInfoListResponse"/>实例</returns>
+        public async Task<DescribeLiveDelayInfoListResponse> DescribeLiveDelayInfoList(DescribeLiveDelayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveDelayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDelayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDelayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询直播域名信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveDomainRequest"/></param>
@@ -810,6 +891,26 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DescribeLiveDomainCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实时的域名维度下行播放数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLiveDomainPlayInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeLiveDomainPlayInfoListResponse"/>实例</returns>
+        public async Task<DescribeLiveDomainPlayInfoListResponse> DescribeLiveDomainPlayInfoList(DescribeLiveDomainPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainPlayInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -859,7 +960,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 查询播放鉴权key
+        /// 查询播放鉴权key。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLivePlayAuthKeyRequest"/></param>
         /// <returns>参考<see cref="DescribeLivePlayAuthKeyResponse"/>实例</returns>
@@ -1302,6 +1403,47 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询下行播放错误码信息，某段时间内1分钟粒度的各http错误码出现的次数，包括4xx，5xx。
+        /// 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePlayErrorCodeDetailInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribePlayErrorCodeDetailInfoListResponse"/>实例</returns>
+        public async Task<DescribePlayErrorCodeDetailInfoListResponse> DescribePlayErrorCodeDetailInfoList(DescribePlayErrorCodeDetailInfoListRequest req)
+        {
+             JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePlayErrorCodeDetailInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询下行播放错误码信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePlayErrorCodeSumInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribePlayErrorCodeSumInfoListResponse"/>实例</returns>
+        public async Task<DescribePlayErrorCodeSumInfoListResponse> DescribePlayErrorCodeSumInfoList(DescribePlayErrorCodeSumInfoListRequest req)
+        {
+             JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePlayErrorCodeSumInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeProIspPlaySumInfoListRequest"/></param>
@@ -1383,6 +1525,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+        /// 注意：按AppName查询，需要联系客服同学提单支持。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeStreamPlayInfoListRequest"/></param>
         /// <returns>参考<see cref="DescribeStreamPlayInfoListResponse"/>实例</returns>
@@ -1393,6 +1536,66 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = await this.InternalRequest(req, "DescribeStreamPlayInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询流id的上行推流质量数据，包括音视频的帧率，码率，流逝时间，编码格式等。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeStreamPushInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeStreamPushInfoListResponse"/>实例</returns>
+        public async Task<DescribeStreamPushInfoListResponse> DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStreamPushInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPushInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某段时间top n客户端ip汇总信息（暂支持top 1000）
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTopClientIpSumInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeTopClientIpSumInfoListResponse"/>实例</returns>
+        public async Task<DescribeTopClientIpSumInfoListResponse> DescribeTopClientIpSumInfoList(DescribeTopClientIpSumInfoListRequest req)
+        {
+             JsonResponseModel<DescribeTopClientIpSumInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopClientIpSumInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopClientIpSumInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某时间段top n的域名或流id信息（暂支持top 1000）。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeVisitTopSumInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeVisitTopSumInfoListResponse"/>实例</returns>
+        public async Task<DescribeVisitTopSumInfoListResponse> DescribeVisitTopSumInfoList(DescribeVisitTopSumInfoListRequest req)
+        {
+             JsonResponseModel<DescribeVisitTopSumInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVisitTopSumInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVisitTopSumInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

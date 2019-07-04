@@ -25,31 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨2:00
+        /// 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
         /// </summary>
         [JsonProperty("StartTimeMin")]
         public long? StartTimeMin{ get; set; }
 
         /// <summary>
-        /// 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨6:00
+        /// 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
         /// </summary>
         [JsonProperty("StartTimeMax")]
         public long? StartTimeMax{ get; set; }
 
         /// <summary>
-        /// 备份过期时间，单位为天
+        /// 备份过期时间，单位为天。
         /// </summary>
         [JsonProperty("BackupExpireDays")]
         public long? BackupExpireDays{ get; set; }
 
         /// <summary>
-        /// 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份
+        /// 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Binlog过期时间，单位为天
+        /// Binlog 过期时间，单位为天。
         /// </summary>
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }

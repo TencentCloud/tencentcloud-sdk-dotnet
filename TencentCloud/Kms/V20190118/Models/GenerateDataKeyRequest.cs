@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。默认为AES_256
+        /// 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
         /// </summary>
         [JsonProperty("KeySpec")]
         public string KeySpec{ get; set; }

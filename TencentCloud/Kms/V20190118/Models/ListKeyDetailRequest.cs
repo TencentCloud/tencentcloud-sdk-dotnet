@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK
+        /// 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
         /// </summary>
         [JsonProperty("KeyState")]
         public ulong? KeyState{ get; set; }

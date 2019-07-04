@@ -53,6 +53,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 取消CMK的计划删除操作
+        /// </summary>
+        /// <param name="req">参考<see cref="CancelKeyDeletionRequest"/></param>
+        /// <returns>参考<see cref="CancelKeyDeletionResponse"/>实例</returns>
+        public async Task<CancelKeyDeletionResponse> CancelKeyDeletion(CancelKeyDeletionRequest req)
+        {
+             JsonResponseModel<CancelKeyDeletionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelKeyDeletion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyDeletionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
         /// </summary>
         /// <param name="req">参考<see cref="CreateKeyRequest"/></param>
@@ -384,6 +404,26 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = await this.InternalRequest(req, "ReEncrypt");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReEncryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
+        /// </summary>
+        /// <param name="req">参考<see cref="ScheduleKeyDeletionRequest"/></param>
+        /// <returns>参考<see cref="ScheduleKeyDeletionResponse"/>实例</returns>
+        public async Task<ScheduleKeyDeletionResponse> ScheduleKeyDeletion(ScheduleKeyDeletionRequest req)
+        {
+             JsonResponseModel<ScheduleKeyDeletionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScheduleKeyDeletion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScheduleKeyDeletionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

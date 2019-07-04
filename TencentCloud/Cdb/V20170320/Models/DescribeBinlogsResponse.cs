@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 符合查询条件的日志文件总数
+        /// 符合查询条件的日志文件总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 符合查询条件的二进制日志文件详情
+        /// 符合查询条件的二进制日志文件详情。
         /// </summary>
         [JsonProperty("Items")]
         public BinlogInfo[] Items{ get; set; }

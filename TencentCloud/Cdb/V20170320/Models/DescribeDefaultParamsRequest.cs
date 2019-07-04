@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// mysql版本，目前支持["5.1", "5.5", "5.6", "5.7"]
+        /// mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }

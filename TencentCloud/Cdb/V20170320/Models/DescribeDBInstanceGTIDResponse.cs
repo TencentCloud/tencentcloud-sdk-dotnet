@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// GTID是否开通的标记：0-未开通，1-已开通。
+        /// GTID 是否开通的标记，可能的取值为：0 - 未开通，1 - 已开通。
         /// </summary>
         [JsonProperty("IsGTIDOpen")]
         public long? IsGTIDOpen{ get; set; }

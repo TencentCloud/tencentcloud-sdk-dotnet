@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 备份任务ID。
+        /// 备份任务 ID。
         /// </summary>
         [JsonProperty("BackupId")]
         public ulong? BackupId{ get; set; }

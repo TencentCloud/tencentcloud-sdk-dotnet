@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+        /// 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 分页参数 , 偏移量 , 默认值为0。
+        /// 分页参数，偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数 , 单次请求返回的数量 , 默认值为20，最小值为1，最大值为100。
+        /// 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

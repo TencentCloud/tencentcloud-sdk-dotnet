@@ -31,6 +31,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public bool? ServiceEnabled{ get; set; }
 
         /// <summary>
+        /// 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvalidType")]
+        public long? InvalidType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Kms.V20190118.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
+            this.SetParamSimple(map, prefix + "InvalidType", this.InvalidType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

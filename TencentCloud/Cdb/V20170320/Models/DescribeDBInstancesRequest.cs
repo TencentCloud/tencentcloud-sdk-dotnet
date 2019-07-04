@@ -25,151 +25,151 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 项目ID，可使用[查询项目列表](https://cloud.tencent.com/document/product/378/4400)接口查询项目ID
+        /// 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例类型，可取值：1-主实例，2-灾备实例，3-只读实例
+        /// 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public ulong?[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// 实例的内网IP地址
+        /// 实例的内网 IP 地址。
         /// </summary>
         [JsonProperty("Vips")]
         public string[] Vips{ get; set; }
 
         /// <summary>
-        /// 实例状态，可取值：0-创建中，1-运行中，4-隔离中，5-已隔离
+        /// 实例状态，可取值：<br>0 - 创建中<br>1 - 运行中<br>4 - 正在进行隔离操作<br>5 - 隔离中（可在回收站恢复开机）
         /// </summary>
         [JsonProperty("Status")]
         public ulong?[] Status{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认值为0
+        /// 偏移量，默认值为 0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 单次请求返回的数量，默认值为20，最大值为2000
+        /// 单次请求返回的数量，默认值为 20，最大值为 2000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 安全组ID
+        /// 安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 付费类型，可取值：0-包年包月，1-小时计费
+        /// 付费类型，可取值：0 - 包年包月，1 - 小时计费。
         /// </summary>
         [JsonProperty("PayTypes")]
         public ulong?[] PayTypes{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 实例名称。
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// 实例任务状态，可能取值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中<br>15-升级待切换<br>16-升级切换中<br>17-升级切换完成
+        /// 实例任务状态，可能取值：<br>0 - 没有任务<br>1 - 升级中<br>2 - 数据导入中<br>3 - 开放Slave中<br>4 - 外网访问开通中<br>5 - 批量操作执行中<br>6 - 回档中<br>7 - 外网访问关闭中<br>8 - 密码修改中<br>9 - 实例名修改中<br>10 - 重启中<br>12 - 自建迁移中<br>13 - 删除库表中<br>14 - 灾备实例创建同步中<br>15 - 升级待切换<br>16 - 升级切换中<br>17 - 升级切换完成
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong?[] TaskStatus{ get; set; }
 
         /// <summary>
-        /// 实例数据库引擎版本，可能取值：5.1、5.5、5.6和5.7
+        /// 实例数据库引擎版本，可能取值：5.1、5.5、5.6 和 5.7。
         /// </summary>
         [JsonProperty("EngineVersions")]
         public string[] EngineVersions{ get; set; }
 
         /// <summary>
-        /// 私有网络的ID
+        /// 私有网络的 ID。
         /// </summary>
         [JsonProperty("VpcIds")]
         public ulong?[] VpcIds{ get; set; }
 
         /// <summary>
-        /// 可用区的ID
+        /// 可用区的 ID。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public ulong?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// 子网 ID。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public ulong?[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 是否锁定标记
+        /// 是否锁定标记。
         /// </summary>
         [JsonProperty("CdbErrors")]
         public long?[] CdbErrors{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序的字段，目前支持："InstanceId", "InstanceName", "CreateTime", "DeadlineTime"
+        /// 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 返回结果集排序方式，目前支持："ASC"或者"DESC"
+        /// 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// 是否包含安全组详细信息，可取值：0-不包含，1-包含
+        /// 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
         /// </summary>
         [JsonProperty("WithSecurityGroup")]
         public long? WithSecurityGroup{ get; set; }
 
         /// <summary>
-        /// 是否包含独享集群详细信息，可取值：0-不包含，1-包含
+        /// 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
         /// </summary>
         [JsonProperty("WithExCluster")]
         public long? WithExCluster{ get; set; }
 
         /// <summary>
-        /// 独享集群ID
+        /// 独享集群 ID。
         /// </summary>
         [JsonProperty("ExClusterId")]
         public string ExClusterId{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例 ID。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 初始化标记，可取值：0-未初始化，1-初始化
+        /// 初始化标记，可取值：0 - 未初始化，1 - 初始化。
         /// </summary>
         [JsonProperty("InitFlag")]
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// 是否包含灾备实例，可取值：0-不包含，1-包含
+        /// 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
         /// </summary>
         [JsonProperty("WithDr")]
         public long? WithDr{ get; set; }
 
         /// <summary>
-        /// 是否包含只读实例，可取值：0-不包含，1-包含
+        /// 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
         /// </summary>
         [JsonProperty("WithRo")]
         public long? WithRo{ get; set; }
 
         /// <summary>
-        /// 是否包含主实例，可取值：0-不包含，1-包含
+        /// 是否包含主实例，可取值：0 - 不包含，1 - 包含。
         /// </summary>
         [JsonProperty("WithMaster")]
         public long? WithMaster{ get; set; }

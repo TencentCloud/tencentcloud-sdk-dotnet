@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 安全组Id。
+        /// 安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 实例ID列表，一个或者多个实例Id组成的数组。
+        /// 实例 ID 列表，一个或者多个实例 ID 组成的数组。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

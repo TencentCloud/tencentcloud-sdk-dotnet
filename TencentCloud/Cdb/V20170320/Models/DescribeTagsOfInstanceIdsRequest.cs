@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例列表
+        /// 实例列表。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页返回多少个标签
+        /// 每页返回多少个标签。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 主库数据保护方式，主实例属性，可能的返回值：0-异步复制方式，1-半同步复制方式，2-强同步复制方式。
+        /// 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// 主库部署方式，主实例属性，可能的返回值：0-单可用部署，1-多可用区部署。
+        /// 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// 主库可用区的正式名称，如ap-shanghai-1。
+        /// 实例可用区信息，格式如 "ap-shanghai-1"。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 从库的配置信息。
+        /// 备库的配置信息。
         /// </summary>
         [JsonProperty("SlaveConfig")]
         public SlaveConfig SlaveConfig{ get; set; }
 
         /// <summary>
-        /// ECDB第二个从库的配置信息，只有ECDB实例才有这个字段。
+        /// 强同步实例第二备库的配置信息。
         /// </summary>
         [JsonProperty("BackupConfig")]
         public BackupConfig BackupConfig{ get; set; }

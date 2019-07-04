@@ -43,7 +43,7 @@ namespace TencentCloud.Ds.V20180523.Models
         public string OffsetCoordY{ get; set; }
 
         /// <summary>
-        /// 签章突破宽度
+        /// 签章图片宽度
         /// </summary>
         [JsonProperty("ImageWidth")]
         public string ImageWidth{ get; set; }

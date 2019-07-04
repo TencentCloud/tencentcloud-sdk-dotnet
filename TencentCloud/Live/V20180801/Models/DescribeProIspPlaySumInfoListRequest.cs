@@ -40,7 +40,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 统计的类型，可选值包括”Province”，”Isp”
+        /// 统计的类型，可选值包括”Province”，”Isp”。
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
@@ -54,14 +54,14 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 页号，
         /// 范围是[1,1000]，
-        /// 默认值是1
+        /// 默认值是1。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
         /// 每页个数，范围是[1,1000]，
-        /// 默认值是20
+        /// 默认值是20。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

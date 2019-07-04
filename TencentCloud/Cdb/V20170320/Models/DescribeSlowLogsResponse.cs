@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 符合查询条件的慢查询日志总数
+        /// 符合查询条件的慢查询日志总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 符合查询条件的慢查询日志详情
+        /// 符合查询条件的慢查询日志详情。
         /// </summary>
         [JsonProperty("Items")]
         public SlowLogInfo[] Items{ get; set; }

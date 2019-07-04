@@ -1293,5 +1293,25 @@ namespace TencentCloud.Vod.V20180717
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 将点播视频发布到微信小程序，供微信小程序播放器播放。
+        /// </summary>
+        /// <param name="req">参考<see cref="WeChatMiniProgramPublishRequest"/></param>
+        /// <returns>参考<see cref="WeChatMiniProgramPublishResponse"/>实例</returns>
+        public async Task<WeChatMiniProgramPublishResponse> WeChatMiniProgramPublish(WeChatMiniProgramPublishRequest req)
+        {
+             JsonResponseModel<WeChatMiniProgramPublishResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "WeChatMiniProgramPublish");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WeChatMiniProgramPublishResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

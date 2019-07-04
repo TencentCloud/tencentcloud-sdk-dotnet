@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 参数个数
+        /// 参数个数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 参数详情
+        /// 参数详情。
         /// </summary>
         [JsonProperty("Items")]
         public ParameterDetail[] Items{ get; set; }

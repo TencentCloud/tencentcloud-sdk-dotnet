@@ -1702,6 +1702,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeNatGateways）用于查询 NAT 网关。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeNatGatewaysRequest"/></param>
+        /// <returns>参考<see cref="DescribeNatGatewaysResponse"/>实例</returns>
+        public async Task<DescribeNatGatewaysResponse> DescribeNatGateways(DescribeNatGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeNetworkInterfacesRequest"/></param>

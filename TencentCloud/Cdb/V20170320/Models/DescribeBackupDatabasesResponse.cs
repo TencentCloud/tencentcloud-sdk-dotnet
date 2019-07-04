@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 返回的数据个数
+        /// 返回的数据个数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 符合查询条件的数据库数组
+        /// 符合查询条件的数据库数组。
         /// </summary>
         [JsonProperty("Items")]
         public DatabaseNameInfo[] Items{ get; set; }

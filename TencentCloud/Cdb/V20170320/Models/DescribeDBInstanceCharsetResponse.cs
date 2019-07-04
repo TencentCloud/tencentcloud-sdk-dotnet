@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例的默认字符集，如"latin1", "utf8"等。
+        /// 实例的默认字符集，如 "latin1"，"utf8" 等。
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }

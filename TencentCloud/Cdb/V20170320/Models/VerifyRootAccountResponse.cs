@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 异步任务的请求ID，可使用此ID查询异步任务的执行结果
+        /// 异步任务的请求 ID，可使用此 ID 查询异步任务的执行结果
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }

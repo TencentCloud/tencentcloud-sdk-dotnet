@@ -80,7 +80,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 
         /// Code 告警码列表和释义：
         /// -9103	身份证翻拍告警，
-        /// -9102	身份证复印件告警。
+        /// -9102	身份证复印件告警，
+        /// -9105	身份证框内遮挡告警。
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }

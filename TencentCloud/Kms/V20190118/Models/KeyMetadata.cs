@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK的状态， Enabled 或者 Disabled 或者 Deleted
+        /// CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }
@@ -90,6 +90,13 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("NextRotateTime")]
         public ulong? NextRotateTime{ get; set; }
 
+        /// <summary>
+        /// 计划删除的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeletionDate")]
+        public ulong? DeletionDate{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -107,6 +114,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "NextRotateTime", this.NextRotateTime);
+            this.SetParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
         }
     }
 }

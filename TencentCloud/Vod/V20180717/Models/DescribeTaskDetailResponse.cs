@@ -29,6 +29,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Procedure：视频处理任务；</li>
         /// <li>EditMedia：视频编辑任务；</li>
         /// <li>WechatPublish：微信发布任务；</li>
+        /// <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
         /// <li>ComposeMedia：制作媒体文件任务；</li>
         /// <li>PullUpload：拉取上传媒体文件任务。</li>
         /// 
@@ -140,6 +141,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
+        /// 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatMiniProgramPublishTask")]
+        public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -166,6 +174,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ConcatTask.", this.ConcatTask);
             this.SetParamObj(map, prefix + "ClipTask.", this.ClipTask);
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
+            this.SetParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

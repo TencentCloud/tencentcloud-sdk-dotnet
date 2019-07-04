@@ -25,31 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，可使用[查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+        /// 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 目标IP。该参数和DstPort参数，两者必传一个。
+        /// 目标 IP。该参数和 DstPort 参数，两者必传一个。
         /// </summary>
         [JsonProperty("DstIp")]
         public string DstIp{ get; set; }
 
         /// <summary>
-        /// 目标端口，支持范围为：[1024-65535]。该参数和DstIp参数，两者必传一个。
+        /// 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
         /// </summary>
         [JsonProperty("DstPort")]
         public long? DstPort{ get; set; }
 
         /// <summary>
-        /// 私有网络统一ID。
+        /// 私有网络统一 ID。
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 子网统一ID。
+        /// 子网统一 ID。
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }

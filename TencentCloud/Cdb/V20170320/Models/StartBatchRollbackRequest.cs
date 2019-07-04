@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 用于回档的实例详情信息
+        /// 用于回档的实例详情信息。
         /// </summary>
         [JsonProperty("Instances")]
         public RollbackInstancesInfo[] Instances{ get; set; }
