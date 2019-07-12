@@ -162,6 +162,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 服务设置
+        /// </summary>
+        [JsonProperty("ServiceSettings")]
+        public ServiceSettings ServiceSettings{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -191,6 +197,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "InActivityStatus", this.InActivityStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
         }
     }
 }

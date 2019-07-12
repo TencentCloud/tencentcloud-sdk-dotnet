@@ -107,6 +107,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Http2")]
         public bool? Http2{ get; set; }
 
+        /// <summary>
+        /// 负载均衡与后端服务之间的转发协议
+        /// </summary>
+        [JsonProperty("ForwardType")]
+        public string ForwardType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -126,6 +132,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "BeAutoCreated", this.BeAutoCreated);
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
+            this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
         }
     }
 }

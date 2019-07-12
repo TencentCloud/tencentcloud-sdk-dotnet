@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLoadBalancerResponse : AbstractModel
+    public class OfflineIsolatedInstancesResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 由负载均衡实例唯一 ID 组成的数组。
-        /// </summary>
-        [JsonProperty("LoadBalancerIds")]
-        public string[] LoadBalancerIds{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

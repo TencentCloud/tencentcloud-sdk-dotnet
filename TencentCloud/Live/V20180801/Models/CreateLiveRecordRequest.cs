@@ -43,14 +43,14 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 录制开始时间。中国标准时间，需要URLEncode。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+        /// 录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
         /// 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 录制结束时间。中国标准时间，需要URLEncode。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+        /// 录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
         /// 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
         /// </summary>
         [JsonProperty("EndTime")]
@@ -67,20 +67,24 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 录制文件格式。其值为：
-        /// “flv”,“hls”,”mp4”,“aac”,”mp3”，默认“flv”。
+        /// “flv”【默认】,“hls”,”mp4”,“aac”,”mp3”。
         /// 在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
         /// </summary>
         [JsonProperty("FileFormat")]
         public string FileFormat{ get; set; }
 
         /// <summary>
-        /// 开启实时视频录制模式标志。0：不开启实时视频录制模式，即采用定时录制模式【默认】；1：开启实时视频录制模式。
+        /// 开启实时视频录制模式标志。
+        /// 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
+        /// 1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
         /// </summary>
         [JsonProperty("Highlight")]
         public long? Highlight{ get; set; }
 
         /// <summary>
-        /// 开启A+B=C混流C流录制标志。0：不开启A+B=C混流C流录制【默认】；1：开启A+B=C混流C流录制。
+        /// 开启A+B=C混流C流录制标志。
+        /// 0：不开启A+B=C混流C流录制【默认】。
+        /// 1：开启A+B=C混流C流录制。
         /// 在定时录制模式或实时视频录制模式下，该参数均有效。
         /// </summary>
         [JsonProperty("MixStream")]

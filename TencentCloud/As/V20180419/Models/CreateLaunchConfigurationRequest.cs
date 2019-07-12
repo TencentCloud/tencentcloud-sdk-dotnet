@@ -129,6 +129,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceTags")]
         public InstanceTag[] InstanceTags{ get; set; }
 
+        /// <summary>
+        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -151,6 +157,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         }
     }
 }

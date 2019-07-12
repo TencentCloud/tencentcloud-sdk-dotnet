@@ -55,10 +55,17 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// 规则的请求转发方式
+        /// 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+        /// 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
+
+        /// <summary>
+        /// 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+        /// </summary>
+        [JsonProperty("ForwardType")]
+        public string ForwardType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
+            this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
         }
     }
 }

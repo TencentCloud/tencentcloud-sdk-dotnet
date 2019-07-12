@@ -50,7 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public RuleTargets[] Rules{ get; set; }
 
         /// <summary>
-        /// 监听器上注册的机器列表（仅适用于TCP/UDP/TCP_SSL监听器）
+        /// 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Targets")]

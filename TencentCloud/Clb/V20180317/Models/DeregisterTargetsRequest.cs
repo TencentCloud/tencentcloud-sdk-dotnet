@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例 ID，格式如 lb-12345678
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 监听器 ID
+        /// 监听器 ID，格式如 lbl-12345678
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+        /// 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("HostIds")]
         public string[] HostIds{ get; set; }
 
+        /// <summary>
+        /// 指定母机ip生产子机
+        /// </summary>
+        [JsonProperty("HostIps")]
+        public string[] HostIps{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "HostIds.", this.HostIds);
+            this.SetParamArraySimple(map, prefix + "HostIps.", this.HostIps);
         }
     }
 }

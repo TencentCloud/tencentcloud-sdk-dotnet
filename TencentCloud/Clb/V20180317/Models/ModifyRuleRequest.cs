@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡监听器 ID
+        /// 负载均衡监听器 ID
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -55,7 +55,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 规则的请求转发方式
+        /// 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+        /// 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -65,6 +66,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+        /// </summary>
+        [JsonProperty("ForwardType")]
+        public string ForwardType{ get; set; }
 
 
         /// <summary>
@@ -79,6 +86,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
+            this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
         }
     }
 }

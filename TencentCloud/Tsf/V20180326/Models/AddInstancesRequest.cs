@@ -55,7 +55,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 重装系统，关联秘钥设置
+        /// 重装系统，关联密钥设置
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }

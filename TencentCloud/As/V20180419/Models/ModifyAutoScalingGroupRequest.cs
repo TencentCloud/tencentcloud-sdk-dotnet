@@ -99,9 +99,10 @@ namespace TencentCloud.As.V20180419.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 重试策略，取值包括 IMMEDIATE_RETRY 和 INCREMENTAL_INTERVALS，默认取值为 IMMEDIATE_RETRY。
+        /// 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
         /// <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
         /// <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
+        /// <br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public string RetryPolicy{ get; set; }
@@ -116,6 +117,12 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("ZonesCheckPolicy")]
         public string ZonesCheckPolicy{ get; set; }
+
+        /// <summary>
+        /// 服务设置，包括云监控不健康替换等服务设置。
+        /// </summary>
+        [JsonProperty("ServiceSettings")]
+        public ServiceSettings ServiceSettings{ get; set; }
 
 
         /// <summary>
@@ -137,6 +144,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "RetryPolicy", this.RetryPolicy);
             this.SetParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
+            this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
         }
     }
 }

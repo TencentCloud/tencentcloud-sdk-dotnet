@@ -32,35 +32,78 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例。1：应用型，0：传统型，默认为应用型负载均衡实例。
+        /// 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
         /// </summary>
         [JsonProperty("Forward")]
         public long? Forward{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的名称，只用来创建一个的时候生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-        /// 注意：如果名称与系统中已有负载均衡实例的名称重复的话，则系统将会自动生成此次创建的负载均衡实例的名称。
+        /// 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+        /// 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// 负载均衡后端实例所属网络 ID，可以通过 DescribeVpcEx 接口获取。 不填则默认为基础网络。
+        /// 负载均衡后端目标设备所属的网络 ID，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 在私有网络内购买内网负载均衡实例的时候需要指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其他情况不用填写该字段。
+        /// 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不填则属于默认项目。
+        /// 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// IP版本，IPV4 | IPV6，默认值 IPV4。
+        /// </summary>
+        [JsonProperty("AddressIPVersion")]
+        public string AddressIPVersion{ get; set; }
+
+        /// <summary>
+        /// 创建负载均衡的个数
+        /// </summary>
+        [JsonProperty("Number")]
+        public ulong? Number{ get; set; }
+
+        /// <summary>
+        /// 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+        /// 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+        /// </summary>
+        [JsonProperty("MasterZoneId")]
+        public string MasterZoneId{ get; set; }
+
+        /// <summary>
+        /// 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// Anycast的发布域，可取 ZONE_A 或 ZONE_B
+        /// </summary>
+        [JsonProperty("AnycastZone")]
+        public string AnycastZone{ get; set; }
+
+        /// <summary>
+        /// 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+        /// </summary>
+        [JsonProperty("InternetAccessible")]
+        public InternetAccessible InternetAccessible{ get; set; }
+
+        /// <summary>
+        /// CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+        /// </summary>
+        [JsonProperty("VipIsp")]
+        public string VipIsp{ get; set; }
 
 
         /// <summary>
@@ -74,6 +117,13 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+            this.SetParamSimple(map, prefix + "Number", this.Number);
+            this.SetParamSimple(map, prefix + "MasterZoneId", this.MasterZoneId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+            this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+            this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
         }
     }
 }

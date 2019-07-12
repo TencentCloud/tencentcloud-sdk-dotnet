@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 监听器ID
+        /// HTTPS:443监听器的ID
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 需要重定向的域名
+        /// HTTPS:443监听器下需要重定向的域名
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

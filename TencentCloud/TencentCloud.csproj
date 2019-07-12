@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.29</VersionPrefix>
+    <VersionPrefix>3.0.30</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -157,6 +157,7 @@
     <Compile Include="As\V20180419\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="As\V20180419\Models\ScalingPolicy.cs" />
     <Compile Include="As\V20180419\Models\ScheduledAction.cs" />
+    <Compile Include="As\V20180419\Models\ServiceSettings.cs" />
     <Compile Include="As\V20180419\Models\SetInstancesProtectionRequest.cs" />
     <Compile Include="As\V20180419\Models\SetInstancesProtectionResponse.cs" />
     <Compile Include="As\V20180419\Models\SpotMarketOptions.cs" />
@@ -1066,6 +1067,8 @@
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\OfflineIsolatedInstancesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OpenDBInstanceGTIDRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\OpenDBInstanceGTIDResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OpenWanServiceRequest.cs" />
@@ -1238,6 +1241,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="Clb\V20180317\Models\HealthCheck.cs" />
+    <Compile Include="Clb\V20180317\Models\InternetAccessible.cs" />
+    <Compile Include="Clb\V20180317\Models\LBChargePrepaid.cs" />
     <Compile Include="Clb\V20180317\Models\Listener.cs" />
     <Compile Include="Clb\V20180317\Models\ListenerBackend.cs" />
     <Compile Include="Clb\V20180317\Models\ListenerHealth.cs" />
@@ -1270,10 +1275,13 @@
     <Compile Include="Clb\V20180317\Models\RuleTargets.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerSecurityGroupsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerSecurityGroupsResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\SetSecurityGroupForLoadbalancersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\TagInfo.cs" />
     <Compile Include="Clb\V20180317\Models\Target.cs" />
     <Compile Include="Clb\V20180317\Models\TargetHealth.cs" />
     <Compile Include="Clb\V20180317\Models\TargetRegionInfo.cs" />
+    <Compile Include="Clb\V20180317\Models\ZoneInfo.cs" />
     <Compile Include="Cloudaudit\V20190319\CloudauditClient.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\AttributeKeyDetail.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\AuditSummary.cs" />
@@ -1880,6 +1888,8 @@
     <Compile Include="Gme\V20180711\GmeClient.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultListRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultListResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeFilterResultRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeFilterResultResponse.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilter.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilterInfo.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilterRequest.cs" />
@@ -2482,8 +2492,6 @@
     <Compile Include="Live\V20180801\Models\ResumeLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\ResumeLiveStreamResponse.cs" />
     <Compile Include="Live\V20180801\Models\RuleInfo.cs" />
-    <Compile Include="Live\V20180801\Models\SetLiveWatermarkStatusRequest.cs" />
-    <Compile Include="Live\V20180801\Models\SetLiveWatermarkStatusResponse.cs" />
     <Compile Include="Live\V20180801\Models\SnapshotTemplateInfo.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordResponse.cs" />

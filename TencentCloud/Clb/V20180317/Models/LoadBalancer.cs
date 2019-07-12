@@ -44,13 +44,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡标识，1：应用型负载均衡，0：传统型的负载均衡。
+        /// 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
         /// </summary>
         [JsonProperty("Forward")]
         public ulong? Forward{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的域名，内网类型负载均衡以及应用型负载均衡实例不提供该字段
+        /// 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Domain")]
@@ -175,6 +175,62 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("NumericalVpcId")]
         public ulong? NumericalVpcId{ get; set; }
 
+        /// <summary>
+        /// 负载均衡IP地址所属的ISP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VipIsp")]
+        public string VipIsp{ get; set; }
+
+        /// <summary>
+        /// 主可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public ZoneInfo MasterZone{ get; set; }
+
+        /// <summary>
+        /// 备可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupZoneSet")]
+        public ZoneInfo[] BackupZoneSet{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例被隔离的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolatedTime")]
+        public string IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的过期时间，仅对预付费负载均衡生效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的计费类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的网络属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkAttributes")]
+        public InternetAccessible NetworkAttributes{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例的预付费相关属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrepaidAttributes")]
+        public LBChargePrepaid PrepaidAttributes{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -203,6 +259,14 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
             this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
             this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
+            this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
+            this.SetParamObj(map, prefix + "MasterZone.", this.MasterZone);
+            this.SetParamArrayObj(map, prefix + "BackupZoneSet.", this.BackupZoneSet);
+            this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
+            this.SetParamObj(map, prefix + "PrepaidAttributes.", this.PrepaidAttributes);
         }
     }
 }

@@ -38,19 +38,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// 1：应用型，0：传统型。
+        /// 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
         /// </summary>
         [JsonProperty("Forward")]
         public long? Forward{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例名称。
+        /// 负载均衡实例的名称。
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// 腾讯云为负载均衡实例分配的域名，应用型负载均衡该字段无意义。
+        /// 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -62,13 +62,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LoadBalancerVips{ get; set; }
 
         /// <summary>
-        /// 后端云服务器的外网 IP。
+        /// 负载均衡绑定的后端服务的外网 IP。
         /// </summary>
         [JsonProperty("BackendPublicIps")]
         public string[] BackendPublicIps{ get; set; }
 
         /// <summary>
-        /// 后端云服务器的内网 IP。
+        /// 负载均衡绑定的后端服务的内网 IP。
         /// </summary>
         [JsonProperty("BackendPrivateIps")]
         public string[] BackendPrivateIps{ get; set; }
@@ -80,13 +80,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回负载均衡个数，默认为 20。
+        /// 返回负载均衡实例的个数，默认为 20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+        /// 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
@@ -110,7 +110,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 查询的负载均衡是否绑定后端服务器，0：没有绑定云服务器，1：绑定云服务器，-1：查询全部。
+        /// 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
         /// </summary>
         [JsonProperty("WithRs")]
         public long? WithRs{ get; set; }
@@ -127,6 +127,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// 主可用区ID，如 ："100001" （对应的是广州一区）
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public string MasterZone{ get; set; }
 
 
         /// <summary>
@@ -151,6 +157,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "WithRs", this.WithRs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
         }
     }
 }

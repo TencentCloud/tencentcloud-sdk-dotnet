@@ -21,20 +21,22 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLoadBalancerResponse : AbstractModel
+    public class LBChargePrepaid : AbstractModel
     {
         
         /// <summary>
-        /// 由负载均衡实例唯一 ID 组成的数组。
+        /// 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LoadBalancerIds")]
-        public string[] LoadBalancerIds{ get; set; }
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 周期，表示多少个月（保留字段）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

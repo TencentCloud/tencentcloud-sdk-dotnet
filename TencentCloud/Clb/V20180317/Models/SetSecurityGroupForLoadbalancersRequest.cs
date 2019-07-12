@@ -21,20 +21,27 @@ namespace TencentCloud.Clb.V20180317.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateLoadBalancerResponse : AbstractModel
+    public class SetSecurityGroupForLoadbalancersRequest : AbstractModel
     {
         
         /// <summary>
-        /// 由负载均衡实例唯一 ID 组成的数组。
+        /// 安全组ID，如 sg-12345678
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// ADD 绑定安全组；
+        /// DEL 解绑安全组
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public string OperationType{ get; set; }
+
+        /// <summary>
+        /// 负载均衡实例ID数组
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
             this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

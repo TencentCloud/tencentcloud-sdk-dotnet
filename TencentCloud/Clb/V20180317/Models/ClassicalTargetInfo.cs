@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 权重 取值为0-100
+        /// 权重，取值范围 [0, 100]
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

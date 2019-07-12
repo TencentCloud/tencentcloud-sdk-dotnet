@@ -1945,26 +1945,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 设置水印是否启用
-        /// </summary>
-        /// <param name="req">参考<see cref="SetLiveWatermarkStatusRequest"/></param>
-        /// <returns>参考<see cref="SetLiveWatermarkStatusResponse"/>实例</returns>
-        public async Task<SetLiveWatermarkStatusResponse> SetLiveWatermarkStatus(SetLiveWatermarkStatusRequest req)
-        {
-             JsonResponseModel<SetLiveWatermarkStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SetLiveWatermarkStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetLiveWatermarkStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
         /// </summary>
         /// <param name="req">参考<see cref="StopLiveRecordRequest"/></param>

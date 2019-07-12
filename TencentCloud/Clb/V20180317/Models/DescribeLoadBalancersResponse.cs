@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 满足过滤条件的负载均衡实例总数。
+        /// 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

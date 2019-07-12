@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡监听器 ID
+        /// 负载均衡监听器 ID
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }

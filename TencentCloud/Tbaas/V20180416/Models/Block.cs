@@ -37,13 +37,13 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string DataHash{ get; set; }
 
         /// <summary>
-        /// 区块ID，与区块编号一直
+        /// 区块ID，与区块编号一致
         /// </summary>
         [JsonProperty("BlockId")]
         public ulong? BlockId{ get; set; }
 
         /// <summary>
-        /// 前一个区块Hash（未使用）,与区块Hash数值一直
+        /// 前一个区块Hash（未使用）,与区块Hash数值一致
         /// </summary>
         [JsonProperty("PreHash")]
         public string PreHash{ get; set; }

@@ -53,6 +53,26 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 根据应用ID和文件ID查询识别结果
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeFilterResultRequest"/></param>
+        /// <returns>参考<see cref="DescribeFilterResultResponse"/>实例</returns>
+        public async Task<DescribeFilterResultResponse> DescribeFilterResult(DescribeFilterResultRequest req)
+        {
+             JsonResponseModel<DescribeFilterResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFilterResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFilterResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据日期查询识别结果列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeFilterResultListRequest"/></param>

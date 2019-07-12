@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 安全组 ID。
+        /// 安全组 ID。当使用安全组 ID 为过滤条件时，需指定 WithSecurityGroup 参数为 1。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// 是否包含安全组详细信息，可取值：0 - 不包含，1 - 包含。
+        /// 是否以安全组 ID 为过滤条件。
         /// </summary>
         [JsonProperty("WithSecurityGroup")]
         public long? WithSecurityGroup{ get; set; }

@@ -36,6 +36,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ForceReboot")]
         public bool? ForceReboot{ get; set; }
 
+        /// <summary>
+        /// 关机类型。取值范围：<br><li>SOFT：表示软关机<br><li>HARD：表示硬关机<br><li>SOFT_FIRST：表示优先软关机，失败再执行硬关机<br><br>默认取值：SOFT。
+        /// </summary>
+        [JsonProperty("StopType")]
+        public string StopType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "ForceReboot", this.ForceReboot);
+            this.SetParamSimple(map, prefix + "StopType", this.StopType);
         }
     }
 }

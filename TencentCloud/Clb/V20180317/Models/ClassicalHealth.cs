@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 云服务器内网 IP
+        /// 后端服务的内网 IP
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// 云服务器端口
+        /// 后端服务的端口
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听端口
+        /// 负载均衡的监听端口
         /// </summary>
         [JsonProperty("ListenerPort")]
         public long? ListenerPort{ get; set; }

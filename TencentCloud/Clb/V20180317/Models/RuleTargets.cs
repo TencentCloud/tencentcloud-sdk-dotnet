@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 后端机器的信息
+        /// 后端服务的信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Targets")]

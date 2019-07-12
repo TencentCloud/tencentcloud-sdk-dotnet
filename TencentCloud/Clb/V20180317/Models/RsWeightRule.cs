@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 后端云服务器新的转发权重，取值范围：0~100。
+        /// 后端服务新的转发权重，取值范围：0~100。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

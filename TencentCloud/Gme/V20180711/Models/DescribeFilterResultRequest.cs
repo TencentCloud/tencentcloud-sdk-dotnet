@@ -21,44 +21,20 @@ namespace TencentCloud.Gme.V20180711.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VoiceFilterRequest : AbstractModel
+    public class DescribeFilterResultRequest : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+        /// 应用ID
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 文件ID，表示文件唯一id
+        /// 文件ID
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
-
-        /// <summary>
-        /// 文件名
-        /// </summary>
-        [JsonProperty("FileName")]
-        public string FileName{ get; set; }
-
-        /// <summary>
-        /// 文件url，urlencode编码，FileUrl和FileContent二选一
-        /// </summary>
-        [JsonProperty("FileUrl")]
-        public string FileUrl{ get; set; }
-
-        /// <summary>
-        /// 文件内容，base64编码，FileUrl和FileContent二选一
-        /// </summary>
-        [JsonProperty("FileContent")]
-        public string FileContent{ get; set; }
-
-        /// <summary>
-        /// 用户ID
-        /// </summary>
-        [JsonProperty("OpenId")]
-        public string OpenId{ get; set; }
 
 
         /// <summary>
@@ -68,10 +44,6 @@ namespace TencentCloud.Gme.V20180711.Models
         {
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "FileName", this.FileName);
-            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
-            this.SetParamSimple(map, prefix + "FileContent", this.FileContent);
-            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
         }
     }
 }

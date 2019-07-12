@@ -59,33 +59,75 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? UnHealthNum{ get; set; }
 
         /// <summary>
-        /// 健康检查状态码（仅适用于HTTP/HTTPS转发规则）。可选值：1~31，默认 31。
-        /// 1 表示探测后返回值 1xx 表示健康，2 表示返回 2xx 表示健康，4 表示返回 3xx 表示健康，8 表示返回 4xx 表示健康，16 表示返回 5xx 表示健康。若希望多种码都表示健康，则将相应的值相加。
+        /// 健康检查状态码（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。可选值：1~31，默认 31。
+        /// 1 表示探测后返回值 1xx 代表健康，2 表示返回 2xx 代表健康，4 表示返回 3xx 代表健康，8 表示返回 4xx 代表健康，16 表示返回 5xx 代表健康。若希望多种返回码都可代表健康，则将相应的值相加。注意：TCP监听器的HTTP健康检查方式，只支持指定一种健康检查状态码。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpCode")]
         public long? HttpCode{ get; set; }
 
         /// <summary>
-        /// 健康检查路径（仅适用于HTTP/HTTPS转发规则）。
+        /// 健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpCheckPath")]
         public string HttpCheckPath{ get; set; }
 
         /// <summary>
-        /// 健康检查域名（仅适用于HTTP/HTTPS转发规则）。
+        /// 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpCheckDomain")]
         public string HttpCheckDomain{ get; set; }
 
         /// <summary>
-        /// 健康检查方法（仅适用于HTTP/HTTPS转发规则），取值为HEAD或GET。
+        /// 健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpCheckMethod")]
         public string HttpCheckMethod{ get; set; }
+
+        /// <summary>
+        /// 自定义探测相关参数。健康检查端口，默认为后端服务的端口，除非您希望指定特定端口，否则建议留空。（仅适用于TCP/UDP监听器）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckPort")]
+        public long? CheckPort{ get; set; }
+
+        /// <summary>
+        /// 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查的输入格式，可取值：HEX或TEXT；取值为HEX时，SendContext和RecvContext的字符只能在0123456789ABCDEF中选取且长度必须是偶数位。（仅适用于TCP/UDP监听器）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContextType")]
+        public string ContextType{ get; set; }
+
+        /// <summary>
+        /// 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查发送的请求内容，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SendContext")]
+        public string SendContext{ get; set; }
+
+        /// <summary>
+        /// 自定义探测相关参数。健康检查协议CheckType的值取CUSTOM时，必填此字段，代表健康检查返回的结果，只允许ASCII可见字符，最大长度限制500。（仅适用于TCP/UDP监听器）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecvContext")]
+        public string RecvContext{ get; set; }
+
+        /// <summary>
+        /// 自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckType")]
+        public string CheckType{ get; set; }
+
+        /// <summary>
+        /// 自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpVersion")]
+        public string HttpVersion{ get; set; }
 
 
         /// <summary>
@@ -102,6 +144,12 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HttpCheckPath", this.HttpCheckPath);
             this.SetParamSimple(map, prefix + "HttpCheckDomain", this.HttpCheckDomain);
             this.SetParamSimple(map, prefix + "HttpCheckMethod", this.HttpCheckMethod);
+            this.SetParamSimple(map, prefix + "CheckPort", this.CheckPort);
+            this.SetParamSimple(map, prefix + "ContextType", this.ContextType);
+            this.SetParamSimple(map, prefix + "SendContext", this.SendContext);
+            this.SetParamSimple(map, prefix + "RecvContext", this.RecvContext);
+            this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
+            this.SetParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
         }
     }
 }

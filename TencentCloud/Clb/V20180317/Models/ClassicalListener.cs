@@ -61,7 +61,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpire{ get; set; }
 
         /// <summary>
-        /// 是否开启了检查：1（开启）、0（关闭）
+        /// 是否开启了健康检查：1（开启）、0（关闭）
         /// </summary>
         [JsonProperty("HealthSwitch")]
         public long? HealthSwitch{ get; set; }
@@ -91,37 +91,37 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? UnhealthNum{ get; set; }
 
         /// <summary>
-        /// 公网固定IP型的 HTTP、HTTPS 协议监听器的轮询方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+        /// 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
         /// </summary>
         [JsonProperty("HttpHash")]
         public string HttpHash{ get; set; }
 
         /// <summary>
-        /// 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+        /// 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
         /// </summary>
         [JsonProperty("HttpCode")]
         public long? HttpCode{ get; set; }
 
         /// <summary>
-        /// 公网固定IP型的 HTTP、HTTPS 协议监听器的健康检查路径
+        /// 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
         /// </summary>
         [JsonProperty("HttpCheckPath")]
         public string HttpCheckPath{ get; set; }
 
         /// <summary>
-        /// 公网固定IP型的 HTTPS 协议监听器的认证方式
+        /// 传统型公网负载均衡的 HTTPS 监听器的认证方式
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }
 
         /// <summary>
-        /// 公网固定IP型的 HTTPS 协议监听器服务端证书 ID
+        /// 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 公网固定IP型的 HTTPS 协议监听器客户端证书 ID
+        /// 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }

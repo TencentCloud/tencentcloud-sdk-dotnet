@@ -154,6 +154,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
+        /// <summary>
+        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -181,6 +187,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         }
     }
 }

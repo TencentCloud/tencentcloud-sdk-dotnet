@@ -25,56 +25,63 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 转发目标的类型，目前仅可取值为 CVM
+        /// 后端服务的类型，可取：CVM、ENI（即将支持）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 云服务器的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+        /// 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 后端云服务器监听端口
+        /// 后端服务的监听端口
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 后端云服务器的转发权重，取值范围：0~100，默认为 10。
+        /// 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 云服务器的外网 IP
+        /// 后端服务的外网 IP
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// 云服务器的内网 IP
+        /// 后端服务的内网 IP
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// 云服务器实例名称
+        /// 后端服务的实例名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 云服务器被绑定到监听器的时间
+        /// 后端服务被绑定的时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegisteredTime")]
         public string RegisteredTime{ get; set; }
+
+        /// <summary>
+        /// 弹性网卡唯一ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EniId")]
+        public string EniId{ get; set; }
 
 
         /// <summary>
@@ -90,6 +97,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
+            this.SetParamSimple(map, prefix + "EniId", this.EniId);
         }
     }
 }
