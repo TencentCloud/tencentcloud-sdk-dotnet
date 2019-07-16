@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class BankCardOCRResponse : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 卡号
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("CardNo")]
+        public string CardNo{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 银行信息
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("BankInfo")]
+        public string BankInfo{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 有效期
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("ValidDate")]
+        public string ValidDate{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "CardNo", this.CardNo);
+            this.SetParamSimple(map, prefix + "BankInfo", this.BankInfo);
+            this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

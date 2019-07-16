@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class BusinessCardOCRResponse : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 名片识别内容。
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("BusinessCardInfos")]
+        public BusinessCardInfo[] BusinessCardInfos{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("RetImageBase64")]
+        public string RetImageBase64{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 策略文档
-        /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamArrayObj(map, prefix + "BusinessCardInfos.", this.BusinessCardInfos);
+            this.SetParamSimple(map, prefix + "RetImageBase64", this.RetImageBase64);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

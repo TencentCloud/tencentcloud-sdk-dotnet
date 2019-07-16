@@ -21,32 +21,39 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class AttachedPolicyOfRole : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 策略ID
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 策略名称
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 绑定时间
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("AddTime")]
+        public string AddTime{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 策略类型，User表示自定义策略，QCS表示预设策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("PolicyType")]
+        public string PolicyType{ get; set; }
+
+        /// <summary>
+        /// 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
+        /// </summary>
+        [JsonProperty("CreateMode")]
+        public ulong? CreateMode{ get; set; }
 
 
         /// <summary>
@@ -56,8 +63,9 @@ namespace TencentCloud.Cam.V20190116.Models
         {
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
+            this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
         }
     }
 }

@@ -21,32 +21,50 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class RoleInfo : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 角色ID
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("RoleId")]
+        public string RoleId{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 角色名称
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 角色的策略文档
+        /// </summary>
+        [JsonProperty("PolicyDocument")]
+        public string PolicyDocument{ get; set; }
+
+        /// <summary>
+        /// 角色描述
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 角色的创建时间
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("AddTime")]
+        public string AddTime{ get; set; }
+
+        /// <summary>
+        /// 角色的最近一次时间
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 角色是否允许登录
+        /// </summary>
+        [JsonProperty("ConsoleLogin")]
+        public ulong? ConsoleLogin{ get; set; }
 
 
         /// <summary>
@@ -54,10 +72,13 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
         }
     }
 }

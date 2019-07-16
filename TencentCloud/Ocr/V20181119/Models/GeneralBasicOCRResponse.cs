@@ -31,8 +31,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public TextDetection[] TextDetections{ get; set; }
 
         /// <summary>
-        /// 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-        /// 返回结果含义为：zh-中英混合，jap-日文，kor-韩文。
+        /// 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }

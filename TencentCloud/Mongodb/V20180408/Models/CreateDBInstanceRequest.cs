@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 版本号，当前仅支持 MONGO_3_WT
+        /// 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }

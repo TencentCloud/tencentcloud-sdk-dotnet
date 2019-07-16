@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// 新增策略id
         /// </summary>
         [JsonProperty("PolicyId")]
-        public long? PolicyId{ get; set; }
+        public ulong? PolicyId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

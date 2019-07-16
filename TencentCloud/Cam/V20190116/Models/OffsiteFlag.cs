@@ -21,32 +21,32 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class OffsiteFlag : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 验证标识
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("VerifyFlag")]
+        public ulong? VerifyFlag{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 手机通知
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("NotifyPhone")]
+        public ulong? NotifyPhone{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 邮箱通知
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("NotifyEmail")]
+        public long? NotifyEmail{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 微信通知
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("NotifyWechat")]
+        public ulong? NotifyWechat{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "VerifyFlag", this.VerifyFlag);
+            this.SetParamSimple(map, prefix + "NotifyPhone", this.NotifyPhone);
+            this.SetParamSimple(map, prefix + "NotifyEmail", this.NotifyEmail);
+            this.SetParamSimple(map, prefix + "NotifyWechat", this.NotifyWechat);
         }
     }
 }

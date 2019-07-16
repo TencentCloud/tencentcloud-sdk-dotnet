@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.30</VersionPrefix>
+    <VersionPrefix>3.0.31</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -782,30 +782,47 @@
     <Compile Include="Cam\V20190116\Models\AttachGroupPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\AttachGroupPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\AttachPolicyInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\AttachRolePolicyRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\AttachRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\AttachedPolicyOfRole.cs" />
+    <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateRoleRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteRoleRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeRoleListResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DetachRolePolicyRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DetachRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachUserPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachUserPolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetCustomMFATokenInfoRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetCustomMFATokenInfoResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetPolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetRoleRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserRequest.cs" />
@@ -815,6 +832,8 @@
     <Compile Include="Cam\V20190116\Models\GroupMemberInfo.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedGroupPoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedGroupPoliciesResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListAttachedRolePoliciesRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ListAttachedRolePoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListEntitiesForPolicyRequest.cs" />
@@ -831,15 +850,24 @@
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\LoginActionFlag.cs" />
+    <Compile Include="Cam\V20190116\Models\OffsiteFlag.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\RoleInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SAMLProviderInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\SetFlagRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\SetFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdatePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdatePolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateRoleDescriptionRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateRoleDescriptionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateUserRequest.cs" />
@@ -2761,7 +2789,16 @@
     <Compile Include="Ocr\V20181119\OcrClient.cs" />
     <Compile Include="Ocr\V20181119\Models\ArithmeticOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ArithmeticOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\BankCardOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\BankCardOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\BizLicenseOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\BizLicenseOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\BusinessCardInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\BusinessCardOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\BusinessCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\Coord.cs" />
+    <Compile Include="Ocr\V20181119\Models\DriverLicenseOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\DriverLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\EnglishOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\EnglishOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralAccurateOCRRequest.cs" />
@@ -2770,15 +2807,27 @@
     <Compile Include="Ocr\V20181119\Models\GeneralBasicOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralFastOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralFastOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\GeneralHandwritingOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\GeneralHandwritingOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\IDCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\IDCardOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\LicensePlateOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\LicensePlateOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TableOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TableOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TextArithmetic.cs" />
     <Compile Include="Ocr\V20181119\Models\TextDetection.cs" />
     <Compile Include="Ocr\V20181119\Models\TextDetectionEn.cs" />
+    <Compile Include="Ocr\V20181119\Models\TextGeneralHandwriting.cs" />
     <Compile Include="Ocr\V20181119\Models\TextTable.cs" />
+    <Compile Include="Ocr\V20181119\Models\TextVatInvoice.cs" />
+    <Compile Include="Ocr\V20181119\Models\TextVehicleBack.cs" />
+    <Compile Include="Ocr\V20181119\Models\TextVehicleFront.cs" />
     <Compile Include="Ocr\V20181119\Models\TextWaybill.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VehicleLicenseOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\VehicleLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VinOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VinOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\WaybillOCRRequest.cs" />

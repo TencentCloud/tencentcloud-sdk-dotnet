@@ -21,26 +21,14 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class CreateRoleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 角色名称
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
-
-        /// <summary>
-        /// 策略名
-        /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
-
-        /// <summary>
-        /// 策略描述
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
 
         /// <summary>
         /// 策略文档
@@ -48,16 +36,28 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("PolicyDocument")]
         public string PolicyDocument{ get; set; }
 
+        /// <summary>
+        /// 角色描述
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 是否允许登录
+        /// </summary>
+        [JsonProperty("ConsoleLogin")]
+        public ulong? ConsoleLogin{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
         }
     }
 }

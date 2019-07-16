@@ -34,7 +34,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// 子账号 uin
         /// </summary>
         [JsonProperty("DetachUin")]
-        public long? DetachUin{ get; set; }
+        public ulong? DetachUin{ get; set; }
 
 
         /// <summary>

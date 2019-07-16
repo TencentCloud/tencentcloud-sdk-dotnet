@@ -21,7 +21,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralBasicOCRRequest : AbstractModel
+    public class DriverLicenseOCRRequest : AbstractModel
     {
         
         /// <summary>
@@ -43,31 +43,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
-        /// <summary>
-        /// 保留字段。
-        /// </summary>
-        [JsonProperty("Scene")]
-        public string Scene{ get; set; }
-
-        /// <summary>
-        /// 识别语言类型。
-        /// 支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
-        /// 可选值：
-        /// zh\auto\jap\kor\
-        /// spa\fre\ger\por\
-        /// vie\may\rus\ita\
-        /// hol\swe\fin\dan\
-        /// nor\hun\tha
-        /// 可选值分别表示：
-        /// 中英文混合、自动识别、日语、韩语、
-        /// 西班牙语、法语、德语、葡萄牙语、
-        /// 越南语、马来语、俄语、意大利语、
-        /// 荷兰语、瑞典语、芬兰语、丹麦语、
-        /// 挪威语、匈牙利语、泰语。
-        /// </summary>
-        [JsonProperty("LanguageType")]
-        public string LanguageType{ get; set; }
-
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -76,8 +51,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
-            this.SetParamSimple(map, prefix + "Scene", this.Scene);
-            this.SetParamSimple(map, prefix + "LanguageType", this.LanguageType);
         }
     }
 }

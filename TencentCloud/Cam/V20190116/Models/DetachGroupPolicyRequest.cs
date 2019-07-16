@@ -28,13 +28,13 @@ namespace TencentCloud.Cam.V20190116.Models
         /// 策略 id
         /// </summary>
         [JsonProperty("PolicyId")]
-        public long? PolicyId{ get; set; }
+        public ulong? PolicyId{ get; set; }
 
         /// <summary>
         /// 用户组 id
         /// </summary>
         [JsonProperty("DetachGroupId")]
-        public long? DetachGroupId{ get; set; }
+        public ulong? DetachGroupId{ get; set; }
 
 
         /// <summary>

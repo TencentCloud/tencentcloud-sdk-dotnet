@@ -21,32 +21,20 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class DescribeRoleListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 页码，从1开始
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("Page")]
+        public ulong? Page{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 每页行数，不能大于200
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
-
-        /// <summary>
-        /// 策略描述
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 策略文档
-        /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("Rp")]
+        public ulong? Rp{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "Rp", this.Rp);
         }
     }
 }

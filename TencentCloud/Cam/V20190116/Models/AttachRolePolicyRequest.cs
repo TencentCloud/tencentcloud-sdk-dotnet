@@ -21,32 +21,26 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class AttachRolePolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 策略ID
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("AttachRoleId")]
+        public string AttachRoleId{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 策略文档
-        /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("AttachRoleName")]
+        public string AttachRoleName{ get; set; }
 
 
         /// <summary>
@@ -55,9 +49,8 @@ namespace TencentCloud.Cam.V20190116.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "AttachRoleId", this.AttachRoleId);
+            this.SetParamSimple(map, prefix + "AttachRoleName", this.AttachRoleName);
         }
     }
 }

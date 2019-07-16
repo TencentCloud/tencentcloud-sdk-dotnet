@@ -21,32 +21,38 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class SetFlagRequest : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 设置用户的uin
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("OpUin")]
+        public ulong? OpUin{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 登录设置
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("LoginFlag")]
+        public LoginActionFlag LoginFlag{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 敏感操作设置
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("ActionFlag")]
+        public LoginActionFlag ActionFlag{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 异地登录设置
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("OffsiteFlag")]
+        public OffsiteFlag OffsiteFlag{ get; set; }
+
+        /// <summary>
+        /// 是否需要充值mfa
+        /// </summary>
+        [JsonProperty("NeedResetMfa")]
+        public ulong? NeedResetMfa{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "OpUin", this.OpUin);
+            this.SetParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
+            this.SetParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
+            this.SetParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
+            this.SetParamSimple(map, prefix + "NeedResetMfa", this.NeedResetMfa);
         }
     }
 }

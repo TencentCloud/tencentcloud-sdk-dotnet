@@ -113,6 +113,26 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 本接口（AttachRolePolicy）用于绑定策略到角色。
+        /// </summary>
+        /// <param name="req">参考<see cref="AttachRolePolicyRequest"/></param>
+        /// <returns>参考<see cref="AttachRolePolicyResponse"/>实例</returns>
+        public async Task<AttachRolePolicyResponse> AttachRolePolicy(AttachRolePolicyRequest req)
+        {
+             JsonResponseModel<AttachRolePolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachRolePolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachRolePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（AttachUserPolicy）可用于绑定到用户的策略。
         /// </summary>
         /// <param name="req">参考<see cref="AttachUserPolicyRequest"/></param>
@@ -124,6 +144,26 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = await this.InternalRequest(req, "AttachUserPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 验证自定义多因子Token
+        /// </summary>
+        /// <param name="req">参考<see cref="ConsumeCustomMFATokenRequest"/></param>
+        /// <returns>参考<see cref="ConsumeCustomMFATokenResponse"/>实例</returns>
+        public async Task<ConsumeCustomMFATokenResponse> ConsumeCustomMFAToken(ConsumeCustomMFATokenRequest req)
+        {
+             JsonResponseModel<ConsumeCustomMFATokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ConsumeCustomMFAToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConsumeCustomMFATokenResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -164,6 +204,26 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = await this.InternalRequest(req, "CreatePolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateRole）用于创建角色。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateRoleRequest"/></param>
+        /// <returns>参考<see cref="CreateRoleResponse"/>实例</returns>
+        public async Task<CreateRoleResponse> CreateRole(CreateRoleRequest req)
+        {
+             JsonResponseModel<CreateRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -233,6 +293,26 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 本接口（DeleteRole）用于删除指定角色。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteRoleRequest"/></param>
+        /// <returns>参考<see cref="DeleteRoleResponse"/>实例</returns>
+        public async Task<DeleteRoleResponse> DeleteRole(DeleteRoleRequest req)
+        {
+             JsonResponseModel<DeleteRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除SAML身份提供商
         /// </summary>
         /// <param name="req">参考<see cref="DeleteSAMLProviderRequest"/></param>
@@ -273,6 +353,26 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 本接口（DescribeRoleList）用于获取账号下的角色列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRoleListRequest"/></param>
+        /// <returns>参考<see cref="DescribeRoleListResponse"/>实例</returns>
+        public async Task<DescribeRoleListResponse> DescribeRoleList(DescribeRoleListRequest req)
+        {
+             JsonResponseModel<DescribeRoleListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
         /// </summary>
         /// <param name="req">参考<see cref="DetachGroupPolicyRequest"/></param>
@@ -293,6 +393,26 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 本接口（DetachRolePolicy）用于解除绑定角色的策略。
+        /// </summary>
+        /// <param name="req">参考<see cref="DetachRolePolicyRequest"/></param>
+        /// <returns>参考<see cref="DetachRolePolicyResponse"/>实例</returns>
+        public async Task<DetachRolePolicyResponse> DetachRolePolicy(DetachRolePolicyRequest req)
+        {
+             JsonResponseModel<DetachRolePolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachRolePolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachRolePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DetachUserPolicy）可用于解除绑定到用户的策略。
         /// </summary>
         /// <param name="req">参考<see cref="DetachUserPolicyRequest"/></param>
@@ -304,6 +424,26 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = await this.InternalRequest(req, "DetachUserPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取自定义多因子Token关联信息
+        /// </summary>
+        /// <param name="req">参考<see cref="GetCustomMFATokenInfoRequest"/></param>
+        /// <returns>参考<see cref="GetCustomMFATokenInfoResponse"/>实例</returns>
+        public async Task<GetCustomMFATokenInfoResponse> GetCustomMFATokenInfo(GetCustomMFATokenInfoRequest req)
+        {
+             JsonResponseModel<GetCustomMFATokenInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetCustomMFATokenInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCustomMFATokenInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -344,6 +484,26 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = await this.InternalRequest(req, "GetPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（GetRole）用于获取指定角色的详细信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="GetRoleRequest"/></param>
+        /// <returns>参考<see cref="GetRoleResponse"/>实例</returns>
+        public async Task<GetRoleResponse> GetRole(GetRoleRequest req)
+        {
+             JsonResponseModel<GetRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -404,6 +564,26 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = await this.InternalRequest(req, "ListAttachedGroupPolicies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAttachedGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListAttachedRolePolicies）用于获取角色绑定的策略列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="ListAttachedRolePoliciesRequest"/></param>
+        /// <returns>参考<see cref="ListAttachedRolePoliciesResponse"/>实例</returns>
+        public async Task<ListAttachedRolePoliciesResponse> ListAttachedRolePolicies(ListAttachedRolePoliciesRequest req)
+        {
+             JsonResponseModel<ListAttachedRolePoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAttachedRolePolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAttachedRolePoliciesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -593,6 +773,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 设置用户的登录，敏感操作，异步登录设置
+        /// </summary>
+        /// <param name="req">参考<see cref="SetFlagRequest"/></param>
+        /// <returns>参考<see cref="SetFlagResponse"/>实例</returns>
+        public async Task<SetFlagResponse> SetFlag(SetFlagRequest req)
+        {
+             JsonResponseModel<SetFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateAssumeRolePolicyRequest"/></param>
+        /// <returns>参考<see cref="UpdateAssumeRolePolicyResponse"/>实例</returns>
+        public async Task<UpdateAssumeRolePolicyResponse> UpdateAssumeRolePolicy(UpdateAssumeRolePolicyRequest req)
+        {
+             JsonResponseModel<UpdateAssumeRolePolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAssumeRolePolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAssumeRolePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新用户组
         /// </summary>
         /// <param name="req">参考<see cref="UpdateGroupRequest"/></param>
@@ -624,6 +844,26 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = await this.InternalRequest(req, "UpdatePolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateRoleDescription）用于修改角色的描述信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateRoleDescriptionRequest"/></param>
+        /// <returns>参考<see cref="UpdateRoleDescriptionResponse"/>实例</returns>
+        public async Task<UpdateRoleDescriptionResponse> UpdateRoleDescription(UpdateRoleDescriptionRequest req)
+        {
+             JsonResponseModel<UpdateRoleDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRoleDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRoleDescriptionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

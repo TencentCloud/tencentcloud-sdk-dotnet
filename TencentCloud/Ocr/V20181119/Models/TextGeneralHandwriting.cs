@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class TextGeneralHandwriting : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 识别出的文本行内容
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("DetectedText")]
+        public string DetectedText{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 置信度 0 - 100
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("Confidence")]
+        public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 文本行坐标，以四个顶点坐标表示
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Polygon")]
+        public Coord[] Polygon{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 此字段为扩展字段
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("AdvancedInfo")]
+        public string AdvancedInfo{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "DetectedText", this.DetectedText);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
+            this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         }
     }
 }

@@ -21,32 +21,38 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdatePolicyRequest : AbstractModel
+    public class LoginActionFlag : AbstractModel
     {
         
         /// <summary>
-        /// 策略 id
+        /// 手机
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public ulong? PolicyId{ get; set; }
+        [JsonProperty("Phone")]
+        public ulong? Phone{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 硬token
         /// </summary>
-        [JsonProperty("PolicyName")]
-        public string PolicyName{ get; set; }
+        [JsonProperty("Token")]
+        public ulong? Token{ get; set; }
 
         /// <summary>
-        /// 策略描述
+        /// 软token
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Stoken")]
+        public ulong? Stoken{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 微信
         /// </summary>
-        [JsonProperty("PolicyDocument")]
-        public string PolicyDocument{ get; set; }
+        [JsonProperty("Wechat")]
+        public ulong? Wechat{ get; set; }
+
+        /// <summary>
+        /// 自定义
+        /// </summary>
+        [JsonProperty("Custom")]
+        public ulong? Custom{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+            this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "Stoken", this.Stoken);
+            this.SetParamSimple(map, prefix + "Wechat", this.Wechat);
+            this.SetParamSimple(map, prefix + "Custom", this.Custom);
         }
     }
 }

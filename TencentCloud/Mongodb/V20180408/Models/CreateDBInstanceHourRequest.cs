@@ -49,7 +49,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public ulong? SecondaryNum{ get; set; }
 
         /// <summary>
-        /// MongoDB引擎版本，值包括：MONGO_2、MONGO_3_MMAP、MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
+        /// MongoDB引擎版本，值包括MONGO_3_WT 、MONGO_3_ROCKS和MONGO_36_WT
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
