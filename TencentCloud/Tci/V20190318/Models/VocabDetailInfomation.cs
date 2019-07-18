@@ -25,10 +25,10 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 词汇库中的单词出现在该音频中的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+        /// 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
         /// </summary>
         [JsonProperty("VocabDetailInfo")]
-        public DetailInfo VocabDetailInfo{ get; set; }
+        public DetailInfo[] VocabDetailInfo{ get; set; }
 
         /// <summary>
         /// 词汇库名
@@ -42,7 +42,7 @@ namespace TencentCloud.Tci.V20190318.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "VocabDetailInfo.", this.VocabDetailInfo);
+            this.SetParamArrayObj(map, prefix + "VocabDetailInfo.", this.VocabDetailInfo);
             this.SetParamSimple(map, prefix + "VocabLibName", this.VocabLibName);
         }
     }

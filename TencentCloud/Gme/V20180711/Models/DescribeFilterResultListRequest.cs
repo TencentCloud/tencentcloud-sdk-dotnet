@@ -43,13 +43,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 偏移量, 默认0
+        /// 偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数目	, 默认10, 最大100
+        /// 返回数量，默认值为10，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

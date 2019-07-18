@@ -42,6 +42,36 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
+        /// <summary>
+        /// 子任务类型
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 子任务状态，0处理中 1成功 -1失败
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 升级检查失败的索引名
+        /// </summary>
+        [JsonProperty("FailedIndices")]
+        public string[] FailedIndices{ get; set; }
+
+        /// <summary>
+        /// 子任务结束时间
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
+
+        /// <summary>
+        /// 子任务等级，1警告 2失败
+        /// </summary>
+        [JsonProperty("Level")]
+        public long? Level{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +81,11 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "FailedIndices.", this.FailedIndices);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
         }
     }
 }

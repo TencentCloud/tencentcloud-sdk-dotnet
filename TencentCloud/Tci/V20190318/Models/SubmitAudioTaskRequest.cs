@@ -43,7 +43,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public long? VoiceEncodeType{ get; set; }
 
         /// <summary>
-        /// 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
+        /// 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
         /// </summary>
         [JsonProperty("VoiceFileType")]
         public long? VoiceFileType{ get; set; }
@@ -55,16 +55,10 @@ namespace TencentCloud.Tci.V20190318.Models
         public Function Functions{ get; set; }
 
         /// <summary>
-        /// 课堂标识符
+        /// 视频文件类型，默认点播，直播天 live_url
         /// </summary>
-        [JsonProperty("ClassId")]
-        public string ClassId{ get; set; }
-
-        /// <summary>
-        /// 身份，1：老师 2：学生
-        /// </summary>
-        [JsonProperty("Identity")]
-        public long? Identity{ get; set; }
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
 
         /// <summary>
         /// 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
@@ -83,8 +77,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);
             this.SetParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
             this.SetParamObj(map, prefix + "Functions.", this.Functions);
-            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
-            this.SetParamSimple(map, prefix + "Identity", this.Identity);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
         }
     }

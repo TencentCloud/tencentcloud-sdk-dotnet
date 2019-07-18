@@ -25,13 +25,13 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用ID，创建应用得到的AppID: https://console.cloud.tencent.com/gamegme
+        /// 应用ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 文件ID，表示文件唯一id
+        /// 文件ID，表示文件唯一ID
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }

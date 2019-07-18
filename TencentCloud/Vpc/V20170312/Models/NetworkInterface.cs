@@ -114,6 +114,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Ipv6AddressSet")]
         public Ipv6Address[] Ipv6AddressSet{ get; set; }
 
+        /// <summary>
+        /// 标签键值对。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -134,6 +140,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

@@ -39,6 +39,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
         /// <li>subnet-name - String - （过滤条件）子网名称。</li>
         /// <li>zone - String - （过滤条件）可用区。</li>
+        /// <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+        /// <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

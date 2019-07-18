@@ -85,13 +85,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// 包年包月购买时长（单位由参数TimeUint决定）
+        /// 包年包月购买时长（单位由参数TimeUnit决定）
         /// </summary>
         [JsonProperty("ChargePeriod")]
         public ulong? ChargePeriod{ get; set; }
 
         /// <summary>
-        /// 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用于默认不自动续费，SVIP用户自动续费
+        /// 自动续费标识<li>RENEW_FLAG_AUTO：自动续费</li><li>RENEW_FLAG_MANUAL：不自动续费，用户手动续费</li>ChargeType为PREPAID时需要设置，如不传递该参数，普通用户默认不自动续费，SVIP用户自动续费
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

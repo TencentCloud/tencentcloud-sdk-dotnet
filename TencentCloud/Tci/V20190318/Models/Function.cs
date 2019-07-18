@@ -25,6 +25,12 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
+        /// 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+        /// </summary>
+        [JsonProperty("EnableAllText")]
+        public bool? EnableAllText{ get; set; }
+
+        /// <summary>
         /// 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
         /// </summary>
         [JsonProperty("EnableKeyword")]
@@ -48,6 +54,7 @@ namespace TencentCloud.Tci.V20190318.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EnableAllText", this.EnableAllText);
             this.SetParamSimple(map, prefix + "EnableKeyword", this.EnableKeyword);
             this.SetParamSimple(map, prefix + "EnableVadInfo", this.EnableVadInfo);
             this.SetParamSimple(map, prefix + "EnableVolume", this.EnableVolume);

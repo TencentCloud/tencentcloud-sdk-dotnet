@@ -31,7 +31,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public string FileContent{ get; set; }
 
         /// <summary>
-        /// 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址
+        /// 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public LightStandard[] LightStandardSet{ get; set; }
 
         /// <summary>
-        /// 抽帧的时间间隔，单位毫秒，默认值1000。
+        /// 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
         /// </summary>
         [JsonProperty("FrameInterval")]
         public long? FrameInterval{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public long? MaxVideoDuration{ get; set; }
 
         /// <summary>
-        /// 人脸识别中的相似度阈值，默认值为0.89
+        /// 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
         /// </summary>
         [JsonProperty("SimThreshold")]
         public float? SimThreshold{ get; set; }

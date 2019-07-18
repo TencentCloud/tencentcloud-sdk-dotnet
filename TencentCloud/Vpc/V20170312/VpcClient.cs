@@ -1902,6 +1902,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询EIP异步任务执行结果
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTaskResultRequest"/></param>
+        /// <returns>参考<see cref="DescribeTaskResultResponse"/>实例</returns>
+        public async Task<DescribeTaskResultResponse> DescribeTaskResult(DescribeTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeVpcIpv6Addresses）用于查询 `VPC` `IPv6` 信息。
         /// 只能查询已使用的`IPv6`信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
         /// </summary>

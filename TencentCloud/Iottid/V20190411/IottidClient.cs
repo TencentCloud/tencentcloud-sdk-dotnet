@@ -53,6 +53,26 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
+        /// 单向认证测试TID
+        /// </summary>
+        /// <param name="req">参考<see cref="AuthTestTidRequest"/></param>
+        /// <returns>参考<see cref="AuthTestTidResponse"/>实例</returns>
+        public async Task<AuthTestTidResponse> AuthTestTid(AuthTestTidRequest req)
+        {
+             JsonResponseModel<AuthTestTidResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AuthTestTid");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthTestTidResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 安全芯片TID烧录回执
         /// </summary>
         /// <param name="req">参考<see cref="BurnTidNotifyRequest"/></param>
@@ -144,6 +164,26 @@ namespace TencentCloud.Iottid.V20190411
              {
                  var strResp = await this.InternalRequest(req, "DownloadTids");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadTidsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下载控制台验证芯片烧录信息，保证TID与中心信息一致
+        /// </summary>
+        /// <param name="req">参考<see cref="VerifyChipBurnInfoRequest"/></param>
+        /// <returns>参考<see cref="VerifyChipBurnInfoResponse"/>实例</returns>
+        public async Task<VerifyChipBurnInfoResponse> VerifyChipBurnInfo(VerifyChipBurnInfoRequest req)
+        {
+             JsonResponseModel<VerifyChipBurnInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyChipBurnInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyChipBurnInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

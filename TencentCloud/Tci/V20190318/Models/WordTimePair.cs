@@ -25,13 +25,13 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 单词的起始时间
+        /// 单词出现的那个句子的起始时间
         /// </summary>
         [JsonProperty("Mbtm")]
         public long? Mbtm{ get; set; }
 
         /// <summary>
-        /// 	单词的结束时间
+        /// 	单词出现的那个句子的结束时间
         /// </summary>
         [JsonProperty("Metm")]
         public long? Metm{ get; set; }

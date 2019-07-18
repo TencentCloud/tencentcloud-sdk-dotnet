@@ -56,7 +56,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 截图间隔，单位s，默认10s。
-        /// 范围： 10s ~ 600s。
+        /// 范围： 5s ~ 600s。
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }

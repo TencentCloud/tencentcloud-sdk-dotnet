@@ -25,14 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 基础信息。包括视频名称、大小、时长、封面图片等。
+        /// 基础信息。包括视频名称、分类、播放地址、封面图片等。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BasicInfo")]
         public MediaBasicInfo BasicInfo{ get; set; }
 
         /// <summary>
-        /// 元信息。包括视频流信息、音频流信息等。
+        /// 元信息。包括大小、时长、视频流信息、音频流信息等。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]

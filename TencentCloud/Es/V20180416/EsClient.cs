@@ -202,5 +202,45 @@ namespace TencentCloud.Es.V20180416
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 升级ES集群版本
+        /// </summary>
+        /// <param name="req">参考<see cref="UpgradeInstanceRequest"/></param>
+        /// <returns>参考<see cref="UpgradeInstanceResponse"/>实例</returns>
+        public async Task<UpgradeInstanceResponse> UpgradeInstance(UpgradeInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级ES商业特性
+        /// </summary>
+        /// <param name="req">参考<see cref="UpgradeLicenseRequest"/></param>
+        /// <returns>参考<see cref="UpgradeLicenseResponse"/>实例</returns>
+        public async Task<UpgradeLicenseResponse> UpgradeLicense(UpgradeLicenseRequest req)
+        {
+             JsonResponseModel<UpgradeLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

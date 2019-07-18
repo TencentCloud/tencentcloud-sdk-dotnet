@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.31</VersionPrefix>
+    <VersionPrefix>3.0.32</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1725,14 +1725,23 @@
     <Compile Include="Dcdb\V20180411\Models\UpgradeDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ZonesInfo.cs" />
     <Compile Include="Drm\V20181115\DrmClient.cs" />
+    <Compile Include="Drm\V20181115\Models\AddFairPlayPemRequest.cs" />
+    <Compile Include="Drm\V20181115\Models\AddFairPlayPemResponse.cs" />
     <Compile Include="Drm\V20181115\Models\CreateLicenseRequest.cs" />
     <Compile Include="Drm\V20181115\Models\CreateLicenseResponse.cs" />
+    <Compile Include="Drm\V20181115\Models\DeleteFairPlayPemRequest.cs" />
+    <Compile Include="Drm\V20181115\Models\DeleteFairPlayPemResponse.cs" />
+    <Compile Include="Drm\V20181115\Models\DescribeFairPlayPemRequest.cs" />
+    <Compile Include="Drm\V20181115\Models\DescribeFairPlayPemResponse.cs" />
     <Compile Include="Drm\V20181115\Models\DescribeKeysRequest.cs" />
     <Compile Include="Drm\V20181115\Models\DescribeKeysResponse.cs" />
     <Compile Include="Drm\V20181115\Models\DrmOutputObject.cs" />
     <Compile Include="Drm\V20181115\Models\DrmOutputPara.cs" />
     <Compile Include="Drm\V20181115\Models\DrmSourceObject.cs" />
+    <Compile Include="Drm\V20181115\Models\FairPlayPemDigestInfo.cs" />
     <Compile Include="Drm\V20181115\Models\KeyInfo.cs" />
+    <Compile Include="Drm\V20181115\Models\ModifyFairPlayPemRequest.cs" />
+    <Compile Include="Drm\V20181115\Models\ModifyFairPlayPemResponse.cs" />
     <Compile Include="Drm\V20181115\Models\PlaybackPolicy.cs" />
     <Compile Include="Drm\V20181115\Models\StartEncryptionRequest.cs" />
     <Compile Include="Drm\V20181115\Models\StartEncryptionResponse.cs" />
@@ -1883,6 +1892,10 @@
     <Compile Include="Es\V20180416\Models\TaskDetail.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\UpgradeInstanceRequest.cs" />
+    <Compile Include="Es\V20180416\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\UpgradeLicenseRequest.cs" />
+    <Compile Include="Es\V20180416\Models\UpgradeLicenseResponse.cs" />
     <Compile Include="Facefusion\V20181201\FacefusionClient.cs" />
     <Compile Include="Facefusion\V20181201\Models\FaceFusionRequest.cs" />
     <Compile Include="Facefusion\V20181201\Models\FaceFusionResponse.cs" />
@@ -2242,6 +2255,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\SearchStudioProductRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\SearchStudioProductResponse.cs" />
     <Compile Include="Iottid\V20190411\IottidClient.cs" />
+    <Compile Include="Iottid\V20190411\Models\AuthTestTidRequest.cs" />
+    <Compile Include="Iottid\V20190411\Models\AuthTestTidResponse.cs" />
     <Compile Include="Iottid\V20190411\Models\BurnTidNotifyRequest.cs" />
     <Compile Include="Iottid\V20190411\Models\BurnTidNotifyResponse.cs" />
     <Compile Include="Iottid\V20190411\Models\DeliverTidNotifyRequest.cs" />
@@ -2253,6 +2268,8 @@
     <Compile Include="Iottid\V20190411\Models\DownloadTidsRequest.cs" />
     <Compile Include="Iottid\V20190411\Models\DownloadTidsResponse.cs" />
     <Compile Include="Iottid\V20190411\Models\TidKeysInfo.cs" />
+    <Compile Include="Iottid\V20190411\Models\VerifyChipBurnInfoRequest.cs" />
+    <Compile Include="Iottid\V20190411\Models\VerifyChipBurnInfoResponse.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
     <Compile Include="Kms\V20190118\Models\CancelKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\CancelKeyDeletionResponse.cs" />
@@ -3297,6 +3314,8 @@
     <Compile Include="Tci\V20190318\Models\CreateFaceResponse.cs" />
     <Compile Include="Tci\V20190318\Models\CreateLibraryRequest.cs" />
     <Compile Include="Tci\V20190318\Models\CreateLibraryResponse.cs" />
+    <Compile Include="Tci\V20190318\Models\CreatePersonRequest.cs" />
+    <Compile Include="Tci\V20190318\Models\CreatePersonResponse.cs" />
     <Compile Include="Tci\V20190318\Models\CreateVocabLibRequest.cs" />
     <Compile Include="Tci\V20190318\Models\CreateVocabLibResponse.cs" />
     <Compile Include="Tci\V20190318\Models\CreateVocabRequest.cs" />
@@ -3377,6 +3396,8 @@
     <Compile Include="Tci\V20190318\Models\SubmitAudioTaskResponse.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitCheckAttendanceTaskRequest.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitCheckAttendanceTaskResponse.cs" />
+    <Compile Include="Tci\V20190318\Models\SubmitConversationTaskRequest.cs" />
+    <Compile Include="Tci\V20190318\Models\SubmitConversationTaskResponse.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitDoubleVideoHighlightsRequest.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitDoubleVideoHighlightsResponse.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitHighlightsRequest.cs" />
@@ -3791,6 +3812,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeSubAppIdsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeSubAppIdsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTasksRequest.cs" />
@@ -3884,6 +3907,10 @@
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySubAppIdInfoRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySubAppIdInfoResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySubAppIdStatusRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySubAppIdStatusResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyTranscodeTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyWatermarkTemplateRequest.cs" />
@@ -3942,6 +3969,7 @@
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
     <Compile Include="Vod\V20180717\Models\StatDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\StickerTrackItem.cs" />
+    <Compile Include="Vod\V20180717\Models\SubAppIdInfo.cs" />
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfo.cs" />
@@ -4168,6 +4196,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeServiceTemplatesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeSubnetsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeTaskResultRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcIpv6AddressesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcIpv6AddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcPrivateIpAddressesRequest.cs" />

@@ -708,7 +708,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。
+        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。 
         /// </summary>
         /// <param name="req">参考<see cref="ImportImageRequest"/></param>
         /// <returns>参考<see cref="ImportImageResponse"/>实例</returns>

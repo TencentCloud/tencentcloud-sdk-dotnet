@@ -25,7 +25,7 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 单词出现在该音频中的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+        /// 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
         /// </summary>
         [JsonProperty("Value")]
         public WordTimePair[] Value{ get; set; }

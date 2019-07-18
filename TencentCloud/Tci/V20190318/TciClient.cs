@@ -173,6 +173,26 @@ namespace TencentCloud.Tci.V20190318
         }
 
         /// <summary>
+        /// 创建人员
+        /// </summary>
+        /// <param name="req">参考<see cref="CreatePersonRequest"/></param>
+        /// <returns>参考<see cref="CreatePersonResponse"/>实例</returns>
+        public async Task<CreatePersonResponse> CreatePerson(CreatePersonRequest req)
+        {
+             JsonResponseModel<CreatePersonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建词汇
         /// </summary>
         /// <param name="req">参考<see cref="CreateVocabRequest"/></param>
@@ -624,6 +644,26 @@ namespace TencentCloud.Tci.V20190318
              {
                  var strResp = await this.InternalRequest(req, "SubmitCheckAttendanceTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCheckAttendanceTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对话任务分析接口
+        /// </summary>
+        /// <param name="req">参考<see cref="SubmitConversationTaskRequest"/></param>
+        /// <returns>参考<see cref="SubmitConversationTaskResponse"/>实例</returns>
+        public async Task<SubmitConversationTaskResponse> SubmitConversationTask(SubmitConversationTaskRequest req)
+        {
+             JsonResponseModel<SubmitConversationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SubmitConversationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitConversationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

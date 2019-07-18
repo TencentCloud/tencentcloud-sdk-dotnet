@@ -49,6 +49,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public VocabStatInfomation[] VocabAnalysisStatInfo{ get; set; }
 
         /// <summary>
+        /// 音频全部文本。
+        /// </summary>
+        [JsonProperty("AllTexts")]
+        public string AllTexts{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamArrayObj(map, prefix + "Texts.", this.Texts);
             this.SetParamArrayObj(map, prefix + "VocabAnalysisDetailInfo.", this.VocabAnalysisDetailInfo);
             this.SetParamArrayObj(map, prefix + "VocabAnalysisStatInfo.", this.VocabAnalysisStatInfo);
+            this.SetParamSimple(map, prefix + "AllTexts", this.AllTexts);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -49,6 +49,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public VocabStatInfomation[] VocabAnalysisStatInfo{ get; set; }
 
         /// <summary>
+        /// 整个音频流的全部文本
+        /// </summary>
+        [JsonProperty("AllTexts")]
+        public string AllTexts{ get; set; }
+
+        /// <summary>
         /// 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
         /// </summary>
         [JsonProperty("JobId")]
@@ -82,6 +88,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamArrayObj(map, prefix + "Texts.", this.Texts);
             this.SetParamArrayObj(map, prefix + "VocabAnalysisDetailInfo.", this.VocabAnalysisDetailInfo);
             this.SetParamArrayObj(map, prefix + "VocabAnalysisStatInfo.", this.VocabAnalysisStatInfo);
+            this.SetParamSimple(map, prefix + "AllTexts", this.AllTexts);
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -25,7 +25,7 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 大教室场景肢体动作识别选项
+        /// 大教室场景学生肢体动作识别选项
         /// </summary>
         [JsonProperty("EnableActionClass")]
         public bool? EnableActionClass{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tci.V20190318.Models
         public bool? EnableFaceIdentify{ get; set; }
 
         /// <summary>
-        /// 动作选项
+        /// 手势选项
         /// </summary>
         [JsonProperty("EnableGesture")]
         public bool? EnableGesture{ get; set; }
 
         /// <summary>
-        /// 手势选项
+        /// 优图手势选项（该功能尚未支持）
         /// </summary>
         [JsonProperty("EnableHandTracking")]
         public bool? EnableHandTracking{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Tci.V20190318.Models
         public bool? EnableLightJudge{ get; set; }
 
         /// <summary>
-        /// 学生动作选项
+        /// 小班课场景学生肢体动作识别选项
         /// </summary>
         [JsonProperty("EnableStudentBodyMovements")]
         public bool? EnableStudentBodyMovements{ get; set; }
 
         /// <summary>
-        /// 教师动作选项
+        /// 教师动作选项（该功能尚未支持）
         /// </summary>
         [JsonProperty("EnableTeacherBodyMovements")]
         public bool? EnableTeacherBodyMovements{ get; set; }

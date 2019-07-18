@@ -30,6 +30,58 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
 
+        /// <summary>
+        /// 应用名称。
+        /// </summary>
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
+
+        /// <summary>
+        /// 推流域名。
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
+        /// <summary>
+        /// 推流开始时间。
+        /// UTC格式时间，
+        /// 例如：2019-01-07T12:00:00Z。
+        /// </summary>
+        [JsonProperty("StreamStartTime")]
+        public string StreamStartTime{ get; set; }
+
+        /// <summary>
+        /// 推流结束时间。
+        /// UTC格式时间，
+        /// 例如：2019-01-07T15:00:00Z。
+        /// </summary>
+        [JsonProperty("StreamEndTime")]
+        public string StreamEndTime{ get; set; }
+
+        /// <summary>
+        /// 停止原因。
+        /// </summary>
+        [JsonProperty("StopReason")]
+        public string StopReason{ get; set; }
+
+        /// <summary>
+        /// 推流持续时长，单位：秒。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public ulong? Duration{ get; set; }
+
+        /// <summary>
+        /// 主播IP。
+        /// </summary>
+        [JsonProperty("ClientIp")]
+        public string ClientIp{ get; set; }
+
+        /// <summary>
+        /// 分辨率。
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +89,14 @@ namespace TencentCloud.Live.V20180801.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "StreamStartTime", this.StreamStartTime);
+            this.SetParamSimple(map, prefix + "StreamEndTime", this.StreamEndTime);
+            this.SetParamSimple(map, prefix + "StopReason", this.StopReason);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "ClientIp", this.ClientIp);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
         }
     }
 }

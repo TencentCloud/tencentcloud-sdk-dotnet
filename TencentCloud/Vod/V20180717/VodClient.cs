@@ -608,8 +608,8 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 1. 该接口可以获取多个视频的多种信息，包括：
-        ///     1. 基础信息（basicInfo）：包括视频名称、大小、时长、封面图片等。
-        ///     2. 元信息（metaData）：包括视频流信息、音频流信息等。
+        ///     1. 基础信息（basicInfo）：包括视频名称、分类、播放地址、封面图片等。
+        ///     2. 元信息（metaData）：包括大小、时长、视频流信息、音频流信息等。
         ///     3. 转码结果信息（transcodeInfo）：包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
         ///     4. 转动图结果信息（animatedGraphicsInfo）：对视频转动图（如 gif）后，动图相关信息。
         ///     5. 采样截图信息（sampleSnapshotInfo）：对视频采样截图后，相关截图信息。
@@ -691,6 +691,27 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeReviewDetails");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReviewDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于获取当前账号有权限的子应用列表，包含主应用。若尚未开通子应用功能，接口将返回 
+        ///  FailedOperation。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSubAppIdsRequest"/></param>
+        /// <returns>参考<see cref="DescribeSubAppIdsResponse"/>实例</returns>
+        public async Task<DescribeSubAppIdsResponse> DescribeSubAppIds(DescribeSubAppIdsRequest req)
+        {
+             JsonResponseModel<DescribeSubAppIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubAppIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubAppIdsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1008,6 +1029,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "ModifyPersonSample");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改子应用信息，但不允许修改主应用信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifySubAppIdInfoRequest"/></param>
+        /// <returns>参考<see cref="ModifySubAppIdInfoResponse"/>实例</returns>
+        public async Task<ModifySubAppIdInfoResponse> ModifySubAppIdInfo(ModifySubAppIdInfoRequest req)
+        {
+             JsonResponseModel<ModifySubAppIdInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubAppIdInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubAppIdInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于启用、停用子应用。被停用的子应用将封停对应域名，并限制控制台访问。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifySubAppIdStatusRequest"/></param>
+        /// <returns>参考<see cref="ModifySubAppIdStatusResponse"/>实例</returns>
+        public async Task<ModifySubAppIdStatusResponse> ModifySubAppIdStatus(ModifySubAppIdStatusRequest req)
+        {
+             JsonResponseModel<ModifySubAppIdStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubAppIdStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubAppIdStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

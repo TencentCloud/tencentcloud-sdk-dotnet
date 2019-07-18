@@ -49,8 +49,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 分辨率自适应，可选值：
-        /// <li>open：开启，此时，Width 代表视频的宽度，Height 表示视频的高度；</li>
-        /// <li>close：关闭，此时，Width 代表视频的长边，Height 表示视频的短边。</li>
+        /// <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+        /// <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
