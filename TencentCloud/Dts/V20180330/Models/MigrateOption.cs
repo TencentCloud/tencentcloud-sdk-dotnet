@@ -49,7 +49,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public long? MigrateObject{ get; set; }
 
         /// <summary>
-        /// 数据对比类型，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+        /// 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public long? ConsistencyType{ get; set; }
@@ -76,12 +76,13 @@ namespace TencentCloud.Dts.V20180330.Models
         /// 	'SrcAuthFlag': "1", 
         /// 	'SrcAuthMechanism':"SCRAM-SHA-1"
         /// }
+        /// MySQL暂不支持额外参数设置。
         /// </summary>
         [JsonProperty("ExternParams")]
         public string ExternParams{ get; set; }
 
         /// <summary>
-        /// 抽样检验时的抽样参数
+        /// 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
         /// </summary>
         [JsonProperty("ConsistencyParams")]
         public ConsistencyParams ConsistencyParams{ get; set; }

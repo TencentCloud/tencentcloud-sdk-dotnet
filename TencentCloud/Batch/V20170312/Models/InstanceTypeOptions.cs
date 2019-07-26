@@ -37,7 +37,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 实例机型类别，可选参数：“ALL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+        /// 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
         /// </summary>
         [JsonProperty("InstanceCategories")]
         public string[] InstanceCategories{ get; set; }

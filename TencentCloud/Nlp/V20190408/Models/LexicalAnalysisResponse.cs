@@ -25,13 +25,16 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 命名实体识别结果
+        /// 命名实体识别结果。取值范围：
+        /// <li>PER：表示人名</li>
+        /// <li>LOC：表示地名</li>
+        /// <li>ORG：表示机构团体名</li>
         /// </summary>
         [JsonProperty("NerTokens")]
         public NerToken[] NerTokens{ get; set; }
 
         /// <summary>
-        /// 分词&词性标注结果
+        /// 分词&词性标注结果（词性表请参见附录）
         /// </summary>
         [JsonProperty("PosTokens")]
         public PosToken[] PosTokens{ get; set; }

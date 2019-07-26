@@ -15,44 +15,50 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DstInfo : AbstractModel
+    public class CarTagItem : AbstractModel
     {
         
         /// <summary>
-        /// 目标实例Id，如cdb-jd92ijd8
+        /// 车系
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Serial")]
+        public string Serial{ get; set; }
 
         /// <summary>
-        /// 目标实例vip。已废弃，无需填写
+        /// 车辆品牌
         /// </summary>
-        [JsonProperty("Ip")]
-        public string Ip{ get; set; }
+        [JsonProperty("Brand")]
+        public string Brand{ get; set; }
 
         /// <summary>
-        /// 目标实例vport。已废弃，无需填写
+        /// 车辆类型
         /// </summary>
-        [JsonProperty("Port")]
-        public long? Port{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 目标实例地域，如ap-guangzhou
+        /// 车辆颜色
         /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
+        [JsonProperty("Color")]
+        public string Color{ get; set; }
 
         /// <summary>
-        /// 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
+        /// 置信度，0-100
         /// </summary>
-        [JsonProperty("ReadOnly")]
-        public long? ReadOnly{ get; set; }
+        [JsonProperty("Confidence")]
+        public long? Confidence{ get; set; }
+
+        /// <summary>
+        /// 年份，没识别出年份的时候返回0
+        /// </summary>
+        [JsonProperty("Year")]
+        public long? Year{ get; set; }
 
 
         /// <summary>
@@ -60,11 +66,12 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Ip", this.Ip);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "Serial", this.Serial);
+            this.SetParamSimple(map, prefix + "Brand", this.Brand);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Color", this.Color);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "Year", this.Year);
         }
     }
 }

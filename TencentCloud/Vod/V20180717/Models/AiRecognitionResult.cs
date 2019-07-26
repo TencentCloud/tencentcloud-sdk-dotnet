@@ -38,6 +38,22 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 视频片头片尾识别结果，当 Type 为
+        ///  HeadTailRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HeadTailTask")]
+        public AiRecognitionTaskHeadTailResult HeadTailTask{ get; set; }
+
+        /// <summary>
+        /// 视频拆条识别结果，当 Type 为
+        ///  SegmentRecognition 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SegmentTask")]
+        public AiRecognitionTaskSegmentResult SegmentTask{ get; set; }
+
+        /// <summary>
         /// 人脸识别结果，当 Type 为 
         ///  FaceRecognition 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,14 +94,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
         /// <summary>
-        /// 视频片头片尾识别结果，当 Type 为
-        ///  HeadTailRecognition 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("HeadTailTask")]
-        public AiRecognitionTaskHeadTailResult HeadTailTask{ get; set; }
-
-        /// <summary>
         /// 物体识别结果，当 Type 为
         ///  ObjectRecognition 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,12 +108,13 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
+            this.SetParamObj(map, prefix + "SegmentTask.", this.SegmentTask);
             this.SetParamObj(map, prefix + "FaceTask.", this.FaceTask);
             this.SetParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
             this.SetParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
             this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
-            this.SetParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
             this.SetParamObj(map, prefix + "ObjectTask.", this.ObjectTask);
         }
     }

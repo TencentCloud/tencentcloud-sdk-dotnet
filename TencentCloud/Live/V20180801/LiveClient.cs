@@ -1120,7 +1120,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 用于查询推断流事件。
+        /// 用于查询推断流事件。<br>
         /// 
         /// 注意：该接口可通过使用IsFilter进行过滤，返回推流历史记录。
         /// </summary>
@@ -1182,7 +1182,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 返回已经推过流的流列表
+        /// 返回已经推过流的流列表。<br>
+        /// 注意：分页最多支持查询1万条记录，可通过调整查询时间范围来获取更多数据。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveStreamPublishedListRequest"/></param>
         /// <returns>参考<see cref="DescribeLiveStreamPublishedListResponse"/>实例</returns>

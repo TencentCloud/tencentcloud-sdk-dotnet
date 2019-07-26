@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 您的域名。
+        /// 您的推流域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
@@ -34,6 +34,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 结束时间。
         /// UTC 格式，例如：2016-06-30T19:00:00Z。
         /// 不超过当前时间。
+        /// 注意：EndTime和StartTime相差不可超过30天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -41,13 +42,13 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 起始时间。 
         /// UTC 格式，例如：2016-06-29T19:00:00Z。
-        /// 和当前时间相隔不超过7天。
+        /// 最长支持查询60天内数据。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -68,6 +69,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
+        /// <summary>
+        /// 流名称，支持模糊匹配。
+        /// </summary>
+        [JsonProperty("StreamName")]
+        public string StreamName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -80,6 +87,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
         }
     }
 }

@@ -15,26 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextClassificationResponse : AbstractModel
+    public class RecognizeCarRequest : AbstractModel
     {
         
         /// <summary>
-        /// 文本分类结果（文本分类映射表请参见附录）
+        /// 图片的BASE64值；
+        /// BASE64编码后的图片数据大小不超过3M，支持PNG、JPG、JPEG、BMP格式，暂不支持GIF格式。
         /// </summary>
-        [JsonProperty("Classes")]
-        public ClassificationResult[] Classes{ get; set; }
+        [JsonProperty("ImageBase64")]
+        public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 图片的 ImageUrl、ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+        /// 
+        /// 图片URL地址。支持的图片格式：PNG、JPG、JPEG、BMP，暂不支持GIF格式。支持的图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ImageUrl")]
+        public string ImageUrl{ get; set; }
 
 
         /// <summary>
@@ -42,8 +45,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Classes.", this.Classes);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// 阿里云AccessKey
+        /// 阿里云AccessKey。源库是阿里云RDS5.6适用
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
@@ -55,43 +55,43 @@ namespace TencentCloud.Dts.V20180330.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 阿里云rds实例id
+        /// 阿里云RDS实例ID。源库是阿里云RDS5.6适用
         /// </summary>
         [JsonProperty("RdsInstanceId")]
         public string RdsInstanceId{ get; set; }
 
         /// <summary>
-        /// CVM实例短ID，格式如：ins-olgl89y8，与云主机控制台页面显示的实例ID相同，如果是CVM自建实例或者通过自建VPN接入的公网实例，需要传递此字段
+        /// CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
         /// </summary>
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }
 
         /// <summary>
-        /// 专线网关ID
+        /// 专线网关ID，格式如：dcg-0rxtqqxb
         /// </summary>
         [JsonProperty("UniqDcgId")]
         public string UniqDcgId{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，和原来的数字vpcId对应，需要调vpc的接口去转换
+        /// 私有网络ID，格式如：vpc-92jblxto
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 私有网络下的子网ID, 和原来的数字子网ID对应，需要调用vpc的接口去转换
+        /// 私有网络下的子网ID，格式如：subnet-3paxmkdz
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 系统分配的VPN网关ID
+        /// VPN网关ID，格式如：vpngw-9ghexg7q
         /// </summary>
         [JsonProperty("UniqVpnGwId")]
         public string UniqVpnGwId{ get; set; }
 
         /// <summary>
-        /// 实例短Id
+        /// 数据库实例ID,格式如：cdb-powiqx8q
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 服务提供商，如:aliyun,others
+        /// 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
         /// </summary>
         [JsonProperty("Supplier")]
         public string Supplier{ get; set; }

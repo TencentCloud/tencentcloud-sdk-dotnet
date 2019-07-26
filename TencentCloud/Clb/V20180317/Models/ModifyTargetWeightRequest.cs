@@ -37,12 +37,6 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 后端云服务器新的转发权重，取值范围：0~100。
-        /// </summary>
-        [JsonProperty("Weight")]
-        public long? Weight{ get; set; }
-
-        /// <summary>
         /// 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
         /// </summary>
         [JsonProperty("LocationId")]
@@ -61,10 +55,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 要修改权重的后端机器列表
+        /// 要修改权重的后端服务列表
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
+
+        /// <summary>
+        /// 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public long? Weight{ get; set; }
 
 
         /// <summary>
@@ -74,11 +74,11 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
-            this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

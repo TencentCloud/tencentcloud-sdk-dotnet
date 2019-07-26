@@ -63,47 +63,47 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// IP版本，IPV4 | IPV6，默认值 IPV4。
+        /// 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
         /// </summary>
         [JsonProperty("AddressIPVersion")]
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// 创建负载均衡的个数
+        /// 创建负载均衡的个数，默认值 1。
         /// </summary>
         [JsonProperty("Number")]
         public ulong? Number{ get; set; }
 
         /// <summary>
-        /// 设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-        /// 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区
+        /// 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+        /// 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
         /// </summary>
         [JsonProperty("MasterZoneId")]
         public string MasterZoneId{ get; set; }
 
         /// <summary>
-        /// 可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+        /// 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Anycast的发布域，可取 ZONE_A 或 ZONE_B
+        /// 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
         /// </summary>
         [JsonProperty("AnycastZone")]
         public string AnycastZone{ get; set; }
 
         /// <summary>
-        /// 负载均衡的网络计费方式，此参数仅对带宽上移用户生效
+        /// 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。
+        /// 购买负载均衡同时，给负载均衡打上标签
         /// </summary>
-        [JsonProperty("VipIsp")]
-        public string VipIsp{ get; set; }
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
-            this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）
+        /// 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
+        /// 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EniIp")]

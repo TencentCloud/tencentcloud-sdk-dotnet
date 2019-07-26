@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextClassificationResponse : AbstractModel
+    public class RecognizeCarResponse : AbstractModel
     {
         
         /// <summary>
-        /// 文本分类结果（文本分类映射表请参见附录）
+        /// 汽车的四个矩形顶点坐标
         /// </summary>
-        [JsonProperty("Classes")]
-        public ClassificationResult[] Classes{ get; set; }
+        [JsonProperty("CarCoords")]
+        public Coord[] CarCoords{ get; set; }
+
+        /// <summary>
+        /// 车辆属性识别的结果数组
+        /// </summary>
+        [JsonProperty("CarTags")]
+        public CarTagItem[] CarTags{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +48,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Classes.", this.Classes);
+            this.SetParamArrayObj(map, prefix + "CarCoords.", this.CarCoords);
+            this.SetParamArrayObj(map, prefix + "CarTags.", this.CarTags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

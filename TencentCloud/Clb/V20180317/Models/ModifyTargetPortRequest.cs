@@ -37,19 +37,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要修改端口的后端机器列表
+        /// 要修改端口的后端服务列表
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 后端机器绑定到监听器的新端口
+        /// 后端服务绑定到监听器或转发规则的新端口
         /// </summary>
         [JsonProperty("NewPort")]
         public long? NewPort{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID
+        /// 转发规则的ID，当后端服务绑定到七层转发规则时，必须提供此参数或Domain+Url两者之一
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// 1-100的整数值，select(*)对比时每张表的抽样行数比例
+        /// 数据内容检测参数。表中选出用来数据对比的行，占表的总行数的百分比。取值范围是整数[1-100]
         /// </summary>
         [JsonProperty("SelectRowsPerTable")]
         public long? SelectRowsPerTable{ get; set; }
 
         /// <summary>
-        /// 1-100的整数值，select(*)对比的表的比例
+        /// 数据内容检测参数。迁移库表中，要进行数据内容检测的表，占所有表的百分比。取值范围是整数[1-100]
         /// </summary>
         [JsonProperty("TablesSelectAll")]
         public long? TablesSelectAll{ get; set; }
 
         /// <summary>
-        /// 1-100的整数值，select count(*)对比的表的比例
+        /// 数据数量检测，检测表行数是否一致。迁移库表中，要进行数据数量检测的表，占所有表的百分比。取值范围是整数[1-100]
         /// </summary>
         [JsonProperty("TablesSelectCount")]
         public long? TablesSelectCount{ get; set; }

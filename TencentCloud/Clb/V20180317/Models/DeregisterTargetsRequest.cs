@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要解绑的后端机器列表，数组长度最大支持20
+        /// 要解绑的后端服务列表，数组长度最大支持20
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }

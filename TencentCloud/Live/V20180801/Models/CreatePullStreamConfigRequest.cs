@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 源Url。
+        /// 源Url。目前可支持直播流及点播文件。
         /// </summary>
         [JsonProperty("FromUrl")]
         public string FromUrl{ get; set; }

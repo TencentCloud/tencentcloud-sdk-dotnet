@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 新域名，	长度限制为：1-80。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
+        /// 新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
         /// </summary>
         [JsonProperty("NewDomain")]
         public string NewDomain{ get; set; }

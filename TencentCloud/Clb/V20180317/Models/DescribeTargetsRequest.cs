@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器端口
+        /// 监听器端口
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

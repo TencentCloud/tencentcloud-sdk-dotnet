@@ -37,13 +37,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public MigrateOption MigrateOption{ get; set; }
 
         /// <summary>
-        /// 源实例数据库类型:mysql,redis,mongodb
+        /// 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        /// 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string SrcAccessType{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public SrcInfo SrcInfo{ get; set; }
 
         /// <summary>
-        /// 目标实例数据库类型,mysql,redis,mongodb
+        /// 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }
 
         /// <summary>
-        /// 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+        /// 目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string DstAccessType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public DstInfo DstInfo{ get; set; }
 
         /// <summary>
-        /// 需要迁移的源数据库表信息，用json格式的字符串描述。
+        /// 需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
         /// 对于database-table两级结构的数据库：
         /// [{Database:db1,Table:[table1,table2]},{Database:db2}]
         /// 对于database-schema-table三级结构：

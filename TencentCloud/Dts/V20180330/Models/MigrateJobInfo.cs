@@ -43,13 +43,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public MigrateOption MigrateOption{ get; set; }
 
         /// <summary>
-        /// 源实例数据库类型:mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+        /// 源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
 
         /// <summary>
-        /// 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        /// 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string SrcAccessType{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Dts.V20180330.Models
         public SrcInfo SrcInfo{ get; set; }
 
         /// <summary>
-        /// 目标实例数据库类型,mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+        /// 目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }
 
         /// <summary>
-        /// 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        /// 目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string DstAccessType{ get; set; }
 
         /// <summary>
-        /// 目的实例信息
+        /// 目标实例信息
         /// </summary>
         [JsonProperty("DstInfo")]
         public DstInfo DstInfo{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 任务状态,取值为：1-创建中(Creating),2-创建完成(Created),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,6-准备运行(ReadyRun),7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-中止中（Stoping）,12-完成中（Completing）
+        /// 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stoping）,12-完成中（Completing）
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

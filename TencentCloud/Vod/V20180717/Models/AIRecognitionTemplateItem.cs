@@ -50,6 +50,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public HeadTailConfigureInfo HeadTailConfigure{ get; set; }
 
         /// <summary>
+        /// 拆条识别控制参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SegmentConfigure")]
+        public SegmentConfigureInfo SegmentConfigure{ get; set; }
+
+        /// <summary>
         /// 人脸识别控制参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -119,6 +126,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamObj(map, prefix + "HeadTailConfigure.", this.HeadTailConfigure);
+            this.SetParamObj(map, prefix + "SegmentConfigure.", this.SegmentConfigure);
             this.SetParamObj(map, prefix + "FaceConfigure.", this.FaceConfigure);
             this.SetParamObj(map, prefix + "OcrFullTextConfigure.", this.OcrFullTextConfigure);
             this.SetParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);

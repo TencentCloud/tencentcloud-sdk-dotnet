@@ -231,6 +231,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("PrepaidAttributes")]
         public LBChargePrepaid PrepaidAttributes{ get; set; }
 
+        /// <summary>
+        /// 负载均衡日志服务(CLS)的日志集ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogSetId")]
+        public string LogSetId{ get; set; }
+
+        /// <summary>
+        /// 负载均衡日志服务(CLS)的日志主题ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -267,6 +281,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
             this.SetParamObj(map, prefix + "PrepaidAttributes.", this.PrepaidAttributes);
+            this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         }
     }
 }

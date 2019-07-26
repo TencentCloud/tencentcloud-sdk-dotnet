@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextClassificationResponse : AbstractModel
+    public class Coord : AbstractModel
     {
         
         /// <summary>
-        /// 文本分类结果（文本分类映射表请参见附录）
+        /// 横坐标x
         /// </summary>
-        [JsonProperty("Classes")]
-        public ClassificationResult[] Classes{ get; set; }
+        [JsonProperty("X")]
+        public long? X{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 纵坐标y
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Y")]
+        public long? Y{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Classes.", this.Classes);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "X", this.X);
+            this.SetParamSimple(map, prefix + "Y", this.Y);
         }
     }
 }

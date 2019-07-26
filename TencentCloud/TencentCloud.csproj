@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.32</VersionPrefix>
+    <VersionPrefix>3.0.33</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3463,9 +3463,13 @@
     <Compile Include="Tics\V20181115\Models\TagType.cs" />
     <Compile Include="Tiia\V20190529\TiiaClient.cs" />
     <Compile Include="Tiia\V20190529\Models\Candidate.cs" />
+    <Compile Include="Tiia\V20190529\Models\CarTagItem.cs" />
+    <Compile Include="Tiia\V20190529\Models\Coord.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectLabelItem.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectLabelRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectLabelResponse.cs" />
+    <Compile Include="Tiia\V20190529\Models\DetectProductRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\DetectProductResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\DisgustResult.cs" />
     <Compile Include="Tiia\V20190529\Models\FaceRect.cs" />
     <Compile Include="Tiia\V20190529\Models\FaceResult.cs" />
@@ -3473,6 +3477,9 @@
     <Compile Include="Tiia\V20190529\Models\ImageModerationResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\PoliticsResult.cs" />
     <Compile Include="Tiia\V20190529\Models\PornResult.cs" />
+    <Compile Include="Tiia\V20190529\Models\Product.cs" />
+    <Compile Include="Tiia\V20190529\Models\RecognizeCarRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\RecognizeCarResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\TerrorismResult.cs" />
     <Compile Include="Tke\V20180525\TkeClient.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
@@ -3695,6 +3702,10 @@
     <Compile Include="Vod\V20180717\Models\AiRecognitionTaskOcrWordsResultItem.cs" />
     <Compile Include="Vod\V20180717\Models\AiRecognitionTaskOcrWordsResultOutput.cs" />
     <Compile Include="Vod\V20180717\Models\AiRecognitionTaskOcrWordsSegmentItem.cs" />
+    <Compile Include="Vod\V20180717\Models\AiRecognitionTaskSegmentResult.cs" />
+    <Compile Include="Vod\V20180717\Models\AiRecognitionTaskSegmentResultInput.cs" />
+    <Compile Include="Vod\V20180717\Models\AiRecognitionTaskSegmentResultOutput.cs" />
+    <Compile Include="Vod\V20180717\Models\AiRecognitionTaskSegmentSegmentItem.cs" />
     <Compile Include="Vod\V20180717\Models\AiReviewPoliticalAsrTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\AiReviewPoliticalAsrTaskOutput.cs" />
     <Compile Include="Vod\V20180717\Models\AiReviewPoliticalOcrTaskInput.cs" />
@@ -3873,6 +3884,9 @@
     <Compile Include="Vod\V20180717\Models\MediaKeyFrameDescInfo.cs" />
     <Compile Include="Vod\V20180717\Models\MediaKeyFrameDescItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaMetaData.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaMiniProgramReviewElem.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaMiniProgramReviewInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaMiniProgramReviewInfoItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaOutputInfo.cs" />
     <Compile Include="Vod\V20180717\Models\MediaProcessTaskAdaptiveDynamicStreamingResult.cs" />
     <Compile Include="Vod\V20180717\Models\MediaProcessTaskAnimatedGraphicResult.cs" />
@@ -3961,6 +3975,7 @@
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\SegmentConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\SimpleHlsClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\SimpleHlsClipResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffset2017.cs" />
