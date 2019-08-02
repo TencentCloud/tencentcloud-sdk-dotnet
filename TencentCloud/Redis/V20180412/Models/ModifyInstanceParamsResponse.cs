@@ -31,6 +31,12 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? Changed{ get; set; }
 
         /// <summary>
+        /// 任务ID
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Changed", this.Changed);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

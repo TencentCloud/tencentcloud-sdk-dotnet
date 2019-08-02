@@ -236,6 +236,13 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
+        /// <summary>
+        /// 是否为免密实例，true-免密实例；false-非免密实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NoAuth")]
+        public bool? NoAuth{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -277,6 +284,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "SlaveReadWeight", this.SlaveReadWeight);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
+            this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
         }
     }
 }

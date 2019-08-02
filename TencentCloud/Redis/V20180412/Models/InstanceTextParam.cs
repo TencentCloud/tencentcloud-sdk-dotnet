@@ -66,6 +66,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("TextValue")]
         public string[] TextValue{ get; set; }
 
+        /// <summary>
+        /// 参数状态, 1: 修改中， 2：修改完成
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
             this.SetParamSimple(map, prefix + "Tips", this.Tips);
             this.SetParamArraySimple(map, prefix + "TextValue.", this.TextValue);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

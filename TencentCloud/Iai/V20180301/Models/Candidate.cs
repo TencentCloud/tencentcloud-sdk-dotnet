@@ -47,6 +47,27 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
+        /// <summary>
+        /// 人员名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PersonName")]
+        public string PersonName{ get; set; }
+
+        /// <summary>
+        /// 人员性别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Gender")]
+        public long? Gender{ get; set; }
+
+        /// <summary>
+        /// 包含此人员的人员库及描述字段内容列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PersonGroupInfos")]
+        public PersonGroupInfo[] PersonGroupInfos{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -56,6 +77,9 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "FaceId", this.FaceId);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "PersonName", this.PersonName);
+            this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamArrayObj(map, prefix + "PersonGroupInfos.", this.PersonGroupInfos);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
+        /// <summary>
+        /// 参数状态, 1: 修改中， 2：修改完成
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
             this.SetParamSimple(map, prefix + "Tips", this.Tips);
             this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

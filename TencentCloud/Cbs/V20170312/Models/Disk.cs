@@ -215,6 +215,20 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }
 
+        /// <summary>
+        /// 云硬盘挂载目标设备的ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachDeviceId")]
+        public string AttachDeviceId{ get; set; }
+
+        /// <summary>
+        /// 云硬盘挂载目标设备的类型，目前包括CVM和POD
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachDeviceType")]
+        public string AttachDeviceType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -251,6 +265,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "MigratePercent", this.MigratePercent);
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+            this.SetParamSimple(map, prefix + "AttachDeviceId", this.AttachDeviceId);
+            this.SetParamSimple(map, prefix + "AttachDeviceType", this.AttachDeviceType);
         }
     }
 }

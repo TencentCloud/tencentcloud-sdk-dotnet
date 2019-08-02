@@ -37,13 +37,22 @@ namespace TencentCloud.Live.V20180801.Models
         public string ToUrl{ get; set; }
 
         /// <summary>
-        /// 区域id,1-深圳,2-上海，3-天津,4-香港。
+        /// 区域id：
+        /// 1-深圳，
+        /// 2-上海，
+        /// 3-天津，
+        /// 4-香港。
         /// </summary>
         [JsonProperty("AreaId")]
         public long? AreaId{ get; set; }
 
         /// <summary>
-        /// 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。
+        /// 运营商id：
+        /// 1-电信，
+        /// 2-移动，
+        /// 3-联通，
+        /// 4-其他。
+        /// 注：AreaId为4的时候,IspId只能为其他。
         /// </summary>
         [JsonProperty("IspId")]
         public long? IspId{ get; set; }

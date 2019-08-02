@@ -60,6 +60,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// 网络插件是否启用CNI(默认开启)
+        /// </summary>
+        [JsonProperty("Cni")]
+        public bool? Cni{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
             this.SetParamSimple(map, prefix + "Ipvs", this.Ipvs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "Cni", this.Cni);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，7 – Redis4.0集群版，
+        /// 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
@@ -55,16 +55,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种
-        /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
-
-        /// <summary>
         /// 付费方式:0-按量计费，1-包年包月。
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
+
+        /// <summary>
+        /// 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
         /// <summary>
         /// 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
@@ -103,7 +103,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
@@ -126,6 +126,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
+        /// <summary>
+        /// 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+        /// </summary>
+        [JsonProperty("NoAuth")]
+        public bool? NoAuth{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -137,8 +143,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
             this.SetParamSimple(map, prefix + "Period", this.Period);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
@@ -149,6 +155,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
             this.SetParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
         }
     }
 }

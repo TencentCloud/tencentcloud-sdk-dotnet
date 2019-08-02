@@ -43,10 +43,24 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaStreamInfo[] StreamInfos{ get; set; }
 
         /// <summary>
+        /// 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+        /// <li>10：拼接时，以分辨率最高的输入为基准；</li>
+        /// <li>20：拼接时，以码率最高的输入为基准；</li>
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
+        /// <summary>
         /// [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }
+
+        /// <summary>
+        /// 编辑后生成的文件配置。
+        /// </summary>
+        [JsonProperty("OutputConfig")]
+        public EditMediaOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -63,7 +77,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+            this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

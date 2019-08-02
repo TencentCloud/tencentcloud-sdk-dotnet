@@ -45,6 +45,14 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+        /// 默认为"2.0"。 
+        /// 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+        /// </summary>
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -54,6 +62,7 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         }
     }
 }

@@ -49,6 +49,12 @@ namespace TencentCloud.Redis.V20180412.Models
         public InstanceTextParam[] InstanceTextParam{ get; set; }
 
         /// <summary>
+        /// 实例多选项型参数
+        /// </summary>
+        [JsonProperty("InstanceMultiParam")]
+        public InstanceMultiParam[] InstanceMultiParam{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArrayObj(map, prefix + "InstanceEnumParam.", this.InstanceEnumParam);
             this.SetParamArrayObj(map, prefix + "InstanceIntegerParam.", this.InstanceIntegerParam);
             this.SetParamArrayObj(map, prefix + "InstanceTextParam.", this.InstanceTextParam);
+            this.SetParamArrayObj(map, prefix + "InstanceMultiParam.", this.InstanceMultiParam);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

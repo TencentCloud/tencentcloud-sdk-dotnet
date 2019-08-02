@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public bool? Result{ get; set; }
 
         /// <summary>
-        /// 置信度 0 ~100
+        /// 保留字段，暂无意义
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Coord[] Polygon{ get; set; }
 
         /// <summary>
-        /// 此字段为扩展字段。
+        /// 此字段为扩展字段
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }

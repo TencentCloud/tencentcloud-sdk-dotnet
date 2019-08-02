@@ -120,6 +120,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("ImageCount")]
         public ulong? ImageCount{ get; set; }
 
+        /// <summary>
+        /// 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+        /// </summary>
+        [JsonProperty("SnapshotType")]
+        public string SnapshotType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -142,6 +148,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "CopyFromRemote", this.CopyFromRemote);
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamSimple(map, prefix + "ImageCount", this.ImageCount);
+            this.SetParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
         }
     }
 }

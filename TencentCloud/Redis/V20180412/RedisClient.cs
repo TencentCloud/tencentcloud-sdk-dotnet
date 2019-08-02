@@ -133,7 +133,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询备份Rdb下载地址
+        /// 查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
         /// </summary>
         /// <param name="req">参考<see cref="DescribeBackupUrlRequest"/></param>
         /// <returns>参考<see cref="DescribeBackupUrlResponse"/>实例</returns>

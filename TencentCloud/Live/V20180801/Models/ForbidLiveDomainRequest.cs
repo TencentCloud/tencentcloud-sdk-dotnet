@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 停用的直播域名
+        /// 待停用的直播域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }

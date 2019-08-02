@@ -32,30 +32,33 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 模板名称。
+        /// 长度上限：255字节。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
         /// 描述信息。
+        /// 长度上限：1024字节。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 截图时间间隔
+        /// 截图间隔，单位s，默认10s。
+        /// 范围： 5s ~ 600s。
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }
 
         /// <summary>
-        /// 截图宽度。
+        /// 截图宽度。默认：0（原始宽）。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 截图高度。
+        /// 截图高度。默认：0（原始高）。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

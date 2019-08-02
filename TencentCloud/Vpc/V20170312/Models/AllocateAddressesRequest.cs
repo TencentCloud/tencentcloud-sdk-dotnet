@@ -30,6 +30,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AddressCount")]
         public long? AddressCount{ get; set; }
 
+        /// <summary>
+        /// 运营商名称，可选值[BGP|CTCC|CMCC|CUCC]，默认BGP。
+        /// </summary>
+        [JsonProperty("InternetServiceProvider")]
+        public string InternetServiceProvider{ get; set; }
+
+        /// <summary>
+        /// EIP类型，EIP|AnycastEIP，默认EIP。
+        /// </summary>
+        [JsonProperty("AddressType")]
+        public string AddressType{ get; set; }
+
+        /// <summary>
+        /// Anycast发布域，ANYCAST_ZONE_A|ANYCAST_ZONE_B，默认为当前地域可选的任一发布域。
+        /// </summary>
+        [JsonProperty("AnycastZone")]
+        public string AnycastZone{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +55,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AddressCount", this.AddressCount);
+            this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+            this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
+            this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
         }
     }
 }

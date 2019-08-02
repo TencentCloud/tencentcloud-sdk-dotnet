@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.33</VersionPrefix>
+    <VersionPrefix>3.0.34</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2992,6 +2992,7 @@
     <Compile Include="Redis\V20180412\Models\InstanceClusterShard.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceEnumParam.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceIntegerParam.cs" />
+    <Compile Include="Redis\V20180412\Models\InstanceMultiParam.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceNode.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceParam.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceParamHistory.cs" />
@@ -3489,15 +3490,24 @@
     <Compile Include="Tke\V20180525\Models\ClusterBasicSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterNetworkSettings.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterInstancesRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterSecurityRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterSecurityResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClustersResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeExistedInstancesRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnhancedService.cs" />
+    <Compile Include="Tke\V20180525\Models\ExistedInstance.cs" />
     <Compile Include="Tke\V20180525\Models\ExistedInstancesForNode.cs" />
     <Compile Include="Tke\V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="Tke\V20180525\Models\Filter.cs" />
@@ -3836,6 +3846,7 @@
     <Compile Include="Vod\V20180717\Models\DescribeWordSamplesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWordSamplesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaFileInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\EditMediaOutputConfig.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaResponse.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaStreamInfo.cs" />
@@ -3976,6 +3987,7 @@
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SegmentConfigureInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\SegmentConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\SimpleHlsClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\SimpleHlsClipResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffset2017.cs" />
@@ -4043,6 +4055,8 @@
     <Compile Include="Vpc\V20170312\Models\AssignPrivateIpAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateAddressResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AttachCcnInstancesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AttachCcnInstancesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AttachClassicLinkVpcRequest.cs" />
@@ -4078,6 +4092,10 @@
     <Compile Include="Vpc\V20170312\Models\CreateHaVipResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateIp6TranslatorsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateIp6TranslatorsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateNatGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateNatGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetworkInterfaceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateRouteTableRequest.cs" />
@@ -4125,6 +4143,10 @@
     <Compile Include="Vpc\V20170312\Models\DeleteHaVipResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteIp6TranslatorsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteIp6TranslatorsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetworkInterfaceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteRouteTableRequest.cs" />
@@ -4191,6 +4213,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeIp6TranslatorQuotaResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIp6TranslatorsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIp6TranslatorsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaysRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaysResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNetworkInterfacesRequest.cs" />
@@ -4238,6 +4262,8 @@
     <Compile Include="Vpc\V20170312\Models\DisableRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateAddressResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DownloadCustomerGatewayConfigurationRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesRequest.cs" />
@@ -4299,6 +4325,10 @@
     <Compile Include="Vpc\V20170312\Models\ModifyIp6TranslatorResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyIpv6AddressesAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyIpv6AddressesAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetworkInterfaceAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetworkInterfaceAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyPrivateIpAddressesAttributeRequest.cs" />
@@ -4323,6 +4353,7 @@
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayAddress.cs" />
+    <Compile Include="Vpc\V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkInterface.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkInterfaceAttachment.cs" />
     <Compile Include="Vpc\V20170312\Models\Price.cs" />
@@ -4348,6 +4379,8 @@
     <Compile Include="Vpc\V20170312\Models\ReplaceSecurityGroupPolicyResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ResetAttachCcnInstancesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ResetAttachCcnInstancesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ResetNatGatewayConnectionRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ResetNatGatewayConnectionResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ResetRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ResetRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ResetVpnConnectionRequest.cs" />

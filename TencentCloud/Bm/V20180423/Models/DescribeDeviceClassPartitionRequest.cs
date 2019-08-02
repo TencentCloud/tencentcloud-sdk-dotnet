@@ -25,7 +25,7 @@ namespace TencentCloud.Bm.V20180423.Models
     {
         
         /// <summary>
-        /// 设备类型代号。代号通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/17602)查询。标准机型需要传入此参数
+        /// 设备类型代号。代号通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询。标准机型需要传入此参数
         /// </summary>
         [JsonProperty("DeviceClassCode")]
         public string DeviceClassCode{ get; set; }

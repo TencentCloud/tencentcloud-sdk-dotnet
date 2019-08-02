@@ -25,16 +25,22 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 重置的密码
+        /// Redis实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 重置的密码（切换为免密实例时，可不传；其他情况必传）
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Redis实例ID
+        /// 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("NoAuth")]
+        public bool? NoAuth{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
         }
     }
 }

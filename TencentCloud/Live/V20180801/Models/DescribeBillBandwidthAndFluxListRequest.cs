@@ -43,16 +43,20 @@ namespace TencentCloud.Live.V20180801.Models
         public string[] PlayDomains{ get; set; }
 
         /// <summary>
-        /// 国内还是国外，若不填，表示国内+国外。
+        /// 可选值：
+        /// Mainland：查询国内数据，
+        /// Oversea：则查询国外数据。
+        /// 默认：查询国内+国外的数据。
         /// </summary>
         [JsonProperty("MainlandOrOversea")]
         public string MainlandOrOversea{ get; set; }
 
         /// <summary>
         /// 数据粒度，支持如下粒度：
-        /// 5：5分钟粒度，默认值（跨度不支持超过1天）；
-        /// 60：1小时粒度（跨度不支持超过一个月）；
+        /// 5：5分钟粒度，（跨度不支持超过1天），
+        /// 60：1小时粒度（跨度不支持超过一个月），
         /// 1440：天粒度（跨度不支持超过一个月）。
+        /// 默认值：5。
         /// </summary>
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }

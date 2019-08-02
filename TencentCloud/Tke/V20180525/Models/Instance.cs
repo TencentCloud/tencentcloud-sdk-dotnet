@@ -25,12 +25,6 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 实例的附加信息
-        /// </summary>
-        [JsonProperty("InstanceAdvanceSettings")]
-        public InstanceAdvancedSettings InstanceAdvanceSettings{ get; set; }
-
-        /// <summary>
         /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
@@ -60,7 +54,6 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "InstanceAdvanceSettings.", this.InstanceAdvanceSettings);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
             this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);

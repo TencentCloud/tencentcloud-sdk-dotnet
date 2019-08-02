@@ -82,7 +82,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public TextWatermarkTemplateInputForUpdate TextTemplate{ get; set; }
 
         /// <summary>
-        /// SVG水印模板，当 Type 为 svg，该字段必填。当 Type 为 image 或 text，该字段无效。
+        /// SVG 水印模板，该字段仅对 SVG 水印模板有效。
         /// </summary>
         [JsonProperty("SvgTemplate")]
         public SvgWatermarkInputForUpdate SvgTemplate{ get; set; }

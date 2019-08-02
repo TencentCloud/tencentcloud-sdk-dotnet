@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 任务ID（修改密码时的任务ID，如果时切换免密码或者非免密码实例，则无需关注此返回值）
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

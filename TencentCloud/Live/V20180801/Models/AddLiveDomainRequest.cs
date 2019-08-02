@@ -43,13 +43,16 @@ namespace TencentCloud.Live.V20180801.Models
         /// 1：国内，
         /// 2：全球，
         /// 3：境外。
+        /// 默认值：1。
         /// </summary>
         [JsonProperty("PlayType")]
         public ulong? PlayType{ get; set; }
 
         /// <summary>
-        /// 默认 0 ：普通直播，
-        /// 1：慢直播。
+        /// 是否是慢直播：
+        /// 0： 普通直播，
+        /// 1 ：慢直播 。
+        /// 默认值： 0。
         /// </summary>
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }

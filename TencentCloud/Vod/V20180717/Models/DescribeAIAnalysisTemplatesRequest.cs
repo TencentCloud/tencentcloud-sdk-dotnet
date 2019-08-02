@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频内容分析模板唯一标识过滤条件，数组长度限制：10。
+        /// 视频内容分析模板唯一标识过滤条件，数组长度最大值：100。
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

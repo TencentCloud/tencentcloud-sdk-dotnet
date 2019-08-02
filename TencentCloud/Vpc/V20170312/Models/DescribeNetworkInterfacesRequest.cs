@@ -39,6 +39,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>groups.security-group-id - String - （过滤条件）绑定的安全组实例ID，例如：sg-f9ekbxeq。</li>
         /// <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
         /// <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
+        /// <li>address-ip - String - （过滤条件）内网IPv4地址。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -31,16 +31,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例密码，恢复实例时，需要校验实例密码
-        /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
-
-        /// <summary>
         /// 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
+
+        /// <summary>
+        /// 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Redis.V20180412.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

@@ -1646,7 +1646,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 停用使用某个直播域名
+        /// 停止使用某个直播域名。
         /// </summary>
         /// <param name="req">参考<see cref="ForbidLiveDomainRequest"/></param>
         /// <returns>参考<see cref="ForbidLiveDomainResponse"/>实例</returns>

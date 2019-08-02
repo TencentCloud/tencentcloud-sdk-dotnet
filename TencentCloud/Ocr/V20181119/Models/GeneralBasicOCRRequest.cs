@@ -57,13 +57,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// spa\fre\ger\por\
         /// vie\may\rus\ita\
         /// hol\swe\fin\dan\
-        /// nor\hun\tha
+        /// nor\hun\tha\lat
         /// 可选值分别表示：
         /// 中英文混合、自动识别、日语、韩语、
         /// 西班牙语、法语、德语、葡萄牙语、
         /// 越南语、马来语、俄语、意大利语、
         /// 荷兰语、瑞典语、芬兰语、丹麦语、
-        /// 挪威语、匈牙利语、泰语。
+        /// 挪威语、匈牙利语、泰语、拉丁语系。
         /// </summary>
         [JsonProperty("LanguageType")]
         public string LanguageType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 内容审核模板唯一标识过滤条件，数组长度限制：50。
+        /// 内容审核模板唯一标识过滤条件，数组长度限制：100。
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，默认值：10，最大值：50。
+        /// 返回记录条数，默认值：10，最大值：100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

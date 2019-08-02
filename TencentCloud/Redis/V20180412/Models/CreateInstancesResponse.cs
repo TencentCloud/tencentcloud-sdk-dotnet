@@ -31,6 +31,12 @@ namespace TencentCloud.Redis.V20180412.Models
         public string DealId{ get; set; }
 
         /// <summary>
+        /// 实例ID(该字段灰度中，部分地域不可见)
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DealId", this.DealId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

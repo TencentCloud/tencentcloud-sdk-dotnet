@@ -256,6 +256,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
+        /// </summary>
+        /// <param name="req">参考<see cref="AssociateNatGatewayAddressRequest"/></param>
+        /// <returns>参考<see cref="AssociateNatGatewayAddressResponse"/>实例</returns>
+        public async Task<AssociateNatGatewayAddressResponse> AssociateNatGatewayAddress(AssociateNatGatewayAddressRequest req)
+        {
+             JsonResponseModel<AssociateNatGatewayAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateNatGatewayAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNatGatewayAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
         /// 每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
         /// </summary>
@@ -544,6 +564,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "CreateIp6Translators");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIp6TranslatorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateNatGateway)用于创建NAT网关。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateNatGatewayRequest"/></param>
+        /// <returns>参考<see cref="CreateNatGatewayResponse"/>实例</returns>
+        public async Task<CreateNatGatewayResponse> CreateNatGateway(CreateNatGatewayRequest req)
+        {
+             JsonResponseModel<CreateNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateNatGatewayDestinationIpPortTranslationNatRule)用于创建NAT网关端口转发规则。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns>参考<see cref="CreateNatGatewayDestinationIpPortTranslationNatRuleResponse"/>实例</returns>
+        public async Task<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> CreateNatGatewayDestinationIpPortTranslationNatRule(CreateNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNatGatewayDestinationIpPortTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1020,6 +1080,47 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DeleteIp6Translators");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIp6TranslatorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNatGateway）用于删除NAT网关。
+        /// 删除 NAT 网关后，系统会自动删除路由表中包含此 NAT 网关的路由项，同时也会解绑弹性公网IP（EIP）。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteNatGatewayRequest"/></param>
+        /// <returns>参考<see cref="DeleteNatGatewayResponse"/>实例</returns>
+        public async Task<DeleteNatGatewayResponse> DeleteNatGateway(DeleteNatGatewayRequest req)
+        {
+             JsonResponseModel<DeleteNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNatGatewayDestinationIpPortTranslationNatRule）用于删除NAT网关端口转发规则。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns>参考<see cref="DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse"/>实例</returns>
+        public async Task<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse> DeleteNatGatewayDestinationIpPortTranslationNatRule(DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1702,6 +1803,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查询NAT网关端口转发规则对象数组。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>
+        /// <returns>参考<see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse"/>实例</returns>
+        public async Task<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse> DescribeNatGatewayDestinationIpPortTranslationNatRules(DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatGatewayDestinationIpPortTranslationNatRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNatGateways）用于查询 NAT 网关。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeNatGatewaysRequest"/></param>
@@ -2140,6 +2261,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DisassociateAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
+        /// </summary>
+        /// <param name="req">参考<see cref="DisassociateNatGatewayAddressRequest"/></param>
+        /// <returns>参考<see cref="DisassociateNatGatewayAddressResponse"/>实例</returns>
+        public async Task<DisassociateNatGatewayAddressResponse> DisassociateNatGatewayAddress(DisassociateNatGatewayAddressRequest req)
+        {
+             JsonResponseModel<DisassociateNatGatewayAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateNatGatewayAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNatGatewayAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2616,6 +2757,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyNatGatewayAttribute）用于修改NAT网关的属性。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyNatGatewayAttributeRequest"/></param>
+        /// <returns>参考<see cref="ModifyNatGatewayAttributeResponse"/>实例</returns>
+        public async Task<ModifyNatGatewayAttributeResponse> ModifyNatGatewayAttribute(ModifyNatGatewayAttributeRequest req)
+        {
+             JsonResponseModel<ModifyNatGatewayAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatGatewayAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatGatewayAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyNatGatewayDestinationIpPortTranslationNatRule）用于修改NAT网关端口转发规则。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest"/></param>
+        /// <returns>参考<see cref="ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse"/>实例</returns>
+        public async Task<ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse> ModifyNatGatewayDestinationIpPortTranslationNatRule(ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatGatewayDestinationIpPortTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyNetworkInterfaceAttributeRequest"/></param>
@@ -3041,6 +3222,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ResetAttachCcnInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAttachCcnInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+        /// </summary>
+        /// <param name="req">参考<see cref="ResetNatGatewayConnectionRequest"/></param>
+        /// <returns>参考<see cref="ResetNatGatewayConnectionResponse"/>实例</returns>
+        public async Task<ResetNatGatewayConnectionResponse> ResetNatGatewayConnection(ResetNatGatewayConnectionRequest req)
+        {
+             JsonResponseModel<ResetNatGatewayConnectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetNatGatewayConnection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetNatGatewayConnectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

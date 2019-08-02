@@ -36,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("AsEnabled")]
         public bool? AsEnabled{ get; set; }
 
+        /// <summary>
+        /// 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+        /// </summary>
+        [JsonProperty("ContainerRuntime")]
+        public string ContainerRuntime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "IPVS", this.IPVS);
             this.SetParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
+            this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         }
     }
 }

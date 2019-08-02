@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// redis的实例密码
+        /// redis的实例密码（免密实例不需要传密码，非免密实例必传）
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

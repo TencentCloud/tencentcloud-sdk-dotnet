@@ -26,7 +26,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         
         /// <summary>
         /// 检测到的文本信息，具体内容请点击左侧链接。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TextDetections")]
         public TextWaybill TextDetections{ get; set; }

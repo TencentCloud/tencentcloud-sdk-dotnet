@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 截图时间间隔。5-300
+        /// 截图时间间隔。5-300秒。
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }

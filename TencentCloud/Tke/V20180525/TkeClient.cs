@@ -93,6 +93,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 扩展(新建)集群节点
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateClusterInstancesRequest"/></param>
+        /// <returns>参考<see cref="CreateClusterInstancesResponse"/>实例</returns>
+        public async Task<CreateClusterInstancesResponse> CreateClusterInstances(CreateClusterInstancesRequest req)
+        {
+             JsonResponseModel<CreateClusterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除集群(YUNAPI V3版本)
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteClusterRequest"/></param>
+        /// <returns>参考<see cref="DeleteClusterResponse"/>实例</returns>
+        public async Task<DeleteClusterResponse> DeleteCluster(DeleteClusterRequest req)
+        {
+             JsonResponseModel<DeleteClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除集群中的实例
         /// </summary>
         /// <param name="req">参考<see cref="DeleteClusterInstancesRequest"/></param>
@@ -133,6 +173,26 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 集群的密钥信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClusterSecurityRequest"/></param>
+        /// <returns>参考<see cref="DescribeClusterSecurityResponse"/>实例</returns>
+        public async Task<DescribeClusterSecurityResponse> DescribeClusterSecurity(DescribeClusterSecurityRequest req)
+        {
+             JsonResponseModel<DescribeClusterSecurityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterSecurity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterSecurityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeClustersRequest"/></param>
@@ -144,6 +204,26 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = await this.InternalRequest(req, "DescribeClusters");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询已经存在的节点，判断是否可以加入集群
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeExistedInstancesRequest"/></param>
+        /// <returns>参考<see cref="DescribeExistedInstancesResponse"/>实例</returns>
+        public async Task<DescribeExistedInstancesResponse> DescribeExistedInstances(DescribeExistedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeExistedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExistedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExistedInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -85,7 +85,7 @@ namespace TencentCloud.As.V20180419.Models
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }
 
         /// <summary>
-        /// 子网ID列表，VPC场景下必须指定子网
+        /// 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
@@ -99,7 +99,7 @@ namespace TencentCloud.As.V20180419.Models
         public string[] TerminationPolicies{ get; set; }
 
         /// <summary>
-        /// 可用区列表，基础网络场景下必须指定可用区
+        /// 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }

@@ -46,25 +46,32 @@ namespace TencentCloud.Iai.V20180301.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 最多处理的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
-        /// MaxFaceNum用于，当待识别图片包含多张人脸时，要搜索的人脸数量。 
-        /// 当 MaxFaceNum 不为1时，设MaxFaceNum=M，则实际上是 M:N 的人脸搜索（N为待搜索的人脸数）。
+        /// 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
+        /// MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
+        /// 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
         /// </summary>
         [JsonProperty("MaxFaceNum")]
         public ulong? MaxFaceNum{ get; set; }
 
         /// <summary>
-        /// 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+        /// 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40的人脸图片无法被识别。建议设置为80。
         /// </summary>
         [JsonProperty("MinFaceSize")]
         public ulong? MinFaceSize{ get; set; }
 
         /// <summary>
-        /// 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-        /// 例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+        /// 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
+        /// 例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+        /// 值越大，需要处理的时间越长。建议不要超过10。
         /// </summary>
         [JsonProperty("MaxPersonNum")]
         public ulong? MaxPersonNum{ get; set; }
+
+        /// <summary>
+        /// 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+        /// </summary>
+        [JsonProperty("NeedPersonInfo")]
+        public long? NeedPersonInfo{ get; set; }
 
 
         /// <summary>
@@ -78,6 +85,7 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "MaxFaceNum", this.MaxFaceNum);
             this.SetParamSimple(map, prefix + "MinFaceSize", this.MinFaceSize);
             this.SetParamSimple(map, prefix + "MaxPersonNum", this.MaxPersonNum);
+            this.SetParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 名片识别内容。
+        /// 名片识别结果，具体内容请点击左侧链接。
         /// </summary>
         [JsonProperty("BusinessCardInfos")]
         public BusinessCardInfo[] BusinessCardInfos{ get; set; }

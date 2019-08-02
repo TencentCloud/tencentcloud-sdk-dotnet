@@ -25,6 +25,24 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 失败的节点ID
+        /// </summary>
+        [JsonProperty("FailedInstanceIds")]
+        public string[] FailedInstanceIds{ get; set; }
+
+        /// <summary>
+        /// 成功的节点ID
+        /// </summary>
+        [JsonProperty("SuccInstanceIds")]
+        public string[] SuccInstanceIds{ get; set; }
+
+        /// <summary>
+        /// 超时未返回出来节点的ID(可能失败，也可能成功)
+        /// </summary>
+        [JsonProperty("TimeoutInstanceIds")]
+        public string[] TimeoutInstanceIds{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+            this.SetParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
+            this.SetParamArraySimple(map, prefix + "TimeoutInstanceIds.", this.TimeoutInstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
