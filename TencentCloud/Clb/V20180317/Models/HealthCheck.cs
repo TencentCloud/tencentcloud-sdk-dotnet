@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? HealthSwitch{ get; set; }
 
         /// <summary>
-        /// 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
+        /// 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeOut")]

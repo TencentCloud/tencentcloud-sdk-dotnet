@@ -58,7 +58,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 预执行脚本设置
         /// </summary>
         [JsonProperty("PreExecutedFileSettings")]
-        public PreExecuteFileSettings PreExecutedFileSettings{ get; set; }
+        public PreExecuteFileSettings[] PreExecutedFileSettings{ get; set; }
 
         /// <summary>
         /// 扩容Task节点数量
@@ -83,7 +83,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
+            this.SetParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
             this.SetParamSimple(map, prefix + "TaskCount", this.TaskCount);
             this.SetParamSimple(map, prefix + "CoreCount", this.CoreCount);
         }

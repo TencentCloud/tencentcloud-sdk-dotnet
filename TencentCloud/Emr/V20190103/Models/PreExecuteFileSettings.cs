@@ -54,6 +54,48 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// 执行顺序
+        /// </summary>
+        [JsonProperty("RunOrder")]
+        public long? RunOrder{ get; set; }
+
+        /// <summary>
+        /// resourceAfter 或 clusterAfter
+        /// </summary>
+        [JsonProperty("WhenRun")]
+        public string WhenRun{ get; set; }
+
+        /// <summary>
+        /// 脚本文件名
+        /// </summary>
+        [JsonProperty("CosFileName")]
+        public string CosFileName{ get; set; }
+
+        /// <summary>
+        /// 脚本的cos地址
+        /// </summary>
+        [JsonProperty("CosFileURI")]
+        public string CosFileURI{ get; set; }
+
+        /// <summary>
+        /// cos的SecretId
+        /// </summary>
+        [JsonProperty("CosSecretId")]
+        public string CosSecretId{ get; set; }
+
+        /// <summary>
+        /// Cos的SecretKey
+        /// </summary>
+        [JsonProperty("CosSecretKey")]
+        public string CosSecretKey{ get; set; }
+
+        /// <summary>
+        /// cos的appid
+        /// </summary>
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +107,13 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "RunOrder", this.RunOrder);
+            this.SetParamSimple(map, prefix + "WhenRun", this.WhenRun);
+            this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
+            this.SetParamSimple(map, prefix + "CosFileURI", this.CosFileURI);
+            this.SetParamSimple(map, prefix + "CosSecretId", this.CosSecretId);
+            this.SetParamSimple(map, prefix + "CosSecretKey", this.CosSecretKey);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

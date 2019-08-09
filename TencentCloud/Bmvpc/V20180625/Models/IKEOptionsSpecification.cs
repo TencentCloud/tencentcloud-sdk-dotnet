@@ -25,7 +25,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
     {
         
         /// <summary>
-        /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+        /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
         /// </summary>
         [JsonProperty("PropoEncryAlgorithm")]
         public string PropoEncryAlgorithm{ get; set; }

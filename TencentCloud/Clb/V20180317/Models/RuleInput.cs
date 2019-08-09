@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 转发规则的域名。
+        /// 转发规则的域名。长度限制为：1~80。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 转发规则的路径。
+        /// 转发规则的路径。长度限制为：1~200。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 会话保持时间
+        /// 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }

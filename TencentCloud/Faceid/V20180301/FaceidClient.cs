@@ -53,7 +53,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 银行卡二要素核验
+        /// 输入银行卡号、姓名，校验信息的真实性和一致性。
         /// </summary>
         /// <param name="req">参考<see cref="BankCard2EVerificationRequest"/></param>
         /// <returns>参考<see cref="BankCard2EVerificationResponse"/>实例</returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 银行卡四要素核验
+        /// 输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
         /// </summary>
         /// <param name="req">参考<see cref="BankCard4EVerificationRequest"/></param>
         /// <returns>参考<see cref="BankCard4EVerificationResponse"/>实例</returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 银行卡核验
+        /// 银行卡三要素核验，输入银行卡号、姓名、开户证件号，校验信息的真实性和一致性。
         /// </summary>
         /// <param name="req">参考<see cref="BankCardVerificationRequest"/></param>
         /// <returns>参考<see cref="BankCardVerificationResponse"/>实例</returns>

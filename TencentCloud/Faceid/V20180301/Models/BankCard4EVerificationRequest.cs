@@ -43,7 +43,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 身份证号码
+        /// 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
         /// </summary>
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }

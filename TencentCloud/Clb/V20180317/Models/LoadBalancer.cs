@@ -245,6 +245,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例的IPv6地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddressIPv6")]
+        public string AddressIPv6{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -283,6 +290,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "PrepaidAttributes.", this.PrepaidAttributes);
             this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
         }
     }
 }

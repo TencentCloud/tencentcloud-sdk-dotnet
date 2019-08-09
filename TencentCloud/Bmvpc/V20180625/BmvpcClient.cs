@@ -153,6 +153,26 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 本接口（CreateCustomerGateway）用于创建对端网关。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateCustomerGatewayRequest"/></param>
+        /// <returns>参考<see cref="CreateCustomerGatewayResponse"/>实例</returns>
+        public async Task<CreateCustomerGatewayResponse> CreateCustomerGateway(CreateCustomerGatewayRequest req)
+        {
+             JsonResponseModel<CreateCustomerGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomerGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomerGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建黑石Docker子网， 如果不指定VlanId，将会分配2000--2999范围的VlanId; 子网会关闭分布式网关
         /// </summary>
         /// <param name="req">参考<see cref="CreateDockerSubnetWithVlanRequest"/></param>
@@ -803,6 +823,26 @@ namespace TencentCloud.Bmvpc.V20180625
         }
 
         /// <summary>
+        /// 获取对等连接列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeVpcPeerConnectionsRequest"/></param>
+        /// <returns>参考<see cref="DescribeVpcPeerConnectionsResponse"/>实例</returns>
+        public async Task<DescribeVpcPeerConnectionsResponse> DescribeVpcPeerConnections(DescribeVpcPeerConnectionsRequest req)
+        {
+             JsonResponseModel<DescribeVpcPeerConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcPeerConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcPeerConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeVpcQuota）用于查询用户VPC相关配额限制。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeVpcQuotaRequest"/></param>
@@ -875,6 +915,46 @@ namespace TencentCloud.Bmvpc.V20180625
              {
                  var strResp = await this.InternalRequest(req, "DescribeVpcs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  本接口（DescribeVpnConnections）查询VPN通道列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeVpnConnectionsRequest"/></param>
+        /// <returns>参考<see cref="DescribeVpnConnectionsResponse"/>实例</returns>
+        public async Task<DescribeVpnConnectionsResponse> DescribeVpnConnections(DescribeVpnConnectionsRequest req)
+        {
+             JsonResponseModel<DescribeVpnConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpnConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeVpnGateways）用于查询VPN网关列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeVpnGatewaysRequest"/></param>
+        /// <returns>参考<see cref="DescribeVpnGatewaysResponse"/>实例</returns>
+        public async Task<DescribeVpnGatewaysResponse> DescribeVpnGateways(DescribeVpnGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpnGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewaysResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

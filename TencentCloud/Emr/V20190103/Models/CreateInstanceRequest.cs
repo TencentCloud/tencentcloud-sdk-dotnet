@@ -112,7 +112,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 预执行脚本设置
         /// </summary>
         [JsonProperty("PreExecutedFileSettings")]
-        public PreExecuteFileSettings PreExecutedFileSettings{ get; set; }
+        public PreExecuteFileSettings[] PreExecutedFileSettings{ get; set; }
 
         /// <summary>
         /// 自动续费
@@ -125,6 +125,12 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("NeedMasterWan")]
         public string NeedMasterWan{ get; set; }
+
+        /// <summary>
+        /// 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+        /// </summary>
+        [JsonProperty("RemoteLoginAtCreate")]
+        public long? RemoteLoginAtCreate{ get; set; }
 
 
         /// <summary>
@@ -146,9 +152,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamObj(map, prefix + "COSSettings.", this.COSSettings);
             this.SetParamSimple(map, prefix + "SgId", this.SgId);
-            this.SetParamObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
+            this.SetParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "NeedMasterWan", this.NeedMasterWan);
+            this.SetParamSimple(map, prefix + "RemoteLoginAtCreate", this.RemoteLoginAtCreate);
         }
     }
 }

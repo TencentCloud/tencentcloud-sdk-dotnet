@@ -67,7 +67,7 @@ namespace TencentCloud.As.V20180419.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 定时任务的重复方式。为标准[Cron](https://zh.wikipedia.org/wiki/Cron)格式<br>此参数与`EndTime`需要同时指定。
+        /// 定时任务的重复方式。为标准 Cron 格式<br>此参数与`EndTime`需要同时指定。
         /// </summary>
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }

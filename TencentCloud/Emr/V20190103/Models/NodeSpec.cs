@@ -81,7 +81,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 多云盘参数
+        /// 多盘数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MultiDisks")]

@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FontSize{ get; set; }
 
         /// <summary>
-        /// 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（黑色）。
+        /// 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }

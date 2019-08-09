@@ -53,6 +53,48 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
+        /// 评估输入图片在视觉上的质量，从多个方面评估，并同时给出综合的、客观的清晰度评分，和主观的美观度评分。
+        /// </summary>
+        /// <param name="req">参考<see cref="AssessQualityRequest"/></param>
+        /// <returns>参考<see cref="AssessQualityResponse"/>实例</returns>
+        public async Task<AssessQualityResponse> AssessQuality(AssessQualityRequest req)
+        {
+             JsonResponseModel<AssessQualityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssessQuality");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssessQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入一张图片，可以识别图片中包含的人物是否为公众人物，如果是，输出人物的姓名、基本信息、脸部坐标。
+        /// 
+        /// 支持识别一张图片中存在的多个人脸，针对每个人脸，会给出与之最相似的公众人物。
+        /// </summary>
+        /// <param name="req">参考<see cref="DetectCelebrityRequest"/></param>
+        /// <returns>参考<see cref="DetectCelebrityResponse"/>实例</returns>
+        public async Task<DetectCelebrityResponse> DetectCelebrity(DetectCelebrityRequest req)
+        {
+             JsonResponseModel<DetectCelebrityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectCelebrity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectCelebrityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 传入一张图片，识别出图片中存在的物体，并返回物体的名称（分类）、置信度，一张图片会给出多个可能的标签。
         /// </summary>
         /// <param name="req">参考<see cref="DetectLabelRequest"/></param>
@@ -84,6 +126,29 @@ namespace TencentCloud.Tiia.V20190529
              {
                  var strResp = await this.InternalRequest(req, "DetectProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入一张图片，输出清晰度提升后的图片。
+        /// 
+        /// 可以消除图片有损压缩导致的噪声，和使用滤镜、拍摄失焦导致的模糊。让图片的边缘和细节更加清晰自然。
+        /// 
+        /// </summary>
+        /// <param name="req">参考<see cref="EnhanceImageRequest"/></param>
+        /// <returns>参考<see cref="EnhanceImageResponse"/>实例</returns>
+        public async Task<EnhanceImageResponse> EnhanceImage(EnhanceImageRequest req)
+        {
+             JsonResponseModel<EnhanceImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnhanceImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnhanceImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

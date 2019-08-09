@@ -129,6 +129,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("FpsToOrig")]
         public long? FpsToOrig{ get; set; }
 
+        /// <summary>
+        /// 是否是急速高清模板，0：否，1：是。默认0。
+        /// </summary>
+        [JsonProperty("AiTransCode")]
+        public long? AiTransCode{ get; set; }
+
+        /// <summary>
+        /// 急速高清相比VideoBitrate少多少码率，0.1到0.5
+        /// </summary>
+        [JsonProperty("AdaptBitratePercent")]
+        public float? AdaptBitratePercent{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -152,6 +164,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "BitrateToOrig", this.BitrateToOrig);
             this.SetParamSimple(map, prefix + "HeightToOrig", this.HeightToOrig);
             this.SetParamSimple(map, prefix + "FpsToOrig", this.FpsToOrig);
+            this.SetParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
+            this.SetParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
         }
     }
 }

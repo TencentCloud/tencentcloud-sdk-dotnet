@@ -91,7 +91,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string UniqVpnGwId{ get; set; }
 
         /// <summary>
-        /// 数据库实例ID,格式如：cdb-powiqx8q
+        /// 数据库实例ID，格式如：cdb-powiqx8q
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -107,6 +107,13 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         [JsonProperty("Supplier")]
         public string Supplier{ get; set; }
+
+        /// <summary>
+        /// 云联网ID，如：ccn-afp6kltc
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CcnId")]
+        public string CcnId{ get; set; }
 
 
         /// <summary>
@@ -128,6 +135,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
+            this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
         }
     }
 }

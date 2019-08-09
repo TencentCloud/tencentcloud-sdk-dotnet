@@ -36,6 +36,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
+        /// <summary>
+        /// 该类型云盘个数
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
         }
     }
 }

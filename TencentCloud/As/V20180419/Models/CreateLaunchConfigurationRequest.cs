@@ -106,7 +106,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
         /// <summary>
-        /// 实例机型列表，不同实例机型指定了不同的资源规格，最多支持5种实例机型。
+        /// 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
         /// `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
         /// </summary>
         [JsonProperty("InstanceTypes")]
