@@ -60,6 +60,19 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("Stress")]
         public bool? Stress{ get; set; }
 
+        /// <summary>
+        /// 参考音素，在单词诊断模式下，代表标准
+        /// 音素
+        /// </summary>
+        [JsonProperty("ReferencePhone")]
+        public string ReferencePhone{ get; set; }
+
+        /// <summary>
+        /// 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+        /// </summary>
+        [JsonProperty("MatchTag")]
+        public long? MatchTag{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +85,8 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "DetectedStress", this.DetectedStress);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Stress", this.Stress);
+            this.SetParamSimple(map, prefix + "ReferencePhone", this.ReferencePhone);
+            this.SetParamSimple(map, prefix + "MatchTag", this.MatchTag);
         }
     }
 }

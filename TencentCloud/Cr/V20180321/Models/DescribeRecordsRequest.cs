@@ -25,13 +25,13 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 模块
+        /// 模块名，本接口取值：Record
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作
+        /// 操作名，本接口取值：List
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -55,25 +55,25 @@ namespace TencentCloud.Cr.V20180321.Models
         public string CalledPhone{ get; set; }
 
         /// <summary>
-        /// 查询起始日期
+        /// 查询起始日期，格式为YYYY-MM-DD
         /// </summary>
         [JsonProperty("StartBizDate")]
         public string StartBizDate{ get; set; }
 
         /// <summary>
-        /// 查询结束日期
+        /// 查询结束日期，格式为YYYY-MM-DD
         /// </summary>
         [JsonProperty("EndBizDate")]
         public string EndBizDate{ get; set; }
 
         /// <summary>
-        /// 分页参数，索引，从0开始
+        /// 分页参数，索引，默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数，页长
+        /// 分页参数，页长，默认为20
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }

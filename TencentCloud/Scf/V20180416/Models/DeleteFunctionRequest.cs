@@ -30,6 +30,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
+        /// <summary>
+        /// 函数所属命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
         }
     }
 }

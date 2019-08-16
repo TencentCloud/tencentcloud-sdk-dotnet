@@ -91,6 +91,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public BodyMovementResult TeacherBodyMovement{ get; set; }
 
         /// <summary>
+        /// 教师是否在屏幕内判断结果
+        /// </summary>
+        [JsonProperty("TeacherOutScreen")]
+        public TeacherOutScreenResult TeacherOutScreen{ get; set; }
+
+        /// <summary>
         /// 时间统计结果
         /// </summary>
         [JsonProperty("TimeInfo")]
@@ -113,6 +119,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamObj(map, prefix + "Light.", this.Light);
             this.SetParamObj(map, prefix + "StudentBodyMovement.", this.StudentBodyMovement);
             this.SetParamObj(map, prefix + "TeacherBodyMovement.", this.TeacherBodyMovement);
+            this.SetParamObj(map, prefix + "TeacherOutScreen.", this.TeacherOutScreen);
             this.SetParamObj(map, prefix + "TimeInfo.", this.TimeInfo);
         }
     }

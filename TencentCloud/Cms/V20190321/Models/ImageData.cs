@@ -37,6 +37,7 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 20002：色情 
         /// 20006：涉毒违法
         /// 20007：谩骂 
+        /// 20103：性感
         /// 24001：暴恐
         /// 21000：综合
         /// </summary>
@@ -54,6 +55,12 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         [JsonProperty("IllegalDetect")]
         public ImageIllegalDetect IllegalDetect{ get; set; }
+
+        /// <summary>
+        /// 图片OCR详情
+        /// </summary>
+        [JsonProperty("OCRDetect")]
+        public OCRDetect OCRDetect{ get; set; }
 
         /// <summary>
         /// 图片涉政详情
@@ -89,6 +96,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
             this.SetParamObj(map, prefix + "HotDetect.", this.HotDetect);
             this.SetParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
+            this.SetParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
             this.SetParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
             this.SetParamObj(map, prefix + "PornDetect.", this.PornDetect);
             this.SetParamObj(map, prefix + "Similar.", this.Similar);

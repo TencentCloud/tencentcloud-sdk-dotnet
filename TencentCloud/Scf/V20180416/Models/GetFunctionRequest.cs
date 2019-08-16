@@ -37,6 +37,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Qualifier{ get; set; }
 
         /// <summary>
+        /// 函数所属命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
         /// 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
         /// </summary>
         [JsonProperty("ShowCode")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "ShowCode", this.ShowCode);
         }
     }

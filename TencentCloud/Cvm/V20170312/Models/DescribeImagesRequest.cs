@@ -38,13 +38,6 @@ namespace TencentCloud.Cvm.V20170312.Models
         ///     PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
         ///     MARKET_IMAGE: 服务市场 (服务市场提供的镜像) 
         ///    SHARED_IMAGE: 共享镜像(其他账户共享给本帐户的镜像) 。</li>
-        /// <li> image-state - String - 是否必填： 否 - （过滤条件）按照镜像状态进行过滤。取值范围：
-        ///     CREATING: 创建中
-        ///     NORMAL: 正常
-        ///     USING: 使用中
-        ///     SYNCING: 同步中
-        ///     IMPORTING: 导入中
-        ///     DELETING: 删除中。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

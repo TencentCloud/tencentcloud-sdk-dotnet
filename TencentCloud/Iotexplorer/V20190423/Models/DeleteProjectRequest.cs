@@ -28,7 +28,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// 项目ID
         /// </summary>
         [JsonProperty("ProjectId")]
-        public long? ProjectId{ get; set; }
+        public string ProjectId{ get; set; }
 
 
         /// <summary>

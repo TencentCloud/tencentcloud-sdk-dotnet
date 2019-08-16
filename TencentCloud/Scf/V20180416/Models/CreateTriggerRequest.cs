@@ -49,6 +49,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TriggerDesc{ get; set; }
 
         /// <summary>
+        /// 函数的命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
         /// 函数的版本
         /// </summary>
         [JsonProperty("Qualifier")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "TriggerName", this.TriggerName);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "TriggerDesc", this.TriggerDesc);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }

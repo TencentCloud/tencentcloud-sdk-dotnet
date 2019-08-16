@@ -25,13 +25,13 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 模块
+        /// 模块名，本接口取值：account
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作
+        /// 操作名，本接口取值：ApplyBlackList
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

@@ -43,6 +43,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public StandardVideoResult VideoResult{ get; set; }
 
         /// <summary>
+        /// 任务状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
         /// 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
         /// </summary>
         [JsonProperty("TaskId")]
@@ -63,6 +69,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamObj(map, prefix + "AudioResult.", this.AudioResult);
             this.SetParamObj(map, prefix + "ImageResult.", this.ImageResult);
             this.SetParamObj(map, prefix + "VideoResult.", this.VideoResult);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

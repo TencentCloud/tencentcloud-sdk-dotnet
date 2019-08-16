@@ -613,6 +613,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
+        /// </summary>
+        /// <param name="req">参考<see cref="SwitchInstanceVipRequest"/></param>
+        /// <returns>参考<see cref="SwitchInstanceVipResponse"/>实例</returns>
+        public async Task<SwitchInstanceVipResponse> SwitchInstanceVip(SwitchInstanceVipRequest req)
+        {
+             JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchInstanceVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchInstanceVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 升级实例
         /// </summary>
         /// <param name="req">参考<see cref="UpgradeInstanceRequest"/></param>

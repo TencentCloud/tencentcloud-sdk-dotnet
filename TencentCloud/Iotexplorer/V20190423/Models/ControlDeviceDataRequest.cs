@@ -42,6 +42,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
+        /// <summary>
+        /// 请求类型
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// 设备ID，该字段有值将代替 ProductId/DeviceName
+        /// </summary>
+        [JsonProperty("DeviceId")]
+        public string DeviceId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +63,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Data", this.Data);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
         }
     }
 }

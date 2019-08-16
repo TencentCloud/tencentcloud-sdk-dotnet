@@ -114,6 +114,26 @@ namespace TencentCloud.Mongodb.V20180408
         }
 
         /// <summary>
+        /// 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。目前只支持3.2版本的MongoDB实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClientConnectionsRequest"/></param>
+        /// <returns>参考<see cref="DescribeClientConnectionsResponse"/>实例</returns>
+        public async Task<DescribeClientConnectionsResponse> DescribeClientConnections(DescribeClientConnectionsRequest req)
+        {
+             JsonResponseModel<DescribeClientConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClientConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDBInstancesRequest"/></param>

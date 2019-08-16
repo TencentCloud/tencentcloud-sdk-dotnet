@@ -78,6 +78,12 @@ namespace TencentCloud.Tci.V20190318.Models
         [JsonProperty("EnableTeacherBodyMovements")]
         public bool? EnableTeacherBodyMovements{ get; set; }
 
+        /// <summary>
+        /// 判断老师是否在屏幕中
+        /// </summary>
+        [JsonProperty("EnableTeacherOutScreen")]
+        public bool? EnableTeacherOutScreen{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +99,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamSimple(map, prefix + "EnableLightJudge", this.EnableLightJudge);
             this.SetParamSimple(map, prefix + "EnableStudentBodyMovements", this.EnableStudentBodyMovements);
             this.SetParamSimple(map, prefix + "EnableTeacherBodyMovements", this.EnableTeacherBodyMovements);
+            this.SetParamSimple(map, prefix + "EnableTeacherOutScreen", this.EnableTeacherOutScreen);
         }
     }
 }

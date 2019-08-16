@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 播放http状态码。
+        /// 播放HTTP状态码。
         /// </summary>
         [JsonProperty("HttpStatus")]
         public string HttpStatus{ get; set; }

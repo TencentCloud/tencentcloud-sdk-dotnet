@@ -74,6 +74,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }
 
+        /// <summary>
+        /// 当前客户使用的cname信息
+        /// </summary>
+        [JsonProperty("CurrentCName")]
+        public string CurrentCName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -88,6 +94,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "TargetDomain", this.TargetDomain);
             this.SetParamSimple(map, prefix + "PlayType", this.PlayType);
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+            this.SetParamSimple(map, prefix + "CurrentCName", this.CurrentCName);
         }
     }
 }

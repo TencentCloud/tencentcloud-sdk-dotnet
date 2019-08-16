@@ -79,6 +79,18 @@ namespace TencentCloud.Scf.V20180416.Models
         public VpcConfig VpcConfig{ get; set; }
 
         /// <summary>
+        /// 函数所属命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// 函数绑定的角色
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
         /// 函数日志投递到的CLS LogsetID
         /// </summary>
         [JsonProperty("ClsLogsetId")]
@@ -89,6 +101,18 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
+
+        /// <summary>
+        /// 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+        /// </summary>
+        [JsonProperty("CodeSource")]
+        public string CodeSource{ get; set; }
 
 
         /// <summary>
@@ -105,8 +129,12 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "Environment.", this.Environment);
             this.SetParamSimple(map, prefix + "Runtime", this.Runtime);
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "CodeSource", this.CodeSource);
         }
     }
 }

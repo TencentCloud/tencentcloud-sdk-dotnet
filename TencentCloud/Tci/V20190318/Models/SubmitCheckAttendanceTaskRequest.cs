@@ -43,13 +43,13 @@ namespace TencentCloud.Tci.V20190318.Models
         public string[] LibraryIds{ get; set; }
 
         /// <summary>
-        /// 确定出勤阀值；默认为0.92
+        /// 确定出勤阈值；默认为0.92
         /// </summary>
         [JsonProperty("AttendanceThreshold")]
         public float? AttendanceThreshold{ get; set; }
 
         /// <summary>
-        /// 是否开启陌生人模式，开启后才会推送陌生人事件，默认不开启
+        /// 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
         /// </summary>
         [JsonProperty("EnableStranger")]
         public bool? EnableStranger{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 函数名
+        /// 要复制的函数的名称
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string NewFunctionName{ get; set; }
 
         /// <summary>
-        /// 命名空间，默认为default
+        /// 要复制的函数所在的命名空间，默认为default
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TargetNamespace{ get; set; }
 
         /// <summary>
-        /// 函数描述
+        /// 新函数的描述
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -59,6 +59,23 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         [JsonProperty("TargetRegion")]
         public string TargetRegion{ get; set; }
+
+        /// <summary>
+        /// 如果目标Namespace下已有同名函数，是否覆盖，默认为否
+        /// （注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
+        /// TRUE：覆盖同名函数
+        /// FALSE：不覆盖同名函数
+        /// </summary>
+        [JsonProperty("Override")]
+        public bool? Override{ get; set; }
+
+        /// <summary>
+        /// 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+        /// TRUE：复制函数配置
+        /// FALSE：不复制函数配置
+        /// </summary>
+        [JsonProperty("CopyConfiguration")]
+        public bool? CopyConfiguration{ get; set; }
 
 
         /// <summary>
@@ -72,6 +89,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "TargetNamespace", this.TargetNamespace);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TargetRegion", this.TargetRegion);
+            this.SetParamSimple(map, prefix + "Override", this.Override);
+            this.SetParamSimple(map, prefix + "CopyConfiguration", this.CopyConfiguration);
         }
     }
 }

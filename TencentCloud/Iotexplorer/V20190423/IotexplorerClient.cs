@@ -73,6 +73,26 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 创建设备
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateDeviceRequest"/></param>
+        /// <returns>参考<see cref="CreateDeviceResponse"/>实例</returns>
+        public async Task<CreateDeviceResponse> CreateDevice(CreateDeviceRequest req)
+        {
+             JsonResponseModel<CreateDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 为用户提供新建项目的能力，用于集中管理产品和应用。
         /// </summary>
         /// <param name="req">参考<see cref="CreateProjectRequest"/></param>
@@ -104,6 +124,26 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = await this.InternalRequest(req, "CreateStudioProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStudioProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除设备
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteDeviceRequest"/></param>
+        /// <returns>参考<see cref="DeleteDeviceResponse"/>实例</returns>
+        public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest req)
+        {
+             JsonResponseModel<DeleteDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

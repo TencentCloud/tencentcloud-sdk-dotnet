@@ -37,6 +37,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public string PersonName{ get; set; }
 
         /// <summary>
+        /// 图片数据 base64 字符串，与 Urls 参数选择一个输入
+        /// </summary>
+        [JsonProperty("Images")]
+        public string[] Images{ get; set; }
+
+        /// <summary>
         /// 人员工作号码
         /// </summary>
         [JsonProperty("JobNumber")]
@@ -72,6 +78,12 @@ namespace TencentCloud.Tci.V20190318.Models
         [JsonProperty("StudentNumber")]
         public string StudentNumber{ get; set; }
 
+        /// <summary>
+        /// 图片下载地址，与 Images 参数选择一个输入
+        /// </summary>
+        [JsonProperty("Urls")]
+        public string[] Urls{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -80,12 +92,14 @@ namespace TencentCloud.Tci.V20190318.Models
         {
             this.SetParamSimple(map, prefix + "LibraryId", this.LibraryId);
             this.SetParamSimple(map, prefix + "PersonName", this.PersonName);
+            this.SetParamArraySimple(map, prefix + "Images.", this.Images);
             this.SetParamSimple(map, prefix + "JobNumber", this.JobNumber);
             this.SetParamSimple(map, prefix + "Mail", this.Mail);
             this.SetParamSimple(map, prefix + "Male", this.Male);
             this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "StudentNumber", this.StudentNumber);
+            this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
         }
     }
 }

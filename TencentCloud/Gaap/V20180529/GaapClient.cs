@@ -94,7 +94,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// 该接口用于7层监听器转发规则绑定源站。
+        /// 该接口用于7层监听器的转发规则绑定源站。注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。
         /// </summary>
         /// <param name="req">参考<see cref="BindRuleRealServersRequest"/></param>
         /// <returns>参考<see cref="BindRuleRealServersResponse"/>实例</returns>

@@ -151,6 +151,16 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 是否只预检此次请求。
+        /// true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
+        /// 如果检查不通过，则返回对应错误码；
+        /// 如果检查通过，则返回RequestId.
+        /// false（默认）：发送正常请求，通过检查后直接创建实例
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -178,6 +188,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

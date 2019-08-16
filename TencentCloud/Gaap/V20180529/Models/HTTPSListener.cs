@@ -43,13 +43,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 监听器协议， HTTP
+        /// 监听器协议， 值为：HTTP
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 监听器状态
+        /// 监听器状态，其中：
+        /// 0， 运行中；
+        /// 1， 创建中；
+        /// 2，销毁中；
+        /// 3，源站调整中；
+        /// 4，配置变更中。
         /// </summary>
         [JsonProperty("ListenerStatus")]
         public ulong? ListenerStatus{ get; set; }

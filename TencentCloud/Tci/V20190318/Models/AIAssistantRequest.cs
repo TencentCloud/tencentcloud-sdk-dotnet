@@ -49,6 +49,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public string[] LibrarySet{ get; set; }
 
         /// <summary>
+        /// 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+        /// </summary>
+        [JsonProperty("MaxVideoDuration")]
+        public long? MaxVideoDuration{ get; set; }
+
+        /// <summary>
         /// 标准化模板选择：0：AI助教基础版本，1：AI评教基础版本，2：AI评教标准版本。AI 助教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、学生动作选项，音频信息分析，微笑识别。AI 评教基础版本功能包括：人脸检索、人脸检测、人脸表情识别、音频信息分析。AI 评教标准版功能包括人脸检索、人脸检测、人脸表情识别、手势识别、音频信息分析、音频关键词分析、视频精彩集锦分析。
         /// </summary>
         [JsonProperty("Template")]
@@ -82,6 +88,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "Lang", this.Lang);
             this.SetParamArraySimple(map, prefix + "LibrarySet.", this.LibrarySet);
+            this.SetParamSimple(map, prefix + "MaxVideoDuration", this.MaxVideoDuration);
             this.SetParamSimple(map, prefix + "Template", this.Template);
             this.SetParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
             this.SetParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);

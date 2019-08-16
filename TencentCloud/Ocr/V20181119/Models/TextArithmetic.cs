@@ -43,7 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 文本行坐标，以四个顶点坐标表示
+        /// 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Polygon")]

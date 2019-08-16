@@ -25,7 +25,7 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 待纠错的文本（仅支持UTF-8格式，不超过200字）
+        /// 待纠错的文本（仅支持UTF-8格式，不超过2000字）
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

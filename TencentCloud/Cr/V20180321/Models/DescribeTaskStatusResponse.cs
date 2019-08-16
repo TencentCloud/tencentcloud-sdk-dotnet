@@ -25,13 +25,13 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 任务结果，例如上传成功时返回“File Uploading Task Success.”
+        /// <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
         /// </summary>
         [JsonProperty("TaskResult")]
         public string TaskResult{ get; set; }
 
         /// <summary>
-        /// <p>任务类型：</p><ul style="margin-bottom:0px;"><li>报告下载：001</li><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+        /// <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

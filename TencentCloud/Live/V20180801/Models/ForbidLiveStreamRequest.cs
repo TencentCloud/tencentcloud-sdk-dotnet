@@ -49,6 +49,14 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("ResumeTime")]
         public string ResumeTime{ get; set; }
 
+        /// <summary>
+        /// 禁推原因。
+        /// 注明：请务必填写禁推原因，防止误操作。
+        /// 长度限制：2048字节。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -59,6 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "ResumeTime", this.ResumeTime);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

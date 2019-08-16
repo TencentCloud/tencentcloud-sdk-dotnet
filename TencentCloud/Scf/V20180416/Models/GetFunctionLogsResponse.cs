@@ -37,6 +37,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public FunctionLog[] Data{ get; set; }
 
         /// <summary>
+        /// 日志服务分页参数
+        /// </summary>
+        [JsonProperty("SearchContext")]
+        public LogSearchContext SearchContext{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamObj(map, prefix + "SearchContext.", this.SearchContext);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,12 +31,6 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerId{ get; set; }
 
         /// <summary>
-        /// 源站权重
-        /// </summary>
-        [JsonProperty("RealServerWeight")]
-        public ulong? RealServerWeight{ get; set; }
-
-        /// <summary>
         /// 源站端口
         /// </summary>
         [JsonProperty("RealServerPort")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("RealServerIP")]
         public string RealServerIP{ get; set; }
 
+        /// <summary>
+        /// 源站权重
+        /// </summary>
+        [JsonProperty("RealServerWeight")]
+        public ulong? RealServerWeight{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -55,9 +55,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RealServerId", this.RealServerId);
-            this.SetParamSimple(map, prefix + "RealServerWeight", this.RealServerWeight);
             this.SetParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
             this.SetParamSimple(map, prefix + "RealServerIP", this.RealServerIP);
+            this.SetParamSimple(map, prefix + "RealServerWeight", this.RealServerWeight);
         }
     }
 }

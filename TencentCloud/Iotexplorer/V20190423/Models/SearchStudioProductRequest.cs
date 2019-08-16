@@ -48,6 +48,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 产品Status
+        /// </summary>
+        [JsonProperty("DevStatus")]
+        public string DevStatus{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "DevStatus", this.DevStatus);
         }
     }
 }

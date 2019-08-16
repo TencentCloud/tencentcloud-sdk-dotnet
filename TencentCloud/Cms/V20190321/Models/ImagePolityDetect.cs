@@ -28,11 +28,6 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 恶意类型
         /// 100：正常 
         /// 20001：政治
-        /// 20002：色情 
-        /// 20006：涉毒违法
-        /// 20007：谩骂 
-        /// 24001：暴恐
-        /// 21000：综合
         /// </summary>
         [JsonProperty("EvilType")]
         public long? EvilType{ get; set; }

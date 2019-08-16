@@ -40,7 +40,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// 过滤条件,字段和详见[CVM查询实例](https://cloud.tencent.com/document/api/213/15728)如果设置了ClusterId，会附加集群的VPCID作为查询字段，在此情况下如果在Filter中指定了"vpc-id"作为过滤字段，指定的VPCID必须与集群的VPCID相同。
         /// </summary>
         [JsonProperty("Filters")]
-        public Filter Filters{ get; set; }
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// 实例IP进行过滤(同时支持内网IP和外网IP)
@@ -74,7 +74,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "VagueIpAddress", this.VagueIpAddress);
             this.SetParamSimple(map, prefix + "VagueInstanceName", this.VagueInstanceName);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

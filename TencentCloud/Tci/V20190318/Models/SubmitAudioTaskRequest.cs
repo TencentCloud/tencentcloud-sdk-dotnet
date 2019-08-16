@@ -55,7 +55,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public Function Functions{ get; set; }
 
         /// <summary>
-        /// 视频文件类型，默认点播，直播天 live_url
+        /// 视频文件类型，默认点播，直播填 live_url
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }

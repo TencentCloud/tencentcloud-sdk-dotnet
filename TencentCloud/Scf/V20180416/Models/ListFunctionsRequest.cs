@@ -55,6 +55,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string SearchKey{ get; set; }
 
         /// <summary>
+        /// 命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
         /// 函数描述，支持模糊搜索
         /// </summary>
         [JsonProperty("Description")]
@@ -80,6 +86,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }

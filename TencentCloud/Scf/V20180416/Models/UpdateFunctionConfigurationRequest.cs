@@ -61,10 +61,40 @@ namespace TencentCloud.Scf.V20180416.Models
         public Environment Environment{ get; set; }
 
         /// <summary>
+        /// 函数所属命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
         /// 函数的私有网络配置
         /// </summary>
         [JsonProperty("VpcConfig")]
         public VpcConfig VpcConfig{ get; set; }
+
+        /// <summary>
+        /// 函数绑定的角色
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
+        /// 日志投递到的cls日志集ID
+        /// </summary>
+        [JsonProperty("ClsLogsetId")]
+        public string ClsLogsetId{ get; set; }
+
+        /// <summary>
+        /// 日志投递到的cls Topic ID
+        /// </summary>
+        [JsonProperty("ClsTopicId")]
+        public string ClsTopicId{ get; set; }
+
+        /// <summary>
+        /// 在更新时是否同步发布新版本，默认为：FALSE，不发布
+        /// </summary>
+        [JsonProperty("Publish")]
+        public string Publish{ get; set; }
 
 
         /// <summary>
@@ -78,7 +108,12 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "Runtime", this.Runtime);
             this.SetParamObj(map, prefix + "Environment.", this.Environment);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+            this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+            this.SetParamSimple(map, prefix + "Publish", this.Publish);
         }
     }
 }

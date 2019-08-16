@@ -60,6 +60,54 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TempCosObjectName")]
         public string TempCosObjectName{ get; set; }
 
+        /// <summary>
+        /// Git地址
+        /// </summary>
+        [JsonProperty("GitUrl")]
+        public string GitUrl{ get; set; }
+
+        /// <summary>
+        /// Git用户名
+        /// </summary>
+        [JsonProperty("GitUserName")]
+        public string GitUserName{ get; set; }
+
+        /// <summary>
+        /// Git密码
+        /// </summary>
+        [JsonProperty("GitPassword")]
+        public string GitPassword{ get; set; }
+
+        /// <summary>
+        /// 加密后的Git密码，一般无需指定
+        /// </summary>
+        [JsonProperty("GitPasswordSecret")]
+        public string GitPasswordSecret{ get; set; }
+
+        /// <summary>
+        /// Git分支
+        /// </summary>
+        [JsonProperty("GitBranch")]
+        public string GitBranch{ get; set; }
+
+        /// <summary>
+        /// 代码在Git仓库中的路径
+        /// </summary>
+        [JsonProperty("GitDirectory")]
+        public string GitDirectory{ get; set; }
+
+        /// <summary>
+        /// 指定要拉取的版本
+        /// </summary>
+        [JsonProperty("GitCommitId")]
+        public string GitCommitId{ get; set; }
+
+        /// <summary>
+        /// 加密后的Git用户名，一般无需指定
+        /// </summary>
+        [JsonProperty("GitUserNameSecret")]
+        public string GitUserNameSecret{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +120,14 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
             this.SetParamSimple(map, prefix + "DemoId", this.DemoId);
             this.SetParamSimple(map, prefix + "TempCosObjectName", this.TempCosObjectName);
+            this.SetParamSimple(map, prefix + "GitUrl", this.GitUrl);
+            this.SetParamSimple(map, prefix + "GitUserName", this.GitUserName);
+            this.SetParamSimple(map, prefix + "GitPassword", this.GitPassword);
+            this.SetParamSimple(map, prefix + "GitPasswordSecret", this.GitPasswordSecret);
+            this.SetParamSimple(map, prefix + "GitBranch", this.GitBranch);
+            this.SetParamSimple(map, prefix + "GitDirectory", this.GitDirectory);
+            this.SetParamSimple(map, prefix + "GitCommitId", this.GitCommitId);
+            this.SetParamSimple(map, prefix + "GitUserNameSecret", this.GitUserNameSecret);
         }
     }
 }

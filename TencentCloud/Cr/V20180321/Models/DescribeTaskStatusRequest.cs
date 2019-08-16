@@ -25,22 +25,28 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名，本接口取值：Task
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名，本接口取值：DescribeTaskStatus
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 任务ID，形如abc-a0b1c2xyz
+        /// 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 实例ID，不传默认为系统分配的初始实例。
+        /// </summary>
+        [JsonProperty("InstId")]
+        public string InstId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "InstId", this.InstId);
         }
     }
 }

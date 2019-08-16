@@ -25,19 +25,19 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 模块名
+        /// 模块名，本接口取值：Report
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名
+        /// 操作名，本接口取值：DownloadReport
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 报告日期
+        /// 报告日期，格式为YYYY-MM-DD
         /// </summary>
         [JsonProperty("ReportDate")]
         public string ReportDate{ get; set; }

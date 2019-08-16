@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? IPVS{ get; set; }
 
         /// <summary>
-        /// 是否启用集群节点扩缩容
+        /// 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
         /// </summary>
         [JsonProperty("AsEnabled")]
         public bool? AsEnabled{ get; set; }

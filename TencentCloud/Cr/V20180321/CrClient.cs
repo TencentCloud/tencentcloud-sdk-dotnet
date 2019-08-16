@@ -53,8 +53,7 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        /// 加入黑名单的客户，将停止拨打。用于：
-        /// 将客户进行黑名单的增加和移除，用于对某些客户阶段性停催。
+        /// 提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于提醒、催收、回访场景。
         /// </summary>
         /// <param name="req">参考<see cref="ApplyBlackListRequest"/></param>
         /// <returns>参考<see cref="ApplyBlackListResponse"/>实例</returns>
@@ -154,6 +153,47 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
+        /// </summary>
+        /// <param name="req">参考<see cref="DownloadDialogueTextRequest"/></param>
+        /// <returns>参考<see cref="DownloadDialogueTextResponse"/>实例</returns>
+        public async Task<DownloadDialogueTextResponse> DownloadDialogueText(DownloadDialogueTextRequest req)
+        {
+             JsonResponseModel<DownloadDialogueTextResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadDialogueText");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadDialogueTextResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p>用于获取录音下载链接清单，次日早上8:00后可查询前日录音清单。</p>
+        /// <p>注意：录音清单中的录音下载链接仅次日20:00之前有效，请及时下载。</p>
+        /// </summary>
+        /// <param name="req">参考<see cref="DownloadRecordListRequest"/></param>
+        /// <returns>参考<see cref="DownloadRecordListResponse"/>实例</returns>
+        public async Task<DownloadRecordListResponse> DownloadRecordList(DownloadRecordListRequest req)
+        {
+             JsonResponseModel<DownloadRecordListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadRecordList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadRecordListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
         /// </summary>
         /// <param name="req">参考<see cref="DownloadReportRequest"/></param>
@@ -177,8 +217,9 @@ namespace TencentCloud.Cr.V20180321
         /// <p>该接口包含上传下列文件：</p>
         /// <ol style="margin-bottom:10px;">
         ///   <li>入催文件：用于每天入催文件的上传</li>
-        ///   <li>回访文件：用于每天贷中回访文件的上传</li>
         ///   <li>还款文件：实时上传当前已还款客户，用于还款客户的实时停催</li>
+        ///   <li>回访文件：用于每天贷中回访文件的上传</li>
+        ///   <li>回访停拨文件：实时上传回访停拨名单文件，文件中的名单实时停拨</li>
         /// </ol>
         /// 接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
         /// </summary>

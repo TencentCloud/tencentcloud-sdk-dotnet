@@ -84,6 +84,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Log")]
         public string Log{ get; set; }
 
+        /// <summary>
+        /// 日志等级
+        /// </summary>
+        [JsonProperty("Level")]
+        public string Level{ get; set; }
+
+        /// <summary>
+        /// 日志来源
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,6 +112,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "BillDuration", this.BillDuration);
             this.SetParamSimple(map, prefix + "MemUsage", this.MemUsage);
             this.SetParamSimple(map, prefix + "Log", this.Log);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

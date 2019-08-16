@@ -25,13 +25,13 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 模块
+        /// 模块名，本接口取值：Credit
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作
+        /// 操作名，本接口取值：Get
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cr.V20180321.Models
         public string CaseId{ get; set; }
 
         /// <summary>
-        /// 请求日期
+        /// 请求日期，格式为YYYY-MM-DD
         /// </summary>
         [JsonProperty("RequestDate")]
         public string RequestDate{ get; set; }

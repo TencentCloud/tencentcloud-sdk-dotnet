@@ -25,7 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，无输入则返回所有日志。
+        /// filter.RetCode的取值有：
+        /// not0 表示只返回错误日志，
+        /// is0 表示只返回正确日志，
+        /// TimeLimitExceeded 返回函数调用发生超时的日志，
+        /// ResourceLimitExceeded 返回函数调用发生资源超限的日志，
+        /// UserCodeException 返回函数调用发生用户代码错误的日志，
+        /// 无输入则返回所有日志。
         /// </summary>
         [JsonProperty("RetCode")]
         public string RetCode{ get; set; }

@@ -41,7 +41,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 1-深圳，
         /// 2-上海，
         /// 3-天津，
-        /// 4-香港。
+        /// 4-中国香港。
         /// </summary>
         [JsonProperty("AreaId")]
         public long? AreaId{ get; set; }

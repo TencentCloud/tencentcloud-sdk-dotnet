@@ -73,6 +73,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public long? Lang{ get; set; }
 
         /// <summary>
+        /// 是否临时保存 音频链接
+        /// </summary>
+        [JsonProperty("StorageMode")]
+        public long? StorageMode{ get; set; }
+
+        /// <summary>
         /// 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
         /// </summary>
         [JsonProperty("VocabLibNameList")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
             this.SetParamSimple(map, prefix + "IsEnd", this.IsEnd);
             this.SetParamSimple(map, prefix + "Lang", this.Lang);
+            this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
             this.SetParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
         }
     }

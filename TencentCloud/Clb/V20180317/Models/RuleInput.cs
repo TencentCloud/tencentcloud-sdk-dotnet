@@ -67,6 +67,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
 
+        /// <summary>
+        /// 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+        /// </summary>
+        [JsonProperty("DefaultServer")]
+        public bool? DefaultServer{ get; set; }
+
+        /// <summary>
+        /// 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+        /// </summary>
+        [JsonProperty("Http2")]
+        public bool? Http2{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -80,6 +92,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
+            this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+            this.SetParamSimple(map, prefix + "Http2", this.Http2);
         }
     }
 }

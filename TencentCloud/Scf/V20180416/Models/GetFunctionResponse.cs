@@ -181,6 +181,24 @@ namespace TencentCloud.Scf.V20180416.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
+        /// EipConfig配置
+        /// </summary>
+        [JsonProperty("EipConfig")]
+        public EipOutConfig EipConfig{ get; set; }
+
+        /// <summary>
+        /// 域名信息
+        /// </summary>
+        [JsonProperty("AccessInfo")]
+        public AccessInfo AccessInfo{ get; set; }
+
+        /// <summary>
+        /// 函数类型，取值为HTTP或者Event
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -218,6 +236,9 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "EipConfig.", this.EipConfig);
+            this.SetParamObj(map, prefix + "AccessInfo.", this.AccessInfo);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

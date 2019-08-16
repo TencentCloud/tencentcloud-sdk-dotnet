@@ -48,6 +48,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 产品所属分类的模型快照（产品创建时刻的）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CategoryModel")]
+        public string CategoryModel{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +65,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ModelDefine", this.ModelDefine);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "CategoryModel", this.CategoryModel);
         }
     }
 }

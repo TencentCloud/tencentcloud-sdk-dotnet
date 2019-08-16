@@ -25,22 +25,28 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
+        /// 出现次数
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
+        /// <summary>
         /// 表情
         /// </summary>
         [JsonProperty("Express")]
         public string Express{ get; set; }
 
         /// <summary>
-        /// 表情所占比例
+        /// 该表情时长占所有表情时长的比例
         /// </summary>
         [JsonProperty("Ratio")]
         public float? Ratio{ get; set; }
 
         /// <summary>
-        /// 出现次数
+        /// 该表情时长占视频总时长的比例
         /// </summary>
-        [JsonProperty("Count")]
-        public long? Count{ get; set; }
+        [JsonProperty("RatioUseDuration")]
+        public float? RatioUseDuration{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Tci.V20190318.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Express", this.Express);
             this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "RatioUseDuration", this.RatioUseDuration);
         }
     }
 }

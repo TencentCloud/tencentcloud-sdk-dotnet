@@ -55,10 +55,28 @@ namespace TencentCloud.Scf.V20180416.Models
         public string ZipFile{ get; set; }
 
         /// <summary>
+        /// 函数所属命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
         /// 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
         /// </summary>
         [JsonProperty("CosBucketRegion")]
         public string CosBucketRegion{ get; set; }
+
+        /// <summary>
+        /// 函数所属环境
+        /// </summary>
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
+
+        /// <summary>
+        /// 在更新时是否同步发布新版本，默认为：FALSE，不发布
+        /// </summary>
+        [JsonProperty("Publish")]
+        public string Publish{ get; set; }
 
 
         /// <summary>
@@ -71,7 +89,10 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
             this.SetParamSimple(map, prefix + "CosObjectName", this.CosObjectName);
             this.SetParamSimple(map, prefix + "ZipFile", this.ZipFile);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "Publish", this.Publish);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("PhoneInfos")]
         public PhoneInfo[] PhoneInfos{ get; set; }
 
+        /// <summary>
+        /// 参考词，目前为保留字段。
+        /// </summary>
+        [JsonProperty("ReferenceWord")]
+        public string ReferenceWord{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "Word", this.Word);
             this.SetParamSimple(map, prefix + "MatchTag", this.MatchTag);
             this.SetParamArrayObj(map, prefix + "PhoneInfos.", this.PhoneInfos);
+            this.SetParamSimple(map, prefix + "ReferenceWord", this.ReferenceWord);
         }
     }
 }

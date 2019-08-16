@@ -61,6 +61,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public LogFilter Filter{ get; set; }
 
         /// <summary>
+        /// 函数的命名空间
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
         /// 函数的版本
         /// </summary>
         [JsonProperty("Qualifier")]
@@ -84,6 +90,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+        /// </summary>
+        [JsonProperty("SearchContext")]
+        public LogSearchContext SearchContext{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -96,10 +108,12 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "FunctionRequestId", this.FunctionRequestId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamObj(map, prefix + "SearchContext.", this.SearchContext);
         }
     }
 }

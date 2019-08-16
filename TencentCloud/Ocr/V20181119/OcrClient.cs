@@ -133,6 +133,26 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持机动车销售统一发票和二手车销售统一发票的识别，包括发票号码、发票代码、合计金额、合计税额等二十多个字段。
+        /// </summary>
+        /// <param name="req">参考<see cref="CarInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="CarInvoiceOCRResponse"/>实例</returns>
+        public async Task<CarInvoiceOCRResponse> CarInvoiceOCR(CarInvoiceOCRRequest req)
+        {
+             JsonResponseModel<CarInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CarInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CarInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持对驾驶证主页所有字段的自动定位与识别，包含证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限等。
         /// </summary>
         /// <param name="req">参考<see cref="DriverLicenseOCRRequest"/></param>
@@ -164,6 +184,26 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "EnglishOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnglishOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持机票行程单关键字段的识别，包括姓名、身份证件号码、航班号、票价 、合计、电子客票号码、填开日期等。
+        /// </summary>
+        /// <param name="req">参考<see cref="FlightInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="FlightInvoiceOCRResponse"/>实例</returns>
+        public async Task<FlightInvoiceOCRResponse> FlightInvoiceOCR(FlightInvoiceOCRRequest req)
+        {
+             JsonResponseModel<FlightInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FlightInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlightInvoiceOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,6 +333,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持对卡式港澳台通行证的识别，包括签发地点、签发机关、有效期限、性别、出生日期、英文姓名、姓名、证件号等字段。
+        /// </summary>
+        /// <param name="req">参考<see cref="PermitOCRRequest"/></param>
+        /// <returns>参考<see cref="PermitOCRResponse"/>实例</returns>
+        public async Task<PermitOCRResponse> PermitOCR(PermitOCRRequest req)
+        {
+             JsonResponseModel<PermitOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PermitOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持定额发票的发票号码、发票代码及金额等关键字段的识别。
+        /// </summary>
+        /// <param name="req">参考<see cref="QuotaInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="QuotaInvoiceOCRResponse"/>实例</returns>
+        public async Task<QuotaInvoiceOCRResponse> QuotaInvoiceOCR(QuotaInvoiceOCRRequest req)
+        {
+             JsonResponseModel<QuotaInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QuotaInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuotaInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
         /// </summary>
         /// <param name="req">参考<see cref="TableOCRRequest"/></param>
@@ -304,6 +384,46 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "TableOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TableOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期等字段。
+        /// </summary>
+        /// <param name="req">参考<see cref="TaxiInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="TaxiInvoiceOCRResponse"/>实例</returns>
+        public async Task<TaxiInvoiceOCRResponse> TaxiInvoiceOCR(TaxiInvoiceOCRRequest req)
+        {
+             JsonResponseModel<TaxiInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TaxiInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TaxiInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别等。
+        /// </summary>
+        /// <param name="req">参考<see cref="TrainTicketOCRRequest"/></param>
+        /// <returns>参考<see cref="TrainTicketOCRResponse"/>实例</returns>
+        public async Task<TrainTicketOCRResponse> TrainTicketOCR(TrainTicketOCRRequest req)
+        {
+             JsonResponseModel<TrainTicketOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TrainTicketOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TrainTicketOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

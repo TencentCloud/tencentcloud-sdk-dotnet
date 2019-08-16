@@ -31,6 +31,12 @@ namespace TencentCloud.Dts.V20180330.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// 目标实例地域，如ap-guangzhou
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
         /// 目标实例vip。已废弃，无需填写
         /// </summary>
         [JsonProperty("Ip")]
@@ -41,12 +47,6 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
-
-        /// <summary>
-        /// 目标实例地域，如ap-guangzhou
-        /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
 
         /// <summary>
         /// 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
@@ -61,9 +61,9 @@ namespace TencentCloud.Dts.V20180330.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         }
     }

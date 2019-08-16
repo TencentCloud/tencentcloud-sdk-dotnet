@@ -53,13 +53,13 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 复制一个函数，可以选择将复制出的新函数放置在同一个namespace或另一个namespace。
+        /// 复制一个函数，您可以选择将复制出的新函数放置在特定的Region和Namespace。
         /// 注：本接口**不会**复制函数的以下对象或属性：
         /// 1. 函数的触发器
         /// 2. 除了$LATEST以外的其它版本
-        /// 3. 函数配置的日志投递到的CLS目标
+        /// 3. 函数配置的日志投递到的CLS目标。
         /// 
-        /// 如有需要，您可以在复制后手动修改新函数。
+        /// 如有需要，您可以在复制后手动配置新函数。
         /// </summary>
         /// <param name="req">参考<see cref="CopyFunctionRequest"/></param>
         /// <returns>参考<see cref="CopyFunctionResponse"/>实例</returns>
@@ -90,6 +90,26 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = await this.InternalRequest(req, "CreateFunction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口根据传入的参数创建命名空间。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateNamespaceRequest"/></param>
+        /// <returns>参考<see cref="CreateNamespaceResponse"/>实例</returns>
+        public async Task<CreateNamespaceResponse> CreateNamespace(CreateNamespaceRequest req)
+        {
+             JsonResponseModel<CreateNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNamespaceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -139,6 +159,26 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 该接口根据传入的参数创建命名空间。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteNamespaceRequest"/></param>
+        /// <returns>参考<see cref="DeleteNamespaceResponse"/>实例</returns>
+        public async Task<DeleteNamespaceResponse> DeleteNamespace(DeleteNamespaceRequest req)
+        {
+             JsonResponseModel<DeleteNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据参数传入删除已有的触发方式。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteTriggerRequest"/></param>
@@ -170,6 +210,26 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = await this.InternalRequest(req, "GetFunction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于获取函数代码包的下载地址。
+        /// </summary>
+        /// <param name="req">参考<see cref="GetFunctionAddressRequest"/></param>
+        /// <returns>参考<see cref="GetFunctionAddressResponse"/>实例</returns>
+        public async Task<GetFunctionAddressResponse> GetFunctionAddress(GetFunctionAddressRequest req)
+        {
+             JsonResponseModel<GetFunctionAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetFunctionAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -239,6 +299,66 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 列出命名空间列表
+        /// </summary>
+        /// <param name="req">参考<see cref="ListNamespacesRequest"/></param>
+        /// <returns>参考<see cref="ListNamespacesResponse"/>实例</returns>
+        public async Task<ListNamespacesResponse> ListNamespaces(ListNamespacesRequest req)
+        {
+             JsonResponseModel<ListNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口根据传入的参数查询函数的版本。
+        /// </summary>
+        /// <param name="req">参考<see cref="ListVersionByFunctionRequest"/></param>
+        /// <returns>参考<see cref="ListVersionByFunctionResponse"/>实例</returns>
+        public async Task<ListVersionByFunctionResponse> ListVersionByFunction(ListVersionByFunctionRequest req)
+        {
+             JsonResponseModel<ListVersionByFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListVersionByFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListVersionByFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于用户发布新版本函数。
+        /// </summary>
+        /// <param name="req">参考<see cref="PublishVersionRequest"/></param>
+        /// <returns>参考<see cref="PublishVersionResponse"/>实例</returns>
+        public async Task<PublishVersionResponse> PublishVersion(PublishVersionRequest req)
+        {
+             JsonResponseModel<PublishVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据传入参数更新函数代码。
         /// </summary>
         /// <param name="req">参考<see cref="UpdateFunctionCodeRequest"/></param>
@@ -270,6 +390,26 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = await this.InternalRequest(req, "UpdateFunctionConfiguration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新命名空间
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateNamespaceRequest"/></param>
+        /// <returns>参考<see cref="UpdateNamespaceResponse"/>实例</returns>
+        public async Task<UpdateNamespaceResponse> UpdateNamespace(UpdateNamespaceRequest req)
+        {
+             JsonResponseModel<UpdateNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateNamespaceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

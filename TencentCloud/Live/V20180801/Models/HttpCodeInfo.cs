@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// http协议返回码。
+        /// HTTP协议返回码。
         /// 例："2xx", "3xx", "4xx", "5xx"。
         /// </summary>
         [JsonProperty("HttpCode")]

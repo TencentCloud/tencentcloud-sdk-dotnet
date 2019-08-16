@@ -113,6 +113,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建集群路由
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateClusterRouteRequest"/></param>
+        /// <returns>参考<see cref="CreateClusterRouteResponse"/>实例</returns>
+        public async Task<CreateClusterRouteResponse> CreateClusterRoute(CreateClusterRouteRequest req)
+        {
+             JsonResponseModel<CreateClusterRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建集群路由表
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateClusterRouteTableRequest"/></param>
+        /// <returns>参考<see cref="CreateClusterRouteTableResponse"/>实例</returns>
+        public async Task<CreateClusterRouteTableResponse> CreateClusterRouteTable(CreateClusterRouteTableRequest req)
+        {
+             JsonResponseModel<CreateClusterRouteTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterRouteTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除集群(YUNAPI V3版本)
         /// </summary>
         /// <param name="req">参考<see cref="DeleteClusterRequest"/></param>
@@ -153,6 +193,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 删除集群路由
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteClusterRouteRequest"/></param>
+        /// <returns>参考<see cref="DeleteClusterRouteResponse"/>实例</returns>
+        public async Task<DeleteClusterRouteResponse> DeleteClusterRoute(DeleteClusterRouteRequest req)
+        {
+             JsonResponseModel<DeleteClusterRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除集群路由表
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteClusterRouteTableRequest"/></param>
+        /// <returns>参考<see cref="DeleteClusterRouteTableResponse"/>实例</returns>
+        public async Task<DeleteClusterRouteTableResponse> DeleteClusterRouteTable(DeleteClusterRouteTableRequest req)
+        {
+             JsonResponseModel<DeleteClusterRouteTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterRouteTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  查询集群下节点实例信息 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeClusterInstancesRequest"/></param>
@@ -164,6 +244,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = await this.InternalRequest(req, "DescribeClusterInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群路由表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClusterRouteTablesRequest"/></param>
+        /// <returns>参考<see cref="DescribeClusterRouteTablesResponse"/>实例</returns>
+        public async Task<DescribeClusterRouteTablesResponse> DescribeClusterRouteTables(DescribeClusterRouteTablesRequest req)
+        {
+             JsonResponseModel<DescribeClusterRouteTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterRouteTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterRouteTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群路由
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClusterRoutesRequest"/></param>
+        /// <returns>参考<see cref="DescribeClusterRoutesResponse"/>实例</returns>
+        public async Task<DescribeClusterRoutesResponse> DescribeClusterRoutes(DescribeClusterRoutesRequest req)
+        {
+             JsonResponseModel<DescribeClusterRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -224,6 +344,26 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = await this.InternalRequest(req, "DescribeExistedInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExistedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询路由表冲突列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRouteTableConflictsRequest"/></param>
+        /// <returns>参考<see cref="DescribeRouteTableConflictsResponse"/>实例</returns>
+        public async Task<DescribeRouteTableConflictsResponse> DescribeRouteTableConflicts(DescribeRouteTableConflictsRequest req)
+        {
+             JsonResponseModel<DescribeRouteTableConflictsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRouteTableConflicts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTableConflictsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
