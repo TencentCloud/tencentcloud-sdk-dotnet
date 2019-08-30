@@ -80,6 +80,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 应用资源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationResourceType")]
+        public string ApplicationResourceType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -94,6 +101,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ProgLang", this.ProgLang);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
         }
     }
 }

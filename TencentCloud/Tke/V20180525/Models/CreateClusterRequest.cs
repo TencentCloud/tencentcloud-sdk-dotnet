@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+        /// CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
         /// </summary>
         [JsonProperty("RunInstancesForNode")]
         public RunInstancesForNode[] RunInstancesForNode{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
 
         /// <summary>
-        /// 已存在实例的配置信息
+        /// 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
         /// </summary>
         [JsonProperty("ExistedInstancesForNode")]
         public ExistedInstancesForNode[] ExistedInstancesForNode{ get; set; }

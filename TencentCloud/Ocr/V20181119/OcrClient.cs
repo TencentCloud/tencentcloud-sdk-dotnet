@@ -333,6 +333,48 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持马来西亚身份证识别，识别字段包括身份证号、姓名、性别、地址；具备身份证人像照片的裁剪功能和翻拍、复印件告警功能。
+        /// 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        /// </summary>
+        /// <param name="req">参考<see cref="MLIDCardOCRRequest"/></param>
+        /// <returns>参考<see cref="MLIDCardOCRResponse"/>实例</returns>
+        public async Task<MLIDCardOCRResponse> MLIDCardOCR(MLIDCardOCRRequest req)
+        {
+             JsonResponseModel<MLIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MLIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持马来西亚身护照识别，识别字段包括护照ID、姓名、出生日期、性别、有效期、发行国、国籍；具备护照人像照片的裁剪功能和翻拍、复印件告警功能。
+        /// 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        /// </summary>
+        /// <param name="req">参考<see cref="MLIDPassportOCRRequest"/></param>
+        /// <returns>参考<see cref="MLIDPassportOCRResponse"/>实例</returns>
+        public async Task<MLIDPassportOCRResponse> MLIDPassportOCR(MLIDPassportOCRRequest req)
+        {
+             JsonResponseModel<MLIDPassportOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MLIDPassportOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MLIDPassportOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持对卡式港澳台通行证的识别，包括签发地点、签发机关、有效期限、性别、出生日期、英文姓名、姓名、证件号等字段。
         /// </summary>
         /// <param name="req">参考<see cref="PermitOCRRequest"/></param>

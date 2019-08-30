@@ -153,6 +153,26 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 通过标签查询资源列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeResourcesByTagsRequest"/></param>
+        /// <returns>参考<see cref="DescribeResourcesByTagsResponse"/>实例</returns>
+        public async Task<DescribeResourcesByTagsResponse> DescribeResourcesByTags(DescribeResourcesByTagsRequest req)
+        {
+             JsonResponseModel<DescribeResourcesByTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourcesByTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesByTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询已建立的标签列表中的标签键。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTagKeysRequest"/></param>

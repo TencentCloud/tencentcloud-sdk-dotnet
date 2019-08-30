@@ -25,7 +25,7 @@ namespace TencentCloud.Tbp.V20190311.Models
     {
         
         /// <summary>
-        /// 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
+        /// 当前会话状态{会话开始: START; 会话中: COUTINUE; 会话结束: COMPLETE}。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DialogStatus")]
@@ -60,18 +60,18 @@ namespace TencentCloud.Tbp.V20190311.Models
         public string InputText{ get; set; }
 
         /// <summary>
-        /// 机器人回答。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ResponseText")]
-        public string ResponseText{ get; set; }
-
-        /// <summary>
-        /// 透传字段，由endpoint服务返回。
+        /// 透传字段，由用户自定义的WebService服务返回。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionAttributes")]
         public string SessionAttributes{ get; set; }
+
+        /// <summary>
+        /// 机器人对话的应答文本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResponseText")]
+        public string ResponseText{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -90,8 +90,8 @@ namespace TencentCloud.Tbp.V20190311.Models
             this.SetParamSimple(map, prefix + "IntentName", this.IntentName);
             this.SetParamArrayObj(map, prefix + "SlotInfoList.", this.SlotInfoList);
             this.SetParamSimple(map, prefix + "InputText", this.InputText);
-            this.SetParamSimple(map, prefix + "ResponseText", this.ResponseText);
             this.SetParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
+            this.SetParamSimple(map, prefix + "ResponseText", this.ResponseText);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

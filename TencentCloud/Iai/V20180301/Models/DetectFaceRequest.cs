@@ -38,13 +38,15 @@ namespace TencentCloud.Iai.V20180301.Models
         public ulong? MinFaceSize{ get; set; }
 
         /// <summary>
-        /// 图片 base64 数据。支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// 图片 base64 数据，base64 编码后大小不可超过5M。
+        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+        /// 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+        /// Url、Image必须提供一个，如果都提供，只使用 Url。  
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -70,6 +72,14 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("NeedQualityDetection")]
         public ulong? NeedQualityDetection{ get; set; }
 
+        /// <summary>
+        /// 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+        /// 默认为"2.0"。 
+        /// 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用最新版本。
+        /// </summary>
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -82,6 +92,7 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "NeedFaceAttributes", this.NeedFaceAttributes);
             this.SetParamSimple(map, prefix + "NeedQualityDetection", this.NeedQualityDetection);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         }
     }
 }

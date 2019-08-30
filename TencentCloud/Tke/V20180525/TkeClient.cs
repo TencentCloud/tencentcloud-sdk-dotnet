@@ -93,6 +93,26 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 为已经存在的集群创建伸缩组
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateClusterAsGroupRequest"/></param>
+        /// <returns>参考<see cref="CreateClusterAsGroupResponse"/>实例</returns>
+        public async Task<CreateClusterAsGroupResponse> CreateClusterAsGroup(CreateClusterAsGroupRequest req)
+        {
+             JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterAsGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterAsGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 扩展(新建)集群节点
         /// </summary>
         /// <param name="req">参考<see cref="CreateClusterInstancesRequest"/></param>

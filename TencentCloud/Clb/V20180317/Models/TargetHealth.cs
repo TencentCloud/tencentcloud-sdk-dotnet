@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 当前健康状态，true：健康，false：不健康。
+        /// 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
         /// </summary>
         [JsonProperty("HealthStatus")]
         public bool? HealthStatus{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("TargetId")]
         public string TargetId{ get; set; }
+
+        /// <summary>
+        /// 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+        /// </summary>
+        [JsonProperty("HealthStatusDetial")]
+        public string HealthStatusDetial{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
             this.SetParamSimple(map, prefix + "TargetId", this.TargetId);
+            this.SetParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
         }
     }
 }

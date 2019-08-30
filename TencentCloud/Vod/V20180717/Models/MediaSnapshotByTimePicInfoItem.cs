@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 该张截图对应视频文件中的时间偏移，单位：秒。
+        /// 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeOffset")]

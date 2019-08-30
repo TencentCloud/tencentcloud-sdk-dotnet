@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
 
+        /// <summary>
+        /// 应有资源类型
+        /// </summary>
+        [JsonProperty("ApplicationResourceType")]
+        public string ApplicationResourceType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationDesc", this.ApplicationDesc);
             this.SetParamSimple(map, prefix + "ApplicationLogConfig", this.ApplicationLogConfig);
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+            this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
         }
     }
 }

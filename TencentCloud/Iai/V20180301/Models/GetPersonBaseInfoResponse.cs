@@ -37,7 +37,7 @@ namespace TencentCloud.Iai.V20180301.Models
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// 包含的人脸图片列表
+        /// 包含的人脸 ID 列表
         /// </summary>
         [JsonProperty("FaceIds")]
         public string[] FaceIds{ get; set; }

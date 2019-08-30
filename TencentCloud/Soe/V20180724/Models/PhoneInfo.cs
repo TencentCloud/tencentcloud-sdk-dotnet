@@ -61,8 +61,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public bool? Stress{ get; set; }
 
         /// <summary>
-        /// 参考音素，在单词诊断模式下，代表标准
-        /// 音素
+        /// 参考音素，在单词诊断模式下，代表标准音素
         /// </summary>
         [JsonProperty("ReferencePhone")]
         public string ReferencePhone{ get; set; }

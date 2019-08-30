@@ -56,7 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReviewSummery")]
-        public MediaMiniProgramReviewElem ReviewSummery{ get; set; }
+        public MediaMiniProgramReviewElem[] ReviewSummery{ get; set; }
 
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "ReviewResult", this.ReviewResult);
-            this.SetParamObj(map, prefix + "ReviewSummery.", this.ReviewSummery);
+            this.SetParamArrayObj(map, prefix + "ReviewSummery.", this.ReviewSummery);
         }
     }
 }

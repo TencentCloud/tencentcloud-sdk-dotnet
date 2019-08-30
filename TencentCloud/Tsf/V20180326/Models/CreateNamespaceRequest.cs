@@ -42,6 +42,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceDesc")]
         public string NamespaceDesc{ get; set; }
 
+        /// <summary>
+        /// 命名空间资源类型(默认值为DEF)
+        /// </summary>
+        [JsonProperty("NamespaceResourceType")]
+        public string NamespaceResourceType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "NamespaceDesc", this.NamespaceDesc);
+            this.SetParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
         }
     }
 }

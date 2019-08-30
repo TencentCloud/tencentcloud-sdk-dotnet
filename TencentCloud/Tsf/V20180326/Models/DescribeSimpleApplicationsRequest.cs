@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
 
+        /// <summary>
+        /// 资源类型数组
+        /// </summary>
+        [JsonProperty("ApplicationResourceTypeList")]
+        public string[] ApplicationResourceTypeList{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+            this.SetParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
         }
     }
 }

@@ -25,37 +25,37 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 产品名称
+        /// 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 子产品名称
+        /// 子产品名称：云产品子类，如云服务器CVM-标准型S1
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// 计费模式
+        /// 计费模式：包年包月和按量计费
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// 项目
+        /// 项目:资源所属项目
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 区域
+        /// 区域：资源所属地域，如华南地区（广州）
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// 可用区：资源所属可用区，如广州三区
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

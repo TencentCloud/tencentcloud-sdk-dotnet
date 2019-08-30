@@ -31,7 +31,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是其他触发器，见具体触发器绑定参数的说明
+        /// 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式，如果是其他触发器，见具体触发器说明
+        /// 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
         /// </summary>
         [JsonProperty("TriggerDesc")]
         public string TriggerDesc{ get; set; }

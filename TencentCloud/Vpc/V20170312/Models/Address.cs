@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AddressName{ get; set; }
 
         /// <summary>
-        /// `EIP`状态。
+        /// `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
         /// </summary>
         [JsonProperty("AddressStatus")]
         public string AddressStatus{ get; set; }

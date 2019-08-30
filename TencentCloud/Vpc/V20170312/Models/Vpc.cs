@@ -96,6 +96,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 辅助CIDR
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AssistantCidrSet")]
+        public AssistantCidr[] AssistantCidrSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -114,6 +121,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableDhcp", this.EnableDhcp);
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
         }
     }
 }

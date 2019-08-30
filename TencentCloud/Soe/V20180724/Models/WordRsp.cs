@@ -25,13 +25,13 @@ namespace TencentCloud.Soe.V20180724.Models
     {
         
         /// <summary>
-        /// 当前单词语音起始时间点，单位为ms
+        /// 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
         /// </summary>
         [JsonProperty("MemBeginTime")]
         public long? MemBeginTime{ get; set; }
 
         /// <summary>
-        /// 当前单词语音终止时间点，单位为ms
+        /// 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
         /// </summary>
         [JsonProperty("MemEndTime")]
         public long? MemEndTime{ get; set; }

@@ -50,7 +50,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string CertificateAlias{ get; set; }
 
         /// <summary>
-        /// 秘钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
+        /// 密钥内容。采用url编码。仅当证书类型为SSL证书时，需要填写该参数。格式为pem。
         /// </summary>
         [JsonProperty("CertificateKey")]
         public string CertificateKey{ get; set; }

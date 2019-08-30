@@ -102,6 +102,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("IsFilterExcluster")]
         public bool? IsFilterExcluster{ get; set; }
 
+        /// <summary>
+        /// 独享集群ID
+        /// </summary>
+        [JsonProperty("ExclusterIds")]
+        public string[] ExclusterIds{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -121,6 +127,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
             this.SetParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
+            this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
         }
     }
 }

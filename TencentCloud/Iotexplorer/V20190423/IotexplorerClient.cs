@@ -193,6 +193,26 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 用于查看某个设备的详细信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceResponse"/>实例</returns>
+        public async Task<DescribeDeviceResponse> DescribeDevice(DescribeDeviceRequest req)
+        {
+             JsonResponseModel<DescribeDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据设备产品ID、设备名称，获取设备上报的属性数据。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDeviceDataRequest"/></param>
@@ -293,6 +313,26 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 用于查询某个产品下的设备列表
+        /// </summary>
+        /// <param name="req">参考<see cref="GetDeviceListRequest"/></param>
+        /// <returns>参考<see cref="GetDeviceListResponse"/>实例</returns>
+        public async Task<GetDeviceListResponse> GetDeviceList(GetDeviceListRequest req)
+        {
+             JsonResponseModel<GetDeviceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDeviceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供查询用户所创建的项目列表查询功能。
         /// </summary>
         /// <param name="req">参考<see cref="GetProjectListRequest"/></param>
@@ -324,6 +364,26 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = await this.InternalRequest(req, "GetStudioProductList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetStudioProductListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备的历史事件
+        /// </summary>
+        /// <param name="req">参考<see cref="ListEventHistoryRequest"/></param>
+        /// <returns>参考<see cref="ListEventHistoryResponse"/>实例</returns>
+        public async Task<ListEventHistoryResponse> ListEventHistory(ListEventHistoryRequest req)
+        {
+             JsonResponseModel<ListEventHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListEventHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEventHistoryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

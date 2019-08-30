@@ -416,7 +416,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（DescribeDatabaseObjects）用于查询云数据库实例的表信息。
+        /// 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDatabaseTableRequest"/></param>
         /// <returns>参考<see cref="DescribeDatabaseTableResponse"/>实例</returns>

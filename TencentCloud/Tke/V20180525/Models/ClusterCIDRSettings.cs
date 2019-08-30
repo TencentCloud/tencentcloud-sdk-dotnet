@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+        /// 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
         /// </summary>
         [JsonProperty("ClusterCIDR")]
         public string ClusterCIDR{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? IgnoreClusterCIDRConflict{ get; set; }
 
         /// <summary>
-        /// 集群中每个Node上最大的Pod数量
+        /// 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
         /// </summary>
         [JsonProperty("MaxNodePodNum")]
         public ulong? MaxNodePodNum{ get; set; }
 
         /// <summary>
-        /// 集群最大的service数量
+        /// 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
         /// </summary>
         [JsonProperty("MaxClusterServiceNum")]
         public ulong? MaxClusterServiceNum{ get; set; }

@@ -31,26 +31,26 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string DetectedText{ get; set; }
 
         /// <summary>
-        /// 结果
+        /// 算式运算结果
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }
 
         /// <summary>
-        /// 保留字段，暂无意义
+        /// 保留字段，暂不支持
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 文本行坐标，以四个顶点坐标表示（预留字段，目前不支持）
+        /// 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Polygon")]
         public Coord[] Polygon{ get; set; }
 
         /// <summary>
-        /// 此字段为扩展字段
+        /// 保留字段，暂不支持
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }

@@ -25,12 +25,11 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 创建命名空间是否成功。
-        /// true：创建成功。
-        /// false：创建失败。
+        /// 成功时为命名空间ID，失败为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
-        public bool? Result{ get; set; }
+        public string Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

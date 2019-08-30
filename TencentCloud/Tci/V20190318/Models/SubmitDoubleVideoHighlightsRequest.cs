@@ -64,7 +64,7 @@ namespace TencentCloud.Tci.V20190318.Models
         /// 人脸检索的相似度阈值，默认值0.89。建议留空。
         /// </summary>
         [JsonProperty("SimThreshold")]
-        public long? SimThreshold{ get; set; }
+        public float? SimThreshold{ get; set; }
 
         /// <summary>
         /// 老师视频url

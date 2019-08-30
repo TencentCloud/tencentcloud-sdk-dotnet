@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 截图时间点列表，单位为秒。
+        /// 截图时间点列表，单位为<font color=red>毫秒</font>。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeOffsetSet")]

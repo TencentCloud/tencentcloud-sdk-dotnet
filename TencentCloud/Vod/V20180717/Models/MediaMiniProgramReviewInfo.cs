@@ -27,8 +27,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 审核信息列表。
         /// </summary>
-        [JsonProperty("MiniProgramReivewList")]
-        public MediaMiniProgramReviewInfoItem[] MiniProgramReivewList{ get; set; }
+        [JsonProperty("MiniProgramReviewList")]
+        public MediaMiniProgramReviewInfoItem[] MiniProgramReviewList{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "MiniProgramReivewList.", this.MiniProgramReivewList);
+            this.SetParamArrayObj(map, prefix + "MiniProgramReviewList.", this.MiniProgramReviewList);
         }
     }
 }

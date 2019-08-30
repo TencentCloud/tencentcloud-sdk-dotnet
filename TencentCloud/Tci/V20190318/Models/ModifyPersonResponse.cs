@@ -25,6 +25,12 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
+        /// 人脸信息
+        /// </summary>
+        [JsonProperty("FaceInfoSet")]
+        public FaceInfo[] FaceInfoSet{ get; set; }
+
+        /// <summary>
         /// 人员所属人员库标识符
         /// </summary>
         [JsonProperty("LibraryId")]
@@ -54,6 +60,7 @@ namespace TencentCloud.Tci.V20190318.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "FaceInfoSet.", this.FaceInfoSet);
             this.SetParamSimple(map, prefix + "LibraryId", this.LibraryId);
             this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "PersonName", this.PersonName);

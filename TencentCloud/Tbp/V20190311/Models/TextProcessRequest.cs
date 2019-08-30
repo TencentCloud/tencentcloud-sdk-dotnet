@@ -49,7 +49,7 @@ namespace TencentCloud.Tbp.V20190311.Models
         public string BotEnv{ get; set; }
 
         /// <summary>
-        /// 透传字段，透传给endpoint服务。
+        /// 透传字段，透传给用户自定义的WebService服务。
         /// </summary>
         [JsonProperty("SessionAttributes")]
         public string SessionAttributes{ get; set; }

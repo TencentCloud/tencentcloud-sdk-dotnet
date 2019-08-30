@@ -40,6 +40,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>network-interface-name - String - （过滤条件）网卡实例名称。</li>
         /// <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
         /// <li>address-ip - String - （过滤条件）内网IPv4地址。</li>
+        /// <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2</li>
+        /// <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

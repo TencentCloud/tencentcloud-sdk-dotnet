@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 交易类型
+        /// 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }

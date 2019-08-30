@@ -73,6 +73,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 创建黑石计算环境
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateCpmComputeEnvRequest"/></param>
+        /// <returns>参考<see cref="CreateCpmComputeEnvResponse"/>实例</returns>
+        public async Task<CreateCpmComputeEnvResponse> CreateCpmComputeEnv(CreateCpmComputeEnvRequest req)
+        {
+             JsonResponseModel<CreateCpmComputeEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCpmComputeEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCpmComputeEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于创建任务模板
         /// </summary>
         /// <param name="req">参考<see cref="CreateTaskTemplateRequest"/></param>

@@ -73,7 +73,7 @@ namespace TencentCloud.Tbp.V20190311
         }
 
         /// <summary>
-        /// 接收调用侧的文本输入，返回应答文本。
+        /// 接收调用侧的文本输入，返回应答文本。已废弃，推荐使用最新版TextProcess接口。
         /// </summary>
         /// <param name="req">参考<see cref="TextProcessRequest"/></param>
         /// <returns>参考<see cref="TextProcessResponse"/>实例</returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Tbp.V20190311
         }
 
         /// <summary>
-        /// 会话重置接口
+        /// 会话重置接口。已废弃，推荐使用最新版TextReset接口。
         /// </summary>
         /// <param name="req">参考<see cref="TextResetRequest"/></param>
         /// <returns>参考<see cref="TextResetResponse"/>实例</returns>

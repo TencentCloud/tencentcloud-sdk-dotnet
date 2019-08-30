@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// vpc的cidr，只能为10.0.0.0/16，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+        /// vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }

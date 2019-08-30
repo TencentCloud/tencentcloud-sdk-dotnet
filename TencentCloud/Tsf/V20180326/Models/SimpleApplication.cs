@@ -52,6 +52,41 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
 
+        /// <summary>
+        /// ApplicationDesc
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationDesc")]
+        public string ApplicationDesc{ get; set; }
+
+        /// <summary>
+        /// ProgLang
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProgLang")]
+        public string ProgLang{ get; set; }
+
+        /// <summary>
+        /// ApplicationResourceType
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationResourceType")]
+        public string ApplicationResourceType{ get; set; }
+
+        /// <summary>
+        /// CreateTime
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// UpdateTime
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -62,6 +97,11 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+            this.SetParamSimple(map, prefix + "ApplicationDesc", this.ApplicationDesc);
+            this.SetParamSimple(map, prefix + "ProgLang", this.ProgLang);
+            this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

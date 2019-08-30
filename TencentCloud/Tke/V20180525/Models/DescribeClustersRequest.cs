@@ -38,7 +38,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 最大输出条数，默认20
+        /// 最大输出条数，默认20，最大为100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

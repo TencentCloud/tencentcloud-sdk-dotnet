@@ -37,7 +37,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? IsEnd{ get; set; }
 
         /// <summary>
-        /// 语音文件类型 	1:raw, 2:wav, 3:mp3(三种格式目前仅支持16k采样率16bit编码单声道，如有不一致可能导致评估不准确或失败)。
+        /// 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
         /// </summary>
         [JsonProperty("VoiceFileType")]
         public long? VoiceFileType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? WorkMode{ get; set; }
 
         /// <summary>
-        /// 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息。
+        /// 评估模式，0：词模式（中文评测模式下为文字模式），1：句子模式，2：段落模式，3：自由说模式，当为词模式评估时，能够提供每个音节的评估信息，当为句子模式时，能够提供完整度和流利度信息，4：单词纠错模式：能够对单词和句子中的读错读音进行纠正，给出参考正确读音。
         /// </summary>
         [JsonProperty("EvalMode")]
         public long? EvalMode{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public string SoeAppId{ get; set; }
 
         /// <summary>
-        /// 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段。
+        /// 音频存储模式，0：不存储，1：存储到公共对象存储，输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段，2：永久存储音频，需要提工单申请，会产生一定存储费用，3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。
         /// </summary>
         [JsonProperty("StorageMode")]
         public long? StorageMode{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public long? IsQuery{ get; set; }
 
         /// <summary>
-        /// 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。
+        /// 输入文本模式，0: 普通文本，1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本。2：音素注册模式（提工单注册需要使用音素的单词）。
         /// </summary>
         [JsonProperty("TextMode")]
         public long? TextMode{ get; set; }

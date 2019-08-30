@@ -132,6 +132,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardId")]
         public long? ShardId{ get; set; }
 
+        /// <summary>
+        /// 产品ProductID
+        /// </summary>
+        [JsonProperty("Pid")]
+        public long? Pid{ get; set; }
+
+        /// <summary>
+        /// Proxy版本
+        /// </summary>
+        [JsonProperty("ProxyVersion")]
+        public string ProxyVersion{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -156,6 +168,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "StorageUsage", this.StorageUsage);
             this.SetParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
             this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         }
     }
 }

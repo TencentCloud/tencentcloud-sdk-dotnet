@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("AddressName")]
         public string AddressName{ get; set; }
 
+        /// <summary>
+        /// 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+        /// </summary>
+        [JsonProperty("EipDirectConnection")]
+        public string EipDirectConnection{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "AddressId", this.AddressId);
             this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
+            this.SetParamSimple(map, prefix + "EipDirectConnection", this.EipDirectConnection);
         }
     }
 }

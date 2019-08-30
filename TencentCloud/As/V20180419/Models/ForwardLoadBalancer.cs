@@ -43,7 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         public TargetAttribute[] TargetAttributes{ get; set; }
 
         /// <summary>
-        /// 转发规则ID
+        /// 转发规则ID，注意：针对七层监听器此参数必填
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

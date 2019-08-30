@@ -53,7 +53,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 接口说明：把房间所有用户从房间踢出，解散房间。
+        /// 接口说明：把房间所有用户从房间踢出，解散房间。支持 TRTC SDK 6.6及以上版本，包括Android、iOS、Windows 和 macOS。
         /// </summary>
         /// <param name="req">参考<see cref="DissolveRoomRequest"/></param>
         /// <returns>参考<see cref="DissolveRoomResponse"/>实例</returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 接口说明：将用户从房间踢出。
+        /// 接口说明：将用户从房间踢出。支持 TRTC SDK 6.6及以上版本，包括Android、iOS、Windows 和 macOS。
         /// </summary>
         /// <param name="req">参考<see cref="KickOutUserRequest"/></param>
         /// <returns>参考<see cref="KickOutUserResponse"/>实例</returns>

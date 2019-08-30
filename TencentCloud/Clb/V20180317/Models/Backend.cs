@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
+        /// 后端服务的唯一 ID，如 ins-abcd1234
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -77,7 +77,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string RegisteredTime{ get; set; }
 
         /// <summary>
-        /// 弹性网卡唯一ID
+        /// 弹性网卡唯一ID，如 eni-1234abcd
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EniId")]

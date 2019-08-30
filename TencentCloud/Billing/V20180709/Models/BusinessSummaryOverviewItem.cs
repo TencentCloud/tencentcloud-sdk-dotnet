@@ -32,7 +32,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }

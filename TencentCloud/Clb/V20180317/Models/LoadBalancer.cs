@@ -252,6 +252,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AddressIPv6")]
         public string AddressIPv6{ get; set; }
 
+        /// <summary>
+        /// 暂做保留，一般用户无需关注。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtraInfo")]
+        public ExtraInfo ExtraInfo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -291,6 +298,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
             this.SetParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
+            this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
         }
     }
 }

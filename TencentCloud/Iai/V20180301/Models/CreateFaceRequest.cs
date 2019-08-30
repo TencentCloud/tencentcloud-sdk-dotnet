@@ -31,7 +31,8 @@ namespace TencentCloud.Iai.V20180301.Models
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 图片 base64 数据。人员人脸总数量不可超过5张。
+        /// 图片 base64 数据，base64 编码后大小不可超过5M。
+        /// 人员人脸总数量不可超过5张。
         /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
@@ -39,12 +40,13 @@ namespace TencentCloud.Iai.V20180301.Models
         public string[] Images{ get; set; }
 
         /// <summary>
-        /// 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
+        /// 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+        /// Url、Image必须提供一个，如果都提供，只使用 Url。  
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-        /// 非腾讯云存储的Url速度和稳定性可能受一定影响。 
+        /// 非腾讯云存储的Url速度和稳定性可能受一定影响。
+        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// 人员人脸总数量不可超过5张。
         /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Urls")]
         public string[] Urls{ get; set; }

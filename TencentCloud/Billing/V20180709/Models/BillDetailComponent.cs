@@ -25,19 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 组件名称
+        /// 组件类型:资源组件类型的名称，如内存、硬盘等
         /// </summary>
         [JsonProperty("ComponentCodeName")]
         public string ComponentCodeName{ get; set; }
 
         /// <summary>
-        /// 组件类型名称
+        /// 组件名称:资源组件的名称，如云数据库MySQL-内存等
         /// </summary>
         [JsonProperty("ItemCodeName")]
         public string ItemCodeName{ get; set; }
 
         /// <summary>
-        /// 组件刊例价
+        /// 组件刊例价:资源组件的原始价格，保持原始粒度
         /// </summary>
         [JsonProperty("SinglePrice")]
         public string SinglePrice{ get; set; }

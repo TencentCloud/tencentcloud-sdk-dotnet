@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// A 图片 base64 数据。
+        /// A 图片 base64 数据，base64 编码后大小不可超过5M。
         /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
@@ -33,7 +33,7 @@ namespace TencentCloud.Iai.V20180301.Models
         public string ImageA{ get; set; }
 
         /// <summary>
-        /// B 图片 base64 数据。
+        /// B 图片 base64 数据，base64 编码后大小不可超过5M。
         /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
@@ -41,7 +41,8 @@ namespace TencentCloud.Iai.V20180301.Models
         public string ImageB{ get; set; }
 
         /// <summary>
-        /// A 图片的 Url 。A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+        /// A 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+        /// A 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。
         /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -51,7 +52,8 @@ namespace TencentCloud.Iai.V20180301.Models
         public string UrlA{ get; set; }
 
         /// <summary>
-        /// B 图片的 Url 。B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
+        /// B 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
+        /// B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。
         /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
