@@ -50,6 +50,20 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("ScanDetail")]
         public ScanDetail[] ScanDetail{ get; set; }
 
+        /// <summary>
+        /// gme实时语音房间id，透传任务传入时的RoomId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
+
+        /// <summary>
+        /// gme实时语音用户id，透传任务传入时的OpenId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -60,6 +74,8 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
             this.SetParamSimple(map, prefix + "MainType", this.MainType);
             this.SetParamArrayObj(map, prefix + "ScanDetail.", this.ScanDetail);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
         }
     }
 }

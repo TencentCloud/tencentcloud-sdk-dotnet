@@ -36,6 +36,18 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// gme实时语音房间id，通过gme实时语音进行语音分析时输入
+        /// </summary>
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
+
+        /// <summary>
+        /// gme实时语音用户id，通过gme实时语音进行语音分析时输入
+        /// </summary>
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +56,8 @@ namespace TencentCloud.Gme.V20180711.Models
         {
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
         }
     }
 }

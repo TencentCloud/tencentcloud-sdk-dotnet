@@ -31,6 +31,18 @@ namespace TencentCloud.Tci.V20190318.Models
         public long? Lang{ get; set; }
 
         /// <summary>
+        /// 学生音频流
+        /// </summary>
+        [JsonProperty("StudentUrl")]
+        public string StudentUrl{ get; set; }
+
+        /// <summary>
+        /// 教师音频流
+        /// </summary>
+        [JsonProperty("TeacherUrl")]
+        public string TeacherUrl{ get; set; }
+
+        /// <summary>
         /// 语音编码类型 1:pcm
         /// </summary>
         [JsonProperty("VoiceEncodeType")]
@@ -49,18 +61,6 @@ namespace TencentCloud.Tci.V20190318.Models
         public Function Functions{ get; set; }
 
         /// <summary>
-        /// 学生音频流
-        /// </summary>
-        [JsonProperty("StudentUrl")]
-        public string StudentUrl{ get; set; }
-
-        /// <summary>
-        /// 教师音频流
-        /// </summary>
-        [JsonProperty("TeacherUrl")]
-        public string TeacherUrl{ get; set; }
-
-        /// <summary>
         /// 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
         /// </summary>
         [JsonProperty("VocabLibNameList")]
@@ -73,11 +73,11 @@ namespace TencentCloud.Tci.V20190318.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Lang", this.Lang);
+            this.SetParamSimple(map, prefix + "StudentUrl", this.StudentUrl);
+            this.SetParamSimple(map, prefix + "TeacherUrl", this.TeacherUrl);
             this.SetParamSimple(map, prefix + "VoiceEncodeType", this.VoiceEncodeType);
             this.SetParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
             this.SetParamObj(map, prefix + "Functions.", this.Functions);
-            this.SetParamSimple(map, prefix + "StudentUrl", this.StudentUrl);
-            this.SetParamSimple(map, prefix + "TeacherUrl", this.TeacherUrl);
             this.SetParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
         }
     }

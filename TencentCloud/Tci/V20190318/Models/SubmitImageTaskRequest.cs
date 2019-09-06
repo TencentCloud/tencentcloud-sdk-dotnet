@@ -25,7 +25,7 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 输入分析对象内容
+        /// 输入分析对象内容，输入数据格式参考FileType参数释义
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public string[] LibrarySet{ get; set; }
 
         /// <summary>
-        /// 最大的视频长度，单位毫秒，默认值为两小时
+        /// 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
         /// </summary>
         [JsonProperty("MaxVideoDuration")]
         public long? MaxVideoDuration{ get; set; }

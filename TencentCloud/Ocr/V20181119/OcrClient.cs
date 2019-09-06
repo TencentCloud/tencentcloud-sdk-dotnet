@@ -113,6 +113,26 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持识别公路汽车客票的发票代码、发票号码、日期、姓名、票价等字段。
+        /// </summary>
+        /// <param name="req">参考<see cref="BusInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="BusInvoiceOCRResponse"/>实例</returns>
+        public async Task<BusInvoiceOCRResponse> BusInvoiceOCR(BusInvoiceOCRRequest req)
+        {
+             JsonResponseModel<BusInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BusInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BusInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持名片各字段的自动定位与识别，包含姓名、电话、手机号、邮箱、公司、部门、职位、网址、地址、QQ、微信、MSN等。
         /// </summary>
         /// <param name="req">参考<see cref="BusinessCardOCRRequest"/></param>
@@ -164,6 +184,26 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "DriverLicenseOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DriverLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持对完税证明的税号、纳税人识别号、纳税人名称、金额合计大写、金额合计小写、填发日期、税务机关、填票人等关键字段的识别。
+        /// </summary>
+        /// <param name="req">参考<see cref="DutyPaidProofOCRRequest"/></param>
+        /// <returns>参考<see cref="DutyPaidProofOCRResponse"/>实例</returns>
+        public async Task<DutyPaidProofOCRResponse> DutyPaidProofOCR(DutyPaidProofOCRRequest req)
+        {
+             JsonResponseModel<DutyPaidProofOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DutyPaidProofOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DutyPaidProofOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -253,6 +293,26 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持多场景、任意版面下整图文字的识别。相较于“通用印刷体识别”接口，精简版接口在准召率有一定损失的情况下，耗时更短。适用于对接口耗时较为敏感的客户。
+        /// </summary>
+        /// <param name="req">参考<see cref="GeneralEfficientOCRRequest"/></param>
+        /// <returns>参考<see cref="GeneralEfficientOCRResponse"/>实例</returns>
+        public async Task<GeneralEfficientOCRResponse> GeneralEfficientOCR(GeneralEfficientOCRRequest req)
+        {
+             JsonResponseModel<GeneralEfficientOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GeneralEfficientOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GeneralEfficientOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持图片中整体文字的检测和识别，返回文字框位置与文字内容。相比通用印刷体识别接口，识别速度更快、支持的 QPS 更高。
         /// </summary>
         /// <param name="req">参考<see cref="GeneralFastOCRRequest"/></param>
@@ -304,6 +364,26 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "IDCardOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<IDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持对通用机打发票的发票代码、发票号码、日期、购买方识别号、销售方识别号、校验码、小写金额等关键字段的识别。
+        /// </summary>
+        /// <param name="req">参考<see cref="InvoiceGeneralOCRRequest"/></param>
+        /// <returns>参考<see cref="InvoiceGeneralOCRResponse"/>实例</returns>
+        public async Task<InvoiceGeneralOCRResponse> InvoiceGeneralOCR(InvoiceGeneralOCRRequest req)
+        {
+             JsonResponseModel<InvoiceGeneralOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InvoiceGeneralOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvoiceGeneralOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -375,6 +455,66 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持多张、多类型票据的混合检测和自动分类，返回对应票据类型。目前已支持增值税发票、增值税发票（卷票）、定额发票、通用机打发票、购车发票、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票、酒店账单、客运限额发票、购物小票、完税证明共15种票据。
+        /// </summary>
+        /// <param name="req">参考<see cref="MixedInvoiceDetectRequest"/></param>
+        /// <returns>参考<see cref="MixedInvoiceDetectResponse"/>实例</returns>
+        public async Task<MixedInvoiceDetectResponse> MixedInvoiceDetect(MixedInvoiceDetectRequest req)
+        {
+             JsonResponseModel<MixedInvoiceDetectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MixedInvoiceDetect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MixedInvoiceDetectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持多张、多类型票据的混合识别，系统自动实现分割、分类和识别。目前已支持增值税发票、增值税发票（卷票）、定额发票、通用机打发票、购车发票、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票共11种票据。
+        /// </summary>
+        /// <param name="req">参考<see cref="MixedInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="MixedInvoiceOCRResponse"/>实例</returns>
+        public async Task<MixedInvoiceOCRResponse> MixedInvoiceOCR(MixedInvoiceOCRRequest req)
+        {
+             JsonResponseModel<MixedInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MixedInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MixedInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持中国大陆护照、中国香港护照、泰国护照及其他国外护照个人资料页多个字段的检测与识别。其中中国大陆居民护照识别，已支持字段包括英文姓名、中文姓名、国家码、护照号、出生地、出生日期、国籍英文、性别英文、有效期、签发地点英文、签发日期、持证人签名、护照机读码（MRZ码）等。中国香港护照、泰国护照及其他国外护照识别，已支持字段包括英文姓名、国籍、签发日期、性别、护照号码等。
+        /// </summary>
+        /// <param name="req">参考<see cref="PassportOCRRequest"/></param>
+        /// <returns>参考<see cref="PassportOCRResponse"/>实例</returns>
+        public async Task<PassportOCRResponse> PassportOCR(PassportOCRRequest req)
+        {
+             JsonResponseModel<PassportOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PassportOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PassportOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持对卡式港澳台通行证的识别，包括签发地点、签发机关、有效期限、性别、出生日期、英文姓名、姓名、证件号等字段。
         /// </summary>
         /// <param name="req">参考<see cref="PermitOCRRequest"/></param>
@@ -406,6 +546,26 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "QuotaInvoiceOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuotaInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价等字段。
+        /// </summary>
+        /// <param name="req">参考<see cref="ShipInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="ShipInvoiceOCRResponse"/>实例</returns>
+        public async Task<ShipInvoiceOCRResponse> ShipInvoiceOCR(ShipInvoiceOCRRequest req)
+        {
+             JsonResponseModel<ShipInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ShipInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ShipInvoiceOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -455,6 +615,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
+        /// </summary>
+        /// <param name="req">参考<see cref="TextDetectRequest"/></param>
+        /// <returns>参考<see cref="TextDetectResponse"/>实例</returns>
+        public async Task<TextDetectResponse> TextDetect(TextDetectRequest req)
+        {
+             JsonResponseModel<TextDetectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TextDetect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextDetectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持对过路过桥费发票的发票代码、发票号码、日期、小写金额等关键字段的识别。
+        /// </summary>
+        /// <param name="req">参考<see cref="TollInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="TollInvoiceOCRResponse"/>实例</returns>
+        public async Task<TollInvoiceOCRResponse> TollInvoiceOCR(TollInvoiceOCRRequest req)
+        {
+             JsonResponseModel<TollInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TollInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TollInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持火车票全字段的识别，包括编号、票价、姓名、座位号、出发时间、出发站、到达站、车次、席别等。
         /// </summary>
         /// <param name="req">参考<see cref="TrainTicketOCRRequest"/></param>
@@ -486,6 +686,26 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "VatInvoiceOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<VatInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持对增值税发票（卷票）的发票代码、发票号码、日期、校验码、合计金额（小写）等关键字段的识别。
+        /// </summary>
+        /// <param name="req">参考<see cref="VatRollInvoiceOCRRequest"/></param>
+        /// <returns>参考<see cref="VatRollInvoiceOCRResponse"/>实例</returns>
+        public async Task<VatRollInvoiceOCRResponse> VatRollInvoiceOCR(VatRollInvoiceOCRRequest req)
+        {
+             JsonResponseModel<VatRollInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VatRollInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VatRollInvoiceOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

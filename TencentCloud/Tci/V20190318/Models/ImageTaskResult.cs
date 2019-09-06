@@ -82,7 +82,7 @@ namespace TencentCloud.Tci.V20190318.Models
         /// 学生肢体动作识别结果
         /// </summary>
         [JsonProperty("StudentBodyMovement")]
-        public BodyMovementResult StudentBodyMovement{ get; set; }
+        public StudentBodyMovementResult StudentBodyMovement{ get; set; }
 
         /// <summary>
         /// 老师肢体动作识别结果

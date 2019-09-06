@@ -31,19 +31,19 @@ namespace TencentCloud.Tci.V20190318.Models
         public string Direction{ get; set; }
 
         /// <summary>
-        /// Pitch
+        /// 围绕Z轴旋转角度，俯仰角
         /// </summary>
         [JsonProperty("Pitch")]
         public float? Pitch{ get; set; }
 
         /// <summary>
-        /// Roll
+        /// 围绕X轴旋转角度，翻滚角
         /// </summary>
         [JsonProperty("Roll")]
         public float? Roll{ get; set; }
 
         /// <summary>
-        /// 角度信息选填
+        /// 围绕Y轴旋转角度，偏航角
         /// </summary>
         [JsonProperty("Yaw")]
         public float? Yaw{ get; set; }

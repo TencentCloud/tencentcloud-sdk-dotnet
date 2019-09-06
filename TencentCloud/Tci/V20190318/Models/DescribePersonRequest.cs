@@ -25,16 +25,16 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 人员唯一标识符
-        /// </summary>
-        [JsonProperty("PersonId")]
-        public string PersonId{ get; set; }
-
-        /// <summary>
         /// 人员库唯一标识符
         /// </summary>
         [JsonProperty("LibraryId")]
         public string LibraryId{ get; set; }
+
+        /// <summary>
+        /// 人员唯一标识符
+        /// </summary>
+        [JsonProperty("PersonId")]
+        public string PersonId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tci.V20190318.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "LibraryId", this.LibraryId);
+            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
         }
     }
 }

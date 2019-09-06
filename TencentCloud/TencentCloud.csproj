@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.38</VersionPrefix>
+    <VersionPrefix>3.0.39</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1178,8 +1178,12 @@
     <Compile Include="Cdn\V20180606\CdnClient.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheOptResult.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnData.cs" />
+    <Compile Include="Cdn\V20180606\Models\CdnIp.cs" />
+    <Compile Include="Cdn\V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCdnIpRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCdnIpResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpVisitRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpVisitResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeMapInfoRequest.cs" />
@@ -1188,6 +1192,10 @@
     <Compile Include="Cdn\V20180606\Models\DescribeOriginDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribePayTypeRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribePayTypeResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribePurgeTasksRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribePushTasksRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribePushTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableCachesRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableCachesResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\EnableCachesRequest.cs" />
@@ -1197,6 +1205,14 @@
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\MapInfo.cs" />
+    <Compile Include="Cdn\V20180606\Models\PurgePathCacheRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\PurgePathCacheResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\PurgeTask.cs" />
+    <Compile Include="Cdn\V20180606\Models\PurgeUrlsCacheRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\PurgeUrlsCacheResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\PushTask.cs" />
+    <Compile Include="Cdn\V20180606\Models\PushUrlsCacheRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\PushUrlsCacheResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ResourceData.cs" />
     <Compile Include="Cdn\V20180606\Models\ResourceOriginData.cs" />
     <Compile Include="Cdn\V20180606\Models\SummarizedData.cs" />
@@ -3249,6 +3265,9 @@
     <Compile Include="Ocr\V20181119\Models\BankCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\BizLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\BizLicenseOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\BusInvoiceInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\BusInvoiceOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\BusInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\BusinessCardInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\BusinessCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\BusinessCardOCRResponse.cs" />
@@ -3258,6 +3277,9 @@
     <Compile Include="Ocr\V20181119\Models\Coord.cs" />
     <Compile Include="Ocr\V20181119\Models\DriverLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\DriverLicenseOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\DutyPaidProofInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\DutyPaidProofOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\DutyPaidProofOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\EnglishOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\EnglishOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\FlightInvoiceInfo.cs" />
@@ -3267,27 +3289,47 @@
     <Compile Include="Ocr\V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralBasicOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralBasicOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\GeneralEfficientOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\GeneralEfficientOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralFastOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralFastOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralHandwritingOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\GeneralHandwritingOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\IDCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\IDCardOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\InvoiceDetectInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\InvoiceGeneralInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\InvoiceGeneralOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\InvoiceGeneralOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\LicensePlateOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\LicensePlateOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDPassportOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\MLIDPassportOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\MixedInvoiceDetectRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\MixedInvoiceDetectResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\MixedInvoiceItem.cs" />
+    <Compile Include="Ocr\V20181119\Models\MixedInvoiceOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\MixedInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\PassportOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\PassportOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\Rect.cs" />
+    <Compile Include="Ocr\V20181119\Models\ShipInvoiceInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\ShipInvoiceOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\ShipInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\SingleInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\TableOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TableOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TaxiInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TaxiInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TextArithmetic.cs" />
+    <Compile Include="Ocr\V20181119\Models\TextDetectRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\TextDetectResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TextDetection.cs" />
     <Compile Include="Ocr\V20181119\Models\TextDetectionEn.cs" />
     <Compile Include="Ocr\V20181119\Models\TextGeneralHandwriting.cs" />
@@ -3296,10 +3338,16 @@
     <Compile Include="Ocr\V20181119\Models\TextVehicleBack.cs" />
     <Compile Include="Ocr\V20181119\Models\TextVehicleFront.cs" />
     <Compile Include="Ocr\V20181119\Models\TextWaybill.cs" />
+    <Compile Include="Ocr\V20181119\Models\TollInvoiceInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\TollInvoiceOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\TollInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatRollInvoiceInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatRollInvoiceOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatRollInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VehicleLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VehicleLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VinOCRRequest.cs" />
@@ -3881,6 +3929,7 @@
     <Compile Include="Tci\V20190318\Models\StandardImageResult.cs" />
     <Compile Include="Tci\V20190318\Models\StandardVideoResult.cs" />
     <Compile Include="Tci\V20190318\Models\StatInfo.cs" />
+    <Compile Include="Tci\V20190318\Models\StudentBodyMovementResult.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitAudioTaskRequest.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitAudioTaskResponse.cs" />
     <Compile Include="Tci\V20190318\Models\SubmitCheckAttendanceTaskRequest.cs" />

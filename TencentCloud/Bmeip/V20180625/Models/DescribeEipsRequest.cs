@@ -106,7 +106,7 @@ namespace TencentCloud.Bmeip.V20180625.Models
         /// EIP ACL实例ID
         /// </summary>
         [JsonProperty("AclId")]
-        public long? AclId{ get; set; }
+        public string AclId{ get; set; }
 
         /// <summary>
         /// 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定

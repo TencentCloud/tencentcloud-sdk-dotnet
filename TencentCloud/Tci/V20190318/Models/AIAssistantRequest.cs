@@ -25,13 +25,13 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 输入分析对象内容
+        /// 输入分析对象内容，输入数据格式参考FileType参数释义
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }
 
         /// <summary>
-        /// 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,audio_url: 音频文件
+        /// 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，audio_url: 音频文件，picture：图片二进制数据的BASE64编码
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public string[] LibrarySet{ get; set; }
 
         /// <summary>
-        /// 直播流评估时间，在FileType为live_url时生效，默认值为10分钟。
+        /// 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
         /// </summary>
         [JsonProperty("MaxVideoDuration")]
         public long? MaxVideoDuration{ get; set; }

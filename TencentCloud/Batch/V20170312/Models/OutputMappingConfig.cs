@@ -37,7 +37,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? WorkerNum{ get; set; }
 
         /// <summary>
-        /// worker分块大小
+        /// worker分块大小，单位MB
         /// </summary>
         [JsonProperty("WorkerPartSize")]
         public long? WorkerPartSize{ get; set; }

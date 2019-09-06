@@ -25,25 +25,25 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 躯体动作识别结果
+        /// 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
         /// </summary>
         [JsonProperty("BodyPosture")]
         public ActionType BodyPosture{ get; set; }
 
         /// <summary>
-        /// 举手识别结果
+        /// 举手识别结果，包含举手（hand）和未检测到举手（nothand）
         /// </summary>
         [JsonProperty("Handup")]
         public ActionType Handup{ get; set; }
 
         /// <summary>
-        /// 是否低头识别结果
+        /// 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
         /// </summary>
         [JsonProperty("LookHead")]
         public ActionType LookHead{ get; set; }
 
         /// <summary>
-        /// 是否写字识别结果
+        /// 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
         /// </summary>
         [JsonProperty("Writing")]
         public ActionType Writing{ get; set; }

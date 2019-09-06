@@ -25,7 +25,7 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 光照程度
+        /// 光照程度，参考提交任务时的LightStandard指定的Name参数
         /// </summary>
         [JsonProperty("LightLevel")]
         public string LightLevel{ get; set; }

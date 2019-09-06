@@ -43,7 +43,7 @@ namespace TencentCloud.Bmeip.V20180625.Models
         public string Eip{ get; set; }
 
         /// <summary>
-        /// 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：香港
+        /// 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
         /// </summary>
         [JsonProperty("IspId")]
         public long? IspId{ get; set; }

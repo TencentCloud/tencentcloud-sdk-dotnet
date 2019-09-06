@@ -25,7 +25,8 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 动作识别结果
+        /// 动作识别结果，InScreen：在屏幕内
+        /// OutScreen：不在屏幕内
         /// </summary>
         [JsonProperty("Class")]
         public string Class{ get; set; }

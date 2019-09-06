@@ -31,7 +31,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 表情识别结果
+        /// 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
         /// </summary>
         [JsonProperty("Expression")]
         public string Expression{ get; set; }

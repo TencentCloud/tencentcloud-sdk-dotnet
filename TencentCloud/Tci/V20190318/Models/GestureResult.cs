@@ -25,7 +25,7 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
-        /// 识别结果
+        /// 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
         /// </summary>
         [JsonProperty("Class")]
         public string Class{ get; set; }

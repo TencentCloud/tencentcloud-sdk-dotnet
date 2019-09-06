@@ -43,7 +43,11 @@ namespace TencentCloud.Tci.V20190318.Models
         public long? Left{ get; set; }
 
         /// <summary>
-        /// 动作识别结果
+        /// 老师动作识别结果，包含
+        /// 1、teach_on_positive_attitude 正面讲解
+        /// 2、point_to_the_blackboard 指黑板
+        /// 3、writing_blackboard 写板书
+        /// 4、other 其他
         /// </summary>
         [JsonProperty("Movements")]
         public string Movements{ get; set; }

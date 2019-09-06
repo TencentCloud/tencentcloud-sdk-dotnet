@@ -82,6 +82,26 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DescribeCdnIp 用于查询 CDN IP 归属。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCdnIpRequest"/></param>
+        /// <returns>参考<see cref="DescribeCdnIpResponse"/>实例</returns>
+        public async Task<DescribeCdnIpResponse> DescribeCdnIp(DescribeCdnIpRequest req)
+        {
+             JsonResponseModel<DescribeCdnIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCdnIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeIpVisit 用于查询 5 分钟活跃用户数，及日活跃用户数明细
         /// 
         /// + 5 分钟活跃用户数：根据日志中客户端 IP，5 分钟粒度去重统计
@@ -175,6 +195,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePurgeTasksRequest"/></param>
+        /// <returns>参考<see cref="DescribePurgeTasksResponse"/>实例</returns>
+        public async Task<DescribePurgeTasksResponse> DescribePurgeTasks(DescribePurgeTasksRequest req)
+        {
+             JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePurgeTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePurgeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribePushTasks 用于查询预热任务提交历史记录及执行进度。（接口尚在批量公测中，暂未全量开放使用）
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePushTasksRequest"/></param>
+        /// <returns>参考<see cref="DescribePushTasksResponse"/>实例</returns>
+        public async Task<DescribePushTasksResponse> DescribePushTasks(DescribePushTasksRequest req)
+        {
+             JsonResponseModel<DescribePushTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePushTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePushTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，全网访问会直接返回 403。（接口尚在内测中，暂未全量开放使用）
         /// </summary>
         /// <param name="req">参考<see cref="DisableCachesRequest"/></param>
@@ -252,6 +312,66 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = await this.InternalRequest(req, "ListTopData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+        /// </summary>
+        /// <param name="req">参考<see cref="PurgePathCacheRequest"/></param>
+        /// <returns>参考<see cref="PurgePathCacheResponse"/>实例</returns>
+        public async Task<PurgePathCacheResponse> PurgePathCache(PurgePathCacheRequest req)
+        {
+             JsonResponseModel<PurgePathCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PurgePathCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PurgePathCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
+        /// </summary>
+        /// <param name="req">参考<see cref="PurgeUrlsCacheRequest"/></param>
+        /// <returns>参考<see cref="PurgeUrlsCacheResponse"/>实例</returns>
+        public async Task<PurgeUrlsCacheResponse> PurgeUrlsCache(PurgeUrlsCacheRequest req)
+        {
+             JsonResponseModel<PurgeUrlsCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PurgeUrlsCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PurgeUrlsCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，默认情况下每次调用可提交 20 条 URL，每日一共可提交 1000 条。
+        /// </summary>
+        /// <param name="req">参考<see cref="PushUrlsCacheRequest"/></param>
+        /// <returns>参考<see cref="PushUrlsCacheResponse"/>实例</returns>
+        public async Task<PushUrlsCacheResponse> PushUrlsCache(PushUrlsCacheRequest req)
+        {
+             JsonResponseModel<PushUrlsCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PushUrlsCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PushUrlsCacheResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
