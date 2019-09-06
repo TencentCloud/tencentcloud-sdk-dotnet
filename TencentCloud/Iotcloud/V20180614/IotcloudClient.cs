@@ -53,6 +53,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（BindDevices）用于网关设备批量绑定子设备
+        /// </summary>
+        /// <param name="req">参考<see cref="BindDevicesRequest"/></param>
+        /// <returns>参考<see cref="BindDevicesResponse"/>实例</returns>
+        public async Task<BindDevicesResponse> BindDevices(BindDevicesRequest req)
+        {
+             JsonResponseModel<BindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CancelTask）用于取消一个未被调度的任务。
         /// </summary>
         /// <param name="req">参考<see cref="CancelTaskRequest"/></param>
@@ -624,6 +644,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = await this.InternalRequest(req, "ResetDeviceState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备
+        /// </summary>
+        /// <param name="req">参考<see cref="UnbindDevicesRequest"/></param>
+        /// <returns>参考<see cref="UnbindDevicesResponse"/>实例</returns>
+        public async Task<UnbindDevicesResponse> UnbindDevices(UnbindDevicesRequest req)
+        {
+             JsonResponseModel<UnbindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用或者禁用设备
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateDeviceAvailableStateRequest"/></param>
+        /// <returns>参考<see cref="UpdateDeviceAvailableStateResponse"/>实例</returns>
+        public async Task<UpdateDeviceAvailableStateResponse> UpdateDeviceAvailableState(UpdateDeviceAvailableStateRequest req)
+        {
+             JsonResponseModel<UpdateDeviceAvailableStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDeviceAvailableState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceAvailableStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// CMQ 的模型，有 Queue 和 Topic 两种。
+        /// CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
         /// </summary>
         [JsonProperty("CmqModel")]
         public string CmqModel{ get; set; }

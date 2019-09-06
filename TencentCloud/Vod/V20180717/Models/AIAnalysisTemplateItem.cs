@@ -71,6 +71,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }
 
         /// <summary>
+        /// 智能精彩集锦任务控制参数。
+        /// </summary>
+        [JsonProperty("HighlightConfigure")]
+        public HighlightsConfigureInfo HighlightConfigure{ get; set; }
+
+        /// <summary>
         /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -95,6 +101,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "TagConfigure.", this.TagConfigure);
             this.SetParamObj(map, prefix + "CoverConfigure.", this.CoverConfigure);
             this.SetParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
+            this.SetParamObj(map, prefix + "HighlightConfigure.", this.HighlightConfigure);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

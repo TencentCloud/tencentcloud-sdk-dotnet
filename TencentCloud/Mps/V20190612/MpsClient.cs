@@ -703,6 +703,31 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 对直播流媒体发起处理任务，功能包括：
+        /// 
+        /// 1. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
+        /// 2. 智能内容分析（精彩集锦）。
+        /// 
+        /// 直播流处理事件通知实时写入用户指定的消息队列 CMQ 中，用户需要从消息队列 CMQ 中获取事件通知结果，同时处理过程中存在输出文件的，会写入用户指定的输出文件的目标存储中。
+        /// </summary>
+        /// <param name="req">参考<see cref="ProcessLiveMediaRequest"/></param>
+        /// <returns>参考<see cref="ProcessLiveMediaResponse"/>实例</returns>
+        public async Task<ProcessLiveMediaResponse> ProcessLiveMedia(ProcessLiveMediaRequest req)
+        {
+             JsonResponseModel<ProcessLiveMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ProcessLiveMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessLiveMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对 COS 中的媒体文件发起处理任务，功能包括：
         /// 1. 视频转码（带水印）；
         /// 2. 视频转动图；

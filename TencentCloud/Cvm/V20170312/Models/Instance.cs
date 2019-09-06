@@ -170,6 +170,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("StopChargingMode")]
         public string StopChargingMode{ get; set; }
 
+        /// <summary>
+        /// 实例全局唯一ID
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -200,6 +206,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "StopChargingMode", this.StopChargingMode);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
         }
     }
 }

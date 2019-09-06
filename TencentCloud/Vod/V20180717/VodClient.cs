@@ -180,6 +180,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义转动图模板，数量上限：16。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateAnimatedGraphicsTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateAnimatedGraphicsTemplateResponse"/>实例</returns>
+        public async Task<CreateAnimatedGraphicsTemplateResponse> CreateAnimatedGraphicsTemplate(CreateAnimatedGraphicsTemplateRequest req)
+        {
+             JsonResponseModel<CreateAnimatedGraphicsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAnimatedGraphicsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAnimatedGraphicsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 用于对媒体进行分类管理；
         /// * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
         /// * 分类层次不可超过 4 层。
@@ -223,6 +243,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建用户自定义雪碧图模板，数量上限：16。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateImageSpriteTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateImageSpriteTemplateResponse"/>实例</returns>
+        public async Task<CreateImageSpriteTemplateResponse> CreateImageSpriteTemplate(CreateImageSpriteTemplateRequest req)
+        {
+             JsonResponseModel<CreateImageSpriteTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImageSpriteTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageSpriteTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
         /// </summary>
         /// <param name="req">参考<see cref="CreatePersonSampleRequest"/></param>
@@ -254,6 +294,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "CreateProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户自定义采样截图模板，数量上限：16。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateSampleSnapshotTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateSampleSnapshotTemplateResponse"/>实例</returns>
+        public async Task<CreateSampleSnapshotTemplateResponse> CreateSampleSnapshotTemplate(CreateSampleSnapshotTemplateRequest req)
+        {
+             JsonResponseModel<CreateSampleSnapshotTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSampleSnapshotTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSampleSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户自定义指定时间点截图模板，数量上限：16。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateSnapshotByTimeOffsetTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateSnapshotByTimeOffsetTemplateResponse"/>实例</returns>
+        public async Task<CreateSnapshotByTimeOffsetTemplateResponse> CreateSnapshotByTimeOffsetTemplate(CreateSnapshotByTimeOffsetTemplateRequest req)
+        {
+             JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSnapshotByTimeOffsetTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotByTimeOffsetTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -365,6 +445,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 删除用户自定义转动图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteAnimatedGraphicsTemplateResponse"/>实例</returns>
+        public async Task<DeleteAnimatedGraphicsTemplateResponse> DeleteAnimatedGraphicsTemplate(DeleteAnimatedGraphicsTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAnimatedGraphicsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAnimatedGraphicsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
         /// * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
         /// </summary>
@@ -397,6 +497,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DeleteContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除雪碧图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteImageSpriteTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteImageSpriteTemplateResponse"/>实例</returns>
+        public async Task<DeleteImageSpriteTemplateResponse> DeleteImageSpriteTemplate(DeleteImageSpriteTemplateRequest req)
+        {
+             JsonResponseModel<DeleteImageSpriteTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImageSpriteTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageSpriteTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -458,6 +578,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DeleteProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义采样截图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteSampleSnapshotTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteSampleSnapshotTemplateResponse"/>实例</returns>
+        public async Task<DeleteSampleSnapshotTemplateResponse> DeleteSampleSnapshotTemplate(DeleteSampleSnapshotTemplateRequest req)
+        {
+             JsonResponseModel<DeleteSampleSnapshotTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSampleSnapshotTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义指定时间点截图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteSnapshotByTimeOffsetTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteSnapshotByTimeOffsetTemplateResponse"/>实例</returns>
+        public async Task<DeleteSnapshotByTimeOffsetTemplateResponse> DeleteSnapshotByTimeOffsetTemplate(DeleteSnapshotByTimeOffsetTemplateRequest req)
+        {
+             JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSnapshotByTimeOffsetTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -587,6 +747,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 查询转动图模板列表，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAnimatedGraphicsTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeAnimatedGraphicsTemplatesResponse"/>实例</returns>
+        public async Task<DescribeAnimatedGraphicsTemplatesResponse> DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAnimatedGraphicsTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -598,6 +778,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeContentReviewTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeContentReviewTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询雪碧图模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeImageSpriteTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeImageSpriteTemplatesResponse"/>实例</returns>
+        public async Task<DescribeImageSpriteTemplatesResponse> DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeImageSpriteTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageSpriteTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -679,8 +879,8 @@ namespace TencentCloud.Vod.V20180717
         /// <summary>
         /// 该接口返回查询时间范围内每天使用的视频内容审核时长数据，单位： 秒。
         /// 
-        /// 1. 可以查询最近90天内的视频内容审核时长统计数据。
-        /// 2. 查询时间跨度不超过60天。
+        /// 1. 可以查询最近365天内的视频内容审核时长统计数据。
+        /// 2. 查询时间跨度不超过90天。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeReviewDetailsRequest"/></param>
         /// <returns>参考<see cref="DescribeReviewDetailsResponse"/>实例</returns>
@@ -691,6 +891,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeReviewDetails");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReviewDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询采样截图模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSampleSnapshotTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeSampleSnapshotTemplatesResponse"/>实例</returns>
+        public async Task<DescribeSampleSnapshotTemplatesResponse> DescribeSampleSnapshotTemplates(DescribeSampleSnapshotTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeSampleSnapshotTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSampleSnapshotTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSampleSnapshotTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间点截图模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSnapshotByTimeOffsetTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeSnapshotByTimeOffsetTemplatesResponse"/>实例</returns>
+        public async Task<DescribeSnapshotByTimeOffsetTemplatesResponse> DescribeSnapshotByTimeOffsetTemplates(DescribeSnapshotByTimeOffsetTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotByTimeOffsetTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotByTimeOffsetTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -958,6 +1198,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改用户自定义转动图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyAnimatedGraphicsTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyAnimatedGraphicsTemplateResponse"/>实例</returns>
+        public async Task<ModifyAnimatedGraphicsTemplateResponse> ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAnimatedGraphicsTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAnimatedGraphicsTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改媒体分类属性。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyClassRequest"/></param>
@@ -998,6 +1258,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改用户自定义雪碧图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyImageSpriteTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyImageSpriteTemplateResponse"/>实例</returns>
+        public async Task<ModifyImageSpriteTemplateResponse> ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req)
+        {
+             JsonResponseModel<ModifyImageSpriteTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyImageSpriteTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImageSpriteTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面等。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyMediaInfoRequest"/></param>
@@ -1029,6 +1309,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "ModifyPersonSample");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户自定义采样截图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifySampleSnapshotTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifySampleSnapshotTemplateResponse"/>实例</returns>
+        public async Task<ModifySampleSnapshotTemplateResponse> ModifySampleSnapshotTemplate(ModifySampleSnapshotTemplateRequest req)
+        {
+             JsonResponseModel<ModifySampleSnapshotTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySampleSnapshotTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户自定义指定时间点截图模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifySnapshotByTimeOffsetTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifySnapshotByTimeOffsetTemplateResponse"/>实例</returns>
+        public async Task<ModifySnapshotByTimeOffsetTemplateResponse> ModifySnapshotByTimeOffsetTemplate(ModifySnapshotByTimeOffsetTemplateRequest req)
+        {
+             JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySnapshotByTimeOffsetTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotByTimeOffsetTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

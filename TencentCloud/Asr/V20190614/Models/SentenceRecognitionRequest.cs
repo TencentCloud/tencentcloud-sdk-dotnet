@@ -37,7 +37,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? SubServiceType{ get; set; }
 
         /// <summary>
-        /// 引擎类型。8k：电话 8k 通用模型；16k：16k 通用模型。只支持单声道音频识别。
+        /// 引擎类型。8k：电话 8k 中文普通话通用；16k：16k 中文普通话通用；16k_en：16k 英语；16k_ca：16k 粤语。
         /// </summary>
         [JsonProperty("EngSerViceType")]
         public string EngSerViceType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? SourceType{ get; set; }
 
         /// <summary>
-        /// 识别音频的音频格式（支持mp3,wav）。
+        /// 识别音频的音频格式。mp3、wav。
         /// </summary>
         [JsonProperty("VoiceFormat")]
         public string VoiceFormat{ get; set; }

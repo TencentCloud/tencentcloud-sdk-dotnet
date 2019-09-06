@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.37</VersionPrefix>
+    <VersionPrefix>3.0.38</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -171,8 +171,14 @@
     <Compile Include="As\V20180419\Models\UpgradeLifecycleHookRequest.cs" />
     <Compile Include="As\V20180419\Models\UpgradeLifecycleHookResponse.cs" />
     <Compile Include="Asr\V20190614\AsrClient.cs" />
+    <Compile Include="Asr\V20190614\Models\CreateRecTaskRequest.cs" />
+    <Compile Include="Asr\V20190614\Models\CreateRecTaskResponse.cs" />
+    <Compile Include="Asr\V20190614\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="Asr\V20190614\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="Asr\V20190614\Models\SentenceRecognitionRequest.cs" />
     <Compile Include="Asr\V20190614\Models\SentenceRecognitionResponse.cs" />
+    <Compile Include="Asr\V20190614\Models\Task.cs" />
+    <Compile Include="Asr\V20190614\Models\TaskStatus.cs" />
     <Compile Include="Batch\V20170312\BatchClient.cs" />
     <Compile Include="Batch\V20170312\Models\Activity.cs" />
     <Compile Include="Batch\V20170312\Models\AgentRunningMode.cs" />
@@ -1904,10 +1910,13 @@
     <Compile Include="Ecc\V20181213\Models\Aspect.cs" />
     <Compile Include="Ecc\V20181213\Models\CompostionContext.cs" />
     <Compile Include="Ecc\V20181213\Models\CorrectData.cs" />
+    <Compile Include="Ecc\V20181213\Models\DescribeTaskRequest.cs" />
+    <Compile Include="Ecc\V20181213\Models\DescribeTaskResponse.cs" />
     <Compile Include="Ecc\V20181213\Models\ECCRequest.cs" />
     <Compile Include="Ecc\V20181213\Models\ECCResponse.cs" />
     <Compile Include="Ecc\V20181213\Models\EHOCRRequest.cs" />
     <Compile Include="Ecc\V20181213\Models\EHOCRResponse.cs" />
+    <Compile Include="Ecc\V20181213\Models\ErrorCoordinate.cs" />
     <Compile Include="Ecc\V20181213\Models\ScoreCategory.cs" />
     <Compile Include="Ecc\V20181213\Models\SentenceCom.cs" />
     <Compile Include="Ecc\V20181213\Models\SentenceItem.cs" />
@@ -1978,8 +1987,12 @@
     <Compile Include="Facefusion\V20181201\FacefusionClient.cs" />
     <Compile Include="Facefusion\V20181201\Models\FaceFusionRequest.cs" />
     <Compile Include="Facefusion\V20181201\Models\FaceFusionResponse.cs" />
+    <Compile Include="Facefusion\V20181201\Models\FaceRect.cs" />
+    <Compile Include="Facefusion\V20181201\Models\FuseFaceRequest.cs" />
+    <Compile Include="Facefusion\V20181201\Models\FuseFaceResponse.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewDetail.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewResult.cs" />
+    <Compile Include="Facefusion\V20181201\Models\MergeInfo.cs" />
     <Compile Include="Faceid\V20180301\FaceidClient.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCard2EVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCard2EVerificationResponse.cs" />
@@ -2419,6 +2432,8 @@
     <Compile Include="Iotcloud\V20180614\Models\Attribute.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BatchPublishMessage.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BatchUpdateShadow.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\BindDevicesRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\BindDevicesResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BrokerSubscribe.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CancelTaskRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CancelTaskResponse.cs" />
@@ -2488,6 +2503,10 @@
     <Compile Include="Iotcloud\V20180614\Models\Task.cs" />
     <Compile Include="Iotcloud\V20180614\Models\TaskInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\TopicRulePayload.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\UnbindDevicesRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\UnbindDevicesResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceAvailableStateRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceAvailableStateResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceShadowRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceShadowResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateTopicPolicyRequest.cs" />
@@ -2986,7 +3005,6 @@
     <Compile Include="Monitor\V20180724\Models\MetricSet.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Mps\V20190612\MpsClient.cs" />
-    <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\AiAnalysisTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\AiContentReviewTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\AiRecognitionTaskInput.cs" />
@@ -3084,6 +3102,8 @@
     <Compile Include="Mps\V20190612\Models\ModifyWatermarkTemplateRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyWatermarkTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\NumberFormat.cs" />
+    <Compile Include="Mps\V20190612\Models\ProcessLiveMediaRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\ProcessLiveMediaResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ProcessMediaRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ProcessMediaResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ResetWorkflowRequest.cs" />
@@ -3094,6 +3114,8 @@
     <Compile Include="Mps\V20190612\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="Mps\V20190612\Models\SvgWatermarkInput.cs" />
     <Compile Include="Mps\V20190612\Models\SvgWatermarkInputForUpdate.cs" />
+    <Compile Include="Mps\V20190612\Models\TEHDConfig.cs" />
+    <Compile Include="Mps\V20190612\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\TaskNotifyConfig.cs" />
     <Compile Include="Mps\V20190612\Models\TaskOutputStorage.cs" />
     <Compile Include="Mps\V20190612\Models\TaskSimpleInfo.cs" />
@@ -4294,6 +4316,7 @@
     <Compile Include="Vod\V20180717\Models\AiSampleWord.cs" />
     <Compile Include="Vod\V20180717\Models\AiSampleWordInfo.cs" />
     <Compile Include="Vod\V20180717\Models\AnimatedGraphicTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\AnimatedGraphicsTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\ApplyUploadRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ApplyUploadResponse.cs" />
     <Compile Include="Vod\V20180717\Models\AsrFullTextConfigureInfo.cs" />
@@ -4331,15 +4354,23 @@
     <Compile Include="Vod\V20180717\Models\CreateAIAnalysisTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateAIRecognitionTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateAIRecognitionTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateAnimatedGraphicsTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateContentReviewTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTask2017.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateImageSpriteTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreatePersonSampleRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateProcedureTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateProcedureTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateSampleSnapshotTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateWatermarkTemplateRequest.cs" />
@@ -4350,16 +4381,24 @@
     <Compile Include="Vod\V20180717\Models\DeleteAIAnalysisTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteAIRecognitionTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteAIRecognitionTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteAnimatedGraphicsTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteContentReviewTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteImageSpriteTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteMediaResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeletePersonSampleRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteProcedureTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteProcedureTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteSampleSnapshotTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteSampleSnapshotTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteSnapshotByTimeOffsetTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteSnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteWatermarkTemplateRequest.cs" />
@@ -4372,8 +4411,12 @@
     <Compile Include="Vod\V20180717\Models\DescribeAIRecognitionTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAllClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAllClassResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribePersonSamplesRequest.cs" />
@@ -4382,6 +4425,10 @@
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeSampleSnapshotTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeSampleSnapshotTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeSnapshotByTimeOffsetTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeSnapshotByTimeOffsetTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeSubAppIdsRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeSubAppIdsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTaskDetailRequest.cs" />
@@ -4414,7 +4461,11 @@
     <Compile Include="Vod\V20180717\Models\FrameTagConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\HeadTailConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HeadTailConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\HighlightSegmentItem.cs" />
+    <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageSpriteTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageTransform.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInputForUpdate.cs" />
@@ -4474,14 +4525,22 @@
     <Compile Include="Vod\V20180717\Models\ModifyAIAnalysisTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyAIRecognitionTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyAIRecognitionTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyAnimatedGraphicsTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyImageSpriteTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyPersonSampleRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyPersonSampleResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySampleSnapshotTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySampleSnapshotTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySnapshotByTimeOffsetTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifySnapshotByTimeOffsetTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifySubAppIdInfoRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifySubAppIdInfoResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifySubAppIdStatusRequest.cs" />
@@ -4534,6 +4593,7 @@
     <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SegmentConfigureInfo.cs" />
@@ -4543,6 +4603,7 @@
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffset2017.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
     <Compile Include="Vod\V20180717\Models\StatDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\StickerTrackItem.cs" />
@@ -4550,6 +4611,7 @@
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\SvgWatermarkInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TEHDConfig.cs" />
+    <Compile Include="Vod\V20180717\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TaskSimpleInfo.cs" />

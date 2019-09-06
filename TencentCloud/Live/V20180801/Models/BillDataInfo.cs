@@ -42,6 +42,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Flux")]
         public float? Flux{ get; set; }
 
+        /// <summary>
+        /// 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+        /// </summary>
+        [JsonProperty("PeakTime")]
+        public string PeakTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Flux", this.Flux);
+            this.SetParamSimple(map, prefix + "PeakTime", this.PeakTime);
         }
     }
 }

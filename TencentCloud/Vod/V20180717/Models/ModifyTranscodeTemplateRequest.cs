@@ -77,6 +77,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
+        /// 极速高清转码参数，需联系商务架构师开通后才能使用。
+        /// </summary>
+        [JsonProperty("TEHDConfig")]
+        public TEHDConfigForUpdate TEHDConfig{ get; set; }
+
+        /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -96,6 +102,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
+            this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

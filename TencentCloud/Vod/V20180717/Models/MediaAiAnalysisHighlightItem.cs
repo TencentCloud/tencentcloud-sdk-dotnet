@@ -25,28 +25,34 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 智能精彩片段地址。
+        /// 智能精彩集锦地址。
         /// </summary>
         [JsonProperty("HighlightUrl")]
         public string HighlightUrl{ get; set; }
 
         /// <summary>
-        /// 智能精彩片段封面地址。
+        /// 智能精彩集锦封面地址。
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }
 
         /// <summary>
-        /// 智能精彩片段的可信度，取值范围是 0 到 100。
+        /// 智能精彩集锦的可信度，取值范围是 0 到 100。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 智能精彩片段持续时间。
+        /// 智能精彩集锦持续时间。
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
+
+        /// <summary>
+        /// 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+        /// </summary>
+        [JsonProperty("SegmentSet")]
+        public HighlightSegmentItem[] SegmentSet{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         }
     }
 }

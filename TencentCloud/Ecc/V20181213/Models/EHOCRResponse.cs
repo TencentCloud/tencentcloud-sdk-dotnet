@@ -25,7 +25,7 @@ namespace TencentCloud.Ecc.V20181213.Models
     {
         
         /// <summary>
-        /// 识别后的作文内容
+        /// 接口返回数据
         /// </summary>
         [JsonProperty("Data")]
         public CompostionContext Data{ get; set; }

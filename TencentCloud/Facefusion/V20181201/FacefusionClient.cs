@@ -74,5 +74,25 @@ namespace TencentCloud.Facefusion.V20181201
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 选脸融合
+        /// </summary>
+        /// <param name="req">参考<see cref="FuseFaceRequest"/></param>
+        /// <returns>参考<see cref="FuseFaceResponse"/>实例</returns>
+        public async Task<FuseFaceResponse> FuseFace(FuseFaceRequest req)
+        {
+             JsonResponseModel<FuseFaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FuseFace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FuseFaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

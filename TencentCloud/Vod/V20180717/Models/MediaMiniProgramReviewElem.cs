@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 审核结果置信度。取值 0~100。
         /// </summary>
         [JsonProperty("Confidence")]
-        public string Confidence{ get; set; }
+        public float? Confidence{ get; set; }
 
 
         /// <summary>

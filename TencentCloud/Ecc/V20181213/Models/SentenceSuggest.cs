@@ -54,6 +54,18 @@ namespace TencentCloud.Ecc.V20181213.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 维度单词位置，在句子的第几个到第几个单词之间
+        /// </summary>
+        [JsonProperty("ErrorPosition")]
+        public long?[] ErrorPosition{ get; set; }
+
+        /// <summary>
+        /// 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+        /// </summary>
+        [JsonProperty("ErrorCoordinates")]
+        public ErrorCoordinate[] ErrorCoordinates{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +77,8 @@ namespace TencentCloud.Ecc.V20181213.Models
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "Replace", this.Replace);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamArraySimple(map, prefix + "ErrorPosition.", this.ErrorPosition);
+            this.SetParamArrayObj(map, prefix + "ErrorCoordinates.", this.ErrorCoordinates);
         }
     }
 }

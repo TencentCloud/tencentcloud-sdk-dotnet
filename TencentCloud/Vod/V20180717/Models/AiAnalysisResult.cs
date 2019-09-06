@@ -30,6 +30,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Cover：智能封面</li>
         /// <li>Tag：智能标签</li>
         /// <li>FrameTag：智能按帧标签</li>
+        /// <li>Highlight：智能精彩集锦</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -63,11 +64,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
         /// <summary>
-        /// 视频内容分析智能按集锦任务的查询结果，当任务类型为 Highlight 时有效。
+        /// 视频内容分析智能精彩集锦任务的查询结果，当任务类型为 Highlight 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("HighlightsTask")]
-        public AiAnalysisTaskHighlightResult[] HighlightsTask{ get; set; }
+        [JsonProperty("HighlightTask")]
+        public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
 
 
         /// <summary>
@@ -80,7 +81,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CoverTask.", this.CoverTask);
             this.SetParamObj(map, prefix + "TagTask.", this.TagTask);
             this.SetParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
-            this.SetParamArrayObj(map, prefix + "HighlightsTask.", this.HighlightsTask);
+            this.SetParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
         }
     }
 }

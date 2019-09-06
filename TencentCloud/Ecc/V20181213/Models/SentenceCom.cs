@@ -25,13 +25,13 @@ namespace TencentCloud.Ecc.V20181213.Models
     {
         
         /// <summary>
-        /// 点评内容
+        /// 句子错误纠正信息
         /// </summary>
         [JsonProperty("Suggestions")]
         public SentenceSuggest[] Suggestions{ get; set; }
 
         /// <summary>
-        /// 点评的句子信息
+        /// 句子信息
         /// </summary>
         [JsonProperty("Sentence")]
         public SentenceItem Sentence{ get; set; }

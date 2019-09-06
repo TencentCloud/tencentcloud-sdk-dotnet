@@ -67,6 +67,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public FrameTagConfigureInfoForUpdate FrameTagConfigure{ get; set; }
 
         /// <summary>
+        /// 智能精彩集锦任务控制参数。
+        /// </summary>
+        [JsonProperty("HighlightConfigure")]
+        public HighlightsConfigureInfoForUpdate HighlightConfigure{ get; set; }
+
+        /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "TagConfigure.", this.TagConfigure);
             this.SetParamObj(map, prefix + "CoverConfigure.", this.CoverConfigure);
             this.SetParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
+            this.SetParamObj(map, prefix + "HighlightConfigure.", this.HighlightConfigure);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

@@ -76,6 +76,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
+        /// <summary>
+        /// 极速高清转码参数，需联系商务架构师开通后才能使用。
+        /// </summary>
+        [JsonProperty("TEHDConfig")]
+        public TEHDConfigForUpdate TEHDConfig{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -90,6 +96,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
+            this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         }
     }
 }

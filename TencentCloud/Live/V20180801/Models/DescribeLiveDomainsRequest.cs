@@ -54,6 +54,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("IsDelayLive")]
         public ulong? IsDelayLive{ get; set; }
 
+        /// <summary>
+        /// 域名前缀
+        /// </summary>
+        [JsonProperty("DomainPrefix")]
+        public string DomainPrefix{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+            this.SetParamSimple(map, prefix + "DomainPrefix", this.DomainPrefix);
         }
     }
 }

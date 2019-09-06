@@ -47,6 +47,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ContainerType{ get; set; }
 
         /// <summary>
+        /// 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+        /// <li>Common：普通转码模板；</li>
+        /// <li>TEHD：极速高清模板。</li>
+        /// </summary>
+        [JsonProperty("TEHDType")]
+        public string TEHDType{ get; set; }
+
+        /// <summary>
         /// 分页偏移量，默认值：0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -73,6 +81,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ContainerType", this.ContainerType);
+            this.SetParamSimple(map, prefix + "TEHDType", this.TEHDType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);

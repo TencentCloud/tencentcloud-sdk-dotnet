@@ -25,28 +25,40 @@ namespace TencentCloud.Ecc.V20181213.Models
     {
         
         /// <summary>
-        /// 词汇项
+        /// 词汇维度
         /// </summary>
         [JsonProperty("Words")]
         public Aspect Words{ get; set; }
 
         /// <summary>
-        /// 句子项
+        /// 句子维度
         /// </summary>
         [JsonProperty("Sentences")]
         public Aspect Sentences{ get; set; }
 
         /// <summary>
-        /// 篇章结构
+        /// 篇章结构维度
         /// </summary>
         [JsonProperty("Structure")]
         public Aspect Structure{ get; set; }
 
         /// <summary>
-        /// 内容
+        /// 内容维度
         /// </summary>
         [JsonProperty("Content")]
         public Aspect Content{ get; set; }
+
+        /// <summary>
+        /// 维度得分
+        /// </summary>
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
+
+        /// <summary>
+        /// 维度分数占比
+        /// </summary>
+        [JsonProperty("Percentage")]
+        public float? Percentage{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Ecc.V20181213.Models
             this.SetParamObj(map, prefix + "Sentences.", this.Sentences);
             this.SetParamObj(map, prefix + "Structure.", this.Structure);
             this.SetParamObj(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "Percentage", this.Percentage);
         }
     }
 }

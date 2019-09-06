@@ -30,6 +30,27 @@ namespace TencentCloud.Ecc.V20181213.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 批改结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CorrectData")]
+        public CorrectData CorrectData{ get; set; }
+
+        /// <summary>
+        /// 任务 id，用于查询接口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 图像识别唯一标识，一次识别一个 SessionId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +58,9 @@ namespace TencentCloud.Ecc.V20181213.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamObj(map, prefix + "CorrectData.", this.CorrectData);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

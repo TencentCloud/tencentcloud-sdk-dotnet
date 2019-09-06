@@ -53,6 +53,26 @@ namespace TencentCloud.Ecc.V20181213
         }
 
         /// <summary>
+        /// 异步任务结果查询接口
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTaskRequest"/></param>
+        /// <returns>参考<see cref="DescribeTaskResponse"/>实例</returns>
+        public async Task<DescribeTaskResponse> DescribeTask(DescribeTaskRequest req)
+        {
+             JsonResponseModel<DescribeTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口请求域名： ecc.tencentcloudapi.com 
         /// 纯文本英语作文批改
         /// </summary>
@@ -75,7 +95,7 @@ namespace TencentCloud.Ecc.V20181213
 
         /// <summary>
         /// https://ecc.tencentcloudapi.com/?Action=EHOCR
-        /// 作文识别
+        /// 图像识别批改接口
         /// </summary>
         /// <param name="req">参考<see cref="EHOCRRequest"/></param>
         /// <returns>参考<see cref="EHOCRResponse"/>实例</returns>

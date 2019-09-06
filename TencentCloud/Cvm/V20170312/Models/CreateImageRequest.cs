@@ -43,7 +43,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageDescription{ get; set; }
 
         /// <summary>
-        /// 软关机失败时是否执行强制关机以制作镜像
+        /// 是否执行强制关机以制作镜像。
+        /// 取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
         /// </summary>
         [JsonProperty("ForcePoweroff")]
         public string ForcePoweroff{ get; set; }
@@ -55,19 +56,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Sysprep{ get; set; }
 
         /// <summary>
-        /// 实例处于运行中时，是否允许关机执行制作镜像任务。
-        /// </summary>
-        [JsonProperty("Reboot")]
-        public string Reboot{ get; set; }
-
-        /// <summary>
         /// 实例需要制作镜像的数据盘Id
         /// </summary>
         [JsonProperty("DataDiskIds")]
         public string[] DataDiskIds{ get; set; }
 
         /// <summary>
-        /// 需要制作镜像的快照Id,必须包含一个系统盘快照
+        /// 需要制作镜像的快照ID,必须包含一个系统盘快照
         /// </summary>
         [JsonProperty("SnapshotIds")]
         public string[] SnapshotIds{ get; set; }
@@ -89,7 +84,6 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
             this.SetParamSimple(map, prefix + "ForcePoweroff", this.ForcePoweroff);
             this.SetParamSimple(map, prefix + "Sysprep", this.Sysprep);
-            this.SetParamSimple(map, prefix + "Reboot", this.Reboot);
             this.SetParamArraySimple(map, prefix + "DataDiskIds.", this.DataDiskIds);
             this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);

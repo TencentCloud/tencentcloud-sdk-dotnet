@@ -63,6 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 开始时间。
         /// 使用UTC格式时间，
         /// 例如：2019-01-08T10:00:00Z。
+        /// 格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -75,6 +76,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 
         /// 使用UTC格式时间，
         /// 例如：2019-01-08T10:00:00Z。
+        /// 格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

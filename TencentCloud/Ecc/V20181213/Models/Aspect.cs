@@ -25,16 +25,22 @@ namespace TencentCloud.Ecc.V20181213.Models
     {
         
         /// <summary>
-        /// 项目 名字
+        /// 维度名字
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 该项得分
+        /// 维度得分
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
+
+        /// <summary>
+        /// 维度分数占比
+        /// </summary>
+        [JsonProperty("Percentage")]
+        public float? Percentage{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ecc.V20181213.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "Percentage", this.Percentage);
         }
     }
 }
