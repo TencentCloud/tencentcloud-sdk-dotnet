@@ -25,12 +25,6 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Token
-        /// </summary>
-        [JsonProperty("ClientToken")]
-        public string ClientToken{ get; set; }
-
-        /// <summary>
         /// 时间单位
         /// </summary>
         [JsonProperty("TimeUnit")]
@@ -55,6 +49,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? PayMode{ get; set; }
 
         /// <summary>
+        /// Token
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
+        /// <summary>
         /// 预执行脚本设置
         /// </summary>
         [JsonProperty("PreExecutedFileSettings")]
@@ -72,20 +72,27 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CoreCount")]
         public ulong? CoreCount{ get; set; }
 
+        /// <summary>
+        /// 扩容时不需要安装的进程
+        /// </summary>
+        [JsonProperty("UnNecessaryNodeList")]
+        public ulong?[] UnNecessaryNodeList{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
             this.SetParamSimple(map, prefix + "TaskCount", this.TaskCount);
             this.SetParamSimple(map, prefix + "CoreCount", this.CoreCount);
+            this.SetParamArraySimple(map, prefix + "UnNecessaryNodeList.", this.UnNecessaryNodeList);
         }
     }
 }

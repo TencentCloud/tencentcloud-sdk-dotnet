@@ -67,6 +67,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("NeedRecordNum")]
         public long? NeedRecordNum{ get; set; }
 
+        /// <summary>
+        /// 查询指定产品信息
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// 付费模式 prePay/postPay
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// 查询指定资源信息
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -80,6 +98,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

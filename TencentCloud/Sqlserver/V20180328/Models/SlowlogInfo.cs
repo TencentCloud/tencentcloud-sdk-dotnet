@@ -66,6 +66,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("ExternalAddr")]
         public string ExternalAddr{ get; set; }
 
+        /// <summary>
+        /// 状态（1成功 2失败）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +86,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
             this.SetParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

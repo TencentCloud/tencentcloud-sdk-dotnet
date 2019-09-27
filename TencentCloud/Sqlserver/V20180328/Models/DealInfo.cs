@@ -54,6 +54,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
+        /// <summary>
+        /// 实例付费类型
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         }
     }
 }

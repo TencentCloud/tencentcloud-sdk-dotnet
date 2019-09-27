@@ -43,10 +43,10 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? RealServerWeight{ get; set; }
 
         /// <summary>
-        /// 源站状态，异常状态包括IP连接不上和域名解析失败（源站为域名）。其中：
-        /// 0，源站正常；
-        /// 1，IP异常；
-        /// 2，域名解析异常。
+        /// 源站健康检查状态，其中：
+        /// 0，正常；
+        /// 1，异常。
+        /// 未开启健康检查状态时，该状态始终为正常。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealServerStatus")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? RealServerPort{ get; set; }
 
         /// <summary>
-        /// 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。
+        /// 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
         /// </summary>
         [JsonProperty("DownIPList")]
         public string[] DownIPList{ get; set; }

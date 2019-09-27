@@ -38,7 +38,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例
+        /// 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
         /// </summary>
         [JsonProperty("Forward")]
         public long? Forward{ get; set; }
@@ -116,8 +116,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? WithRs{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例所属私有网络，如 vpc-bhqkbhdx，
-        /// 基础网络不支持通过VpcId查询。
+        /// 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+        /// 基础网络可传入'0'。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

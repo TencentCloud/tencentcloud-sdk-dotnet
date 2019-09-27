@@ -193,6 +193,26 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="IdCardOCRVerificationRequest"/></param>
+        /// <returns>参考<see cref="IdCardOCRVerificationResponse"/>实例</returns>
+        public async Task<IdCardOCRVerificationResponse> IdCardOCRVerification(IdCardOCRVerificationRequest req)
+        {
+             JsonResponseModel<IdCardOCRVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IdCardOCRVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IdCardOCRVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 传入姓名和身份证号，校验两者的真实性和一致性。
         /// </summary>
         /// <param name="req">参考<see cref="IdCardVerificationRequest"/></param>

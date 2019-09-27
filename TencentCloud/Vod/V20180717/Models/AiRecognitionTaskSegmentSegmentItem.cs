@@ -25,6 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
         /// 视频拆条片段 Url。
         /// </summary>
         [JsonProperty("SegmentUrl")]
@@ -66,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

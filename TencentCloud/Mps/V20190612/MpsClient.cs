@@ -483,7 +483,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 用户信息查询，返回用户状态和计费类型，若未注册则返回未注册用户错误提示。
+        /// 用户服务信息查询，返回用户状态和计费类型；若未注册则返回相应错误提示。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeUserInfoRequest"/></param>
         /// <returns>参考<see cref="DescribeUserInfoResponse"/>实例</returns>

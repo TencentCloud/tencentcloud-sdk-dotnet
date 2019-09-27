@@ -25,10 +25,24 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 扩容结果
+        /// 实例ID
         /// </summary>
-        [JsonProperty("Result")]
-        public ScaleOutInstanceResult Result{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
+
+        /// <summary>
+        /// token
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +56,9 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

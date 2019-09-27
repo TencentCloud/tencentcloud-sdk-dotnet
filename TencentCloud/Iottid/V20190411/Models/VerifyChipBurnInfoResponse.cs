@@ -31,6 +31,18 @@ namespace TencentCloud.Iottid.V20190411.Models
         public bool? Pass{ get; set; }
 
         /// <summary>
+        /// 已验证次数
+        /// </summary>
+        [JsonProperty("VerifiedTimes")]
+        public ulong? VerifiedTimes{ get; set; }
+
+        /// <summary>
+        /// 剩余验证次数
+        /// </summary>
+        [JsonProperty("LeftTimes")]
+        public ulong? LeftTimes{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Iottid.V20190411.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Pass", this.Pass);
+            this.SetParamSimple(map, prefix + "VerifiedTimes", this.VerifiedTimes);
+            this.SetParamSimple(map, prefix + "LeftTimes", this.LeftTimes);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

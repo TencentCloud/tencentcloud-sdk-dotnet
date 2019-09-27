@@ -91,10 +91,23 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string SuitInfo{ get; set; }
 
         /// <summary>
-        /// 此规格对应的Pid
+        /// 此规格对应的包年包月Pid
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
+
+        /// <summary>
+        /// 此规格对应的按量计费Pid列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PostPid")]
+        public long?[] PostPid{ get; set; }
+
+        /// <summary>
+        /// 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+        /// </summary>
+        [JsonProperty("PayModeStatus")]
+        public string PayModeStatus{ get; set; }
 
 
         /// <summary>
@@ -114,6 +127,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "QPS", this.QPS);
             this.SetParamSimple(map, prefix + "SuitInfo", this.SuitInfo);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamArraySimple(map, prefix + "PostPid.", this.PostPid);
+            this.SetParamSimple(map, prefix + "PayModeStatus", this.PayModeStatus);
         }
     }
 }

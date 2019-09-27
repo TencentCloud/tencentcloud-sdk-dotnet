@@ -30,6 +30,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
 
+        /// <summary>
+        /// 代金券金额
+        /// </summary>
+        [JsonProperty("VoucherPayAmount")]
+        public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// 赠送金金额
+        /// </summary>
+        [JsonProperty("IncentivePayAmount")]
+        public string IncentivePayAmount{ get; set; }
+
+        /// <summary>
+        /// 现金金额
+        /// </summary>
+        [JsonProperty("CashPayAmount")]
+        public string CashPayAmount{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +55,9 @@ namespace TencentCloud.Billing.V20180709.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+            this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+            this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         }
     }
 }

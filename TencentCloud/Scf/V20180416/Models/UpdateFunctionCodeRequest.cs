@@ -78,6 +78,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Publish")]
         public string Publish{ get; set; }
 
+        /// <summary>
+        /// 函数代码
+        /// </summary>
+        [JsonProperty("Code")]
+        public Code Code{ get; set; }
+
+        /// <summary>
+        /// 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+        /// </summary>
+        [JsonProperty("CodeSource")]
+        public string CodeSource{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +105,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "Publish", this.Publish);
+            this.SetParamObj(map, prefix + "Code.", this.Code);
+            this.SetParamSimple(map, prefix + "CodeSource", this.CodeSource);
         }
     }
 }

@@ -96,6 +96,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Publish")]
         public string Publish{ get; set; }
 
+        /// <summary>
+        /// 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("L5Enable")]
+        public string L5Enable{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -114,6 +120,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "Publish", this.Publish);
+            this.SetParamSimple(map, prefix + "L5Enable", this.L5Enable);
         }
     }
 }

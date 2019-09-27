@@ -25,10 +25,32 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 询价结果
+        /// 刊例价
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public InquiryPriceResult Result{ get; set; }
+        [JsonProperty("OriginalCost")]
+        public float? OriginalCost{ get; set; }
+
+        /// <summary>
+        /// 折扣价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountCost")]
+        public float? DiscountCost{ get; set; }
+
+        /// <summary>
+        /// 时间单位，"s","m"
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// 时间数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public long? TimeSpan{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +64,10 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
+            this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -126,6 +126,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("RestartComputeNode")]
         public bool? RestartComputeNode{ get; set; }
 
+        /// <summary>
+        /// 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+        /// </summary>
+        [JsonProperty("ResourceMaxRetryCount")]
+        public ulong? ResourceMaxRetryCount{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -149,6 +155,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "MaxConcurrentNum", this.MaxConcurrentNum);
             this.SetParamSimple(map, prefix + "RestartComputeNode", this.RestartComputeNode);
+            this.SetParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
         }
     }
 }

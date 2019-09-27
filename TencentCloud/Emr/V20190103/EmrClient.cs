@@ -113,6 +113,26 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 续费询价。
+        /// </summary>
+        /// <param name="req">参考<see cref="InquiryPriceRenewInstanceRequest"/></param>
+        /// <returns>参考<see cref="InquiryPriceRenewInstanceResponse"/>实例</returns>
+        public async Task<InquiryPriceRenewInstanceResponse> InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 扩容询价. 当扩容时候，请通过该接口查询价格。
         /// </summary>
         /// <param name="req">参考<see cref="InquiryPriceScaleOutInstanceRequest"/></param>
@@ -124,6 +144,26 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = await this.InternalRequest(req, "InquiryPriceScaleOutInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 变配询价
+        /// </summary>
+        /// <param name="req">参考<see cref="InquiryPriceUpdateInstanceRequest"/></param>
+        /// <returns>参考<see cref="InquiryPriceUpdateInstanceResponse"/>实例</returns>
+        public async Task<InquiryPriceUpdateInstanceResponse> InquiryPriceUpdateInstance(InquiryPriceUpdateInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceUpdateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceUpdateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

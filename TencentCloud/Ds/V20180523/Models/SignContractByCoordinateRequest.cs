@@ -67,7 +67,7 @@ namespace TencentCloud.Ds.V20180523.Models
         public SignLocation[] SignLocations{ get; set; }
 
         /// <summary>
-        /// 印章ID
+        /// 签章ID
         /// </summary>
         [JsonProperty("SealResId")]
         public string SealResId{ get; set; }

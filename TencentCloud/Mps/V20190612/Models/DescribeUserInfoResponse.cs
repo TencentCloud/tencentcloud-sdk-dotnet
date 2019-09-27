@@ -37,10 +37,17 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 用户付费类型，取值：
         /// <li>DailyPayment：日结付费 ；</li>
         /// <li>MonthlyPayment：月结付费。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PaymentType")]
         public string PaymentType{ get; set; }
+
+        /// <summary>
+        /// 是否是旧版视频处理用户，取值：
+        /// <li>0：否 ；</li>
+        /// <li>1：是。</li>
+        /// </summary>
+        [JsonProperty("OldMpsUser")]
+        public long? OldMpsUser{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -56,6 +63,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "PaymentType", this.PaymentType);
+            this.SetParamSimple(map, prefix + "OldMpsUser", this.OldMpsUser);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

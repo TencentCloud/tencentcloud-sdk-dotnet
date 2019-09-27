@@ -193,6 +193,26 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 删除集群伸缩组
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteClusterAsGroupsRequest"/></param>
+        /// <returns>参考<see cref="DeleteClusterAsGroupsResponse"/>实例</returns>
+        public async Task<DeleteClusterAsGroupsResponse> DeleteClusterAsGroups(DeleteClusterAsGroupsRequest req)
+        {
+             JsonResponseModel<DeleteClusterAsGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterAsGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterAsGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除集群中的实例
         /// </summary>
         /// <param name="req">参考<see cref="DeleteClusterInstancesRequest"/></param>

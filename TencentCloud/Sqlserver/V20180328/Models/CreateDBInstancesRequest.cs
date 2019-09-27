@@ -43,7 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 付费模式，目前只支持预付费，其值为PREPAID。可不填，默认值为PREPAID
+        /// 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 数据库版本号，目前取值有2012SP3，表示SQL Server 2012；2008R2，表示SQL Server 2008 R2；2016SP1，表示SQL Server 2016 SP1。每个地域支持售卖的版本可能不一样，可以通过DescribeZones接口来拉取每个地域可售卖的版本信息。不填的话，默认为版本2008R2
+        /// sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }

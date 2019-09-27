@@ -67,7 +67,7 @@ namespace TencentCloud.Ds.V20180523.Models
         public string Remarks{ get; set; }
 
         /// <summary>
-        /// 过期时间
+        /// 合同长时间未签署的过期时间
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

@@ -168,6 +168,42 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupTime")]
         public string BackupTime{ get; set; }
 
+        /// <summary>
+        /// 实例付费模式， 0-按量计费，1-包年包月
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// 实例唯一UID
+        /// </summary>
+        [JsonProperty("Uid")]
+        public string Uid{ get; set; }
+
+        /// <summary>
+        /// 实例cpu核心数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// 实例版本代号
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// 物理机代号
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 计费ID
+        /// </summary>
+        [JsonProperty("Pid")]
+        public long? Pid{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -198,6 +234,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Pid", this.Pid);
         }
     }
 }

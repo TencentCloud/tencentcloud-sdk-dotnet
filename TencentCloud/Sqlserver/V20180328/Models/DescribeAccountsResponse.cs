@@ -37,7 +37,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public AccountDetail[] Accounts{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 总数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -50,6 +56,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

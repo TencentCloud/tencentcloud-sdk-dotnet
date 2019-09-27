@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 脚本在COS上路径
+        /// 脚本在COS上路径，已废弃
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] Args{ get; set; }
 
         /// <summary>
-        /// COS的Bucket名称
+        /// COS的Bucket名称，已废弃
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// COS的Region名称
+        /// COS的Region名称，已废弃
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// COS的Domain数据
+        /// COS的Domain数据，已废弃
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string WhenRun{ get; set; }
 
         /// <summary>
-        /// 脚本文件名
+        /// 脚本文件名，已废弃
         /// </summary>
         [JsonProperty("CosFileName")]
         public string CosFileName{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string CosSecretKey{ get; set; }
 
         /// <summary>
-        /// cos的appid
+        /// cos的appid，已废弃
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

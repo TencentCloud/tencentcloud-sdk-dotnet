@@ -61,7 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+        /// 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
         /// </summary>
         [JsonProperty("TaskPriority")]
         public long? TaskPriority{ get; set; }

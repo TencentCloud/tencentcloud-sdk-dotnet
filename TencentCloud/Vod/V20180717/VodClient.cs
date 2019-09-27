@@ -727,6 +727,26 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 查询转自适应码流模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAdaptiveDynamicStreamingTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeAdaptiveDynamicStreamingTemplatesResponse"/>实例</returns>
+        public async Task<DescribeAdaptiveDynamicStreamingTemplatesResponse> DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 获得用户的所有分类信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAllClassRequest"/></param>
@@ -758,6 +778,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeAnimatedGraphicsTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取转自适应码流音频轨模板列表，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAudioTrackTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeAudioTrackTemplatesResponse"/>实例</returns>
+        public async Task<DescribeAudioTrackTemplatesResponse> DescribeAudioTrackTemplates(DescribeAudioTrackTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAudioTrackTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAudioTrackTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAudioTrackTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1014,6 +1054,26 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = await this.InternalRequest(req, "DescribeTranscodeTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取转自适应码流视频轨模板列表，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeVideoTrackTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeVideoTrackTemplatesResponse"/>实例</returns>
+        public async Task<DescribeVideoTrackTemplatesResponse> DescribeVideoTrackTemplates(DescribeVideoTrackTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeVideoTrackTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVideoTrackTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoTrackTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

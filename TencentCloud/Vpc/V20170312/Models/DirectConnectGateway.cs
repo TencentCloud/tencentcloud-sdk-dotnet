@@ -99,6 +99,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EnableBGP")]
         public bool? EnableBGP{ get; set; }
 
+        /// <summary>
+        /// 开启和关闭BGP的community属性。
+        /// </summary>
+        [JsonProperty("EnableBGPCommunity")]
+        public bool? EnableBGPCommunity{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -116,6 +122,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
             this.SetParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
+            this.SetParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace TencentCloud.Nlp.V20190408.Models
 
         /// <summary>
         /// 词法分析模式（默认取1值）：
-        /// 1、高精度；
+        /// 1、高精度（具备混合粒度分词能力）；
         /// 2、高性能；
         /// </summary>
         [JsonProperty("Flag")]

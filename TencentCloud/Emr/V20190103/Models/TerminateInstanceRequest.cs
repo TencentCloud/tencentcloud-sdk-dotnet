@@ -30,6 +30,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 销毁节点ID
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         }
     }
 }

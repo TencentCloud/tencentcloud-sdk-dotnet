@@ -259,6 +259,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ExtraInfo")]
         public ExtraInfo ExtraInfo{ get; set; }
 
+        /// <summary>
+        /// 是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -299,6 +306,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
             this.SetParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
             this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

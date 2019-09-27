@@ -46,7 +46,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 资源描述
         /// </summary>
         [JsonProperty("ResourceSpec")]
-        public ResourceSpec ResourceSpec{ get; set; }
+        public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
         /// 支持HA
@@ -91,12 +91,6 @@ namespace TencentCloud.Emr.V20190103.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// 客户端Token
-        /// </summary>
-        [JsonProperty("ClientToken")]
-        public string ClientToken{ get; set; }
-
-        /// <summary>
         /// COS设置参数
         /// </summary>
         [JsonProperty("COSSettings")]
@@ -121,6 +115,12 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
+        /// 客户端Token
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
+        /// <summary>
         /// 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
         /// </summary>
         [JsonProperty("NeedMasterWan")]
@@ -131,6 +131,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("RemoteLoginAtCreate")]
         public long? RemoteLoginAtCreate{ get; set; }
+
+        /// <summary>
+        /// 是否开启安全集群，0表示不开启，非0表示开启
+        /// </summary>
+        [JsonProperty("CheckSecurity")]
+        public long? CheckSecurity{ get; set; }
+
+        /// <summary>
+        /// 访问外部文件系统
+        /// </summary>
+        [JsonProperty("ExtendFsField")]
+        public string ExtendFsField{ get; set; }
 
 
         /// <summary>
@@ -149,13 +161,15 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
-            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamObj(map, prefix + "COSSettings.", this.COSSettings);
             this.SetParamSimple(map, prefix + "SgId", this.SgId);
             this.SetParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "NeedMasterWan", this.NeedMasterWan);
             this.SetParamSimple(map, prefix + "RemoteLoginAtCreate", this.RemoteLoginAtCreate);
+            this.SetParamSimple(map, prefix + "CheckSecurity", this.CheckSecurity);
+            this.SetParamSimple(map, prefix + "ExtendFsField", this.ExtendFsField);
         }
     }
 }

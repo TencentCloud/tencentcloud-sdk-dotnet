@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 子产品：云产品子类，如云服务器CVM-标准型S1
+        /// 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
@@ -180,6 +180,31 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ExtendField5")]
         public string ExtendField5{ get; set; }
 
+        /// <summary>
+        /// Tag 信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public BillTagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// 付款方uin
+        /// </summary>
+        [JsonProperty("PayerUin")]
+        public string PayerUin{ get; set; }
+
+        /// <summary>
+        /// 资源所有者uin,无值则返回"-"
+        /// </summary>
+        [JsonProperty("OwnerUin")]
+        public string OwnerUin{ get; set; }
+
+        /// <summary>
+        /// 操作者uin,无值则返回"-"
+        /// </summary>
+        [JsonProperty("OperateUin")]
+        public string OperateUin{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -212,6 +237,10 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ExtendField3", this.ExtendField3);
             this.SetParamSimple(map, prefix + "ExtendField4", this.ExtendField4);
             this.SetParamSimple(map, prefix + "ExtendField5", this.ExtendField5);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+            this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
         }
     }
 }

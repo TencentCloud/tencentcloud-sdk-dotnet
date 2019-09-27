@@ -61,7 +61,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 后端服务服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+        /// 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

@@ -78,6 +78,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -93,6 +100,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "ClusterNetworkSettings.", this.ClusterNetworkSettings);
             this.SetParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.39</VersionPrefix>
+    <VersionPrefix>3.0.40</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -297,6 +297,7 @@
     <Compile Include="Billing\V20180709\Models\BillDetail.cs" />
     <Compile Include="Billing\V20180709\Models\BillDetailComponent.cs" />
     <Compile Include="Billing\V20180709\Models\BillResourceSummary.cs" />
+    <Compile Include="Billing\V20180709\Models\BillTagInfo.cs" />
     <Compile Include="Billing\V20180709\Models\BusinessSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\BusinessSummaryTotal.cs" />
     <Compile Include="Billing\V20180709\Models\Deal.cs" />
@@ -314,6 +315,8 @@
     <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByProjectResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByRegionRequest.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByRegionResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByTagRequest.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeBillSummaryByTagResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDealsByCondRequest.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDealsByCondResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDosageDetailByDateRequest.cs" />
@@ -326,6 +329,7 @@
     <Compile Include="Billing\V20180709\Models\ProductInfo.cs" />
     <Compile Include="Billing\V20180709\Models\ProjectSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="Billing\V20180709\Models\TagSummaryOverviewItem.cs" />
     <Compile Include="Bizlive\V20190313\BizliveClient.cs" />
     <Compile Include="Bizlive\V20190313\Models\DayStreamPlayInfo.cs" />
     <Compile Include="Bizlive\V20190313\Models\DescribeStreamPlayInfoListRequest.cs" />
@@ -932,6 +936,8 @@
     <Compile Include="Cbs\V20170312\Models\DescribeInstancesDiskNumResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeSnapshotOperationLogsRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeSnapshotOperationLogsResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\DescribeSnapshotSharePermissionRequest.cs" />
+    <Compile Include="Cbs\V20170312\Models\DescribeSnapshotSharePermissionResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeSnapshotsRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\DetachDisksRequest.cs" />
@@ -952,10 +958,14 @@
     <Compile Include="Cbs\V20170312\Models\ModifyAutoSnapshotPolicyAttributeResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyDiskAttributesRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyDiskAttributesResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\ModifyDisksChargeTypeRequest.cs" />
+    <Compile Include="Cbs\V20170312\Models\ModifyDisksChargeTypeResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyDisksRenewFlagRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifyDisksRenewFlagResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifySnapshotAttributeRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ModifySnapshotAttributeResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\ModifySnapshotsSharePermissionRequest.cs" />
+    <Compile Include="Cbs\V20170312\Models\ModifySnapshotsSharePermissionResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\Placement.cs" />
     <Compile Include="Cbs\V20170312\Models\Policy.cs" />
     <Compile Include="Cbs\V20170312\Models\PrepayPrice.cs" />
@@ -964,6 +974,7 @@
     <Compile Include="Cbs\V20170312\Models\RenewDiskResponse.cs" />
     <Compile Include="Cbs\V20170312\Models\ResizeDiskRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\ResizeDiskResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\SharePermission.cs" />
     <Compile Include="Cbs\V20170312\Models\Snapshot.cs" />
     <Compile Include="Cbs\V20170312\Models\SnapshotOperationLog.cs" />
     <Compile Include="Cbs\V20170312\Models\Tag.cs" />
@@ -1234,6 +1245,54 @@
     <Compile Include="Cds\V20180420\Models\ModifyDbauditInstancesRenewFlagRequest.cs" />
     <Compile Include="Cds\V20180420\Models\ModifyDbauditInstancesRenewFlagResponse.cs" />
     <Compile Include="Cds\V20180420\Models\RegionInfo.cs" />
+    <Compile Include="Cfs\V20190719\CfsClient.cs" />
+    <Compile Include="Cfs\V20190719\Models\AvailableProtoStatus.cs" />
+    <Compile Include="Cfs\V20190719\Models\AvailableRegion.cs" />
+    <Compile Include="Cfs\V20190719\Models\AvailableType.cs" />
+    <Compile Include="Cfs\V20190719\Models\AvailableZone.cs" />
+    <Compile Include="Cfs\V20190719\Models\CreateCfsFileSystemRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\CreateCfsFileSystemResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\CreateCfsPGroupRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\CreateCfsPGroupResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\CreateCfsRuleRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\CreateCfsRuleResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteCfsFileSystemRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteCfsFileSystemResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteCfsPGroupRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteCfsPGroupResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteCfsRuleRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteCfsRuleResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteMountTargetRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DeleteMountTargetResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeAvailableZoneInfoRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeAvailableZoneInfoResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsFileSystemsRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsFileSystemsResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsPGroupsRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsPGroupsResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsRulesRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsRulesResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsServiceStatusRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsServiceStatusResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeMountTargetsRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeMountTargetsResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\FileSystemInfo.cs" />
+    <Compile Include="Cfs\V20190719\Models\MountInfo.cs" />
+    <Compile Include="Cfs\V20190719\Models\PGroup.cs" />
+    <Compile Include="Cfs\V20190719\Models\PGroupInfo.cs" />
+    <Compile Include="Cfs\V20190719\Models\PGroupRuleInfo.cs" />
+    <Compile Include="Cfs\V20190719\Models\SignUpCfsServiceRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\SignUpCfsServiceResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsFileSystemNameRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsFileSystemNameResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsFileSystemPGroupRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsFileSystemPGroupResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsFileSystemSizeLimitRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsFileSystemSizeLimitResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsPGroupRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsPGroupResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleResponse.cs" />
     <Compile Include="Chdfs\V20190718\ChdfsClient.cs" />
     <Compile Include="Chdfs\V20190718\Models\AccessGroup.cs" />
     <Compile Include="Chdfs\V20190718\Models\AccessRule.cs" />
@@ -1364,6 +1423,8 @@
     <Compile Include="Clb\V20180317\Models\LoadBalancerHealth.cs" />
     <Compile Include="Clb\V20180317\Models\ManualRewriteRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ManualRewriteResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyDomainAttributesRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyDomainAttributesResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyDomainRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyDomainResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyListenerRequest.cs" />
@@ -1546,6 +1607,10 @@
     <Compile Include="Cvm\V20170312\Models\DescribeKeyPairsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesOfferingsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeZonesRequest.cs" />
@@ -1618,6 +1683,8 @@
     <Compile Include="Cvm\V20170312\Models\OsVersion.cs" />
     <Compile Include="Cvm\V20170312\Models\Placement.cs" />
     <Compile Include="Cvm\V20170312\Models\Price.cs" />
+    <Compile Include="Cvm\V20170312\Models\PurchaseReservedInstancesOfferingRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\PurchaseReservedInstancesOfferingResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\RebootInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\RebootInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\RegionInfo.cs" />
@@ -1625,6 +1692,8 @@
     <Compile Include="Cvm\V20170312\Models\RenewHostsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\RenewInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\RenewInstancesResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\ReservedInstances.cs" />
+    <Compile Include="Cvm\V20170312\Models\ReservedInstancesOffering.cs" />
     <Compile Include="Cvm\V20170312\Models\ResetInstanceRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ResetInstanceResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ResetInstancesInternetMaxBandwidthRequest.cs" />
@@ -1939,33 +2008,35 @@
     <Compile Include="Ecc\V20181213\Models\SentenceSuggest.cs" />
     <Compile Include="Emr\V20190103\EmrClient.cs" />
     <Compile Include="Emr\V20190103\Models\COSSettings.cs" />
-    <Compile Include="Emr\V20190103\Models\ClusterInfoResult.cs" />
-    <Compile Include="Emr\V20190103\Models\ClusterInstanceInfo.cs" />
+    <Compile Include="Emr\V20190103\Models\ClusterInstancesInfo.cs" />
     <Compile Include="Emr\V20190103\Models\CreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\CreateInstanceResponse.cs" />
-    <Compile Include="Emr\V20190103\Models\CreateInstanceResult.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
-    <Compile Include="Emr\V20190103\Models\EMRProductConfigSettings.cs" />
+    <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
-    <Compile Include="Emr\V20190103\Models\InquiryPriceResult.cs" />
+    <Compile Include="Emr\V20190103\Models\InquiryPriceRenewInstanceRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\InquiryPriceRenewInstanceResponse.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceScaleOutInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceScaleOutInstanceResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\InquiryPriceUpdateInstanceRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\InquiryPriceUpdateInstanceResponse.cs" />
     <Compile Include="Emr\V20190103\Models\LoginSettings.cs" />
     <Compile Include="Emr\V20190103\Models\MultiDisk.cs" />
-    <Compile Include="Emr\V20190103\Models\NodeSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\NewResourceSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\OutterResource.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
-    <Compile Include="Emr\V20190103\Models\ResourceSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\PriceResource.cs" />
+    <Compile Include="Emr\V20190103\Models\Resource.cs" />
     <Compile Include="Emr\V20190103\Models\ScaleOutInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\ScaleOutInstanceResponse.cs" />
-    <Compile Include="Emr\V20190103\Models\ScaleOutInstanceResult.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceResponse.cs" />
-    <Compile Include="Emr\V20190103\Models\TerminateResult.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateTasksRequest.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateTasksResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\UpdateInstanceSettings.cs" />
     <Compile Include="Emr\V20190103\Models\VPCSettings.cs" />
     <Compile Include="Es\V20180416\EsClient.cs" />
     <Compile Include="Es\V20180416\Models\CosBackup.cs" />
@@ -2024,6 +2095,8 @@
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetLiveCodeRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetLiveCodeResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\IdCardOCRVerificationRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\IdCardOCRVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\ImageRecognitionRequest.cs" />
@@ -2589,6 +2662,8 @@
     <Compile Include="Iottid\V20190411\Models\DeliverTidNotifyResponse.cs" />
     <Compile Include="Iottid\V20190411\Models\DeliverTidsRequest.cs" />
     <Compile Include="Iottid\V20190411\Models\DeliverTidsResponse.cs" />
+    <Compile Include="Iottid\V20190411\Models\DescribeAvailableLibCountRequest.cs" />
+    <Compile Include="Iottid\V20190411\Models\DescribeAvailableLibCountResponse.cs" />
     <Compile Include="Iottid\V20190411\Models\DescribePermissionRequest.cs" />
     <Compile Include="Iottid\V20190411\Models\DescribePermissionResponse.cs" />
     <Compile Include="Iottid\V20190411\Models\DownloadTidsRequest.cs" />
@@ -3021,6 +3096,7 @@
     <Compile Include="Monitor\V20180724\Models\MetricSet.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Mps\V20190612\MpsClient.cs" />
+    <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\AiAnalysisTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\AiContentReviewTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\AiRecognitionTaskInput.cs" />
@@ -3233,6 +3309,7 @@
     <Compile Include="Nlp\V20190408\Models\DependencyParsingRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\DependencyParsingResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DpToken.cs" />
+    <Compile Include="Nlp\V20190408\Models\EvilToken.cs" />
     <Compile Include="Nlp\V20190408\Models\Keyword.cs" />
     <Compile Include="Nlp\V20190408\Models\KeywordsExtractionRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\KeywordsExtractionResponse.cs" />
@@ -3250,6 +3327,8 @@
     <Compile Include="Nlp\V20190408\Models\SentimentAnalysisResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\SimilarWordsRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\SimilarWordsResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextApprovalRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextApprovalResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextClassificationRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextClassificationResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextCorrectionRequest.cs" />
@@ -3483,6 +3562,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeSlowLogRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeSlowLogResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeTaskInfoRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DestroyPostpaidInstanceRequest.cs" />
@@ -3503,6 +3584,7 @@
     <Compile Include="Redis\V20180412\Models\InstanceParamHistory.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceSecurityGroupDetail.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceSet.cs" />
+    <Compile Include="Redis\V20180412\Models\InstanceSlowlogDetail.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTagInfo.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTextParam.cs" />
     <Compile Include="Redis\V20180412\Models\ManualBackupInstanceRequest.cs" />
@@ -3703,6 +3785,8 @@
     <Compile Include="Sqlserver\V20180328\Models\RunMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SpecInfo.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\TerminateDBInstanceRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\TerminateDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ZoneInfo.cs" />
@@ -4063,6 +4147,7 @@
     <Compile Include="Tiia\V20190529\Models\RecognizeCarRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\RecognizeCarResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\TerrorismResult.cs" />
+    <Compile Include="Tiia\V20190529\Models\TextResult.cs" />
     <Compile Include="Tke\V20180525\TkeClient.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
@@ -4081,6 +4166,8 @@
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterRequest.cs" />
@@ -4118,6 +4205,8 @@
     <Compile Include="Tke\V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="Tke\V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="Tke\V20180525\Models\Tag.cs" />
+    <Compile Include="Tke\V20180525\Models\TagSpecification.cs" />
     <Compile Include="Tkgdq\V20190411\TkgdqClient.cs" />
     <Compile Include="Tkgdq\V20190411\Models\DescribeEntityRequest.cs" />
     <Compile Include="Tkgdq\V20190411\Models\DescribeEntityResponse.cs" />
@@ -4274,11 +4363,15 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageVmGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroupSimple.cs" />
+    <Compile Include="Tts\V20190823\TtsClient.cs" />
+    <Compile Include="Tts\V20190823\Models\TextToVoiceRequest.cs" />
+    <Compile Include="Tts\V20190823\Models\TextToVoiceResponse.cs" />
     <Compile Include="Vod\V20180717\VodClient.cs" />
     <Compile Include="Vod\V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Vod\V20180717\Models\AIRecognitionTemplateItem.cs" />
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisResult.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisTaskClassificationInput.cs" />
     <Compile Include="Vod\V20180717\Models\AiAnalysisTaskClassificationOutput.cs" />
@@ -4375,6 +4468,7 @@
     <Compile Include="Vod\V20180717\Models\AudioTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\AudioTrackItem.cs" />
+    <Compile Include="Vod\V20180717\Models\AudioTrackTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\AudioTransform.cs" />
     <Compile Include="Vod\V20180717\Models\AudioVolumeParam.cs" />
     <Compile Include="Vod\V20180717\Models\Canvas.cs" />
@@ -4458,10 +4552,14 @@
     <Compile Include="Vod\V20180717\Models\DescribeAIAnalysisTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAIRecognitionTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAIRecognitionTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAdaptiveDynamicStreamingTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAdaptiveDynamicStreamingTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAllClassRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAudioTrackTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeAudioTrackTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
@@ -4486,6 +4584,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeTasksResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTranscodeTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTranscodeTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeVideoTrackTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeVideoTrackTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWatermarkTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWatermarkTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWordSamplesRequest.cs" />
@@ -4687,6 +4787,7 @@
     <Compile Include="Vod\V20180717\Models\VideoTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\VideoTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\VideoTrackItem.cs" />
+    <Compile Include="Vod\V20180717\Models\VideoTrackTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\WatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\WatermarkTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\WeChatMiniProgramPublishRequest.cs" />

@@ -79,6 +79,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 被复制的通道ID。只有处于运行中状态的通道可以被复制。
+        /// 当设置该参数时，表示复制该通道。
+        /// </summary>
+        [JsonProperty("ClonedProxyId")]
+        public string ClonedProxyId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -94,6 +101,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
         }
     }
 }

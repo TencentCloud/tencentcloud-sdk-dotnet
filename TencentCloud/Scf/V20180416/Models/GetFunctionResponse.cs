@@ -199,6 +199,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 是否启用L5
+        /// </summary>
+        [JsonProperty("L5Enable")]
+        public string L5Enable{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -239,6 +245,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "EipConfig.", this.EipConfig);
             this.SetParamObj(map, prefix + "AccessInfo.", this.AccessInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "L5Enable", this.L5Enable);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

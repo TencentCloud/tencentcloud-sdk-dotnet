@@ -193,6 +193,26 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 获取按标签汇总费用分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBillSummaryByTagRequest"/></param>
+        /// <returns>参考<see cref="DescribeBillSummaryByTagResponse"/>实例</returns>
+        public async Task<DescribeBillSummaryByTagResponse> DescribeBillSummaryByTag(DescribeBillSummaryByTagRequest req)
+        {
+             JsonResponseModel<DescribeBillSummaryByTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBillSummaryByTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询订单
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDealsByCondRequest"/></param>

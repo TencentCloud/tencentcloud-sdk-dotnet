@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ExpireDays{ get; set; }
 
         /// <summary>
-        /// 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+        /// 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备；默认备份方法为 逻辑冷备。
+        /// 自动备份方式，仅支持：physical - 物理冷备
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }

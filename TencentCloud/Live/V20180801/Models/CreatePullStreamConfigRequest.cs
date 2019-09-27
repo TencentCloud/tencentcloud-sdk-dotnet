@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string ToUrl{ get; set; }
 
         /// <summary>
-        /// 区域id：
+        /// 选择完成转拉推的服务所在区域:
         /// 1-深圳，
         /// 2-上海，
         /// 3-天津，
@@ -47,7 +47,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? AreaId{ get; set; }
 
         /// <summary>
-        /// 运营商id：
+        /// 选择完成转拉推服务使用的运营商网络：
         /// 1-电信，
         /// 2-移动，
         /// 3-联通，

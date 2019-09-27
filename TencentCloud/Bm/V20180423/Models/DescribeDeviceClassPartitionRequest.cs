@@ -25,13 +25,13 @@ namespace TencentCloud.Bm.V20180423.Models
     {
         
         /// <summary>
-        /// 设备类型代号。代号通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询。标准机型需要传入此参数
+        /// 设备类型代号。代号通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询。标准机型需要传入此参数。虽是可选参数，但DeviceClassCode和InstanceId参数，必须要填写一个。
         /// </summary>
         [JsonProperty("DeviceClassCode")]
         public string DeviceClassCode{ get; set; }
 
         /// <summary>
-        /// 需要查询自定义机型RAID信息时，传入自定义机型实例ID。InstanceId存在时DeviceClassCode失效
+        /// 需要查询自定义机型RAID信息时，传入自定义机型实例ID。InstanceId存在时DeviceClassCode失效。 虽是可选参数，但DeviceClassCode和InstanceId参数，必须要填写一个。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

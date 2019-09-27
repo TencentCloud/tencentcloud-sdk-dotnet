@@ -68,6 +68,13 @@ namespace TencentCloud.Tiia.V20190529.Models
         public DisgustResult DisgustResult{ get; set; }
 
         /// <summary>
+        /// 文字识别结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TextResult")]
+        public TextResult TextResult{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +92,7 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamObj(map, prefix + "PoliticsResult.", this.PoliticsResult);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamObj(map, prefix + "DisgustResult.", this.DisgustResult);
+            this.SetParamObj(map, prefix + "TextResult.", this.TextResult);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

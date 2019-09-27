@@ -42,6 +42,14 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ForwardLoadBalancers")]
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }
 
+        /// <summary>
+        /// 负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
+        /// <br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
+        /// <br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
+        /// </summary>
+        [JsonProperty("LoadBalancersCheckPolicy")]
+        public string LoadBalancersCheckPolicy{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +59,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
             this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
             this.SetParamArrayObj(map, prefix + "ForwardLoadBalancers.", this.ForwardLoadBalancers);
+            this.SetParamSimple(map, prefix + "LoadBalancersCheckPolicy", this.LoadBalancersCheckPolicy);
         }
     }
 }

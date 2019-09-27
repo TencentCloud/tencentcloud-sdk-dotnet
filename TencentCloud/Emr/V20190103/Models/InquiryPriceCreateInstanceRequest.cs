@@ -40,7 +40,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// 询价资源描述
         /// </summary>
         [JsonProperty("ResourceSpec")]
-        public ResourceSpec ResourceSpec{ get; set; }
+        public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
         /// 货币种类

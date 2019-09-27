@@ -194,7 +194,7 @@ namespace TencentCloud.Bm.V20180423.Models
 
         /// <summary>
         /// CPU型号ID，自定义机型需要传入，取值：
-        /// <br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
+        /// <br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
         /// </summary>
         [JsonProperty("CpuId")]
         public ulong? CpuId{ get; set; }
@@ -247,6 +247,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("FileSystem")]
         public string FileSystem{ get; set; }
 
+        /// <summary>
+        /// 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名做为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+        /// </summary>
+        [JsonProperty("BuySession")]
+        public string BuySession{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -290,6 +296,7 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
+            this.SetParamSimple(map, prefix + "BuySession", this.BuySession);
         }
     }
 }

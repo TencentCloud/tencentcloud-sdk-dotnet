@@ -43,6 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
 
+        /// <summary>
+        /// 元信息。包括大小、时长、视频流信息、音频流信息等。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -52,6 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
         }
     }
 }

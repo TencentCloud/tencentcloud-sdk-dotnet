@@ -113,6 +113,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
 
+        /// <summary>
+        /// 转发规则的创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -133,6 +139,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

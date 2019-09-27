@@ -67,7 +67,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// 源站状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+        /// 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
         /// </summary>
         [JsonProperty("RuleStatus")]
         public ulong? RuleStatus{ get; set; }
@@ -85,7 +85,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         public BindRealServer[] RealServerSet{ get; set; }
 
         /// <summary>
-        /// 绑定源站状态，0正常，1源站IP异常，2源站域名解析异常
+        /// 源站的服务状态，0：异常，1：正常。
+        /// 未开启健康检查时，该状态始终未正常。
+        /// 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
         /// </summary>
         [JsonProperty("BindStatus")]
         public ulong? BindStatus{ get; set; }

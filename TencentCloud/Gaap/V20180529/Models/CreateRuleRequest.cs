@@ -73,6 +73,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ForwardProtocol")]
         public string ForwardProtocol{ get; set; }
 
+        /// <summary>
+        /// 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+        /// </summary>
+        [JsonProperty("ForwardHost")]
+        public string ForwardHost{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -87,6 +93,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
             this.SetParamObj(map, prefix + "CheckParams.", this.CheckParams);
             this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
+            this.SetParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
         }
     }
 }

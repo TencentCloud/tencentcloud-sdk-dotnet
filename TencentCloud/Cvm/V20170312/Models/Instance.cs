@@ -176,6 +176,30 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
+        /// <summary>
+        /// 实例的最新操作。例：StopInstances、ResetInstance。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestOperation")]
+        public string LatestOperation{ get; set; }
+
+        /// <summary>
+        /// 实例的最新操作状态。取值范围：<br>
+        /// <li>SUCCESS：表示操作成功<br>
+        /// <li>OPERATING：表示操作执行中<br>
+        /// <li>FAILED：表示操作失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestOperationState")]
+        public string LatestOperationState{ get; set; }
+
+        /// <summary>
+        /// 实例最新操作的唯一请求 ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LatestOperationRequestId")]
+        public string LatestOperationRequestId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -207,6 +231,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "StopChargingMode", this.StopChargingMode);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
+            this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+            this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
         }
     }
 }

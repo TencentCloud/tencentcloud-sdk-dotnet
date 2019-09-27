@@ -333,6 +333,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询实例慢查询记录
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSlowLogRequest"/></param>
+        /// <returns>参考<see cref="DescribeSlowLogResponse"/>实例</returns>
+        public async Task<DescribeSlowLogResponse> DescribeSlowLog(DescribeSlowLogRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询任务结果
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTaskInfoRequest"/></param>

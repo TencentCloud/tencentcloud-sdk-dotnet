@@ -524,6 +524,27 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// ModifyDomainAttributes接口用于修改负载均衡7层监听器转发规则的域名级别属性，如修改域名、修改DefaultServer、开启/关闭Http2、修改证书。
+        /// 本接口为异步接口，本接口返回成功后，需以返回的RequestId为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyDomainAttributesRequest"/></param>
+        /// <returns>参考<see cref="ModifyDomainAttributesResponse"/>实例</returns>
+        public async Task<ModifyDomainAttributesResponse> ModifyDomainAttributes(ModifyDomainAttributesRequest req)
+        {
+             JsonResponseModel<ModifyDomainAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ModifyListener接口用来修改负载均衡监听器的属性，包括监听器名称、健康检查参数、证书信息、转发策略等。本接口不支持传统型负载均衡。
         /// 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
         /// </summary>

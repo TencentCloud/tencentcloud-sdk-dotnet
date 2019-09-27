@@ -54,6 +54,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("Detail")]
         public ActionSummaryOverviewItem[] Detail{ get; set; }
 
+        /// <summary>
+        /// 现金金额
+        /// </summary>
+        [JsonProperty("CashPayAmount")]
+        public string CashPayAmount{ get; set; }
+
+        /// <summary>
+        /// 赠送金金额
+        /// </summary>
+        [JsonProperty("IncentivePayAmount")]
+        public string IncentivePayAmount{ get; set; }
+
+        /// <summary>
+        /// 代金券金额
+        /// </summary>
+        [JsonProperty("VoucherPayAmount")]
+        public string VoucherPayAmount{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +83,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
             this.SetParamArrayObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
+            this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         }
     }
 }

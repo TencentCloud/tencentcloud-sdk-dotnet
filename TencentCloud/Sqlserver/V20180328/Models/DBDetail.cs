@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 实例id
+        /// 数据库名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -84,6 +84,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// ADJUSTING，配置变更中；
         /// ISOLATING，隔离中（欠费触发）；
         /// ISOLATED，已隔离（欠费触发）；
+        /// CLONING，复制中；
         /// UNKNOWN，未知状态。
         /// </summary>
         [JsonProperty("Status")]

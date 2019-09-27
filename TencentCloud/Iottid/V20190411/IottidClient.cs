@@ -53,7 +53,7 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        /// 单向认证测试TID
+        /// 单向认证测试TID 
         /// </summary>
         /// <param name="req">参考<see cref="AuthTestTidRequest"/></param>
         /// <returns>参考<see cref="AuthTestTidResponse"/>实例</returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        /// 安全芯片TID烧录回执
+        /// 安全芯片TID烧录回执 
         /// </summary>
         /// <param name="req">参考<see cref="BurnTidNotifyRequest"/></param>
         /// <returns>参考<see cref="BurnTidNotifyResponse"/>实例</returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        /// 安全芯片为载体的TID空发回执，绑定TID与订单号。
+        /// 安全芯片为载体的TID空发回执，绑定TID与订单号。 
         /// </summary>
         /// <param name="req">参考<see cref="DeliverTidNotifyRequest"/></param>
         /// <returns>参考<see cref="DeliverTidNotifyResponse"/>实例</returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        /// 设备服务商请求空发产品订单的TID信息
+        /// 设备服务商请求空发产品订单的TID信息 
         /// </summary>
         /// <param name="req">参考<see cref="DeliverTidsRequest"/></param>
         /// <returns>参考<see cref="DeliverTidsResponse"/>实例</returns>
@@ -133,7 +133,27 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        /// 查询企业用户TID平台控制台权限
+        /// 查询指定订单的可空发的白盒密钥数量
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAvailableLibCountRequest"/></param>
+        /// <returns>参考<see cref="DescribeAvailableLibCountResponse"/>实例</returns>
+        public async Task<DescribeAvailableLibCountResponse> DescribeAvailableLibCount(DescribeAvailableLibCountRequest req)
+        {
+             JsonResponseModel<DescribeAvailableLibCountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAvailableLibCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableLibCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业用户TID平台控制台权限 
         /// </summary>
         /// <param name="req">参考<see cref="DescribePermissionRequest"/></param>
         /// <returns>参考<see cref="DescribePermissionResponse"/>实例</returns>
@@ -153,7 +173,7 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        /// 下载芯片订单的TID
+        /// 下载芯片订单的TID 
         /// </summary>
         /// <param name="req">参考<see cref="DownloadTidsRequest"/></param>
         /// <returns>参考<see cref="DownloadTidsResponse"/>实例</returns>
@@ -173,7 +193,7 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        /// 下载控制台验证芯片烧录信息，保证TID与中心信息一致
+        /// 下载控制台验证芯片烧录信息，保证TID与中心信息一致 
         /// </summary>
         /// <param name="req">参考<see cref="VerifyChipBurnInfoRequest"/></param>
         /// <returns>参考<see cref="VerifyChipBurnInfoResponse"/>实例</returns>

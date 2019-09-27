@@ -60,6 +60,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
+        /// <summary>
+        /// 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+        /// </summary>
+        [JsonProperty("OsCustomizeType")]
+        public string OsCustomizeType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +84,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterDescription", this.ClusterDescription);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         }
     }
 }

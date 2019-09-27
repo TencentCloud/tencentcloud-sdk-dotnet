@@ -390,6 +390,26 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeSnapshotSharePermission）用于查询快照的分享信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSnapshotSharePermissionRequest"/></param>
+        /// <returns>参考<see cref="DescribeSnapshotSharePermissionResponse"/>实例</returns>
+        public async Task<DescribeSnapshotSharePermissionResponse> DescribeSnapshotSharePermission(DescribeSnapshotSharePermissionRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotSharePermissionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotSharePermission");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotSharePermissionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeSnapshots）用于查询快照的详细信息。
         /// 
         /// * 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
@@ -549,6 +569,32 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 接口请求域名： cbs.tencentcloudapi.com 。
+        /// 
+        /// 本接口 (ModifyDisksChargeType) 用于切换云盘的计费模式。
+        /// 
+        /// 只支持从 POSTPAID_BY_HOUR 计费模式切换为PREPAID计费模式。
+        /// 非弹性云盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云盘一起转换。
+        /// 默认接口请求频率限制：10次/秒。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyDisksChargeTypeRequest"/></param>
+        /// <returns>参考<see cref="ModifyDisksChargeTypeResponse"/>实例</returns>
+        public async Task<ModifyDisksChargeTypeResponse> ModifyDisksChargeType(ModifyDisksChargeTypeRequest req)
+        {
+             JsonResponseModel<ModifyDisksChargeTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDisksChargeType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksChargeTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识，支持批量修改。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyDisksRenewFlagRequest"/></param>
@@ -583,6 +629,32 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ModifySnapshotAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifySnapshotsSharePermission）用于修改快照分享信息。
+        /// 
+        /// 分享快照后，被分享账户可以通过该快照创建云硬盘。
+        /// * 每个快照最多可分享给50个账户。
+        /// * 分享快照无法更改名称，描述，仅可用于创建云硬盘。
+        /// * 只支持分享到对方账户相同地域。
+        /// * 仅支持分享数据盘快照。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifySnapshotsSharePermissionRequest"/></param>
+        /// <returns>参考<see cref="ModifySnapshotsSharePermissionResponse"/>实例</returns>
+        public async Task<ModifySnapshotsSharePermissionResponse> ModifySnapshotsSharePermission(ModifySnapshotsSharePermissionRequest req)
+        {
+             JsonResponseModel<ModifySnapshotsSharePermissionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySnapshotsSharePermission");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotsSharePermissionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

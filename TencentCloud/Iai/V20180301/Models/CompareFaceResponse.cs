@@ -25,13 +25,20 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// 两张图片中人脸的相似度分数。 
-        /// 若需要验证两张图片中人脸是否为同一人，则误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。  
-        /// 一般超过80分则可认定为同一人。 
+        /// 两张图片中人脸的相似度分数。
+        /// 不同算法版本返回的相似度分数不同。 
+        /// 若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。  一般超过50分则可认定为同一人。 
+        /// 2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。 
         /// 若需要验证两张图片中的人脸是否为同一人，建议使用人脸验证接口。
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
+
+        /// <summary>
+        /// 人脸识别所用的算法模型版本。
+        /// </summary>
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,6 +53,7 @@ namespace TencentCloud.Iai.V20180301.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

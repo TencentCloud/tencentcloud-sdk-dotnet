@@ -623,6 +623,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeReservedInstances)可提供列出用户已购买的预留实例
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns>参考<see cref="DescribeReservedInstancesResponse"/>实例</returns>
+        public async Task<DescribeReservedInstancesResponse> DescribeReservedInstances(DescribeReservedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReservedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeReservedInstancesOfferingsRequest"/></param>
+        /// <returns>参考<see cref="DescribeReservedInstancesOfferingsResponse"/>实例</returns>
+        public async Task<DescribeReservedInstancesOfferingsResponse> DescribeReservedInstancesOfferings(DescribeReservedInstancesOfferingsRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesOfferingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReservedInstancesOfferings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesOfferingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeZoneInstanceConfigInfosRequest"/></param>
@@ -1134,6 +1174,26 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ModifyKeyPairAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyKeyPairAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
+        /// </summary>
+        /// <param name="req">参考<see cref="PurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns>参考<see cref="PurchaseReservedInstancesOfferingResponse"/>实例</returns>
+        public async Task<PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest req)
+        {
+             JsonResponseModel<PurchaseReservedInstancesOfferingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PurchaseReservedInstancesOffering");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PurchaseReservedInstancesOfferingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

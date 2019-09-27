@@ -30,6 +30,12 @@ namespace TencentCloud.Nlp.V20190408.Models
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
+        /// <summary>
+        /// 指定关键词个数上限（默认值为5）
+        /// </summary>
+        [JsonProperty("Num")]
+        public ulong? Num{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +43,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "Num", this.Num);
         }
     }
 }

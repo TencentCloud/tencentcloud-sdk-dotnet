@@ -42,6 +42,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetRegionInfo")]
         public TargetRegionInfo TargetRegionInfo{ get; set; }
 
+        /// <summary>
+        /// 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+        /// </summary>
+        [JsonProperty("InternetChargeInfo")]
+        public InternetAccessible InternetChargeInfo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
+            this.SetParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
         }
     }
 }

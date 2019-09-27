@@ -813,6 +813,26 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口(TerminateDBInstance)用于主动销毁按量计费实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="TerminateDBInstanceRequest"/></param>
+        /// <returns>参考<see cref="TerminateDBInstanceResponse"/>实例</returns>
+        public async Task<TerminateDBInstanceResponse> TerminateDBInstance(TerminateDBInstanceRequest req)
+        {
+             JsonResponseModel<TerminateDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UpgradeDBInstance）用于升级实例
         /// </summary>
         /// <param name="req">参考<see cref="UpgradeDBInstanceRequest"/></param>

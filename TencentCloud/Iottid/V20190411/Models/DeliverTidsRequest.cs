@@ -31,7 +31,7 @@ namespace TencentCloud.Iottid.V20190411.Models
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 数量，1~10
+        /// 数量，1~100
         /// </summary>
         [JsonProperty("Quantity")]
         public ulong? Quantity{ get; set; }

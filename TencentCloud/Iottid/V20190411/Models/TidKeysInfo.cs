@@ -48,6 +48,18 @@ namespace TencentCloud.Iottid.V20190411.Models
         [JsonProperty("Psk")]
         public string Psk{ get; set; }
 
+        /// <summary>
+        /// 软加固白盒密钥下载地址
+        /// </summary>
+        [JsonProperty("DownloadUrl")]
+        public string DownloadUrl{ get; set; }
+
+        /// <summary>
+        /// 软加固设备标识码
+        /// </summary>
+        [JsonProperty("DeviceCode")]
+        public string DeviceCode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +70,8 @@ namespace TencentCloud.Iottid.V20190411.Models
             this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);
             this.SetParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
             this.SetParamSimple(map, prefix + "Psk", this.Psk);
+            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+            this.SetParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
         }
     }
 }

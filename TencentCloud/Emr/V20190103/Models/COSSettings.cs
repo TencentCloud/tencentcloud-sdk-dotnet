@@ -25,12 +25,6 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 日志存储在COS上的路径
-        /// </summary>
-        [JsonProperty("LogOnCosPath")]
-        public string LogOnCosPath{ get; set; }
-
-        /// <summary>
         /// COS SecretId
         /// </summary>
         [JsonProperty("CosSecretId")]
@@ -42,15 +36,21 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CosSecretKey")]
         public string CosSecretKey{ get; set; }
 
+        /// <summary>
+        /// 日志存储在COS上的路径
+        /// </summary>
+        [JsonProperty("LogOnCosPath")]
+        public string LogOnCosPath{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LogOnCosPath", this.LogOnCosPath);
             this.SetParamSimple(map, prefix + "CosSecretId", this.CosSecretId);
             this.SetParamSimple(map, prefix + "CosSecretKey", this.CosSecretKey);
+            this.SetParamSimple(map, prefix + "LogOnCosPath", this.LogOnCosPath);
         }
     }
 }

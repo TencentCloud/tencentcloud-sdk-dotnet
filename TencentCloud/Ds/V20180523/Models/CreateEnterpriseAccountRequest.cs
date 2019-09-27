@@ -43,7 +43,7 @@ namespace TencentCloud.Ds.V20180523.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 企业用户证件类型，8代表营业执照
+        /// 企业用户证件类型，8代表营业执照，详情请见常见问题
         /// </summary>
         [JsonProperty("IdentType")]
         public long? IdentType{ get; set; }

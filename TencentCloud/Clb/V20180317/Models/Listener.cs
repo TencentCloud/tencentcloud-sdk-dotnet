@@ -91,6 +91,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
+        /// <summary>
+        /// 监听器的创建时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -107,6 +114,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

@@ -149,7 +149,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? VersionNumber{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间。
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
@@ -159,6 +159,12 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
+
+        /// <summary>
+        /// 上次操作时，InstanceTypesCheckPolicy 取值。
+        /// </summary>
+        [JsonProperty("LastOperationInstanceTypesCheckPolicy")]
+        public string LastOperationInstanceTypesCheckPolicy{ get; set; }
 
 
         /// <summary>
@@ -188,6 +194,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+            this.SetParamSimple(map, prefix + "LastOperationInstanceTypesCheckPolicy", this.LastOperationInstanceTypesCheckPolicy);
         }
     }
 }

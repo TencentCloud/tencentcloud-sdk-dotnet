@@ -49,13 +49,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为 0
+        /// 页数，默认为 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为50
+        /// 页大小，默认为50
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -65,6 +65,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
+
+        /// <summary>
+        /// 付费类型检索 1-包年包月，0-按量计费
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
 
 
         /// <summary>
@@ -77,6 +83,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

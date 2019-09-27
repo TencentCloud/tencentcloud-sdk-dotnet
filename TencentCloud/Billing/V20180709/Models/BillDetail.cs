@@ -132,6 +132,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
+        /// <summary>
+        /// Tag 信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public BillTagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -156,6 +163,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

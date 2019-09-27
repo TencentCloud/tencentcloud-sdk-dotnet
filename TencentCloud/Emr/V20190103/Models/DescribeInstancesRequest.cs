@@ -25,6 +25,12 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+        /// </summary>
+        [JsonProperty("DisplayStrategy")]
+        public string DisplayStrategy{ get; set; }
+
+        /// <summary>
         /// 查询列表,  如果不填写，返回该AppId下所有实例列表
         /// </summary>
         [JsonProperty("InstanceIds")]
@@ -42,15 +48,37 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 项目列表，默认值-1
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 排序字段，当前支持以下排序字段：clusterId、addTime、status
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 排序方法，0降序，1升序
+        /// </summary>
+        [JsonProperty("Asc")]
+        public long? Asc{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DisplayStrategy", this.DisplayStrategy);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
         }
     }
 }

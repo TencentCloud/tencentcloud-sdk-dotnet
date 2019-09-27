@@ -32,7 +32,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// 最大出带宽，单位Mbps，范围支持0到65535，仅对公网属性的LB生效，默认值 10
+        /// 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
