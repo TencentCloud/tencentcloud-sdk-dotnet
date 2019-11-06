@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3表示查询PendingDelete CMK(处于计划删除状态的Key)
+        /// 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
         /// </summary>
         [JsonProperty("KeyState")]
         public ulong? KeyState{ get; set; }
@@ -59,6 +59,12 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         [JsonProperty("SearchKeyAlias")]
         public string SearchKeyAlias{ get; set; }
+
+        /// <summary>
+        /// 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+        /// </summary>
+        [JsonProperty("Origin")]
+        public string Origin{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "KeyState", this.KeyState);
             this.SetParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
+            this.SetParamSimple(map, prefix + "Origin", this.Origin);
         }
     }
 }

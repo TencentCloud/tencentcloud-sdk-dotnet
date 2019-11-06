@@ -42,6 +42,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceDeleteMode")]
         public string InstanceDeleteMode{ get; set; }
 
+        /// <summary>
+        /// 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+        /// </summary>
+        [JsonProperty("ForceDelete")]
+        public bool? ForceDelete{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "InstanceDeleteMode", this.InstanceDeleteMode);
+            this.SetParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
         }
     }
 }

@@ -53,6 +53,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 提供给用户异步调用设备动作的能力
+        /// </summary>
+        /// <param name="req">参考<see cref="CallDeviceActionAsyncRequest"/></param>
+        /// <returns>参考<see cref="CallDeviceActionAsyncResponse"/>实例</returns>
+        public async Task<CallDeviceActionAsyncResponse> CallDeviceActionAsync(CallDeviceActionAsyncRequest req)
+        {
+             JsonResponseModel<CallDeviceActionAsyncResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CallDeviceActionAsync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallDeviceActionAsyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为用户提供同步调用设备动作的能力。
+        /// </summary>
+        /// <param name="req">参考<see cref="CallDeviceActionSyncRequest"/></param>
+        /// <returns>参考<see cref="CallDeviceActionSyncResponse"/>实例</returns>
+        public async Task<CallDeviceActionSyncResponse> CallDeviceActionSync(CallDeviceActionSyncRequest req)
+        {
+             JsonResponseModel<CallDeviceActionSyncResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CallDeviceActionSync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallDeviceActionSyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据设备产品ID、设备名称，设置控制设备的属性数据。
         /// </summary>
         /// <param name="req">参考<see cref="ControlDeviceDataRequest"/></param>

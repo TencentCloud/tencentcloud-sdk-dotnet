@@ -25,13 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间，如：2018-12-12 10:24:00。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间，如：2018-12-14 10:24:00。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -50,6 +50,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 分页查询偏移量，默认为 0 （第一页）。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 分页查询限制数目，默认为20。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -60,6 +72,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

@@ -67,6 +67,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
+        /// <summary>
+        /// 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+        /// </summary>
+        [JsonProperty("SniSwitch")]
+        public long? SniSwitch{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -80,6 +86,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
+            this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         }
     }
 }

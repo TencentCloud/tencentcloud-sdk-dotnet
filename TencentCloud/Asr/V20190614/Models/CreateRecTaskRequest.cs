@@ -25,7 +25,10 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 引擎类型。8k_0：电话 8k 通用模型；16k_0：16k 通用模型；8k_6: 电话场景下单声道话者分离模型。
+        /// 引擎类型。
+        /// 8k_0：电话 8k 通用模型；
+        /// 16k_0：16k 通用模型；
+        /// 8k_6: 电话场景下单声道话者分离模型。
         /// </summary>
         [JsonProperty("EngineModelType")]
         public string EngineModelType{ get; set; }
@@ -49,7 +52,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? SourceType{ get; set; }
 
         /// <summary>
-        /// 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。
+        /// 回调 URL，用户自行搭建的用于接收识别结果的服务器地址， 长度小于2048字节。如果用户使用回调方式获取识别结果，需提交该参数；如果用户使用轮询方式获取识别结果，则无需提交该参数。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

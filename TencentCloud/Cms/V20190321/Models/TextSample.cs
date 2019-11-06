@@ -49,8 +49,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 20002：色情 
         /// 20006：涉毒违法
         /// 20007：谩骂 
+        /// 20105：广告引流 
         /// 24001：暴恐
-        /// 21000：综合
+        /// 20004/21000：综合
         /// </summary>
         [JsonProperty("EvilType")]
         public ulong? EvilType{ get; set; }

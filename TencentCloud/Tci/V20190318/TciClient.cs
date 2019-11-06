@@ -646,6 +646,26 @@ namespace TencentCloud.Tci.V20190318
         }
 
         /// <summary>
+        /// 支持多路视频流，提交高级人员考勤任务
+        /// </summary>
+        /// <param name="req">参考<see cref="SubmitCheckAttendanceTaskPlusRequest"/></param>
+        /// <returns>参考<see cref="SubmitCheckAttendanceTaskPlusResponse"/>实例</returns>
+        public async Task<SubmitCheckAttendanceTaskPlusResponse> SubmitCheckAttendanceTaskPlus(SubmitCheckAttendanceTaskPlusRequest req)
+        {
+             JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SubmitCheckAttendanceTaskPlus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对话任务分析接口
         /// </summary>
         /// <param name="req">参考<see cref="SubmitConversationTaskRequest"/></param>
@@ -744,6 +764,26 @@ namespace TencentCloud.Tci.V20190318
              {
                  var strResp = await this.InternalRequest(req, "SubmitImageTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitImageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 高级图像分析任务，开放了图像任务里的所有开关，可以根据场景深度定制图像分析任务。支持的图像类别有，图片链接、图片二进制数据、点播链接和直播链接。
+        /// </summary>
+        /// <param name="req">参考<see cref="SubmitImageTaskPlusRequest"/></param>
+        /// <returns>参考<see cref="SubmitImageTaskPlusResponse"/>实例</returns>
+        public async Task<SubmitImageTaskPlusResponse> SubmitImageTaskPlus(SubmitImageTaskPlusRequest req)
+        {
+             JsonResponseModel<SubmitImageTaskPlusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SubmitImageTaskPlus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitImageTaskPlusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

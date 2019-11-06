@@ -93,6 +93,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 创建实例子账号
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateInstanceAccountRequest"/></param>
+        /// <returns>参考<see cref="CreateInstanceAccountResponse"/>实例</returns>
+        public async Task<CreateInstanceAccountResponse> CreateInstanceAccount(CreateInstanceAccountRequest req)
+        {
+             JsonResponseModel<CreateInstanceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstanceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建redis实例
         /// </summary>
         /// <param name="req">参考<see cref="CreateInstancesRequest"/></param>
@@ -104,6 +124,26 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "CreateInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除实例子账号
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteInstanceAccountRequest"/></param>
+        /// <returns>参考<see cref="DeleteInstanceAccountResponse"/>实例</returns>
+        public async Task<DeleteInstanceAccountResponse> DeleteInstanceAccount(DeleteInstanceAccountRequest req)
+        {
+             JsonResponseModel<DeleteInstanceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInstanceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -153,6 +193,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查看实例子账号信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceAccountRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceAccountResponse"/>实例</returns>
+        public async Task<DescribeInstanceAccountResponse> DescribeInstanceAccount(DescribeInstanceAccountRequest req)
+        {
+             JsonResponseModel<DescribeInstanceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询 CRS 实例备份列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeInstanceBackupsRequest"/></param>
@@ -184,6 +244,166 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceDealDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDealDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例大Key
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorBigKeyResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorBigKeyResponse> DescribeInstanceMonitorBigKey(DescribeInstanceMonitorBigKeyRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorBigKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorBigKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例大Key大小分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorBigKeySizeDistResponse> DescribeInstanceMonitorBigKeySizeDist(DescribeInstanceMonitorBigKeySizeDistRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorBigKeySizeDist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例大Key类型分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorBigKeyTypeDistResponse> DescribeInstanceMonitorBigKeyTypeDist(DescribeInstanceMonitorBigKeyTypeDistRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorBigKeyTypeDist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例热Key
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorHotKeyRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorHotKeyResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorHotKeyResponse> DescribeInstanceMonitorHotKey(DescribeInstanceMonitorHotKeyRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorHotKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorHotKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorHotKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例访问来源信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorSIPRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorSIPResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorSIPResponse> DescribeInstanceMonitorSIP(DescribeInstanceMonitorSIPRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorSIPResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorSIP");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorSIPResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例大Key大小分布
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorTookDistRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorTookDistResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorTookDistResponse> DescribeInstanceMonitorTookDist(DescribeInstanceMonitorTookDistRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorTookDistResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorTookDist");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorTookDistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例访问命令
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorTopNCmdRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorTopNCmdResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorTopNCmdResponse> DescribeInstanceMonitorTopNCmd(DescribeInstanceMonitorTopNCmdRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorTopNCmd");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例CPU耗时
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceMonitorTopNCmdTookRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceMonitorTopNCmdTookResponse"/>实例</returns>
+        public async Task<DescribeInstanceMonitorTopNCmdTookResponse> DescribeInstanceMonitorTopNCmdTook(DescribeInstanceMonitorTopNCmdTookRequest req)
+        {
+             JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorTopNCmdTook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -524,6 +744,26 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "ModifyInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例子账号
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyInstanceAccountRequest"/></param>
+        /// <returns>参考<see cref="ModifyInstanceAccountResponse"/>实例</returns>
+        public async Task<ModifyInstanceAccountResponse> ModifyInstanceAccount(ModifyInstanceAccountRequest req)
+        {
+             JsonResponseModel<ModifyInstanceAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

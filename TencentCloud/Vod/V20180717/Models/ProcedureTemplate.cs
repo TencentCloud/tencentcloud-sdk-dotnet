@@ -31,6 +31,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 任务流模板类型，取值范围：
+        /// <li>Preset：系统预置任务流模板；</li>
+        /// <li>Custom：用户自定义任务流模板。</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 视频处理类型任务参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -59,6 +67,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
+        /// 微信小程序发布任务参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MiniProgramPublishTask")]
+        public WechatMiniProgramPublishTaskInput MiniProgramPublishTask{ get; set; }
+
+        /// <summary>
         /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -77,10 +92,12 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+            this.SetParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

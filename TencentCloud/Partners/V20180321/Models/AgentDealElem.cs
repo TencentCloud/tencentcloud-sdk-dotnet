@@ -181,6 +181,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("PayerMode")]
         public string PayerMode{ get; set; }
 
+        /// <summary>
+        /// 活动ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ActivityId")]
+        public string ActivityId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -210,6 +217,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
             this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
             this.SetParamSimple(map, prefix + "PayerMode", this.PayerMode);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
         }
     }
 }

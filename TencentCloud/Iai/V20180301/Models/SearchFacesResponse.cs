@@ -37,6 +37,12 @@ namespace TencentCloud.Iai.V20180301.Models
         public ulong? FaceNum{ get; set; }
 
         /// <summary>
+        /// 人脸识别所用的算法模型版本。
+        /// </summary>
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Iai.V20180301.Models
         {
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
             this.SetParamSimple(map, prefix + "FaceNum", this.FaceNum);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -72,6 +72,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
+        /// <summary>
+        /// 是否开启节点的默认安全组(默认: 否，Aphla特性)
+        /// </summary>
+        [JsonProperty("NeedWorkSecurityGroup")]
+        public bool? NeedWorkSecurityGroup{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -86,6 +92,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
         }
     }
 }

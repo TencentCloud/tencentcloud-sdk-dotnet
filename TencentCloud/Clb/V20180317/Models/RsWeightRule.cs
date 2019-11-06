@@ -31,16 +31,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID
-        /// </summary>
-        [JsonProperty("LocationId")]
-        public string LocationId{ get; set; }
-
-        /// <summary>
         /// 要修改权重的后端机器列表
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
+
+        /// <summary>
+        /// 转发规则的ID，七层规则时需要此参数，4层规则不需要
+        /// </summary>
+        [JsonProperty("LocationId")]
+        public string LocationId{ get; set; }
 
         /// <summary>
         /// 目标规则的域名，提供LocationId参数时本参数不生效
@@ -67,8 +67,8 @@ namespace TencentCloud.Clb.V20180317.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
-            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
             this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);

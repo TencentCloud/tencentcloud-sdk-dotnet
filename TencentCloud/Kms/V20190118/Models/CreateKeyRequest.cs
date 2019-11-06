@@ -43,7 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyUsage{ get; set; }
 
         /// <summary>
-        /// 指定key类型，1为当前地域默认类型，默认为1，且当前只支持该类型
+        /// 指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

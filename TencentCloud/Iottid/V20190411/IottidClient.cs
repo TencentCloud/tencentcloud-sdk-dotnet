@@ -193,6 +193,26 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
+        /// 上传硬件唯一标识码，是软加固设备身份参数。本接口如遇到错误数据，则所有当次上传数据失效。
+        /// </summary>
+        /// <param name="req">参考<see cref="UploadDeviceUniqueCodeRequest"/></param>
+        /// <returns>参考<see cref="UploadDeviceUniqueCodeResponse"/>实例</returns>
+        public async Task<UploadDeviceUniqueCodeResponse> UploadDeviceUniqueCode(UploadDeviceUniqueCodeRequest req)
+        {
+             JsonResponseModel<UploadDeviceUniqueCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadDeviceUniqueCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadDeviceUniqueCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 下载控制台验证芯片烧录信息，保证TID与中心信息一致 
         /// </summary>
         /// <param name="req">参考<see cref="VerifyChipBurnInfoRequest"/></param>

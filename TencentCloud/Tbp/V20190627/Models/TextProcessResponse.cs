@@ -74,7 +74,7 @@ namespace TencentCloud.Tbp.V20190627.Models
         public string SessionAttributes{ get; set; }
 
         /// <summary>
-        /// 结果类型 {0:未命中机器人; 1:任务型机器人; 2:问答型机器人; 3:闲聊型机器人}
+        /// 结果类型 {中间逻辑出错:0; 任务型机器人:1; 问答型机器人:2; 闲聊型机器人:3; 未匹配上，返回预设兜底话术:5; 未匹配上，返回相似问题列表:6}。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultType")]

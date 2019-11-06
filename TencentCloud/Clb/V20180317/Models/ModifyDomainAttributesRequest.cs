@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡监听器 ID
+        /// 负载均衡监听器 ID
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+        /// 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
         /// </summary>
         [JsonProperty("Http2")]
         public bool? Http2{ get; set; }

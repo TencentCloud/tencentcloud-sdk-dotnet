@@ -79,6 +79,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string SeatCategory{ get; set; }
 
         /// <summary>
+        /// 身份证号
+        /// </summary>
+        [JsonProperty("ID")]
+        public string ID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "SeatCategory", this.SeatCategory);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,7 +31,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// 鉴黄鉴政结果
+        /// 鉴政结果
         /// </summary>
         [JsonProperty("ReviewResultSet")]
         public FuseFaceReviewResult[] ReviewResultSet{ get; set; }

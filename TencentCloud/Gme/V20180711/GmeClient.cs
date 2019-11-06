@@ -53,6 +53,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 本接口(CreateApp)用于创建一个GME应用
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateAppRequest"/></param>
+        /// <returns>参考<see cref="CreateAppResponse"/>实例</returns>
+        public async Task<CreateAppResponse> CreateApp(CreateAppRequest req)
+        {
+             JsonResponseModel<CreateAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAppStatistics)用户获取某个GME应用的用量数据。包括实时语音，离线语音，语音过滤等。最长查询周期为最近30天。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAppStatisticsRequest"/></param>
+        /// <returns>参考<see cref="DescribeAppStatisticsResponse"/>实例</returns>
+        public async Task<DescribeAppStatisticsResponse> DescribeAppStatistics(DescribeAppStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeAppStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAppStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据应用ID和文件ID查询识别结果
         /// </summary>
         /// <param name="req">参考<see cref="DescribeFilterResultRequest"/></param>
@@ -114,8 +154,33 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。
+        /// 本接口(ModifyAppStatus)用于修改应用总开关状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyAppStatusRequest"/></param>
+        /// <returns>参考<see cref="ModifyAppStatusResponse"/>实例</returns>
+        public async Task<ModifyAppStatusResponse> ModifyAppStatus(ModifyAppStatusRequest req)
+        {
+             JsonResponseModel<ModifyAppStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAppStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
         /// </br></br>
+        /// 
+        /// <h4><b>功能试用说明：</b></h4>
+        /// <li>打开前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 产品试用</a>免费试用语音分析服务。</li>
+        /// </br>
+        /// 
         /// <h4><b>接口功能说明：</b></h4>
         /// <li>支持对语音流或语音文件进行检测，判断其中是否包含违规内容。</li>
         /// <li>支持设置回调地址 Callback 获取检测结果，同时支持通过接口(查询语音检测结果)主动轮询获取检测结果。</li>
@@ -155,7 +220,7 @@ namespace TencentCloud.Gme.V20180711
         /// <p>ad :广告</p>
         /// <p>terrorism:暴恐</p>
         /// <p>contraband :违禁</p>
-        /// <p>customized:自定义词库</p>
+        /// <p>customized:自定义词库。目前白名单开放，如有需要请<a href="https://cloud.tencent.com/apply/p/8809fjcik56">联系我们</a>。</p>
         /// </td>
         /// </tr>
         /// </tbody>
@@ -188,18 +253,12 @@ namespace TencentCloud.Gme.V20180711
         /// 	<ul>
         /// 		<li>使用 HMAC-SH1 算法, 最终结果做 BASE64 编码;</li>
         /// 		<li>签名原文串为 POST+body 的整个json内容(长度以 Content-Length 为准);</li>
-        /// 		<li>签名key为应用的 secrectkey，可以通过控制台查看。</li>
+        /// 		<li>签名key为应用的 SecretKey，可以通过控制台查看。</li>
         /// 	</ul>
         /// </ul>
         /// 
-        /// <ul>
-        /// <li>
-        /// 回调请求 Body 的字段说明见结构：
-        /// <a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>
-        /// </li>
-        /// </ul>
-        /// 
-        /// <li>回调示例如下<font color="red">（详细字段说明见上述表格中 Data 字段说明）</font>：</li>
+        /// <li>回调示例如下<font color="red">（详细字段说明见结构：
+        /// <a href="https://cloud.tencent.com/document/api/607/35375#DescribeScanResult" target="_blank">DescribeScanResult</a>）</font>：</li>
         /// <pre><code>{
         /// 	"Code": 0,
         /// 	"DataId": "1400000000_test_data_id",
@@ -213,6 +272,7 @@ namespace TencentCloud.Gme.V20180711
         /// 		"MainType": "abuse",
         /// 		"RoomId": "123",
         /// 		"OpenId": "xxx",
+        /// 		"Info":"",
         /// 		"ScanDetail": [{
         /// 			"EndTime": 1110,
         /// 			"KeyWord": "xxx",

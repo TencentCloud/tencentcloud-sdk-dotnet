@@ -480,7 +480,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 用于删除录制任务。
+        /// 注：DeleteLiveRecord 接口仅用于删除录制任务记录，不具备停止录制的功能，也不能删除正在进行中的录制。如果需要停止录制任务，请使用终止录制[StopLiveRecord](/document/product/267/30146) 接口。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteLiveRecordRequest"/></param>
         /// <returns>参考<see cref="DeleteLiveRecordResponse"/>实例</returns>
@@ -1244,8 +1244,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 支持查询某天的转码详细信息。
-        /// 注意：当前只支持查询近30天内某天的详细数据。
+        /// 支持查询某天或某段时间的转码详细信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>
         /// <returns>参考<see cref="DescribeLiveTranscodeDetailInfoResponse"/>实例</returns>

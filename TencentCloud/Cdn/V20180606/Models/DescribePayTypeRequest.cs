@@ -24,12 +24,21 @@ namespace TencentCloud.Cdn.V20180606.Models
     public class DescribePayTypeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 指定服务地域查询，不填充表示查询中国境内 CDN 计费方式
+        /// mainland：指定查询中国境内 CDN 计费方式
+        /// overseas：指定查询中国境外 CDN 计费方式
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Unschedulable")]
         public long? Unschedulable{ get; set; }
 
+        /// <summary>
+        /// 节点Label数组
+        /// </summary>
+        [JsonProperty("Labels")]
+        public Label[] Labels{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
         }
     }
 }

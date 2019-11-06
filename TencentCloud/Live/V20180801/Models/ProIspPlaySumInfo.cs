@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 省份/运营商。
+        /// 省份/运营商/国家或地区。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

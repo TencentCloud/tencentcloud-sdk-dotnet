@@ -48,6 +48,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 对id和name进行关键词过滤
+        /// </summary>
+        [JsonProperty("SearchWord")]
+        public string SearchWord{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Plaintext{ get; set; }
 
         /// <summary>
-        /// DataKey加密后的密文，用户需要自行保存密文
+        /// DataKey加密后经过base64编码的密文，用户需要自行保存密文
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }

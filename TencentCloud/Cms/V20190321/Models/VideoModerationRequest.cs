@@ -25,7 +25,7 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 回调Url
+        /// 回调URL，音频识别结果将以POST请求方式发送到此地址
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

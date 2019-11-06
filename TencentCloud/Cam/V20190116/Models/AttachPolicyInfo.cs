@@ -58,6 +58,34 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
+        /// <summary>
+        /// 策略备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 策略关联操作者主张号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperateOwnerUin")]
+        public ulong? OperateOwnerUin{ get; set; }
+
+        /// <summary>
+        /// 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperateUin")]
+        public ulong? OperateUin{ get; set; }
+
+        /// <summary>
+        /// UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperateUinType")]
+        public ulong? OperateUinType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -69,6 +97,10 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
             this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "OperateOwnerUin", this.OperateOwnerUin);
+            this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
+            this.SetParamSimple(map, prefix + "OperateUinType", this.OperateUinType);
         }
     }
 }

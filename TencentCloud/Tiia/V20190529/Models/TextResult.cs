@@ -47,6 +47,11 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// PASS：正常
         /// REVIEW：疑似
         /// BLOCK：违规
+        /// 
+        /// Suggestion由Type决定：
+        /// Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
+        /// Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
+        /// 其他情况下Suggestion为REVIEW。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }

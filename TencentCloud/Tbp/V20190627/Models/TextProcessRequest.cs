@@ -55,7 +55,7 @@ namespace TencentCloud.Tbp.V20190627.Models
         public string SessionAttributes{ get; set; }
 
         /// <summary>
-        /// 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount}。
+        /// 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
         /// </summary>
         [JsonProperty("PlatformType")]
         public string PlatformType{ get; set; }

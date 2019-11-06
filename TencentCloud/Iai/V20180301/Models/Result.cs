@@ -36,6 +36,13 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("FaceRect")]
         public FaceRect FaceRect{ get; set; }
 
+        /// <summary>
+        /// 检测出的人脸图片状态返回码。0 表示正常。 
+        /// -1601代表不符合图片质量控制要求，此时Candidate内容为空。
+        /// </summary>
+        [JsonProperty("RetCode")]
+        public long? RetCode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +51,7 @@ namespace TencentCloud.Iai.V20180301.Models
         {
             this.SetParamArrayObj(map, prefix + "Candidates.", this.Candidates);
             this.SetParamObj(map, prefix + "FaceRect.", this.FaceRect);
+            this.SetParamSimple(map, prefix + "RetCode", this.RetCode);
         }
     }
 }

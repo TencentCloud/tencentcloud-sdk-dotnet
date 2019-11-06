@@ -75,6 +75,25 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("NeedPersonInfo")]
         public long? NeedPersonInfo{ get; set; }
 
+        /// <summary>
+        /// 图片质量控制，若图片中包含多张人脸，会对要求处理的人脸进行质量控制判断。  
+        /// 0: 不进行控制， 
+        /// 1:较低的质量要求， 
+        /// 2: 一般的质量要求， 
+        /// 3: 较高的质量要求。 
+        /// 4: 很高的质量要求。 
+        /// 默认 0。 
+        /// 若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+        /// </summary>
+        [JsonProperty("QualityControl")]
+        public ulong? QualityControl{ get; set; }
+
+        /// <summary>
+        /// 出参Score中，只有超过FaceMatchThreshold值的结果才会返回。默认为0。
+        /// </summary>
+        [JsonProperty("FaceMatchThreshold")]
+        public float? FaceMatchThreshold{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -88,6 +107,8 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "MinFaceSize", this.MinFaceSize);
             this.SetParamSimple(map, prefix + "MaxPersonNum", this.MaxPersonNum);
             this.SetParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
+            this.SetParamSimple(map, prefix + "QualityControl", this.QualityControl);
+            this.SetParamSimple(map, prefix + "FaceMatchThreshold", this.FaceMatchThreshold);
         }
     }
 }

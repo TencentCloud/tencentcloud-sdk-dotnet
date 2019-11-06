@@ -72,7 +72,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 时间粒度，支持以下几种模式：
-        /// min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据
+        /// min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可返回 1 分钟粒度明细数据（指定查询服务地域为中国境外时不支持 1 分钟粒度）
         /// 5min：5 分钟粒度，指定查询区间 31 天内（含 31 天），可返回 5 分钟粒度明细数据
         /// hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
         /// day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
@@ -87,6 +87,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Detail")]
         public bool? Detail{ get; set; }
 
+        /// <summary>
+        /// 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+        /// mainland：指定查询中国境内 CDN 数据
+        /// overseas：指定查询中国境外 CDN 数据
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,6 +108,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Project", this.Project);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "Detail", this.Detail);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

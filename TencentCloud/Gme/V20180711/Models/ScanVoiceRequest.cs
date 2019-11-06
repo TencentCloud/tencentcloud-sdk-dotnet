@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用ID，登录控制台创建应用得到的AppID。
+        /// 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }

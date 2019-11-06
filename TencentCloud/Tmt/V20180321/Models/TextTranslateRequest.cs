@@ -49,6 +49,12 @@ namespace TencentCloud.Tmt.V20180321.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 用来标记不希望被翻译的文本内容，如句子中的特殊符号、人名、地名等；每次请求只支持配置一个不被翻译的单词；仅支持配置人名、地名等名词，不要配置动词或短语，否则会影响翻译结果。
+        /// </summary>
+        [JsonProperty("UntranslatedText")]
+        public string UntranslatedText{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -59,6 +65,7 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "UntranslatedText", this.UntranslatedText);
         }
     }
 }

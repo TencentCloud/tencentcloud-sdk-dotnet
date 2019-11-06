@@ -28,7 +28,7 @@ namespace TencentCloud.Tag.V20180813.Models
         /// 标签过滤数组
         /// </summary>
         [JsonProperty("TagFilters")]
-        public TagFilters[] TagFilters{ get; set; }
+        public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
         /// 创建标签者uin

@@ -231,6 +231,26 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 创建放置实例的置放群组
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateDeployGroupRequest"/></param>
+        /// <returns>参考<see cref="CreateDeployGroupResponse"/>实例</returns>
+        public async Task<CreateDeployGroupResponse> CreateDeployGroup(CreateDeployGroupRequest req)
+        {
+             JsonResponseModel<CreateDeployGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDeployGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeployGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（CreateParamTemplate）用于创建参数模板。
         /// </summary>
         /// <param name="req">参考<see cref="CreateParamTemplateRequest"/></param>
@@ -282,6 +302,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DeleteBackup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据置放群组ID删除置放群组（置放群组中有资源存在时不能删除该置放群组）
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteDeployGroupsRequest"/></param>
+        /// <returns>参考<see cref="DeleteDeployGroupsResponse"/>实例</returns>
+        public async Task<DeleteDeployGroupsResponse> DeleteDeployGroups(DeleteDeployGroupsRequest req)
+        {
+             JsonResponseModel<DeleteDeployGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDeployGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeployGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -728,6 +768,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "DescribeDefaultParams");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据置放群组 ID 或置放群组名称查询置放群组列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeployGroupListRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeployGroupListResponse"/>实例</returns>
+        public async Task<DescribeDeployGroupListResponse> DescribeDeployGroupList(DescribeDeployGroupListRequest req)
+        {
+             JsonResponseModel<DescribeDeployGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeployGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployGroupListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1308,6 +1368,26 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = await this.InternalRequest(req, "ModifyInstanceTag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改置放群组的名称或者描述
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyNameOrDescByDpIdRequest"/></param>
+        /// <returns>参考<see cref="ModifyNameOrDescByDpIdResponse"/>实例</returns>
+        public async Task<ModifyNameOrDescByDpIdResponse> ModifyNameOrDescByDpId(ModifyNameOrDescByDpIdRequest req)
+        {
+             JsonResponseModel<ModifyNameOrDescByDpIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNameOrDescByDpId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNameOrDescByDpIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

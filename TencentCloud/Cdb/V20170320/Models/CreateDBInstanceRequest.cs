@@ -168,6 +168,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ResourceTags")]
         public TagInfo[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// 置放群组 ID。
+        /// </summary>
+        [JsonProperty("DeployGroupId")]
+        public string DeployGroupId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -198,6 +204,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamObj(map, prefix + "RoGroup.", this.RoGroup);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         }
     }
 }

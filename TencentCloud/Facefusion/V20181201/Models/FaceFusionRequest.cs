@@ -49,13 +49,14 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string RspImgType{ get; set; }
 
         /// <summary>
-        /// 0表示不需要鉴黄，1表示需要鉴黄。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1.
+        /// 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
         /// </summary>
         [JsonProperty("PornDetect")]
         public long? PornDetect{ get; set; }
 
         /// <summary>
-        /// 0表示不需要鉴政，1表示需要鉴政。2018年12月1号以前创建的活动默认值为0，其他情况默认值为1。鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
+        /// 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+        /// 鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
         /// </summary>
         [JsonProperty("CelebrityIdentify")]
         public long? CelebrityIdentify{ get; set; }

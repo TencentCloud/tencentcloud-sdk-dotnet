@@ -34,16 +34,15 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 任务流状态，取值：
         /// <li>PROCESSING：处理中；</li>
         /// <li>FINISH：已完成。</li>
-        /// 
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误码
-        /// <li>0：成功；</li>
-        /// <li>其他值：失败。</li>
+        /// 错误码，0 表示成功，其他值表示失败：
+        /// <li>40000：输入参数不合法，请检查输入参数；</li>
+        /// <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
+        /// <li>70000：内部服务错误，建议重试。</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }

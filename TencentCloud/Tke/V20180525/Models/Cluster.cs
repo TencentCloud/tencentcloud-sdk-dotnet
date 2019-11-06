@@ -85,6 +85,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
+        /// <summary>
+        /// 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public string ClusterStatus{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -101,6 +107,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         }
     }
 }

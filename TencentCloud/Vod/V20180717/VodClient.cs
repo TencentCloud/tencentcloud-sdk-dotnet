@@ -807,6 +807,29 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于查询点播 CDN 的流量、带宽等统计数据。
+        ///    1. 可以查询最近365天内的 CDN 用量数据。
+        ///    2.  查询时间跨度不超过90天。
+        ///    3.  流量为每天的总流量，带宽为每天的峰值带宽。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeCDNUsageDataRequest"/></param>
+        /// <returns>参考<see cref="DescribeCDNUsageDataResponse"/>实例</returns>
+        public async Task<DescribeCDNUsageDataResponse> DescribeCDNUsageData(DescribeCDNUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeCDNUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCDNUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDNUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据视频内容审核模板唯一标识，获取视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -847,15 +870,15 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 1. 该接口可以获取多个视频的多种信息，包括：
-        ///     1. 基础信息（basicInfo）：包括视频名称、分类、播放地址、封面图片等。
+        /// 1. 该接口可以获取多个媒体文件的多种信息，包括：
+        ///     1. 基础信息（basicInfo）：包括媒体名称、分类、播放地址、封面图片等。
         ///     2. 元信息（metaData）：包括大小、时长、视频流信息、音频流信息等。
-        ///     3. 转码结果信息（transcodeInfo）：包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
-        ///     4. 转动图结果信息（animatedGraphicsInfo）：对视频转动图（如 gif）后，动图相关信息。
-        ///     5. 采样截图信息（sampleSnapshotInfo）：对视频采样截图后，相关截图信息。
-        ///     6. 雪碧图信息（imageSpriteInfo）：对视频截取雪碧图之后，雪碧图的相关信息。
-        ///     7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，各个截图的信息。
-        ///     8. 视频打点信息（keyFrameDescInfo）：对视频设置的各个打点信息。
+        ///     3. 转码结果信息（transcodeInfo）：包括该媒体转码生成的各种规格的媒体地址、视频流参数、音频流参数等。
+        ///     4. 转动图结果信息（animatedGraphicsInfo）：对视频转动图（如 gif）后的动图信息。
+        ///     5. 采样截图信息（sampleSnapshotInfo）：对视频采样截图后的截图信息。
+        ///     6. 雪碧图信息（imageSpriteInfo）：对视频截取雪碧图后的雪碧图信息。
+        ///     7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，的截图信息。
+        ///     8. 视频打点信息（keyFrameDescInfo）：对视频设置的打点信息。
         ///     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
         /// 2. 可以指定回包只返回部分信息。
         /// </summary>
@@ -1595,10 +1618,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// * 该接口用于业务服务器以[可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)的方式获取事件通知；
+        /// * 该接口用于业务服务器以 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 的方式获取事件通知；
         /// * 接口为长轮询模式，即：如果服务端存在未消费事件，则立即返回给请求方；如果服务端没有未消费事件，则后台会将请求挂起，直到有新的事件产生为止；
-        /// * 请求最多挂起 5 秒，建议请求方将超时时间设置为 10 秒；
-        /// * 若该接口有事件返回，调用方必须再调用[确认事件通知](https://cloud.tencent.com/document/product/266/33434)接口，确认事件通知已经处理，否则该事件通知后续会再次被拉取到。
+        /// * 请求最多挂起5秒，建议请求方将超时时间设置为10秒；
+        /// * 若该接口有事件返回，调用方必须在<font color="red">30秒</font>内调用 [确认事件通知](https://cloud.tencent.com/document/product/266/33434) 接口，确认事件通知已经处理，否则该事件通知在<font color="red">30秒</font>后会再次被拉取到。
         /// </summary>
         /// <param name="req">参考<see cref="PullEventsRequest"/></param>
         /// <returns>参考<see cref="PullEventsResponse"/>实例</returns>

@@ -25,6 +25,12 @@ namespace TencentCloud.Tci.V20190318.Models
     {
         
         /// <summary>
+        /// 缺失人员的ID列表(只针对请求中的libids字段)
+        /// </summary>
+        [JsonProperty("AbsenceSetInLibs")]
+        public AbsenceInfo[] AbsenceSetInLibs{ get; set; }
+
+        /// <summary>
         /// 确定出勤人员列表
         /// </summary>
         [JsonProperty("AttendanceSet")]
@@ -37,7 +43,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public SuspectedInfo[] SuspectedSet{ get; set; }
 
         /// <summary>
-        /// 缺失人员的ID列表
+        /// 缺失人员的ID列表(只针对请求中的personids字段)
         /// </summary>
         [JsonProperty("AbsenceSet")]
         public string[] AbsenceSet{ get; set; }
@@ -60,6 +66,7 @@ namespace TencentCloud.Tci.V20190318.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "AbsenceSetInLibs.", this.AbsenceSetInLibs);
             this.SetParamArrayObj(map, prefix + "AttendanceSet.", this.AttendanceSet);
             this.SetParamArrayObj(map, prefix + "SuspectedSet.", this.SuspectedSet);
             this.SetParamArraySimple(map, prefix + "AbsenceSet.", this.AbsenceSet);

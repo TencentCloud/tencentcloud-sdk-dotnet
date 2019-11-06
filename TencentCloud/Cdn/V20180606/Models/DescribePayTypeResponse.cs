@@ -28,6 +28,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// 计费类型：
         /// flux：流量计费
         /// bandwidth：带宽计费
+        /// 如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
@@ -52,6 +53,22 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string StatType{ get; set; }
 
         /// <summary>
+        /// 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
+        /// all：表示全地区统一计费
+        /// multiple：表示分地区计费。
+        /// </summary>
+        [JsonProperty("RegionType")]
+        public string RegionType{ get; set; }
+
+        /// <summary>
+        /// 当前计费类型：
+        /// flux：流量计费
+        /// bandwidth：带宽计费
+        /// </summary>
+        [JsonProperty("CurrentPayType")]
+        public string CurrentPayType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -66,6 +83,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "BillingCycle", this.BillingCycle);
             this.SetParamSimple(map, prefix + "StatType", this.StatType);
+            this.SetParamSimple(map, prefix + "RegionType", this.RegionType);
+            this.SetParamSimple(map, prefix + "CurrentPayType", this.CurrentPayType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

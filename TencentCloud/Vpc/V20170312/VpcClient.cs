@@ -343,6 +343,26 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口(CheckNetDetectState)用于验证网络探测。
+        /// </summary>
+        /// <param name="req">参考<see cref="CheckNetDetectStateRequest"/></param>
+        /// <returns>参考<see cref="CheckNetDetectStateResponse"/>实例</returns>
+        public async Task<CheckNetDetectStateResponse> CheckNetDetectState(CheckNetDetectStateRequest req)
+        {
+             JsonResponseModel<CheckNetDetectStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckNetDetectState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckNetDetectStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateAddressTemplate）用于创建IP地址模版
         /// </summary>
         /// <param name="req">参考<see cref="CreateAddressTemplateRequest"/></param>
@@ -604,6 +624,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "CreateNatGatewayDestinationIpPortTranslationNatRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateNetDetect)用于创建网络探测。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateNetDetectRequest"/></param>
+        /// <returns>参考<see cref="CreateNetDetectResponse"/>实例</returns>
+        public async Task<CreateNetDetectResponse> CreateNetDetect(CreateNetDetectRequest req)
+        {
+             JsonResponseModel<CreateNetDetectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNetDetect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetDetectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1121,6 +1161,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteNetDetect)用于删除网络探测实例。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteNetDetectRequest"/></param>
+        /// <returns>参考<see cref="DeleteNetDetectResponse"/>实例</returns>
+        public async Task<DeleteNetDetectResponse> DeleteNetDetect(DeleteNetDetectRequest req)
+        {
+             JsonResponseModel<DeleteNetDetectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNetDetect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetDetectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1834,6 +1894,66 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "DescribeNatGateways");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeNetDetectStates)用于查询网络探测验证结果列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeNetDetectStatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeNetDetectStatesResponse"/>实例</returns>
+        public async Task<DescribeNetDetectStatesResponse> DescribeNetDetectStates(DescribeNetDetectStatesRequest req)
+        {
+             JsonResponseModel<DescribeNetDetectStatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetDetectStates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetDetectStatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNetDetects）用于查询网络探测列表。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeNetDetectsRequest"/></param>
+        /// <returns>参考<see cref="DescribeNetDetectsResponse"/>实例</returns>
+        public async Task<DescribeNetDetectsResponse> DescribeNetDetects(DescribeNetDetectsRequest req)
+        {
+             JsonResponseModel<DescribeNetDetectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetDetects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetDetectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID查询弹性网卡配额，返回该CVM实例能绑定的弹性网卡配额，以及每个弹性网卡可以分配的ip配额
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeNetworkInterfaceLimitRequest"/></param>
+        /// <returns>参考<see cref="DescribeNetworkInterfaceLimitResponse"/>实例</returns>
+        public async Task<DescribeNetworkInterfaceLimitResponse> DescribeNetworkInterfaceLimit(DescribeNetworkInterfaceLimitRequest req)
+        {
+             JsonResponseModel<DescribeNetworkInterfaceLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkInterfaceLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInterfaceLimitResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2788,6 +2908,26 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = await this.InternalRequest(req, "ModifyNatGatewayDestinationIpPortTranslationNatRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyNetDetect)用于修改网络探测参数。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyNetDetectRequest"/></param>
+        /// <returns>参考<see cref="ModifyNetDetectResponse"/>实例</returns>
+        public async Task<ModifyNetDetectResponse> ModifyNetDetect(ModifyNetDetectRequest req)
+        {
+             JsonResponseModel<ModifyNetDetectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNetDetect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetDetectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

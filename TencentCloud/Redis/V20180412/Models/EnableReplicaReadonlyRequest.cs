@@ -30,6 +30,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+        /// </summary>
+        [JsonProperty("ReadonlyPolicy")]
+        public string[] ReadonlyPolicy{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
         }
     }
 }

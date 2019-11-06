@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK的状态， Enabled 或者 Disabled 或者PendingDelete状态
+        /// CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyUsage{ get; set; }
 
         /// <summary>
-        /// CMK类型，当前为 1 普通类型
+        /// CMK类型，2 表示符合FIPS标准，4表示符合国密标准
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -97,6 +97,20 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("DeletionDate")]
         public ulong? DeletionDate{ get; set; }
 
+        /// <summary>
+        /// CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Origin")]
+        public string Origin{ get; set; }
+
+        /// <summary>
+        /// 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValidTo")]
+        public ulong? ValidTo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -115,6 +129,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
             this.SetParamSimple(map, prefix + "NextRotateTime", this.NextRotateTime);
             this.SetParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
+            this.SetParamSimple(map, prefix + "Origin", this.Origin);
+            this.SetParamSimple(map, prefix + "ValidTo", this.ValidTo);
         }
     }
 }

@@ -55,6 +55,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CidrBlock{ get; set; }
 
         /// <summary>
+        /// 网段或IPv6(互斥)。
+        /// </summary>
+        [JsonProperty("Ipv6CidrBlock")]
+        public string Ipv6CidrBlock{ get; set; }
+
+        /// <summary>
         /// 安全组实例ID，例如：sg-ohuuioma。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
@@ -78,6 +84,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PolicyDescription")]
         public string PolicyDescription{ get; set; }
 
+        /// <summary>
+        /// 安全组最近修改时间。
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -89,10 +101,12 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamObj(map, prefix + "ServiceTemplate.", this.ServiceTemplate);
             this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+            this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
             this.SetParamObj(map, prefix + "AddressTemplate.", this.AddressTemplate);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         }
     }
 }

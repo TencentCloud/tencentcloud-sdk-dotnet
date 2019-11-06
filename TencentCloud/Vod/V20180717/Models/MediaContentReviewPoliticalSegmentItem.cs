@@ -26,21 +26,18 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 嫌疑片段起始的偏移时间，单位：秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
         /// 嫌疑片段结束的偏移时间，单位：秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
         /// 嫌疑片段涉政分数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -50,21 +47,18 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// 涉政人物、违规图标名字。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 嫌疑片段鉴政结果标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -72,24 +66,27 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 嫌疑图片 URL （图片不会永久存储，到达
         ///  PicUrlExpireTime 时间点后图片将被删除）。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 该字段已废弃，请使用 PicUrlExpireTime。
         /// </summary>
         [JsonProperty("PicUrlExpireTimeStamp")]
         public long? PicUrlExpireTimeStamp{ get; set; }
+
+        /// <summary>
+        /// 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// </summary>
+        [JsonProperty("PicUrlExpireTime")]
+        public string PicUrlExpireTime{ get; set; }
 
 
         /// <summary>
@@ -106,6 +103,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
             this.SetParamSimple(map, prefix + "PicUrlExpireTimeStamp", this.PicUrlExpireTimeStamp);
+            this.SetParamSimple(map, prefix + "PicUrlExpireTime", this.PicUrlExpireTime);
         }
     }
 }

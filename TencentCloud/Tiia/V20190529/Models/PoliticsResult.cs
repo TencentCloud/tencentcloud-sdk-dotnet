@@ -57,9 +57,9 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// 75到90，Suggestion建议为REVIEW
         /// 90到100，Suggestion建议为BLOCK
         /// Type为FACE时：
-        /// 0到55，Suggestion建议为PASS
-        /// 55到60，Suggestion建议为REVIEW
-        /// 60到100，Suggestion建议为BLOCK
+        /// 0到70，Suggestion建议为PASS
+        /// 70到80，Suggestion建议为REVIEW
+        /// 80到100，Suggestion建议为BLOCK
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }

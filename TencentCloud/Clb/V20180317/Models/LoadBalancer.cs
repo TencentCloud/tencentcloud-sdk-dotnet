@@ -260,11 +260,18 @@ namespace TencentCloud.Clb.V20180317.Models
         public ExtraInfo ExtraInfo{ get; set; }
 
         /// <summary>
-        /// 是否默认放通来自CLB的流量。开启默认放通（true）：只验证CLB上的安全组；不开启默认放通（false）：需同时验证CLB和后端实例上的安全组。
+        /// 是否可绑定高防包
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LoadBalancerPassToTarget")]
-        public bool? LoadBalancerPassToTarget{ get; set; }
+        [JsonProperty("IsDDos")]
+        public bool? IsDDos{ get; set; }
+
+        /// <summary>
+        /// 负载均衡维度的个性化配置ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigId")]
+        public string ConfigId{ get; set; }
 
 
         /// <summary>
@@ -306,7 +313,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
             this.SetParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
             this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
-            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "IsDDos", this.IsDDos);
+            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
         }
     }
 }

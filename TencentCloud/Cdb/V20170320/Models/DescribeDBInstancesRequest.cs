@@ -157,19 +157,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// 是否包含灾备实例，可取值：0 - 不包含，1 - 包含。
+        /// 是否包含灾备关系对应的实例，可取值：0 - 不包含，1 - 包含。默认取值为1。如果拉取主实例，则灾备关系的数据在DrInfo字段中， 如果拉取灾备实例， 则灾备关系的数据在MasterInfo字段中。灾备关系中只包含部分基本的数据，详细的数据需要自行调接口拉取。
         /// </summary>
         [JsonProperty("WithDr")]
         public long? WithDr{ get; set; }
 
         /// <summary>
-        /// 是否包含只读实例，可取值：0 - 不包含，1 - 包含。
+        /// 是否包含只读实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
         /// </summary>
         [JsonProperty("WithRo")]
         public long? WithRo{ get; set; }
 
         /// <summary>
-        /// 是否包含主实例，可取值：0 - 不包含，1 - 包含。
+        /// 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
         /// </summary>
         [JsonProperty("WithMaster")]
         public long? WithMaster{ get; set; }

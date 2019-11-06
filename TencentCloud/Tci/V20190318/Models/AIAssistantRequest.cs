@@ -49,7 +49,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public string[] LibrarySet{ get; set; }
 
         /// <summary>
-        /// 视频评估时间，单位毫秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+        /// 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
         /// </summary>
         [JsonProperty("MaxVideoDuration")]
         public long? MaxVideoDuration{ get; set; }

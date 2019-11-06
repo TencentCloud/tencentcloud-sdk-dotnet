@@ -25,14 +25,6 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 起始时间，北京时间，
-        /// 格式：yyyymmdd。
-        /// 注意：当前只支持查询近30天内某天的详细数据。
-        /// </summary>
-        [JsonProperty("DayTime")]
-        public string DayTime{ get; set; }
-
-        /// <summary>
         /// 推流域名。
         /// </summary>
         [JsonProperty("PushDomain")]
@@ -43,6 +35,14 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }
+
+        /// <summary>
+        /// 查询时间，北京时间，
+        /// 格式：yyyymmdd。
+        /// 注意：支持查询近3个月内某天的详细数据。
+        /// </summary>
+        [JsonProperty("DayTime")]
+        public string DayTime{ get; set; }
 
         /// <summary>
         /// 页数，默认1，
@@ -58,17 +58,35 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
+        /// <summary>
+        /// 起始天时间，北京时间，
+        /// 格式：yyyymmdd。
+        /// 注意：支持查询近3个月内的详细数据。
+        /// </summary>
+        [JsonProperty("StartDayTime")]
+        public string StartDayTime{ get; set; }
+
+        /// <summary>
+        /// 结束天时间，北京时间，
+        /// 格式：yyyymmdd。
+        /// 注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+        /// </summary>
+        [JsonProperty("EndDayTime")]
+        public string EndDayTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DayTime", this.DayTime);
             this.SetParamSimple(map, prefix + "PushDomain", this.PushDomain);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "DayTime", this.DayTime);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "StartDayTime", this.StartDayTime);
+            this.SetParamSimple(map, prefix + "EndDayTime", this.EndDayTime);
         }
     }
 }

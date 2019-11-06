@@ -31,13 +31,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。
+        /// 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
         /// </summary>
         [JsonProperty("KeySpec")]
         public string KeySpec{ get; set; }
 
         /// <summary>
-        /// 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024
+        /// 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
         /// </summary>
         [JsonProperty("NumberOfBytes")]
         public ulong? NumberOfBytes{ get; set; }

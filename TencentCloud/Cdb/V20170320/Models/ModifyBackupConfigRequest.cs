@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ExpireDays{ get; set; }
 
         /// <summary>
-        /// 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+        /// (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }
 
+        /// <summary>
+        /// 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+        /// </summary>
+        [JsonProperty("BackupTimeWindow")]
+        public CommonTimeWindow BackupTimeWindow{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
+            this.SetParamObj(map, prefix + "BackupTimeWindow.", this.BackupTimeWindow);
         }
     }
 }

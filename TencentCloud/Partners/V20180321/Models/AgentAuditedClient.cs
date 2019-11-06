@@ -116,6 +116,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("SalesName")]
         public string SalesName{ get; set; }
 
+        /// <summary>
+        /// 代客邮箱
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Mail")]
+        public string Mail{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -137,6 +144,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
             this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
             this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
+            this.SetParamSimple(map, prefix + "Mail", this.Mail);
         }
     }
 }

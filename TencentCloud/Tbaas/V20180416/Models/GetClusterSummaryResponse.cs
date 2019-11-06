@@ -37,22 +37,10 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public ulong? MyChannelCount{ get; set; }
 
         /// <summary>
-        /// 其组织创建的通道数量
-        /// </summary>
-        [JsonProperty("OtherChannelCount")]
-        public ulong? OtherChannelCount{ get; set; }
-
-        /// <summary>
         /// 当前组织加入的通道数量
         /// </summary>
         [JsonProperty("JoinChannelCount")]
         public ulong? JoinChannelCount{ get; set; }
-
-        /// <summary>
-        /// 与当前组织无关的通道数量
-        /// </summary>
-        [JsonProperty("NoneChannelCount")]
-        public ulong? NoneChannelCount{ get; set; }
 
         /// <summary>
         /// 网络节点总数量
@@ -69,8 +57,8 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// <summary>
         /// 其他组织创建的节点数量
         /// </summary>
-        [JsonProperty("OtherPeerCount")]
-        public ulong? OtherPeerCount{ get; set; }
+        [JsonProperty("OrderCount")]
+        public ulong? OrderCount{ get; set; }
 
         /// <summary>
         /// 网络组织总数量
@@ -83,12 +71,6 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         [JsonProperty("MyGroupCount")]
         public ulong? MyGroupCount{ get; set; }
-
-        /// <summary>
-        /// 其他组织创建的组织数量
-        /// </summary>
-        [JsonProperty("OtherGroupCount")]
-        public ulong? OtherGroupCount{ get; set; }
 
         /// <summary>
         /// 网络智能合约总数量
@@ -109,12 +91,6 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public ulong? MyChaincodeCount{ get; set; }
 
         /// <summary>
-        /// 其组织发起的智能合约数量
-        /// </summary>
-        [JsonProperty("OtherChaincodeCount")]
-        public ulong? OtherChaincodeCount{ get; set; }
-
-        /// <summary>
         /// 当前组织的证书总数量
         /// </summary>
         [JsonProperty("TotalCertCount")]
@@ -131,12 +107,6 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         [JsonProperty("PeerCertCount")]
         public ulong? PeerCertCount{ get; set; }
-
-        /// <summary>
-        /// 网络排序节点证书数量
-        /// </summary>
-        [JsonProperty("OrderCertCount")]
-        public ulong? OrderCertCount{ get; set; }
 
         /// <summary>
         /// 当前组织业务证书数量
@@ -158,23 +128,18 @@ namespace TencentCloud.Tbaas.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "TotalChannelCount", this.TotalChannelCount);
             this.SetParamSimple(map, prefix + "MyChannelCount", this.MyChannelCount);
-            this.SetParamSimple(map, prefix + "OtherChannelCount", this.OtherChannelCount);
             this.SetParamSimple(map, prefix + "JoinChannelCount", this.JoinChannelCount);
-            this.SetParamSimple(map, prefix + "NoneChannelCount", this.NoneChannelCount);
             this.SetParamSimple(map, prefix + "TotalPeerCount", this.TotalPeerCount);
             this.SetParamSimple(map, prefix + "MyPeerCount", this.MyPeerCount);
-            this.SetParamSimple(map, prefix + "OtherPeerCount", this.OtherPeerCount);
+            this.SetParamSimple(map, prefix + "OrderCount", this.OrderCount);
             this.SetParamSimple(map, prefix + "TotalGroupCount", this.TotalGroupCount);
             this.SetParamSimple(map, prefix + "MyGroupCount", this.MyGroupCount);
-            this.SetParamSimple(map, prefix + "OtherGroupCount", this.OtherGroupCount);
             this.SetParamSimple(map, prefix + "TotalChaincodeCount", this.TotalChaincodeCount);
             this.SetParamSimple(map, prefix + "RecentChaincodeCount", this.RecentChaincodeCount);
             this.SetParamSimple(map, prefix + "MyChaincodeCount", this.MyChaincodeCount);
-            this.SetParamSimple(map, prefix + "OtherChaincodeCount", this.OtherChaincodeCount);
             this.SetParamSimple(map, prefix + "TotalCertCount", this.TotalCertCount);
             this.SetParamSimple(map, prefix + "TlsCertCount", this.TlsCertCount);
             this.SetParamSimple(map, prefix + "PeerCertCount", this.PeerCertCount);
-            this.SetParamSimple(map, prefix + "OrderCertCount", this.OrderCertCount);
             this.SetParamSimple(map, prefix + "ClientCertCount", this.ClientCertCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

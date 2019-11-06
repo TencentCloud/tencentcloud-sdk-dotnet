@@ -37,6 +37,18 @@ namespace TencentCloud.Live.V20180801.Models
         public string IspName{ get; set; }
 
         /// <summary>
+        /// 错误码为2开头的次数。
+        /// </summary>
+        [JsonProperty("Code2xx")]
+        public ulong? Code2xx{ get; set; }
+
+        /// <summary>
+        /// 错误码为3开头的次数。
+        /// </summary>
+        [JsonProperty("Code3xx")]
+        public ulong? Code3xx{ get; set; }
+
+        /// <summary>
         /// 错误码为4开头的次数。
         /// </summary>
         [JsonProperty("Code4xx")]
@@ -56,6 +68,8 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "ProvinceName", this.ProvinceName);
             this.SetParamSimple(map, prefix + "IspName", this.IspName);
+            this.SetParamSimple(map, prefix + "Code2xx", this.Code2xx);
+            this.SetParamSimple(map, prefix + "Code3xx", this.Code3xx);
             this.SetParamSimple(map, prefix + "Code4xx", this.Code4xx);
             this.SetParamSimple(map, prefix + "Code5xx", this.Code5xx);
         }

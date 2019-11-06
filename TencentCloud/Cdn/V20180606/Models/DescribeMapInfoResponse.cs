@@ -31,6 +31,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         public MapInfo[] MapInfoList{ get; set; }
 
         /// <summary>
+        /// 服务端区域id和子区域id的映射关系。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerRegionRelation")]
+        public RegionMapRelation[] ServerRegionRelation{ get; set; }
+
+        /// <summary>
+        /// 客户端区域id和子区域id的映射关系。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientRegionRelation")]
+        public RegionMapRelation[] ClientRegionRelation{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +57,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "MapInfoList.", this.MapInfoList);
+            this.SetParamArrayObj(map, prefix + "ServerRegionRelation.", this.ServerRegionRelation);
+            this.SetParamArrayObj(map, prefix + "ClientRegionRelation.", this.ClientRegionRelation);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

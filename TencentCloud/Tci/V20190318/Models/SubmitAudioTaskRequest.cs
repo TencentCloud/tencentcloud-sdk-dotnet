@@ -61,6 +61,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public string FileType{ get; set; }
 
         /// <summary>
+        /// 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+        /// </summary>
+        [JsonProperty("MuteThreshold")]
+        public long? MuteThreshold{ get; set; }
+
+        /// <summary>
         /// 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
         /// </summary>
         [JsonProperty("VocabLibNameList")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamSimple(map, prefix + "VoiceFileType", this.VoiceFileType);
             this.SetParamObj(map, prefix + "Functions.", this.Functions);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "MuteThreshold", this.MuteThreshold);
             this.SetParamArraySimple(map, prefix + "VocabLibNameList.", this.VocabLibNameList);
         }
     }

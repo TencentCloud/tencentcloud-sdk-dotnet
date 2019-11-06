@@ -39,16 +39,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误码
-        /// <li>0：成功；</li>
-        /// <li>其他值：失败。</li>
+        /// 已弃用，请使用各个具体任务的 ErrCode。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// 已弃用，请使用各个具体任务的 Message。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]

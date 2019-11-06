@@ -213,6 +213,26 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持数学试题内容的识别和结构化输出，包括通用文本解析和小学/初中/高中数学公式解析能力（包括91种题型，180种符号）。
+        /// </summary>
+        /// <param name="req">参考<see cref="EduPaperOCRRequest"/></param>
+        /// <returns>参考<see cref="EduPaperOCRResponse"/>实例</returns>
+        public async Task<EduPaperOCRResponse> EduPaperOCR(EduPaperOCRRequest req)
+        {
+             JsonResponseModel<EduPaperOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EduPaperOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EduPaperOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持图像英文文字的检测和识别，返回文字框位置与文字内容。支持多场景、任意版面下的英文、字母、数字和常见字符的识别，同时覆盖英文印刷体和英文手写体识别。
         /// </summary>
         /// <param name="req">参考<see cref="EnglishOCRRequest"/></param>
@@ -233,6 +253,88 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持智能化识别各类企业登记证书、许可证书、企业执照、三证合一类证书，结构化输出统一社会信用代码、公司名称、法定代表人、公司地址、注册资金、企业类型、经营范围等关键字段。
+        /// </summary>
+        /// <param name="req">参考<see cref="EnterpriseLicenseOCRRequest"/></param>
+        /// <returns>参考<see cref="EnterpriseLicenseOCRResponse"/>实例</returns>
+        public async Task<EnterpriseLicenseOCRResponse> EnterpriseLicenseOCR(EnterpriseLicenseOCRRequest req)
+        {
+             JsonResponseModel<EnterpriseLicenseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnterpriseLicenseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnterpriseLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="req">参考<see cref="EstateCertOCRRequest"/></param>
+        /// <returns>参考<see cref="EstateCertOCRResponse"/>实例</returns>
+        public async Task<EstateCertOCRResponse> EstateCertOCR(EstateCertOCRRequest req)
+        {
+             JsonResponseModel<EstateCertOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EstateCertOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstateCertOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持常见银行票据的自动分类和识别。整单识别包括支票（含现金支票、普通支票、转账支票），承兑汇票（含银行承兑汇票、商业承兑汇票）以及进账单等，适用于中国人民银行印发的 2010 版银行票据凭证版式（银发[2010]299 号）。
+        /// </summary>
+        /// <param name="req">参考<see cref="FinanBillOCRRequest"/></param>
+        /// <returns>参考<see cref="FinanBillOCRResponse"/>实例</returns>
+        public async Task<FinanBillOCRResponse> FinanBillOCR(FinanBillOCRRequest req)
+        {
+             JsonResponseModel<FinanBillOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FinanBillOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FinanBillOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持常见银行票据的自动分类和识别。切片识别包括金融行业常见票据的重要切片字段识别，包括金额、账号、日期、凭证号码等。（金融票据切片：金融票据中待识别字段及其周围局部区域的裁剪图像。）
+        /// </summary>
+        /// <param name="req">参考<see cref="FinanBillSliceOCRRequest"/></param>
+        /// <returns>参考<see cref="FinanBillSliceOCRResponse"/>实例</returns>
+        public async Task<FinanBillSliceOCRResponse> FinanBillSliceOCR(FinanBillSliceOCRRequest req)
+        {
+             JsonResponseModel<FinanBillSliceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FinanBillSliceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FinanBillSliceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持机票行程单关键字段的识别，包括姓名、身份证件号码、航班号、票价 、合计、电子客票号码、填开日期等。
         /// </summary>
         /// <param name="req">参考<see cref="FlightInvoiceOCRRequest"/></param>
@@ -244,6 +346,26 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "FlightInvoiceOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlightInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持识别主流初高中数学符号和公式，返回公式的 Latex 格式文本。
+        /// </summary>
+        /// <param name="req">参考<see cref="FormulaOCRRequest"/></param>
+        /// <returns>参考<see cref="FormulaOCRResponse"/>实例</returns>
+        public async Task<FormulaOCRResponse> FormulaOCR(FormulaOCRRequest req)
+        {
+             JsonResponseModel<FormulaOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FormulaOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FormulaOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -364,6 +486,46 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "IDCardOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<IDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
+        /// </summary>
+        /// <param name="req">参考<see cref="InstitutionOCRRequest"/></param>
+        /// <returns>参考<see cref="InstitutionOCRResponse"/>实例</returns>
+        public async Task<InstitutionOCRResponse> InstitutionOCR(InstitutionOCRRequest req)
+        {
+             JsonResponseModel<InstitutionOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InstitutionOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstitutionOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持病案首页、费用清单、结算单、医疗发票四种保险理赔单据的文本识别和结构化输出。
+        /// </summary>
+        /// <param name="req">参考<see cref="InsuranceBillOCRRequest"/></param>
+        /// <returns>参考<see cref="InsuranceBillOCRResponse"/>实例</returns>
+        public async Task<InsuranceBillOCRResponse> InsuranceBillOCR(InsuranceBillOCRRequest req)
+        {
+             JsonResponseModel<InsuranceBillOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InsuranceBillOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InsuranceBillOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -495,6 +657,26 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持组织机构代码证关键字段的识别，包括代码、有效期、地址、机构名称等。
+        /// </summary>
+        /// <param name="req">参考<see cref="OrgCodeCertOCRRequest"/></param>
+        /// <returns>参考<see cref="OrgCodeCertOCRResponse"/>实例</returns>
+        public async Task<OrgCodeCertOCRResponse> OrgCodeCertOCR(OrgCodeCertOCRRequest req)
+        {
+             JsonResponseModel<OrgCodeCertOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OrgCodeCertOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OrgCodeCertOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持中国大陆护照、中国香港护照、泰国护照及其他国外护照个人资料页多个字段的检测与识别。其中中国大陆居民护照识别，已支持字段包括英文姓名、中文姓名、国家码、护照号、出生地、出生日期、国籍英文、性别英文、有效期、签发地点英文、签发日期、持证人签名、护照机读码（MRZ码）等。中国香港护照、泰国护照及其他国外护照识别，已支持字段包括英文姓名、国籍、签发日期、性别、护照号码等。
         /// </summary>
         /// <param name="req">参考<see cref="PassportOCRRequest"/></param>
@@ -526,6 +708,27 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "PermitOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PermitOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持条形码和二维码的识别（包括 DataMatrix 和 PDF417）。
+        /// 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+        /// </summary>
+        /// <param name="req">参考<see cref="QrcodeOCRRequest"/></param>
+        /// <returns>参考<see cref="QrcodeOCRResponse"/>实例</returns>
+        public async Task<QrcodeOCRResponse> QrcodeOCR(QrcodeOCRRequest req)
+        {
+             JsonResponseModel<QrcodeOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QrcodeOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QrcodeOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -726,6 +929,26 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = await this.InternalRequest(req, "VehicleLicenseOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<VehicleLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持国内机动车登记证书主要字段的结构化识别，包括机动车所有人、身份证明名称、号码、车辆型号、车辆识别代号、发动机号、制造厂名称等。
+        /// </summary>
+        /// <param name="req">参考<see cref="VehicleRegCertOCRRequest"/></param>
+        /// <returns>参考<see cref="VehicleRegCertOCRResponse"/>实例</returns>
+        public async Task<VehicleRegCertOCRResponse> VehicleRegCertOCR(VehicleRegCertOCRRequest req)
+        {
+             JsonResponseModel<VehicleRegCertOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VehicleRegCertOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VehicleRegCertOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -44,6 +44,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoVipInfo")]
         public RoVipInfo RoVipInfo{ get; set; }
@@ -68,6 +69,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 备机信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveInfo")]
         public SlaveInfo SlaveInfo{ get; set; }
@@ -98,6 +100,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 只读组详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }
@@ -146,6 +149,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 主实例详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MasterInfo")]
         public MasterInfo MasterInfo{ get; set; }
@@ -170,6 +174,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 灾备实例详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DrInfo")]
         public DrInfo[] DrInfo{ get; set; }

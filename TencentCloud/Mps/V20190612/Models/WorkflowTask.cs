@@ -39,15 +39,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 错误码
-        /// <li>0：成功；</li>
-        /// <li>其他值：失败。</li>
+        /// 已弃用，请使用各个具体任务的 ErrCode。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 错误信息。
+        /// 已弃用，请使用各个具体任务的 Message。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

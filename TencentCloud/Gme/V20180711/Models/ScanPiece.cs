@@ -64,6 +64,13 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Info")]
+        public string Info{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -76,6 +83,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamArrayObj(map, prefix + "ScanDetail.", this.ScanDetail);
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "Info", this.Info);
         }
     }
 }

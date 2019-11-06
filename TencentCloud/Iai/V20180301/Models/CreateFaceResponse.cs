@@ -37,10 +37,33 @@ namespace TencentCloud.Iai.V20180301.Models
         public string[] SucFaceIds{ get; set; }
 
         /// <summary>
-        /// 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，其他非 0 值代表算法服务异常。
+        /// 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
+        /// -1601代表不符合图片质量控制要求, 
+        /// -1603 代表已有相似度超过99%的人脸存在，-1604 代表人脸相似度没有超过FaceMatchThreshold。 
+        /// 其他非 0 值代表算法服务异常。 
+        /// RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
         /// </summary>
         [JsonProperty("RetCode")]
         public long?[] RetCode{ get; set; }
+
+        /// <summary>
+        /// 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
+        /// 例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+        /// </summary>
+        [JsonProperty("SucIndexes")]
+        public ulong?[] SucIndexes{ get; set; }
+
+        /// <summary>
+        /// 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
+        /// </summary>
+        [JsonProperty("SucFaceRects")]
+        public FaceRect[] SucFaceRects{ get; set; }
+
+        /// <summary>
+        /// 人脸识别所用的算法模型版本。
+        /// </summary>
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +80,9 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "SucFaceNum", this.SucFaceNum);
             this.SetParamArraySimple(map, prefix + "SucFaceIds.", this.SucFaceIds);
             this.SetParamArraySimple(map, prefix + "RetCode.", this.RetCode);
+            this.SetParamArraySimple(map, prefix + "SucIndexes.", this.SucIndexes);
+            this.SetParamArrayObj(map, prefix + "SucFaceRects.", this.SucFaceRects);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

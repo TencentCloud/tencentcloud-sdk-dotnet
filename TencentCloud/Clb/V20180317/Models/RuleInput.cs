@@ -79,6 +79,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Http2")]
         public bool? Http2{ get; set; }
 
+        /// <summary>
+        /// 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -94,6 +100,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
         }
     }
 }

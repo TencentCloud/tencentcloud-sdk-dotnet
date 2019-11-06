@@ -54,6 +54,13 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("FaceIds")]
         public string[] FaceIds{ get; set; }
 
+        /// <summary>
+        /// Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+        /// Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+        /// </summary>
+        [JsonProperty("CreationTimestamp")]
+        public ulong? CreationTimestamp{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +72,7 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "Gender", this.Gender);
             this.SetParamArraySimple(map, prefix + "PersonExDescriptions.", this.PersonExDescriptions);
             this.SetParamArraySimple(map, prefix + "FaceIds.", this.FaceIds);
+            this.SetParamSimple(map, prefix + "CreationTimestamp", this.CreationTimestamp);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 阿里云RDS实例ID。源库是阿里云RDS5.6适用
+        /// 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
         /// </summary>
         [JsonProperty("RdsInstanceId")]
         public string RdsInstanceId{ get; set; }
@@ -115,6 +115,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
+        /// <summary>
+        /// 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+        /// </summary>
+        [JsonProperty("EngineVersion")]
+        public string EngineVersion{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -136,6 +142,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Supplier", this.Supplier);
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
+            this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         }
     }
 }

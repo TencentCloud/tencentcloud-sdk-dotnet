@@ -37,6 +37,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public bool? EnableKeyword{ get; set; }
 
         /// <summary>
+        /// 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+        /// </summary>
+        [JsonProperty("EnableMuteDetect")]
+        public bool? EnableMuteDetect{ get; set; }
+
+        /// <summary>
         /// 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
         /// </summary>
         [JsonProperty("EnableVadInfo")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Tci.V20190318.Models
         {
             this.SetParamSimple(map, prefix + "EnableAllText", this.EnableAllText);
             this.SetParamSimple(map, prefix + "EnableKeyword", this.EnableKeyword);
+            this.SetParamSimple(map, prefix + "EnableMuteDetect", this.EnableMuteDetect);
             this.SetParamSimple(map, prefix + "EnableVadInfo", this.EnableVadInfo);
             this.SetParamSimple(map, prefix + "EnableVolume", this.EnableVolume);
         }

@@ -31,6 +31,26 @@ namespace TencentCloud.Iai.V20180301.Models
         public string FaceId{ get; set; }
 
         /// <summary>
+        /// 检测出的人脸框的位置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FaceRect")]
+        public FaceRect FaceRect{ get; set; }
+
+        /// <summary>
+        /// 疑似同一人的PersonId。 
+        /// 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+        /// </summary>
+        [JsonProperty("SimilarPersonId")]
+        public string SimilarPersonId{ get; set; }
+
+        /// <summary>
+        /// 人脸识别所用的算法模型版本。
+        /// </summary>
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +63,9 @@ namespace TencentCloud.Iai.V20180301.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FaceId", this.FaceId);
+            this.SetParamObj(map, prefix + "FaceRect.", this.FaceRect);
+            this.SetParamSimple(map, prefix + "SimilarPersonId", this.SimilarPersonId);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

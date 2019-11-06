@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 加密后的密文
+        /// 加密后经过base64编码的密文
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }

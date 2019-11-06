@@ -98,6 +98,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 端口段结束端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndPort")]
+        public long? EndPort{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -115,6 +122,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
         }
     }
 }

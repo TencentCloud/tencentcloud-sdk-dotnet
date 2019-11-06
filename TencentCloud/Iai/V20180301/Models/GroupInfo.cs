@@ -63,7 +63,7 @@ namespace TencentCloud.Iai.V20180301.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreationTimestamp")]
-        public string CreationTimestamp{ get; set; }
+        public ulong? CreationTimestamp{ get; set; }
 
 
         /// <summary>

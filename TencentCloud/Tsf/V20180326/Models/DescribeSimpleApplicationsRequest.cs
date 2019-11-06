@@ -60,6 +60,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationResourceTypeList")]
         public string[] ApplicationResourceTypeList{ get; set; }
 
+        /// <summary>
+        /// 通过id和name进行关键词过滤
+        /// </summary>
+        [JsonProperty("SearchWord")]
+        public string SearchWord{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
+            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
         }
     }
 }

@@ -113,6 +113,26 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 合作伙伴为客户创建强代付关系
+        /// </summary>
+        /// <param name="req">参考<see cref="CreatePayRelationForClientRequest"/></param>
+        /// <returns>参考<see cref="CreatePayRelationForClientResponse"/>实例</returns>
+        public async Task<CreatePayRelationForClientResponse> CreatePayRelationForClient(CreatePayRelationForClientRequest req)
+        {
+             JsonResponseModel<CreatePayRelationForClientResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePayRelationForClient");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayRelationForClientResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询已审核客户列表
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAgentAuditedClientsRequest"/></param>
@@ -284,6 +304,26 @@ namespace TencentCloud.Partners.V20180321
              {
                  var strResp = await this.InternalRequest(req, "ModifyClientRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClientRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 合作伙伴为客户消除强代付关系
+        /// </summary>
+        /// <param name="req">参考<see cref="RemovePayRelationForClientRequest"/></param>
+        /// <returns>参考<see cref="RemovePayRelationForClientResponse"/>实例</returns>
+        public async Task<RemovePayRelationForClientResponse> RemovePayRelationForClient(RemovePayRelationForClientRequest req)
+        {
+             JsonResponseModel<RemovePayRelationForClientResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemovePayRelationForClient");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemovePayRelationForClientResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
