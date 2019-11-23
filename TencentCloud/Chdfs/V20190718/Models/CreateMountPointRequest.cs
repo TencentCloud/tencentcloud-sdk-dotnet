@@ -54,6 +54,12 @@ namespace TencentCloud.Chdfs.V20190718.Models
         [JsonProperty("MountPointStatus")]
         public ulong? MountPointStatus{ get; set; }
 
+        /// <summary>
+        /// VPC网络类型（1：CVM；2：黑石1.0；3：黑石2.0）
+        /// </summary>
+        [JsonProperty("VpcType")]
+        public ulong? VpcType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Chdfs.V20190718.Models
             this.SetParamSimple(map, prefix + "AccessGroupId", this.AccessGroupId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "MountPointStatus", this.MountPointStatus);
+            this.SetParamSimple(map, prefix + "VpcType", this.VpcType);
         }
     }
 }

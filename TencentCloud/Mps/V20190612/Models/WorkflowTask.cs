@@ -70,6 +70,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("MediaProcessResultSet")]
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
+        /// <summary>
+        /// 视频内容审核任务的执行状态与结果。
+        /// </summary>
+        [JsonProperty("AiContentReviewResultSet")]
+        public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }
+
+        /// <summary>
+        /// 视频内容识别任务的执行状态与结果。
+        /// </summary>
+        [JsonProperty("AiRecognitionResultSet")]
+        public AiRecognitionResult[] AiRecognitionResultSet{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -83,6 +95,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamArrayObj(map, prefix + "MediaProcessResultSet.", this.MediaProcessResultSet);
+            this.SetParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
+            this.SetParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
         }
     }
 }

@@ -37,37 +37,44 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
+        /// 指定任务 ID 查询
+        /// TaskId 和起始时间必须指定一项
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 查询关键字，请输入域名或 http(s):// 开头完整 URL。
+        /// 查询关键字，请输入域名或 http(s):// 开头完整 URL
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 分页查询偏移量，默认为 0 （第一页）。
+        /// 分页查询偏移量，默认为 0 （第一页）
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询限制数目，默认为20。
+        /// 分页查询限制数目，默认为 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询刷新记录指定地区。mainland：中国大陆。
+        /// 指定地区查询预热纪录
+        /// mainland：境内
+        /// overseas：境外
+        /// global：全球
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+        /// 指定任务状态查询
+        /// fail：预热失败
+        /// done：预热成功
+        /// process：预热中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

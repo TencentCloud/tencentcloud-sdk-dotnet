@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 截图时间点列表，单位为<font color=red>毫秒</font>。
+        /// 截图时间点列表，单位为<font color=red>秒</font>。
         /// </summary>
         [JsonProperty("TimeOffsetSet")]
         public float?[] TimeOffsetSet{ get; set; }

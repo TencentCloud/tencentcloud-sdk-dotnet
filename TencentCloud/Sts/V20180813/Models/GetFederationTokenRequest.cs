@@ -25,7 +25,7 @@ namespace TencentCloud.Sts.V20180813.Models
     {
         
         /// <summary>
-        /// 联合身份用户昵称
+        /// 调用方英文名称，由字母组成。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -41,7 +41,7 @@ namespace TencentCloud.Sts.V20180813.Models
         public string Policy{ get; set; }
 
         /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒
+        /// 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
         /// </summary>
         [JsonProperty("DurationSeconds")]
         public ulong? DurationSeconds{ get; set; }

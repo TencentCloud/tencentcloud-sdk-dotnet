@@ -31,13 +31,13 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 传统负载均衡器ID列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+        /// 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡器列表，目前长度上限为5，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+        /// 应用型负载均衡器列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
         /// </summary>
         [JsonProperty("ForwardLoadBalancers")]
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }

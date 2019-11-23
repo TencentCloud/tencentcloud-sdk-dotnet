@@ -25,7 +25,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
     {
         
         /// <summary>
-        /// 服务类型，ss或者dam
+        /// 服务类型，iss或者dam
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }

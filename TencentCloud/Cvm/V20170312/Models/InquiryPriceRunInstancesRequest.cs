@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)描述。若不指定该参数，则默认机型为S1.SMALL1。
+        /// 实例机型。不同实例机型指定了不同的资源规格，具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。若不指定该参数，则默认机型为S1.SMALL1。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定11块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含10块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+        /// 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HostName{ get; set; }
 
         /// <summary>
-        /// 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云主机实例。
+        /// 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
         /// </summary>
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }

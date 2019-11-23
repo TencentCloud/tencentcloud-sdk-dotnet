@@ -31,7 +31,7 @@ namespace TencentCloud.Cr.V20180321.Models
         public string TaskResult{ get; set; }
 
         /// <summary>
-        /// <p>任务类型：</p><ul style="margin-bottom:0px;"><li>催收数据上传：002</li><li>还款数据上传：003</li><li>回访数据上传：004</li><li>停拨数据上传：005</li></ul>
+        /// <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

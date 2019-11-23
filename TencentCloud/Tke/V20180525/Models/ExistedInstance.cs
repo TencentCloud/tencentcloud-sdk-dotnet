@@ -68,6 +68,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// <summary>
         /// 实例主网卡的公网IP列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }

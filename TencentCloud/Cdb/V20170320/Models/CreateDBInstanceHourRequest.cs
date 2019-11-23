@@ -168,6 +168,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
+        /// <summary>
+        /// 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -198,6 +204,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

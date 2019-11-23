@@ -25,66 +25,6 @@ namespace TencentCloud.Cws.V20180312.Models
     {
         
         /// <summary>
-        /// 扫描进度，百分比整数
-        /// </summary>
-        [JsonProperty("Progress")]
-        public ulong? Progress{ get; set; }
-
-        /// <summary>
-        /// 云用户appid。
-        /// </summary>
-        [JsonProperty("Appid")]
-        public ulong? Appid{ get; set; }
-
-        /// <summary>
-        /// 云用户标识。
-        /// </summary>
-        [JsonProperty("Uin")]
-        public string Uin{ get; set; }
-
-        /// <summary>
-        /// 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
-        /// </summary>
-        [JsonProperty("NeedLogin")]
-        public long? NeedLogin{ get; set; }
-
-        /// <summary>
-        /// 登录后的cookie。
-        /// </summary>
-        [JsonProperty("LoginCookie")]
-        public string LoginCookie{ get; set; }
-
-        /// <summary>
-        /// 登录后的cookie是否有效：0-无效；1-有效。
-        /// </summary>
-        [JsonProperty("LoginCookieValid")]
-        public ulong? LoginCookieValid{ get; set; }
-
-        /// <summary>
-        /// 用于测试cookie是否有效的URL。
-        /// </summary>
-        [JsonProperty("LoginCheckUrl")]
-        public string LoginCheckUrl{ get; set; }
-
-        /// <summary>
-        /// 用于测试cookie是否有效的关键字。
-        /// </summary>
-        [JsonProperty("LoginCheckKw")]
-        public string LoginCheckKw{ get; set; }
-
-        /// <summary>
-        /// 禁止扫描器扫描的目录关键字。
-        /// </summary>
-        [JsonProperty("ScanDisallow")]
-        public string ScanDisallow{ get; set; }
-
-        /// <summary>
-        /// 访问网站的客户端标识。
-        /// </summary>
-        [JsonProperty("UserAgent")]
-        public string UserAgent{ get; set; }
-
-        /// <summary>
         /// 站点ID。
         /// </summary>
         [JsonProperty("Id")]
@@ -216,22 +156,84 @@ namespace TencentCloud.Cws.V20180312.Models
         [JsonProperty("LastScanNoticeNum")]
         public ulong? LastScanNoticeNum{ get; set; }
 
+        /// <summary>
+        /// 扫描进度，百分比整数
+        /// </summary>
+        [JsonProperty("Progress")]
+        public ulong? Progress{ get; set; }
+
+        /// <summary>
+        /// 云用户appid。
+        /// </summary>
+        [JsonProperty("Appid")]
+        public ulong? Appid{ get; set; }
+
+        /// <summary>
+        /// 云用户标识。
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+        /// </summary>
+        [JsonProperty("NeedLogin")]
+        public long? NeedLogin{ get; set; }
+
+        /// <summary>
+        /// 登录后的cookie。
+        /// </summary>
+        [JsonProperty("LoginCookie")]
+        public string LoginCookie{ get; set; }
+
+        /// <summary>
+        /// 登录后的cookie是否有效：0-无效；1-有效。
+        /// </summary>
+        [JsonProperty("LoginCookieValid")]
+        public ulong? LoginCookieValid{ get; set; }
+
+        /// <summary>
+        /// 用于测试cookie是否有效的URL。
+        /// </summary>
+        [JsonProperty("LoginCheckUrl")]
+        public string LoginCheckUrl{ get; set; }
+
+        /// <summary>
+        /// 用于测试cookie是否有效的关键字。
+        /// </summary>
+        [JsonProperty("LoginCheckKw")]
+        public string LoginCheckKw{ get; set; }
+
+        /// <summary>
+        /// 禁止扫描器扫描的目录关键字。
+        /// </summary>
+        [JsonProperty("ScanDisallow")]
+        public string ScanDisallow{ get; set; }
+
+        /// <summary>
+        /// 访问网站的客户端标识。
+        /// </summary>
+        [JsonProperty("UserAgent")]
+        public string UserAgent{ get; set; }
+
+        /// <summary>
+        /// 内容检测状态：0-未检测；1-已检测；
+        /// </summary>
+        [JsonProperty("ContentStatus")]
+        public ulong? ContentStatus{ get; set; }
+
+        /// <summary>
+        /// 最近一次扫描内容检测数量
+        /// </summary>
+        [JsonProperty("LastScanContentNum")]
+        public ulong? LastScanContentNum{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Progress", this.Progress);
-            this.SetParamSimple(map, prefix + "Appid", this.Appid);
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
-            this.SetParamSimple(map, prefix + "NeedLogin", this.NeedLogin);
-            this.SetParamSimple(map, prefix + "LoginCookie", this.LoginCookie);
-            this.SetParamSimple(map, prefix + "LoginCookieValid", this.LoginCookieValid);
-            this.SetParamSimple(map, prefix + "LoginCheckUrl", this.LoginCheckUrl);
-            this.SetParamSimple(map, prefix + "LoginCheckKw", this.LoginCheckKw);
-            this.SetParamSimple(map, prefix + "ScanDisallow", this.ScanDisallow);
-            this.SetParamSimple(map, prefix + "UserAgent", this.UserAgent);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "MonitorId", this.MonitorId);
             this.SetParamSimple(map, prefix + "Url", this.Url);
@@ -254,6 +256,18 @@ namespace TencentCloud.Cws.V20180312.Models
             this.SetParamSimple(map, prefix + "LastScanRateLimit", this.LastScanRateLimit);
             this.SetParamSimple(map, prefix + "LastScanVulsNum", this.LastScanVulsNum);
             this.SetParamSimple(map, prefix + "LastScanNoticeNum", this.LastScanNoticeNum);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "Appid", this.Appid);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "NeedLogin", this.NeedLogin);
+            this.SetParamSimple(map, prefix + "LoginCookie", this.LoginCookie);
+            this.SetParamSimple(map, prefix + "LoginCookieValid", this.LoginCookieValid);
+            this.SetParamSimple(map, prefix + "LoginCheckUrl", this.LoginCheckUrl);
+            this.SetParamSimple(map, prefix + "LoginCheckKw", this.LoginCheckKw);
+            this.SetParamSimple(map, prefix + "ScanDisallow", this.ScanDisallow);
+            this.SetParamSimple(map, prefix + "UserAgent", this.UserAgent);
+            this.SetParamSimple(map, prefix + "ContentStatus", this.ContentStatus);
+            this.SetParamSimple(map, prefix + "LastScanContentNum", this.LastScanContentNum);
         }
     }
 }

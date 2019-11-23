@@ -25,12 +25,6 @@ namespace TencentCloud.Cws.V20180312.Models
     {
         
         /// <summary>
-        /// 云用户appid。
-        /// </summary>
-        [JsonProperty("Appid")]
-        public ulong? Appid{ get; set; }
-
-        /// <summary>
         /// 监控任务ID。
         /// </summary>
         [JsonProperty("Id")]
@@ -108,13 +102,24 @@ namespace TencentCloud.Cws.V20180312.Models
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// 云用户appid。
+        /// </summary>
+        [JsonProperty("Appid")]
+        public ulong? Appid{ get; set; }
+
+        /// <summary>
+        /// 扫描状态：0-待检测；1-检测完成
+        /// </summary>
+        [JsonProperty("ContentScanStatus")]
+        public ulong? ContentScanStatus{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Appid", this.Appid);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
@@ -128,6 +133,8 @@ namespace TencentCloud.Cws.V20180312.Models
             this.SetParamSimple(map, prefix + "CurrentScanStartTime", this.CurrentScanStartTime);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "Appid", this.Appid);
+            this.SetParamSimple(map, prefix + "ContentScanStatus", this.ContentScanStatus);
         }
     }
 }

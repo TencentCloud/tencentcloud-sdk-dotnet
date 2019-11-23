@@ -100,6 +100,12 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public ulong? VulNum{ get; set; }
 
         /// <summary>
+        /// 导出文件下载地址。
+        /// </summary>
+        [JsonProperty("DownloadUrl")]
+        public string DownloadUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -123,6 +129,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "NonlocalLoginNum", this.NonlocalLoginNum);
             this.SetParamSimple(map, prefix + "BruteAttackSuccessNum", this.BruteAttackSuccessNum);
             this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
+            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

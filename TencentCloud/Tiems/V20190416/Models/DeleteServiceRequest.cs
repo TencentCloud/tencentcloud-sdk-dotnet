@@ -28,7 +28,7 @@ namespace TencentCloud.Tiems.V20190416.Models
         /// 服务Id
         /// </summary>
         [JsonProperty("ServiceId")]
-        public ulong? ServiceId{ get; set; }
+        public string ServiceId{ get; set; }
 
 
         /// <summary>

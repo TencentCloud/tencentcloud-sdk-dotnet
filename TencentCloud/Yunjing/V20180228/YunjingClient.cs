@@ -53,6 +53,46 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口（AddLoginWhiteList）用于添加白名单规则
+        /// </summary>
+        /// <param name="req">参考<see cref="AddLoginWhiteListRequest"/></param>
+        /// <returns>参考<see cref="AddLoginWhiteListResponse"/>实例</returns>
+        public async Task<AddLoginWhiteListResponse> AddLoginWhiteList(AddLoginWhiteListRequest req)
+        {
+             JsonResponseModel<AddLoginWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddLoginWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddLoginWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增加机器关联标签
+        /// </summary>
+        /// <param name="req">参考<see cref="AddMachineTagRequest"/></param>
+        /// <returns>参考<see cref="AddMachineTagResponse"/>实例</returns>
+        public async Task<AddMachineTagResponse> AddMachineTag(AddMachineTagRequest req)
+        {
+             JsonResponseModel<AddMachineTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddMachineTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddMachineTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CloseProVersion) 用于关闭专业版。
         /// </summary>
         /// <param name="req">参考<see cref="CloseProVersionRequest"/></param>
@@ -64,6 +104,26 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "CloseProVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseProVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateOpenPortTaskRequest"/></param>
+        /// <returns>参考<see cref="CreateOpenPortTaskResponse"/>实例</returns>
+        public async Task<CreateOpenPortTaskResponse> CreateOpenPortTask(CreateOpenPortTaskRequest req)
+        {
+             JsonResponseModel<CreateOpenPortTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOpenPortTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenPortTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -113,6 +173,66 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 删除网络攻击日志
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteAttackLogsRequest"/></param>
+        /// <returns>参考<see cref="DeleteAttackLogsResponse"/>实例</returns>
+        public async Task<DeleteAttackLogsResponse> DeleteAttackLogs(DeleteAttackLogsRequest req)
+        {
+             JsonResponseModel<DeleteAttackLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAttackLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAttackLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据Ids删除高危命令事件
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteBashEventsRequest"/></param>
+        /// <returns>参考<see cref="DeleteBashEventsResponse"/>实例</returns>
+        public async Task<DeleteBashEventsResponse> DeleteBashEvents(DeleteBashEventsRequest req)
+        {
+             JsonResponseModel<DeleteBashEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBashEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBashEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除高危命令规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteBashRulesRequest"/></param>
+        /// <returns>参考<see cref="DeleteBashRulesResponse"/>实例</returns>
+        public async Task<DeleteBashRulesResponse> DeleteBashRules(DeleteBashRulesRequest req)
+        {
+             JsonResponseModel<DeleteBashRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBashRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBashRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DeleteBruteAttacks) 用于删除暴力破解记录。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteBruteAttacksRequest"/></param>
@@ -133,6 +253,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 删除白名单规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteLoginWhiteListRequest"/></param>
+        /// <returns>参考<see cref="DeleteLoginWhiteListResponse"/>实例</returns>
+        public async Task<DeleteLoginWhiteListResponse> DeleteLoginWhiteList(DeleteLoginWhiteListRequest req)
+        {
+             JsonResponseModel<DeleteLoginWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoginWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoginWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteMachine）用于卸载云镜客户端。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteMachineRequest"/></param>
@@ -144,6 +284,26 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DeleteMachine");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMachineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除服务器关联的标签
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteMachineTagRequest"/></param>
+        /// <returns>参考<see cref="DeleteMachineTagResponse"/>实例</returns>
+        public async Task<DeleteMachineTagResponse> DeleteMachineTag(DeleteMachineTagRequest req)
+        {
+             JsonResponseModel<DeleteMachineTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMachineTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMachineTagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,6 +373,106 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 根据Ids删除本地提权
+        /// </summary>
+        /// <param name="req">参考<see cref="DeletePrivilegeEventsRequest"/></param>
+        /// <returns>参考<see cref="DeletePrivilegeEventsResponse"/>实例</returns>
+        public async Task<DeletePrivilegeEventsResponse> DeletePrivilegeEvents(DeletePrivilegeEventsRequest req)
+        {
+             JsonResponseModel<DeletePrivilegeEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePrivilegeEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivilegeEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除本地提权规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DeletePrivilegeRulesRequest"/></param>
+        /// <returns>参考<see cref="DeletePrivilegeRulesResponse"/>实例</returns>
+        public async Task<DeletePrivilegeRulesResponse> DeletePrivilegeRules(DeletePrivilegeRulesRequest req)
+        {
+             JsonResponseModel<DeletePrivilegeRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePrivilegeRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivilegeRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据Ids删除反弹Shell事件
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteReverseShellEventsRequest"/></param>
+        /// <returns>参考<see cref="DeleteReverseShellEventsResponse"/>实例</returns>
+        public async Task<DeleteReverseShellEventsResponse> DeleteReverseShellEvents(DeleteReverseShellEventsRequest req)
+        {
+             JsonResponseModel<DeleteReverseShellEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReverseShellEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReverseShellEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除反弹Shell规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteReverseShellRulesRequest"/></param>
+        /// <returns>参考<see cref="DeleteReverseShellRulesResponse"/>实例</returns>
+        public async Task<DeleteReverseShellRulesResponse> DeleteReverseShellRules(DeleteReverseShellRulesRequest req)
+        {
+             JsonResponseModel<DeleteReverseShellRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReverseShellRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReverseShellRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除标签
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteTagsRequest"/></param>
+        /// <returns>参考<see cref="DeleteTagsResponse"/>实例</returns>
+        public async Task<DeleteTagsResponse> DeleteTags(DeleteTagsRequest req)
+        {
+             JsonResponseModel<DeleteTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteUsualLoginPlaces）用于删除常用登录地。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteUsualLoginPlacesRequest"/></param>
@@ -273,7 +533,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// 本接口 (DescribeAgentVuls) 用于获取主机的漏洞列表。
+        /// 本接口 (DescribeAgentVuls) 用于获取单台主机的漏洞列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAgentVulsRequest"/></param>
         /// <returns>参考<see cref="DescribeAgentVulsResponse"/>实例</returns>
@@ -304,6 +564,86 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeAlarmAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 网络攻击日志详情
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAttackLogInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeAttackLogInfoResponse"/>实例</returns>
+        public async Task<DescribeAttackLogInfoResponse> DescribeAttackLogInfo(DescribeAttackLogInfoRequest req)
+        {
+             JsonResponseModel<DescribeAttackLogInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAttackLogInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackLogInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按分页形式展示网络攻击日志列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAttackLogsRequest"/></param>
+        /// <returns>参考<see cref="DescribeAttackLogsResponse"/>实例</returns>
+        public async Task<DescribeAttackLogsResponse> DescribeAttackLogs(DescribeAttackLogsRequest req)
+        {
+             JsonResponseModel<DescribeAttackLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAttackLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取高危命令列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBashEventsRequest"/></param>
+        /// <returns>参考<see cref="DescribeBashEventsResponse"/>实例</returns>
+        public async Task<DescribeBashEventsResponse> DescribeBashEvents(DescribeBashEventsRequest req)
+        {
+             JsonResponseModel<DescribeBashEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBashEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBashEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取高危命令规则列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeBashRulesRequest"/></param>
+        /// <returns>参考<see cref="DescribeBashRulesResponse"/>实例</returns>
+        public async Task<DescribeBashRulesResponse> DescribeBashRules(DescribeBashRulesRequest req)
+        {
+             JsonResponseModel<DescribeBashRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBashRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBashRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -433,6 +773,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 获取异地登录白名单列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLoginWhiteListRequest"/></param>
+        /// <returns>参考<see cref="DescribeLoginWhiteListResponse"/>实例</returns>
+        public async Task<DescribeLoginWhiteListResponse> DescribeLoginWhiteList(DescribeLoginWhiteListRequest req)
+        {
+             JsonResponseModel<DescribeLoginWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoginWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoginWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeMachineInfo）用于获取机器详细信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeMachineInfoRequest"/></param>
@@ -553,6 +913,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 本接口 (DescribeOpenPortTaskStatus) 用于获取实时拉取端口任务状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeOpenPortTaskStatusRequest"/></param>
+        /// <returns>参考<see cref="DescribeOpenPortTaskStatusResponse"/>实例</returns>
+        public async Task<DescribeOpenPortTaskStatusResponse> DescribeOpenPortTaskStatus(DescribeOpenPortTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeOpenPortTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOpenPortTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOpenPortTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeOpenPorts) 用于获取端口列表数据。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeOpenPortsRequest"/></param>
@@ -584,6 +964,46 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeOverviewStatistics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取本地提权事件列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePrivilegeEventsRequest"/></param>
+        /// <returns>参考<see cref="DescribePrivilegeEventsResponse"/>实例</returns>
+        public async Task<DescribePrivilegeEventsResponse> DescribePrivilegeEvents(DescribePrivilegeEventsRequest req)
+        {
+             JsonResponseModel<DescribePrivilegeEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrivilegeEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivilegeEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取本地提权规则列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePrivilegeRulesRequest"/></param>
+        /// <returns>参考<see cref="DescribePrivilegeRulesResponse"/>实例</returns>
+        public async Task<DescribePrivilegeRulesResponse> DescribePrivilegeRules(DescribePrivilegeRulesRequest req)
+        {
+             JsonResponseModel<DescribePrivilegeRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrivilegeRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrivilegeRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -673,6 +1093,46 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 获取反弹Shell列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeReverseShellEventsRequest"/></param>
+        /// <returns>参考<see cref="DescribeReverseShellEventsResponse"/>实例</returns>
+        public async Task<DescribeReverseShellEventsResponse> DescribeReverseShellEvents(DescribeReverseShellEventsRequest req)
+        {
+             JsonResponseModel<DescribeReverseShellEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReverseShellEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReverseShellEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取反弹Shell规则列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeReverseShellRulesRequest"/></param>
+        /// <returns>参考<see cref="DescribeReverseShellRulesResponse"/>实例</returns>
+        public async Task<DescribeReverseShellRulesResponse> DescribeReverseShellRules(DescribeReverseShellRulesRequest req)
+        {
+             JsonResponseModel<DescribeReverseShellRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReverseShellRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReverseShellRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeSecurityDynamics) 用于获取安全事件消息数据。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeSecurityDynamicsRequest"/></param>
@@ -704,6 +1164,46 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "DescribeSecurityTrends");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityTrendsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定标签关联的服务器信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTagMachinesRequest"/></param>
+        /// <returns>参考<see cref="DescribeTagMachinesResponse"/>实例</returns>
+        public async Task<DescribeTagMachinesResponse> DescribeTagMachines(DescribeTagMachinesRequest req)
+        {
+             JsonResponseModel<DescribeTagMachinesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagMachines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagMachinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取所有主机标签
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTagsRequest"/></param>
+        /// <returns>参考<see cref="DescribeTagsResponse"/>实例</returns>
+        public async Task<DescribeTagsResponse> DescribeTags(DescribeTagsRequest req)
+        {
+             JsonResponseModel<DescribeTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -913,6 +1413,146 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 新增或修改高危命令规则
+        /// </summary>
+        /// <param name="req">参考<see cref="EditBashRuleRequest"/></param>
+        /// <returns>参考<see cref="EditBashRuleResponse"/>实例</returns>
+        public async Task<EditBashRuleResponse> EditBashRule(EditBashRuleRequest req)
+        {
+             JsonResponseModel<EditBashRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditBashRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditBashRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增或修改本地提权规则
+        /// </summary>
+        /// <param name="req">参考<see cref="EditPrivilegeRuleRequest"/></param>
+        /// <returns>参考<see cref="EditPrivilegeRuleResponse"/>实例</returns>
+        public async Task<EditPrivilegeRuleResponse> EditPrivilegeRule(EditPrivilegeRuleRequest req)
+        {
+             JsonResponseModel<EditPrivilegeRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditPrivilegeRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditPrivilegeRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑反弹Shell规则
+        /// </summary>
+        /// <param name="req">参考<see cref="EditReverseShellRuleRequest"/></param>
+        /// <returns>参考<see cref="EditReverseShellRuleResponse"/>实例</returns>
+        public async Task<EditReverseShellRuleResponse> EditReverseShellRule(EditReverseShellRuleRequest req)
+        {
+             JsonResponseModel<EditReverseShellRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditReverseShellRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditReverseShellRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增或编辑标签
+        /// </summary>
+        /// <param name="req">参考<see cref="EditTagsRequest"/></param>
+        /// <returns>参考<see cref="EditTagsResponse"/>实例</returns>
+        public async Task<EditTagsResponse> EditTags(EditTagsRequest req)
+        {
+             JsonResponseModel<EditTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出网络攻击日志
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportAttackLogsRequest"/></param>
+        /// <returns>参考<see cref="ExportAttackLogsResponse"/>实例</returns>
+        public async Task<ExportAttackLogsResponse> ExportAttackLogs(ExportAttackLogsRequest req)
+        {
+             JsonResponseModel<ExportAttackLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportAttackLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportAttackLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出高危命令事件
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportBashEventsRequest"/></param>
+        /// <returns>参考<see cref="ExportBashEventsResponse"/>实例</returns>
+        public async Task<ExportBashEventsResponse> ExportBashEvents(ExportBashEventsRequest req)
+        {
+             JsonResponseModel<ExportBashEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportBashEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportBashEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ExportBruteAttacks) 用于导出密码破解记录成CSV文件。
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportBruteAttacksRequest"/></param>
+        /// <returns>参考<see cref="ExportBruteAttacksResponse"/>实例</returns>
+        public async Task<ExportBruteAttacksResponse> ExportBruteAttacks(ExportBruteAttacksRequest req)
+        {
+             JsonResponseModel<ExportBruteAttacksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportBruteAttacks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportBruteAttacksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ExportMaliciousRequests) 用于导出下载恶意请求文件。
         /// </summary>
         /// <param name="req">参考<see cref="ExportMaliciousRequestsRequest"/></param>
@@ -933,7 +1573,87 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// 本接口 (IngoreImpactedHosts) 用于忽略漏洞。
+        /// 本接口 (ExportMalwares) 用于导出木马记录CSV文件。
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportMalwaresRequest"/></param>
+        /// <returns>参考<see cref="ExportMalwaresResponse"/>实例</returns>
+        public async Task<ExportMalwaresResponse> ExportMalwares(ExportMalwaresRequest req)
+        {
+             JsonResponseModel<ExportMalwaresResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportMalwares");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportMalwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ExportNonlocalLoginPlaces) 用于导出异地登录事件记录CSV文件。
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportNonlocalLoginPlacesRequest"/></param>
+        /// <returns>参考<see cref="ExportNonlocalLoginPlacesResponse"/>实例</returns>
+        public async Task<ExportNonlocalLoginPlacesResponse> ExportNonlocalLoginPlaces(ExportNonlocalLoginPlacesRequest req)
+        {
+             JsonResponseModel<ExportNonlocalLoginPlacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportNonlocalLoginPlaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportNonlocalLoginPlacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出本地提权事件
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportPrivilegeEventsRequest"/></param>
+        /// <returns>参考<see cref="ExportPrivilegeEventsResponse"/>实例</returns>
+        public async Task<ExportPrivilegeEventsResponse> ExportPrivilegeEvents(ExportPrivilegeEventsRequest req)
+        {
+             JsonResponseModel<ExportPrivilegeEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportPrivilegeEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportPrivilegeEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出反弹Shell事件
+        /// </summary>
+        /// <param name="req">参考<see cref="ExportReverseShellEventsRequest"/></param>
+        /// <returns>参考<see cref="ExportReverseShellEventsResponse"/>实例</returns>
+        public async Task<ExportReverseShellEventsResponse> ExportReverseShellEvents(ExportReverseShellEventsRequest req)
+        {
+             JsonResponseModel<ExportReverseShellEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportReverseShellEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportReverseShellEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
         /// </summary>
         /// <param name="req">参考<see cref="IgnoreImpactedHostsRequest"/></param>
         /// <returns>参考<see cref="IgnoreImpactedHostsResponse"/>实例</returns>
@@ -1033,6 +1753,26 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 编辑白名单规则
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyLoginWhiteListRequest"/></param>
+        /// <returns>参考<see cref="ModifyLoginWhiteListResponse"/>实例</returns>
+        public async Task<ModifyLoginWhiteListResponse> ModifyLoginWhiteList(ModifyLoginWhiteListRequest req)
+        {
+             JsonResponseModel<ModifyLoginWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoginWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoginWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyProVersionRenewFlagRequest"/></param>
@@ -1113,7 +1853,7 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
-        /// 本接口 (RescanImpactedHosts) 用于漏洞重新检测。
+        /// 本接口 (RescanImpactedHost) 用于漏洞重新检测。
         /// </summary>
         /// <param name="req">参考<see cref="RescanImpactedHostRequest"/></param>
         /// <returns>参考<see cref="RescanImpactedHostResponse"/>实例</returns>
@@ -1144,6 +1884,46 @@ namespace TencentCloud.Yunjing.V20180228
              {
                  var strResp = await this.InternalRequest(req, "SeparateMalwares");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SeparateMalwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置高危命令事件状态
+        /// </summary>
+        /// <param name="req">参考<see cref="SetBashEventsStatusRequest"/></param>
+        /// <returns>参考<see cref="SetBashEventsStatusResponse"/>实例</returns>
+        public async Task<SetBashEventsStatusResponse> SetBashEventsStatus(SetBashEventsStatusRequest req)
+        {
+             JsonResponseModel<SetBashEventsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetBashEventsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetBashEventsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换高危命令规则状态
+        /// </summary>
+        /// <param name="req">参考<see cref="SwitchBashRulesRequest"/></param>
+        /// <returns>参考<see cref="SwitchBashRulesResponse"/>实例</returns>
+        public async Task<SwitchBashRulesResponse> SwitchBashRules(SwitchBashRulesRequest req)
+        {
+             JsonResponseModel<SwitchBashRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchBashRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchBashRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

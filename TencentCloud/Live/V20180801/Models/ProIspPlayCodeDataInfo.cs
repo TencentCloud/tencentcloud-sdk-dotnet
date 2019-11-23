@@ -25,6 +25,12 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
+        /// 国家或地区。
+        /// </summary>
+        [JsonProperty("CountryAreaName")]
+        public string CountryAreaName{ get; set; }
+
+        /// <summary>
         /// 省份。
         /// </summary>
         [JsonProperty("ProvinceName")]
@@ -66,6 +72,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CountryAreaName", this.CountryAreaName);
             this.SetParamSimple(map, prefix + "ProvinceName", this.ProvinceName);
             this.SetParamSimple(map, prefix + "IspName", this.IspName);
             this.SetParamSimple(map, prefix + "Code2xx", this.Code2xx);

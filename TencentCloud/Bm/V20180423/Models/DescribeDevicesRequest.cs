@@ -37,7 +37,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/31968)查询
+        /// 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
         /// </summary>
         [JsonProperty("DeviceClassCode")]
         public string DeviceClassCode{ get; set; }

@@ -31,7 +31,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务类型，目前仅支持 WorkflowTask。
+        /// 任务类型，包含：
+        /// <li> WorkflowTask：工作流处理任务；</li>
+        /// <li> LiveProcessTask：直播处理任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 录音文件识别的请求返回结果。
+        /// 录音文件识别的请求返回结果，包含结果查询需要的TaskId
         /// </summary>
         [JsonProperty("Data")]
         public Task Data{ get; set; }

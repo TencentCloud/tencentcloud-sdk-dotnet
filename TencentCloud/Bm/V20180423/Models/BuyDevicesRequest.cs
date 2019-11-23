@@ -31,7 +31,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/api/386/31964)获取操作系统信息
+        /// 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
         /// </summary>
         [JsonProperty("OsTypeId")]
         public ulong? OsTypeId{ get; set; }
@@ -248,7 +248,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public string FileSystem{ get; set; }
 
         /// <summary>
-        /// 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名做为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+        /// 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
         /// </summary>
         [JsonProperty("BuySession")]
         public string BuySession{ get; set; }

@@ -25,10 +25,10 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 通道扩展码，默认没有开通（需要填空）
+        /// 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
         /// </summary>
         [JsonProperty("ExtendCode")]
-        public string ExtendCode{ get; set; }
+        public ulong? ExtendCode{ get; set; }
 
         /// <summary>
         /// 国家（或地区）码
@@ -37,7 +37,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public string NationCode{ get; set; }
 
         /// <summary>
-        /// 手机号码（ e.164 标准）
+        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
@@ -55,10 +55,10 @@ namespace TencentCloud.Sms.V20190711.Models
         public string ReplyContent{ get; set; }
 
         /// <summary>
-        /// 回复时间，UNIX 时间戳（单位：秒）
+        /// 回复时间(例如：2019-10-08 17:18:37)
         /// </summary>
         [JsonProperty("ReplyTime")]
-        public ulong? ReplyTime{ get; set; }
+        public string ReplyTime{ get; set; }
 
 
         /// <summary>

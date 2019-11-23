@@ -43,7 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+        /// 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Polygon")]
@@ -54,6 +54,29 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }
+
+        /// <summary>
+        /// 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+        /// </summary>
+        [JsonProperty("ItemCoord")]
+        public ItemCoord ItemCoord{ get; set; }
+
+        /// <summary>
+        /// 算式题型编号：
+        /// ‘1’: 加减乘除四则
+        /// ‘2’: 加减乘除已知结果求运算因子
+        /// ‘3’: 判断大小
+        /// ‘4’: 约等于估算
+        /// ‘5’: 带余数除法
+        /// ‘6’: 分数四则运算
+        /// ‘7’: 单位换算
+        /// ‘8’: 竖式加减法
+        /// ‘9’: 竖式乘除法
+        /// ‘10’: 脱式计算
+        /// ‘11’: 解方程
+        /// </summary>
+        [JsonProperty("ExpressionType")]
+        public string ExpressionType{ get; set; }
 
 
         /// <summary>
@@ -66,6 +89,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
+            this.SetParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
         }
     }
 }

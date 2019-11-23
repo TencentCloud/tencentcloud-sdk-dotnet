@@ -66,6 +66,12 @@ namespace TencentCloud.Chdfs.V20190718.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// VPC网络类型
+        /// </summary>
+        [JsonProperty("VpcType")]
+        public ulong? VpcType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Chdfs.V20190718.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "VpcType", this.VpcType);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，默认为当前时间。 EndTime不能小于EtartTime
+        /// 结束时间，默认为当前时间。 EndTime不能小于StartTime
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

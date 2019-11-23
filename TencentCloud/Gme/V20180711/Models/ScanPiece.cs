@@ -71,6 +71,20 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
+        /// <summary>
+        /// 流检测时分片在流中的偏移时间，单位毫秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 流检测时分片时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public ulong? Duration{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -84,6 +98,8 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "Info", this.Info);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
         }
     }
 }

@@ -25,13 +25,15 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 要刷新的目录列表，必须包含协议头部。
+        /// 目录列表，需要包含协议头部 http:// 或 https://
         /// </summary>
         [JsonProperty("Paths")]
         public string[] Paths{ get; set; }
 
         /// <summary>
-        /// 刷新类型，flush 代表刷新有更新的资源，delete 表示刷新全部资源。
+        /// 刷新类型
+        /// flush：刷新产生更新的资源
+        /// delete：刷新全部资源
         /// </summary>
         [JsonProperty("FlushType")]
         public string FlushType{ get; set; }

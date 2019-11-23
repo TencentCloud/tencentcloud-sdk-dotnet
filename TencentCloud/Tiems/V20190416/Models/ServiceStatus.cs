@@ -56,6 +56,13 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("Replicas")]
         public string[] Replicas{ get; set; }
 
+        /// <summary>
+        /// 运行状态对额外信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -67,6 +74,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
             this.SetParamArraySimple(map, prefix + "Replicas.", this.Replicas);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

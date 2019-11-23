@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 流名称。
+        /// 流名称。如果只绑定域名或路径，则此处填空。
         /// </summary>
         [JsonProperty("StreamName")]
         public string StreamName{ get; set; }

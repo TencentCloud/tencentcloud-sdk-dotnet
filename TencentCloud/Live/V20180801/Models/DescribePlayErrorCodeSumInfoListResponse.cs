@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalCode5xx{ get; set; }
 
         /// <summary>
-        /// 各状态码的总次数，暂时支持400,403,404,500,502,503,504。
+        /// 各状态码的总次数。
         /// </summary>
         [JsonProperty("TotalCodeList")]
         public PlayCodeTotalInfo[] TotalCodeList{ get; set; }
@@ -79,6 +79,18 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalNum{ get; set; }
 
         /// <summary>
+        /// 状态码为2开头的总次数。
+        /// </summary>
+        [JsonProperty("TotalCode2xx")]
+        public ulong? TotalCode2xx{ get; set; }
+
+        /// <summary>
+        /// 状态码为3开头的总次数。
+        /// </summary>
+        [JsonProperty("TotalCode3xx")]
+        public ulong? TotalCode3xx{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +111,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "TotalPage", this.TotalPage);
             this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
+            this.SetParamSimple(map, prefix + "TotalCode2xx", this.TotalCode2xx);
+            this.SetParamSimple(map, prefix + "TotalCode3xx", this.TotalCode3xx);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

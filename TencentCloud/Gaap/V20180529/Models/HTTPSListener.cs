@@ -107,6 +107,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ClientCertificateAlias")]
         public string ClientCertificateAlias{ get; set; }
 
+        /// <summary>
+        /// 多客户端CA证书别名信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolyClientCertificateAliasInfo")]
+        public CertificateAliasInfo[] PolyClientCertificateAliasInfo{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -125,6 +132,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ClientCertificateAlias", this.ClientCertificateAlias);
+            this.SetParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
         }
     }
 }

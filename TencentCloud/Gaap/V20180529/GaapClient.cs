@@ -215,6 +215,26 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 定制域名指定错误码的错误响应
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateDomainErrorPageInfoRequest"/></param>
+        /// <returns>参考<see cref="CreateDomainErrorPageInfoResponse"/>实例</returns>
+        public async Task<CreateDomainErrorPageInfoResponse> CreateDomainErrorPageInfo(CreateDomainErrorPageInfoRequest req)
+        {
+             JsonResponseModel<CreateDomainErrorPageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDomainErrorPageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainErrorPageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
         /// </summary>
         /// <param name="req">参考<see cref="CreateHTTPListenerRequest"/></param>
@@ -455,6 +475,26 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 删除域名的定制错误
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteDomainErrorPageInfoRequest"/></param>
+        /// <returns>参考<see cref="DeleteDomainErrorPageInfoResponse"/>实例</returns>
+        public async Task<DeleteDomainErrorPageInfoResponse> DeleteDomainErrorPageInfo(DeleteDomainErrorPageInfoRequest req)
+        {
+             JsonResponseModel<DeleteDomainErrorPageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDomainErrorPageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainErrorPageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DeleteListeners）用于批量删除通道或通道组的监听器，包括4/7层监听器。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteListenersRequest"/></param>
@@ -666,6 +706,26 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = await this.InternalRequest(req, "DescribeDestRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDestRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询目前订制域名的错误响应
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDomainErrorPageInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeDomainErrorPageInfoResponse"/>实例</returns>
+        public async Task<DescribeDomainErrorPageInfoResponse> DescribeDomainErrorPageInfo(DescribeDomainErrorPageInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainErrorPageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainErrorPageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainErrorPageInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

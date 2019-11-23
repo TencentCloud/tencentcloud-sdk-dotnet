@@ -25,18 +25,6 @@ namespace TencentCloud.Cws.V20180312.Models
     {
         
         /// <summary>
-        /// 监控任务包含的站点列表的平均扫描进度。
-        /// </summary>
-        [JsonProperty("Progress")]
-        public ulong? Progress{ get; set; }
-
-        /// <summary>
-        /// 扫描页面总数。
-        /// </summary>
-        [JsonProperty("PageCount")]
-        public ulong? PageCount{ get; set; }
-
-        /// <summary>
         /// 监控任务基础信息。
         /// </summary>
         [JsonProperty("Basic")]
@@ -90,14 +78,30 @@ namespace TencentCloud.Cws.V20180312.Models
         [JsonProperty("VulsNoticeNumber")]
         public ulong? VulsNoticeNumber{ get; set; }
 
+        /// <summary>
+        /// 监控任务包含的站点列表的平均扫描进度。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public ulong? Progress{ get; set; }
+
+        /// <summary>
+        /// 扫描页面总数。
+        /// </summary>
+        [JsonProperty("PageCount")]
+        public ulong? PageCount{ get; set; }
+
+        /// <summary>
+        /// 内容检测数量。
+        /// </summary>
+        [JsonProperty("ContentNumber")]
+        public ulong? ContentNumber{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Progress", this.Progress);
-            this.SetParamSimple(map, prefix + "PageCount", this.PageCount);
             this.SetParamObj(map, prefix + "Basic.", this.Basic);
             this.SetParamArrayObj(map, prefix + "Sites.", this.Sites);
             this.SetParamSimple(map, prefix + "SiteNumber", this.SiteNumber);
@@ -107,6 +111,9 @@ namespace TencentCloud.Cws.V20180312.Models
             this.SetParamSimple(map, prefix + "VulsMiddleNumber", this.VulsMiddleNumber);
             this.SetParamSimple(map, prefix + "VulsLowNumber", this.VulsLowNumber);
             this.SetParamSimple(map, prefix + "VulsNoticeNumber", this.VulsNoticeNumber);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "PageCount", this.PageCount);
+            this.SetParamSimple(map, prefix + "ContentNumber", this.ContentNumber);
         }
     }
 }

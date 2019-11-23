@@ -64,16 +64,22 @@ namespace TencentCloud.Live.V20180801.Models
         public string[] PlayDomains{ get; set; }
 
         /// <summary>
-        /// 非必传参数，要查询的省份（地区）英文名称列表，如 Beijing
+        /// 要查询的省份（地区）英文名称列表，如 Beijing。
         /// </summary>
         [JsonProperty("ProvinceNames")]
         public string[] ProvinceNames{ get; set; }
 
         /// <summary>
-        /// 非必传参数，要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据
+        /// 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
         /// </summary>
         [JsonProperty("IspNames")]
         public string[] IspNames{ get; set; }
+
+        /// <summary>
+        /// 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        /// </summary>
+        [JsonProperty("MainlandOrOversea")]
+        public string MainlandOrOversea{ get; set; }
 
 
         /// <summary>
@@ -88,6 +94,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
             this.SetParamArraySimple(map, prefix + "ProvinceNames.", this.ProvinceNames);
             this.SetParamArraySimple(map, prefix + "IspNames.", this.IspNames);
+            this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         }
     }
 }

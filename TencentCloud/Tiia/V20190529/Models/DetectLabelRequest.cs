@@ -43,6 +43,18 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
+        /// <summary>
+        /// 本次调用支持的识别场景，可选值如下：
+        /// WEB，针对网络图片优化;
+        /// CAMERA，针对手机摄像头拍摄图片优化;
+        /// ALBUM，针对手机相册、网盘产品优化;
+        /// 如果不传此参数，则默认为WEB。
+        /// 
+        /// 支持多场景（Scenes）一起检测。例如，使用 Scenes=["WEB", "CAMERA"]，即对一张图片使用两个模型同时检测，输出两套识别结果。
+        /// </summary>
+        [JsonProperty("Scenes")]
+        public string[] Scenes{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +63,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         {
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
         }
     }
 }

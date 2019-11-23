@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 要刷新的Url列表，必须包含协议头部。
+        /// URL 列表，需要包含协议头部 http:// 或 https://
         /// </summary>
         [JsonProperty("Urls")]
         public string[] Urls{ get; set; }

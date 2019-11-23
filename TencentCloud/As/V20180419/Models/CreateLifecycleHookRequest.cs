@@ -31,19 +31,19 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超128个字节。
+        /// 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
         /// </summary>
         [JsonProperty("LifecycleHookName")]
         public string LifecycleHookName{ get; set; }
 
         /// <summary>
-        /// 进行生命周期挂钩的场景，取值范围包括“INSTANCE_LAUNCHING”和“INSTANCE_TERMINATING”
+        /// 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
 
         /// <summary>
-        /// 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是“CONTINUE”或“ABANDON”，默认值为“CONTINUE”
+        /// 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩向通知目标发送的附加信息，默认值为''。最大长度不能超过1024个字节。
+        /// 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }

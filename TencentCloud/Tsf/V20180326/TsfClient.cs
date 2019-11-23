@@ -233,6 +233,26 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建Serverless部署组
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateServerlessGroupRequest"/></param>
+        /// <returns>参考<see cref="CreateServerlessGroupResponse"/>实例</returns>
+        public async Task<CreateServerlessGroupResponse> CreateServerlessGroup(CreateServerlessGroupRequest req)
+        {
+             JsonResponseModel<CreateServerlessGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServerlessGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServerlessGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除应用
         /// </summary>
         /// <param name="req">参考<see cref="DeleteApplicationRequest"/></param>
@@ -405,6 +425,26 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = await this.InternalRequest(req, "DeletePublicConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePublicConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除Serverless部署组
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteServerlessGroupRequest"/></param>
+        /// <returns>参考<see cref="DeleteServerlessGroupResponse"/>实例</returns>
+        public async Task<DeleteServerlessGroupResponse> DeleteServerlessGroup(DeleteServerlessGroupRequest req)
+        {
+             JsonResponseModel<DeleteServerlessGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteServerlessGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServerlessGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -946,6 +986,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = await this.InternalRequest(req, "DescribeReleasedConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReleasedConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Serverless部署组明细
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeServerlessGroupRequest"/></param>
+        /// <returns>参考<see cref="DescribeServerlessGroupResponse"/>实例</returns>
+        public async Task<DescribeServerlessGroupResponse> DescribeServerlessGroup(DescribeServerlessGroupRequest req)
+        {
+             JsonResponseModel<DescribeServerlessGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServerlessGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Serverless部署组列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeServerlessGroupsRequest"/></param>
+        /// <returns>参考<see cref="DescribeServerlessGroupsResponse"/>实例</returns>
+        public async Task<DescribeServerlessGroupsResponse> DescribeServerlessGroups(DescribeServerlessGroupsRequest req)
+        {
+             JsonResponseModel<DescribeServerlessGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServerlessGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

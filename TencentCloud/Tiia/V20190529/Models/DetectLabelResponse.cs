@@ -25,10 +25,25 @@ namespace TencentCloud.Tiia.V20190529.Models
     {
         
         /// <summary>
-        /// 标签结果数组。
+        /// Web网络版标签结果数组。如未选择WEB场景，则为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public DetectLabelItem[] Labels{ get; set; }
+
+        /// <summary>
+        /// Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CameraLabels")]
+        public DetectLabelItem[] CameraLabels{ get; set; }
+
+        /// <summary>
+        /// Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlbumLabels")]
+        public DetectLabelItem[] AlbumLabels{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +58,8 @@ namespace TencentCloud.Tiia.V20190529.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamArrayObj(map, prefix + "CameraLabels.", this.CameraLabels);
+            this.SetParamArrayObj(map, prefix + "AlbumLabels.", this.AlbumLabels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

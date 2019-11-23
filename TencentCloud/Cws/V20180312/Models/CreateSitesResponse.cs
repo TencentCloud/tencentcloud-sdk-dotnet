@@ -31,7 +31,13 @@ namespace TencentCloud.Cws.V20180312.Models
         public ulong? Number{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 站点数组
+        /// </summary>
+        [JsonProperty("Sites")]
+        public MiniSite[] Sites{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Cws.V20180312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Number", this.Number);
+            this.SetParamArrayObj(map, prefix + "Sites.", this.Sites);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

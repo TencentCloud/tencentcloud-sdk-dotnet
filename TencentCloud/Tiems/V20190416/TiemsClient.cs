@@ -53,6 +53,46 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 创建任务
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateJobRequest"/></param>
+        /// <returns>参考<see cref="CreateJobResponse"/>实例</returns>
+        public async Task<CreateJobResponse> CreateJob(CreateJobRequest req)
+        {
+             JsonResponseModel<CreateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建运行环境
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateRuntimeRequest"/></param>
+        /// <returns>参考<see cref="CreateRuntimeResponse"/>实例</returns>
+        public async Task<CreateRuntimeResponse> CreateRuntime(CreateRuntimeRequest req)
+        {
+             JsonResponseModel<CreateRuntimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRuntime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRuntimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建服务
         /// </summary>
         /// <param name="req">参考<see cref="CreateServiceRequest"/></param>
@@ -93,6 +133,46 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 删除任务
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteJobRequest"/></param>
+        /// <returns>参考<see cref="DeleteJobResponse"/>实例</returns>
+        public async Task<DeleteJobResponse> DeleteJob(DeleteJobRequest req)
+        {
+             JsonResponseModel<DeleteJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除运行环境
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteRuntimeRequest"/></param>
+        /// <returns>参考<see cref="DeleteRuntimeResponse"/>实例</returns>
+        public async Task<DeleteRuntimeResponse> DeleteRuntime(DeleteRuntimeRequest req)
+        {
+             JsonResponseModel<DeleteRuntimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRuntime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRuntimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除服务
         /// </summary>
         /// <param name="req">参考<see cref="DeleteServiceRequest"/></param>
@@ -124,6 +204,26 @@ namespace TencentCloud.Tiems.V20190416
              {
                  var strResp = await this.InternalRequest(req, "DeleteServiceConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取节点列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstancesRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstancesResponse"/>实例</returns>
+        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
+        {
+             JsonResponseModel<DescribeInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -184,6 +284,46 @@ namespace TencentCloud.Tiems.V20190416
              {
                  var strResp = await this.InternalRequest(req, "DescribeServices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暴露服务
+        /// </summary>
+        /// <param name="req">参考<see cref="ExposeServiceRequest"/></param>
+        /// <returns>参考<see cref="ExposeServiceResponse"/>实例</returns>
+        public async Task<ExposeServiceResponse> ExposeService(ExposeServiceRequest req)
+        {
+             JsonResponseModel<ExposeServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExposeService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExposeServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新任务
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateJobRequest"/></param>
+        /// <returns>参考<see cref="UpdateJobResponse"/>实例</returns>
+        public async Task<UpdateJobResponse> UpdateJob(UpdateJobRequest req)
+        {
+             JsonResponseModel<UpdateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

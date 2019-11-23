@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// [实例状态](/document/api/213/9452#INSTANCE_STATE)。
+        /// 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }

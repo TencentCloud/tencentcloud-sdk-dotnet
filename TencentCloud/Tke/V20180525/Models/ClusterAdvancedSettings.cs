@@ -42,6 +42,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ContainerRuntime")]
         public string ContainerRuntime{ get; set; }
 
+        /// <summary>
+        /// 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+        /// </summary>
+        [JsonProperty("NodeNameType")]
+        public string NodeNameType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "IPVS", this.IPVS);
             this.SetParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+            this.SetParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
         }
     }
 }

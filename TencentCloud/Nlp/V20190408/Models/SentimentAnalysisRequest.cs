@@ -32,10 +32,10 @@ namespace TencentCloud.Nlp.V20190408.Models
 
         /// <summary>
         /// 文本所属类型（默认取4值）：
-        /// 1、电商
-        /// 2、APP
-        /// 3、美食
-        /// 4、酒店和其他
+        /// 1、商品评论类
+        /// 2、社交类
+        /// 3、美食酒店类
+        /// 4、通用领域类
         /// </summary>
         [JsonProperty("Flag")]
         public ulong? Flag{ get; set; }

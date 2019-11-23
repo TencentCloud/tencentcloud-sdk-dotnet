@@ -142,7 +142,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// 实例任务状态
+        /// 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }

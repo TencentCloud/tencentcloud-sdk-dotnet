@@ -25,14 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 符合搜索条件的记录总数
-        /// <li>最大值：5000，即，当命中记录数超过 5000，该字段将返回 5000，而非实际命中总数。</li>
+        /// 符合搜索条件的记录总数。
+        /// <li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 媒体文件信息列表，只包含基础信息（BasicInfo）
+        /// 媒体文件信息列表，只包含基础信息（BasicInfo）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaInfoSet")]

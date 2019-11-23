@@ -25,7 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// CDN 统计数据，每天一条数据。
+        /// 时间粒度，单位：分钟。
+        /// </summary>
+        [JsonProperty("DataInterval")]
+        public long? DataInterval{ get; set; }
+
+        /// <summary>
+        /// CDN 统计数据。
         /// </summary>
         [JsonProperty("Data")]
         public StatDataItem[] Data{ get; set; }
@@ -42,6 +48,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataInterval", this.DataInterval);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

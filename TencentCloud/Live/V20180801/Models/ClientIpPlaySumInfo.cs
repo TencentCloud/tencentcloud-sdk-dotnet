@@ -54,6 +54,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("TotalFailedRequest")]
         public ulong? TotalFailedRequest{ get; set; }
 
+        /// <summary>
+        /// 客户端所在国家。
+        /// </summary>
+        [JsonProperty("CountryArea")]
+        public string CountryArea{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "TotalFlux", this.TotalFlux);
             this.SetParamSimple(map, prefix + "TotalRequest", this.TotalRequest);
             this.SetParamSimple(map, prefix + "TotalFailedRequest", this.TotalFailedRequest);
+            this.SetParamSimple(map, prefix + "CountryArea", this.CountryArea);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Tbp.V20190627.Models
         [JsonProperty("PlatformType")]
         public string PlatformType{ get; set; }
 
+        /// <summary>
+        /// 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+        /// </summary>
+        [JsonProperty("PlatformId")]
+        public string PlatformId{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -72,6 +78,7 @@ namespace TencentCloud.Tbp.V20190627.Models
             this.SetParamSimple(map, prefix + "InputText", this.InputText);
             this.SetParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
             this.SetParamSimple(map, prefix + "PlatformType", this.PlatformType);
+            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
         }
     }
 }

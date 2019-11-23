@@ -25,30 +25,6 @@ namespace TencentCloud.Cws.V20180312.Models
     {
         
         /// <summary>
-        /// ID。
-        /// </summary>
-        [JsonProperty("Id")]
-        public ulong? Id{ get; set; }
-
-        /// <summary>
-        /// 云用户appid
-        /// </summary>
-        [JsonProperty("Appid")]
-        public ulong? Appid{ get; set; }
-
-        /// <summary>
-        /// 用于验证站点的url，即访问该url获取验证数据。
-        /// </summary>
-        [JsonProperty("VerifyUrl")]
-        public string VerifyUrl{ get; set; }
-
-        /// <summary>
-        /// 获取验证验证文件的url。
-        /// </summary>
-        [JsonProperty("VerifyFileUrl")]
-        public string VerifyFileUrl{ get; set; }
-
-        /// <summary>
         /// 根域名。
         /// </summary>
         [JsonProperty("Domain")]
@@ -90,16 +66,36 @@ namespace TencentCloud.Cws.V20180312.Models
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// ID。
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// 云用户appid
+        /// </summary>
+        [JsonProperty("Appid")]
+        public ulong? Appid{ get; set; }
+
+        /// <summary>
+        /// 用于验证站点的url，即访问该url获取验证数据。
+        /// </summary>
+        [JsonProperty("VerifyUrl")]
+        public string VerifyUrl{ get; set; }
+
+        /// <summary>
+        /// 获取验证验证文件的url。
+        /// </summary>
+        [JsonProperty("VerifyFileUrl")]
+        public string VerifyFileUrl{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Appid", this.Appid);
-            this.SetParamSimple(map, prefix + "VerifyUrl", this.VerifyUrl);
-            this.SetParamSimple(map, prefix + "VerifyFileUrl", this.VerifyFileUrl);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "TxtName", this.TxtName);
             this.SetParamSimple(map, prefix + "TxtText", this.TxtText);
@@ -107,6 +103,10 @@ namespace TencentCloud.Cws.V20180312.Models
             this.SetParamSimple(map, prefix + "VerifyStatus", this.VerifyStatus);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Appid", this.Appid);
+            this.SetParamSimple(map, prefix + "VerifyUrl", this.VerifyUrl);
+            this.SetParamSimple(map, prefix + "VerifyFileUrl", this.VerifyFileUrl);
         }
     }
 }

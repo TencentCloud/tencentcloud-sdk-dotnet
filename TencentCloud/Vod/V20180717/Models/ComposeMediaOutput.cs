@@ -37,6 +37,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+        /// <li>默认值：0，表示其他分类。</li>
+        /// </summary>
+        [JsonProperty("ClassId")]
+        public long? ClassId{ get; set; }
+
+        /// <summary>
+        /// 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
         /// 封装格式，可选值：mp4、mp3。其中，mp3 为纯音频文件。
         /// </summary>
         [JsonProperty("Container")]
@@ -82,6 +95,8 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamObj(map, prefix + "VideoStream.", this.VideoStream);
             this.SetParamObj(map, prefix + "AudioStream.", this.AudioStream);

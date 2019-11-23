@@ -25,10 +25,10 @@ namespace TencentCloud.Tiems.V20190416.Models
     {
         
         /// <summary>
-        /// 服务配置Id (deprecated)
+        /// 服务配置Id
         /// </summary>
         [JsonProperty("ServiceConfigId")]
-        public long? ServiceConfigId{ get; set; }
+        public string ServiceConfigId{ get; set; }
 
         /// <summary>
         /// 服务配置名称

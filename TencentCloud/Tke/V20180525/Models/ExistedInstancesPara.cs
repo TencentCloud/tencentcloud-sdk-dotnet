@@ -49,10 +49,16 @@ namespace TencentCloud.Tke.V20180525.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+        /// 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// 重装系统时，可以指定修改实例的HostName。
+        /// </summary>
+        [JsonProperty("HostName")]
+        public string HostName{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "HostName", this.HostName);
         }
     }
 }

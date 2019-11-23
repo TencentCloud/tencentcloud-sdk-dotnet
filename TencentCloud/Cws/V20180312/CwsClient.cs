@@ -113,7 +113,7 @@ namespace TencentCloud.Cws.V20180312
         }
 
         /// <summary>
-        /// 本接口（CreateVulsMisinformation）用于新增一个或多个漏洞误报信息。
+        /// 本接口（CreateVulsMisinformation）可以用于新增一个或多个漏洞误报信息。
         /// </summary>
         /// <param name="req">参考<see cref="CreateVulsMisinformationRequest"/></param>
         /// <returns>参考<see cref="CreateVulsMisinformationResponse"/>实例</returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cws.V20180312
         }
 
         /// <summary>
-        /// 本接口 (DeleteMonitors) 用于删除监控任务。
+        /// 本接口 (DeleteMonitors) 用于删除用户监控任务。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteMonitorsRequest"/></param>
         /// <returns>参考<see cref="DeleteMonitorsResponse"/>实例</returns>

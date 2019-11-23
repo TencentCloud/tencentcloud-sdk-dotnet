@@ -58,6 +58,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }
 
+        /// <summary>
+        /// 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        /// </summary>
+        [JsonProperty("MainlandOrOversea")]
+        public string MainlandOrOversea{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -69,6 +75,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
             this.SetParamSimple(map, prefix + "StatType", this.StatType);
             this.SetParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
+            this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         }
     }
 }

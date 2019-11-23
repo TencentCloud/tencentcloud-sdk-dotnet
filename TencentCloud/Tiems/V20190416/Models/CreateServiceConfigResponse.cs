@@ -28,7 +28,7 @@ namespace TencentCloud.Tiems.V20190416.Models
         /// 服务配置
         /// </summary>
         [JsonProperty("ServiceConfig")]
-        public ServiceConfig ServiceConfig{ get; set; }
+        public Config ServiceConfig{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

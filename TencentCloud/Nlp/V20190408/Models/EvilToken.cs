@@ -49,7 +49,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// 5、广告/灌水；
         /// 6、迷信/邪教；
         /// 7、其他违法（如跨站追杀/恶意竞争等）；
-        /// 8、综合
+        /// 8、综合；
+        /// 9、联系方式/链接
         /// </summary>
         [JsonProperty("EvilType")]
         public ulong? EvilType{ get; set; }

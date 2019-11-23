@@ -53,6 +53,26 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
+        /// 服务器绑定CAM角色，该角色授权访问黑石物理服务器服务，为黑石物理服务器提供了访问资源的权限，如请求服务器的临时证书
+        /// </summary>
+        /// <param name="req">参考<see cref="AttachCamRoleRequest"/></param>
+        /// <returns>参考<see cref="AttachCamRoleResponse"/>实例</returns>
+        public async Task<AttachCamRoleResponse> AttachCamRole(AttachCamRoleRequest req)
+        {
+             JsonResponseModel<AttachCamRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachCamRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachCamRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 为预授权规则绑定标签
         /// </summary>
         /// <param name="req">参考<see cref="BindPsaTagRequest"/></param>
@@ -694,6 +714,26 @@ namespace TencentCloud.Bm.V20180423
              {
                  var strResp = await this.InternalRequest(req, "DescribeUserCmds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserCmdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务器绑定CAM角色
+        /// </summary>
+        /// <param name="req">参考<see cref="DetachCamRoleRequest"/></param>
+        /// <returns>参考<see cref="DetachCamRoleResponse"/>实例</returns>
+        public async Task<DetachCamRoleResponse> DetachCamRole(DetachCamRoleRequest req)
+        {
+             JsonResponseModel<DetachCamRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachCamRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachCamRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

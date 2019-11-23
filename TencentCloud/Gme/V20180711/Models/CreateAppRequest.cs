@@ -37,13 +37,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 需要支持的引擎列表，取值android, ios, uinty, cocos, unreal, windows。默认全选。
+        /// 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
         /// </summary>
         [JsonProperty("EngineList")]
         public string[] EngineList{ get; set; }
 
         /// <summary>
-        /// 服务区域列表, 默认为空数组. 取值: mainland(美), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选
+        /// 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public RealtimeSpeechConf RealtimeSpeechConf{ get; set; }
 
         /// <summary>
-        /// 离线语音服务配置数据
+        /// 语音消息及转文本服务配置数据
         /// </summary>
         [JsonProperty("VoiceMessageConf")]
         public VoiceMessageConf VoiceMessageConf{ get; set; }
 
         /// <summary>
-        /// 语音过滤服务配置数据
+        /// 语音分析服务配置数据
         /// </summary>
         [JsonProperty("VoiceFilterConf")]
         public VoiceFilterConf VoiceFilterConf{ get; set; }

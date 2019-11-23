@@ -61,6 +61,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
+        /// 视频内容审核类型任务参数。
+        /// </summary>
+        [JsonProperty("AiContentReviewTask")]
+        public AiClassificationTaskInput AiContentReviewTask{ get; set; }
+
+        /// <summary>
+        /// 视频内容识别类型任务参数。
+        /// </summary>
+        [JsonProperty("AiRecognitionTask")]
+        public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
+
+        /// <summary>
         /// 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
         /// </summary>
         [JsonProperty("TaskPriority")]
@@ -84,6 +96,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
+            this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
+            this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamSimple(map, prefix + "TaskPriority", this.TaskPriority);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         }

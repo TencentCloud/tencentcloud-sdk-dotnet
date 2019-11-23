@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 此批次提交任务对应的 Id，值唯一
+        /// 此批提交的任务 ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

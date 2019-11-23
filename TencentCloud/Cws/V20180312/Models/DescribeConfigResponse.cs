@@ -55,7 +55,13 @@ namespace TencentCloud.Cws.V20180312.Models
         public ulong? Appid{ get; set; }
 
         /// <summary>
-        /// 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+        /// 内容检测通知等级-1:通知,0-不通知
+        /// </summary>
+        [JsonProperty("ContentLevel")]
+        public ulong? ContentLevel{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
@@ -71,6 +77,7 @@ namespace TencentCloud.Cws.V20180312.Models
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "Appid", this.Appid);
+            this.SetParamSimple(map, prefix + "ContentLevel", this.ContentLevel);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

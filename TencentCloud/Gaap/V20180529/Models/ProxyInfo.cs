@@ -168,6 +168,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 是否支持安全组配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportSecurity")]
+        public long? SupportSecurity{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -195,6 +202,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamObj(map, prefix + "RealServerRegionInfo.", this.RealServerRegionInfo);
             this.SetParamSimple(map, prefix + "ForwardIP", this.ForwardIP);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
         }
     }
 }

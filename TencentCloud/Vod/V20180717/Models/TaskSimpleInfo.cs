@@ -48,8 +48,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
         /// </summary>
-        [JsonProperty("CreatTime")]
-        public string CreatTime{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
         /// 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为空。
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
-            this.SetParamSimple(map, prefix + "CreatTime", this.CreatTime);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }

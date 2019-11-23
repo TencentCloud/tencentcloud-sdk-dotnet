@@ -113,6 +113,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateClusterEndpointRequest"/></param>
+        /// <returns>参考<see cref="CreateClusterEndpointResponse"/>实例</returns>
+        public async Task<CreateClusterEndpointResponse> CreateClusterEndpoint(CreateClusterEndpointRequest req)
+        {
+             JsonResponseModel<CreateClusterEndpointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterEndpointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateClusterEndpointVipRequest"/></param>
+        /// <returns>参考<see cref="CreateClusterEndpointVipResponse"/>实例</returns>
+        public async Task<CreateClusterEndpointVipResponse> CreateClusterEndpointVip(CreateClusterEndpointVipRequest req)
+        {
+             JsonResponseModel<CreateClusterEndpointVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterEndpointVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterEndpointVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 扩展(新建)集群节点
         /// </summary>
         /// <param name="req">参考<see cref="CreateClusterInstancesRequest"/></param>
@@ -213,6 +253,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 删除集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteClusterEndpointRequest"/></param>
+        /// <returns>参考<see cref="DeleteClusterEndpointResponse"/>实例</returns>
+        public async Task<DeleteClusterEndpointResponse> DeleteClusterEndpoint(DeleteClusterEndpointRequest req)
+        {
+             JsonResponseModel<DeleteClusterEndpointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterEndpointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteClusterEndpointVipRequest"/></param>
+        /// <returns>参考<see cref="DeleteClusterEndpointVipResponse"/>实例</returns>
+        public async Task<DeleteClusterEndpointVipResponse> DeleteClusterEndpointVip(DeleteClusterEndpointVipRequest req)
+        {
+             JsonResponseModel<DeleteClusterEndpointVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterEndpointVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterEndpointVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除集群中的实例
         /// </summary>
         /// <param name="req">参考<see cref="DeleteClusterInstancesRequest"/></param>
@@ -264,6 +344,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = await this.InternalRequest(req, "DeleteClusterRouteTable");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClusterEndpointStatusRequest"/></param>
+        /// <returns>参考<see cref="DescribeClusterEndpointStatusResponse"/>实例</returns>
+        public async Task<DescribeClusterEndpointStatusResponse> DescribeClusterEndpointStatus(DescribeClusterEndpointStatusRequest req)
+        {
+             JsonResponseModel<DescribeClusterEndpointStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterEndpointStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterEndpointStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群开启端口流程状态(仅支持托管集群外网端口)
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeClusterEndpointVipStatusRequest"/></param>
+        /// <returns>参考<see cref="DescribeClusterEndpointVipStatusResponse"/>实例</returns>
+        public async Task<DescribeClusterEndpointVipStatusResponse> DescribeClusterEndpointVipStatus(DescribeClusterEndpointVipStatusRequest req)
+        {
+             JsonResponseModel<DescribeClusterEndpointVipStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterEndpointVipStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterEndpointVipStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -404,6 +524,26 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = await this.InternalRequest(req, "DescribeRouteTableConflicts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTableConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改托管集群外网端口的安全策略（老的方式，仅支持托管集群外网端口）
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyClusterEndpointSPRequest"/></param>
+        /// <returns>参考<see cref="ModifyClusterEndpointSPResponse"/>实例</returns>
+        public async Task<ModifyClusterEndpointSPResponse> ModifyClusterEndpointSP(ModifyClusterEndpointSPRequest req)
+        {
+             JsonResponseModel<ModifyClusterEndpointSPResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterEndpointSP");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterEndpointSPResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

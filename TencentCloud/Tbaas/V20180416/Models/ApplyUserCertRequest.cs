@@ -61,7 +61,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string Applicant{ get; set; }
 
         /// <summary>
-        /// 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入企业营业执照；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+        /// 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
         /// </summary>
         [JsonProperty("IdentityNum")]
         public string IdentityNum{ get; set; }

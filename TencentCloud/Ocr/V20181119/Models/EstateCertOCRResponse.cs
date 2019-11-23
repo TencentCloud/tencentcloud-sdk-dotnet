@@ -91,6 +91,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public float? Angle{ get; set; }
 
         /// <summary>
+        /// 不动产权号
+        /// </summary>
+        [JsonProperty("Number")]
+        public string Number{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +119,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Term", this.Term);
             this.SetParamSimple(map, prefix + "Other", this.Other);
             this.SetParamSimple(map, prefix + "Angle", this.Angle);
+            this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

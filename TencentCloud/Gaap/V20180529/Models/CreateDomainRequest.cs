@@ -44,10 +44,17 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-        /// 仅当采用双向认证的方式时，需要设置该字段。
+        /// 仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
         /// </summary>
         [JsonProperty("ClientCertificateId")]
         public string ClientCertificateId{ get; set; }
+
+        /// <summary>
+        /// 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+        /// 仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+        /// </summary>
+        [JsonProperty("PolyClientCertificateIds")]
+        public string[] PolyClientCertificateIds{ get; set; }
 
 
         /// <summary>
@@ -59,6 +66,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+            this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
         }
     }
 }

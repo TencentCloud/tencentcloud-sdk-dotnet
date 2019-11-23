@@ -133,6 +133,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
 
+        /// <summary>
+        /// 云服务器主机名（HostName）的相关设置。
+        /// </summary>
+        [JsonProperty("HostNameSettings")]
+        public HostNameSettings HostNameSettings{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -156,6 +162,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+            this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         }
     }
 }

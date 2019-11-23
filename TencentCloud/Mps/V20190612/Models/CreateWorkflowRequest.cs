@@ -55,6 +55,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
+        /// 视频内容审核类型任务参数。
+        /// </summary>
+        [JsonProperty("AiContentReviewTask")]
+        public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
+
+        /// <summary>
+        /// 视频内容识别类型任务参数。
+        /// </summary>
+        [JsonProperty("AiRecognitionTask")]
+        public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
+
+        /// <summary>
         /// 任务的事件通知配置，不填代表不获取事件通知。
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -77,6 +89,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
+            this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
+            this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TaskPriority", this.TaskPriority);
         }

@@ -64,10 +64,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? AuthType{ get; set; }
 
         /// <summary>
-        /// 客户端CA证书ID，仅当双向认证时设置该参数。
+        /// 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
         /// </summary>
         [JsonProperty("ClientCertificateId")]
         public string ClientCertificateId{ get; set; }
+
+        /// <summary>
+        /// 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+        /// </summary>
+        [JsonProperty("PolyClientCertificateIds")]
+        public string[] PolyClientCertificateIds{ get; set; }
 
 
         /// <summary>
@@ -82,6 +88,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+            this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
         }
     }
 }

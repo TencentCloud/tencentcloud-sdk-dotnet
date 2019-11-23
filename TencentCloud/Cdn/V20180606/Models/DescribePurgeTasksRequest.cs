@@ -25,52 +25,67 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 查询刷新类型。url：查询 url 刷新记录；path：查询目录刷新记录。
+        /// 指定刷新类型查询
+        /// url：url 刷新记录
+        /// path：目录刷新记录
         /// </summary>
         [JsonProperty("PurgeType")]
         public string PurgeType{ get; set; }
 
         /// <summary>
-        /// 开始时间，如2018-08-08 00:00:00。
+        /// 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，如2018-08-08 23:59:59。
+        /// 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 提交时返回的任务 Id，查询时 TaskId 和起始时间必须指定一项。
+        /// 根据任务 ID 查询时，填充任务 ID
+        /// 查询时任务 ID 与起始时间必须填充一项
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 分页查询偏移量，默认为 0 （第一页）。
+        /// 分页查询偏移量，默认为 0 （第一页）
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询限制数目，默认为20。
+        /// 分页查询限制数目，默认为 20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询关键字，请输入域名或 http(s):// 开头完整 URL。
+        /// 支持域名过滤，或 http(s):// 开头完整 URL 过滤
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 查询指定任务状态，fail表示失败，done表示成功，process表示刷新中。
+        /// 指定任务状态查询
+        /// fail：刷新失败
+        /// done：刷新成功
+        /// process：刷新中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 指定刷新地域查询
+        /// mainland：境内
+        /// overseas：境外
+        /// global：全球
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -86,6 +101,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

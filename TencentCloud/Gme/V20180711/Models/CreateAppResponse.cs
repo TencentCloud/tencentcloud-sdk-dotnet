@@ -61,13 +61,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public RealtimeSpeechConf RealtimeSpeechConf{ get; set; }
 
         /// <summary>
-        /// 语音消息服务配置数据
+        /// 语音消息及转文本服务配置数据
         /// </summary>
         [JsonProperty("VoiceMessageConf")]
         public VoiceMessageConf VoiceMessageConf{ get; set; }
 
         /// <summary>
-        /// 语音过滤服务配置数据
+        /// 语音分析服务配置数据
         /// </summary>
         [JsonProperty("VoiceFilterConf")]
         public VoiceFilterConf VoiceFilterConf{ get; set; }

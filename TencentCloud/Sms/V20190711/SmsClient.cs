@@ -53,6 +53,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// 统计用户回执的数据
+        /// </summary>
+        /// <param name="req">参考<see cref="CallbackStatusStatisticsRequest"/></param>
+        /// <returns>参考<see cref="CallbackStatusStatisticsResponse"/>实例</returns>
+        public async Task<CallbackStatusStatisticsResponse> CallbackStatusStatistics(CallbackStatusStatisticsRequest req)
+        {
+             JsonResponseModel<CallbackStatusStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CallbackStatusStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallbackStatusStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取短信回复状态
         /// </summary>
         /// <param name="req">参考<see cref="PullSmsReplyStatusRequest"/></param>
@@ -145,6 +165,46 @@ namespace TencentCloud.Sms.V20190711
              {
                  var strResp = await this.InternalRequest(req, "SendSms");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 统计用户发送短信的数据
+        /// </summary>
+        /// <param name="req">参考<see cref="SendStatusStatisticsRequest"/></param>
+        /// <returns>参考<see cref="SendStatusStatisticsResponse"/>实例</returns>
+        public async Task<SendStatusStatisticsResponse> SendStatusStatistics(SendStatusStatisticsRequest req)
+        {
+             JsonResponseModel<SendStatusStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendStatusStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendStatusStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户套餐包信息统计
+        /// </summary>
+        /// <param name="req">参考<see cref="SmsPackagesStatisticsRequest"/></param>
+        /// <returns>参考<see cref="SmsPackagesStatisticsResponse"/>实例</returns>
+        public async Task<SmsPackagesStatisticsResponse> SmsPackagesStatistics(SmsPackagesStatisticsRequest req)
+        {
+             JsonResponseModel<SmsPackagesStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SmsPackagesStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmsPackagesStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

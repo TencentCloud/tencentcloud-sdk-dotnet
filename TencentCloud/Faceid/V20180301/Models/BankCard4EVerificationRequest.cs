@@ -49,15 +49,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string IdCard{ get; set; }
 
         /// <summary>
-        /// 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。（不填默认0）
-        /// 0 身份证
-        /// 1 军官证
-        /// 2 护照
-        /// 3 港澳证
-        /// 4 台胞证
-        /// 5 警官证
-        /// 6 士兵证
-        /// 7 其它证件
+        /// 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+        /// 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// 计费类型：
         /// flux：流量计费
         /// bandwidth：带宽计费
-        /// 如果修改过计费方式，表示下次生效的计费类型，否则表示当前计费类型。
+        /// 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
@@ -53,15 +53,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string StatType{ get; set; }
 
         /// <summary>
-        /// 地区计费方式，仅在查询中国境外 CDN 计费方式时可用
-        /// all：表示全地区统一计费
-        /// multiple：表示分地区计费。
+        /// 境外计费类型：
+        /// all：全地区统一计费
+        /// multiple：分地区计费
         /// </summary>
         [JsonProperty("RegionType")]
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// 当前计费类型：
+        /// 当前生效计费类型：
         /// flux：流量计费
         /// bandwidth：带宽计费
         /// </summary>

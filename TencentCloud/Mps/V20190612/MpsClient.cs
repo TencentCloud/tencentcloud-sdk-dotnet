@@ -53,6 +53,26 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 创建用户自定义内容识别模板，数量上限：50。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateAIRecognitionTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateAIRecognitionTemplateResponse"/>实例</returns>
+        public async Task<CreateAIRecognitionTemplateResponse> CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req)
+        {
+             JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAIRecognitionTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义转动图模板，数量上限：16。
         /// </summary>
         /// <param name="req">参考<see cref="CreateAnimatedGraphicsTemplateRequest"/></param>
@@ -73,6 +93,26 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 创建用户自定义内容审核模板，数量上限：50。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateContentReviewTemplateRequest"/></param>
+        /// <returns>参考<see cref="CreateContentReviewTemplateResponse"/>实例</returns>
+        public async Task<CreateContentReviewTemplateResponse> CreateContentReviewTemplate(CreateContentReviewTemplateRequest req)
+        {
+             JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateContentReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义雪碧图模板，数量上限：16。
         /// </summary>
         /// <param name="req">参考<see cref="CreateImageSpriteTemplateRequest"/></param>
@@ -84,6 +124,26 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = await this.InternalRequest(req, "CreateImageSpriteTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageSpriteTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于创建人物样本，用于通过人脸识别等技术，进行内容识别、内容审核等视频处理。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreatePersonSampleRequest"/></param>
+        /// <returns>参考<see cref="CreatePersonSampleResponse"/>实例</returns>
+        public async Task<CreatePersonSampleResponse> CreatePersonSample(CreatePersonSampleRequest req)
+        {
+             JsonResponseModel<CreatePersonSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePersonSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -173,13 +233,35 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 该接口用于批量创建关键词样本，样本用于通过OCR、ASR技术，进行内容审核、内容识别等视频处理。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateWordSamplesRequest"/></param>
+        /// <returns>参考<see cref="CreateWordSamplesResponse"/>实例</returns>
+        public async Task<CreateWordSamplesResponse> CreateWordSamples(CreateWordSamplesRequest req)
+        {
+             JsonResponseModel<CreateWordSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWordSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWordSamplesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对 COS 中指定 Bucket 的目录下上传的媒体文件，设置处理规则，包括：
         /// 1. 视频转码（带水印）；
         /// 2. 视频转动图；
         /// 3. 对视频按指定时间点截图；
         /// 4. 对视频采样截图；
         /// 5. 对视频截图雪碧图；
-        /// 6. 对视频转自适应码流。
+        /// 6. 对视频转自适应码流；
+        /// 7. 智能内容审核（鉴黄、鉴恐、鉴政）；
+        /// 8. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
         /// 
         /// 注意：创建工作流成功后是禁用状态，需要手动启用。
         /// </summary>
@@ -192,6 +274,26 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = await this.InternalRequest(req, "CreateWorkflow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkflowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义内容识别模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteAIRecognitionTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteAIRecognitionTemplateResponse"/>实例</returns>
+        public async Task<DeleteAIRecognitionTemplateResponse> DeleteAIRecognitionTemplate(DeleteAIRecognitionTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAIRecognitionTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAIRecognitionTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -221,6 +323,26 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除用户自定义内容审核模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteContentReviewTemplateRequest"/></param>
+        /// <returns>参考<see cref="DeleteContentReviewTemplateResponse"/>实例</returns>
+        public async Task<DeleteContentReviewTemplateResponse> DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req)
+        {
+             JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteContentReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除雪碧图模板。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteImageSpriteTemplateRequest"/></param>
@@ -232,6 +354,26 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = await this.InternalRequest(req, "DeleteImageSpriteTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageSpriteTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于根据人物 ID，删除人物样本。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeletePersonSampleRequest"/></param>
+        /// <returns>参考<see cref="DeletePersonSampleResponse"/>实例</returns>
+        public async Task<DeletePersonSampleResponse> DeletePersonSample(DeletePersonSampleRequest req)
+        {
+             JsonResponseModel<DeletePersonSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePersonSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePersonSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -321,6 +463,26 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 该接口用于批量删除关键词样本。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteWordSamplesRequest"/></param>
+        /// <returns>参考<see cref="DeleteWordSamplesResponse"/>实例</returns>
+        public async Task<DeleteWordSamplesResponse> DeleteWordSamples(DeleteWordSamplesRequest req)
+        {
+             JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWordSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWordSamplesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除工作流。对于已启用的工作流，需要禁用后才能删除。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteWorkflowRequest"/></param>
@@ -332,6 +494,26 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = await this.InternalRequest(req, "DeleteWorkflow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWorkflowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据内容识别模板唯一标识，获取内容识别模板详情列表。返回结果包含符合条件的所有用户自定义内容识别模板及系统预置视频内容识别模板
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeAIRecognitionTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeAIRecognitionTemplatesResponse"/>实例</returns>
+        public async Task<DescribeAIRecognitionTemplatesResponse> DescribeAIRecognitionTemplates(DescribeAIRecognitionTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAIRecognitionTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIRecognitionTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -361,6 +543,26 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 根据内容审核模板唯一标识，获取内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置内容审核模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeContentReviewTemplatesRequest"/></param>
+        /// <returns>参考<see cref="DescribeContentReviewTemplatesResponse"/>实例</returns>
+        public async Task<DescribeContentReviewTemplatesResponse> DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeContentReviewTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeContentReviewTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeContentReviewTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询雪碧图模板，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeImageSpriteTemplatesRequest"/></param>
@@ -372,6 +574,26 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = await this.InternalRequest(req, "DescribeImageSpriteTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询人物样本信息，支持根据人物 ID、名称、标签，分页查询。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribePersonSamplesRequest"/></param>
+        /// <returns>参考<see cref="DescribePersonSamplesResponse"/>实例</returns>
+        public async Task<DescribePersonSamplesResponse> DescribePersonSamples(DescribePersonSamplesRequest req)
+        {
+             JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePersonSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePersonSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -483,26 +705,6 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 用户服务信息查询，返回用户状态和计费类型；若未注册则返回相应错误提示。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeUserInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeUserInfoResponse"/>实例</returns>
-        public async Task<DescribeUserInfoResponse> DescribeUserInfo(DescribeUserInfoRequest req)
-        {
-             JsonResponseModel<DescribeUserInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeUserInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询用户自定义水印模板，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeWatermarkTemplatesRequest"/></param>
@@ -514,6 +716,26 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = await this.InternalRequest(req, "DescribeWatermarkTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWatermarkTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于根据应用场景、关键词、标签，分页查询关键词样本信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeWordSamplesRequest"/></param>
+        /// <returns>参考<see cref="DescribeWordSamplesResponse"/>实例</returns>
+        public async Task<DescribeWordSamplesResponse> DescribeWordSamples(DescribeWordSamplesRequest req)
+        {
+             JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWordSamples");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWordSamplesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -583,6 +805,26 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 修改用户自定义内容识别模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyAIRecognitionTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyAIRecognitionTemplateResponse"/>实例</returns>
+        public async Task<ModifyAIRecognitionTemplateResponse> ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAIRecognitionTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改用户自定义转动图模板。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyAnimatedGraphicsTemplateRequest"/></param>
@@ -603,6 +845,26 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 修改用户自定义内容审核模板。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyContentReviewTemplateRequest"/></param>
+        /// <returns>参考<see cref="ModifyContentReviewTemplateResponse"/>实例</returns>
+        public async Task<ModifyContentReviewTemplateResponse> ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req)
+        {
+             JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyContentReviewTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改用户自定义雪碧图模板。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyImageSpriteTemplateRequest"/></param>
@@ -614,6 +876,26 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = await this.InternalRequest(req, "ModifyImageSpriteTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImageSpriteTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于根据人物 ID，修改人物样本信息，包括名称、描述的修改，以及人脸、标签的添加、删除、重置操作。人脸删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyPersonSampleRequest"/></param>
+        /// <returns>参考<see cref="ModifyPersonSampleResponse"/>实例</returns>
+        public async Task<ModifyPersonSampleResponse> ModifyPersonSample(ModifyPersonSampleRequest req)
+        {
+             JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPersonSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -703,22 +985,83 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyWordSampleRequest"/></param>
+        /// <returns>参考<see cref="ModifyWordSampleResponse"/>实例</returns>
+        public async Task<ModifyWordSampleResponse> ModifyWordSample(ModifyWordSampleRequest req)
+        {
+             JsonResponseModel<ModifyWordSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWordSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWordSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从 CMQ 获取到消息后，从消息的 msgBody 字段中解析出 MPS 直播流处理事件通知的内容。
+        /// 该接口不用于发起网络调用，而是用来帮助生成各个语言平台的 SDK，您可以参考 SDK 的中解析函数的实现事件通知的解析。
+        /// </summary>
+        /// <param name="req">参考<see cref="ParseLiveStreamProcessNotificationRequest"/></param>
+        /// <returns>参考<see cref="ParseLiveStreamProcessNotificationResponse"/>实例</returns>
+        public async Task<ParseLiveStreamProcessNotificationResponse> ParseLiveStreamProcessNotification(ParseLiveStreamProcessNotificationRequest req)
+        {
+             JsonResponseModel<ParseLiveStreamProcessNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ParseLiveStreamProcessNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseLiveStreamProcessNotificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从 CMQ 获取到消息后，从消息的 msgBody 字段中解析出 MPS 事件通知的内容。
+        /// 该接口不用于发起网络调用，而是用来帮助生成各个语言平台的 SDK，您可以参考 SDK 的中解析函数的实现事件通知的解析。
+        /// </summary>
+        /// <param name="req">参考<see cref="ParseNotificationRequest"/></param>
+        /// <returns>参考<see cref="ParseNotificationResponse"/>实例</returns>
+        public async Task<ParseNotificationResponse> ParseNotification(ParseNotificationRequest req)
+        {
+             JsonResponseModel<ParseNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ParseNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseNotificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对直播流媒体发起处理任务，功能包括：
         /// 
-        /// 1. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
-        /// 2. 智能内容分析（精彩集锦）。
+        /// * 智能内容审核（画面鉴黄、鉴政、鉴暴、声音鉴黄）。
         /// 
         /// 直播流处理事件通知实时写入用户指定的消息队列 CMQ 中，用户需要从消息队列 CMQ 中获取事件通知结果，同时处理过程中存在输出文件的，会写入用户指定的输出文件的目标存储中。
         /// </summary>
-        /// <param name="req">参考<see cref="ProcessLiveMediaRequest"/></param>
-        /// <returns>参考<see cref="ProcessLiveMediaResponse"/>实例</returns>
-        public async Task<ProcessLiveMediaResponse> ProcessLiveMedia(ProcessLiveMediaRequest req)
+        /// <param name="req">参考<see cref="ProcessLiveStreamRequest"/></param>
+        /// <returns>参考<see cref="ProcessLiveStreamResponse"/>实例</returns>
+        public async Task<ProcessLiveStreamResponse> ProcessLiveStream(ProcessLiveStreamRequest req)
         {
-             JsonResponseModel<ProcessLiveMediaResponse> rsp = null;
+             JsonResponseModel<ProcessLiveStreamResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "ProcessLiveMedia");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessLiveMediaResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ProcessLiveStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessLiveStreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -734,7 +1077,9 @@ namespace TencentCloud.Mps.V20190612
         /// 3. 对视频按指定时间点截图；
         /// 4. 对视频采样截图；
         /// 5. 对视频截图雪碧图；
-        /// 6. 对视频转自适应码流。
+        /// 6. 对视频转自适应码流；
+        /// 7. 智能内容审核（鉴黄、鉴恐、鉴政）；
+        /// 8. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
         /// </summary>
         /// <param name="req">参考<see cref="ProcessMediaRequest"/></param>
         /// <returns>参考<see cref="ProcessMediaResponse"/>实例</returns>

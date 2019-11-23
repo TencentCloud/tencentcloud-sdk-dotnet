@@ -25,16 +25,27 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// URL 列表，提交时需要包含协议头部（http:// 或 https://）
+        /// URL 列表，需要包含协议头部 http:// 或 https://
         /// </summary>
         [JsonProperty("Urls")]
         public string[] Urls{ get; set; }
 
         /// <summary>
-        /// 预热请求回源时 HTTP 请求的 User-Agent 头部，默认为 TencentCdn
+        /// 指定预热请求回源时 HTTP 请求的 User-Agent 头部
+        /// 默认为 TencentCdn
         /// </summary>
         [JsonProperty("UserAgent")]
         public string UserAgent{ get; set; }
+
+        /// <summary>
+        /// 预热生效区域
+        /// mainland：预热至境内节点
+        /// overseas：预热至境外节点
+        /// global：预热全球节点
+        /// 不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -44,6 +55,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
             this.SetParamSimple(map, prefix + "UserAgent", this.UserAgent);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

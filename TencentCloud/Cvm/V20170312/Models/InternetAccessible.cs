@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// 公网出带宽上限，单位：Mbps。默认值：0Mbps。不同机型带宽上限范围不一致，具体限制详见[购买网络带宽](/document/product/213/509)。
+        /// 公网出带宽上限，单位：Mbps。默认值：0Mbps。不同机型带宽上限范围不一致，具体限制详见[购买网络带宽](https://cloud.tencent.com/document/product/213/12523)。
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }

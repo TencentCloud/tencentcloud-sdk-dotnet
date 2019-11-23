@@ -31,9 +31,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 词法分析模式（默认取1值）：
-        /// 1、高精度（具备混合粒度分词能力）；
-        /// 2、高性能；
+        /// 词法分析模式（默认取2值）：
+        /// 1、高精度（混合粒度分词能力）；
+        /// 2、高性能（单粒度分词能力）；
         /// </summary>
         [JsonProperty("Flag")]
         public ulong? Flag{ get; set; }

@@ -39,6 +39,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
         /// 如 134表示拉取文本类、视频最佳截图照片、视频。
+        /// 默认值：0
         /// </summary>
         [JsonProperty("InfoType")]
         public string InfoType{ get; set; }

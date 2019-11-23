@@ -25,31 +25,38 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 刷新任务ID。
+        /// 刷新任务 ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 刷新Url。
+        /// 刷新 URL
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 刷新任务状态，fail表示失败，done表示成功，process表示刷新中。
+        /// 刷新任务状态
+        /// fail：刷新失败
+        /// done：刷新成功
+        /// process：刷新中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 刷新类型，url表示url刷新，path表示目录刷新。
+        /// 刷新类型
+        /// url：URL 刷新
+        /// path：目录刷新
         /// </summary>
         [JsonProperty("PurgeType")]
         public string PurgeType{ get; set; }
 
         /// <summary>
-        /// 刷新资源方式，flush代表刷新更新资源，delete代表刷新全部资源。
+        /// 刷新方式
+        /// flush：刷新更新资源（仅目录刷新时有此类型）
+        /// delete：刷新全部资源
         /// </summary>
         [JsonProperty("FlushType")]
         public string FlushType{ get; set; }

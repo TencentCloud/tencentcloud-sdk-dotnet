@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 违规场景，参照Label定义
+        /// 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

@@ -43,13 +43,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 置放群组内可容纳的云主机数量。
+        /// 置放群组内可容纳的云服务器数量。
         /// </summary>
         [JsonProperty("CvmQuotaTotal")]
         public long? CvmQuotaTotal{ get; set; }
 
         /// <summary>
-        /// 置放群组内已有的云主机数量。
+        /// 置放群组内已有的云服务器数量。
         /// </summary>
         [JsonProperty("CurrentNum")]
         public long? CurrentNum{ get; set; }

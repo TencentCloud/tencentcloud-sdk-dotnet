@@ -67,7 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalPage{ get; set; }
 
         /// <summary>
-        /// 省份或运营商汇总数据列表。
+        /// 省份，运营商，国家或地区汇总数据列表。
         /// </summary>
         [JsonProperty("DataInfoList")]
         public ProIspPlaySumInfo[] DataInfoList{ get; set; }

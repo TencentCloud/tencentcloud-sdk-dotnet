@@ -43,28 +43,10 @@ namespace TencentCloud.Tiems.V20190416.Models
         public string ModelUri{ get; set; }
 
         /// <summary>
-        /// 处理器配置, 单位为1/1000核；范围[100, 256000]
+        /// 配置描述
         /// </summary>
-        [JsonProperty("Cpu")]
-        public ulong? Cpu{ get; set; }
-
-        /// <summary>
-        /// 内存配置, 单位为1M；范围[100, 256000]
-        /// </summary>
-        [JsonProperty("Memory")]
-        public ulong? Memory{ get; set; }
-
-        /// <summary>
-        /// GPU算力配置，单位为1/100 tflops，范围 [0, 256000]
-        /// </summary>
-        [JsonProperty("TflopUnits")]
-        public ulong? TflopUnits{ get; set; }
-
-        /// <summary>
-        /// 显存配置, 单位为1M，范围 [0, 256000]
-        /// </summary>
-        [JsonProperty("GpuMemory")]
-        public ulong? GpuMemory{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -75,10 +57,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Runtime", this.Runtime);
             this.SetParamSimple(map, prefix + "ModelUri", this.ModelUri);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "TflopUnits", this.TflopUnits);
-            this.SetParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

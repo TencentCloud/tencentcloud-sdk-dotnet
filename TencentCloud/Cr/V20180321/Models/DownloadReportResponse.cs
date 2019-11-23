@@ -25,21 +25,21 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 催收日报下载地址
+        /// 到期/逾期提醒日报下载地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DailyReportUrl")]
         public string DailyReportUrl{ get; set; }
 
         /// <summary>
-        /// 催收结果下载地址
+        /// 到期/逾期提醒结果下载地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResultReportUrl")]
         public string ResultReportUrl{ get; set; }
 
         /// <summary>
-        /// 催收明细下载地址
+        /// 到期/逾期提醒明细下载地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailReportUrl")]

@@ -31,6 +31,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Names{ get; set; }
 
         /// <summary>
+        /// 任务流模板类型过滤条件，可选值：
+        /// <li>Preset：系统预置任务流模板；</li>
+        /// <li>Custom：用户自定义任务流模板。</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 分页偏移量，默认值：0。
         /// </summary>
         [JsonProperty("Offset")]
@@ -55,6 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Names.", this.Names);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);

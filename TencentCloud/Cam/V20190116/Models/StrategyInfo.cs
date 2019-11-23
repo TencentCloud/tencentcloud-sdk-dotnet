@@ -75,6 +75,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
+        /// <summary>
+        /// 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAttached")]
+        public ulong? IsAttached{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -89,6 +96,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
             this.SetParamSimple(map, prefix + "Attachments", this.Attachments);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "IsAttached", this.IsAttached);
         }
     }
 }

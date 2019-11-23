@@ -233,6 +233,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询实例DTS信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstanceDTSInfoRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstanceDTSInfoResponse"/>实例</returns>
+        public async Task<DescribeInstanceDTSInfoResponse> DescribeInstanceDTSInfo(DescribeInstanceDTSInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceDTSInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceDTSInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDTSInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询订单信息
         /// </summary>
         /// <param name="req">参考<see cref="DescribeInstanceDealDetailRequest"/></param>
@@ -593,6 +613,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询任务列表信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTaskListRequest"/></param>
+        /// <returns>参考<see cref="DescribeTaskListResponse"/>实例</returns>
+        public async Task<DescribeTaskListResponse> DescribeTaskList(DescribeTaskListRequest req)
+        {
+             JsonResponseModel<DescribeTaskListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按量计费实例销毁
         /// </summary>
         /// <param name="req">参考<see cref="DestroyPostpaidInstanceRequest"/></param>
@@ -864,6 +904,26 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = await this.InternalRequest(req, "RestoreInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例解隔离
+        /// </summary>
+        /// <param name="req">参考<see cref="StartupInstanceRequest"/></param>
+        /// <returns>参考<see cref="StartupInstanceResponse"/>实例</returns>
+        public async Task<StartupInstanceResponse> StartupInstance(StartupInstanceRequest req)
+        {
+             JsonResponseModel<StartupInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartupInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartupInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

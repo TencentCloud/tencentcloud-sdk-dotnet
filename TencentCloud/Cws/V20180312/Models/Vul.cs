@@ -25,24 +25,6 @@ namespace TencentCloud.Cws.V20180312.Models
     {
         
         /// <summary>
-        /// 是否已经添加误报，0-否，1-是。
-        /// </summary>
-        [JsonProperty("IsReported")]
-        public ulong? IsReported{ get; set; }
-
-        /// <summary>
-        /// 云用户appid。
-        /// </summary>
-        [JsonProperty("Appid")]
-        public ulong? Appid{ get; set; }
-
-        /// <summary>
-        /// 云用户标识。
-        /// </summary>
-        [JsonProperty("Uin")]
-        public string Uin{ get; set; }
-
-        /// <summary>
         /// 漏洞ID。
         /// </summary>
         [JsonProperty("Id")]
@@ -132,15 +114,30 @@ namespace TencentCloud.Cws.V20180312.Models
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// 是否已经添加误报，0-否，1-是。
+        /// </summary>
+        [JsonProperty("IsReported")]
+        public ulong? IsReported{ get; set; }
+
+        /// <summary>
+        /// 云用户appid。
+        /// </summary>
+        [JsonProperty("Appid")]
+        public ulong? Appid{ get; set; }
+
+        /// <summary>
+        /// 云用户标识。
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsReported", this.IsReported);
-            this.SetParamSimple(map, prefix + "Appid", this.Appid);
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "SiteId", this.SiteId);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
@@ -156,6 +153,9 @@ namespace TencentCloud.Cws.V20180312.Models
             this.SetParamSimple(map, prefix + "Parameter", this.Parameter);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "IsReported", this.IsReported);
+            this.SetParamSimple(map, prefix + "Appid", this.Appid);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
         }
     }
 }

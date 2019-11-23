@@ -25,37 +25,43 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 预热任务Id，前十位为时间戳。
+        /// 预热任务 ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 预热Url。
+        /// 预热 URL
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 预热任务状态，fail表示失败，done表示成功，process表示预热中。
+        /// 预热任务状态
+        /// fail：预热失败
+        /// done：预热成功
+        /// process：预热中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 预热百分比。
+        /// 预热进度百分比
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }
 
         /// <summary>
-        /// 预热任务提交时间。
+        /// 预热任务提交时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 预热区域，mainland，overseas或global。
+        /// 预热区域
+        /// mainland：境内
+        /// overseas：境外
+        /// global：全球
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

@@ -44,6 +44,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SvgContent")]
         public string SvgContent{ get; set; }
 
+        /// <summary>
+        /// 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+        /// <li>不填或填0，表示水印从画面开始就出现；</li>
+        /// <li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
+        /// <li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+        /// </summary>
+        [JsonProperty("StartTimeOffset")]
+        public float? StartTimeOffset{ get; set; }
+
+        /// <summary>
+        /// 水印的结束时间偏移，单位：秒。
+        /// <li>不填或填0，表示水印持续到画面结束；</li>
+        /// <li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
+        /// <li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+        /// </summary>
+        [JsonProperty("EndTimeOffset")]
+        public float? EndTimeOffset{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -53,6 +71,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
             this.SetParamSimple(map, prefix + "SvgContent", this.SvgContent);
+            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }
     }
 }

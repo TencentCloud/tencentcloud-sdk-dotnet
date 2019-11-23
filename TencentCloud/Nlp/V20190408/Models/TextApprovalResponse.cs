@@ -25,7 +25,26 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 文本审核输出结果
+        /// 文本审核输出结果列表，列表每个元素包含以下信息：
+        /// 
+        /// EvilFlag（文本恶意等级）：
+        /// 0、正常；
+        /// 1、恶意；
+        /// 2、可疑送审
+        /// 
+        /// EvilType（文本恶意类型）：
+        /// 0、正常；
+        /// 1、政治；
+        /// 2、色情；
+        /// 3、辱骂/低俗；
+        /// 4、暴恐/毒品；
+        /// 5、广告/灌水；
+        /// 6、迷信/邪教；
+        /// 7、其他违法（如跨站追杀/恶意竞争等）；
+        /// 8、综合；
+        /// 9、联系方式/链接
+        /// 
+        /// EvilKeywords（恶意关键词组）
         /// </summary>
         [JsonProperty("EvilTokens")]
         public EvilToken[] EvilTokens{ get; set; }

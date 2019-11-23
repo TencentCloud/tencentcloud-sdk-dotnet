@@ -43,6 +43,18 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public ulong? ImpactedHostNum{ get; set; }
 
         /// <summary>
+        /// 主机总数。
+        /// </summary>
+        [JsonProperty("HostNum")]
+        public ulong? HostNum{ get; set; }
+
+        /// <summary>
+        /// 基础版机器数。
+        /// </summary>
+        [JsonProperty("BasicVersionNum")]
+        public ulong? BasicVersionNum{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
             this.SetParamSimple(map, prefix + "ProVersionNum", this.ProVersionNum);
             this.SetParamSimple(map, prefix + "ImpactedHostNum", this.ImpactedHostNum);
+            this.SetParamSimple(map, prefix + "HostNum", this.HostNum);
+            this.SetParamSimple(map, prefix + "BasicVersionNum", this.BasicVersionNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

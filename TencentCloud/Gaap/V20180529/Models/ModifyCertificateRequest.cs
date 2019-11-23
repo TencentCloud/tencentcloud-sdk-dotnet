@@ -46,10 +46,17 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// <summary>
         /// 新的客户端证书ID。其中：
         /// 当ClientCertificateId=default时，表示使用监听器的证书。
-        /// 仅当采用双向认证方式时，需要设置该参数。
+        /// 仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
         /// </summary>
         [JsonProperty("ClientCertificateId")]
         public string ClientCertificateId{ get; set; }
+
+        /// <summary>
+        /// 新的多客户端证书ID列表。其中：
+        /// 仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+        /// </summary>
+        [JsonProperty("PolyClientCertificateIds")]
+        public string[] PolyClientCertificateIds{ get; set; }
 
 
         /// <summary>
@@ -61,6 +68,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+            this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
         }
     }
 }

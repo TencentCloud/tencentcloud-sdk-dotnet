@@ -57,10 +57,10 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 漏洞数，非专业版将返回：0。
+        /// 漏洞数。
         /// </summary>
         [JsonProperty("VulNum")]
-        public ulong? VulNum{ get; set; }
+        public long? VulNum{ get; set; }
 
         /// <summary>
         /// 主机IP。
@@ -90,6 +90,18 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
+        /// <summary>
+        /// 木马数。
+        /// </summary>
+        [JsonProperty("MalwareNum")]
+        public long? MalwareNum{ get; set; }
+
+        /// <summary>
+        /// 标签信息
+        /// </summary>
+        [JsonProperty("Tag")]
+        public MachineTag[] Tag{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -106,6 +118,8 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
             this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "MalwareNum", this.MalwareNum);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }

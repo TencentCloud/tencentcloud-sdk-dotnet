@@ -52,13 +52,22 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 客户端CA证书ID，，仅适用于version3.0的通道。其中：
-        /// 不带该字段时，表示使用原证书；
+        /// 客户端CA证书ID，仅适用于version3.0的通道。其中：
+        /// 不带该字段和PolyClientCertificateIds时，表示使用原证书；
         /// 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-        /// 其他情况，使用该ClientCertificateId指定的证书。
+        /// 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
         /// </summary>
         [JsonProperty("ClientCertificateId")]
         public string ClientCertificateId{ get; set; }
+
+        /// <summary>
+        /// 客户端CA证书ID，仅适用于version3.0的通道。其中：
+        /// 不带该字段和ClientCertificateId时，表示使用原证书；
+        /// 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
+        /// 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+        /// </summary>
+        [JsonProperty("PolyClientCertificateIds")]
+        public string[] PolyClientCertificateIds{ get; set; }
 
 
         /// <summary>
@@ -71,6 +80,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "NewDomain", this.NewDomain);
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+            this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
         }
     }
 }

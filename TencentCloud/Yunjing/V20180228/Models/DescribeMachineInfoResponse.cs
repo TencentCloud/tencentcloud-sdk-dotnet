@@ -117,6 +117,18 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public string PayMode{ get; set; }
 
         /// <summary>
+        /// 免费木马剩余检测数量。
+        /// </summary>
+        [JsonProperty("FreeMalwaresLeft")]
+        public ulong? FreeMalwaresLeft{ get; set; }
+
+        /// <summary>
+        /// 免费漏洞剩余检测数量。
+        /// </summary>
+        [JsonProperty("FreeVulsLeft")]
+        public ulong? FreeVulsLeft{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -142,6 +154,8 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "MachineRegion", this.MachineRegion);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "FreeMalwaresLeft", this.FreeMalwaresLeft);
+            this.SetParamSimple(map, prefix + "FreeVulsLeft", this.FreeVulsLeft);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

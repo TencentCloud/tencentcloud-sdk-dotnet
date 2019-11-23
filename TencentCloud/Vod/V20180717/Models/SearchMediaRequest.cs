@@ -25,14 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+        /// 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
         /// 标签集合，匹配集合中任意元素。
-        /// <li>单个标签长度限制：8 个字符。</li>
+        /// <li>单个标签长度限制：8个字符。</li>
         /// <li>数组长度限制：10。</li>
         /// </summary>
         [JsonProperty("Tags")]
@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 创建时间的开始时间。
         /// <li>大于等于开始时间。</li>
-        /// <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+        /// <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 创建时间的结束时间。
         /// <li>小于结束时间。</li>
-        /// <li>格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+        /// <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+        /// 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
@@ -87,15 +87,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// 偏移量。
-        /// <li>默认值：0。</li>
-        /// <li>取值范围：Offset + Limit 不超过 5000。</li>
+        /// 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// <li>取值范围：Offset + Limit 不超过5000。</li>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，默认值：10。
+        /// 分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// <li>取值范围：Offset + Limit 不超过5000。</li>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

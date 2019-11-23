@@ -49,7 +49,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string EnvDescription{ get; set; }
 
         /// <summary>
-        /// 计算环境管理类型
+        /// 计算环境管理类型， 取值MANAGED。
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }

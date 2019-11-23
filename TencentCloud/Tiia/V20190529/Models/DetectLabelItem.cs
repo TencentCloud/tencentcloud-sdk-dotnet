@@ -36,6 +36,18 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
+        /// <summary>
+        /// 标签的一级分类
+        /// </summary>
+        [JsonProperty("FirstCategory")]
+        public string FirstCategory{ get; set; }
+
+        /// <summary>
+        /// 标签的二级分类
+        /// </summary>
+        [JsonProperty("SecondCategory")]
+        public string SecondCategory{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +56,8 @@ namespace TencentCloud.Tiia.V20190529.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "FirstCategory", this.FirstCategory);
+            this.SetParamSimple(map, prefix + "SecondCategory", this.SecondCategory);
         }
     }
 }

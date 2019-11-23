@@ -75,6 +75,12 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }
 
+        /// <summary>
+        /// 是否为专业版。
+        /// </summary>
+        [JsonProperty("IsProVersion")]
+        public bool? IsProVersion{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -89,6 +95,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
         }
     }
 }

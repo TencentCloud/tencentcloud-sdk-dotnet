@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// 监听器后端转发源站协议类型
+        /// 监听器后端转发与源站之间的协议类型
         /// </summary>
         [JsonProperty("ForwardProtocol")]
         public string ForwardProtocol{ get; set; }
@@ -55,10 +55,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 修改后的监听器客户端证书ID
+        /// 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
         /// </summary>
         [JsonProperty("ClientCertificateId")]
         public string ClientCertificateId{ get; set; }
+
+        /// <summary>
+        /// 新字段,修改后的监听器客户端证书ID
+        /// </summary>
+        [JsonProperty("PolyClientCertificateIds")]
+        public string[] PolyClientCertificateIds{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
+            this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
         }
     }
 }

@@ -253,6 +253,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 获取交易详情
+        /// </summary>
+        /// <param name="req">参考<see cref="GetTransactionDetailForUserRequest"/></param>
+        /// <returns>参考<see cref="GetTransactionDetailForUserResponse"/>实例</returns>
+        public async Task<GetTransactionDetailForUserResponse> GetTransactionDetailForUser(GetTransactionDetailForUserRequest req)
+        {
+             JsonResponseModel<GetTransactionDetailForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTransactionDetailForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransactionDetailForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新增交易
         /// </summary>
         /// <param name="req">参考<see cref="InvokeRequest"/></param>

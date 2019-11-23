@@ -48,6 +48,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }
 
+        /// <summary>
+        /// 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+        /// </summary>
+        [JsonProperty("Required")]
+        public string Required{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -58,6 +64,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "PartitionType", this.PartitionType);
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
             this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
+            this.SetParamSimple(map, prefix + "Required", this.Required);
         }
     }
 }

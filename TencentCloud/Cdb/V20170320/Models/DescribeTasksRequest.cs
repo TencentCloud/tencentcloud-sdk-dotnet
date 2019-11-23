@@ -31,19 +31,39 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 异步任务请求 ID，执行 CDB 相关操作返回的 AsyncRequestId。
+        /// 异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }
 
         /// <summary>
-        /// 任务类型，不传值则查询所有任务类型，可能的值：1-数据库回档；2-SQL操作；3-数据导入；5-参数设置；6-初始化；7-重启；8-开启GTID；9-只读实例升级；10-数据库批量回档；11-主实例升级；12-删除库表；13-切换为主实例。
+        /// 任务类型，不传值则查询所有任务类型，支持的值包括：
+        /// 1 - 数据库回档；
+        /// 2 - SQL操作；
+        /// 3 - 数据导入；
+        /// 5 - 参数设置；
+        /// 6 - 初始化云数据库实例；
+        /// 7 - 重启云数据库实例；
+        /// 8 - 开启云数据库实例GTID；
+        /// 9 - 只读实例升级；
+        /// 10 - 数据库批量回档；
+        /// 11 - 主实例升级；
+        /// 12 - 删除云数据库库表；
+        /// 13 - 灾备实例提升为主。
         /// </summary>
         [JsonProperty("TaskTypes")]
         public long?[] TaskTypes{ get; set; }
 
         /// <summary>
-        /// 任务状态，不传值则查询所有任务状态，可能的值：-1-未定义；0-初始化; 1-运行中；2-执行成功；3-执行失败；4-已终止；5-已删除；6-已暂停。
+        /// 任务状态，不传值则查询所有任务状态，支持的值包括：
+        /// -1 - 未定义；
+        /// 0 - 初始化；
+        /// 1 - 运行中；
+        /// 2 - 执行成功；
+        /// 3 - 执行失败；
+        /// 4 - 已终止；
+        /// 5 - 已删除；
+        /// 6 - 已暂停。
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long?[] TaskStatus{ get; set; }

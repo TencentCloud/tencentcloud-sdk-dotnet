@@ -44,25 +44,34 @@ namespace TencentCloud.Live.V20180801.Models
         public string[] PlayDomains{ get; set; }
 
         /// <summary>
-        /// 页号，
-        /// 范围是[1,1000]，
-        /// 默认值是1。
+        /// 页号，范围是[1,1000]，默认值是1。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页个数，范围是[1,1000]，
-        /// 默认值是20。
+        /// 每页个数，范围是[1,1000]，默认值是20。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 排序指标，可选值包括”TotalRequest”，”FailedRequest”,“TotalFlux”。
+        /// 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
         /// </summary>
         [JsonProperty("OrderParam")]
         public string OrderParam{ get; set; }
+
+        /// <summary>
+        /// 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+        /// </summary>
+        [JsonProperty("MainlandOrOversea")]
+        public string MainlandOrOversea{ get; set; }
+
+        /// <summary>
+        /// 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+        /// </summary>
+        [JsonProperty("OutLanguage")]
+        public string OutLanguage{ get; set; }
 
 
         /// <summary>
@@ -76,6 +85,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "OrderParam", this.OrderParam);
+            this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+            this.SetParamSimple(map, prefix + "OutLanguage", this.OutLanguage);
         }
     }
 }

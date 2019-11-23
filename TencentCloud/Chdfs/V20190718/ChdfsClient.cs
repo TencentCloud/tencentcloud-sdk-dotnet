@@ -53,7 +53,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 创建权限组
+        /// 创建权限组。
         /// </summary>
         /// <param name="req">参考<see cref="CreateAccessGroupRequest"/></param>
         /// <returns>参考<see cref="CreateAccessGroupResponse"/>实例</returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 批量创建权限规则
+        /// 批量创建权限规则，权限规则ID和创建时间无需填写。
         /// </summary>
         /// <param name="req">参考<see cref="CreateAccessRulesRequest"/></param>
         /// <returns>参考<see cref="CreateAccessRulesResponse"/>实例</returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 创建文件系统（异步创建）
+        /// 创建文件系统（异步）。
         /// </summary>
         /// <param name="req">参考<see cref="CreateFileSystemRequest"/></param>
         /// <returns>参考<see cref="CreateFileSystemResponse"/>实例</returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 创建挂载点
+        /// 创建文件系统挂载点，仅限于创建成功的文件系统。
         /// </summary>
         /// <param name="req">参考<see cref="CreateMountPointRequest"/></param>
         /// <returns>参考<see cref="CreateMountPointResponse"/>实例</returns>
@@ -133,7 +133,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 删除权限组
+        /// 删除权限组。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteAccessGroupRequest"/></param>
         /// <returns>参考<see cref="DeleteAccessGroupResponse"/>实例</returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 批量删除权限规则
+        /// 批量删除权限规则。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteAccessRulesRequest"/></param>
         /// <returns>参考<see cref="DeleteAccessRulesResponse"/>实例</returns>
@@ -173,7 +173,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 删除文件系统
+        /// 删除文件系统，不允许删除非空文件系统。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteFileSystemRequest"/></param>
         /// <returns>参考<see cref="DeleteFileSystemResponse"/>实例</returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 删除挂载点
+        /// 删除挂载点。
         /// </summary>
         /// <param name="req">参考<see cref="DeleteMountPointRequest"/></param>
         /// <returns>参考<see cref="DeleteMountPointResponse"/>实例</returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 查看权限组列表
+        /// 查看权限组列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAccessGroupsRequest"/></param>
         /// <returns>参考<see cref="DescribeAccessGroupsResponse"/>实例</returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 查看权限规则列表
+        /// 通过权限组ID查看权限规则列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeAccessRulesRequest"/></param>
         /// <returns>参考<see cref="DescribeAccessRulesResponse"/>实例</returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 查看文件系统详细信息
+        /// 查看文件系统详细信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeFileSystemRequest"/></param>
         /// <returns>参考<see cref="DescribeFileSystemResponse"/>实例</returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 查看文件系统列表
+        /// 查看文件系统列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeFileSystemsRequest"/></param>
         /// <returns>参考<see cref="DescribeFileSystemsResponse"/>实例</returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 查看挂载点详细信息
+        /// 查看挂载点详细信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeMountPointRequest"/></param>
         /// <returns>参考<see cref="DescribeMountPointResponse"/>实例</returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 查看挂载点列表
+        /// 通过文件系统ID或者权限组ID查看挂载点列表。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeMountPointsRequest"/></param>
         /// <returns>参考<see cref="DescribeMountPointsResponse"/>实例</returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 修改权限组属性
+        /// 修改权限组属性。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyAccessGroupRequest"/></param>
         /// <returns>参考<see cref="ModifyAccessGroupResponse"/>实例</returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 批量修改权限规则属性
+        /// 批量修改权限规则属性，需要指定权限规则ID。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyAccessRulesRequest"/></param>
         /// <returns>参考<see cref="ModifyAccessRulesResponse"/>实例</returns>
@@ -373,7 +373,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 修改文件系统属性
+        /// 修改文件系统属性，仅限于创建成功的文件系统。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyFileSystemRequest"/></param>
         /// <returns>参考<see cref="ModifyFileSystemResponse"/>实例</returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 修改挂载点属性
+        /// 修改挂载点属性。
         /// </summary>
         /// <param name="req">参考<see cref="ModifyMountPointRequest"/></param>
         /// <returns>参考<see cref="ModifyMountPointResponse"/>实例</returns>

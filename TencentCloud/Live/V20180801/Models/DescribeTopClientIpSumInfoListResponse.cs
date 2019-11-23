@@ -25,16 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 页号，
-        /// 范围是[1,1000]，
-        /// 默认值是1。
+        /// 页号，范围是[1,1000]，默认值是1。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页个数，范围是[1,1000]，
-        /// 默认值是20。
+        /// 每页个数，范围是[1,1000]，默认值是20。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }

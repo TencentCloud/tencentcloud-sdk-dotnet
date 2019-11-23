@@ -28,7 +28,7 @@ namespace TencentCloud.Tiems.V20190416.Models
         /// 服务Id
         /// </summary>
         [JsonProperty("ServiceId")]
-        public long? ServiceId{ get; set; }
+        public string ServiceId{ get; set; }
 
         /// <summary>
         /// 扩缩容配置
@@ -40,7 +40,7 @@ namespace TencentCloud.Tiems.V20190416.Models
         /// 服务配置Id
         /// </summary>
         [JsonProperty("ServiceConfigId")]
-        public long? ServiceConfigId{ get; set; }
+        public string ServiceConfigId{ get; set; }
 
         /// <summary>
         /// 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
@@ -54,6 +54,18 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("ServiceAction")]
         public string ServiceAction{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// GPU卡类型
+        /// </summary>
+        [JsonProperty("GpuType")]
+        public string GpuType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +77,8 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "ServiceConfigId", this.ServiceConfigId);
             this.SetParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
             this.SetParamSimple(map, prefix + "ServiceAction", this.ServiceAction);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
         }
     }
 }

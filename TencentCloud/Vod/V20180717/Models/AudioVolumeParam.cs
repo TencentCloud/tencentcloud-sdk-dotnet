@@ -25,16 +25,6 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 音频增益，取值范围0~10。仅在Mute=0时生效。
-        /// <li>大于1表示增加音量。</li>
-        /// <li>小于1表示降低音量。</li>
-        /// <li>1：表示不改变。</li>
-        /// 默认是1。
-        /// </summary>
-        [JsonProperty("Gain")]
-        public float? Gain{ get; set; }
-
-        /// <summary>
         /// 是否静音，取值范围0或1。
         /// <li>0表示不静音。</li>
         /// <li>1表示静音。</li>
@@ -43,14 +33,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Mute")]
         public long? Mute{ get; set; }
 
+        /// <summary>
+        /// 音频增益，取值范围0~10。
+        /// <li>大于1表示增加音量。</li>
+        /// <li>小于1表示降低音量。</li>
+        /// <li>0和1：表示不改变。</li>
+        /// 默认是0。
+        /// </summary>
+        [JsonProperty("Gain")]
+        public float? Gain{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Gain", this.Gain);
             this.SetParamSimple(map, prefix + "Mute", this.Mute);
+            this.SetParamSimple(map, prefix + "Gain", this.Gain);
         }
     }
 }

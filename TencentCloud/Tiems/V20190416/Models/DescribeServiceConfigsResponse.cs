@@ -28,7 +28,7 @@ namespace TencentCloud.Tiems.V20190416.Models
         /// 服务配置
         /// </summary>
         [JsonProperty("ServiceConfigs")]
-        public ServiceConfig[] ServiceConfigs{ get; set; }
+        public Config[] ServiceConfigs{ get; set; }
 
         /// <summary>
         /// 服务配置总数

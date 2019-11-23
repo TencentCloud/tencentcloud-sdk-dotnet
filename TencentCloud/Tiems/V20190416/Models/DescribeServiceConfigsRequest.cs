@@ -54,6 +54,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
+        /// <summary>
+        /// 是否按照配置名分页
+        /// </summary>
+        [JsonProperty("PageByName")]
+        public bool? PageByName{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +71,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "PageByName", this.PageByName);
         }
     }
 }

@@ -1445,7 +1445,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 查询某段时间内每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
+        /// 查询某段时间内每个国家地区每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeProIspPlaySumInfoListRequest"/></param>
         /// <returns>参考<see cref="DescribeProIspPlaySumInfoListResponse"/>实例</returns>
