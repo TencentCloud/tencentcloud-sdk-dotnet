@@ -65,22 +65,22 @@ namespace TencentCloud.Common
         }
 
         /// <summary>
-        /// 序列化函数，将对象数据转化为json格式的string
+        /// Serialize an obect of AbstractModel into JSON string.
         /// </summary>
-        /// <typeparam name="V">继承自AbstractModel的子类型</typeparam>
-        /// <param name="obj">子实例</param>
-        /// <returns>json格式的string</returns>
+        /// <typeparam name="V">A class inherited from AbstrctModel.</typeparam>
+        /// <param name="obj">An object of the class.</param>
+        /// <returns>JSON formatted string.</returns>
         public static string ToJsonString<V>(V obj) where V: AbstractModel
         {
             return JsonConvert.SerializeObject(obj);
         }
 
         /// <summary>
-        ///  序列化函数，根据传入的json格式的string实例化一个cls对象返回
+        /// Deserialize JSON formatted string into an object of a class inherited from AbstractModel.
         /// </summary>
-        /// <typeparam name="V"></typeparam>
-        /// <param name="json">json格式的string</param>
-        /// <returns>与json匹配的类对象</returns>
+        /// <typeparam name="V">A class inherited from AbstrctModel.</typeparam>
+        /// <param name="json">JSON formatted string.</param>
+        /// <returns>An object of the class.</returns>
         public static V FromJsonString<V>(string json) 
         {
             return JsonConvert.DeserializeObject<V>(json);

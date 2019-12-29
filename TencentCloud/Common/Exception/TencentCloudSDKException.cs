@@ -33,7 +33,7 @@ namespace TencentCloud.Common
         }
 
         /// <summary>
-        /// 获取请求id
+        /// UUID of a request.
         /// </summary>
         public string RequestId { get; private set; }
 

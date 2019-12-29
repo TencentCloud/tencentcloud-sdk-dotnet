@@ -17,17 +17,17 @@
 namespace TencentCloud.Common
 {
     /// <summary>
-    ///  认证相关信息类
+    /// Credentials.
     /// </summary>
     public class Credential
     {
         /// <summary>
-        /// secretId,在控制台申请
+        /// SecretId, can only be obtained from Tencent Cloud Management Console.
         /// </summary>
         public string SecretId { get; set; }
 
         /// <summary>
-        /// secretKey,在控制台申请
+        /// SecretKey, can only be obtained from Tencent Cloud Management Console.
         /// </summary>
         public string SecretKey { get; set; }
 

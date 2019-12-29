@@ -25,14 +25,14 @@ using TencentCloud.Common.Profile;
 namespace TencentCloud.Common
 {
     /// <summary>
-    /// 签名工具类
+    /// Signature helper class.
     /// </summary>
     public class SignHelper
     {
-        //<summary>生成签名</summary>
-        ///<param name="signKey">被加密串</param>
-        ///<param name="secret">加密密钥</param>
-        ///<returns>签名</returns>
+        ///<summary>Generate signature.</summary>
+        ///<param name="signKey">Credential SecretKey.</param>
+        ///<param name="secret">Plain text to be signed.</param>
+        ///<returns>Signature.</returns>
         public static string Sign(string signKey, string secret, string SignatureMethod)
         {
             string signRet = string.Empty;

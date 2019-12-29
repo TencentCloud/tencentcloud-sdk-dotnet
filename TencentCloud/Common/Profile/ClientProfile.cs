@@ -17,15 +17,15 @@
 namespace TencentCloud.Common.Profile
 {
     /// <summary>
-    /// client选项类
+    /// Client profiles.
     /// </summary>
     public class ClientProfile
     {
         /// <summary>
-        /// 构造函数
+        /// Constructor.
         /// </summary>
-        /// <param name="signMethod">签名方法</param>
-        /// <param name="httpProfile">HttpProfile实例</param>
+        /// <param name="signMethod">Signature process method.</param>
+        /// <param name="httpProfile">HttpProfile instance.</param>
         public ClientProfile(string signMethod, HttpProfile httpProfile)
         {
             this.SignMethod = signMethod;
@@ -45,28 +45,28 @@ namespace TencentCloud.Common.Profile
         }
 
         /// <summary>
-        /// http相关选项，请参考 <seealso cref="HttpProfile"/>
+        /// HTTP profiles, refer to <seealso cref="HttpProfile"/>
         /// </summary>
         public HttpProfile HttpProfile { get; set; }
 
         /// <summary>
-        /// 签名方法
+        /// Signature process method.
         /// </summary>
         public string SignMethod { get; set; }
 
 
         /// <summary>
-        /// HmacSHA1签名方法
+        /// Signature process version 1, with HmacSHA1.
         /// </summary>
         public const string SIGN_SHA1 = "HmacSHA1";
 
         /// <summary>
-        /// HmacSHA256签名方法
+        /// Signature process version 1, with HmacSHA256.
         /// </summary>
         public static string SIGN_SHA256 = "HmacSHA256";
 
         /// <summary>
-        /// TC3-HMAC-SHA256 签名方法
+        /// Signature process version 3, with TC3-HMAC-SHA256.
         /// </summary>
         public static string SIGN_TC3SHA256 = "TC3-HMAC-SHA256";
     }

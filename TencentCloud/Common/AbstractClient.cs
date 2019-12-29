@@ -43,36 +43,37 @@ namespace TencentCloud.Common
         }
 
         /// <summary>
-        /// 认证信息实例
+        /// Credentials.
         /// </summary>
         public Credential Credential { get; set; }
 
         /// <summary>
-        /// 配置实例
+        /// Client profiles.
         /// </summary>
         public ClientProfile Profile { get; set; }
 
         /// <summary>
-        /// 服务端点
+        /// Service endpoint, or domain name, such as productName.tencentcloudapi.com.
         /// </summary>
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// 产品地域
+        /// Service region, such as ap-guangzhou.
         /// </summary>
         public string Region { get; set; }
+
         /// <summary>
-        /// 路径
+        /// URL path, for API 3.0, is /.
         /// </summary>
         public string Path { get; private set; }
 
         /// <summary>
-        /// SDK版本
+        /// SDK version.
         /// </summary>
         public string SdkVersion { get; set; }
 
         /// <summary>
-        /// API版本
+        /// API version.
         /// </summary>
         public string ApiVersion { get; set; }
 
@@ -165,7 +166,6 @@ namespace TencentCloud.Common
                 + canonicalHeaders + "\n"
                 + signedHeaders + "\n"
                 + hashedRequestPayload;
-            //Console.WriteLine(canonicalRequest);
 
             string algorithm = "TC3-HMAC-SHA256";
             long timestamp = ToTimestamp() / 1000;
@@ -178,7 +178,6 @@ namespace TencentCloud.Common
                 + requestTimestamp + "\n"
                 + credentialScope + "\n"
                 + hashedCanonicalRequest;
-            //Console.WriteLine(stringToSign);
 
             byte[] tc3SecretKey = Encoding.UTF8.GetBytes("TC3" + Credential.SecretKey);
             byte[] secretDate = SignHelper.HmacSHA256(tc3SecretKey, Encoding.UTF8.GetBytes(date));
@@ -186,13 +185,11 @@ namespace TencentCloud.Common
             byte[] secretSigning = SignHelper.HmacSHA256(secretService, Encoding.UTF8.GetBytes("tc3_request"));
             byte[] signatureBytes = SignHelper.HmacSHA256(secretSigning, Encoding.UTF8.GetBytes(stringToSign));
             string signature = BitConverter.ToString(signatureBytes).Replace("-", "").ToLower();
-            //Console.WriteLine(signature);
 
             string authorization = algorithm + " "
                 + "Credential=" + Credential.SecretId + "/" + credentialScope + ", "
                 + "SignedHeaders=" + signedHeaders + ", "
                 + "Signature=" + signature;
-            //Console.WriteLine(authorization);
 
             Dictionary<string, string> headers = new Dictionary<string, string>();
             headers.Add("Authorization", authorization);

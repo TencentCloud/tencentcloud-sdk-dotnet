@@ -17,32 +17,32 @@
 namespace TencentCloud.Common.Profile
 {
     /// <summary>
-    /// http选项类
+    /// HTTP profiles.
     /// </summary>
     public class HttpProfile
     {
         /// <summary>
-        /// https协议
+        /// HTTPS protocol.
         /// </summary>
         public static readonly string REQ_HTTPS = "https://";
 
         /// <summary>
-        /// http协议
+        /// HTTP protocol.
         /// </summary>
         public static readonly string REQ_HTTP = "http://";
 
         /// <summary>
-        /// post请求
+        /// HTTP method POST.
         /// </summary>
         public static readonly  string REQ_POST = "POST";
 
         /// <summary>
-        /// get请求
+        /// HTTP method GET.
         /// </summary>
         public static readonly string REQ_GET = "GET";
 
         /// <summary>
-        /// 时间单位，1分钟   60s
+        /// Time unit, 60 seconds.
         /// </summary>
         public static readonly int TM_MINUTE = 60;
 
@@ -55,27 +55,27 @@ namespace TencentCloud.Common.Profile
         }
 
         /// <summary>
-        /// 请求方法
+        /// HTTP request method.
         /// </summary>
         public string ReqMethod { get; set; }
 
         /// <summary>
-        /// 请求域名
+        /// Service endpoint, or domain name.
         /// </summary>
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// 请求协议
+        /// HTTP protocol.
         /// </summary>
         public string Protocol { get; set; }
 
         /// <summary>
-        /// 超时时间
+        /// HTTP request timeout value, in seconds.
         /// </summary>
         public int Timeout { get; set; }
 
         /// <summary>
-        /// 代理服务器
+        /// HTTP proxy settings.
         /// </summary>
         public string WebProxy { get; set; }
     }
