@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 资源Id，形如'eip-xxxx', 'lb-xxxx'
+        /// 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }

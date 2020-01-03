@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 作业ID
+        /// 作业ID列表，与Filters参数不能同时指定。
         /// </summary>
         [JsonProperty("JobIds")]
         public string[] JobIds{ get; set; }
@@ -36,6 +36,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
         /// <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
         /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+        /// 与JobIds参数不能同时指定。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

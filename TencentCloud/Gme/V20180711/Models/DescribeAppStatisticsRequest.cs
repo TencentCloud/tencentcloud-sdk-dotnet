@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// GME应用id
+        /// GME应用ID
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }

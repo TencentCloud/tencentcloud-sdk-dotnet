@@ -66,6 +66,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExistedInstancesForNode")]
         public ExistedInstancesForNode[] ExistedInstancesForNode{ get; set; }
 
+        /// <summary>
+        /// CVM类型和其对应的数据盘挂载配置信息
+        /// </summary>
+        [JsonProperty("InstanceDataDiskMountSettings")]
+        public InstanceDataDiskMountSetting[] InstanceDataDiskMountSettings{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
+            this.SetParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
         }
     }
 }

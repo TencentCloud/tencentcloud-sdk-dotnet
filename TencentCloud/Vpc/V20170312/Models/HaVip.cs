@@ -86,6 +86,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// 使用havip的业务标识。
+        /// </summary>
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -102,6 +108,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressIp", this.AddressIp);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
         }
     }
 }

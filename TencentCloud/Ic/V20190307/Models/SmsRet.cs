@@ -37,13 +37,13 @@ namespace TencentCloud.Ic.V20190307.Models
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 卡片id
+        /// 卡片ID
         /// </summary>
         [JsonProperty("Iccid")]
         public string Iccid{ get; set; }
 
         /// <summary>
-        /// 流水id
+        /// 流水ID
         /// </summary>
         [JsonProperty("Sid")]
         public string Sid{ get; set; }

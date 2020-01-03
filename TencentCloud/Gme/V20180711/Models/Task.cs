@@ -37,13 +37,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// gme实时语音房间id，通过gme实时语音进行语音分析时输入
+        /// gme实时语音房间ID，通过gme实时语音进行语音分析时输入
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// gme实时语音用户id，通过gme实时语音进行语音分析时输入
+        /// gme实时语音用户ID，通过gme实时语音进行语音分析时输入
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

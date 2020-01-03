@@ -25,13 +25,13 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 拉取最大条数，最多100条
+        /// 拉取最大条数，最多100条。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+        /// 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
         /// </summary>
         [JsonProperty("SmsSdkAppid")]
         public string SmsSdkAppid{ get; set; }

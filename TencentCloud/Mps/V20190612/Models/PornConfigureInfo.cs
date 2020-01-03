@@ -26,21 +26,18 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 画面鉴黄控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PornImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
         /// 语音鉴黄控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PornAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
         /// 文本鉴黄控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PornOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

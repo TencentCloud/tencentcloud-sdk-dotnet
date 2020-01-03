@@ -25,55 +25,55 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 短信回执量统计
+        /// 短信回执量统计。
         /// </summary>
         [JsonProperty("CallbackCount")]
         public ulong? CallbackCount{ get; set; }
 
         /// <summary>
-        /// 短信提交成功量统计
+        /// 短信提交成功量统计。
         /// </summary>
         [JsonProperty("RequestSuccessCount")]
         public ulong? RequestSuccessCount{ get; set; }
 
         /// <summary>
-        /// 短信回执失败量统计
+        /// 短信回执失败量统计。
         /// </summary>
         [JsonProperty("CallbackFailCount")]
         public ulong? CallbackFailCount{ get; set; }
 
         /// <summary>
-        /// 短信回执成功量统计
+        /// 短信回执成功量统计。
         /// </summary>
         [JsonProperty("CallbackSuccessCount")]
         public ulong? CallbackSuccessCount{ get; set; }
 
         /// <summary>
-        /// 运营商内部错误统计
+        /// 运营商内部错误统计。
         /// </summary>
         [JsonProperty("InternalErrorCount")]
         public ulong? InternalErrorCount{ get; set; }
 
         /// <summary>
-        /// 号码无效或空号统计
+        /// 号码无效或空号统计。
         /// </summary>
         [JsonProperty("InvalidNumberCount")]
         public ulong? InvalidNumberCount{ get; set; }
 
         /// <summary>
-        /// 停机、关机等错误统计
+        /// 停机、关机等错误统计。
         /// </summary>
         [JsonProperty("ShutdownErrorCount")]
         public ulong? ShutdownErrorCount{ get; set; }
 
         /// <summary>
-        /// 号码拉入黑名单统计
+        /// 号码拉入黑名单统计。
         /// </summary>
         [JsonProperty("BlackListCount")]
         public ulong? BlackListCount{ get; set; }
 
         /// <summary>
-        /// 运营商频率限制统计
+        /// 运营商频率限制统计。
         /// </summary>
         [JsonProperty("FrequencyLimitCount")]
         public ulong? FrequencyLimitCount{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
+        /// 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
         /// </summary>
         [JsonProperty("Quality")]
         public string Quality{ get; set; }

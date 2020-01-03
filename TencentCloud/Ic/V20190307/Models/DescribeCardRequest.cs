@@ -25,13 +25,13 @@ namespace TencentCloud.Ic.V20190307.Models
     {
         
         /// <summary>
-        /// 应用id
+        /// 应用ID
         /// </summary>
         [JsonProperty("Sdkappid")]
         public long? Sdkappid{ get; set; }
 
         /// <summary>
-        /// 卡片id
+        /// 卡片ID
         /// </summary>
         [JsonProperty("Iccid")]
         public string Iccid{ get; set; }

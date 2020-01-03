@@ -26,7 +26,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 账户在指定地域的IPV6转换实例及规则配额信息
-        /// QUOTAID属性是TOTAL_TRANSLATOR_QUOTA，表示账户在指定地域的IPV6转换实例配额信息；QUOTAID属性是IPV6转转换实例唯一ID（形如ip6-xxxxxxxx），表示账户在该转换实例允许创建的转换规则配额
+        /// QUOTAID属性是TOTAL_TRANSLATOR_QUOTA，表示账户在指定地域的IPV6转换实例配额信息；QUOTAID属性是IPV6转换实例唯一ID（形如ip6-xxxxxxxx），表示账户在该转换实例允许创建的转换规则配额
         /// </summary>
         [JsonProperty("QuotaSet")]
         public Quota[] QuotaSet{ get; set; }

@@ -39,7 +39,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Result{ get; set; }
 
         /// <summary>
-        /// 认证结果信息。
+        /// 业务结果描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ic.V20190307.Models
     {
         
         /// <summary>
-        /// 应用id
+        /// 应用ID
         /// </summary>
         [JsonProperty("Sdkappid")]
         public string Sdkappid{ get; set; }

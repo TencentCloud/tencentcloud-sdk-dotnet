@@ -31,7 +31,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称。
+        /// 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }

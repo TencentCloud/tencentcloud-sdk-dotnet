@@ -73,7 +73,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CancelTask）用于取消一个未被调度的任务。
+        /// BindDevices接口的同步版本，本接口（BindDevices）用于网关设备批量绑定子设备
+        /// </summary>
+        /// <param name="req">参考<see cref="BindDevicesRequest"/></param>
+        /// <returns>参考<see cref="BindDevicesResponse"/>实例</returns>
+        public BindDevicesResponse BindDevicesSync(BindDevicesRequest req)
+        {
+             JsonResponseModel<BindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CancelTask）用于取消一个未被调度的任务。 
         /// </summary>
         /// <param name="req">参考<see cref="CancelTaskRequest"/></param>
         /// <returns>参考<see cref="CancelTaskResponse"/>实例</returns>
@@ -93,7 +113,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateDevice）用于新建一个物联网通信设备。
+        /// CancelTask接口的同步版本，本接口（CancelTask）用于取消一个未被调度的任务。 
+        /// </summary>
+        /// <param name="req">参考<see cref="CancelTaskRequest"/></param>
+        /// <returns>参考<see cref="CancelTaskResponse"/>实例</returns>
+        public CancelTaskResponse CancelTaskSync(CancelTaskRequest req)
+        {
+             JsonResponseModel<CancelTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateDevice）用于新建一个物联网通信设备。 
         /// </summary>
         /// <param name="req">参考<see cref="CreateDeviceRequest"/></param>
         /// <returns>参考<see cref="CreateDeviceResponse"/>实例</returns>
@@ -103,6 +143,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateDevice接口的同步版本，本接口（CreateDevice）用于新建一个物联网通信设备。 
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateDeviceRequest"/></param>
+        /// <returns>参考<see cref="CreateDeviceResponse"/>实例</returns>
+        public CreateDeviceResponse CreateDeviceSync(CreateDeviceRequest req)
+        {
+             JsonResponseModel<CreateDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -133,6 +193,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// CreateLoraDevice接口的同步版本，创建lora类型的设备
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateLoraDeviceRequest"/></param>
+        /// <returns>参考<see cref="CreateLoraDeviceResponse"/>实例</returns>
+        public CreateLoraDeviceResponse CreateLoraDeviceSync(CreateLoraDeviceRequest req)
+        {
+             JsonResponseModel<CreateLoraDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLoraDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoraDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateMultiDevice）用于批量创建物联云设备。
         /// </summary>
         /// <param name="req">参考<see cref="CreateMultiDeviceRequest"/></param>
@@ -153,7 +233,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品
+        /// CreateMultiDevice接口的同步版本，本接口（CreateMultiDevice）用于批量创建物联云设备。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateMultiDeviceRequest"/></param>
+        /// <returns>参考<see cref="CreateMultiDeviceResponse"/>实例</returns>
+        public CreateMultiDeviceResponse CreateMultiDeviceSync(CreateMultiDeviceRequest req)
+        {
+             JsonResponseModel<CreateMultiDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMultiDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMultiDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品 
         /// </summary>
         /// <param name="req">参考<see cref="CreateProductRequest"/></param>
         /// <returns>参考<see cref="CreateProductResponse"/>实例</returns>
@@ -173,7 +273,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateTask）用于创建一个批量任务。目前此接口可以创建批量更新影子以及批量下发消息的任务
+        /// CreateProduct接口的同步版本，本接口（CreateProduct）用于创建一个新的物联网通信产品 
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateProductRequest"/></param>
+        /// <returns>参考<see cref="CreateProductResponse"/>实例</returns>
+        public CreateProductResponse CreateProductSync(CreateProductRequest req)
+        {
+             JsonResponseModel<CreateProductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateTask）用于创建一个批量任务。目前此接口可以创建批量更新影子以及批量下发消息的任务 
         /// </summary>
         /// <param name="req">参考<see cref="CreateTaskRequest"/></param>
         /// <returns>参考<see cref="CreateTaskResponse"/>实例</returns>
@@ -193,7 +313,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateTopicPolicy）用于创建一个Topic
+        /// CreateTask接口的同步版本，本接口（CreateTask）用于创建一个批量任务。目前此接口可以创建批量更新影子以及批量下发消息的任务 
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTaskRequest"/></param>
+        /// <returns>参考<see cref="CreateTaskResponse"/>实例</returns>
+        public CreateTaskResponse CreateTaskSync(CreateTaskRequest req)
+        {
+             JsonResponseModel<CreateTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
         /// </summary>
         /// <param name="req">参考<see cref="CreateTopicPolicyRequest"/></param>
         /// <returns>参考<see cref="CreateTopicPolicyResponse"/>实例</returns>
@@ -203,6 +343,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateTopicPolicy接口的同步版本，本接口（CreateTopicPolicy）用于创建一个Topic 
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTopicPolicyRequest"/></param>
+        /// <returns>参考<see cref="CreateTopicPolicyResponse"/>实例</returns>
+        public CreateTopicPolicyResponse CreateTopicPolicySync(CreateTopicPolicyRequest req)
+        {
+             JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTopicPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,7 +393,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DeleteDevice）用于删除物联网通信设备。
+        /// CreateTopicRule接口的同步版本，本接口（CreateTopicRule）用于创建一个规则
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="CreateTopicRuleResponse"/>实例</returns>
+        public CreateTopicRuleResponse CreateTopicRuleSync(CreateTopicRuleRequest req)
+        {
+             JsonResponseModel<CreateTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDevice）用于删除物联网通信设备。 
         /// </summary>
         /// <param name="req">参考<see cref="DeleteDeviceRequest"/></param>
         /// <returns>参考<see cref="DeleteDeviceResponse"/>实例</returns>
@@ -243,6 +423,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteDevice接口的同步版本，本接口（DeleteDevice）用于删除物联网通信设备。 
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteDeviceRequest"/></param>
+        /// <returns>参考<see cref="DeleteDeviceResponse"/>实例</returns>
+        public DeleteDeviceResponse DeleteDeviceSync(DeleteDeviceRequest req)
+        {
+             JsonResponseModel<DeleteDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -273,7 +473,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DeleteProduct）用于删除一个物联网通信产品。
+        /// DeleteLoraDevice接口的同步版本，删除lora类型的设备
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteLoraDeviceRequest"/></param>
+        /// <returns>参考<see cref="DeleteLoraDeviceResponse"/>实例</returns>
+        public DeleteLoraDeviceResponse DeleteLoraDeviceSync(DeleteLoraDeviceRequest req)
+        {
+             JsonResponseModel<DeleteLoraDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoraDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoraDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteProduct）用于删除一个物联网通信产品
         /// </summary>
         /// <param name="req">参考<see cref="DeleteProductRequest"/></param>
         /// <returns>参考<see cref="DeleteProductResponse"/>实例</returns>
@@ -283,6 +503,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteProduct接口的同步版本，本接口（DeleteProduct）用于删除一个物联网通信产品
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteProductRequest"/></param>
+        /// <returns>参考<see cref="DeleteProductResponse"/>实例</returns>
+        public DeleteProductResponse DeleteProductSync(DeleteProductRequest req)
+        {
+             JsonResponseModel<DeleteProductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProductResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,7 +553,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDevice）用于查看设备信息
+        /// DeleteTopicRule接口的同步版本，本接口（DeleteTopicRule）用于删除规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="DeleteTopicRuleResponse"/>实例</returns>
+        public DeleteTopicRuleResponse DeleteTopicRuleSync(DeleteTopicRuleRequest req)
+        {
+             JsonResponseModel<DeleteTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDevice）用于查看设备信息 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDeviceRequest"/></param>
         /// <returns>参考<see cref="DescribeDeviceResponse"/>实例</returns>
@@ -323,6 +583,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeDevice接口的同步版本，本接口（DescribeDevice）用于查看设备信息 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceResponse"/>实例</returns>
+        public DescribeDeviceResponse DescribeDeviceSync(DescribeDeviceRequest req)
+        {
+             JsonResponseModel<DescribeDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -353,7 +633,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
+        /// DescribeDeviceClientKey接口的同步版本，获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceClientKeyRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceClientKeyResponse"/>实例</returns>
+        public DescribeDeviceClientKeyResponse DescribeDeviceClientKeySync(DescribeDeviceClientKeyRequest req)
+        {
+             JsonResponseModel<DescribeDeviceClientKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeviceClientKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceClientKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDeviceShadowRequest"/></param>
         /// <returns>参考<see cref="DescribeDeviceShadowResponse"/>实例</returns>
@@ -373,7 +673,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
+        /// DescribeDeviceShadow接口的同步版本，本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDeviceShadowRequest"/></param>
+        /// <returns>参考<see cref="DescribeDeviceShadowResponse"/>实例</returns>
+        public DescribeDeviceShadowResponse DescribeDeviceShadowSync(DescribeDeviceShadowRequest req)
+        {
+             JsonResponseModel<DescribeDeviceShadowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeviceShadow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeDevicesRequest"/></param>
         /// <returns>参考<see cref="DescribeDevicesResponse"/>实例</returns>
@@ -383,6 +703,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeDevices接口的同步版本，本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDevicesRequest"/></param>
+        /// <returns>参考<see cref="DescribeDevicesResponse"/>实例</returns>
+        public DescribeDevicesResponse DescribeDevicesSync(DescribeDevicesRequest req)
+        {
+             JsonResponseModel<DescribeDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDevices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -413,6 +753,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// DescribeLoraDevice接口的同步版本，获取lora类型设备的详细信息
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeLoraDeviceRequest"/></param>
+        /// <returns>参考<see cref="DescribeLoraDeviceResponse"/>实例</returns>
+        public DescribeLoraDeviceResponse DescribeLoraDeviceSync(DescribeLoraDeviceRequest req)
+        {
+             JsonResponseModel<DescribeLoraDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoraDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoraDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeMultiDevTask）用于查询批量创建设备任务的执行状态。
         /// </summary>
         /// <param name="req">参考<see cref="DescribeMultiDevTaskRequest"/></param>
@@ -423,6 +783,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeMultiDevTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMultiDevTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeMultiDevTask接口的同步版本，本接口（DescribeMultiDevTask）用于查询批量创建设备任务的执行状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeMultiDevTaskRequest"/></param>
+        /// <returns>参考<see cref="DescribeMultiDevTaskResponse"/>实例</returns>
+        public DescribeMultiDevTaskResponse DescribeMultiDevTaskSync(DescribeMultiDevTaskRequest req)
+        {
+             JsonResponseModel<DescribeMultiDevTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMultiDevTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMultiDevTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -453,7 +833,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeProducts）用于列出产品列表。
+        /// DescribeMultiDevices接口的同步版本，本接口（DescribeMultiDevices）用于查询批量创建设备的执行结果。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeMultiDevicesRequest"/></param>
+        /// <returns>参考<see cref="DescribeMultiDevicesResponse"/>实例</returns>
+        public DescribeMultiDevicesResponse DescribeMultiDevicesSync(DescribeMultiDevicesRequest req)
+        {
+             JsonResponseModel<DescribeMultiDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMultiDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMultiDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProducts）用于列出产品列表。 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeProductsRequest"/></param>
         /// <returns>参考<see cref="DescribeProductsResponse"/>实例</returns>
@@ -473,7 +873,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月
+        /// DescribeProducts接口的同步版本，本接口（DescribeProducts）用于列出产品列表。 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeProductsRequest"/></param>
+        /// <returns>参考<see cref="DescribeProductsResponse"/>实例</returns>
+        public DescribeProductsResponse DescribeProductsSync(DescribeProductsRequest req)
+        {
+             JsonResponseModel<DescribeProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTaskRequest"/></param>
         /// <returns>参考<see cref="DescribeTaskResponse"/>实例</returns>
@@ -493,7 +913,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月
+        /// DescribeTask接口的同步版本，本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTaskRequest"/></param>
+        /// <returns>参考<see cref="DescribeTaskResponse"/>实例</returns>
+        public DescribeTaskResponse DescribeTaskSync(DescribeTaskRequest req)
+        {
+             JsonResponseModel<DescribeTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月 
         /// </summary>
         /// <param name="req">参考<see cref="DescribeTasksRequest"/></param>
         /// <returns>参考<see cref="DescribeTasksResponse"/>实例</returns>
@@ -503,6 +943,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeTasks接口的同步版本，本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月 
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTasksRequest"/></param>
+        /// <returns>参考<see cref="DescribeTasksResponse"/>实例</returns>
+        public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
+        {
+             JsonResponseModel<DescribeTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -533,6 +993,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// DisableTopicRule接口的同步版本，本接口（DisableTopicRule）用于禁用规则
+        /// </summary>
+        /// <param name="req">参考<see cref="DisableTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="DisableTopicRuleResponse"/>实例</returns>
+        public DisableTopicRuleResponse DisableTopicRuleSync(DisableTopicRuleRequest req)
+        {
+             JsonResponseModel<DisableTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（EnableTopicRule）用于启用规则
         /// </summary>
         /// <param name="req">参考<see cref="EnableTopicRuleRequest"/></param>
@@ -543,6 +1023,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "EnableTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// EnableTopicRule接口的同步版本，本接口（EnableTopicRule）用于启用规则
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="EnableTopicRuleResponse"/>实例</returns>
+        public EnableTopicRuleResponse EnableTopicRuleSync(EnableTopicRuleRequest req)
+        {
+             JsonResponseModel<EnableTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTopicRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -573,7 +1073,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（PublishMessage）用于向某个主题发消息。
+        /// PublishAsDevice接口的同步版本，模拟lora类型的设备端向服务器端发送消息
+        /// </summary>
+        /// <param name="req">参考<see cref="PublishAsDeviceRequest"/></param>
+        /// <returns>参考<see cref="PublishAsDeviceResponse"/>实例</returns>
+        public PublishAsDeviceResponse PublishAsDeviceSync(PublishAsDeviceRequest req)
+        {
+             JsonResponseModel<PublishAsDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishAsDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishAsDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（PublishMessage）用于向某个主题发消息。 
         /// </summary>
         /// <param name="req">参考<see cref="PublishMessageRequest"/></param>
         /// <returns>参考<see cref="PublishMessageResponse"/>实例</returns>
@@ -583,6 +1103,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "PublishMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PublishMessage接口的同步版本，本接口（PublishMessage）用于向某个主题发消息。 
+        /// </summary>
+        /// <param name="req">参考<see cref="PublishMessageRequest"/></param>
+        /// <returns>参考<see cref="PublishMessageResponse"/>实例</returns>
+        public PublishMessageResponse PublishMessageSync(PublishMessageRequest req)
+        {
+             JsonResponseModel<PublishMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishMessage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishMessageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -613,6 +1153,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// PublishToDevice接口的同步版本，服务器端下发消息给lora类型的设备
+        /// </summary>
+        /// <param name="req">参考<see cref="PublishToDeviceRequest"/></param>
+        /// <returns>参考<see cref="PublishToDeviceResponse"/>实例</returns>
+        public PublishToDeviceResponse PublishToDeviceSync(PublishToDeviceRequest req)
+        {
+             JsonResponseModel<PublishToDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishToDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishToDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ReplaceTopicRule）用于修改替换规则
         /// </summary>
         /// <param name="req">参考<see cref="ReplaceTopicRuleRequest"/></param>
@@ -633,7 +1193,27 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 重置设备的连接状态
+        /// ReplaceTopicRule接口的同步版本，本接口（ReplaceTopicRule）用于修改替换规则
+        /// </summary>
+        /// <param name="req">参考<see cref="ReplaceTopicRuleRequest"/></param>
+        /// <returns>参考<see cref="ReplaceTopicRuleResponse"/>实例</returns>
+        public ReplaceTopicRuleResponse ReplaceTopicRuleSync(ReplaceTopicRuleRequest req)
+        {
+             JsonResponseModel<ReplaceTopicRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceTopicRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置设备的连接状态 
         /// </summary>
         /// <param name="req">参考<see cref="ResetDeviceStateRequest"/></param>
         /// <returns>参考<see cref="ResetDeviceStateResponse"/>实例</returns>
@@ -643,6 +1223,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "ResetDeviceState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ResetDeviceState接口的同步版本，重置设备的连接状态 
+        /// </summary>
+        /// <param name="req">参考<see cref="ResetDeviceStateRequest"/></param>
+        /// <returns>参考<see cref="ResetDeviceStateResponse"/>实例</returns>
+        public ResetDeviceStateResponse ResetDeviceStateSync(ResetDeviceStateRequest req)
+        {
+             JsonResponseModel<ResetDeviceStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetDeviceState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDeviceStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -673,6 +1273,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// UnbindDevices接口的同步版本，本接口（UnbindDevices）用于网关设备批量解绑子设备
+        /// </summary>
+        /// <param name="req">参考<see cref="UnbindDevicesRequest"/></param>
+        /// <returns>参考<see cref="UnbindDevicesResponse"/>实例</returns>
+        public UnbindDevicesResponse UnbindDevicesSync(UnbindDevicesRequest req)
+        {
+             JsonResponseModel<UnbindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启用或者禁用设备
         /// </summary>
         /// <param name="req">参考<see cref="UpdateDeviceAvailableStateRequest"/></param>
@@ -683,6 +1303,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateDeviceAvailableState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceAvailableStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// UpdateDeviceAvailableState接口的同步版本，启用或者禁用设备
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateDeviceAvailableStateRequest"/></param>
+        /// <returns>参考<see cref="UpdateDeviceAvailableStateResponse"/>实例</returns>
+        public UpdateDeviceAvailableStateResponse UpdateDeviceAvailableStateSync(UpdateDeviceAvailableStateRequest req)
+        {
+             JsonResponseModel<UpdateDeviceAvailableStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDeviceAvailableState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceAvailableStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -713,6 +1353,26 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// UpdateDeviceShadow接口的同步版本，本接口（UpdateDeviceShadow）用于更新虚拟设备信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateDeviceShadowRequest"/></param>
+        /// <returns>参考<see cref="UpdateDeviceShadowResponse"/>实例</returns>
+        public UpdateDeviceShadowResponse UpdateDeviceShadowSync(UpdateDeviceShadowRequest req)
+        {
+             JsonResponseModel<UpdateDeviceShadowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDeviceShadow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UpdateTopicPolicy）用于更新Topic信息
         /// </summary>
         /// <param name="req">参考<see cref="UpdateTopicPolicyRequest"/></param>
@@ -723,6 +1383,26 @@ namespace TencentCloud.Iotcloud.V20180614
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// UpdateTopicPolicy接口的同步版本，本接口（UpdateTopicPolicy）用于更新Topic信息
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateTopicPolicyRequest"/></param>
+        /// <returns>参考<see cref="UpdateTopicPolicyResponse"/>实例</returns>
+        public UpdateTopicPolicyResponse UpdateTopicPolicySync(UpdateTopicPolicyRequest req)
+        {
+             JsonResponseModel<UpdateTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateTopicPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateTopicPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)

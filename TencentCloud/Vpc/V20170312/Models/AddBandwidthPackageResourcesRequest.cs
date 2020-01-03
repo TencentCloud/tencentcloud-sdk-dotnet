@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 资源Id，形如'eip-xxxx', 'lb-xxxx'
+        /// 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 带宽包类型，包括'BGP', 'SINGLEISP', 'ANYCAST'
+        /// 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

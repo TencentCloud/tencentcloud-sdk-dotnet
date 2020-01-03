@@ -36,6 +36,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
+        /// <summary>
+        /// PAI管理页面URL
+        /// </summary>
+        [JsonProperty("PaiMateUrl")]
+        public string PaiMateUrl{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "PaiMateUrl", this.PaiMateUrl);
         }
     }
 }

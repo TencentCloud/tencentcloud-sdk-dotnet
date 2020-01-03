@@ -31,7 +31,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 登录用户名，由字幕、数字、下划线和连字符组成，长度为1~32位。
+        /// 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

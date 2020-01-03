@@ -73,6 +73,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// ApplyUserCert接口的同步版本，申请用户证书
+        /// </summary>
+        /// <param name="req">参考<see cref="ApplyUserCertRequest"/></param>
+        /// <returns>参考<see cref="ApplyUserCertResponse"/>实例</returns>
+        public ApplyUserCertResponse ApplyUserCertSync(ApplyUserCertRequest req)
+        {
+             JsonResponseModel<ApplyUserCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyUserCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyUserCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Bcos根据块高查询区块信息
         /// </summary>
         /// <param name="req">参考<see cref="BlockByNumberHandlerRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Tbaas.V20180416
              try
              {
                  var strResp = await this.InternalRequest(req, "BlockByNumberHandler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BlockByNumberHandlerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// BlockByNumberHandler接口的同步版本，Bcos根据块高查询区块信息
+        /// </summary>
+        /// <param name="req">参考<see cref="BlockByNumberHandlerRequest"/></param>
+        /// <returns>参考<see cref="BlockByNumberHandlerResponse"/>实例</returns>
+        public BlockByNumberHandlerResponse BlockByNumberHandlerSync(BlockByNumberHandlerRequest req)
+        {
+             JsonResponseModel<BlockByNumberHandlerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BlockByNumberHandler");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BlockByNumberHandlerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// DownloadUserCert接口的同步版本，下载用户证书
+        /// </summary>
+        /// <param name="req">参考<see cref="DownloadUserCertRequest"/></param>
+        /// <returns>参考<see cref="DownloadUserCertResponse"/>实例</returns>
+        public DownloadUserCertResponse DownloadUserCertSync(DownloadUserCertRequest req)
+        {
+             JsonResponseModel<DownloadUserCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadUserCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadUserCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看当前网络下的所有区块列表，分页展示
         /// </summary>
         /// <param name="req">参考<see cref="GetBlockListRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Tbaas.V20180416
              try
              {
                  var strResp = await this.InternalRequest(req, "GetBlockList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBlockListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GetBlockList接口的同步版本，查看当前网络下的所有区块列表，分页展示
+        /// </summary>
+        /// <param name="req">参考<see cref="GetBlockListRequest"/></param>
+        /// <returns>参考<see cref="GetBlockListResponse"/>实例</returns>
+        public GetBlockListResponse GetBlockListSync(GetBlockListRequest req)
+        {
+             JsonResponseModel<GetBlockListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetBlockList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBlockListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// GetBlockListHandler接口的同步版本，bcos分页查询当前群组下的区块列表
+        /// </summary>
+        /// <param name="req">参考<see cref="GetBlockListHandlerRequest"/></param>
+        /// <returns>参考<see cref="GetBlockListHandlerResponse"/>实例</returns>
+        public GetBlockListHandlerResponse GetBlockListHandlerSync(GetBlockListHandlerRequest req)
+        {
+             JsonResponseModel<GetBlockListHandlerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetBlockListHandler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBlockListHandlerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取区块链网络概要
         /// </summary>
         /// <param name="req">参考<see cref="GetClusterSummaryRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Tbaas.V20180416
              try
              {
                  var strResp = await this.InternalRequest(req, "GetClusterSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetClusterSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GetClusterSummary接口的同步版本，获取区块链网络概要
+        /// </summary>
+        /// <param name="req">参考<see cref="GetClusterSummaryRequest"/></param>
+        /// <returns>参考<see cref="GetClusterSummaryResponse"/>实例</returns>
+        public GetClusterSummaryResponse GetClusterSummarySync(GetClusterSummaryRequest req)
+        {
+             JsonResponseModel<GetClusterSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetClusterSummary");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetClusterSummaryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// GetInvokeTx接口的同步版本，Invoke异步调用结果查询
+        /// </summary>
+        /// <param name="req">参考<see cref="GetInvokeTxRequest"/></param>
+        /// <returns>参考<see cref="GetInvokeTxResponse"/>实例</returns>
+        public GetInvokeTxResponse GetInvokeTxSync(GetInvokeTxRequest req)
+        {
+             JsonResponseModel<GetInvokeTxResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetInvokeTx");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetInvokeTxResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取最新交易列表
         /// </summary>
         /// <param name="req">参考<see cref="GetLatesdTransactionListRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Tbaas.V20180416
              try
              {
                  var strResp = await this.InternalRequest(req, "GetLatesdTransactionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLatesdTransactionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GetLatesdTransactionList接口的同步版本，获取最新交易列表
+        /// </summary>
+        /// <param name="req">参考<see cref="GetLatesdTransactionListRequest"/></param>
+        /// <returns>参考<see cref="GetLatesdTransactionListResponse"/>实例</returns>
+        public GetLatesdTransactionListResponse GetLatesdTransactionListSync(GetLatesdTransactionListRequest req)
+        {
+             JsonResponseModel<GetLatesdTransactionListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetLatesdTransactionList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLatesdTransactionListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,6 +393,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// GetTransByHashHandler接口的同步版本，Bcos根据交易哈希查看交易详细信息
+        /// </summary>
+        /// <param name="req">参考<see cref="GetTransByHashHandlerRequest"/></param>
+        /// <returns>参考<see cref="GetTransByHashHandlerResponse"/>实例</returns>
+        public GetTransByHashHandlerResponse GetTransByHashHandlerSync(GetTransByHashHandlerRequest req)
+        {
+             JsonResponseModel<GetTransByHashHandlerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTransByHashHandler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransByHashHandlerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Bcos分页查询当前群组的交易信息列表
         /// </summary>
         /// <param name="req">参考<see cref="GetTransListHandlerRequest"/></param>
@@ -243,6 +423,26 @@ namespace TencentCloud.Tbaas.V20180416
              try
              {
                  var strResp = await this.InternalRequest(req, "GetTransListHandler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransListHandlerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GetTransListHandler接口的同步版本，Bcos分页查询当前群组的交易信息列表
+        /// </summary>
+        /// <param name="req">参考<see cref="GetTransListHandlerRequest"/></param>
+        /// <returns>参考<see cref="GetTransListHandlerResponse"/>实例</returns>
+        public GetTransListHandlerResponse GetTransListHandlerSync(GetTransListHandlerRequest req)
+        {
+             JsonResponseModel<GetTransListHandlerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTransListHandler");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransListHandlerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -273,6 +473,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// GetTransactionDetailForUser接口的同步版本，获取交易详情
+        /// </summary>
+        /// <param name="req">参考<see cref="GetTransactionDetailForUserRequest"/></param>
+        /// <returns>参考<see cref="GetTransactionDetailForUserResponse"/>实例</returns>
+        public GetTransactionDetailForUserResponse GetTransactionDetailForUserSync(GetTransactionDetailForUserRequest req)
+        {
+             JsonResponseModel<GetTransactionDetailForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTransactionDetailForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransactionDetailForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新增交易
         /// </summary>
         /// <param name="req">参考<see cref="InvokeRequest"/></param>
@@ -283,6 +503,26 @@ namespace TencentCloud.Tbaas.V20180416
              try
              {
                  var strResp = await this.InternalRequest(req, "Invoke");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Invoke接口的同步版本，新增交易
+        /// </summary>
+        /// <param name="req">参考<see cref="InvokeRequest"/></param>
+        /// <returns>参考<see cref="InvokeResponse"/>实例</returns>
+        public InvokeResponse InvokeSync(InvokeRequest req)
+        {
+             JsonResponseModel<InvokeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Invoke");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,6 +553,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// Query接口的同步版本，查询交易
+        /// </summary>
+        /// <param name="req">参考<see cref="QueryRequest"/></param>
+        /// <returns>参考<see cref="QueryResponse"/>实例</returns>
+        public QueryResponse QuerySync(QueryRequest req)
+        {
+             JsonResponseModel<QueryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Query");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Bcos发送交易
         /// </summary>
         /// <param name="req">参考<see cref="SendTransactionHandlerRequest"/></param>
@@ -333,6 +593,26 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// SendTransactionHandler接口的同步版本，Bcos发送交易
+        /// </summary>
+        /// <param name="req">参考<see cref="SendTransactionHandlerRequest"/></param>
+        /// <returns>参考<see cref="SendTransactionHandlerResponse"/>实例</returns>
+        public SendTransactionHandlerResponse SendTransactionHandlerSync(SendTransactionHandlerRequest req)
+        {
+             JsonResponseModel<SendTransactionHandlerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendTransactionHandler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTransactionHandlerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// trustsql服务统一接口
         /// </summary>
         /// <param name="req">参考<see cref="SrvInvokeRequest"/></param>
@@ -343,6 +623,26 @@ namespace TencentCloud.Tbaas.V20180416
              try
              {
                  var strResp = await this.InternalRequest(req, "SrvInvoke");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SrvInvokeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SrvInvoke接口的同步版本，trustsql服务统一接口
+        /// </summary>
+        /// <param name="req">参考<see cref="SrvInvokeRequest"/></param>
+        /// <returns>参考<see cref="SrvInvokeResponse"/>实例</returns>
+        public SrvInvokeResponse SrvInvokeSync(SrvInvokeRequest req)
+        {
+             JsonResponseModel<SrvInvokeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SrvInvoke");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SrvInvokeResponse>>(strResp);
              }
              catch (JsonSerializationException e)

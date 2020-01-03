@@ -25,7 +25,7 @@ namespace TencentCloud.Ic.V20190307.Models
     {
         
         /// <summary>
-        /// 卡片id
+        /// 卡片ID
         /// </summary>
         [JsonProperty("Iccid")]
         public string Iccid{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Ic.V20190307.Models
         public string Imei{ get; set; }
 
         /// <summary>
-        /// 应用id
+        /// 应用ID
         /// </summary>
         [JsonProperty("Sdkappid")]
         public string Sdkappid{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Ic.V20190307.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 流量池id
+        /// 流量池ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoolId")]
@@ -158,7 +158,7 @@ namespace TencentCloud.Ic.V20190307.Models
         public long? IsActivated{ get; set; }
 
         /// <summary>
-        /// 订单id
+        /// 订单ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderId")]

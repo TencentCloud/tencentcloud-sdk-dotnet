@@ -26,21 +26,18 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 画面鉴政控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PoliticalImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
         /// 语音鉴政控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PoliticalAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
         /// 文本鉴政控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PoliticalOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

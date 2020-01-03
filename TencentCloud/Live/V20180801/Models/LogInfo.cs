@@ -42,6 +42,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("LogTime")]
         public string LogTime{ get; set; }
 
+        /// <summary>
+        /// 文件大小
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public long? FileSize{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -51,6 +57,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "LogName", this.LogName);
             this.SetParamSimple(map, prefix + "LogUrl", this.LogUrl);
             this.SetParamSimple(map, prefix + "LogTime", this.LogTime);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
         }
     }
 }

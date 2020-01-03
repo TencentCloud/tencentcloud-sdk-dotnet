@@ -25,7 +25,7 @@ namespace TencentCloud.Dayu.V20180709.Models
     {
         
         /// <summary>
-        /// 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+        /// 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包）
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 资源的IP；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
+        /// 资源的IP（当Business为bgp-multip时必填，且仅支持一个IP）；当不填写时，默认统计资源实例的所有IP；资源实例有多个IP（比如高防IP专业版）时，统计方式是求和；
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }

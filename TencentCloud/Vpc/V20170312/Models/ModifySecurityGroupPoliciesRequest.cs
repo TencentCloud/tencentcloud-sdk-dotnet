@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SecurityGroupPolicySet")]
         public SecurityGroupPolicySet SecurityGroupPolicySet{ get; set; }
 
+        /// <summary>
+        /// 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+        /// </summary>
+        [JsonProperty("SortPolicys")]
+        public bool? SortPolicys{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
             this.SetParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
+            this.SetParamSimple(map, prefix + "SortPolicys", this.SortPolicys);
         }
     }
 }

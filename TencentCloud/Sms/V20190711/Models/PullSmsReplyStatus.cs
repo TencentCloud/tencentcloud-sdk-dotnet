@@ -25,40 +25,46 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+        /// 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
         /// </summary>
         [JsonProperty("ExtendCode")]
-        public ulong? ExtendCode{ get; set; }
+        public string ExtendCode{ get; set; }
 
         /// <summary>
-        /// 国家（或地区）码
+        /// 国家（或地区）码。
         /// </summary>
         [JsonProperty("NationCode")]
         public string NationCode{ get; set; }
 
         /// <summary>
-        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 短信签名
+        /// 短信签名。
         /// </summary>
         [JsonProperty("Sign")]
         public string Sign{ get; set; }
 
         /// <summary>
-        /// 用户回复的内容
+        /// 用户回复的内容。
         /// </summary>
         [JsonProperty("ReplyContent")]
         public string ReplyContent{ get; set; }
 
         /// <summary>
-        /// 回复时间(例如：2019-10-08 17:18:37)
+        /// 回复时间（例如：2019-10-08 17:18:37）。
         /// </summary>
         [JsonProperty("ReplyTime")]
         public string ReplyTime{ get; set; }
+
+        /// <summary>
+        /// 回复时间，UNIX 时间戳（单位：秒）。
+        /// </summary>
+        [JsonProperty("ReplyUnixTime")]
+        public ulong? ReplyUnixTime{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Sms.V20190711.Models
             this.SetParamSimple(map, prefix + "Sign", this.Sign);
             this.SetParamSimple(map, prefix + "ReplyContent", this.ReplyContent);
             this.SetParamSimple(map, prefix + "ReplyTime", this.ReplyTime);
+            this.SetParamSimple(map, prefix + "ReplyUnixTime", this.ReplyUnixTime);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PrivateIpAddresses")]
         public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

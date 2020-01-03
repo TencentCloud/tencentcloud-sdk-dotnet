@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 计算环境ID
+        /// 计算环境ID列表，与Filters参数不能同时指定。
         /// </summary>
         [JsonProperty("EnvIds")]
         public string[] EnvIds{ get; set; }
@@ -35,6 +35,8 @@ namespace TencentCloud.Batch.V20170312.Models
         /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
         /// <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
         /// <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+        /// <li> resource-type - String - 是否必填：否 -（过滤条件）按照计算资源类型过滤，取值CVM或者CPM(黑石)。</li>
+        /// 与EnvIds参数不能同时指定。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -66,6 +66,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("DesiredComputeNodeCount")]
         public ulong? DesiredComputeNodeCount{ get; set; }
 
+        /// <summary>
+        /// 计算环境资源类型，当前为CVM和CPM（黑石）
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -79,6 +85,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "ComputeNodeMetrics.", this.ComputeNodeMetrics);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }
     }
 }

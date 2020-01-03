@@ -86,14 +86,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 音频流信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioStreamSet")]
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
         /// 视频流信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }

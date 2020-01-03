@@ -31,25 +31,25 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long?[] Conn{ get; set; }
 
         /// <summary>
-        /// 网卡入包量
+        /// 网卡入包量，单位：个/秒
         /// </summary>
         [JsonProperty("PackageIn")]
         public long?[] PackageIn{ get; set; }
 
         /// <summary>
-        /// 网卡出包量
+        /// 网卡出包量，单位：个/秒
         /// </summary>
         [JsonProperty("PackageOut")]
         public long?[] PackageOut{ get; set; }
 
         /// <summary>
-        /// 入流量，单位：KB
+        /// 入流量，单位：kbps
         /// </summary>
         [JsonProperty("FlowIn")]
         public long?[] FlowIn{ get; set; }
 
         /// <summary>
-        /// 出流量，单位：KB
+        /// 出流量，单位：kbps
         /// </summary>
         [JsonProperty("FlowOut")]
         public long?[] FlowOut{ get; set; }

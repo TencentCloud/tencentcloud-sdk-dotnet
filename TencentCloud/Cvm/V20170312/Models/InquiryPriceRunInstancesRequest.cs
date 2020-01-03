@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br>默认值：POSTPAID_BY_HOUR。
+        /// 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络ip，那么InstanceCount参数只能为1。
+        /// 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络IP，那么InstanceCount参数只能为1。
         /// </summary>
         [JsonProperty("VirtualPrivateCloud")]
         public VirtualPrivateCloud VirtualPrivateCloud{ get; set; }

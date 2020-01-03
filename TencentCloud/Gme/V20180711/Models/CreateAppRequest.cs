@@ -31,19 +31,19 @@ namespace TencentCloud.Gme.V20180711.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 腾讯云项目id，默认为0，表示默认项目
+        /// 腾讯云项目ID，默认为0，表示默认项目
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 需要支持的引擎列表，取值android, ios, unity, cocos, unreal, windows。默认全选。
+        /// 需要支持的引擎列表，默认全选。
         /// </summary>
         [JsonProperty("EngineList")]
         public string[] EngineList{ get; set; }
 
         /// <summary>
-        /// 服务区域列表，取值: mainland(大陆地区), sa(南美), eu(欧洲), oc(澳洲), me(中东)。默认全选。
+        /// 服务区域列表，默认全选。
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }

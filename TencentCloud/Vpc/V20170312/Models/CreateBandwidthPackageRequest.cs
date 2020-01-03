@@ -54,6 +54,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InternetMaxBandwidth")]
         public long? InternetMaxBandwidth{ get; set; }
 
+        /// <summary>
+        /// 需要关联的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -65,6 +77,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
             this.SetParamSimple(map, prefix + "BandwidthPackageCount", this.BandwidthPackageCount);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidth", this.InternetMaxBandwidth);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

@@ -25,14 +25,14 @@ namespace TencentCloud.Ic.V20190307.Models
     {
         
         /// <summary>
-        /// 卡片id
+        /// 卡片ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Iccid")]
         public string Iccid{ get; set; }
 
         /// <summary>
-        /// 信息流水id
+        /// 信息流水ID
         /// </summary>
         [JsonProperty("Sid")]
         public string Sid{ get; set; }

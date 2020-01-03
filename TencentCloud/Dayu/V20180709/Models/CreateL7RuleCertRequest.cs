@@ -43,7 +43,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 证书类型，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]
+        /// 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
         /// </summary>
         [JsonProperty("CertType")]
         public ulong? CertType{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Cert{ get; set; }
 
         /// <summary>
-        /// 当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+        /// 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }

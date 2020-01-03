@@ -30,6 +30,15 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ReplaceMonitorUnhealthy")]
         public bool? ReplaceMonitorUnhealthy{ get; set; }
 
+        /// <summary>
+        /// 取值范围： 
+        /// CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
+        /// WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
+        /// 默认取值：CLASSIC_SCALING
+        /// </summary>
+        [JsonProperty("ScalingMode")]
+        public string ScalingMode{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -37,6 +46,7 @@ namespace TencentCloud.As.V20180419.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
+            this.SetParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         }
     }
 }

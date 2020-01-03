@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽包配额数据结构
+        /// 带宽包配额详细信息
         /// </summary>
         [JsonProperty("QuotaSet")]
         public Quota[] QuotaSet{ get; set; }

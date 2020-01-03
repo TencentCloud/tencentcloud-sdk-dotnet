@@ -25,6 +25,12 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
+        /// 创建的转发规则的唯一标识数组
+        /// </summary>
+        [JsonProperty("LocationIds")]
+        public string[] LocationIds{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

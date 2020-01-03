@@ -62,6 +62,12 @@ namespace TencentCloud.Facefusion.V20181201.Models
         [JsonProperty("FuseFaceDegree")]
         public long? FuseFaceDegree{ get; set; }
 
+        /// <summary>
+        /// 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+        /// </summary>
+        [JsonProperty("CelebrityIdentify")]
+        public long? CelebrityIdentify{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -74,6 +80,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
             this.SetParamArrayObj(map, prefix + "MergeInfos.", this.MergeInfos);
             this.SetParamSimple(map, prefix + "FuseProfileDegree", this.FuseProfileDegree);
             this.SetParamSimple(map, prefix + "FuseFaceDegree", this.FuseFaceDegree);
+            this.SetParamSimple(map, prefix + "CelebrityIdentify", this.CelebrityIdentify);
         }
     }
 }

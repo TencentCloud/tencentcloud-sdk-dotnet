@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 证书Id。
+        /// 证书Id。使用添加证书接口获取证书Id。
         /// </summary>
         [JsonProperty("CertId")]
         public long? CertId{ get; set; }

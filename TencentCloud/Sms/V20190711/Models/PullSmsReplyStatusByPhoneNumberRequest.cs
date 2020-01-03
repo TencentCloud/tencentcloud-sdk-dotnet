@@ -25,20 +25,20 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 拉取起始时间，UNIX 时间戳（时间：秒）
+        /// 拉取起始时间，UNIX 时间戳（时间：秒）。
         /// </summary>
         [JsonProperty("SendDateTime")]
-        public string SendDateTime{ get; set; }
+        public ulong? SendDateTime{ get; set; }
 
         /// <summary>
-        /// 偏移量
-        /// 注：目前固定设置为0
+        /// 偏移量。
+        /// 注：目前固定设置为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 拉取最大条数，最多 100
+        /// 拉取最大条数，最多 100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+        /// 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
         /// </summary>
         [JsonProperty("SmsSdkAppid")]
         public string SmsSdkAppid{ get; set; }

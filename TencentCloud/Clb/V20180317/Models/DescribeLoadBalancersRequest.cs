@@ -80,7 +80,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回负载均衡实例的个数，默认为 20。
+        /// 返回负载均衡实例的数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

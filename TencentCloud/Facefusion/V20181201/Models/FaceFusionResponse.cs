@@ -25,7 +25,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
     {
         
         /// <summary>
-        /// RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。当前仅支持 url 方式，base64 方式后期开放。
+        /// RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }

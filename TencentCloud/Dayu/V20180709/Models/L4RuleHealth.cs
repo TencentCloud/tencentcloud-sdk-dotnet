@@ -43,7 +43,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? TimeOut{ get; set; }
 
         /// <summary>
-        /// 检测间隔时间，单位秒
+        /// 检测间隔时间，单位秒，必须要大于响应超时时间
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }

@@ -105,6 +105,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EndPort")]
         public long? EndPort{ get; set; }
 
+        /// <summary>
+        /// 后端服务器类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
+
+        /// <summary>
+        /// 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetGroup")]
+        public BasicTargetGroupInfo TargetGroup{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -123,6 +137,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
+            this.SetParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
         }
     }
 }

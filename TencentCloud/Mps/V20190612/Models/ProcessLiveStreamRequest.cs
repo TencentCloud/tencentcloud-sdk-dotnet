@@ -55,16 +55,22 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+        /// 视频内容识别类型任务参数。
         /// </summary>
-        [JsonProperty("SessionContext")]
-        public string SessionContext{ get; set; }
+        [JsonProperty("AiRecognitionTask")]
+        public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
 
 
         /// <summary>
@@ -77,8 +83,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
-            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

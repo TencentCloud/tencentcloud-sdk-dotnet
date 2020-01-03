@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public TargetRegionInfo TargetRegionInfo{ get; set; }
 
         /// <summary>
-        /// 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+        /// 网络计费相关参数
         /// </summary>
         [JsonProperty("InternetChargeInfo")]
         public InternetAccessible InternetChargeInfo{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Iai.V20180301.Models
         public long? ImageHeight{ get; set; }
 
         /// <summary>
-        /// 人脸信息列表。
+        /// 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
         /// </summary>
         [JsonProperty("FaceInfos")]
         public FaceInfo[] FaceInfos{ get; set; }

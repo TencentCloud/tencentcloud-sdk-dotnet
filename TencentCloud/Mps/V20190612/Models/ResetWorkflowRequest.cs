@@ -64,7 +64,13 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 视频内容审核类型任务参数。
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
-        public AiClassificationTaskInput AiContentReviewTask{ get; set; }
+        public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
+
+        /// <summary>
+        /// 视频内容分析类型任务参数。
+        /// </summary>
+        [JsonProperty("AiAnalysisTask")]
+        public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
         /// 视频内容识别类型任务参数。
@@ -97,6 +103,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
+            this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamSimple(map, prefix + "TaskPriority", this.TaskPriority);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);

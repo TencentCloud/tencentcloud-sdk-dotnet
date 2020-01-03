@@ -73,7 +73,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string PornCensorshipNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+        /// 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }

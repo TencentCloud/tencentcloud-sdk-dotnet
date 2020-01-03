@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 偏移量。
+        /// 分页偏移量。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页返回多少个标签。
+        /// 分页大小。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

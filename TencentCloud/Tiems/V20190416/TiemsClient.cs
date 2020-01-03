@@ -73,6 +73,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// CreateJob接口的同步版本，创建任务
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateJobRequest"/></param>
+        /// <returns>参考<see cref="CreateJobResponse"/>实例</returns>
+        public CreateJobResponse CreateJobSync(CreateJobRequest req)
+        {
+             JsonResponseModel<CreateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建运行环境
         /// </summary>
         /// <param name="req">参考<see cref="CreateRuntimeRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Tiems.V20190416
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateRuntime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRuntimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateRuntime接口的同步版本，创建运行环境
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateRuntimeRequest"/></param>
+        /// <returns>参考<see cref="CreateRuntimeResponse"/>实例</returns>
+        public CreateRuntimeResponse CreateRuntimeSync(CreateRuntimeRequest req)
+        {
+             JsonResponseModel<CreateRuntimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRuntime");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRuntimeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// CreateService接口的同步版本，创建服务
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateServiceRequest"/></param>
+        /// <returns>参考<see cref="CreateServiceResponse"/>实例</returns>
+        public CreateServiceResponse CreateServiceSync(CreateServiceRequest req)
+        {
+             JsonResponseModel<CreateServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建服务配置
         /// </summary>
         /// <param name="req">参考<see cref="CreateServiceConfigRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Tiems.V20190416
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateServiceConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateServiceConfig接口的同步版本，创建服务配置
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateServiceConfigRequest"/></param>
+        /// <returns>参考<see cref="CreateServiceConfigResponse"/>实例</returns>
+        public CreateServiceConfigResponse CreateServiceConfigSync(CreateServiceConfigRequest req)
+        {
+             JsonResponseModel<CreateServiceConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServiceConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// DeleteJob接口的同步版本，删除任务
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteJobRequest"/></param>
+        /// <returns>参考<see cref="DeleteJobResponse"/>实例</returns>
+        public DeleteJobResponse DeleteJobSync(DeleteJobRequest req)
+        {
+             JsonResponseModel<DeleteJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除运行环境
         /// </summary>
         /// <param name="req">参考<see cref="DeleteRuntimeRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Tiems.V20190416
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteRuntime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRuntimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteRuntime接口的同步版本，删除运行环境
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteRuntimeRequest"/></param>
+        /// <returns>参考<see cref="DeleteRuntimeResponse"/>实例</returns>
+        public DeleteRuntimeResponse DeleteRuntimeSync(DeleteRuntimeRequest req)
+        {
+             JsonResponseModel<DeleteRuntimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRuntime");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRuntimeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// DeleteService接口的同步版本，删除服务
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteServiceRequest"/></param>
+        /// <returns>参考<see cref="DeleteServiceResponse"/>实例</returns>
+        public DeleteServiceResponse DeleteServiceSync(DeleteServiceRequest req)
+        {
+             JsonResponseModel<DeleteServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除服务配置
         /// </summary>
         /// <param name="req">参考<see cref="DeleteServiceConfigRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Tiems.V20190416
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteServiceConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteServiceConfig接口的同步版本，删除服务配置
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteServiceConfigRequest"/></param>
+        /// <returns>参考<see cref="DeleteServiceConfigResponse"/>实例</returns>
+        public DeleteServiceConfigResponse DeleteServiceConfigSync(DeleteServiceConfigRequest req)
+        {
+             JsonResponseModel<DeleteServiceConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteServiceConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,6 +393,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// DescribeInstances接口的同步版本，获取节点列表
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeInstancesRequest"/></param>
+        /// <returns>参考<see cref="DescribeInstancesResponse"/>实例</returns>
+        public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
+        {
+             JsonResponseModel<DescribeInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 描述服务运行环境
         /// </summary>
         /// <param name="req">参考<see cref="DescribeRuntimesRequest"/></param>
@@ -243,6 +423,26 @@ namespace TencentCloud.Tiems.V20190416
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeRuntimes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRuntimesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeRuntimes接口的同步版本，描述服务运行环境
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRuntimesRequest"/></param>
+        /// <returns>参考<see cref="DescribeRuntimesResponse"/>实例</returns>
+        public DescribeRuntimesResponse DescribeRuntimesSync(DescribeRuntimesRequest req)
+        {
+             JsonResponseModel<DescribeRuntimesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRuntimes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRuntimesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -273,6 +473,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// DescribeServiceConfigs接口的同步版本，描述服务配置
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeServiceConfigsRequest"/></param>
+        /// <returns>参考<see cref="DescribeServiceConfigsResponse"/>实例</returns>
+        public DescribeServiceConfigsResponse DescribeServiceConfigsSync(DescribeServiceConfigsRequest req)
+        {
+             JsonResponseModel<DescribeServiceConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 描述服务
         /// </summary>
         /// <param name="req">参考<see cref="DescribeServicesRequest"/></param>
@@ -283,6 +503,26 @@ namespace TencentCloud.Tiems.V20190416
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeServices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeServices接口的同步版本，描述服务
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeServicesRequest"/></param>
+        /// <returns>参考<see cref="DescribeServicesResponse"/>实例</returns>
+        public DescribeServicesResponse DescribeServicesSync(DescribeServicesRequest req)
+        {
+             JsonResponseModel<DescribeServicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServicesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,6 +553,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// ExposeService接口的同步版本，暴露服务
+        /// </summary>
+        /// <param name="req">参考<see cref="ExposeServiceRequest"/></param>
+        /// <returns>参考<see cref="ExposeServiceResponse"/>实例</returns>
+        public ExposeServiceResponse ExposeServiceSync(ExposeServiceRequest req)
+        {
+             JsonResponseModel<ExposeServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExposeService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExposeServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新任务
         /// </summary>
         /// <param name="req">参考<see cref="UpdateJobRequest"/></param>
@@ -333,6 +593,26 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// UpdateJob接口的同步版本，更新任务
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateJobRequest"/></param>
+        /// <returns>参考<see cref="UpdateJobResponse"/>实例</returns>
+        public UpdateJobResponse UpdateJobSync(UpdateJobRequest req)
+        {
+             JsonResponseModel<UpdateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新服务
         /// </summary>
         /// <param name="req">参考<see cref="UpdateServiceRequest"/></param>
@@ -343,6 +623,26 @@ namespace TencentCloud.Tiems.V20190416
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// UpdateService接口的同步版本，更新服务
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateServiceRequest"/></param>
+        /// <returns>参考<see cref="UpdateServiceResponse"/>实例</returns>
+        public UpdateServiceResponse UpdateServiceSync(UpdateServiceRequest req)
+        {
+             JsonResponseModel<UpdateServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)

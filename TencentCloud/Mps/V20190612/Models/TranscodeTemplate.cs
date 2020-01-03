@@ -38,14 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 转码模板名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 模板描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -76,14 +74,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
         /// 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }

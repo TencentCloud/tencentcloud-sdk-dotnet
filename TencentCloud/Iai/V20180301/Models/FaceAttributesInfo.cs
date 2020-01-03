@@ -49,21 +49,21 @@ namespace TencentCloud.Iai.V20180301.Models
         public bool? Glass{ get; set; }
 
         /// <summary>
-        /// 上下偏移[-30,30]。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+        /// 上下偏移[-30,30]，单位角度。NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
         /// 建议：人脸入库选择[-10,10]的图片。
         /// </summary>
         [JsonProperty("Pitch")]
         public long? Pitch{ get; set; }
 
         /// <summary>
-        /// 左右偏移[-30,30]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+        /// 左右偏移[-30,30]，单位角度。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
         /// 建议：人脸入库选择[-10,10]的图片。
         /// </summary>
         [JsonProperty("Yaw")]
         public long? Yaw{ get; set; }
 
         /// <summary>
-        /// 平面旋转[-180,180]。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
+        /// 平面旋转[-180,180]，单位角度。 NeedFaceAttributes 不为1 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。  
         /// 建议：人脸入库选择[-20,20]的图片。
         /// </summary>
         [JsonProperty("Roll")]

@@ -65,6 +65,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
+        /// <summary>
+        /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 来源上下文，用于透传用户请求信息。
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -76,6 +88,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

@@ -156,6 +156,13 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("EnableState")]
         public ulong? EnableState{ get; set; }
 
+        /// <summary>
+        /// 设备标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public DeviceLabel[] Labels{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -183,6 +190,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
             this.SetParamSimple(map, prefix + "CertState", this.CertState);
             this.SetParamSimple(map, prefix + "EnableState", this.EnableState);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
         }
     }
 }

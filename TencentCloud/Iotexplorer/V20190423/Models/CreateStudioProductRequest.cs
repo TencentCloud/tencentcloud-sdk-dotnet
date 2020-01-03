@@ -25,37 +25,37 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 产品名称
+        /// 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 产品分组模板ID
+        /// 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }
 
         /// <summary>
-        /// 产品类型
+        /// 产品类型 填写 ( 0 普通产品 )
         /// </summary>
         [JsonProperty("ProductType")]
         public long? ProductType{ get; set; }
 
         /// <summary>
-        /// 加密类型
+        /// 加密类型 加密类型，1表示证书认证，2表示签名认证。
         /// </summary>
         [JsonProperty("EncryptionType")]
         public string EncryptionType{ get; set; }
 
         /// <summary>
-        /// 连接类型
+        /// 连接类型 可以填写 wifi cellular else
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// 数据协议
+        /// 数据协议 (1 使用物模型)
         /// </summary>
         [JsonProperty("DataProtocol")]
         public long? DataProtocol{ get; set; }

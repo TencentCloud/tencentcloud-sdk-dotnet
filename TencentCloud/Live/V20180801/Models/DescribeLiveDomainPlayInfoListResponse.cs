@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public float? TotalFlux{ get; set; }
 
         /// <summary>
-        /// TotalRequest。
+        /// 总请求数。
         /// </summary>
         [JsonProperty("TotalRequest")]
         public ulong? TotalRequest{ get; set; }

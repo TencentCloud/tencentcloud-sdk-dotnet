@@ -136,6 +136,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ServiceSettings")]
         public ServiceSettings ServiceSettings{ get; set; }
 
+        /// <summary>
+        /// 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+        /// </summary>
+        [JsonProperty("Ipv6AddressCount")]
+        public long? Ipv6AddressCount{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -159,6 +165,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
+            this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
         }
     }
 }

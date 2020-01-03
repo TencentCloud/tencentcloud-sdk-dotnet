@@ -27,7 +27,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 水印类型，可选值：
         /// <li>image：图片水印；</li>
-        /// <li>text：文字水印。</li>
+        /// <li>text：文字水印；</li>
+        /// <li>svg：SVG 水印。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -50,7 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
         /// <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
         /// <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-        /// 默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+        /// 默认值：TopLeft。
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }

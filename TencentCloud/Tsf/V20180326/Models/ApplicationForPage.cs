@@ -87,6 +87,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationResourceType")]
         public string ApplicationResourceType{ get; set; }
 
+        /// <summary>
+        /// 应用runtime类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationRuntimeType")]
+        public string ApplicationRuntimeType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -102,6 +109,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
+            this.SetParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
         }
     }
 }

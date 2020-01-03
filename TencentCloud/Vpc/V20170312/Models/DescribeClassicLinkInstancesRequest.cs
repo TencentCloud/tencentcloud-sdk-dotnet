@@ -27,7 +27,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// 过滤条件。
         /// <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
-        /// <li>vm-ip - String - （过滤条件）基础网络云主机IP。</li>
+        /// <li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public FilterObject[] Filters{ get; set; }

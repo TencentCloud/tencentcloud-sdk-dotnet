@@ -73,6 +73,26 @@ namespace TencentCloud.Tbp.V20190311
         }
 
         /// <summary>
+        /// Reset接口的同步版本，对当前机器人的会话状态进行复位
+        /// </summary>
+        /// <param name="req">参考<see cref="ResetRequest"/></param>
+        /// <returns>参考<see cref="ResetResponse"/>实例</returns>
+        public ResetResponse ResetSync(ResetRequest req)
+        {
+             JsonResponseModel<ResetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Reset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接收调用侧的文本输入，返回应答文本。已废弃，推荐使用最新版TextProcess接口。
         /// </summary>
         /// <param name="req">参考<see cref="TextProcessRequest"/></param>
@@ -93,6 +113,26 @@ namespace TencentCloud.Tbp.V20190311
         }
 
         /// <summary>
+        /// TextProcess接口的同步版本，接收调用侧的文本输入，返回应答文本。已废弃，推荐使用最新版TextProcess接口。
+        /// </summary>
+        /// <param name="req">参考<see cref="TextProcessRequest"/></param>
+        /// <returns>参考<see cref="TextProcessResponse"/>实例</returns>
+        public TextProcessResponse TextProcessSync(TextProcessRequest req)
+        {
+             JsonResponseModel<TextProcessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TextProcess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextProcessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 会话重置接口。已废弃，推荐使用最新版TextReset接口。
         /// </summary>
         /// <param name="req">参考<see cref="TextResetRequest"/></param>
@@ -103,6 +143,26 @@ namespace TencentCloud.Tbp.V20190311
              try
              {
                  var strResp = await this.InternalRequest(req, "TextReset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextResetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// TextReset接口的同步版本，会话重置接口。已废弃，推荐使用最新版TextReset接口。
+        /// </summary>
+        /// <param name="req">参考<see cref="TextResetRequest"/></param>
+        /// <returns>参考<see cref="TextResetResponse"/>实例</returns>
+        public TextResetResponse TextResetSync(TextResetRequest req)
+        {
+             JsonResponseModel<TextResetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TextReset");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextResetResponse>>(strResp);
              }
              catch (JsonSerializationException e)

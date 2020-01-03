@@ -49,7 +49,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? OpenStatus{ get; set; }
 
         /// <summary>
-        /// 秘钥生成时间
+        /// 密钥生成时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

@@ -51,14 +51,14 @@ namespace TencentCloud.Gme.V20180711.Models
         public ScanDetail[] ScanDetail{ get; set; }
 
         /// <summary>
-        /// gme实时语音房间id，透传任务传入时的RoomId
+        /// gme实时语音房间ID，透传任务传入时的RoomId
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// gme实时语音用户id，透传任务传入时的OpenId
+        /// gme实时语音用户ID，透传任务传入时的OpenId
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OpenId")]
@@ -85,6 +85,13 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
+        /// <summary>
+        /// 分片开始检测时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PieceStartTime")]
+        public ulong? PieceStartTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -100,6 +107,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "Info", this.Info);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "PieceStartTime", this.PieceStartTime);
         }
     }
 }

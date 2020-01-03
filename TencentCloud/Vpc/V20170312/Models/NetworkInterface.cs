@@ -120,6 +120,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+        /// </summary>
+        [JsonProperty("EniType")]
+        public ulong? EniType{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -141,6 +147,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "EniType", this.EniType);
         }
     }
 }

@@ -43,16 +43,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 置放群组描述。
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
         /// 置放群组实例配额。
         /// </summary>
         [JsonProperty("Quota")]
         public long? Quota{ get; set; }
+
+        /// <summary>
+        /// 置放群组亲和性策略。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Affinity")]
+        public string Affinity{ get; set; }
+
+        /// <summary>
+        /// 置放群组亲和性策略1的限制实例个数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LimitNum")]
+        public long? LimitNum{ get; set; }
+
+        /// <summary>
+        /// 置放群组详细信息。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -63,8 +77,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
             this.SetParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Quota", this.Quota);
+            this.SetParamSimple(map, prefix + "Affinity", this.Affinity);
+            this.SetParamSimple(map, prefix + "LimitNum", this.LimitNum);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

@@ -62,7 +62,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+        /// 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? DefaultServer{ get; set; }
 
         /// <summary>
-        /// 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+        /// 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
         /// </summary>
         [JsonProperty("Http2")]
         public bool? Http2{ get; set; }
@@ -84,6 +84,18 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
+
+        /// <summary>
+        /// TRPC被调服务器路由，ForwardType为TRPC时必填
+        /// </summary>
+        [JsonProperty("TrpcCallee")]
+        public string TrpcCallee{ get; set; }
+
+        /// <summary>
+        /// TRPC调用服务接口，ForwardType为TRPC时必填
+        /// </summary>
+        [JsonProperty("TrpcFunc")]
+        public string TrpcFunc{ get; set; }
 
 
         /// <summary>
@@ -101,6 +113,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
+            this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+            this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         }
     }
 }

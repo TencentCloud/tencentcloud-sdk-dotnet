@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用id，由后台自动生成。
+        /// 应用ID，由后台自动生成。
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 项目id，透传输入的ProjectId
+        /// 项目ID，透传输入的ProjectId
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

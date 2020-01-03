@@ -73,7 +73,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Architecture{ get; set; }
 
         /// <summary>
-        /// 镜像状态
+        /// 镜像状态:
+        /// CREATING-创建中
+        /// NORMAL-正常
+        /// CREATEFAILED-创建失败
+        /// USING-使用中
+        /// SYNCING-同步中
+        /// IMPORTING-导入中
+        /// IMPORTFAILED-导入失败
         /// </summary>
         [JsonProperty("ImageState")]
         public string ImageState{ get; set; }

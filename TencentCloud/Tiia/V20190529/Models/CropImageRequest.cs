@@ -55,6 +55,7 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+        /// **注意：图片需要base64编码，并且要去掉编码头部。**
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
     {
         
         /// <summary>
-        /// 鉴政使用字段, 为职业属性,其他审核结果对应上一级category
+        /// 保留字段
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
@@ -37,13 +37,19 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// 对应识别label的置信度
+        /// 对应识别label的置信度，分数越高意味涉政可能性越大。 
+        /// 0到70，Suggestion建议为PASS； 
+        /// 70到80，Suggestion建议为REVIEW； 
+        /// 80到100，Suggestion建议为BLOCK。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 此字段为保留字段，目前统一返回pass。
+        /// 识别场景的审核结论：  
+        /// PASS：正常 
+        /// REVIEW：疑似  
+        /// BLOCK：违规
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }

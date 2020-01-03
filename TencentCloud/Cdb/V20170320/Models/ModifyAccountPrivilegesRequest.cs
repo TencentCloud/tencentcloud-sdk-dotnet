@@ -38,24 +38,28 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+        /// 注意，不传该参数表示清除该权限。
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }
 
         /// <summary>
         /// 数据库的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
+        /// 注意，不传该参数表示清除该权限。
         /// </summary>
         [JsonProperty("DatabasePrivileges")]
         public DatabasePrivilege[] DatabasePrivileges{ get; set; }
 
         /// <summary>
         /// 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+        /// 注意，不传该参数表示清除该权限。
         /// </summary>
         [JsonProperty("TablePrivileges")]
         public TablePrivilege[] TablePrivileges{ get; set; }
 
         /// <summary>
         /// 数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
+        /// 注意，不传该参数表示清除该权限。
         /// </summary>
         [JsonProperty("ColumnPrivileges")]
         public ColumnPrivilege[] ColumnPrivileges{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 回复状态响应集合
+        /// 回复状态响应集合。
         /// </summary>
         [JsonProperty("PullSmsReplyStatusSet")]
         public PullSmsReplyStatus[] PullSmsReplyStatusSet{ get; set; }

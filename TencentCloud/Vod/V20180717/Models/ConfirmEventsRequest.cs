@@ -25,10 +25,17 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 事件句柄，数组长度限制：16。
+        /// 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+        /// 数组长度限制：16。
         /// </summary>
         [JsonProperty("EventHandles")]
         public string[] EventHandles{ get; set; }
+
+        /// <summary>
+        /// 保留字段，特殊用途时使用。
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
 
         /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -43,6 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "EventHandles.", this.EventHandles);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

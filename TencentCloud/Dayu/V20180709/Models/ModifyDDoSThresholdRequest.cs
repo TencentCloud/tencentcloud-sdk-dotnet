@@ -38,6 +38,7 @@ namespace TencentCloud.Dayu.V20180709.Models
 
         /// <summary>
         /// DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+        /// 当设置值为0时，表示采用默认值；
         /// </summary>
         [JsonProperty("Threshold")]
         public ulong? Threshold{ get; set; }

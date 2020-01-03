@@ -36,6 +36,12 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("TaskIdList")]
         public string[] TaskIdList{ get; set; }
 
+        /// <summary>
+        /// 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -44,6 +50,7 @@ namespace TencentCloud.Gme.V20180711.Models
         {
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamArraySimple(map, prefix + "TaskIdList.", this.TaskIdList);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

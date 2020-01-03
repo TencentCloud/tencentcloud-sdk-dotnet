@@ -91,6 +91,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
+        /// <summary>
+        /// 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Property")]
+        public string Property{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -108,6 +115,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "Property", this.Property);
         }
     }
 }

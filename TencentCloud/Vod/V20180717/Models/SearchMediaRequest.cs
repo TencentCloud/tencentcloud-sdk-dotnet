@@ -87,15 +87,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-        /// <li>取值范围：Offset + Limit 不超过5000。</li>
+        /// <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-        /// <li>取值范围：Offset + Limit 不超过5000。</li>
+        /// <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// <li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

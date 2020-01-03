@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 云主机实例数。
+        /// 云服务器实例数。
         /// </summary>
         [JsonProperty("CVM")]
         public ulong? CVM{ get; set; }

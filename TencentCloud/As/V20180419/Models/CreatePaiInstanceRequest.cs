@@ -49,7 +49,7 @@ namespace TencentCloud.As.V20180419.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// VpcId。
+        /// VPC ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

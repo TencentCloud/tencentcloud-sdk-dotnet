@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 回执数据统计响应包体
+        /// 回执数据统计响应包体。
         /// </summary>
         [JsonProperty("CallbackStatusStatistics")]
         public CallbackStatusStatistics CallbackStatusStatistics{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// 返回图像方式（url 或 base64) ，二选一。当前仅支持 url 方式，base64 方式后期开放。
+        /// 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
         /// </summary>
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }
@@ -56,7 +56,6 @@ namespace TencentCloud.Facefusion.V20181201.Models
 
         /// <summary>
         /// 0表示不需要鉴政，1表示需要鉴政。默认值为0。
-        /// 鉴政接口同时会对名人明星进行识别，您可以根据实际需要过滤。
         /// </summary>
         [JsonProperty("CelebrityIdentify")]
         public long? CelebrityIdentify{ get; set; }

@@ -70,11 +70,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         public HttpHeaderParam[] SetHeaders{ get; set; }
 
         /// <summary>
-        /// 设置的响应体(不包括 http头)
+        /// 设置的响应体(不包括 HTTP头)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }
+
+        /// <summary>
+        /// 规则状态,0为成功
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -90,6 +97,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "ClearHeaders.", this.ClearHeaders);
             this.SetParamArrayObj(map, prefix + "SetHeaders.", this.SetHeaders);
             this.SetParamSimple(map, prefix + "Body", this.Body);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

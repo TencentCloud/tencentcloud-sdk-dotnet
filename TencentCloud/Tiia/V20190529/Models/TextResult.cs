@@ -80,6 +80,8 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// CURSE：谩骂
         /// TERRORISM：暴恐
         /// OTHERS：其他
+        /// 
+        /// 本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

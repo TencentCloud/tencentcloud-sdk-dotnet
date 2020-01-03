@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// EIP唯一标识id，形如'eip-xxxx'
+        /// EIP唯一标识ID，形如'eip-xxxx'
         /// </summary>
         [JsonProperty("AddressIds")]
         public string[] AddressIds{ get; set; }

@@ -32,14 +32,14 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 下一跳类型，目前我们支持的类型有：
-        /// CVM：公网网关类型的云主机；
+        /// CVM：公网网关类型的云服务器；
         /// VPN：VPN网关；
         /// DIRECTCONNECT：专线网关；
         /// PEERCONNECTION：对等连接；
         /// SSLVPN：sslvpn网关；
         /// NAT：NAT网关; 
-        /// NORMAL_CVM：普通云主机；
-        /// EIP：云主机的公网IP；
+        /// NORMAL_CVM：普通云服务器；
+        /// EIP：云服务器的公网IP；
         /// CCN：云联网。
         /// </summary>
         [JsonProperty("GatewayType")]

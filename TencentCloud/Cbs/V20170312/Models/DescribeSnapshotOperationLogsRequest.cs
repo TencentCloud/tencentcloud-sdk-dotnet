@@ -31,6 +31,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// 内部实现，用户禁止调用
@@ -38,6 +50,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

@@ -45,13 +45,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// '-2': '姓名校验不通过'
         /// '-3': '身份证号码有误'
         /// '-4': '银行卡号码有误'
-        /// '-17': '服务繁忙'
+        /// '-17': '验证中心服务繁忙'
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 认证结果信息。
+        /// 业务结果描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

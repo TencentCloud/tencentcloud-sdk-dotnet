@@ -32,7 +32,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-        /// 时间跨度在（0,4小时]，支持最近1天数据查询。
+        /// 时间跨度在(0,4小时]，支持最近1天数据查询。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
