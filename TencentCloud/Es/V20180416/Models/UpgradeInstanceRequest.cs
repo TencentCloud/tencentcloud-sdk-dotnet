@@ -48,9 +48,15 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
+        /// <summary>
+        /// 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+        /// </summary>
+        [JsonProperty("BasicSecurityType")]
+        public ulong? BasicSecurityType{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -58,6 +64,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EsVersion", this.EsVersion);
             this.SetParamSimple(map, prefix + "CheckOnly", this.CheckOnly);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         }
     }
 }

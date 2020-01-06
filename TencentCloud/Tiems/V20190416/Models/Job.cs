@@ -32,6 +32,7 @@ namespace TencentCloud.Tiems.V20190416.Models
 
         /// <summary>
         /// 集群名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
@@ -50,6 +51,7 @@ namespace TencentCloud.Tiems.V20190416.Models
 
         /// <summary>
         /// Worker 使用的运行环境
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
@@ -63,12 +65,14 @@ namespace TencentCloud.Tiems.V20190416.Models
 
         /// <summary>
         /// 配置 Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
         /// <summary>
         /// 预测输入
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PredictInput")]
         public PredictInput PredictInput{ get; set; }
@@ -169,9 +173,23 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("ConfigVersion")]
         public string ConfigVersion{ get; set; }
 
+        /// <summary>
+        /// Job类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobType")]
+        public string JobType{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 量化输入
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuantizationInput")]
+        public QuantizationInput QuantizationInput{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -197,6 +215,8 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
             this.SetParamSimple(map, prefix + "ConfigName", this.ConfigName);
             this.SetParamSimple(map, prefix + "ConfigVersion", this.ConfigVersion);
+            this.SetParamSimple(map, prefix + "JobType", this.JobType);
+            this.SetParamObj(map, prefix + "QuantizationInput.", this.QuantizationInput);
         }
     }
 }

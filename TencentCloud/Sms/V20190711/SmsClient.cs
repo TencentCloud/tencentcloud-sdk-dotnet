@@ -30,10 +30,10 @@ namespace TencentCloud.Sms.V20190711
        private const string version = "2019-07-11";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public SmsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public SmsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -53,10 +53,10 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        /// 统计用户回执的数据
+        /// 统计用户回执的数据。
         /// </summary>
-        /// <param name="req">参考<see cref="CallbackStatusStatisticsRequest"/></param>
-        /// <returns>参考<see cref="CallbackStatusStatisticsResponse"/>实例</returns>
+        /// <param name="req"><see cref="CallbackStatusStatisticsRequest"/></param>
+        /// <returns><see cref="CallbackStatusStatisticsResponse"/></returns>
         public async Task<CallbackStatusStatisticsResponse> CallbackStatusStatistics(CallbackStatusStatisticsRequest req)
         {
              JsonResponseModel<CallbackStatusStatisticsResponse> rsp = null;
@@ -73,10 +73,10 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        /// 拉取短信回复状态
+        /// 拉取短信回复状态。
         /// </summary>
-        /// <param name="req">参考<see cref="PullSmsReplyStatusRequest"/></param>
-        /// <returns>参考<see cref="PullSmsReplyStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="PullSmsReplyStatusRequest"/></param>
+        /// <returns><see cref="PullSmsReplyStatusResponse"/></returns>
         public async Task<PullSmsReplyStatusResponse> PullSmsReplyStatus(PullSmsReplyStatusRequest req)
         {
              JsonResponseModel<PullSmsReplyStatusResponse> rsp = null;
@@ -93,10 +93,10 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        /// 拉取单个号码短信回复状态
+        /// 拉取单个号码短信回复状态。
         /// </summary>
-        /// <param name="req">参考<see cref="PullSmsReplyStatusByPhoneNumberRequest"/></param>
-        /// <returns>参考<see cref="PullSmsReplyStatusByPhoneNumberResponse"/>实例</returns>
+        /// <param name="req"><see cref="PullSmsReplyStatusByPhoneNumberRequest"/></param>
+        /// <returns><see cref="PullSmsReplyStatusByPhoneNumberResponse"/></returns>
         public async Task<PullSmsReplyStatusByPhoneNumberResponse> PullSmsReplyStatusByPhoneNumber(PullSmsReplyStatusByPhoneNumberRequest req)
         {
              JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse> rsp = null;
@@ -113,10 +113,10 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        /// 拉取短信下发状态
+        /// 拉取短信下发状态。
         /// </summary>
-        /// <param name="req">参考<see cref="PullSmsSendStatusRequest"/></param>
-        /// <returns>参考<see cref="PullSmsSendStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="PullSmsSendStatusRequest"/></param>
+        /// <returns><see cref="PullSmsSendStatusResponse"/></returns>
         public async Task<PullSmsSendStatusResponse> PullSmsSendStatus(PullSmsSendStatusRequest req)
         {
              JsonResponseModel<PullSmsSendStatusResponse> rsp = null;
@@ -133,10 +133,10 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        /// 拉取单个号码短信下发状态
+        /// 拉取单个号码短信下发状态。
         /// </summary>
-        /// <param name="req">参考<see cref="PullSmsSendStatusByPhoneNumberRequest"/></param>
-        /// <returns>参考<see cref="PullSmsSendStatusByPhoneNumberResponse"/>实例</returns>
+        /// <param name="req"><see cref="PullSmsSendStatusByPhoneNumberRequest"/></param>
+        /// <returns><see cref="PullSmsSendStatusByPhoneNumberResponse"/></returns>
         public async Task<PullSmsSendStatusByPhoneNumberResponse> PullSmsSendStatusByPhoneNumber(PullSmsSendStatusByPhoneNumberRequest req)
         {
              JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse> rsp = null;
@@ -156,8 +156,8 @@ namespace TencentCloud.Sms.V20190711
         /// 短信发送接口，用户给用户发短信验证码、通知类短信或营销短信。
         /// 
         /// </summary>
-        /// <param name="req">参考<see cref="SendSmsRequest"/></param>
-        /// <returns>参考<see cref="SendSmsResponse"/>实例</returns>
+        /// <param name="req"><see cref="SendSmsRequest"/></param>
+        /// <returns><see cref="SendSmsResponse"/></returns>
         public async Task<SendSmsResponse> SendSms(SendSmsRequest req)
         {
              JsonResponseModel<SendSmsResponse> rsp = null;
@@ -174,10 +174,10 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        /// 统计用户发送短信的数据
+        /// 统计用户发送短信的数据。
         /// </summary>
-        /// <param name="req">参考<see cref="SendStatusStatisticsRequest"/></param>
-        /// <returns>参考<see cref="SendStatusStatisticsResponse"/>实例</returns>
+        /// <param name="req"><see cref="SendStatusStatisticsRequest"/></param>
+        /// <returns><see cref="SendStatusStatisticsResponse"/></returns>
         public async Task<SendStatusStatisticsResponse> SendStatusStatistics(SendStatusStatisticsRequest req)
         {
              JsonResponseModel<SendStatusStatisticsResponse> rsp = null;
@@ -194,10 +194,10 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
-        /// 用户套餐包信息统计
+        /// 用户套餐包信息统计。
         /// </summary>
-        /// <param name="req">参考<see cref="SmsPackagesStatisticsRequest"/></param>
-        /// <returns>参考<see cref="SmsPackagesStatisticsResponse"/>实例</returns>
+        /// <param name="req"><see cref="SmsPackagesStatisticsRequest"/></param>
+        /// <returns><see cref="SmsPackagesStatisticsResponse"/></returns>
         public async Task<SmsPackagesStatisticsResponse> SmsPackagesStatistics(SmsPackagesStatisticsRequest req)
         {
              JsonResponseModel<SmsPackagesStatisticsResponse> rsp = null;

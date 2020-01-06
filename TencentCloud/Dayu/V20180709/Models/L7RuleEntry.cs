@@ -73,7 +73,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+        /// 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
         /// </summary>
         [JsonProperty("CertType")]
         public ulong? CertType{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Cert{ get; set; }
 
         /// <summary>
-        /// 当证书来源为自有证书时，此字段必须填写证书秘钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+        /// 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
@@ -115,26 +115,26 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? CCStatus{ get; set; }
 
         /// <summary>
-        /// https的CC防护状态，取值[0(关闭), 1(开启)]
+        /// HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
         /// </summary>
         [JsonProperty("CCEnable")]
         public ulong? CCEnable{ get; set; }
 
         /// <summary>
-        /// https的CC防护阈值
+        /// HTTPS协议的CC防护阈值
         /// </summary>
         [JsonProperty("CCThreshold")]
         public ulong? CCThreshold{ get; set; }
 
         /// <summary>
-        /// https的CC防护等级
+        /// HTTPS协议的CC防护等级
         /// </summary>
         [JsonProperty("CCLevel")]
         public string CCLevel{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

@@ -32,7 +32,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 创建时间，采用unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+        /// 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
@@ -177,7 +177,7 @@ namespace TencentCloud.Gaap.V20180529.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

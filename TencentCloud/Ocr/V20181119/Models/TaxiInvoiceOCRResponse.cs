@@ -67,6 +67,38 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Distance{ get; set; }
 
         /// <summary>
+        /// 发票所在地
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
+        /// <summary>
+        /// 车牌号
+        /// </summary>
+        [JsonProperty("PlateNumber")]
+        public string PlateNumber{ get; set; }
+
+        /// <summary>
+        /// 发票消费类型
+        /// </summary>
+        [JsonProperty("InvoiceType")]
+        public string InvoiceType{ get; set; }
+
+        /// <summary>
+        /// 省
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Province")]
+        public string Province{ get; set; }
+
+        /// <summary>
+        /// 市
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("City")]
+        public string City{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -74,7 +106,7 @@ namespace TencentCloud.Ocr.V20181119.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -85,6 +117,11 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "GetOnTime", this.GetOnTime);
             this.SetParamSimple(map, prefix + "GetOffTime", this.GetOffTime);
             this.SetParamSimple(map, prefix + "Distance", this.Distance);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "PlateNumber", this.PlateNumber);
+            this.SetParamSimple(map, prefix + "InvoiceType", this.InvoiceType);
+            this.SetParamSimple(map, prefix + "Province", this.Province);
+            this.SetParamSimple(map, prefix + "City", this.City);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -30,10 +30,10 @@ namespace TencentCloud.Sts.V20180813
        private const string version = "2018-08-13";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public StsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public StsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Sts.V20180813
         /// <summary>
         /// 申请扮演角色
         /// </summary>
-        /// <param name="req">参考<see cref="AssumeRoleRequest"/></param>
-        /// <returns>参考<see cref="AssumeRoleResponse"/>实例</returns>
+        /// <param name="req"><see cref="AssumeRoleRequest"/></param>
+        /// <returns><see cref="AssumeRoleResponse"/></returns>
         public async Task<AssumeRoleResponse> AssumeRole(AssumeRoleRequest req)
         {
              JsonResponseModel<AssumeRoleResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Sts.V20180813
         /// <summary>
         /// 本接口（AssumeRoleWithSAML）用于根据 SAML 断言申请角色临时凭证。
         /// </summary>
-        /// <param name="req">参考<see cref="AssumeRoleWithSAMLRequest"/></param>
-        /// <returns>参考<see cref="AssumeRoleWithSAMLResponse"/>实例</returns>
+        /// <param name="req"><see cref="AssumeRoleWithSAMLRequest"/></param>
+        /// <returns><see cref="AssumeRoleWithSAMLResponse"/></returns>
         public async Task<AssumeRoleWithSAMLResponse> AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req)
         {
              JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Sts.V20180813
         /// <summary>
         /// 获取联合身份临时访问凭证
         /// </summary>
-        /// <param name="req">参考<see cref="GetFederationTokenRequest"/></param>
-        /// <returns>参考<see cref="GetFederationTokenResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetFederationTokenRequest"/></param>
+        /// <returns><see cref="GetFederationTokenResponse"/></returns>
         public async Task<GetFederationTokenResponse> GetFederationToken(GetFederationTokenRequest req)
         {
              JsonResponseModel<GetFederationTokenResponse> rsp = null;
@@ -104,6 +104,26 @@ namespace TencentCloud.Sts.V20180813
              {
                  var strResp = await this.InternalRequest(req, "GetFederationToken");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFederationTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取API密钥列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryApiKeyRequest"/></param>
+        /// <returns><see cref="QueryApiKeyResponse"/></returns>
+        public async Task<QueryApiKeyResponse> QueryApiKey(QueryApiKeyRequest req)
+        {
+             JsonResponseModel<QueryApiKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryApiKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryApiKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

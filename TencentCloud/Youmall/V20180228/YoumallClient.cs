@@ -30,10 +30,10 @@ namespace TencentCloud.Youmall.V20180228
        private const string version = "2018-02-28";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public YoumallClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Youmall.V20180228
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public YoumallClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 创建集团门店管理员账号
         /// </summary>
-        /// <param name="req">参考<see cref="CreateAccountRequest"/></param>
-        /// <returns>参考<see cref="CreateAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateAccountRequest"/></param>
+        /// <returns><see cref="CreateAccountResponse"/></returns>
         public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest req)
         {
              JsonResponseModel<CreateAccountResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 通过上传指定规格的人脸图片，创建黑名单用户或者白名单用户。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateFacePictureRequest"/></param>
-        /// <returns>参考<see cref="CreateFacePictureResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateFacePictureRequest"/></param>
+        /// <returns><see cref="CreateFacePictureResponse"/></returns>
         public async Task<CreateFacePictureResponse> CreateFacePicture(CreateFacePictureRequest req)
         {
              JsonResponseModel<CreateFacePictureResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 删除顾客特征，仅支持删除黑名单或者白名单用户特征。
         /// </summary>
-        /// <param name="req">参考<see cref="DeletePersonFeatureRequest"/></param>
-        /// <returns>参考<see cref="DeletePersonFeatureResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeletePersonFeatureRequest"/></param>
+        /// <returns><see cref="DeletePersonFeatureResponse"/></returns>
         public async Task<DeletePersonFeatureResponse> DeletePersonFeature(DeletePersonFeatureRequest req)
         {
              JsonResponseModel<DeletePersonFeatureResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 通过指定设备ID和指定时段，获取该时段内中收银台摄像设备抓取到顾客头像及身份ID
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCameraPersonRequest"/></param>
-        /// <returns>参考<see cref="DescribeCameraPersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCameraPersonRequest"/></param>
+        /// <returns><see cref="DescribeCameraPersonResponse"/></returns>
         public async Task<DescribeCameraPersonResponse> DescribeCameraPerson(DescribeCameraPersonRequest req)
         {
              JsonResponseModel<DescribeCameraPersonResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。停留时间为多次进出场的停留时间之和。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterPersonArrivedMallRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterPersonArrivedMallResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterPersonArrivedMallRequest"/></param>
+        /// <returns><see cref="DescribeClusterPersonArrivedMallResponse"/></returns>
         public async Task<DescribeClusterPersonArrivedMallResponse> DescribeClusterPersonArrivedMall(DescribeClusterPersonArrivedMallRequest req)
         {
              JsonResponseModel<DescribeClusterPersonArrivedMallResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 输出开始时间到结束时间段内的进出场数据。按天聚合的情况下，每天多次进出场算一次，以最初进场时间为进场时间，最后离场时间为离场时间。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterPersonTraceRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterPersonTraceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterPersonTraceRequest"/></param>
+        /// <returns><see cref="DescribeClusterPersonTraceResponse"/></returns>
         public async Task<DescribeClusterPersonTraceResponse> DescribeClusterPersonTrace(DescribeClusterPersonTraceRequest req)
         {
              JsonResponseModel<DescribeClusterPersonTraceResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 通过DescribeCameraPerson接口上报的收银台身份ID查询顾客的FaceID。查询最佳时间为收银台上报的次日1点后。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeFaceIdByTempIdRequest"/></param>
-        /// <returns>参考<see cref="DescribeFaceIdByTempIdResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeFaceIdByTempIdRequest"/></param>
+        /// <returns><see cref="DescribeFaceIdByTempIdResponse"/></returns>
         public async Task<DescribeFaceIdByTempIdResponse> DescribeFaceIdByTempId(DescribeFaceIdByTempIdRequest req)
         {
              JsonResponseModel<DescribeFaceIdByTempIdResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 返回当前门店历史网络状态数据
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeHistoryNetworkInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeHistoryNetworkInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeHistoryNetworkInfoRequest"/></param>
+        /// <returns><see cref="DescribeHistoryNetworkInfoResponse"/></returns>
         public async Task<DescribeHistoryNetworkInfoResponse> DescribeHistoryNetworkInfo(DescribeHistoryNetworkInfoRequest req)
         {
              JsonResponseModel<DescribeHistoryNetworkInfoResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 返回当前门店最新网络状态数据
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeNetworkInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeNetworkInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeNetworkInfoRequest"/></param>
+        /// <returns><see cref="DescribeNetworkInfoResponse"/></returns>
         public async Task<DescribeNetworkInfoResponse> DescribeNetworkInfo(DescribeNetworkInfoRequest req)
         {
              JsonResponseModel<DescribeNetworkInfoResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 查询指定某一卖场的用户信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonRequest"/></param>
+        /// <returns><see cref="DescribePersonResponse"/></returns>
         public async Task<DescribePersonResponse> DescribePerson(DescribePersonRequest req)
         {
              JsonResponseModel<DescribePersonResponse> rsp = null;
@@ -256,8 +256,8 @@ namespace TencentCloud.Youmall.V20180228
         /// 输出开始时间到结束时间段内的进出场数据。不做按天聚合的情况下，每次进出场，产生一条进出场数据。
         /// 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonArrivedMallRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonArrivedMallResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonArrivedMallRequest"/></param>
+        /// <returns><see cref="DescribePersonArrivedMallResponse"/></returns>
         public async Task<DescribePersonArrivedMallResponse> DescribePersonArrivedMall(DescribePersonArrivedMallRequest req)
         {
              JsonResponseModel<DescribePersonArrivedMallResponse> rsp = null;
@@ -276,8 +276,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 指定门店获取所有顾客详情列表，包含客户ID、图片、年龄、性别
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonInfoRequest"/></param>
+        /// <returns><see cref="DescribePersonInfoResponse"/></returns>
         public async Task<DescribePersonInfoResponse> DescribePersonInfo(DescribePersonInfoRequest req)
         {
              JsonResponseModel<DescribePersonInfoResponse> rsp = null;
@@ -296,8 +296,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 通过上传人脸图片检索系统face id、顾客身份信息及底图
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonInfoByFacePictureRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonInfoByFacePictureResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonInfoByFacePictureRequest"/></param>
+        /// <returns><see cref="DescribePersonInfoByFacePictureResponse"/></returns>
         public async Task<DescribePersonInfoByFacePictureResponse> DescribePersonInfoByFacePicture(DescribePersonInfoByFacePictureRequest req)
         {
              JsonResponseModel<DescribePersonInfoByFacePictureResponse> rsp = null;
@@ -316,8 +316,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 输出开始时间到结束时间段内的进出场数据。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonTraceRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonTraceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonTraceRequest"/></param>
+        /// <returns><see cref="DescribePersonTraceResponse"/></returns>
         public async Task<DescribePersonTraceResponse> DescribePersonTrace(DescribePersonTraceRequest req)
         {
              JsonResponseModel<DescribePersonTraceResponse> rsp = null;
@@ -336,8 +336,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 查询客户单次到场轨迹明细
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonTraceDetailRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonTraceDetailResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonTraceDetailRequest"/></param>
+        /// <returns><see cref="DescribePersonTraceDetailResponse"/></returns>
         public async Task<DescribePersonTraceDetailResponse> DescribePersonTraceDetail(DescribePersonTraceDetailRequest req)
         {
              JsonResponseModel<DescribePersonTraceDetailResponse> rsp = null;
@@ -356,8 +356,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取门店指定时间范围内的所有用户到访信息记录，支持的时间范围：过去365天，含当天。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonVisitInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonVisitInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonVisitInfoRequest"/></param>
+        /// <returns><see cref="DescribePersonVisitInfoResponse"/></returns>
         public async Task<DescribePersonVisitInfoResponse> DescribePersonVisitInfo(DescribePersonVisitInfoRequest req)
         {
              JsonResponseModel<DescribePersonVisitInfoResponse> rsp = null;
@@ -376,8 +376,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 按小时提供查询日期范围内门店的每天每小时累计客流人数数据，支持的时间范围：过去365天，含当天。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeShopHourTrafficInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeShopHourTrafficInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeShopHourTrafficInfoRequest"/></param>
+        /// <returns><see cref="DescribeShopHourTrafficInfoResponse"/></returns>
         public async Task<DescribeShopHourTrafficInfoResponse> DescribeShopHourTrafficInfo(DescribeShopHourTrafficInfoRequest req)
         {
              JsonResponseModel<DescribeShopHourTrafficInfoResponse> rsp = null;
@@ -396,8 +396,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 根据客户身份标识获取客户下所有的门店信息列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeShopInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeShopInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeShopInfoRequest"/></param>
+        /// <returns><see cref="DescribeShopInfoResponse"/></returns>
         public async Task<DescribeShopInfoResponse> DescribeShopInfo(DescribeShopInfoRequest req)
         {
              JsonResponseModel<DescribeShopInfoResponse> rsp = null;
@@ -416,8 +416,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 按天提供查询日期范围内门店的单日累计客流人数，支持的时间范围：过去365天，含当天。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeShopTrafficInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeShopTrafficInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeShopTrafficInfoRequest"/></param>
+        /// <returns><see cref="DescribeShopTrafficInfoResponse"/></returns>
         public async Task<DescribeShopTrafficInfoResponse> DescribeShopTrafficInfo(DescribeShopTrafficInfoRequest req)
         {
              JsonResponseModel<DescribeShopTrafficInfoResponse> rsp = null;
@@ -436,8 +436,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取动线轨迹信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTrajectoryDataRequest"/></param>
-        /// <returns>参考<see cref="DescribeTrajectoryDataResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTrajectoryDataRequest"/></param>
+        /// <returns><see cref="DescribeTrajectoryDataResponse"/></returns>
         public async Task<DescribeTrajectoryDataResponse> DescribeTrajectoryData(DescribeTrajectoryDataRequest req)
         {
              JsonResponseModel<DescribeTrajectoryDataResponse> rsp = null;
@@ -456,8 +456,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取指定区域人流各年龄占比
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneFlowAgeInfoByZoneIdRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneFlowAgeInfoByZoneIdResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneFlowAgeInfoByZoneIdRequest"/></param>
+        /// <returns><see cref="DescribeZoneFlowAgeInfoByZoneIdResponse"/></returns>
         public async Task<DescribeZoneFlowAgeInfoByZoneIdResponse> DescribeZoneFlowAgeInfoByZoneId(DescribeZoneFlowAgeInfoByZoneIdRequest req)
         {
              JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse> rsp = null;
@@ -476,8 +476,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取区域人流和停留时间
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneFlowAndStayTimeRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneFlowAndStayTimeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneFlowAndStayTimeRequest"/></param>
+        /// <returns><see cref="DescribeZoneFlowAndStayTimeResponse"/></returns>
         public async Task<DescribeZoneFlowAndStayTimeResponse> DescribeZoneFlowAndStayTime(DescribeZoneFlowAndStayTimeRequest req)
         {
              JsonResponseModel<DescribeZoneFlowAndStayTimeResponse> rsp = null;
@@ -496,8 +496,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取指定区域每日客流量
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneFlowDailyByZoneIdRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneFlowDailyByZoneIdResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneFlowDailyByZoneIdRequest"/></param>
+        /// <returns><see cref="DescribeZoneFlowDailyByZoneIdResponse"/></returns>
         public async Task<DescribeZoneFlowDailyByZoneIdResponse> DescribeZoneFlowDailyByZoneId(DescribeZoneFlowDailyByZoneIdRequest req)
         {
              JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse> rsp = null;
@@ -516,8 +516,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取指定区域不同年龄段男女平均停留时间
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest"/></param>
+        /// <returns><see cref="DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse"/></returns>
         public async Task<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse> DescribeZoneFlowGenderAvrStayTimeByZoneId(DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest req)
         {
              JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse> rsp = null;
@@ -536,8 +536,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取指定区域性别占比
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneFlowGenderInfoByZoneIdRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneFlowGenderInfoByZoneIdResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneFlowGenderInfoByZoneIdRequest"/></param>
+        /// <returns><see cref="DescribeZoneFlowGenderInfoByZoneIdResponse"/></returns>
         public async Task<DescribeZoneFlowGenderInfoByZoneIdResponse> DescribeZoneFlowGenderInfoByZoneId(DescribeZoneFlowGenderInfoByZoneIdRequest req)
         {
              JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse> rsp = null;
@@ -556,8 +556,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 获取指定区域分时客流量
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneFlowHourlyByZoneIdRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneFlowHourlyByZoneIdResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneFlowHourlyByZoneIdRequest"/></param>
+        /// <returns><see cref="DescribeZoneFlowHourlyByZoneIdResponse"/></returns>
         public async Task<DescribeZoneFlowHourlyByZoneIdResponse> DescribeZoneFlowHourlyByZoneId(DescribeZoneFlowHourlyByZoneIdRequest req)
         {
              JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse> rsp = null;
@@ -576,8 +576,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 按天提供查询日期范围内，客户指定门店下的所有区域（优Mall部署时已配置区域）的累计客流人次和平均停留时间。支持的时间范围：过去365天，含当天。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneTrafficInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneTrafficInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneTrafficInfoRequest"/></param>
+        /// <returns><see cref="DescribeZoneTrafficInfoResponse"/></returns>
         public async Task<DescribeZoneTrafficInfoResponse> DescribeZoneTrafficInfo(DescribeZoneTrafficInfoRequest req)
         {
              JsonResponseModel<DescribeZoneTrafficInfoResponse> rsp = null;
@@ -596,8 +596,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 支持修改黑白名单类型的顾客特征
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPersonFeatureInfoRequest"/></param>
-        /// <returns>参考<see cref="ModifyPersonFeatureInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPersonFeatureInfoRequest"/></param>
+        /// <returns><see cref="ModifyPersonFeatureInfoResponse"/></returns>
         public async Task<ModifyPersonFeatureInfoResponse> ModifyPersonFeatureInfo(ModifyPersonFeatureInfoRequest req)
         {
              JsonResponseModel<ModifyPersonFeatureInfoResponse> rsp = null;
@@ -616,8 +616,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 标记到店顾客的身份类型，例如黑名单、白名单等
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPersonTagInfoRequest"/></param>
-        /// <returns>参考<see cref="ModifyPersonTagInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPersonTagInfoRequest"/></param>
+        /// <returns><see cref="ModifyPersonTagInfoResponse"/></returns>
         public async Task<ModifyPersonTagInfoResponse> ModifyPersonTagInfo(ModifyPersonTagInfoRequest req)
         {
              JsonResponseModel<ModifyPersonTagInfoResponse> rsp = null;
@@ -636,8 +636,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 修改顾客身份类型接口
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPersonTypeRequest"/></param>
-        /// <returns>参考<see cref="ModifyPersonTypeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPersonTypeRequest"/></param>
+        /// <returns><see cref="ModifyPersonTypeResponse"/></returns>
         public async Task<ModifyPersonTypeResponse> ModifyPersonType(ModifyPersonTypeRequest req)
         {
              JsonResponseModel<ModifyPersonTypeResponse> rsp = null;
@@ -656,8 +656,8 @@ namespace TencentCloud.Youmall.V20180228
         /// <summary>
         /// 调用本接口在优Mall中注册自己集团的到店通知回调接口地址，接口协议为HTTP或HTTPS。注册后，若集团有特殊身份（例如老客）到店通知，优Mall后台将主动将到店信息push给该接口
         /// </summary>
-        /// <param name="req">参考<see cref="RegisterCallbackRequest"/></param>
-        /// <returns>参考<see cref="RegisterCallbackResponse"/>实例</returns>
+        /// <param name="req"><see cref="RegisterCallbackRequest"/></param>
+        /// <returns><see cref="RegisterCallbackResponse"/></returns>
         public async Task<RegisterCallbackResponse> RegisterCallback(RegisterCallbackRequest req)
         {
              JsonResponseModel<RegisterCallbackResponse> rsp = null;

@@ -30,10 +30,10 @@ namespace TencentCloud.Ms.V20180408
        private const string version = "2018-04-08";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public MsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public MsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 将应用和资源进行绑定
         /// </summary>
-        /// <param name="req">参考<see cref="CreateBindInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateBindInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateBindInstanceRequest"/></param>
+        /// <returns><see cref="CreateBindInstanceResponse"/></returns>
         public async Task<CreateBindInstanceResponse> CreateBindInstance(CreateBindInstanceRequest req)
         {
              JsonResponseModel<CreateBindInstanceResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateCosSecKeyInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateCosSecKeyInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateCosSecKeyInstanceRequest"/></param>
+        /// <returns><see cref="CreateCosSecKeyInstanceResponse"/></returns>
         public async Task<CreateCosSecKeyInstanceResponse> CreateCosSecKeyInstance(CreateCosSecKeyInstanceRequest req)
         {
              JsonResponseModel<CreateCosSecKeyInstanceResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 用户可以使用该接口自建资源，只支持白名单用户
         /// </summary>
-        /// <param name="req">参考<see cref="CreateResourceInstancesRequest"/></param>
-        /// <returns>参考<see cref="CreateResourceInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateResourceInstancesRequest"/></param>
+        /// <returns><see cref="CreateResourceInstancesResponse"/></returns>
         public async Task<CreateResourceInstancesResponse> CreateResourceInstances(CreateResourceInstancesRequest req)
         {
              JsonResponseModel<CreateResourceInstancesResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
         /// </summary>
-        /// <param name="req">参考<see cref="CreateScanInstancesRequest"/></param>
-        /// <returns>参考<see cref="CreateScanInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateScanInstancesRequest"/></param>
+        /// <returns><see cref="CreateScanInstancesResponse"/></returns>
         public async Task<CreateScanInstancesResponse> CreateScanInstances(CreateScanInstancesRequest req)
         {
              JsonResponseModel<CreateScanInstancesResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 用户通过该接口提交应用进行应用加固，加固后需通过DescribeShieldResult接口查询加固结果
         /// </summary>
-        /// <param name="req">参考<see cref="CreateShieldInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateShieldInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateShieldInstanceRequest"/></param>
+        /// <returns><see cref="CreateShieldInstanceResponse"/></returns>
         public async Task<CreateShieldInstanceResponse> CreateShieldInstance(CreateShieldInstanceRequest req)
         {
              JsonResponseModel<CreateShieldInstanceResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 对资源进行策略新增
         /// </summary>
-        /// <param name="req">参考<see cref="CreateShieldPlanInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateShieldPlanInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateShieldPlanInstanceRequest"/></param>
+        /// <returns><see cref="CreateShieldPlanInstanceResponse"/></returns>
         public async Task<CreateShieldPlanInstanceResponse> CreateShieldPlanInstance(CreateShieldPlanInstanceRequest req)
         {
              JsonResponseModel<CreateShieldPlanInstanceResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 删除一个或者多个app扫描信息
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteScanInstancesRequest"/></param>
-        /// <returns>参考<see cref="DeleteScanInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteScanInstancesRequest"/></param>
+        /// <returns><see cref="DeleteScanInstancesResponse"/></returns>
         public async Task<DeleteScanInstancesResponse> DeleteScanInstances(DeleteScanInstancesRequest req)
         {
              JsonResponseModel<DeleteScanInstancesResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 删除一个或者多个app加固信息
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteShieldInstancesRequest"/></param>
-        /// <returns>参考<see cref="DeleteShieldInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteShieldInstancesRequest"/></param>
+        /// <returns><see cref="DeleteShieldInstancesResponse"/></returns>
         public async Task<DeleteShieldInstancesResponse> DeleteShieldInstances(DeleteShieldInstancesRequest req)
         {
              JsonResponseModel<DeleteShieldInstancesResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 获取某个用户的所有资源信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeResourceInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeResourceInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeResourceInstancesRequest"/></param>
+        /// <returns><see cref="DescribeResourceInstancesResponse"/></returns>
         public async Task<DescribeResourceInstancesResponse> DescribeResourceInstances(DescribeResourceInstancesRequest req)
         {
              JsonResponseModel<DescribeResourceInstancesResponse> rsp = null;
@@ -236,8 +236,8 @@ namespace TencentCloud.Ms.V20180408
         /// 本接口用于查看app列表。
         /// 可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeScanInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeScanInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeScanInstancesRequest"/></param>
+        /// <returns><see cref="DescribeScanInstancesResponse"/></returns>
         public async Task<DescribeScanInstancesResponse> DescribeScanInstances(DescribeScanInstancesRequest req)
         {
              JsonResponseModel<DescribeScanInstancesResponse> rsp = null;
@@ -256,8 +256,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 用户通过CreateScanInstances接口提交应用进行风险批量扫描后，用此接口批量获取风险详细信息,包含漏洞信息，广告信息，插件信息和病毒信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeScanResultsRequest"/></param>
-        /// <returns>参考<see cref="DescribeScanResultsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeScanResultsRequest"/></param>
+        /// <returns><see cref="DescribeScanResultsResponse"/></returns>
         public async Task<DescribeScanResultsResponse> DescribeScanResults(DescribeScanResultsRequest req)
         {
              JsonResponseModel<DescribeScanResultsResponse> rsp = null;
@@ -277,8 +277,8 @@ namespace TencentCloud.Ms.V20180408
         /// 本接口用于查看app列表。
         /// 可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeShieldInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeShieldInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeShieldInstancesRequest"/></param>
+        /// <returns><see cref="DescribeShieldInstancesResponse"/></returns>
         public async Task<DescribeShieldInstancesResponse> DescribeShieldInstances(DescribeShieldInstancesRequest req)
         {
              JsonResponseModel<DescribeShieldInstancesResponse> rsp = null;
@@ -297,8 +297,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 查询加固策略
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeShieldPlanInstanceRequest"/></param>
-        /// <returns>参考<see cref="DescribeShieldPlanInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeShieldPlanInstanceRequest"/></param>
+        /// <returns><see cref="DescribeShieldPlanInstanceResponse"/></returns>
         public async Task<DescribeShieldPlanInstanceResponse> DescribeShieldPlanInstance(DescribeShieldPlanInstanceRequest req)
         {
              JsonResponseModel<DescribeShieldPlanInstanceResponse> rsp = null;
@@ -317,8 +317,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 通过唯一标识获取加固的结果
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeShieldResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeShieldResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeShieldResultRequest"/></param>
+        /// <returns><see cref="DescribeShieldResultResponse"/></returns>
         public async Task<DescribeShieldResultResponse> DescribeShieldResult(DescribeShieldResultRequest req)
         {
              JsonResponseModel<DescribeShieldResultResponse> rsp = null;
@@ -337,8 +337,8 @@ namespace TencentCloud.Ms.V20180408
         /// <summary>
         /// 获取用户基础信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeUserBaseInfoInstanceRequest"/></param>
-        /// <returns>参考<see cref="DescribeUserBaseInfoInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeUserBaseInfoInstanceRequest"/></param>
+        /// <returns><see cref="DescribeUserBaseInfoInstanceResponse"/></returns>
         public async Task<DescribeUserBaseInfoInstanceResponse> DescribeUserBaseInfoInstance(DescribeUserBaseInfoInstanceRequest req)
         {
              JsonResponseModel<DescribeUserBaseInfoInstanceResponse> rsp = null;

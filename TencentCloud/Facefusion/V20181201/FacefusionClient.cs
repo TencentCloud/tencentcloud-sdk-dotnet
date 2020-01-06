@@ -30,10 +30,10 @@ namespace TencentCloud.Facefusion.V20181201
        private const string version = "2018-12-01";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public FacefusionClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Facefusion.V20181201
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public FacefusionClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -57,8 +57,8 @@ namespace TencentCloud.Facefusion.V20181201
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="FaceFusionRequest"/></param>
-        /// <returns>参考<see cref="FaceFusionResponse"/>实例</returns>
+        /// <param name="req"><see cref="FaceFusionRequest"/></param>
+        /// <returns><see cref="FaceFusionResponse"/></returns>
         public async Task<FaceFusionResponse> FaceFusion(FaceFusionRequest req)
         {
              JsonResponseModel<FaceFusionResponse> rsp = null;
@@ -81,8 +81,8 @@ namespace TencentCloud.Facefusion.V20181201
         /// >
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="FuseFaceRequest"/></param>
-        /// <returns>参考<see cref="FuseFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="FuseFaceRequest"/></param>
+        /// <returns><see cref="FuseFaceResponse"/></returns>
         public async Task<FuseFaceResponse> FuseFace(FuseFaceRequest req)
         {
              JsonResponseModel<FuseFaceResponse> rsp = null;

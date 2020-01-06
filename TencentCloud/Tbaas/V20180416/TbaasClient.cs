@@ -30,10 +30,10 @@ namespace TencentCloud.Tbaas.V20180416
        private const string version = "2018-04-16";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TbaasClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TbaasClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 申请用户证书
         /// </summary>
-        /// <param name="req">参考<see cref="ApplyUserCertRequest"/></param>
-        /// <returns>参考<see cref="ApplyUserCertResponse"/>实例</returns>
+        /// <param name="req"><see cref="ApplyUserCertRequest"/></param>
+        /// <returns><see cref="ApplyUserCertResponse"/></returns>
         public async Task<ApplyUserCertResponse> ApplyUserCert(ApplyUserCertRequest req)
         {
              JsonResponseModel<ApplyUserCertResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// Bcos根据块高查询区块信息
         /// </summary>
-        /// <param name="req">参考<see cref="BlockByNumberHandlerRequest"/></param>
-        /// <returns>参考<see cref="BlockByNumberHandlerResponse"/>实例</returns>
+        /// <param name="req"><see cref="BlockByNumberHandlerRequest"/></param>
+        /// <returns><see cref="BlockByNumberHandlerResponse"/></returns>
         public async Task<BlockByNumberHandlerResponse> BlockByNumberHandler(BlockByNumberHandlerRequest req)
         {
              JsonResponseModel<BlockByNumberHandlerResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 下载用户证书
         /// </summary>
-        /// <param name="req">参考<see cref="DownloadUserCertRequest"/></param>
-        /// <returns>参考<see cref="DownloadUserCertResponse"/>实例</returns>
+        /// <param name="req"><see cref="DownloadUserCertRequest"/></param>
+        /// <returns><see cref="DownloadUserCertResponse"/></returns>
         public async Task<DownloadUserCertResponse> DownloadUserCert(DownloadUserCertRequest req)
         {
              JsonResponseModel<DownloadUserCertResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 查看当前网络下的所有区块列表，分页展示
         /// </summary>
-        /// <param name="req">参考<see cref="GetBlockListRequest"/></param>
-        /// <returns>参考<see cref="GetBlockListResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetBlockListRequest"/></param>
+        /// <returns><see cref="GetBlockListResponse"/></returns>
         public async Task<GetBlockListResponse> GetBlockList(GetBlockListRequest req)
         {
              JsonResponseModel<GetBlockListResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// bcos分页查询当前群组下的区块列表
         /// </summary>
-        /// <param name="req">参考<see cref="GetBlockListHandlerRequest"/></param>
-        /// <returns>参考<see cref="GetBlockListHandlerResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetBlockListHandlerRequest"/></param>
+        /// <returns><see cref="GetBlockListHandlerResponse"/></returns>
         public async Task<GetBlockListHandlerResponse> GetBlockListHandler(GetBlockListHandlerRequest req)
         {
              JsonResponseModel<GetBlockListHandlerResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 获取区块链网络概要
         /// </summary>
-        /// <param name="req">参考<see cref="GetClusterSummaryRequest"/></param>
-        /// <returns>参考<see cref="GetClusterSummaryResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetClusterSummaryRequest"/></param>
+        /// <returns><see cref="GetClusterSummaryResponse"/></returns>
         public async Task<GetClusterSummaryResponse> GetClusterSummary(GetClusterSummaryRequest req)
         {
              JsonResponseModel<GetClusterSummaryResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// Invoke异步调用结果查询
         /// </summary>
-        /// <param name="req">参考<see cref="GetInvokeTxRequest"/></param>
-        /// <returns>参考<see cref="GetInvokeTxResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetInvokeTxRequest"/></param>
+        /// <returns><see cref="GetInvokeTxResponse"/></returns>
         public async Task<GetInvokeTxResponse> GetInvokeTx(GetInvokeTxRequest req)
         {
              JsonResponseModel<GetInvokeTxResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 获取最新交易列表
         /// </summary>
-        /// <param name="req">参考<see cref="GetLatesdTransactionListRequest"/></param>
-        /// <returns>参考<see cref="GetLatesdTransactionListResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetLatesdTransactionListRequest"/></param>
+        /// <returns><see cref="GetLatesdTransactionListResponse"/></returns>
         public async Task<GetLatesdTransactionListResponse> GetLatesdTransactionList(GetLatesdTransactionListRequest req)
         {
              JsonResponseModel<GetLatesdTransactionListResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// Bcos根据交易哈希查看交易详细信息
         /// </summary>
-        /// <param name="req">参考<see cref="GetTransByHashHandlerRequest"/></param>
-        /// <returns>参考<see cref="GetTransByHashHandlerResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetTransByHashHandlerRequest"/></param>
+        /// <returns><see cref="GetTransByHashHandlerResponse"/></returns>
         public async Task<GetTransByHashHandlerResponse> GetTransByHashHandler(GetTransByHashHandlerRequest req)
         {
              JsonResponseModel<GetTransByHashHandlerResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// Bcos分页查询当前群组的交易信息列表
         /// </summary>
-        /// <param name="req">参考<see cref="GetTransListHandlerRequest"/></param>
-        /// <returns>参考<see cref="GetTransListHandlerResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetTransListHandlerRequest"/></param>
+        /// <returns><see cref="GetTransListHandlerResponse"/></returns>
         public async Task<GetTransListHandlerResponse> GetTransListHandler(GetTransListHandlerRequest req)
         {
              JsonResponseModel<GetTransListHandlerResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 获取交易详情
         /// </summary>
-        /// <param name="req">参考<see cref="GetTransactionDetailForUserRequest"/></param>
-        /// <returns>参考<see cref="GetTransactionDetailForUserResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetTransactionDetailForUserRequest"/></param>
+        /// <returns><see cref="GetTransactionDetailForUserResponse"/></returns>
         public async Task<GetTransactionDetailForUserResponse> GetTransactionDetailForUser(GetTransactionDetailForUserRequest req)
         {
              JsonResponseModel<GetTransactionDetailForUserResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 新增交易
         /// </summary>
-        /// <param name="req">参考<see cref="InvokeRequest"/></param>
-        /// <returns>参考<see cref="InvokeResponse"/>实例</returns>
+        /// <param name="req"><see cref="InvokeRequest"/></param>
+        /// <returns><see cref="InvokeResponse"/></returns>
         public async Task<InvokeResponse> Invoke(InvokeRequest req)
         {
              JsonResponseModel<InvokeResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// 查询交易
         /// </summary>
-        /// <param name="req">参考<see cref="QueryRequest"/></param>
-        /// <returns>参考<see cref="QueryResponse"/>实例</returns>
+        /// <param name="req"><see cref="QueryRequest"/></param>
+        /// <returns><see cref="QueryResponse"/></returns>
         public async Task<QueryResponse> Query(QueryRequest req)
         {
              JsonResponseModel<QueryResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// Bcos发送交易
         /// </summary>
-        /// <param name="req">参考<see cref="SendTransactionHandlerRequest"/></param>
-        /// <returns>参考<see cref="SendTransactionHandlerResponse"/>实例</returns>
+        /// <param name="req"><see cref="SendTransactionHandlerRequest"/></param>
+        /// <returns><see cref="SendTransactionHandlerResponse"/></returns>
         public async Task<SendTransactionHandlerResponse> SendTransactionHandler(SendTransactionHandlerRequest req)
         {
              JsonResponseModel<SendTransactionHandlerResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Tbaas.V20180416
         /// <summary>
         /// trustsql服务统一接口
         /// </summary>
-        /// <param name="req">参考<see cref="SrvInvokeRequest"/></param>
-        /// <returns>参考<see cref="SrvInvokeResponse"/>实例</returns>
+        /// <param name="req"><see cref="SrvInvokeRequest"/></param>
+        /// <returns><see cref="SrvInvokeResponse"/></returns>
         public async Task<SrvInvokeResponse> SrvInvoke(SrvInvokeRequest req)
         {
              JsonResponseModel<SrvInvokeResponse> rsp = null;

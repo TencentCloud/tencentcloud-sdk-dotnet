@@ -55,7 +55,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? RaidId{ get; set; }
 
         /// <summary>
-        /// 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+        /// 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
         /// </summary>
         [JsonProperty("OsTypeId")]
         public long? OsTypeId{ get; set; }
@@ -152,7 +152,7 @@ namespace TencentCloud.Batch.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

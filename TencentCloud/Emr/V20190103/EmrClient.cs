@@ -30,10 +30,10 @@ namespace TencentCloud.Emr.V20190103
        private const string version = "2019-01-03";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public EmrClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public EmrClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 创建EMR实例
         /// </summary>
-        /// <param name="req">参考<see cref="CreateInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
         public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest req)
         {
              JsonResponseModel<CreateInstanceResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 查询EMR实例
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesResponse"/></returns>
         public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
         {
              JsonResponseModel<DescribeInstancesResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 创建实例询价
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceCreateInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceCreateInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
         public async Task<InquiryPriceCreateInstanceResponse> InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 续费询价。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceRenewInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceRenewInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewInstanceResponse"/></returns>
         public async Task<InquiryPriceRenewInstanceResponse> InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 扩容询价. 当扩容时候，请通过该接口查询价格。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceScaleOutInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceScaleOutInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceScaleOutInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceScaleOutInstanceResponse"/></returns>
         public async Task<InquiryPriceScaleOutInstanceResponse> InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 变配询价
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceUpdateInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceUpdateInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceUpdateInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceUpdateInstanceResponse"/></returns>
         public async Task<InquiryPriceUpdateInstanceResponse> InquiryPriceUpdateInstance(InquiryPriceUpdateInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceUpdateInstanceResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 实例扩容
         /// </summary>
-        /// <param name="req">参考<see cref="ScaleOutInstanceRequest"/></param>
-        /// <returns>参考<see cref="ScaleOutInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
+        /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
         public async Task<ScaleOutInstanceResponse> ScaleOutInstance(ScaleOutInstanceRequest req)
         {
              JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 销毁EMR实例
         /// </summary>
-        /// <param name="req">参考<see cref="TerminateInstanceRequest"/></param>
-        /// <returns>参考<see cref="TerminateInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="TerminateInstanceRequest"/></param>
+        /// <returns><see cref="TerminateInstanceResponse"/></returns>
         public async Task<TerminateInstanceResponse> TerminateInstance(TerminateInstanceRequest req)
         {
              JsonResponseModel<TerminateInstanceResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Emr.V20190103
         /// <summary>
         /// 缩容Task节点
         /// </summary>
-        /// <param name="req">参考<see cref="TerminateTasksRequest"/></param>
-        /// <returns>参考<see cref="TerminateTasksResponse"/>实例</returns>
+        /// <param name="req"><see cref="TerminateTasksRequest"/></param>
+        /// <returns><see cref="TerminateTasksResponse"/></returns>
         public async Task<TerminateTasksResponse> TerminateTasks(TerminateTasksRequest req)
         {
              JsonResponseModel<TerminateTasksResponse> rsp = null;

@@ -119,9 +119,43 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 后端服务器类型
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetGroup")]
+        public BasicTargetGroupInfo TargetGroup{ get; set; }
+
+        /// <summary>
+        /// WAF实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WafDomainId")]
+        public string WafDomainId{ get; set; }
+
+        /// <summary>
+        /// TRPC被调服务器路由，ForwardType为TRPC时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrpcCallee")]
+        public string TrpcCallee{ get; set; }
+
+        /// <summary>
+        /// TRPC调用服务接口，ForwardType为TRPC时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrpcFunc")]
+        public string TrpcFunc{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -140,6 +174,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
+            this.SetParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
+            this.SetParamSimple(map, prefix + "WafDomainId", this.WafDomainId);
+            this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+            this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         }
     }
 }

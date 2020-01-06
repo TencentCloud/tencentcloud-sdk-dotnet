@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽包配额数据结构
+        /// 带宽包配额详细信息
         /// </summary>
         [JsonProperty("QuotaSet")]
         public Quota[] QuotaSet{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

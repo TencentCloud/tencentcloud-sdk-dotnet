@@ -50,9 +50,30 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// GATEWAY 服务id，ExposeType = GATEWAY 时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GateWayServiceId")]
+        public string GateWayServiceId{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// GATEWAY api id，ExposeType = GATEWAY 时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GateWayAPIId")]
+        public string GateWayAPIId{ get; set; }
+
+        /// <summary>
+        /// GATEWAY domain，ExposeType = GATEWAY 时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GateWayDomain")]
+        public string GateWayDomain{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -60,6 +81,9 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "GateWayServiceId", this.GateWayServiceId);
+            this.SetParamSimple(map, prefix + "GateWayAPIId", this.GateWayAPIId);
+            this.SetParamSimple(map, prefix + "GateWayDomain", this.GateWayDomain);
         }
     }
 }

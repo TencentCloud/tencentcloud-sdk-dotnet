@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+        /// 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

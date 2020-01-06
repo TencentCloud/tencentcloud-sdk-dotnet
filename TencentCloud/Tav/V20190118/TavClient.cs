@@ -30,10 +30,10 @@ namespace TencentCloud.Tav.V20190118
        private const string version = "2019-01-18";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TavClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tav.V20190118
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TavClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Tav.V20190118
         /// <summary>
         /// 获取TAV本地引擎
         /// </summary>
-        /// <param name="req">参考<see cref="GetLocalEngineRequest"/></param>
-        /// <returns>参考<see cref="GetLocalEngineResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetLocalEngineRequest"/></param>
+        /// <returns><see cref="GetLocalEngineResponse"/></returns>
         public async Task<GetLocalEngineResponse> GetLocalEngine(GetLocalEngineRequest req)
         {
              JsonResponseModel<GetLocalEngineResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Tav.V20190118
         /// <summary>
         /// tav文件上传扫描结果查询
         /// </summary>
-        /// <param name="req">参考<see cref="GetScanResultRequest"/></param>
-        /// <returns>参考<see cref="GetScanResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetScanResultRequest"/></param>
+        /// <returns><see cref="GetScanResultResponse"/></returns>
         public async Task<GetScanResultResponse> GetScanResult(GetScanResultRequest req)
         {
              JsonResponseModel<GetScanResultResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Tav.V20190118
         /// <summary>
         /// tav文件上传扫描
         /// </summary>
-        /// <param name="req">参考<see cref="ScanFileRequest"/></param>
-        /// <returns>参考<see cref="ScanFileResponse"/>实例</returns>
+        /// <param name="req"><see cref="ScanFileRequest"/></param>
+        /// <returns><see cref="ScanFileResponse"/></returns>
         public async Task<ScanFileResponse> ScanFile(ScanFileRequest req)
         {
              JsonResponseModel<ScanFileResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Tav.V20190118
         /// <summary>
         /// 通过文件哈希值获取文件黑白属性
         /// </summary>
-        /// <param name="req">参考<see cref="ScanFileHashRequest"/></param>
-        /// <returns>参考<see cref="ScanFileHashResponse"/>实例</returns>
+        /// <param name="req"><see cref="ScanFileHashRequest"/></param>
+        /// <returns><see cref="ScanFileHashResponse"/></returns>
         public async Task<ScanFileHashResponse> ScanFileHash(ScanFileHashRequest req)
         {
              JsonResponseModel<ScanFileHashResponse> rsp = null;

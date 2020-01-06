@@ -38,14 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 转码模板名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 模板描述信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -76,20 +74,18 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
         /// 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// 极速高清转码参数，需联系商务架构师开通后才能使用。
+        /// 极速高清转码参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TEHDConfig")]
@@ -117,7 +113,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

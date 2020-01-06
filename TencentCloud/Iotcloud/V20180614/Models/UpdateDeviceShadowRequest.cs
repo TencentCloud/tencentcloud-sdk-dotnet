@@ -48,9 +48,15 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("ShadowVersion")]
         public ulong? ShadowVersion{ get; set; }
 
+        /// <summary>
+        /// 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
+        /// </summary>
+        [JsonProperty("Prefix")]
+        public string Prefix{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "ShadowVersion", this.ShadowVersion);
+            this.SetParamSimple(map, prefix + "Prefix", this.Prefix);
         }
     }
 }

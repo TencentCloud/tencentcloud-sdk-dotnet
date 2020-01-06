@@ -38,8 +38,9 @@ namespace TencentCloud.Dayu.V20180709.Models
 
         /// <summary>
         /// 指标名，取值：
-        /// connum表示总TCP连接数（新建TCP连接数与活跃TCP连接数的和）；
+        /// connum表示TCP活跃连接数；
         /// new_conn表示新建TCP连接数；
+        /// inactive_conn表示非活跃连接数;
         /// intraffic表示入流量；
         /// outtraffic表示出流量；
         /// alltraffic表示出流量和入流量之和；
@@ -90,7 +91,7 @@ namespace TencentCloud.Dayu.V20180709.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

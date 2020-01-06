@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用id，创建应用后由后台生成并返回。
+        /// 应用ID，创建应用后由后台生成并返回。
         /// </summary>
         [JsonProperty("BizId")]
         public ulong? BizId{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Gme.V20180711.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

@@ -30,10 +30,10 @@ namespace TencentCloud.Cvm.V20170312
        private const string version = "2017-03-12";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CvmClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public CvmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -56,8 +56,8 @@ namespace TencentCloud.Cvm.V20170312
         /// 本接口 (AllocateHosts) 用于创建一个或多个指定配置的CDH实例。
         /// * 当HostChargeType为PREPAID时，必须指定HostChargePrepaid参数。
         /// </summary>
-        /// <param name="req">参考<see cref="AllocateHostsRequest"/></param>
-        /// <returns>参考<see cref="AllocateHostsResponse"/>实例</returns>
+        /// <param name="req"><see cref="AllocateHostsRequest"/></param>
+        /// <returns><see cref="AllocateHostsResponse"/></returns>
         public async Task<AllocateHostsResponse> AllocateHosts(AllocateHostsRequest req)
         {
              JsonResponseModel<AllocateHostsResponse> rsp = null;
@@ -81,8 +81,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 如果实例原来是通过密码登录，绑定密钥后无法使用密码登录。
         /// * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
         /// </summary>
-        /// <param name="req">参考<see cref="AssociateInstancesKeyPairsRequest"/></param>
-        /// <returns>参考<see cref="AssociateInstancesKeyPairsResponse"/>实例</returns>
+        /// <param name="req"><see cref="AssociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="AssociateInstancesKeyPairsResponse"/></returns>
         public async Task<AssociateInstancesKeyPairsResponse> AssociateInstancesKeyPairs(AssociateInstancesKeyPairsRequest req)
         {
              JsonResponseModel<AssociateInstancesKeyPairsResponse> rsp = null;
@@ -100,9 +100,10 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="AssociateSecurityGroupsRequest"/></param>
-        /// <returns>参考<see cref="AssociateSecurityGroupsResponse"/>实例</returns>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
         public async Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
         {
              JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
@@ -121,8 +122,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDisasterRecoverGroupRequest"/></param>
-        /// <returns>参考<see cref="CreateDisasterRecoverGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="CreateDisasterRecoverGroupResponse"/></returns>
         public async Task<CreateDisasterRecoverGroupResponse> CreateDisasterRecoverGroup(CreateDisasterRecoverGroupRequest req)
         {
              JsonResponseModel<CreateDisasterRecoverGroupResponse> rsp = null;
@@ -141,8 +142,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateImageRequest"/></param>
-        /// <returns>参考<see cref="CreateImageResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateImageRequest"/></param>
+        /// <returns><see cref="CreateImageResponse"/></returns>
         public async Task<CreateImageResponse> CreateImage(CreateImageRequest req)
         {
              JsonResponseModel<CreateImageResponse> rsp = null;
@@ -166,8 +167,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 私钥的内容可以保存到文件中作为 `SSH` 的一种认证方式。
         /// * 腾讯云不会保存用户的私钥，请妥善保管。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateKeyPairRequest"/></param>
-        /// <returns>参考<see cref="CreateKeyPairResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateKeyPairRequest"/></param>
+        /// <returns><see cref="CreateKeyPairResponse"/></returns>
         public async Task<CreateKeyPairResponse> CreateKeyPair(CreateKeyPairRequest req)
         {
              JsonResponseModel<CreateKeyPairResponse> rsp = null;
@@ -186,8 +187,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口 (DeleteDisasterRecoverGroups)用于删除[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。只有空的置放群组才能被删除，非空的群组需要先销毁组内所有云服务器，才能执行删除操作，不然会产生删除置放群组失败的错误。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteDisasterRecoverGroupsRequest"/></param>
-        /// <returns>参考<see cref="DeleteDisasterRecoverGroupsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DeleteDisasterRecoverGroupsResponse"/></returns>
         public async Task<DeleteDisasterRecoverGroupsResponse> DeleteDisasterRecoverGroups(DeleteDisasterRecoverGroupsRequest req)
         {
              JsonResponseModel<DeleteDisasterRecoverGroupsResponse> rsp = null;
@@ -206,12 +207,12 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口（DeleteImages）用于删除一个或多个镜像。
         /// 
-        /// * 当[镜像状态](https://cloud.tencent.com/document/api/213/9452#image_state)为`创建中`和`使用中`时, 不允许删除。镜像状态可以通过[DescribeImages](https://cloud.tencent.com/document/api/213/9418)获取。
+        /// * 当[镜像状态](https://cloud.tencent.com/document/product/213/15753#Image)为`创建中`和`使用中`时, 不允许删除。镜像状态可以通过[DescribeImages](https://cloud.tencent.com/document/api/213/9418)获取。
         /// * 每个地域最多只支持创建10个自定义镜像，删除镜像可以释放账户的配额。
         /// * 当镜像正在被其它账户分享时，不允许删除。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteImagesRequest"/></param>
-        /// <returns>参考<see cref="DeleteImagesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteImagesRequest"/></param>
+        /// <returns><see cref="DeleteImagesResponse"/></returns>
         public async Task<DeleteImagesResponse> DeleteImages(DeleteImagesRequest req)
         {
              JsonResponseModel<DeleteImagesResponse> rsp = null;
@@ -233,8 +234,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 可以同时删除多个密钥对。
         /// * 不能删除已被实例或镜像引用的密钥对，所以需要独立判断是否所有密钥对都被成功删除。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteKeyPairsRequest"/></param>
-        /// <returns>参考<see cref="DeleteKeyPairsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteKeyPairsRequest"/></param>
+        /// <returns><see cref="DeleteKeyPairsResponse"/></returns>
         public async Task<DeleteKeyPairsResponse> DeleteKeyPairs(DeleteKeyPairsRequest req)
         {
              JsonResponseModel<DeleteKeyPairsResponse> rsp = null;
@@ -253,8 +254,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDisasterRecoverGroupQuotaRequest"/></param>
-        /// <returns>参考<see cref="DescribeDisasterRecoverGroupQuotaResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDisasterRecoverGroupQuotaRequest"/></param>
+        /// <returns><see cref="DescribeDisasterRecoverGroupQuotaResponse"/></returns>
         public async Task<DescribeDisasterRecoverGroupQuotaResponse> DescribeDisasterRecoverGroupQuota(DescribeDisasterRecoverGroupQuotaRequest req)
         {
              JsonResponseModel<DescribeDisasterRecoverGroupQuotaResponse> rsp = null;
@@ -273,8 +274,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDisasterRecoverGroupsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDisasterRecoverGroupsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDisasterRecoverGroupsResponse"/></returns>
         public async Task<DescribeDisasterRecoverGroupsResponse> DescribeDisasterRecoverGroups(DescribeDisasterRecoverGroupsRequest req)
         {
              JsonResponseModel<DescribeDisasterRecoverGroupsResponse> rsp = null;
@@ -293,8 +294,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口 (DescribeHosts) 用于获取一个或多个CDH实例的详细信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeHostsRequest"/></param>
-        /// <returns>参考<see cref="DescribeHostsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeHostsRequest"/></param>
+        /// <returns><see cref="DescribeHostsResponse"/></returns>
         public async Task<DescribeHostsResponse> DescribeHosts(DescribeHostsRequest req)
         {
              JsonResponseModel<DescribeHostsResponse> rsp = null;
@@ -313,8 +314,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(DescribeImageQuota)用于查询用户帐号的镜像配额。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeImageQuotaRequest"/></param>
-        /// <returns>参考<see cref="DescribeImageQuotaResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeImageQuotaRequest"/></param>
+        /// <returns><see cref="DescribeImageQuotaResponse"/></returns>
         public async Task<DescribeImageQuotaResponse> DescribeImageQuota(DescribeImageQuotaRequest req)
         {
              JsonResponseModel<DescribeImageQuotaResponse> rsp = null;
@@ -333,8 +334,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口（DescribeImageSharePermission）用于查询镜像分享信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeImageSharePermissionRequest"/></param>
-        /// <returns>参考<see cref="DescribeImageSharePermissionResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeImageSharePermissionRequest"/></param>
+        /// <returns><see cref="DescribeImageSharePermissionResponse"/></returns>
         public async Task<DescribeImageSharePermissionResponse> DescribeImageSharePermission(DescribeImageSharePermissionRequest req)
         {
              JsonResponseModel<DescribeImageSharePermissionResponse> rsp = null;
@@ -356,8 +357,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 可以通过指定镜像ID来查询指定镜像的详细信息，或通过设定过滤器来查询满足过滤条件的镜像的详细信息。
         /// * 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个镜像信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeImagesRequest"/></param>
-        /// <returns>参考<see cref="DescribeImagesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeImagesRequest"/></param>
+        /// <returns><see cref="DescribeImagesResponse"/></returns>
         public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest req)
         {
              JsonResponseModel<DescribeImagesResponse> rsp = null;
@@ -376,8 +377,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 查看可以导入的镜像操作系统信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeImportImageOsRequest"/></param>
-        /// <returns>参考<see cref="DescribeImportImageOsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeImportImageOsRequest"/></param>
+        /// <returns><see cref="DescribeImportImageOsResponse"/></returns>
         public async Task<DescribeImportImageOsResponse> DescribeImportImageOs(DescribeImportImageOsRequest req)
         {
              JsonResponseModel<DescribeImportImageOsResponse> rsp = null;
@@ -396,8 +397,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口（DescribeInstanceFamilyConfigs）查询当前用户和地域所支持的机型族列表信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceFamilyConfigsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceFamilyConfigsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstanceFamilyConfigsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceFamilyConfigsResponse"/></returns>
         public async Task<DescribeInstanceFamilyConfigsResponse> DescribeInstanceFamilyConfigs(DescribeInstanceFamilyConfigsRequest req)
         {
              JsonResponseModel<DescribeInstanceFamilyConfigsResponse> rsp = null;
@@ -419,8 +420,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 只支持查询`BANDWIDTH_PREPAID`计费模式的带宽配置。
         /// * 接口返回实例的所有带宽配置信息（包含历史的带宽配置信息）。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceInternetBandwidthConfigsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceInternetBandwidthConfigsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstanceInternetBandwidthConfigsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceInternetBandwidthConfigsResponse"/></returns>
         public async Task<DescribeInstanceInternetBandwidthConfigsResponse> DescribeInstanceInternetBandwidthConfigs(DescribeInstanceInternetBandwidthConfigsRequest req)
         {
              JsonResponseModel<DescribeInstanceInternetBandwidthConfigsResponse> rsp = null;
@@ -442,8 +443,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 可以根据`zone`、`instance-family`来查询实例机型配置。过滤条件详见过滤器`Filter`。
         /// * 如果参数为空，返回指定地域的所有实例机型配置。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceTypeConfigsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceTypeConfigsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstanceTypeConfigsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTypeConfigsResponse"/></returns>
         public async Task<DescribeInstanceTypeConfigsResponse> DescribeInstanceTypeConfigs(DescribeInstanceTypeConfigsRequest req)
         {
              JsonResponseModel<DescribeInstanceTypeConfigsResponse> rsp = null;
@@ -466,7 +467,7 @@ namespace TencentCloud.Cvm.V20170312
         /// * 管理终端地址的有效期为 15 秒，调用接口成功后如果 15 秒内不使用该链接进行访问，管理终端地址自动失效，您需要重新查询。
         /// * 管理终端地址一旦被访问，将自动失效，您需要重新查询。
         /// * 如果连接断开，每分钟内重新连接的次数不能超过 30 次。
-        /// * 获取到 `InstanceVncUrl` 后，您需要在在链接 <https://img.qcloud.com/qcloud/app/active_vnc/index.html?> 末尾加上参数 `InstanceVncUrl=xxxx`  。
+        /// * 获取到 `InstanceVncUrl` 后，您需要在链接 <https://img.qcloud.com/qcloud/app/active_vnc/index.html?> 末尾加上参数 `InstanceVncUrl=xxxx`  。
         ///   - 参数 `InstanceVncUrl` ：调用接口成功后会返回的 `InstanceVncUrl` 的值。
         /// 
         ///     最后组成的 URL 格式如下：
@@ -475,8 +476,8 @@ namespace TencentCloud.Cvm.V20170312
         /// https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
         /// ```
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceVncUrlRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceVncUrlResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
+        /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
         public async Task<DescribeInstanceVncUrlResponse> DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req)
         {
              JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
@@ -499,8 +500,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
         /// * 支持查询实例的最新操作（LatestOperation）以及最新操作状态(LatestOperationState)。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesResponse"/></returns>
         public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
         {
              JsonResponseModel<DescribeInstancesResponse> rsp = null;
@@ -521,8 +522,8 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * 目前支持调整配置操作限制次数查询。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstancesOperationLimitRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstancesOperationLimitResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstancesOperationLimitRequest"/></param>
+        /// <returns><see cref="DescribeInstancesOperationLimitResponse"/></returns>
         public async Task<DescribeInstancesOperationLimitResponse> DescribeInstancesOperationLimit(DescribeInstancesOperationLimitRequest req)
         {
              JsonResponseModel<DescribeInstancesOperationLimitResponse> rsp = null;
@@ -544,8 +545,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 可以根据实例`ID`来查询实例的状态。
         /// * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例状态。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstancesStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstancesStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInstancesStatusRequest"/></param>
+        /// <returns><see cref="DescribeInstancesStatusResponse"/></returns>
         public async Task<DescribeInstancesStatusResponse> DescribeInstancesStatus(DescribeInstancesStatusRequest req)
         {
              JsonResponseModel<DescribeInstancesStatusResponse> rsp = null;
@@ -564,8 +565,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口（DescribeInternetChargeTypeConfigs）用于查询网络的计费类型。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInternetChargeTypeConfigsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInternetChargeTypeConfigsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInternetChargeTypeConfigsRequest"/></param>
+        /// <returns><see cref="DescribeInternetChargeTypeConfigsResponse"/></returns>
         public async Task<DescribeInternetChargeTypeConfigsResponse> DescribeInternetChargeTypeConfigs(DescribeInternetChargeTypeConfigsRequest req)
         {
              JsonResponseModel<DescribeInternetChargeTypeConfigsResponse> rsp = null;
@@ -586,8 +587,8 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * 密钥对是通过一种算法生成的一对密钥，在生成的密钥对中，一个向外界公开，称为公钥；另一个用户自己保留，称为私钥。密钥对的公钥内容可以通过这个接口查询，但私钥内容系统不保留。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeKeyPairsRequest"/></param>
-        /// <returns>参考<see cref="DescribeKeyPairsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeKeyPairsRequest"/></param>
+        /// <returns><see cref="DescribeKeyPairsResponse"/></returns>
         public async Task<DescribeKeyPairsResponse> DescribeKeyPairs(DescribeKeyPairsRequest req)
         {
              JsonResponseModel<DescribeKeyPairsResponse> rsp = null;
@@ -606,8 +607,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(DescribeRegions)用于查询地域信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRegionsRequest"/></param>
-        /// <returns>参考<see cref="DescribeRegionsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
         public async Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
         {
              JsonResponseModel<DescribeRegionsResponse> rsp = null;
@@ -626,8 +627,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(DescribeReservedInstances)可提供列出用户已购买的预留实例
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeReservedInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeReservedInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
         public async Task<DescribeReservedInstancesResponse> DescribeReservedInstances(DescribeReservedInstancesRequest req)
         {
              JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
@@ -646,8 +647,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeReservedInstancesOfferingsRequest"/></param>
-        /// <returns>参考<see cref="DescribeReservedInstancesOfferingsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeReservedInstancesOfferingsRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesOfferingsResponse"/></returns>
         public async Task<DescribeReservedInstancesOfferingsResponse> DescribeReservedInstancesOfferings(DescribeReservedInstancesOfferingsRequest req)
         {
              JsonResponseModel<DescribeReservedInstancesOfferingsResponse> rsp = null;
@@ -666,8 +667,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZoneInstanceConfigInfosRequest"/></param>
-        /// <returns>参考<see cref="DescribeZoneInstanceConfigInfosResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZoneInstanceConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeZoneInstanceConfigInfosResponse"/></returns>
         public async Task<DescribeZoneInstanceConfigInfosResponse> DescribeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest req)
         {
              JsonResponseModel<DescribeZoneInstanceConfigInfosResponse> rsp = null;
@@ -686,8 +687,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(DescribeZones)用于查询可用区信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZonesRequest"/></param>
-        /// <returns>参考<see cref="DescribeZonesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZonesRequest"/></param>
+        /// <returns><see cref="DescribeZonesResponse"/></returns>
         public async Task<DescribeZonesResponse> DescribeZones(DescribeZonesRequest req)
         {
              JsonResponseModel<DescribeZonesResponse> rsp = null;
@@ -711,8 +712,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 如果原来没有设置密码，解绑后将无法使用 `SSH` 登录。可以调用 [ResetInstancesPassword](https://cloud.tencent.com/document/api/213/15736) 接口来设置登录密码。
         /// * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
         /// </summary>
-        /// <param name="req">参考<see cref="DisassociateInstancesKeyPairsRequest"/></param>
-        /// <returns>参考<see cref="DisassociateInstancesKeyPairsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DisassociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="DisassociateInstancesKeyPairsResponse"/></returns>
         public async Task<DisassociateInstancesKeyPairsResponse> DisassociateInstancesKeyPairs(DisassociateInstancesKeyPairsRequest req)
         {
              JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
@@ -730,9 +731,10 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// 本接口 (DisassociateSecurityGroups) 用于解绑实例的指定安全组。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="DisassociateSecurityGroupsRequest"/></param>
-        /// <returns>参考<see cref="DisassociateSecurityGroupsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
         public async Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
         {
              JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
@@ -751,8 +753,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。 
         /// </summary>
-        /// <param name="req">参考<see cref="ImportImageRequest"/></param>
-        /// <returns>参考<see cref="ImportImageResponse"/>实例</returns>
+        /// <param name="req"><see cref="ImportImageRequest"/></param>
+        /// <returns><see cref="ImportImageResponse"/></returns>
         public async Task<ImportImageResponse> ImportImage(ImportImageRequest req)
         {
              JsonResponseModel<ImportImageResponse> rsp = null;
@@ -775,8 +777,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 需指定密钥对名称以及该密钥对的公钥文本。
         /// * 如果用户只有私钥，可以通过 `SSL` 工具将私钥转换成公钥后再导入。
         /// </summary>
-        /// <param name="req">参考<see cref="ImportKeyPairRequest"/></param>
-        /// <returns>参考<see cref="ImportKeyPairResponse"/>实例</returns>
+        /// <param name="req"><see cref="ImportKeyPairRequest"/></param>
+        /// <returns><see cref="ImportKeyPairResponse"/></returns>
         public async Task<ImportKeyPairResponse> ImportKeyPair(ImportKeyPairRequest req)
         {
              JsonResponseModel<ImportKeyPairResponse> rsp = null;
@@ -798,8 +800,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
         /// * 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例不支持该操作。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceModifyInstancesChargeTypeRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceModifyInstancesChargeTypeResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceModifyInstancesChargeTypeRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyInstancesChargeTypeResponse"/></returns>
         public async Task<InquiryPriceModifyInstancesChargeTypeResponse> InquiryPriceModifyInstancesChargeType(InquiryPriceModifyInstancesChargeTypeRequest req)
         {
              JsonResponseModel<InquiryPriceModifyInstancesChargeTypeResponse> rsp = null;
@@ -820,8 +822,8 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * 只支持查询包年包月实例的续费价格。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceRenewInstancesRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceRenewInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceRenewInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewInstancesResponse"/></returns>
         public async Task<InquiryPriceRenewInstancesResponse> InquiryPriceRenewInstances(InquiryPriceRenewInstancesRequest req)
         {
              JsonResponseModel<InquiryPriceRenewInstancesResponse> rsp = null;
@@ -844,8 +846,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 目前只支持[系统盘类型](https://cloud.tencent.com/document/api/213/15753#SystemDisk)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`类型的实例使用该接口实现`Linux`和`Windows`操作系统切换的重装询价。
         /// * 目前不支持境外地域的实例使用该接口实现`Linux`和`Windows`操作系统切换的重装询价。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceResetInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceResetInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceResetInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceResetInstanceResponse"/></returns>
         public async Task<InquiryPriceResetInstanceResponse> InquiryPriceResetInstance(InquiryPriceResetInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceResetInstanceResponse> rsp = null;
@@ -871,8 +873,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 接口不支持批量调整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 计费方式的带宽。
         /// * 接口不支持批量调整混合计费方式的带宽。例如不支持同时调整`TRAFFIC_POSTPAID_BY_HOUR`和`BANDWIDTH_PACKAGE`计费方式的带宽。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceResetInstancesInternetMaxBandwidthRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceResetInstancesInternetMaxBandwidthResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceResetInstancesInternetMaxBandwidthRequest"/></param>
+        /// <returns><see cref="InquiryPriceResetInstancesInternetMaxBandwidthResponse"/></returns>
         public async Task<InquiryPriceResetInstancesInternetMaxBandwidthResponse> InquiryPriceResetInstancesInternetMaxBandwidth(InquiryPriceResetInstancesInternetMaxBandwidthRequest req)
         {
              JsonResponseModel<InquiryPriceResetInstancesInternetMaxBandwidthResponse> rsp = null;
@@ -891,12 +893,12 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口 (InquiryPriceResetInstancesType) 用于调整实例的机型询价。
         /// 
-        /// * 目前只支持[系统盘类型](https://cloud.tencent.com/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`类型的实例使用该接口进行调整机型询价。
+        /// * 目前只支持[系统盘类型](https://cloud.tencent.com/document/product/213/15753#SystemDisk)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`类型的实例使用该接口进行调整机型询价。
         /// * 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口调整机型询价。
         /// * 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceResetInstancesTypeRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceResetInstancesTypeResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceResetInstancesTypeRequest"/></param>
+        /// <returns><see cref="InquiryPriceResetInstancesTypeResponse"/></returns>
         public async Task<InquiryPriceResetInstancesTypeResponse> InquiryPriceResetInstancesType(InquiryPriceResetInstancesTypeRequest req)
         {
              JsonResponseModel<InquiryPriceResetInstancesTypeResponse> rsp = null;
@@ -918,8 +920,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 目前只支持扩容非弹性数据盘（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）询价，且[数据盘类型](https://cloud.tencent.com/document/product/213/15753#DataDisk)为：`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`。
         /// * 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口扩容数据盘询价。* 仅支持包年包月实例随机器购买的数据盘。* 目前只支持扩容一块数据盘询价。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceResizeInstanceDisksRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceResizeInstanceDisksResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceResizeInstanceDisksRequest"/></param>
+        /// <returns><see cref="InquiryPriceResizeInstanceDisksResponse"/></returns>
         public async Task<InquiryPriceResizeInstanceDisksResponse> InquiryPriceResizeInstanceDisks(InquiryPriceResizeInstanceDisksRequest req)
         {
              JsonResponseModel<InquiryPriceResizeInstanceDisksResponse> rsp = null;
@@ -938,8 +940,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(InquiryPriceRunInstances)用于创建实例询价。本接口仅允许针对购买限制范围内的实例配置进行询价, 详见：[创建实例](https://cloud.tencent.com/document/api/213/15730)。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceRunInstancesRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceRunInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceRunInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRunInstancesResponse"/></returns>
         public async Task<InquiryPriceRunInstancesResponse> InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req)
         {
              JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
@@ -958,8 +960,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDisasterRecoverGroupAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyDisasterRecoverGroupAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDisasterRecoverGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDisasterRecoverGroupAttributeResponse"/></returns>
         public async Task<ModifyDisasterRecoverGroupAttributeResponse> ModifyDisasterRecoverGroupAttribute(ModifyDisasterRecoverGroupAttributeRequest req)
         {
              JsonResponseModel<ModifyDisasterRecoverGroupAttributeResponse> rsp = null;
@@ -978,8 +980,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口（ModifyHostsAttribute）用于修改CDH实例的属性，如实例名称和续费标记等。参数HostName和RenewFlag必须设置其中一个，但不能同时设置。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyHostsAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyHostsAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyHostsAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHostsAttributeResponse"/></returns>
         public async Task<ModifyHostsAttributeResponse> ModifyHostsAttribute(ModifyHostsAttributeRequest req)
         {
              JsonResponseModel<ModifyHostsAttributeResponse> rsp = null;
@@ -1000,8 +1002,8 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * 已分享的镜像无法修改属性。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyImageAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyImageAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyImageAttributeRequest"/></param>
+        /// <returns><see cref="ModifyImageAttributeResponse"/></returns>
         public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest req)
         {
              JsonResponseModel<ModifyImageAttributeResponse> rsp = null;
@@ -1025,8 +1027,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 分享镜像无法更改名称，描述，仅可用于创建实例。
         /// * 只支持分享到对方账户相同地域。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyImageSharePermissionRequest"/></param>
-        /// <returns>参考<see cref="ModifyImageSharePermissionResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyImageSharePermissionRequest"/></param>
+        /// <returns><see cref="ModifyImageSharePermissionResponse"/></returns>
         public async Task<ModifyImageSharePermissionResponse> ModifyImageSharePermission(ModifyImageSharePermissionRequest req)
         {
              JsonResponseModel<ModifyImageSharePermissionResponse> rsp = null;
@@ -1048,9 +1050,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * “实例名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行实例管理操作的依据。
         /// * 支持批量操作。每次请求批量实例的上限为100。
         /// * 修改关联安全组时，子机原来关联的安全组会被解绑。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstancesAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstancesAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesAttributeResponse"/></returns>
         public async Task<ModifyInstancesAttributeResponse> ModifyInstancesAttribute(ModifyInstancesAttributeRequest req)
         {
              JsonResponseModel<ModifyInstancesAttributeResponse> rsp = null;
@@ -1071,9 +1074,10 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
         /// * 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例不支持该操作。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstancesChargeTypeRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstancesChargeTypeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyInstancesChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesChargeTypeResponse"/></returns>
         public async Task<ModifyInstancesChargeTypeResponse> ModifyInstancesChargeType(ModifyInstancesChargeTypeRequest req)
         {
              JsonResponseModel<ModifyInstancesChargeTypeResponse> rsp = null;
@@ -1096,9 +1100,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 绑定负载均衡的实例不支持修改实例所属项目，请先使用[`DeregisterInstancesFromLoadBalancer`](https://cloud.tencent.com/document/api/214/1258)接口解绑负载均衡。
         /// * 修改实例所属项目会自动解关联实例原来关联的安全组，修改完成后可能使用[`ModifySecurityGroupsOfInstance`](https://cloud.tencent.com/document/api/213/1367)接口关联安全组。
         /// * 支持批量操作。每次请求批量实例的上限为100。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstancesProjectRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstancesProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyInstancesProjectRequest"/></param>
+        /// <returns><see cref="ModifyInstancesProjectResponse"/></returns>
         public async Task<ModifyInstancesProjectResponse> ModifyInstancesProject(ModifyInstancesProjectRequest req)
         {
              JsonResponseModel<ModifyInstancesProjectResponse> rsp = null;
@@ -1119,9 +1124,10 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * 实例被标识为自动续费后，每次在实例到期时，会自动续费一个月。
         /// * 支持批量操作。每次请求批量实例的上限为100。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstancesRenewFlagRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstancesRenewFlagResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyInstancesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstancesRenewFlagResponse"/></returns>
         public async Task<ModifyInstancesRenewFlagResponse> ModifyInstancesRenewFlag(ModifyInstancesRenewFlagRequest req)
         {
              JsonResponseModel<ModifyInstancesRenewFlagResponse> rsp = null;
@@ -1141,9 +1147,10 @@ namespace TencentCloud.Cvm.V20170312
         /// 本接口(ModifyInstancesVpcAttribute)用于修改实例vpc属性，如私有网络ip。
         /// * 此操作默认会关闭实例，完成后再启动。
         /// * 当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。执行此操作前请确保指定的实例上没有绑定[弹性网卡](https://cloud.tencent.com/document/product/576)和[负载均衡](https://cloud.tencent.com/document/product/214)。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstancesVpcAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstancesVpcAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyInstancesVpcAttributeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesVpcAttributeResponse"/></returns>
         public async Task<ModifyInstancesVpcAttributeResponse> ModifyInstancesVpcAttribute(ModifyInstancesVpcAttributeRequest req)
         {
              JsonResponseModel<ModifyInstancesVpcAttributeResponse> rsp = null;
@@ -1166,8 +1173,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 密钥对名称不能和已经存在的密钥对的名称重复。
         /// * 密钥对ID是密钥对的唯一标识，不可修改。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyKeyPairAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyKeyPairAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyKeyPairAttributeRequest"/></param>
+        /// <returns><see cref="ModifyKeyPairAttributeResponse"/></returns>
         public async Task<ModifyKeyPairAttributeResponse> ModifyKeyPairAttribute(ModifyKeyPairAttributeRequest req)
         {
              JsonResponseModel<ModifyKeyPairAttributeResponse> rsp = null;
@@ -1186,8 +1193,8 @@ namespace TencentCloud.Cvm.V20170312
         /// <summary>
         /// 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
         /// </summary>
-        /// <param name="req">参考<see cref="PurchaseReservedInstancesOfferingRequest"/></param>
-        /// <returns>参考<see cref="PurchaseReservedInstancesOfferingResponse"/>实例</returns>
+        /// <param name="req"><see cref="PurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="PurchaseReservedInstancesOfferingResponse"/></returns>
         public async Task<PurchaseReservedInstancesOfferingResponse> PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest req)
         {
              JsonResponseModel<PurchaseReservedInstancesOfferingResponse> rsp = null;
@@ -1210,9 +1217,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 接口调用成功时，实例会进入`REBOOTING`状态；重启实例成功时，实例会进入`RUNNING`状态。
         /// * 支持强制重启。强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
         /// * 支持批量操作，每次请求批量实例的上限为100。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="RebootInstancesRequest"/></param>
-        /// <returns>参考<see cref="RebootInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="RebootInstancesRequest"/></param>
+        /// <returns><see cref="RebootInstancesResponse"/></returns>
         public async Task<RebootInstancesResponse> RebootInstances(RebootInstancesRequest req)
         {
              JsonResponseModel<RebootInstancesResponse> rsp = null;
@@ -1234,8 +1242,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 只支持操作包年包月实例，否则操作会以特定[错误码](#4.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。
         /// * 续费时请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
         /// </summary>
-        /// <param name="req">参考<see cref="RenewHostsRequest"/></param>
-        /// <returns>参考<see cref="RenewHostsResponse"/>实例</returns>
+        /// <param name="req"><see cref="RenewHostsRequest"/></param>
+        /// <returns><see cref="RenewHostsResponse"/></returns>
         public async Task<RenewHostsResponse> RenewHosts(RenewHostsRequest req)
         {
              JsonResponseModel<RenewHostsResponse> rsp = null;
@@ -1256,9 +1264,10 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * 只支持操作包年包月实例。
         /// * 续费时请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="RenewInstancesRequest"/></param>
-        /// <returns>参考<see cref="RenewInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="RenewInstancesRequest"/></param>
+        /// <returns><see cref="RenewInstancesResponse"/></returns>
         public async Task<RenewInstancesResponse> RenewInstances(RenewInstancesRequest req)
         {
              JsonResponseModel<RenewInstancesResponse> rsp = null;
@@ -1283,9 +1292,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 密码不指定将会通过站内信下发随机密码。
         /// * 目前只支持[系统盘类型](https://cloud.tencent.com/document/api/213/9452#SystemDisk)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`类型的实例使用该接口实现`Linux`和`Windows`操作系统切换。
         /// * 目前不支持境外地域的实例使用该接口实现`Linux`和`Windows`操作系统切换。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ResetInstanceRequest"/></param>
-        /// <returns>参考<see cref="ResetInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetInstanceRequest"/></param>
+        /// <returns><see cref="ResetInstanceResponse"/></returns>
         public async Task<ResetInstanceResponse> ResetInstance(ResetInstanceRequest req)
         {
              JsonResponseModel<ResetInstanceResponse> rsp = null;
@@ -1310,9 +1320,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 接口不支持调整 `BANDWIDTH_POSTPAID_BY_MONTH` 计费方式的带宽。
         /// * 接口不支持批量调整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 计费方式的带宽。
         /// * 接口不支持批量调整混合计费方式的带宽。例如不支持同时调整 `TRAFFIC_POSTPAID_BY_HOUR` 和 `BANDWIDTH_PACKAGE` 计费方式的带宽。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ResetInstancesInternetMaxBandwidthRequest"/></param>
-        /// <returns>参考<see cref="ResetInstancesInternetMaxBandwidthResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetInstancesInternetMaxBandwidthRequest"/></param>
+        /// <returns><see cref="ResetInstancesInternetMaxBandwidthResponse"/></returns>
         public async Task<ResetInstancesInternetMaxBandwidthResponse> ResetInstancesInternetMaxBandwidth(ResetInstancesInternetMaxBandwidthRequest req)
         {
              JsonResponseModel<ResetInstancesInternetMaxBandwidthResponse> rsp = null;
@@ -1334,9 +1345,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 只修改管理员帐号的密码。实例的操作系统不同，管理员帐号也会不一样(`Windows`为`Administrator`，`Ubuntu`为`ubuntu`，其它系统为`root`)。
         /// * 重置处于运行中状态的实例，需要显式指定强制关机参数`ForceStop`。如果没有显式指定强制关机参数，则只有处于关机状态的实例才允许执行重置密码操作。
         /// * 支持批量操作。将多个实例操作系统的密码重置为相同的密码。每次请求批量实例的上限为100。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ResetInstancesPasswordRequest"/></param>
-        /// <returns>参考<see cref="ResetInstancesPasswordResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
+        /// <returns><see cref="ResetInstancesPasswordResponse"/></returns>
         public async Task<ResetInstancesPasswordResponse> ResetInstancesPassword(ResetInstancesPasswordRequest req)
         {
              JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
@@ -1356,9 +1368,10 @@ namespace TencentCloud.Cvm.V20170312
         /// 本接口 (ResetInstancesType) 用于调整实例的机型。
         /// * 目前只支持[系统盘类型](/document/api/213/9452#block_device)是`CLOUD_BASIC`、`CLOUD_PREMIUM`、`CLOUD_SSD`类型的实例使用该接口进行机型调整。
         /// * 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口调整机型。对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
+        /// * 本接口为异步接口，调整实例配置请求发送成功后会返回一个RequestId，此时操作并未立即完成。实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表调整实例配置操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ResetInstancesTypeRequest"/></param>
-        /// <returns>参考<see cref="ResetInstancesTypeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetInstancesTypeRequest"/></param>
+        /// <returns><see cref="ResetInstancesTypeResponse"/></returns>
         public async Task<ResetInstancesTypeResponse> ResetInstancesType(ResetInstancesTypeRequest req)
         {
              JsonResponseModel<ResetInstancesTypeResponse> rsp = null;
@@ -1381,9 +1394,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口扩容数据盘。
         /// * 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
         /// * 目前只支持扩容一块数据盘。
+        /// * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="ResizeInstanceDisksRequest"/></param>
-        /// <returns>参考<see cref="ResizeInstanceDisksResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResizeInstanceDisksRequest"/></param>
+        /// <returns><see cref="ResizeInstanceDisksResponse"/></returns>
         public async Task<ResizeInstanceDisksResponse> ResizeInstanceDisks(ResizeInstanceDisksRequest req)
         {
              JsonResponseModel<ResizeInstanceDisksResponse> rsp = null;
@@ -1407,8 +1421,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 本接口允许购买的实例数量遵循[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)，所创建的实例和官网入口创建的实例共用配额。
         /// * 本接口为异步接口，当创建请求下发成功后会返回一个实例`ID`列表，此时实例的创建并立即未完成。在此期间实例的状态将会处于“准备中”，可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口查询对应实例的状态，来判断创建有没有最终成功。如果实例的状态由“准备中”变为“运行中”，则为创建成功。
         /// </summary>
-        /// <param name="req">参考<see cref="RunInstancesRequest"/></param>
-        /// <returns>参考<see cref="RunInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="RunInstancesRequest"/></param>
+        /// <returns><see cref="RunInstancesResponse"/></returns>
         public async Task<RunInstancesResponse> RunInstances(RunInstancesRequest req)
         {
              JsonResponseModel<RunInstancesResponse> rsp = null;
@@ -1430,9 +1444,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 只有状态为`STOPPED`的实例才可以进行此操作。
         /// * 接口调用成功时，实例会进入`STARTING`状态；启动实例成功时，实例会进入`RUNNING`状态。
         /// * 支持批量操作。每次请求批量实例的上限为100。
+        /// * 本接口为异步接口，启动实例请求发送成功后会返回一个RequestId，此时操作并未立即完成。实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表启动实例操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="StartInstancesRequest"/></param>
-        /// <returns>参考<see cref="StartInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="StartInstancesRequest"/></param>
+        /// <returns><see cref="StartInstancesResponse"/></returns>
         public async Task<StartInstancesResponse> StartInstances(StartInstancesRequest req)
         {
              JsonResponseModel<StartInstancesResponse> rsp = null;
@@ -1455,9 +1470,10 @@ namespace TencentCloud.Cvm.V20170312
         /// * 接口调用成功时，实例会进入`STOPPING`状态；关闭实例成功时，实例会进入`STOPPED`状态。
         /// * 支持强制关闭。强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
         /// * 支持批量操作。每次请求批量实例的上限为100。
+        /// * 本接口为异步接口，关闭实例请求发送成功后会返回一个RequestId，此时操作并未立即完成。实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表关闭实例操作成功。
         /// </summary>
-        /// <param name="req">参考<see cref="StopInstancesRequest"/></param>
-        /// <returns>参考<see cref="StopInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="StopInstancesRequest"/></param>
+        /// <returns><see cref="StopInstancesResponse"/></returns>
         public async Task<StopInstancesResponse> StopInstances(StopInstancesRequest req)
         {
              JsonResponseModel<StopInstancesResponse> rsp = null;
@@ -1480,8 +1496,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 该接口支持多个同步地域。
         /// * 单个帐号在每个地域最多支持存在10个自定义镜像。
         /// </summary>
-        /// <param name="req">参考<see cref="SyncImagesRequest"/></param>
-        /// <returns>参考<see cref="SyncImagesResponse"/>实例</returns>
+        /// <param name="req"><see cref="SyncImagesRequest"/></param>
+        /// <returns><see cref="SyncImagesResponse"/></returns>
         public async Task<SyncImagesResponse> SyncImages(SyncImagesRequest req)
         {
              JsonResponseModel<SyncImagesResponse> rsp = null;
@@ -1505,8 +1521,8 @@ namespace TencentCloud.Cvm.V20170312
         /// * 首次调用本接口，实例将被移至回收站，再次调用本接口，实例将被销毁，且不可恢复。
         /// * 支持批量操作，每次请求批量实例的上限为100。
         /// </summary>
-        /// <param name="req">参考<see cref="TerminateInstancesRequest"/></param>
-        /// <returns>参考<see cref="TerminateInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="TerminateInstancesRequest"/></param>
+        /// <returns><see cref="TerminateInstancesResponse"/></returns>
         public async Task<TerminateInstancesResponse> TerminateInstances(TerminateInstancesRequest req)
         {
              JsonResponseModel<TerminateInstancesResponse> rsp = null;

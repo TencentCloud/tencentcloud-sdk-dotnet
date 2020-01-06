@@ -30,10 +30,10 @@ namespace TencentCloud.Habo.V20181203
        private const string version = "2018-12-03";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public HaboClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Habo.V20181203
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public HaboClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Habo.V20181203
         /// <summary>
         /// 查询指定md5样本是否分析完成，并获取分析日志下载地址。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeStatusRequest"/></param>
+        /// <returns><see cref="DescribeStatusResponse"/></returns>
         public async Task<DescribeStatusResponse> DescribeStatus(DescribeStatusRequest req)
         {
              JsonResponseModel<DescribeStatusResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Habo.V20181203
         /// <summary>
         /// 上传样本到哈勃进行分析，异步生成分析日志。
         /// </summary>
-        /// <param name="req">参考<see cref="StartAnalyseRequest"/></param>
-        /// <returns>参考<see cref="StartAnalyseResponse"/>实例</returns>
+        /// <param name="req"><see cref="StartAnalyseRequest"/></param>
+        /// <returns><see cref="StartAnalyseResponse"/></returns>
         public async Task<StartAnalyseResponse> StartAnalyse(StartAnalyseRequest req)
         {
              JsonResponseModel<StartAnalyseResponse> rsp = null;

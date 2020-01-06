@@ -25,31 +25,31 @@ namespace TencentCloud.Facefusion.V20181201.Models
     {
         
         /// <summary>
-        /// 对应的类别名称 porn, politics, terror
+        /// 保留字段
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// 对应子类别状态码
+        /// 状态码， 0为处理成功，其他值为处理失败
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 对应子类别状态码信息描述
+        /// 对应状态码信息描述
         /// </summary>
         [JsonProperty("CodeDescription")]
         public string CodeDescription{ get; set; }
 
         /// <summary>
-        /// 对应识别种类的置信度
+        /// 保留字段
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 此字段为保留字段，目前统一返回pass。
+        /// 保留字段
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

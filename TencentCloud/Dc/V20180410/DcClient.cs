@@ -30,10 +30,10 @@ namespace TencentCloud.Dc.V20180410
        private const string version = "2018-04-10";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public DcClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public DcClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 接受专用通道申请
         /// </summary>
-        /// <param name="req">参考<see cref="AcceptDirectConnectTunnelRequest"/></param>
-        /// <returns>参考<see cref="AcceptDirectConnectTunnelResponse"/>实例</returns>
+        /// <param name="req"><see cref="AcceptDirectConnectTunnelRequest"/></param>
+        /// <returns><see cref="AcceptDirectConnectTunnelResponse"/></returns>
         public async Task<AcceptDirectConnectTunnelResponse> AcceptDirectConnectTunnel(AcceptDirectConnectTunnelRequest req)
         {
              JsonResponseModel<AcceptDirectConnectTunnelResponse> rsp = null;
@@ -78,8 +78,8 @@ namespace TencentCloud.Dc.V20180410
         /// 账号要进行实名认证，否则不允许申请物理专线；
         /// 若账户下存在欠费状态的物理专线，则不能申请更多的物理专线。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDirectConnectRequest"/></param>
-        /// <returns>参考<see cref="CreateDirectConnectResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDirectConnectRequest"/></param>
+        /// <returns><see cref="CreateDirectConnectResponse"/></returns>
         public async Task<CreateDirectConnectResponse> CreateDirectConnect(CreateDirectConnectRequest req)
         {
              JsonResponseModel<CreateDirectConnectResponse> rsp = null;
@@ -98,8 +98,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 用于创建专用通道的接口
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDirectConnectTunnelRequest"/></param>
-        /// <returns>参考<see cref="CreateDirectConnectTunnelResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDirectConnectTunnelRequest"/></param>
+        /// <returns><see cref="CreateDirectConnectTunnelResponse"/></returns>
         public async Task<CreateDirectConnectTunnelResponse> CreateDirectConnectTunnel(CreateDirectConnectTunnelRequest req)
         {
              JsonResponseModel<CreateDirectConnectTunnelResponse> rsp = null;
@@ -119,8 +119,8 @@ namespace TencentCloud.Dc.V20180410
         /// 删除物理专线。
         /// 只能删除处于状态的物理专线。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteDirectConnectRequest"/></param>
-        /// <returns>参考<see cref="DeleteDirectConnectResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
+        /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
         public async Task<DeleteDirectConnectResponse> DeleteDirectConnect(DeleteDirectConnectRequest req)
         {
              JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
@@ -139,8 +139,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 删除专用通道
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteDirectConnectTunnelRequest"/></param>
-        /// <returns>参考<see cref="DeleteDirectConnectTunnelResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteDirectConnectTunnelRequest"/></param>
+        /// <returns><see cref="DeleteDirectConnectTunnelResponse"/></returns>
         public async Task<DeleteDirectConnectTunnelResponse> DeleteDirectConnectTunnel(DeleteDirectConnectTunnelRequest req)
         {
              JsonResponseModel<DeleteDirectConnectTunnelResponse> rsp = null;
@@ -159,8 +159,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 查询物理专线接入点
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccessPointsRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccessPointsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccessPointsRequest"/></param>
+        /// <returns><see cref="DescribeAccessPointsResponse"/></returns>
         public async Task<DescribeAccessPointsResponse> DescribeAccessPoints(DescribeAccessPointsRequest req)
         {
              JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
@@ -179,8 +179,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 用于查询专用通道列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDirectConnectTunnelsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDirectConnectTunnelsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDirectConnectTunnelsRequest"/></param>
+        /// <returns><see cref="DescribeDirectConnectTunnelsResponse"/></returns>
         public async Task<DescribeDirectConnectTunnelsResponse> DescribeDirectConnectTunnels(DescribeDirectConnectTunnelsRequest req)
         {
              JsonResponseModel<DescribeDirectConnectTunnelsResponse> rsp = null;
@@ -199,8 +199,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 查询物理专线列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDirectConnectsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDirectConnectsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDirectConnectsRequest"/></param>
+        /// <returns><see cref="DescribeDirectConnectsResponse"/></returns>
         public async Task<DescribeDirectConnectsResponse> DescribeDirectConnects(DescribeDirectConnectsRequest req)
         {
              JsonResponseModel<DescribeDirectConnectsResponse> rsp = null;
@@ -219,8 +219,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 修改物理专线的属性。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDirectConnectAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyDirectConnectAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDirectConnectAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectAttributeResponse"/></returns>
         public async Task<ModifyDirectConnectAttributeResponse> ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req)
         {
              JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
@@ -239,8 +239,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 修改专用通道属性
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDirectConnectTunnelAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyDirectConnectTunnelAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDirectConnectTunnelAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectTunnelAttributeResponse"/></returns>
         public async Task<ModifyDirectConnectTunnelAttributeResponse> ModifyDirectConnectTunnelAttribute(ModifyDirectConnectTunnelAttributeRequest req)
         {
              JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse> rsp = null;
@@ -259,8 +259,8 @@ namespace TencentCloud.Dc.V20180410
         /// <summary>
         /// 拒绝专用通道申请
         /// </summary>
-        /// <param name="req">参考<see cref="RejectDirectConnectTunnelRequest"/></param>
-        /// <returns>参考<see cref="RejectDirectConnectTunnelResponse"/>实例</returns>
+        /// <param name="req"><see cref="RejectDirectConnectTunnelRequest"/></param>
+        /// <returns><see cref="RejectDirectConnectTunnelResponse"/></returns>
         public async Task<RejectDirectConnectTunnelResponse> RejectDirectConnectTunnel(RejectDirectConnectTunnelRequest req)
         {
              JsonResponseModel<RejectDirectConnectTunnelResponse> rsp = null;

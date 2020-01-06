@@ -30,10 +30,10 @@ namespace TencentCloud.Aai.V20180522
        private const string version = "2018-05-22";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public AaiClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Aai.V20180522
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public AaiClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Aai.V20180522
         /// <summary>
         /// 提供基于文本的基础聊天能力，可以让您的应用快速拥有具备深度语义理解的机器聊天功能。
         /// </summary>
-        /// <param name="req">参考<see cref="ChatRequest"/></param>
-        /// <returns>参考<see cref="ChatResponse"/>实例</returns>
+        /// <param name="req"><see cref="ChatRequest"/></param>
+        /// <returns><see cref="ChatResponse"/></returns>
         public async Task<ChatResponse> Chat(ChatRequest req)
         {
              JsonResponseModel<ChatResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Aai.V20180522
         /// <summary>
         /// 识别60s内的短语音，当音频放在请求body中传输时整个请求大小不能超过600KB，当音频以url方式传输时，音频时长不可超过60s。所有请求参数放在post的body中采用x-www-form-urlencoded（数据转换成一个字符串（name1=value1&name2=value2…）进行urlencode后）编码传输。现暂只支持中文普通话识别，支持识别8k(16k)的16bit的mp3或者wav音频。
         /// </summary>
-        /// <param name="req">参考<see cref="SentenceRecognitionRequest"/></param>
-        /// <returns>参考<see cref="SentenceRecognitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="SentenceRecognitionRequest"/></param>
+        /// <returns><see cref="SentenceRecognitionResponse"/></returns>
         public async Task<SentenceRecognitionResponse> SentenceRecognition(SentenceRecognitionRequest req)
         {
              JsonResponseModel<SentenceRecognitionResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Aai.V20180522
         /// <summary>
         /// 该接口是实时流式识别，可同时返回语音识别文本及翻译文本，当前仅支持中文和英文。该接口可配合同传windows客户端，提供会议现场同传服务。
         /// </summary>
-        /// <param name="req">参考<see cref="SimultaneousInterpretingRequest"/></param>
-        /// <returns>参考<see cref="SimultaneousInterpretingResponse"/>实例</returns>
+        /// <param name="req"><see cref="SimultaneousInterpretingRequest"/></param>
+        /// <returns><see cref="SimultaneousInterpretingResponse"/></returns>
         public async Task<SimultaneousInterpretingResponse> SimultaneousInterpreting(SimultaneousInterpretingRequest req)
         {
              JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
@@ -117,8 +117,8 @@ namespace TencentCloud.Aai.V20180522
         /// 腾讯TTS技术可以应用到很多场景，比如，移动APP语音播报新闻；智能设备语音提醒；依靠网上现有节目或少量录音，快速合成明星语音，降低邀约成本；支持车载导航语音合成的个性化语音播报。
         /// 内测期间免费使用。
         /// </summary>
-        /// <param name="req">参考<see cref="TextToVoiceRequest"/></param>
-        /// <returns>参考<see cref="TextToVoiceResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextToVoiceRequest"/></param>
+        /// <returns><see cref="TextToVoiceResponse"/></returns>
         public async Task<TextToVoiceResponse> TextToVoice(TextToVoiceRequest req)
         {
              JsonResponseModel<TextToVoiceResponse> rsp = null;

@@ -38,7 +38,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
@@ -65,7 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

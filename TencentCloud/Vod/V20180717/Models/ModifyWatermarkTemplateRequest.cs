@@ -48,7 +48,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
         /// <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
         /// <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-        /// 目前，当 Type 为 image，该字段仅支持 TopLeft。
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }
@@ -95,7 +94,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

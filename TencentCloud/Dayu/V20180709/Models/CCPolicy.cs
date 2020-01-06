@@ -31,7 +31,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 匹配模式
+        /// 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
         /// </summary>
         [JsonProperty("Smode")]
         public string Smode{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? Frequency{ get; set; }
 
         /// <summary>
-        /// 执行策略模式，拦截或者验证码
+        /// 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
         /// </summary>
         [JsonProperty("ExeMode")]
         public string ExeMode{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public CCRule[] RuleList{ get; set; }
 
         /// <summary>
-        /// Ip列表
+        /// IP列表
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
@@ -85,20 +85,20 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 可选字段，表示https的CC防护域名对应的转发规则ID;
+        /// 可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// https的CC防护域名
+        /// HTTPS的CC防护域名
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

@@ -30,10 +30,10 @@ namespace TencentCloud.Trtc.V20190722
        private const string version = "2019-07-22";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TrtcClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TrtcClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -53,17 +53,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 接口说明：把房间所有用户从房间踢出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
         /// </summary>
-        /// <param name="req">参考<see cref="DissolveRoomRequest"/></param>
-        /// <returns>参考<see cref="DissolveRoomResponse"/>实例</returns>
-        public async Task<DissolveRoomResponse> DissolveRoom(DissolveRoomRequest req)
+        /// <param name="req"><see cref="DismissRoomRequest"/></param>
+        /// <returns><see cref="DismissRoomResponse"/></returns>
+        public async Task<DismissRoomResponse> DismissRoom(DismissRoomRequest req)
         {
-             JsonResponseModel<DissolveRoomResponse> rsp = null;
+             JsonResponseModel<DismissRoomResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DissolveRoom");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DissolveRoomResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DismissRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -73,17 +73,17 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 接口说明：将用户从房间踢出。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
         /// </summary>
-        /// <param name="req">参考<see cref="KickOutUserRequest"/></param>
-        /// <returns>参考<see cref="KickOutUserResponse"/>实例</returns>
-        public async Task<KickOutUserResponse> KickOutUser(KickOutUserRequest req)
+        /// <param name="req"><see cref="RemoveUserRequest"/></param>
+        /// <returns><see cref="RemoveUserResponse"/></returns>
+        public async Task<RemoveUserResponse> RemoveUser(RemoveUserRequest req)
         {
-             JsonResponseModel<KickOutUserResponse> rsp = null;
+             JsonResponseModel<RemoveUserResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "KickOutUser");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KickOutUserResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "RemoveUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

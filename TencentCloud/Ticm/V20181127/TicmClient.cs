@@ -30,10 +30,10 @@ namespace TencentCloud.Ticm.V20181127
        private const string version = "2018-11-27";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TicmClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Ticm.V20181127
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TicmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Ticm.V20181127
         /// <summary>
         /// 本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
         /// </summary>
-        /// <param name="req">参考<see cref="ImageModerationRequest"/></param>
-        /// <returns>参考<see cref="ImageModerationResponse"/>实例</returns>
+        /// <param name="req"><see cref="ImageModerationRequest"/></param>
+        /// <returns><see cref="ImageModerationResponse"/></returns>
         public async Task<ImageModerationResponse> ImageModeration(ImageModerationRequest req)
         {
              JsonResponseModel<ImageModerationResponse> rsp = null;

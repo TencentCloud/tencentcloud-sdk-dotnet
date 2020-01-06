@@ -273,9 +273,44 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
+        /// <summary>
+        /// 后端服务是否放通来自LB的流量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 内网独占集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExclusiveCluster")]
+        public ExclusiveCluster ExclusiveCluster{ get; set; }
+
+        /// <summary>
+        /// IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPv6Mode")]
+        public string IPv6Mode{ get; set; }
+
+        /// <summary>
+        /// 是否开启SnatPro
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnatPro")]
+        public bool? SnatPro{ get; set; }
+
+        /// <summary>
+        /// 开启SnatPro负载均衡后，SnatIp列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnatIps")]
+        public SnatIp[] SnatIps{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -315,6 +350,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
             this.SetParamSimple(map, prefix + "IsDDos", this.IsDDos);
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
+            this.SetParamSimple(map, prefix + "IPv6Mode", this.IPv6Mode);
+            this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
+            this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         }
     }
 }

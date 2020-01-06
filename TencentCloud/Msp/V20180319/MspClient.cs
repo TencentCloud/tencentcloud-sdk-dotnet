@@ -30,10 +30,10 @@ namespace TencentCloud.Msp.V20180319
        private const string version = "2018-03-19";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public MspClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Msp.V20180319
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public MspClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Msp.V20180319
         /// <summary>
         /// 取消注册迁移任务
         /// </summary>
-        /// <param name="req">参考<see cref="DeregisterMigrationTaskRequest"/></param>
-        /// <returns>参考<see cref="DeregisterMigrationTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeregisterMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeregisterMigrationTaskResponse"/></returns>
         public async Task<DeregisterMigrationTaskResponse> DeregisterMigrationTask(DeregisterMigrationTaskRequest req)
         {
              JsonResponseModel<DeregisterMigrationTaskResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Msp.V20180319
         /// <summary>
         /// 获取指定迁移任务详情
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeMigrationTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeMigrationTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeMigrationTaskRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTaskResponse"/></returns>
         public async Task<DescribeMigrationTaskResponse> DescribeMigrationTask(DescribeMigrationTaskRequest req)
         {
              JsonResponseModel<DescribeMigrationTaskResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Msp.V20180319
         /// <summary>
         /// 获取迁移项目名称列表
         /// </summary>
-        /// <param name="req">参考<see cref="ListMigrationProjectRequest"/></param>
-        /// <returns>参考<see cref="ListMigrationProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListMigrationProjectRequest"/></param>
+        /// <returns><see cref="ListMigrationProjectResponse"/></returns>
         public async Task<ListMigrationProjectResponse> ListMigrationProject(ListMigrationProjectRequest req)
         {
              JsonResponseModel<ListMigrationProjectResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Msp.V20180319
         /// <summary>
         /// 获取迁移任务列表
         /// </summary>
-        /// <param name="req">参考<see cref="ListMigrationTaskRequest"/></param>
-        /// <returns>参考<see cref="ListMigrationTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListMigrationTaskRequest"/></param>
+        /// <returns><see cref="ListMigrationTaskResponse"/></returns>
         public async Task<ListMigrationTaskResponse> ListMigrationTask(ListMigrationTaskRequest req)
         {
              JsonResponseModel<ListMigrationTaskResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Msp.V20180319
         /// <summary>
         /// 更改迁移任务所属项目
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyMigrationTaskBelongToProjectRequest"/></param>
-        /// <returns>参考<see cref="ModifyMigrationTaskBelongToProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyMigrationTaskBelongToProjectRequest"/></param>
+        /// <returns><see cref="ModifyMigrationTaskBelongToProjectResponse"/></returns>
         public async Task<ModifyMigrationTaskBelongToProjectResponse> ModifyMigrationTaskBelongToProject(ModifyMigrationTaskBelongToProjectRequest req)
         {
              JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Msp.V20180319
         /// <summary>
         /// 更新迁移任务状态
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyMigrationTaskStatusRequest"/></param>
-        /// <returns>参考<see cref="ModifyMigrationTaskStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyMigrationTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyMigrationTaskStatusResponse"/></returns>
         public async Task<ModifyMigrationTaskStatusResponse> ModifyMigrationTaskStatus(ModifyMigrationTaskStatusRequest req)
         {
              JsonResponseModel<ModifyMigrationTaskStatusResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Msp.V20180319
         /// <summary>
         /// 注册迁移任务
         /// </summary>
-        /// <param name="req">参考<see cref="RegisterMigrationTaskRequest"/></param>
-        /// <returns>参考<see cref="RegisterMigrationTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="RegisterMigrationTaskRequest"/></param>
+        /// <returns><see cref="RegisterMigrationTaskResponse"/></returns>
         public async Task<RegisterMigrationTaskResponse> RegisterMigrationTask(RegisterMigrationTaskRequest req)
         {
              JsonResponseModel<RegisterMigrationTaskResponse> rsp = null;

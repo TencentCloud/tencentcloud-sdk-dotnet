@@ -31,6 +31,13 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string FusedImage{ get; set; }
 
         /// <summary>
+        /// 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReviewResultSet")]
+        public FuseFaceReviewResult[] ReviewResultSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -38,11 +45,12 @@ namespace TencentCloud.Facefusion.V20181201.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FusedImage", this.FusedImage);
+            this.SetParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

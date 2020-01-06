@@ -30,10 +30,10 @@ namespace TencentCloud.Iai.V20180301
        private const string version = "2018-03-01";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public IaiClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Iai.V20180301
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public IaiClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -58,8 +58,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="AnalyzeFaceRequest"/></param>
-        /// <returns>参考<see cref="AnalyzeFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="AnalyzeFaceRequest"/></param>
+        /// <returns><see cref="AnalyzeFaceResponse"/></returns>
         public async Task<AnalyzeFaceResponse> AnalyzeFace(AnalyzeFaceRequest req)
         {
              JsonResponseModel<AnalyzeFaceResponse> rsp = null;
@@ -76,6 +76,32 @@ namespace TencentCloud.Iai.V20180301
         }
 
         /// <summary>
+        /// 对指定的人员库进行查重，给出疑似相同人的信息。
+        /// 
+        /// 不支持跨算法模型版本查重，且目前仅支持算法模型为3.0的人员库使用查重功能。
+        /// 
+        /// >     
+        /// - 若对完全相同的指定人员库进行查重操作，需等待上次操作完成才可。即，若两次请求输入的 GroupIds 相同，第一次请求若未完成，第二次请求将返回失败。<br>
+        /// 查重的人员库状态为腾讯云开始进行查重任务的那一刻，即您可以理解为当您发起查重请求后，若您的查重任务需要排队，在排队期间您对人员库的增删操作均会会影响查重的结果。腾讯云将以开始进行查重任务的那一刻人员库的状态进行查重。查重任务开始后，您对人员库的任何操作均不影响查重任务的进行。但建议查重任务开始后，请不要对人员库中人员和人脸进行增删操作。
+        /// </summary>
+        /// <param name="req"><see cref="CheckSimilarPersonRequest"/></param>
+        /// <returns><see cref="CheckSimilarPersonResponse"/></returns>
+        public async Task<CheckSimilarPersonResponse> CheckSimilarPerson(CheckSimilarPersonRequest req)
+        {
+             JsonResponseModel<CheckSimilarPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckSimilarPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSimilarPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
         /// 
         /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://cloud.tencent.com/document/product/867/32806)接口。
@@ -83,8 +109,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="CompareFaceRequest"/></param>
-        /// <returns>参考<see cref="CompareFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CompareFaceRequest"/></param>
+        /// <returns><see cref="CompareFaceResponse"/></returns>
         public async Task<CompareFaceResponse> CompareFace(CompareFaceRequest req)
         {
              JsonResponseModel<CompareFaceResponse> rsp = null;
@@ -105,8 +131,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 注：若该人员创建时算法模型版本为2.0，复制到非2.0算法模型版本的Group中时，复制操作将会失败。
         /// </summary>
-        /// <param name="req">参考<see cref="CopyPersonRequest"/></param>
-        /// <returns>参考<see cref="CopyPersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="CopyPersonRequest"/></param>
+        /// <returns><see cref="CopyPersonResponse"/></returns>
         public async Task<CopyPersonResponse> CopyPerson(CopyPersonRequest req)
         {
              JsonResponseModel<CopyPersonResponse> rsp = null;
@@ -128,8 +154,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateFaceRequest"/></param>
-        /// <returns>参考<see cref="CreateFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateFaceRequest"/></param>
+        /// <returns><see cref="CreateFaceResponse"/></returns>
         public async Task<CreateFaceResponse> CreateFace(CreateFaceRequest req)
         {
              JsonResponseModel<CreateFaceResponse> rsp = null;
@@ -148,8 +174,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 用于创建一个空的人员库，如果人员库已存在返回错误。可根据需要创建自定义描述字段，用于辅助描述该人员库下的人员信息。1个APPID下最多创建2万个人员库（Group）、最多包含1000万张人脸（Face），单个人员库（Group）最多包含100万张人脸（Face）。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateGroupRequest"/></param>
-        /// <returns>参考<see cref="CreateGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupResponse"/></returns>
         public async Task<CreateGroupResponse> CreateGroup(CreateGroupRequest req)
         {
              JsonResponseModel<CreateGroupResponse> rsp = null;
@@ -171,8 +197,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="CreatePersonRequest"/></param>
-        /// <returns>参考<see cref="CreatePersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreatePersonRequest"/></param>
+        /// <returns><see cref="CreatePersonResponse"/></returns>
         public async Task<CreatePersonResponse> CreatePerson(CreatePersonRequest req)
         {
              JsonResponseModel<CreatePersonResponse> rsp = null;
@@ -191,8 +217,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 删除一个人员下的人脸图片。如果该人员只有一张人脸图片，则返回错误。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteFaceRequest"/></param>
-        /// <returns>参考<see cref="DeleteFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteFaceRequest"/></param>
+        /// <returns><see cref="DeleteFaceResponse"/></returns>
         public async Task<DeleteFaceResponse> DeleteFace(DeleteFaceRequest req)
         {
              JsonResponseModel<DeleteFaceResponse> rsp = null;
@@ -214,8 +240,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 删除人员库的操作为异步执行，删除单张人脸时间约为10ms，即一小时内可以删除36万张。删除期间，无法向该人员库添加人员。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteGroupRequest"/></param>
-        /// <returns>参考<see cref="DeleteGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
         public async Task<DeleteGroupResponse> DeleteGroup(DeleteGroupRequest req)
         {
              JsonResponseModel<DeleteGroupResponse> rsp = null;
@@ -234,8 +260,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 删除该人员信息，此操作会导致所有人员库均删除此人员。同时，该人员的所有人脸信息将被删除。
         /// </summary>
-        /// <param name="req">参考<see cref="DeletePersonRequest"/></param>
-        /// <returns>参考<see cref="DeletePersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeletePersonRequest"/></param>
+        /// <returns><see cref="DeletePersonResponse"/></returns>
         public async Task<DeletePersonResponse> DeletePerson(DeletePersonRequest req)
         {
              JsonResponseModel<DeletePersonResponse> rsp = null;
@@ -254,8 +280,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 从某人员库中删除人员，此操作仅影响该人员库。若该人员仅存在于指定的人员库中，该人员将被删除，其所有的人脸信息也将被删除。
         /// </summary>
-        /// <param name="req">参考<see cref="DeletePersonFromGroupRequest"/></param>
-        /// <returns>参考<see cref="DeletePersonFromGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeletePersonFromGroupRequest"/></param>
+        /// <returns><see cref="DeletePersonFromGroupResponse"/></returns>
         public async Task<DeletePersonFromGroupResponse> DeletePersonFromGroup(DeletePersonFromGroupRequest req)
         {
              JsonResponseModel<DeletePersonFromGroupResponse> rsp = null;
@@ -289,8 +315,8 @@ namespace TencentCloud.Iai.V20180301
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// 
         /// </summary>
-        /// <param name="req">参考<see cref="DetectFaceRequest"/></param>
-        /// <returns>参考<see cref="DetectFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectFaceRequest"/></param>
+        /// <returns><see cref="DetectFaceResponse"/></returns>
         public async Task<DetectFaceResponse> DetectFace(DetectFaceRequest req)
         {
              JsonResponseModel<DetectFaceResponse> rsp = null;
@@ -317,8 +343,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="DetectLiveFaceRequest"/></param>
-        /// <returns>参考<see cref="DetectLiveFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectLiveFaceRequest"/></param>
+        /// <returns><see cref="DetectLiveFaceResponse"/></returns>
         public async Task<DetectLiveFaceResponse> DetectLiveFace(DetectLiveFaceRequest req)
         {
              JsonResponseModel<DetectLiveFaceResponse> rsp = null;
@@ -335,10 +361,34 @@ namespace TencentCloud.Iai.V20180301
         }
 
         /// <summary>
+        /// 获取若要开始一个人员查重任务，这个任务结束的预估时间。
+        /// 
+        /// 若EndTimestamp符合您预期，请您尽快发起人员查重请求，否则导致可能需要更多处理时间。
+        /// 
+        /// 若预估时间超过5小时，则无法使用人员查重功能。
+        /// </summary>
+        /// <param name="req"><see cref="EstimateCheckSimilarPersonCostTimeRequest"/></param>
+        /// <returns><see cref="EstimateCheckSimilarPersonCostTimeResponse"/></returns>
+        public async Task<EstimateCheckSimilarPersonCostTimeResponse> EstimateCheckSimilarPersonCostTime(EstimateCheckSimilarPersonCostTimeRequest req)
+        {
+             JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EstimateCheckSimilarPersonCostTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取人员库列表。
         /// </summary>
-        /// <param name="req">参考<see cref="GetGroupListRequest"/></param>
-        /// <returns>参考<see cref="GetGroupListResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetGroupListRequest"/></param>
+        /// <returns><see cref="GetGroupListResponse"/></returns>
         public async Task<GetGroupListResponse> GetGroupList(GetGroupListRequest req)
         {
              JsonResponseModel<GetGroupListResponse> rsp = null;
@@ -357,8 +407,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 获取指定人员的信息，包括姓名、性别、人脸等。
         /// </summary>
-        /// <param name="req">参考<see cref="GetPersonBaseInfoRequest"/></param>
-        /// <returns>参考<see cref="GetPersonBaseInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetPersonBaseInfoRequest"/></param>
+        /// <returns><see cref="GetPersonBaseInfoResponse"/></returns>
         public async Task<GetPersonBaseInfoResponse> GetPersonBaseInfo(GetPersonBaseInfoRequest req)
         {
              JsonResponseModel<GetPersonBaseInfoResponse> rsp = null;
@@ -377,8 +427,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 获取指定人员的信息，包括加入的人员库、描述内容等。
         /// </summary>
-        /// <param name="req">参考<see cref="GetPersonGroupInfoRequest"/></param>
-        /// <returns>参考<see cref="GetPersonGroupInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetPersonGroupInfoRequest"/></param>
+        /// <returns><see cref="GetPersonGroupInfoResponse"/></returns>
         public async Task<GetPersonGroupInfoResponse> GetPersonGroupInfo(GetPersonGroupInfoRequest req)
         {
              JsonResponseModel<GetPersonGroupInfoResponse> rsp = null;
@@ -397,8 +447,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 获取指定人员库中的人员列表。
         /// </summary>
-        /// <param name="req">参考<see cref="GetPersonListRequest"/></param>
-        /// <returns>参考<see cref="GetPersonListResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetPersonListRequest"/></param>
+        /// <returns><see cref="GetPersonListResponse"/></returns>
         public async Task<GetPersonListResponse> GetPersonList(GetPersonListRequest req)
         {
              JsonResponseModel<GetPersonListResponse> rsp = null;
@@ -417,8 +467,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 获取指定人员库中人员数量。
         /// </summary>
-        /// <param name="req">参考<see cref="GetPersonListNumRequest"/></param>
-        /// <returns>参考<see cref="GetPersonListNumResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetPersonListNumRequest"/></param>
+        /// <returns><see cref="GetPersonListNumResponse"/></returns>
         public async Task<GetPersonListNumResponse> GetPersonListNum(GetPersonListNumRequest req)
         {
              JsonResponseModel<GetPersonListNumResponse> rsp = null;
@@ -435,10 +485,30 @@ namespace TencentCloud.Iai.V20180301
         }
 
         /// <summary>
+        /// 获取人员查重接口（CheckSimilarPerson）结果。
+        /// </summary>
+        /// <param name="req"><see cref="GetSimilarPersonResultRequest"/></param>
+        /// <returns><see cref="GetSimilarPersonResultResponse"/></returns>
+        public async Task<GetSimilarPersonResultResponse> GetSimilarPersonResult(GetSimilarPersonResultRequest req)
+        {
+             JsonResponseModel<GetSimilarPersonResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSimilarPersonResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSimilarPersonResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改人员库名称、备注、自定义描述字段名称。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyGroupRequest"/></param>
-        /// <returns>参考<see cref="ModifyGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyGroupRequest"/></param>
+        /// <returns><see cref="ModifyGroupResponse"/></returns>
         public async Task<ModifyGroupResponse> ModifyGroup(ModifyGroupRequest req)
         {
              JsonResponseModel<ModifyGroupResponse> rsp = null;
@@ -457,8 +527,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 修改人员信息，包括名称、性别等。人员名称和性别修改会同步到包含该人员的所有人员库。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPersonBaseInfoRequest"/></param>
-        /// <returns>参考<see cref="ModifyPersonBaseInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPersonBaseInfoRequest"/></param>
+        /// <returns><see cref="ModifyPersonBaseInfoResponse"/></returns>
         public async Task<ModifyPersonBaseInfoResponse> ModifyPersonBaseInfo(ModifyPersonBaseInfoRequest req)
         {
              JsonResponseModel<ModifyPersonBaseInfoResponse> rsp = null;
@@ -477,8 +547,8 @@ namespace TencentCloud.Iai.V20180301
         /// <summary>
         /// 修改指定人员库人员描述内容。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPersonGroupInfoRequest"/></param>
-        /// <returns>参考<see cref="ModifyPersonGroupInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPersonGroupInfoRequest"/></param>
+        /// <returns><see cref="ModifyPersonGroupInfoResponse"/></returns>
         public async Task<ModifyPersonGroupInfoResponse> ModifyPersonGroupInfo(ModifyPersonGroupInfoRequest req)
         {
              JsonResponseModel<ModifyPersonGroupInfoResponse> rsp = null;
@@ -501,8 +571,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="SearchFacesRequest"/></param>
-        /// <returns>参考<see cref="SearchFacesResponse"/>实例</returns>
+        /// <param name="req"><see cref="SearchFacesRequest"/></param>
+        /// <returns><see cref="SearchFacesResponse"/></returns>
         public async Task<SearchFacesResponse> SearchFaces(SearchFacesRequest req)
         {
              JsonResponseModel<SearchFacesResponse> rsp = null;
@@ -522,8 +592,8 @@ namespace TencentCloud.Iai.V20180301
         /// 用于对一张待识别的人脸图片，在一个或多个人员库中识别出最相似的 TopN 人员，按照人员库的维度以人员相似度从大到小顺序排列。
         /// 此接口需与[人员库管理相关接口](https://cloud.tencent.com/document/product/867/32794)结合使用。
         /// </summary>
-        /// <param name="req">参考<see cref="SearchFacesReturnsByGroupRequest"/></param>
-        /// <returns>参考<see cref="SearchFacesReturnsByGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="SearchFacesReturnsByGroupRequest"/></param>
+        /// <returns><see cref="SearchFacesReturnsByGroupResponse"/></returns>
         public async Task<SearchFacesReturnsByGroupResponse> SearchFacesReturnsByGroup(SearchFacesReturnsByGroupRequest req)
         {
              JsonResponseModel<SearchFacesReturnsByGroupResponse> rsp = null;
@@ -547,9 +617,10 @@ namespace TencentCloud.Iai.V20180301
         /// 人员搜索接口和人脸搜索接口的区别是：人脸搜索会比对该 Person 下所有 Face ，而人员搜索比对的是该 Person 的 Person 特征。
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// - 仅支持算法模型版本（FaceModelVersion）为3.0的人员库。
         /// </summary>
-        /// <param name="req">参考<see cref="SearchPersonsRequest"/></param>
-        /// <returns>参考<see cref="SearchPersonsResponse"/>实例</returns>
+        /// <param name="req"><see cref="SearchPersonsRequest"/></param>
+        /// <returns><see cref="SearchPersonsResponse"/></returns>
         public async Task<SearchPersonsResponse> SearchPersons(SearchPersonsRequest req)
         {
              JsonResponseModel<SearchPersonsResponse> rsp = null;
@@ -571,9 +642,12 @@ namespace TencentCloud.Iai.V20180301
         /// 本接口会将该人员（Person）下的所有人脸（Face）进行融合特征处理，即若某个Person下有4张 Face，本接口会将4张 Face 的特征进行融合处理，生成对应这个 Person 的特征，使人员搜索（确定待识别的人脸图片是某人员）更加准确。
         /// 
         /// 人员搜索和人脸搜索的区别是：人脸搜索比对该 Person 下所有 Face ，而人员搜索比对的是该 Person 的 Person 特征。
+        /// >     
+        /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// - 仅支持算法模型版本（FaceModelVersion）为3.0的人员库。
         /// </summary>
-        /// <param name="req">参考<see cref="SearchPersonsReturnsByGroupRequest"/></param>
-        /// <returns>参考<see cref="SearchPersonsReturnsByGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="SearchPersonsReturnsByGroupRequest"/></param>
+        /// <returns><see cref="SearchPersonsReturnsByGroupResponse"/></returns>
         public async Task<SearchPersonsReturnsByGroupResponse> SearchPersonsReturnsByGroup(SearchPersonsReturnsByGroupRequest req)
         {
              JsonResponseModel<SearchPersonsReturnsByGroupResponse> rsp = null;
@@ -595,8 +669,8 @@ namespace TencentCloud.Iai.V20180301
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="VerifyFaceRequest"/></param>
-        /// <returns>参考<see cref="VerifyFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="VerifyFaceRequest"/></param>
+        /// <returns><see cref="VerifyFaceResponse"/></returns>
         public async Task<VerifyFaceResponse> VerifyFace(VerifyFaceRequest req)
         {
              JsonResponseModel<VerifyFaceResponse> rsp = null;
@@ -621,9 +695,10 @@ namespace TencentCloud.Iai.V20180301
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// - 仅支持算法模型版本（FaceModelVersion）为3.0的人员库。
         /// </summary>
-        /// <param name="req">参考<see cref="VerifyPersonRequest"/></param>
-        /// <returns>参考<see cref="VerifyPersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="VerifyPersonRequest"/></param>
+        /// <returns><see cref="VerifyPersonResponse"/></returns>
         public async Task<VerifyPersonResponse> VerifyPerson(VerifyPersonRequest req)
         {
              JsonResponseModel<VerifyPersonResponse> rsp = null;

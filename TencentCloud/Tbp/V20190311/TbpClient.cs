@@ -30,10 +30,10 @@ namespace TencentCloud.Tbp.V20190311
        private const string version = "2019-03-11";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TbpClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tbp.V20190311
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TbpClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Tbp.V20190311
         /// <summary>
         /// 对当前机器人的会话状态进行复位
         /// </summary>
-        /// <param name="req">参考<see cref="ResetRequest"/></param>
-        /// <returns>参考<see cref="ResetResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetRequest"/></param>
+        /// <returns><see cref="ResetResponse"/></returns>
         public async Task<ResetResponse> Reset(ResetRequest req)
         {
              JsonResponseModel<ResetResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Tbp.V20190311
         /// <summary>
         /// 接收调用侧的文本输入，返回应答文本。已废弃，推荐使用最新版TextProcess接口。
         /// </summary>
-        /// <param name="req">参考<see cref="TextProcessRequest"/></param>
-        /// <returns>参考<see cref="TextProcessResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextProcessRequest"/></param>
+        /// <returns><see cref="TextProcessResponse"/></returns>
         public async Task<TextProcessResponse> TextProcess(TextProcessRequest req)
         {
              JsonResponseModel<TextProcessResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Tbp.V20190311
         /// <summary>
         /// 会话重置接口。已废弃，推荐使用最新版TextReset接口。
         /// </summary>
-        /// <param name="req">参考<see cref="TextResetRequest"/></param>
-        /// <returns>参考<see cref="TextResetResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextResetRequest"/></param>
+        /// <returns><see cref="TextResetResponse"/></returns>
         public async Task<TextResetResponse> TextReset(TextResetRequest req)
         {
              JsonResponseModel<TextResetResponse> rsp = null;

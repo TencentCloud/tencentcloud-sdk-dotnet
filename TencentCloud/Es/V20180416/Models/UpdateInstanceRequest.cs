@@ -37,6 +37,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
+        /// 已废弃请使用NodeInfoList
         /// 节点个数（2-50个）
         /// </summary>
         [JsonProperty("NodeNum")]
@@ -61,30 +62,35 @@ namespace TencentCloud.Es.V20180416.Models
         public EsAcl EsAcl{ get; set; }
 
         /// <summary>
+        /// 已废弃请使用NodeInfoList
         /// 磁盘大小（单位GB）
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
+        /// 已废弃请使用NodeInfoList
         /// 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
+        /// 已废弃请使用NodeInfoList
         /// 专用主节点个数（只支持3个或5个）
         /// </summary>
         [JsonProperty("MasterNodeNum")]
         public ulong? MasterNodeNum{ get; set; }
 
         /// <summary>
+        /// 已废弃请使用NodeInfoList
         /// 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         /// </summary>
         [JsonProperty("MasterNodeType")]
         public string MasterNodeType{ get; set; }
 
         /// <summary>
+        /// 已废弃请使用NodeInfoList
         /// 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
         /// </summary>
         [JsonProperty("MasterNodeDiskSize")]
@@ -102,9 +108,39 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("CosBackup")]
         public CosBackup CosBackup{ get; set; }
 
+        /// <summary>
+        /// 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
+        /// </summary>
+        [JsonProperty("NodeInfoList")]
+        public NodeInfo[] NodeInfoList{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 公网访问状态
+        /// </summary>
+        [JsonProperty("PublicAccess")]
+        public string PublicAccess{ get; set; }
+
+        /// <summary>
+        /// 公网访问控制列表
+        /// </summary>
+        [JsonProperty("EsPublicAcl")]
+        public EsPublicAcl EsPublicAcl{ get; set; }
+
+        /// <summary>
+        /// Kibana公网访问状态
+        /// </summary>
+        [JsonProperty("KibanaPublicAccess")]
+        public string KibanaPublicAccess{ get; set; }
+
+        /// <summary>
+        /// Kibana内网访问状态
+        /// </summary>
+        [JsonProperty("KibanaPrivateAccess")]
+        public string KibanaPrivateAccess{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -121,6 +157,11 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "MasterNodeDiskSize", this.MasterNodeDiskSize);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
             this.SetParamObj(map, prefix + "CosBackup.", this.CosBackup);
+            this.SetParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
+            this.SetParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
+            this.SetParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
+            this.SetParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
+            this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         }
     }
 }

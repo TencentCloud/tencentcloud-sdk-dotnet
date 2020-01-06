@@ -60,9 +60,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DiskAvailable")]
         public ulong? DiskAvailable{ get; set; }
 
+        /// <summary>
+        /// cdh实例磁盘类型
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -72,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "MemAvailable", this.MemAvailable);
             this.SetParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
             this.SetParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

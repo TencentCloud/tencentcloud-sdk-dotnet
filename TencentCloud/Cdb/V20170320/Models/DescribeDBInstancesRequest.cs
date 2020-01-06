@@ -174,9 +174,15 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("WithMaster")]
         public long? WithMaster{ get; set; }
 
+        /// <summary>
+        /// 置放群组ID列表。
+        /// </summary>
+        [JsonProperty("DeployGroupIds")]
+        public string[] DeployGroupIds{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -205,6 +211,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "WithDr", this.WithDr);
             this.SetParamSimple(map, prefix + "WithRo", this.WithRo);
             this.SetParamSimple(map, prefix + "WithMaster", this.WithMaster);
+            this.SetParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
         }
     }
 }

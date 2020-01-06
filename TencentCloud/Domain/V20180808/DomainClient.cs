@@ -30,10 +30,10 @@ namespace TencentCloud.Domain.V20180808
        private const string version = "2018-08-08";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public DomainClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public DomainClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Domain.V20180808
         /// <summary>
         /// 检查域名是否可以注册
         /// </summary>
-        /// <param name="req">参考<see cref="CheckDomainRequest"/></param>
-        /// <returns>参考<see cref="CheckDomainResponse"/>实例</returns>
+        /// <param name="req"><see cref="CheckDomainRequest"/></param>
+        /// <returns><see cref="CheckDomainResponse"/></returns>
         public async Task<CheckDomainResponse> CheckDomain(CheckDomainRequest req)
         {
              JsonResponseModel<CheckDomainResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Domain.V20180808
         /// <summary>
         /// 按照域名后缀获取对应的价格列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDomainPriceListRequest"/></param>
-        /// <returns>参考<see cref="DescribeDomainPriceListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDomainPriceListRequest"/></param>
+        /// <returns><see cref="DescribeDomainPriceListResponse"/></returns>
         public async Task<DescribeDomainPriceListResponse> DescribeDomainPriceList(DescribeDomainPriceListRequest req)
         {
              JsonResponseModel<DescribeDomainPriceListResponse> rsp = null;

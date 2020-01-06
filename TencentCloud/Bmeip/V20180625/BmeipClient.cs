@@ -30,10 +30,10 @@ namespace TencentCloud.Bmeip.V20180625
        private const string version = "2018-06-25";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public BmeipClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public BmeipClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 此接口用于为某个 EIP 关联 ACL。
         /// </summary>
-        /// <param name="req">参考<see cref="BindEipAclsRequest"/></param>
-        /// <returns>参考<see cref="BindEipAclsResponse"/>实例</returns>
+        /// <param name="req"><see cref="BindEipAclsRequest"/></param>
+        /// <returns><see cref="BindEipAclsResponse"/></returns>
         public async Task<BindEipAclsResponse> BindEipAcls(BindEipAclsRequest req)
         {
              JsonResponseModel<BindEipAclsResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// BindHosted接口用于绑定黑石弹性公网IP到黑石托管机器上
         /// </summary>
-        /// <param name="req">参考<see cref="BindHostedRequest"/></param>
-        /// <returns>参考<see cref="BindHostedResponse"/>实例</returns>
+        /// <param name="req"><see cref="BindHostedRequest"/></param>
+        /// <returns><see cref="BindHostedResponse"/></returns>
         public async Task<BindHostedResponse> BindHosted(BindHostedRequest req)
         {
              JsonResponseModel<BindHostedResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 绑定黑石EIP
         /// </summary>
-        /// <param name="req">参考<see cref="BindRsRequest"/></param>
-        /// <returns>参考<see cref="BindRsResponse"/>实例</returns>
+        /// <param name="req"><see cref="BindRsRequest"/></param>
+        /// <returns><see cref="BindRsResponse"/></returns>
         public async Task<BindRsResponse> BindRs(BindRsRequest req)
         {
              JsonResponseModel<BindRsResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 黑石EIP绑定VPCIP
         /// </summary>
-        /// <param name="req">参考<see cref="BindVpcIpRequest"/></param>
-        /// <returns>参考<see cref="BindVpcIpResponse"/>实例</returns>
+        /// <param name="req"><see cref="BindVpcIpRequest"/></param>
+        /// <returns><see cref="BindVpcIpResponse"/></returns>
         public async Task<BindVpcIpResponse> BindVpcIp(BindVpcIpRequest req)
         {
              JsonResponseModel<BindVpcIpResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 创建黑石弹性公网IP
         /// </summary>
-        /// <param name="req">参考<see cref="CreateEipRequest"/></param>
-        /// <returns>参考<see cref="CreateEipResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateEipRequest"/></param>
+        /// <returns><see cref="CreateEipResponse"/></returns>
         public async Task<CreateEipResponse> CreateEip(CreateEipRequest req)
         {
              JsonResponseModel<CreateEipResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 创建黑石弹性公网 EIPACL
         /// </summary>
-        /// <param name="req">参考<see cref="CreateEipAclRequest"/></param>
-        /// <returns>参考<see cref="CreateEipAclResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateEipAclRequest"/></param>
+        /// <returns><see cref="CreateEipAclResponse"/></returns>
         public async Task<CreateEipAclResponse> CreateEipAcl(CreateEipAclRequest req)
         {
              JsonResponseModel<CreateEipAclResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 释放黑石弹性公网IP
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteEipRequest"/></param>
-        /// <returns>参考<see cref="DeleteEipResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteEipRequest"/></param>
+        /// <returns><see cref="DeleteEipResponse"/></returns>
         public async Task<DeleteEipResponse> DeleteEip(DeleteEipRequest req)
         {
              JsonResponseModel<DeleteEipResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 删除弹性公网IP ACL
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteEipAclRequest"/></param>
-        /// <returns>参考<see cref="DeleteEipAclResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteEipAclRequest"/></param>
+        /// <returns><see cref="DeleteEipAclResponse"/></returns>
         public async Task<DeleteEipAclResponse> DeleteEipAcl(DeleteEipAclRequest req)
         {
              JsonResponseModel<DeleteEipAclResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 查询弹性公网IP ACL
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeEipAclsRequest"/></param>
-        /// <returns>参考<see cref="DescribeEipAclsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeEipAclsRequest"/></param>
+        /// <returns><see cref="DescribeEipAclsResponse"/></returns>
         public async Task<DescribeEipAclsResponse> DescribeEipAcls(DescribeEipAclsRequest req)
         {
              JsonResponseModel<DescribeEipAclsResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 查询黑石EIP 限额
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeEipQuotaRequest"/></param>
-        /// <returns>参考<see cref="DescribeEipQuotaResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeEipQuotaRequest"/></param>
+        /// <returns><see cref="DescribeEipQuotaResponse"/></returns>
         public async Task<DescribeEipQuotaResponse> DescribeEipQuota(DescribeEipQuotaRequest req)
         {
              JsonResponseModel<DescribeEipQuotaResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 黑石EIP查询任务状态
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeEipTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeEipTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeEipTaskRequest"/></param>
+        /// <returns><see cref="DescribeEipTaskResponse"/></returns>
         public async Task<DescribeEipTaskResponse> DescribeEipTask(DescribeEipTaskRequest req)
         {
              JsonResponseModel<DescribeEipTaskResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 黑石EIP查询接口
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeEipsRequest"/></param>
-        /// <returns>参考<see cref="DescribeEipsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeEipsRequest"/></param>
+        /// <returns><see cref="DescribeEipsResponse"/></returns>
         public async Task<DescribeEipsResponse> DescribeEips(DescribeEipsRequest req)
         {
              JsonResponseModel<DescribeEipsResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 修改弹性公网IP ACL
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyEipAclRequest"/></param>
-        /// <returns>参考<see cref="ModifyEipAclResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyEipAclRequest"/></param>
+        /// <returns><see cref="ModifyEipAclResponse"/></returns>
         public async Task<ModifyEipAclResponse> ModifyEipAcl(ModifyEipAclRequest req)
         {
              JsonResponseModel<ModifyEipAclResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 黑石EIP修改计费方式
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyEipChargeRequest"/></param>
-        /// <returns>参考<see cref="ModifyEipChargeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyEipChargeRequest"/></param>
+        /// <returns><see cref="ModifyEipChargeResponse"/></returns>
         public async Task<ModifyEipChargeResponse> ModifyEipCharge(ModifyEipChargeRequest req)
         {
              JsonResponseModel<ModifyEipChargeResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 更新黑石EIP名称
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyEipNameRequest"/></param>
-        /// <returns>参考<see cref="ModifyEipNameResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyEipNameRequest"/></param>
+        /// <returns><see cref="ModifyEipNameResponse"/></returns>
         public async Task<ModifyEipNameResponse> ModifyEipName(ModifyEipNameRequest req)
         {
              JsonResponseModel<ModifyEipNameResponse> rsp = null;
@@ -355,8 +355,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 解绑弹性公网IP ACL
         /// </summary>
-        /// <param name="req">参考<see cref="UnbindEipAclsRequest"/></param>
-        /// <returns>参考<see cref="UnbindEipAclsResponse"/>实例</returns>
+        /// <param name="req"><see cref="UnbindEipAclsRequest"/></param>
+        /// <returns><see cref="UnbindEipAclsResponse"/></returns>
         public async Task<UnbindEipAclsResponse> UnbindEipAcls(UnbindEipAclsRequest req)
         {
              JsonResponseModel<UnbindEipAclsResponse> rsp = null;
@@ -375,8 +375,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// UnbindHosted接口用于解绑托管机器上的EIP
         /// </summary>
-        /// <param name="req">参考<see cref="UnbindHostedRequest"/></param>
-        /// <returns>参考<see cref="UnbindHostedResponse"/>实例</returns>
+        /// <param name="req"><see cref="UnbindHostedRequest"/></param>
+        /// <returns><see cref="UnbindHostedResponse"/></returns>
         public async Task<UnbindHostedResponse> UnbindHosted(UnbindHostedRequest req)
         {
              JsonResponseModel<UnbindHostedResponse> rsp = null;
@@ -395,8 +395,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 解绑黑石EIP
         /// </summary>
-        /// <param name="req">参考<see cref="UnbindRsRequest"/></param>
-        /// <returns>参考<see cref="UnbindRsResponse"/>实例</returns>
+        /// <param name="req"><see cref="UnbindRsRequest"/></param>
+        /// <returns><see cref="UnbindRsResponse"/></returns>
         public async Task<UnbindRsResponse> UnbindRs(UnbindRsRequest req)
         {
              JsonResponseModel<UnbindRsResponse> rsp = null;
@@ -415,8 +415,8 @@ namespace TencentCloud.Bmeip.V20180625
         /// <summary>
         /// 黑石EIP解绑VPCIP
         /// </summary>
-        /// <param name="req">参考<see cref="UnbindVpcIpRequest"/></param>
-        /// <returns>参考<see cref="UnbindVpcIpResponse"/>实例</returns>
+        /// <param name="req"><see cref="UnbindVpcIpRequest"/></param>
+        /// <returns><see cref="UnbindVpcIpResponse"/></returns>
         public async Task<UnbindVpcIpResponse> UnbindVpcIp(UnbindVpcIpRequest req)
         {
              JsonResponseModel<UnbindVpcIpResponse> rsp = null;

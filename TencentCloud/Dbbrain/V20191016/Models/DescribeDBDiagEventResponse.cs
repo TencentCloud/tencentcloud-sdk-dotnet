@@ -61,7 +61,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string Problem{ get; set; }
 
         /// <summary>
-        /// 严重程度。
+        /// 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
         /// </summary>
         [JsonProperty("Severity")]
         public long? Severity{ get; set; }
@@ -99,7 +99,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

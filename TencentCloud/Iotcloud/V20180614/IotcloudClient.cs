@@ -30,10 +30,10 @@ namespace TencentCloud.Iotcloud.V20180614
        private const string version = "2018-06-14";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public IotcloudClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public IotcloudClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（BindDevices）用于网关设备批量绑定子设备
         /// </summary>
-        /// <param name="req">参考<see cref="BindDevicesRequest"/></param>
-        /// <returns>参考<see cref="BindDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="BindDevicesRequest"/></param>
+        /// <returns><see cref="BindDevicesResponse"/></returns>
         public async Task<BindDevicesResponse> BindDevices(BindDevicesRequest req)
         {
              JsonResponseModel<BindDevicesResponse> rsp = null;
@@ -73,10 +73,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CancelTask）用于取消一个未被调度的任务。
+        /// 本接口（CancelTask）用于取消一个未被调度的任务。 
         /// </summary>
-        /// <param name="req">参考<see cref="CancelTaskRequest"/></param>
-        /// <returns>参考<see cref="CancelTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="CancelTaskRequest"/></param>
+        /// <returns><see cref="CancelTaskResponse"/></returns>
         public async Task<CancelTaskResponse> CancelTask(CancelTaskRequest req)
         {
              JsonResponseModel<CancelTaskResponse> rsp = null;
@@ -93,10 +93,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateDevice）用于新建一个物联网通信设备。
+        /// 本接口（CreateDevice）用于新建一个物联网通信设备。 
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDeviceRequest"/></param>
-        /// <returns>参考<see cref="CreateDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDeviceRequest"/></param>
+        /// <returns><see cref="CreateDeviceResponse"/></returns>
         public async Task<CreateDeviceResponse> CreateDevice(CreateDeviceRequest req)
         {
              JsonResponseModel<CreateDeviceResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 创建lora类型的设备
         /// </summary>
-        /// <param name="req">参考<see cref="CreateLoraDeviceRequest"/></param>
-        /// <returns>参考<see cref="CreateLoraDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateLoraDeviceRequest"/></param>
+        /// <returns><see cref="CreateLoraDeviceResponse"/></returns>
         public async Task<CreateLoraDeviceResponse> CreateLoraDevice(CreateLoraDeviceRequest req)
         {
              JsonResponseModel<CreateLoraDeviceResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（CreateMultiDevice）用于批量创建物联云设备。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateMultiDeviceRequest"/></param>
-        /// <returns>参考<see cref="CreateMultiDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateMultiDeviceRequest"/></param>
+        /// <returns><see cref="CreateMultiDeviceResponse"/></returns>
         public async Task<CreateMultiDeviceResponse> CreateMultiDevice(CreateMultiDeviceRequest req)
         {
              JsonResponseModel<CreateMultiDeviceResponse> rsp = null;
@@ -153,10 +153,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品
+        /// 本接口（CreateProduct）用于创建一个新的物联网通信产品 
         /// </summary>
-        /// <param name="req">参考<see cref="CreateProductRequest"/></param>
-        /// <returns>参考<see cref="CreateProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateProductRequest"/></param>
+        /// <returns><see cref="CreateProductResponse"/></returns>
         public async Task<CreateProductResponse> CreateProduct(CreateProductRequest req)
         {
              JsonResponseModel<CreateProductResponse> rsp = null;
@@ -173,10 +173,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateTask）用于创建一个批量任务。目前此接口可以创建批量更新影子以及批量下发消息的任务
+        /// 本接口（CreateTask）用于创建一个批量任务。目前此接口可以创建批量更新影子以及批量下发消息的任务 
         /// </summary>
-        /// <param name="req">参考<see cref="CreateTaskRequest"/></param>
-        /// <returns>参考<see cref="CreateTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateTaskRequest"/></param>
+        /// <returns><see cref="CreateTaskResponse"/></returns>
         public async Task<CreateTaskResponse> CreateTask(CreateTaskRequest req)
         {
              JsonResponseModel<CreateTaskResponse> rsp = null;
@@ -193,10 +193,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateTopicPolicy）用于创建一个Topic
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
         /// </summary>
-        /// <param name="req">参考<see cref="CreateTopicPolicyRequest"/></param>
-        /// <returns>参考<see cref="CreateTopicPolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateTopicPolicyRequest"/></param>
+        /// <returns><see cref="CreateTopicPolicyResponse"/></returns>
         public async Task<CreateTopicPolicyResponse> CreateTopicPolicy(CreateTopicPolicyRequest req)
         {
              JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（CreateTopicRule）用于创建一个规则
         /// </summary>
-        /// <param name="req">参考<see cref="CreateTopicRuleRequest"/></param>
-        /// <returns>参考<see cref="CreateTopicRuleResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateTopicRuleRequest"/></param>
+        /// <returns><see cref="CreateTopicRuleResponse"/></returns>
         public async Task<CreateTopicRuleResponse> CreateTopicRule(CreateTopicRuleRequest req)
         {
              JsonResponseModel<CreateTopicRuleResponse> rsp = null;
@@ -233,10 +233,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DeleteDevice）用于删除物联网通信设备。
+        /// 本接口（DeleteDevice）用于删除物联网通信设备。 
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteDeviceRequest"/></param>
-        /// <returns>参考<see cref="DeleteDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
+        /// <returns><see cref="DeleteDeviceResponse"/></returns>
         public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest req)
         {
              JsonResponseModel<DeleteDeviceResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 删除lora类型的设备
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteLoraDeviceRequest"/></param>
-        /// <returns>参考<see cref="DeleteLoraDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteLoraDeviceRequest"/></param>
+        /// <returns><see cref="DeleteLoraDeviceResponse"/></returns>
         public async Task<DeleteLoraDeviceResponse> DeleteLoraDevice(DeleteLoraDeviceRequest req)
         {
              JsonResponseModel<DeleteLoraDeviceResponse> rsp = null;
@@ -273,10 +273,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DeleteProduct）用于删除一个物联网通信产品。
+        /// 本接口（DeleteProduct）用于删除一个物联网通信产品
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteProductRequest"/></param>
-        /// <returns>参考<see cref="DeleteProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteProductRequest"/></param>
+        /// <returns><see cref="DeleteProductResponse"/></returns>
         public async Task<DeleteProductResponse> DeleteProduct(DeleteProductRequest req)
         {
              JsonResponseModel<DeleteProductResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（DeleteTopicRule）用于删除规则
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteTopicRuleRequest"/></param>
-        /// <returns>参考<see cref="DeleteTopicRuleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteTopicRuleRequest"/></param>
+        /// <returns><see cref="DeleteTopicRuleResponse"/></returns>
         public async Task<DeleteTopicRuleResponse> DeleteTopicRule(DeleteTopicRuleRequest req)
         {
              JsonResponseModel<DeleteTopicRuleResponse> rsp = null;
@@ -313,10 +313,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDevice）用于查看设备信息
+        /// 本接口（DescribeDevice）用于查看设备信息 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
+        /// <returns><see cref="DescribeDeviceResponse"/></returns>
         public async Task<DescribeDeviceResponse> DescribeDevice(DescribeDeviceRequest req)
         {
              JsonResponseModel<DescribeDeviceResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceClientKeyRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceClientKeyResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceClientKeyRequest"/></param>
+        /// <returns><see cref="DescribeDeviceClientKeyResponse"/></returns>
         public async Task<DescribeDeviceClientKeyResponse> DescribeDeviceClientKey(DescribeDeviceClientKeyRequest req)
         {
              JsonResponseModel<DescribeDeviceClientKeyResponse> rsp = null;
@@ -353,10 +353,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。
+        /// 本接口（DescribeDeviceShadow）用于查询虚拟设备信息。 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceShadowRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceShadowResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceShadowRequest"/></param>
+        /// <returns><see cref="DescribeDeviceShadowResponse"/></returns>
         public async Task<DescribeDeviceShadowResponse> DescribeDeviceShadow(DescribeDeviceShadowRequest req)
         {
              JsonResponseModel<DescribeDeviceShadowResponse> rsp = null;
@@ -373,10 +373,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。
+        /// 本接口（DescribeDevices）用于查询物联网通信设备的设备列表。 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDevicesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDevicesRequest"/></param>
+        /// <returns><see cref="DescribeDevicesResponse"/></returns>
         public async Task<DescribeDevicesResponse> DescribeDevices(DescribeDevicesRequest req)
         {
              JsonResponseModel<DescribeDevicesResponse> rsp = null;
@@ -395,8 +395,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 获取lora类型设备的详细信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeLoraDeviceRequest"/></param>
-        /// <returns>参考<see cref="DescribeLoraDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeLoraDeviceRequest"/></param>
+        /// <returns><see cref="DescribeLoraDeviceResponse"/></returns>
         public async Task<DescribeLoraDeviceResponse> DescribeLoraDevice(DescribeLoraDeviceRequest req)
         {
              JsonResponseModel<DescribeLoraDeviceResponse> rsp = null;
@@ -415,8 +415,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（DescribeMultiDevTask）用于查询批量创建设备任务的执行状态。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeMultiDevTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeMultiDevTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeMultiDevTaskRequest"/></param>
+        /// <returns><see cref="DescribeMultiDevTaskResponse"/></returns>
         public async Task<DescribeMultiDevTaskResponse> DescribeMultiDevTask(DescribeMultiDevTaskRequest req)
         {
              JsonResponseModel<DescribeMultiDevTaskResponse> rsp = null;
@@ -435,8 +435,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（DescribeMultiDevices）用于查询批量创建设备的执行结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeMultiDevicesRequest"/></param>
-        /// <returns>参考<see cref="DescribeMultiDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeMultiDevicesRequest"/></param>
+        /// <returns><see cref="DescribeMultiDevicesResponse"/></returns>
         public async Task<DescribeMultiDevicesResponse> DescribeMultiDevices(DescribeMultiDevicesRequest req)
         {
              JsonResponseModel<DescribeMultiDevicesResponse> rsp = null;
@@ -453,10 +453,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeProducts）用于列出产品列表。
+        /// 本接口（DescribeProducts）用于列出产品列表。 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeProductsRequest"/></param>
-        /// <returns>参考<see cref="DescribeProductsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeProductsRequest"/></param>
+        /// <returns><see cref="DescribeProductsResponse"/></returns>
         public async Task<DescribeProductsResponse> DescribeProducts(DescribeProductsRequest req)
         {
              JsonResponseModel<DescribeProductsResponse> rsp = null;
@@ -473,10 +473,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月
+        /// 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTaskRequest"/></param>
+        /// <returns><see cref="DescribeTaskResponse"/></returns>
         public async Task<DescribeTaskResponse> DescribeTask(DescribeTaskRequest req)
         {
              JsonResponseModel<DescribeTaskResponse> rsp = null;
@@ -493,10 +493,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月
+        /// 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTasksRequest"/></param>
-        /// <returns>参考<see cref="DescribeTasksResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
         public async Task<DescribeTasksResponse> DescribeTasks(DescribeTasksRequest req)
         {
              JsonResponseModel<DescribeTasksResponse> rsp = null;
@@ -515,8 +515,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（DisableTopicRule）用于禁用规则
         /// </summary>
-        /// <param name="req">参考<see cref="DisableTopicRuleRequest"/></param>
-        /// <returns>参考<see cref="DisableTopicRuleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DisableTopicRuleRequest"/></param>
+        /// <returns><see cref="DisableTopicRuleResponse"/></returns>
         public async Task<DisableTopicRuleResponse> DisableTopicRule(DisableTopicRuleRequest req)
         {
              JsonResponseModel<DisableTopicRuleResponse> rsp = null;
@@ -535,8 +535,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（EnableTopicRule）用于启用规则
         /// </summary>
-        /// <param name="req">参考<see cref="EnableTopicRuleRequest"/></param>
-        /// <returns>参考<see cref="EnableTopicRuleResponse"/>实例</returns>
+        /// <param name="req"><see cref="EnableTopicRuleRequest"/></param>
+        /// <returns><see cref="EnableTopicRuleResponse"/></returns>
         public async Task<EnableTopicRuleResponse> EnableTopicRule(EnableTopicRuleRequest req)
         {
              JsonResponseModel<EnableTopicRuleResponse> rsp = null;
@@ -555,8 +555,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 模拟lora类型的设备端向服务器端发送消息
         /// </summary>
-        /// <param name="req">参考<see cref="PublishAsDeviceRequest"/></param>
-        /// <returns>参考<see cref="PublishAsDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="PublishAsDeviceRequest"/></param>
+        /// <returns><see cref="PublishAsDeviceResponse"/></returns>
         public async Task<PublishAsDeviceResponse> PublishAsDevice(PublishAsDeviceRequest req)
         {
              JsonResponseModel<PublishAsDeviceResponse> rsp = null;
@@ -573,10 +573,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（PublishMessage）用于向某个主题发消息。
+        /// 本接口（PublishMessage）用于向某个主题发消息。 
         /// </summary>
-        /// <param name="req">参考<see cref="PublishMessageRequest"/></param>
-        /// <returns>参考<see cref="PublishMessageResponse"/>实例</returns>
+        /// <param name="req"><see cref="PublishMessageRequest"/></param>
+        /// <returns><see cref="PublishMessageResponse"/></returns>
         public async Task<PublishMessageResponse> PublishMessage(PublishMessageRequest req)
         {
              JsonResponseModel<PublishMessageResponse> rsp = null;
@@ -595,8 +595,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 服务器端下发消息给lora类型的设备
         /// </summary>
-        /// <param name="req">参考<see cref="PublishToDeviceRequest"/></param>
-        /// <returns>参考<see cref="PublishToDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="PublishToDeviceRequest"/></param>
+        /// <returns><see cref="PublishToDeviceResponse"/></returns>
         public async Task<PublishToDeviceResponse> PublishToDevice(PublishToDeviceRequest req)
         {
              JsonResponseModel<PublishToDeviceResponse> rsp = null;
@@ -615,8 +615,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（ReplaceTopicRule）用于修改替换规则
         /// </summary>
-        /// <param name="req">参考<see cref="ReplaceTopicRuleRequest"/></param>
-        /// <returns>参考<see cref="ReplaceTopicRuleResponse"/>实例</returns>
+        /// <param name="req"><see cref="ReplaceTopicRuleRequest"/></param>
+        /// <returns><see cref="ReplaceTopicRuleResponse"/></returns>
         public async Task<ReplaceTopicRuleResponse> ReplaceTopicRule(ReplaceTopicRuleRequest req)
         {
              JsonResponseModel<ReplaceTopicRuleResponse> rsp = null;
@@ -633,10 +633,10 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 重置设备的连接状态
+        /// 重置设备的连接状态 
         /// </summary>
-        /// <param name="req">参考<see cref="ResetDeviceStateRequest"/></param>
-        /// <returns>参考<see cref="ResetDeviceStateResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetDeviceStateRequest"/></param>
+        /// <returns><see cref="ResetDeviceStateResponse"/></returns>
         public async Task<ResetDeviceStateResponse> ResetDeviceState(ResetDeviceStateRequest req)
         {
              JsonResponseModel<ResetDeviceStateResponse> rsp = null;
@@ -655,8 +655,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（UnbindDevices）用于网关设备批量解绑子设备
         /// </summary>
-        /// <param name="req">参考<see cref="UnbindDevicesRequest"/></param>
-        /// <returns>参考<see cref="UnbindDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
+        /// <returns><see cref="UnbindDevicesResponse"/></returns>
         public async Task<UnbindDevicesResponse> UnbindDevices(UnbindDevicesRequest req)
         {
              JsonResponseModel<UnbindDevicesResponse> rsp = null;
@@ -675,8 +675,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 启用或者禁用设备
         /// </summary>
-        /// <param name="req">参考<see cref="UpdateDeviceAvailableStateRequest"/></param>
-        /// <returns>参考<see cref="UpdateDeviceAvailableStateResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpdateDeviceAvailableStateRequest"/></param>
+        /// <returns><see cref="UpdateDeviceAvailableStateResponse"/></returns>
         public async Task<UpdateDeviceAvailableStateResponse> UpdateDeviceAvailableState(UpdateDeviceAvailableStateRequest req)
         {
              JsonResponseModel<UpdateDeviceAvailableStateResponse> rsp = null;
@@ -695,8 +695,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（UpdateDeviceShadow）用于更新虚拟设备信息。
         /// </summary>
-        /// <param name="req">参考<see cref="UpdateDeviceShadowRequest"/></param>
-        /// <returns>参考<see cref="UpdateDeviceShadowResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpdateDeviceShadowRequest"/></param>
+        /// <returns><see cref="UpdateDeviceShadowResponse"/></returns>
         public async Task<UpdateDeviceShadowResponse> UpdateDeviceShadow(UpdateDeviceShadowRequest req)
         {
              JsonResponseModel<UpdateDeviceShadowResponse> rsp = null;
@@ -715,8 +715,8 @@ namespace TencentCloud.Iotcloud.V20180614
         /// <summary>
         /// 本接口（UpdateTopicPolicy）用于更新Topic信息
         /// </summary>
-        /// <param name="req">参考<see cref="UpdateTopicPolicyRequest"/></param>
-        /// <returns>参考<see cref="UpdateTopicPolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpdateTopicPolicyRequest"/></param>
+        /// <returns><see cref="UpdateTopicPolicyResponse"/></returns>
         public async Task<UpdateTopicPolicyResponse> UpdateTopicPolicy(UpdateTopicPolicyRequest req)
         {
              JsonResponseModel<UpdateTopicPolicyResponse> rsp = null;

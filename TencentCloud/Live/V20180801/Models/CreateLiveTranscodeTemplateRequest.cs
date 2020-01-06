@@ -32,6 +32,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 视频码率。范围：100-8000。
+        /// 注意：码率必须是100的倍数。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
@@ -129,20 +130,20 @@ namespace TencentCloud.Live.V20180801.Models
         public long? FpsToOrig{ get; set; }
 
         /// <summary>
-        /// 是否是急速高清模板，0：否，1：是。默认0。
+        /// 是否是极速高清模板，0：否，1：是。默认0。
         /// </summary>
         [JsonProperty("AiTransCode")]
         public long? AiTransCode{ get; set; }
 
         /// <summary>
-        /// 急速高清相比VideoBitrate少多少码率，0.1到0.5
+        /// 极速高清相比VideoBitrate少多少码率，0.1到0.5
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

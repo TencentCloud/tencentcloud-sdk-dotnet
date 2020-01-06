@@ -41,7 +41,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         /// "Key":"url"时，"Value":值表示URL;
         /// "Key":"domain"时， "Value":值表示域名;
         /// "Key":"type"时，"Value":值表示黑白名单类型(white为白名单，block为黑名单);
-        /// "Key":"protocol"时，"Value":值表示CC的防护类型(http防护或https域名防护);
+        /// "Key":"protocol"时，"Value":值表示CC的防护类型(HTTP防护或HTTPS域名防护);
         /// </summary>
         [JsonProperty("RecordList")]
         public KeyValueRecord[] RecordList{ get; set; }
@@ -54,7 +54,7 @@ namespace TencentCloud.Dayu.V20180709.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

@@ -25,7 +25,7 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// 任务模板ID
+        /// 任务模板ID列表，与Filters参数不能同时指定。
         /// </summary>
         [JsonProperty("TaskTemplateIds")]
         public string[] TaskTemplateIds{ get; set; }
@@ -33,6 +33,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// <summary>
         /// 过滤条件
         /// <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+        /// 与TaskTemplateIds参数不能同时指定。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -51,7 +52,7 @@ namespace TencentCloud.Batch.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

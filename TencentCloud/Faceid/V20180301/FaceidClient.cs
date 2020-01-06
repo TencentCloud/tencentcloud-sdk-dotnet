@@ -30,10 +30,10 @@ namespace TencentCloud.Faceid.V20180301
        private const string version = "2018-03-01";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public FaceidClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public FaceidClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -53,10 +53,10 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 输入银行卡号、姓名，校验信息的真实性和一致性。
+        /// 本接口用于校验姓名和银行卡号的真实性和一致性。
         /// </summary>
-        /// <param name="req">参考<see cref="BankCard2EVerificationRequest"/></param>
-        /// <returns>参考<see cref="BankCard2EVerificationResponse"/>实例</returns>
+        /// <param name="req"><see cref="BankCard2EVerificationRequest"/></param>
+        /// <returns><see cref="BankCard2EVerificationResponse"/></returns>
         public async Task<BankCard2EVerificationResponse> BankCard2EVerification(BankCard2EVerificationRequest req)
         {
              JsonResponseModel<BankCard2EVerificationResponse> rsp = null;
@@ -73,10 +73,10 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
+        /// 本接口用于输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
         /// </summary>
-        /// <param name="req">参考<see cref="BankCard4EVerificationRequest"/></param>
-        /// <returns>参考<see cref="BankCard4EVerificationResponse"/>实例</returns>
+        /// <param name="req"><see cref="BankCard4EVerificationRequest"/></param>
+        /// <returns><see cref="BankCard4EVerificationResponse"/></returns>
         public async Task<BankCard4EVerificationResponse> BankCard4EVerification(BankCard4EVerificationRequest req)
         {
              JsonResponseModel<BankCard4EVerificationResponse> rsp = null;
@@ -93,10 +93,10 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 银行卡三要素核验，输入银行卡号、姓名、开户证件号，校验信息的真实性和一致性。
+        /// 本接口用于银行卡号、姓名、开户证件号信息的真实性和一致性。
         /// </summary>
-        /// <param name="req">参考<see cref="BankCardVerificationRequest"/></param>
-        /// <returns>参考<see cref="BankCardVerificationResponse"/>实例</returns>
+        /// <param name="req"><see cref="BankCardVerificationRequest"/></param>
+        /// <returns><see cref="BankCardVerificationResponse"/></returns>
         public async Task<BankCardVerificationResponse> BankCardVerification(BankCardVerificationRequest req)
         {
              JsonResponseModel<BankCardVerificationResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DetectAuthRequest"/></param>
-        /// <returns>参考<see cref="DetectAuthResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectAuthRequest"/></param>
+        /// <returns><see cref="DetectAuthResponse"/></returns>
         public async Task<DetectAuthResponse> DetectAuth(DetectAuthRequest req)
         {
              JsonResponseModel<DetectAuthResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 使用动作活体检测模式前，需调用本接口获取动作顺序。
         /// </summary>
-        /// <param name="req">参考<see cref="GetActionSequenceRequest"/></param>
-        /// <returns>参考<see cref="GetActionSequenceResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetActionSequenceRequest"/></param>
+        /// <returns><see cref="GetActionSequenceResponse"/></returns>
         public async Task<GetActionSequenceResponse> GetActionSequence(GetActionSequenceRequest req)
         {
              JsonResponseModel<GetActionSequenceResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
         /// </summary>
-        /// <param name="req">参考<see cref="GetDetectInfoRequest"/></param>
-        /// <returns>参考<see cref="GetDetectInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetDetectInfoRequest"/></param>
+        /// <returns><see cref="GetDetectInfoResponse"/></returns>
         public async Task<GetDetectInfoResponse> GetDetectInfo(GetDetectInfoRequest req)
         {
              JsonResponseModel<GetDetectInfoResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 使用数字活体检测模式前，需调用本接口获取数字验证码。
         /// </summary>
-        /// <param name="req">参考<see cref="GetLiveCodeRequest"/></param>
-        /// <returns>参考<see cref="GetLiveCodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetLiveCodeRequest"/></param>
+        /// <returns><see cref="GetLiveCodeResponse"/></returns>
         public async Task<GetLiveCodeResponse> GetLiveCode(GetLiveCodeRequest req)
         {
              JsonResponseModel<GetLiveCodeResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
         /// </summary>
-        /// <param name="req">参考<see cref="IdCardOCRVerificationRequest"/></param>
-        /// <returns>参考<see cref="IdCardOCRVerificationResponse"/>实例</returns>
+        /// <param name="req"><see cref="IdCardOCRVerificationRequest"/></param>
+        /// <returns><see cref="IdCardOCRVerificationResponse"/></returns>
         public async Task<IdCardOCRVerificationResponse> IdCardOCRVerification(IdCardOCRVerificationRequest req)
         {
              JsonResponseModel<IdCardOCRVerificationResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 传入姓名和身份证号，校验两者的真实性和一致性。
         /// </summary>
-        /// <param name="req">参考<see cref="IdCardVerificationRequest"/></param>
-        /// <returns>参考<see cref="IdCardVerificationResponse"/>实例</returns>
+        /// <param name="req"><see cref="IdCardVerificationRequest"/></param>
+        /// <returns><see cref="IdCardVerificationResponse"/></returns>
         public async Task<IdCardVerificationResponse> IdCardVerification(IdCardVerificationRequest req)
         {
              JsonResponseModel<IdCardVerificationResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。
         /// </summary>
-        /// <param name="req">参考<see cref="ImageRecognitionRequest"/></param>
-        /// <returns>参考<see cref="ImageRecognitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="ImageRecognitionRequest"/></param>
+        /// <returns><see cref="ImageRecognitionResponse"/></returns>
         public async Task<ImageRecognitionResponse> ImageRecognition(ImageRecognitionRequest req)
         {
              JsonResponseModel<ImageRecognitionResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 活体检测
         /// </summary>
-        /// <param name="req">参考<see cref="LivenessRequest"/></param>
-        /// <returns>参考<see cref="LivenessResponse"/>实例</returns>
+        /// <param name="req"><see cref="LivenessRequest"/></param>
+        /// <returns><see cref="LivenessResponse"/></returns>
         public async Task<LivenessResponse> Liveness(LivenessRequest req)
         {
              JsonResponseModel<LivenessResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 传入视频和照片，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
         /// </summary>
-        /// <param name="req">参考<see cref="LivenessCompareRequest"/></param>
-        /// <returns>参考<see cref="LivenessCompareResponse"/>实例</returns>
+        /// <param name="req"><see cref="LivenessCompareRequest"/></param>
+        /// <returns><see cref="LivenessCompareResponse"/></returns>
         public async Task<LivenessCompareResponse> LivenessCompare(LivenessCompareRequest req)
         {
              JsonResponseModel<LivenessCompareResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Faceid.V20180301
         /// <summary>
         /// 传入视频和身份信息，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与公安权威库的证件照是否属于同一个人。
         /// </summary>
-        /// <param name="req">参考<see cref="LivenessRecognitionRequest"/></param>
-        /// <returns>参考<see cref="LivenessRecognitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="LivenessRecognitionRequest"/></param>
+        /// <returns><see cref="LivenessRecognitionResponse"/></returns>
         public async Task<LivenessRecognitionResponse> LivenessRecognition(LivenessRecognitionRequest req)
         {
              JsonResponseModel<LivenessRecognitionResponse> rsp = null;
@@ -304,6 +304,86 @@ namespace TencentCloud.Faceid.V20180301
              {
                  var strResp = await this.InternalRequest(req, "LivenessRecognition");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<LivenessRecognitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入手机号或者姓名和身份证号，判断该信息是否已实名认证且年满18周岁。
+        /// </summary>
+        /// <param name="req"><see cref="MinorsVerificationRequest"/></param>
+        /// <returns><see cref="MinorsVerificationResponse"/></returns>
+        public async Task<MinorsVerificationResponse> MinorsVerification(MinorsVerificationRequest req)
+        {
+             JsonResponseModel<MinorsVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MinorsVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MinorsVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询手机号在网时长，输入手机号进行查询。
+        /// </summary>
+        /// <param name="req"><see cref="MobileNetworkTimeVerificationRequest"/></param>
+        /// <returns><see cref="MobileNetworkTimeVerificationResponse"/></returns>
+        public async Task<MobileNetworkTimeVerificationResponse> MobileNetworkTimeVerification(MobileNetworkTimeVerificationRequest req)
+        {
+             JsonResponseModel<MobileNetworkTimeVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MobileNetworkTimeVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MobileNetworkTimeVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于验证手机号的状态，您可以输入手机号进行查询。
+        /// </summary>
+        /// <param name="req"><see cref="MobileStatusRequest"/></param>
+        /// <returns><see cref="MobileStatusResponse"/></returns>
+        public async Task<MobileStatusResponse> MobileStatus(MobileStatusRequest req)
+        {
+             JsonResponseModel<MobileStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MobileStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MobileStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性。
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationRequest"/></param>
+        /// <returns><see cref="PhoneVerificationResponse"/></returns>
+        public async Task<PhoneVerificationResponse> PhoneVerification(PhoneVerificationRequest req)
+        {
+             JsonResponseModel<PhoneVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PhoneVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PhoneVerificationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

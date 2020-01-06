@@ -30,10 +30,10 @@ namespace TencentCloud.Hcm.V20181106
        private const string version = "2018-11-06";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public HcmClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Hcm.V20181106
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public HcmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Hcm.V20181106
         /// <summary>
         /// 速算题目批改接口，根据用户上传的图片或图片的URL识别图片中的数学算式，进而给出算式的正确性评估。
         /// </summary>
-        /// <param name="req">参考<see cref="EvaluationRequest"/></param>
-        /// <returns>参考<see cref="EvaluationResponse"/>实例</returns>
+        /// <param name="req"><see cref="EvaluationRequest"/></param>
+        /// <returns><see cref="EvaluationResponse"/></returns>
         public async Task<EvaluationResponse> Evaluation(EvaluationRequest req)
         {
              JsonResponseModel<EvaluationResponse> rsp = null;

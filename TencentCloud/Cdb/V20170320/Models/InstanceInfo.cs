@@ -264,9 +264,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
+        /// <summary>
+        /// 置放群组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployGroupId")]
+        public string DeployGroupId{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -309,6 +316,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Qps", this.Qps);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
+            this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         }
     }
 }

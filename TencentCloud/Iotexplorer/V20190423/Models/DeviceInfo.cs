@@ -78,9 +78,51 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DeviceCert")]
         public string DeviceCert{ get; set; }
 
+        /// <summary>
+        /// 日志级别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogLevel")]
+        public long? LogLevel{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// LoRaWAN 设备地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DevAddr")]
+        public string DevAddr{ get; set; }
+
+        /// <summary>
+        /// LoRaWAN 应用密钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppKey")]
+        public string AppKey{ get; set; }
+
+        /// <summary>
+        /// LoRaWAN 设备唯一标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DevEUI")]
+        public string DevEUI{ get; set; }
+
+        /// <summary>
+        /// LoRaWAN 应用会话密钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppSKey")]
+        public string AppSKey{ get; set; }
+
+        /// <summary>
+        /// LoRaWAN 网络会话密钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NwkSKey")]
+        public string NwkSKey{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -92,6 +134,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "DeviceCert", this.DeviceCert);
+            this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
+            this.SetParamSimple(map, prefix + "DevAddr", this.DevAddr);
+            this.SetParamSimple(map, prefix + "AppKey", this.AppKey);
+            this.SetParamSimple(map, prefix + "DevEUI", this.DevEUI);
+            this.SetParamSimple(map, prefix + "AppSKey", this.AppSKey);
+            this.SetParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
         }
     }
 }

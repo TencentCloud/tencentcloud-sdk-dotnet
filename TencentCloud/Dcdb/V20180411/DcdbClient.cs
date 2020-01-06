@@ -30,10 +30,10 @@ namespace TencentCloud.Dcdb.V20180411
        private const string version = "2018-04-11";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public DcdbClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public DcdbClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（CloneAccount）用于克隆实例账户。
         /// </summary>
-        /// <param name="req">参考<see cref="CloneAccountRequest"/></param>
-        /// <returns>参考<see cref="CloneAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="CloneAccountRequest"/></param>
+        /// <returns><see cref="CloneAccountResponse"/></returns>
         public async Task<CloneAccountResponse> CloneAccount(CloneAccountRequest req)
         {
              JsonResponseModel<CloneAccountResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
         /// </summary>
-        /// <param name="req">参考<see cref="CloseDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="CloseDBExtranetAccessResponse"/>实例</returns>
+        /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="CloseDBExtranetAccessResponse"/></returns>
         public async Task<CloseDBExtranetAccessResponse> CloseDBExtranetAccess(CloseDBExtranetAccessRequest req)
         {
              JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
@@ -96,8 +96,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// 本接口（CopyAccountPrivileges）用于复制云数据库账号的权限。
         /// 注意：相同用户名，不同Host是不同的账号，Readonly属性相同的账号之间才能复制权限。
         /// </summary>
-        /// <param name="req">参考<see cref="CopyAccountPrivilegesRequest"/></param>
-        /// <returns>参考<see cref="CopyAccountPrivilegesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CopyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="CopyAccountPrivilegesResponse"/></returns>
         public async Task<CopyAccountPrivilegesResponse> CopyAccountPrivileges(CopyAccountPrivilegesRequest req)
         {
              JsonResponseModel<CopyAccountPrivilegesResponse> rsp = null;
@@ -116,8 +116,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（CreateAccount）用于创建云数据库账号。一个实例可以创建多个不同的账号，相同的用户名+不同的host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateAccountRequest"/></param>
-        /// <returns>参考<see cref="CreateAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateAccountRequest"/></param>
+        /// <returns><see cref="CreateAccountResponse"/></returns>
         public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest req)
         {
              JsonResponseModel<CreateAccountResponse> rsp = null;
@@ -136,8 +136,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（CreateDCDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDCDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateDCDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDCDBInstanceResponse"/></returns>
         public async Task<CreateDCDBInstanceResponse> CreateDCDBInstance(CreateDCDBInstanceRequest req)
         {
              JsonResponseModel<CreateDCDBInstanceResponse> rsp = null;
@@ -156,8 +156,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteAccountRequest"/></param>
-        /// <returns>参考<see cref="DeleteAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
         public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest req)
         {
              JsonResponseModel<DeleteAccountResponse> rsp = null;
@@ -177,8 +177,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// 本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。
         /// 注意：注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountPrivilegesRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountPrivilegesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
         public async Task<DescribeAccountPrivilegesResponse> DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req)
         {
              JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
@@ -197,8 +197,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountsRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
+        /// <returns><see cref="DescribeAccountsResponse"/></returns>
         public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest req)
         {
              JsonResponseModel<DescribeAccountsResponse> rsp = null;
@@ -217,8 +217,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBLogFilesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBLogFilesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeDBLogFilesResponse"/></returns>
         public async Task<DescribeDBLogFilesResponse> DescribeDBLogFiles(DescribeDBLogFilesRequest req)
         {
              JsonResponseModel<DescribeDBLogFilesResponse> rsp = null;
@@ -237,8 +237,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口(DescribeDBParameters)用于获取数据库的当前参数设置。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBParametersRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBParametersResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBParametersRequest"/></param>
+        /// <returns><see cref="DescribeDBParametersResponse"/></returns>
         public async Task<DescribeDBParametersResponse> DescribeDBParameters(DescribeDBParametersRequest req)
         {
              JsonResponseModel<DescribeDBParametersResponse> rsp = null;
@@ -257,8 +257,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBSyncModeRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBSyncModeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBSyncModeRequest"/></param>
+        /// <returns><see cref="DescribeDBSyncModeResponse"/></returns>
         public async Task<DescribeDBSyncModeResponse> DescribeDBSyncMode(DescribeDBSyncModeRequest req)
         {
              JsonResponseModel<DescribeDBSyncModeResponse> rsp = null;
@@ -278,8 +278,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// 查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
         /// 如果不指定任何筛选条件，则默认返回10条实例记录，单次请求最多支持返回100条实例记录。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDCDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDCDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDCDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstancesResponse"/></returns>
         public async Task<DescribeDCDBInstancesResponse> DescribeDCDBInstances(DescribeDCDBInstancesRequest req)
         {
              JsonResponseModel<DescribeDCDBInstancesResponse> rsp = null;
@@ -298,8 +298,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDCDBPrice）用于在购买实例前，查询实例的价格。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDCDBPriceRequest"/></param>
-        /// <returns>参考<see cref="DescribeDCDBPriceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDCDBPriceRequest"/></param>
+        /// <returns><see cref="DescribeDCDBPriceResponse"/></returns>
         public async Task<DescribeDCDBPriceResponse> DescribeDCDBPrice(DescribeDCDBPriceRequest req)
         {
              JsonResponseModel<DescribeDCDBPriceResponse> rsp = null;
@@ -318,8 +318,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDCDBRenewalPrice）用于在续费分布式数据库实例时，查询续费的价格。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDCDBRenewalPriceRequest"/></param>
-        /// <returns>参考<see cref="DescribeDCDBRenewalPriceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDCDBRenewalPriceRequest"/></param>
+        /// <returns><see cref="DescribeDCDBRenewalPriceResponse"/></returns>
         public async Task<DescribeDCDBRenewalPriceResponse> DescribeDCDBRenewalPrice(DescribeDCDBRenewalPriceRequest req)
         {
              JsonResponseModel<DescribeDCDBRenewalPriceResponse> rsp = null;
@@ -338,8 +338,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口(DescribeDCDBSaleInfo)用于查询分布式数据库可售卖的地域和可用区信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDCDBSaleInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeDCDBSaleInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDCDBSaleInfoRequest"/></param>
+        /// <returns><see cref="DescribeDCDBSaleInfoResponse"/></returns>
         public async Task<DescribeDCDBSaleInfoResponse> DescribeDCDBSaleInfo(DescribeDCDBSaleInfoRequest req)
         {
              JsonResponseModel<DescribeDCDBSaleInfoResponse> rsp = null;
@@ -358,8 +358,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDCDBShards）用于查询云数据库实例的分片信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDCDBShardsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDCDBShardsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDCDBShardsRequest"/></param>
+        /// <returns><see cref="DescribeDCDBShardsResponse"/></returns>
         public async Task<DescribeDCDBShardsResponse> DescribeDCDBShards(DescribeDCDBShardsRequest req)
         {
              JsonResponseModel<DescribeDCDBShardsResponse> rsp = null;
@@ -378,8 +378,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDCDBUpgradePrice）用于查询升级分布式数据库实例价格。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDCDBUpgradePriceRequest"/></param>
-        /// <returns>参考<see cref="DescribeDCDBUpgradePriceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDCDBUpgradePriceRequest"/></param>
+        /// <returns><see cref="DescribeDCDBUpgradePriceResponse"/></returns>
         public async Task<DescribeDCDBUpgradePriceResponse> DescribeDCDBUpgradePrice(DescribeDCDBUpgradePriceRequest req)
         {
              JsonResponseModel<DescribeDCDBUpgradePriceResponse> rsp = null;
@@ -398,8 +398,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDatabaseObjectsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDatabaseObjectsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectsResponse"/></returns>
         public async Task<DescribeDatabaseObjectsResponse> DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req)
         {
              JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
@@ -418,8 +418,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDatabaseTableRequest"/></param>
-        /// <returns>参考<see cref="DescribeDatabaseTableResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
         public async Task<DescribeDatabaseTableResponse> DescribeDatabaseTable(DescribeDatabaseTableRequest req)
         {
              JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
@@ -438,8 +438,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDatabasesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDatabasesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
         public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest req)
         {
              JsonResponseModel<DescribeDatabasesResponse> rsp = null;
@@ -458,8 +458,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeOrders）用于查询分布式数据库订单信息。传入订单Id来查询订单关联的分布式数据库实例，和对应的任务流程ID。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeOrdersRequest"/></param>
-        /// <returns>参考<see cref="DescribeOrdersResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
+        /// <returns><see cref="DescribeOrdersResponse"/></returns>
         public async Task<DescribeOrdersResponse> DescribeOrders(DescribeOrdersRequest req)
         {
              JsonResponseModel<DescribeOrdersResponse> rsp = null;
@@ -478,8 +478,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 查询可创建的分布式数据库可售卖的分片规格配置。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeShardSpecRequest"/></param>
-        /// <returns>参考<see cref="DescribeShardSpecResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeShardSpecRequest"/></param>
+        /// <returns><see cref="DescribeShardSpecResponse"/></returns>
         public async Task<DescribeShardSpecResponse> DescribeShardSpec(DescribeShardSpecRequest req)
         {
              JsonResponseModel<DescribeShardSpecResponse> rsp = null;
@@ -498,8 +498,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSqlLogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeSqlLogsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
+        /// <returns><see cref="DescribeSqlLogsResponse"/></returns>
         public async Task<DescribeSqlLogsResponse> DescribeSqlLogs(DescribeSqlLogsRequest req)
         {
              JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
@@ -519,8 +519,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// 本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="GrantAccountPrivilegesRequest"/></param>
-        /// <returns>参考<see cref="GrantAccountPrivilegesResponse"/>实例</returns>
+        /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="GrantAccountPrivilegesResponse"/></returns>
         public async Task<GrantAccountPrivilegesResponse> GrantAccountPrivileges(GrantAccountPrivilegesRequest req)
         {
              JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
@@ -539,8 +539,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口(InitDCDBInstances)用于初始化云数据库实例，包括设置默认字符集、表名大小写敏感等。
         /// </summary>
-        /// <param name="req">参考<see cref="InitDCDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="InitDCDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="InitDCDBInstancesRequest"/></param>
+        /// <returns><see cref="InitDCDBInstancesResponse"/></returns>
         public async Task<InitDCDBInstancesResponse> InitDCDBInstances(InitDCDBInstancesRequest req)
         {
              JsonResponseModel<InitDCDBInstancesResponse> rsp = null;
@@ -560,8 +560,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// 本接口（ModifyAccountDescription）用于修改云数据库账号备注。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyAccountDescriptionRequest"/></param>
-        /// <returns>参考<see cref="ModifyAccountDescriptionResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyAccountDescriptionResponse"/></returns>
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescription(ModifyAccountDescriptionRequest req)
         {
              JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
@@ -580,8 +580,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（ModifyDBInstancesProject）用于修改云数据库实例所属项目。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBInstancesProjectRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBInstancesProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
+        /// <returns><see cref="ModifyDBInstancesProjectResponse"/></returns>
         public async Task<ModifyDBInstancesProjectResponse> ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req)
         {
              JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
@@ -600,8 +600,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口(ModifyDBParameters)用于修改数据库参数。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBParametersRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBParametersResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBParametersRequest"/></param>
+        /// <returns><see cref="ModifyDBParametersResponse"/></returns>
         public async Task<ModifyDBParametersResponse> ModifyDBParameters(ModifyDBParametersRequest req)
         {
              JsonResponseModel<ModifyDBParametersResponse> rsp = null;
@@ -620,8 +620,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBSyncModeRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBSyncModeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBSyncModeRequest"/></param>
+        /// <returns><see cref="ModifyDBSyncModeResponse"/></returns>
         public async Task<ModifyDBSyncModeResponse> ModifyDBSyncMode(ModifyDBSyncModeRequest req)
         {
              JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
@@ -640,8 +640,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（OpenDBExtranetAccess）用于开通云数据库实例的外网访问。开通外网访问后，您可通过外网域名和端口访问实例，可使用查询实例列表接口获取外网域名和端口信息。
         /// </summary>
-        /// <param name="req">参考<see cref="OpenDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="OpenDBExtranetAccessResponse"/>实例</returns>
+        /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="OpenDBExtranetAccessResponse"/></returns>
         public async Task<OpenDBExtranetAccessResponse> OpenDBExtranetAccess(OpenDBExtranetAccessRequest req)
         {
              JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
@@ -660,8 +660,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（RenewDCDBInstance）用于续费分布式数据库实例。
         /// </summary>
-        /// <param name="req">参考<see cref="RenewDCDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="RenewDCDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="RenewDCDBInstanceRequest"/></param>
+        /// <returns><see cref="RenewDCDBInstanceResponse"/></returns>
         public async Task<RenewDCDBInstanceResponse> RenewDCDBInstance(RenewDCDBInstanceRequest req)
         {
              JsonResponseModel<RenewDCDBInstanceResponse> rsp = null;
@@ -681,8 +681,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// 本接口（ResetAccountPassword）用于重置云数据库账号的密码。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="ResetAccountPasswordRequest"/></param>
-        /// <returns>参考<see cref="ResetAccountPasswordResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
         public async Task<ResetAccountPasswordResponse> ResetAccountPassword(ResetAccountPasswordRequest req)
         {
              JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
@@ -701,8 +701,8 @@ namespace TencentCloud.Dcdb.V20180411
         /// <summary>
         /// 本接口（UpgradeDCDBInstance）用于升级分布式数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
         /// </summary>
-        /// <param name="req">参考<see cref="UpgradeDCDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="UpgradeDCDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpgradeDCDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDCDBInstanceResponse"/></returns>
         public async Task<UpgradeDCDBInstanceResponse> UpgradeDCDBInstance(UpgradeDCDBInstanceRequest req)
         {
              JsonResponseModel<UpgradeDCDBInstanceResponse> rsp = null;

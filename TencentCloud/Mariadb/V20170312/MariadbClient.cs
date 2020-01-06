@@ -30,10 +30,10 @@ namespace TencentCloud.Mariadb.V20170312
        private const string version = "2017-03-12";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public MariadbClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public MariadbClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（CloneAccount）用于克隆实例账户。
         /// </summary>
-        /// <param name="req">参考<see cref="CloneAccountRequest"/></param>
-        /// <returns>参考<see cref="CloneAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="CloneAccountRequest"/></param>
+        /// <returns><see cref="CloneAccountResponse"/></returns>
         public async Task<CloneAccountResponse> CloneAccount(CloneAccountRequest req)
         {
              JsonResponseModel<CloneAccountResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(CloseDBExtranetAccess)用于关闭云数据库实例的外网访问。关闭外网访问后，外网地址将不可访问，查询实例列表接口将不返回对应实例的外网域名和端口信息。
         /// </summary>
-        /// <param name="req">参考<see cref="CloseDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="CloseDBExtranetAccessResponse"/>实例</returns>
+        /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="CloseDBExtranetAccessResponse"/></returns>
         public async Task<CloseDBExtranetAccessResponse> CloseDBExtranetAccess(CloseDBExtranetAccessRequest req)
         {
              JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
@@ -96,8 +96,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// 本接口（CopyAccountPrivileges）用于复制云数据库账号的权限。
         /// 注意：相同用户名，不同Host是不同的账号，Readonly属性相同的账号之间才能复制权限。
         /// </summary>
-        /// <param name="req">参考<see cref="CopyAccountPrivilegesRequest"/></param>
-        /// <returns>参考<see cref="CopyAccountPrivilegesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CopyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="CopyAccountPrivilegesResponse"/></returns>
         public async Task<CopyAccountPrivilegesResponse> CopyAccountPrivileges(CopyAccountPrivilegesRequest req)
         {
              JsonResponseModel<CopyAccountPrivilegesResponse> rsp = null;
@@ -116,8 +116,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（CreateAccount）用于创建云数据库账号。一个实例可以创建多个不同的账号，相同的用户名+不同的host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateAccountRequest"/></param>
-        /// <returns>参考<see cref="CreateAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateAccountRequest"/></param>
+        /// <returns><see cref="CreateAccountResponse"/></returns>
         public async Task<CreateAccountResponse> CreateAccount(CreateAccountRequest req)
         {
              JsonResponseModel<CreateAccountResponse> rsp = null;
@@ -136,8 +136,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（CreateDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长和数量等信息创建云数据库实例。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceResponse"/></returns>
         public async Task<CreateDBInstanceResponse> CreateDBInstance(CreateDBInstanceRequest req)
         {
              JsonResponseModel<CreateDBInstanceResponse> rsp = null;
@@ -154,10 +154,30 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreateTmpInstances）用于创建临时实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTmpInstancesRequest"/></param>
+        /// <returns><see cref="CreateTmpInstancesResponse"/></returns>
+        public async Task<CreateTmpInstancesResponse> CreateTmpInstances(CreateTmpInstancesRequest req)
+        {
+             JsonResponseModel<CreateTmpInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTmpInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTmpInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteAccountRequest"/></param>
-        /// <returns>参考<see cref="DeleteAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
         public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest req)
         {
              JsonResponseModel<DeleteAccountResponse> rsp = null;
@@ -177,8 +197,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// 本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。
         /// 注意：注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountPrivilegesRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountPrivilegesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
         public async Task<DescribeAccountPrivilegesResponse> DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req)
         {
              JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
@@ -197,8 +217,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountsRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
+        /// <returns><see cref="DescribeAccountsResponse"/></returns>
         public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest req)
         {
              JsonResponseModel<DescribeAccountsResponse> rsp = null;
@@ -217,8 +237,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（DescribeBackupTime）用于获取云数据库的备份时间。后台系统将根据此配置定期进行实例备份。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBackupTimeRequest"/></param>
-        /// <returns>参考<see cref="DescribeBackupTimeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBackupTimeRequest"/></param>
+        /// <returns><see cref="DescribeBackupTimeResponse"/></returns>
         public async Task<DescribeBackupTimeResponse> DescribeBackupTime(DescribeBackupTimeRequest req)
         {
              JsonResponseModel<DescribeBackupTimeResponse> rsp = null;
@@ -237,8 +257,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBInstanceSpecsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBInstanceSpecsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBInstanceSpecsRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceSpecsResponse"/></returns>
         public async Task<DescribeDBInstanceSpecsResponse> DescribeDBInstanceSpecs(DescribeDBInstanceSpecsRequest req)
         {
              JsonResponseModel<DescribeDBInstanceSpecsResponse> rsp = null;
@@ -258,8 +278,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
         /// 如果不指定任何筛选条件，则默认返回20条实例记录，单次请求最多支持返回100条实例记录。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
         public async Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
         {
              JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
@@ -278,8 +298,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBLogFilesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBLogFilesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeDBLogFilesResponse"/></returns>
         public async Task<DescribeDBLogFilesResponse> DescribeDBLogFiles(DescribeDBLogFilesRequest req)
         {
              JsonResponseModel<DescribeDBLogFilesResponse> rsp = null;
@@ -298,8 +318,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBParameters)用于获取数据库的当前参数设置。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBParametersRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBParametersResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBParametersRequest"/></param>
+        /// <returns><see cref="DescribeDBParametersResponse"/></returns>
         public async Task<DescribeDBParametersResponse> DescribeDBParameters(DescribeDBParametersRequest req)
         {
              JsonResponseModel<DescribeDBParametersResponse> rsp = null;
@@ -318,8 +338,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBPerformance)用于查看数据库实例当前性能数据。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBPerformanceRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBPerformanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBPerformanceRequest"/></param>
+        /// <returns><see cref="DescribeDBPerformanceResponse"/></returns>
         public async Task<DescribeDBPerformanceResponse> DescribeDBPerformance(DescribeDBPerformanceRequest req)
         {
              JsonResponseModel<DescribeDBPerformanceResponse> rsp = null;
@@ -338,8 +358,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBPerformanceDetails)用于查看实例性能数据详情。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBPerformanceDetailsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBPerformanceDetailsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBPerformanceDetailsRequest"/></param>
+        /// <returns><see cref="DescribeDBPerformanceDetailsResponse"/></returns>
         public async Task<DescribeDBPerformanceDetailsResponse> DescribeDBPerformanceDetails(DescribeDBPerformanceDetailsRequest req)
         {
              JsonResponseModel<DescribeDBPerformanceDetailsResponse> rsp = null;
@@ -358,8 +378,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBResourceUsage)用于查看数据库实例资源的使用情况。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBResourceUsageRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBResourceUsageResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBResourceUsageRequest"/></param>
+        /// <returns><see cref="DescribeDBResourceUsageResponse"/></returns>
         public async Task<DescribeDBResourceUsageResponse> DescribeDBResourceUsage(DescribeDBResourceUsageRequest req)
         {
              JsonResponseModel<DescribeDBResourceUsageResponse> rsp = null;
@@ -378,8 +398,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBResourceUsageDetails)用于查看数据库实例当前性能数据。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBResourceUsageDetailsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBResourceUsageDetailsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBResourceUsageDetailsRequest"/></param>
+        /// <returns><see cref="DescribeDBResourceUsageDetailsResponse"/></returns>
         public async Task<DescribeDBResourceUsageDetailsResponse> DescribeDBResourceUsageDetails(DescribeDBResourceUsageDetailsRequest req)
         {
              JsonResponseModel<DescribeDBResourceUsageDetailsResponse> rsp = null;
@@ -398,8 +418,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBSlowLogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBSlowLogsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSlowLogsResponse"/></returns>
         public async Task<DescribeDBSlowLogsResponse> DescribeDBSlowLogs(DescribeDBSlowLogsRequest req)
         {
              JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
@@ -416,10 +436,30 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeFlow）用于查询流程状态。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeFlowRequest"/></param>
-        /// <returns>参考<see cref="DescribeFlowResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeFlowRequest"/></param>
+        /// <returns><see cref="DescribeFlowResponse"/></returns>
         public async Task<DescribeFlowResponse> DescribeFlow(DescribeFlowRequest req)
         {
              JsonResponseModel<DescribeFlowResponse> rsp = null;
@@ -438,8 +478,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeLogFileRetentionPeriodRequest"/></param>
-        /// <returns>参考<see cref="DescribeLogFileRetentionPeriodResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="DescribeLogFileRetentionPeriodResponse"/></returns>
         public async Task<DescribeLogFileRetentionPeriodResponse> DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req)
         {
              JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
@@ -458,8 +498,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（DescribeOrders）用于查询云数据库订单信息。传入订单Id来查询订单关联的云数据库实例，和对应的任务流程ID。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeOrdersRequest"/></param>
-        /// <returns>参考<see cref="DescribeOrdersResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
+        /// <returns><see cref="DescribeOrdersResponse"/></returns>
         public async Task<DescribeOrdersResponse> DescribeOrders(DescribeOrdersRequest req)
         {
              JsonResponseModel<DescribeOrdersResponse> rsp = null;
@@ -478,8 +518,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（DescribePrice）用于在购买实例前，查询实例的价格。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePriceRequest"/></param>
-        /// <returns>参考<see cref="DescribePriceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePriceRequest"/></param>
+        /// <returns><see cref="DescribePriceResponse"/></returns>
         public async Task<DescribePriceResponse> DescribePrice(DescribePriceRequest req)
         {
              JsonResponseModel<DescribePriceResponse> rsp = null;
@@ -498,8 +538,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（DescribeRenewalPrice）用于在续费云数据库实例时，查询续费的价格。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRenewalPriceRequest"/></param>
-        /// <returns>参考<see cref="DescribeRenewalPriceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRenewalPriceRequest"/></param>
+        /// <returns><see cref="DescribeRenewalPriceResponse"/></returns>
         public async Task<DescribeRenewalPriceResponse> DescribeRenewalPrice(DescribeRenewalPriceRequest req)
         {
              JsonResponseModel<DescribeRenewalPriceResponse> rsp = null;
@@ -518,8 +558,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(DescribeSaleInfo)用于查询云数据库可售卖的地域和可用区信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSaleInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeSaleInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSaleInfoRequest"/></param>
+        /// <returns><see cref="DescribeSaleInfoResponse"/></returns>
         public async Task<DescribeSaleInfoResponse> DescribeSaleInfo(DescribeSaleInfoRequest req)
         {
              JsonResponseModel<DescribeSaleInfoResponse> rsp = null;
@@ -538,8 +578,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSqlLogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeSqlLogsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
+        /// <returns><see cref="DescribeSqlLogsResponse"/></returns>
         public async Task<DescribeSqlLogsResponse> DescribeSqlLogs(DescribeSqlLogsRequest req)
         {
              JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
@@ -558,8 +598,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询扩容的价格。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeUpgradePriceRequest"/></param>
-        /// <returns>参考<see cref="DescribeUpgradePriceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeUpgradePriceRequest"/></param>
+        /// <returns><see cref="DescribeUpgradePriceResponse"/></returns>
         public async Task<DescribeUpgradePriceResponse> DescribeUpgradePrice(DescribeUpgradePriceRequest req)
         {
              JsonResponseModel<DescribeUpgradePriceResponse> rsp = null;
@@ -579,8 +619,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// 本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="GrantAccountPrivilegesRequest"/></param>
-        /// <returns>参考<see cref="GrantAccountPrivilegesResponse"/>实例</returns>
+        /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="GrantAccountPrivilegesResponse"/></returns>
         public async Task<GrantAccountPrivilegesResponse> GrantAccountPrivileges(GrantAccountPrivilegesRequest req)
         {
              JsonResponseModel<GrantAccountPrivilegesResponse> rsp = null;
@@ -599,8 +639,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(InitDBInstances)用于初始化云数据库实例，包括设置默认字符集、表名大小写敏感等。
         /// </summary>
-        /// <param name="req">参考<see cref="InitDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="InitDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
+        /// <returns><see cref="InitDBInstancesResponse"/></returns>
         public async Task<InitDBInstancesResponse> InitDBInstances(InitDBInstancesRequest req)
         {
              JsonResponseModel<InitDBInstancesResponse> rsp = null;
@@ -620,8 +660,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// 本接口（ModifyAccountDescription）用于修改云数据库账号备注。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyAccountDescriptionRequest"/></param>
-        /// <returns>参考<see cref="ModifyAccountDescriptionResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyAccountDescriptionResponse"/></returns>
         public async Task<ModifyAccountDescriptionResponse> ModifyAccountDescription(ModifyAccountDescriptionRequest req)
         {
              JsonResponseModel<ModifyAccountDescriptionResponse> rsp = null;
@@ -640,8 +680,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（ModifyBackupTime）用于设置云数据库实例的备份时间。后台系统将根据此配置定期进行实例备份。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyBackupTimeRequest"/></param>
-        /// <returns>参考<see cref="ModifyBackupTimeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyBackupTimeRequest"/></param>
+        /// <returns><see cref="ModifyBackupTimeResponse"/></returns>
         public async Task<ModifyBackupTimeResponse> ModifyBackupTime(ModifyBackupTimeRequest req)
         {
              JsonResponseModel<ModifyBackupTimeResponse> rsp = null;
@@ -660,8 +700,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（ModifyDBInstanceName）用于修改云数据库实例的名称。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBInstanceNameRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBInstanceNameResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNameResponse"/></returns>
         public async Task<ModifyDBInstanceNameResponse> ModifyDBInstanceName(ModifyDBInstanceNameRequest req)
         {
              JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
@@ -680,8 +720,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（ModifyDBInstancesProject）用于修改云数据库实例所属项目。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBInstancesProjectRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBInstancesProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
+        /// <returns><see cref="ModifyDBInstancesProjectResponse"/></returns>
         public async Task<ModifyDBInstancesProjectResponse> ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req)
         {
              JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
@@ -700,8 +740,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(ModifyDBParameters)用于修改数据库参数。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBParametersRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBParametersResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBParametersRequest"/></param>
+        /// <returns><see cref="ModifyDBParametersResponse"/></returns>
         public async Task<ModifyDBParametersResponse> ModifyDBParameters(ModifyDBParametersRequest req)
         {
              JsonResponseModel<ModifyDBParametersResponse> rsp = null;
@@ -720,8 +760,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyLogFileRetentionPeriodRequest"/></param>
-        /// <returns>参考<see cref="ModifyLogFileRetentionPeriodResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyLogFileRetentionPeriodRequest"/></param>
+        /// <returns><see cref="ModifyLogFileRetentionPeriodResponse"/></returns>
         public async Task<ModifyLogFileRetentionPeriodResponse> ModifyLogFileRetentionPeriod(ModifyLogFileRetentionPeriodRequest req)
         {
              JsonResponseModel<ModifyLogFileRetentionPeriodResponse> rsp = null;
@@ -740,8 +780,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（OpenDBExtranetAccess）用于开通云数据库实例的外网访问。开通外网访问后，您可通过外网域名和端口访问实例，可使用查询实例列表接口获取外网域名和端口信息。
         /// </summary>
-        /// <param name="req">参考<see cref="OpenDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="OpenDBExtranetAccessResponse"/>实例</returns>
+        /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="OpenDBExtranetAccessResponse"/></returns>
         public async Task<OpenDBExtranetAccessResponse> OpenDBExtranetAccess(OpenDBExtranetAccessRequest req)
         {
              JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
@@ -760,8 +800,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// <summary>
         /// 本接口（RenewDBInstance）用于续费云数据库实例。
         /// </summary>
-        /// <param name="req">参考<see cref="RenewDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="RenewDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="RenewDBInstanceRequest"/></param>
+        /// <returns><see cref="RenewDBInstanceResponse"/></returns>
         public async Task<RenewDBInstanceResponse> RenewDBInstance(RenewDBInstanceRequest req)
         {
              JsonResponseModel<RenewDBInstanceResponse> rsp = null;
@@ -781,8 +821,8 @@ namespace TencentCloud.Mariadb.V20170312
         /// 本接口（ResetAccountPassword）用于重置云数据库账号的密码。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>
-        /// <param name="req">参考<see cref="ResetAccountPasswordRequest"/></param>
-        /// <returns>参考<see cref="ResetAccountPasswordResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
         public async Task<ResetAccountPasswordResponse> ResetAccountPassword(ResetAccountPasswordRequest req)
         {
              JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
@@ -799,10 +839,30 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（RestartDBInstances）用于重启数据库实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
+        /// <returns><see cref="RestartDBInstancesResponse"/></returns>
+        public async Task<RestartDBInstancesResponse> RestartDBInstances(RestartDBInstancesRequest req)
+        {
+             JsonResponseModel<RestartDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(UpgradeDBInstance)用于扩容云数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
         /// </summary>
-        /// <param name="req">参考<see cref="UpgradeDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="UpgradeDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
         public async Task<UpgradeDBInstanceResponse> UpgradeDBInstance(UpgradeDBInstanceRequest req)
         {
              JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;

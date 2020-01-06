@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽包Id
+        /// 带宽包唯一ID
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 带宽包Ids(申请数量大于1时有效)
+        /// 带宽包唯一ID列表(申请数量大于1时有效)
         /// </summary>
         [JsonProperty("BandwidthPackageIds")]
         public string[] BandwidthPackageIds{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

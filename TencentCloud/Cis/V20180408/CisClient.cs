@@ -30,10 +30,10 @@ namespace TencentCloud.Cis.V20180408
        private const string version = "2018-04-08";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CisClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Cis.V20180408
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public CisClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Cis.V20180408
         /// <summary>
         /// 此接口（CreateContainerInstance）用于创建容器实例
         /// </summary>
-        /// <param name="req">参考<see cref="CreateContainerInstanceRequest"/></param>
-        /// <returns>参考<see cref="CreateContainerInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateContainerInstanceRequest"/></param>
+        /// <returns><see cref="CreateContainerInstanceResponse"/></returns>
         public async Task<CreateContainerInstanceResponse> CreateContainerInstance(CreateContainerInstanceRequest req)
         {
              JsonResponseModel<CreateContainerInstanceResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Cis.V20180408
         /// <summary>
         /// 此接口（DeleteContainerInstance）用于删除容器实例
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteContainerInstanceRequest"/></param>
-        /// <returns>参考<see cref="DeleteContainerInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteContainerInstanceRequest"/></param>
+        /// <returns><see cref="DeleteContainerInstanceResponse"/></returns>
         public async Task<DeleteContainerInstanceResponse> DeleteContainerInstance(DeleteContainerInstanceRequest req)
         {
              JsonResponseModel<DeleteContainerInstanceResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Cis.V20180408
         /// <summary>
         /// 此接口（DescribeContainerInstance）用于获取容器实例详情
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeContainerInstanceRequest"/></param>
-        /// <returns>参考<see cref="DescribeContainerInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeContainerInstanceRequest"/></param>
+        /// <returns><see cref="DescribeContainerInstanceResponse"/></returns>
         public async Task<DescribeContainerInstanceResponse> DescribeContainerInstance(DescribeContainerInstanceRequest req)
         {
              JsonResponseModel<DescribeContainerInstanceResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Cis.V20180408
         /// <summary>
         /// 此接口（DescribeContainerInstanceEvents）用于查询容器实例事件列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeContainerInstanceEventsRequest"/></param>
-        /// <returns>参考<see cref="DescribeContainerInstanceEventsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeContainerInstanceEventsRequest"/></param>
+        /// <returns><see cref="DescribeContainerInstanceEventsResponse"/></returns>
         public async Task<DescribeContainerInstanceEventsResponse> DescribeContainerInstanceEvents(DescribeContainerInstanceEventsRequest req)
         {
              JsonResponseModel<DescribeContainerInstanceEventsResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Cis.V20180408
         /// <summary>
         /// 此接口（DescribeContainerInstances）查询容器实例列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeContainerInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeContainerInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeContainerInstancesRequest"/></param>
+        /// <returns><see cref="DescribeContainerInstancesResponse"/></returns>
         public async Task<DescribeContainerInstancesResponse> DescribeContainerInstances(DescribeContainerInstancesRequest req)
         {
              JsonResponseModel<DescribeContainerInstancesResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Cis.V20180408
         /// <summary>
         /// 此接口（DescribeContainerLog）用于获取容器日志信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeContainerLogRequest"/></param>
-        /// <returns>参考<see cref="DescribeContainerLogResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeContainerLogRequest"/></param>
+        /// <returns><see cref="DescribeContainerLogResponse"/></returns>
         public async Task<DescribeContainerLogResponse> DescribeContainerLog(DescribeContainerLogRequest req)
         {
              JsonResponseModel<DescribeContainerLogResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Cis.V20180408
         /// <summary>
         /// 此接口（InquiryPriceCreateCis）用于查询容器实例价格
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceCreateCisRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceCreateCisResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceCreateCisRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateCisResponse"/></returns>
         public async Task<InquiryPriceCreateCisResponse> InquiryPriceCreateCis(InquiryPriceCreateCisRequest req)
         {
              JsonResponseModel<InquiryPriceCreateCisResponse> rsp = null;

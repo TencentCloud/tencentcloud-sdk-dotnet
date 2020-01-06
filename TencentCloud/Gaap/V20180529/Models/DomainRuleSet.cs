@@ -141,15 +141,22 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerCertificateDomain{ get; set; }
 
         /// <summary>
-        /// 多客户端证书时，返回多个证书的id和列表
+        /// 多客户端证书时，返回多个证书的id和别名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PolyClientCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyClientCertificateAliasInfo{ get; set; }
 
+        /// <summary>
+        /// 多源站证书时，返回多个证书的id和别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolyRealServerCertificateAliasInfo")]
+        public CertificateAliasInfo[] PolyRealServerCertificateAliasInfo{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -170,6 +177,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "GaapCertificateAlias", this.GaapCertificateAlias);
             this.SetParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
             this.SetParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
+            this.SetParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
         }
     }
 }

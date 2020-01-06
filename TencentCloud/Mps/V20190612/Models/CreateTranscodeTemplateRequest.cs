@@ -73,14 +73,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// 极速高清转码参数，需联系商务架构师开通后才能使用。
+        /// 极速高清转码参数。
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

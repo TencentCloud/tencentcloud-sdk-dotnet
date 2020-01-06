@@ -30,10 +30,10 @@ namespace TencentCloud.Nlp.V20190408
        private const string version = "2019-04-08";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public NlpClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public NlpClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <summary>
         /// 利用人工智能算法，自动抽取文本中的关键信息并生成指定长度的文本摘要。可用于新闻标题生成、科技文献摘要生成和商品评论摘要等。
         /// </summary>
-        /// <param name="req">参考<see cref="AutoSummarizationRequest"/></param>
-        /// <returns>参考<see cref="AutoSummarizationResponse"/>实例</returns>
+        /// <param name="req"><see cref="AutoSummarizationRequest"/></param>
+        /// <returns><see cref="AutoSummarizationResponse"/></returns>
         public async Task<AutoSummarizationResponse> AutoSummarization(AutoSummarizationRequest req)
         {
              JsonResponseModel<AutoSummarizationResponse> rsp = null;
@@ -76,8 +76,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 闲聊服务基于腾讯领先的NLP引擎能力、数据运算能力和千亿级互联网语料数据的支持，同时集成了广泛的知识问答能力，可实现上百种自定义属性配置，以及儿童语言风格及说话方式，从而让聊天变得更睿智、简单和有趣。
         /// 
         /// </summary>
-        /// <param name="req">参考<see cref="ChatBotRequest"/></param>
-        /// <returns>参考<see cref="ChatBotResponse"/>实例</returns>
+        /// <param name="req"><see cref="ChatBotRequest"/></param>
+        /// <returns><see cref="ChatBotResponse"/></returns>
         public async Task<ChatBotResponse> ChatBot(ChatBotRequest req)
         {
              JsonResponseModel<ChatBotResponse> rsp = null;
@@ -94,42 +94,10 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
-        /// （该接口即将下线，请使用升级接口：文本审核）
-        /// 
-        /// 文本审核接口能够识别文本信息中的色情、政治等有害内容，帮助用户及时、精准地防范违规风险，可用于内容审核、敏感信息过滤、舆情监控等场景。
-        /// 
-        /// 该功能基于10万级大规模敏感词库，结合多种文本对抗方法、政策权威指令等，并运用了深度学习技术，高效识别高危有害内容。同时我们会根据大规模语料和实时反误杀系统，不断更新迭代，确保效果持续提升。
-        /// 
-        /// 文本审核接口目前提供以下三个功能：
-        /// 
-        /// 1、文本恶意级别：将文本分为3个级别，包括正常、恶意、可疑送审；
-        /// 
-        /// 2、文本恶意类型：把文本分为9个类别，包括正常、政治、色情、辱骂/低俗、暴恐/毒品、广告/灌水、迷信/邪教、其他违法、综合；
-        /// 
-        /// 3、恶意关键词：文本中所有涉嫌恶意的关键词。
-        /// </summary>
-        /// <param name="req">参考<see cref="ContentApprovalRequest"/></param>
-        /// <returns>参考<see cref="ContentApprovalResponse"/>实例</returns>
-        public async Task<ContentApprovalResponse> ContentApproval(ContentApprovalRequest req)
-        {
-             JsonResponseModel<ContentApprovalResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ContentApproval");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContentApprovalResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 句法依存分析接口能够分析出句子中词与词之间的相互依存关系，并揭示其句法结构，包括主谓关系、动宾关系、核心关系等等，可用于提取句子主干、提取句子核心词等，在机器翻译、自动问答、知识抽取等领域都有很好的应用。
         /// </summary>
-        /// <param name="req">参考<see cref="DependencyParsingRequest"/></param>
-        /// <returns>参考<see cref="DependencyParsingResponse"/>实例</returns>
+        /// <param name="req"><see cref="DependencyParsingRequest"/></param>
+        /// <returns><see cref="DependencyParsingResponse"/></returns>
         public async Task<DependencyParsingResponse> DependencyParsing(DependencyParsingRequest req)
         {
              JsonResponseModel<DependencyParsingResponse> rsp = null;
@@ -148,8 +116,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <summary>
         /// 输入实体名称，返回实体相关的信息如实体别名、实体英文名、实体详细信息、相关实体等。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeEntityRequest"/></param>
-        /// <returns>参考<see cref="DescribeEntityResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeEntityRequest"/></param>
+        /// <returns><see cref="DescribeEntityResponse"/></returns>
         public async Task<DescribeEntityResponse> DescribeEntity(DescribeEntityRequest req)
         {
              JsonResponseModel<DescribeEntityResponse> rsp = null;
@@ -168,8 +136,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <summary>
         /// 输入两个实体，返回两个实体间的关系，例如马化腾与腾讯公司不仅是相关实体，二者还存在隶属关系（马化腾属于腾讯公司）。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRelationRequest"/></param>
-        /// <returns>参考<see cref="DescribeRelationResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRelationRequest"/></param>
+        /// <returns><see cref="DescribeRelationResponse"/></returns>
         public async Task<DescribeRelationResponse> DescribeRelation(DescribeRelationRequest req)
         {
              JsonResponseModel<DescribeRelationResponse> rsp = null;
@@ -188,8 +156,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <summary>
         /// 三元组查询，主要分为两类，SP查询和PO查询。SP查询表示已知主语和谓语查询宾语，PO查询表示已知宾语和谓语查询主语。每一个SP或PO查询都是一个可独立执行的查询，TQL支持SP查询的嵌套查询，即主语可以是一个嵌套的子查询。其他复杂的三元组查询方法，请参考官网API文档示例。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTripleRequest"/></param>
-        /// <returns>参考<see cref="DescribeTripleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTripleRequest"/></param>
+        /// <returns><see cref="DescribeTripleResponse"/></returns>
         public async Task<DescribeTripleResponse> DescribeTriple(DescribeTripleRequest req)
         {
              JsonResponseModel<DescribeTripleResponse> rsp = null;
@@ -208,8 +176,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <summary>
         /// 基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
         /// </summary>
-        /// <param name="req">参考<see cref="KeywordsExtractionRequest"/></param>
-        /// <returns>参考<see cref="KeywordsExtractionResponse"/>实例</returns>
+        /// <param name="req"><see cref="KeywordsExtractionRequest"/></param>
+        /// <returns><see cref="KeywordsExtractionResponse"/></returns>
         public async Task<KeywordsExtractionResponse> KeywordsExtraction(KeywordsExtractionRequest req)
         {
              JsonResponseModel<KeywordsExtractionResponse> rsp = null;
@@ -236,8 +204,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 所有的功能均基于千亿级大规模互联网语料进行持续迭代更新，以保证效果不断提升，用户无需担心新词发现、歧义消除、调用性能等问题。目前词法分析已经在泛互联网、金融、政务等不同垂直领域提供业务支持，并取得良好的效果。
         /// </summary>
-        /// <param name="req">参考<see cref="LexicalAnalysisRequest"/></param>
-        /// <returns>参考<see cref="LexicalAnalysisResponse"/>实例</returns>
+        /// <param name="req"><see cref="LexicalAnalysisRequest"/></param>
+        /// <returns><see cref="LexicalAnalysisResponse"/></returns>
         public async Task<LexicalAnalysisResponse> LexicalAnalysis(LexicalAnalysisRequest req)
         {
              JsonResponseModel<LexicalAnalysisResponse> rsp = null;
@@ -260,8 +228,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 目前能够支持对政治、色情、辱骂/低俗、暴恐/毒品、广告/灌水、迷信/邪教、其他违法、综合等8大类敏感信息的识别。
         /// </summary>
-        /// <param name="req">参考<see cref="SensitiveWordsRecognitionRequest"/></param>
-        /// <returns>参考<see cref="SensitiveWordsRecognitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="SensitiveWordsRecognitionRequest"/></param>
+        /// <returns><see cref="SensitiveWordsRecognitionResponse"/></returns>
         public async Task<SensitiveWordsRecognitionResponse> SensitiveWordsRecognition(SensitiveWordsRecognitionRequest req)
         {
              JsonResponseModel<SensitiveWordsRecognitionResponse> rsp = null;
@@ -282,8 +250,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 该句向量服务由腾讯知文自然语言处理团队联合腾讯AI Lab共同打造，基于千亿级大规模互联网语料并采用AI Lab自研的DSG算法训练而成，在腾讯内部诸多业务的NLP任务上实测效果显著。
         /// </summary>
-        /// <param name="req">参考<see cref="SentenceEmbeddingRequest"/></param>
-        /// <returns>参考<see cref="SentenceEmbeddingResponse"/>实例</returns>
+        /// <param name="req"><see cref="SentenceEmbeddingRequest"/></param>
+        /// <returns><see cref="SentenceEmbeddingResponse"/></returns>
         public async Task<SentenceEmbeddingResponse> SentenceEmbedding(SentenceEmbeddingRequest req)
         {
              JsonResponseModel<SentenceEmbeddingResponse> rsp = null;
@@ -304,8 +272,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 鉴于文本相似度是一个应用非常广泛的功能，腾讯知文自然语言处理团队在深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于文本相似度，可以轻松实现诸如文本去重、相似推荐等功能。
         /// </summary>
-        /// <param name="req">参考<see cref="SentenceSimilarityRequest"/></param>
-        /// <returns>参考<see cref="SentenceSimilarityResponse"/>实例</returns>
+        /// <param name="req"><see cref="SentenceSimilarityRequest"/></param>
+        /// <returns><see cref="SentenceSimilarityResponse"/></returns>
         public async Task<SentenceSimilarityResponse> SentenceSimilarity(SentenceSimilarityRequest req)
         {
              JsonResponseModel<SentenceSimilarityResponse> rsp = null;
@@ -326,8 +294,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 该功能基于基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升。
         /// </summary>
-        /// <param name="req">参考<see cref="SentimentAnalysisRequest"/></param>
-        /// <returns>参考<see cref="SentimentAnalysisResponse"/>实例</returns>
+        /// <param name="req"><see cref="SentimentAnalysisRequest"/></param>
+        /// <returns><see cref="SentimentAnalysisResponse"/></returns>
         public async Task<SentimentAnalysisResponse> SentimentAnalysis(SentimentAnalysisRequest req)
         {
              JsonResponseModel<SentimentAnalysisResponse> rsp = null;
@@ -346,8 +314,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <summary>
         /// 相似词接口能够基于同义词库及词向量技术，检索出与输入词语在语义上最相似的若干个词语，可广泛用于检索系统、问答系统、文档归档等场景。
         /// </summary>
-        /// <param name="req">参考<see cref="SimilarWordsRequest"/></param>
-        /// <returns>参考<see cref="SimilarWordsResponse"/>实例</returns>
+        /// <param name="req"><see cref="SimilarWordsRequest"/></param>
+        /// <returns><see cref="SimilarWordsResponse"/></returns>
         public async Task<SimilarWordsResponse> SimilarWords(SimilarWordsRequest req)
         {
              JsonResponseModel<SimilarWordsResponse> rsp = null;
@@ -376,8 +344,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 3、恶意关键词：文本中所有涉嫌恶意的关键词。
         /// </summary>
-        /// <param name="req">参考<see cref="TextApprovalRequest"/></param>
-        /// <returns>参考<see cref="TextApprovalResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextApprovalRequest"/></param>
+        /// <returns><see cref="TextApprovalResponse"/></returns>
         public async Task<TextApprovalResponse> TextApproval(TextApprovalRequest req)
         {
              JsonResponseModel<TextApprovalResponse> rsp = null;
@@ -406,8 +374,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 更多垂直领域的分类体系即将推出，敬请期待。
         /// </summary>
-        /// <param name="req">参考<see cref="TextClassificationRequest"/></param>
-        /// <returns>参考<see cref="TextClassificationResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextClassificationRequest"/></param>
+        /// <returns><see cref="TextClassificationResponse"/></returns>
         public async Task<TextClassificationResponse> TextClassification(TextClassificationRequest req)
         {
              JsonResponseModel<TextClassificationResponse> rsp = null;
@@ -428,8 +396,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// 此功能是基于千亿级大规模互联网语料和LSTM、BERT等深度神经网络模型进行训练，并持续迭代更新，以保证效果不断提升，是搜索引擎、语音识别、内容审核等功能更好运行的基础之一。 
         /// </summary>
-        /// <param name="req">参考<see cref="TextCorrectionRequest"/></param>
-        /// <returns>参考<see cref="TextCorrectionResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextCorrectionRequest"/></param>
+        /// <returns><see cref="TextCorrectionResponse"/></returns>
         public async Task<TextCorrectionResponse> TextCorrection(TextCorrectionRequest req)
         {
              JsonResponseModel<TextCorrectionResponse> rsp = null;
@@ -456,8 +424,8 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// https://ai.tencent.com/ailab/nlp/embedding.html 
         /// </summary>
-        /// <param name="req">参考<see cref="WordEmbeddingRequest"/></param>
-        /// <returns>参考<see cref="WordEmbeddingResponse"/>实例</returns>
+        /// <param name="req"><see cref="WordEmbeddingRequest"/></param>
+        /// <returns><see cref="WordEmbeddingResponse"/></returns>
         public async Task<WordEmbeddingResponse> WordEmbedding(WordEmbeddingRequest req)
         {
              JsonResponseModel<WordEmbeddingResponse> rsp = null;
@@ -476,8 +444,8 @@ namespace TencentCloud.Nlp.V20190408
         /// <summary>
         /// 词相似度接口能够基于词向量技术来计算两个输入词语的余弦相似度，相似度数值越大的两个词语在语义上越相似。
         /// </summary>
-        /// <param name="req">参考<see cref="WordSimilarityRequest"/></param>
-        /// <returns>参考<see cref="WordSimilarityResponse"/>实例</returns>
+        /// <param name="req"><see cref="WordSimilarityRequest"/></param>
+        /// <returns><see cref="WordSimilarityResponse"/></returns>
         public async Task<WordSimilarityResponse> WordSimilarity(WordSimilarityRequest req)
         {
              JsonResponseModel<WordSimilarityResponse> rsp = null;

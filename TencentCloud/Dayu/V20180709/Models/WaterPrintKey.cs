@@ -49,14 +49,14 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? OpenStatus{ get; set; }
 
         /// <summary>
-        /// 秘钥生成时间
+        /// 密钥生成时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

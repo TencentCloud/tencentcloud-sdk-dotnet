@@ -25,7 +25,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
     {
         
         /// <summary>
-        /// 产品Id
+        /// 产品id
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

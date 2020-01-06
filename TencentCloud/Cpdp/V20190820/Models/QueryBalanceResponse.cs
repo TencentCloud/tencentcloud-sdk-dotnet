@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cpdp.V20190820.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class QueryBalanceResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// 本次交易返回查询结果记录数
+        /// </summary>
+        [JsonProperty("ResultCount")]
+        public string ResultCount{ get; set; }
+
+        /// <summary>
+        /// 起始记录号
+        /// </summary>
+        [JsonProperty("StartRecordOffset")]
+        public string StartRecordOffset{ get; set; }
+
+        /// <summary>
+        /// 结束标志
+        /// </summary>
+        [JsonProperty("EndFlag")]
+        public string EndFlag{ get; set; }
+
+        /// <summary>
+        /// 符合业务查询条件的记录总数
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public string TotalCount{ get; set; }
+
+        /// <summary>
+        /// 查询结果项
+        /// </summary>
+        [JsonProperty("QueryItems")]
+        public QueryItem[] QueryItems{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ResultCount", this.ResultCount);
+            this.SetParamSimple(map, prefix + "StartRecordOffset", this.StartRecordOffset);
+            this.SetParamSimple(map, prefix + "EndFlag", this.EndFlag);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "QueryItems.", this.QueryItems);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

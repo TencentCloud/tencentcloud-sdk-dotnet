@@ -35,14 +35,12 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>40000：输入参数不合法，请检查输入参数；</li>
         /// <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
         /// <li>70000：内部服务错误，建议重试。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 错误信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -62,7 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

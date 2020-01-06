@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public float? TotalFlux{ get; set; }
 
         /// <summary>
-        /// TotalRequest。
+        /// 总请求数。
         /// </summary>
         [JsonProperty("TotalRequest")]
         public ulong? TotalRequest{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Live.V20180801.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

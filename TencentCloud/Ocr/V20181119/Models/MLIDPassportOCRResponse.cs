@@ -81,6 +81,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Image{ get; set; }
 
         /// <summary>
+        /// 扩展字段:
+        /// {
+        ///     ID:{
+        ///         Confidence:0.9999
+        ///     },
+        ///     Name:{
+        ///         Confidence:0.9996
+        ///     }
+        /// }
+        /// </summary>
+        [JsonProperty("AdvancedInfo")]
+        public string AdvancedInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -88,7 +102,7 @@ namespace TencentCloud.Ocr.V20181119.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -101,6 +115,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamArraySimple(map, prefix + "Warn.", this.Warn);
             this.SetParamSimple(map, prefix + "Image", this.Image);
+            this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

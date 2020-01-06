@@ -66,9 +66,21 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }
 
+        /// <summary>
+        /// 节点标签信息列表
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfo[] TagList{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 私有网络vip列表
+        /// </summary>
+        [JsonProperty("IpList")]
+        public string[] IpList{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -79,6 +91,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderByKey", this.OrderByKey);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
         }
     }
 }

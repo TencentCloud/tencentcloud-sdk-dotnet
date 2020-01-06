@@ -25,13 +25,15 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        /// 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// 过滤条件，根据监听器ID精确查询
+        /// 过滤条件，根据监听器ID精确查询。
+        /// 当设置了ProxyId时，会检查该监听器是否归属于该通道。
+        /// 当设置了GroupId时，会检查该监听器是否归属于该通道组。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -61,7 +63,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+        /// 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -74,7 +76,7 @@ namespace TencentCloud.Gaap.V20180529.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

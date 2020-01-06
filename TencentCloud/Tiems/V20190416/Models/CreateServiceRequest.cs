@@ -49,6 +49,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         public string ScaleMode{ get; set; }
 
         /// <summary>
+        /// 部署要使用的资源组Id，默认为共享资源组
+        /// </summary>
+        [JsonProperty("ResourceGroupId")]
+        public string ResourceGroupId{ get; set; }
+
+        /// <summary>
         /// 处理器配置, 单位为1/1000核；范围[100, 256000]
         /// </summary>
         [JsonProperty("Cpu")]
@@ -65,12 +71,6 @@ namespace TencentCloud.Tiems.V20190416.Models
         /// </summary>
         [JsonProperty("Cluster")]
         public string Cluster{ get; set; }
-
-        /// <summary>
-        /// 部署要使用的资源组Id，默认为共享资源组
-        /// </summary>
-        [JsonProperty("ResourceGroupId")]
-        public string ResourceGroupId{ get; set; }
 
         /// <summary>
         /// 默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
@@ -104,7 +104,7 @@ namespace TencentCloud.Tiems.V20190416.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -112,10 +112,10 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "ServiceConfigId", this.ServiceConfigId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
+            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
-            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
             this.SetParamSimple(map, prefix + "GpuMemory", this.GpuMemory);

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? EniQuantity{ get; set; }
 
         /// <summary>
-        /// 每个弹性网卡可以分配的ip配额
+        /// 每个弹性网卡可以分配的IP配额
         /// </summary>
         [JsonProperty("EniPrivateIpAddressQuantity")]
         public long? EniPrivateIpAddressQuantity{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

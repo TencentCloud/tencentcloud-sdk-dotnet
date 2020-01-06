@@ -55,14 +55,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 重装系统时，可以指定修改实例的HostName。
+        /// 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

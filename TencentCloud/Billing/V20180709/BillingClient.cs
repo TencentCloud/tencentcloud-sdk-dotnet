@@ -30,10 +30,10 @@ namespace TencentCloud.Billing.V20180709
        private const string version = "2018-07-09";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public BillingClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public BillingClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 获取云账户余额信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountBalanceRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountBalanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
+        /// <returns><see cref="DescribeAccountBalanceResponse"/></returns>
         public async Task<DescribeAccountBalanceResponse> DescribeAccountBalance(DescribeAccountBalanceRequest req)
         {
              JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 查询账单明细数据
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillDetailRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillDetailResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeBillDetailResponse"/></returns>
         public async Task<DescribeBillDetailResponse> DescribeBillDetail(DescribeBillDetailRequest req)
         {
              JsonResponseModel<DescribeBillDetailResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 查询账单资源汇总数据 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillResourceSummaryRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillResourceSummaryResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBillResourceSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBillResourceSummaryResponse"/></returns>
         public async Task<DescribeBillResourceSummaryResponse> DescribeBillResourceSummary(DescribeBillResourceSummaryRequest req)
         {
              JsonResponseModel<DescribeBillResourceSummaryResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 获取按付费模式汇总费用分布
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByPayModeRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByPayModeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>
         public async Task<DescribeBillSummaryByPayModeResponse> DescribeBillSummaryByPayMode(DescribeBillSummaryByPayModeRequest req)
         {
              JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 获取产品汇总费用分布
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByProductRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBillSummaryByProductRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByProductResponse"/></returns>
         public async Task<DescribeBillSummaryByProductResponse> DescribeBillSummaryByProduct(DescribeBillSummaryByProductRequest req)
         {
              JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 获取按项目汇总费用分布
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByProjectRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBillSummaryByProjectRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByProjectResponse"/></returns>
         public async Task<DescribeBillSummaryByProjectResponse> DescribeBillSummaryByProject(DescribeBillSummaryByProjectRequest req)
         {
              JsonResponseModel<DescribeBillSummaryByProjectResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 获取按地域汇总费用分布
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByRegionRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByRegionResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBillSummaryByRegionRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByRegionResponse"/></returns>
         public async Task<DescribeBillSummaryByRegionResponse> DescribeBillSummaryByRegion(DescribeBillSummaryByRegionRequest req)
         {
              JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 获取按标签汇总费用分布
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByTagRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByTagResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBillSummaryByTagRequest"/></param>
+        /// <returns><see cref="DescribeBillSummaryByTagResponse"/></returns>
         public async Task<DescribeBillSummaryByTagResponse> DescribeBillSummaryByTag(DescribeBillSummaryByTagRequest req)
         {
              JsonResponseModel<DescribeBillSummaryByTagResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 查询订单
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDealsByCondRequest"/></param>
-        /// <returns>参考<see cref="DescribeDealsByCondResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDealsByCondRequest"/></param>
+        /// <returns><see cref="DescribeDealsByCondResponse"/></returns>
         public async Task<DescribeDealsByCondResponse> DescribeDealsByCond(DescribeDealsByCondRequest req)
         {
              JsonResponseModel<DescribeDealsByCondResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 按日期获取产品用量明细
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDosageDetailByDateRequest"/></param>
-        /// <returns>参考<see cref="DescribeDosageDetailByDateResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDosageDetailByDateRequest"/></param>
+        /// <returns><see cref="DescribeDosageDetailByDateResponse"/></returns>
         public async Task<DescribeDosageDetailByDateResponse> DescribeDosageDetailByDate(DescribeDosageDetailByDateRequest req)
         {
              JsonResponseModel<DescribeDosageDetailByDateResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Billing.V20180709
         /// <summary>
         /// 支付订单
         /// </summary>
-        /// <param name="req">参考<see cref="PayDealsRequest"/></param>
-        /// <returns>参考<see cref="PayDealsResponse"/>实例</returns>
+        /// <param name="req"><see cref="PayDealsRequest"/></param>
+        /// <returns><see cref="PayDealsResponse"/></returns>
         public async Task<PayDealsResponse> PayDeals(PayDealsRequest req)
         {
              JsonResponseModel<PayDealsResponse> rsp = null;

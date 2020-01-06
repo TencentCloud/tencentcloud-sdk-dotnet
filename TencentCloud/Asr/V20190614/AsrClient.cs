@@ -30,10 +30,10 @@ namespace TencentCloud.Asr.V20190614
        private const string version = "2019-06-14";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public AsrClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public AsrClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -58,11 +58,11 @@ namespace TencentCloud.Asr.V20190614
         /// <br>• 接口支持wav、mp3、silk、amr、m4a等主流音频格式
         /// <br>• 支持语音 URL 和本地语音文件两种请求方式
         /// <br>• 本地语音文件上传的文件不能大于5MB，语音 URL的音频时长不能长于1小时
-        /// <br>• 目前仅支持中文普通话
+        /// <br>• 支持中文普通话、英语和粤语。
         /// <br>• 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateRecTaskRequest"/></param>
-        /// <returns>参考<see cref="CreateRecTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateRecTaskRequest"/></param>
+        /// <returns><see cref="CreateRecTaskResponse"/></returns>
         public async Task<CreateRecTaskResponse> CreateRecTask(CreateRecTaskRequest req)
         {
              JsonResponseModel<CreateRecTaskResponse> rsp = null;
@@ -83,8 +83,8 @@ namespace TencentCloud.Asr.V20190614
         /// <br>• 当采用回调方式时，识别完成后会将结果通过 POST 请求的形式通知到用户在请求时填写的回调 URL，具体请参见[ 录音识别结果回调 ](https://cloud.tencent.com/document/product/1093/37139#callback)。
         /// <br>• 当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见下文说明。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
         public async Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
         {
              JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
@@ -108,8 +108,8 @@ namespace TencentCloud.Asr.V20190614
         /// <br>•   当音频文件通过请求中body内容上传时，请求大小不能超过600KB；当音频以URL方式传输时，音频时长不可超过60s。
         /// <br>•   所有请求参数放在POST请求的body中，编码类型采用x-www-form-urlencoded，参数进行urlencode编码后传输。
         /// </summary>
-        /// <param name="req">参考<see cref="SentenceRecognitionRequest"/></param>
-        /// <returns>参考<see cref="SentenceRecognitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="SentenceRecognitionRequest"/></param>
+        /// <returns><see cref="SentenceRecognitionResponse"/></returns>
         public async Task<SentenceRecognitionResponse> SentenceRecognition(SentenceRecognitionRequest req)
         {
              JsonResponseModel<SentenceRecognitionResponse> rsp = null;

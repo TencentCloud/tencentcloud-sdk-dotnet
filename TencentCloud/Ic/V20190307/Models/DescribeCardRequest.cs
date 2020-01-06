@@ -25,20 +25,20 @@ namespace TencentCloud.Ic.V20190307.Models
     {
         
         /// <summary>
-        /// 应用id
+        /// 应用ID
         /// </summary>
         [JsonProperty("Sdkappid")]
         public long? Sdkappid{ get; set; }
 
         /// <summary>
-        /// 卡片id
+        /// 卡片ID
         /// </summary>
         [JsonProperty("Iccid")]
         public string Iccid{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

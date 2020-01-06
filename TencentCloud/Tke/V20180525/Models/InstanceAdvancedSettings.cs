@@ -54,9 +54,15 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
+        /// <summary>
+        /// 数据盘相关信息
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -65,6 +71,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         }
     }
 }

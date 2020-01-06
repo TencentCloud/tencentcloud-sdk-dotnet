@@ -39,6 +39,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 采样频率，即对视频每秒截取进行审核的帧数。
+        /// </summary>
+        [JsonProperty("SampleRate")]
+        public float? SampleRate{ get; set; }
+
+        /// <summary>
+        /// 审核的视频时长，单位：秒。
+        /// </summary>
+        [JsonProperty("Duration")]
+        public float? Duration{ get; set; }
+
+        /// <summary>
         /// 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -89,11 +101,13 @@ namespace TencentCloud.Mps.V20190612.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamObj(map, prefix + "PornTask.", this.PornTask);
             this.SetParamObj(map, prefix + "TerrorismTask.", this.TerrorismTask);
             this.SetParamObj(map, prefix + "PoliticalTask.", this.PoliticalTask);

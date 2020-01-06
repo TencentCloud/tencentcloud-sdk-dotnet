@@ -30,10 +30,10 @@ namespace TencentCloud.Tts.V20190823
        private const string version = "2019-08-23";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TtsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tts.V20190823
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TtsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -57,8 +57,8 @@ namespace TencentCloud.Tts.V20190823
         /// 腾讯TTS技术可以应用到很多场景，比如，移动APP语音播报新闻；智能设备语音提醒；依靠网上现有节目或少量录音，快速合成明星语音，降低邀约成本；支持车载导航语音合成的个性化语音播报。
         /// 内测期间免费使用。
         /// </summary>
-        /// <param name="req">参考<see cref="TextToVoiceRequest"/></param>
-        /// <returns>参考<see cref="TextToVoiceResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextToVoiceRequest"/></param>
+        /// <returns><see cref="TextToVoiceResponse"/></returns>
         public async Task<TextToVoiceResponse> TextToVoice(TextToVoiceRequest req)
         {
              JsonResponseModel<TextToVoiceResponse> rsp = null;

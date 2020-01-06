@@ -66,9 +66,27 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("GpuType")]
         public string GpuType{ get; set; }
 
+        /// <summary>
+        /// 处理器配置，单位为 1/1000 核
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 内存配置，单位为1M
+        /// </summary>
+        [JsonProperty("Memory")]
+        public ulong? Memory{ get; set; }
+
+        /// <summary>
+        /// 显卡配置，单位为 1/1000 卡
+        /// </summary>
+        [JsonProperty("Gpu")]
+        public ulong? Gpu{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -79,6 +97,9 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "ServiceAction", this.ServiceAction);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
         }
     }
 }

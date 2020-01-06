@@ -30,10 +30,10 @@ namespace TencentCloud.Cim.V20190318
        private const string version = "2019-03-18";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CimClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Cim.V20190318
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public CimClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Cim.V20190318
         /// <summary>
         /// 获取云通信IM中腾讯云账号对应的SDKAppID
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSdkAppidRequest"/></param>
-        /// <returns>参考<see cref="DescribeSdkAppidResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSdkAppidRequest"/></param>
+        /// <returns><see cref="DescribeSdkAppidResponse"/></returns>
         public async Task<DescribeSdkAppidResponse> DescribeSdkAppid(DescribeSdkAppidRequest req)
         {
              JsonResponseModel<DescribeSdkAppidResponse> rsp = null;

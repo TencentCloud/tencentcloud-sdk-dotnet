@@ -85,6 +85,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ID{ get; set; }
 
         /// <summary>
+        /// 发票消费类型
+        /// </summary>
+        [JsonProperty("InvoiceType")]
+        public string InvoiceType{ get; set; }
+
+        /// <summary>
+        /// 序列号
+        /// </summary>
+        [JsonProperty("SerialNumber")]
+        public string SerialNumber{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,7 +104,7 @@ namespace TencentCloud.Ocr.V20181119.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -106,6 +118,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "SeatCategory", this.SeatCategory);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "InvoiceType", this.InvoiceType);
+            this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -30,10 +30,10 @@ namespace TencentCloud.Cdn.V20180606
        private const string version = "2018-06-06";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CdnClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public CdnClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -64,8 +64,8 @@ namespace TencentCloud.Cdn.V20180606
         /// + 状态码 4xx 汇总及各 4 开头状态码明细（单位为 个）
         /// + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCdnDataRequest"/></param>
-        /// <returns>参考<see cref="DescribeCdnDataResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCdnDataRequest"/></param>
+        /// <returns><see cref="DescribeCdnDataResponse"/></returns>
         public async Task<DescribeCdnDataResponse> DescribeCdnData(DescribeCdnDataRequest req)
         {
              JsonResponseModel<DescribeCdnDataResponse> rsp = null;
@@ -84,8 +84,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// DescribeCdnDomainLogs 用于查询访问日志下载地址，仅支持 30 天以内的境内、境外访问日志下载链接查询。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCdnDomainLogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeCdnDomainLogsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCdnDomainLogsRequest"/></param>
+        /// <returns><see cref="DescribeCdnDomainLogsResponse"/></returns>
         public async Task<DescribeCdnDomainLogsResponse> DescribeCdnDomainLogs(DescribeCdnDomainLogsRequest req)
         {
              JsonResponseModel<DescribeCdnDomainLogsResponse> rsp = null;
@@ -104,8 +104,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// DescribeCdnIp 用于查询 CDN IP 归属。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCdnIpRequest"/></param>
-        /// <returns>参考<see cref="DescribeCdnIpResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
+        /// <returns><see cref="DescribeCdnIpResponse"/></returns>
         public async Task<DescribeCdnIpResponse> DescribeCdnIp(DescribeCdnIpRequest req)
         {
              JsonResponseModel<DescribeCdnIpResponse> rsp = null;
@@ -127,8 +127,8 @@ namespace TencentCloud.Cdn.V20180606
         /// + 5 分钟活跃用户数：根据日志中客户端 IP，5 分钟粒度去重统计
         /// + 日活跃用户数：根据日志中客户端 IP，按天粒度去重统计
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeIpVisitRequest"/></param>
-        /// <returns>参考<see cref="DescribeIpVisitResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeIpVisitRequest"/></param>
+        /// <returns><see cref="DescribeIpVisitResponse"/></returns>
         public async Task<DescribeIpVisitResponse> DescribeIpVisit(DescribeIpVisitRequest req)
         {
              JsonResponseModel<DescribeIpVisitResponse> rsp = null;
@@ -147,8 +147,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// DescribeMapInfo 用于查询省份对应的 ID，运营商对应的 ID 信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeMapInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeMapInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeMapInfoRequest"/></param>
+        /// <returns><see cref="DescribeMapInfoResponse"/></returns>
         public async Task<DescribeMapInfoResponse> DescribeMapInfo(DescribeMapInfoRequest req)
         {
              JsonResponseModel<DescribeMapInfoResponse> rsp = null;
@@ -177,8 +177,8 @@ namespace TencentCloud.Cdn.V20180606
         /// + 回源状态码 4xx 汇总及各 4 开头回源状态码明细（单位为 个）
         /// + 回源状态码 5xx 汇总及各 5 开头回源状态码明细（单位为 个）
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeOriginDataRequest"/></param>
-        /// <returns>参考<see cref="DescribeOriginDataResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeOriginDataRequest"/></param>
+        /// <returns><see cref="DescribeOriginDataResponse"/></returns>
         public async Task<DescribeOriginDataResponse> DescribeOriginData(DescribeOriginDataRequest req)
         {
              JsonResponseModel<DescribeOriginDataResponse> rsp = null;
@@ -197,8 +197,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// DescribePayType 用于查询用户的计费类型，计费周期等信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePayTypeRequest"/></param>
-        /// <returns>参考<see cref="DescribePayTypeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePayTypeRequest"/></param>
+        /// <returns><see cref="DescribePayTypeResponse"/></returns>
         public async Task<DescribePayTypeResponse> DescribePayType(DescribePayTypeRequest req)
         {
              JsonResponseModel<DescribePayTypeResponse> rsp = null;
@@ -217,8 +217,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// DescribePurgeTasks 用于查询提交的 URL 刷新、目录刷新记录及执行进度，通过 PurgePathCache 与 PurgeUrlsCache 接口提交的任务均可通过此接口进行查询。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePurgeTasksRequest"/></param>
-        /// <returns>参考<see cref="DescribePurgeTasksResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
+        /// <returns><see cref="DescribePurgeTasksResponse"/></returns>
         public async Task<DescribePurgeTasksResponse> DescribePurgeTasks(DescribePurgeTasksRequest req)
         {
              JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
@@ -238,8 +238,8 @@ namespace TencentCloud.Cdn.V20180606
         /// DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
         /// 接口灰度中，暂未全量开放，敬请期待。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePushTasksRequest"/></param>
-        /// <returns>参考<see cref="DescribePushTasksResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePushTasksRequest"/></param>
+        /// <returns><see cref="DescribePushTasksResponse"/></returns>
         public async Task<DescribePushTasksResponse> DescribePushTasks(DescribePushTasksRequest req)
         {
              JsonResponseModel<DescribePushTasksResponse> rsp = null;
@@ -258,8 +258,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// DescribeTrafficPackages 用于查询境内 CDN 流量包详情。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTrafficPackagesRequest"/></param>
-        /// <returns>参考<see cref="DescribeTrafficPackagesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTrafficPackagesRequest"/></param>
+        /// <returns><see cref="DescribeTrafficPackagesResponse"/></returns>
         public async Task<DescribeTrafficPackagesResponse> DescribeTrafficPackages(DescribeTrafficPackagesRequest req)
         {
              JsonResponseModel<DescribeTrafficPackagesResponse> rsp = null;
@@ -278,8 +278,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，全网访问会直接返回 403。（接口尚在内测中，暂未全量开放使用）
         /// </summary>
-        /// <param name="req">参考<see cref="DisableCachesRequest"/></param>
-        /// <returns>参考<see cref="DisableCachesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DisableCachesRequest"/></param>
+        /// <returns><see cref="DisableCachesResponse"/></returns>
         public async Task<DisableCachesResponse> DisableCaches(DisableCachesRequest req)
         {
              JsonResponseModel<DisableCachesResponse> rsp = null;
@@ -298,8 +298,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
         /// </summary>
-        /// <param name="req">参考<see cref="EnableCachesRequest"/></param>
-        /// <returns>参考<see cref="EnableCachesResponse"/>实例</returns>
+        /// <param name="req"><see cref="EnableCachesRequest"/></param>
+        /// <returns><see cref="EnableCachesResponse"/></returns>
         public async Task<EnableCachesResponse> EnableCaches(EnableCachesRequest req)
         {
              JsonResponseModel<EnableCachesResponse> rsp = null;
@@ -318,8 +318,8 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// GetDisableRecords 用户查询资源禁用历史，及 URL 当前状态。（接口尚在内测中，暂未全量开放使用）
         /// </summary>
-        /// <param name="req">参考<see cref="GetDisableRecordsRequest"/></param>
-        /// <returns>参考<see cref="GetDisableRecordsResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetDisableRecordsRequest"/></param>
+        /// <returns><see cref="GetDisableRecordsResponse"/></returns>
         public async Task<GetDisableRecordsResponse> GetDisableRecords(GetDisableRecordsRequest req)
         {
              JsonResponseModel<GetDisableRecordsResponse> rsp = null;
@@ -344,8 +344,8 @@ namespace TencentCloud.Cdn.V20180606
         /// + 依据总流量、峰值带宽、总请求数、平均命中率、2XX/3XX/4XX/5XX 状态码对域名排序，从大至小返回域名列表
         /// + 依据总回源流量、回源峰值带宽、总回源请求数、平均回源失败率、2XX/3XX/4XX/5XX 回源状态码对域名排序，从大至小返回域名列表
         /// </summary>
-        /// <param name="req">参考<see cref="ListTopDataRequest"/></param>
-        /// <returns>参考<see cref="ListTopDataResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListTopDataRequest"/></param>
+        /// <returns><see cref="ListTopDataResponse"/></returns>
         public async Task<ListTopDataResponse> ListTopData(ListTopDataRequest req)
         {
              JsonResponseModel<ListTopDataResponse> rsp = null;
@@ -365,8 +365,8 @@ namespace TencentCloud.Cdn.V20180606
         /// PurgePathCache 用于批量提交目录刷新，根据域名的加速区域进行对应区域的刷新。
         /// 默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 20 条。
         /// </summary>
-        /// <param name="req">参考<see cref="PurgePathCacheRequest"/></param>
-        /// <returns>参考<see cref="PurgePathCacheResponse"/>实例</returns>
+        /// <param name="req"><see cref="PurgePathCacheRequest"/></param>
+        /// <returns><see cref="PurgePathCacheResponse"/></returns>
         public async Task<PurgePathCacheResponse> PurgePathCache(PurgePathCacheRequest req)
         {
              JsonResponseModel<PurgePathCacheResponse> rsp = null;
@@ -386,8 +386,8 @@ namespace TencentCloud.Cdn.V20180606
         /// PurgeUrlsCache 用于批量提交 URL 进行刷新，根据 URL 中域名的当前加速区域进行对应区域的刷新。
         /// 默认情况下境内、境外加速区域每日 URL 刷新额度各为 10000 条，每次最多可提交 1000 条。
         /// </summary>
-        /// <param name="req">参考<see cref="PurgeUrlsCacheRequest"/></param>
-        /// <returns>参考<see cref="PurgeUrlsCacheResponse"/>实例</returns>
+        /// <param name="req"><see cref="PurgeUrlsCacheRequest"/></param>
+        /// <returns><see cref="PurgeUrlsCacheResponse"/></returns>
         public async Task<PurgeUrlsCacheResponse> PurgeUrlsCache(PurgeUrlsCacheRequest req)
         {
              JsonResponseModel<PurgeUrlsCacheResponse> rsp = null;
@@ -408,8 +408,8 @@ namespace TencentCloud.Cdn.V20180606
         /// 默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 20 条。
         /// 接口灰度中，暂未全量开放，敬请期待。
         /// </summary>
-        /// <param name="req">参考<see cref="PushUrlsCacheRequest"/></param>
-        /// <returns>参考<see cref="PushUrlsCacheResponse"/>实例</returns>
+        /// <param name="req"><see cref="PushUrlsCacheRequest"/></param>
+        /// <returns><see cref="PushUrlsCacheResponse"/></returns>
         public async Task<PushUrlsCacheResponse> PushUrlsCache(PushUrlsCacheRequest req)
         {
              JsonResponseModel<PushUrlsCacheResponse> rsp = null;

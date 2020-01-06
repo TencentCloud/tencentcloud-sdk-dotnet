@@ -184,10 +184,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LatestOperation{ get; set; }
 
         /// <summary>
-        /// 实例的最新操作状态。取值范围：<br>
-        /// <li>SUCCESS：表示操作成功<br>
-        /// <li>OPERATING：表示操作执行中<br>
-        /// <li>FAILED：表示操作失败
+        /// 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LatestOperationState")]
@@ -202,7 +199,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

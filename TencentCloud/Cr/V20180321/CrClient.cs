@@ -30,10 +30,10 @@ namespace TencentCloud.Cr.V20180321
        private const string version = "2018-03-21";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CrClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public CrClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 提交黑名单后，黑名单中有效期内的号码将停止拨打，适用于到期/逾期提醒、回访场景。
         /// </summary>
-        /// <param name="req">参考<see cref="ApplyBlackListRequest"/></param>
-        /// <returns>参考<see cref="ApplyBlackListResponse"/>实例</returns>
+        /// <param name="req"><see cref="ApplyBlackListRequest"/></param>
+        /// <returns><see cref="ApplyBlackListResponse"/></returns>
         public async Task<ApplyBlackListResponse> ApplyBlackList(ApplyBlackListRequest req)
         {
              JsonResponseModel<ApplyBlackListResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 提交信审外呼申请，返回当次请求日期。
         /// </summary>
-        /// <param name="req">参考<see cref="ApplyCreditAuditRequest"/></param>
-        /// <returns>参考<see cref="ApplyCreditAuditResponse"/>实例</returns>
+        /// <param name="req"><see cref="ApplyCreditAuditRequest"/></param>
+        /// <returns><see cref="ApplyCreditAuditResponse"/></returns>
         public async Task<ApplyCreditAuditResponse> ApplyCreditAudit(ApplyCreditAuditRequest req)
         {
              JsonResponseModel<ApplyCreditAuditResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 根据信审任务ID和请求日期，获取相关信审结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCreditResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeCreditResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCreditResultRequest"/></param>
+        /// <returns><see cref="DescribeCreditResultResponse"/></returns>
         public async Task<DescribeCreditResultResponse> DescribeCreditResult(DescribeCreditResultRequest req)
         {
              JsonResponseModel<DescribeCreditResultResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 用于获取指定案件的录音地址，次日早上8:00后可查询前日录音。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRecordsRequest"/></param>
-        /// <returns>参考<see cref="DescribeRecordsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRecordsRequest"/></param>
+        /// <returns><see cref="DescribeRecordsResponse"/></returns>
         public async Task<DescribeRecordsResponse> DescribeRecords(DescribeRecordsRequest req)
         {
              JsonResponseModel<DescribeRecordsResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 根据上传文件接口的输出参数DataResId，获取相关上传结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
         public async Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
         {
              JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
         /// </summary>
-        /// <param name="req">参考<see cref="DownloadDialogueTextRequest"/></param>
-        /// <returns>参考<see cref="DownloadDialogueTextResponse"/>实例</returns>
+        /// <param name="req"><see cref="DownloadDialogueTextRequest"/></param>
+        /// <returns><see cref="DownloadDialogueTextResponse"/></returns>
         public async Task<DownloadDialogueTextResponse> DownloadDialogueText(DownloadDialogueTextRequest req)
         {
              JsonResponseModel<DownloadDialogueTextResponse> rsp = null;
@@ -176,8 +176,8 @@ namespace TencentCloud.Cr.V20180321
         /// <p>用于获取录音下载链接清单，次日早上8:00后可查询前日录音清单。</p>
         /// <p>注意：录音清单中的录音下载链接仅次日20:00之前有效，请及时下载。</p>
         /// </summary>
-        /// <param name="req">参考<see cref="DownloadRecordListRequest"/></param>
-        /// <returns>参考<see cref="DownloadRecordListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DownloadRecordListRequest"/></param>
+        /// <returns><see cref="DownloadRecordListResponse"/></returns>
         public async Task<DownloadRecordListResponse> DownloadRecordList(DownloadRecordListRequest req)
         {
              JsonResponseModel<DownloadRecordListResponse> rsp = null;
@@ -196,8 +196,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 用于下载当日催收和回访结果报表。当日23:00后，可获取当日催收结果，次日00:30后，可获取昨日回访结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DownloadReportRequest"/></param>
-        /// <returns>参考<see cref="DownloadReportResponse"/>实例</returns>
+        /// <param name="req"><see cref="DownloadReportRequest"/></param>
+        /// <returns><see cref="DownloadReportResponse"/></returns>
         public async Task<DownloadReportResponse> DownloadReport(DownloadReportRequest req)
         {
              JsonResponseModel<DownloadReportResponse> rsp = null;
@@ -223,8 +223,8 @@ namespace TencentCloud.Cr.V20180321
         /// </ol>
         /// 接口返回数据任务ID，支持xlsx、xls、csv、zip格式，文档大小不超过50MB。
         /// </summary>
-        /// <param name="req">参考<see cref="UploadDataFileRequest"/></param>
-        /// <returns>参考<see cref="UploadDataFileResponse"/>实例</returns>
+        /// <param name="req"><see cref="UploadDataFileRequest"/></param>
+        /// <returns><see cref="UploadDataFileResponse"/></returns>
         public async Task<UploadDataFileResponse> UploadDataFile(UploadDataFileRequest req)
         {
              JsonResponseModel<UploadDataFileResponse> rsp = null;
@@ -243,8 +243,8 @@ namespace TencentCloud.Cr.V20180321
         /// <summary>
         /// 客户通过调用该接口上传需催收文档，格式需为excel格式。接口返回任务ID。
         /// </summary>
-        /// <param name="req">参考<see cref="UploadFileRequest"/></param>
-        /// <returns>参考<see cref="UploadFileResponse"/>实例</returns>
+        /// <param name="req"><see cref="UploadFileRequest"/></param>
+        /// <returns><see cref="UploadFileResponse"/></returns>
         public async Task<UploadFileResponse> UploadFile(UploadFileRequest req)
         {
              JsonResponseModel<UploadFileResponse> rsp = null;

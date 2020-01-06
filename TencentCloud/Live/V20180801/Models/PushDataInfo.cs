@@ -104,9 +104,15 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
+        /// <summary>
+        /// 采样率。
+        /// </summary>
+        [JsonProperty("AsampleRate")]
+        public ulong? AsampleRate{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -123,6 +129,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Acodec", this.Acodec);
             this.SetParamSimple(map, prefix + "Vcodec", this.Vcodec);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "AsampleRate", this.AsampleRate);
         }
     }
 }

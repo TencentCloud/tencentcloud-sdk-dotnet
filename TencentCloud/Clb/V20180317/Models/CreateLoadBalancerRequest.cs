@@ -51,7 +51,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+        /// 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+        /// 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
         /// </summary>
         [JsonProperty("AddressIPVersion")]
         public string AddressIPVersion{ get; set; }
@@ -88,12 +88,6 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
-        /// </summary>
-        [JsonProperty("AnycastZone")]
-        public string AnycastZone{ get; set; }
-
-        /// <summary>
         /// 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
         /// </summary>
         [JsonProperty("InternetAccessible")]
@@ -107,7 +101,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -121,7 +115,6 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamSimple(map, prefix + "MasterZoneId", this.MasterZoneId);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }

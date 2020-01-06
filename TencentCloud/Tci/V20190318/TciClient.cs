@@ -30,10 +30,10 @@ namespace TencentCloud.Tci.V20190318
        private const string version = "2019-03-18";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TciClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tci.V20190318
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TciClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 提供 AI 助教基础版本功能接口
         /// </summary>
-        /// <param name="req">参考<see cref="AIAssistantRequest"/></param>
-        /// <returns>参考<see cref="AIAssistantResponse"/>实例</returns>
+        /// <param name="req"><see cref="AIAssistantRequest"/></param>
+        /// <returns><see cref="AIAssistantResponse"/></returns>
         public async Task<AIAssistantResponse> AIAssistant(AIAssistantRequest req)
         {
              JsonResponseModel<AIAssistantResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 用于取消已经提交的任务，目前只支持图像任务。
         /// </summary>
-        /// <param name="req">参考<see cref="CancelTaskRequest"/></param>
-        /// <returns>参考<see cref="CancelTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="CancelTaskRequest"/></param>
+        /// <returns><see cref="CancelTaskResponse"/></returns>
         public async Task<CancelTaskResponse> CancelTask(CancelTaskRequest req)
         {
              JsonResponseModel<CancelTaskResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 检查人脸图片是否合法
         /// </summary>
-        /// <param name="req">参考<see cref="CheckFacePhotoRequest"/></param>
-        /// <returns>参考<see cref="CheckFacePhotoResponse"/>实例</returns>
+        /// <param name="req"><see cref="CheckFacePhotoRequest"/></param>
+        /// <returns><see cref="CheckFacePhotoResponse"/></returns>
         public async Task<CheckFacePhotoResponse> CheckFacePhoto(CheckFacePhotoRequest req)
         {
              JsonResponseModel<CheckFacePhotoResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 创建人脸
         /// </summary>
-        /// <param name="req">参考<see cref="CreateFaceRequest"/></param>
-        /// <returns>参考<see cref="CreateFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateFaceRequest"/></param>
+        /// <returns><see cref="CreateFaceResponse"/></returns>
         public async Task<CreateFaceResponse> CreateFace(CreateFaceRequest req)
         {
              JsonResponseModel<CreateFaceResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 创建人员库
         /// </summary>
-        /// <param name="req">参考<see cref="CreateLibraryRequest"/></param>
-        /// <returns>参考<see cref="CreateLibraryResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateLibraryRequest"/></param>
+        /// <returns><see cref="CreateLibraryResponse"/></returns>
         public async Task<CreateLibraryResponse> CreateLibrary(CreateLibraryRequest req)
         {
              JsonResponseModel<CreateLibraryResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 创建人员
         /// </summary>
-        /// <param name="req">参考<see cref="CreatePersonRequest"/></param>
-        /// <returns>参考<see cref="CreatePersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreatePersonRequest"/></param>
+        /// <returns><see cref="CreatePersonResponse"/></returns>
         public async Task<CreatePersonResponse> CreatePerson(CreatePersonRequest req)
         {
              JsonResponseModel<CreatePersonResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 创建词汇
         /// </summary>
-        /// <param name="req">参考<see cref="CreateVocabRequest"/></param>
-        /// <returns>参考<see cref="CreateVocabResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateVocabRequest"/></param>
+        /// <returns><see cref="CreateVocabResponse"/></returns>
         public async Task<CreateVocabResponse> CreateVocab(CreateVocabRequest req)
         {
              JsonResponseModel<CreateVocabResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 建立词汇库
         /// </summary>
-        /// <param name="req">参考<see cref="CreateVocabLibRequest"/></param>
-        /// <returns>参考<see cref="CreateVocabLibResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateVocabLibRequest"/></param>
+        /// <returns><see cref="CreateVocabLibResponse"/></returns>
         public async Task<CreateVocabLibResponse> CreateVocabLib(CreateVocabLibRequest req)
         {
              JsonResponseModel<CreateVocabLibResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 删除人脸
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteFaceRequest"/></param>
-        /// <returns>参考<see cref="DeleteFaceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteFaceRequest"/></param>
+        /// <returns><see cref="DeleteFaceResponse"/></returns>
         public async Task<DeleteFaceResponse> DeleteFace(DeleteFaceRequest req)
         {
              JsonResponseModel<DeleteFaceResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 删除人员库
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteLibraryRequest"/></param>
-        /// <returns>参考<see cref="DeleteLibraryResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteLibraryRequest"/></param>
+        /// <returns><see cref="DeleteLibraryResponse"/></returns>
         public async Task<DeleteLibraryResponse> DeleteLibrary(DeleteLibraryRequest req)
         {
              JsonResponseModel<DeleteLibraryResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 删除人员
         /// </summary>
-        /// <param name="req">参考<see cref="DeletePersonRequest"/></param>
-        /// <returns>参考<see cref="DeletePersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeletePersonRequest"/></param>
+        /// <returns><see cref="DeletePersonResponse"/></returns>
         public async Task<DeletePersonResponse> DeletePerson(DeletePersonRequest req)
         {
              JsonResponseModel<DeletePersonResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 删除词汇
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteVocabRequest"/></param>
-        /// <returns>参考<see cref="DeleteVocabResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteVocabRequest"/></param>
+        /// <returns><see cref="DeleteVocabResponse"/></returns>
         public async Task<DeleteVocabResponse> DeleteVocab(DeleteVocabRequest req)
         {
              JsonResponseModel<DeleteVocabResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 删除词汇库
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteVocabLibRequest"/></param>
-        /// <returns>参考<see cref="DeleteVocabLibResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteVocabLibRequest"/></param>
+        /// <returns><see cref="DeleteVocabLibResponse"/></returns>
         public async Task<DeleteVocabLibResponse> DeleteVocabLib(DeleteVocabLibRequest req)
         {
              JsonResponseModel<DeleteVocabLibResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 获取标准化接口任务结果
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAITaskResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeAITaskResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAITaskResultRequest"/></param>
+        /// <returns><see cref="DescribeAITaskResultResponse"/></returns>
         public async Task<DescribeAITaskResultResponse> DescribeAITaskResult(DescribeAITaskResultRequest req)
         {
              JsonResponseModel<DescribeAITaskResultResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 人脸考勤查询结果
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAttendanceResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeAttendanceResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAttendanceResultRequest"/></param>
+        /// <returns><see cref="DescribeAttendanceResultResponse"/></returns>
         public async Task<DescribeAttendanceResultResponse> DescribeAttendanceResult(DescribeAttendanceResultRequest req)
         {
              JsonResponseModel<DescribeAttendanceResultResponse> rsp = null;
@@ -355,8 +355,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 音频评估任务信息查询接口，异步查询客户提交的请求的结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAudioTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeAudioTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAudioTaskRequest"/></param>
+        /// <returns><see cref="DescribeAudioTaskResponse"/></returns>
         public async Task<DescribeAudioTaskResponse> DescribeAudioTask(DescribeAudioTaskRequest req)
         {
              JsonResponseModel<DescribeAudioTaskResponse> rsp = null;
@@ -375,8 +375,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 音频对话任务评估任务信息查询接口，异步查询客户提交的请求的结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeConversationTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeConversationTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeConversationTaskRequest"/></param>
+        /// <returns><see cref="DescribeConversationTaskResponse"/></returns>
         public async Task<DescribeConversationTaskResponse> DescribeConversationTask(DescribeConversationTaskRequest req)
         {
              JsonResponseModel<DescribeConversationTaskResponse> rsp = null;
@@ -395,8 +395,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 视频精彩集锦结果查询接口，异步查询客户提交的请求的结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeHighlightResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeHighlightResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeHighlightResultRequest"/></param>
+        /// <returns><see cref="DescribeHighlightResultResponse"/></returns>
         public async Task<DescribeHighlightResultResponse> DescribeHighlightResult(DescribeHighlightResultRequest req)
         {
              JsonResponseModel<DescribeHighlightResultResponse> rsp = null;
@@ -415,8 +415,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 拉取任务详情
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeImageTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeImageTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeImageTaskRequest"/></param>
+        /// <returns><see cref="DescribeImageTaskResponse"/></returns>
         public async Task<DescribeImageTaskResponse> DescribeImageTask(DescribeImageTaskRequest req)
         {
              JsonResponseModel<DescribeImageTaskResponse> rsp = null;
@@ -435,8 +435,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 获取图像任务统计信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeImageTaskStatisticRequest"/></param>
-        /// <returns>参考<see cref="DescribeImageTaskStatisticResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeImageTaskStatisticRequest"/></param>
+        /// <returns><see cref="DescribeImageTaskStatisticResponse"/></returns>
         public async Task<DescribeImageTaskStatisticResponse> DescribeImageTaskStatistic(DescribeImageTaskStatisticRequest req)
         {
              JsonResponseModel<DescribeImageTaskStatisticResponse> rsp = null;
@@ -455,8 +455,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 获取人员库列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeLibrariesRequest"/></param>
-        /// <returns>参考<see cref="DescribeLibrariesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeLibrariesRequest"/></param>
+        /// <returns><see cref="DescribeLibrariesResponse"/></returns>
         public async Task<DescribeLibrariesResponse> DescribeLibraries(DescribeLibrariesRequest req)
         {
              JsonResponseModel<DescribeLibrariesResponse> rsp = null;
@@ -475,8 +475,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 获取人员详情
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonRequest"/></param>
+        /// <returns><see cref="DescribePersonResponse"/></returns>
         public async Task<DescribePersonResponse> DescribePerson(DescribePersonRequest req)
         {
              JsonResponseModel<DescribePersonResponse> rsp = null;
@@ -495,8 +495,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 拉取人员列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePersonsRequest"/></param>
-        /// <returns>参考<see cref="DescribePersonsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePersonsRequest"/></param>
+        /// <returns><see cref="DescribePersonsResponse"/></returns>
         public async Task<DescribePersonsResponse> DescribePersons(DescribePersonsRequest req)
         {
              JsonResponseModel<DescribePersonsResponse> rsp = null;
@@ -515,8 +515,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 查询词汇
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeVocabRequest"/></param>
-        /// <returns>参考<see cref="DescribeVocabResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeVocabRequest"/></param>
+        /// <returns><see cref="DescribeVocabResponse"/></returns>
         public async Task<DescribeVocabResponse> DescribeVocab(DescribeVocabRequest req)
         {
              JsonResponseModel<DescribeVocabResponse> rsp = null;
@@ -535,8 +535,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 查询词汇库
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeVocabLibRequest"/></param>
-        /// <returns>参考<see cref="DescribeVocabLibResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeVocabLibRequest"/></param>
+        /// <returns><see cref="DescribeVocabLibResponse"/></returns>
         public async Task<DescribeVocabLibResponse> DescribeVocabLib(DescribeVocabLibRequest req)
         {
              JsonResponseModel<DescribeVocabLibResponse> rsp = null;
@@ -555,8 +555,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 修改人员库信息
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyLibraryRequest"/></param>
-        /// <returns>参考<see cref="ModifyLibraryResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyLibraryRequest"/></param>
+        /// <returns><see cref="ModifyLibraryResponse"/></returns>
         public async Task<ModifyLibraryResponse> ModifyLibrary(ModifyLibraryRequest req)
         {
              JsonResponseModel<ModifyLibraryResponse> rsp = null;
@@ -575,8 +575,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 修改人员信息
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPersonRequest"/></param>
-        /// <returns>参考<see cref="ModifyPersonResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPersonRequest"/></param>
+        /// <returns><see cref="ModifyPersonResponse"/></returns>
         public async Task<ModifyPersonResponse> ModifyPerson(ModifyPersonRequest req)
         {
              JsonResponseModel<ModifyPersonResponse> rsp = null;
@@ -595,8 +595,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 音频任务提交接口
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitAudioTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitAudioTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitAudioTaskRequest"/></param>
+        /// <returns><see cref="SubmitAudioTaskResponse"/></returns>
         public async Task<SubmitAudioTaskResponse> SubmitAudioTask(SubmitAudioTaskRequest req)
         {
              JsonResponseModel<SubmitAudioTaskResponse> rsp = null;
@@ -628,8 +628,8 @@ namespace TencentCloud.Tci.V20190318
         ///  | timestamp | uint64 | 识别到人脸的绝对时间戳，单位ms | 
         ///  | image_url | string | 识别到人脸的事件抓图的下载地址，不长期保存，需要请及时下载 | 
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitCheckAttendanceTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitCheckAttendanceTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitCheckAttendanceTaskRequest"/></param>
+        /// <returns><see cref="SubmitCheckAttendanceTaskResponse"/></returns>
         public async Task<SubmitCheckAttendanceTaskResponse> SubmitCheckAttendanceTask(SubmitCheckAttendanceTaskRequest req)
         {
              JsonResponseModel<SubmitCheckAttendanceTaskResponse> rsp = null;
@@ -648,8 +648,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 支持多路视频流，提交高级人员考勤任务
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitCheckAttendanceTaskPlusRequest"/></param>
-        /// <returns>参考<see cref="SubmitCheckAttendanceTaskPlusResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitCheckAttendanceTaskPlusRequest"/></param>
+        /// <returns><see cref="SubmitCheckAttendanceTaskPlusResponse"/></returns>
         public async Task<SubmitCheckAttendanceTaskPlusResponse> SubmitCheckAttendanceTaskPlus(SubmitCheckAttendanceTaskPlusRequest req)
         {
              JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse> rsp = null;
@@ -668,8 +668,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 对话任务分析接口
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitConversationTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitConversationTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitConversationTaskRequest"/></param>
+        /// <returns><see cref="SubmitConversationTaskResponse"/></returns>
         public async Task<SubmitConversationTaskResponse> SubmitConversationTask(SubmitConversationTaskRequest req)
         {
              JsonResponseModel<SubmitConversationTaskResponse> rsp = null;
@@ -689,8 +689,8 @@ namespace TencentCloud.Tci.V20190318
         /// 发起双路视频生成精彩集锦接口。该接口可以通过客户传入的学生音视频及老师视频两路Url，自动生成一堂课程的精彩集锦。需要通过DescribeHighlightResult
         /// 接口获取生成结果。
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitDoubleVideoHighlightsRequest"/></param>
-        /// <returns>参考<see cref="SubmitDoubleVideoHighlightsResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitDoubleVideoHighlightsRequest"/></param>
+        /// <returns><see cref="SubmitDoubleVideoHighlightsResponse"/></returns>
         public async Task<SubmitDoubleVideoHighlightsResponse> SubmitDoubleVideoHighlights(SubmitDoubleVideoHighlightsRequest req)
         {
              JsonResponseModel<SubmitDoubleVideoHighlightsResponse> rsp = null;
@@ -715,8 +715,8 @@ namespace TencentCloud.Tci.V20190318
         ///     
         /// **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitFullBodyClassTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitFullBodyClassTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitFullBodyClassTaskRequest"/></param>
+        /// <returns><see cref="SubmitFullBodyClassTaskResponse"/></returns>
         public async Task<SubmitFullBodyClassTaskResponse> SubmitFullBodyClassTask(SubmitFullBodyClassTaskRequest req)
         {
              JsonResponseModel<SubmitFullBodyClassTaskResponse> rsp = null;
@@ -735,8 +735,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 发起视频生成精彩集锦接口。该接口可以通过客户传入的课程音频数据及相关策略（如微笑抽取，专注抽取等），自动生成一堂课程的精彩集锦。需要通过QueryHighlightResult接口获取生成结果。
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitHighlightsRequest"/></param>
-        /// <returns>参考<see cref="SubmitHighlightsResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitHighlightsRequest"/></param>
+        /// <returns><see cref="SubmitHighlightsResponse"/></returns>
         public async Task<SubmitHighlightsResponse> SubmitHighlights(SubmitHighlightsRequest req)
         {
              JsonResponseModel<SubmitHighlightsResponse> rsp = null;
@@ -755,8 +755,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 提交图像分析任务
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitImageTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitImageTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitImageTaskRequest"/></param>
+        /// <returns><see cref="SubmitImageTaskResponse"/></returns>
         public async Task<SubmitImageTaskResponse> SubmitImageTask(SubmitImageTaskRequest req)
         {
              JsonResponseModel<SubmitImageTaskResponse> rsp = null;
@@ -775,8 +775,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 高级图像分析任务，开放了图像任务里的所有开关，可以根据场景深度定制图像分析任务。支持的图像类别有，图片链接、图片二进制数据、点播链接和直播链接。
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitImageTaskPlusRequest"/></param>
-        /// <returns>参考<see cref="SubmitImageTaskPlusResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitImageTaskPlusRequest"/></param>
+        /// <returns><see cref="SubmitImageTaskPlusResponse"/></returns>
         public async Task<SubmitImageTaskPlusResponse> SubmitImageTaskPlus(SubmitImageTaskPlusRequest req)
         {
              JsonResponseModel<SubmitImageTaskPlusResponse> rsp = null;
@@ -802,8 +802,8 @@ namespace TencentCloud.Tci.V20190318
         ///     
         /// **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitOneByOneClassTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitOneByOneClassTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitOneByOneClassTaskRequest"/></param>
+        /// <returns><see cref="SubmitOneByOneClassTaskResponse"/></returns>
         public async Task<SubmitOneByOneClassTaskResponse> SubmitOneByOneClassTask(SubmitOneByOneClassTaskRequest req)
         {
              JsonResponseModel<SubmitOneByOneClassTaskResponse> rsp = null;
@@ -829,8 +829,8 @@ namespace TencentCloud.Tci.V20190318
         ///     
         /// **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitOpenClassTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitOpenClassTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitOpenClassTaskRequest"/></param>
+        /// <returns><see cref="SubmitOpenClassTaskResponse"/></returns>
         public async Task<SubmitOpenClassTaskResponse> SubmitOpenClassTask(SubmitOpenClassTaskRequest req)
         {
              JsonResponseModel<SubmitOpenClassTaskResponse> rsp = null;
@@ -855,8 +855,8 @@ namespace TencentCloud.Tci.V20190318
         ///     
         /// **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitPartialBodyClassTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitPartialBodyClassTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitPartialBodyClassTaskRequest"/></param>
+        /// <returns><see cref="SubmitPartialBodyClassTaskResponse"/></returns>
         public async Task<SubmitPartialBodyClassTaskResponse> SubmitPartialBodyClassTask(SubmitPartialBodyClassTaskRequest req)
         {
              JsonResponseModel<SubmitPartialBodyClassTaskResponse> rsp = null;
@@ -883,8 +883,8 @@ namespace TencentCloud.Tci.V20190318
         /// **结果查询方式：**图像任务直接返回结果，点播及直播任务通过DescribeAITaskResult查询结果。
         ///   
         /// </summary>
-        /// <param name="req">参考<see cref="SubmitTraditionalClassTaskRequest"/></param>
-        /// <returns>参考<see cref="SubmitTraditionalClassTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="SubmitTraditionalClassTaskRequest"/></param>
+        /// <returns><see cref="SubmitTraditionalClassTaskResponse"/></returns>
         public async Task<SubmitTraditionalClassTaskResponse> SubmitTraditionalClassTask(SubmitTraditionalClassTaskRequest req)
         {
              JsonResponseModel<SubmitTraditionalClassTaskResponse> rsp = null;
@@ -903,8 +903,8 @@ namespace TencentCloud.Tci.V20190318
         /// <summary>
         /// 分析音频信息
         /// </summary>
-        /// <param name="req">参考<see cref="TransmitAudioStreamRequest"/></param>
-        /// <returns>参考<see cref="TransmitAudioStreamResponse"/>实例</returns>
+        /// <param name="req"><see cref="TransmitAudioStreamRequest"/></param>
+        /// <returns><see cref="TransmitAudioStreamResponse"/></returns>
         public async Task<TransmitAudioStreamResponse> TransmitAudioStream(TransmitAudioStreamRequest req)
         {
              JsonResponseModel<TransmitAudioStreamResponse> rsp = null;

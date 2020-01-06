@@ -114,9 +114,21 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 网关带宽配额信息
+        /// </summary>
+        [JsonProperty("VpnGatewayQuotaSet")]
+        public VpnGatewayQuota[] VpnGatewayQuotaSet{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 网关实例版本信息
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -135,6 +147,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NewPurchasePlan", this.NewPurchasePlan);
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

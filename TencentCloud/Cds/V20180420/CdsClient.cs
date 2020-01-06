@@ -30,10 +30,10 @@ namespace TencentCloud.Cds.V20180420
        private const string version = "2018-04-20";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CdsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public CdsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Cds.V20180420
         /// <summary>
         /// 本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDbauditInstanceTypeRequest"/></param>
-        /// <returns>参考<see cref="DescribeDbauditInstanceTypeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDbauditInstanceTypeRequest"/></param>
+        /// <returns><see cref="DescribeDbauditInstanceTypeResponse"/></returns>
         public async Task<DescribeDbauditInstanceTypeResponse> DescribeDbauditInstanceType(DescribeDbauditInstanceTypeRequest req)
         {
              JsonResponseModel<DescribeDbauditInstanceTypeResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Cds.V20180420
         /// <summary>
         /// 本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDbauditInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDbauditInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDbauditInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDbauditInstancesResponse"/></returns>
         public async Task<DescribeDbauditInstancesResponse> DescribeDbauditInstances(DescribeDbauditInstancesRequest req)
         {
              JsonResponseModel<DescribeDbauditInstancesResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Cds.V20180420
         /// <summary>
         /// 本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDbauditUsedRegionsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDbauditUsedRegionsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDbauditUsedRegionsRequest"/></param>
+        /// <returns><see cref="DescribeDbauditUsedRegionsResponse"/></returns>
         public async Task<DescribeDbauditUsedRegionsResponse> DescribeDbauditUsedRegions(DescribeDbauditUsedRegionsRequest req)
         {
              JsonResponseModel<DescribeDbauditUsedRegionsResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Cds.V20180420
         /// <summary>
         /// 用于查询数据安全审计产品实例价格
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceDbauditInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceDbauditInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceDbauditInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceDbauditInstanceResponse"/></returns>
         public async Task<InquiryPriceDbauditInstanceResponse> InquiryPriceDbauditInstance(InquiryPriceDbauditInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceDbauditInstanceResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Cds.V20180420
         /// <summary>
         /// 本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDbauditInstancesRenewFlagRequest"/></param>
-        /// <returns>参考<see cref="ModifyDbauditInstancesRenewFlagResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDbauditInstancesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDbauditInstancesRenewFlagResponse"/></returns>
         public async Task<ModifyDbauditInstancesRenewFlagResponse> ModifyDbauditInstancesRenewFlag(ModifyDbauditInstancesRenewFlagRequest req)
         {
              JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse> rsp = null;

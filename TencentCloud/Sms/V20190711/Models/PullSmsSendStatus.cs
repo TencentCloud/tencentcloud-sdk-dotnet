@@ -25,54 +25,61 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 用户实际接收到短信的时间
+        /// 用户实际接收到短信的时间。
         /// </summary>
         [JsonProperty("UserReceiveTime")]
         public string UserReceiveTime{ get; set; }
 
         /// <summary>
-        /// 国家（或地区）码
+        /// 用户实际接收到短信的时间，UNIX 时间戳（单位：秒）。
+        /// </summary>
+        [JsonProperty("UserReceiveUnixTime")]
+        public ulong? UserReceiveUnixTime{ get; set; }
+
+        /// <summary>
+        /// 国家（或地区）码。
         /// </summary>
         [JsonProperty("NationCode")]
         public string NationCode{ get; set; }
 
         /// <summary>
-        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
         /// </summary>
         [JsonProperty("PurePhoneNumber")]
         public string PurePhoneNumber{ get; set; }
 
         /// <summary>
-        /// 手机号码，普通格式，示例如：13711112222
+        /// 手机号码，普通格式，示例如：13711112222。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 本次发送标识 ID
+        /// 本次发送标识 ID。
         /// </summary>
         [JsonProperty("SerialNo")]
         public string SerialNo{ get; set; }
 
         /// <summary>
-        /// 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
+        /// 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）。
         /// </summary>
         [JsonProperty("ReportStatus")]
         public string ReportStatus{ get; set; }
 
         /// <summary>
-        /// 用户接收短信状态描述
+        /// 用户接收短信状态描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserReceiveTime", this.UserReceiveTime);
+            this.SetParamSimple(map, prefix + "UserReceiveUnixTime", this.UserReceiveUnixTime);
             this.SetParamSimple(map, prefix + "NationCode", this.NationCode);
             this.SetParamSimple(map, prefix + "PurePhoneNumber", this.PurePhoneNumber);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);

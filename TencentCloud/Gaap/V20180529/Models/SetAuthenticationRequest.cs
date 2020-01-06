@@ -76,7 +76,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string GaapCertificateId{ get; set; }
 
         /// <summary>
-        /// 源站CA证书ID，从证书管理页获取。
+        /// 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
         /// </summary>
         [JsonProperty("RealServerCertificateId")]
         public string RealServerCertificateId{ get; set; }
@@ -87,9 +87,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("RealServerCertificateDomain")]
         public string RealServerCertificateDomain{ get; set; }
 
+        /// <summary>
+        /// 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+        /// </summary>
+        [JsonProperty("PolyRealServerCertificateIds")]
+        public string[] PolyRealServerCertificateIds{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -102,6 +108,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "GaapCertificateId", this.GaapCertificateId);
             this.SetParamSimple(map, prefix + "RealServerCertificateId", this.RealServerCertificateId);
             this.SetParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
+            this.SetParamArraySimple(map, prefix + "PolyRealServerCertificateIds.", this.PolyRealServerCertificateIds);
         }
     }
 }

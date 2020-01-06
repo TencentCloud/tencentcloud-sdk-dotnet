@@ -157,6 +157,13 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ulong? EnableState{ get; set; }
 
         /// <summary>
+        /// 设备标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public DeviceLabel[] Labels{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -164,7 +171,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -189,6 +196,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "CertState", this.CertState);
             this.SetParamSimple(map, prefix + "EnableState", this.EnableState);
+            this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

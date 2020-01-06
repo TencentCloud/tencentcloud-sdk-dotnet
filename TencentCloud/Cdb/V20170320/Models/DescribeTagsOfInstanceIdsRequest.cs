@@ -31,20 +31,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 偏移量。
+        /// 分页偏移量。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页返回多少个标签。
+        /// 分页大小。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

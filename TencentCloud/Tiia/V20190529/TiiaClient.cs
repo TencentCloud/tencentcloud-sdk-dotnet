@@ -30,10 +30,10 @@ namespace TencentCloud.Tiia.V20190529
        private const string version = "2019-05-29";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TiiaClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TiiaClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -57,8 +57,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="AssessQualityRequest"/></param>
-        /// <returns>参考<see cref="AssessQualityResponse"/>实例</returns>
+        /// <param name="req"><see cref="AssessQualityRequest"/></param>
+        /// <returns><see cref="AssessQualityResponse"/></returns>
         public async Task<AssessQualityResponse> AssessQuality(AssessQualityRequest req)
         {
              JsonResponseModel<AssessQualityResponse> rsp = null;
@@ -81,8 +81,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="CropImageRequest"/></param>
-        /// <returns>参考<see cref="CropImageResponse"/>实例</returns>
+        /// <param name="req"><see cref="CropImageRequest"/></param>
+        /// <returns><see cref="CropImageResponse"/></returns>
         public async Task<CropImageResponse> CropImage(CropImageRequest req)
         {
              JsonResponseModel<CropImageResponse> rsp = null;
@@ -105,8 +105,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="DetectCelebrityRequest"/></param>
-        /// <returns>参考<see cref="DetectCelebrityResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectCelebrityRequest"/></param>
+        /// <returns><see cref="DetectCelebrityResponse"/></returns>
         public async Task<DetectCelebrityResponse> DetectCelebrity(DetectCelebrityRequest req)
         {
              JsonResponseModel<DetectCelebrityResponse> rsp = null;
@@ -129,8 +129,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="DetectDisgustRequest"/></param>
-        /// <returns>参考<see cref="DetectDisgustResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectDisgustRequest"/></param>
+        /// <returns><see cref="DetectDisgustResponse"/></returns>
         public async Task<DetectDisgustResponse> DetectDisgust(DetectDisgustRequest req)
         {
              JsonResponseModel<DetectDisgustResponse> rsp = null;
@@ -167,8 +167,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="DetectLabelRequest"/></param>
-        /// <returns>参考<see cref="DetectLabelResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectLabelRequest"/></param>
+        /// <returns><see cref="DetectLabelResponse"/></returns>
         public async Task<DetectLabelResponse> DetectLabel(DetectLabelRequest req)
         {
              JsonResponseModel<DetectLabelResponse> rsp = null;
@@ -189,8 +189,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="DetectMisbehaviorRequest"/></param>
-        /// <returns>参考<see cref="DetectMisbehaviorResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectMisbehaviorRequest"/></param>
+        /// <returns><see cref="DetectMisbehaviorResponse"/></returns>
         public async Task<DetectMisbehaviorResponse> DetectMisbehavior(DetectMisbehaviorRequest req)
         {
              JsonResponseModel<DetectMisbehaviorResponse> rsp = null;
@@ -211,8 +211,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="DetectProductRequest"/></param>
-        /// <returns>参考<see cref="DetectProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetectProductRequest"/></param>
+        /// <returns><see cref="DetectProductResponse"/></returns>
         public async Task<DetectProductResponse> DetectProduct(DetectProductRequest req)
         {
              JsonResponseModel<DetectProductResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="EnhanceImageRequest"/></param>
-        /// <returns>参考<see cref="EnhanceImageResponse"/>实例</returns>
+        /// <param name="req"><see cref="EnhanceImageRequest"/></param>
+        /// <returns><see cref="EnhanceImageResponse"/></returns>
         public async Task<EnhanceImageResponse> EnhanceImage(EnhanceImageRequest req)
         {
              JsonResponseModel<EnhanceImageResponse> rsp = null;
@@ -269,8 +269,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="ImageModerationRequest"/></param>
-        /// <returns>参考<see cref="ImageModerationResponse"/>实例</returns>
+        /// <param name="req"><see cref="ImageModerationRequest"/></param>
+        /// <returns><see cref="ImageModerationResponse"/></returns>
         public async Task<ImageModerationResponse> ImageModeration(ImageModerationRequest req)
         {
              JsonResponseModel<ImageModerationResponse> rsp = null;
@@ -291,8 +291,8 @@ namespace TencentCloud.Tiia.V20190529
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// </summary>
-        /// <param name="req">参考<see cref="RecognizeCarRequest"/></param>
-        /// <returns>参考<see cref="RecognizeCarResponse"/>实例</returns>
+        /// <param name="req"><see cref="RecognizeCarRequest"/></param>
+        /// <returns><see cref="RecognizeCarResponse"/></returns>
         public async Task<RecognizeCarResponse> RecognizeCar(RecognizeCarRequest req)
         {
              JsonResponseModel<RecognizeCarResponse> rsp = null;

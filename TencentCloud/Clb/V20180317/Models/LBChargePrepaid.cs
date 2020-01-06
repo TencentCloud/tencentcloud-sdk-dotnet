@@ -32,7 +32,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 周期，表示多少个月（保留字段）
+        /// 购买时长，单位：月
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
@@ -40,7 +40,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

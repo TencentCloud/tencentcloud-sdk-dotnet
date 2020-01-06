@@ -30,10 +30,10 @@ namespace TencentCloud.Iotexplorer.V20190423
        private const string version = "2019-04-23";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public IotexplorerClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public IotexplorerClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供给用户异步调用设备动作的能力
         /// </summary>
-        /// <param name="req">参考<see cref="CallDeviceActionAsyncRequest"/></param>
-        /// <returns>参考<see cref="CallDeviceActionAsyncResponse"/>实例</returns>
+        /// <param name="req"><see cref="CallDeviceActionAsyncRequest"/></param>
+        /// <returns><see cref="CallDeviceActionAsyncResponse"/></returns>
         public async Task<CallDeviceActionAsyncResponse> CallDeviceActionAsync(CallDeviceActionAsyncRequest req)
         {
              JsonResponseModel<CallDeviceActionAsyncResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 为用户提供同步调用设备动作的能力。
         /// </summary>
-        /// <param name="req">参考<see cref="CallDeviceActionSyncRequest"/></param>
-        /// <returns>参考<see cref="CallDeviceActionSyncResponse"/>实例</returns>
+        /// <param name="req"><see cref="CallDeviceActionSyncRequest"/></param>
+        /// <returns><see cref="CallDeviceActionSyncResponse"/></returns>
         public async Task<CallDeviceActionSyncResponse> CallDeviceActionSync(CallDeviceActionSyncRequest req)
         {
              JsonResponseModel<CallDeviceActionSyncResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 根据设备产品ID、设备名称，设置控制设备的属性数据。
         /// </summary>
-        /// <param name="req">参考<see cref="ControlDeviceDataRequest"/></param>
-        /// <returns>参考<see cref="ControlDeviceDataResponse"/>实例</returns>
+        /// <param name="req"><see cref="ControlDeviceDataRequest"/></param>
+        /// <returns><see cref="ControlDeviceDataResponse"/></returns>
         public async Task<ControlDeviceDataResponse> ControlDeviceData(ControlDeviceDataRequest req)
         {
              JsonResponseModel<ControlDeviceDataResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 创建设备
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDeviceRequest"/></param>
-        /// <returns>参考<see cref="CreateDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDeviceRequest"/></param>
+        /// <returns><see cref="CreateDeviceResponse"/></returns>
         public async Task<CreateDeviceResponse> CreateDevice(CreateDeviceRequest req)
         {
              JsonResponseModel<CreateDeviceResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 为用户提供新建项目的能力，用于集中管理产品和应用。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateProjectRequest"/></param>
-        /// <returns>参考<see cref="CreateProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
         public async Task<CreateProjectResponse> CreateProject(CreateProjectRequest req)
         {
              JsonResponseModel<CreateProjectResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 为用户提供新建产品的能力，用于管理用户的设备
         /// </summary>
-        /// <param name="req">参考<see cref="CreateStudioProductRequest"/></param>
-        /// <returns>参考<see cref="CreateStudioProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateStudioProductRequest"/></param>
+        /// <returns><see cref="CreateStudioProductResponse"/></returns>
         public async Task<CreateStudioProductResponse> CreateStudioProduct(CreateStudioProductRequest req)
         {
              JsonResponseModel<CreateStudioProductResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 删除设备
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteDeviceRequest"/></param>
-        /// <returns>参考<see cref="DeleteDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
+        /// <returns><see cref="DeleteDeviceResponse"/></returns>
         public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest req)
         {
              JsonResponseModel<DeleteDeviceResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供删除某个项目的能力
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteProjectRequest"/></param>
-        /// <returns>参考<see cref="DeleteProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
         public async Task<DeleteProjectResponse> DeleteProject(DeleteProjectRequest req)
         {
              JsonResponseModel<DeleteProjectResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供删除某个项目下产品的能力
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteStudioProductRequest"/></param>
-        /// <returns>参考<see cref="DeleteStudioProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteStudioProductRequest"/></param>
+        /// <returns><see cref="DeleteStudioProductResponse"/></returns>
         public async Task<DeleteStudioProductResponse> DeleteStudioProduct(DeleteStudioProductRequest req)
         {
              JsonResponseModel<DeleteStudioProductResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 用于查看某个设备的详细信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
+        /// <returns><see cref="DescribeDeviceResponse"/></returns>
         public async Task<DescribeDeviceResponse> DescribeDevice(DescribeDeviceRequest req)
         {
              JsonResponseModel<DescribeDeviceResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 根据设备产品ID、设备名称，获取设备上报的属性数据。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceDataRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceDataResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceDataRequest"/></param>
+        /// <returns><see cref="DescribeDeviceDataResponse"/></returns>
         public async Task<DescribeDeviceDataResponse> DescribeDeviceData(DescribeDeviceDataRequest req)
         {
              JsonResponseModel<DescribeDeviceDataResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 获取设备在指定时间范围内上报的历史数据。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceDataHistoryRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceDataHistoryResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceDataHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceDataHistoryResponse"/></returns>
         public async Task<DescribeDeviceDataHistoryResponse> DescribeDeviceDataHistory(DescribeDeviceDataHistoryRequest req)
         {
              JsonResponseModel<DescribeDeviceDataHistoryResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 查询产品配置的数据模板信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeModelDefinitionRequest"/></param>
-        /// <returns>参考<see cref="DescribeModelDefinitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeModelDefinitionRequest"/></param>
+        /// <returns><see cref="DescribeModelDefinitionResponse"/></returns>
         public async Task<DescribeModelDefinitionResponse> DescribeModelDefinition(DescribeModelDefinitionRequest req)
         {
              JsonResponseModel<DescribeModelDefinitionResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 查询项目详情
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeProjectRequest"/></param>
-        /// <returns>参考<see cref="DescribeProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeProjectRequest"/></param>
+        /// <returns><see cref="DescribeProjectResponse"/></returns>
         public async Task<DescribeProjectResponse> DescribeProject(DescribeProjectRequest req)
         {
              JsonResponseModel<DescribeProjectResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供查看茶品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeStudioProductRequest"/></param>
-        /// <returns>参考<see cref="DescribeStudioProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeStudioProductRequest"/></param>
+        /// <returns><see cref="DescribeStudioProductResponse"/></returns>
         public async Task<DescribeStudioProductResponse> DescribeStudioProduct(DescribeStudioProductRequest req)
         {
              JsonResponseModel<DescribeStudioProductResponse> rsp = null;
@@ -355,8 +355,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 用于查询某个产品下的设备列表
         /// </summary>
-        /// <param name="req">参考<see cref="GetDeviceListRequest"/></param>
-        /// <returns>参考<see cref="GetDeviceListResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetDeviceListRequest"/></param>
+        /// <returns><see cref="GetDeviceListResponse"/></returns>
         public async Task<GetDeviceListResponse> GetDeviceList(GetDeviceListRequest req)
         {
              JsonResponseModel<GetDeviceListResponse> rsp = null;
@@ -375,8 +375,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供查询用户所创建的项目列表查询功能。
         /// </summary>
-        /// <param name="req">参考<see cref="GetProjectListRequest"/></param>
-        /// <returns>参考<see cref="GetProjectListResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetProjectListRequest"/></param>
+        /// <returns><see cref="GetProjectListResponse"/></returns>
         public async Task<GetProjectListResponse> GetProjectList(GetProjectListRequest req)
         {
              JsonResponseModel<GetProjectListResponse> rsp = null;
@@ -395,8 +395,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供查询某个项目下所有产品信息的能力。
         /// </summary>
-        /// <param name="req">参考<see cref="GetStudioProductListRequest"/></param>
-        /// <returns>参考<see cref="GetStudioProductListResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetStudioProductListRequest"/></param>
+        /// <returns><see cref="GetStudioProductListResponse"/></returns>
         public async Task<GetStudioProductListResponse> GetStudioProductList(GetStudioProductListRequest req)
         {
              JsonResponseModel<GetStudioProductListResponse> rsp = null;
@@ -415,8 +415,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 获取设备的历史事件
         /// </summary>
-        /// <param name="req">参考<see cref="ListEventHistoryRequest"/></param>
-        /// <returns>参考<see cref="ListEventHistoryResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListEventHistoryRequest"/></param>
+        /// <returns><see cref="ListEventHistoryResponse"/></returns>
         public async Task<ListEventHistoryResponse> ListEventHistory(ListEventHistoryRequest req)
         {
              JsonResponseModel<ListEventHistoryResponse> rsp = null;
@@ -435,8 +435,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供修改产品的数据模板的能力
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyModelDefinitionRequest"/></param>
-        /// <returns>参考<see cref="ModifyModelDefinitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyModelDefinitionRequest"/></param>
+        /// <returns><see cref="ModifyModelDefinitionResponse"/></returns>
         public async Task<ModifyModelDefinitionResponse> ModifyModelDefinition(ModifyModelDefinitionRequest req)
         {
              JsonResponseModel<ModifyModelDefinitionResponse> rsp = null;
@@ -455,8 +455,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 修改项目
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyProjectRequest"/></param>
-        /// <returns>参考<see cref="ModifyProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyProjectRequest"/></param>
+        /// <returns><see cref="ModifyProjectResponse"/></returns>
         public async Task<ModifyProjectResponse> ModifyProject(ModifyProjectRequest req)
         {
              JsonResponseModel<ModifyProjectResponse> rsp = null;
@@ -475,8 +475,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供修改产品的名称和描述等信息的能力
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyStudioProductRequest"/></param>
-        /// <returns>参考<see cref="ModifyStudioProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyStudioProductRequest"/></param>
+        /// <returns><see cref="ModifyStudioProductResponse"/></returns>
         public async Task<ModifyStudioProductResponse> ModifyStudioProduct(ModifyStudioProductRequest req)
         {
              JsonResponseModel<ModifyStudioProductResponse> rsp = null;
@@ -495,8 +495,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
         /// </summary>
-        /// <param name="req">参考<see cref="ReleaseStudioProductRequest"/></param>
-        /// <returns>参考<see cref="ReleaseStudioProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="ReleaseStudioProductRequest"/></param>
+        /// <returns><see cref="ReleaseStudioProductResponse"/></returns>
         public async Task<ReleaseStudioProductResponse> ReleaseStudioProduct(ReleaseStudioProductRequest req)
         {
              JsonResponseModel<ReleaseStudioProductResponse> rsp = null;
@@ -515,8 +515,8 @@ namespace TencentCloud.Iotexplorer.V20190423
         /// <summary>
         /// 提供根据产品名称查找产品的能力
         /// </summary>
-        /// <param name="req">参考<see cref="SearchStudioProductRequest"/></param>
-        /// <returns>参考<see cref="SearchStudioProductResponse"/>实例</returns>
+        /// <param name="req"><see cref="SearchStudioProductRequest"/></param>
+        /// <returns><see cref="SearchStudioProductResponse"/></returns>
         public async Task<SearchStudioProductResponse> SearchStudioProduct(SearchStudioProductRequest req)
         {
              JsonResponseModel<SearchStudioProductResponse> rsp = null;

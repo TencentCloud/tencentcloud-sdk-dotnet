@@ -169,7 +169,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string EsConfig{ get; set; }
 
         /// <summary>
-        /// ES访问控制配置
+        /// Kibana访问控制配置
         /// </summary>
         [JsonProperty("EsAcl")]
         public EsAcl EsAcl{ get; set; }
@@ -234,9 +234,127 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
+        /// <summary>
+        /// 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableHotWarmMode")]
+        public bool? EnableHotWarmMode{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmNodeType")]
+        public string WarmNodeType{ get; set; }
+
+        /// <summary>
+        /// 冷节点个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmNodeNum")]
+        public ulong? WarmNodeNum{ get; set; }
+
+        /// <summary>
+        /// 冷节点CPU核数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmCpuNum")]
+        public ulong? WarmCpuNum{ get; set; }
+
+        /// <summary>
+        /// 冷节点内存内存大小，单位GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmMemSize")]
+        public ulong? WarmMemSize{ get; set; }
+
+        /// <summary>
+        /// 冷节点磁盘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmDiskType")]
+        public string WarmDiskType{ get; set; }
+
+        /// <summary>
+        /// 冷节点磁盘大小，单位GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmDiskSize")]
+        public ulong? WarmDiskSize{ get; set; }
+
+        /// <summary>
+        /// 集群节点信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeInfoList")]
+        public NodeInfo[] NodeInfoList{ get; set; }
+
+        /// <summary>
+        /// Es公网地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsPublicUrl")]
+        public string EsPublicUrl{ get; set; }
+
+        /// <summary>
+        /// 多可用区网络信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultiZoneInfo")]
+        public ZoneDetail[] MultiZoneInfo{ get; set; }
+
+        /// <summary>
+        /// 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployMode")]
+        public ulong? DeployMode{ get; set; }
+
+        /// <summary>
+        /// ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicAccess")]
+        public string PublicAccess{ get; set; }
+
+        /// <summary>
+        /// ES公网访问控制配置
+        /// </summary>
+        [JsonProperty("EsPublicAcl")]
+        public EsAcl EsPublicAcl{ get; set; }
+
+        /// <summary>
+        /// Kibana内网地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KibanaPrivateUrl")]
+        public string KibanaPrivateUrl{ get; set; }
+
+        /// <summary>
+        /// Kibana公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KibanaPublicAccess")]
+        public string KibanaPublicAccess{ get; set; }
+
+        /// <summary>
+        /// Kibana内网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KibanaPrivateAccess")]
+        public string KibanaPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityType")]
+        public ulong? SecurityType{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -275,6 +393,23 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "EnableHotWarmMode", this.EnableHotWarmMode);
+            this.SetParamSimple(map, prefix + "WarmNodeType", this.WarmNodeType);
+            this.SetParamSimple(map, prefix + "WarmNodeNum", this.WarmNodeNum);
+            this.SetParamSimple(map, prefix + "WarmCpuNum", this.WarmCpuNum);
+            this.SetParamSimple(map, prefix + "WarmMemSize", this.WarmMemSize);
+            this.SetParamSimple(map, prefix + "WarmDiskType", this.WarmDiskType);
+            this.SetParamSimple(map, prefix + "WarmDiskSize", this.WarmDiskSize);
+            this.SetParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
+            this.SetParamSimple(map, prefix + "EsPublicUrl", this.EsPublicUrl);
+            this.SetParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+            this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
+            this.SetParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
+            this.SetParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
+            this.SetParamSimple(map, prefix + "KibanaPrivateUrl", this.KibanaPrivateUrl);
+            this.SetParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
+            this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
+            this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
         }
     }
 }

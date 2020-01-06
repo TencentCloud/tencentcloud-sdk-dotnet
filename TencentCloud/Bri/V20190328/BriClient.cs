@@ -30,10 +30,10 @@ namespace TencentCloud.Bri.V20190328
        private const string version = "2019-03-28";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public BriClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Bri.V20190328
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public BriClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -65,8 +65,8 @@ namespace TencentCloud.Bri.V20190328
         /// 
         /// 当业务名为bri_url时，必须填Url字段.
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBRIRequest"/></param>
-        /// <returns>参考<see cref="DescribeBRIResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBRIRequest"/></param>
+        /// <returns><see cref="DescribeBRIResponse"/></returns>
         public async Task<DescribeBRIResponse> DescribeBRI(DescribeBRIRequest req)
         {
              JsonResponseModel<DescribeBRIResponse> rsp = null;

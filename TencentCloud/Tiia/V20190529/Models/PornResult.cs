@@ -62,14 +62,18 @@ namespace TencentCloud.Tiia.V20190529.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+        /// 色情识别类型：
+        /// PORN：色情
+        /// HOT：性感
+        /// NORMAL：正常
+        /// FAIL：识别失败
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

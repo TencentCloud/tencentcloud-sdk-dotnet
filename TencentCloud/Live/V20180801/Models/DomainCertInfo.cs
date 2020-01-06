@@ -56,8 +56,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 证书类型。
-        /// 0：腾讯云托管证书
-        /// 1：用户添加证书。
+        /// 0：用户添加证书，
+        /// 1：腾讯云托管证书。
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
@@ -82,7 +82,7 @@ namespace TencentCloud.Live.V20180801.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

@@ -30,10 +30,10 @@ namespace TencentCloud.Ecc.V20181213
        private const string version = "2018-12-13";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public EccClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Ecc.V20181213
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public EccClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Ecc.V20181213
         /// <summary>
         /// 异步任务结果查询接口
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTaskRequest"/></param>
+        /// <returns><see cref="DescribeTaskResponse"/></returns>
         public async Task<DescribeTaskResponse> DescribeTask(DescribeTaskRequest req)
         {
              JsonResponseModel<DescribeTaskResponse> rsp = null;
@@ -76,8 +76,8 @@ namespace TencentCloud.Ecc.V20181213
         /// 接口请求域名： ecc.tencentcloudapi.com 
         /// 纯文本英语作文批改
         /// </summary>
-        /// <param name="req">参考<see cref="ECCRequest"/></param>
-        /// <returns>参考<see cref="ECCResponse"/>实例</returns>
+        /// <param name="req"><see cref="ECCRequest"/></param>
+        /// <returns><see cref="ECCResponse"/></returns>
         public async Task<ECCResponse> ECC(ECCRequest req)
         {
              JsonResponseModel<ECCResponse> rsp = null;
@@ -97,8 +97,8 @@ namespace TencentCloud.Ecc.V20181213
         /// https://ecc.tencentcloudapi.com/?Action=EHOCR
         /// 图像识别批改接口
         /// </summary>
-        /// <param name="req">参考<see cref="EHOCRRequest"/></param>
-        /// <returns>参考<see cref="EHOCRResponse"/>实例</returns>
+        /// <param name="req"><see cref="EHOCRRequest"/></param>
+        /// <returns><see cref="EHOCRResponse"/></returns>
         public async Task<EHOCRResponse> EHOCR(EHOCRRequest req)
         {
              JsonResponseModel<EHOCRResponse> rsp = null;

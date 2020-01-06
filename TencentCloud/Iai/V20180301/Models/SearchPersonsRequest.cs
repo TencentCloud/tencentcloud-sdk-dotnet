@@ -89,9 +89,15 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("FaceMatchThreshold")]
         public float? FaceMatchThreshold{ get; set; }
 
+        /// <summary>
+        /// 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+        /// </summary>
+        [JsonProperty("NeedPersonInfo")]
+        public long? NeedPersonInfo{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -103,6 +109,7 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "MaxPersonNum", this.MaxPersonNum);
             this.SetParamSimple(map, prefix + "QualityControl", this.QualityControl);
             this.SetParamSimple(map, prefix + "FaceMatchThreshold", this.FaceMatchThreshold);
+            this.SetParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
         }
     }
 }

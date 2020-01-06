@@ -43,14 +43,14 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ContainerRuntime{ get; set; }
 
         /// <summary>
-        /// 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip）
+        /// 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
         /// </summary>
         [JsonProperty("NodeNameType")]
         public string NodeNameType{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

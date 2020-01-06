@@ -30,10 +30,10 @@ namespace TencentCloud.Bm.V20180423
        private const string version = "2018-04-23";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public BmClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public BmClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 服务器绑定CAM角色，该角色授权访问黑石物理服务器服务，为黑石物理服务器提供了访问资源的权限，如请求服务器的临时证书
         /// </summary>
-        /// <param name="req">参考<see cref="AttachCamRoleRequest"/></param>
-        /// <returns>参考<see cref="AttachCamRoleResponse"/>实例</returns>
+        /// <param name="req"><see cref="AttachCamRoleRequest"/></param>
+        /// <returns><see cref="AttachCamRoleResponse"/></returns>
         public async Task<AttachCamRoleResponse> AttachCamRole(AttachCamRoleRequest req)
         {
              JsonResponseModel<AttachCamRoleResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 为预授权规则绑定标签
         /// </summary>
-        /// <param name="req">参考<see cref="BindPsaTagRequest"/></param>
-        /// <returns>参考<see cref="BindPsaTagResponse"/>实例</returns>
+        /// <param name="req"><see cref="BindPsaTagRequest"/></param>
+        /// <returns><see cref="BindPsaTagResponse"/></returns>
         public async Task<BindPsaTagResponse> BindPsaTag(BindPsaTagRequest req)
         {
              JsonResponseModel<BindPsaTagResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 购买黑石物理机
         /// </summary>
-        /// <param name="req">参考<see cref="BuyDevicesRequest"/></param>
-        /// <returns>参考<see cref="BuyDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="BuyDevicesRequest"/></param>
+        /// <returns><see cref="BuyDevicesResponse"/></returns>
         public async Task<BuyDevicesResponse> BuyDevices(BuyDevicesRequest req)
         {
              JsonResponseModel<BuyDevicesResponse> rsp = null;
@@ -116,8 +116,8 @@ namespace TencentCloud.Bm.V20180423
         /// 创建自定义镜像<br>
         /// 每个AppId在每个可用区最多保留20个自定义镜像
         /// </summary>
-        /// <param name="req">参考<see cref="CreateCustomImageRequest"/></param>
-        /// <returns>参考<see cref="CreateCustomImageResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateCustomImageRequest"/></param>
+        /// <returns><see cref="CreateCustomImageResponse"/></returns>
         public async Task<CreateCustomImageResponse> CreateCustomImage(CreateCustomImageRequest req)
         {
              JsonResponseModel<CreateCustomImageResponse> rsp = null;
@@ -136,8 +136,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 创建预授权规则
         /// </summary>
-        /// <param name="req">参考<see cref="CreatePsaRegulationRequest"/></param>
-        /// <returns>参考<see cref="CreatePsaRegulationResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreatePsaRegulationRequest"/></param>
+        /// <returns><see cref="CreatePsaRegulationResponse"/></returns>
         public async Task<CreatePsaRegulationResponse> CreatePsaRegulation(CreatePsaRegulationRequest req)
         {
              JsonResponseModel<CreatePsaRegulationResponse> rsp = null;
@@ -156,8 +156,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 创建黑石竞价实例
         /// </summary>
-        /// <param name="req">参考<see cref="CreateSpotDeviceRequest"/></param>
-        /// <returns>参考<see cref="CreateSpotDeviceResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateSpotDeviceRequest"/></param>
+        /// <returns><see cref="CreateSpotDeviceResponse"/></returns>
         public async Task<CreateSpotDeviceResponse> CreateSpotDevice(CreateSpotDeviceRequest req)
         {
              JsonResponseModel<CreateSpotDeviceResponse> rsp = null;
@@ -176,8 +176,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 创建自定义脚本
         /// </summary>
-        /// <param name="req">参考<see cref="CreateUserCmdRequest"/></param>
-        /// <returns>参考<see cref="CreateUserCmdResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateUserCmdRequest"/></param>
+        /// <returns><see cref="CreateUserCmdResponse"/></returns>
         public async Task<CreateUserCmdResponse> CreateUserCmd(CreateUserCmdRequest req)
         {
              JsonResponseModel<CreateUserCmdResponse> rsp = null;
@@ -197,8 +197,8 @@ namespace TencentCloud.Bm.V20180423
         /// 删除自定义镜像<br>
         /// 正用于部署或重装中的镜像被删除后，镜像文件将保留一段时间，直到部署或重装结束
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteCustomImagesRequest"/></param>
-        /// <returns>参考<see cref="DeleteCustomImagesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteCustomImagesRequest"/></param>
+        /// <returns><see cref="DeleteCustomImagesResponse"/></returns>
         public async Task<DeleteCustomImagesResponse> DeleteCustomImages(DeleteCustomImagesRequest req)
         {
              JsonResponseModel<DeleteCustomImagesResponse> rsp = null;
@@ -217,8 +217,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 删除预授权规则
         /// </summary>
-        /// <param name="req">参考<see cref="DeletePsaRegulationRequest"/></param>
-        /// <returns>参考<see cref="DeletePsaRegulationResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeletePsaRegulationRequest"/></param>
+        /// <returns><see cref="DeletePsaRegulationResponse"/></returns>
         public async Task<DeletePsaRegulationResponse> DeletePsaRegulation(DeletePsaRegulationRequest req)
         {
              JsonResponseModel<DeletePsaRegulationResponse> rsp = null;
@@ -237,8 +237,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 删除自定义脚本
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteUserCmdsRequest"/></param>
-        /// <returns>参考<see cref="DeleteUserCmdsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteUserCmdsRequest"/></param>
+        /// <returns><see cref="DeleteUserCmdsResponse"/></returns>
         public async Task<DeleteUserCmdsResponse> DeleteUserCmds(DeleteUserCmdsRequest req)
         {
              JsonResponseModel<DeleteUserCmdsResponse> rsp = null;
@@ -257,8 +257,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询自定义镜像制作进度
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCustomImageProcessRequest"/></param>
-        /// <returns>参考<see cref="DescribeCustomImageProcessResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCustomImageProcessRequest"/></param>
+        /// <returns><see cref="DescribeCustomImageProcessResponse"/></returns>
         public async Task<DescribeCustomImageProcessResponse> DescribeCustomImageProcess(DescribeCustomImageProcessRequest req)
         {
              JsonResponseModel<DescribeCustomImageProcessResponse> rsp = null;
@@ -277,8 +277,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查看自定义镜像列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCustomImagesRequest"/></param>
-        /// <returns>参考<see cref="DescribeCustomImagesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCustomImagesRequest"/></param>
+        /// <returns><see cref="DescribeCustomImagesResponse"/></returns>
         public async Task<DescribeCustomImagesResponse> DescribeCustomImages(DescribeCustomImagesRequest req)
         {
              JsonResponseModel<DescribeCustomImagesResponse> rsp = null;
@@ -297,8 +297,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取获取设备类型
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceClassRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceClassResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceClassRequest"/></param>
+        /// <returns><see cref="DescribeDeviceClassResponse"/></returns>
         public async Task<DescribeDeviceClassResponse> DescribeDeviceClass(DescribeDeviceClassRequest req)
         {
              JsonResponseModel<DescribeDeviceClassResponse> rsp = null;
@@ -317,8 +317,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询机型支持的RAID方式， 并返回系统盘的分区和逻辑盘的列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceClassPartitionRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceClassPartitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceClassPartitionRequest"/></param>
+        /// <returns><see cref="DescribeDeviceClassPartitionResponse"/></returns>
         public async Task<DescribeDeviceClassPartitionResponse> DescribeDeviceClassPartition(DescribeDeviceClassPartitionRequest req)
         {
              JsonResponseModel<DescribeDeviceClassPartitionResponse> rsp = null;
@@ -337,8 +337,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询设备硬件配置信息，如 CPU 型号，内存大小，磁盘大小和数量
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceHardwareInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceHardwareInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceHardwareInfoRequest"/></param>
+        /// <returns><see cref="DescribeDeviceHardwareInfoResponse"/></returns>
         public async Task<DescribeDeviceHardwareInfoResponse> DescribeDeviceHardwareInfo(DescribeDeviceHardwareInfoRequest req)
         {
              JsonResponseModel<DescribeDeviceHardwareInfoResponse> rsp = null;
@@ -357,8 +357,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询设备库存
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceInventoryRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceInventoryResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceInventoryRequest"/></param>
+        /// <returns><see cref="DescribeDeviceInventoryResponse"/></returns>
         public async Task<DescribeDeviceInventoryResponse> DescribeDeviceInventory(DescribeDeviceInventoryRequest req)
         {
              JsonResponseModel<DescribeDeviceInventoryResponse> rsp = null;
@@ -377,8 +377,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询设备操作日志， 如设备重启，重装，设置密码等操作
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDeviceOperationLogRequest"/></param>
-        /// <returns>参考<see cref="DescribeDeviceOperationLogResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDeviceOperationLogRequest"/></param>
+        /// <returns><see cref="DescribeDeviceOperationLogResponse"/></returns>
         public async Task<DescribeDeviceOperationLogResponse> DescribeDeviceOperationLog(DescribeDeviceOperationLogRequest req)
         {
              JsonResponseModel<DescribeDeviceOperationLogResponse> rsp = null;
@@ -397,8 +397,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取物理机的分区格式
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDevicePartitionRequest"/></param>
-        /// <returns>参考<see cref="DescribeDevicePartitionResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDevicePartitionRequest"/></param>
+        /// <returns><see cref="DescribeDevicePartitionResponse"/></returns>
         public async Task<DescribeDevicePartitionResponse> DescribeDevicePartition(DescribeDevicePartitionRequest req)
         {
              JsonResponseModel<DescribeDevicePartitionResponse> rsp = null;
@@ -417,8 +417,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询服务器所在的位置，如机架，上联交换机等信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDevicePositionRequest"/></param>
-        /// <returns>参考<see cref="DescribeDevicePositionResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDevicePositionRequest"/></param>
+        /// <returns><see cref="DescribeDevicePositionResponse"/></returns>
         public async Task<DescribeDevicePositionResponse> DescribeDevicePosition(DescribeDevicePositionRequest req)
         {
              JsonResponseModel<DescribeDevicePositionResponse> rsp = null;
@@ -437,8 +437,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询服务器价格信息，支持设备的批量查找，支持标准机型和弹性机型的混合查找
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDevicePriceInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeDevicePriceInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDevicePriceInfoRequest"/></param>
+        /// <returns><see cref="DescribeDevicePriceInfoResponse"/></returns>
         public async Task<DescribeDevicePriceInfoResponse> DescribeDevicePriceInfo(DescribeDevicePriceInfoRequest req)
         {
              JsonResponseModel<DescribeDevicePriceInfoResponse> rsp = null;
@@ -457,8 +457,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询物理服务器，可以按照实例，业务IP等过滤
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDevicesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDevicesRequest"/></param>
+        /// <returns><see cref="DescribeDevicesResponse"/></returns>
         public async Task<DescribeDevicesResponse> DescribeDevices(DescribeDevicesRequest req)
         {
              JsonResponseModel<DescribeDevicesResponse> rsp = null;
@@ -477,8 +477,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询自定义机型部件信息，包括CpuId对应的型号，DiskTypeId对应的磁盘类型
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeHardwareSpecificationRequest"/></param>
-        /// <returns>参考<see cref="DescribeHardwareSpecificationResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeHardwareSpecificationRequest"/></param>
+        /// <returns><see cref="DescribeHardwareSpecificationResponse"/></returns>
         public async Task<DescribeHardwareSpecificationResponse> DescribeHardwareSpecification(DescribeHardwareSpecificationRequest req)
         {
              JsonResponseModel<DescribeHardwareSpecificationResponse> rsp = null;
@@ -497,8 +497,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询托管设备带外信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeHostedDeviceOutBandInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeHostedDeviceOutBandInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeHostedDeviceOutBandInfoRequest"/></param>
+        /// <returns><see cref="DescribeHostedDeviceOutBandInfoResponse"/></returns>
         public async Task<DescribeHostedDeviceOutBandInfoResponse> DescribeHostedDeviceOutBandInfo(DescribeHostedDeviceOutBandInfoRequest req)
         {
              JsonResponseModel<DescribeHostedDeviceOutBandInfoResponse> rsp = null;
@@ -517,8 +517,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取异步操作状态的完成状态
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeOperationResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeOperationResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeOperationResultRequest"/></param>
+        /// <returns><see cref="DescribeOperationResultResponse"/></returns>
         public async Task<DescribeOperationResultResponse> DescribeOperationResult(DescribeOperationResultRequest req)
         {
              JsonResponseModel<DescribeOperationResultResponse> rsp = null;
@@ -537,8 +537,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询指定机型所支持的操作系统
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeOsInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeOsInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeOsInfoRequest"/></param>
+        /// <returns><see cref="DescribeOsInfoResponse"/></returns>
         public async Task<DescribeOsInfoResponse> DescribeOsInfo(DescribeOsInfoRequest req)
         {
              JsonResponseModel<DescribeOsInfoResponse> rsp = null;
@@ -557,8 +557,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取预授权规则列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePsaRegulationsRequest"/></param>
-        /// <returns>参考<see cref="DescribePsaRegulationsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePsaRegulationsRequest"/></param>
+        /// <returns><see cref="DescribePsaRegulationsResponse"/></returns>
         public async Task<DescribePsaRegulationsResponse> DescribePsaRegulations(DescribePsaRegulationsRequest req)
         {
              JsonResponseModel<DescribePsaRegulationsResponse> rsp = null;
@@ -577,8 +577,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 查询地域以及可用区
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRegionsRequest"/></param>
-        /// <returns>参考<see cref="DescribeRegionsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
         public async Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
         {
              JsonResponseModel<DescribeRegionsResponse> rsp = null;
@@ -597,8 +597,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 维修任务配置获取
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRepairTaskConstantRequest"/></param>
-        /// <returns>参考<see cref="DescribeRepairTaskConstantResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRepairTaskConstantRequest"/></param>
+        /// <returns><see cref="DescribeRepairTaskConstantResponse"/></returns>
         public async Task<DescribeRepairTaskConstantResponse> DescribeRepairTaskConstant(DescribeRepairTaskConstantRequest req)
         {
              JsonResponseModel<DescribeRepairTaskConstantResponse> rsp = null;
@@ -625,8 +625,8 @@ namespace TencentCloud.Bm.V20180423
         /// 5：已恢复<br>
         /// 6：待确认-未恢复<br>
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeTaskInfoResponse"/></returns>
         public async Task<DescribeTaskInfoResponse> DescribeTaskInfo(DescribeTaskInfoRequest req)
         {
              JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
@@ -645,8 +645,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取维修任务操作日志
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskOperationLogRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskOperationLogResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTaskOperationLogRequest"/></param>
+        /// <returns><see cref="DescribeTaskOperationLogResponse"/></returns>
         public async Task<DescribeTaskOperationLogResponse> DescribeTaskOperationLog(DescribeTaskOperationLogRequest req)
         {
              JsonResponseModel<DescribeTaskOperationLogResponse> rsp = null;
@@ -665,8 +665,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取自定义脚本任务详细信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeUserCmdTaskInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeUserCmdTaskInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeUserCmdTaskInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserCmdTaskInfoResponse"/></returns>
         public async Task<DescribeUserCmdTaskInfoResponse> DescribeUserCmdTaskInfo(DescribeUserCmdTaskInfoRequest req)
         {
              JsonResponseModel<DescribeUserCmdTaskInfoResponse> rsp = null;
@@ -685,8 +685,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取自定义脚本任务列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeUserCmdTasksRequest"/></param>
-        /// <returns>参考<see cref="DescribeUserCmdTasksResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeUserCmdTasksRequest"/></param>
+        /// <returns><see cref="DescribeUserCmdTasksResponse"/></returns>
         public async Task<DescribeUserCmdTasksResponse> DescribeUserCmdTasks(DescribeUserCmdTasksRequest req)
         {
              JsonResponseModel<DescribeUserCmdTasksResponse> rsp = null;
@@ -705,8 +705,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 获取自定义脚本信息列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeUserCmdsRequest"/></param>
-        /// <returns>参考<see cref="DescribeUserCmdsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeUserCmdsRequest"/></param>
+        /// <returns><see cref="DescribeUserCmdsResponse"/></returns>
         public async Task<DescribeUserCmdsResponse> DescribeUserCmds(DescribeUserCmdsRequest req)
         {
              JsonResponseModel<DescribeUserCmdsResponse> rsp = null;
@@ -725,8 +725,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 服务器绑定CAM角色
         /// </summary>
-        /// <param name="req">参考<see cref="DetachCamRoleRequest"/></param>
-        /// <returns>参考<see cref="DetachCamRoleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DetachCamRoleRequest"/></param>
+        /// <returns><see cref="DetachCamRoleResponse"/></returns>
         public async Task<DetachCamRoleResponse> DetachCamRole(DetachCamRoleRequest req)
         {
              JsonResponseModel<DetachCamRoleResponse> rsp = null;
@@ -745,8 +745,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 用于修改自定义镜像名或描述
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCustomImageAttributeRequest"/></param>
-        /// <returns>参考<see cref="ModifyCustomImageAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCustomImageAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCustomImageAttributeResponse"/></returns>
         public async Task<ModifyCustomImageAttributeResponse> ModifyCustomImageAttribute(ModifyCustomImageAttributeRequest req)
         {
              JsonResponseModel<ModifyCustomImageAttributeResponse> rsp = null;
@@ -765,8 +765,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 修改服务器名称
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDeviceAliasesRequest"/></param>
-        /// <returns>参考<see cref="ModifyDeviceAliasesResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDeviceAliasesRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAliasesResponse"/></returns>
         public async Task<ModifyDeviceAliasesResponse> ModifyDeviceAliases(ModifyDeviceAliasesRequest req)
         {
              JsonResponseModel<ModifyDeviceAliasesResponse> rsp = null;
@@ -785,8 +785,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 修改物理机服务器自动续费标志
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDeviceAutoRenewFlagRequest"/></param>
-        /// <returns>参考<see cref="ModifyDeviceAutoRenewFlagResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDeviceAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAutoRenewFlagResponse"/></returns>
         public async Task<ModifyDeviceAutoRenewFlagResponse> ModifyDeviceAutoRenewFlag(ModifyDeviceAutoRenewFlagRequest req)
         {
              JsonResponseModel<ModifyDeviceAutoRenewFlagResponse> rsp = null;
@@ -805,8 +805,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 修改物理机内网IP（不重装系统）
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyLanIpRequest"/></param>
-        /// <returns>参考<see cref="ModifyLanIpResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyLanIpRequest"/></param>
+        /// <returns><see cref="ModifyLanIpResponse"/></returns>
         public async Task<ModifyLanIpResponse> ModifyLanIp(ModifyLanIpRequest req)
         {
              JsonResponseModel<ModifyLanIpResponse> rsp = null;
@@ -825,8 +825,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 将设备的预付费模式修改为后付费计费模式，支持批量转换。（前提是客户要加入黑石物理机后付费计费的白名单，申请黑石物理机后付费可以联系腾讯云客服）
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPayModePre2PostRequest"/></param>
-        /// <returns>参考<see cref="ModifyPayModePre2PostResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPayModePre2PostRequest"/></param>
+        /// <returns><see cref="ModifyPayModePre2PostResponse"/></returns>
         public async Task<ModifyPayModePre2PostResponse> ModifyPayModePre2Post(ModifyPayModePre2PostRequest req)
         {
              JsonResponseModel<ModifyPayModePre2PostResponse> rsp = null;
@@ -845,8 +845,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 允许修改规则信息及关联故障类型
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyPsaRegulationRequest"/></param>
-        /// <returns>参考<see cref="ModifyPsaRegulationResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyPsaRegulationRequest"/></param>
+        /// <returns><see cref="ModifyPsaRegulationResponse"/></returns>
         public async Task<ModifyPsaRegulationResponse> ModifyPsaRegulation(ModifyPsaRegulationRequest req)
         {
              JsonResponseModel<ModifyPsaRegulationResponse> rsp = null;
@@ -865,8 +865,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 修改自定义脚本
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyUserCmdRequest"/></param>
-        /// <returns>参考<see cref="ModifyUserCmdResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyUserCmdRequest"/></param>
+        /// <returns><see cref="ModifyUserCmdResponse"/></returns>
         public async Task<ModifyUserCmdResponse> ModifyUserCmd(ModifyUserCmdRequest req)
         {
              JsonResponseModel<ModifyUserCmdResponse> rsp = null;
@@ -885,8 +885,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 销毁黑石物理机实例：可以销毁物理机列表中的竞价实例，或回收站列表中所有计费模式的实例
         /// </summary>
-        /// <param name="req">参考<see cref="OfflineDevicesRequest"/></param>
-        /// <returns>参考<see cref="OfflineDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="OfflineDevicesRequest"/></param>
+        /// <returns><see cref="OfflineDevicesResponse"/></returns>
         public async Task<OfflineDevicesResponse> OfflineDevices(OfflineDevicesRequest req)
         {
              JsonResponseModel<OfflineDevicesResponse> rsp = null;
@@ -905,8 +905,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 重启机器
         /// </summary>
-        /// <param name="req">参考<see cref="RebootDevicesRequest"/></param>
-        /// <returns>参考<see cref="RebootDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="RebootDevicesRequest"/></param>
+        /// <returns><see cref="RebootDevicesResponse"/></returns>
         public async Task<RebootDevicesResponse> RebootDevices(RebootDevicesRequest req)
         {
              JsonResponseModel<RebootDevicesResponse> rsp = null;
@@ -925,8 +925,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 恢复回收站中的物理机（仅限后付费的物理机）
         /// </summary>
-        /// <param name="req">参考<see cref="RecoverDevicesRequest"/></param>
-        /// <returns>参考<see cref="RecoverDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="RecoverDevicesRequest"/></param>
+        /// <returns><see cref="RecoverDevicesResponse"/></returns>
         public async Task<RecoverDevicesResponse> RecoverDevices(RecoverDevicesRequest req)
         {
              JsonResponseModel<RecoverDevicesResponse> rsp = null;
@@ -965,8 +965,8 @@ namespace TencentCloud.Bm.V20180423
         /// <br>
         /// 详细信息请访问：https://cloud.tencent.com/document/product/386/18190
         /// </summary>
-        /// <param name="req">参考<see cref="RepairTaskControlRequest"/></param>
-        /// <returns>参考<see cref="RepairTaskControlResponse"/>实例</returns>
+        /// <param name="req"><see cref="RepairTaskControlRequest"/></param>
+        /// <returns><see cref="RepairTaskControlResponse"/></returns>
         public async Task<RepairTaskControlResponse> RepairTaskControl(RepairTaskControlRequest req)
         {
              JsonResponseModel<RepairTaskControlResponse> rsp = null;
@@ -985,8 +985,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 重置服务器密码
         /// </summary>
-        /// <param name="req">参考<see cref="ResetDevicePasswordRequest"/></param>
-        /// <returns>参考<see cref="ResetDevicePasswordResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetDevicePasswordRequest"/></param>
+        /// <returns><see cref="ResetDevicePasswordResponse"/></returns>
         public async Task<ResetDevicePasswordResponse> ResetDevicePassword(ResetDevicePasswordRequest req)
         {
              JsonResponseModel<ResetDevicePasswordResponse> rsp = null;
@@ -1005,8 +1005,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 退回物理机至回收站，支持批量退还不同计费模式的物理机（包括预付费、后付费、预付费转后付费）
         /// </summary>
-        /// <param name="req">参考<see cref="ReturnDevicesRequest"/></param>
-        /// <returns>参考<see cref="ReturnDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="ReturnDevicesRequest"/></param>
+        /// <returns><see cref="ReturnDevicesResponse"/></returns>
         public async Task<ReturnDevicesResponse> ReturnDevices(ReturnDevicesRequest req)
         {
              JsonResponseModel<ReturnDevicesResponse> rsp = null;
@@ -1025,8 +1025,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 运行自定义脚本
         /// </summary>
-        /// <param name="req">参考<see cref="RunUserCmdRequest"/></param>
-        /// <returns>参考<see cref="RunUserCmdResponse"/>实例</returns>
+        /// <param name="req"><see cref="RunUserCmdRequest"/></param>
+        /// <returns><see cref="RunUserCmdResponse"/></returns>
         public async Task<RunUserCmdResponse> RunUserCmd(RunUserCmdRequest req)
         {
              JsonResponseModel<RunUserCmdResponse> rsp = null;
@@ -1045,8 +1045,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 设置带外VPN认证用户密码
         /// </summary>
-        /// <param name="req">参考<see cref="SetOutBandVpnAuthPasswordRequest"/></param>
-        /// <returns>参考<see cref="SetOutBandVpnAuthPasswordResponse"/>实例</returns>
+        /// <param name="req"><see cref="SetOutBandVpnAuthPasswordRequest"/></param>
+        /// <returns><see cref="SetOutBandVpnAuthPasswordResponse"/></returns>
         public async Task<SetOutBandVpnAuthPasswordResponse> SetOutBandVpnAuthPassword(SetOutBandVpnAuthPasswordRequest req)
         {
              JsonResponseModel<SetOutBandVpnAuthPasswordResponse> rsp = null;
@@ -1065,8 +1065,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 关闭服务器
         /// </summary>
-        /// <param name="req">参考<see cref="ShutdownDevicesRequest"/></param>
-        /// <returns>参考<see cref="ShutdownDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="ShutdownDevicesRequest"/></param>
+        /// <returns><see cref="ShutdownDevicesResponse"/></returns>
         public async Task<ShutdownDevicesResponse> ShutdownDevices(ShutdownDevicesRequest req)
         {
              JsonResponseModel<ShutdownDevicesResponse> rsp = null;
@@ -1085,8 +1085,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 开启服务器
         /// </summary>
-        /// <param name="req">参考<see cref="StartDevicesRequest"/></param>
-        /// <returns>参考<see cref="StartDevicesResponse"/>实例</returns>
+        /// <param name="req"><see cref="StartDevicesRequest"/></param>
+        /// <returns><see cref="StartDevicesResponse"/></returns>
         public async Task<StartDevicesResponse> StartDevices(StartDevicesRequest req)
         {
              JsonResponseModel<StartDevicesResponse> rsp = null;
@@ -1105,8 +1105,8 @@ namespace TencentCloud.Bm.V20180423
         /// <summary>
         /// 解除标签与预授权规则的绑定
         /// </summary>
-        /// <param name="req">参考<see cref="UnbindPsaTagRequest"/></param>
-        /// <returns>参考<see cref="UnbindPsaTagResponse"/>实例</returns>
+        /// <param name="req"><see cref="UnbindPsaTagRequest"/></param>
+        /// <returns><see cref="UnbindPsaTagResponse"/></returns>
         public async Task<UnbindPsaTagResponse> UnbindPsaTag(UnbindPsaTagRequest req)
         {
              JsonResponseModel<UnbindPsaTagResponse> rsp = null;

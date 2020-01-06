@@ -25,7 +25,7 @@ namespace TencentCloud.Dayu.V20180709.Models
     {
         
         /// <summary>
-        /// 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+        /// 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
@@ -43,21 +43,20 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Level{ get; set; }
 
         /// <summary>
-        /// 可选字段，代表CC防护类型，取值[http（http协议的CC防护），https（https协议的CC防护）]；当不填时，默认为http协议的CC防护；当填写https时还需要填写RuleId字段；
+        /// 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 可选字段，表示https协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-        /// 当Protocol=https时必须填写；
+        /// 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

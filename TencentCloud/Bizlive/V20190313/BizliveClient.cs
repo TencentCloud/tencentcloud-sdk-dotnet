@@ -30,10 +30,10 @@ namespace TencentCloud.Bizlive.V20190313
        private const string version = "2019-03-13";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public BizliveClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Bizlive.V20190313
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public BizliveClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Bizlive.V20190313
         /// <summary>
         /// 查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeStreamPlayInfoListRequest"/></param>
-        /// <returns>参考<see cref="DescribeStreamPlayInfoListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeStreamPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStreamPlayInfoListResponse"/></returns>
         public async Task<DescribeStreamPlayInfoListResponse> DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req)
         {
              JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Bizlive.V20190313
         /// <summary>
         /// 禁止某条流的推送，可以预设某个时刻将流恢复。
         /// </summary>
-        /// <param name="req">参考<see cref="ForbidLiveStreamRequest"/></param>
-        /// <returns>参考<see cref="ForbidLiveStreamResponse"/>实例</returns>
+        /// <param name="req"><see cref="ForbidLiveStreamRequest"/></param>
+        /// <returns><see cref="ForbidLiveStreamResponse"/></returns>
         public async Task<ForbidLiveStreamResponse> ForbidLiveStream(ForbidLiveStreamRequest req)
         {
              JsonResponseModel<ForbidLiveStreamResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Bizlive.V20190313
         /// <summary>
         /// 注册聊天室
         /// </summary>
-        /// <param name="req">参考<see cref="RegisterIMRequest"/></param>
-        /// <returns>参考<see cref="RegisterIMResponse"/>实例</returns>
+        /// <param name="req"><see cref="RegisterIMRequest"/></param>
+        /// <returns><see cref="RegisterIMResponse"/></returns>
         public async Task<RegisterIMResponse> RegisterIM(RegisterIMRequest req)
         {
              JsonResponseModel<RegisterIMResponse> rsp = null;

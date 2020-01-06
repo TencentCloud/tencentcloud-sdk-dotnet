@@ -48,9 +48,21 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
+        /// <summary>
+        /// 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+        /// </summary>
+        [JsonProperty("BasicSecurityType")]
+        public ulong? BasicSecurityType{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
+        /// </summary>
+        [JsonProperty("ForceRestart")]
+        public bool? ForceRestart{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -58,6 +70,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+            this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         }
     }
 }

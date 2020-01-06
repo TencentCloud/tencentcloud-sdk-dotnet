@@ -30,10 +30,10 @@ namespace TencentCloud.Chdfs.V20190718
        private const string version = "2019-07-18";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public ChdfsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public ChdfsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 创建权限组。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateAccessGroupRequest"/></param>
-        /// <returns>参考<see cref="CreateAccessGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateAccessGroupRequest"/></param>
+        /// <returns><see cref="CreateAccessGroupResponse"/></returns>
         public async Task<CreateAccessGroupResponse> CreateAccessGroup(CreateAccessGroupRequest req)
         {
              JsonResponseModel<CreateAccessGroupResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 批量创建权限规则，权限规则ID和创建时间无需填写。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateAccessRulesRequest"/></param>
-        /// <returns>参考<see cref="CreateAccessRulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateAccessRulesRequest"/></param>
+        /// <returns><see cref="CreateAccessRulesResponse"/></returns>
         public async Task<CreateAccessRulesResponse> CreateAccessRules(CreateAccessRulesRequest req)
         {
              JsonResponseModel<CreateAccessRulesResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 创建文件系统（异步）。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateFileSystemRequest"/></param>
-        /// <returns>参考<see cref="CreateFileSystemResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateFileSystemRequest"/></param>
+        /// <returns><see cref="CreateFileSystemResponse"/></returns>
         public async Task<CreateFileSystemResponse> CreateFileSystem(CreateFileSystemRequest req)
         {
              JsonResponseModel<CreateFileSystemResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 创建文件系统挂载点，仅限于创建成功的文件系统。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateMountPointRequest"/></param>
-        /// <returns>参考<see cref="CreateMountPointResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateMountPointRequest"/></param>
+        /// <returns><see cref="CreateMountPointResponse"/></returns>
         public async Task<CreateMountPointResponse> CreateMountPoint(CreateMountPointRequest req)
         {
              JsonResponseModel<CreateMountPointResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 删除权限组。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteAccessGroupRequest"/></param>
-        /// <returns>参考<see cref="DeleteAccessGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteAccessGroupRequest"/></param>
+        /// <returns><see cref="DeleteAccessGroupResponse"/></returns>
         public async Task<DeleteAccessGroupResponse> DeleteAccessGroup(DeleteAccessGroupRequest req)
         {
              JsonResponseModel<DeleteAccessGroupResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 批量删除权限规则。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteAccessRulesRequest"/></param>
-        /// <returns>参考<see cref="DeleteAccessRulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteAccessRulesRequest"/></param>
+        /// <returns><see cref="DeleteAccessRulesResponse"/></returns>
         public async Task<DeleteAccessRulesResponse> DeleteAccessRules(DeleteAccessRulesRequest req)
         {
              JsonResponseModel<DeleteAccessRulesResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 删除文件系统，不允许删除非空文件系统。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteFileSystemRequest"/></param>
-        /// <returns>参考<see cref="DeleteFileSystemResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteFileSystemRequest"/></param>
+        /// <returns><see cref="DeleteFileSystemResponse"/></returns>
         public async Task<DeleteFileSystemResponse> DeleteFileSystem(DeleteFileSystemRequest req)
         {
              JsonResponseModel<DeleteFileSystemResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 删除挂载点。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteMountPointRequest"/></param>
-        /// <returns>参考<see cref="DeleteMountPointResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteMountPointRequest"/></param>
+        /// <returns><see cref="DeleteMountPointResponse"/></returns>
         public async Task<DeleteMountPointResponse> DeleteMountPoint(DeleteMountPointRequest req)
         {
              JsonResponseModel<DeleteMountPointResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 查看权限组列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccessGroupsRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccessGroupsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccessGroupsRequest"/></param>
+        /// <returns><see cref="DescribeAccessGroupsResponse"/></returns>
         public async Task<DescribeAccessGroupsResponse> DescribeAccessGroups(DescribeAccessGroupsRequest req)
         {
              JsonResponseModel<DescribeAccessGroupsResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 通过权限组ID查看权限规则列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccessRulesRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccessRulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccessRulesRequest"/></param>
+        /// <returns><see cref="DescribeAccessRulesResponse"/></returns>
         public async Task<DescribeAccessRulesResponse> DescribeAccessRules(DescribeAccessRulesRequest req)
         {
              JsonResponseModel<DescribeAccessRulesResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 查看文件系统详细信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeFileSystemRequest"/></param>
-        /// <returns>参考<see cref="DescribeFileSystemResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeFileSystemRequest"/></param>
+        /// <returns><see cref="DescribeFileSystemResponse"/></returns>
         public async Task<DescribeFileSystemResponse> DescribeFileSystem(DescribeFileSystemRequest req)
         {
              JsonResponseModel<DescribeFileSystemResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 查看文件系统列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeFileSystemsRequest"/></param>
-        /// <returns>参考<see cref="DescribeFileSystemsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeFileSystemsRequest"/></param>
+        /// <returns><see cref="DescribeFileSystemsResponse"/></returns>
         public async Task<DescribeFileSystemsResponse> DescribeFileSystems(DescribeFileSystemsRequest req)
         {
              JsonResponseModel<DescribeFileSystemsResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 查看挂载点详细信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeMountPointRequest"/></param>
-        /// <returns>参考<see cref="DescribeMountPointResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeMountPointRequest"/></param>
+        /// <returns><see cref="DescribeMountPointResponse"/></returns>
         public async Task<DescribeMountPointResponse> DescribeMountPoint(DescribeMountPointRequest req)
         {
              JsonResponseModel<DescribeMountPointResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 通过文件系统ID或者权限组ID查看挂载点列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeMountPointsRequest"/></param>
-        /// <returns>参考<see cref="DescribeMountPointsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeMountPointsRequest"/></param>
+        /// <returns><see cref="DescribeMountPointsResponse"/></returns>
         public async Task<DescribeMountPointsResponse> DescribeMountPoints(DescribeMountPointsRequest req)
         {
              JsonResponseModel<DescribeMountPointsResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 修改权限组属性。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyAccessGroupRequest"/></param>
-        /// <returns>参考<see cref="ModifyAccessGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyAccessGroupRequest"/></param>
+        /// <returns><see cref="ModifyAccessGroupResponse"/></returns>
         public async Task<ModifyAccessGroupResponse> ModifyAccessGroup(ModifyAccessGroupRequest req)
         {
              JsonResponseModel<ModifyAccessGroupResponse> rsp = null;
@@ -355,8 +355,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 批量修改权限规则属性，需要指定权限规则ID。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyAccessRulesRequest"/></param>
-        /// <returns>参考<see cref="ModifyAccessRulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyAccessRulesRequest"/></param>
+        /// <returns><see cref="ModifyAccessRulesResponse"/></returns>
         public async Task<ModifyAccessRulesResponse> ModifyAccessRules(ModifyAccessRulesRequest req)
         {
              JsonResponseModel<ModifyAccessRulesResponse> rsp = null;
@@ -375,8 +375,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 修改文件系统属性，仅限于创建成功的文件系统。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyFileSystemRequest"/></param>
-        /// <returns>参考<see cref="ModifyFileSystemResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyFileSystemRequest"/></param>
+        /// <returns><see cref="ModifyFileSystemResponse"/></returns>
         public async Task<ModifyFileSystemResponse> ModifyFileSystem(ModifyFileSystemRequest req)
         {
              JsonResponseModel<ModifyFileSystemResponse> rsp = null;
@@ -395,8 +395,8 @@ namespace TencentCloud.Chdfs.V20190718
         /// <summary>
         /// 修改挂载点属性。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyMountPointRequest"/></param>
-        /// <returns>参考<see cref="ModifyMountPointResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyMountPointRequest"/></param>
+        /// <returns><see cref="ModifyMountPointResponse"/></returns>
         public async Task<ModifyMountPointResponse> ModifyMountPoint(ModifyMountPointRequest req)
         {
              JsonResponseModel<ModifyMountPointResponse> rsp = null;

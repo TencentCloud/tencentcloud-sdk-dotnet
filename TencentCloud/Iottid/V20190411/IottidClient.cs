@@ -30,10 +30,10 @@ namespace TencentCloud.Iottid.V20190411
        private const string version = "2019-04-11";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public IottidClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Iottid.V20190411
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public IottidClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 单向认证测试TID 
         /// </summary>
-        /// <param name="req">参考<see cref="AuthTestTidRequest"/></param>
-        /// <returns>参考<see cref="AuthTestTidResponse"/>实例</returns>
+        /// <param name="req"><see cref="AuthTestTidRequest"/></param>
+        /// <returns><see cref="AuthTestTidResponse"/></returns>
         public async Task<AuthTestTidResponse> AuthTestTid(AuthTestTidRequest req)
         {
              JsonResponseModel<AuthTestTidResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 安全芯片TID烧录回执 
         /// </summary>
-        /// <param name="req">参考<see cref="BurnTidNotifyRequest"/></param>
-        /// <returns>参考<see cref="BurnTidNotifyResponse"/>实例</returns>
+        /// <param name="req"><see cref="BurnTidNotifyRequest"/></param>
+        /// <returns><see cref="BurnTidNotifyResponse"/></returns>
         public async Task<BurnTidNotifyResponse> BurnTidNotify(BurnTidNotifyRequest req)
         {
              JsonResponseModel<BurnTidNotifyResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 安全芯片为载体的TID空发回执，绑定TID与订单号。 
         /// </summary>
-        /// <param name="req">参考<see cref="DeliverTidNotifyRequest"/></param>
-        /// <returns>参考<see cref="DeliverTidNotifyResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeliverTidNotifyRequest"/></param>
+        /// <returns><see cref="DeliverTidNotifyResponse"/></returns>
         public async Task<DeliverTidNotifyResponse> DeliverTidNotify(DeliverTidNotifyRequest req)
         {
              JsonResponseModel<DeliverTidNotifyResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 设备服务商请求空发产品订单的TID信息 
         /// </summary>
-        /// <param name="req">参考<see cref="DeliverTidsRequest"/></param>
-        /// <returns>参考<see cref="DeliverTidsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeliverTidsRequest"/></param>
+        /// <returns><see cref="DeliverTidsResponse"/></returns>
         public async Task<DeliverTidsResponse> DeliverTids(DeliverTidsRequest req)
         {
              JsonResponseModel<DeliverTidsResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 查询指定订单的可空发的白盒密钥数量
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAvailableLibCountRequest"/></param>
-        /// <returns>参考<see cref="DescribeAvailableLibCountResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAvailableLibCountRequest"/></param>
+        /// <returns><see cref="DescribeAvailableLibCountResponse"/></returns>
         public async Task<DescribeAvailableLibCountResponse> DescribeAvailableLibCount(DescribeAvailableLibCountRequest req)
         {
              JsonResponseModel<DescribeAvailableLibCountResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 查询企业用户TID平台控制台权限 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePermissionRequest"/></param>
-        /// <returns>参考<see cref="DescribePermissionResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePermissionRequest"/></param>
+        /// <returns><see cref="DescribePermissionResponse"/></returns>
         public async Task<DescribePermissionResponse> DescribePermission(DescribePermissionRequest req)
         {
              JsonResponseModel<DescribePermissionResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 下载芯片订单的TID 
         /// </summary>
-        /// <param name="req">参考<see cref="DownloadTidsRequest"/></param>
-        /// <returns>参考<see cref="DownloadTidsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DownloadTidsRequest"/></param>
+        /// <returns><see cref="DownloadTidsResponse"/></returns>
         public async Task<DownloadTidsResponse> DownloadTids(DownloadTidsRequest req)
         {
              JsonResponseModel<DownloadTidsResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 上传硬件唯一标识码，是软加固设备身份参数。本接口如遇到错误数据，则所有当次上传数据失效。
         /// </summary>
-        /// <param name="req">参考<see cref="UploadDeviceUniqueCodeRequest"/></param>
-        /// <returns>参考<see cref="UploadDeviceUniqueCodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="UploadDeviceUniqueCodeRequest"/></param>
+        /// <returns><see cref="UploadDeviceUniqueCodeResponse"/></returns>
         public async Task<UploadDeviceUniqueCodeResponse> UploadDeviceUniqueCode(UploadDeviceUniqueCodeRequest req)
         {
              JsonResponseModel<UploadDeviceUniqueCodeResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Iottid.V20190411
         /// <summary>
         /// 下载控制台验证芯片烧录信息，保证TID与中心信息一致 
         /// </summary>
-        /// <param name="req">参考<see cref="VerifyChipBurnInfoRequest"/></param>
-        /// <returns>参考<see cref="VerifyChipBurnInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="VerifyChipBurnInfoRequest"/></param>
+        /// <returns><see cref="VerifyChipBurnInfoResponse"/></returns>
         public async Task<VerifyChipBurnInfoResponse> VerifyChipBurnInfo(VerifyChipBurnInfoRequest req)
         {
              JsonResponseModel<VerifyChipBurnInfoResponse> rsp = null;

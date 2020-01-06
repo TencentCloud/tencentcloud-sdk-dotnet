@@ -30,10 +30,10 @@ namespace TencentCloud.Tag.V20180813
        private const string version = "2018-08-13";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TagClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TagClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 本接口用于给标签关联资源
         /// </summary>
-        /// <param name="req">参考<see cref="AddResourceTagRequest"/></param>
-        /// <returns>参考<see cref="AddResourceTagResponse"/>实例</returns>
+        /// <param name="req"><see cref="AddResourceTagRequest"/></param>
+        /// <returns><see cref="AddResourceTagResponse"/></returns>
         public async Task<AddResourceTagResponse> AddResourceTag(AddResourceTagRequest req)
         {
              JsonResponseModel<AddResourceTagResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 本接口用于创建一对标签键和标签值
         /// </summary>
-        /// <param name="req">参考<see cref="CreateTagRequest"/></param>
-        /// <returns>参考<see cref="CreateTagResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateTagRequest"/></param>
+        /// <returns><see cref="CreateTagResponse"/></returns>
         public async Task<CreateTagResponse> CreateTag(CreateTagRequest req)
         {
              JsonResponseModel<CreateTagResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 本接口用于解除标签和资源的关联关系
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteResourceTagRequest"/></param>
-        /// <returns>参考<see cref="DeleteResourceTagResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteResourceTagRequest"/></param>
+        /// <returns><see cref="DeleteResourceTagResponse"/></returns>
         public async Task<DeleteResourceTagResponse> DeleteResourceTag(DeleteResourceTagRequest req)
         {
              JsonResponseModel<DeleteResourceTagResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 本接口用于删除一对标签键和标签值
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteTagRequest"/></param>
-        /// <returns>参考<see cref="DeleteTagResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteTagRequest"/></param>
+        /// <returns><see cref="DeleteTagResponse"/></returns>
         public async Task<DeleteTagResponse> DeleteTag(DeleteTagRequest req)
         {
              JsonResponseModel<DeleteTagResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 用于查询已有资源标签键值对
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeResourceTagsByResourceIdsRequest"/></param>
-        /// <returns>参考<see cref="DescribeResourceTagsByResourceIdsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeResourceTagsByResourceIdsRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsByResourceIdsResponse"/></returns>
         public async Task<DescribeResourceTagsByResourceIdsResponse> DescribeResourceTagsByResourceIds(DescribeResourceTagsByResourceIdsRequest req)
         {
              JsonResponseModel<DescribeResourceTagsByResourceIdsResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 通过标签查询资源列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeResourcesByTagsRequest"/></param>
-        /// <returns>参考<see cref="DescribeResourcesByTagsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeResourcesByTagsRequest"/></param>
+        /// <returns><see cref="DescribeResourcesByTagsResponse"/></returns>
         public async Task<DescribeResourcesByTagsResponse> DescribeResourcesByTags(DescribeResourcesByTagsRequest req)
         {
              JsonResponseModel<DescribeResourcesByTagsResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 用于查询已建立的标签列表中的标签键。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTagKeysRequest"/></param>
-        /// <returns>参考<see cref="DescribeTagKeysResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTagKeysRequest"/></param>
+        /// <returns><see cref="DescribeTagKeysResponse"/></returns>
         public async Task<DescribeTagKeysResponse> DescribeTagKeys(DescribeTagKeysRequest req)
         {
              JsonResponseModel<DescribeTagKeysResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 用于查询已建立的标签列表中的标签值。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTagValuesRequest"/></param>
-        /// <returns>参考<see cref="DescribeTagValuesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTagValuesRequest"/></param>
+        /// <returns><see cref="DescribeTagValuesResponse"/></returns>
         public async Task<DescribeTagValuesResponse> DescribeTagValues(DescribeTagValuesRequest req)
         {
              JsonResponseModel<DescribeTagValuesResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 用于查询已建立的标签列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTagsRequest"/></param>
-        /// <returns>参考<see cref="DescribeTagsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTagsRequest"/></param>
+        /// <returns><see cref="DescribeTagsResponse"/></returns>
         public async Task<DescribeTagsResponse> DescribeTags(DescribeTagsRequest req)
         {
              JsonResponseModel<DescribeTagsResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 本接口用于修改资源关联的所有标签
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyResourceTagsRequest"/></param>
-        /// <returns>参考<see cref="ModifyResourceTagsResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>
+        /// <returns><see cref="ModifyResourceTagsResponse"/></returns>
         public async Task<ModifyResourceTagsResponse> ModifyResourceTags(ModifyResourceTagsRequest req)
         {
              JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Tag.V20180813
         /// <summary>
         /// 本接口用于修改资源已关联的标签值（标签键不变）
         /// </summary>
-        /// <param name="req">参考<see cref="UpdateResourceTagValueRequest"/></param>
-        /// <returns>参考<see cref="UpdateResourceTagValueResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpdateResourceTagValueRequest"/></param>
+        /// <returns><see cref="UpdateResourceTagValueResponse"/></returns>
         public async Task<UpdateResourceTagValueResponse> UpdateResourceTagValue(UpdateResourceTagValueRequest req)
         {
              JsonResponseModel<UpdateResourceTagValueResponse> rsp = null;

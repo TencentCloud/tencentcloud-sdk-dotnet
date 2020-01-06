@@ -30,10 +30,10 @@ namespace TencentCloud.Dbbrain.V20191016
        private const string version = "2019-10-16";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public DbbrainClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public DbbrainClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -53,10 +53,10 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// 输入参数可以是事件Id, 若没有给定事件Id,则通过时间点查询。
+        /// 获取实例异常诊断事件的详情信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBDiagEventRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBDiagEventResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBDiagEventRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagEventResponse"/></returns>
         public async Task<DescribeDBDiagEventResponse> DescribeDBDiagEvent(DescribeDBDiagEventRequest req)
         {
              JsonResponseModel<DescribeDBDiagEventResponse> rsp = null;
@@ -73,10 +73,10 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// 获取实例诊断历史。
+        /// 获取实例诊断事件的列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBDiagHistoryRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBDiagHistoryResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBDiagHistoryRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagHistoryResponse"/></returns>
         public async Task<DescribeDBDiagHistoryResponse> DescribeDBDiagHistory(DescribeDBDiagHistoryRequest req)
         {
              JsonResponseModel<DescribeDBDiagHistoryResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Dbbrain.V20191016
         /// <summary>
         /// 获取慢日志统计柱状图
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSlowLogTimeSeriesStatsRequest"/></param>
-        /// <returns>参考<see cref="DescribeSlowLogTimeSeriesStatsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSlowLogTimeSeriesStatsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogTimeSeriesStatsResponse"/></returns>
         public async Task<DescribeSlowLogTimeSeriesStatsResponse> DescribeSlowLogTimeSeriesStats(DescribeSlowLogTimeSeriesStatsRequest req)
         {
              JsonResponseModel<DescribeSlowLogTimeSeriesStatsResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Dbbrain.V20191016
         /// <summary>
         /// 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSlowLogTopSqlsRequest"/></param>
-        /// <returns>参考<see cref="DescribeSlowLogTopSqlsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSlowLogTopSqlsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogTopSqlsResponse"/></returns>
         public async Task<DescribeSlowLogTopSqlsResponse> DescribeSlowLogTopSqls(DescribeSlowLogTopSqlsRequest req)
         {
              JsonResponseModel<DescribeSlowLogTopSqlsResponse> rsp = null;

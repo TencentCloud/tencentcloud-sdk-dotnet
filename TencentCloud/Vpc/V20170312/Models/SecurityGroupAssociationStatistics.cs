@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 云主机实例数。
+        /// 云服务器实例数。
         /// </summary>
         [JsonProperty("CVM")]
         public ulong? CVM{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

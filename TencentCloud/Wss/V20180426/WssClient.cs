@@ -30,10 +30,10 @@ namespace TencentCloud.Wss.V20180426
        private const string version = "2018-04-26";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public WssClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Wss.V20180426
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public WssClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Wss.V20180426
         /// <summary>
         /// 本接口（DeleteCert）用于删除证书。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteCertRequest"/></param>
-        /// <returns>参考<see cref="DeleteCertResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteCertRequest"/></param>
+        /// <returns><see cref="DeleteCertResponse"/></returns>
         public async Task<DeleteCertResponse> DeleteCert(DeleteCertRequest req)
         {
              JsonResponseModel<DeleteCertResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Wss.V20180426
         /// <summary>
         /// 本接口(DescribeCertList)用于获取证书列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCertListRequest"/></param>
-        /// <returns>参考<see cref="DescribeCertListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCertListRequest"/></param>
+        /// <returns><see cref="DescribeCertListResponse"/></returns>
         public async Task<DescribeCertListResponse> DescribeCertList(DescribeCertListRequest req)
         {
              JsonResponseModel<DescribeCertListResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Wss.V20180426
         /// <summary>
         /// 本接口（UploadCert）用于上传证书。
         /// </summary>
-        /// <param name="req">参考<see cref="UploadCertRequest"/></param>
-        /// <returns>参考<see cref="UploadCertResponse"/>实例</returns>
+        /// <param name="req"><see cref="UploadCertRequest"/></param>
+        /// <returns><see cref="UploadCertResponse"/></returns>
         public async Task<UploadCertResponse> UploadCert(UploadCertRequest req)
         {
              JsonResponseModel<UploadCertResponse> rsp = null;

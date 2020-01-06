@@ -62,9 +62,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// 安全策略ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -74,6 +81,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "DestPortRange", this.DestPortRange);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

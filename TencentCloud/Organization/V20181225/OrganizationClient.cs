@@ -30,10 +30,10 @@ namespace TencentCloud.Organization.V20181225
        private const string version = "2018-12-25";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public OrganizationClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public OrganizationClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 接受加入企业组织邀请
         /// </summary>
-        /// <param name="req">参考<see cref="AcceptOrganizationInvitationRequest"/></param>
-        /// <returns>参考<see cref="AcceptOrganizationInvitationResponse"/>实例</returns>
+        /// <param name="req"><see cref="AcceptOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="AcceptOrganizationInvitationResponse"/></returns>
         public async Task<AcceptOrganizationInvitationResponse> AcceptOrganizationInvitation(AcceptOrganizationInvitationRequest req)
         {
              JsonResponseModel<AcceptOrganizationInvitationResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 添加企业组织单元
         /// </summary>
-        /// <param name="req">参考<see cref="AddOrganizationNodeRequest"/></param>
-        /// <returns>参考<see cref="AddOrganizationNodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="AddOrganizationNodeRequest"/></param>
+        /// <returns><see cref="AddOrganizationNodeResponse"/></returns>
         public async Task<AddOrganizationNodeResponse> AddOrganizationNode(AddOrganizationNodeRequest req)
         {
              JsonResponseModel<AddOrganizationNodeResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 取消企业组织邀请
         /// </summary>
-        /// <param name="req">参考<see cref="CancelOrganizationInvitationRequest"/></param>
-        /// <returns>参考<see cref="CancelOrganizationInvitationResponse"/>实例</returns>
+        /// <param name="req"><see cref="CancelOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="CancelOrganizationInvitationResponse"/></returns>
         public async Task<CancelOrganizationInvitationResponse> CancelOrganizationInvitation(CancelOrganizationInvitationRequest req)
         {
              JsonResponseModel<CancelOrganizationInvitationResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 创建企业组织
         /// </summary>
-        /// <param name="req">参考<see cref="CreateOrganizationRequest"/></param>
-        /// <returns>参考<see cref="CreateOrganizationResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
+        /// <returns><see cref="CreateOrganizationResponse"/></returns>
         public async Task<CreateOrganizationResponse> CreateOrganization(CreateOrganizationRequest req)
         {
              JsonResponseModel<CreateOrganizationResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 删除企业组织
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteOrganizationRequest"/></param>
-        /// <returns>参考<see cref="DeleteOrganizationResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationResponse"/></returns>
         public async Task<DeleteOrganizationResponse> DeleteOrganization(DeleteOrganizationRequest req)
         {
              JsonResponseModel<DeleteOrganizationResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 删除企业组织成员
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteOrganizationMemberFromNodeRequest"/></param>
-        /// <returns>参考<see cref="DeleteOrganizationMemberFromNodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteOrganizationMemberFromNodeRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMemberFromNodeResponse"/></returns>
         public async Task<DeleteOrganizationMemberFromNodeResponse> DeleteOrganizationMemberFromNode(DeleteOrganizationMemberFromNodeRequest req)
         {
              JsonResponseModel<DeleteOrganizationMemberFromNodeResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 批量删除企业组织成员
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteOrganizationMembersRequest"/></param>
-        /// <returns>参考<see cref="DeleteOrganizationMembersResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>
         public async Task<DeleteOrganizationMembersResponse> DeleteOrganizationMembers(DeleteOrganizationMembersRequest req)
         {
              JsonResponseModel<DeleteOrganizationMembersResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 批量删除企业组织单元
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteOrganizationNodesRequest"/></param>
-        /// <returns>参考<see cref="DeleteOrganizationNodesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteOrganizationNodesRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationNodesResponse"/></returns>
         public async Task<DeleteOrganizationNodesResponse> DeleteOrganizationNodes(DeleteOrganizationNodesRequest req)
         {
              JsonResponseModel<DeleteOrganizationNodesResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 拒绝企业组织邀请
         /// </summary>
-        /// <param name="req">参考<see cref="DenyOrganizationInvitationRequest"/></param>
-        /// <returns>参考<see cref="DenyOrganizationInvitationResponse"/>实例</returns>
+        /// <param name="req"><see cref="DenyOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="DenyOrganizationInvitationResponse"/></returns>
         public async Task<DenyOrganizationInvitationResponse> DenyOrganizationInvitation(DenyOrganizationInvitationRequest req)
         {
              JsonResponseModel<DenyOrganizationInvitationResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 获取企业组织信息
         /// </summary>
-        /// <param name="req">参考<see cref="GetOrganizationRequest"/></param>
-        /// <returns>参考<see cref="GetOrganizationResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetOrganizationRequest"/></param>
+        /// <returns><see cref="GetOrganizationResponse"/></returns>
         public async Task<GetOrganizationResponse> GetOrganization(GetOrganizationRequest req)
         {
              JsonResponseModel<GetOrganizationResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 获取企业组织成员
         /// </summary>
-        /// <param name="req">参考<see cref="GetOrganizationMemberRequest"/></param>
-        /// <returns>参考<see cref="GetOrganizationMemberResponse"/>实例</returns>
+        /// <param name="req"><see cref="GetOrganizationMemberRequest"/></param>
+        /// <returns><see cref="GetOrganizationMemberResponse"/></returns>
         public async Task<GetOrganizationMemberResponse> GetOrganizationMember(GetOrganizationMemberRequest req)
         {
              JsonResponseModel<GetOrganizationMemberResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 获取邀请信息列表
         /// </summary>
-        /// <param name="req">参考<see cref="ListOrganizationInvitationsRequest"/></param>
-        /// <returns>参考<see cref="ListOrganizationInvitationsResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListOrganizationInvitationsRequest"/></param>
+        /// <returns><see cref="ListOrganizationInvitationsResponse"/></returns>
         public async Task<ListOrganizationInvitationsResponse> ListOrganizationInvitations(ListOrganizationInvitationsRequest req)
         {
              JsonResponseModel<ListOrganizationInvitationsResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 获取企业组织成员列表
         /// </summary>
-        /// <param name="req">参考<see cref="ListOrganizationMembersRequest"/></param>
-        /// <returns>参考<see cref="ListOrganizationMembersResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListOrganizationMembersRequest"/></param>
+        /// <returns><see cref="ListOrganizationMembersResponse"/></returns>
         public async Task<ListOrganizationMembersResponse> ListOrganizationMembers(ListOrganizationMembersRequest req)
         {
              JsonResponseModel<ListOrganizationMembersResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 获取企业组织单元成员列表
         /// </summary>
-        /// <param name="req">参考<see cref="ListOrganizationNodeMembersRequest"/></param>
-        /// <returns>参考<see cref="ListOrganizationNodeMembersResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListOrganizationNodeMembersRequest"/></param>
+        /// <returns><see cref="ListOrganizationNodeMembersResponse"/></returns>
         public async Task<ListOrganizationNodeMembersResponse> ListOrganizationNodeMembers(ListOrganizationNodeMembersRequest req)
         {
              JsonResponseModel<ListOrganizationNodeMembersResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 获取企业组织单元列表
         /// </summary>
-        /// <param name="req">参考<see cref="ListOrganizationNodesRequest"/></param>
-        /// <returns>参考<see cref="ListOrganizationNodesResponse"/>实例</returns>
+        /// <param name="req"><see cref="ListOrganizationNodesRequest"/></param>
+        /// <returns><see cref="ListOrganizationNodesResponse"/></returns>
         public async Task<ListOrganizationNodesResponse> ListOrganizationNodes(ListOrganizationNodesRequest req)
         {
              JsonResponseModel<ListOrganizationNodesResponse> rsp = null;
@@ -355,8 +355,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 移动成员到指定企业组织单元
         /// </summary>
-        /// <param name="req">参考<see cref="MoveOrganizationMembersToNodeRequest"/></param>
-        /// <returns>参考<see cref="MoveOrganizationMembersToNodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="MoveOrganizationMembersToNodeRequest"/></param>
+        /// <returns><see cref="MoveOrganizationMembersToNodeResponse"/></returns>
         public async Task<MoveOrganizationMembersToNodeResponse> MoveOrganizationMembersToNode(MoveOrganizationMembersToNodeRequest req)
         {
              JsonResponseModel<MoveOrganizationMembersToNodeResponse> rsp = null;
@@ -375,8 +375,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 退出企业组织
         /// </summary>
-        /// <param name="req">参考<see cref="QuitOrganizationRequest"/></param>
-        /// <returns>参考<see cref="QuitOrganizationResponse"/>实例</returns>
+        /// <param name="req"><see cref="QuitOrganizationRequest"/></param>
+        /// <returns><see cref="QuitOrganizationResponse"/></returns>
         public async Task<QuitOrganizationResponse> QuitOrganization(QuitOrganizationRequest req)
         {
              JsonResponseModel<QuitOrganizationResponse> rsp = null;
@@ -395,8 +395,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 发送企业组织邀请
         /// </summary>
-        /// <param name="req">参考<see cref="SendOrganizationInvitationRequest"/></param>
-        /// <returns>参考<see cref="SendOrganizationInvitationResponse"/>实例</returns>
+        /// <param name="req"><see cref="SendOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="SendOrganizationInvitationResponse"/></returns>
         public async Task<SendOrganizationInvitationResponse> SendOrganizationInvitation(SendOrganizationInvitationRequest req)
         {
              JsonResponseModel<SendOrganizationInvitationResponse> rsp = null;
@@ -415,8 +415,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 更新企业成员信息
         /// </summary>
-        /// <param name="req">参考<see cref="UpdateOrganizationMemberRequest"/></param>
-        /// <returns>参考<see cref="UpdateOrganizationMemberResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpdateOrganizationMemberRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberResponse"/></returns>
         public async Task<UpdateOrganizationMemberResponse> UpdateOrganizationMember(UpdateOrganizationMemberRequest req)
         {
              JsonResponseModel<UpdateOrganizationMemberResponse> rsp = null;
@@ -435,8 +435,8 @@ namespace TencentCloud.Organization.V20181225
         /// <summary>
         /// 更新企业组织单元
         /// </summary>
-        /// <param name="req">参考<see cref="UpdateOrganizationNodeRequest"/></param>
-        /// <returns>参考<see cref="UpdateOrganizationNodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpdateOrganizationNodeRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationNodeResponse"/></returns>
         public async Task<UpdateOrganizationNodeResponse> UpdateOrganizationNode(UpdateOrganizationNodeRequest req)
         {
              JsonResponseModel<UpdateOrganizationNodeResponse> rsp = null;

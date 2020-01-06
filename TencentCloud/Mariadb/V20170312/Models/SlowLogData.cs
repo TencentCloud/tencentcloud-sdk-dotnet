@@ -126,9 +126,16 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("User")]
         public string User{ get; set; }
 
+        /// <summary>
+        /// 样例Sql
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExampleSql")]
+        public string ExampleSql{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -149,6 +156,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "TsMax", this.TsMax);
             this.SetParamSimple(map, prefix + "TsMin", this.TsMin);
             this.SetParamSimple(map, prefix + "User", this.User);
+            this.SetParamSimple(map, prefix + "ExampleSql", this.ExampleSql);
         }
     }
 }

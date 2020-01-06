@@ -27,7 +27,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 识别结果。
         /// OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
-        /// FailedOperation.UnKnowError： 表示识别失败；
+        /// FailedOperation.UnKnowError：表示识别失败；
         /// 其它错误码见各个票据接口的定义。
         /// </summary>
         [JsonProperty("Code")]
@@ -40,17 +40,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 1：定额发票
         /// 2：火车票
         /// 3：增值税发票
-        /// 4：客运限额发票（仅支持类型检测，不支持识别）
         /// 5：机票行程单
-        /// 6：酒店账单（仅支持类型检测，不支持识别）
-        /// 7：完税证明
         /// 8：通用机打发票
         /// 9：汽车票
         /// 10：轮船票
         /// 11：增值税发票（卷票 ）
         /// 12：购车发票
         /// 13：过路过桥费发票
-        /// 14：购物小票（仅支持类型检测，不支持识别）
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -75,7 +71,7 @@ namespace TencentCloud.Ocr.V20181119.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

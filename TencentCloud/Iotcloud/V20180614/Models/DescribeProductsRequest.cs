@@ -36,21 +36,14 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
-        /// <summary>
-        /// 过滤条件
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

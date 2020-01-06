@@ -30,10 +30,10 @@ namespace TencentCloud.Yunsou.V20180504
        private const string version = "2018-05-04";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public YunsouClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Yunsou.V20180504
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public YunsouClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Yunsou.V20180504
         /// <summary>
         /// 上传云搜数据的API接口
         /// </summary>
-        /// <param name="req">参考<see cref="DataManipulationRequest"/></param>
-        /// <returns>参考<see cref="DataManipulationResponse"/>实例</returns>
+        /// <param name="req"><see cref="DataManipulationRequest"/></param>
+        /// <returns><see cref="DataManipulationResponse"/></returns>
         public async Task<DataManipulationResponse> DataManipulation(DataManipulationRequest req)
         {
              JsonResponseModel<DataManipulationResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Yunsou.V20180504
         /// <summary>
         /// 用于检索云搜中的数据
         /// </summary>
-        /// <param name="req">参考<see cref="DataSearchRequest"/></param>
-        /// <returns>参考<see cref="DataSearchResponse"/>实例</returns>
+        /// <param name="req"><see cref="DataSearchRequest"/></param>
+        /// <returns><see cref="DataSearchResponse"/></returns>
         public async Task<DataSearchResponse> DataSearch(DataSearchRequest req)
         {
              JsonResponseModel<DataSearchResponse> rsp = null;

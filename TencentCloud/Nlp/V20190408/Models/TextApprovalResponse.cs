@@ -40,7 +40,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// 4、暴恐/毒品；
         /// 5、广告/灌水；
         /// 6、迷信/邪教；
-        /// 7、其他违法（如跨站追杀/恶意竞争等）；
+        /// 7、其他违法(如赌博/造假/违法交易等)；
         /// 8、综合；
         /// 9、联系方式/链接
         /// 
@@ -57,7 +57,7 @@ namespace TencentCloud.Nlp.V20190408.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

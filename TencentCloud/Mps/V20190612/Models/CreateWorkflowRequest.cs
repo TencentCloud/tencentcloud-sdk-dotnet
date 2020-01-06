@@ -61,6 +61,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
+        /// 视频内容分析类型任务参数。
+        /// </summary>
+        [JsonProperty("AiAnalysisTask")]
+        public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
+
+        /// <summary>
         /// 视频内容识别类型任务参数。
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
@@ -80,7 +86,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -90,6 +96,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
+            this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TaskPriority", this.TaskPriority);

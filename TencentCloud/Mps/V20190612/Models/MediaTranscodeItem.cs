@@ -86,21 +86,19 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 音频流信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioStreamSet")]
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
         /// 视频流信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

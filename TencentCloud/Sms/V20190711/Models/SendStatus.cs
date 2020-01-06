@@ -25,44 +25,44 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 发送流水号
+        /// 发送流水号。
         /// </summary>
         [JsonProperty("SerialNo")]
         public string SerialNo{ get; set; }
 
         /// <summary>
-        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+        /// 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 计费条数，计费规则请查询[计费策略](https://cloud.tencent.com/document/product/382/36135)
+        /// 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
         /// </summary>
         [JsonProperty("Fee")]
         public ulong? Fee{ get; set; }
 
         /// <summary>
-        /// 用户Session内容
+        /// 用户Session内容。
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 短信请求错误码，具体含义请参考错误码
+        /// 短信请求错误码，具体含义请参考错误码。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 短信请求错误码描述
+        /// 短信请求错误码描述。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

@@ -36,14 +36,28 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 置放群组的亲和性策略。
+        /// </summary>
+        [JsonProperty("Affinity")]
+        public long?[] Affinity{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 置放群组亲和性策略1的实例限制个数。
+        /// </summary>
+        [JsonProperty("LimitNum")]
+        public long? LimitNum{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArraySimple(map, prefix + "Affinity.", this.Affinity);
+            this.SetParamSimple(map, prefix + "LimitNum", this.LimitNum);
         }
     }
 }

@@ -30,10 +30,10 @@ namespace TencentCloud.Postgres.V20170312
        private const string version = "2017-03-12";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public PostgresClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public PostgresClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
         /// </summary>
-        /// <param name="req">参考<see cref="CloseDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="CloseDBExtranetAccessResponse"/>实例</returns>
+        /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="CloseDBExtranetAccessResponse"/></returns>
         public async Task<CloseDBExtranetAccessResponse> CloseDBExtranetAccess(CloseDBExtranetAccessRequest req)
         {
              JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="CreateDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
         public async Task<CreateDBInstancesResponse> CreateDBInstances(CreateDBInstancesRequest req)
         {
              JsonResponseModel<CreateDBInstancesResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（DescribeAccounts）用于获取实例用户列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountsRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
+        /// <returns><see cref="DescribeAccountsResponse"/></returns>
         public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest req)
         {
              JsonResponseModel<DescribeAccountsResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（DescribeDBBackups）用于查询实例备份列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBBackupsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBBackupsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
+        /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
         public async Task<DescribeDBBackupsResponse> DescribeDBBackups(DescribeDBBackupsRequest req)
         {
              JsonResponseModel<DescribeDBBackupsResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（DescribeDBErrlogs）用于获取错误日志。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBErrlogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBErrlogsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBErrlogsRequest"/></param>
+        /// <returns><see cref="DescribeDBErrlogsResponse"/></returns>
         public async Task<DescribeDBErrlogsResponse> DescribeDBErrlogs(DescribeDBErrlogsRequest req)
         {
              JsonResponseModel<DescribeDBErrlogsResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (DescribeDBInstanceAttribute) 用于查询某个实例的详情信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBInstanceAttributeRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBInstanceAttributeResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBInstanceAttributeRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceAttributeResponse"/></returns>
         public async Task<DescribeDBInstanceAttributeResponse> DescribeDBInstanceAttribute(DescribeDBInstanceAttributeRequest req)
         {
              JsonResponseModel<DescribeDBInstanceAttributeResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
         public async Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
         {
              JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBSlowlogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBSlowlogsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
         public async Task<DescribeDBSlowlogsResponse> DescribeDBSlowlogs(DescribeDBSlowlogsRequest req)
         {
              JsonResponseModel<DescribeDBSlowlogsResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（DescribeDBXlogs）用于获取实例Xlog列表。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBXlogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBXlogsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
+        /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
         public async Task<DescribeDBXlogsResponse> DescribeDBXlogs(DescribeDBXlogsRequest req)
         {
              JsonResponseModel<DescribeDBXlogsResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（DescribeOrders）用于获取订单信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeOrdersRequest"/></param>
-        /// <returns>参考<see cref="DescribeOrdersResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
+        /// <returns><see cref="DescribeOrdersResponse"/></returns>
         public async Task<DescribeOrdersResponse> DescribeOrders(DescribeOrdersRequest req)
         {
              JsonResponseModel<DescribeOrdersResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeProductConfigRequest"/></param>
-        /// <returns>参考<see cref="DescribeProductConfigResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
+        /// <returns><see cref="DescribeProductConfigResponse"/></returns>
         public async Task<DescribeProductConfigResponse> DescribeProductConfig(DescribeProductConfigRequest req)
         {
              JsonResponseModel<DescribeProductConfigResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (DescribeRegions) 用于查询售卖地域信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRegionsRequest"/></param>
-        /// <returns>参考<see cref="DescribeRegionsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
         public async Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
         {
              JsonResponseModel<DescribeRegionsResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (DescribeZones) 用于查询支持的可用区信息。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeZonesRequest"/></param>
-        /// <returns>参考<see cref="DescribeZonesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeZonesRequest"/></param>
+        /// <returns><see cref="DescribeZonesResponse"/></returns>
         public async Task<DescribeZonesResponse> DescribeZones(DescribeZonesRequest req)
         {
              JsonResponseModel<DescribeZonesResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (InitDBInstances) 用于初始化云数据库PostgreSQL实例。
         /// </summary>
-        /// <param name="req">参考<see cref="InitDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="InitDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
+        /// <returns><see cref="InitDBInstancesResponse"/></returns>
         public async Task<InitDBInstancesResponse> InitDBInstances(InitDBInstancesRequest req)
         {
              JsonResponseModel<InitDBInstancesResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口 (InquiryPriceCreateDBInstances) 用于查询购买一个或多个实例的价格信息。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceCreateDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceCreateDBInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateDBInstancesResponse"/></returns>
         public async Task<InquiryPriceCreateDBInstancesResponse> InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req)
         {
              JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
@@ -355,8 +355,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（InquiryPriceRenewDBInstance）用于查询续费实例的价格。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceRenewDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceRenewDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceRenewDBInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewDBInstanceResponse"/></returns>
         public async Task<InquiryPriceRenewDBInstanceResponse> InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
@@ -375,8 +375,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
         /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceUpgradeDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>
         public async Task<InquiryPriceUpgradeDBInstanceResponse> InquiryPriceUpgradeDBInstance(InquiryPriceUpgradeDBInstanceRequest req)
         {
              JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse> rsp = null;
@@ -395,8 +395,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（ModifyAccountRemark）用于修改帐号备注。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyAccountRemarkRequest"/></param>
-        /// <returns>参考<see cref="ModifyAccountRemarkResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyAccountRemarkRequest"/></param>
+        /// <returns><see cref="ModifyAccountRemarkResponse"/></returns>
         public async Task<ModifyAccountRemarkResponse> ModifyAccountRemark(ModifyAccountRemarkRequest req)
         {
              JsonResponseModel<ModifyAccountRemarkResponse> rsp = null;
@@ -415,8 +415,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（ModifyDBInstanceName）用于修改postgresql实例名字。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBInstanceNameRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBInstanceNameResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNameResponse"/></returns>
         public async Task<ModifyDBInstanceNameResponse> ModifyDBInstanceName(ModifyDBInstanceNameRequest req)
         {
              JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
@@ -435,8 +435,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBInstancesProjectRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBInstancesProjectResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
+        /// <returns><see cref="ModifyDBInstancesProjectResponse"/></returns>
         public async Task<ModifyDBInstancesProjectResponse> ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req)
         {
              JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
@@ -455,8 +455,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（OpenDBExtranetAccess）用于开通外网。
         /// </summary>
-        /// <param name="req">参考<see cref="OpenDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="OpenDBExtranetAccessResponse"/>实例</returns>
+        /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
+        /// <returns><see cref="OpenDBExtranetAccessResponse"/></returns>
         public async Task<OpenDBExtranetAccessResponse> OpenDBExtranetAccess(OpenDBExtranetAccessRequest req)
         {
              JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
@@ -475,8 +475,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（RenewInstance）用于续费实例。
         /// </summary>
-        /// <param name="req">参考<see cref="RenewInstanceRequest"/></param>
-        /// <returns>参考<see cref="RenewInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
         public async Task<RenewInstanceResponse> RenewInstance(RenewInstanceRequest req)
         {
              JsonResponseModel<RenewInstanceResponse> rsp = null;
@@ -495,8 +495,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（ResetAccountPassword）用于重置实例的账户密码。
         /// </summary>
-        /// <param name="req">参考<see cref="ResetAccountPasswordRequest"/></param>
-        /// <returns>参考<see cref="ResetAccountPasswordResponse"/>实例</returns>
+        /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
         public async Task<ResetAccountPasswordResponse> ResetAccountPassword(ResetAccountPasswordRequest req)
         {
              JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
@@ -515,8 +515,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（RestartDBInstance）用于重启实例。
         /// </summary>
-        /// <param name="req">参考<see cref="RestartDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="RestartDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="RestartDBInstanceRequest"/></param>
+        /// <returns><see cref="RestartDBInstanceResponse"/></returns>
         public async Task<RestartDBInstanceResponse> RestartDBInstance(RestartDBInstanceRequest req)
         {
              JsonResponseModel<RestartDBInstanceResponse> rsp = null;
@@ -535,8 +535,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（SetAutoRenewFlag）用于设置自动续费。
         /// </summary>
-        /// <param name="req">参考<see cref="SetAutoRenewFlagRequest"/></param>
-        /// <returns>参考<see cref="SetAutoRenewFlagResponse"/>实例</returns>
+        /// <param name="req"><see cref="SetAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="SetAutoRenewFlagResponse"/></returns>
         public async Task<SetAutoRenewFlagResponse> SetAutoRenewFlag(SetAutoRenewFlagRequest req)
         {
              JsonResponseModel<SetAutoRenewFlagResponse> rsp = null;
@@ -555,8 +555,8 @@ namespace TencentCloud.Postgres.V20170312
         /// <summary>
         /// 本接口（UpgradeDBInstance）用于升级实例。
         /// </summary>
-        /// <param name="req">参考<see cref="UpgradeDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="UpgradeDBInstanceResponse"/>实例</returns>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
         public async Task<UpgradeDBInstanceResponse> UpgradeDBInstance(UpgradeDBInstanceRequest req)
         {
              JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;

@@ -49,7 +49,20 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationName{ get; set; }
 
         /// <summary>
-        /// 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+        /// 生命周期状态，取值如下：<br>
+        /// <li>IN_SERVICE：运行中
+        /// <li>CREATING：创建中
+        /// <li>CREATION_FAILED：创建失败
+        /// <li>TERMINATING：中止中
+        /// <li>TERMINATION_FAILED：中止失败
+        /// <li>ATTACHING：绑定中
+        /// <li>DETACHING：解绑中
+        /// <li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+        /// <li>STARTING：开机中
+        /// <li>START_FAILED：开机失败
+        /// <li>STOPPING：关机中
+        /// <li>STOP_FAILED：关机失败
+        /// <li>STOPPED：已关机
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
@@ -104,7 +117,7 @@ namespace TencentCloud.As.V20180419.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

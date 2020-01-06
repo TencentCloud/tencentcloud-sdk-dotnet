@@ -162,9 +162,15 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBInstanceNetInfo")]
         public DBInstanceNetInfo[] DBInstanceNetInfo{ get; set; }
 
+        /// <summary>
+        /// 机器类型
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -191,6 +197,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

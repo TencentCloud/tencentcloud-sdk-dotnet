@@ -80,9 +80,21 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("CurrentCName")]
         public string CurrentCName{ get; set; }
 
+        /// <summary>
+        /// 是否租用域名
+        /// </summary>
+        [JsonProperty("RentTag")]
+        public long? RentTag{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// 租用域名过期时间
+        /// </summary>
+        [JsonProperty("RentExpireTime")]
+        public string RentExpireTime{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -95,6 +107,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PlayType", this.PlayType);
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
             this.SetParamSimple(map, prefix + "CurrentCName", this.CurrentCName);
+            this.SetParamSimple(map, prefix + "RentTag", this.RentTag);
+            this.SetParamSimple(map, prefix + "RentExpireTime", this.RentExpireTime);
         }
     }
 }

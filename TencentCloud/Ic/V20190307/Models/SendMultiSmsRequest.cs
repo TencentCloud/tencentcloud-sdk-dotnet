@@ -25,7 +25,7 @@ namespace TencentCloud.Ic.V20190307.Models
     {
         
         /// <summary>
-        /// 应用id
+        /// 应用ID
         /// </summary>
         [JsonProperty("Sdkappid")]
         public string Sdkappid{ get; set; }
@@ -37,14 +37,14 @@ namespace TencentCloud.Ic.V20190307.Models
         public string[] Iccids{ get; set; }
 
         /// <summary>
-        /// 短信内容
+        /// 短信内容 长度限制 70
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

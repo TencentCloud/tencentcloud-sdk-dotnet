@@ -26,28 +26,25 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// 音频流的码率，单位：bps。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
         /// 音频流的采样率，单位：hz。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SamplingRate")]
         public long? SamplingRate{ get; set; }
 
         /// <summary>
         /// 音频流的编码格式，例如 aac。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

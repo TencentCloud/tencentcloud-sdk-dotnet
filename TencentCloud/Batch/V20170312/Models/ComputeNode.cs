@@ -84,9 +84,15 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 计算环境资源类型，当前为CVM和CPM（黑石）
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -100,6 +106,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }
     }
 }

@@ -30,10 +30,10 @@ namespace TencentCloud.Ds.V20180523
        private const string version = "2018-05-23";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public DsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Ds.V20180523
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public DsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -57,8 +57,8 @@ namespace TencentCloud.Ds.V20180523
         /// 
         /// 用户在企业电子合同平台输入收到的验证码后，由企业电子合同平台调用该接口向腾讯云提交确认受托签署合同验证码命令。验证码验证正确时，本次合同签署的授权成功。
         /// </summary>
-        /// <param name="req">参考<see cref="CheckVcodeRequest"/></param>
-        /// <returns>参考<see cref="CheckVcodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="CheckVcodeRequest"/></param>
+        /// <returns><see cref="CheckVcodeResponse"/></returns>
         public async Task<CheckVcodeResponse> CheckVcode(CheckVcodeRequest req)
         {
              JsonResponseModel<CheckVcodeResponse> rsp = null;
@@ -77,8 +77,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 此接口适用于：客户平台通过上传PDF文件作为合同，以备未来进行签署。接口返回任务号，可调用DescribeTaskStatus接口查看任务执行结果。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateContractByUploadRequest"/></param>
-        /// <returns>参考<see cref="CreateContractByUploadResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateContractByUploadRequest"/></param>
+        /// <returns><see cref="CreateContractByUploadResponse"/></returns>
         public async Task<CreateContractByUploadResponse> CreateContractByUpload(CreateContractByUploadRequest req)
         {
              JsonResponseModel<CreateContractByUploadResponse> rsp = null;
@@ -97,8 +97,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 为企业电子合同平台的最终企业用户进行开户。在企业电子合同平台进行操作的企业用户，企业电子合同平台向腾讯云发送企业用户的信息，提交开户命令。腾讯云接到请求后，自动为企业电子合同平台的企业用户生成一张数字证书。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateEnterpriseAccountRequest"/></param>
-        /// <returns>参考<see cref="CreateEnterpriseAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateEnterpriseAccountRequest"/></param>
+        /// <returns><see cref="CreateEnterpriseAccountResponse"/></returns>
         public async Task<CreateEnterpriseAccountResponse> CreateEnterpriseAccount(CreateEnterpriseAccountRequest req)
         {
              JsonResponseModel<CreateEnterpriseAccountResponse> rsp = null;
@@ -117,8 +117,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 为企业电子合同平台的最终个人用户进行开户。在企业电子合同平台进行操作的个人用户，企业电子合同平台向腾讯云发送个人用户的信息，提交开户命令。腾讯云接到请求后，自动为企业电子合同平台的个人用户生成一张数字证书。
         /// </summary>
-        /// <param name="req">参考<see cref="CreatePersonalAccountRequest"/></param>
-        /// <returns>参考<see cref="CreatePersonalAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreatePersonalAccountRequest"/></param>
+        /// <returns><see cref="CreatePersonalAccountResponse"/></returns>
         public async Task<CreatePersonalAccountResponse> CreatePersonalAccount(CreatePersonalAccountRequest req)
         {
              JsonResponseModel<CreatePersonalAccountResponse> rsp = null;
@@ -137,8 +137,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 此接口用于客户电子合同平台增加某用户的印章图片。客户平台可以调用此接口增加某用户的印章图片。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateSealRequest"/></param>
-        /// <returns>参考<see cref="CreateSealResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateSealRequest"/></param>
+        /// <returns><see cref="CreateSealResponse"/></returns>
         public async Task<CreateSealResponse> CreateSeal(CreateSealRequest req)
         {
              JsonResponseModel<CreateSealResponse> rsp = null;
@@ -157,8 +157,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 删除企业电子合同平台的最终用户。调用该接口后，腾讯云将删除该用户账号。删除账号后，已经签名的合同不受影响。
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteAccountRequest"/></param>
-        /// <returns>参考<see cref="DeleteAccountResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteAccountRequest"/></param>
+        /// <returns><see cref="DeleteAccountResponse"/></returns>
         public async Task<DeleteAccountResponse> DeleteAccount(DeleteAccountRequest req)
         {
              JsonResponseModel<DeleteAccountResponse> rsp = null;
@@ -177,8 +177,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 删除印章接口，删除指定账号的某个印章
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteSealRequest"/></param>
-        /// <returns>参考<see cref="DeleteSealResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteSealRequest"/></param>
+        /// <returns><see cref="DeleteSealResponse"/></returns>
         public async Task<DeleteSealResponse> DeleteSeal(DeleteSealRequest req)
         {
              JsonResponseModel<DeleteSealResponse> rsp = null;
@@ -197,8 +197,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 接口使用于：客户平台可使用该接口查询任务执行状态或者执行结果
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
         public async Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
         {
              JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
@@ -217,8 +217,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 下载合同接口。调用该接口可以下载签署中和签署完成的合同。接口返回任务号，可调用DescribeTaskStatus接口查看任务执行结果。
         /// </summary>
-        /// <param name="req">参考<see cref="DownloadContractRequest"/></param>
-        /// <returns>参考<see cref="DownloadContractResponse"/>实例</returns>
+        /// <param name="req"><see cref="DownloadContractRequest"/></param>
+        /// <returns><see cref="DownloadContractResponse"/></returns>
         public async Task<DownloadContractResponse> DownloadContract(DownloadContractRequest req)
         {
              JsonResponseModel<DownloadContractResponse> rsp = null;
@@ -237,8 +237,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 发送验证码接口。此接口用于：企业电子合同平台需要腾讯云发送验证码对其用户进行验证时调用，腾讯云将向其用户联系手机(企业电子合同平台为用户开户时通过接口传入)发送验证码，以验证码授权方式签署合同。用户验证工作由企业电子合同平台自身完成。
         /// </summary>
-        /// <param name="req">参考<see cref="SendVcodeRequest"/></param>
-        /// <returns>参考<see cref="SendVcodeResponse"/>实例</returns>
+        /// <param name="req"><see cref="SendVcodeRequest"/></param>
+        /// <returns><see cref="SendVcodeResponse"/></returns>
         public async Task<SendVcodeResponse> SendVcode(SendVcodeRequest req)
         {
              JsonResponseModel<SendVcodeResponse> rsp = null;
@@ -257,8 +257,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口提供详细的PDF文档签名坐标进行签署。
         /// </summary>
-        /// <param name="req">参考<see cref="SignContractByCoordinateRequest"/></param>
-        /// <returns>参考<see cref="SignContractByCoordinateResponse"/>实例</returns>
+        /// <param name="req"><see cref="SignContractByCoordinateRequest"/></param>
+        /// <returns><see cref="SignContractByCoordinateResponse"/></returns>
         public async Task<SignContractByCoordinateResponse> SignContractByCoordinate(SignContractByCoordinateRequest req)
         {
              JsonResponseModel<SignContractByCoordinateResponse> rsp = null;
@@ -277,8 +277,8 @@ namespace TencentCloud.Ds.V20180523
         /// <summary>
         /// 此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口对PDF合同文档按照关键字和坐标进行签署。
         /// </summary>
-        /// <param name="req">参考<see cref="SignContractByKeywordRequest"/></param>
-        /// <returns>参考<see cref="SignContractByKeywordResponse"/>实例</returns>
+        /// <param name="req"><see cref="SignContractByKeywordRequest"/></param>
+        /// <returns><see cref="SignContractByKeywordResponse"/></returns>
         public async Task<SignContractByKeywordResponse> SignContractByKeyword(SignContractByKeywordRequest req)
         {
              JsonResponseModel<SignContractByKeywordResponse> rsp = null;

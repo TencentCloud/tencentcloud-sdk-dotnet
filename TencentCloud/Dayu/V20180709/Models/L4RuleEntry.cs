@@ -67,7 +67,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? LbType{ get; set; }
 
         /// <summary>
-        /// 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+        /// 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
         /// </summary>
         [JsonProperty("KeepEnable")]
         public ulong? KeepEnable{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Dayu.V20180709.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

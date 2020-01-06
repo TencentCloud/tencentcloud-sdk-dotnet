@@ -39,6 +39,23 @@ namespace TencentCloud.Ocr.V20181119.Models
         public TextVehicleBack BackInfo{ get; set; }
 
         /// <summary>
+        /// 告警码	告警码消息	                                                告警码说明
+        /// -9102	WARN_DRIVER_LICENSE_COPY_CARD	        复印件告警
+        /// -9103	WARN_DRIVER_LICENSE_SCREENED_CARD	翻拍件告警
+        /// -9106	WARN_DRIVER_LICENSE_PS_CARD	                ps告警
+        /// 注：告警码可以同时存在多个
+        /// </summary>
+        [JsonProperty("RecognizeWarnCode")]
+        public long?[] RecognizeWarnCode{ get; set; }
+
+        /// <summary>
+        /// 告警码说明
+        /// 注：告警信息可以同时存在多个
+        /// </summary>
+        [JsonProperty("RecognizeWarnMsg")]
+        public string[] RecognizeWarnMsg{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -46,12 +63,14 @@ namespace TencentCloud.Ocr.V20181119.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "FrontInfo.", this.FrontInfo);
             this.SetParamObj(map, prefix + "BackInfo.", this.BackInfo);
+            this.SetParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
+            this.SetParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

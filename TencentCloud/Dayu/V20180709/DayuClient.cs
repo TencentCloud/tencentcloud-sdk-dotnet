@@ -30,10 +30,10 @@ namespace TencentCloud.Dayu.V20180709
        private const string version = "2018-07-09";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public DayuClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public DayuClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -53,10 +53,30 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 设置基础防护的DDoS告警阈值，只支持基础防护产品
+        /// </summary>
+        /// <param name="req"><see cref="CreateBasicDDoSAlarmThresholdRequest"/></param>
+        /// <returns><see cref="CreateBasicDDoSAlarmThresholdResponse"/></returns>
+        public async Task<CreateBasicDDoSAlarmThresholdResponse> CreateBasicDDoSAlarmThreshold(CreateBasicDDoSAlarmThresholdRequest req)
+        {
+             JsonResponseModel<CreateBasicDDoSAlarmThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBasicDDoSAlarmThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBasicDDoSAlarmThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建CC自定义策略
         /// </summary>
-        /// <param name="req">参考<see cref="CreateCCSelfDefinePolicyRequest"/></param>
-        /// <returns>参考<see cref="CreateCCSelfDefinePolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateCCSelfDefinePolicyRequest"/></param>
+        /// <returns><see cref="CreateCCSelfDefinePolicyResponse"/></returns>
         public async Task<CreateCCSelfDefinePolicyResponse> CreateCCSelfDefinePolicy(CreateCCSelfDefinePolicyRequest req)
         {
              JsonResponseModel<CreateCCSelfDefinePolicyResponse> rsp = null;
@@ -75,8 +95,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 添加DDoS高级策略
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDDoSPolicyRequest"/></param>
-        /// <returns>参考<see cref="CreateDDoSPolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDDoSPolicyRequest"/></param>
+        /// <returns><see cref="CreateDDoSPolicyResponse"/></returns>
         public async Task<CreateDDoSPolicyResponse> CreateDDoSPolicy(CreateDDoSPolicyRequest req)
         {
              JsonResponseModel<CreateDDoSPolicyResponse> rsp = null;
@@ -95,8 +115,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 添加策略场景
         /// </summary>
-        /// <param name="req">参考<see cref="CreateDDoSPolicyCaseRequest"/></param>
-        /// <returns>参考<see cref="CreateDDoSPolicyCaseResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateDDoSPolicyCaseRequest"/></param>
+        /// <returns><see cref="CreateDDoSPolicyCaseResponse"/></returns>
         public async Task<CreateDDoSPolicyCaseResponse> CreateDDoSPolicyCase(CreateDDoSPolicyCaseRequest req)
         {
              JsonResponseModel<CreateDDoSPolicyCaseResponse> rsp = null;
@@ -115,8 +135,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 资源实例重命名，支持独享包、共享包、高防IP、高防IP专业版、棋牌盾；
         /// </summary>
-        /// <param name="req">参考<see cref="CreateInstanceNameRequest"/></param>
-        /// <returns>参考<see cref="CreateInstanceNameResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateInstanceNameRequest"/></param>
+        /// <returns><see cref="CreateInstanceNameResponse"/></returns>
         public async Task<CreateInstanceNameResponse> CreateInstanceName(CreateInstanceNameRequest req)
         {
              JsonResponseModel<CreateInstanceNameResponse> rsp = null;
@@ -135,8 +155,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 上传四层健康检查配置
         /// </summary>
-        /// <param name="req">参考<see cref="CreateL4HealthConfigRequest"/></param>
-        /// <returns>参考<see cref="CreateL4HealthConfigResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateL4HealthConfigRequest"/></param>
+        /// <returns><see cref="CreateL4HealthConfigResponse"/></returns>
         public async Task<CreateL4HealthConfigResponse> CreateL4HealthConfig(CreateL4HealthConfigRequest req)
         {
              JsonResponseModel<CreateL4HealthConfigResponse> rsp = null;
@@ -155,8 +175,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 添加L4转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="CreateL4RulesRequest"/></param>
-        /// <returns>参考<see cref="CreateL4RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateL4RulesRequest"/></param>
+        /// <returns><see cref="CreateL4RulesResponse"/></returns>
         public async Task<CreateL4RulesResponse> CreateL4Rules(CreateL4RulesRequest req)
         {
              JsonResponseModel<CreateL4RulesResponse> rsp = null;
@@ -175,8 +195,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 支持读取，添加，删除7层CC自定义规则
         /// </summary>
-        /// <param name="req">参考<see cref="CreateL7CCRuleRequest"/></param>
-        /// <returns>参考<see cref="CreateL7CCRuleResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateL7CCRuleRequest"/></param>
+        /// <returns><see cref="CreateL7CCRuleResponse"/></returns>
         public async Task<CreateL7CCRuleResponse> CreateL7CCRule(CreateL7CCRuleRequest req)
         {
              JsonResponseModel<CreateL7CCRuleResponse> rsp = null;
@@ -195,8 +215,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 上传七层健康检查配置
         /// </summary>
-        /// <param name="req">参考<see cref="CreateL7HealthConfigRequest"/></param>
-        /// <returns>参考<see cref="CreateL7HealthConfigResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateL7HealthConfigRequest"/></param>
+        /// <returns><see cref="CreateL7HealthConfigResponse"/></returns>
         public async Task<CreateL7HealthConfigResponse> CreateL7HealthConfig(CreateL7HealthConfigRequest req)
         {
              JsonResponseModel<CreateL7HealthConfigResponse> rsp = null;
@@ -215,8 +235,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 配置7层转发规则的证书
         /// </summary>
-        /// <param name="req">参考<see cref="CreateL7RuleCertRequest"/></param>
-        /// <returns>参考<see cref="CreateL7RuleCertResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateL7RuleCertRequest"/></param>
+        /// <returns><see cref="CreateL7RuleCertResponse"/></returns>
         public async Task<CreateL7RuleCertResponse> CreateL7RuleCert(CreateL7RuleCertRequest req)
         {
              JsonResponseModel<CreateL7RuleCertResponse> rsp = null;
@@ -235,8 +255,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 添加7层(网站)转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="CreateL7RulesRequest"/></param>
-        /// <returns>参考<see cref="CreateL7RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateL7RulesRequest"/></param>
+        /// <returns><see cref="CreateL7RulesResponse"/></returns>
         public async Task<CreateL7RulesResponse> CreateL7Rules(CreateL7RulesRequest req)
         {
              JsonResponseModel<CreateL7RulesResponse> rsp = null;
@@ -255,8 +275,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 批量上传7层转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="CreateL7RulesUploadRequest"/></param>
-        /// <returns>参考<see cref="CreateL7RulesUploadResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateL7RulesUploadRequest"/></param>
+        /// <returns><see cref="CreateL7RulesUploadResponse"/></returns>
         public async Task<CreateL7RulesUploadResponse> CreateL7RulesUpload(CreateL7RulesUploadRequest req)
         {
              JsonResponseModel<CreateL7RulesUploadResponse> rsp = null;
@@ -275,8 +295,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// IP解封操作
         /// </summary>
-        /// <param name="req">参考<see cref="CreateUnblockIpRequest"/></param>
-        /// <returns>参考<see cref="CreateUnblockIpResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateUnblockIpRequest"/></param>
+        /// <returns><see cref="CreateUnblockIpResponse"/></returns>
         public async Task<CreateUnblockIpResponse> CreateUnblockIp(CreateUnblockIpRequest req)
         {
              JsonResponseModel<CreateUnblockIpResponse> rsp = null;
@@ -295,8 +315,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 删除CC自定义策略
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteCCSelfDefinePolicyRequest"/></param>
-        /// <returns>参考<see cref="DeleteCCSelfDefinePolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteCCSelfDefinePolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCSelfDefinePolicyResponse"/></returns>
         public async Task<DeleteCCSelfDefinePolicyResponse> DeleteCCSelfDefinePolicy(DeleteCCSelfDefinePolicyRequest req)
         {
              JsonResponseModel<DeleteCCSelfDefinePolicyResponse> rsp = null;
@@ -315,8 +335,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 删除DDoS高级策略
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteDDoSPolicyRequest"/></param>
-        /// <returns>参考<see cref="DeleteDDoSPolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteDDoSPolicyRequest"/></param>
+        /// <returns><see cref="DeleteDDoSPolicyResponse"/></returns>
         public async Task<DeleteDDoSPolicyResponse> DeleteDDoSPolicy(DeleteDDoSPolicyRequest req)
         {
              JsonResponseModel<DeleteDDoSPolicyResponse> rsp = null;
@@ -335,8 +355,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 删除策略场景
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteDDoSPolicyCaseRequest"/></param>
-        /// <returns>参考<see cref="DeleteDDoSPolicyCaseResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteDDoSPolicyCaseRequest"/></param>
+        /// <returns><see cref="DeleteDDoSPolicyCaseResponse"/></returns>
         public async Task<DeleteDDoSPolicyCaseResponse> DeleteDDoSPolicyCase(DeleteDDoSPolicyCaseRequest req)
         {
              JsonResponseModel<DeleteDDoSPolicyCaseResponse> rsp = null;
@@ -355,8 +375,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 删除四层转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteL4RulesRequest"/></param>
-        /// <returns>参考<see cref="DeleteL4RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteL4RulesRequest"/></param>
+        /// <returns><see cref="DeleteL4RulesResponse"/></returns>
         public async Task<DeleteL4RulesResponse> DeleteL4Rules(DeleteL4RulesRequest req)
         {
              JsonResponseModel<DeleteL4RulesResponse> rsp = null;
@@ -375,8 +395,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 删除七层转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteL7RulesRequest"/></param>
-        /// <returns>参考<see cref="DeleteL7RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteL7RulesRequest"/></param>
+        /// <returns><see cref="DeleteL7RulesResponse"/></returns>
         public async Task<DeleteL7RulesResponse> DeleteL7Rules(DeleteL7RulesRequest req)
         {
              JsonResponseModel<DeleteL7RulesResponse> rsp = null;
@@ -395,8 +415,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取操作日志
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeActionLogRequest"/></param>
-        /// <returns>参考<see cref="DescribeActionLogResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeActionLogRequest"/></param>
+        /// <returns><see cref="DescribeActionLogResponse"/></returns>
         public async Task<DescribeActionLogResponse> DescribeActionLog(DescribeActionLogRequest req)
         {
              JsonResponseModel<DescribeActionLogResponse> rsp = null;
@@ -415,8 +435,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 为大禹子产品提供从巴拉多获取指标统计数据的接口
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBaradDataRequest"/></param>
-        /// <returns>参考<see cref="DescribeBaradDataResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeBaradDataRequest"/></param>
+        /// <returns><see cref="DescribeBaradDataResponse"/></returns>
         public async Task<DescribeBaradDataResponse> DescribeBaradData(DescribeBaradDataRequest req)
         {
              JsonResponseModel<DescribeBaradDataResponse> rsp = null;
@@ -433,10 +453,50 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取基础防护黑洞阈值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicDeviceThresholdRequest"/></param>
+        /// <returns><see cref="DescribeBasicDeviceThresholdResponse"/></returns>
+        public async Task<DescribeBasicDeviceThresholdResponse> DescribeBasicDeviceThreshold(DescribeBasicDeviceThresholdRequest req)
+        {
+             JsonResponseModel<DescribeBasicDeviceThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBasicDeviceThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDeviceThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCAlarmThresholdRequest"/></param>
+        /// <returns><see cref="DescribeCCAlarmThresholdResponse"/></returns>
+        public async Task<DescribeCCAlarmThresholdResponse> DescribeCCAlarmThreshold(DescribeCCAlarmThresholdRequest req)
+        {
+             JsonResponseModel<DescribeCCAlarmThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCAlarmThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCAlarmThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取CC攻击事件列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCCEvListRequest"/></param>
-        /// <returns>参考<see cref="DescribeCCEvListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCCEvListRequest"/></param>
+        /// <returns><see cref="DescribeCCEvListResponse"/></returns>
         public async Task<DescribeCCEvListResponse> DescribeCCEvList(DescribeCCEvListRequest req)
         {
              JsonResponseModel<DescribeCCEvListResponse> rsp = null;
@@ -455,8 +515,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取CC的IP黑白名单
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCCIpAllowDenyRequest"/></param>
-        /// <returns>参考<see cref="DescribeCCIpAllowDenyResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCCIpAllowDenyRequest"/></param>
+        /// <returns><see cref="DescribeCCIpAllowDenyResponse"/></returns>
         public async Task<DescribeCCIpAllowDenyResponse> DescribeCCIpAllowDeny(DescribeCCIpAllowDenyRequest req)
         {
              JsonResponseModel<DescribeCCIpAllowDenyResponse> rsp = null;
@@ -473,10 +533,30 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取CC自定义策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCSelfDefinePolicyRequest"/></param>
+        /// <returns><see cref="DescribeCCSelfDefinePolicyResponse"/></returns>
+        public async Task<DescribeCCSelfDefinePolicyResponse> DescribeCCSelfDefinePolicy(DescribeCCSelfDefinePolicyRequest req)
+        {
+             JsonResponseModel<DescribeCCSelfDefinePolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCSelfDefinePolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCSelfDefinePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCCTrendRequest"/></param>
-        /// <returns>参考<see cref="DescribeCCTrendResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
+        /// <returns><see cref="DescribeCCTrendResponse"/></returns>
         public async Task<DescribeCCTrendResponse> DescribeCCTrend(DescribeCCTrendRequest req)
         {
              JsonResponseModel<DescribeCCTrendResponse> rsp = null;
@@ -495,8 +575,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取CC的Url白名单
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeCCUrlAllowRequest"/></param>
-        /// <returns>参考<see cref="DescribeCCUrlAllowResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeCCUrlAllowRequest"/></param>
+        /// <returns><see cref="DescribeCCUrlAllowResponse"/></returns>
         public async Task<DescribeCCUrlAllowResponse> DescribeCCUrlAllow(DescribeCCUrlAllowRequest req)
         {
              JsonResponseModel<DescribeCCUrlAllowResponse> rsp = null;
@@ -513,10 +593,50 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取高防包、高防IP、高防IP专业版、棋牌盾产品设置DDoS攻击的告警通知阈值
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAlarmThresholdRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAlarmThresholdResponse"/></returns>
+        public async Task<DescribeDDoSAlarmThresholdResponse> DescribeDDoSAlarmThreshold(DescribeDDoSAlarmThresholdRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAlarmThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSAlarmThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAlarmThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS攻击源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSAttackSourceRequest"/></param>
+        /// <returns><see cref="DescribeDDoSAttackSourceResponse"/></returns>
+        public async Task<DescribeDDoSAttackSourceResponse> DescribeDDoSAttackSource(DescribeDDoSAttackSourceRequest req)
+        {
+             JsonResponseModel<DescribeDDoSAttackSourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSAttackSource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSAttackSourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取DDoS攻击占比分析
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSCountRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSCountResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSCountRequest"/></param>
+        /// <returns><see cref="DescribeDDoSCountResponse"/></returns>
         public async Task<DescribeDDoSCountResponse> DescribeDDoSCount(DescribeDDoSCountRequest req)
         {
              JsonResponseModel<DescribeDDoSCountResponse> rsp = null;
@@ -533,10 +653,10 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// 获取DDoS防护状态，支持产品：基础防护，独享包，共享包，高防IP，高防IP专业版；
+        /// 获取DDoS防护状态（临时关闭状态），支持产品：基础防护，独享包，共享包，高防IP，高防IP专业版；调用此接口是获取当前是否有设置临时关闭DDoS防护状态，如果有设置会返回临时关闭的时长等参数。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSDefendStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSDefendStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSDefendStatusRequest"/></param>
+        /// <returns><see cref="DescribeDDoSDefendStatusResponse"/></returns>
         public async Task<DescribeDDoSDefendStatusResponse> DescribeDDoSDefendStatus(DescribeDDoSDefendStatusRequest req)
         {
              JsonResponseModel<DescribeDDoSDefendStatusResponse> rsp = null;
@@ -555,8 +675,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取DDoS攻击事件详情
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSEvInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSEvInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSEvInfoRequest"/></param>
+        /// <returns><see cref="DescribeDDoSEvInfoResponse"/></returns>
         public async Task<DescribeDDoSEvInfoResponse> DescribeDDoSEvInfo(DescribeDDoSEvInfoRequest req)
         {
              JsonResponseModel<DescribeDDoSEvInfoResponse> rsp = null;
@@ -575,8 +695,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取DDoS攻击事件列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSEvListRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSEvListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSEvListRequest"/></param>
+        /// <returns><see cref="DescribeDDoSEvListResponse"/></returns>
         public async Task<DescribeDDoSEvListResponse> DescribeDDoSEvList(DescribeDDoSEvListRequest req)
         {
              JsonResponseModel<DescribeDDoSEvListResponse> rsp = null;
@@ -595,8 +715,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取DDoSIP攻击日志
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSIpLogRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSIpLogResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSIpLogRequest"/></param>
+        /// <returns><see cref="DescribeDDoSIpLogResponse"/></returns>
         public async Task<DescribeDDoSIpLogResponse> DescribeDDoSIpLog(DescribeDDoSIpLogRequest req)
         {
              JsonResponseModel<DescribeDDoSIpLogResponse> rsp = null;
@@ -615,8 +735,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取高防IP专业版资源的DDoS攻击占比分析
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSNetCountRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSNetCountResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSNetCountRequest"/></param>
+        /// <returns><see cref="DescribeDDoSNetCountResponse"/></returns>
         public async Task<DescribeDDoSNetCountResponse> DescribeDDoSNetCount(DescribeDDoSNetCountRequest req)
         {
              JsonResponseModel<DescribeDDoSNetCountResponse> rsp = null;
@@ -635,8 +755,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取高防IP专业版资源的DDoS攻击事件详情
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSNetEvInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSNetEvInfoResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSNetEvInfoRequest"/></param>
+        /// <returns><see cref="DescribeDDoSNetEvInfoResponse"/></returns>
         public async Task<DescribeDDoSNetEvInfoResponse> DescribeDDoSNetEvInfo(DescribeDDoSNetEvInfoRequest req)
         {
              JsonResponseModel<DescribeDDoSNetEvInfoResponse> rsp = null;
@@ -655,8 +775,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取高防IP专业版资源的DDoS攻击事件列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSNetEvListRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSNetEvListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSNetEvListRequest"/></param>
+        /// <returns><see cref="DescribeDDoSNetEvListResponse"/></returns>
         public async Task<DescribeDDoSNetEvListResponse> DescribeDDoSNetEvList(DescribeDDoSNetEvListRequest req)
         {
              JsonResponseModel<DescribeDDoSNetEvListResponse> rsp = null;
@@ -675,8 +795,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取高防IP专业版资源的DDoSIP攻击日志
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSNetIpLogRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSNetIpLogResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSNetIpLogRequest"/></param>
+        /// <returns><see cref="DescribeDDoSNetIpLogResponse"/></returns>
         public async Task<DescribeDDoSNetIpLogResponse> DescribeDDoSNetIpLog(DescribeDDoSNetIpLogRequest req)
         {
              JsonResponseModel<DescribeDDoSNetIpLogResponse> rsp = null;
@@ -695,8 +815,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取高防IP专业版资源的DDoS攻击指标数据
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSNetTrendRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSNetTrendResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSNetTrendRequest"/></param>
+        /// <returns><see cref="DescribeDDoSNetTrendResponse"/></returns>
         public async Task<DescribeDDoSNetTrendResponse> DescribeDDoSNetTrend(DescribeDDoSNetTrendRequest req)
         {
              JsonResponseModel<DescribeDDoSNetTrendResponse> rsp = null;
@@ -715,8 +835,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取DDoS高级策略
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSPolicyRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSPolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSPolicyRequest"/></param>
+        /// <returns><see cref="DescribeDDoSPolicyResponse"/></returns>
         public async Task<DescribeDDoSPolicyResponse> DescribeDDoSPolicy(DescribeDDoSPolicyRequest req)
         {
              JsonResponseModel<DescribeDDoSPolicyResponse> rsp = null;
@@ -735,8 +855,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取DDoS攻击流量带宽和攻击包速率数据
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSTrendRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSTrendResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSTrendRequest"/></param>
+        /// <returns><see cref="DescribeDDoSTrendResponse"/></returns>
         public async Task<DescribeDDoSTrendResponse> DescribeDDoSTrend(DescribeDDoSTrendRequest req)
         {
              JsonResponseModel<DescribeDDoSTrendResponse> rsp = null;
@@ -755,8 +875,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 统计用户的高防资源的使用天数和DDoS攻击防护次数
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDDoSUsedStatisRequest"/></param>
-        /// <returns>参考<see cref="DescribeDDoSUsedStatisResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDDoSUsedStatisRequest"/></param>
+        /// <returns><see cref="DescribeDDoSUsedStatisResponse"/></returns>
         public async Task<DescribeDDoSUsedStatisResponse> DescribeDDoSUsedStatis(DescribeDDoSUsedStatisRequest req)
         {
              JsonResponseModel<DescribeDDoSUsedStatisResponse> rsp = null;
@@ -773,10 +893,30 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取独享包或共享包IP对应的云资产信息，只支持独享包和共享包的IP
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPProductInfoRequest"/></param>
+        /// <returns><see cref="DescribeIPProductInfoResponse"/></returns>
+        public async Task<DescribeIPProductInfoResponse> DescribeIPProductInfo(DescribeIPProductInfoRequest req)
+        {
+             JsonResponseModel<DescribeIPProductInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIPProductInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPProductInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取保险包套餐列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeInsurePacksRequest"/></param>
-        /// <returns>参考<see cref="DescribeInsurePacksResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeInsurePacksRequest"/></param>
+        /// <returns><see cref="DescribeInsurePacksResponse"/></returns>
         public async Task<DescribeInsurePacksResponse> DescribeInsurePacks(DescribeInsurePacksRequest req)
         {
              JsonResponseModel<DescribeInsurePacksResponse> rsp = null;
@@ -795,8 +935,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取IP封堵列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeIpBlockListRequest"/></param>
-        /// <returns>参考<see cref="DescribeIpBlockListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeIpBlockListRequest"/></param>
+        /// <returns><see cref="DescribeIpBlockListResponse"/></returns>
         public async Task<DescribeIpBlockListResponse> DescribeIpBlockList(DescribeIpBlockListRequest req)
         {
              JsonResponseModel<DescribeIpBlockListResponse> rsp = null;
@@ -813,10 +953,30 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取IP解封记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpUnBlockListRequest"/></param>
+        /// <returns><see cref="DescribeIpUnBlockListResponse"/></returns>
+        public async Task<DescribeIpUnBlockListResponse> DescribeIpUnBlockList(DescribeIpUnBlockListRequest req)
+        {
+             JsonResponseModel<DescribeIpUnBlockListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpUnBlockList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpUnBlockListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 导出四层健康检查配置
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeL4HealthConfigRequest"/></param>
-        /// <returns>参考<see cref="DescribeL4HealthConfigResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeL4HealthConfigRequest"/></param>
+        /// <returns><see cref="DescribeL4HealthConfigResponse"/></returns>
         public async Task<DescribeL4HealthConfigResponse> DescribeL4HealthConfig(DescribeL4HealthConfigRequest req)
         {
              JsonResponseModel<DescribeL4HealthConfigResponse> rsp = null;
@@ -835,8 +995,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取L4转发规则健康检查异常结果
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeL4RulesErrHealthRequest"/></param>
-        /// <returns>参考<see cref="DescribeL4RulesErrHealthResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeL4RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeL4RulesErrHealthResponse"/></returns>
         public async Task<DescribeL4RulesErrHealthResponse> DescribeL4RulesErrHealth(DescribeL4RulesErrHealthRequest req)
         {
              JsonResponseModel<DescribeL4RulesErrHealthResponse> rsp = null;
@@ -855,8 +1015,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 导出七层健康检查配置
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeL7HealthConfigRequest"/></param>
-        /// <returns>参考<see cref="DescribeL7HealthConfigResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeL7HealthConfigRequest"/></param>
+        /// <returns><see cref="DescribeL7HealthConfigResponse"/></returns>
         public async Task<DescribeL7HealthConfigResponse> DescribeL7HealthConfig(DescribeL7HealthConfigRequest req)
         {
              JsonResponseModel<DescribeL7HealthConfigResponse> rsp = null;
@@ -875,8 +1035,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取产品总览统计，支持高防包、高防IP、高防IP专业版、棋牌盾
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePackIndexRequest"/></param>
-        /// <returns>参考<see cref="DescribePackIndexResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePackIndexRequest"/></param>
+        /// <returns><see cref="DescribePackIndexResponse"/></returns>
         public async Task<DescribePackIndexResponse> DescribePackIndex(DescribePackIndexRequest req)
         {
              JsonResponseModel<DescribePackIndexResponse> rsp = null;
@@ -895,8 +1055,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 下载攻击事件的pcap包
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePcapRequest"/></param>
-        /// <returns>参考<see cref="DescribePcapResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePcapRequest"/></param>
+        /// <returns><see cref="DescribePcapResponse"/></returns>
         public async Task<DescribePcapResponse> DescribePcap(DescribePcapRequest req)
         {
              JsonResponseModel<DescribePcapResponse> rsp = null;
@@ -915,8 +1075,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取策略场景
         /// </summary>
-        /// <param name="req">参考<see cref="DescribePolicyCaseRequest"/></param>
-        /// <returns>参考<see cref="DescribePolicyCaseResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribePolicyCaseRequest"/></param>
+        /// <returns><see cref="DescribePolicyCaseResponse"/></returns>
         public async Task<DescribePolicyCaseResponse> DescribePolicyCase(DescribePolicyCaseRequest req)
         {
              JsonResponseModel<DescribePolicyCaseResponse> rsp = null;
@@ -935,8 +1095,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取资源的IP列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeResIpListRequest"/></param>
-        /// <returns>参考<see cref="DescribeResIpListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeResIpListRequest"/></param>
+        /// <returns><see cref="DescribeResIpListResponse"/></returns>
         public async Task<DescribeResIpListResponse> DescribeResIpList(DescribeResIpListRequest req)
         {
              JsonResponseModel<DescribeResIpListResponse> rsp = null;
@@ -955,8 +1115,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取资源列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeResourceListRequest"/></param>
-        /// <returns>参考<see cref="DescribeResourceListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeResourceListRequest"/></param>
+        /// <returns><see cref="DescribeResourceListResponse"/></returns>
         public async Task<DescribeResourceListResponse> DescribeResourceList(DescribeResourceListRequest req)
         {
              JsonResponseModel<DescribeResourceListResponse> rsp = null;
@@ -975,8 +1135,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取资源的规则数
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRuleSetsRequest"/></param>
-        /// <returns>参考<see cref="DescribeRuleSetsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRuleSetsRequest"/></param>
+        /// <returns><see cref="DescribeRuleSetsResponse"/></returns>
         public async Task<DescribeRuleSetsResponse> DescribeRuleSets(DescribeRuleSetsRequest req)
         {
              JsonResponseModel<DescribeRuleSetsResponse> rsp = null;
@@ -995,8 +1155,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取本月安全统计
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSecIndexRequest"/></param>
-        /// <returns>参考<see cref="DescribeSecIndexResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSecIndexRequest"/></param>
+        /// <returns><see cref="DescribeSecIndexResponse"/></returns>
         public async Task<DescribeSecIndexResponse> DescribeSecIndex(DescribeSecIndexRequest req)
         {
              JsonResponseModel<DescribeSecIndexResponse> rsp = null;
@@ -1015,8 +1175,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取回源IP段，支持的产品：高防IP，高防IP专业版，棋牌盾；
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeSourceIpSegmentRequest"/></param>
-        /// <returns>参考<see cref="DescribeSourceIpSegmentResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeSourceIpSegmentRequest"/></param>
+        /// <returns><see cref="DescribeSourceIpSegmentResponse"/></returns>
         public async Task<DescribeSourceIpSegmentResponse> DescribeSourceIpSegment(DescribeSourceIpSegmentRequest req)
         {
              JsonResponseModel<DescribeSourceIpSegmentResponse> rsp = null;
@@ -1035,8 +1195,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取业务转发统计数据，支持转发流量和转发包速率
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTransmitStatisRequest"/></param>
-        /// <returns>参考<see cref="DescribeTransmitStatisResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTransmitStatisRequest"/></param>
+        /// <returns><see cref="DescribeTransmitStatisResponse"/></returns>
         public async Task<DescribeTransmitStatisResponse> DescribeTransmitStatis(DescribeTransmitStatisRequest req)
         {
              JsonResponseModel<DescribeTransmitStatisResponse> rsp = null;
@@ -1055,8 +1215,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取黑洞解封次数
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeUnBlockStatisRequest"/></param>
-        /// <returns>参考<see cref="DescribeUnBlockStatisResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeUnBlockStatisRequest"/></param>
+        /// <returns><see cref="DescribeUnBlockStatisResponse"/></returns>
         public async Task<DescribeUnBlockStatisResponse> DescribeUnBlockStatis(DescribeUnBlockStatisRequest req)
         {
              JsonResponseModel<DescribeUnBlockStatisResponse> rsp = null;
@@ -1075,8 +1235,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取四层转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="DescribleL4RulesRequest"/></param>
-        /// <returns>参考<see cref="DescribleL4RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribleL4RulesRequest"/></param>
+        /// <returns><see cref="DescribleL4RulesResponse"/></returns>
         public async Task<DescribleL4RulesResponse> DescribleL4Rules(DescribleL4RulesRequest req)
         {
              JsonResponseModel<DescribleL4RulesResponse> rsp = null;
@@ -1095,8 +1255,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取七层转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="DescribleL7RulesRequest"/></param>
-        /// <returns>参考<see cref="DescribleL7RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribleL7RulesRequest"/></param>
+        /// <returns><see cref="DescribleL7RulesResponse"/></returns>
         public async Task<DescribleL7RulesResponse> DescribleL7Rules(DescribleL7RulesRequest req)
         {
              JsonResponseModel<DescribleL7RulesResponse> rsp = null;
@@ -1115,8 +1275,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 获取地域的资源实例数
         /// </summary>
-        /// <param name="req">参考<see cref="DescribleRegionCountRequest"/></param>
-        /// <returns>参考<see cref="DescribleRegionCountResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribleRegionCountRequest"/></param>
+        /// <returns><see cref="DescribleRegionCountResponse"/></returns>
         public async Task<DescribleRegionCountResponse> DescribleRegionCount(DescribleRegionCountRequest req)
         {
              JsonResponseModel<DescribleRegionCountResponse> rsp = null;
@@ -1133,10 +1293,30 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 为高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCAlarmThresholdRequest"/></param>
+        /// <returns><see cref="ModifyCCAlarmThresholdResponse"/></returns>
+        public async Task<ModifyCCAlarmThresholdResponse> ModifyCCAlarmThreshold(ModifyCCAlarmThresholdRequest req)
+        {
+             JsonResponseModel<ModifyCCAlarmThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCCAlarmThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCAlarmThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 开启或关闭CC域名防护
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCCHostProtectionRequest"/></param>
-        /// <returns>参考<see cref="ModifyCCHostProtectionResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCCHostProtectionRequest"/></param>
+        /// <returns><see cref="ModifyCCHostProtectionResponse"/></returns>
         public async Task<ModifyCCHostProtectionResponse> ModifyCCHostProtection(ModifyCCHostProtectionRequest req)
         {
              JsonResponseModel<ModifyCCHostProtectionResponse> rsp = null;
@@ -1155,8 +1335,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 添加或删除CC的IP黑白名单
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCCIpAllowDenyRequest"/></param>
-        /// <returns>参考<see cref="ModifyCCIpAllowDenyResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCCIpAllowDenyRequest"/></param>
+        /// <returns><see cref="ModifyCCIpAllowDenyResponse"/></returns>
         public async Task<ModifyCCIpAllowDenyResponse> ModifyCCIpAllowDeny(ModifyCCIpAllowDenyRequest req)
         {
              JsonResponseModel<ModifyCCIpAllowDenyResponse> rsp = null;
@@ -1175,8 +1355,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改CC防护等级
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCCLevelRequest"/></param>
-        /// <returns>参考<see cref="ModifyCCLevelResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCCLevelRequest"/></param>
+        /// <returns><see cref="ModifyCCLevelResponse"/></returns>
         public async Task<ModifyCCLevelResponse> ModifyCCLevel(ModifyCCLevelRequest req)
         {
              JsonResponseModel<ModifyCCLevelResponse> rsp = null;
@@ -1195,8 +1375,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改CC自定义策略开关
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCCPolicySwitchRequest"/></param>
-        /// <returns>参考<see cref="ModifyCCPolicySwitchResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCCPolicySwitchRequest"/></param>
+        /// <returns><see cref="ModifyCCPolicySwitchResponse"/></returns>
         public async Task<ModifyCCPolicySwitchResponse> ModifyCCPolicySwitch(ModifyCCPolicySwitchRequest req)
         {
              JsonResponseModel<ModifyCCPolicySwitchResponse> rsp = null;
@@ -1215,8 +1395,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改CC自定义策略
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCCSelfDefinePolicyRequest"/></param>
-        /// <returns>参考<see cref="ModifyCCSelfDefinePolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCCSelfDefinePolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCSelfDefinePolicyResponse"/></returns>
         public async Task<ModifyCCSelfDefinePolicyResponse> ModifyCCSelfDefinePolicy(ModifyCCSelfDefinePolicyRequest req)
         {
              JsonResponseModel<ModifyCCSelfDefinePolicyResponse> rsp = null;
@@ -1235,8 +1415,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改CC的防护阈值
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCCThresholdRequest"/></param>
-        /// <returns>参考<see cref="ModifyCCThresholdResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCCThresholdRequest"/></param>
+        /// <returns><see cref="ModifyCCThresholdResponse"/></returns>
         public async Task<ModifyCCThresholdResponse> ModifyCCThreshold(ModifyCCThresholdRequest req)
         {
              JsonResponseModel<ModifyCCThresholdResponse> rsp = null;
@@ -1255,8 +1435,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 添加或删除CC的URL白名单
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyCCUrlAllowRequest"/></param>
-        /// <returns>参考<see cref="ModifyCCUrlAllowResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyCCUrlAllowRequest"/></param>
+        /// <returns><see cref="ModifyCCUrlAllowResponse"/></returns>
         public async Task<ModifyCCUrlAllowResponse> ModifyCCUrlAllow(ModifyCCUrlAllowRequest req)
         {
              JsonResponseModel<ModifyCCUrlAllowResponse> rsp = null;
@@ -1275,8 +1455,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 读取或修改DDoS的AI防护状态
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSAIStatusRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSAIStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSAIStatusRequest"/></param>
+        /// <returns><see cref="ModifyDDoSAIStatusResponse"/></returns>
         public async Task<ModifyDDoSAIStatusResponse> ModifyDDoSAIStatus(ModifyDDoSAIStatusRequest req)
         {
              JsonResponseModel<ModifyDDoSAIStatusResponse> rsp = null;
@@ -1293,10 +1473,30 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
-        /// 开启或关闭DDoS防护状态
+        /// 为高防包、高防IP、高防IP专业版、棋牌盾等产品设置DDoS攻击的告警通知阈值
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSDefendStatusRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSDefendStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSAlarmThresholdRequest"/></param>
+        /// <returns><see cref="ModifyDDoSAlarmThresholdResponse"/></returns>
+        public async Task<ModifyDDoSAlarmThresholdResponse> ModifyDDoSAlarmThreshold(ModifyDDoSAlarmThresholdRequest req)
+        {
+             JsonResponseModel<ModifyDDoSAlarmThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDDoSAlarmThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSAlarmThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启或关闭DDoS防护状态，调用此接口允许临时关闭DDoS防护一段时间，等时间到了会自动开启DDoS防护；
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSDefendStatusRequest"/></param>
+        /// <returns><see cref="ModifyDDoSDefendStatusResponse"/></returns>
         public async Task<ModifyDDoSDefendStatusResponse> ModifyDDoSDefendStatus(ModifyDDoSDefendStatusRequest req)
         {
              JsonResponseModel<ModifyDDoSDefendStatusResponse> rsp = null;
@@ -1315,8 +1515,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 读取或修改DDoS的防护等级
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSLevelRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSLevelResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSLevelRequest"/></param>
+        /// <returns><see cref="ModifyDDoSLevelResponse"/></returns>
         public async Task<ModifyDDoSLevelResponse> ModifyDDoSLevel(ModifyDDoSLevelRequest req)
         {
              JsonResponseModel<ModifyDDoSLevelResponse> rsp = null;
@@ -1335,8 +1535,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改DDoS高级策略
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSPolicyRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSPolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSPolicyRequest"/></param>
+        /// <returns><see cref="ModifyDDoSPolicyResponse"/></returns>
         public async Task<ModifyDDoSPolicyResponse> ModifyDDoSPolicy(ModifyDDoSPolicyRequest req)
         {
              JsonResponseModel<ModifyDDoSPolicyResponse> rsp = null;
@@ -1355,8 +1555,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改策略场景
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSPolicyCaseRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSPolicyCaseResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSPolicyCaseRequest"/></param>
+        /// <returns><see cref="ModifyDDoSPolicyCaseResponse"/></returns>
         public async Task<ModifyDDoSPolicyCaseResponse> ModifyDDoSPolicyCase(ModifyDDoSPolicyCaseRequest req)
         {
              JsonResponseModel<ModifyDDoSPolicyCaseResponse> rsp = null;
@@ -1375,8 +1575,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改DDoS高级策略名称
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSPolicyNameRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSPolicyNameResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSPolicyNameRequest"/></param>
+        /// <returns><see cref="ModifyDDoSPolicyNameResponse"/></returns>
         public async Task<ModifyDDoSPolicyNameResponse> ModifyDDoSPolicyName(ModifyDDoSPolicyNameRequest req)
         {
              JsonResponseModel<ModifyDDoSPolicyNameResponse> rsp = null;
@@ -1395,8 +1595,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 开启或关闭DDoS防护，只支持基础防护产品；
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSSwitchRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSSwitchResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSSwitchRequest"/></param>
+        /// <returns><see cref="ModifyDDoSSwitchResponse"/></returns>
         public async Task<ModifyDDoSSwitchResponse> ModifyDDoSSwitch(ModifyDDoSSwitchRequest req)
         {
              JsonResponseModel<ModifyDDoSSwitchResponse> rsp = null;
@@ -1415,8 +1615,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改DDoS清洗阈值
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSThresholdRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSThresholdResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSThresholdRequest"/></param>
+        /// <returns><see cref="ModifyDDoSThresholdResponse"/></returns>
         public async Task<ModifyDDoSThresholdResponse> ModifyDDoSThreshold(ModifyDDoSThresholdRequest req)
         {
              JsonResponseModel<ModifyDDoSThresholdResponse> rsp = null;
@@ -1435,8 +1635,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 支持水印密钥的添加，删除，开启，关闭
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDDoSWaterKeyRequest"/></param>
-        /// <returns>参考<see cref="ModifyDDoSWaterKeyResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDDoSWaterKeyRequest"/></param>
+        /// <returns><see cref="ModifyDDoSWaterKeyResponse"/></returns>
         public async Task<ModifyDDoSWaterKeyResponse> ModifyDDoSWaterKey(ModifyDDoSWaterKeyRequest req)
         {
              JsonResponseModel<ModifyDDoSWaterKeyResponse> rsp = null;
@@ -1455,8 +1655,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改弹性防护阈值
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyElasticLimitRequest"/></param>
-        /// <returns>参考<see cref="ModifyElasticLimitResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyElasticLimitRequest"/></param>
+        /// <returns><see cref="ModifyElasticLimitResponse"/></returns>
         public async Task<ModifyElasticLimitResponse> ModifyElasticLimit(ModifyElasticLimitRequest req)
         {
              JsonResponseModel<ModifyElasticLimitResponse> rsp = null;
@@ -1475,8 +1675,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改L4转发规则健康检查参数，支持的子产品：高防IP、高防IP专业版
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyL4HealthRequest"/></param>
-        /// <returns>参考<see cref="ModifyL4HealthResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyL4HealthRequest"/></param>
+        /// <returns><see cref="ModifyL4HealthResponse"/></returns>
         public async Task<ModifyL4HealthResponse> ModifyL4Health(ModifyL4HealthRequest req)
         {
              JsonResponseModel<ModifyL4HealthResponse> rsp = null;
@@ -1495,8 +1695,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改L4转发规则的会话保持，支持的子产品：高防IP、高防IP专业版
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyL4KeepTimeRequest"/></param>
-        /// <returns>参考<see cref="ModifyL4KeepTimeResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyL4KeepTimeRequest"/></param>
+        /// <returns><see cref="ModifyL4KeepTimeResponse"/></returns>
         public async Task<ModifyL4KeepTimeResponse> ModifyL4KeepTime(ModifyL4KeepTimeRequest req)
         {
              JsonResponseModel<ModifyL4KeepTimeResponse> rsp = null;
@@ -1515,8 +1715,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改L4转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyL4RulesRequest"/></param>
-        /// <returns>参考<see cref="ModifyL4RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyL4RulesRequest"/></param>
+        /// <returns><see cref="ModifyL4RulesResponse"/></returns>
         public async Task<ModifyL4RulesResponse> ModifyL4Rules(ModifyL4RulesRequest req)
         {
              JsonResponseModel<ModifyL4RulesResponse> rsp = null;
@@ -1535,8 +1735,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 修改L7转发规则
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyL7RulesRequest"/></param>
-        /// <returns>参考<see cref="ModifyL7RulesResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyL7RulesRequest"/></param>
+        /// <returns><see cref="ModifyL7RulesResponse"/></returns>
         public async Task<ModifyL7RulesResponse> ModifyL7Rules(ModifyL7RulesRequest req)
         {
              JsonResponseModel<ModifyL7RulesResponse> rsp = null;
@@ -1555,8 +1755,8 @@ namespace TencentCloud.Dayu.V20180709
         /// <summary>
         /// 资源实例绑定DDoS高级策略
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyResBindDDoSPolicyRequest"/></param>
-        /// <returns>参考<see cref="ModifyResBindDDoSPolicyResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyResBindDDoSPolicyRequest"/></param>
+        /// <returns><see cref="ModifyResBindDDoSPolicyResponse"/></returns>
         public async Task<ModifyResBindDDoSPolicyResponse> ModifyResBindDDoSPolicy(ModifyResBindDDoSPolicyRequest req)
         {
              JsonResponseModel<ModifyResBindDDoSPolicyResponse> rsp = null;
@@ -1564,6 +1764,26 @@ namespace TencentCloud.Dayu.V20180709
              {
                  var strResp = await this.InternalRequest(req, "ModifyResBindDDoSPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResBindDDoSPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改资源自动续费标记
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyResourceRenewFlagResponse"/></returns>
+        public async Task<ModifyResourceRenewFlagResponse> ModifyResourceRenewFlag(ModifyResourceRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyResourceRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourceRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

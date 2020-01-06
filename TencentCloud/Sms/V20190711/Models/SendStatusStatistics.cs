@@ -25,32 +25,32 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+        /// 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
         /// </summary>
-        [JsonProperty("BillingStatistics")]
-        public ulong? BillingStatistics{ get; set; }
+        [JsonProperty("FeeCount")]
+        public ulong? FeeCount{ get; set; }
 
         /// <summary>
-        /// 短信提交量统计
+        /// 短信提交量统计。
         /// </summary>
-        [JsonProperty("RequestStatistics")]
-        public ulong? RequestStatistics{ get; set; }
+        [JsonProperty("RequestCount")]
+        public ulong? RequestCount{ get; set; }
 
         /// <summary>
-        /// 短信提交成功量统计
+        /// 短信提交成功量统计。
         /// </summary>
-        [JsonProperty("RequestSuccessStatistics")]
-        public ulong? RequestSuccessStatistics{ get; set; }
+        [JsonProperty("RequestSuccessCount")]
+        public ulong? RequestSuccessCount{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BillingStatistics", this.BillingStatistics);
-            this.SetParamSimple(map, prefix + "RequestStatistics", this.RequestStatistics);
-            this.SetParamSimple(map, prefix + "RequestSuccessStatistics", this.RequestSuccessStatistics);
+            this.SetParamSimple(map, prefix + "FeeCount", this.FeeCount);
+            this.SetParamSimple(map, prefix + "RequestCount", this.RequestCount);
+            this.SetParamSimple(map, prefix + "RequestSuccessCount", this.RequestSuccessCount);
         }
     }
 }

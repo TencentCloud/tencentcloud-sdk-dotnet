@@ -97,7 +97,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] SecurityGroupIdList{ get; set; }
 
         /// <summary>
-        /// 用户自定义的端口 不填则默认为6379
+        /// 用户自定义的端口 不填则默认为6379，范围[1024,65535]
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
@@ -134,7 +134,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

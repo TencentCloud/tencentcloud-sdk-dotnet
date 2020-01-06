@@ -30,10 +30,10 @@ namespace TencentCloud.Tke.V20180525
        private const string version = "2018-05-25";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TkeClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TkeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 添加已经存在的实例到集群
         /// </summary>
-        /// <param name="req">参考<see cref="AddExistedInstancesRequest"/></param>
-        /// <returns>参考<see cref="AddExistedInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="AddExistedInstancesRequest"/></param>
+        /// <returns><see cref="AddExistedInstancesResponse"/></returns>
         public async Task<AddExistedInstancesResponse> AddExistedInstances(AddExistedInstancesRequest req)
         {
              JsonResponseModel<AddExistedInstancesResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 创建集群
         /// </summary>
-        /// <param name="req">参考<see cref="CreateClusterRequest"/></param>
-        /// <returns>参考<see cref="CreateClusterResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateClusterRequest"/></param>
+        /// <returns><see cref="CreateClusterResponse"/></returns>
         public async Task<CreateClusterResponse> CreateCluster(CreateClusterRequest req)
         {
              JsonResponseModel<CreateClusterResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 为已经存在的集群创建伸缩组
         /// </summary>
-        /// <param name="req">参考<see cref="CreateClusterAsGroupRequest"/></param>
-        /// <returns>参考<see cref="CreateClusterAsGroupResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateClusterAsGroupRequest"/></param>
+        /// <returns><see cref="CreateClusterAsGroupResponse"/></returns>
         public async Task<CreateClusterAsGroupResponse> CreateClusterAsGroup(CreateClusterAsGroupRequest req)
         {
              JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 创建集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
         /// </summary>
-        /// <param name="req">参考<see cref="CreateClusterEndpointRequest"/></param>
-        /// <returns>参考<see cref="CreateClusterEndpointResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateClusterEndpointRequest"/></param>
+        /// <returns><see cref="CreateClusterEndpointResponse"/></returns>
         public async Task<CreateClusterEndpointResponse> CreateClusterEndpoint(CreateClusterEndpointRequest req)
         {
              JsonResponseModel<CreateClusterEndpointResponse> rsp = null;
@@ -135,8 +135,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 创建托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
         /// </summary>
-        /// <param name="req">参考<see cref="CreateClusterEndpointVipRequest"/></param>
-        /// <returns>参考<see cref="CreateClusterEndpointVipResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateClusterEndpointVipRequest"/></param>
+        /// <returns><see cref="CreateClusterEndpointVipResponse"/></returns>
         public async Task<CreateClusterEndpointVipResponse> CreateClusterEndpointVip(CreateClusterEndpointVipRequest req)
         {
              JsonResponseModel<CreateClusterEndpointVipResponse> rsp = null;
@@ -155,8 +155,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 扩展(新建)集群节点
         /// </summary>
-        /// <param name="req">参考<see cref="CreateClusterInstancesRequest"/></param>
-        /// <returns>参考<see cref="CreateClusterInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateClusterInstancesRequest"/></param>
+        /// <returns><see cref="CreateClusterInstancesResponse"/></returns>
         public async Task<CreateClusterInstancesResponse> CreateClusterInstances(CreateClusterInstancesRequest req)
         {
              JsonResponseModel<CreateClusterInstancesResponse> rsp = null;
@@ -175,8 +175,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 创建集群路由
         /// </summary>
-        /// <param name="req">参考<see cref="CreateClusterRouteRequest"/></param>
-        /// <returns>参考<see cref="CreateClusterRouteResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateClusterRouteRequest"/></param>
+        /// <returns><see cref="CreateClusterRouteResponse"/></returns>
         public async Task<CreateClusterRouteResponse> CreateClusterRoute(CreateClusterRouteRequest req)
         {
              JsonResponseModel<CreateClusterRouteResponse> rsp = null;
@@ -195,8 +195,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 创建集群路由表
         /// </summary>
-        /// <param name="req">参考<see cref="CreateClusterRouteTableRequest"/></param>
-        /// <returns>参考<see cref="CreateClusterRouteTableResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateClusterRouteTableRequest"/></param>
+        /// <returns><see cref="CreateClusterRouteTableResponse"/></returns>
         public async Task<CreateClusterRouteTableResponse> CreateClusterRouteTable(CreateClusterRouteTableRequest req)
         {
              JsonResponseModel<CreateClusterRouteTableResponse> rsp = null;
@@ -215,8 +215,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 删除集群(YUNAPI V3版本)
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteClusterRequest"/></param>
-        /// <returns>参考<see cref="DeleteClusterResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteClusterRequest"/></param>
+        /// <returns><see cref="DeleteClusterResponse"/></returns>
         public async Task<DeleteClusterResponse> DeleteCluster(DeleteClusterRequest req)
         {
              JsonResponseModel<DeleteClusterResponse> rsp = null;
@@ -235,8 +235,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 删除集群伸缩组
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteClusterAsGroupsRequest"/></param>
-        /// <returns>参考<see cref="DeleteClusterAsGroupsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteClusterAsGroupsRequest"/></param>
+        /// <returns><see cref="DeleteClusterAsGroupsResponse"/></returns>
         public async Task<DeleteClusterAsGroupsResponse> DeleteClusterAsGroups(DeleteClusterAsGroupsRequest req)
         {
              JsonResponseModel<DeleteClusterAsGroupsResponse> rsp = null;
@@ -255,8 +255,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 删除集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteClusterEndpointRequest"/></param>
-        /// <returns>参考<see cref="DeleteClusterEndpointResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteClusterEndpointRequest"/></param>
+        /// <returns><see cref="DeleteClusterEndpointResponse"/></returns>
         public async Task<DeleteClusterEndpointResponse> DeleteClusterEndpoint(DeleteClusterEndpointRequest req)
         {
              JsonResponseModel<DeleteClusterEndpointResponse> rsp = null;
@@ -275,8 +275,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 删除托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteClusterEndpointVipRequest"/></param>
-        /// <returns>参考<see cref="DeleteClusterEndpointVipResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteClusterEndpointVipRequest"/></param>
+        /// <returns><see cref="DeleteClusterEndpointVipResponse"/></returns>
         public async Task<DeleteClusterEndpointVipResponse> DeleteClusterEndpointVip(DeleteClusterEndpointVipRequest req)
         {
              JsonResponseModel<DeleteClusterEndpointVipResponse> rsp = null;
@@ -295,8 +295,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 删除集群中的实例
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteClusterInstancesRequest"/></param>
-        /// <returns>参考<see cref="DeleteClusterInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteClusterInstancesRequest"/></param>
+        /// <returns><see cref="DeleteClusterInstancesResponse"/></returns>
         public async Task<DeleteClusterInstancesResponse> DeleteClusterInstances(DeleteClusterInstancesRequest req)
         {
              JsonResponseModel<DeleteClusterInstancesResponse> rsp = null;
@@ -315,8 +315,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 删除集群路由
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteClusterRouteRequest"/></param>
-        /// <returns>参考<see cref="DeleteClusterRouteResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteClusterRouteRequest"/></param>
+        /// <returns><see cref="DeleteClusterRouteResponse"/></returns>
         public async Task<DeleteClusterRouteResponse> DeleteClusterRoute(DeleteClusterRouteRequest req)
         {
              JsonResponseModel<DeleteClusterRouteResponse> rsp = null;
@@ -335,8 +335,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 删除集群路由表
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteClusterRouteTableRequest"/></param>
-        /// <returns>参考<see cref="DeleteClusterRouteTableResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteClusterRouteTableRequest"/></param>
+        /// <returns><see cref="DeleteClusterRouteTableResponse"/></returns>
         public async Task<DeleteClusterRouteTableResponse> DeleteClusterRouteTable(DeleteClusterRouteTableRequest req)
         {
              JsonResponseModel<DeleteClusterRouteTableResponse> rsp = null;
@@ -353,10 +353,50 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 集群弹性伸缩配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAsGroupOptionRequest"/></param>
+        /// <returns><see cref="DescribeClusterAsGroupOptionResponse"/></returns>
+        public async Task<DescribeClusterAsGroupOptionResponse> DescribeClusterAsGroupOption(DescribeClusterAsGroupOptionRequest req)
+        {
+             JsonResponseModel<DescribeClusterAsGroupOptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAsGroupOption");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAsGroupOptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集群关联的伸缩组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAsGroupsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAsGroupsResponse"/></returns>
+        public async Task<DescribeClusterAsGroupsResponse> DescribeClusterAsGroups(DescribeClusterAsGroupsRequest req)
+        {
+             JsonResponseModel<DescribeClusterAsGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAsGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAsGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterEndpointStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterEndpointStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterEndpointStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterEndpointStatusResponse"/></returns>
         public async Task<DescribeClusterEndpointStatusResponse> DescribeClusterEndpointStatus(DescribeClusterEndpointStatusRequest req)
         {
              JsonResponseModel<DescribeClusterEndpointStatusResponse> rsp = null;
@@ -375,8 +415,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 查询集群开启端口流程状态(仅支持托管集群外网端口)
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterEndpointVipStatusRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterEndpointVipStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterEndpointVipStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterEndpointVipStatusResponse"/></returns>
         public async Task<DescribeClusterEndpointVipStatusResponse> DescribeClusterEndpointVipStatus(DescribeClusterEndpointVipStatusRequest req)
         {
              JsonResponseModel<DescribeClusterEndpointVipStatusResponse> rsp = null;
@@ -395,8 +435,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         ///  查询集群下节点实例信息 
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterInstancesRequest"/></param>
+        /// <returns><see cref="DescribeClusterInstancesResponse"/></returns>
         public async Task<DescribeClusterInstancesResponse> DescribeClusterInstances(DescribeClusterInstancesRequest req)
         {
              JsonResponseModel<DescribeClusterInstancesResponse> rsp = null;
@@ -415,8 +455,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 查询集群路由表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterRouteTablesRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterRouteTablesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeClusterRouteTablesResponse"/></returns>
         public async Task<DescribeClusterRouteTablesResponse> DescribeClusterRouteTables(DescribeClusterRouteTablesRequest req)
         {
              JsonResponseModel<DescribeClusterRouteTablesResponse> rsp = null;
@@ -435,8 +475,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 查询集群路由
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterRoutesRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterRoutesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterRoutesRequest"/></param>
+        /// <returns><see cref="DescribeClusterRoutesResponse"/></returns>
         public async Task<DescribeClusterRoutesResponse> DescribeClusterRoutes(DescribeClusterRoutesRequest req)
         {
              JsonResponseModel<DescribeClusterRoutesResponse> rsp = null;
@@ -455,8 +495,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 集群的密钥信息
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClusterSecurityRequest"/></param>
-        /// <returns>参考<see cref="DescribeClusterSecurityResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClusterSecurityRequest"/></param>
+        /// <returns><see cref="DescribeClusterSecurityResponse"/></returns>
         public async Task<DescribeClusterSecurityResponse> DescribeClusterSecurity(DescribeClusterSecurityRequest req)
         {
              JsonResponseModel<DescribeClusterSecurityResponse> rsp = null;
@@ -475,8 +515,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 查询集群列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeClustersRequest"/></param>
-        /// <returns>参考<see cref="DescribeClustersResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeClustersRequest"/></param>
+        /// <returns><see cref="DescribeClustersResponse"/></returns>
         public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest req)
         {
              JsonResponseModel<DescribeClustersResponse> rsp = null;
@@ -495,8 +535,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 查询已经存在的节点，判断是否可以加入集群
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeExistedInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeExistedInstancesResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeExistedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeExistedInstancesResponse"/></returns>
         public async Task<DescribeExistedInstancesResponse> DescribeExistedInstances(DescribeExistedInstancesRequest req)
         {
              JsonResponseModel<DescribeExistedInstancesResponse> rsp = null;
@@ -515,8 +555,8 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 查询路由表冲突列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeRouteTableConflictsRequest"/></param>
-        /// <returns>参考<see cref="DescribeRouteTableConflictsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeRouteTableConflictsRequest"/></param>
+        /// <returns><see cref="DescribeRouteTableConflictsResponse"/></returns>
         public async Task<DescribeRouteTableConflictsResponse> DescribeRouteTableConflicts(DescribeRouteTableConflictsRequest req)
         {
              JsonResponseModel<DescribeRouteTableConflictsResponse> rsp = null;
@@ -533,10 +573,30 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 修改集群伸缩组属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAsGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyClusterAsGroupAttributeResponse"/></returns>
+        public async Task<ModifyClusterAsGroupAttributeResponse> ModifyClusterAsGroupAttribute(ModifyClusterAsGroupAttributeRequest req)
+        {
+             JsonResponseModel<ModifyClusterAsGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterAsGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAsGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改托管集群外网端口的安全策略（老的方式，仅支持托管集群外网端口）
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyClusterEndpointSPRequest"/></param>
-        /// <returns>参考<see cref="ModifyClusterEndpointSPResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyClusterEndpointSPRequest"/></param>
+        /// <returns><see cref="ModifyClusterEndpointSPResponse"/></returns>
         public async Task<ModifyClusterEndpointSPResponse> ModifyClusterEndpointSP(ModifyClusterEndpointSPRequest req)
         {
              JsonResponseModel<ModifyClusterEndpointSPResponse> rsp = null;

@@ -44,35 +44,30 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 人脸识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FaceConfigure")]
         public FaceConfigureInfo FaceConfigure{ get; set; }
 
         /// <summary>
         /// 文本全文识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrFullTextConfigure")]
         public OcrFullTextConfigureInfo OcrFullTextConfigure{ get; set; }
 
         /// <summary>
         /// 文本关键词识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrWordsConfigure")]
         public OcrWordsConfigureInfo OcrWordsConfigure{ get; set; }
 
         /// <summary>
         /// 语音全文识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
 
         /// <summary>
         /// 语音关键词识别控制参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AsrWordsConfigure")]
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
@@ -91,7 +86,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

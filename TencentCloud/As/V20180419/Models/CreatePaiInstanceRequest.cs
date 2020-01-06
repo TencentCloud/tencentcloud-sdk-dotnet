@@ -49,7 +49,7 @@ namespace TencentCloud.As.V20180419.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// VpcId。
+        /// VPC ID。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.As.V20180419.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

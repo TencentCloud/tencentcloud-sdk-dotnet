@@ -63,9 +63,16 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 副本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplicaInfos")]
+        public ReplicaInfo[] ReplicaInfos{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -75,6 +82,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
             this.SetParamArraySimple(map, prefix + "Replicas.", this.Replicas);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamArrayObj(map, prefix + "ReplicaInfos.", this.ReplicaInfos);
         }
     }
 }

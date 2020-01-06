@@ -43,6 +43,39 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Rate{ get; set; }
 
         /// <summary>
+        /// 小写金额
+        /// </summary>
+        [JsonProperty("RateNum")]
+        public string RateNum{ get; set; }
+
+        /// <summary>
+        /// 发票消费类型
+        /// </summary>
+        [JsonProperty("InvoiceType")]
+        public string InvoiceType{ get; set; }
+
+        /// <summary>
+        /// 省
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Province")]
+        public string Province{ get; set; }
+
+        /// <summary>
+        /// 市
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("City")]
+        public string City{ get; set; }
+
+        /// <summary>
+        /// 是否有公司印章（1有 0无 空为识别不出）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasStamp")]
+        public string HasStamp{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,13 +83,18 @@ namespace TencentCloud.Ocr.V20181119.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InvoiceNum", this.InvoiceNum);
             this.SetParamSimple(map, prefix + "InvoiceCode", this.InvoiceCode);
             this.SetParamSimple(map, prefix + "Rate", this.Rate);
+            this.SetParamSimple(map, prefix + "RateNum", this.RateNum);
+            this.SetParamSimple(map, prefix + "InvoiceType", this.InvoiceType);
+            this.SetParamSimple(map, prefix + "Province", this.Province);
+            this.SetParamSimple(map, prefix + "City", this.City);
+            this.SetParamSimple(map, prefix + "HasStamp", this.HasStamp);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

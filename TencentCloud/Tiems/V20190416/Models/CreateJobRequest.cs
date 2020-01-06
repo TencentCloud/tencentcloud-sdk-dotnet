@@ -31,16 +31,10 @@ namespace TencentCloud.Tiems.V20190416.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 同时处理任务的 Worker 个数
+        /// 使用的资源组 Id，默认使用共享资源组
         /// </summary>
-        [JsonProperty("WorkerCount")]
-        public ulong? WorkerCount{ get; set; }
-
-        /// <summary>
-        /// 使用的配置 Id
-        /// </summary>
-        [JsonProperty("ConfigId")]
-        public string ConfigId{ get; set; }
+        [JsonProperty("ResourceGroupId")]
+        public string ResourceGroupId{ get; set; }
 
         /// <summary>
         /// 处理器配置, 单位为1/1000核；范围[100, 256000]
@@ -73,10 +67,16 @@ namespace TencentCloud.Tiems.V20190416.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 使用的资源组 Id，默认使用共享资源组
+        /// 同时处理任务的 Worker 个数
         /// </summary>
-        [JsonProperty("ResourceGroupId")]
-        public string ResourceGroupId{ get; set; }
+        [JsonProperty("WorkerCount")]
+        public ulong? WorkerCount{ get; set; }
+
+        /// <summary>
+        /// 使用的配置 Id
+        /// </summary>
+        [JsonProperty("ConfigId")]
+        public string ConfigId{ get; set; }
 
         /// <summary>
         /// GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
@@ -96,24 +96,31 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("GpuType")]
         public string GpuType{ get; set; }
 
+        /// <summary>
+        /// 量化输入
+        /// </summary>
+        [JsonProperty("QuantizationInput")]
+        public QuantizationInput QuantizationInput{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "WorkerCount", this.WorkerCount);
-            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
             this.SetParamObj(map, prefix + "PredictInput.", this.PredictInput);
             this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+            this.SetParamSimple(map, prefix + "WorkerCount", this.WorkerCount);
+            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
             this.SetParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
+            this.SetParamObj(map, prefix + "QuantizationInput.", this.QuantizationInput);
         }
     }
 }

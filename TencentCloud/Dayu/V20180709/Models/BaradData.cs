@@ -25,7 +25,14 @@ namespace TencentCloud.Dayu.V20180709.Models
     {
         
         /// <summary>
-        /// 指标名（connum表示TCP连接数；new_conn表示新增TCP连接数；intraffic表示入流量；outtraffic表示出流量）
+        /// 指标名（connum表示TCP活跃连接数；
+        /// new_conn表示新建TCP连接数；
+        /// inactive_conn表示非活跃连接数;
+        /// intraffic表示入流量；
+        /// outtraffic表示出流量；
+        /// alltraffic表示出流量和入流量之和；
+        /// inpkg表示入包速率；
+        /// outpkg表示出包速率；）
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
@@ -44,7 +51,7 @@ namespace TencentCloud.Dayu.V20180709.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

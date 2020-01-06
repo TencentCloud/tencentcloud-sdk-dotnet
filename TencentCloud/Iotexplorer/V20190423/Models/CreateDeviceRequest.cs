@@ -31,19 +31,54 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称。
+        /// 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
+        /// <summary>
+        /// LoRaWAN 设备地址
+        /// </summary>
+        [JsonProperty("DevAddr")]
+        public string DevAddr{ get; set; }
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// LoRaWAN 应用密钥
+        /// </summary>
+        [JsonProperty("AppKey")]
+        public string AppKey{ get; set; }
+
+        /// <summary>
+        /// LoRaWAN 设备唯一标识
+        /// </summary>
+        [JsonProperty("DevEUI")]
+        public string DevEUI{ get; set; }
+
+        /// <summary>
+        /// LoRaWAN 应用会话密钥
+        /// </summary>
+        [JsonProperty("AppSKey")]
+        public string AppSKey{ get; set; }
+
+        /// <summary>
+        /// LoRaWAN 网络会话密钥
+        /// </summary>
+        [JsonProperty("NwkSKey")]
+        public string NwkSKey{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "DevAddr", this.DevAddr);
+            this.SetParamSimple(map, prefix + "AppKey", this.AppKey);
+            this.SetParamSimple(map, prefix + "DevEUI", this.DevEUI);
+            this.SetParamSimple(map, prefix + "AppSKey", this.AppSKey);
+            this.SetParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
         }
     }
 }

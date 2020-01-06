@@ -30,10 +30,10 @@ namespace TencentCloud.Gme.V20180711
        private const string version = "2018-07-11";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public GmeClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public GmeClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -53,10 +53,10 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// 本接口(CreateApp)用于创建一个GME应用
+        /// 本接口(CreateApp)用于创建一个GME应用。
         /// </summary>
-        /// <param name="req">参考<see cref="CreateAppRequest"/></param>
-        /// <returns>参考<see cref="CreateAppResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateAppRequest"/></param>
+        /// <returns><see cref="CreateAppResponse"/></returns>
         public async Task<CreateAppResponse> CreateApp(CreateAppRequest req)
         {
              JsonResponseModel<CreateAppResponse> rsp = null;
@@ -73,10 +73,10 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，离线语音，语音过滤等。最长查询周期为最近30天。
+        /// 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeAppStatisticsRequest"/></param>
-        /// <returns>参考<see cref="DescribeAppStatisticsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeAppStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeAppStatisticsResponse"/></returns>
         public async Task<DescribeAppStatisticsResponse> DescribeAppStatistics(DescribeAppStatisticsRequest req)
         {
              JsonResponseModel<DescribeAppStatisticsResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Gme.V20180711
         /// <summary>
         /// 根据应用ID和文件ID查询识别结果
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeFilterResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeFilterResultResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeFilterResultRequest"/></param>
+        /// <returns><see cref="DescribeFilterResultResponse"/></returns>
         public async Task<DescribeFilterResultResponse> DescribeFilterResult(DescribeFilterResultRequest req)
         {
              JsonResponseModel<DescribeFilterResultResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Gme.V20180711
         /// <summary>
         /// 根据日期查询识别结果列表
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeFilterResultListRequest"/></param>
-        /// <returns>参考<see cref="DescribeFilterResultListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeFilterResultListRequest"/></param>
+        /// <returns><see cref="DescribeFilterResultListResponse"/></returns>
         public async Task<DescribeFilterResultListResponse> DescribeFilterResultList(DescribeFilterResultListRequest req)
         {
              JsonResponseModel<DescribeFilterResultListResponse> rsp = null;
@@ -136,8 +136,8 @@ namespace TencentCloud.Gme.V20180711
         /// 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
         /// <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeScanResultListRequest"/></param>
-        /// <returns>参考<see cref="DescribeScanResultListResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeScanResultListRequest"/></param>
+        /// <returns><see cref="DescribeScanResultListResponse"/></returns>
         public async Task<DescribeScanResultListResponse> DescribeScanResultList(DescribeScanResultListRequest req)
         {
              JsonResponseModel<DescribeScanResultListResponse> rsp = null;
@@ -156,8 +156,8 @@ namespace TencentCloud.Gme.V20180711
         /// <summary>
         /// 本接口(ModifyAppStatus)用于修改应用总开关状态。
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyAppStatusRequest"/></param>
-        /// <returns>参考<see cref="ModifyAppStatusResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>
+        /// <returns><see cref="ModifyAppStatusResponse"/></returns>
         public async Task<ModifyAppStatusResponse> ModifyAppStatus(ModifyAppStatusRequest req)
         {
              JsonResponseModel<ModifyAppStatusResponse> rsp = null;
@@ -273,8 +273,9 @@ namespace TencentCloud.Gme.V20180711
         /// 		"RoomId": "123",
         /// 		"OpenId": "xxx",
         /// 		"Info":"",
-        ///                 "Offset": 0,
-        ///                 "Duration": 3400,
+        /// 		"Offset": 0,
+        /// 		"Duration": 3400,
+        /// 		"PieceStartTime":1574684231,
         /// 		"ScanDetail": [{
         /// 			"EndTime": 1110,
         /// 			"KeyWord": "xxx",
@@ -311,8 +312,8 @@ namespace TencentCloud.Gme.V20180711
         /// }
         /// </code></pre>
         /// </summary>
-        /// <param name="req">参考<see cref="ScanVoiceRequest"/></param>
-        /// <returns>参考<see cref="ScanVoiceResponse"/>实例</returns>
+        /// <param name="req"><see cref="ScanVoiceRequest"/></param>
+        /// <returns><see cref="ScanVoiceResponse"/></returns>
         public async Task<ScanVoiceResponse> ScanVoice(ScanVoiceRequest req)
         {
              JsonResponseModel<ScanVoiceResponse> rsp = null;
@@ -333,8 +334,8 @@ namespace TencentCloud.Gme.V20180711
         /// {"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
         /// Type表示过滤类型，1：政治，2：色情，3：谩骂
         /// </summary>
-        /// <param name="req">参考<see cref="VoiceFilterRequest"/></param>
-        /// <returns>参考<see cref="VoiceFilterResponse"/>实例</returns>
+        /// <param name="req"><see cref="VoiceFilterRequest"/></param>
+        /// <returns><see cref="VoiceFilterResponse"/></returns>
         public async Task<VoiceFilterResponse> VoiceFilter(VoiceFilterRequest req)
         {
              JsonResponseModel<VoiceFilterResponse> rsp = null;

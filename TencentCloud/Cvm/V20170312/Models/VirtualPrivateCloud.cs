@@ -48,9 +48,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 为弹性网卡指定随机生成的 IPv6 地址数量。
+        /// </summary>
+        [JsonProperty("Ipv6AddressCount")]
+        public ulong? Ipv6AddressCount{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -58,6 +64,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "AsVpcGateway", this.AsVpcGateway);
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+            this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
         }
     }
 }

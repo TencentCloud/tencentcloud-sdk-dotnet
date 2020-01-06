@@ -31,14 +31,14 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 事件 ID 。
+        /// 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

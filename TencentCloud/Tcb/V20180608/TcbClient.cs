@@ -30,10 +30,10 @@ namespace TencentCloud.Tcb.V20180608
        private const string version = "2018-06-08";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public TcbClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public TcbClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -55,8 +55,8 @@ namespace TencentCloud.Tcb.V20180608
         /// <summary>
         /// 获取数据库权限
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeDatabaseACLRequest"/></param>
-        /// <returns>参考<see cref="DescribeDatabaseACLResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeDatabaseACLRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseACLResponse"/></returns>
         public async Task<DescribeDatabaseACLResponse> DescribeDatabaseACL(DescribeDatabaseACLRequest req)
         {
              JsonResponseModel<DescribeDatabaseACLResponse> rsp = null;
@@ -75,8 +75,8 @@ namespace TencentCloud.Tcb.V20180608
         /// <summary>
         /// 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeEnvsRequest"/></param>
-        /// <returns>参考<see cref="DescribeEnvsResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeEnvsRequest"/></param>
+        /// <returns><see cref="DescribeEnvsResponse"/></returns>
         public async Task<DescribeEnvsResponse> DescribeEnvs(DescribeEnvsRequest req)
         {
              JsonResponseModel<DescribeEnvsResponse> rsp = null;
@@ -95,8 +95,8 @@ namespace TencentCloud.Tcb.V20180608
         /// <summary>
         /// 修改数据库权限
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyDatabaseACLRequest"/></param>
-        /// <returns>参考<see cref="ModifyDatabaseACLResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyDatabaseACLRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseACLResponse"/></returns>
         public async Task<ModifyDatabaseACLResponse> ModifyDatabaseACL(ModifyDatabaseACLRequest req)
         {
              JsonResponseModel<ModifyDatabaseACLResponse> rsp = null;
@@ -115,8 +115,8 @@ namespace TencentCloud.Tcb.V20180608
         /// <summary>
         /// 更新环境信息
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyEnvRequest"/></param>
-        /// <returns>参考<see cref="ModifyEnvResponse"/>实例</returns>
+        /// <param name="req"><see cref="ModifyEnvRequest"/></param>
+        /// <returns><see cref="ModifyEnvResponse"/></returns>
         public async Task<ModifyEnvResponse> ModifyEnv(ModifyEnvRequest req)
         {
              JsonResponseModel<ModifyEnvResponse> rsp = null;

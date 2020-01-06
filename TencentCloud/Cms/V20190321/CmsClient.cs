@@ -30,10 +30,10 @@ namespace TencentCloud.Cms.V20190321
        private const string version = "2019-03-21";
 
         /// <summary>
-        /// 构造client
+        /// Client constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region"> 产品地域</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
         public CmsClient(Credential credential, string region)
             : this(credential, region, new ClientProfile())
         {
@@ -41,11 +41,11 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        ///  构造client
+        /// Client Constructor.
         /// </summary>
-        /// <param name="credential">认证信息实例</param>
-        /// <param name="region">产品地域</param>
-        /// <param name="profile">配置实例</param>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
         public CmsClient(Credential credential, string region, ClientProfile profile)
             : base(endpoint, version, credential, region, profile)
         {
@@ -85,8 +85,8 @@ namespace TencentCloud.Cms.V20190321
         /// EndTime | Array of String | 恶意结束时间（Homology、CustomizedDetect无此字段）
         /// SeedUrl | String | 命中的种子URL
         /// </summary>
-        /// <param name="req">参考<see cref="AudioModerationRequest"/></param>
-        /// <returns>参考<see cref="AudioModerationResponse"/>实例</returns>
+        /// <param name="req"><see cref="AudioModerationRequest"/></param>
+        /// <returns><see cref="AudioModerationResponse"/></returns>
         public async Task<AudioModerationResponse> AudioModeration(AudioModerationRequest req)
         {
              JsonResponseModel<AudioModerationResponse> rsp = null;
@@ -105,8 +105,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 通过该接口可以将文件新增到样本库
         /// </summary>
-        /// <param name="req">参考<see cref="CreateFileSampleRequest"/></param>
-        /// <returns>参考<see cref="CreateFileSampleResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateFileSampleRequest"/></param>
+        /// <returns><see cref="CreateFileSampleResponse"/></returns>
         public async Task<CreateFileSampleResponse> CreateFileSample(CreateFileSampleRequest req)
         {
              JsonResponseModel<CreateFileSampleResponse> rsp = null;
@@ -125,8 +125,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 新增文本类型样本库
         /// </summary>
-        /// <param name="req">参考<see cref="CreateTextSampleRequest"/></param>
-        /// <returns>参考<see cref="CreateTextSampleResponse"/>实例</returns>
+        /// <param name="req"><see cref="CreateTextSampleRequest"/></param>
+        /// <returns><see cref="CreateTextSampleResponse"/></returns>
         public async Task<CreateTextSampleResponse> CreateTextSample(CreateTextSampleRequest req)
         {
              JsonResponseModel<CreateTextSampleResponse> rsp = null;
@@ -145,8 +145,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 删除文件样本库，支持批量删除，一次提交不超过20个
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteFileSampleRequest"/></param>
-        /// <returns>参考<see cref="DeleteFileSampleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteFileSampleRequest"/></param>
+        /// <returns><see cref="DeleteFileSampleResponse"/></returns>
         public async Task<DeleteFileSampleResponse> DeleteFileSample(DeleteFileSampleRequest req)
         {
              JsonResponseModel<DeleteFileSampleResponse> rsp = null;
@@ -165,8 +165,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 删除文字样本库，暂时只支持单个删除
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteTextSampleRequest"/></param>
-        /// <returns>参考<see cref="DeleteTextSampleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DeleteTextSampleRequest"/></param>
+        /// <returns><see cref="DeleteTextSampleResponse"/></returns>
         public async Task<DeleteTextSampleResponse> DeleteTextSample(DeleteTextSampleRequest req)
         {
              JsonResponseModel<DeleteTextSampleResponse> rsp = null;
@@ -185,8 +185,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 查询文件样本库，支持批量查询
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeFileSampleRequest"/></param>
-        /// <returns>参考<see cref="DescribeFileSampleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeFileSampleRequest"/></param>
+        /// <returns><see cref="DescribeFileSampleResponse"/></returns>
         public async Task<DescribeFileSampleResponse> DescribeFileSample(DescribeFileSampleRequest req)
         {
              JsonResponseModel<DescribeFileSampleResponse> rsp = null;
@@ -205,8 +205,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 根据日期，渠道和服务类型查询识别结果概览数据
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeModerationOverviewRequest"/></param>
-        /// <returns>参考<see cref="DescribeModerationOverviewResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeModerationOverviewRequest"/></param>
+        /// <returns><see cref="DescribeModerationOverviewResponse"/></returns>
         public async Task<DescribeModerationOverviewResponse> DescribeModerationOverview(DescribeModerationOverviewRequest req)
         {
              JsonResponseModel<DescribeModerationOverviewResponse> rsp = null;
@@ -225,8 +225,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 支持批量查询文字样本库
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeTextSampleRequest"/></param>
-        /// <returns>参考<see cref="DescribeTextSampleResponse"/>实例</returns>
+        /// <param name="req"><see cref="DescribeTextSampleRequest"/></param>
+        /// <returns><see cref="DescribeTextSampleResponse"/></returns>
         public async Task<DescribeTextSampleResponse> DescribeTextSample(DescribeTextSampleRequest req)
         {
              JsonResponseModel<DescribeTextSampleResponse> rsp = null;
@@ -245,8 +245,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
         /// </summary>
-        /// <param name="req">参考<see cref="ImageModerationRequest"/></param>
-        /// <returns>参考<see cref="ImageModerationResponse"/>实例</returns>
+        /// <param name="req"><see cref="ImageModerationRequest"/></param>
+        /// <returns><see cref="ImageModerationResponse"/></returns>
         public async Task<ImageModerationResponse> ImageModeration(ImageModerationRequest req)
         {
              JsonResponseModel<ImageModerationResponse> rsp = null;
@@ -265,8 +265,8 @@ namespace TencentCloud.Cms.V20190321
         /// <summary>
         /// 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
         /// </summary>
-        /// <param name="req">参考<see cref="TextModerationRequest"/></param>
-        /// <returns>参考<see cref="TextModerationResponse"/>实例</returns>
+        /// <param name="req"><see cref="TextModerationRequest"/></param>
+        /// <returns><see cref="TextModerationResponse"/></returns>
         public async Task<TextModerationResponse> TextModeration(TextModerationRequest req)
         {
              JsonResponseModel<TextModerationResponse> rsp = null;
@@ -311,8 +311,8 @@ namespace TencentCloud.Cms.V20190321
         /// Keywords | Array of String | 关键词明细
         /// SeedUrl | String | 命中的种子URL
         /// </summary>
-        /// <param name="req">参考<see cref="VideoModerationRequest"/></param>
-        /// <returns>参考<see cref="VideoModerationResponse"/>实例</returns>
+        /// <param name="req"><see cref="VideoModerationRequest"/></param>
+        /// <returns><see cref="VideoModerationResponse"/></returns>
         public async Task<VideoModerationResponse> VideoModeration(VideoModerationRequest req)
         {
              JsonResponseModel<VideoModerationResponse> rsp = null;

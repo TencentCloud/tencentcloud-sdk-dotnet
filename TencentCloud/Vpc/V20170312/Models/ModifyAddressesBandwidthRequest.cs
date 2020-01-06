@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// EIP唯一标识id，形如'eip-xxxx'
+        /// EIP唯一标识ID，形如'eip-xxxx'
         /// </summary>
         [JsonProperty("AddressIds")]
         public string[] AddressIds{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

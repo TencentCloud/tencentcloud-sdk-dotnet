@@ -38,13 +38,14 @@ namespace TencentCloud.Dayu.V20180709.Models
 
         /// <summary>
         /// DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
+        /// 当设置值为0时，表示采用默认值；
         /// </summary>
         [JsonProperty("Threshold")]
         public ulong? Threshold{ get; set; }
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {

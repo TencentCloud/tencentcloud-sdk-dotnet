@@ -132,9 +132,15 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("GpuRequested")]
         public ulong? GpuRequested{ get; set; }
 
+        /// <summary>
+        /// 节点所在伸缩组 ID
+        /// </summary>
+        [JsonProperty("RsgAsGroupId")]
+        public string RsgAsGroupId{ get; set; }
+
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -156,6 +162,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "CpuRequested", this.CpuRequested);
             this.SetParamSimple(map, prefix + "MemoryRequested", this.MemoryRequested);
             this.SetParamSimple(map, prefix + "GpuRequested", this.GpuRequested);
+            this.SetParamSimple(map, prefix + "RsgAsGroupId", this.RsgAsGroupId);
         }
     }
 }

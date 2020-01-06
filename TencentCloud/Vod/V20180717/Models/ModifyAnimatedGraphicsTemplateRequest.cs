@@ -48,7 +48,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+        /// 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
         /// <li>当 Width、Height 均为 0，则分辨率同源；</li>
         /// <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -57,6 +57,15 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
+
+        /// <summary>
+        /// 分辨率自适应，可选值：
+        /// <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
+        /// <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+        /// 默认值：open。
+        /// </summary>
+        [JsonProperty("ResolutionAdaptive")]
+        public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
         /// 动图格式，取值为 gif 和 webp。
@@ -90,7 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
 
         /// <summary>
-        /// 内部实现，用户禁止调用
+        /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
@@ -98,6 +107,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "Quality", this.Quality);
