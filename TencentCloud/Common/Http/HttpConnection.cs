@@ -176,7 +176,8 @@ namespace TencentCloud.Common.Http
             {
                 ["Content-Type"] = "application/x-www-form-urlencoded"
             };
-            HttpWebRequest request = this.CreateHttp(url, HttpMethod.Post, headers);
+            StringBuilder urlBuilder = new StringBuilder($"{client.BaseClient.BaseAddress.AbsoluteUri.TrimEnd('/')}{url}?");
+            HttpWebRequest request = this.CreateHttp(urlBuilder.ToString(), HttpMethod.Post, headers);
             StringBuilder bodysb = new StringBuilder();
             string body = AppendQuery(bodysb, param);
             using (Stream reqStream = request.GetRequestStream())
