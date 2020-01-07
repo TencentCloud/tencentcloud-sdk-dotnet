@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TencentCloud", "TencentCloud\TencentCloud.csproj", "{423CA746-9292-4983-8EFD-3A0B2F167221}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TencentCloudExamples", "TencentCloudExamples\TencentCloudExamples.csproj", "{4697FD38-F706-4290-BA14-EC9FF98393C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDemo", "WindowsFormsApp\WindowsFormsDemo.csproj", "{4B668FDF-0C03-476E-98CE-7A56F723FB81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4697FD38-F706-4290-BA14-EC9FF98393C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4697FD38-F706-4290-BA14-EC9FF98393C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4697FD38-F706-4290-BA14-EC9FF98393C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B668FDF-0C03-476E-98CE-7A56F723FB81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B668FDF-0C03-476E-98CE-7A56F723FB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B668FDF-0C03-476E-98CE-7A56F723FB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B668FDF-0C03-476E-98CE-7A56F723FB81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
