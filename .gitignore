@@ -6,3 +6,4 @@ bin
 obj
 /.vs
 packages
+*.user
