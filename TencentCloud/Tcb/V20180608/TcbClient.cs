@@ -73,6 +73,26 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// DescribeDatabaseACL接口的同步版本，获取数据库权限
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeDatabaseACLRequest"/></param>
+        /// <returns>参考<see cref="DescribeDatabaseACLResponse"/>实例</returns>
+        public DescribeDatabaseACLResponse DescribeDatabaseACLSync(DescribeDatabaseACLRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseACLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseACL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseACLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvsRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Tcb.V20180608
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeEnvs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeEnvs接口的同步版本，获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeEnvsRequest"/></param>
+        /// <returns>参考<see cref="DescribeEnvsResponse"/>实例</returns>
+        public DescribeEnvsResponse DescribeEnvsSync(DescribeEnvsRequest req)
+        {
+             JsonResponseModel<DescribeEnvsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// ModifyDatabaseACL接口的同步版本，修改数据库权限
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyDatabaseACLRequest"/></param>
+        /// <returns>参考<see cref="ModifyDatabaseACLResponse"/>实例</returns>
+        public ModifyDatabaseACLResponse ModifyDatabaseACLSync(ModifyDatabaseACLRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseACLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseACL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseACLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新环境信息
         /// </summary>
         /// <param name="req"><see cref="ModifyEnvRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Tcb.V20180608
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ModifyEnv接口的同步版本，更新环境信息
+        /// </summary>
+        /// <param name="req">参考<see cref="ModifyEnvRequest"/></param>
+        /// <returns>参考<see cref="ModifyEnvResponse"/>实例</returns>
+        public ModifyEnvResponse ModifyEnvSync(ModifyEnvRequest req)
+        {
+             JsonResponseModel<ModifyEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEnv");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvResponse>>(strResp);
              }
              catch (JsonSerializationException e)

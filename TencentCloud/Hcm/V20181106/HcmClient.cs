@@ -72,5 +72,25 @@ namespace TencentCloud.Hcm.V20181106
              return rsp.Response;
         }
 
+        /// <summary>
+        /// Evaluation接口的同步版本，速算题目批改接口，根据用户上传的图片或图片的URL识别图片中的数学算式，进而给出算式的正确性评估。
+        /// </summary>
+        /// <param name="req">参考<see cref="EvaluationRequest"/></param>
+        /// <returns>参考<see cref="EvaluationResponse"/>实例</returns>
+        public EvaluationResponse EvaluationSync(EvaluationRequest req)
+        {
+             JsonResponseModel<EvaluationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Evaluation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EvaluationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -75,6 +75,28 @@ namespace TencentCloud.Ds.V20180523
         }
 
         /// <summary>
+        /// CheckVcode接口的同步版本，检测验证码接口。此接口用于企业电子合同平台通过给用户发送短信验证码，以短信授权方式签署合同。此接口配合发送验证码接口使用。
+        /// 
+        /// 用户在企业电子合同平台输入收到的验证码后，由企业电子合同平台调用该接口向腾讯云提交确认受托签署合同验证码命令。验证码验证正确时，本次合同签署的授权成功。
+        /// </summary>
+        /// <param name="req">参考<see cref="CheckVcodeRequest"/></param>
+        /// <returns>参考<see cref="CheckVcodeResponse"/>实例</returns>
+        public CheckVcodeResponse CheckVcodeSync(CheckVcodeRequest req)
+        {
+             JsonResponseModel<CheckVcodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckVcode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckVcodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口适用于：客户平台通过上传PDF文件作为合同，以备未来进行签署。接口返回任务号，可调用DescribeTaskStatus接口查看任务执行结果。
         /// </summary>
         /// <param name="req"><see cref="CreateContractByUploadRequest"/></param>
@@ -85,6 +107,26 @@ namespace TencentCloud.Ds.V20180523
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateContractByUpload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateContractByUploadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateContractByUpload接口的同步版本，此接口适用于：客户平台通过上传PDF文件作为合同，以备未来进行签署。接口返回任务号，可调用DescribeTaskStatus接口查看任务执行结果。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateContractByUploadRequest"/></param>
+        /// <returns>参考<see cref="CreateContractByUploadResponse"/>实例</returns>
+        public CreateContractByUploadResponse CreateContractByUploadSync(CreateContractByUploadRequest req)
+        {
+             JsonResponseModel<CreateContractByUploadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateContractByUpload");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateContractByUploadResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -115,6 +157,26 @@ namespace TencentCloud.Ds.V20180523
         }
 
         /// <summary>
+        /// CreateEnterpriseAccount接口的同步版本，为企业电子合同平台的最终企业用户进行开户。在企业电子合同平台进行操作的企业用户，企业电子合同平台向腾讯云发送企业用户的信息，提交开户命令。腾讯云接到请求后，自动为企业电子合同平台的企业用户生成一张数字证书。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateEnterpriseAccountRequest"/></param>
+        /// <returns>参考<see cref="CreateEnterpriseAccountResponse"/>实例</returns>
+        public CreateEnterpriseAccountResponse CreateEnterpriseAccountSync(CreateEnterpriseAccountRequest req)
+        {
+             JsonResponseModel<CreateEnterpriseAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEnterpriseAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEnterpriseAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 为企业电子合同平台的最终个人用户进行开户。在企业电子合同平台进行操作的个人用户，企业电子合同平台向腾讯云发送个人用户的信息，提交开户命令。腾讯云接到请求后，自动为企业电子合同平台的个人用户生成一张数字证书。
         /// </summary>
         /// <param name="req"><see cref="CreatePersonalAccountRequest"/></param>
@@ -125,6 +187,26 @@ namespace TencentCloud.Ds.V20180523
              try
              {
                  var strResp = await this.InternalRequest(req, "CreatePersonalAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonalAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreatePersonalAccount接口的同步版本，为企业电子合同平台的最终个人用户进行开户。在企业电子合同平台进行操作的个人用户，企业电子合同平台向腾讯云发送个人用户的信息，提交开户命令。腾讯云接到请求后，自动为企业电子合同平台的个人用户生成一张数字证书。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreatePersonalAccountRequest"/></param>
+        /// <returns>参考<see cref="CreatePersonalAccountResponse"/>实例</returns>
+        public CreatePersonalAccountResponse CreatePersonalAccountSync(CreatePersonalAccountRequest req)
+        {
+             JsonResponseModel<CreatePersonalAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePersonalAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePersonalAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -155,6 +237,26 @@ namespace TencentCloud.Ds.V20180523
         }
 
         /// <summary>
+        /// CreateSeal接口的同步版本，此接口用于客户电子合同平台增加某用户的印章图片。客户平台可以调用此接口增加某用户的印章图片。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateSealRequest"/></param>
+        /// <returns>参考<see cref="CreateSealResponse"/>实例</returns>
+        public CreateSealResponse CreateSealSync(CreateSealRequest req)
+        {
+             JsonResponseModel<CreateSealResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除企业电子合同平台的最终用户。调用该接口后，腾讯云将删除该用户账号。删除账号后，已经签名的合同不受影响。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>
@@ -165,6 +267,26 @@ namespace TencentCloud.Ds.V20180523
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteAccount接口的同步版本，删除企业电子合同平台的最终用户。调用该接口后，腾讯云将删除该用户账号。删除账号后，已经签名的合同不受影响。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteAccountRequest"/></param>
+        /// <returns>参考<see cref="DeleteAccountResponse"/>实例</returns>
+        public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
+        {
+             JsonResponseModel<DeleteAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -195,6 +317,26 @@ namespace TencentCloud.Ds.V20180523
         }
 
         /// <summary>
+        /// DeleteSeal接口的同步版本，删除印章接口，删除指定账号的某个印章
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteSealRequest"/></param>
+        /// <returns>参考<see cref="DeleteSealResponse"/>实例</returns>
+        public DeleteSealResponse DeleteSealSync(DeleteSealRequest req)
+        {
+             JsonResponseModel<DeleteSealResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口使用于：客户平台可使用该接口查询任务执行状态或者执行结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
@@ -205,6 +347,26 @@ namespace TencentCloud.Ds.V20180523
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeTaskStatus接口的同步版本，接口使用于：客户平台可使用该接口查询任务执行状态或者执行结果
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns>参考<see cref="DescribeTaskStatusResponse"/>实例</returns>
+        public DescribeTaskStatusResponse DescribeTaskStatusSync(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -235,6 +397,26 @@ namespace TencentCloud.Ds.V20180523
         }
 
         /// <summary>
+        /// DownloadContract接口的同步版本，下载合同接口。调用该接口可以下载签署中和签署完成的合同。接口返回任务号，可调用DescribeTaskStatus接口查看任务执行结果。
+        /// </summary>
+        /// <param name="req">参考<see cref="DownloadContractRequest"/></param>
+        /// <returns>参考<see cref="DownloadContractResponse"/>实例</returns>
+        public DownloadContractResponse DownloadContractSync(DownloadContractRequest req)
+        {
+             JsonResponseModel<DownloadContractResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发送验证码接口。此接口用于：企业电子合同平台需要腾讯云发送验证码对其用户进行验证时调用，腾讯云将向其用户联系手机(企业电子合同平台为用户开户时通过接口传入)发送验证码，以验证码授权方式签署合同。用户验证工作由企业电子合同平台自身完成。
         /// </summary>
         /// <param name="req"><see cref="SendVcodeRequest"/></param>
@@ -245,6 +427,26 @@ namespace TencentCloud.Ds.V20180523
              try
              {
                  var strResp = await this.InternalRequest(req, "SendVcode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendVcodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SendVcode接口的同步版本，发送验证码接口。此接口用于：企业电子合同平台需要腾讯云发送验证码对其用户进行验证时调用，腾讯云将向其用户联系手机(企业电子合同平台为用户开户时通过接口传入)发送验证码，以验证码授权方式签署合同。用户验证工作由企业电子合同平台自身完成。
+        /// </summary>
+        /// <param name="req">参考<see cref="SendVcodeRequest"/></param>
+        /// <returns>参考<see cref="SendVcodeResponse"/>实例</returns>
+        public SendVcodeResponse SendVcodeSync(SendVcodeRequest req)
+        {
+             JsonResponseModel<SendVcodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendVcode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendVcodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -275,6 +477,26 @@ namespace TencentCloud.Ds.V20180523
         }
 
         /// <summary>
+        /// SignContractByCoordinate接口的同步版本，此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口提供详细的PDF文档签名坐标进行签署。
+        /// </summary>
+        /// <param name="req">参考<see cref="SignContractByCoordinateRequest"/></param>
+        /// <returns>参考<see cref="SignContractByCoordinateResponse"/>实例</returns>
+        public SignContractByCoordinateResponse SignContractByCoordinateSync(SignContractByCoordinateRequest req)
+        {
+             JsonResponseModel<SignContractByCoordinateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SignContractByCoordinate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignContractByCoordinateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口对PDF合同文档按照关键字和坐标进行签署。
         /// </summary>
         /// <param name="req"><see cref="SignContractByKeywordRequest"/></param>
@@ -285,6 +507,26 @@ namespace TencentCloud.Ds.V20180523
              try
              {
                  var strResp = await this.InternalRequest(req, "SignContractByKeyword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignContractByKeywordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SignContractByKeyword接口的同步版本，此接口适用于：客户平台在创建好合同后，由合同签署方对创建的合同内容进行确认，无误后再进行签署。客户平台使用该接口对PDF合同文档按照关键字和坐标进行签署。
+        /// </summary>
+        /// <param name="req">参考<see cref="SignContractByKeywordRequest"/></param>
+        /// <returns>参考<see cref="SignContractByKeywordResponse"/>实例</returns>
+        public SignContractByKeywordResponse SignContractByKeywordSync(SignContractByKeywordRequest req)
+        {
+             JsonResponseModel<SignContractByKeywordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SignContractByKeyword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignContractByKeywordResponse>>(strResp);
              }
              catch (JsonSerializationException e)

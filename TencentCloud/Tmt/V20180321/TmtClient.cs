@@ -74,6 +74,27 @@ namespace TencentCloud.Tmt.V20180321
         }
 
         /// <summary>
+        /// ImageTranslate接口的同步版本，提供中文到英文、英文到中文两种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。<br />
+        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        /// </summary>
+        /// <param name="req">参考<see cref="ImageTranslateRequest"/></param>
+        /// <returns>参考<see cref="ImageTranslateResponse"/>实例</returns>
+        public ImageTranslateResponse ImageTranslateSync(ImageTranslateRequest req)
+        {
+             JsonResponseModel<ImageTranslateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImageTranslate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageTranslateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 可自动识别文本内容的语言种类，轻量高效，无需额外实现判断方式，使面向客户的服务体验更佳。 <br />
         /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
         /// </summary>
@@ -85,6 +106,27 @@ namespace TencentCloud.Tmt.V20180321
              try
              {
                  var strResp = await this.InternalRequest(req, "LanguageDetect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LanguageDetectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// LanguageDetect接口的同步版本，可自动识别文本内容的语言种类，轻量高效，无需额外实现判断方式，使面向客户的服务体验更佳。 <br />
+        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        /// </summary>
+        /// <param name="req">参考<see cref="LanguageDetectRequest"/></param>
+        /// <returns>参考<see cref="LanguageDetectResponse"/>实例</returns>
+        public LanguageDetectResponse LanguageDetectSync(LanguageDetectRequest req)
+        {
+             JsonResponseModel<LanguageDetectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LanguageDetect");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<LanguageDetectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -118,6 +160,29 @@ namespace TencentCloud.Tmt.V20180321
         }
 
         /// <summary>
+        /// SpeechTranslate接口的同步版本，本接口提供音频内文字识别 + 翻译功能，目前开放中英互译的语音翻译服务。
+        /// 待识别和翻译的音频文件可以是 pcm、mp3、amr和speex 格式，采样率要求16kHz、位深16bit、单声道，音频内语音清晰。<br/>
+        /// 如果采用流式传输的方式，要求每个分片时长200ms~500ms；如果采用非流式的传输方式，要求音频时长不超过8s。注意最后一个分片的IsEnd参数设置为1。<br />
+        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源部分。
+        /// </summary>
+        /// <param name="req">参考<see cref="SpeechTranslateRequest"/></param>
+        /// <returns>参考<see cref="SpeechTranslateResponse"/>实例</returns>
+        public SpeechTranslateResponse SpeechTranslateSync(SpeechTranslateRequest req)
+        {
+             JsonResponseModel<SpeechTranslateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SpeechTranslate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SpeechTranslateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供中文到英文、英文到中文的等多种语言的文本内容翻译服务， 经过大数据语料库、多种解码算法、翻译引擎深度优化，在新闻文章、生活口语等不同语言场景中都有深厚积累，翻译结果专业评价处于行业领先水平。<br />
         /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
         /// </summary>
@@ -139,6 +204,27 @@ namespace TencentCloud.Tmt.V20180321
         }
 
         /// <summary>
+        /// TextTranslate接口的同步版本，提供中文到英文、英文到中文的等多种语言的文本内容翻译服务， 经过大数据语料库、多种解码算法、翻译引擎深度优化，在新闻文章、生活口语等不同语言场景中都有深厚积累，翻译结果专业评价处于行业领先水平。<br />
+        /// 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+        /// </summary>
+        /// <param name="req">参考<see cref="TextTranslateRequest"/></param>
+        /// <returns>参考<see cref="TextTranslateResponse"/>实例</returns>
+        public TextTranslateResponse TextTranslateSync(TextTranslateRequest req)
+        {
+             JsonResponseModel<TextTranslateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TextTranslate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextTranslateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 文本翻译的批量接口
         /// </summary>
         /// <param name="req"><see cref="TextTranslateBatchRequest"/></param>
@@ -149,6 +235,26 @@ namespace TencentCloud.Tmt.V20180321
              try
              {
                  var strResp = await this.InternalRequest(req, "TextTranslateBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextTranslateBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// TextTranslateBatch接口的同步版本，文本翻译的批量接口
+        /// </summary>
+        /// <param name="req">参考<see cref="TextTranslateBatchRequest"/></param>
+        /// <returns>参考<see cref="TextTranslateBatchResponse"/>实例</returns>
+        public TextTranslateBatchResponse TextTranslateBatchSync(TextTranslateBatchRequest req)
+        {
+             JsonResponseModel<TextTranslateBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TextTranslateBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextTranslateBatchResponse>>(strResp);
              }
              catch (JsonSerializationException e)
