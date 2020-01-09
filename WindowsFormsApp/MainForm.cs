@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -127,9 +121,6 @@ namespace WindowsFormsApp1
 
         private async void getZonesAsyncButton_Click(object sender, EventArgs e)
         {
-            // 本方法参考了知乎上的回答，在此感谢知乎用户:
-            // https://www.zhihu.com/question/35284600/answer/583728189
-
             // 进行界面逻辑控制，防止在处理过程中用户进行了不合适的并行操作
             // 此处禁用此Button并不是必须的，只是提供禁止用户进行不合适操作的代码样例
             // 例如：防止用户多次点击，导致进行了多个不期望的修改操作

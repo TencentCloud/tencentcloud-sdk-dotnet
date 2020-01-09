@@ -6,9 +6,6 @@ namespace WindowsFormsApp1
 {
     /// <summary>
     /// 用于同步等待的<code>SynchronizationContext</code>类。
-    /// 
-    /// 本类参考了知乎上的回答，在此感谢知乎用户:
-    /// https://www.zhihu.com/question/35284600/answer/583728189
     /// </summary>
     public sealed class SynchronizationContextAwaiter : INotifyCompletion
     {
