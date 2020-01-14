@@ -73,6 +73,26 @@ namespace TencentCloud.Tkgdq.V20190411
         }
 
         /// <summary>
+        /// DescribeEntity接口的同步版本，输入实体名称，返回实体相关的信息如实体别名、实体英文名、实体详细信息、相关实体等
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeEntityRequest"/></param>
+        /// <returns>参考<see cref="DescribeEntityResponse"/>实例</returns>
+        public DescribeEntityResponse DescribeEntitySync(DescribeEntityRequest req)
+        {
+             JsonResponseModel<DescribeEntityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEntity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEntityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 输入两个实体，返回两个实体间的关系，例如马化腾与腾讯公司不仅是相关实体，二者还存在隶属关系（马化腾属于腾讯公司）。
         /// </summary>
         /// <param name="req"><see cref="DescribeRelationRequest"/></param>
@@ -93,6 +113,26 @@ namespace TencentCloud.Tkgdq.V20190411
         }
 
         /// <summary>
+        /// DescribeRelation接口的同步版本，输入两个实体，返回两个实体间的关系，例如马化腾与腾讯公司不仅是相关实体，二者还存在隶属关系（马化腾属于腾讯公司）。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeRelationRequest"/></param>
+        /// <returns>参考<see cref="DescribeRelationResponse"/>实例</returns>
+        public DescribeRelationResponse DescribeRelationSync(DescribeRelationRequest req)
+        {
+             JsonResponseModel<DescribeRelationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRelation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRelationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 三元组查询，主要分为两类，SP查询和PO查询。SP查询表示已知主语和谓语查询宾语，PO查询表示已知宾语和谓语查询主语。每一个SP或PO查询都是一个可独立执行的查询，TQL支持SP查询的嵌套查询，即主语可以是一个嵌套的子查询。其他复杂的三元组查询方法，请参考官网API文档示例。
         /// </summary>
         /// <param name="req"><see cref="DescribeTripleRequest"/></param>
@@ -103,6 +143,26 @@ namespace TencentCloud.Tkgdq.V20190411
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTriple");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTripleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeTriple接口的同步版本，三元组查询，主要分为两类，SP查询和PO查询。SP查询表示已知主语和谓语查询宾语，PO查询表示已知宾语和谓语查询主语。每一个SP或PO查询都是一个可独立执行的查询，TQL支持SP查询的嵌套查询，即主语可以是一个嵌套的子查询。其他复杂的三元组查询方法，请参考官网API文档示例。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTripleRequest"/></param>
+        /// <returns>参考<see cref="DescribeTripleResponse"/>实例</returns>
+        public DescribeTripleResponse DescribeTripleSync(DescribeTripleRequest req)
+        {
+             JsonResponseModel<DescribeTripleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTriple");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTripleResponse>>(strResp);
              }
              catch (JsonSerializationException e)

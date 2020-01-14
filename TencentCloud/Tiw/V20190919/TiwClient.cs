@@ -73,6 +73,26 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// CreateTranscode接口的同步版本，创建一个文档转码任务
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateTranscodeRequest"/></param>
+        /// <returns>参考<see cref="CreateTranscodeResponse"/>实例</returns>
+        public CreateTranscodeResponse CreateTranscodeSync(CreateTranscodeRequest req)
+        {
+             JsonResponseModel<CreateTranscodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTranscode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTranscodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实时录制任务状态与结果
         /// </summary>
         /// <param name="req"><see cref="DescribeOnlineRecordRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Tiw.V20190919
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeOnlineRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOnlineRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeOnlineRecord接口的同步版本，查询实时录制任务状态与结果
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeOnlineRecordRequest"/></param>
+        /// <returns>参考<see cref="DescribeOnlineRecordResponse"/>实例</returns>
+        public DescribeOnlineRecordResponse DescribeOnlineRecordSync(DescribeOnlineRecordRequest req)
+        {
+             JsonResponseModel<DescribeOnlineRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOnlineRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOnlineRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// DescribeOnlineRecordCallback接口的同步版本，查询实时录制回调地址
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeOnlineRecordCallbackRequest"/></param>
+        /// <returns>参考<see cref="DescribeOnlineRecordCallbackResponse"/>实例</returns>
+        public DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallbackSync(DescribeOnlineRecordCallbackRequest req)
+        {
+             JsonResponseModel<DescribeOnlineRecordCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOnlineRecordCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOnlineRecordCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询文档转码任务的执行进度与转码结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Tiw.V20190919
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTranscode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeTranscode接口的同步版本，查询文档转码任务的执行进度与转码结果
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTranscodeRequest"/></param>
+        /// <returns>参考<see cref="DescribeTranscodeResponse"/>实例</returns>
+        public DescribeTranscodeResponse DescribeTranscodeSync(DescribeTranscodeRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTranscode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// DescribeTranscodeCallback接口的同步版本，查询文档转码回调地址
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeTranscodeCallbackRequest"/></param>
+        /// <returns>参考<see cref="DescribeTranscodeCallbackResponse"/>实例</returns>
+        public DescribeTranscodeCallbackResponse DescribeTranscodeCallbackSync(DescribeTranscodeCallbackRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTranscodeCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 暂停实时录制
         /// </summary>
         /// <param name="req"><see cref="PauseOnlineRecordRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Tiw.V20190919
              try
              {
                  var strResp = await this.InternalRequest(req, "PauseOnlineRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseOnlineRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PauseOnlineRecord接口的同步版本，暂停实时录制
+        /// </summary>
+        /// <param name="req">参考<see cref="PauseOnlineRecordRequest"/></param>
+        /// <returns>参考<see cref="PauseOnlineRecordResponse"/>实例</returns>
+        public PauseOnlineRecordResponse PauseOnlineRecordSync(PauseOnlineRecordRequest req)
+        {
+             JsonResponseModel<PauseOnlineRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PauseOnlineRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PauseOnlineRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// ResumeOnlineRecord接口的同步版本，恢复实时录制
+        /// </summary>
+        /// <param name="req">参考<see cref="ResumeOnlineRecordRequest"/></param>
+        /// <returns>参考<see cref="ResumeOnlineRecordResponse"/>实例</returns>
+        public ResumeOnlineRecordResponse ResumeOnlineRecordSync(ResumeOnlineRecordRequest req)
+        {
+             JsonResponseModel<ResumeOnlineRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeOnlineRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeOnlineRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置实时录制回调地址
         /// </summary>
         /// <param name="req"><see cref="SetOnlineRecordCallbackRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Tiw.V20190919
              try
              {
                  var strResp = await this.InternalRequest(req, "SetOnlineRecordCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetOnlineRecordCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SetOnlineRecordCallback接口的同步版本，设置实时录制回调地址
+        /// </summary>
+        /// <param name="req">参考<see cref="SetOnlineRecordCallbackRequest"/></param>
+        /// <returns>参考<see cref="SetOnlineRecordCallbackResponse"/>实例</returns>
+        public SetOnlineRecordCallbackResponse SetOnlineRecordCallbackSync(SetOnlineRecordCallbackRequest req)
+        {
+             JsonResponseModel<SetOnlineRecordCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetOnlineRecordCallback");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetOnlineRecordCallbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,6 +393,26 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// SetTranscodeCallback接口的同步版本，设置文档转码回调地址
+        /// </summary>
+        /// <param name="req">参考<see cref="SetTranscodeCallbackRequest"/></param>
+        /// <returns>参考<see cref="SetTranscodeCallbackResponse"/>实例</returns>
+        public SetTranscodeCallbackResponse SetTranscodeCallbackSync(SetTranscodeCallbackRequest req)
+        {
+             JsonResponseModel<SetTranscodeCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetTranscodeCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTranscodeCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发起一个实时录制任务
         /// </summary>
         /// <param name="req"><see cref="StartOnlineRecordRequest"/></param>
@@ -253,6 +433,26 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// StartOnlineRecord接口的同步版本，发起一个实时录制任务
+        /// </summary>
+        /// <param name="req">参考<see cref="StartOnlineRecordRequest"/></param>
+        /// <returns>参考<see cref="StartOnlineRecordResponse"/>实例</returns>
+        public StartOnlineRecordResponse StartOnlineRecordSync(StartOnlineRecordRequest req)
+        {
+             JsonResponseModel<StartOnlineRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartOnlineRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartOnlineRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 停止实时录制
         /// </summary>
         /// <param name="req"><see cref="StopOnlineRecordRequest"/></param>
@@ -263,6 +463,26 @@ namespace TencentCloud.Tiw.V20190919
              try
              {
                  var strResp = await this.InternalRequest(req, "StopOnlineRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopOnlineRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// StopOnlineRecord接口的同步版本，停止实时录制
+        /// </summary>
+        /// <param name="req">参考<see cref="StopOnlineRecordRequest"/></param>
+        /// <returns>参考<see cref="StopOnlineRecordResponse"/>实例</returns>
+        public StopOnlineRecordResponse StopOnlineRecordSync(StopOnlineRecordRequest req)
+        {
+             JsonResponseModel<StopOnlineRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopOnlineRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopOnlineRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)

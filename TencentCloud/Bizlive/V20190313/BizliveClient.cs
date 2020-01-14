@@ -73,6 +73,26 @@ namespace TencentCloud.Bizlive.V20190313
         }
 
         /// <summary>
+        /// DescribeStreamPlayInfoList接口的同步版本，查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeStreamPlayInfoListRequest"/></param>
+        /// <returns>参考<see cref="DescribeStreamPlayInfoListResponse"/>实例</returns>
+        public DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoListSync(DescribeStreamPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStreamPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 禁止某条流的推送，可以预设某个时刻将流恢复。
         /// </summary>
         /// <param name="req"><see cref="ForbidLiveStreamRequest"/></param>
@@ -93,6 +113,26 @@ namespace TencentCloud.Bizlive.V20190313
         }
 
         /// <summary>
+        /// ForbidLiveStream接口的同步版本，禁止某条流的推送，可以预设某个时刻将流恢复。
+        /// </summary>
+        /// <param name="req">参考<see cref="ForbidLiveStreamRequest"/></param>
+        /// <returns>参考<see cref="ForbidLiveStreamResponse"/>实例</returns>
+        public ForbidLiveStreamResponse ForbidLiveStreamSync(ForbidLiveStreamRequest req)
+        {
+             JsonResponseModel<ForbidLiveStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ForbidLiveStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForbidLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 注册聊天室
         /// </summary>
         /// <param name="req"><see cref="RegisterIMRequest"/></param>
@@ -103,6 +143,26 @@ namespace TencentCloud.Bizlive.V20190313
              try
              {
                  var strResp = await this.InternalRequest(req, "RegisterIM");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterIMResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// RegisterIM接口的同步版本，注册聊天室
+        /// </summary>
+        /// <param name="req">参考<see cref="RegisterIMRequest"/></param>
+        /// <returns>参考<see cref="RegisterIMResponse"/>实例</returns>
+        public RegisterIMResponse RegisterIMSync(RegisterIMRequest req)
+        {
+             JsonResponseModel<RegisterIMResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterIM");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterIMResponse>>(strResp);
              }
              catch (JsonSerializationException e)

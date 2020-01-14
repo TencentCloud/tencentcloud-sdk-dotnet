@@ -73,6 +73,26 @@ namespace TencentCloud.Habo.V20181203
         }
 
         /// <summary>
+        /// DescribeStatus接口的同步版本，查询指定md5样本是否分析完成，并获取分析日志下载地址。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeStatusRequest"/></param>
+        /// <returns>参考<see cref="DescribeStatusResponse"/>实例</returns>
+        public DescribeStatusResponse DescribeStatusSync(DescribeStatusRequest req)
+        {
+             JsonResponseModel<DescribeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 上传样本到哈勃进行分析，异步生成分析日志。
         /// </summary>
         /// <param name="req"><see cref="StartAnalyseRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Habo.V20181203
              try
              {
                  var strResp = await this.InternalRequest(req, "StartAnalyse");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartAnalyseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// StartAnalyse接口的同步版本，上传样本到哈勃进行分析，异步生成分析日志。
+        /// </summary>
+        /// <param name="req">参考<see cref="StartAnalyseRequest"/></param>
+        /// <returns>参考<see cref="StartAnalyseResponse"/>实例</returns>
+        public StartAnalyseResponse StartAnalyseSync(StartAnalyseRequest req)
+        {
+             JsonResponseModel<StartAnalyseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartAnalyse");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartAnalyseResponse>>(strResp);
              }
              catch (JsonSerializationException e)

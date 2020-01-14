@@ -115,6 +115,9 @@ namespace TencentCloudExamples
                 DescribeInstancesResponse resp = client.DescribeInstances(req).
                     ConfigureAwait(false).GetAwaiter().GetResult();
 
+                // 使用同步接口调用结果
+                // DescribeInstancesResponse resp = client.DescribeInstancesSync(req);
+
                 // 输出json格式的字符串回包
                 Console.WriteLine(AbstractModel.ToJsonString(resp));
 
@@ -138,7 +141,15 @@ namespace TencentCloudExamples
 
 ## 同步调用与异步调用
 
-目前 SDK 中仅提供了异步调用接口，在示例中由于是控制台应用程序，所以可以使用同步方式调用异步接口，即`ConfigureAwait(false).GetAwaiter().GetResult()`。在开发 ASP 应用程序，或者 Windows Forms 应用程序时，UI 控件的响应方法中，不能使用同步方式调用异步接口，否则会造成界面停止响应。解决的办法是将 UI 控件的响应方法改为异步，在方法中也异步地调用接口。
+新版本SDK中同时提供了异步接口和同步接口，同步接口统一在异步接口之后添加了```Sync```后缀，在上述代码中已有样例。
+
+注意：
+
+在示例中由于是控制台应用程序，所以可以使用同步方式调用异步接口，即`ConfigureAwait(false).GetAwaiter().GetResult()`。
+在开发 ASP 应用程序，或者 Windows Forms 应用程序时，UI 控件的响应方法中，不能使用同步方式调用异步接口，否则会造成界面停止响应。
+解决的办法是将 UI 控件的响应方法改为异步，同时要注意同步上下文。
+另外，由于异步调用立即返回控制权给用户，很容易造成用户多次点击，或者用户进行了一些不期望的操作，程序中应注意此类问题。
+源码可以参考项目中的WindowsFormsDemo项目。
 
 源码可以参考这篇文章：[https://cloud.tencent.com/developer/article/1395819](https://cloud.tencent.com/developer/article/1395819)
 

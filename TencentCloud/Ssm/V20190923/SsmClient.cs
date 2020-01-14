@@ -73,6 +73,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// CreateSecret接口的同步版本，创建新的凭据信息，通过KMS进行加密保护。每个Region最多可创建存储1000个凭据信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="CreateSecretRequest"/></param>
+        /// <returns>参考<see cref="CreateSecretResponse"/>实例</returns>
+        public CreateSecretResponse CreateSecretSync(CreateSecretRequest req)
+        {
+             JsonResponseModel<CreateSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除指定的凭据信息，可以通过RecoveryWindowInDays参数设置立即删除或者计划删除。对于计划删除的凭据，在删除日期到达之前状态为 PendingDelete，并可以通过RestoreSecret 进行恢复，超出指定删除日期之后会被彻底删除。您必须先通过 DisableSecret 停用凭据后才可以进行（计划）删除操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteSecretRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Ssm.V20190923
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DeleteSecret接口的同步版本，删除指定的凭据信息，可以通过RecoveryWindowInDays参数设置立即删除或者计划删除。对于计划删除的凭据，在删除日期到达之前状态为 PendingDelete，并可以通过RestoreSecret 进行恢复，超出指定删除日期之后会被彻底删除。您必须先通过 DisableSecret 停用凭据后才可以进行（计划）删除操作。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteSecretRequest"/></param>
+        /// <returns>参考<see cref="DeleteSecretResponse"/>实例</returns>
+        public DeleteSecretResponse DeleteSecretSync(DeleteSecretRequest req)
+        {
+             JsonResponseModel<DeleteSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecret");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecretResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// DeleteSecretVersion接口的同步版本，该接口用于直接删除指定凭据下的单个版本凭据，删除操作立即生效，对所有状态下的凭据版本都可以删除。
+        /// </summary>
+        /// <param name="req">参考<see cref="DeleteSecretVersionRequest"/></param>
+        /// <returns>参考<see cref="DeleteSecretVersionResponse"/>实例</returns>
+        public DeleteSecretVersionResponse DeleteSecretVersionSync(DeleteSecretVersionRequest req)
+        {
+             JsonResponseModel<DeleteSecretVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecretVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecretVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取凭据的详细属性信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecretRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Ssm.V20190923
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeSecret接口的同步版本，获取凭据的详细属性信息。
+        /// </summary>
+        /// <param name="req">参考<see cref="DescribeSecretRequest"/></param>
+        /// <returns>参考<see cref="DescribeSecretResponse"/>实例</returns>
+        public DescribeSecretResponse DescribeSecretSync(DescribeSecretRequest req)
+        {
+             JsonResponseModel<DescribeSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecret");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecretResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// DisableSecret接口的同步版本，停用指定的凭据，停用后状态为 Disabled，无法通过接口获取该凭据的明文。
+        /// </summary>
+        /// <param name="req">参考<see cref="DisableSecretRequest"/></param>
+        /// <returns>参考<see cref="DisableSecretResponse"/>实例</returns>
+        public DisableSecretResponse DisableSecretSync(DisableSecretRequest req)
+        {
+             JsonResponseModel<DisableSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于开启凭据，状态为Enabled。可以通过 GetSecretValue 接口获取凭据明文。处于PendingDelete状态的凭据不能直接开启，需要通过RestoreSecret 恢复后再开启使用。
         /// </summary>
         /// <param name="req"><see cref="EnableSecretRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Ssm.V20190923
              try
              {
                  var strResp = await this.InternalRequest(req, "EnableSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// EnableSecret接口的同步版本，该接口用于开启凭据，状态为Enabled。可以通过 GetSecretValue 接口获取凭据明文。处于PendingDelete状态的凭据不能直接开启，需要通过RestoreSecret 恢复后再开启使用。
+        /// </summary>
+        /// <param name="req">参考<see cref="EnableSecretRequest"/></param>
+        /// <returns>参考<see cref="EnableSecretResponse"/>实例</returns>
+        public EnableSecretResponse EnableSecretSync(EnableSecretRequest req)
+        {
+             JsonResponseModel<EnableSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableSecret");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableSecretResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// GetRegions接口的同步版本，获取控制台展示region列表
+        /// </summary>
+        /// <param name="req">参考<see cref="GetRegionsRequest"/></param>
+        /// <returns>参考<see cref="GetRegionsResponse"/>实例</returns>
+        public GetRegionsResponse GetRegionsSync(GetRegionsRequest req)
+        {
+             JsonResponseModel<GetRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取指定凭据名称和版本的凭据明文信息，只能获取启用状态的凭据明文。
         /// </summary>
         /// <param name="req"><see cref="GetSecretValueRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Ssm.V20190923
              try
              {
                  var strResp = await this.InternalRequest(req, "GetSecretValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSecretValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GetSecretValue接口的同步版本，获取指定凭据名称和版本的凭据明文信息，只能获取启用状态的凭据明文。
+        /// </summary>
+        /// <param name="req">参考<see cref="GetSecretValueRequest"/></param>
+        /// <returns>参考<see cref="GetSecretValueResponse"/>实例</returns>
+        public GetSecretValueResponse GetSecretValueSync(GetSecretValueRequest req)
+        {
+             JsonResponseModel<GetSecretValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSecretValue");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSecretValueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,6 +393,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// GetServiceStatus接口的同步版本，该接口用户获取用户SecretsManager服务开通状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="GetServiceStatusRequest"/></param>
+        /// <returns>参考<see cref="GetServiceStatusResponse"/>实例</returns>
+        public GetServiceStatusResponse GetServiceStatusSync(GetServiceStatusRequest req)
+        {
+             JsonResponseModel<GetServiceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetServiceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于获取指定凭据下的版本列表信息
         /// </summary>
         /// <param name="req"><see cref="ListSecretVersionIdsRequest"/></param>
@@ -243,6 +423,26 @@ namespace TencentCloud.Ssm.V20190923
              try
              {
                  var strResp = await this.InternalRequest(req, "ListSecretVersionIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSecretVersionIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ListSecretVersionIds接口的同步版本，该接口用于获取指定凭据下的版本列表信息
+        /// </summary>
+        /// <param name="req">参考<see cref="ListSecretVersionIdsRequest"/></param>
+        /// <returns>参考<see cref="ListSecretVersionIdsResponse"/>实例</returns>
+        public ListSecretVersionIdsResponse ListSecretVersionIdsSync(ListSecretVersionIdsRequest req)
+        {
+             JsonResponseModel<ListSecretVersionIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListSecretVersionIds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSecretVersionIdsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -273,6 +473,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// ListSecrets接口的同步版本，该接口用于获取所有凭据的详细列表，可以指定过滤字段、排序方式等。
+        /// </summary>
+        /// <param name="req">参考<see cref="ListSecretsRequest"/></param>
+        /// <returns>参考<see cref="ListSecretsResponse"/>实例</returns>
+        public ListSecretsResponse ListSecretsSync(ListSecretsRequest req)
+        {
+             JsonResponseModel<ListSecretsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListSecrets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSecretsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口在指定名称的凭据下增加新版本的凭据内容，一个凭据下最多可以支持10个版本。只能对处于Enabled 和 Disabled 状态的凭据添加新的版本。
         /// </summary>
         /// <param name="req"><see cref="PutSecretValueRequest"/></param>
@@ -283,6 +503,26 @@ namespace TencentCloud.Ssm.V20190923
              try
              {
                  var strResp = await this.InternalRequest(req, "PutSecretValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutSecretValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PutSecretValue接口的同步版本，该接口在指定名称的凭据下增加新版本的凭据内容，一个凭据下最多可以支持10个版本。只能对处于Enabled 和 Disabled 状态的凭据添加新的版本。
+        /// </summary>
+        /// <param name="req">参考<see cref="PutSecretValueRequest"/></param>
+        /// <returns>参考<see cref="PutSecretValueResponse"/>实例</returns>
+        public PutSecretValueResponse PutSecretValueSync(PutSecretValueRequest req)
+        {
+             JsonResponseModel<PutSecretValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutSecretValue");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutSecretValueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,6 +553,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// RestoreSecret接口的同步版本，该接口用于恢复计划删除（PendingDelete状态）中的凭据，取消计划删除。取消计划删除的凭据将处于Disabled 状态，如需恢复使用，通过EnableSecret 接口开启凭据。
+        /// </summary>
+        /// <param name="req">参考<see cref="RestoreSecretRequest"/></param>
+        /// <returns>参考<see cref="RestoreSecretResponse"/>实例</returns>
+        public RestoreSecretResponse RestoreSecretSync(RestoreSecretRequest req)
+        {
+             JsonResponseModel<RestoreSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestoreSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于修改指定凭据的描述信息，仅能修改Enabled 和 Disabled 状态的凭据。
         /// </summary>
         /// <param name="req"><see cref="UpdateDescriptionRequest"/></param>
@@ -333,6 +593,26 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// UpdateDescription接口的同步版本，该接口用于修改指定凭据的描述信息，仅能修改Enabled 和 Disabled 状态的凭据。
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateDescriptionRequest"/></param>
+        /// <returns>参考<see cref="UpdateDescriptionResponse"/>实例</returns>
+        public UpdateDescriptionResponse UpdateDescriptionSync(UpdateDescriptionRequest req)
+        {
+             JsonResponseModel<UpdateDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于更新指定凭据名称和版本号的内容，调用该接口会对新的凭据内容加密后覆盖旧的内容。仅允许更新Enabled 和 Disabled 状态的凭据。
         /// </summary>
         /// <param name="req"><see cref="UpdateSecretRequest"/></param>
@@ -343,6 +623,26 @@ namespace TencentCloud.Ssm.V20190923
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// UpdateSecret接口的同步版本，该接口用于更新指定凭据名称和版本号的内容，调用该接口会对新的凭据内容加密后覆盖旧的内容。仅允许更新Enabled 和 Disabled 状态的凭据。
+        /// </summary>
+        /// <param name="req">参考<see cref="UpdateSecretRequest"/></param>
+        /// <returns>参考<see cref="UpdateSecretResponse"/>实例</returns>
+        public UpdateSecretResponse UpdateSecretSync(UpdateSecretRequest req)
+        {
+             JsonResponseModel<UpdateSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateSecret");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateSecretResponse>>(strResp);
              }
              catch (JsonSerializationException e)

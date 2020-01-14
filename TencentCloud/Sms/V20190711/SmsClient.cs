@@ -73,6 +73,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// CallbackStatusStatistics接口的同步版本，统计用户回执的数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="CallbackStatusStatisticsRequest"/></param>
+        /// <returns>参考<see cref="CallbackStatusStatisticsResponse"/>实例</returns>
+        public CallbackStatusStatisticsResponse CallbackStatusStatisticsSync(CallbackStatusStatisticsRequest req)
+        {
+             JsonResponseModel<CallbackStatusStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CallbackStatusStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallbackStatusStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取短信回复状态。
         /// </summary>
         /// <param name="req"><see cref="PullSmsReplyStatusRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "PullSmsReplyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PullSmsReplyStatus接口的同步版本，拉取短信回复状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="PullSmsReplyStatusRequest"/></param>
+        /// <returns>参考<see cref="PullSmsReplyStatusResponse"/>实例</returns>
+        public PullSmsReplyStatusResponse PullSmsReplyStatusSync(PullSmsReplyStatusRequest req)
+        {
+             JsonResponseModel<PullSmsReplyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsReplyStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// PullSmsReplyStatusByPhoneNumber接口的同步版本，拉取单个号码短信回复状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="PullSmsReplyStatusByPhoneNumberRequest"/></param>
+        /// <returns>参考<see cref="PullSmsReplyStatusByPhoneNumberResponse"/>实例</returns>
+        public PullSmsReplyStatusByPhoneNumberResponse PullSmsReplyStatusByPhoneNumberSync(PullSmsReplyStatusByPhoneNumberRequest req)
+        {
+             JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsReplyStatusByPhoneNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取短信下发状态。
         /// </summary>
         /// <param name="req"><see cref="PullSmsSendStatusRequest"/></param>
@@ -133,6 +193,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// PullSmsSendStatus接口的同步版本，拉取短信下发状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="PullSmsSendStatusRequest"/></param>
+        /// <returns>参考<see cref="PullSmsSendStatusResponse"/>实例</returns>
+        public PullSmsSendStatusResponse PullSmsSendStatusSync(PullSmsSendStatusRequest req)
+        {
+             JsonResponseModel<PullSmsSendStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsSendStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取单个号码短信下发状态。
         /// </summary>
         /// <param name="req"><see cref="PullSmsSendStatusByPhoneNumberRequest"/></param>
@@ -143,6 +223,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "PullSmsSendStatusByPhoneNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// PullSmsSendStatusByPhoneNumber接口的同步版本，拉取单个号码短信下发状态。
+        /// </summary>
+        /// <param name="req">参考<see cref="PullSmsSendStatusByPhoneNumberRequest"/></param>
+        /// <returns>参考<see cref="PullSmsSendStatusByPhoneNumberResponse"/>实例</returns>
+        public PullSmsSendStatusByPhoneNumberResponse PullSmsSendStatusByPhoneNumberSync(PullSmsSendStatusByPhoneNumberRequest req)
+        {
+             JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PullSmsSendStatusByPhoneNumber");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -174,6 +274,27 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// SendSms接口的同步版本，短信发送接口，用户给用户发短信验证码、通知类短信或营销短信。
+        /// 
+        /// </summary>
+        /// <param name="req">参考<see cref="SendSmsRequest"/></param>
+        /// <returns>参考<see cref="SendSmsResponse"/>实例</returns>
+        public SendSmsResponse SendSmsSync(SendSmsRequest req)
+        {
+             JsonResponseModel<SendSmsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendSms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 统计用户发送短信的数据。
         /// </summary>
         /// <param name="req"><see cref="SendStatusStatisticsRequest"/></param>
@@ -194,6 +315,26 @@ namespace TencentCloud.Sms.V20190711
         }
 
         /// <summary>
+        /// SendStatusStatistics接口的同步版本，统计用户发送短信的数据。
+        /// </summary>
+        /// <param name="req">参考<see cref="SendStatusStatisticsRequest"/></param>
+        /// <returns>参考<see cref="SendStatusStatisticsResponse"/>实例</returns>
+        public SendStatusStatisticsResponse SendStatusStatisticsSync(SendStatusStatisticsRequest req)
+        {
+             JsonResponseModel<SendStatusStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendStatusStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendStatusStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户套餐包信息统计。
         /// </summary>
         /// <param name="req"><see cref="SmsPackagesStatisticsRequest"/></param>
@@ -204,6 +345,26 @@ namespace TencentCloud.Sms.V20190711
              try
              {
                  var strResp = await this.InternalRequest(req, "SmsPackagesStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmsPackagesStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SmsPackagesStatistics接口的同步版本，用户套餐包信息统计。
+        /// </summary>
+        /// <param name="req">参考<see cref="SmsPackagesStatisticsRequest"/></param>
+        /// <returns>参考<see cref="SmsPackagesStatisticsResponse"/>实例</returns>
+        public SmsPackagesStatisticsResponse SmsPackagesStatisticsSync(SmsPackagesStatisticsRequest req)
+        {
+             JsonResponseModel<SmsPackagesStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SmsPackagesStatistics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmsPackagesStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
