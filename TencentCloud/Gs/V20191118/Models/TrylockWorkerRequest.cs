@@ -48,6 +48,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("SetNo")]
         public ulong? SetNo{ get; set; }
 
+        /// <summary>
+        /// 游戏用户IP，用于就近调度，例如125.127.178.228
+        /// </summary>
+        [JsonProperty("UserIp")]
+        public string UserIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "GameId", this.GameId);
             this.SetParamSimple(map, prefix + "GameRegion", this.GameRegion);
             this.SetParamSimple(map, prefix + "SetNo", this.SetNo);
+            this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
         }
     }
 }

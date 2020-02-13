@@ -25,7 +25,7 @@ namespace TencentCloud.Dayu.V20180709.Models
     {
         
         /// <summary>
-        /// 协议，取值范围[tcp,udp,icmp,all]
+        /// 协议，取值范围[tcp,udp,all]
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

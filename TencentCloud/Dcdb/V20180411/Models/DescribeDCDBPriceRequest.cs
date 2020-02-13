@@ -31,7 +31,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 欲购买实例的数量，目前只支持购买1个实例
+        /// 欲购买实例的数量，目前支持购买1-10个实例
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
@@ -69,6 +69,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardCount")]
         public long? ShardCount{ get; set; }
 
+        /// <summary>
+        /// 付费类型。postpaid：按量付费   prepaid：预付费
+        /// </summary>
+        [JsonProperty("Paymode")]
+        public string Paymode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ShardMemory", this.ShardMemory);
             this.SetParamSimple(map, prefix + "ShardStorage", this.ShardStorage);
             this.SetParamSimple(map, prefix + "ShardCount", this.ShardCount);
+            this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
         }
     }
 }

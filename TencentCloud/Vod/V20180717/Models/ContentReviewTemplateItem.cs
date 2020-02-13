@@ -64,6 +64,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
 
         /// <summary>
+        /// 违禁控制参数。违禁内容包括：
+        /// <li>谩骂；</li>
+        /// <li>涉毒违法。</li>
+        /// 注意：此参数尚未支持。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProhibitedConfigure")]
+        public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
+
+        /// <summary>
         /// 用户自定义内容审核控制参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -85,13 +95,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -108,6 +118,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
             this.SetParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
             this.SetParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+            this.SetParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
             this.SetParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
             this.SetParamSimple(map, prefix + "ReviewWallSwitch", this.ReviewWallSwitch);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);

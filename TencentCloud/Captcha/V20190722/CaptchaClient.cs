@@ -73,26 +73,6 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// DescribeCaptchaAppIdInfo接口的同步版本，查询安全验证码应用APPId信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCaptchaAppIdInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeCaptchaAppIdInfoResponse"/>实例</returns>
-        public DescribeCaptchaAppIdInfoResponse DescribeCaptchaAppIdInfoSync(DescribeCaptchaAppIdInfoRequest req)
-        {
-             JsonResponseModel<DescribeCaptchaAppIdInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaAppIdInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaAppIdInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 安全验证码分类查询数据接口，请求量type=0、验证量type=1、通过量type=2、拦截量type=3  分钟级查询
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaDataRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Captcha.V20190722
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeCaptchaData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeCaptchaData接口的同步版本，安全验证码分类查询数据接口，请求量type=0、验证量type=1、通过量type=2、拦截量type=3  分钟级查询
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCaptchaDataRequest"/></param>
-        /// <returns>参考<see cref="DescribeCaptchaDataResponse"/>实例</returns>
-        public DescribeCaptchaDataResponse DescribeCaptchaDataSync(DescribeCaptchaDataRequest req)
-        {
-             JsonResponseModel<DescribeCaptchaDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// DescribeCaptchaDataSum接口的同步版本，安全验证码查询请求数据概况，例如：按照时间段查询数据  昨日请求量、昨日恶意比例、昨日验证量、昨日通过量、昨日恶意拦截量……
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCaptchaDataSumRequest"/></param>
-        /// <returns>参考<see cref="DescribeCaptchaDataSumResponse"/>实例</returns>
-        public DescribeCaptchaDataSumResponse DescribeCaptchaDataSumSync(DescribeCaptchaDataSumRequest req)
-        {
-             JsonResponseModel<DescribeCaptchaDataSumResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaDataSum");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaDataSumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaOperDataRequest"/></param>
@@ -183,26 +123,6 @@ namespace TencentCloud.Captcha.V20190722
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeCaptchaOperData");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaOperDataResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeCaptchaOperData接口的同步版本，安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCaptchaOperDataRequest"/></param>
-        /// <returns>参考<see cref="DescribeCaptchaOperDataResponse"/>实例</returns>
-        public DescribeCaptchaOperDataResponse DescribeCaptchaOperDataSync(DescribeCaptchaOperDataRequest req)
-        {
-             JsonResponseModel<DescribeCaptchaOperDataResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaOperData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaOperDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,26 +153,6 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// DescribeCaptchaResult接口的同步版本，核查验证码票据结果
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCaptchaResultRequest"/></param>
-        /// <returns>参考<see cref="DescribeCaptchaResultResponse"/>实例</returns>
-        public DescribeCaptchaResultResponse DescribeCaptchaResultSync(DescribeCaptchaResultRequest req)
-        {
-             JsonResponseModel<DescribeCaptchaResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 安全验证码获取用户注册所有APPId和应用名称
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaUserAllAppIdRequest"/></param>
@@ -273,26 +173,6 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// DescribeCaptchaUserAllAppId接口的同步版本，安全验证码获取用户注册所有APPId和应用名称
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCaptchaUserAllAppIdRequest"/></param>
-        /// <returns>参考<see cref="DescribeCaptchaUserAllAppIdResponse"/>实例</returns>
-        public DescribeCaptchaUserAllAppIdResponse DescribeCaptchaUserAllAppIdSync(DescribeCaptchaUserAllAppIdRequest req)
-        {
-             JsonResponseModel<DescribeCaptchaUserAllAppIdResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaUserAllAppId");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaUserAllAppIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 更新验证码应用APPId信息
         /// </summary>
         /// <param name="req"><see cref="UpdateCaptchaAppIdInfoRequest"/></param>
@@ -303,26 +183,6 @@ namespace TencentCloud.Captcha.V20190722
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateCaptchaAppIdInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCaptchaAppIdInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// UpdateCaptchaAppIdInfo接口的同步版本，更新验证码应用APPId信息
-        /// </summary>
-        /// <param name="req">参考<see cref="UpdateCaptchaAppIdInfoRequest"/></param>
-        /// <returns>参考<see cref="UpdateCaptchaAppIdInfoResponse"/>实例</returns>
-        public UpdateCaptchaAppIdInfoResponse UpdateCaptchaAppIdInfoSync(UpdateCaptchaAppIdInfoRequest req)
-        {
-             JsonResponseModel<UpdateCaptchaAppIdInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpdateCaptchaAppIdInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCaptchaAppIdInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)

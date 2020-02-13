@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份Id，通过DescribeInstanceBackups接口可查
+        /// 备份ID，通过DescribeInstanceBackups接口可查
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }

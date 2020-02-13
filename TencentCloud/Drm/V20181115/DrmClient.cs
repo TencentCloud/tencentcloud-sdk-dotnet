@@ -74,18 +74,17 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
-        /// AddFairPlayPem接口的同步版本，本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
-        /// 如需使用fairplay方案，请务必先设置私钥。
+        /// 该接口用来设置加密的秘钥。注意，同一个content id，只能设置一次！
         /// </summary>
-        /// <param name="req">参考<see cref="AddFairPlayPemRequest"/></param>
-        /// <returns>参考<see cref="AddFairPlayPemResponse"/>实例</returns>
-        public AddFairPlayPemResponse AddFairPlayPemSync(AddFairPlayPemRequest req)
+        /// <param name="req"><see cref="CreateEncryptKeysRequest"/></param>
+        /// <returns><see cref="CreateEncryptKeysResponse"/></returns>
+        public async Task<CreateEncryptKeysResponse> CreateEncryptKeys(CreateEncryptKeysRequest req)
         {
-             JsonResponseModel<AddFairPlayPemResponse> rsp = null;
+             JsonResponseModel<CreateEncryptKeysResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "AddFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFairPlayPemResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateEncryptKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEncryptKeysResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -106,27 +105,6 @@ namespace TencentCloud.Drm.V20181115
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateLicense");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLicenseResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// CreateLicense接口的同步版本，本接口用来生成DRM方案对应的播放许可证，开发者需提供DRM方案类型、内容类型参数，后台将生成许可证后返回许可证数据
-        /// 开发者需要转发终端设备发出的许可证请求信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateLicenseRequest"/></param>
-        /// <returns>参考<see cref="CreateLicenseResponse"/>实例</returns>
-        public CreateLicenseResponse CreateLicenseSync(CreateLicenseRequest req)
-        {
-             JsonResponseModel<CreateLicenseResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLicense");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLicenseResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -159,19 +137,17 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
-        /// DeleteFairPlayPem接口的同步版本，本接口用来删除fairplay方案的私钥、ask等信息
-        /// 注：高风险操作，删除后，您将无法使用腾讯云DRM提供的fairplay服务。
-        /// 由于缓存，删除操作需要约半小时生效
+        /// 本接口用来查询指定DRM类型、ContentType的所有加密秘钥
         /// </summary>
-        /// <param name="req">参考<see cref="DeleteFairPlayPemRequest"/></param>
-        /// <returns>参考<see cref="DeleteFairPlayPemResponse"/>实例</returns>
-        public DeleteFairPlayPemResponse DeleteFairPlayPemSync(DeleteFairPlayPemRequest req)
+        /// <param name="req"><see cref="DescribeAllKeysRequest"/></param>
+        /// <returns><see cref="DescribeAllKeysResponse"/></returns>
+        public async Task<DescribeAllKeysResponse> DescribeAllKeys(DescribeAllKeysRequest req)
         {
-             JsonResponseModel<DeleteFairPlayPemResponse> rsp = null;
+             JsonResponseModel<DescribeAllKeysResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DeleteFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFairPlayPemResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeAllKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllKeysResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -191,26 +167,6 @@ namespace TencentCloud.Drm.V20181115
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeFairPlayPem接口的同步版本，该接口用来查询设置的FairPlay私钥校验信息。可用该接口校验设置的私钥与本身的私钥是否一致。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeFairPlayPemRequest"/></param>
-        /// <returns>参考<see cref="DescribeFairPlayPemResponse"/>实例</returns>
-        public DescribeFairPlayPemResponse DescribeFairPlayPemSync(DescribeFairPlayPemRequest req)
-        {
-             JsonResponseModel<DescribeFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFairPlayPem");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFairPlayPemResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -242,27 +198,6 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
-        /// DescribeKeys接口的同步版本，开发者需要指定使用的DRM类型、和需要加密的Track类型，后台返回加密使用的密钥
-        /// 如果加密使用的ContentID没有关联的密钥信息，后台会自动生成新的密钥返回
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeKeysRequest"/></param>
-        /// <returns>参考<see cref="DescribeKeysResponse"/>实例</returns>
-        public DescribeKeysResponse DescribeKeysSync(DescribeKeysRequest req)
-        {
-             JsonResponseModel<DescribeKeysResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeKeys");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
         /// 如需使用fairplay方案，请务必先设置私钥。
         /// </summary>
@@ -284,27 +219,6 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
-        /// ModifyFairPlayPem接口的同步版本，本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
-        /// 如需使用fairplay方案，请务必先设置私钥。
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyFairPlayPemRequest"/></param>
-        /// <returns>参考<see cref="ModifyFairPlayPemResponse"/>实例</returns>
-        public ModifyFairPlayPemResponse ModifyFairPlayPemSync(ModifyFairPlayPemRequest req)
-        {
-             JsonResponseModel<ModifyFairPlayPemResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyFairPlayPem");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFairPlayPemResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 开发者调用该接口，启动一次内容文件的DRM加密工作流
         /// </summary>
         /// <param name="req"><see cref="StartEncryptionRequest"/></param>
@@ -315,26 +229,6 @@ namespace TencentCloud.Drm.V20181115
              try
              {
                  var strResp = await this.InternalRequest(req, "StartEncryption");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartEncryptionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// StartEncryption接口的同步版本，开发者调用该接口，启动一次内容文件的DRM加密工作流
-        /// </summary>
-        /// <param name="req">参考<see cref="StartEncryptionRequest"/></param>
-        /// <returns>参考<see cref="StartEncryptionResponse"/>实例</returns>
-        public StartEncryptionResponse StartEncryptionSync(StartEncryptionRequest req)
-        {
-             JsonResponseModel<StartEncryptionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartEncryption");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartEncryptionResponse>>(strResp);
              }
              catch (JsonSerializationException e)

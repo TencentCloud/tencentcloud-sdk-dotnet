@@ -25,37 +25,37 @@ namespace TencentCloud.Wss.V20180426.Models
     {
         
         /// <summary>
-        /// 证书内容
+        /// 证书内容。
         /// </summary>
         [JsonProperty("Cert")]
         public string Cert{ get; set; }
 
         /// <summary>
-        /// 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
+        /// 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）。
         /// </summary>
         [JsonProperty("CertType")]
         public string CertType{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目ID，详见用户指南的 [项目与标签](https://cloud.tencent.com/document/product/598/32738)。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 模块名称，应填ssl
+        /// 模块名称，应填 ssl。
         /// </summary>
         [JsonProperty("ModuleType")]
         public string ModuleType{ get; set; }
 
         /// <summary>
-        /// 证书私钥，certType=SVR 时必填
+        /// 证书私钥，certType=SVR 时必填。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 证书备注
+        /// 证书备注。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

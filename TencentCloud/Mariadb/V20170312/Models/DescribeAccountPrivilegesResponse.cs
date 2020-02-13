@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -31,6 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
+        /// <summary>
+        /// 文字鉴恐任务控制参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OcrReviewInfo")]
+        public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
+            this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+        /// 证书相关信息，此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }

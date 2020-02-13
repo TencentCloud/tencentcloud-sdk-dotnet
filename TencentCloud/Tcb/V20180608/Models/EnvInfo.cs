@@ -59,7 +59,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <summary>
         /// 环境状态。包含以下取值：
         /// <li>NORMAL：正常可用</li>
-        /// <li>HALTED：停服，用量超限或后台封禁</li>
         /// <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
         /// </summary>
         [JsonProperty("Status")]
@@ -97,6 +96,27 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
+        /// <summary>
+        /// 云日志服务列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogServices")]
+        public LogServiceInfo[] LogServices{ get; set; }
+
+        /// <summary>
+        /// 静态资源信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StaticStorages")]
+        public StaticStorageInfo[] StaticStorages{ get; set; }
+
+        /// <summary>
+        /// 是否到期自动降为免费版
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAutoDegrade")]
+        public bool? IsAutoDegrade{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +134,9 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "Functions.", this.Functions);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
+            this.SetParamArrayObj(map, prefix + "LogServices.", this.LogServices);
+            this.SetParamArrayObj(map, prefix + "StaticStorages.", this.StaticStorages);
+            this.SetParamSimple(map, prefix + "IsAutoDegrade", this.IsAutoDegrade);
         }
     }
 }

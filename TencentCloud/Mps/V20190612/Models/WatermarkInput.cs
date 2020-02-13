@@ -31,6 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
+        /// 水印自定义参数，当 Definition 填 0 时有效。
+        /// 该参数用于高度定制场景，建议您优先使用 Definition 指定水印参数。
+        /// </summary>
+        [JsonProperty("RawParameter")]
+        public RawWatermarkParameter RawParameter{ get; set; }
+
+        /// <summary>
         /// 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
         /// </summary>
         [JsonProperty("TextContent")]
@@ -67,6 +74,7 @@ namespace TencentCloud.Mps.V20190612.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
             this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
             this.SetParamSimple(map, prefix + "SvgContent", this.SvgContent);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

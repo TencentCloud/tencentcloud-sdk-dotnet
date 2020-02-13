@@ -28,7 +28,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 视频流的编码格式，可选值：
         /// <li>libx264：H.264 编码</li>
         /// <li>libx265：H.265 编码</li>
-        /// 目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+        /// <li>av1：AOMedia Video 1 编码</li>
+        /// 目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }

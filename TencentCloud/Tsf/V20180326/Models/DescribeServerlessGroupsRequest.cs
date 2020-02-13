@@ -25,16 +25,16 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 分组所属应用ID
-        /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
-
-        /// <summary>
         /// 搜索字段，模糊搜索groupName字段
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
+
+        /// <summary>
+        /// 分组所属应用ID
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 排序字段，默认为 createTime字段，支持id， name， createTime
@@ -60,18 +60,32 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 分组所属名字空间ID
+        /// </summary>
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
+
+        /// <summary>
+        /// 分组所属集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

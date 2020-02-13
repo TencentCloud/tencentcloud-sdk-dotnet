@@ -82,6 +82,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("IsAttached")]
         public ulong? IsAttached{ get; set; }
 
+        /// <summary>
+        /// 是否已下线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deactived")]
+        public ulong? Deactived{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +104,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Attachments", this.Attachments);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "IsAttached", this.IsAttached);
+            this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
         }
     }
 }

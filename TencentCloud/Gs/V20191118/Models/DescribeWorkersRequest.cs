@@ -25,7 +25,7 @@ namespace TencentCloud.Gs.V20191118.Models
     {
         
         /// <summary>
-        /// 资源池编号，值为2的幂，1表示共用，2表示测试
+        /// 资源池编号，1表示正式，2表示测试
         /// </summary>
         [JsonProperty("SetNo")]
         public ulong? SetNo{ get; set; }

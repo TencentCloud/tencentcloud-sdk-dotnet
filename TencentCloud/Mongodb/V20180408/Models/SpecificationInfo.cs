@@ -39,8 +39,8 @@ namespace TencentCloud.Mongodb.V20180408.Models
         /// <summary>
         /// 售卖规格信息
         /// </summary>
-        [JsonProperty("SpecItem")]
-        public SpecItem[] SpecItem{ get; set; }
+        [JsonProperty("SpecItems")]
+        public SpecItem[] SpecItems{ get; set; }
 
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamArrayObj(map, prefix + "SpecItem.", this.SpecItem);
+            this.SetParamArrayObj(map, prefix + "SpecItems.", this.SpecItems);
         }
     }
 }

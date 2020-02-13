@@ -120,6 +120,27 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
+        /// <summary>
+        /// 组件类型代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ItemCode")]
+        public string ItemCode{ get; set; }
+
+        /// <summary>
+        /// 组件名称代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ComponentCode")]
+        public string ComponentCode{ get; set; }
+
+        /// <summary>
+        /// 合同价
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContractPrice")]
+        public string ContractPrice{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +163,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "ItemCode", this.ItemCode);
+            this.SetParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
+            this.SetParamSimple(map, prefix + "ContractPrice", this.ContractPrice);
         }
     }
 }

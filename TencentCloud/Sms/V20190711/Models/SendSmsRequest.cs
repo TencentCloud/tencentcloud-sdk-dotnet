@@ -43,7 +43,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public string SmsSdkAppid{ get; set; }
 
         /// <summary>
-        /// 短信签名内容，使用 UTF-8 编码，必须填写已审核通过的签名，签名信息可登录 [短信控制台](https://console.cloud.tencent.com/sms/smslist)  查看。
+        /// 短信签名内容，使用 UTF-8 编码，必须填写已审核通过的签名，签名信息可登录 [短信控制台](https://console.cloud.tencent.com/sms/smslist)  查看。注：国内短信为必填参数。
         /// </summary>
         [JsonProperty("Sign")]
         public string Sign{ get; set; }

@@ -73,26 +73,6 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
-        /// BeautifyPic接口的同步版本，输入人脸图片，输出美颜后的人脸图片。
-        /// </summary>
-        /// <param name="req">参考<see cref="BeautifyPicRequest"/></param>
-        /// <returns>参考<see cref="BeautifyPicResponse"/>实例</returns>
-        public BeautifyPicResponse BeautifyPicSync(BeautifyPicRequest req)
-        {
-             JsonResponseModel<BeautifyPicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BeautifyPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 上传 LUT 格式文件注册唇色ID。最多允许上传1万张素材。
         /// </summary>
         /// <param name="req"><see cref="CreateModelRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Fmu.V20191213
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// CreateModel接口的同步版本，上传 LUT 格式文件注册唇色ID。最多允许上传1万张素材。
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateModelRequest"/></param>
-        /// <returns>参考<see cref="CreateModelResponse"/>实例</returns>
-        public CreateModelResponse CreateModelSync(CreateModelRequest req)
-        {
-             JsonResponseModel<CreateModelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateModel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
-        /// DeleteModel接口的同步版本，删除已注册的唇色素材。
-        /// </summary>
-        /// <param name="req">参考<see cref="DeleteModelRequest"/></param>
-        /// <returns>参考<see cref="DeleteModelResponse"/>实例</returns>
-        public DeleteModelResponse DeleteModelSync(DeleteModelRequest req)
-        {
-             JsonResponseModel<DeleteModelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询已注册的唇色素材。
         /// </summary>
         /// <param name="req"><see cref="GetModelListRequest"/></param>
@@ -183,26 +123,6 @@ namespace TencentCloud.Fmu.V20191213
              try
              {
                  var strResp = await this.InternalRequest(req, "GetModelList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// GetModelList接口的同步版本，查询已注册的唇色素材。
-        /// </summary>
-        /// <param name="req">参考<see cref="GetModelListRequest"/></param>
-        /// <returns>参考<see cref="GetModelListResponse"/>实例</returns>
-        public GetModelListResponse GetModelListSync(GetModelListRequest req)
-        {
-             JsonResponseModel<GetModelListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetModelList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -230,33 +150,6 @@ namespace TencentCloud.Fmu.V20191213
              try
              {
                  var strResp = await this.InternalRequest(req, "TryLipstickPic");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TryLipstickPicResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// TryLipstickPic接口的同步版本，对图片中的人脸嘴唇进行着色，最多支持同时对一张图中的3张人脸进行试唇色。
-        /// 
-        /// 您可以通过事先注册在腾讯云的唇色素材（LUT文件）改变图片中的人脸唇色，也可以输入RGBA模型数值。
-        /// 
-        /// 为了更好的效果，建议您使用事先注册在腾讯云的唇色素材（LUT文件）。
-        /// 
-        /// >     
-        /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-        /// </summary>
-        /// <param name="req">参考<see cref="TryLipstickPicRequest"/></param>
-        /// <returns>参考<see cref="TryLipstickPicResponse"/>实例</returns>
-        public TryLipstickPicResponse TryLipstickPicSync(TryLipstickPicRequest req)
-        {
-             JsonResponseModel<TryLipstickPicResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TryLipstickPic");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TryLipstickPicResponse>>(strResp);
              }
              catch (JsonSerializationException e)

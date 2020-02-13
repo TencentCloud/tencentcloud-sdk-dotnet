@@ -252,7 +252,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public string InstanceStatusDesc{ get; set; }
 
         /// <summary>
-        /// 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+        /// 实例对应的物理实例ID，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
         /// </summary>
         [JsonProperty("RealInstanceId")]
         public string RealInstanceId{ get; set; }

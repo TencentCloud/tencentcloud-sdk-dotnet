@@ -25,13 +25,13 @@ namespace TencentCloud.Wss.V20180426.Models
     {
         
         /// <summary>
-        /// 总数量
+        /// 总数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 列表
+        /// 列表。
         /// </summary>
         [JsonProperty("CertificateSet")]
         public SSLCertificate[] CertificateSet{ get; set; }

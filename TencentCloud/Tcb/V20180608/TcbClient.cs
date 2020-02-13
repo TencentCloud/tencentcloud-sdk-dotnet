@@ -53,6 +53,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// TCB云API统一入口
+        /// </summary>
+        /// <param name="req"><see cref="CommonServiceAPIRequest"/></param>
+        /// <returns><see cref="CommonServiceAPIResponse"/></returns>
+        public async Task<CommonServiceAPIResponse> CommonServiceAPI(CommonServiceAPIRequest req)
+        {
+             JsonResponseModel<CommonServiceAPIResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CommonServiceAPI");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CommonServiceAPIResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建mysql实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateMysqlInstanceRequest"/></param>
+        /// <returns><see cref="CreateMysqlInstanceResponse"/></returns>
+        public async Task<CreateMysqlInstanceResponse> CreateMysqlInstance(CreateMysqlInstanceRequest req)
+        {
+             JsonResponseModel<CreateMysqlInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMysqlInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMysqlInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取数据库权限
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseACLRequest"/></param>
@@ -63,26 +103,6 @@ namespace TencentCloud.Tcb.V20180608
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDatabaseACL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseACLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeDatabaseACL接口的同步版本，获取数据库权限
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDatabaseACLRequest"/></param>
-        /// <returns>参考<see cref="DescribeDatabaseACLResponse"/>实例</returns>
-        public DescribeDatabaseACLResponse DescribeDatabaseACLSync(DescribeDatabaseACLRequest req)
-        {
-             JsonResponseModel<DescribeDatabaseACLResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseACL");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseACLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,17 +133,17 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// DescribeEnvs接口的同步版本，获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
+        /// 隔离mysql实例
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeEnvsRequest"/></param>
-        /// <returns>参考<see cref="DescribeEnvsResponse"/>实例</returns>
-        public DescribeEnvsResponse DescribeEnvsSync(DescribeEnvsRequest req)
+        /// <param name="req"><see cref="IsolateMysqlInstanceRequest"/></param>
+        /// <returns><see cref="IsolateMysqlInstanceResponse"/></returns>
+        public async Task<IsolateMysqlInstanceResponse> IsolateMysqlInstance(IsolateMysqlInstanceRequest req)
         {
-             JsonResponseModel<DescribeEnvsResponse> rsp = null;
+             JsonResponseModel<IsolateMysqlInstanceResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeEnvs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvsResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "IsolateMysqlInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateMysqlInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -143,26 +163,6 @@ namespace TencentCloud.Tcb.V20180608
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyDatabaseACL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseACLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ModifyDatabaseACL接口的同步版本，修改数据库权限
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyDatabaseACLRequest"/></param>
-        /// <returns>参考<see cref="ModifyDatabaseACLResponse"/>实例</returns>
-        public ModifyDatabaseACLResponse ModifyDatabaseACLSync(ModifyDatabaseACLRequest req)
-        {
-             JsonResponseModel<ModifyDatabaseACLResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseACL");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseACLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,17 +193,37 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// ModifyEnv接口的同步版本，更新环境信息
+        /// 下线mysql实例
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyEnvRequest"/></param>
-        /// <returns>参考<see cref="ModifyEnvResponse"/>实例</returns>
-        public ModifyEnvResponse ModifyEnvSync(ModifyEnvRequest req)
+        /// <param name="req"><see cref="OfflineMysqlInstanceRequest"/></param>
+        /// <returns><see cref="OfflineMysqlInstanceResponse"/></returns>
+        public async Task<OfflineMysqlInstanceResponse> OfflineMysqlInstance(OfflineMysqlInstanceRequest req)
         {
-             JsonResponseModel<ModifyEnvResponse> rsp = null;
+             JsonResponseModel<OfflineMysqlInstanceResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyEnv");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "OfflineMysqlInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineMysqlInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级mysql实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeMysqlInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeMysqlInstanceResponse"/></returns>
+        public async Task<UpgradeMysqlInstanceResponse> UpgradeMysqlInstance(UpgradeMysqlInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeMysqlInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeMysqlInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeMysqlInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

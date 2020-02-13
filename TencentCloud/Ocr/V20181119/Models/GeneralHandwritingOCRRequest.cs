@@ -43,6 +43,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 场景字段，默认不用填写。
+        /// 可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

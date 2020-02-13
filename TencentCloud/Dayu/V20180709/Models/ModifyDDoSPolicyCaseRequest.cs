@@ -156,6 +156,18 @@ namespace TencentCloud.Dayu.V20180709.Models
         [JsonProperty("HasVPN")]
         public string HasVPN{ get; set; }
 
+        /// <summary>
+        /// TCP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+        /// </summary>
+        [JsonProperty("TcpPortList")]
+        public string TcpPortList{ get; set; }
+
+        /// <summary>
+        /// UDP业务端口列表，同时支持单个端口和端口段，字符串格式，例如：80,443,700-800,53,1000-3000
+        /// </summary>
+        [JsonProperty("UdpPortList")]
+        public string UdpPortList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Dayu.V20180709.Models
             this.SetParamSimple(map, prefix + "MinUdpPackageLen", this.MinUdpPackageLen);
             this.SetParamSimple(map, prefix + "MaxUdpPackageLen", this.MaxUdpPackageLen);
             this.SetParamSimple(map, prefix + "HasVPN", this.HasVPN);
+            this.SetParamSimple(map, prefix + "TcpPortList", this.TcpPortList);
+            this.SetParamSimple(map, prefix + "UdpPortList", this.UdpPortList);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tiia.V20190529.Models
     {
         
         /// <summary>
-        /// 汽车的四个矩形顶点坐标
+        /// 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
         /// </summary>
         [JsonProperty("CarCoords")]
         public Coord[] CarCoords{ get; set; }
 
         /// <summary>
-        /// 车辆属性识别的结果数组
+        /// 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
         /// </summary>
         [JsonProperty("CarTags")]
         public CarTagItem[] CarTags{ get; set; }

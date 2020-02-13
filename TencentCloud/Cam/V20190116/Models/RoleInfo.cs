@@ -66,6 +66,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("ConsoleLogin")]
         public ulong? ConsoleLogin{ get; set; }
 
+        /// <summary>
+        /// 角色类型，取user或system
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RoleType")]
+        public string RoleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
+            this.SetParamSimple(map, prefix + "RoleType", this.RoleType);
         }
     }
 }

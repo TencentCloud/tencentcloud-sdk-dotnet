@@ -72,25 +72,5 @@ namespace TencentCloud.Ticm.V20181127
              return rsp.Response;
         }
 
-        /// <summary>
-        /// ImageModeration接口的同步版本，本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
-        /// </summary>
-        /// <param name="req">参考<see cref="ImageModerationRequest"/></param>
-        /// <returns>参考<see cref="ImageModerationResponse"/>实例</returns>
-        public ImageModerationResponse ImageModerationSync(ImageModerationRequest req)
-        {
-             JsonResponseModel<ImageModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
     }
 }

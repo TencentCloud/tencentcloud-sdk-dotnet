@@ -61,7 +61,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string RdsInstanceId{ get; set; }
 
         /// <summary>
-        /// CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+        /// CVM实例短ID，格式如：ins-olgl39y8，与云服务器控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
         /// </summary>
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }

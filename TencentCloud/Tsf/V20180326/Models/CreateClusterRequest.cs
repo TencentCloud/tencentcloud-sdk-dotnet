@@ -66,6 +66,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("TsfZoneId")]
         public string TsfZoneId{ get; set; }
 
+        /// <summary>
+        /// 私有网络子网ID
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
             this.SetParamSimple(map, prefix + "TsfRegionId", this.TsfRegionId);
             this.SetParamSimple(map, prefix + "TsfZoneId", this.TsfZoneId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

@@ -120,6 +120,19 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TotalCost")]
         public float? TotalCost{ get; set; }
 
+        /// <summary>
+        /// 产品编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// 子产品编码
+        /// </summary>
+        [JsonProperty("SubProductCode")]
+        public string SubProductCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +155,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
         }
     }
 }

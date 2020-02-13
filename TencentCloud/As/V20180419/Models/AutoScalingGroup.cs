@@ -174,6 +174,14 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
 
+        /// <summary>
+        /// 多可用区/子网策略。
+        /// <br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
+        /// <br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+        /// </summary>
+        [JsonProperty("MultiZoneSubnetPolicy")]
+        public string MultiZoneSubnetPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +213,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+            this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
         }
     }
 }

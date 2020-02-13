@@ -25,7 +25,7 @@ namespace TencentCloud.Drm.V20181115.Models
     {
         
         /// <summary>
-        /// 加密track类型。
+        /// 加密track类型。Widevine支持SD、HD、UHD1、UHD2、AUDIO。Fairplay只支持HD。
         /// </summary>
         [JsonProperty("Track")]
         public string Track{ get; set; }
@@ -48,6 +48,13 @@ namespace TencentCloud.Drm.V20181115.Models
         [JsonProperty("Iv")]
         public string Iv{ get; set; }
 
+        /// <summary>
+        /// 该key生成时的时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InsertTimestamp")]
+        public ulong? InsertTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Drm.V20181115.Models
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Iv", this.Iv);
+            this.SetParamSimple(map, prefix + "InsertTimestamp", this.InsertTimestamp);
         }
     }
 }

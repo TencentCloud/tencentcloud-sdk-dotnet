@@ -25,16 +25,16 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 集群ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
         /// 命名空间名称
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
+
+        /// <summary>
+        /// 集群ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
         /// 命名空间描述
@@ -48,16 +48,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceResourceType")]
         public string NamespaceResourceType{ get; set; }
 
+        /// <summary>
+        /// 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
+        /// </summary>
+        [JsonProperty("NamespaceType")]
+        public string NamespaceType{ get; set; }
+
+        /// <summary>
+        /// 命名空间ID
+        /// </summary>
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NamespaceDesc", this.NamespaceDesc);
             this.SetParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
+            this.SetParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         }
     }
 }

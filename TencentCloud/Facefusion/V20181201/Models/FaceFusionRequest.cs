@@ -56,6 +56,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
 
         /// <summary>
         /// 0表示不需要鉴政，1表示需要鉴政。默认值为0。
+        /// 请注意，鉴政服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
         /// </summary>
         [JsonProperty("CelebrityIdentify")]
         public long? CelebrityIdentify{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Wss.V20180426.Models
     {
         
         /// <summary>
-        /// 模块名称，应填ssl
+        /// 模块名称，应填 ssl。
         /// </summary>
         [JsonProperty("ModuleType")]
         public string ModuleType{ get; set; }
 
         /// <summary>
-        /// 页数，默认第一页
+        /// 页数，默认第一页。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页条数，默认每页20条
+        /// 每页条数，默认每页20条。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键字
+        /// 搜索关键字。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
+        /// 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）。
         /// </summary>
         [JsonProperty("CertType")]
         public string CertType{ get; set; }
 
         /// <summary>
-        /// 证书id
+        /// 证书ID。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 是否同时获取证书内容
+        /// 是否同时获取证书内容。
         /// </summary>
         [JsonProperty("WithCert")]
         public string WithCert{ get; set; }
 
         /// <summary>
-        /// 如传，则只返回可以给该域名使用的证书
+        /// 如传，则只返回可以给该域名使用的证书。
         /// </summary>
         [JsonProperty("AltDomain")]
         public string AltDomain{ get; set; }

@@ -57,7 +57,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// <summary>
         /// 组件类型。
         /// <li>SYSTEM：系统组件</li>
-        /// <li>WEB：WEB组件</li>
+        /// <li>WEB：Web组件</li>
         /// </summary>
         [JsonProperty("ComponentType")]
         public string ComponentType{ get; set; }

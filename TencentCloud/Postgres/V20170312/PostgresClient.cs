@@ -73,26 +73,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// CloseDBExtranetAccess接口的同步版本，本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
-        /// </summary>
-        /// <param name="req">参考<see cref="CloseDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="CloseDBExtranetAccessResponse"/>实例</returns>
-        public CloseDBExtranetAccessResponse CloseDBExtranetAccessSync(CloseDBExtranetAccessRequest req)
-        {
-             JsonResponseModel<CloseDBExtranetAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CloseDBExtranetAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseDBExtranetAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateDBInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// CreateDBInstances接口的同步版本，本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="CreateDBInstancesResponse"/>实例</returns>
-        public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
-        {
-             JsonResponseModel<CreateDBInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// DescribeAccounts接口的同步版本，本接口（DescribeAccounts）用于获取实例用户列表。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountsRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountsResponse"/>实例</returns>
-        public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
-        {
-             JsonResponseModel<DescribeAccountsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAccounts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeDBBackups）用于查询实例备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
@@ -183,26 +123,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDBBackups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBBackupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeDBBackups接口的同步版本，本接口（DescribeDBBackups）用于查询实例备份列表。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBBackupsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBBackupsResponse"/>实例</returns>
-        public DescribeDBBackupsResponse DescribeDBBackupsSync(DescribeDBBackupsRequest req)
-        {
-             JsonResponseModel<DescribeDBBackupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBBackups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBBackupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,26 +153,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// DescribeDBErrlogs接口的同步版本，本接口（DescribeDBErrlogs）用于获取错误日志。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBErrlogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBErrlogsResponse"/>实例</returns>
-        public DescribeDBErrlogsResponse DescribeDBErrlogsSync(DescribeDBErrlogsRequest req)
-        {
-             JsonResponseModel<DescribeDBErrlogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBErrlogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBErrlogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口 (DescribeDBInstanceAttribute) 用于查询某个实例的详情信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceAttributeRequest"/></param>
@@ -263,26 +163,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDBInstanceAttribute");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceAttributeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeDBInstanceAttribute接口的同步版本，本接口 (DescribeDBInstanceAttribute) 用于查询某个实例的详情信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBInstanceAttributeRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBInstanceAttributeResponse"/>实例</returns>
-        public DescribeDBInstanceAttributeResponse DescribeDBInstanceAttributeSync(DescribeDBInstanceAttributeRequest req)
-        {
-             JsonResponseModel<DescribeDBInstanceAttributeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,26 +193,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// DescribeDBInstances接口的同步版本，本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBInstancesResponse"/>实例</returns>
-        public DescribeDBInstancesResponse DescribeDBInstancesSync(DescribeDBInstancesRequest req)
-        {
-             JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
@@ -343,26 +203,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDBSlowlogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSlowlogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeDBSlowlogs接口的同步版本，本接口（DescribeDBSlowlogs）用于获取慢查询日志。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBSlowlogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBSlowlogsResponse"/>实例</returns>
-        public DescribeDBSlowlogsResponse DescribeDBSlowlogsSync(DescribeDBSlowlogsRequest req)
-        {
-             JsonResponseModel<DescribeDBSlowlogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBSlowlogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSlowlogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -393,26 +233,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// DescribeDBXlogs接口的同步版本，本接口（DescribeDBXlogs）用于获取实例Xlog列表。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDBXlogsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDBXlogsResponse"/>实例</returns>
-        public DescribeDBXlogsResponse DescribeDBXlogsSync(DescribeDBXlogsRequest req)
-        {
-             JsonResponseModel<DescribeDBXlogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBXlogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBXlogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeOrders）用于获取订单信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
@@ -423,26 +243,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeOrders");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeOrders接口的同步版本，本接口（DescribeOrders）用于获取订单信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeOrdersRequest"/></param>
-        /// <returns>参考<see cref="DescribeOrdersResponse"/>实例</returns>
-        public DescribeOrdersResponse DescribeOrdersSync(DescribeOrdersRequest req)
-        {
-             JsonResponseModel<DescribeOrdersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrders");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -473,26 +273,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// DescribeProductConfig接口的同步版本，本接口 (DescribeProductConfig) 用于查询售卖规格配置。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeProductConfigRequest"/></param>
-        /// <returns>参考<see cref="DescribeProductConfigResponse"/>实例</returns>
-        public DescribeProductConfigResponse DescribeProductConfigSync(DescribeProductConfigRequest req)
-        {
-             JsonResponseModel<DescribeProductConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeProductConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口 (DescribeRegions) 用于查询售卖地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
@@ -503,26 +283,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeRegions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeRegions接口的同步版本，本接口 (DescribeRegions) 用于查询售卖地域信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeRegionsRequest"/></param>
-        /// <returns>参考<see cref="DescribeRegionsResponse"/>实例</returns>
-        public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
-        {
-             JsonResponseModel<DescribeRegionsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -553,26 +313,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// DescribeZones接口的同步版本，本接口 (DescribeZones) 用于查询支持的可用区信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeZonesRequest"/></param>
-        /// <returns>参考<see cref="DescribeZonesResponse"/>实例</returns>
-        public DescribeZonesResponse DescribeZonesSync(DescribeZonesRequest req)
-        {
-             JsonResponseModel<DescribeZonesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeZones");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口 (InitDBInstances) 用于初始化云数据库PostgreSQL实例。
         /// </summary>
         /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
@@ -583,26 +323,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "InitDBInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDBInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// InitDBInstances接口的同步版本，本接口 (InitDBInstances) 用于初始化云数据库PostgreSQL实例。
-        /// </summary>
-        /// <param name="req">参考<see cref="InitDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="InitDBInstancesResponse"/>实例</returns>
-        public InitDBInstancesResponse InitDBInstancesSync(InitDBInstancesRequest req)
-        {
-             JsonResponseModel<InitDBInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InitDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -633,26 +353,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// InquiryPriceCreateDBInstances接口的同步版本，本接口 (InquiryPriceCreateDBInstances) 用于查询购买一个或多个实例的价格信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceCreateDBInstancesRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceCreateDBInstancesResponse"/>实例</returns>
-        public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstancesSync(InquiryPriceCreateDBInstancesRequest req)
-        {
-             JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceCreateDBInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（InquiryPriceRenewDBInstance）用于查询续费实例的价格。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewDBInstanceRequest"/></param>
@@ -663,26 +363,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "InquiryPriceRenewDBInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// InquiryPriceRenewDBInstance接口的同步版本，本接口（InquiryPriceRenewDBInstance）用于查询续费实例的价格。
-        /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceRenewDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceRenewDBInstanceResponse"/>实例</returns>
-        public InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstanceSync(InquiryPriceRenewDBInstanceRequest req)
-        {
-             JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceRenewDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -713,26 +393,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// InquiryPriceUpgradeDBInstance接口的同步版本，本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
-        /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceUpgradeDBInstanceResponse"/>实例</returns>
-        public InquiryPriceUpgradeDBInstanceResponse InquiryPriceUpgradeDBInstanceSync(InquiryPriceUpgradeDBInstanceRequest req)
-        {
-             JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceUpgradeDBInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpgradeDBInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（ModifyAccountRemark）用于修改帐号备注。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountRemarkRequest"/></param>
@@ -743,26 +403,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyAccountRemark");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountRemarkResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ModifyAccountRemark接口的同步版本，本接口（ModifyAccountRemark）用于修改帐号备注。
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyAccountRemarkRequest"/></param>
-        /// <returns>参考<see cref="ModifyAccountRemarkResponse"/>实例</returns>
-        public ModifyAccountRemarkResponse ModifyAccountRemarkSync(ModifyAccountRemarkRequest req)
-        {
-             JsonResponseModel<ModifyAccountRemarkResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyAccountRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountRemarkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -793,26 +433,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// ModifyDBInstanceName接口的同步版本，本接口（ModifyDBInstanceName）用于修改postgresql实例名字。
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBInstanceNameRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBInstanceNameResponse"/>实例</returns>
-        public ModifyDBInstanceNameResponse ModifyDBInstanceNameSync(ModifyDBInstanceNameRequest req)
-        {
-             JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceName");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNameResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
@@ -823,26 +443,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyDBInstancesProject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstancesProjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ModifyDBInstancesProject接口的同步版本，本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyDBInstancesProjectRequest"/></param>
-        /// <returns>参考<see cref="ModifyDBInstancesProjectResponse"/>实例</returns>
-        public ModifyDBInstancesProjectResponse ModifyDBInstancesProjectSync(ModifyDBInstancesProjectRequest req)
-        {
-             JsonResponseModel<ModifyDBInstancesProjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDBInstancesProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstancesProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -873,26 +473,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// OpenDBExtranetAccess接口的同步版本，本接口（OpenDBExtranetAccess）用于开通外网。
-        /// </summary>
-        /// <param name="req">参考<see cref="OpenDBExtranetAccessRequest"/></param>
-        /// <returns>参考<see cref="OpenDBExtranetAccessResponse"/>实例</returns>
-        public OpenDBExtranetAccessResponse OpenDBExtranetAccessSync(OpenDBExtranetAccessRequest req)
-        {
-             JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "OpenDBExtranetAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenDBExtranetAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（RenewInstance）用于续费实例。
         /// </summary>
         /// <param name="req"><see cref="RenewInstanceRequest"/></param>
@@ -903,26 +483,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "RenewInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// RenewInstance接口的同步版本，本接口（RenewInstance）用于续费实例。
-        /// </summary>
-        /// <param name="req">参考<see cref="RenewInstanceRequest"/></param>
-        /// <returns>参考<see cref="RenewInstanceResponse"/>实例</returns>
-        public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
-        {
-             JsonResponseModel<RenewInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RenewInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -953,26 +513,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// ResetAccountPassword接口的同步版本，本接口（ResetAccountPassword）用于重置实例的账户密码。
-        /// </summary>
-        /// <param name="req">参考<see cref="ResetAccountPasswordRequest"/></param>
-        /// <returns>参考<see cref="ResetAccountPasswordResponse"/>实例</returns>
-        public ResetAccountPasswordResponse ResetAccountPasswordSync(ResetAccountPasswordRequest req)
-        {
-             JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ResetAccountPassword");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAccountPasswordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（RestartDBInstance）用于重启实例。
         /// </summary>
         /// <param name="req"><see cref="RestartDBInstanceRequest"/></param>
@@ -983,26 +523,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "RestartDBInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDBInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// RestartDBInstance接口的同步版本，本接口（RestartDBInstance）用于重启实例。
-        /// </summary>
-        /// <param name="req">参考<see cref="RestartDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="RestartDBInstanceResponse"/>实例</returns>
-        public RestartDBInstanceResponse RestartDBInstanceSync(RestartDBInstanceRequest req)
-        {
-             JsonResponseModel<RestartDBInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RestartDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1033,26 +553,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// SetAutoRenewFlag接口的同步版本，本接口（SetAutoRenewFlag）用于设置自动续费。
-        /// </summary>
-        /// <param name="req">参考<see cref="SetAutoRenewFlagRequest"/></param>
-        /// <returns>参考<see cref="SetAutoRenewFlagResponse"/>实例</returns>
-        public SetAutoRenewFlagResponse SetAutoRenewFlagSync(SetAutoRenewFlagRequest req)
-        {
-             JsonResponseModel<SetAutoRenewFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SetAutoRenewFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoRenewFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（UpgradeDBInstance）用于升级实例。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
@@ -1063,26 +563,6 @@ namespace TencentCloud.Postgres.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "UpgradeDBInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// UpgradeDBInstance接口的同步版本，本接口（UpgradeDBInstance）用于升级实例。
-        /// </summary>
-        /// <param name="req">参考<see cref="UpgradeDBInstanceRequest"/></param>
-        /// <returns>参考<see cref="UpgradeDBInstanceResponse"/>实例</returns>
-        public UpgradeDBInstanceResponse UpgradeDBInstanceSync(UpgradeDBInstanceRequest req)
-        {
-             JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpgradeDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)

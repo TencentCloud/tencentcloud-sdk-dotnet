@@ -64,7 +64,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? ShardCount{ get; set; }
 
         /// <summary>
-        /// 欲购买实例的数量，目前只支持购买1个实例
+        /// 欲购买实例的数量
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
@@ -109,6 +109,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
+        /// <summary>
+        /// 安全组id
+        /// </summary>
+        [JsonProperty("SecurityGroupId")]
+        public string SecurityGroupId{ get; set; }
+
+        /// <summary>
+        /// 实例名称， 可以通过该字段自主的设置实例的名字
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
         }
     }
 }

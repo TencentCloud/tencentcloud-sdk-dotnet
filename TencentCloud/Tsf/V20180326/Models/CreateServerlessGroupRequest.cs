@@ -37,16 +37,16 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 程序包Id
+        /// 分组所属名字空间ID
         /// </summary>
-        [JsonProperty("PkgId")]
-        public string PkgId{ get; set; }
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// VpcConfig对象
+        /// 分组所属集群ID
         /// </summary>
-        [JsonProperty("VpcConfig")]
-        public VpcConfig VpcConfig{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
-            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
-            this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

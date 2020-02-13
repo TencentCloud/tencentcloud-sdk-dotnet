@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 置放群组的亲和性策略。
+        /// 置放群组的亲和性策略，目前仅支持取值为1，策略1表示同台物理机上限制实例的个数。
         /// </summary>
         [JsonProperty("Affinity")]
         public long?[] Affinity{ get; set; }
 
         /// <summary>
-        /// 置放群组亲和性策略1的实例限制个数。
+        /// 置放群组亲和性策略1中同台物理机上实例的限制个数。
         /// </summary>
         [JsonProperty("LimitNum")]
         public long? LimitNum{ get; set; }

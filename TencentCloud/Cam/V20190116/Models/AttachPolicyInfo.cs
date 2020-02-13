@@ -86,6 +86,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("OperateUinType")]
         public ulong? OperateUinType{ get; set; }
 
+        /// <summary>
+        /// 是否已下线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deactived")]
+        public ulong? Deactived{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "OperateOwnerUin", this.OperateOwnerUin);
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
             this.SetParamSimple(map, prefix + "OperateUinType", this.OperateUinType);
+            this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
         }
     }
 }

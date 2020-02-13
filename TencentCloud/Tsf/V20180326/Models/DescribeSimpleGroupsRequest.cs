@@ -72,6 +72,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
+        /// <summary>
+        /// 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+        /// </summary>
+        [JsonProperty("AppMicroServiceType")]
+        public string AppMicroServiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
+            this.SetParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
         }
     }
 }

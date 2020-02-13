@@ -67,7 +67,7 @@ namespace TencentCloud.Mongodb.V20180408.Models
         public ulong? SecondaryNum{ get; set; }
 
         /// <summary>
-        /// 分片物理id
+        /// 分片物理ID
         /// </summary>
         [JsonProperty("RealReplicaSetId")]
         public string RealReplicaSetId{ get; set; }

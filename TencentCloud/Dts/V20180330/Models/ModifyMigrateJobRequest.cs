@@ -43,7 +43,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public MigrateOption MigrateOption{ get; set; }
 
         /// <summary>
-        /// 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+        /// 源实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例),cdb(云上CDB实例)
         /// </summary>
         [JsonProperty("SrcAccessType")]
         public string SrcAccessType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public SrcInfo SrcInfo{ get; set; }
 
         /// <summary>
-        /// 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+        /// 目标实例接入类型，值包括：extranet(外网),cvm(CVM自建实例),dcg(专线接入的实例),vpncloud(云VPN接入的实例)，cdb(云上CDB实例). 目前只支持cdb.
         /// </summary>
         [JsonProperty("DstAccessType")]
         public string DstAccessType{ get; set; }

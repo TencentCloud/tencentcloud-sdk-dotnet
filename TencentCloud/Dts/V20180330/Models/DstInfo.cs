@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// 目标实例Id，如cdb-jd92ijd8
+        /// 目标实例ID，如cdb-jd92ijd8
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

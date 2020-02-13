@@ -33,6 +33,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Porn.Ocr：Ocr 文字鉴黄</li>
         /// <li>Political.Asr：Asr 文字鉴政</li>
         /// <li>Political.Ocr：Ocr 文字鉴政</li>
+        /// <li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+        /// <li>Prohibited.Asr：Asr 文字鉴违禁</li>
+        /// <li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -86,6 +89,27 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("PoliticalOcrTask")]
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
+        /// <summary>
+        /// 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TerrorismOcrTask")]
+        public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }
+
+        /// <summary>
+        /// 视频内容审核 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProhibitedAsrTask")]
+        public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
+
+        /// <summary>
+        /// 视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProhibitedOcrTask")]
+        public AiReviewTaskProhibitedOcrResult ProhibitedOcrTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +124,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "PornOcrTask.", this.PornOcrTask);
             this.SetParamObj(map, prefix + "PoliticalAsrTask.", this.PoliticalAsrTask);
             this.SetParamObj(map, prefix + "PoliticalOcrTask.", this.PoliticalOcrTask);
+            this.SetParamObj(map, prefix + "TerrorismOcrTask.", this.TerrorismOcrTask);
+            this.SetParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
+            this.SetParamObj(map, prefix + "ProhibitedOcrTask.", this.ProhibitedOcrTask);
         }
     }
 }

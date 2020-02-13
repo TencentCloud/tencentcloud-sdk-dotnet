@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-        /// 支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
+        /// 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Procedure{ get; set; }
 
         /// <summary>
-        /// 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

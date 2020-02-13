@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+        /// 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/862/37042)。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

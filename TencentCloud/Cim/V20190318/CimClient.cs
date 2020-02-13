@@ -72,25 +72,5 @@ namespace TencentCloud.Cim.V20190318
              return rsp.Response;
         }
 
-        /// <summary>
-        /// DescribeSdkAppid接口的同步版本，获取云通信IM中腾讯云账号对应的SDKAppID
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeSdkAppidRequest"/></param>
-        /// <returns>参考<see cref="DescribeSdkAppidResponse"/>实例</returns>
-        public DescribeSdkAppidResponse DescribeSdkAppidSync(DescribeSdkAppidRequest req)
-        {
-             JsonResponseModel<DescribeSdkAppidResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSdkAppid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSdkAppidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
     }
 }

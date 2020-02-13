@@ -67,7 +67,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? KeepEnable{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// 规则ID，当添加新规则时可以不用填写此字段；当修改或者删除规则时需要填写此字段；
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }

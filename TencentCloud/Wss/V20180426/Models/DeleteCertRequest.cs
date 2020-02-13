@@ -25,13 +25,13 @@ namespace TencentCloud.Wss.V20180426.Models
     {
         
         /// <summary>
-        /// 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
+        /// 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 模块名称，应填ssl
+        /// 模块名称，应填 ssl。
         /// </summary>
         [JsonProperty("ModuleType")]
         public string ModuleType{ get; set; }

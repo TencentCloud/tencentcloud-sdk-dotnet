@@ -73,26 +73,6 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// DescribeAccountBalance接口的同步版本，获取云账户余额信息。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeAccountBalanceRequest"/></param>
-        /// <returns>参考<see cref="DescribeAccountBalanceResponse"/>实例</returns>
-        public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
-        {
-             JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAccountBalance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountBalanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询账单明细数据
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Billing.V20180709
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeBillDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeBillDetail接口的同步版本，查询账单明细数据
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillDetailRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillDetailResponse"/>实例</returns>
-        public DescribeBillDetailResponse DescribeBillDetailSync(DescribeBillDetailRequest req)
-        {
-             JsonResponseModel<DescribeBillDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// DescribeBillResourceSummary接口的同步版本，查询账单资源汇总数据 
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillResourceSummaryRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillResourceSummaryResponse"/>实例</returns>
-        public DescribeBillResourceSummaryResponse DescribeBillResourceSummarySync(DescribeBillResourceSummaryRequest req)
-        {
-             JsonResponseModel<DescribeBillResourceSummaryResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillResourceSummary");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillResourceSummaryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取按付费模式汇总费用分布
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
@@ -183,26 +123,6 @@ namespace TencentCloud.Billing.V20180709
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeBillSummaryByPayMode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeBillSummaryByPayMode接口的同步版本，获取按付费模式汇总费用分布
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByPayModeRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByPayModeResponse"/>实例</returns>
-        public DescribeBillSummaryByPayModeResponse DescribeBillSummaryByPayModeSync(DescribeBillSummaryByPayModeRequest req)
-        {
-             JsonResponseModel<DescribeBillSummaryByPayModeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByPayMode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByPayModeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,26 +153,6 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// DescribeBillSummaryByProduct接口的同步版本，获取产品汇总费用分布
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByProductRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByProductResponse"/>实例</returns>
-        public DescribeBillSummaryByProductResponse DescribeBillSummaryByProductSync(DescribeBillSummaryByProductRequest req)
-        {
-             JsonResponseModel<DescribeBillSummaryByProductResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByProduct");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByProductResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取按项目汇总费用分布
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByProjectRequest"/></param>
@@ -263,26 +163,6 @@ namespace TencentCloud.Billing.V20180709
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeBillSummaryByProject");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByProjectResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeBillSummaryByProject接口的同步版本，获取按项目汇总费用分布
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByProjectRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByProjectResponse"/>实例</returns>
-        public DescribeBillSummaryByProjectResponse DescribeBillSummaryByProjectSync(DescribeBillSummaryByProjectRequest req)
-        {
-             JsonResponseModel<DescribeBillSummaryByProjectResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,26 +193,6 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// DescribeBillSummaryByRegion接口的同步版本，获取按地域汇总费用分布
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByRegionRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByRegionResponse"/>实例</returns>
-        public DescribeBillSummaryByRegionResponse DescribeBillSummaryByRegionSync(DescribeBillSummaryByRegionRequest req)
-        {
-             JsonResponseModel<DescribeBillSummaryByRegionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByRegion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByRegionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取按标签汇总费用分布
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByTagRequest"/></param>
@@ -353,17 +213,97 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// DescribeBillSummaryByTag接口的同步版本，获取按标签汇总费用分布
+        /// 查询消耗明细
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBillSummaryByTagRequest"/></param>
-        /// <returns>参考<see cref="DescribeBillSummaryByTagResponse"/>实例</returns>
-        public DescribeBillSummaryByTagResponse DescribeBillSummaryByTagSync(DescribeBillSummaryByTagRequest req)
+        /// <param name="req"><see cref="DescribeCostDetailRequest"/></param>
+        /// <returns><see cref="DescribeCostDetailResponse"/></returns>
+        public async Task<DescribeCostDetailResponse> DescribeCostDetail(DescribeCostDetailRequest req)
         {
-             JsonResponseModel<DescribeBillSummaryByTagResponse> rsp = null;
+             JsonResponseModel<DescribeCostDetailResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeBillSummaryByTag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBillSummaryByTagResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeCostDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCostDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取按产品汇总消耗详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByProductRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByProductResponse"/></returns>
+        public async Task<DescribeCostSummaryByProductResponse> DescribeCostSummaryByProduct(DescribeCostSummaryByProductRequest req)
+        {
+             JsonResponseModel<DescribeCostSummaryByProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCostSummaryByProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCostSummaryByProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取按项目汇总消耗详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByProjectRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByProjectResponse"/></returns>
+        public async Task<DescribeCostSummaryByProjectResponse> DescribeCostSummaryByProject(DescribeCostSummaryByProjectRequest req)
+        {
+             JsonResponseModel<DescribeCostSummaryByProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCostSummaryByProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCostSummaryByProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取按地域汇总消耗详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByRegionRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByRegionResponse"/></returns>
+        public async Task<DescribeCostSummaryByRegionResponse> DescribeCostSummaryByRegion(DescribeCostSummaryByRegionRequest req)
+        {
+             JsonResponseModel<DescribeCostSummaryByRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCostSummaryByRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCostSummaryByRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取按资源汇总消耗详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCostSummaryByResourceRequest"/></param>
+        /// <returns><see cref="DescribeCostSummaryByResourceResponse"/></returns>
+        public async Task<DescribeCostSummaryByResourceResponse> DescribeCostSummaryByResource(DescribeCostSummaryByResourceRequest req)
+        {
+             JsonResponseModel<DescribeCostSummaryByResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCostSummaryByResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCostSummaryByResourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -383,26 +323,6 @@ namespace TencentCloud.Billing.V20180709
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDealsByCond");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDealsByCondResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeDealsByCond接口的同步版本，查询订单
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDealsByCondRequest"/></param>
-        /// <returns>参考<see cref="DescribeDealsByCondResponse"/>实例</returns>
-        public DescribeDealsByCondResponse DescribeDealsByCondSync(DescribeDealsByCondRequest req)
-        {
-             JsonResponseModel<DescribeDealsByCondResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDealsByCond");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDealsByCondResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -433,26 +353,6 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// DescribeDosageDetailByDate接口的同步版本，按日期获取产品用量明细
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDosageDetailByDateRequest"/></param>
-        /// <returns>参考<see cref="DescribeDosageDetailByDateResponse"/>实例</returns>
-        public DescribeDosageDetailByDateResponse DescribeDosageDetailByDateSync(DescribeDosageDetailByDateRequest req)
-        {
-             JsonResponseModel<DescribeDosageDetailByDateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDosageDetailByDate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageDetailByDateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 支付订单
         /// </summary>
         /// <param name="req"><see cref="PayDealsRequest"/></param>
@@ -463,26 +363,6 @@ namespace TencentCloud.Billing.V20180709
              try
              {
                  var strResp = await this.InternalRequest(req, "PayDeals");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PayDealsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// PayDeals接口的同步版本，支付订单
-        /// </summary>
-        /// <param name="req">参考<see cref="PayDealsRequest"/></param>
-        /// <returns>参考<see cref="PayDealsResponse"/>实例</returns>
-        public PayDealsResponse PayDealsSync(PayDealsRequest req)
-        {
-             JsonResponseModel<PayDealsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PayDeals");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PayDealsResponse>>(strResp);
              }
              catch (JsonSerializationException e)

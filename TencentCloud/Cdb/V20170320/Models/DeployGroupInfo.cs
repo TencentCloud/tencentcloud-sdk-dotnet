@@ -43,20 +43,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 置放群组实例配额。
+        /// 置放群组实例配额，表示一个置放群组中可容纳的最大实例数目。
         /// </summary>
         [JsonProperty("Quota")]
         public long? Quota{ get; set; }
 
         /// <summary>
-        /// 置放群组亲和性策略。
+        /// 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Affinity")]
         public string Affinity{ get; set; }
 
         /// <summary>
-        /// 置放群组亲和性策略1的限制实例个数。
+        /// 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LimitNum")]
@@ -67,6 +67,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// 置放群组物理机型属性。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DevClass")]
+        public string DevClass{ get; set; }
 
 
         /// <summary>
@@ -81,6 +88,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Affinity", this.Affinity);
             this.SetParamSimple(map, prefix + "LimitNum", this.LimitNum);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "DevClass", this.DevClass);
         }
     }
 }

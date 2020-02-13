@@ -99,6 +99,24 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
+        /// <summary>
+        /// 是否专业版。
+        /// </summary>
+        [JsonProperty("IsProVersion")]
+        public bool? IsProVersion{ get; set; }
+
+        /// <summary>
+        /// 阻断状态。
+        /// </summary>
+        [JsonProperty("BanStatus")]
+        public string BanStatus{ get; set; }
+
+        /// <summary>
+        /// 机器UUID
+        /// </summary>
+        [JsonProperty("Quuid")]
+        public string Quuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +135,9 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "MachineName", this.MachineName);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "IsProVersion", this.IsProVersion);
+            this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
+            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
         }
     }
 }

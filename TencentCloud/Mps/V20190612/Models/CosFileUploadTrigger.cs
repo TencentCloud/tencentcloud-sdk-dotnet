@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+        /// 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。
         /// </summary>
         [JsonProperty("Dir")]
         public string Dir{ get; set; }

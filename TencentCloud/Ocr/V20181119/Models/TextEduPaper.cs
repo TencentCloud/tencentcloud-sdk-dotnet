@@ -25,10 +25,22 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 识别出的文本行内容
+        /// 识别出的字段名称（关键字）
+        /// </summary>
+        [JsonProperty("Item")]
+        public string Item{ get; set; }
+
+        /// <summary>
+        /// 识别出的字段名称对应的值，也就是字段Item对应的字符串结果
         /// </summary>
         [JsonProperty("DetectedText")]
         public string DetectedText{ get; set; }
+
+        /// <summary>
+        /// 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+        /// </summary>
+        [JsonProperty("Itemcoord")]
+        public ItemCoord Itemcoord{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Item", this.Item);
             this.SetParamSimple(map, prefix + "DetectedText", this.DetectedText);
+            this.SetParamObj(map, prefix + "Itemcoord.", this.Itemcoord);
         }
     }
 }

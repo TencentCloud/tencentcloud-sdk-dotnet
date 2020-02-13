@@ -25,7 +25,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
     {
         
         /// <summary>
-        /// 分页偏移，Offset从0开始
+        /// 偏移量，Offset从0开始
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

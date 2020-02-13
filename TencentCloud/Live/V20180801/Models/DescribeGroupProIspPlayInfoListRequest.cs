@@ -50,7 +50,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string[] ProvinceNames{ get; set; }
 
         /// <summary>
-        /// 运营商列表，默认不填，则返回个运营商的数据。
+        /// 运营商列表，默认不填，则返回整个运营商的数据。
         /// </summary>
         [JsonProperty("IspNames")]
         public string[] IspNames{ get; set; }

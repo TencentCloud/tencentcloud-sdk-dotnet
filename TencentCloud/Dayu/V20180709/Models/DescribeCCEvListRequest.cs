@@ -25,7 +25,7 @@ namespace TencentCloud.Dayu.V20180709.Models
     {
         
         /// <summary>
-        /// 大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+        /// 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }

@@ -60,6 +60,17 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
+        /// <summary>
+        /// 数据盘是否随子机销毁。取值范围：
+        /// <li>TRUE：加密
+        /// <li>FALSE：不加密<br>
+        /// 默认取值：FALSE<br>
+        /// 该参数目前仅用于 `RunInstances` 接口。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +82,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
         }
     }
 }

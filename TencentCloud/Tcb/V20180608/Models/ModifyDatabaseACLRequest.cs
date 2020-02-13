@@ -37,7 +37,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string CollectionName{ get; set; }
 
         /// <summary>
-        /// 权限标签。取值范围：
+        /// 权限标签。包含以下取值：
         /// <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
         /// <li> PRIVATE：仅创建者及管理员可读写</li>
         /// <li> ADMINWRITE：所有用户可读，仅管理员可写</li>

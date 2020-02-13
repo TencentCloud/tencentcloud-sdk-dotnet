@@ -48,6 +48,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("NotifyWechat")]
         public ulong? NotifyWechat{ get; set; }
 
+        /// <summary>
+        /// 提示
+        /// </summary>
+        [JsonProperty("Tips")]
+        public ulong? Tips{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "NotifyPhone", this.NotifyPhone);
             this.SetParamSimple(map, prefix + "NotifyEmail", this.NotifyEmail);
             this.SetParamSimple(map, prefix + "NotifyWechat", this.NotifyWechat);
+            this.SetParamSimple(map, prefix + "Tips", this.Tips);
         }
     }
 }

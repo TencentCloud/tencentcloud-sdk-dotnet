@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。
+        /// 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
         /// </summary>
         [JsonProperty("StartTimeMin")]
         public long? StartTimeMin{ get; set; }
 
         /// <summary>
-        /// 备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。
+        /// 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
         /// </summary>
         [JsonProperty("StartTimeMax")]
         public long? StartTimeMax{ get; set; }
 
         /// <summary>
-        /// 备份过期时间，单位为天。
+        /// 备份文件保留时间，单位为天。
         /// </summary>
         [JsonProperty("BackupExpireDays")]
         public long? BackupExpireDays{ get; set; }
@@ -49,10 +49,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Binlog 过期时间，单位为天。
+        /// Binlog 文件保留时间，单位为天。
         /// </summary>
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }
+
+        /// <summary>
+        /// 实例自动备份的时间窗。
+        /// </summary>
+        [JsonProperty("BackupTimeWindow")]
+        public CommonTimeWindow BackupTimeWindow{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +77,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupExpireDays", this.BackupExpireDays);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
+            this.SetParamObj(map, prefix + "BackupTimeWindow.", this.BackupTimeWindow);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

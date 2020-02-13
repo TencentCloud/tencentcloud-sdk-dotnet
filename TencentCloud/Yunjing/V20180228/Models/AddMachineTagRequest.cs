@@ -25,7 +25,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
     {
         
         /// <summary>
-        /// 云主机ID
+        /// 云服务器ID
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public ulong? TagId{ get; set; }
 
         /// <summary>
-        /// 主机地区
+        /// 云服务器地区
         /// </summary>
         [JsonProperty("MRegion")]
         public string MRegion{ get; set; }
 
         /// <summary>
-        /// 主机地区类型(CVM|BM)
+        /// 云服务器类型(CVM|BM)
         /// </summary>
         [JsonProperty("MArea")]
         public string MArea{ get; set; }

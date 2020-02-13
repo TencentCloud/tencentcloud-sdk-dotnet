@@ -37,7 +37,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// APPID
+        /// AppID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -163,25 +163,25 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? IsTmp{ get; set; }
 
         /// <summary>
-        /// 独享集群Id，为空表示非独享集群实例
+        /// 独享集群ID，为空表示非独享集群实例
         /// </summary>
         [JsonProperty("ExclusterId")]
         public string ExclusterId{ get; set; }
 
         /// <summary>
-        /// 字符串型的私有网络Id
+        /// 字符串型的私有网络ID
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
 
         /// <summary>
-        /// 字符串型的私有网络子网Id
+        /// 字符串型的私有网络子网ID
         /// </summary>
         [JsonProperty("UniqueSubnetId")]
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// 数字实例Id（过时字段，请勿依赖该值）
+        /// 数字实例ID（过时字段，请勿依赖该值）
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// 产品类型 Id（过时字段，请勿依赖该值）
+        /// 产品类型 ID（过时字段，请勿依赖该值）
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }

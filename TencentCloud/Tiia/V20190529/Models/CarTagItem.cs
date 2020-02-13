@@ -60,6 +60,12 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("Year")]
         public long? Year{ get; set; }
 
+        /// <summary>
+        /// 车辆在图片中的坐标信息
+        /// </summary>
+        [JsonProperty("CarLocation")]
+        public Coord[] CarLocation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "Color", this.Color);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "Year", this.Year);
+            this.SetParamArrayObj(map, prefix + "CarLocation.", this.CarLocation);
         }
     }
 }

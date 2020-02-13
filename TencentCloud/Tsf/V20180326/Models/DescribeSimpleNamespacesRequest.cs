@@ -72,6 +72,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceTypeList")]
         public string[] NamespaceTypeList{ get; set; }
 
+        /// <summary>
+        /// 通过命名空间名精确过滤
+        /// </summary>
+        [JsonProperty("NamespaceName")]
+        public string NamespaceName{ get; set; }
+
+        /// <summary>
+        /// 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public string IsDefault{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "NamespaceResourceTypeList.", this.NamespaceResourceTypeList);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamArraySimple(map, prefix + "NamespaceTypeList.", this.NamespaceTypeList);
+            this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
         }
     }
 }

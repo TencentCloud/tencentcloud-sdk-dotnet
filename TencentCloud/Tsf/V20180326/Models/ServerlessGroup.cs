@@ -115,6 +115,41 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("PkgVersion")]
         public string PkgVersion{ get; set; }
 
+        /// <summary>
+        /// 所需实例内存大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Memory")]
+        public string Memory{ get; set; }
+
+        /// <summary>
+        /// 要求最小实例数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceRequest")]
+        public ulong? InstanceRequest{ get; set; }
+
+        /// <summary>
+        /// 部署组启动参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartupParameters")]
+        public string StartupParameters{ get; set; }
+
+        /// <summary>
+        /// 应用ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 部署组实例数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceCount")]
+        public ulong? InstanceCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +169,11 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "PkgVersion", this.PkgVersion);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "InstanceRequest", this.InstanceRequest);
+            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 子用户用户 ID
+        /// 子用户用户 UIN
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }

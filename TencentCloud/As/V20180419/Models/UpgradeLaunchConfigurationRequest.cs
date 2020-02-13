@@ -139,6 +139,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("HostNameSettings")]
         public HostNameSettings HostNameSettings{ get; set; }
 
+        /// <summary>
+        /// 云服务器实例名（InstanceName）的相关设置。
+        /// </summary>
+        [JsonProperty("InstanceNameSettings")]
+        public InstanceNameSettings[] InstanceNameSettings{ get; set; }
+
+        /// <summary>
+        /// 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+        /// </summary>
+        [JsonProperty("InstanceChargePrepaid")]
+        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
+            this.SetParamArrayObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+            this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         }
     }
 }

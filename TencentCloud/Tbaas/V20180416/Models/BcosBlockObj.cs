@@ -43,7 +43,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string BlockTimestamp{ get; set; }
 
         /// <summary>
-        /// 打包节点id
+        /// 打包节点ID
         /// </summary>
         [JsonProperty("Sealer")]
         public string Sealer{ get; set; }

@@ -53,6 +53,27 @@ namespace TencentCloud.Ecc.V20181213
         }
 
         /// <summary>
+        /// https://ecc.tencentcloudapi.com/?Action=CorrectMultiImage
+        /// 多图像识别批改接口
+        /// </summary>
+        /// <param name="req"><see cref="CorrectMultiImageRequest"/></param>
+        /// <returns><see cref="CorrectMultiImageResponse"/></returns>
+        public async Task<CorrectMultiImageResponse> CorrectMultiImage(CorrectMultiImageRequest req)
+        {
+             JsonResponseModel<CorrectMultiImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CorrectMultiImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CorrectMultiImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 异步任务结果查询接口
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskRequest"/></param>
@@ -63,26 +84,6 @@ namespace TencentCloud.Ecc.V20181213
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeTask接口的同步版本，异步任务结果查询接口
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskResponse"/>实例</returns>
-        public DescribeTaskResponse DescribeTaskSync(DescribeTaskRequest req)
-        {
-             JsonResponseModel<DescribeTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -114,27 +115,6 @@ namespace TencentCloud.Ecc.V20181213
         }
 
         /// <summary>
-        /// ECC接口的同步版本，接口请求域名： ecc.tencentcloudapi.com 
-        /// 纯文本英语作文批改
-        /// </summary>
-        /// <param name="req">参考<see cref="ECCRequest"/></param>
-        /// <returns>参考<see cref="ECCResponse"/>实例</returns>
-        public ECCResponse ECCSync(ECCRequest req)
-        {
-             JsonResponseModel<ECCResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ECC");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ECCResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// https://ecc.tencentcloudapi.com/?Action=EHOCR
         /// 图像识别批改接口
         /// </summary>
@@ -146,27 +126,6 @@ namespace TencentCloud.Ecc.V20181213
              try
              {
                  var strResp = await this.InternalRequest(req, "EHOCR");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EHOCRResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// EHOCR接口的同步版本，https://ecc.tencentcloudapi.com/?Action=EHOCR
-        /// 图像识别批改接口
-        /// </summary>
-        /// <param name="req">参考<see cref="EHOCRRequest"/></param>
-        /// <returns>参考<see cref="EHOCRResponse"/>实例</returns>
-        public EHOCRResponse EHOCRSync(EHOCRRequest req)
-        {
-             JsonResponseModel<EHOCRResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EHOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EHOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)

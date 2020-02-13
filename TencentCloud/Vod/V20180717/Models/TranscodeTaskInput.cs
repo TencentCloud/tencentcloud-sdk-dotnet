@@ -37,6 +37,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
+        /// <summary>
+        /// 马赛克列表，最大可支持 10 张。
+        /// </summary>
+        [JsonProperty("MosaicSet")]
+        public MosaicInput[] MosaicSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         }
     }
 }

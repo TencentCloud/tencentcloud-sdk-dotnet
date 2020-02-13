@@ -31,7 +31,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 策略文档
+        /// 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
         /// </summary>
         [JsonProperty("PolicyDocument")]
         public string PolicyDocument{ get; set; }

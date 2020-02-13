@@ -79,6 +79,12 @@ namespace TencentCloud.Batch.V20170312.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
+        /// 下一步动作
+        /// </summary>
+        [JsonProperty("NextAction")]
+        public string NextAction{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

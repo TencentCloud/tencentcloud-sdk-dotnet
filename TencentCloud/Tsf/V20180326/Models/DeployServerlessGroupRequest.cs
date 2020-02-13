@@ -37,10 +37,22 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string PkgId{ get; set; }
 
         /// <summary>
-        /// VpcConfig对象，和创建接口中对象一致
+        /// 所需实例内存大小，取值为 1Gi 2Gi 4Gi 8Gi 16Gi，缺省为 1Gi，不传表示维持原态
         /// </summary>
-        [JsonProperty("VpcConfig")]
-        public VpcConfig VpcConfig{ get; set; }
+        [JsonProperty("Memory")]
+        public string Memory{ get; set; }
+
+        /// <summary>
+        /// 要求最小实例数，取值范围 [1, 4]，缺省为 1，不传表示维持原态
+        /// </summary>
+        [JsonProperty("InstanceRequest")]
+        public ulong? InstanceRequest{ get; set; }
+
+        /// <summary>
+        /// 部署组启动参数，不传表示维持原态
+        /// </summary>
+        [JsonProperty("StartupParameters")]
+        public string StartupParameters{ get; set; }
 
 
         /// <summary>
@@ -50,7 +62,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
-            this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "InstanceRequest", this.InstanceRequest);
+            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
         }
     }
 }

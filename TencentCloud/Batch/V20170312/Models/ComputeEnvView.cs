@@ -72,6 +72,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
+        /// <summary>
+        /// 下一步动作
+        /// </summary>
+        [JsonProperty("NextAction")]
+        public string NextAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
         }
     }
 }

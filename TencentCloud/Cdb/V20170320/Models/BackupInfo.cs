@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InternetUrl{ get; set; }
 
         /// <summary>
-        /// 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+        /// 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// 备份任务状态
+        /// 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -79,10 +79,28 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+        /// （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
+
+        /// <summary>
+        /// 备份任务的开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+        /// </summary>
+        [JsonProperty("Method")]
+        public string Method{ get; set; }
+
+        /// <summary>
+        /// 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+        /// </summary>
+        [JsonProperty("Way")]
+        public string Way{ get; set; }
 
 
         /// <summary>
@@ -100,6 +118,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "Way", this.Way);
         }
     }
 }

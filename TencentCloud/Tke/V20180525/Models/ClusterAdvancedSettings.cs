@@ -48,6 +48,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("NodeNameType")]
         public string NodeNameType{ get; set; }
 
+        /// <summary>
+        /// 集群自定义参数
+        /// </summary>
+        [JsonProperty("ExtraArgs")]
+        public ClusterExtraArgs ExtraArgs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
+            this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         }
     }
 }

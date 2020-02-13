@@ -36,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExistedInstancesPara")]
         public ExistedInstancesPara ExistedInstancesPara{ get; set; }
 
+        /// <summary>
+        /// 节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
+        /// </summary>
+        [JsonProperty("InstanceAdvancedSettingsOverride")]
+        public InstanceAdvancedSettings InstanceAdvancedSettingsOverride{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
             this.SetParamObj(map, prefix + "ExistedInstancesPara.", this.ExistedInstancesPara);
+            this.SetParamObj(map, prefix + "InstanceAdvancedSettingsOverride.", this.InstanceAdvancedSettingsOverride);
         }
     }
 }

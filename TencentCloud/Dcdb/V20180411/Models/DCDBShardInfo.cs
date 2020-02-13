@@ -144,6 +144,27 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ProxyVersion")]
         public string ProxyVersion{ get; set; }
 
+        /// <summary>
+        /// 付费模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Paymode")]
+        public string Paymode{ get; set; }
+
+        /// <summary>
+        /// 分片的主可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShardMasterZone")]
+        public string ShardMasterZone{ get; set; }
+
+        /// <summary>
+        /// 分片的从可用区列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShardSlaveZones")]
+        public string[] ShardSlaveZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +191,9 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
+            this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
+            this.SetParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
+            this.SetParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
         }
     }
 }

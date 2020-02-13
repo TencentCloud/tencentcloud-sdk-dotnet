@@ -73,26 +73,6 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
-        /// CreateSmpnEpa接口的同步版本，企业号码认证
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateSmpnEpaRequest"/></param>
-        /// <returns>参考<see cref="CreateSmpnEpaResponse"/>实例</returns>
-        public CreateSmpnEpaResponse CreateSmpnEpaSync(CreateSmpnEpaRequest req)
-        {
-             JsonResponseModel<CreateSmpnEpaResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSmpnEpa");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSmpnEpaResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询号码的标记和标记次数
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnChpRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Smpn.V20190822
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeSmpnChp");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnChpResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeSmpnChp接口的同步版本，查询号码的标记和标记次数
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeSmpnChpRequest"/></param>
-        /// <returns>参考<see cref="DescribeSmpnChpResponse"/>实例</returns>
-        public DescribeSmpnChpResponse DescribeSmpnChpSync(DescribeSmpnChpRequest req)
-        {
-             JsonResponseModel<DescribeSmpnChpResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSmpnChp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnChpResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
-        /// DescribeSmpnFnr接口的同步版本，虚假号码识别
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeSmpnFnrRequest"/></param>
-        /// <returns>参考<see cref="DescribeSmpnFnrResponse"/>实例</returns>
-        public DescribeSmpnFnrResponse DescribeSmpnFnrSync(DescribeSmpnFnrRequest req)
-        {
-             JsonResponseModel<DescribeSmpnFnrResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSmpnFnr");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnFnrResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 号码营销监控
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMhmRequest"/></param>
@@ -193,26 +133,6 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
-        /// DescribeSmpnMhm接口的同步版本，号码营销监控
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeSmpnMhmRequest"/></param>
-        /// <returns>参考<see cref="DescribeSmpnMhmResponse"/>实例</returns>
-        public DescribeSmpnMhmResponse DescribeSmpnMhmSync(DescribeSmpnMhmRequest req)
-        {
-             JsonResponseModel<DescribeSmpnMhmResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSmpnMhm");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnMhmResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询号码恶意标记等级
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMrlRequest"/></param>
@@ -223,26 +143,6 @@ namespace TencentCloud.Smpn.V20190822
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeSmpnMrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnMrlResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeSmpnMrl接口的同步版本，查询号码恶意标记等级
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeSmpnMrlRequest"/></param>
-        /// <returns>参考<see cref="DescribeSmpnMrlResponse"/>实例</returns>
-        public DescribeSmpnMrlResponse DescribeSmpnMrlSync(DescribeSmpnMrlRequest req)
-        {
-             JsonResponseModel<DescribeSmpnMrlResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSmpnMrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnMrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)

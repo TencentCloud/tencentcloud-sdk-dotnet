@@ -73,26 +73,6 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// CreateSession接口的同步版本，创建会话
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateSessionRequest"/></param>
-        /// <returns>参考<see cref="CreateSessionResponse"/>实例</returns>
-        public CreateSessionResponse CreateSessionSync(CreateSessionRequest req)
-        {
-             JsonResponseModel<CreateSessionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSession");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSessionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询空闲机器数量
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkersRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Gs.V20191118
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeWorkers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeWorkers接口的同步版本，查询空闲机器数量
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeWorkersRequest"/></param>
-        /// <returns>参考<see cref="DescribeWorkersResponse"/>实例</returns>
-        public DescribeWorkersResponse DescribeWorkersSync(DescribeWorkersRequest req)
-        {
-             JsonResponseModel<DescribeWorkersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeWorkers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// StopGame接口的同步版本，强制退出游戏
-        /// </summary>
-        /// <param name="req">参考<see cref="StopGameRequest"/></param>
-        /// <returns>参考<see cref="StopGameResponse"/>实例</returns>
-        public StopGameResponse StopGameSync(StopGameRequest req)
-        {
-             JsonResponseModel<StopGameResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StopGame");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopGameResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 尝试锁定机器
         /// </summary>
         /// <param name="req"><see cref="TrylockWorkerRequest"/></param>
@@ -183,26 +123,6 @@ namespace TencentCloud.Gs.V20191118
              try
              {
                  var strResp = await this.InternalRequest(req, "TrylockWorker");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TrylockWorkerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// TrylockWorker接口的同步版本，尝试锁定机器
-        /// </summary>
-        /// <param name="req">参考<see cref="TrylockWorkerRequest"/></param>
-        /// <returns>参考<see cref="TrylockWorkerResponse"/>实例</returns>
-        public TrylockWorkerResponse TrylockWorkerSync(TrylockWorkerRequest req)
-        {
-             JsonResponseModel<TrylockWorkerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TrylockWorker");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TrylockWorkerResponse>>(strResp);
              }
              catch (JsonSerializationException e)

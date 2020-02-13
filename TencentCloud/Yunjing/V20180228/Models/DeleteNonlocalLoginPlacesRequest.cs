@@ -25,7 +25,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
     {
         
         /// <summary>
-        /// 异地登录事件Id数组。
+        /// 异地登录事件ID数组。
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

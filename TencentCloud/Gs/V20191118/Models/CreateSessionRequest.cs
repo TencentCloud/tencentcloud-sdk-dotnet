@@ -43,7 +43,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string GameId{ get; set; }
 
         /// <summary>
-        /// 游戏区域
+        /// 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
         /// </summary>
         [JsonProperty("GameRegion")]
         public string GameRegion{ get; set; }
@@ -55,22 +55,52 @@ namespace TencentCloud.Gs.V20191118.Models
         public string GameParas{ get; set; }
 
         /// <summary>
-        /// 分辨率
+        /// 分辨率,，可设置为1080p或720p
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 背景图url
+        /// 背景图url，格式为png或jpeg，宽高1920*1080
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 资源池编号
+        /// 资源池编号，1表示正式，2表示测试
         /// </summary>
         [JsonProperty("SetNo")]
         public ulong? SetNo{ get; set; }
+
+        /// <summary>
+        /// 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+        /// </summary>
+        [JsonProperty("Bitrate")]
+        public ulong? Bitrate{ get; set; }
+
+        /// <summary>
+        /// 单位Mbps，动态调整最大码率
+        /// </summary>
+        [JsonProperty("MaxBitrate")]
+        public ulong? MaxBitrate{ get; set; }
+
+        /// <summary>
+        /// 单位Mbps，动态调整最小码率
+        /// </summary>
+        [JsonProperty("MinBitrate")]
+        public ulong? MinBitrate{ get; set; }
+
+        /// <summary>
+        /// 帧率，可设置为30、45或60
+        /// </summary>
+        [JsonProperty("Fps")]
+        public ulong? Fps{ get; set; }
+
+        /// <summary>
+        /// 游戏用户IP，用于就近调度，例如125.127.178.228
+        /// </summary>
+        [JsonProperty("UserIp")]
+        public string UserIp{ get; set; }
 
 
         /// <summary>
@@ -86,6 +116,11 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "SetNo", this.SetNo);
+            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
+            this.SetParamSimple(map, prefix + "MaxBitrate", this.MaxBitrate);
+            this.SetParamSimple(map, prefix + "MinBitrate", this.MinBitrate);
+            this.SetParamSimple(map, prefix + "Fps", this.Fps);
+            this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Wss.V20180426.Models
     {
         
         /// <summary>
-        /// 证书ID
+        /// 证书ID。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

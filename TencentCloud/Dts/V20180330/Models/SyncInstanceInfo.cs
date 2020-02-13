@@ -31,7 +31,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例短Id
+        /// 实例短ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

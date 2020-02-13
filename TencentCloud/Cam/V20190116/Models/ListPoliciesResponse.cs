@@ -38,6 +38,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// type：1 表示自定义策略，2 表示预设策略 
         /// description：策略描述 
         /// createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略
+        /// Attachments: 关联的用户数
+        /// ServiceType: 策略关联的产品
+        /// IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
         /// </summary>
         [JsonProperty("List")]
         public StrategyInfo[] List{ get; set; }

@@ -37,9 +37,9 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? SubServiceType{ get; set; }
 
         /// <summary>
-        /// 引擎类型。
-        /// 8k：电话 8k 中文普通话通用；
-        /// 16k：16k 中文普通话通用；
+        /// 引擎模型类型。
+        /// 8k_zh：电话 8k 中文普通话通用；
+        /// 16k_zh：16k 中文普通话通用；
         /// 16k_en：16k 英语；
         /// 16k_ca：16k 粤语。
         /// </summary>
@@ -82,6 +82,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("DataLen")]
         public long? DataLen{ get; set; }
 
+        /// <summary>
+        /// 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+        /// </summary>
+        [JsonProperty("HotwordId")]
+        public string HotwordId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +103,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "DataLen", this.DataLen);
+            this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
         }
     }
 }

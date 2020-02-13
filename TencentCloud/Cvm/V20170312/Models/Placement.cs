@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例所属的专用宿主机ID列表。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
+        /// 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
         /// </summary>
         [JsonProperty("HostIds")]
         public string[] HostIds{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         [JsonProperty("HostIps")]
         public string[] HostIps{ get; set; }
+
+        /// <summary>
+        /// 实例所属的专用宿主机ID，仅用于出参。
+        /// </summary>
+        [JsonProperty("HostId")]
+        public string HostId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "HostIds.", this.HostIds);
             this.SetParamArraySimple(map, prefix + "HostIps.", this.HostIps);
+            this.SetParamSimple(map, prefix + "HostId", this.HostId);
         }
     }
 }

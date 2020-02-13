@@ -43,7 +43,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         public Coord[] Polygon{ get; set; }
 
         /// <summary>
-        /// 此字段为扩展字段
+        /// 此字段为扩展字段。
+        /// 能返回文本行的段落信息，例如：{\"Parag\":{\"ParagNo\":2}}，
+        /// 其中ParagNo为段落行，从1开始。
         /// </summary>
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }

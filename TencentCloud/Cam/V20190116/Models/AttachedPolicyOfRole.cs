@@ -55,6 +55,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("CreateMode")]
         public ulong? CreateMode{ get; set; }
 
+        /// <summary>
+        /// 是否已下线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deactived")]
+        public ulong? Deactived{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
             this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
+            this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
         }
     }
 }

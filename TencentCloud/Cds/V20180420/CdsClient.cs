@@ -73,26 +73,6 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
-        /// DescribeDbauditInstanceType接口的同步版本，本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDbauditInstanceTypeRequest"/></param>
-        /// <returns>参考<see cref="DescribeDbauditInstanceTypeResponse"/>实例</returns>
-        public DescribeDbauditInstanceTypeResponse DescribeDbauditInstanceTypeSync(DescribeDbauditInstanceTypeRequest req)
-        {
-             JsonResponseModel<DescribeDbauditInstanceTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDbauditInstanceType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditInstanceTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDbauditInstancesRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Cds.V20180420
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDbauditInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeDbauditInstances接口的同步版本，本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDbauditInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeDbauditInstancesResponse"/>实例</returns>
-        public DescribeDbauditInstancesResponse DescribeDbauditInstancesSync(DescribeDbauditInstancesRequest req)
-        {
-             JsonResponseModel<DescribeDbauditInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDbauditInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
-        /// DescribeDbauditUsedRegions接口的同步版本，本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeDbauditUsedRegionsRequest"/></param>
-        /// <returns>参考<see cref="DescribeDbauditUsedRegionsResponse"/>实例</returns>
-        public DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegionsSync(DescribeDbauditUsedRegionsRequest req)
-        {
-             JsonResponseModel<DescribeDbauditUsedRegionsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDbauditUsedRegions");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditUsedRegionsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 用于查询数据安全审计产品实例价格
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceDbauditInstanceRequest"/></param>
@@ -193,26 +133,6 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
-        /// InquiryPriceDbauditInstance接口的同步版本，用于查询数据安全审计产品实例价格
-        /// </summary>
-        /// <param name="req">参考<see cref="InquiryPriceDbauditInstanceRequest"/></param>
-        /// <returns>参考<see cref="InquiryPriceDbauditInstanceResponse"/>实例</returns>
-        public InquiryPriceDbauditInstanceResponse InquiryPriceDbauditInstanceSync(InquiryPriceDbauditInstanceRequest req)
-        {
-             JsonResponseModel<InquiryPriceDbauditInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceDbauditInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceDbauditInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
         /// </summary>
         /// <param name="req"><see cref="ModifyDbauditInstancesRenewFlagRequest"/></param>
@@ -223,26 +143,6 @@ namespace TencentCloud.Cds.V20180420
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyDbauditInstancesRenewFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ModifyDbauditInstancesRenewFlag接口的同步版本，本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyDbauditInstancesRenewFlagRequest"/></param>
-        /// <returns>参考<see cref="ModifyDbauditInstancesRenewFlagResponse"/>实例</returns>
-        public ModifyDbauditInstancesRenewFlagResponse ModifyDbauditInstancesRenewFlagSync(ModifyDbauditInstancesRenewFlagRequest req)
-        {
-             JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDbauditInstancesRenewFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)

@@ -60,6 +60,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
+        /// <summary>
+        /// 节点相关的自定义参数信息
+        /// </summary>
+        [JsonProperty("ExtraArgs")]
+        public InstanceExtraArgs ExtraArgs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         }
     }
 }

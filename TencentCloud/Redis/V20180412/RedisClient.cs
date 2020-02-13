@@ -53,6 +53,26 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public async Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 回收站实例立即下线
         /// </summary>
         /// <param name="req"><see cref="CleanUpInstanceRequest"/></param>
@@ -63,26 +83,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "CleanUpInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CleanUpInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// CleanUpInstance接口的同步版本，回收站实例立即下线
-        /// </summary>
-        /// <param name="req">参考<see cref="CleanUpInstanceRequest"/></param>
-        /// <returns>参考<see cref="CleanUpInstanceResponse"/>实例</returns>
-        public CleanUpInstanceResponse CleanUpInstanceSync(CleanUpInstanceRequest req)
-        {
-             JsonResponseModel<CleanUpInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CleanUpInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CleanUpInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,26 +113,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// ClearInstance接口的同步版本，清空Redis实例的实例数据。
-        /// </summary>
-        /// <param name="req">参考<see cref="ClearInstanceRequest"/></param>
-        /// <returns>参考<see cref="ClearInstanceResponse"/>实例</returns>
-        public ClearInstanceResponse ClearInstanceSync(ClearInstanceRequest req)
-        {
-             JsonResponseModel<ClearInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ClearInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 创建实例子账号
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
@@ -143,26 +123,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateInstanceAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// CreateInstanceAccount接口的同步版本，创建实例子账号
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateInstanceAccountRequest"/></param>
-        /// <returns>参考<see cref="CreateInstanceAccountResponse"/>实例</returns>
-        public CreateInstanceAccountResponse CreateInstanceAccountSync(CreateInstanceAccountRequest req)
-        {
-             JsonResponseModel<CreateInstanceAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateInstanceAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,26 +153,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// CreateInstances接口的同步版本，创建redis实例
-        /// </summary>
-        /// <param name="req">参考<see cref="CreateInstancesRequest"/></param>
-        /// <returns>参考<see cref="CreateInstancesResponse"/>实例</returns>
-        public CreateInstancesResponse CreateInstancesSync(CreateInstancesRequest req)
-        {
-             JsonResponseModel<CreateInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 删除实例子账号
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
@@ -223,26 +163,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteInstanceAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DeleteInstanceAccount接口的同步版本，删除实例子账号
-        /// </summary>
-        /// <param name="req">参考<see cref="DeleteInstanceAccountRequest"/></param>
-        /// <returns>参考<see cref="DeleteInstanceAccountResponse"/>实例</returns>
-        public DeleteInstanceAccountResponse DeleteInstanceAccountSync(DeleteInstanceAccountRequest req)
-        {
-             JsonResponseModel<DeleteInstanceAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteInstanceAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -273,26 +193,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeAutoBackupConfig接口的同步版本，获取备份配置
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeAutoBackupConfigRequest"/></param>
-        /// <returns>参考<see cref="DescribeAutoBackupConfigResponse"/>实例</returns>
-        public DescribeAutoBackupConfigResponse DescribeAutoBackupConfigSync(DescribeAutoBackupConfigRequest req)
-        {
-             JsonResponseModel<DescribeAutoBackupConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAutoBackupConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoBackupConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
@@ -313,17 +213,17 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeBackupUrl接口的同步版本，查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
+        /// 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeBackupUrlRequest"/></param>
-        /// <returns>参考<see cref="DescribeBackupUrlResponse"/>实例</returns>
-        public DescribeBackupUrlResponse DescribeBackupUrlSync(DescribeBackupUrlRequest req)
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public async Task<DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req)
         {
-             JsonResponseModel<DescribeBackupUrlResponse> rsp = null;
+             JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeBackupUrl");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUrlResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeDBSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -343,26 +243,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceAccount接口的同步版本，查看实例子账号信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceAccountRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceAccountResponse"/>实例</returns>
-        public DescribeInstanceAccountResponse DescribeInstanceAccountSync(DescribeInstanceAccountRequest req)
-        {
-             JsonResponseModel<DescribeInstanceAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -393,26 +273,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceBackups接口的同步版本，查询 CRS 实例备份列表
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceBackupsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceBackupsResponse"/>实例</returns>
-        public DescribeInstanceBackupsResponse DescribeInstanceBackupsSync(DescribeInstanceBackupsRequest req)
-        {
-             JsonResponseModel<DescribeInstanceBackupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceBackups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceBackupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询实例DTS信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceDTSInfoRequest"/></param>
@@ -423,26 +283,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceDTSInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDTSInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceDTSInfo接口的同步版本，查询实例DTS信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceDTSInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceDTSInfoResponse"/>实例</returns>
-        public DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfoSync(DescribeInstanceDTSInfoRequest req)
-        {
-             JsonResponseModel<DescribeInstanceDTSInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceDTSInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDTSInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -473,26 +313,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceDealDetail接口的同步版本，查询订单信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceDealDetailRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceDealDetailResponse"/>实例</returns>
-        public DescribeInstanceDealDetailResponse DescribeInstanceDealDetailSync(DescribeInstanceDealDetailRequest req)
-        {
-             JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceDealDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDealDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询实例大Key
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
@@ -503,26 +323,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorBigKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceMonitorBigKey接口的同步版本，查询实例大Key
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorBigKeyResponse"/>实例</returns>
-        public DescribeInstanceMonitorBigKeyResponse DescribeInstanceMonitorBigKeySync(DescribeInstanceMonitorBigKeyRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorBigKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorBigKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -553,26 +353,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceMonitorBigKeySizeDist接口的同步版本，查询实例大Key大小分布
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/>实例</returns>
-        public DescribeInstanceMonitorBigKeySizeDistResponse DescribeInstanceMonitorBigKeySizeDistSync(DescribeInstanceMonitorBigKeySizeDistRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorBigKeySizeDist");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询实例大Key类型分布
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
@@ -583,26 +363,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorBigKeyTypeDist");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceMonitorBigKeyTypeDist接口的同步版本，查询实例大Key类型分布
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/>实例</returns>
-        public DescribeInstanceMonitorBigKeyTypeDistResponse DescribeInstanceMonitorBigKeyTypeDistSync(DescribeInstanceMonitorBigKeyTypeDistRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorBigKeyTypeDist");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -633,26 +393,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceMonitorHotKey接口的同步版本，查询实例热Key
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorHotKeyRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorHotKeyResponse"/>实例</returns>
-        public DescribeInstanceMonitorHotKeyResponse DescribeInstanceMonitorHotKeySync(DescribeInstanceMonitorHotKeyRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorHotKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorHotKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorHotKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询实例访问来源信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorSIPRequest"/></param>
@@ -663,26 +403,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorSIP");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorSIPResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceMonitorSIP接口的同步版本，查询实例访问来源信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorSIPRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorSIPResponse"/>实例</returns>
-        public DescribeInstanceMonitorSIPResponse DescribeInstanceMonitorSIPSync(DescribeInstanceMonitorSIPRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorSIPResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorSIP");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorSIPResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -713,26 +433,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceMonitorTookDist接口的同步版本，查询实例大Key大小分布
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorTookDistRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorTookDistResponse"/>实例</returns>
-        public DescribeInstanceMonitorTookDistResponse DescribeInstanceMonitorTookDistSync(DescribeInstanceMonitorTookDistRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorTookDistResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorTookDist");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorTookDistResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询实例访问命令
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTopNCmdRequest"/></param>
@@ -743,26 +443,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceMonitorTopNCmd");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceMonitorTopNCmd接口的同步版本，查询实例访问命令
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorTopNCmdRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorTopNCmdResponse"/>实例</returns>
-        public DescribeInstanceMonitorTopNCmdResponse DescribeInstanceMonitorTopNCmdSync(DescribeInstanceMonitorTopNCmdRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorTopNCmd");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -793,26 +473,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceMonitorTopNCmdTook接口的同步版本，查询实例CPU耗时
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceMonitorTopNCmdTookRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceMonitorTopNCmdTookResponse"/>实例</returns>
-        public DescribeInstanceMonitorTopNCmdTookResponse DescribeInstanceMonitorTopNCmdTookSync(DescribeInstanceMonitorTopNCmdTookRequest req)
-        {
-             JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceMonitorTopNCmdTook");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询参数修改历史列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
@@ -823,26 +483,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceParamRecords");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceParamRecords接口的同步版本，查询参数修改历史列表
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceParamRecordsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceParamRecordsResponse"/>实例</returns>
-        public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecordsSync(DescribeInstanceParamRecordsRequest req)
-        {
-             JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParamRecords");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -873,26 +513,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceParams接口的同步版本，查询实例参数列表
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceParamsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceParamsResponse"/>实例</returns>
-        public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
-        {
-             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParams");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询实例安全组信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSecurityGroupRequest"/></param>
@@ -903,26 +523,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstanceSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceSecurityGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstanceSecurityGroup接口的同步版本，查询实例安全组信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceSecurityGroupRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceSecurityGroupResponse"/>实例</returns>
-        public DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroupSync(DescribeInstanceSecurityGroupRequest req)
-        {
-             JsonResponseModel<DescribeInstanceSecurityGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceSecurityGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -953,26 +553,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeInstanceShards接口的同步版本，获取集群版实例分片信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstanceShardsRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstanceShardsResponse"/>实例</returns>
-        public DescribeInstanceShardsResponse DescribeInstanceShardsSync(DescribeInstanceShardsRequest req)
-        {
-             JsonResponseModel<DescribeInstanceShardsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstanceShards");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceShardsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询Redis实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -983,26 +563,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeInstances接口的同步版本，查询Redis实例列表
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeInstancesRequest"/></param>
-        /// <returns>参考<see cref="DescribeInstancesResponse"/>实例</returns>
-        public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
-        {
-             JsonResponseModel<DescribeInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1033,26 +593,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeProductInfo接口的同步版本，本接口查询指定可用区和实例类型下 Redis 的售卖规格， 如果用户不在购买白名单中，将不能查询该可用区或该类型的售卖规格详情。申请购买某地域白名单可以提交工单
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeProductInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeProductInfoResponse"/>实例</returns>
-        public DescribeProductInfoResponse DescribeProductInfoSync(DescribeProductInfoRequest req)
-        {
-             JsonResponseModel<DescribeProductInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeProductInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询项目安全组信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupRequest"/></param>
@@ -1073,17 +613,17 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeProjectSecurityGroup接口的同步版本，查询项目安全组信息
+        /// 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
         /// </summary>
-        /// <param name="req">参考<see cref="DescribeProjectSecurityGroupRequest"/></param>
-        /// <returns>参考<see cref="DescribeProjectSecurityGroupResponse"/>实例</returns>
-        public DescribeProjectSecurityGroupResponse DescribeProjectSecurityGroupSync(DescribeProjectSecurityGroupRequest req)
+        /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
+        public async Task<DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req)
         {
-             JsonResponseModel<DescribeProjectSecurityGroupResponse> rsp = null;
+             JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DescribeProjectSecurityGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DescribeProjectSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1103,26 +643,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeSlowLog");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeSlowLog接口的同步版本，查询实例慢查询记录
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeSlowLogRequest"/></param>
-        /// <returns>参考<see cref="DescribeSlowLogResponse"/>实例</returns>
-        public DescribeSlowLogResponse DescribeSlowLogSync(DescribeSlowLogRequest req)
-        {
-             JsonResponseModel<DescribeSlowLogResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSlowLog");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1153,26 +673,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DescribeTaskInfo接口的同步版本，用于查询任务结果
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskInfoRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskInfoResponse"/>实例</returns>
-        public DescribeTaskInfoResponse DescribeTaskInfoSync(DescribeTaskInfoRequest req)
-        {
-             JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTaskInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询任务列表信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskListRequest"/></param>
@@ -1183,26 +683,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeTaskList接口的同步版本，查询任务列表信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeTaskListRequest"/></param>
-        /// <returns>参考<see cref="DescribeTaskListResponse"/>实例</returns>
-        public DescribeTaskListResponse DescribeTaskListSync(DescribeTaskListRequest req)
-        {
-             JsonResponseModel<DescribeTaskListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTaskList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1233,26 +713,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DestroyPostpaidInstance接口的同步版本，按量计费实例销毁
-        /// </summary>
-        /// <param name="req">参考<see cref="DestroyPostpaidInstanceRequest"/></param>
-        /// <returns>参考<see cref="DestroyPostpaidInstanceResponse"/>实例</returns>
-        public DestroyPostpaidInstanceResponse DestroyPostpaidInstanceSync(DestroyPostpaidInstanceRequest req)
-        {
-             JsonResponseModel<DestroyPostpaidInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DestroyPostpaidInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyPostpaidInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 包年包月实例退还
         /// </summary>
         /// <param name="req"><see cref="DestroyPrepaidInstanceRequest"/></param>
@@ -1263,26 +723,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "DestroyPrepaidInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyPrepaidInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DestroyPrepaidInstance接口的同步版本，包年包月实例退还
-        /// </summary>
-        /// <param name="req">参考<see cref="DestroyPrepaidInstanceRequest"/></param>
-        /// <returns>参考<see cref="DestroyPrepaidInstanceResponse"/>实例</returns>
-        public DestroyPrepaidInstanceResponse DestroyPrepaidInstanceSync(DestroyPrepaidInstanceRequest req)
-        {
-             JsonResponseModel<DestroyPrepaidInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DestroyPrepaidInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyPrepaidInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1313,17 +753,17 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// DisableReplicaReadonly接口的同步版本，禁用读写分离
+        /// 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
         /// </summary>
-        /// <param name="req">参考<see cref="DisableReplicaReadonlyRequest"/></param>
-        /// <returns>参考<see cref="DisableReplicaReadonlyResponse"/>实例</returns>
-        public DisableReplicaReadonlyResponse DisableReplicaReadonlySync(DisableReplicaReadonlyRequest req)
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public async Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
         {
-             JsonResponseModel<DisableReplicaReadonlyResponse> rsp = null;
+             JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "DisableReplicaReadonly");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableReplicaReadonlyResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "DisassociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1353,17 +793,57 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// EnableReplicaReadonly接口的同步版本，启用读写分离
+        /// 查询新购实例价格
         /// </summary>
-        /// <param name="req">参考<see cref="EnableReplicaReadonlyRequest"/></param>
-        /// <returns>参考<see cref="EnableReplicaReadonlyResponse"/>实例</returns>
-        public EnableReplicaReadonlyResponse EnableReplicaReadonlySync(EnableReplicaReadonlyRequest req)
+        /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
+        public async Task<InquiryPriceCreateInstanceResponse> InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req)
         {
-             JsonResponseModel<EnableReplicaReadonlyResponse> rsp = null;
+             JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "EnableReplicaReadonly");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableReplicaReadonlyResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "InquiryPriceCreateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例续费价格（包年包月）
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewInstanceResponse"/></returns>
+        public async Task<InquiryPriceRenewInstanceResponse> InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceRenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例扩容价格
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceUpgradeInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceUpgradeInstanceResponse"/></returns>
+        public async Task<InquiryPriceUpgradeInstanceResponse> InquiryPriceUpgradeInstance(InquiryPriceUpgradeInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceUpgradeInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceUpgradeInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1383,26 +863,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "ManualBackupInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualBackupInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ManualBackupInstance接口的同步版本，手动备份Redis实例
-        /// </summary>
-        /// <param name="req">参考<see cref="ManualBackupInstanceRequest"/></param>
-        /// <returns>参考<see cref="ManualBackupInstanceResponse"/>实例</returns>
-        public ManualBackupInstanceResponse ManualBackupInstanceSync(ManualBackupInstanceRequest req)
-        {
-             JsonResponseModel<ManualBackupInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ManualBackupInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualBackupInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1433,26 +893,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// ModfiyInstancePassword接口的同步版本，修改redis密码
-        /// </summary>
-        /// <param name="req">参考<see cref="ModfiyInstancePasswordRequest"/></param>
-        /// <returns>参考<see cref="ModfiyInstancePasswordResponse"/>实例</returns>
-        public ModfiyInstancePasswordResponse ModfiyInstancePasswordSync(ModfiyInstancePasswordRequest req)
-        {
-             JsonResponseModel<ModfiyInstancePasswordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModfiyInstancePassword");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModfiyInstancePasswordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 设置自动备份时间
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoBackupConfigRequest"/></param>
@@ -1473,17 +913,17 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// ModifyAutoBackupConfig接口的同步版本，设置自动备份时间
+        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组
         /// </summary>
-        /// <param name="req">参考<see cref="ModifyAutoBackupConfigRequest"/></param>
-        /// <returns>参考<see cref="ModifyAutoBackupConfigResponse"/>实例</returns>
-        public ModifyAutoBackupConfigResponse ModifyAutoBackupConfigSync(ModifyAutoBackupConfigRequest req)
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public async Task<ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req)
         {
-             JsonResponseModel<ModifyAutoBackupConfigResponse> rsp = null;
+             JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "ModifyAutoBackupConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAutoBackupConfigResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1503,26 +943,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ModifyInstance接口的同步版本，修改实例相关信息
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstanceRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstanceResponse"/>实例</returns>
-        public ModifyInstanceResponse ModifyInstanceSync(ModifyInstanceRequest req)
-        {
-             JsonResponseModel<ModifyInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1553,26 +973,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// ModifyInstanceAccount接口的同步版本，修改实例子账号
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstanceAccountRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstanceAccountResponse"/>实例</returns>
-        public ModifyInstanceAccountResponse ModifyInstanceAccountSync(ModifyInstanceAccountRequest req)
-        {
-             JsonResponseModel<ModifyInstanceAccountResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyInstanceAccount");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceAccountResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 修改实例参数
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
@@ -1583,26 +983,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyInstanceParams");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ModifyInstanceParams接口的同步版本，修改实例参数
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyInstanceParamsRequest"/></param>
-        /// <returns>参考<see cref="ModifyInstanceParamsResponse"/>实例</returns>
-        public ModifyInstanceParamsResponse ModifyInstanceParamsSync(ModifyInstanceParamsRequest req)
-        {
-             JsonResponseModel<ModifyInstanceParamsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyInstanceParams");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1633,26 +1013,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// ModifyNetworkConfig接口的同步版本，修改实例网络配置
-        /// </summary>
-        /// <param name="req">参考<see cref="ModifyNetworkConfigRequest"/></param>
-        /// <returns>参考<see cref="ModifyNetworkConfigResponse"/>实例</returns>
-        public ModifyNetworkConfigResponse ModifyNetworkConfigSync(ModifyNetworkConfigRequest req)
-        {
-             JsonResponseModel<ModifyNetworkConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyNetworkConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 续费实例
         /// </summary>
         /// <param name="req"><see cref="RenewInstanceRequest"/></param>
@@ -1663,26 +1023,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "RenewInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// RenewInstance接口的同步版本，续费实例
-        /// </summary>
-        /// <param name="req">参考<see cref="RenewInstanceRequest"/></param>
-        /// <returns>参考<see cref="RenewInstanceResponse"/>实例</returns>
-        public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
-        {
-             JsonResponseModel<RenewInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RenewInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1713,26 +1053,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// ResetPassword接口的同步版本，重置密码
-        /// </summary>
-        /// <param name="req">参考<see cref="ResetPasswordRequest"/></param>
-        /// <returns>参考<see cref="ResetPasswordResponse"/>实例</returns>
-        public ResetPasswordResponse ResetPasswordSync(ResetPasswordRequest req)
-        {
-             JsonResponseModel<ResetPasswordResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ResetPassword");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetPasswordResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 恢复 CRS 实例
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
@@ -1743,26 +1063,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "RestoreInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// RestoreInstance接口的同步版本，恢复 CRS 实例
-        /// </summary>
-        /// <param name="req">参考<see cref="RestoreInstanceRequest"/></param>
-        /// <returns>参考<see cref="RestoreInstanceResponse"/>实例</returns>
-        public RestoreInstanceResponse RestoreInstanceSync(RestoreInstanceRequest req)
-        {
-             JsonResponseModel<RestoreInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RestoreInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -1793,26 +1093,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// StartupInstance接口的同步版本，实例解隔离
-        /// </summary>
-        /// <param name="req">参考<see cref="StartupInstanceRequest"/></param>
-        /// <returns>参考<see cref="StartupInstanceResponse"/>实例</returns>
-        public StartupInstanceResponse StartupInstanceSync(StartupInstanceRequest req)
-        {
-             JsonResponseModel<StartupInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartupInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartupInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
         /// </summary>
         /// <param name="req"><see cref="SwitchInstanceVipRequest"/></param>
@@ -1833,26 +1113,6 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// SwitchInstanceVip接口的同步版本，在通过DTS支持跨可用区灾备的场景中，通过该接口交换实例VIP完成实例灾备切换。交换VIP后目标实例可写，源和目标实例VIP互换，同时源与目标实例间DTS同步任务断开
-        /// </summary>
-        /// <param name="req">参考<see cref="SwitchInstanceVipRequest"/></param>
-        /// <returns>参考<see cref="SwitchInstanceVipResponse"/>实例</returns>
-        public SwitchInstanceVipResponse SwitchInstanceVipSync(SwitchInstanceVipRequest req)
-        {
-             JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SwitchInstanceVip");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchInstanceVipResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 升级实例
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
@@ -1863,26 +1123,6 @@ namespace TencentCloud.Redis.V20180412
              try
              {
                  var strResp = await this.InternalRequest(req, "UpgradeInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// UpgradeInstance接口的同步版本，升级实例
-        /// </summary>
-        /// <param name="req">参考<see cref="UpgradeInstanceRequest"/></param>
-        /// <returns>参考<see cref="UpgradeInstanceResponse"/>实例</returns>
-        public UpgradeInstanceResponse UpgradeInstanceSync(UpgradeInstanceRequest req)
-        {
-             JsonResponseModel<UpgradeInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "UpgradeInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)

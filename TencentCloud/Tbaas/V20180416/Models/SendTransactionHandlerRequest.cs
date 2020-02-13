@@ -43,12 +43,6 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string GroupPk{ get; set; }
 
         /// <summary>
-        /// 私钥用户编号
-        /// </summary>
-        [JsonProperty("KeyUser")]
-        public string KeyUser{ get; set; }
-
-        /// <summary>
         /// 合约编号
         /// </summary>
         [JsonProperty("ContractId")]
@@ -75,7 +69,6 @@ namespace TencentCloud.Tbaas.V20180416.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "GroupPk", this.GroupPk);
-            this.SetParamSimple(map, prefix + "KeyUser", this.KeyUser);
             this.SetParamSimple(map, prefix + "ContractId", this.ContractId);
             this.SetParamSimple(map, prefix + "FuncName", this.FuncName);
             this.SetParamArraySimple(map, prefix + "FuncParam.", this.FuncParam);

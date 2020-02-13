@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BandwidthPackageName")]
         public string BandwidthPackageName{ get; set; }
 
+        /// <summary>
+        /// 带宽包计费模式
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 是否允许登录
+        /// 是否允许登录 1 为允许 0 为不允许
         /// </summary>
         [JsonProperty("ConsoleLogin")]
         public ulong? ConsoleLogin{ get; set; }

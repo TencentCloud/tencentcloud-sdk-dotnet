@@ -31,10 +31,16 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// 应用类型
+        /// 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
+
+        /// <summary>
+        /// 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+        /// </summary>
+        [JsonProperty("MicroserviceType")]
+        public string MicroserviceType{ get; set; }
 
         /// <summary>
         /// 应用描述
@@ -49,16 +55,16 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationLogConfig{ get; set; }
 
         /// <summary>
-        /// 应用微服务类型
-        /// </summary>
-        [JsonProperty("MicroserviceType")]
-        public string MicroserviceType{ get; set; }
-
-        /// <summary>
-        /// 应有资源类型
+        /// 应用资源类型，废弃参数
         /// </summary>
         [JsonProperty("ApplicationResourceType")]
         public string ApplicationResourceType{ get; set; }
+
+        /// <summary>
+        /// 应用runtime类型
+        /// </summary>
+        [JsonProperty("ApplicationRuntimeType")]
+        public string ApplicationRuntimeType{ get; set; }
 
 
         /// <summary>
@@ -68,10 +74,11 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamSimple(map, prefix + "ApplicationDesc", this.ApplicationDesc);
             this.SetParamSimple(map, prefix + "ApplicationLogConfig", this.ApplicationLogConfig);
-            this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
+            this.SetParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
         }
     }
 }

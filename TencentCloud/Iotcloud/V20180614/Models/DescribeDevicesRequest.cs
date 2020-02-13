@@ -31,13 +31,13 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 分页偏移
+        /// 偏移量，Offset从0开始
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页的大小，数值范围 10-100
+        /// 分页的大小，数值范围 10-250
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

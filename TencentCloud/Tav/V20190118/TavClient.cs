@@ -73,26 +73,6 @@ namespace TencentCloud.Tav.V20190118
         }
 
         /// <summary>
-        /// GetLocalEngine接口的同步版本，获取TAV本地引擎
-        /// </summary>
-        /// <param name="req">参考<see cref="GetLocalEngineRequest"/></param>
-        /// <returns>参考<see cref="GetLocalEngineResponse"/>实例</returns>
-        public GetLocalEngineResponse GetLocalEngineSync(GetLocalEngineRequest req)
-        {
-             JsonResponseModel<GetLocalEngineResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetLocalEngine");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLocalEngineResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// tav文件上传扫描结果查询
         /// </summary>
         /// <param name="req"><see cref="GetScanResultRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Tav.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "GetScanResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetScanResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// GetScanResult接口的同步版本，tav文件上传扫描结果查询
-        /// </summary>
-        /// <param name="req">参考<see cref="GetScanResultRequest"/></param>
-        /// <returns>参考<see cref="GetScanResultResponse"/>实例</returns>
-        public GetScanResultResponse GetScanResultSync(GetScanResultRequest req)
-        {
-             JsonResponseModel<GetScanResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetScanResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetScanResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Tav.V20190118
         }
 
         /// <summary>
-        /// ScanFile接口的同步版本，tav文件上传扫描
-        /// </summary>
-        /// <param name="req">参考<see cref="ScanFileRequest"/></param>
-        /// <returns>参考<see cref="ScanFileResponse"/>实例</returns>
-        public ScanFileResponse ScanFileSync(ScanFileRequest req)
-        {
-             JsonResponseModel<ScanFileResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ScanFile");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanFileResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 通过文件哈希值获取文件黑白属性
         /// </summary>
         /// <param name="req"><see cref="ScanFileHashRequest"/></param>
@@ -183,26 +123,6 @@ namespace TencentCloud.Tav.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "ScanFileHash");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanFileHashResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ScanFileHash接口的同步版本，通过文件哈希值获取文件黑白属性
-        /// </summary>
-        /// <param name="req">参考<see cref="ScanFileHashRequest"/></param>
-        /// <returns>参考<see cref="ScanFileHashResponse"/>实例</returns>
-        public ScanFileHashResponse ScanFileHashSync(ScanFileHashRequest req)
-        {
-             JsonResponseModel<ScanFileHashResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ScanFileHash");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanFileHashResponse>>(strResp);
              }
              catch (JsonSerializationException e)

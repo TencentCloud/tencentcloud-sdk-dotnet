@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+        /// 流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? IsPersistence{ get; set; }
 
         /// <summary>
-        /// 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
+        /// 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -65,6 +65,18 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("MetaDataRequired")]
         public ulong? MetaDataRequired{ get; set; }
+
+        /// <summary>
+        /// 即时剪辑使用的域名，必须在直播侧开通时移。
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
+        /// <summary>
+        /// 系统保留字段，请勿填写。
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
 
         /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -85,6 +97,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
             this.SetParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

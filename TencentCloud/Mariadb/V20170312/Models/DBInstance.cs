@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// 实例 Id，唯一标识一个 TDSQL 实例
+        /// 实例 ID，唯一标识一个 TDSQL 实例
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 实例所属应用 Id
+        /// 实例所属应用 ID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 实例所属项目 Id
+        /// 实例所属项目 ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 私有网络 Id，基础网络时为 0
+        /// 私有网络 ID，基础网络时为 0
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 Id，基础网络时为 0
+        /// 子网 ID，基础网络时为 0
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
@@ -157,13 +157,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 字符串型的私有网络Id
+        /// 字符串型的私有网络ID
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
 
         /// <summary>
-        /// 字符串型的私有网络子网Id
+        /// 字符串型的私有网络子网ID
         /// </summary>
         [JsonProperty("UniqueSubnetId")]
         public string UniqueSubnetId{ get; set; }
@@ -187,19 +187,19 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public ulong? IsTmp{ get; set; }
 
         /// <summary>
-        /// 独享集群Id，为空表示为普通实例
+        /// 独享集群ID，为空表示为普通实例
         /// </summary>
         [JsonProperty("ExclusterId")]
         public string ExclusterId{ get; set; }
 
         /// <summary>
-        /// 数字实例Id（过时字段，请勿依赖该值）
+        /// 数字实例ID（过时字段，请勿依赖该值）
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 产品类型 Id
+        /// 产品类型 ID
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }

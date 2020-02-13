@@ -109,7 +109,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ExclusterType{ get; set; }
 
         /// <summary>
-        /// 按独享集群Id过滤实例，独享集群Id形如dbdc-4ih6uct9
+        /// 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
         /// </summary>
         [JsonProperty("ExclusterIds")]
         public string[] ExclusterIds{ get; set; }

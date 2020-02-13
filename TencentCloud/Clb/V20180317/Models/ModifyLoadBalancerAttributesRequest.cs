@@ -48,6 +48,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("InternetChargeInfo")]
         public InternetAccessible InternetChargeInfo{ get; set; }
 
+        /// <summary>
+        /// Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
             this.SetParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

@@ -93,7 +93,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 数据复制方式
+        /// 数据复制方式。0 - 异步复制；1 - 半同步复制；2 - 强同步复制
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
@@ -136,7 +136,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// 可用区部署方式
+        /// 可用区部署方式。可能的值为：0 - 单可用区；1 - 多可用区
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }

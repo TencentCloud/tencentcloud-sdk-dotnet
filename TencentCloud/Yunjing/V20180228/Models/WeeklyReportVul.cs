@@ -38,7 +38,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
 
         /// <summary>
         /// 漏洞类型。
-        /// <li> WEB : WEB漏洞</li>
+        /// <li> WEB : Web漏洞</li>
         /// <li> SYSTEM :系统组件漏洞</li>
         /// <li> BASELINE : 安全基线</li>
         /// </summary>

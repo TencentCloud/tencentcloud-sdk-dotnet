@@ -40,6 +40,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// 主机状态。
         /// <li>OFFLINE: 离线  </li>
         /// <li>ONLINE: 在线</li>
+        /// <li>MACHINE_STOPPED: 已关机</li>
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }

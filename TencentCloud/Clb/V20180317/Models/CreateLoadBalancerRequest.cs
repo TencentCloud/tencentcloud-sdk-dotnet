@@ -88,10 +88,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+        /// 仅适用于公网负载均衡。负载均衡的网络计费模式。
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
+
+        /// <summary>
+        /// 仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
+        /// </summary>
+        [JsonProperty("VipIsp")]
+        public string VipIsp{ get; set; }
 
         /// <summary>
         /// 购买负载均衡同时，给负载均衡打上标签
@@ -116,6 +122,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MasterZoneId", this.MasterZoneId);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+            this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

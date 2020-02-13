@@ -73,26 +73,6 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
-        /// DescribeApp接口的同步版本，根据应用id查询物联卡应用详情
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeAppRequest"/></param>
-        /// <returns>参考<see cref="DescribeAppResponse"/>实例</returns>
-        public DescribeAppResponse DescribeAppSync(DescribeAppRequest req)
-        {
-             JsonResponseModel<DescribeAppResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeApp");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询卡片详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCardRequest"/></param>
@@ -103,26 +83,6 @@ namespace TencentCloud.Ic.V20190307
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeCard");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCardResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DescribeCard接口的同步版本，查询卡片详细信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCardRequest"/></param>
-        /// <returns>参考<see cref="DescribeCardResponse"/>实例</returns>
-        public DescribeCardResponse DescribeCardSync(DescribeCardRequest req)
-        {
-             JsonResponseModel<DescribeCardResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCard");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCardResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,26 +113,6 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
-        /// DescribeCards接口的同步版本，查询卡片列表信息
-        /// </summary>
-        /// <param name="req">参考<see cref="DescribeCardsRequest"/></param>
-        /// <returns>参考<see cref="DescribeCardsResponse"/>实例</returns>
-        public DescribeCardsResponse DescribeCardsSync(DescribeCardsRequest req)
-        {
-             JsonResponseModel<DescribeCardsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCards");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCardsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 群发短信
         /// </summary>
         /// <param name="req"><see cref="SendMultiSmsRequest"/></param>
@@ -193,26 +133,6 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
-        /// SendMultiSms接口的同步版本，群发短信
-        /// </summary>
-        /// <param name="req">参考<see cref="SendMultiSmsRequest"/></param>
-        /// <returns>参考<see cref="SendMultiSmsResponse"/>实例</returns>
-        public SendMultiSmsResponse SendMultiSmsSync(SendMultiSmsRequest req)
-        {
-             JsonResponseModel<SendMultiSmsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendMultiSms");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMultiSmsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 发送短信息接口
         /// </summary>
         /// <param name="req"><see cref="SendSmsRequest"/></param>
@@ -223,26 +143,6 @@ namespace TencentCloud.Ic.V20190307
              try
              {
                  var strResp = await this.InternalRequest(req, "SendSms");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// SendSms接口的同步版本，发送短信息接口
-        /// </summary>
-        /// <param name="req">参考<see cref="SendSmsRequest"/></param>
-        /// <returns>参考<see cref="SendSmsResponse"/>实例</returns>
-        public SendSmsResponse SendSmsSync(SendSmsRequest req)
-        {
-             JsonResponseModel<SendSmsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendSms");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
              }
              catch (JsonSerializationException e)

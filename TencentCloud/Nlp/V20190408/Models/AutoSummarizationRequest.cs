@@ -31,8 +31,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 指定摘要的长度（默认值为200）
-        /// 注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
+        /// 指定摘要的长度上限（默认值为200）
+        /// 注：为保证摘要的可读性，最终生成的摘要长度会低于指定的长度上限。
         /// </summary>
         [JsonProperty("Length")]
         public ulong? Length{ get; set; }

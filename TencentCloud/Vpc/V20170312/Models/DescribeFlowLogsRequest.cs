@@ -96,6 +96,14 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+        /// <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
+        /// <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +122,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
     {
         
         /// <summary>
-        /// 实例Id，透传入参。
+        /// 实例ID，透传入参。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

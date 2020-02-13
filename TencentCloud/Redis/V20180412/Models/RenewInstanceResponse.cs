@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 交易Id
+        /// 交易ID
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }
