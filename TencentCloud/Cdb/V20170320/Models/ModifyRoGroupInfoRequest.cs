@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// RO 组的实例 ID。
+        /// RO 组的 ID。
         /// </summary>
         [JsonProperty("RoGroupId")]
         public string RoGroupId{ get; set; }

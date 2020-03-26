@@ -25,13 +25,16 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 上下线状态。online 为上线，offline 为下线。
+        /// 操作类型
+        /// online：节点上线
+        /// offline：节点下线
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 操作时间。当该值为 null 时表示无历史状态变更记录。
+        /// 操作类型对应的操作时间
+        /// 当该值为 null 时表示无历史状态变更记录
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Datetime")]

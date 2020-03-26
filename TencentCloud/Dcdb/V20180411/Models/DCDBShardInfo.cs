@@ -165,6 +165,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ShardSlaveZones")]
         public string[] ShardSlaveZones{ get; set; }
 
+        /// <summary>
+        /// CPU核数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +200,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
             this.SetParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
             this.SetParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

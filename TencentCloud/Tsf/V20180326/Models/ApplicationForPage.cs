@@ -94,6 +94,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationRuntimeType")]
         public string ApplicationRuntimeType{ get; set; }
 
+        /// <summary>
+        /// Apigateway的serviceId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApigatewayServiceId")]
+        public string ApigatewayServiceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
             this.SetParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
+            this.SetParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
         }
     }
 }

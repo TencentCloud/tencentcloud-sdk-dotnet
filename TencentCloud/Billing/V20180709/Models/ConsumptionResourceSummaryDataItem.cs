@@ -96,6 +96,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
+        /// <summary>
+        /// 消耗类型
+        /// </summary>
+        [JsonProperty("ConsumptionTypeName")]
+        public string ConsumptionTypeName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayModeName", this.PayModeName);
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
+            this.SetParamSimple(map, prefix + "ConsumptionTypeName", this.ConsumptionTypeName);
         }
     }
 }

@@ -26,18 +26,21 @@ namespace TencentCloud.Iot.V20180123.Models
         
         /// <summary>
         /// 转发至topic
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public TopicAction Topic{ get; set; }
 
         /// <summary>
         /// 转发至第三发
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Service")]
         public ServiceAction Service{ get; set; }
 
         /// <summary>
         /// 转发至第三发Ckafka
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ckafka")]
         public CkafkaAction Ckafka{ get; set; }

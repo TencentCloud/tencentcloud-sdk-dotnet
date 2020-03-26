@@ -30,6 +30,19 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
+        /// <summary>
+        /// 指定Channels字段为可见渠道列表或不可见渠道列表
+        /// 如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
+        /// </summary>
+        [JsonProperty("IsVisible")]
+        public bool? IsVisible{ get; set; }
+
+        /// <summary>
+        /// 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+        /// </summary>
+        [JsonProperty("Channels")]
+        public string[] Channels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +50,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "IsVisible", this.IsVisible);
+            this.SetParamArraySimple(map, prefix + "Channels.", this.Channels);
         }
     }
 }

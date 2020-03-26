@@ -183,6 +183,13 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("GpuType")]
         public string GpuType{ get; set; }
 
+        /// <summary>
+        /// Cls日志主题Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         }
     }
 }

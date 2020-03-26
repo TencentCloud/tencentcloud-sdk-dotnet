@@ -204,6 +204,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
+        /// <summary>
+        /// 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +252,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         }
     }
 }

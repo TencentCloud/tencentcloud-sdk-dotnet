@@ -25,16 +25,16 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 待删除表所在应用实例ID
+        /// 待删除表所在集群ID
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
         /// 待删除表信息列表
         /// </summary>
         [JsonProperty("SelectedTables")]
-        public SelectedTableInfo[] SelectedTables{ get; set; }
+        public SelectedTableInfoNew[] SelectedTables{ get; set; }
 
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         }
     }

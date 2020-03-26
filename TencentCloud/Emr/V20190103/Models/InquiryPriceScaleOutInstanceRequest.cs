@@ -25,52 +25,63 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 时间单位。s:按量用例单位。m:包年包月用例单位
+        /// 扩容的时间单位。取值范围：
+        /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 时间长度。按量用例长度为3600。
+        /// 扩容的时长。需要结合TimeUnit一起使用。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Zone ID
+        /// 实例所属的可用区ID，例如100003。该参数可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/213/15707) 的返回值中的ZoneId字段来获取。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 计费类型
+        /// 实例计费模式。取值范围：
+        /// <li>0：表示按量计费。</li>
+        /// <li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 扩容Core节点个数
+        /// 扩容的Core节点数量。
         /// </summary>
         [JsonProperty("CoreCount")]
         public ulong? CoreCount{ get; set; }
 
         /// <summary>
-        /// 扩容Task节点个数
+        /// 扩容的Task节点数量。
         /// </summary>
         [JsonProperty("TaskCount")]
         public ulong? TaskCount{ get; set; }
 
         /// <summary>
-        /// 货币种类
+        /// 货币种类。取值范围：
+        /// <li>CNY：表示人民币。</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
+
+        /// <summary>
+        /// 扩容的Router节点数量。
+        /// </summary>
+        [JsonProperty("RouterCount")]
+        public ulong? RouterCount{ get; set; }
 
 
         /// <summary>
@@ -86,6 +97,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CoreCount", this.CoreCount);
             this.SetParamSimple(map, prefix + "TaskCount", this.TaskCount);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamSimple(map, prefix + "RouterCount", this.RouterCount);
         }
     }
 }

@@ -63,6 +63,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> na-toronto-1 </li>
         /// <li> na-ashburn-1 </li>
         /// <li> na-ashburn-2 </li>
+        /// <li> ap-nanjing-1 </li>
+        /// <li> ap-nanjing-2 </li>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

@@ -78,6 +78,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
 
+        /// <summary>
+        /// 生命周期挂钩适用场景
+        /// </summary>
+        [JsonProperty("LifecycleTransitionType")]
+        public string LifecycleTransitionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+            this.SetParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
         }
     }
 }

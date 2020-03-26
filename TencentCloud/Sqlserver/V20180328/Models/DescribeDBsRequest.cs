@@ -31,13 +31,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
-        /// 每页记录数，最大为100，默认20
+        /// 分页返回，每页返回的数目，取值为1-100，默认值为20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 页编号，从第0页开始
+        /// 分页返回，页编号，默认值为第0页
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

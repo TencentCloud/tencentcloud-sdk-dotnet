@@ -114,6 +114,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("RaidDescription")]
         public string RaidDescription{ get; set; }
 
+        /// <summary>
+        /// cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "DiskDescription", this.DiskDescription);
             this.SetParamSimple(map, prefix + "NicDescription", this.NicDescription);
             this.SetParamSimple(map, prefix + "RaidDescription", this.RaidDescription);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

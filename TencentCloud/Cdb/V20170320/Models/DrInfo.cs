@@ -49,7 +49,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 实例同步状态
+        /// 实例同步状态。可能的返回值为：
+        /// 0 - 灾备未同步；
+        /// 1 - 灾备同步中；
+        /// 2 - 灾备同步成功；
+        /// 3 - 灾备同步失败；
+        /// 4 - 灾备同步修复中。
         /// </summary>
         [JsonProperty("SyncStatus")]
         public long? SyncStatus{ get; set; }

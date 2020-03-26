@@ -26,24 +26,28 @@ namespace TencentCloud.Iot.V20180123.Models
         
         /// <summary>
         /// 数字类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Number")]
         public NumberData Number{ get; set; }
 
         /// <summary>
         /// 字符串类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("String")]
         public StringData String{ get; set; }
 
         /// <summary>
         /// 枚举类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Enum")]
         public EnumData Enum{ get; set; }
 
         /// <summary>
         /// 布尔类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bool")]
         public BoolData Bool{ get; set; }

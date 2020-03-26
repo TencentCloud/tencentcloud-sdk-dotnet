@@ -49,40 +49,46 @@ namespace TencentCloud.Bm.V20180423.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// CpuId，自定义机型时需传入
+        /// CPU型号ID，查询自定义机型时必填
         /// </summary>
         [JsonProperty("CpuId")]
         public ulong? CpuId{ get; set; }
 
         /// <summary>
-        /// 硬盘类型，自定义机型时需传入
+        /// 内存大小，单位为G，查询自定义机型时必填
         /// </summary>
-        [JsonProperty("DiskType")]
-        public string DiskType{ get; set; }
+        [JsonProperty("MemSize")]
+        public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// 单块硬盘大小，自定义机型时需传入
+        /// 是否有RAID卡，取值：1(有) 0(无)，查询自定义机型时必填
         /// </summary>
-        [JsonProperty("DiskSize")]
-        public ulong? DiskSize{ get; set; }
+        [JsonProperty("ContainRaidCard")]
+        public ulong? ContainRaidCard{ get; set; }
 
         /// <summary>
-        /// 硬盘数量，自定义机型时需传入
+        /// 系统盘类型ID，查询自定义机型时必填
         /// </summary>
-        [JsonProperty("DiskNum")]
-        public ulong? DiskNum{ get; set; }
+        [JsonProperty("SystemDiskTypeId")]
+        public ulong? SystemDiskTypeId{ get; set; }
 
         /// <summary>
-        /// 内存总大小，自定义机型时需传入
+        /// 系统盘数量，查询自定义机型时必填
         /// </summary>
-        [JsonProperty("Mem")]
-        public ulong? Mem{ get; set; }
+        [JsonProperty("SystemDiskCount")]
+        public ulong? SystemDiskCount{ get; set; }
 
         /// <summary>
-        /// 是否支持raid，自定义机型时需传入
+        /// 数据盘类型ID，查询自定义机型时可填
         /// </summary>
-        [JsonProperty("HaveRaidCard")]
-        public ulong? HaveRaidCard{ get; set; }
+        [JsonProperty("DataDiskTypeId")]
+        public ulong? DataDiskTypeId{ get; set; }
+
+        /// <summary>
+        /// 数据盘数量，查询自定义机型时可填
+        /// </summary>
+        [JsonProperty("DataDiskCount")]
+        public ulong? DataDiskCount{ get; set; }
 
 
         /// <summary>
@@ -95,11 +101,12 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "CpuId", this.CpuId);
-            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
-            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
-            this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
-            this.SetParamSimple(map, prefix + "Mem", this.Mem);
-            this.SetParamSimple(map, prefix + "HaveRaidCard", this.HaveRaidCard);
+            this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "ContainRaidCard", this.ContainRaidCard);
+            this.SetParamSimple(map, prefix + "SystemDiskTypeId", this.SystemDiskTypeId);
+            this.SetParamSimple(map, prefix + "SystemDiskCount", this.SystemDiskCount);
+            this.SetParamSimple(map, prefix + "DataDiskTypeId", this.DataDiskTypeId);
+            this.SetParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
         }
     }
 }

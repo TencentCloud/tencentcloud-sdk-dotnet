@@ -26,49 +26,42 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
         /// 容器类型，例如 m4a，mp4 等。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
         /// 视频流码率平均值与音频流码率平均值之和，单位：bps。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
         /// 视频流高度的最大值，单位：px。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
         /// 视频流宽度的最大值，单位：px。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
         /// 视频时长，单位：秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
         /// 视频拍摄时的选择角度，单位：度。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
@@ -89,14 +82,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频时长，单位：秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoDuration")]
         public float? VideoDuration{ get; set; }
 
         /// <summary>
         /// 音频时长，单位：秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }

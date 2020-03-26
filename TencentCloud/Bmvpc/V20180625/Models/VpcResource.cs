@@ -144,6 +144,27 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("IsOld")]
         public bool? IsOld{ get; set; }
 
+        /// <summary>
+        /// 云联网服务个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CcnServiceNum")]
+        public ulong? CcnServiceNum{ get; set; }
+
+        /// <summary>
+        /// VPC允许创建的对等连接个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcPeerLimitToAllRegion")]
+        public ulong? VpcPeerLimitToAllRegion{ get; set; }
+
+        /// <summary>
+        /// VPC允许创建的同地域的对等连接的个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcPeerLimitToSameRegion")]
+        public ulong? VpcPeerLimitToSameRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +191,9 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "IsOld", this.IsOld);
+            this.SetParamSimple(map, prefix + "CcnServiceNum", this.CcnServiceNum);
+            this.SetParamSimple(map, prefix + "VpcPeerLimitToAllRegion", this.VpcPeerLimitToAllRegion);
+            this.SetParamSimple(map, prefix + "VpcPeerLimitToSameRegion", this.VpcPeerLimitToSameRegion);
         }
     }
 }

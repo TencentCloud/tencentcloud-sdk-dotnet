@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
+        /// 含义跟 SQL 查询的 Limit 一致，表示本次最多获取 Limit 个元素。缺省值为10，最大值为200
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
+        /// <summary>
+        /// 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
+        /// </summary>
+        [JsonProperty("KeyUsage")]
+        public string KeyUsage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeyState", this.KeyState);
             this.SetParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
+            this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         }
     }
 }

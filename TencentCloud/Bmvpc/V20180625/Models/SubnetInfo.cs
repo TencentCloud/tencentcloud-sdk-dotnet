@@ -67,7 +67,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 可用区ID。
+        /// 子网可用区ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
@@ -132,6 +132,31 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("IsSmartNic")]
         public ulong? IsSmartNic{ get; set; }
 
+        /// <summary>
+        /// 子网可用区。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// VPC所在可用区ID
+        /// </summary>
+        [JsonProperty("VpcZoneId")]
+        public ulong? VpcZoneId{ get; set; }
+
+        /// <summary>
+        /// VPC所在可用区
+        /// </summary>
+        [JsonProperty("VpcZone")]
+        public string VpcZone{ get; set; }
+
+        /// <summary>
+        /// 是否开启广播，关闭为0，开启为1。
+        /// </summary>
+        [JsonProperty("BroadcastFlag")]
+        public ulong? BroadcastFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +181,10 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamSimple(map, prefix + "TotalIpNum", this.TotalIpNum);
             this.SetParamSimple(map, prefix + "SubnetCreateTime", this.SubnetCreateTime);
             this.SetParamSimple(map, prefix + "IsSmartNic", this.IsSmartNic);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "VpcZoneId", this.VpcZoneId);
+            this.SetParamSimple(map, prefix + "VpcZone", this.VpcZone);
+            this.SetParamSimple(map, prefix + "BroadcastFlag", this.BroadcastFlag);
         }
     }
 }

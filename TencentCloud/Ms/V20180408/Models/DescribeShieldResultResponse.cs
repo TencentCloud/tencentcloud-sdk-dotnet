@@ -25,7 +25,7 @@ namespace TencentCloud.Ms.V20180408.Models
     {
         
         /// <summary>
-        /// 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+        /// 任务状态: 0-请返回,1-已完成,2-处理中,3-处理出错,4-处理超时
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong? TaskStatus{ get; set; }

@@ -96,6 +96,12 @@ namespace TencentCloud.Bmlb.V20180625.Models
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
+        /// <summary>
+        /// 转发协议。当监听器Protocol为https时并且SslMode为1或2时，有意义。可选的值为0：https，1：spdy，2：http2，3：spdy+http2。
+        /// </summary>
+        [JsonProperty("ForwardProtocol")]
+        public long? ForwardProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
             this.SetParamSimple(map, prefix + "CertCaName", this.CertCaName);
             this.SetParamSimple(map, prefix + "CertCaContent", this.CertCaContent);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
         }
     }
 }

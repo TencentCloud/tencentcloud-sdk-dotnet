@@ -25,13 +25,13 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 拨测结果查询id。接下来可以使用查询拨测是否能够成功，验证能否通过。
+        /// 拨测结果查询ID。接下来可以使用查询拨测是否能够成功，验证能否通过。
         /// </summary>
         [JsonProperty("ResultId")]
         public ulong? ResultId{ get; set; }
 
         /// <summary>
-        /// 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+        /// 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

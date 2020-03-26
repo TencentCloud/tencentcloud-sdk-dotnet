@@ -90,6 +90,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
+        /// <summary>
+        /// 计算环境资源来源。<br>BATCH_CREATED：由批量计算创建的实例资源。<br>
+        /// USER_ATTACHED：用户添加到计算环境中的实例资源。
+        /// </summary>
+        [JsonProperty("ResourceOrigin")]
+        public string ResourceOrigin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ResourceOrigin", this.ResourceOrigin);
         }
     }
 }

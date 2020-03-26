@@ -36,6 +36,18 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 伸缩组最大节点数
+        /// </summary>
+        [JsonProperty("MaxSize")]
+        public ulong? MaxSize{ get; set; }
+
+        /// <summary>
+        /// 伸缩组最小节点数
+        /// </summary>
+        [JsonProperty("MinSize")]
+        public ulong? MinSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Tiems.V20190416.Models
         {
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
+            this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
         }
     }
 }

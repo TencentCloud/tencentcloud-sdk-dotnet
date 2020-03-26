@@ -42,7 +42,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? ChannelNum{ get; set; }
 
         /// <summary>
-        /// 识别结果文本编码方式。0：UTF-8。
+        /// 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：仅支持16k中文引擎，含识别结果详情(词时间戳列表，一般用于生成字幕场景)。
         /// </summary>
         [JsonProperty("ResTextFormat")]
         public ulong? ResTextFormat{ get; set; }
@@ -83,6 +83,18 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("HotwordId")]
         public string HotwordId{ get; set; }
 
+        /// <summary>
+        /// 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+        /// </summary>
+        [JsonProperty("FilterDirty")]
+        public long? FilterDirty{ get; set; }
+
+        /// <summary>
+        /// 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+        /// </summary>
+        [JsonProperty("FilterModal")]
+        public long? FilterModal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +110,8 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "DataLen", this.DataLen);
             this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
+            this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+            this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
         }
     }
 }

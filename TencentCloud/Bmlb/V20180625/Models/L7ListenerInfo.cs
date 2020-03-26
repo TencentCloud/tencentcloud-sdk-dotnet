@@ -96,6 +96,12 @@ namespace TencentCloud.Bmlb.V20180625.Models
         [JsonProperty("RuleSet")]
         public L7ListenerInfoRule[] RuleSet{ get; set; }
 
+        /// <summary>
+        /// https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
+        /// </summary>
+        [JsonProperty("ForwardProtocol")]
+        public long? ForwardProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AddTimestamp", this.AddTimestamp);
             this.SetParamArrayObj(map, prefix + "RuleSet.", this.RuleSet);
+            this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
         }
     }
 }

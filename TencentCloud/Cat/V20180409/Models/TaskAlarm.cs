@@ -25,7 +25,7 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务Id
+        /// 任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 拨测任务的Url
+        /// 拨测任务的URL
         /// </summary>
         [JsonProperty("CgiUrl")]
         public string CgiUrl{ get; set; }

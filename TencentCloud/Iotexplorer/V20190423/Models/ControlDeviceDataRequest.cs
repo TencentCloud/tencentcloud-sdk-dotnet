@@ -37,22 +37,28 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 属性数据
+        /// 属性数据, JSON格式字符串, 注意字段需要在物模型属性里定义
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }
 
         /// <summary>
-        /// 请求类型
+        /// 请求类型 , 不填该参数或者 desired 表示下发属性给设备,  reported 表示模拟设备上报属性
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// 设备ID，该字段有值将代替 ProductId/DeviceName
+        /// 设备ID，该字段有值将代替 ProductId/DeviceName , 通常情况不需要填写
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
+
+        /// <summary>
+        /// 上报数据UNIX时间戳(毫秒), 仅对Method:reported有效
+        /// </summary>
+        [JsonProperty("DataTimestamp")]
+        public long? DataTimestamp{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "DataTimestamp", this.DataTimestamp);
         }
     }
 }

@@ -48,6 +48,24 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("MaxClusterServiceNum")]
         public ulong? MaxClusterServiceNum{ get; set; }
 
+        /// <summary>
+        /// 用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
+        /// </summary>
+        [JsonProperty("ServiceCIDR")]
+        public string ServiceCIDR{ get; set; }
+
+        /// <summary>
+        /// VPC-CNI网络模式下，弹性网卡的子网Id。
+        /// </summary>
+        [JsonProperty("EniSubnetIds")]
+        public string[] EniSubnetIds{ get; set; }
+
+        /// <summary>
+        /// VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
+        /// </summary>
+        [JsonProperty("ClaimExpiredSeconds")]
+        public long? ClaimExpiredSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "IgnoreClusterCIDRConflict", this.IgnoreClusterCIDRConflict);
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
             this.SetParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
+            this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+            this.SetParamArraySimple(map, prefix + "EniSubnetIds.", this.EniSubnetIds);
+            this.SetParamSimple(map, prefix + "ClaimExpiredSeconds", this.ClaimExpiredSeconds);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Bizlive.V20190313.Models
     {
         
         /// <summary>
-        /// 结束时间，北京时间，
+        /// 结束时间，北京时间，格式：2019-04-28 10:36:00
         /// 结束时间 和 开始时间  必须在同一天内。
         /// </summary>
         [JsonProperty("EndTime")]
@@ -38,7 +38,7 @@ namespace TencentCloud.Bizlive.V20190313.Models
         public string PlayDomain{ get; set; }
 
         /// <summary>
-        /// 开始时间，北京时间，
+        /// 开始时间，北京时间，格式：2019-04-28 10:36:00
         /// 当前时间 和 开始时间 间隔不超过30天。
         /// </summary>
         [JsonProperty("StartTime")]

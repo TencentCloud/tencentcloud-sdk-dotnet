@@ -25,28 +25,30 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 刊例价
+        /// 原价，单位为元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// 折扣价格
+        /// 折扣价，单位为元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountCost")]
         public string DiscountCost{ get; set; }
 
         /// <summary>
-        /// 单位
+        /// 扩容的时间单位。取值范围：
+        /// <li>s：表示秒。</li>
+        /// <li>m：表示月份。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 询价配置
+        /// 询价的节点规格。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PriceSpec")]

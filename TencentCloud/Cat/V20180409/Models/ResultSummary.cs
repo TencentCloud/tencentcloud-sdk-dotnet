@@ -31,7 +31,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string LogTime{ get; set; }
 
         /// <summary>
-        /// 任务Id
+        /// 任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

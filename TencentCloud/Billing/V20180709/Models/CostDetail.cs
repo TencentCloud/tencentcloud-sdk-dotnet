@@ -113,7 +113,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 组件明细
         /// </summary>
         [JsonProperty("ComponentSet")]
-        public CostComponentSet ComponentSet{ get; set; }
+        public CostComponentSet[] ComponentSet{ get; set; }
 
         /// <summary>
         /// 产品代码
@@ -141,7 +141,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BillId", this.BillId);
             this.SetParamSimple(map, prefix + "FeeBeginTime", this.FeeBeginTime);
             this.SetParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
-            this.SetParamObj(map, prefix + "ComponentSet.", this.ComponentSet);
+            this.SetParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
         }
     }

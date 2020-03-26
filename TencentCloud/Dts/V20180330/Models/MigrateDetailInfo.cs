@@ -49,13 +49,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public string CurrentStepProgress{ get; set; }
 
         /// <summary>
-        /// 主从差距，MB
+        /// 主从差距，MB；在增量同步阶段有效，目前支持产品为：redis和mysql
         /// </summary>
         [JsonProperty("MasterSlaveDistance")]
         public long? MasterSlaveDistance{ get; set; }
 
         /// <summary>
-        /// 主从差距，秒
+        /// 主从差距，秒；在增量同步阶段有效，目前支持产品为：mysql
         /// </summary>
         [JsonProperty("SecondsBehindMaster")]
         public long? SecondsBehindMaster{ get; set; }

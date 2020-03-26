@@ -158,6 +158,34 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 跨可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
+        /// <summary>
+        /// kafka版本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// 最大分组数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxGroupNum")]
+        public long? MaxGroupNum{ get; set; }
+
+        /// <summary>
+        /// 售卖类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cvm")]
+        public long? Cvm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +214,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "CreatedTopics", this.CreatedTopics);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "MaxGroupNum", this.MaxGroupNum);
+            this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
         }
     }
 }

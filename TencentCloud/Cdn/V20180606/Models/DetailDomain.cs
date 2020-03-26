@@ -25,257 +25,279 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 域名ID。
+        /// 域名 ID
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 腾讯云账号ID。
+        /// 腾讯云账号ID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 加速域名。
+        /// 加速域名
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名CName。
+        /// 域名对应的 CNAME 地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// 域名状态，pending，rejected，processing， online，offline，deleted分别表示审核中，审核未通过，审核通过部署中，已开启，已关闭，已删除。
+        /// 加速服务状态
+        /// rejected：域名审核未通过，域名备案过期/被注销导致
+        /// processing：部署中
+        /// online：已启动
+        /// offline：已关闭
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID，可前往腾讯云项目管理页面查看
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 域名业务类型，web，download，media分别表示静态加速，下载加速和流媒体加速。
+        /// 域名业务类型
+        /// web：静态加速
+        /// download：下载加速
+        /// media：流媒体点播加速
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 域名创建时间。
+        /// 域名创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 域名更新时间。
+        /// 域名更新时间
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 源站配置。
+        /// 源站配置
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// IP黑白名单配置。
+        /// IP 黑白名单配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpFilter")]
         public IpFilter IpFilter{ get; set; }
 
         /// <summary>
-        /// IP限频配置。
+        /// IP 访问限频配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpFreqLimit")]
         public IpFreqLimit IpFreqLimit{ get; set; }
 
         /// <summary>
-        /// 状态码缓存配置。
+        /// 状态码缓存配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StatusCodeCache")]
         public StatusCodeCache StatusCodeCache{ get; set; }
 
         /// <summary>
-        /// 智能压缩配置。
+        /// 智能压缩配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Compression")]
         public Compression Compression{ get; set; }
 
         /// <summary>
-        /// 带宽封顶配置。
+        /// 带宽封顶配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthAlert")]
         public BandwidthAlert BandwidthAlert{ get; set; }
 
         /// <summary>
-        /// Range回源配置。
+        /// Range 回源配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RangeOriginPull")]
         public RangeOriginPull RangeOriginPull{ get; set; }
 
         /// <summary>
-        /// 301和302自动回源跟随配置。
+        /// 301/302 回源自动跟随配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FollowRedirect")]
         public FollowRedirect FollowRedirect{ get; set; }
 
         /// <summary>
-        /// 错误码重定向配置。
+        /// 自定义错误页面配置（功能灰度中，敬请期待）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorPage")]
         public ErrorPage ErrorPage{ get; set; }
 
         /// <summary>
-        /// 回源请求头部配置。
+        /// 自定义请求头部配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestHeader")]
         public RequestHeader RequestHeader{ get; set; }
 
         /// <summary>
-        /// 源站响应头部配置。
+        /// 自定义响应头部配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseHeader")]
         public ResponseHeader ResponseHeader{ get; set; }
 
         /// <summary>
-        /// 下载速度配置。
+        /// 单链接下行限速配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownstreamCapping")]
         public DownstreamCapping DownstreamCapping{ get; set; }
 
         /// <summary>
-        /// 节点缓存配置。
+        /// 带参/不带参缓存配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CacheKey")]
         public CacheKey CacheKey{ get; set; }
 
         /// <summary>
-        /// 遵循源站缓存头部配置。
+        /// 源站头部缓存配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResponseHeaderCache")]
         public ResponseHeaderCache ResponseHeaderCache{ get; set; }
 
         /// <summary>
-        /// 视频拖拽配置。
+        /// 视频拖拽配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoSeek")]
         public VideoSeek VideoSeek{ get; set; }
 
         /// <summary>
-        /// 缓存规则配置。
+        /// 节点缓存过期规则配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cache")]
         public Cache Cache{ get; set; }
 
         /// <summary>
-        /// 跨国优化配置。
+        /// 跨国链路优化配置（功能灰度中，敬请期待）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginPullOptimization")]
         public OriginPullOptimization OriginPullOptimization{ get; set; }
 
         /// <summary>
-        /// Https配置。
+        /// Https 加速相关配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// 时间戳防盗链配置。
+        /// 时间戳防盗链配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Authentication")]
         public Authentication Authentication{ get; set; }
 
         /// <summary>
-        /// seo优化配置。
+        /// SEO 优化配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Seo")]
         public Seo Seo{ get; set; }
 
         /// <summary>
-        /// 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping分别表示。
+        /// 域名封禁状态
+        /// normal：正常状态
+        /// overdue：账号欠费导致域名关闭，充值完成后可自行启动加速服务
+        /// malicious：域名出现恶意行为，强制关闭加速服务
+        /// ddos：域名被大规模 DDoS 攻击，关闭加速服务
+        /// idle：域名超过 90 天内无任何操作、数据产生，判定为不活跃域名自动关闭加速服务，可自行启动加速服务
+        /// unlicensed：域名未备案/备案注销，自动关闭加速服务，备案完成后可自行启动加速服务
+        /// capping：触发配置的带宽阈值上限
+        /// readonly：域名存在特殊配置，被锁定
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Disable")]
         public string Disable{ get; set; }
 
         /// <summary>
-        /// 访问协议强制跳转配置。
+        /// 访问协议强制跳转配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// 防盗链配置。
+        /// Referer 防盗链配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Referer")]
         public Referer Referer{ get; set; }
 
         /// <summary>
-        /// 浏览器缓存规则配置。
+        /// 浏览器缓存过期规则配置（功能灰度中，敬请期待）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxAge")]
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// Ipv6配置。
+        /// Ipv6 配置（功能灰度中，敬请期待）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// 是否兼容旧版本配置。
+        /// 是否兼容旧版本配置（内部兼容性字段）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Compatibility")]
         public Compatibility Compatibility{ get; set; }
 
         /// <summary>
-        /// 分地区特殊配置。
+        /// 区域特殊配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecificConfig")]
         public SpecificConfig SpecificConfig{ get; set; }
 
         /// <summary>
-        /// 加速区域，mainland，overseas或global。
+        /// 加速区域
+        /// mainland：中国境内加速
+        /// overseas：中国境外加速
+        /// global：全球加速
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 域名锁定状态，normal，mainland，overseas或global，分别表示未被锁定，国内锁定，海外锁定或全球锁定。
+        /// 域名锁定状态
+        /// normal：未锁定
+        /// mainland：中国境内锁定
+        /// overseas：中国境外锁定
+        /// global：全球锁定
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Readonly")]
@@ -287,6 +309,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("OriginPullTimeout")]
         public OriginPullTimeout OriginPullTimeout{ get; set; }
+
+        /// <summary>
+        /// 回源S3鉴权配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AwsPrivateAccess")]
+        public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
 
         /// <summary>
@@ -333,6 +362,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Readonly", this.Readonly);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+            this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         }
     }
 }

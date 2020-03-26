@@ -49,7 +49,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 查询条件，传'all'则查询所有与规则绑定的主机信息。
+        /// 查询条件，传'all'则查询所有与规则绑定的主机信息。如果为all时，DomainId和LocationId参数没有意义不必传入，否则DomainId和LocationId参数必须传入。
         /// </summary>
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }

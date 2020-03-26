@@ -31,7 +31,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string CatTypeName{ get; set; }
 
         /// <summary>
-        /// 拨测的url  例如：www.qq.com (url域名解析需要能解析出具体的ip)
+        /// 拨测的URL， 例如：www.qq.com (URL域名解析需要能解析出具体的IP)
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 拨测分组id，体现本拨测任务要采用那些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
+        /// 拨测分组ID，体现本拨测任务要采用哪些运营商作为拨测源。一般可直接填写本用户的默认拨测分组。参见：DescribeAgentGroups 接口，本参数使用返回结果里的GroupId的值。注意： Type为0时，AgentGroupId为必填
         /// </summary>
         [JsonProperty("AgentGroupId")]
         public ulong? AgentGroupId{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? IsHeader{ get; set; }
 
         /// <summary>
-        /// url中含有https时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
+        /// URL中含有"https"时有用。缺省为SSLv23。需要为 TLSv1_2, TLSv1_1, TLSv1, SSLv2, SSLv23, SSLv3 之一
         /// </summary>
         [JsonProperty("SslVer")]
         public string SslVer{ get; set; }
 
         /// <summary>
-        /// POST 请求数据。空字符串表示非POST请求
+        /// POST请求数据。空字符串表示非POST请求
         /// </summary>
         [JsonProperty("PostData")]
         public string PostData{ get; set; }
 
         /// <summary>
-        /// 用户agent 信息
+        /// 用户Agent信息
         /// </summary>
         [JsonProperty("UserAgent")]
         public string UserAgent{ get; set; }
@@ -97,25 +97,25 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? CheckType{ get; set; }
 
         /// <summary>
-        /// 需要设置的cookie信息
+        /// 需要设置的Cookie信息
         /// </summary>
         [JsonProperty("Cookie")]
         public string Cookie{ get; set; }
 
         /// <summary>
-        /// 任务号。用于验证且修改任务时传入原任务号
+        /// 任务ID，用于验证且修改任务时传入原任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 登陆服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测。
+        /// 登录服务器的账号。如果为空字符串，表示不用校验用户密码。只做简单连接服务器的拨测
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 登陆服务器的密码
+        /// 登录服务器的密码
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? ReqDataType{ get; set; }
 
         /// <summary>
-        /// 发起tcp, udp请求的协议请求数据
+        /// 发起TCP, UDP请求的协议请求数据
         /// </summary>
         [JsonProperty("ReqData")]
         public string ReqData{ get; set; }
@@ -139,19 +139,19 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? RespDataType{ get; set; }
 
         /// <summary>
-        /// 预期的udp请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
+        /// 预期的UDP请求的回应数据。字符串型，只需要返回的结果里包含本字符串算校验通过。二进制型，则需要严格等于才算通过
         /// </summary>
         [JsonProperty("RespData")]
         public string RespData{ get; set; }
 
         /// <summary>
-        /// 目的dns服务器  可以为空字符串
+        /// 目的DNS服务器  可以为空字符串
         /// </summary>
         [JsonProperty("DnsSvr")]
         public string DnsSvr{ get; set; }
 
         /// <summary>
-        /// 需要检验是否在dns ip列表的ip。可以为空字符串，表示不校验
+        /// 需要检验是否在DNS IP列表的IP。可以为空字符串，表示不校验
         /// </summary>
         [JsonProperty("DnsCheckIp")]
         public string DnsCheckIp{ get; set; }
@@ -163,13 +163,13 @@ namespace TencentCloud.Cat.V20180409.Models
         public string DnsQueryType{ get; set; }
 
         /// <summary>
-        /// 是否使用安全链接ssl  0 不使用，1 使用
+        /// 是否使用安全链接SSL， 0 不使用，1 使用
         /// </summary>
         [JsonProperty("UseSecConn")]
         public ulong? UseSecConn{ get; set; }
 
         /// <summary>
-        /// ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+        /// FTP登录验证方式， 0 不验证 ， 1 匿名登录， 2 需要身份验证
         /// </summary>
         [JsonProperty("NeedAuth")]
         public ulong? NeedAuth{ get; set; }

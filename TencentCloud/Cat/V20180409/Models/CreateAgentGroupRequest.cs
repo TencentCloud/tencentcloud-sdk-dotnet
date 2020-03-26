@@ -31,13 +31,13 @@ namespace TencentCloud.Cat.V20180409.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 是否为默认分组，取值可为 0 或 1
+        /// 是否为默认分组，取值可为 0 或 1。取 1 时表示设置为默认分组
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgentList 的返回结果。
+        /// Province, Isp 需要成对地进行选择。参数对的取值范围。参见：DescribeAgents 的返回结果。
         /// </summary>
         [JsonProperty("Agents")]
         public CatAgent[] Agents{ get; set; }

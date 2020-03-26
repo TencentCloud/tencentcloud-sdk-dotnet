@@ -84,6 +84,12 @@ namespace TencentCloud.Captcha.V20190722.Models
         [JsonProperty("Imei")]
         public string Imei{ get; set; }
 
+        /// <summary>
+        /// 是否返回前端获取验证码时间，取值1：需要返回
+        /// </summary>
+        [JsonProperty("NeedGetCaptchaTime")]
+        public long? NeedGetCaptchaTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Captcha.V20190722.Models
             this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
             this.SetParamSimple(map, prefix + "MacAddress", this.MacAddress);
             this.SetParamSimple(map, prefix + "Imei", this.Imei);
+            this.SetParamSimple(map, prefix + "NeedGetCaptchaTime", this.NeedGetCaptchaTime);
         }
     }
 }

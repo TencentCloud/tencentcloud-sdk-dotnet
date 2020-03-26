@@ -73,6 +73,26 @@ namespace TencentCloud.Wss.V20180426
         }
 
         /// <summary>
+        /// 本接口（DeleteCert）用于删除证书。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCertRequest"/></param>
+        /// <returns><see cref="DeleteCertResponse"/></returns>
+        public DeleteCertResponse DeleteCertSync(DeleteCertRequest req)
+        {
+             JsonResponseModel<DeleteCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeCertList)用于获取证书列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertListRequest"/></param>
@@ -93,6 +113,26 @@ namespace TencentCloud.Wss.V20180426
         }
 
         /// <summary>
+        /// 本接口(DescribeCertList)用于获取证书列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCertListRequest"/></param>
+        /// <returns><see cref="DescribeCertListResponse"/></returns>
+        public DescribeCertListResponse DescribeCertListSync(DescribeCertListRequest req)
+        {
+             JsonResponseModel<DescribeCertListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCertList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UploadCert）用于上传证书。
         /// </summary>
         /// <param name="req"><see cref="UploadCertRequest"/></param>
@@ -103,6 +143,26 @@ namespace TencentCloud.Wss.V20180426
              try
              {
                  var strResp = await this.InternalRequest(req, "UploadCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UploadCert）用于上传证书。
+        /// </summary>
+        /// <param name="req"><see cref="UploadCertRequest"/></param>
+        /// <returns><see cref="UploadCertResponse"/></returns>
+        public UploadCertResponse UploadCertSync(UploadCertRequest req)
+        {
+             JsonResponseModel<UploadCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)

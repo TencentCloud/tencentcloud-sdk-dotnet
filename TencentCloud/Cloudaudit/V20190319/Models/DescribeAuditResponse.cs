@@ -67,6 +67,30 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public long? IsEnableCmqNotify{ get; set; }
 
         /// <summary>
+        /// 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+        /// </summary>
+        [JsonProperty("IsEnableKmsEncry")]
+        public long? IsEnableKmsEncry{ get; set; }
+
+        /// <summary>
+        /// CMK的全局唯一标识符。
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// CMK别名。
+        /// </summary>
+        [JsonProperty("KmsAlias")]
+        public string KmsAlias{ get; set; }
+
+        /// <summary>
+        /// kms地域。
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        public string KmsRegion{ get; set; }
+
+        /// <summary>
         /// 日志前缀。
         /// </summary>
         [JsonProperty("LogFilePrefix")]
@@ -97,6 +121,10 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
             this.SetParamSimple(map, prefix + "CosRegion", this.CosRegion);
             this.SetParamSimple(map, prefix + "IsEnableCmqNotify", this.IsEnableCmqNotify);
+            this.SetParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KmsAlias", this.KmsAlias);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
             this.SetParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
             this.SetParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -32,9 +32,16 @@ namespace TencentCloud.Hcm.V20181106.Models
 
         /// <summary>
         /// 识别出的算式信息；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]
         public ItemInfo[] Items{ get; set; }
+
+        /// <summary>
+        /// 任务 id，用于查询接口
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +57,7 @@ namespace TencentCloud.Hcm.V20181106.Models
         {
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -38,7 +38,6 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 20006：涉毒违法
         /// 20007：谩骂 
         /// 24001：暴恐
-        /// 21000：综合
         /// 20105：广告引流
         /// </summary>
         [JsonProperty("EvilType")]
@@ -52,6 +51,12 @@ namespace TencentCloud.Cms.V20190321.Models
         [JsonProperty("Label")]
         public ulong? Label{ get; set; }
 
+        /// <summary>
+        /// 测试修改参数
+        /// </summary>
+        [JsonProperty("Test")]
+        public string Test{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +66,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamArraySimple(map, prefix + "Contents.", this.Contents);
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
             this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "Test", this.Test);
         }
     }
 }

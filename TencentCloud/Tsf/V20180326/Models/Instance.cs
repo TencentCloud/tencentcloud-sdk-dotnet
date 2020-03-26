@@ -220,6 +220,62 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("OperationState")]
         public long? OperationState{ get; set; }
 
+        /// <summary>
+        /// NamespaceId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
+
+        /// <summary>
+        /// InstanceZoneId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceZoneId")]
+        public string InstanceZoneId{ get; set; }
+
+        /// <summary>
+        /// InstanceImportMode
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceImportMode")]
+        public string InstanceImportMode{ get; set; }
+
+        /// <summary>
+        /// ApplicationType
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationType")]
+        public string ApplicationType{ get; set; }
+
+        /// <summary>
+        /// ApplicationResourceType
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationResourceType")]
+        public string ApplicationResourceType{ get; set; }
+
+        /// <summary>
+        /// ServiceSidecarStatus
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceSidecarStatus")]
+        public string ServiceSidecarStatus{ get; set; }
+
+        /// <summary>
+        /// GroupName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// NamespaceName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NamespaceName")]
+        public string NamespaceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +310,14 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RestrictState", this.RestrictState);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "OperationState", this.OperationState);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "InstanceZoneId", this.InstanceZoneId);
+            this.SetParamSimple(map, prefix + "InstanceImportMode", this.InstanceImportMode);
+            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
+            this.SetParamSimple(map, prefix + "ServiceSidecarStatus", this.ServiceSidecarStatus);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         }
     }
 }

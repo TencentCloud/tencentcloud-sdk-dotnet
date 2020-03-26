@@ -126,6 +126,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public bool? CanSetDefault{ get; set; }
 
         /// <summary>
+        /// 是否且规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsUnionRule")]
+        public long? IsUnionRule{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -153,6 +160,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "Callback.", this.Callback);
             this.SetParamObj(map, prefix + "ConditionsTemp.", this.ConditionsTemp);
             this.SetParamSimple(map, prefix + "CanSetDefault", this.CanSetDefault);
+            this.SetParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

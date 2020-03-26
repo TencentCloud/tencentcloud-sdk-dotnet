@@ -205,6 +205,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
+        /// <summary>
+        /// 商品名称代码
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
+        /// <summary>
+        /// 子商品名称代码
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// 区域ID
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public long? RegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +259,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

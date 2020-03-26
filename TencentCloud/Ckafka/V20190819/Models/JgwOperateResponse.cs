@@ -36,6 +36,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ReturnMessage")]
         public string ReturnMessage{ get; set; }
 
+        /// <summary>
+        /// 操作型返回的Data数据,可能有flowId等
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Data")]
+        public OperateResponseData Data{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
             this.SetParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
         }
     }
 }

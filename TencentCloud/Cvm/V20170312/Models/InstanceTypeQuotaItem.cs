@@ -97,6 +97,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Price")]
         public ItemPrice Price{ get; set; }
 
+        /// <summary>
+        /// 售罄原因。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SoldOutReason")]
+        public string SoldOutReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +122,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "LocalDiskTypeList.", this.LocalDiskTypeList);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Price.", this.Price);
+            this.SetParamSimple(map, prefix + "SoldOutReason", this.SoldOutReason);
         }
     }
 }

@@ -49,22 +49,22 @@ namespace TencentCloud.Ds.V20180523.Models
         public string AccountResId{ get; set; }
 
         /// <summary>
-        /// 授权时间，格式为年月日时分秒，例20160801095509
+        /// 签署关键字，偏移坐标原点为关键字中心
+        /// </summary>
+        [JsonProperty("SignKeyword")]
+        public SignKeyword SignKeyword{ get; set; }
+
+        /// <summary>
+        /// 授权时间（由平台自动填充）
         /// </summary>
         [JsonProperty("AuthorizationTime")]
         public string AuthorizationTime{ get; set; }
 
         /// <summary>
-        /// 授权IP地址
+        /// 授权IP地址（由平台自动填充）
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }
-
-        /// <summary>
-        /// 签署关键字，偏移坐标原点为关键字中心
-        /// </summary>
-        [JsonProperty("SignKeyword")]
-        public SignKeyword SignKeyword{ get; set; }
 
         /// <summary>
         /// 签章ID
@@ -94,9 +94,9 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "ContractResId", this.ContractResId);
             this.SetParamSimple(map, prefix + "AccountResId", this.AccountResId);
+            this.SetParamObj(map, prefix + "SignKeyword.", this.SignKeyword);
             this.SetParamSimple(map, prefix + "AuthorizationTime", this.AuthorizationTime);
             this.SetParamSimple(map, prefix + "Position", this.Position);
-            this.SetParamObj(map, prefix + "SignKeyword.", this.SignKeyword);
             this.SetParamSimple(map, prefix + "SealResId", this.SealResId);
             this.SetParamSimple(map, prefix + "CertType", this.CertType);
             this.SetParamSimple(map, prefix + "ImageData", this.ImageData);

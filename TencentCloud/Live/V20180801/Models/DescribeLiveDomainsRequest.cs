@@ -25,37 +25,37 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 域名状态过滤。0-停用，1-启用
+        /// 域名状态过滤。0-停用，1-启用。
         /// </summary>
         [JsonProperty("DomainStatus")]
         public ulong? DomainStatus{ get; set; }
 
         /// <summary>
-        /// 域名类型过滤。0-推流，1-播放
+        /// 域名类型过滤。0-推流，1-播放。
         /// </summary>
         [JsonProperty("DomainType")]
         public ulong? DomainType{ get; set; }
 
         /// <summary>
-        /// 分页大小，范围：10~100。默认10
+        /// 分页大小，范围：10~100。默认10。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 取第几页，范围：1~100000。默认1
+        /// 取第几页，范围：1~100000。默认1。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 0 普通直播 1慢直播 默认0
+        /// 0 普通直播 1慢直播 默认0。
         /// </summary>
         [JsonProperty("IsDelayLive")]
         public ulong? IsDelayLive{ get; set; }
 
         /// <summary>
-        /// 域名前缀
+        /// 域名前缀。
         /// </summary>
         [JsonProperty("DomainPrefix")]
         public string DomainPrefix{ get; set; }

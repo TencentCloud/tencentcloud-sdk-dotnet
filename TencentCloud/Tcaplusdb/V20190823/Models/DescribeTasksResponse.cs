@@ -34,7 +34,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// 查询到的任务详情列表
         /// </summary>
         [JsonProperty("TaskInfos")]
-        public TaskInfo[] TaskInfos{ get; set; }
+        public TaskInfoNew[] TaskInfos{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

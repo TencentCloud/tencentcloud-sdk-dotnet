@@ -60,6 +60,18 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 业务员ID
+        /// </summary>
+        [JsonProperty("SalesUin")]
+        public string SalesUin{ get; set; }
+
+        /// <summary>
+        /// 业务员姓名（模糊查询）
+        /// </summary>
+        [JsonProperty("SalesName")]
+        public string SalesName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
+            this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
         }
     }
 }

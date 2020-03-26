@@ -49,7 +49,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+        /// 网关创建状态，其中0表示创建中，1表示运行中，2表示创建失败
         /// </summary>
         [JsonProperty("ProductionStatus")]
         public ulong? ProductionStatus{ get; set; }
@@ -102,6 +102,24 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 网关启用状态，1为禁用，0为启用。
+        /// </summary>
+        [JsonProperty("State")]
+        public ulong? State{ get; set; }
+
+        /// <summary>
+        /// 私有网络整型ID
+        /// </summary>
+        [JsonProperty("IntVpcId")]
+        public ulong? IntVpcId{ get; set; }
+
+        /// <summary>
+        /// NAT资源ID
+        /// </summary>
+        [JsonProperty("NatResourceId")]
+        public ulong? NatResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +139,9 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "IntVpcId", this.IntVpcId);
+            this.SetParamSimple(map, prefix + "NatResourceId", this.NatResourceId);
         }
     }
 }

@@ -69,6 +69,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
+        /// 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+        /// </summary>
+        [JsonProperty("TasksPriority")]
+        public long? TasksPriority{ get; set; }
+
+        /// <summary>
         /// 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
@@ -93,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }

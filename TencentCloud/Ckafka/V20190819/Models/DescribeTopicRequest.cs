@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，不填则默认为10，最大值为20
+        /// 返回数量，不填则默认为10，最大值为50
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

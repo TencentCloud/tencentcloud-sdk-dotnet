@@ -243,6 +243,55 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
+        /// <summary>
+        /// 客户端连接数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientLimit")]
+        public long? ClientLimit{ get; set; }
+
+        /// <summary>
+        /// DTS状态（内部参数，用户可忽略）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DtsStatus")]
+        public long? DtsStatus{ get; set; }
+
+        /// <summary>
+        /// 分片带宽上限，单位MB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetLimit")]
+        public long? NetLimit{ get; set; }
+
+        /// <summary>
+        /// 免密实例标识（内部参数，用户可忽略）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PasswordFree")]
+        public long? PasswordFree{ get; set; }
+
+        /// <summary>
+        /// 实例只读标识（内部参数，用户可忽略）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReadOnly")]
+        public long? ReadOnly{ get; set; }
+
+        /// <summary>
+        /// 内部参数，用户可忽略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vip6")]
+        public string Vip6{ get; set; }
+
+        /// <summary>
+        /// 内部参数，用户可忽略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemainBandwidthDuration")]
+        public string RemainBandwidthDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -285,6 +334,13 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
+            this.SetParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
+            this.SetParamSimple(map, prefix + "DtsStatus", this.DtsStatus);
+            this.SetParamSimple(map, prefix + "NetLimit", this.NetLimit);
+            this.SetParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
+            this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "Vip6", this.Vip6);
+            this.SetParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
         }
     }
 }

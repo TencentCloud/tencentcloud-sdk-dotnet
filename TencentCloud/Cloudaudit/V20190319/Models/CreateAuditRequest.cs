@@ -79,6 +79,24 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public long? IsCreateNewQueue{ get; set; }
 
         /// <summary>
+        /// 是否开启kms加密。1：是，0：否。如果开启KMS加密，数据在投递到cos时，会将数据加密。
+        /// </summary>
+        [JsonProperty("IsEnableKmsEncry")]
+        public long? IsEnableKmsEncry{ get; set; }
+
+        /// <summary>
+        /// CMK的全局唯一标识符，如果不是新创建的kms，该值是必填值。可以通过ListKeyAliasByRegion来获取。云审计不会校验KeyId的合法性，请您谨慎填写，避免给您的数据造成损失。
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// kms地域。目前支持的地域可以使用ListKmsEnableRegion来获取。必须要和cos的地域保持一致。
+        /// </summary>
+        [JsonProperty("KmsRegion")]
+        public string KmsRegion{ get; set; }
+
+        /// <summary>
         /// 日志文件前缀。3-40个字符，只能包含 ASCII 编码字母 a-z，A-Z，数字 0-9。可以不填，默认以账号ID作为日志前缀。
         /// </summary>
         [JsonProperty("LogFilePrefix")]
@@ -99,6 +117,9 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "CmqQueueName", this.CmqQueueName);
             this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
             this.SetParamSimple(map, prefix + "IsCreateNewQueue", this.IsCreateNewQueue);
+            this.SetParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
             this.SetParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
         }
     }

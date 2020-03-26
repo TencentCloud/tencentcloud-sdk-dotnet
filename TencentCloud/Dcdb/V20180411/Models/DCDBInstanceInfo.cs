@@ -253,6 +253,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("IsAuditSupported")]
         public ulong? IsAuditSupported{ get; set; }
 
+        /// <summary>
+        /// Cpu核数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -297,6 +303,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Locker", this.Locker);
             this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
             this.SetParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

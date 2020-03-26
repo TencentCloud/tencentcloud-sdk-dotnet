@@ -42,6 +42,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("TargetPort")]
         public long? TargetPort{ get; set; }
 
+        /// <summary>
+        /// 主机端口
+        /// </summary>
+        [JsonProperty("NodePort")]
+        public long? NodePort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "TargetPort", this.TargetPort);
+            this.SetParamSimple(map, prefix + "NodePort", this.NodePort);
         }
     }
 }

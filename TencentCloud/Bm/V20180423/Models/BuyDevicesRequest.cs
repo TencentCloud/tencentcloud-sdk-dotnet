@@ -194,7 +194,7 @@ namespace TencentCloud.Bm.V20180423.Models
 
         /// <summary>
         /// CPU型号ID，自定义机型需要传入，取值：
-        /// <br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+        /// <br/><li>1: E5-2620v3 (6核) &#42; 2</li><li>2: E5-2680v4 (14核) &#42; 2</li><li>3: E5-2670v3 (12核) &#42; 2</li><li>4: E5-2620v4 (8核) &#42; 2</li><li>5: 4110 (8核) &#42; 2</li><li>6: 6133 (20核) &#42; 2</li><br/>
         /// </summary>
         [JsonProperty("CpuId")]
         public ulong? CpuId{ get; set; }
@@ -253,6 +253,18 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("BuySession")]
         public string BuySession{ get; set; }
 
+        /// <summary>
+        /// 绑定已有的安全组ID。仅在NeedSecurityAgent为1时生效
+        /// </summary>
+        [JsonProperty("SgId")]
+        public string SgId{ get; set; }
+
+        /// <summary>
+        /// 安全组模板ID，由模板创建新安全组并绑定。TemplateId和SgId不能同时传入
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -297,6 +309,8 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
             this.SetParamSimple(map, prefix + "BuySession", this.BuySession);
+            this.SetParamSimple(map, prefix + "SgId", this.SgId);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 文件系统
+        /// 文件系统(ext3/ext4/xfs)
         /// </summary>
         [JsonProperty("FileSystem")]
         public string FileSystem{ get; set; }

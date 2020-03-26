@@ -175,6 +175,33 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("FaultReportContactNumber")]
         public string FaultReportContactNumber{ get; set; }
 
+        /// <summary>
+        /// 标签键值对
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
+        /// <summary>
+        /// 物理专线的接入点类型。
+        /// </summary>
+        [JsonProperty("AccessPointType")]
+        public string AccessPointType{ get; set; }
+
+        /// <summary>
+        /// IDC所在城市
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IdcCity")]
+        public string IdcCity{ get; set; }
+
+        /// <summary>
+        /// 计费状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeState")]
+        public string ChargeState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +230,10 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
+            this.SetParamSimple(map, prefix + "IdcCity", this.IdcCity);
+            this.SetParamSimple(map, prefix + "ChargeState", this.ChargeState);
         }
     }
 }

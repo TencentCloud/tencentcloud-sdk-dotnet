@@ -38,12 +38,14 @@ namespace TencentCloud.Iot.V20180123.Models
 
         /// <summary>
         /// Topic
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
         /// 产品Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }

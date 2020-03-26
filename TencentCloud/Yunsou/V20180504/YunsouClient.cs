@@ -73,6 +73,26 @@ namespace TencentCloud.Yunsou.V20180504
         }
 
         /// <summary>
+        /// 上传云搜数据的API接口
+        /// </summary>
+        /// <param name="req"><see cref="DataManipulationRequest"/></param>
+        /// <returns><see cref="DataManipulationResponse"/></returns>
+        public DataManipulationResponse DataManipulationSync(DataManipulationRequest req)
+        {
+             JsonResponseModel<DataManipulationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DataManipulation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DataManipulationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于检索云搜中的数据
         /// </summary>
         /// <param name="req"><see cref="DataSearchRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Yunsou.V20180504
              try
              {
                  var strResp = await this.InternalRequest(req, "DataSearch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DataSearchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于检索云搜中的数据
+        /// </summary>
+        /// <param name="req"><see cref="DataSearchRequest"/></param>
+        /// <returns><see cref="DataSearchResponse"/></returns>
+        public DataSearchResponse DataSearchSync(DataSearchRequest req)
+        {
+             JsonResponseModel<DataSearchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DataSearch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DataSearchResponse>>(strResp);
              }
              catch (JsonSerializationException e)

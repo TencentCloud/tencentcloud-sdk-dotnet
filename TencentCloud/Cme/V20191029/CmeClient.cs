@@ -73,6 +73,26 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 创建云剪的编辑项目，支持创建视频剪辑及直播剪辑两大类项目。
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
+        public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
+        {
+             JsonResponseModel<CreateProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除用户登录态，使用户登出云剪平台。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginStatusRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Cme.V20191029
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteLoginStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoginStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户登录态，使用户登出云剪平台。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginStatusRequest"/></param>
+        /// <returns><see cref="DeleteLoginStatusResponse"/></returns>
+        public DeleteLoginStatusResponse DeleteLoginStatusSync(DeleteLoginStatusRequest req)
+        {
+             JsonResponseModel<DeleteLoginStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoginStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoginStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 删除云剪编辑项目。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public DeleteProjectResponse DeleteProjectSync(DeleteProjectRequest req)
+        {
+             JsonResponseModel<DeleteProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询指定用户的登录态。
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginStatusRequest"/></param>
@@ -133,6 +193,26 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 查询指定用户的登录态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginStatusRequest"/></param>
+        /// <returns><see cref="DescribeLoginStatusResponse"/></returns>
+        public DescribeLoginStatusResponse DescribeLoginStatusSync(DescribeLoginStatusRequest req)
+        {
+             JsonResponseModel<DescribeLoginStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoginStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoginStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支持根据多种条件过滤出项目列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
@@ -143,6 +223,26 @@ namespace TencentCloud.Cme.V20191029
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持根据多种条件过滤出项目列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProjects");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -175,6 +275,28 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 获取任务详情信息，包含下面几个部分：
+        /// <li>任务基础信息：包括任务状态、错误信息、创建时间等；</li>
+        /// <li>导出项目输出信息：包括输出的素材 Id 等。</li>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
+        public DescribeTaskDetailResponse DescribeTaskDetailSync(DescribeTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支持各种条件筛选，返回对应的任务基础信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksRequest"/></param>
@@ -185,6 +307,26 @@ namespace TencentCloud.Cme.V20191029
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持各种条件筛选，返回对应的任务基础信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
+        {
+             JsonResponseModel<DescribeTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -215,6 +357,26 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 导出视频编辑项目，支持指定输出的模板。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVideoEditProjectRequest"/></param>
+        /// <returns><see cref="ExportVideoEditProjectResponse"/></returns>
+        public ExportVideoEditProjectResponse ExportVideoEditProjectSync(ExportVideoEditProjectRequest req)
+        {
+             JsonResponseModel<ExportVideoEditProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportVideoEditProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVideoEditProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将云点播中的媒资添加到素材库中，提供给后续的视频编辑。
         /// </summary>
         /// <param name="req"><see cref="ImportMediaToProjectRequest"/></param>
@@ -235,6 +397,26 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 将云点播中的媒资添加到素材库中，提供给后续的视频编辑。
+        /// </summary>
+        /// <param name="req"><see cref="ImportMediaToProjectRequest"/></param>
+        /// <returns><see cref="ImportMediaToProjectResponse"/></returns>
+        public ImportMediaToProjectResponse ImportMediaToProjectSync(ImportMediaToProjectRequest req)
+        {
+             JsonResponseModel<ImportMediaToProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportMediaToProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportMediaToProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改云剪编辑项目的信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
@@ -245,6 +427,26 @@ namespace TencentCloud.Cme.V20191029
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改云剪编辑项目的信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProjectRequest"/></param>
+        /// <returns><see cref="ModifyProjectResponse"/></returns>
+        public ModifyProjectResponse ModifyProjectSync(ModifyProjectRequest req)
+        {
+             JsonResponseModel<ModifyProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProjectResponse>>(strResp);
              }
              catch (JsonSerializationException e)

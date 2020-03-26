@@ -101,6 +101,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 集群资源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NamespaceResourceType")]
+        public string NamespaceResourceType{ get; set; }
+
+        /// <summary>
+        /// 命名空间类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NamespaceType")]
+        public string NamespaceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +132,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
+            this.SetParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
         }
     }
 }

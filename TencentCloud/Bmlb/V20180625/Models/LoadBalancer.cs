@@ -121,7 +121,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
         public string VpcCidrBlock{ get; set; }
 
         /// <summary>
-        /// 负载均衡获得的公网IP地址,支持多个
+        /// 负载均衡的IPV4的VIP。
         /// </summary>
         [JsonProperty("LoadBalancerVips")]
         public string[] LoadBalancerVips{ get; set; }
@@ -180,6 +180,19 @@ namespace TencentCloud.Bmlb.V20180625.Models
         [JsonProperty("BzL7Metrics")]
         public string BzL7Metrics{ get; set; }
 
+        /// <summary>
+        /// 该负载均衡对应的所在的整形类型的VpcId
+        /// </summary>
+        [JsonProperty("IntVpcId")]
+        public ulong? IntVpcId{ get; set; }
+
+        /// <summary>
+        /// 负载均衡的IPV6或者IPV4的VIP。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurVips")]
+        public string[] CurVips{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +225,8 @@ namespace TencentCloud.Bmlb.V20180625.Models
             this.SetParamSimple(map, prefix + "BzPayMode", this.BzPayMode);
             this.SetParamSimple(map, prefix + "BzL4Metrics", this.BzL4Metrics);
             this.SetParamSimple(map, prefix + "BzL7Metrics", this.BzL7Metrics);
+            this.SetParamSimple(map, prefix + "IntVpcId", this.IntVpcId);
+            this.SetParamArraySimple(map, prefix + "CurVips.", this.CurVips);
         }
     }
 }

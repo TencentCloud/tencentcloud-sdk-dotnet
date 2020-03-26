@@ -73,6 +73,26 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
+        /// 根据应用id查询物联卡应用详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppRequest"/></param>
+        /// <returns><see cref="DescribeAppResponse"/></returns>
+        public DescribeAppResponse DescribeAppSync(DescribeAppRequest req)
+        {
+             JsonResponseModel<DescribeAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询卡片详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCardRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Ic.V20190307
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeCard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询卡片详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCardRequest"/></param>
+        /// <returns><see cref="DescribeCardResponse"/></returns>
+        public DescribeCardResponse DescribeCardSync(DescribeCardRequest req)
+        {
+             JsonResponseModel<DescribeCardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCard");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCardResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
+        /// 查询卡片列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCardsRequest"/></param>
+        /// <returns><see cref="DescribeCardsResponse"/></returns>
+        public DescribeCardsResponse DescribeCardsSync(DescribeCardsRequest req)
+        {
+             JsonResponseModel<DescribeCardsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCardsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 群发短信
         /// </summary>
         /// <param name="req"><see cref="SendMultiSmsRequest"/></param>
@@ -133,6 +193,26 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
+        /// 群发短信
+        /// </summary>
+        /// <param name="req"><see cref="SendMultiSmsRequest"/></param>
+        /// <returns><see cref="SendMultiSmsResponse"/></returns>
+        public SendMultiSmsResponse SendMultiSmsSync(SendMultiSmsRequest req)
+        {
+             JsonResponseModel<SendMultiSmsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendMultiSms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMultiSmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发送短信息接口
         /// </summary>
         /// <param name="req"><see cref="SendSmsRequest"/></param>
@@ -143,6 +223,26 @@ namespace TencentCloud.Ic.V20190307
              try
              {
                  var strResp = await this.InternalRequest(req, "SendSms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送短信息接口
+        /// </summary>
+        /// <param name="req"><see cref="SendSmsRequest"/></param>
+        /// <returns><see cref="SendSmsResponse"/></returns>
+        public SendSmsResponse SendSmsSync(SendSmsRequest req)
+        {
+             JsonResponseModel<SendSmsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendSms");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
              }
              catch (JsonSerializationException e)

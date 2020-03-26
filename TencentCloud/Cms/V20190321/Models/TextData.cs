@@ -39,10 +39,27 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 20007：谩骂
         /// 20105：广告引流 
         /// 24001：暴恐
-        /// 21000：综合
         /// </summary>
         [JsonProperty("EvilType")]
         public long? EvilType{ get; set; }
+
+        /// <summary>
+        /// 消息类公共相关参数
+        /// </summary>
+        [JsonProperty("Common")]
+        public TextOutputComm Common{ get; set; }
+
+        /// <summary>
+        /// 消息类ID信息
+        /// </summary>
+        [JsonProperty("ID")]
+        public TextOutputID ID{ get; set; }
+
+        /// <summary>
+        /// 消息类输出结果
+        /// </summary>
+        [JsonProperty("Res")]
+        public TextOutputRes Res{ get; set; }
 
         /// <summary>
         /// 命中的关键词
@@ -58,6 +75,9 @@ namespace TencentCloud.Cms.V20190321.Models
         {
             this.SetParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
+            this.SetParamObj(map, prefix + "Common.", this.Common);
+            this.SetParamObj(map, prefix + "ID.", this.ID);
+            this.SetParamObj(map, prefix + "Res.", this.Res);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         }
     }

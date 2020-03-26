@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
+        /// 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+        /// 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }

@@ -102,6 +102,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
+        /// <summary>
+        /// 优化项，便于客户灰度开启新的优化项，默认为0
+        /// </summary>
+        [JsonProperty("Optimization")]
+        public ulong? Optimization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "MinBitrate", this.MinBitrate);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
+            this.SetParamSimple(map, prefix + "Optimization", this.Optimization);
         }
     }
 }

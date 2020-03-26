@@ -53,7 +53,11 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// 创建跟踪集
+        /// 参数要求：
+        /// 1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
+        /// 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
+        /// 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
+        /// 4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRequest"/></param>
         /// <returns><see cref="CreateAuditResponse"/></returns>
@@ -63,6 +67,30 @@ namespace TencentCloud.Cloudaudit.V20190319
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateAudit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 参数要求：
+        /// 1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
+        /// 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
+        /// 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
+        /// 4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRequest"/></param>
+        /// <returns><see cref="CreateAuditResponse"/></returns>
+        public CreateAuditResponse CreateAuditSync(CreateAuditRequest req)
+        {
+             JsonResponseModel<CreateAuditResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAudit");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -93,6 +121,26 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 删除跟踪集
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRequest"/></param>
+        /// <returns><see cref="DeleteAuditResponse"/></returns>
+        public DeleteAuditResponse DeleteAuditSync(DeleteAuditRequest req)
+        {
+             JsonResponseModel<DeleteAuditResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAudit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询跟踪集详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRequest"/></param>
@@ -103,6 +151,26 @@ namespace TencentCloud.Cloudaudit.V20190319
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeAudit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询跟踪集详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRequest"/></param>
+        /// <returns><see cref="DescribeAuditResponse"/></returns>
+        public DescribeAuditResponse DescribeAuditSync(DescribeAuditRequest req)
+        {
+             JsonResponseModel<DescribeAuditResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAudit");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -133,6 +201,26 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 查询AttributeKey的有效取值范围
+        /// </summary>
+        /// <param name="req"><see cref="GetAttributeKeyRequest"/></param>
+        /// <returns><see cref="GetAttributeKeyResponse"/></returns>
+        public GetAttributeKeyResponse GetAttributeKeySync(GetAttributeKeyRequest req)
+        {
+             JsonResponseModel<GetAttributeKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAttributeKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttributeKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户可创建跟踪集的数量
         /// </summary>
         /// <param name="req"><see cref="InquireAuditCreditRequest"/></param>
@@ -143,6 +231,26 @@ namespace TencentCloud.Cloudaudit.V20190319
              try
              {
                  var strResp = await this.InternalRequest(req, "InquireAuditCredit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireAuditCreditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户可创建跟踪集的数量
+        /// </summary>
+        /// <param name="req"><see cref="InquireAuditCreditRequest"/></param>
+        /// <returns><see cref="InquireAuditCreditResponse"/></returns>
+        public InquireAuditCreditResponse InquireAuditCreditSync(InquireAuditCreditRequest req)
+        {
+             JsonResponseModel<InquireAuditCreditResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquireAuditCredit");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquireAuditCreditResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -173,6 +281,26 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 查询跟踪集概要
+        /// </summary>
+        /// <param name="req"><see cref="ListAuditsRequest"/></param>
+        /// <returns><see cref="ListAuditsResponse"/></returns>
+        public ListAuditsResponse ListAuditsSync(ListAuditsRequest req)
+        {
+             JsonResponseModel<ListAuditsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAudits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAuditsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询云审计支持的cmq的可用区
         /// </summary>
         /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
@@ -183,6 +311,26 @@ namespace TencentCloud.Cloudaudit.V20190319
              try
              {
                  var strResp = await this.InternalRequest(req, "ListCmqEnableRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCmqEnableRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云审计支持的cmq的可用区
+        /// </summary>
+        /// <param name="req"><see cref="ListCmqEnableRegionRequest"/></param>
+        /// <returns><see cref="ListCmqEnableRegionResponse"/></returns>
+        public ListCmqEnableRegionResponse ListCmqEnableRegionSync(ListCmqEnableRegionRequest req)
+        {
+             JsonResponseModel<ListCmqEnableRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListCmqEnableRegion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCmqEnableRegionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -213,6 +361,26 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 查询云审计支持的cos可用区
+        /// </summary>
+        /// <param name="req"><see cref="ListCosEnableRegionRequest"/></param>
+        /// <returns><see cref="ListCosEnableRegionResponse"/></returns>
+        public ListCosEnableRegionResponse ListCosEnableRegionSync(ListCosEnableRegionRequest req)
+        {
+             JsonResponseModel<ListCosEnableRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListCosEnableRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCosEnableRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于对操作日志进行检索，便于用户进行查询相关的操作信息。
         /// </summary>
         /// <param name="req"><see cref="LookUpEventsRequest"/></param>
@@ -223,6 +391,26 @@ namespace TencentCloud.Cloudaudit.V20190319
              try
              {
                  var strResp = await this.InternalRequest(req, "LookUpEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LookUpEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于对操作日志进行检索，便于用户进行查询相关的操作信息。
+        /// </summary>
+        /// <param name="req"><see cref="LookUpEventsRequest"/></param>
+        /// <returns><see cref="LookUpEventsResponse"/></returns>
+        public LookUpEventsResponse LookUpEventsSync(LookUpEventsRequest req)
+        {
+             JsonResponseModel<LookUpEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LookUpEvents");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<LookUpEventsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -253,6 +441,26 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 开启跟踪集
+        /// </summary>
+        /// <param name="req"><see cref="StartLoggingRequest"/></param>
+        /// <returns><see cref="StartLoggingResponse"/></returns>
+        public StartLoggingResponse StartLoggingSync(StartLoggingRequest req)
+        {
+             JsonResponseModel<StartLoggingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartLogging");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartLoggingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 关闭跟踪集
         /// </summary>
         /// <param name="req"><see cref="StopLoggingRequest"/></param>
@@ -273,10 +481,31 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 关闭跟踪集
+        /// </summary>
+        /// <param name="req"><see cref="StopLoggingRequest"/></param>
+        /// <returns><see cref="StopLoggingResponse"/></returns>
+        public StopLoggingResponse StopLoggingSync(StopLoggingRequest req)
+        {
+             JsonResponseModel<StopLoggingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopLogging");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLoggingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 参数要求：
         /// 1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
         /// 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
         /// 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
+        /// 4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
         /// </summary>
         /// <param name="req"><see cref="UpdateAuditRequest"/></param>
         /// <returns><see cref="UpdateAuditResponse"/></returns>
@@ -286,6 +515,30 @@ namespace TencentCloud.Cloudaudit.V20190319
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateAudit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAuditResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 参数要求：
+        /// 1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
+        /// 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
+        /// 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
+        /// 4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAuditRequest"/></param>
+        /// <returns><see cref="UpdateAuditResponse"/></returns>
+        public UpdateAuditResponse UpdateAuditSync(UpdateAuditRequest req)
+        {
+             JsonResponseModel<UpdateAuditResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAudit");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAuditResponse>>(strResp);
              }
              catch (JsonSerializationException e)

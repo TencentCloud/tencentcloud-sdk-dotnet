@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 水印图片url。
+        /// 水印图片 URL。
         /// </summary>
         [JsonProperty("PictureUrl")]
         public string PictureUrl{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string WatermarkName{ get; set; }
 
         /// <summary>
-        /// 显示位置,X轴偏移。
+        /// 显示位置, X轴偏移。
         /// </summary>
         [JsonProperty("XPosition")]
         public long? XPosition{ get; set; }

@@ -114,6 +114,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("Detail")]
         public MigrateDetailInfo Detail{ get; set; }
 
+        /// <summary>
+        /// 任务错误信息提示，当任务发生错误时，不为null或者空值
+        /// </summary>
+        [JsonProperty("ErrorInfo")]
+        public ErrorInfo[] ErrorInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Detail.", this.Detail);
+            this.SetParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
         }
     }
 }

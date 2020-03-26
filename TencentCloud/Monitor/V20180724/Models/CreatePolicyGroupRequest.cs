@@ -90,6 +90,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("BackEndCall")]
         public long? BackEndCall{ get; set; }
 
+        /// <summary>
+        /// 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
+        /// </summary>
+        [JsonProperty("IsUnionRule")]
+        public long? IsUnionRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
             this.SetParamArrayObj(map, prefix + "EventConditions.", this.EventConditions);
             this.SetParamSimple(map, prefix + "BackEndCall", this.BackEndCall);
+            this.SetParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
         }
     }
 }

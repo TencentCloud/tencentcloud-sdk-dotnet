@@ -25,31 +25,31 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 文件所属应用实例ID
+        /// 文件所属集群ID
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 文件所属大区ID
+        /// 文件所属表格组ID
         /// </summary>
-        [JsonProperty("LogicZoneIds")]
-        public string[] LogicZoneIds{ get; set; }
+        [JsonProperty("TableGroupIds")]
+        public string[] TableGroupIds{ get; set; }
 
         /// <summary>
-        /// 指定文件ID
+        /// 指定文件ID列表
         /// </summary>
         [JsonProperty("IdlFileIds")]
         public string[] IdlFileIds{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 查询列表偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 文件列表大小
+        /// 查询列表返回记录数
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -60,8 +60,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamArraySimple(map, prefix + "LogicZoneIds.", this.LogicZoneIds);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "TableGroupIds.", this.TableGroupIds);
             this.SetParamArraySimple(map, prefix + "IdlFileIds.", this.IdlFileIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

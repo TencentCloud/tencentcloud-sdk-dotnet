@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 任务流id
+        /// 任务流ID
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

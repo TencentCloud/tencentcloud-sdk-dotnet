@@ -100,7 +100,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
         /// </summary>
         [JsonProperty("Healthy")]
-        public string Healthy{ get; set; }
+        public long? Healthy{ get; set; }
 
         /// <summary>
         /// 实例状态信息
@@ -138,6 +138,27 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// kafka版本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// 跨可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
+        /// <summary>
+        /// ckafka售卖类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cvm")]
+        public long? Cvm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +184,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "IsInternal", this.IsInternal);
             this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+            this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
         }
     }
 }

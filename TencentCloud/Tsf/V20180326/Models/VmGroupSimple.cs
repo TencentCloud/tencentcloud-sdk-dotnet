@@ -122,6 +122,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MicroserviceType")]
         public string MicroserviceType{ get; set; }
 
+        /// <summary>
+        /// GroupResourceType
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupResourceType")]
+        public string GroupResourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
+            this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         }
     }
 }

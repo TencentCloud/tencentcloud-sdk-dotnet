@@ -1,0 +1,92 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Scf.V20180416.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class LayerVersionInfo : AbstractModel
+    {
+        
+        /// <summary>
+        /// 版本适用的运行时
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CompatibleRuntimes")]
+        public string[] CompatibleRuntimes{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("AddTime")]
+        public string AddTime{ get; set; }
+
+        /// <summary>
+        /// 版本描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 许可证信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LicenseInfo")]
+        public string LicenseInfo{ get; set; }
+
+        /// <summary>
+        /// 版本号
+        /// </summary>
+        [JsonProperty("LayerVersion")]
+        public long? LayerVersion{ get; set; }
+
+        /// <summary>
+        /// 层名称
+        /// </summary>
+        [JsonProperty("LayerName")]
+        public string LayerName{ get; set; }
+
+        /// <summary>
+        /// 层的具体版本当前状态，可能取值：
+        /// Active 正常
+        /// Publishing  发布中
+        /// PublishFailed  发布失败
+        /// Deleted 已删除
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArraySimple(map, prefix + "CompatibleRuntimes.", this.CompatibleRuntimes);
+            this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "LicenseInfo", this.LicenseInfo);
+            this.SetParamSimple(map, prefix + "LayerVersion", this.LayerVersion);
+            this.SetParamSimple(map, prefix + "LayerName", this.LayerName);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+        }
+    }
+}
+

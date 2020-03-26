@@ -102,6 +102,12 @@ namespace TencentCloud.Bmlb.V20180625.Models
         [JsonProperty("HealthStatus")]
         public string HealthStatus{ get; set; }
 
+        /// <summary>
+        /// 接收机的可以执行的操作集合。
+        /// </summary>
+        [JsonProperty("Operates")]
+        public string[] Operates{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+            this.SetParamArraySimple(map, prefix + "Operates.", this.Operates);
         }
     }
 }

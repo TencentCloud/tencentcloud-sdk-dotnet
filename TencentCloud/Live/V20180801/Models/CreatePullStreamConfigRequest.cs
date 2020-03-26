@@ -25,13 +25,18 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 源Url。目前可支持直播流及点播文件。
+        /// 源 Url。目前可支持直播流及点播文件。
+        /// 注意：
+        /// 1. 多个点播url之间使用空格拼接。
+        /// 2. 目前上限支持10个url。
+        /// 3. 支持拉流文件格式：flv，rtmp，hls，mp4。
         /// </summary>
         [JsonProperty("FromUrl")]
         public string FromUrl{ get; set; }
 
         /// <summary>
-        /// 目的Url，目前限制该目标地址为腾讯域名。
+        /// 目的 Url，目前限制该目标地址为腾讯域名。
+        /// 仅支持：rtmp 协议。
         /// </summary>
         [JsonProperty("ToUrl")]
         public string ToUrl{ get; set; }
@@ -52,14 +57,14 @@ namespace TencentCloud.Live.V20180801.Models
         /// 2-移动，
         /// 3-联通，
         /// 4-其他。
-        /// 注：AreaId为4的时候,IspId只能为其他。
+        /// 注：AreaId 为4的时候，IspId 只能为其他。
         /// </summary>
         [JsonProperty("IspId")]
         public long? IspId{ get; set; }
 
         /// <summary>
         /// 开始时间。
-        /// 使用UTC格式时间，
+        /// 使用 UTC 格式时间，
         /// 例如：2019-01-08T10:00:00Z。
         /// 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
@@ -71,7 +76,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 1. 结束时间必须大于开始时间；
         /// 2. 结束时间和开始时间必须大于当前时间；
         /// 3. 结束时间 和 开始时间 间隔必须小于七天。
-        /// 使用UTC格式时间，
+        /// 使用 UTC 格式时间，
         /// 例如：2019-01-08T10:00:00Z。
         /// 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>

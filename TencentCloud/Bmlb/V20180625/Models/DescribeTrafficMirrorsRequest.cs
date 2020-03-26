@@ -54,6 +54,24 @@ namespace TencentCloud.Bmlb.V20180625.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 排序字段。trafficMirrorId或者createTime。
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 排序方式，取值：0:增序(默认)，1:降序
+        /// </summary>
+        [JsonProperty("Order")]
+        public long? Order{ get; set; }
+
+        /// <summary>
+        /// 模糊匹配trafficMirrorId或者alias字段。
+        /// </summary>
+        [JsonProperty("SearchKey")]
+        public string SearchKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Bmlb.V20180625.Models
             this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
         }
     }
 }

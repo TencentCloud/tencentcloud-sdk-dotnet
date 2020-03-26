@@ -80,6 +80,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PushDomain")]
         public string PushDomain{ get; set; }
 
+        /// <summary>
+        /// 分辨率。
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "PushDomain", this.PushDomain);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
         }
     }
 }

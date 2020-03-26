@@ -53,6 +53,58 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 此接口可将已存在实例添加到计算环境中。
+        /// 实例需要满足如下条件：<br/>
+        /// 1.实例不在批量计算系统中。<br/>
+        /// 2.实例状态要求处于运行中。<br/>
+        /// 3.支持预付费实例，按小时后付费实例，专享子机实例。不支持竞价实例。<br/>
+        /// 
+        /// 此接口会将加入到计算环境中的实例重设UserData和重装操作系统。
+        /// </summary>
+        /// <param name="req"><see cref="AttachInstancesRequest"/></param>
+        /// <returns><see cref="AttachInstancesResponse"/></returns>
+        public async Task<AttachInstancesResponse> AttachInstances(AttachInstancesRequest req)
+        {
+             JsonResponseModel<AttachInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口可将已存在实例添加到计算环境中。
+        /// 实例需要满足如下条件：<br/>
+        /// 1.实例不在批量计算系统中。<br/>
+        /// 2.实例状态要求处于运行中。<br/>
+        /// 3.支持预付费实例，按小时后付费实例，专享子机实例。不支持竞价实例。<br/>
+        /// 
+        /// 此接口会将加入到计算环境中的实例重设UserData和重装操作系统。
+        /// </summary>
+        /// <param name="req"><see cref="AttachInstancesRequest"/></param>
+        /// <returns><see cref="AttachInstancesResponse"/></returns>
+        public AttachInstancesResponse AttachInstancesSync(AttachInstancesRequest req)
+        {
+             JsonResponseModel<AttachInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于创建计算环境
         /// </summary>
         /// <param name="req"><see cref="CreateComputeEnvRequest"/></param>
@@ -63,6 +115,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateComputeEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateComputeEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建计算环境
+        /// </summary>
+        /// <param name="req"><see cref="CreateComputeEnvRequest"/></param>
+        /// <returns><see cref="CreateComputeEnvResponse"/></returns>
+        public CreateComputeEnvResponse CreateComputeEnvSync(CreateComputeEnvRequest req)
+        {
+             JsonResponseModel<CreateComputeEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateComputeEnv");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateComputeEnvResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -93,6 +165,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 创建黑石计算环境
+        /// </summary>
+        /// <param name="req"><see cref="CreateCpmComputeEnvRequest"/></param>
+        /// <returns><see cref="CreateCpmComputeEnvResponse"/></returns>
+        public CreateCpmComputeEnvResponse CreateCpmComputeEnvSync(CreateCpmComputeEnvRequest req)
+        {
+             JsonResponseModel<CreateCpmComputeEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCpmComputeEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCpmComputeEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于创建任务模板
         /// </summary>
         /// <param name="req"><see cref="CreateTaskTemplateRequest"/></param>
@@ -113,6 +205,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于创建任务模板
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskTemplateRequest"/></param>
+        /// <returns><see cref="CreateTaskTemplateResponse"/></returns>
+        public CreateTaskTemplateResponse CreateTaskTemplateSync(CreateTaskTemplateRequest req)
+        {
+             JsonResponseModel<CreateTaskTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTaskTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于删除计算环境
         /// </summary>
         /// <param name="req"><see cref="DeleteComputeEnvRequest"/></param>
@@ -123,6 +235,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteComputeEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteComputeEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除计算环境
+        /// </summary>
+        /// <param name="req"><see cref="DeleteComputeEnvRequest"/></param>
+        /// <returns><see cref="DeleteComputeEnvResponse"/></returns>
+        public DeleteComputeEnvResponse DeleteComputeEnvSync(DeleteComputeEnvRequest req)
+        {
+             JsonResponseModel<DeleteComputeEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteComputeEnv");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteComputeEnvResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -155,6 +287,28 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于删除作业记录。
+        /// 删除作业的效果相当于删除作业相关的所有信息。删除成功后，作业相关的所有信息都无法查询。
+        /// 待删除的作业必须处于完结状态，且其内部包含的所有任务实例也必须处于完结状态，否则会禁止操作。完结状态，是指处于 SUCCEED 或 FAILED 状态。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobRequest"/></param>
+        /// <returns><see cref="DeleteJobResponse"/></returns>
+        public DeleteJobResponse DeleteJobSync(DeleteJobRequest req)
+        {
+             JsonResponseModel<DeleteJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于删除任务模板信息
         /// </summary>
         /// <param name="req"><see cref="DeleteTaskTemplatesRequest"/></param>
@@ -165,6 +319,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteTaskTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除任务模板信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteTaskTemplatesResponse"/></returns>
+        public DeleteTaskTemplatesResponse DeleteTaskTemplatesSync(DeleteTaskTemplatesRequest req)
+        {
+             JsonResponseModel<DeleteTaskTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTaskTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -195,6 +369,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 查看可用的CVM机型配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableCvmInstanceTypesRequest"/></param>
+        /// <returns><see cref="DescribeAvailableCvmInstanceTypesResponse"/></returns>
+        public DescribeAvailableCvmInstanceTypesResponse DescribeAvailableCvmInstanceTypesSync(DescribeAvailableCvmInstanceTypesRequest req)
+        {
+             JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAvailableCvmInstanceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableCvmInstanceTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询计算环境的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeComputeEnvRequest"/></param>
@@ -205,6 +399,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeComputeEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询计算环境的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComputeEnvRequest"/></param>
+        /// <returns><see cref="DescribeComputeEnvResponse"/></returns>
+        public DescribeComputeEnvResponse DescribeComputeEnvSync(DescribeComputeEnvRequest req)
+        {
+             JsonResponseModel<DescribeComputeEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeComputeEnv");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -235,6 +449,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于查询计算环境的活动信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComputeEnvActivitiesRequest"/></param>
+        /// <returns><see cref="DescribeComputeEnvActivitiesResponse"/></returns>
+        public DescribeComputeEnvActivitiesResponse DescribeComputeEnvActivitiesSync(DescribeComputeEnvActivitiesRequest req)
+        {
+             JsonResponseModel<DescribeComputeEnvActivitiesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeComputeEnvActivities");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvActivitiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看计算环境的创建信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeComputeEnvCreateInfoRequest"/></param>
@@ -245,6 +479,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeComputeEnvCreateInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvCreateInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看计算环境的创建信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComputeEnvCreateInfoRequest"/></param>
+        /// <returns><see cref="DescribeComputeEnvCreateInfoResponse"/></returns>
+        public DescribeComputeEnvCreateInfoResponse DescribeComputeEnvCreateInfoSync(DescribeComputeEnvCreateInfoRequest req)
+        {
+             JsonResponseModel<DescribeComputeEnvCreateInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeComputeEnvCreateInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvCreateInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -275,6 +529,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于查看计算环境创建信息列表，包括名称、描述、类型、环境参数、通知及期望节点数等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComputeEnvCreateInfosRequest"/></param>
+        /// <returns><see cref="DescribeComputeEnvCreateInfosResponse"/></returns>
+        public DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfosSync(DescribeComputeEnvCreateInfosRequest req)
+        {
+             JsonResponseModel<DescribeComputeEnvCreateInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeComputeEnvCreateInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvCreateInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查看计算环境列表
         /// </summary>
         /// <param name="req"><see cref="DescribeComputeEnvsRequest"/></param>
@@ -285,6 +559,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeComputeEnvs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查看计算环境列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComputeEnvsRequest"/></param>
+        /// <returns><see cref="DescribeComputeEnvsResponse"/></returns>
+        public DescribeComputeEnvsResponse DescribeComputeEnvsSync(DescribeComputeEnvsRequest req)
+        {
+             JsonResponseModel<DescribeComputeEnvsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeComputeEnvs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComputeEnvsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -315,6 +609,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 创建黑石计算环境时，查询批量计算环境支持的黑石操作系统信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCpmOsInfoRequest"/></param>
+        /// <returns><see cref="DescribeCpmOsInfoResponse"/></returns>
+        public DescribeCpmOsInfoResponse DescribeCpmOsInfoSync(DescribeCpmOsInfoRequest req)
+        {
+             JsonResponseModel<DescribeCpmOsInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCpmOsInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCpmOsInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取批量计算可用区机型配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCvmZoneInstanceConfigInfosRequest"/></param>
@@ -325,6 +639,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeCvmZoneInstanceConfigInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取批量计算可用区机型配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCvmZoneInstanceConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeCvmZoneInstanceConfigInfosResponse"/></returns>
+        public DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfosSync(DescribeCvmZoneInstanceConfigInfosRequest req)
+        {
+             JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCvmZoneInstanceConfigInfos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCvmZoneInstanceConfigInfosResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -355,6 +689,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 目前对CVM现有实例族分类，每一类包含若干实例族。该接口用于查询实例分类信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceCategoriesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceCategoriesResponse"/></returns>
+        public DescribeInstanceCategoriesResponse DescribeInstanceCategoriesSync(DescribeInstanceCategoriesRequest req)
+        {
+             JsonResponseModel<DescribeInstanceCategoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceCategories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceCategoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeJobRequest"/></param>
@@ -365,6 +719,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobRequest"/></param>
+        /// <returns><see cref="DescribeJobResponse"/></returns>
+        public DescribeJobResponse DescribeJobSync(DescribeJobRequest req)
+        {
+             JsonResponseModel<DescribeJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -395,6 +769,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于查询指定作业的提交信息，其返回内容包括 JobId 和 SubmitJob 接口中作为输入参数的作业提交信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobSubmitInfoRequest"/></param>
+        /// <returns><see cref="DescribeJobSubmitInfoResponse"/></returns>
+        public DescribeJobSubmitInfoResponse DescribeJobSubmitInfoSync(DescribeJobSubmitInfoRequest req)
+        {
+             JsonResponseModel<DescribeJobSubmitInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJobSubmitInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobSubmitInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询若干个作业的概览信息
         /// </summary>
         /// <param name="req"><see cref="DescribeJobsRequest"/></param>
@@ -405,6 +799,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询若干个作业的概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobsRequest"/></param>
+        /// <returns><see cref="DescribeJobsResponse"/></returns>
+        public DescribeJobsResponse DescribeJobsSync(DescribeJobsRequest req)
+        {
+             JsonResponseModel<DescribeJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -435,6 +849,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于查询指定任务的详细信息，包括任务内部的任务实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskRequest"/></param>
+        /// <returns><see cref="DescribeTaskResponse"/></returns>
+        public DescribeTaskResponse DescribeTaskSync(DescribeTaskRequest req)
+        {
+             JsonResponseModel<DescribeTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取任务多个实例标准输出和标准错误日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLogsRequest"/></param>
@@ -445,6 +879,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTaskLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取任务多个实例标准输出和标准错误日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLogsRequest"/></param>
+        /// <returns><see cref="DescribeTaskLogsResponse"/></returns>
+        public DescribeTaskLogsResponse DescribeTaskLogsSync(DescribeTaskLogsRequest req)
+        {
+             JsonResponseModel<DescribeTaskLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -475,6 +929,66 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于查询任务模板信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeTaskTemplatesResponse"/></returns>
+        public DescribeTaskTemplatesResponse DescribeTaskTemplatesSync(DescribeTaskTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeTaskTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将添加到计算环境中的实例从计算环境中移出。若是由批量计算自动创建的计算节点实例则不允许移出。
+        /// </summary>
+        /// <param name="req"><see cref="DetachInstancesRequest"/></param>
+        /// <returns><see cref="DetachInstancesResponse"/></returns>
+        public async Task<DetachInstancesResponse> DetachInstances(DetachInstancesRequest req)
+        {
+             JsonResponseModel<DetachInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将添加到计算环境中的实例从计算环境中移出。若是由批量计算自动创建的计算节点实例则不允许移出。
+        /// </summary>
+        /// <param name="req"><see cref="DetachInstancesRequest"/></param>
+        /// <returns><see cref="DetachInstancesResponse"/></returns>
+        public DetachInstancesResponse DetachInstancesSync(DetachInstancesRequest req)
+        {
+             JsonResponseModel<DetachInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于修改计算环境属性
         /// </summary>
         /// <param name="req"><see cref="ModifyComputeEnvRequest"/></param>
@@ -495,6 +1009,26 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于修改计算环境属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyComputeEnvRequest"/></param>
+        /// <returns><see cref="ModifyComputeEnvResponse"/></returns>
+        public ModifyComputeEnvResponse ModifyComputeEnvSync(ModifyComputeEnvRequest req)
+        {
+             JsonResponseModel<ModifyComputeEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyComputeEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyComputeEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于修改任务模板
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskTemplateRequest"/></param>
@@ -505,6 +1039,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyTaskTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于修改任务模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskTemplateRequest"/></param>
+        /// <returns><see cref="ModifyTaskTemplateResponse"/></returns>
+        public ModifyTaskTemplateResponse ModifyTaskTemplateSync(ModifyTaskTemplateRequest req)
+        {
+             JsonResponseModel<ModifyTaskTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTaskTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -536,6 +1090,27 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于重试作业中失败的任务实例。
+        /// 当且仅当作业处于“FAILED”状态，支持重试操作。重试操作成功后，作业会按照“DAG”中指定的任务依赖关系，依次重试各个任务中失败的任务实例。任务实例的历史信息将被重置，如同首次运行一样，参与后续的调度和执行。
+        /// </summary>
+        /// <param name="req"><see cref="RetryJobsRequest"/></param>
+        /// <returns><see cref="RetryJobsResponse"/></returns>
+        public RetryJobsResponse RetryJobsSync(RetryJobsRequest req)
+        {
+             JsonResponseModel<RetryJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RetryJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetryJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于提交一个作业
         /// </summary>
         /// <param name="req"><see cref="SubmitJobRequest"/></param>
@@ -546,6 +1121,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "SubmitJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于提交一个作业
+        /// </summary>
+        /// <param name="req"><see cref="SubmitJobRequest"/></param>
+        /// <returns><see cref="SubmitJobResponse"/></returns>
+        public SubmitJobResponse SubmitJobSync(SubmitJobRequest req)
+        {
+             JsonResponseModel<SubmitJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SubmitJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -577,6 +1172,27 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于销毁计算节点。
+        /// 对于状态为CREATED、CREATION_FAILED、RUNNING和ABNORMAL的节点，允许销毁处理。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateComputeNodeRequest"/></param>
+        /// <returns><see cref="TerminateComputeNodeResponse"/></returns>
+        public TerminateComputeNodeResponse TerminateComputeNodeSync(TerminateComputeNodeRequest req)
+        {
+             JsonResponseModel<TerminateComputeNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateComputeNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateComputeNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于批量销毁计算节点，不允许重复销毁同一个节点。
         /// </summary>
         /// <param name="req"><see cref="TerminateComputeNodesRequest"/></param>
@@ -587,6 +1203,26 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "TerminateComputeNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateComputeNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于批量销毁计算节点，不允许重复销毁同一个节点。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateComputeNodesRequest"/></param>
+        /// <returns><see cref="TerminateComputeNodesResponse"/></returns>
+        public TerminateComputeNodesResponse TerminateComputeNodesSync(TerminateComputeNodesRequest req)
+        {
+             JsonResponseModel<TerminateComputeNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateComputeNodes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateComputeNodesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -619,6 +1255,28 @@ namespace TencentCloud.Batch.V20170312
         }
 
         /// <summary>
+        /// 用于终止作业。
+        /// 当作业处于“SUBMITTED”状态时，禁止终止操作；当作业处于“SUCCEED”状态时，终止操作不会生效。
+        /// 终止作业是一个异步过程。整个终止过程的耗时和任务总数成正比。终止的效果相当于所含的所有任务实例进行TerminateTaskInstance操作。具体效果和用法可参考TerminateTaskInstance。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateJobRequest"/></param>
+        /// <returns><see cref="TerminateJobResponse"/></returns>
+        public TerminateJobResponse TerminateJobSync(TerminateJobRequest req)
+        {
+             JsonResponseModel<TerminateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于终止任务实例。
         /// 对于状态已经为“SUCCEED”和“FAILED”的任务实例，不做处理。
         /// 对于状态为“SUBMITTED”、“PENDING”、“RUNNABLE”的任务实例，状态将置为“FAILED”状态。
@@ -633,6 +1291,30 @@ namespace TencentCloud.Batch.V20170312
              try
              {
                  var strResp = await this.InternalRequest(req, "TerminateTaskInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateTaskInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于终止任务实例。
+        /// 对于状态已经为“SUCCEED”和“FAILED”的任务实例，不做处理。
+        /// 对于状态为“SUBMITTED”、“PENDING”、“RUNNABLE”的任务实例，状态将置为“FAILED”状态。
+        /// 对于状态为“STARTING”、“RUNNING”、“FAILED_INTERRUPTED”的任务实例，分区两种情况：如果未显示指定计算环境，会先销毁CVM服务器，然后将状态置为“FAILED”，具有一定耗时；如果指定了计算环境EnvId，任务实例状态置为“FAILED”，并重启执行该任务的CVM服务器，具有一定的耗时。
+        /// 对于状态为“FAILED_INTERRUPTED”的任务实例，终止操作实际成功之后，相关资源和配额才会释放。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateTaskInstanceRequest"/></param>
+        /// <returns><see cref="TerminateTaskInstanceResponse"/></returns>
+        public TerminateTaskInstanceResponse TerminateTaskInstanceSync(TerminateTaskInstanceRequest req)
+        {
+             JsonResponseModel<TerminateTaskInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateTaskInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateTaskInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)

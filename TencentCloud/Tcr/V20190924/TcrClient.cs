@@ -1,0 +1,2016 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tcr.V20190924
+{
+
+   using Newtonsoft.Json;
+   using System.Threading.Tasks;
+   using TencentCloud.Common;
+   using TencentCloud.Common.Profile;
+   using TencentCloud.Tcr.V20190924.Models;
+
+   public class TcrClient : AbstractClient{
+
+       private const string endpoint = "tcr.tencentcloudapi.com";
+       private const string version = "2019-09-24";
+
+        /// <summary>
+        /// Client constructor.
+        /// </summary>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        public TcrClient(Credential credential, string region)
+            : this(credential, region, new ClientProfile())
+        {
+
+        }
+
+        /// <summary>
+        /// Client Constructor.
+        /// </summary>
+        /// <param name="credential">Credentials.</param>
+        /// <param name="region">Region name, such as "ap-guangzhou".</param>
+        /// <param name="profile">Client profiles.</param>
+        public TcrClient(Credential credential, string region, ClientProfile profile)
+            : base(endpoint, version, credential, region, profile)
+        {
+
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中批量删除Tag
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteImagePersonalRequest"/></param>
+        /// <returns><see cref="BatchDeleteImagePersonalResponse"/></returns>
+        public async Task<BatchDeleteImagePersonalResponse> BatchDeleteImagePersonal(BatchDeleteImagePersonalRequest req)
+        {
+             JsonResponseModel<BatchDeleteImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中批量删除Tag
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteImagePersonalRequest"/></param>
+        /// <returns><see cref="BatchDeleteImagePersonalResponse"/></returns>
+        public BatchDeleteImagePersonalResponse BatchDeleteImagePersonalSync(BatchDeleteImagePersonalRequest req)
+        {
+             JsonResponseModel<BatchDeleteImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于个人版镜像仓库中批量删除镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="BatchDeleteRepositoryPersonalResponse"/></returns>
+        public async Task<BatchDeleteRepositoryPersonalResponse> BatchDeleteRepositoryPersonal(BatchDeleteRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<BatchDeleteRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeleteRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于个人版镜像仓库中批量删除镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeleteRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="BatchDeleteRepositoryPersonalResponse"/></returns>
+        public BatchDeleteRepositoryPersonalResponse BatchDeleteRepositoryPersonalSync(BatchDeleteRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<BatchDeleteRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeleteRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeleteRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="CreateApplicationTriggerPersonalResponse"/></returns>
+        public async Task<CreateApplicationTriggerPersonalResponse> CreateApplicationTriggerPersonal(CreateApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<CreateApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="CreateApplicationTriggerPersonalResponse"/></returns>
+        public CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonalSync(CreateApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<CreateApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中创建清理策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageLifecyclePersonalRequest"/></param>
+        /// <returns><see cref="CreateImageLifecyclePersonalResponse"/></returns>
+        public async Task<CreateImageLifecyclePersonalResponse> CreateImageLifecyclePersonal(CreateImageLifecyclePersonalRequest req)
+        {
+             JsonResponseModel<CreateImageLifecyclePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImageLifecyclePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageLifecyclePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中创建清理策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageLifecyclePersonalRequest"/></param>
+        /// <returns><see cref="CreateImageLifecyclePersonalResponse"/></returns>
+        public CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonalSync(CreateImageLifecyclePersonalRequest req)
+        {
+             JsonResponseModel<CreateImageLifecyclePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImageLifecyclePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageLifecyclePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public async Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest req)
+        {
+             JsonResponseModel<CreateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
+        {
+             JsonResponseModel<CreateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建实例的临时或长期访问凭证
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceTokenRequest"/></param>
+        /// <returns><see cref="CreateInstanceTokenResponse"/></returns>
+        public async Task<CreateInstanceTokenResponse> CreateInstanceToken(CreateInstanceTokenRequest req)
+        {
+             JsonResponseModel<CreateInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建实例的临时或长期访问凭证
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceTokenRequest"/></param>
+        /// <returns><see cref="CreateInstanceTokenResponse"/></returns>
+        public CreateInstanceTokenResponse CreateInstanceTokenSync(CreateInstanceTokenRequest req)
+        {
+             JsonResponseModel<CreateInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在企业版中创建命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateNamespaceRequest"/></param>
+        /// <returns><see cref="CreateNamespaceResponse"/></returns>
+        public async Task<CreateNamespaceResponse> CreateNamespace(CreateNamespaceRequest req)
+        {
+             JsonResponseModel<CreateNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在企业版中创建命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateNamespaceRequest"/></param>
+        /// <returns><see cref="CreateNamespaceResponse"/></returns>
+        public CreateNamespaceResponse CreateNamespaceSync(CreateNamespaceRequest req)
+        {
+             JsonResponseModel<CreateNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建个人版镜像仓库命名空间，此命名空间全局唯一
+        /// </summary>
+        /// <param name="req"><see cref="CreateNamespacePersonalRequest"/></param>
+        /// <returns><see cref="CreateNamespacePersonalResponse"/></returns>
+        public async Task<CreateNamespacePersonalResponse> CreateNamespacePersonal(CreateNamespacePersonalRequest req)
+        {
+             JsonResponseModel<CreateNamespacePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNamespacePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNamespacePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建个人版镜像仓库命名空间，此命名空间全局唯一
+        /// </summary>
+        /// <param name="req"><see cref="CreateNamespacePersonalRequest"/></param>
+        /// <returns><see cref="CreateNamespacePersonalResponse"/></returns>
+        public CreateNamespacePersonalResponse CreateNamespacePersonalSync(CreateNamespacePersonalRequest req)
+        {
+             JsonResponseModel<CreateNamespacePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNamespacePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNamespacePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于企业版创建镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="CreateRepositoryRequest"/></param>
+        /// <returns><see cref="CreateRepositoryResponse"/></returns>
+        public async Task<CreateRepositoryResponse> CreateRepository(CreateRepositoryRequest req)
+        {
+             JsonResponseModel<CreateRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于企业版创建镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="CreateRepositoryRequest"/></param>
+        /// <returns><see cref="CreateRepositoryResponse"/></returns>
+        public CreateRepositoryResponse CreateRepositorySync(CreateRepositoryRequest req)
+        {
+             JsonResponseModel<CreateRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版仓库中创建镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="CreateRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="CreateRepositoryPersonalResponse"/></returns>
+        public async Task<CreateRepositoryPersonalResponse> CreateRepositoryPersonal(CreateRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<CreateRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版仓库中创建镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="CreateRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="CreateRepositoryPersonalResponse"/></returns>
+        public CreateRepositoryPersonalResponse CreateRepositoryPersonalSync(CreateRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<CreateRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建个人用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserPersonalRequest"/></param>
+        /// <returns><see cref="CreateUserPersonalResponse"/></returns>
+        public async Task<CreateUserPersonalResponse> CreateUserPersonal(CreateUserPersonalRequest req)
+        {
+             JsonResponseModel<CreateUserPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUserPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建个人用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserPersonalRequest"/></param>
+        /// <returns><see cref="CreateUserPersonalResponse"/></returns>
+        public CreateUserPersonalResponse CreateUserPersonalSync(CreateUserPersonalRequest req)
+        {
+             JsonResponseModel<CreateUserPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUserPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="DeleteApplicationTriggerPersonalResponse"/></returns>
+        public async Task<DeleteApplicationTriggerPersonalResponse> DeleteApplicationTriggerPersonal(DeleteApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<DeleteApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="DeleteApplicationTriggerPersonalResponse"/></returns>
+        public DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonalSync(DeleteApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<DeleteApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除个人版全局镜像版本自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageLifecycleGlobalPersonalRequest"/></param>
+        /// <returns><see cref="DeleteImageLifecycleGlobalPersonalResponse"/></returns>
+        public async Task<DeleteImageLifecycleGlobalPersonalResponse> DeleteImageLifecycleGlobalPersonal(DeleteImageLifecycleGlobalPersonalRequest req)
+        {
+             JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImageLifecycleGlobalPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除个人版全局镜像版本自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageLifecycleGlobalPersonalRequest"/></param>
+        /// <returns><see cref="DeleteImageLifecycleGlobalPersonalResponse"/></returns>
+        public DeleteImageLifecycleGlobalPersonalResponse DeleteImageLifecycleGlobalPersonalSync(DeleteImageLifecycleGlobalPersonalRequest req)
+        {
+             JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImageLifecycleGlobalPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中删除仓库Tag自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageLifecyclePersonalRequest"/></param>
+        /// <returns><see cref="DeleteImageLifecyclePersonalResponse"/></returns>
+        public async Task<DeleteImageLifecyclePersonalResponse> DeleteImageLifecyclePersonal(DeleteImageLifecyclePersonalRequest req)
+        {
+             JsonResponseModel<DeleteImageLifecyclePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImageLifecyclePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageLifecyclePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中删除仓库Tag自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageLifecyclePersonalRequest"/></param>
+        /// <returns><see cref="DeleteImageLifecyclePersonalResponse"/></returns>
+        public DeleteImageLifecyclePersonalResponse DeleteImageLifecyclePersonalSync(DeleteImageLifecyclePersonalRequest req)
+        {
+             JsonResponseModel<DeleteImageLifecyclePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImageLifecyclePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageLifecyclePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中删除tag
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImagePersonalRequest"/></param>
+        /// <returns><see cref="DeleteImagePersonalResponse"/></returns>
+        public async Task<DeleteImagePersonalResponse> DeleteImagePersonal(DeleteImagePersonalRequest req)
+        {
+             JsonResponseModel<DeleteImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中删除tag
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImagePersonalRequest"/></param>
+        /// <returns><see cref="DeleteImagePersonalResponse"/></returns>
+        public DeleteImagePersonalResponse DeleteImagePersonalSync(DeleteImagePersonalRequest req)
+        {
+             JsonResponseModel<DeleteImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除长期访问凭证
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceTokenRequest"/></param>
+        /// <returns><see cref="DeleteInstanceTokenResponse"/></returns>
+        public async Task<DeleteInstanceTokenResponse> DeleteInstanceToken(DeleteInstanceTokenRequest req)
+        {
+             JsonResponseModel<DeleteInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除长期访问凭证
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceTokenRequest"/></param>
+        /// <returns><see cref="DeleteInstanceTokenResponse"/></returns>
+        public DeleteInstanceTokenResponse DeleteInstanceTokenSync(DeleteInstanceTokenRequest req)
+        {
+             JsonResponseModel<DeleteInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteNamespaceResponse"/></returns>
+        public async Task<DeleteNamespaceResponse> DeleteNamespace(DeleteNamespaceRequest req)
+        {
+             JsonResponseModel<DeleteNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteNamespaceResponse"/></returns>
+        public DeleteNamespaceResponse DeleteNamespaceSync(DeleteNamespaceRequest req)
+        {
+             JsonResponseModel<DeleteNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除共享版命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNamespacePersonalRequest"/></param>
+        /// <returns><see cref="DeleteNamespacePersonalResponse"/></returns>
+        public async Task<DeleteNamespacePersonalResponse> DeleteNamespacePersonal(DeleteNamespacePersonalRequest req)
+        {
+             JsonResponseModel<DeleteNamespacePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNamespacePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNamespacePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除共享版命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNamespacePersonalRequest"/></param>
+        /// <returns><see cref="DeleteNamespacePersonalResponse"/></returns>
+        public DeleteNamespacePersonalResponse DeleteNamespacePersonalSync(DeleteNamespacePersonalRequest req)
+        {
+             JsonResponseModel<DeleteNamespacePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNamespacePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNamespacePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRepositoryRequest"/></param>
+        /// <returns><see cref="DeleteRepositoryResponse"/></returns>
+        public async Task<DeleteRepositoryResponse> DeleteRepository(DeleteRepositoryRequest req)
+        {
+             JsonResponseModel<DeleteRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRepositoryRequest"/></param>
+        /// <returns><see cref="DeleteRepositoryResponse"/></returns>
+        public DeleteRepositoryResponse DeleteRepositorySync(DeleteRepositoryRequest req)
+        {
+             JsonResponseModel<DeleteRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于个人版镜像仓库中删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="DeleteRepositoryPersonalResponse"/></returns>
+        public async Task<DeleteRepositoryPersonalResponse> DeleteRepositoryPersonal(DeleteRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<DeleteRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于个人版镜像仓库中删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="DeleteRepositoryPersonalResponse"/></returns>
+        public DeleteRepositoryPersonalResponse DeleteRepositoryPersonalSync(DeleteRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<DeleteRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询应用更新触发器触发日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationTriggerLogPersonalRequest"/></param>
+        /// <returns><see cref="DescribeApplicationTriggerLogPersonalResponse"/></returns>
+        public async Task<DescribeApplicationTriggerLogPersonalResponse> DescribeApplicationTriggerLogPersonal(DescribeApplicationTriggerLogPersonalRequest req)
+        {
+             JsonResponseModel<DescribeApplicationTriggerLogPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationTriggerLogPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationTriggerLogPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询应用更新触发器触发日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationTriggerLogPersonalRequest"/></param>
+        /// <returns><see cref="DescribeApplicationTriggerLogPersonalResponse"/></returns>
+        public DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonalSync(DescribeApplicationTriggerLogPersonalRequest req)
+        {
+             JsonResponseModel<DescribeApplicationTriggerLogPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationTriggerLogPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationTriggerLogPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="DescribeApplicationTriggerPersonalResponse"/></returns>
+        public async Task<DescribeApplicationTriggerPersonalResponse> DescribeApplicationTriggerPersonal(DescribeApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<DescribeApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="DescribeApplicationTriggerPersonalResponse"/></returns>
+        public DescribeApplicationTriggerPersonalResponse DescribeApplicationTriggerPersonalSync(DescribeApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<DescribeApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人收藏仓库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFavorRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="DescribeFavorRepositoryPersonalResponse"/></returns>
+        public async Task<DescribeFavorRepositoryPersonalResponse> DescribeFavorRepositoryPersonal(DescribeFavorRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<DescribeFavorRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFavorRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFavorRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人收藏仓库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFavorRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="DescribeFavorRepositoryPersonalResponse"/></returns>
+        public DescribeFavorRepositoryPersonalResponse DescribeFavorRepositoryPersonalSync(DescribeFavorRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<DescribeFavorRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFavorRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFavorRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中查询与指定tag镜像内容相同的tag列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageFilterPersonalRequest"/></param>
+        /// <returns><see cref="DescribeImageFilterPersonalResponse"/></returns>
+        public async Task<DescribeImageFilterPersonalResponse> DescribeImageFilterPersonal(DescribeImageFilterPersonalRequest req)
+        {
+             JsonResponseModel<DescribeImageFilterPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageFilterPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageFilterPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中查询与指定tag镜像内容相同的tag列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageFilterPersonalRequest"/></param>
+        /// <returns><see cref="DescribeImageFilterPersonalResponse"/></returns>
+        public DescribeImageFilterPersonalResponse DescribeImageFilterPersonalSync(DescribeImageFilterPersonalRequest req)
+        {
+             JsonResponseModel<DescribeImageFilterPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageFilterPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageFilterPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取个人版全局镜像版本自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLifecycleGlobalPersonalRequest"/></param>
+        /// <returns><see cref="DescribeImageLifecycleGlobalPersonalResponse"/></returns>
+        public async Task<DescribeImageLifecycleGlobalPersonalResponse> DescribeImageLifecycleGlobalPersonal(DescribeImageLifecycleGlobalPersonalRequest req)
+        {
+             JsonResponseModel<DescribeImageLifecycleGlobalPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageLifecycleGlobalPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageLifecycleGlobalPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取个人版全局镜像版本自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLifecycleGlobalPersonalRequest"/></param>
+        /// <returns><see cref="DescribeImageLifecycleGlobalPersonalResponse"/></returns>
+        public DescribeImageLifecycleGlobalPersonalResponse DescribeImageLifecycleGlobalPersonalSync(DescribeImageLifecycleGlobalPersonalRequest req)
+        {
+             JsonResponseModel<DescribeImageLifecycleGlobalPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageLifecycleGlobalPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageLifecycleGlobalPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取个人版仓库中自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLifecyclePersonalRequest"/></param>
+        /// <returns><see cref="DescribeImageLifecyclePersonalResponse"/></returns>
+        public async Task<DescribeImageLifecyclePersonalResponse> DescribeImageLifecyclePersonal(DescribeImageLifecyclePersonalRequest req)
+        {
+             JsonResponseModel<DescribeImageLifecyclePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageLifecyclePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageLifecyclePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取个人版仓库中自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageLifecyclePersonalRequest"/></param>
+        /// <returns><see cref="DescribeImageLifecyclePersonalResponse"/></returns>
+        public DescribeImageLifecyclePersonalResponse DescribeImageLifecyclePersonalSync(DescribeImageLifecyclePersonalRequest req)
+        {
+             JsonResponseModel<DescribeImageLifecyclePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageLifecyclePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageLifecyclePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取个人版镜像仓库tag列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagePersonalRequest"/></param>
+        /// <returns><see cref="DescribeImagePersonalResponse"/></returns>
+        public async Task<DescribeImagePersonalResponse> DescribeImagePersonal(DescribeImagePersonalRequest req)
+        {
+             JsonResponseModel<DescribeImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取个人版镜像仓库tag列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagePersonalRequest"/></param>
+        /// <returns><see cref="DescribeImagePersonalResponse"/></returns>
+        public DescribeImagePersonalResponse DescribeImagePersonalSync(DescribeImagePersonalRequest req)
+        {
+             JsonResponseModel<DescribeImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询镜像版本列表或指定容器镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesRequest"/></param>
+        /// <returns><see cref="DescribeImagesResponse"/></returns>
+        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest req)
+        {
+             JsonResponseModel<DescribeImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询镜像版本列表或指定容器镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesRequest"/></param>
+        /// <returns><see cref="DescribeImagesResponse"/></returns>
+        public DescribeImagesResponse DescribeImagesSync(DescribeImagesRequest req)
+        {
+             JsonResponseModel<DescribeImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例当前状态以及过程信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceStatusRequest"/></param>
+        /// <returns><see cref="DescribeInstanceStatusResponse"/></returns>
+        public async Task<DescribeInstanceStatusResponse> DescribeInstanceStatus(DescribeInstanceStatusRequest req)
+        {
+             JsonResponseModel<DescribeInstanceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例当前状态以及过程信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceStatusRequest"/></param>
+        /// <returns><see cref="DescribeInstanceStatusResponse"/></returns>
+        public DescribeInstanceStatusResponse DescribeInstanceStatusSync(DescribeInstanceStatusRequest req)
+        {
+             JsonResponseModel<DescribeInstanceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询长期访问凭证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTokenRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTokenResponse"/></returns>
+        public async Task<DescribeInstanceTokenResponse> DescribeInstanceToken(DescribeInstanceTokenRequest req)
+        {
+             JsonResponseModel<DescribeInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询长期访问凭证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTokenRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTokenResponse"/></returns>
+        public DescribeInstanceTokenResponse DescribeInstanceTokenSync(DescribeInstanceTokenRequest req)
+        {
+             JsonResponseModel<DescribeInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesResponse"/></returns>
+        public async Task<DescribeInstancesResponse> DescribeInstances(DescribeInstancesRequest req)
+        {
+             JsonResponseModel<DescribeInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesResponse"/></returns>
+        public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
+        {
+             JsonResponseModel<DescribeInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人版命名空间信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNamespacePersonalRequest"/></param>
+        /// <returns><see cref="DescribeNamespacePersonalResponse"/></returns>
+        public async Task<DescribeNamespacePersonalResponse> DescribeNamespacePersonal(DescribeNamespacePersonalRequest req)
+        {
+             JsonResponseModel<DescribeNamespacePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNamespacePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNamespacePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人版命名空间信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNamespacePersonalRequest"/></param>
+        /// <returns><see cref="DescribeNamespacePersonalResponse"/></returns>
+        public DescribeNamespacePersonalResponse DescribeNamespacePersonalSync(DescribeNamespacePersonalRequest req)
+        {
+             JsonResponseModel<DescribeNamespacePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNamespacePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNamespacePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询命名空间列表或指定命名空间信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeNamespacesResponse"/></returns>
+        public async Task<DescribeNamespacesResponse> DescribeNamespaces(DescribeNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询命名空间列表或指定命名空间信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeNamespacesResponse"/></returns>
+        public DescribeNamespacesResponse DescribeNamespacesSync(DescribeNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询镜像仓库列表或指定镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoriesRequest"/></param>
+        /// <returns><see cref="DescribeRepositoriesResponse"/></returns>
+        public async Task<DescribeRepositoriesResponse> DescribeRepositories(DescribeRepositoriesRequest req)
+        {
+             JsonResponseModel<DescribeRepositoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRepositories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询镜像仓库列表或指定镜像仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoriesRequest"/></param>
+        /// <returns><see cref="DescribeRepositoriesResponse"/></returns>
+        public DescribeRepositoriesResponse DescribeRepositoriesSync(DescribeRepositoriesRequest req)
+        {
+             JsonResponseModel<DescribeRepositoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRepositories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中，获取满足输入搜索条件的用户镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoryFilterPersonalRequest"/></param>
+        /// <returns><see cref="DescribeRepositoryFilterPersonalResponse"/></returns>
+        public async Task<DescribeRepositoryFilterPersonalResponse> DescribeRepositoryFilterPersonal(DescribeRepositoryFilterPersonalRequest req)
+        {
+             JsonResponseModel<DescribeRepositoryFilterPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRepositoryFilterPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoryFilterPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中，获取满足输入搜索条件的用户镜像仓库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoryFilterPersonalRequest"/></param>
+        /// <returns><see cref="DescribeRepositoryFilterPersonalResponse"/></returns>
+        public DescribeRepositoryFilterPersonalResponse DescribeRepositoryFilterPersonalSync(DescribeRepositoryFilterPersonalRequest req)
+        {
+             JsonResponseModel<DescribeRepositoryFilterPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRepositoryFilterPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoryFilterPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中获取用户全部的镜像仓库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoryOwnerPersonalRequest"/></param>
+        /// <returns><see cref="DescribeRepositoryOwnerPersonalResponse"/></returns>
+        public async Task<DescribeRepositoryOwnerPersonalResponse> DescribeRepositoryOwnerPersonal(DescribeRepositoryOwnerPersonalRequest req)
+        {
+             JsonResponseModel<DescribeRepositoryOwnerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRepositoryOwnerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoryOwnerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版中获取用户全部的镜像仓库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoryOwnerPersonalRequest"/></param>
+        /// <returns><see cref="DescribeRepositoryOwnerPersonalResponse"/></returns>
+        public DescribeRepositoryOwnerPersonalResponse DescribeRepositoryOwnerPersonalSync(DescribeRepositoryOwnerPersonalRequest req)
+        {
+             JsonResponseModel<DescribeRepositoryOwnerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRepositoryOwnerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoryOwnerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人版仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="DescribeRepositoryPersonalResponse"/></returns>
+        public async Task<DescribeRepositoryPersonalResponse> DescribeRepositoryPersonal(DescribeRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<DescribeRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人版仓库信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRepositoryPersonalRequest"/></param>
+        /// <returns><see cref="DescribeRepositoryPersonalResponse"/></returns>
+        public DescribeRepositoryPersonalResponse DescribeRepositoryPersonalSync(DescribeRepositoryPersonalRequest req)
+        {
+             JsonResponseModel<DescribeRepositoryPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRepositoryPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人用户配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaPersonalRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaPersonalResponse"/></returns>
+        public async Task<DescribeUserQuotaPersonalResponse> DescribeUserQuotaPersonal(DescribeUserQuotaPersonalRequest req)
+        {
+             JsonResponseModel<DescribeUserQuotaPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserQuotaPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserQuotaPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人用户配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaPersonalRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaPersonalResponse"/></returns>
+        public DescribeUserQuotaPersonalResponse DescribeUserQuotaPersonalSync(DescribeUserQuotaPersonalRequest req)
+        {
+             JsonResponseModel<DescribeUserQuotaPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserQuotaPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserQuotaPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中复制镜像版本
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateImagePersonalRequest"/></param>
+        /// <returns><see cref="DuplicateImagePersonalResponse"/></returns>
+        public async Task<DuplicateImagePersonalResponse> DuplicateImagePersonal(DuplicateImagePersonalRequest req)
+        {
+             JsonResponseModel<DuplicateImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DuplicateImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DuplicateImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中复制镜像版本
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateImagePersonalRequest"/></param>
+        /// <returns><see cref="DuplicateImagePersonalResponse"/></returns>
+        public DuplicateImagePersonalResponse DuplicateImagePersonalSync(DuplicateImagePersonalRequest req)
+        {
+             JsonResponseModel<DuplicateImagePersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DuplicateImagePersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DuplicateImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于设置个人版全局镜像版本自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="ManageImageLifecycleGlobalPersonalRequest"/></param>
+        /// <returns><see cref="ManageImageLifecycleGlobalPersonalResponse"/></returns>
+        public async Task<ManageImageLifecycleGlobalPersonalResponse> ManageImageLifecycleGlobalPersonal(ManageImageLifecycleGlobalPersonalRequest req)
+        {
+             JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageImageLifecycleGlobalPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于设置个人版全局镜像版本自动清理策略
+        /// </summary>
+        /// <param name="req"><see cref="ManageImageLifecycleGlobalPersonalRequest"/></param>
+        /// <returns><see cref="ManageImageLifecycleGlobalPersonalResponse"/></returns>
+        public ManageImageLifecycleGlobalPersonalResponse ManageImageLifecycleGlobalPersonalSync(ManageImageLifecycleGlobalPersonalRequest req)
+        {
+             JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageImageLifecycleGlobalPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于修改应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="ModifyApplicationTriggerPersonalResponse"/></returns>
+        public async Task<ModifyApplicationTriggerPersonalResponse> ModifyApplicationTriggerPersonal(ModifyApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<ModifyApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于修改应用更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationTriggerPersonalRequest"/></param>
+        /// <returns><see cref="ModifyApplicationTriggerPersonalResponse"/></returns>
+        public ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonalSync(ModifyApplicationTriggerPersonalRequest req)
+        {
+             JsonResponseModel<ModifyApplicationTriggerPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApplicationTriggerPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新实例内指定长期访问凭证的启用状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceTokenRequest"/></param>
+        /// <returns><see cref="ModifyInstanceTokenResponse"/></returns>
+        public async Task<ModifyInstanceTokenResponse> ModifyInstanceToken(ModifyInstanceTokenRequest req)
+        {
+             JsonResponseModel<ModifyInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新实例内指定长期访问凭证的启用状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceTokenRequest"/></param>
+        /// <returns><see cref="ModifyInstanceTokenResponse"/></returns>
+        public ModifyInstanceTokenResponse ModifyInstanceTokenSync(ModifyInstanceTokenRequest req)
+        {
+             JsonResponseModel<ModifyInstanceTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新命名空间信息，当前仅支持修改命名空间访问级别
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyNamespaceResponse"/></returns>
+        public async Task<ModifyNamespaceResponse> ModifyNamespace(ModifyNamespaceRequest req)
+        {
+             JsonResponseModel<ModifyNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新命名空间信息，当前仅支持修改命名空间访问级别
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyNamespaceResponse"/></returns>
+        public ModifyNamespaceResponse ModifyNamespaceSync(ModifyNamespaceRequest req)
+        {
+             JsonResponseModel<ModifyNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新镜像仓库信息，可修改仓库描述信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRepositoryRequest"/></param>
+        /// <returns><see cref="ModifyRepositoryResponse"/></returns>
+        public async Task<ModifyRepositoryResponse> ModifyRepository(ModifyRepositoryRequest req)
+        {
+             JsonResponseModel<ModifyRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新镜像仓库信息，可修改仓库描述信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRepositoryRequest"/></param>
+        /// <returns><see cref="ModifyRepositoryResponse"/></returns>
+        public ModifyRepositoryResponse ModifyRepositorySync(ModifyRepositoryRequest req)
+        {
+             JsonResponseModel<ModifyRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于更新个人版镜像仓库的访问属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRepositoryAccessPersonalRequest"/></param>
+        /// <returns><see cref="ModifyRepositoryAccessPersonalResponse"/></returns>
+        public async Task<ModifyRepositoryAccessPersonalResponse> ModifyRepositoryAccessPersonal(ModifyRepositoryAccessPersonalRequest req)
+        {
+             JsonResponseModel<ModifyRepositoryAccessPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRepositoryAccessPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRepositoryAccessPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于更新个人版镜像仓库的访问属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRepositoryAccessPersonalRequest"/></param>
+        /// <returns><see cref="ModifyRepositoryAccessPersonalResponse"/></returns>
+        public ModifyRepositoryAccessPersonalResponse ModifyRepositoryAccessPersonalSync(ModifyRepositoryAccessPersonalRequest req)
+        {
+             JsonResponseModel<ModifyRepositoryAccessPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRepositoryAccessPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRepositoryAccessPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中更新容器镜像描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRepositoryInfoPersonalRequest"/></param>
+        /// <returns><see cref="ModifyRepositoryInfoPersonalResponse"/></returns>
+        public async Task<ModifyRepositoryInfoPersonalResponse> ModifyRepositoryInfoPersonal(ModifyRepositoryInfoPersonalRequest req)
+        {
+             JsonResponseModel<ModifyRepositoryInfoPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRepositoryInfoPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRepositoryInfoPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在个人版镜像仓库中更新容器镜像描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRepositoryInfoPersonalRequest"/></param>
+        /// <returns><see cref="ModifyRepositoryInfoPersonalResponse"/></returns>
+        public ModifyRepositoryInfoPersonalResponse ModifyRepositoryInfoPersonalSync(ModifyRepositoryInfoPersonalRequest req)
+        {
+             JsonResponseModel<ModifyRepositoryInfoPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRepositoryInfoPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRepositoryInfoPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改个人用户登录密码
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPasswordPersonalRequest"/></param>
+        /// <returns><see cref="ModifyUserPasswordPersonalResponse"/></returns>
+        public async Task<ModifyUserPasswordPersonalResponse> ModifyUserPasswordPersonal(ModifyUserPasswordPersonalRequest req)
+        {
+             JsonResponseModel<ModifyUserPasswordPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserPasswordPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserPasswordPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改个人用户登录密码
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPasswordPersonalRequest"/></param>
+        /// <returns><see cref="ModifyUserPasswordPersonalResponse"/></returns>
+        public ModifyUserPasswordPersonalResponse ModifyUserPasswordPersonalSync(ModifyUserPasswordPersonalRequest req)
+        {
+             JsonResponseModel<ModifyUserPasswordPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserPasswordPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserPasswordPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人版用户命名空间是否存在
+        /// </summary>
+        /// <param name="req"><see cref="ValidateNamespaceExistPersonalRequest"/></param>
+        /// <returns><see cref="ValidateNamespaceExistPersonalResponse"/></returns>
+        public async Task<ValidateNamespaceExistPersonalResponse> ValidateNamespaceExistPersonal(ValidateNamespaceExistPersonalRequest req)
+        {
+             JsonResponseModel<ValidateNamespaceExistPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ValidateNamespaceExistPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ValidateNamespaceExistPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询个人版用户命名空间是否存在
+        /// </summary>
+        /// <param name="req"><see cref="ValidateNamespaceExistPersonalRequest"/></param>
+        /// <returns><see cref="ValidateNamespaceExistPersonalResponse"/></returns>
+        public ValidateNamespaceExistPersonalResponse ValidateNamespaceExistPersonalSync(ValidateNamespaceExistPersonalRequest req)
+        {
+             JsonResponseModel<ValidateNamespaceExistPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ValidateNamespaceExistPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ValidateNamespaceExistPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于判断个人版仓库是否存在
+        /// </summary>
+        /// <param name="req"><see cref="ValidateRepositoryExistPersonalRequest"/></param>
+        /// <returns><see cref="ValidateRepositoryExistPersonalResponse"/></returns>
+        public async Task<ValidateRepositoryExistPersonalResponse> ValidateRepositoryExistPersonal(ValidateRepositoryExistPersonalRequest req)
+        {
+             JsonResponseModel<ValidateRepositoryExistPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ValidateRepositoryExistPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ValidateRepositoryExistPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于判断个人版仓库是否存在
+        /// </summary>
+        /// <param name="req"><see cref="ValidateRepositoryExistPersonalRequest"/></param>
+        /// <returns><see cref="ValidateRepositoryExistPersonalResponse"/></returns>
+        public ValidateRepositoryExistPersonalResponse ValidateRepositoryExistPersonalSync(ValidateRepositoryExistPersonalRequest req)
+        {
+             JsonResponseModel<ValidateRepositoryExistPersonalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ValidateRepositoryExistPersonal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ValidateRepositoryExistPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+    }
+}

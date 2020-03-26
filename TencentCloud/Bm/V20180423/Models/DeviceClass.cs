@@ -68,24 +68,28 @@ namespace TencentCloud.Bm.V20180423.Models
 
         /// <summary>
         /// 单价折扣
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
         /// 用户刊例价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UnitPrice")]
         public ulong? UnitPrice{ get; set; }
 
         /// <summary>
         /// 实际价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealPrice")]
         public ulong? RealPrice{ get; set; }
 
         /// <summary>
         /// 官网刊例价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NormalPrice")]
         public ulong? NormalPrice{ get; set; }
@@ -101,6 +105,18 @@ namespace TencentCloud.Bm.V20180423.Models
         /// </summary>
         [JsonProperty("Series")]
         public ulong? Series{ get; set; }
+
+        /// <summary>
+        /// cpu的核心数。仅是物理服务器未开启超线程的核心数， 超线程的核心数为Cpu*2
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
+        /// <summary>
+        /// 内存容量。单位G
+        /// </summary>
+        [JsonProperty("Mem")]
+        public ulong? Mem{ get; set; }
 
 
         /// <summary>
@@ -121,6 +137,8 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "NormalPrice", this.NormalPrice);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "Series", this.Series);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Mem", this.Mem);
         }
     }
 }

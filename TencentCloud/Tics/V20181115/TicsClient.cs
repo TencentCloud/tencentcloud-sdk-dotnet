@@ -73,6 +73,26 @@ namespace TencentCloud.Tics.V20181115
         }
 
         /// <summary>
+        /// 提供域名相关的基础信息以及与攻击事件（团伙、家族）、恶意文件等相关联信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainInfoRequest"/></param>
+        /// <returns><see cref="DescribeDomainInfoResponse"/></returns>
+        public DescribeDomainInfoResponse DescribeDomainInfoSync(DescribeDomainInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供文件相关的基础信息以及与攻击事件（团伙、家族）、恶意文件等相关联信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFileInfoRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Tics.V20181115
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeFileInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供文件相关的基础信息以及与攻击事件（团伙、家族）、恶意文件等相关联信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileInfoRequest"/></param>
+        /// <returns><see cref="DescribeFileInfoResponse"/></returns>
+        public DescribeFileInfoResponse DescribeFileInfoSync(DescribeFileInfoRequest req)
+        {
+             JsonResponseModel<DescribeFileInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFileInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Tics.V20181115
         }
 
         /// <summary>
+        /// 提供IP相关的基础信息以及与攻击事件（团伙、家族）、恶意文件等相关联信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInfoRequest"/></param>
+        /// <returns><see cref="DescribeIpInfoResponse"/></returns>
+        public DescribeIpInfoResponse DescribeIpInfoSync(DescribeIpInfoRequest req)
+        {
+             JsonResponseModel<DescribeIpInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供IP和域名相关威胁情报信息查询，这些信息可以辅助检测失陷主机、帮助SIEM/SOC等系统做研判决策、帮助运营团队对设备报警的编排处理。
         /// </summary>
         /// <param name="req"><see cref="DescribeThreatInfoRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Tics.V20181115
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeThreatInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeThreatInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供IP和域名相关威胁情报信息查询，这些信息可以辅助检测失陷主机、帮助SIEM/SOC等系统做研判决策、帮助运营团队对设备报警的编排处理。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeThreatInfoRequest"/></param>
+        /// <returns><see cref="DescribeThreatInfoResponse"/></returns>
+        public DescribeThreatInfoResponse DescribeThreatInfoSync(DescribeThreatInfoRequest req)
+        {
+             JsonResponseModel<DescribeThreatInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeThreatInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeThreatInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)

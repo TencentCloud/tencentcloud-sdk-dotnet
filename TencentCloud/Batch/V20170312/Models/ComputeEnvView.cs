@@ -78,6 +78,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("NextAction")]
         public string NextAction{ get; set; }
 
+        /// <summary>
+        /// 用户添加到计算环境中的计算节点个数
+        /// </summary>
+        [JsonProperty("AttachedComputeNodeCount")]
+        public ulong? AttachedComputeNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
+            this.SetParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tiems.V20190416.Models
     {
         
         /// <summary>
-        /// 最大副本数
+        /// 最大副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
         /// </summary>
         [JsonProperty("MaxReplicas")]
         public ulong? MaxReplicas{ get; set; }
 
         /// <summary>
-        /// 最小副本数
+        /// 最小副本数，ScaleMode 为 MANUAL 时辞会此值会被置为 StartReplicas 取值
         /// </summary>
         [JsonProperty("MinReplicas")]
         public ulong? MinReplicas{ get; set; }

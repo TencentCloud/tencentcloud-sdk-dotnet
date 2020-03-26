@@ -92,6 +92,14 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("RentExpireTime")]
         public string RentExpireTime{ get; set; }
 
+        /// <summary>
+        /// 0：标准直播，
+        /// 1：小程序直播。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsMiniProgramLive")]
+        public long? IsMiniProgramLive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +117,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CurrentCName", this.CurrentCName);
             this.SetParamSimple(map, prefix + "RentTag", this.RentTag);
             this.SetParamSimple(map, prefix + "RentExpireTime", this.RentExpireTime);
+            this.SetParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
         }
     }
 }

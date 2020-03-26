@@ -36,6 +36,24 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
+        /// <summary>
+        /// 分页参数，每页返回的数量，取值1~100，默认20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页参数，页偏移量，从0开始计数，默认0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 筛选对象的维度信息
+        /// </summary>
+        [JsonProperty("Dimensions")]
+        public DescribeBindingPolicyObjectListDimension[] Dimensions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
         }
     }
 }

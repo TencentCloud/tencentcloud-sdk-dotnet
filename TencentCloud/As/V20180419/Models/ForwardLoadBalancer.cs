@@ -48,6 +48,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
+        /// <summary>
+        /// 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
             this.SetParamArrayObj(map, prefix + "TargetAttributes.", this.TargetAttributes);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("SecurityProto")]
         public string SecurityProto{ get; set; }
 
+        /// <summary>
+        /// 报文封装模式:默认为Tunnel
+        /// </summary>
+        [JsonProperty("EncapMode")]
+        public string EncapMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamSimple(map, prefix + "IntegrityAlgorith", this.IntegrityAlgorith);
             this.SetParamSimple(map, prefix + "IPSECSaLifetimeSeconds", this.IPSECSaLifetimeSeconds);
             this.SetParamSimple(map, prefix + "SecurityProto", this.SecurityProto);
+            this.SetParamSimple(map, prefix + "EncapMode", this.EncapMode);
         }
     }
 }

@@ -25,31 +25,37 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 节点 ip。
+        /// 指定查询的 IP
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
+        /// IP 归属：
+        /// yes：节点归属于腾讯云 CDN
+        /// no：节点不属于腾讯云 CDN
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 表示该节点所处的省份/国家。unknown 表示节点位置未知。
+        /// 节点所处的省份/国家
+        /// unknown 表示节点位置未知
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// 节点上下线历史记录。
+        /// 节点上下线历史记录
         /// </summary>
         [JsonProperty("History")]
         public CdnIpHistory[] History{ get; set; }
 
         /// <summary>
-        /// 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+        /// 节点的所在区域
+        /// mainland：中国境内加速节点
+        /// overseas：中国境外加速节点
+        /// unknown：服务地域无法获取
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

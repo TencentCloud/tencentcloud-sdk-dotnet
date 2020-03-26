@@ -53,6 +53,46 @@ namespace TencentCloud.Ticm.V20181127
         }
 
         /// <summary>
+        /// 提交完视频审核任务后，可以通过本接口来获取当前处理的进度和结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoTaskRequest"/></param>
+        /// <returns><see cref="DescribeVideoTaskResponse"/></returns>
+        public async Task<DescribeVideoTaskResponse> DescribeVideoTask(DescribeVideoTaskRequest req)
+        {
+             JsonResponseModel<DescribeVideoTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVideoTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交完视频审核任务后，可以通过本接口来获取当前处理的进度和结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoTaskRequest"/></param>
+        /// <returns><see cref="DescribeVideoTaskResponse"/></returns>
+        public DescribeVideoTaskResponse DescribeVideoTaskSync(DescribeVideoTaskRequest req)
+        {
+             JsonResponseModel<DescribeVideoTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVideoTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
         /// </summary>
         /// <param name="req"><see cref="ImageModerationRequest"/></param>
@@ -64,6 +104,66 @@ namespace TencentCloud.Ticm.V20181127
              {
                  var strResp = await this.InternalRequest(req, "ImageModeration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口提供多种维度的图像审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+        /// </summary>
+        /// <param name="req"><see cref="ImageModerationRequest"/></param>
+        /// <returns><see cref="ImageModerationResponse"/></returns>
+        public ImageModerationResponse ImageModerationSync(ImageModerationRequest req)
+        {
+             JsonResponseModel<ImageModerationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImageModeration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口提供多种维度的视频审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+        /// </summary>
+        /// <param name="req"><see cref="VideoModerationRequest"/></param>
+        /// <returns><see cref="VideoModerationResponse"/></returns>
+        public async Task<VideoModerationResponse> VideoModeration(VideoModerationRequest req)
+        {
+             JsonResponseModel<VideoModerationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VideoModeration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoModerationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口提供多种维度的视频审核能力，支持色情和性感内容识别，政治人物和涉政敏感场景识别，以及暴恐人物、场景、旗帜标识等违禁内容的识别。
+        /// </summary>
+        /// <param name="req"><see cref="VideoModerationRequest"/></param>
+        /// <returns><see cref="VideoModerationResponse"/></returns>
+        public VideoModerationResponse VideoModerationSync(VideoModerationRequest req)
+        {
+             JsonResponseModel<VideoModerationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VideoModeration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoModerationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

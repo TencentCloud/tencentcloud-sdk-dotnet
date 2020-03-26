@@ -39,6 +39,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public long? HitFlag{ get; set; }
 
         /// <summary>
+        /// 命中的logo标签信息
+        /// </summary>
+        [JsonProperty("PolityLogoDetail")]
+        public Logo[] PolityLogoDetail{ get; set; }
+
+        /// <summary>
         /// 命中的人脸名称
         /// </summary>
         [JsonProperty("FaceNames")]
@@ -70,6 +76,7 @@ namespace TencentCloud.Cms.V20190321.Models
         {
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
             this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
+            this.SetParamArrayObj(map, prefix + "PolityLogoDetail.", this.PolityLogoDetail);
             this.SetParamArraySimple(map, prefix + "FaceNames.", this.FaceNames);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamArraySimple(map, prefix + "PolityItems.", this.PolityItems);

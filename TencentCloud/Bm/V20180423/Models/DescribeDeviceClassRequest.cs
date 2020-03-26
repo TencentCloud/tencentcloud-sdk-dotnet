@@ -24,12 +24,26 @@ namespace TencentCloud.Bm.V20180423.Models
     public class DescribeDeviceClassRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 是否仅查询在售标准机型配置信息。取值0：查询所有机型；1：查询在售机型。默认为1
+        /// </summary>
+        [JsonProperty("OnSale")]
+        public ulong? OnSale{ get; set; }
+
+        /// <summary>
+        /// 是否返回价格信息。取值0：不返回价格信息，接口返回速度更快；1：返回价格信息。默认为1
+        /// </summary>
+        [JsonProperty("NeedPriceInfo")]
+        public ulong? NeedPriceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "OnSale", this.OnSale);
+            this.SetParamSimple(map, prefix + "NeedPriceInfo", this.NeedPriceInfo);
         }
     }
 }

@@ -25,16 +25,16 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 待修改表所在应用实例ID
+        /// 待修改表格所在集群ID
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 待修改表列表
+        /// 待修改表格列表
         /// </summary>
         [JsonProperty("SelectedTables")]
-        public SelectedTableInfo[] SelectedTables{ get; set; }
+        public SelectedTableInfoNew[] SelectedTables{ get; set; }
 
         /// <summary>
         /// 选中的已上传IDL文件列表，与NewIdlFiles必选其一
@@ -54,7 +54,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
             this.SetParamArrayObj(map, prefix + "ExistingIdlFiles.", this.ExistingIdlFiles);
             this.SetParamArrayObj(map, prefix + "NewIdlFiles.", this.NewIdlFiles);

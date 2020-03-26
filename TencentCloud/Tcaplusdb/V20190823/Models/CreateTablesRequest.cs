@@ -25,22 +25,22 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 待创建表所属应用实例ID
+        /// 待创建表格所属集群ID
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 用户选定的建表IDL文件列表
+        /// 用户选定的建表格IDL文件列表
         /// </summary>
         [JsonProperty("IdlFiles")]
         public IdlFileInfo[] IdlFiles{ get; set; }
 
         /// <summary>
-        /// 待创建表信息列表
+        /// 待创建表格信息列表
         /// </summary>
         [JsonProperty("SelectedTables")]
-        public SelectedTableInfo[] SelectedTables{ get; set; }
+        public SelectedTableInfoNew[] SelectedTables{ get; set; }
 
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
             this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         }

@@ -44,7 +44,6 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 20006：涉毒违法
         /// 20007：谩骂 
         /// 24001：暴恐
-        /// 21000：综合
         /// </summary>
         [JsonProperty("EvilType")]
         public ulong? EvilType{ get; set; }
@@ -90,6 +89,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 文件压缩后云url
+        /// </summary>
+        [JsonProperty("CompressFileUrl")]
+        public string CompressFileUrl{ get; set; }
+
+        /// <summary>
         /// 文件的url
         /// </summary>
         [JsonProperty("FileUrl")]
@@ -110,6 +115,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
         }
     }

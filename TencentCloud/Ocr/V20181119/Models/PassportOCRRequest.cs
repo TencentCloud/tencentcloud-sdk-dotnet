@@ -44,11 +44,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 护照类型（默认CN）：
-        /// CN：支持中国大陆居民护照，字段较多，精度更高；
-        /// HK：支持中国香港护照（部分主要字段）；
-        /// GENERAL：支持国外护照（部分主要字段）；
-        /// THAI：支持泰国护照（部分主要字段）。
+        /// 默认填写CN
+        /// 支持中国大陆居民护照。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

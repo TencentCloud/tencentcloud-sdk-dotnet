@@ -59,7 +59,7 @@ namespace TencentCloud.Bri.V20190328
         /// 
         /// 当业务名为bri_dev时, 必须填Imei字段.
         /// 
-        /// 当业务名为bri_ip时，必须填Ip字段.
+        /// 当业务名为bri_ip时，必须填IP字段.
         /// 
         /// 当业务名为bri_apk时，必须填 (PackageName,CertMd5,FileSize) 三个字段 或者 FileMd5一个字段.
         /// 
@@ -73,6 +73,36 @@ namespace TencentCloud.Bri.V20190328
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeBRI");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBRIResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 输入业务名 (bri_num, bri_dev, bri_ip, bri_apk, bri_url 五种之一)  及其 相应字段, 获取业务风险分数和标签。
+        /// 
+        /// 当业务名为bri_num时，必须填PhoneNumber字段.
+        /// 
+        /// 当业务名为bri_dev时, 必须填Imei字段.
+        /// 
+        /// 当业务名为bri_ip时，必须填IP字段.
+        /// 
+        /// 当业务名为bri_apk时，必须填 (PackageName,CertMd5,FileSize) 三个字段 或者 FileMd5一个字段.
+        /// 
+        /// 当业务名为bri_url时，必须填Url字段.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBRIRequest"/></param>
+        /// <returns><see cref="DescribeBRIResponse"/></returns>
+        public DescribeBRIResponse DescribeBRISync(DescribeBRIRequest req)
+        {
+             JsonResponseModel<DescribeBRIResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBRI");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBRIResponse>>(strResp);
              }
              catch (JsonSerializationException e)

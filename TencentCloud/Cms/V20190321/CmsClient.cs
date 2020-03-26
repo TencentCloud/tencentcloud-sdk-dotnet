@@ -53,57 +53,9 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 音频内容检测（Audio Moderation, AM）服务使用了波形分析、声纹分析等技术，能识别涉黄、涉政、涉恐等违规音频，同时支持用户配置音频黑库，打击自定义的违规内容。
-        /// 
+        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
         /// <br>
-        /// 接口返回值说明：调用本接口有两个返回值，一个是同步返回值，一个是识别完成后的异步回调返回值。
-        /// 
-        /// 音频识别结果存在于异步回调返回值中，异步回调返回值明细：
-        /// 
-        /// 参数名 | 类型 | 描述
-        /// -|-|-
-        /// SeqID | String | 请求seqId唯一标识
-        /// EvilFlag | Integer | 是否恶意：0正常，1可疑（Homology模块下：0未匹配到，1恶意，2白样本）
-        /// EvilType | Integer | 恶意类型：100正常，20001政治，20002色情，20007谩骂
-        /// Duration | Integer | 音频时长（单位：毫秒）
-        /// PornDetect | [AudioDetectData](#ADD) | 音频智能鉴黄
-        /// PolityDetect | [AudioDetectData](#ADD)| 音频涉政识别
-        /// CurseDetect | [AudioDetectData](#ADD) | 音频谩骂识别
-        /// CustomizedDetect | [AudioDetectData](#ADD) | 自定义识别
-        /// Homology | [AudioDetectData](#ADD) | 相似度识别
-        /// 
-        /// 
-        /// <span id="ADD"> AudioDetectData </span>
-        /// 
-        /// 参数名 | 类型 | 描述
-        /// -|-|-
-        /// HitFlag | Integer | 0正常，1可疑
-        /// Score | Integer | 判断分值
-        /// EvilType | Integer | 恶意类型：100正常，20001政治，20002色情，20007谩骂
-        /// Keywords | Array of String | 关键词明细
-        /// StartTime | Array of String | 恶意开始时间（Homology、CustomizedDetect无此字段）
-        /// EndTime | Array of String | 恶意结束时间（Homology、CustomizedDetect无此字段）
-        /// SeedUrl | String | 命中的种子URL
-        /// </summary>
-        /// <param name="req"><see cref="AudioModerationRequest"/></param>
-        /// <returns><see cref="AudioModerationResponse"/></returns>
-        public async Task<AudioModerationResponse> AudioModeration(AudioModerationRequest req)
-        {
-             JsonResponseModel<AudioModerationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AudioModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AudioModerationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 通过该接口可以将文件新增到样本库
+        /// 通过该接口可以将图片新增到样本库。
         /// </summary>
         /// <param name="req"><see cref="CreateFileSampleRequest"/></param>
         /// <returns><see cref="CreateFileSampleResponse"/></returns>
@@ -123,7 +75,31 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 新增文本类型样本库
+        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        /// <br>
+        /// 通过该接口可以将图片新增到样本库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileSampleRequest"/></param>
+        /// <returns><see cref="CreateFileSampleResponse"/></returns>
+        public CreateFileSampleResponse CreateFileSampleSync(CreateFileSampleRequest req)
+        {
+             JsonResponseModel<CreateFileSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFileSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        /// <br>
+        /// 通过该接口可以将文本新增到样本库。
         /// </summary>
         /// <param name="req"><see cref="CreateTextSampleRequest"/></param>
         /// <returns><see cref="CreateTextSampleResponse"/></returns>
@@ -143,7 +119,31 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 删除文件样本库，支持批量删除，一次提交不超过20个
+        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        /// <br>
+        /// 通过该接口可以将文本新增到样本库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTextSampleRequest"/></param>
+        /// <returns><see cref="CreateTextSampleResponse"/></returns>
+        public CreateTextSampleResponse CreateTextSampleSync(CreateTextSampleRequest req)
+        {
+             JsonResponseModel<CreateTextSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTextSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTextSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        /// <br>
+        /// 删除图片样本库，支持批量删除，一次提交不超过20个。
         /// </summary>
         /// <param name="req"><see cref="DeleteFileSampleRequest"/></param>
         /// <returns><see cref="DeleteFileSampleResponse"/></returns>
@@ -163,7 +163,31 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 删除文字样本库，暂时只支持单个删除
+        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        /// <br>
+        /// 删除图片样本库，支持批量删除，一次提交不超过20个。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFileSampleRequest"/></param>
+        /// <returns><see cref="DeleteFileSampleResponse"/></returns>
+        public DeleteFileSampleResponse DeleteFileSampleSync(DeleteFileSampleRequest req)
+        {
+             JsonResponseModel<DeleteFileSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFileSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        /// <br>
+        /// 删除文本样本库，暂时只支持单个删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteTextSampleRequest"/></param>
         /// <returns><see cref="DeleteTextSampleResponse"/></returns>
@@ -183,7 +207,31 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 查询文件样本库，支持批量查询
+        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        /// <br>
+        /// 删除文本样本库，暂时只支持单个删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTextSampleRequest"/></param>
+        /// <returns><see cref="DeleteTextSampleResponse"/></returns>
+        public DeleteTextSampleResponse DeleteTextSampleSync(DeleteTextSampleRequest req)
+        {
+             JsonResponseModel<DeleteTextSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTextSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTextSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        /// <br>
+        /// 查询图片样本库，支持批量查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeFileSampleRequest"/></param>
         /// <returns><see cref="DescribeFileSampleResponse"/></returns>
@@ -203,17 +251,19 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 根据日期，渠道和服务类型查询识别结果概览数据
+        /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
+        /// <br>
+        /// 查询图片样本库，支持批量查询。
         /// </summary>
-        /// <param name="req"><see cref="DescribeModerationOverviewRequest"/></param>
-        /// <returns><see cref="DescribeModerationOverviewResponse"/></returns>
-        public async Task<DescribeModerationOverviewResponse> DescribeModerationOverview(DescribeModerationOverviewRequest req)
+        /// <param name="req"><see cref="DescribeFileSampleRequest"/></param>
+        /// <returns><see cref="DescribeFileSampleResponse"/></returns>
+        public DescribeFileSampleResponse DescribeFileSampleSync(DescribeFileSampleRequest req)
         {
-             JsonResponseModel<DescribeModerationOverviewResponse> rsp = null;
+             JsonResponseModel<DescribeFileSampleResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "DescribeModerationOverview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModerationOverviewResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "DescribeFileSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -223,7 +273,9 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 支持批量查询文字样本库
+        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        /// <br>
+        /// 支持批量查询文本样本库。
         /// </summary>
         /// <param name="req"><see cref="DescribeTextSampleRequest"/></param>
         /// <returns><see cref="DescribeTextSampleResponse"/></returns>
@@ -233,6 +285,28 @@ namespace TencentCloud.Cms.V20190321
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeTextSample");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextSampleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
+        /// <br>
+        /// 支持批量查询文本样本库。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextSampleRequest"/></param>
+        /// <returns><see cref="DescribeTextSampleResponse"/></returns>
+        public DescribeTextSampleResponse DescribeTextSampleSync(DescribeTextSampleRequest req)
+        {
+             JsonResponseModel<DescribeTextSampleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTextSample");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextSampleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -263,6 +337,26 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
+        /// 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
+        /// </summary>
+        /// <param name="req"><see cref="ImageModerationRequest"/></param>
+        /// <returns><see cref="ImageModerationResponse"/></returns>
+        public ImageModerationResponse ImageModerationSync(ImageModerationRequest req)
+        {
+             JsonResponseModel<ImageModerationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImageModeration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageModerationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
         /// </summary>
         /// <param name="req"><see cref="TextModerationRequest"/></param>
@@ -283,43 +377,17 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
-        /// 视频内容检测（Video Moderation, VM）服务能识别涉黄、涉政、涉恐等违规视频，同时支持用户配置视频黑库，打击自定义的违规内容。
-        /// 
-        /// <br>
-        /// 接口返回值说明：调用本接口有两个返回值，一个是同步返回值，一个是识别完成后的异步回调返回值。
-        /// 
-        /// 视频识别结果存在于异步回调返回值中，异步回调返回值明细：
-        /// 
-        /// 参数名 | 类型 | 描述
-        /// -|-|-
-        /// SeqID | String | 请求seqId唯一标识
-        /// EvilFlag | Integer | 是否恶意：0正常，1可疑（Homology模块下：0未匹配到，1恶意，2白样本）
-        /// EvilType | Integer | 恶意类型：100正常，20001政治，20002色情
-        /// Duration | Integer | 视频时长（单位：秒）
-        /// PornDetect | [VideoDetectData](#VDD) | 视频智能鉴黄
-        /// PolityDetect | [VideoDetectData](#VDD) | 视频涉政识别
-        /// Homology | [VideoDetectData](#VDD) | 相似度识别
-        /// 
-        /// 
-        /// <span id="VDD">VideoDetectData</span>
-        /// 
-        /// 参数名 | 类型 | 描述
-        /// -|-|-
-        /// HitFlag | Integer  | 0正常，1可疑
-        /// Score | Integer | 判断分值
-        /// EvilType | Integer | 恶意类型：100正常，20001政治，20002色情
-        /// Keywords | Array of String | 关键词明细
-        /// SeedUrl | String | 命中的种子URL
+        /// 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
         /// </summary>
-        /// <param name="req"><see cref="VideoModerationRequest"/></param>
-        /// <returns><see cref="VideoModerationResponse"/></returns>
-        public async Task<VideoModerationResponse> VideoModeration(VideoModerationRequest req)
+        /// <param name="req"><see cref="TextModerationRequest"/></param>
+        /// <returns><see cref="TextModerationResponse"/></returns>
+        public TextModerationResponse TextModerationSync(TextModerationRequest req)
         {
-             JsonResponseModel<VideoModerationResponse> rsp = null;
+             JsonResponseModel<TextModerationResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "VideoModeration");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VideoModerationResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "TextModeration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextModerationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

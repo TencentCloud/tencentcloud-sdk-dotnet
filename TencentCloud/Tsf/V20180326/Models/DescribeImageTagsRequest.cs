@@ -48,6 +48,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("QueryImageIdFlag")]
         public long? QueryImageIdFlag{ get; set; }
 
+        /// <summary>
+        /// 可用于搜索的 tag 名字
+        /// </summary>
+        [JsonProperty("SearchWord")]
+        public string SearchWord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "QueryImageIdFlag", this.QueryImageIdFlag);
+            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
         }
     }
 }

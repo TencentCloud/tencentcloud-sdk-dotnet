@@ -25,7 +25,7 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 拨测分组Id
+        /// 拨测分组ID
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }

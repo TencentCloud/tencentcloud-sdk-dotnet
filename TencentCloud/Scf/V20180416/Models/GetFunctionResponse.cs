@@ -205,6 +205,38 @@ namespace TencentCloud.Scf.V20180416.Models
         public string L5Enable{ get; set; }
 
         /// <summary>
+        /// 函数关联的Layer版本信息
+        /// </summary>
+        [JsonProperty("Layers")]
+        public LayerVersionInfo[] Layers{ get; set; }
+
+        /// <summary>
+        /// 函数关联的死信队列信息
+        /// </summary>
+        [JsonProperty("DeadLetterConfig")]
+        public DeadLetterConfig DeadLetterConfig{ get; set; }
+
+        /// <summary>
+        /// 函数创建回见
+        /// </summary>
+        [JsonProperty("AddTime")]
+        public string AddTime{ get; set; }
+
+        /// <summary>
+        /// 公网访问配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicNetConfig")]
+        public PublicNetConfigOut PublicNetConfig{ get; set; }
+
+        /// <summary>
+        /// 是否启用Ons
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OnsEnable")]
+        public string OnsEnable{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -246,6 +278,11 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "AccessInfo.", this.AccessInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "L5Enable", this.L5Enable);
+            this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
+            this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+            this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+            this.SetParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

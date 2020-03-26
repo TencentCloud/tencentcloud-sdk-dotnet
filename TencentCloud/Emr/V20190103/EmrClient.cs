@@ -73,6 +73,66 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 创建EMR实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
+        {
+             JsonResponseModel<CreateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询硬件节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
+        public async Task<DescribeClusterNodesResponse> DescribeClusterNodes(DescribeClusterNodesRequest req)
+        {
+             JsonResponseModel<DescribeClusterNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询硬件节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
+        public DescribeClusterNodesResponse DescribeClusterNodesSync(DescribeClusterNodesRequest req)
+        {
+             JsonResponseModel<DescribeClusterNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询EMR实例
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -83,6 +143,26 @@ namespace TencentCloud.Emr.V20190103
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询EMR实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesResponse"/></returns>
+        public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
+        {
+             JsonResponseModel<DescribeInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +193,26 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 创建实例询价
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
+        public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstanceSync(InquiryPriceCreateInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceCreateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceCreateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 续费询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
@@ -123,6 +223,26 @@ namespace TencentCloud.Emr.V20190103
              try
              {
                  var strResp = await this.InternalRequest(req, "InquiryPriceRenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 续费询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewInstanceResponse"/></returns>
+        public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstanceSync(InquiryPriceRenewInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceRenewInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceRenewInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +273,26 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 扩容询价. 当扩容时候，请通过该接口查询价格。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceScaleOutInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceScaleOutInstanceResponse"/></returns>
+        public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstanceSync(InquiryPriceScaleOutInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceScaleOutInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 变配询价
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpdateInstanceRequest"/></param>
@@ -163,6 +303,26 @@ namespace TencentCloud.Emr.V20190103
              try
              {
                  var strResp = await this.InternalRequest(req, "InquiryPriceUpdateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 变配询价
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceUpdateInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceUpdateInstanceResponse"/></returns>
+        public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstanceSync(InquiryPriceUpdateInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceUpdateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceUpdateInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,7 +353,27 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 销毁EMR实例
+        /// 实例扩容
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
+        /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
+        public ScaleOutInstanceResponse ScaleOutInstanceSync(ScaleOutInstanceRequest req)
+        {
+             JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleOutInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁EMR实例。此接口仅支持弹性MapReduce正式计费版本。
         /// </summary>
         /// <param name="req"><see cref="TerminateInstanceRequest"/></param>
         /// <returns><see cref="TerminateInstanceResponse"/></returns>
@@ -203,6 +383,26 @@ namespace TencentCloud.Emr.V20190103
              try
              {
                  var strResp = await this.InternalRequest(req, "TerminateInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁EMR实例。此接口仅支持弹性MapReduce正式计费版本。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateInstanceRequest"/></param>
+        /// <returns><see cref="TerminateInstanceResponse"/></returns>
+        public TerminateInstanceResponse TerminateInstanceSync(TerminateInstanceRequest req)
+        {
+             JsonResponseModel<TerminateInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -223,6 +423,26 @@ namespace TencentCloud.Emr.V20190103
              try
              {
                  var strResp = await this.InternalRequest(req, "TerminateTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 缩容Task节点
+        /// </summary>
+        /// <param name="req"><see cref="TerminateTasksRequest"/></param>
+        /// <returns><see cref="TerminateTasksResponse"/></returns>
+        public TerminateTasksResponse TerminateTasksSync(TerminateTasksRequest req)
+        {
+             JsonResponseModel<TerminateTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)

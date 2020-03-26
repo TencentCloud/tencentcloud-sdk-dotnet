@@ -66,6 +66,13 @@ namespace TencentCloud.Captcha.V20190722.Models
         public long? EvilLevel{ get; set; }
 
         /// <summary>
+        /// 前端获取验证码时间，时间戳格式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GetCaptchaTime")]
+        public long? GetCaptchaTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -80,6 +87,7 @@ namespace TencentCloud.Captcha.V20190722.Models
             this.SetParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);
             this.SetParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
             this.SetParamSimple(map, prefix + "EvilLevel", this.EvilLevel);
+            this.SetParamSimple(map, prefix + "GetCaptchaTime", this.GetCaptchaTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

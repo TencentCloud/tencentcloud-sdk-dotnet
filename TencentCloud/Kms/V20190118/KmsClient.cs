@@ -53,6 +53,86 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
+        /// </summary>
+        /// <param name="req"><see cref="AsymmetricRsaDecryptRequest"/></param>
+        /// <returns><see cref="AsymmetricRsaDecryptResponse"/></returns>
+        public async Task<AsymmetricRsaDecryptResponse> AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req)
+        {
+             JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AsymmetricRsaDecrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricRsaDecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
+        /// </summary>
+        /// <param name="req"><see cref="AsymmetricRsaDecryptRequest"/></param>
+        /// <returns><see cref="AsymmetricRsaDecryptResponse"/></returns>
+        public AsymmetricRsaDecryptResponse AsymmetricRsaDecryptSync(AsymmetricRsaDecryptRequest req)
+        {
+             JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AsymmetricRsaDecrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricRsaDecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用指定的SM2非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。传入的密文的长度不能超过256字节。
+        /// </summary>
+        /// <param name="req"><see cref="AsymmetricSm2DecryptRequest"/></param>
+        /// <returns><see cref="AsymmetricSm2DecryptResponse"/></returns>
+        public async Task<AsymmetricSm2DecryptResponse> AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req)
+        {
+             JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AsymmetricSm2Decrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricSm2DecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用指定的SM2非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。传入的密文的长度不能超过256字节。
+        /// </summary>
+        /// <param name="req"><see cref="AsymmetricSm2DecryptRequest"/></param>
+        /// <returns><see cref="AsymmetricSm2DecryptResponse"/></returns>
+        public AsymmetricSm2DecryptResponse AsymmetricSm2DecryptSync(AsymmetricSm2DecryptRequest req)
+        {
+             JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AsymmetricSm2Decrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AsymmetricSm2DecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 取消CMK的计划删除操作
         /// </summary>
         /// <param name="req"><see cref="CancelKeyDeletionRequest"/></param>
@@ -63,6 +143,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "CancelKeyDeletion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyDeletionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消CMK的计划删除操作
+        /// </summary>
+        /// <param name="req"><see cref="CancelKeyDeletionRequest"/></param>
+        /// <returns><see cref="CancelKeyDeletionResponse"/></returns>
+        public CancelKeyDeletionResponse CancelKeyDeletionSync(CancelKeyDeletionRequest req)
+        {
+             JsonResponseModel<CancelKeyDeletionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelKeyDeletion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyDeletionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -93,6 +193,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeyRequest"/></param>
+        /// <returns><see cref="CreateKeyResponse"/></returns>
+        public CreateKeyResponse CreateKeySync(CreateKeyRequest req)
+        {
+             JsonResponseModel<CreateKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于解密密文，得到明文数据。
         /// </summary>
         /// <param name="req"><see cref="DecryptRequest"/></param>
@@ -103,6 +223,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "Decrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DecryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于解密密文，得到明文数据。
+        /// </summary>
+        /// <param name="req"><see cref="DecryptRequest"/></param>
+        /// <returns><see cref="DecryptResponse"/></returns>
+        public DecryptResponse DecryptSync(DecryptRequest req)
+        {
+             JsonResponseModel<DecryptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Decrypt");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DecryptResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -133,6 +273,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 用于删除导入的密钥材料，仅对EXTERNAL类型的CMK有效，该接口将CMK设置为PendingImport 状态，并不会删除CMK，在重新进行密钥导入后可继续使用。彻底删除CMK请使用 ScheduleKeyDeletion 接口。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImportedKeyMaterialRequest"/></param>
+        /// <returns><see cref="DeleteImportedKeyMaterialResponse"/></returns>
+        public DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterialSync(DeleteImportedKeyMaterialRequest req)
+        {
+             JsonResponseModel<DeleteImportedKeyMaterialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImportedKeyMaterial");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImportedKeyMaterialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取指定KeyId的主密钥属性详情信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeKeyRequest"/></param>
@@ -143,6 +303,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取指定KeyId的主密钥属性详情信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeyRequest"/></param>
+        /// <returns><see cref="DescribeKeyResponse"/></returns>
+        public DescribeKeyResponse DescribeKeySync(DescribeKeyRequest req)
+        {
+             JsonResponseModel<DescribeKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -173,6 +353,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 该接口用于批量获取主密钥属性信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeysRequest"/></param>
+        /// <returns><see cref="DescribeKeysResponse"/></returns>
+        public DescribeKeysResponse DescribeKeysSync(DescribeKeysRequest req)
+        {
+             JsonResponseModel<DescribeKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
         /// </summary>
         /// <param name="req"><see cref="DisableKeyRequest"/></param>
@@ -183,6 +383,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "DisableKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
+        /// </summary>
+        /// <param name="req"><see cref="DisableKeyRequest"/></param>
+        /// <returns><see cref="DisableKeyResponse"/></returns>
+        public DisableKeyResponse DisableKeySync(DisableKeyRequest req)
+        {
+             JsonResponseModel<DisableKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -213,6 +433,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 对指定的CMK禁止密钥轮换功能。
+        /// </summary>
+        /// <param name="req"><see cref="DisableKeyRotationRequest"/></param>
+        /// <returns><see cref="DisableKeyRotationResponse"/></returns>
+        public DisableKeyRotationResponse DisableKeyRotationSync(DisableKeyRotationRequest req)
+        {
+             JsonResponseModel<DisableKeyRotationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableKeyRotation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeyRotationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于批量禁止CMK的使用。
         /// </summary>
         /// <param name="req"><see cref="DisableKeysRequest"/></param>
@@ -223,6 +463,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "DisableKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于批量禁止CMK的使用。
+        /// </summary>
+        /// <param name="req"><see cref="DisableKeysRequest"/></param>
+        /// <returns><see cref="DisableKeysResponse"/></returns>
+        public DisableKeysResponse DisableKeysSync(DisableKeysRequest req)
+        {
+             JsonResponseModel<DisableKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableKeys");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableKeysResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -253,6 +513,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 用于启用一个指定的CMK。
+        /// </summary>
+        /// <param name="req"><see cref="EnableKeyRequest"/></param>
+        /// <returns><see cref="EnableKeyResponse"/></returns>
+        public EnableKeyResponse EnableKeySync(EnableKeyRequest req)
+        {
+             JsonResponseModel<EnableKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对指定的CMK开启密钥轮换功能。
         /// </summary>
         /// <param name="req"><see cref="EnableKeyRotationRequest"/></param>
@@ -263,6 +543,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "EnableKeyRotation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeyRotationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对指定的CMK开启密钥轮换功能。
+        /// </summary>
+        /// <param name="req"><see cref="EnableKeyRotationRequest"/></param>
+        /// <returns><see cref="EnableKeyRotationResponse"/></returns>
+        public EnableKeyRotationResponse EnableKeyRotationSync(EnableKeyRotationRequest req)
+        {
+             JsonResponseModel<EnableKeyRotationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableKeyRotation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeyRotationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -293,6 +593,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 该接口用于批量启用CMK。
+        /// </summary>
+        /// <param name="req"><see cref="EnableKeysRequest"/></param>
+        /// <returns><see cref="EnableKeysResponse"/></returns>
+        public EnableKeysResponse EnableKeysSync(EnableKeysRequest req)
+        {
+             JsonResponseModel<EnableKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
         /// </summary>
         /// <param name="req"><see cref="EncryptRequest"/></param>
@@ -303,6 +623,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "Encrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
+        /// </summary>
+        /// <param name="req"><see cref="EncryptRequest"/></param>
+        /// <returns><see cref="EncryptResponse"/></returns>
+        public EncryptResponse EncryptSync(EncryptRequest req)
+        {
+             JsonResponseModel<EncryptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Encrypt");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -333,6 +673,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 本接口生成一个数据密钥，您可以用这个密钥进行本地数据的加密。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateDataKeyRequest"/></param>
+        /// <returns><see cref="GenerateDataKeyResponse"/></returns>
+        public GenerateDataKeyResponse GenerateDataKeySync(GenerateDataKeyRequest req)
+        {
+             JsonResponseModel<GenerateDataKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateDataKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDataKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 随机数生成接口。
         /// </summary>
         /// <param name="req"><see cref="GenerateRandomRequest"/></param>
@@ -343,6 +703,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "GenerateRandom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateRandomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 随机数生成接口。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateRandomRequest"/></param>
+        /// <returns><see cref="GenerateRandomResponse"/></returns>
+        public GenerateRandomResponse GenerateRandomSync(GenerateRandomRequest req)
+        {
+             JsonResponseModel<GenerateRandomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateRandom");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateRandomResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -373,6 +753,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 查询指定的CMK是否开启了密钥轮换功能。
+        /// </summary>
+        /// <param name="req"><see cref="GetKeyRotationStatusRequest"/></param>
+        /// <returns><see cref="GetKeyRotationStatusResponse"/></returns>
+        public GetKeyRotationStatusResponse GetKeyRotationStatusSync(GetKeyRotationStatusRequest req)
+        {
+             JsonResponseModel<GetKeyRotationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetKeyRotationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetKeyRotationStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取导入主密钥（CMK）材料的参数，返回的Token作为执行ImportKeyMaterial的参数之一，返回的PublicKey用于对自主导入密钥材料进行加密。返回的Token和PublicKey 24小时后失效，失效后如需重新导入，需要再次调用该接口获取新的Token和PublicKey。
         /// </summary>
         /// <param name="req"><see cref="GetParametersForImportRequest"/></param>
@@ -393,6 +793,66 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 获取导入主密钥（CMK）材料的参数，返回的Token作为执行ImportKeyMaterial的参数之一，返回的PublicKey用于对自主导入密钥材料进行加密。返回的Token和PublicKey 24小时后失效，失效后如需重新导入，需要再次调用该接口获取新的Token和PublicKey。
+        /// </summary>
+        /// <param name="req"><see cref="GetParametersForImportRequest"/></param>
+        /// <returns><see cref="GetParametersForImportResponse"/></returns>
+        public GetParametersForImportResponse GetParametersForImportSync(GetParametersForImportRequest req)
+        {
+             JsonResponseModel<GetParametersForImportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetParametersForImport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetParametersForImportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用户获取 KeyUsage为ASYMMETRIC_DECRYPT_RSA_2048 和 ASYMMETRIC_DECRYPT_SM2 的非对称密钥的公钥信息，使用该公钥用户可在本地进行数据加密，使用该公钥加密的数据只能通过KMS使用对应的私钥进行解密。只有处于Enabled状态的非对称密钥才可能获取公钥。
+        /// </summary>
+        /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
+        /// <returns><see cref="GetPublicKeyResponse"/></returns>
+        public async Task<GetPublicKeyResponse> GetPublicKey(GetPublicKeyRequest req)
+        {
+             JsonResponseModel<GetPublicKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPublicKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用户获取 KeyUsage为ASYMMETRIC_DECRYPT_RSA_2048 和 ASYMMETRIC_DECRYPT_SM2 的非对称密钥的公钥信息，使用该公钥用户可在本地进行数据加密，使用该公钥加密的数据只能通过KMS使用对应的私钥进行解密。只有处于Enabled状态的非对称密钥才可能获取公钥。
+        /// </summary>
+        /// <param name="req"><see cref="GetPublicKeyRequest"/></param>
+        /// <returns><see cref="GetPublicKeyResponse"/></returns>
+        public GetPublicKeyResponse GetPublicKeySync(GetPublicKeyRequest req)
+        {
+             JsonResponseModel<GetPublicKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPublicKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPublicKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询该用户是否已开通KMS服务
         /// </summary>
         /// <param name="req"><see cref="GetServiceStatusRequest"/></param>
@@ -403,6 +863,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "GetServiceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询该用户是否已开通KMS服务
+        /// </summary>
+        /// <param name="req"><see cref="GetServiceStatusRequest"/></param>
+        /// <returns><see cref="GetServiceStatusResponse"/></returns>
+        public GetServiceStatusResponse GetServiceStatusSync(GetServiceStatusRequest req)
+        {
+             JsonResponseModel<GetServiceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetServiceStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -434,6 +914,67 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 用于导入密钥材料。只有类型为EXTERNAL 的CMK 才可以导入，导入的密钥材料使用 GetParametersForImport 获取的密钥进行加密。可以为指定的 CMK 重新导入密钥材料，并重新指定过期时间，但必须导入相同的密钥材料。CMK 密钥材料导入后不可以更换密钥材料。导入的密钥材料过期或者被删除后，指定的CMK将无法使用，需要再次导入相同的密钥材料才能正常使用。CMK是独立的，同样的密钥材料可导入不同的 CMK 中，但使用其中一个 CMK 加密的数据无法使用另一个 CMK解密。
+        /// 只有Enabled 和 PendingImport状态的CMK可以导入密钥材料。
+        /// </summary>
+        /// <param name="req"><see cref="ImportKeyMaterialRequest"/></param>
+        /// <returns><see cref="ImportKeyMaterialResponse"/></returns>
+        public ImportKeyMaterialResponse ImportKeyMaterialSync(ImportKeyMaterialRequest req)
+        {
+             JsonResponseModel<ImportKeyMaterialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportKeyMaterial");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportKeyMaterialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出当前Region支持的加密方式
+        /// </summary>
+        /// <param name="req"><see cref="ListAlgorithmsRequest"/></param>
+        /// <returns><see cref="ListAlgorithmsResponse"/></returns>
+        public async Task<ListAlgorithmsResponse> ListAlgorithms(ListAlgorithmsRequest req)
+        {
+             JsonResponseModel<ListAlgorithmsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAlgorithms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAlgorithmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出当前Region支持的加密方式
+        /// </summary>
+        /// <param name="req"><see cref="ListAlgorithmsRequest"/></param>
+        /// <returns><see cref="ListAlgorithmsResponse"/></returns>
+        public ListAlgorithmsResponse ListAlgorithmsSync(ListAlgorithmsRequest req)
+        {
+             JsonResponseModel<ListAlgorithmsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAlgorithms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAlgorithmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据指定Offset和Limit获取主密钥列表详情。
         /// </summary>
         /// <param name="req"><see cref="ListKeyDetailRequest"/></param>
@@ -444,6 +985,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "ListKeyDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeyDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据指定Offset和Limit获取主密钥列表详情。
+        /// </summary>
+        /// <param name="req"><see cref="ListKeyDetailRequest"/></param>
+        /// <returns><see cref="ListKeyDetailResponse"/></returns>
+        public ListKeyDetailResponse ListKeyDetailSync(ListKeyDetailRequest req)
+        {
+             JsonResponseModel<ListKeyDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListKeyDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeyDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -474,6 +1035,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 列出账号下面状态为Enabled， Disabled 和 PendingImport 的CMK KeyId 列表
+        /// </summary>
+        /// <param name="req"><see cref="ListKeysRequest"/></param>
+        /// <returns><see cref="ListKeysResponse"/></returns>
+        public ListKeysResponse ListKeysSync(ListKeysRequest req)
+        {
+             JsonResponseModel<ListKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 使用指定CMK对密文重新加密。
         /// </summary>
         /// <param name="req"><see cref="ReEncryptRequest"/></param>
@@ -484,6 +1065,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "ReEncrypt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReEncryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用指定CMK对密文重新加密。
+        /// </summary>
+        /// <param name="req"><see cref="ReEncryptRequest"/></param>
+        /// <returns><see cref="ReEncryptResponse"/></returns>
+        public ReEncryptResponse ReEncryptSync(ReEncryptRequest req)
+        {
+             JsonResponseModel<ReEncryptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReEncrypt");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReEncryptResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -514,6 +1115,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
+        /// </summary>
+        /// <param name="req"><see cref="ScheduleKeyDeletionRequest"/></param>
+        /// <returns><see cref="ScheduleKeyDeletionResponse"/></returns>
+        public ScheduleKeyDeletionResponse ScheduleKeyDeletionSync(ScheduleKeyDeletionRequest req)
+        {
+             JsonResponseModel<ScheduleKeyDeletionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScheduleKeyDeletion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScheduleKeyDeletionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于修改CMK的别名。对于处于PendingDelete状态的CMK禁止修改。
         /// </summary>
         /// <param name="req"><see cref="UpdateAliasRequest"/></param>
@@ -534,6 +1155,26 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 用于修改CMK的别名。对于处于PendingDelete状态的CMK禁止修改。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAliasRequest"/></param>
+        /// <returns><see cref="UpdateAliasResponse"/></returns>
+        public UpdateAliasResponse UpdateAliasSync(UpdateAliasRequest req)
+        {
+             JsonResponseModel<UpdateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于对指定的cmk修改描述信息。对于处于PendingDelete状态的CMK禁止修改。
         /// </summary>
         /// <param name="req"><see cref="UpdateKeyDescriptionRequest"/></param>
@@ -544,6 +1185,26 @@ namespace TencentCloud.Kms.V20190118
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateKeyDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateKeyDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于对指定的cmk修改描述信息。对于处于PendingDelete状态的CMK禁止修改。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateKeyDescriptionRequest"/></param>
+        /// <returns><see cref="UpdateKeyDescriptionResponse"/></returns>
+        public UpdateKeyDescriptionResponse UpdateKeyDescriptionSync(UpdateKeyDescriptionRequest req)
+        {
+             JsonResponseModel<UpdateKeyDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateKeyDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateKeyDescriptionResponse>>(strResp);
              }
              catch (JsonSerializationException e)

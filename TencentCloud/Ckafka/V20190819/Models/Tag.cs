@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 标识的key
+        /// 标签的key
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 标识的值
+        /// 标签的值
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

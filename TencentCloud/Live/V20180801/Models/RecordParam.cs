@@ -47,6 +47,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
+        /// <summary>
+        /// 点播子应用ID。
+        /// </summary>
+        [JsonProperty("VodSubAppId")]
+        public long? VodSubAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +62,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "RecordInterval", this.RecordInterval);
             this.SetParamSimple(map, prefix + "StorageTime", this.StorageTime);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
         }
     }
 }

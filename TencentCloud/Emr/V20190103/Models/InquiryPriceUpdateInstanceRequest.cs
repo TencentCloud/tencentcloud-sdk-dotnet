@@ -25,37 +25,43 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 时间单位。s:按量用例单位。m:包年包月用例单位
+        /// 变配的时间单位。取值范围：
+        /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 时间长度。按量用例长度为3600。
+        /// 变配的时长。需要结合TimeUnit一起使用。
+        /// <li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 变配参数
+        /// 节点变配的目标配置。
         /// </summary>
         [JsonProperty("UpdateSpec")]
         public UpdateInstanceSettings UpdateSpec{ get; set; }
 
         /// <summary>
-        /// 计费类型
+        /// 实例计费模式。取值范围：
+        /// <li>0：表示按量计费。</li>
+        /// <li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 位置信息
+        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 货币种类
+        /// 货币种类。取值范围：
+        /// <li>CNY：表示人民币。</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

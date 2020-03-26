@@ -227,6 +227,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("SnapshotSize")]
         public ulong? SnapshotSize{ get; set; }
 
+        /// <summary>
+        /// 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+        /// </summary>
+        [JsonProperty("BackupDisk")]
+        public bool? BackupDisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +271,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
             this.SetParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
             this.SetParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
+            this.SetParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
         }
     }
 }

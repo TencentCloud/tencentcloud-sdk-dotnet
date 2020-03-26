@@ -37,15 +37,13 @@ namespace TencentCloud.Ame.V20190916.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-        /// 链接地址：https://cloud.tencent.com/document/product/1155/40109
+        /// （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
         /// </summary>
         [JsonProperty("CategoryId")]
         public string CategoryId{ get; set; }
 
         /// <summary>
-        /// （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从【获取分类内容（Station）列表接口】中获取。
-        /// 链接地址：https://cloud.tencent.com/document/product/1155/40109
+        /// （电台/歌单）ID，CategoryId和CategoryCode两个必传1个，可以从<a href="https://cloud.tencent.com/document/product/1155/40109">获取分类内容（Station）列表接口</a>中获取。
         /// </summary>
         [JsonProperty("CategoryCode")]
         public string CategoryCode{ get; set; }

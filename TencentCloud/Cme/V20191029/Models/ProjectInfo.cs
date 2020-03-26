@@ -54,6 +54,24 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
+        /// <summary>
+        /// 项目封面图片地址。
+        /// </summary>
+        [JsonProperty("CoverUrl")]
+        public string CoverUrl{ get; set; }
+
+        /// <summary>
+        /// 项目创建时间，格式按照 ISO 8601 标准表示。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 项目更新时间，格式按照 ISO 8601 标准表示。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
+            this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

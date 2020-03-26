@@ -102,6 +102,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IsRemoteVpcSnat")]
         public bool? IsRemoteVpcSnat{ get; set; }
 
+        /// <summary>
+        /// 子网`IP`总数。
+        /// </summary>
+        [JsonProperty("TotalIpAddressCount")]
+        public ulong? TotalIpAddressCount{ get; set; }
+
+        /// <summary>
+        /// 标签键值对。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
             this.SetParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
+            this.SetParamSimple(map, prefix + "TotalIpAddressCount", this.TotalIpAddressCount);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

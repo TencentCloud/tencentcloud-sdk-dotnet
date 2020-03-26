@@ -187,6 +187,13 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("QuantizationInput")]
         public QuantizationInput QuantizationInput{ get; set; }
 
+        /// <summary>
+        /// Cls日志主题ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -217,6 +224,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "ConfigVersion", this.ConfigVersion);
             this.SetParamSimple(map, prefix + "JobType", this.JobType);
             this.SetParamObj(map, prefix + "QuantizationInput.", this.QuantizationInput);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         }
     }
 }

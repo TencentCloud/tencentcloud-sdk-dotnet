@@ -114,6 +114,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("CodeSource")]
         public string CodeSource{ get; set; }
 
+        /// <summary>
+        /// 函数要关联的Layer版本列表，Layer会按照在列表中顺序依次覆盖。
+        /// </summary>
+        [JsonProperty("Layers")]
+        public LayerVersionSimple[] Layers{ get; set; }
+
+        /// <summary>
+        /// 死信队列参数
+        /// </summary>
+        [JsonProperty("DeadLetterConfig")]
+        public DeadLetterConfig DeadLetterConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CodeSource", this.CodeSource);
+            this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
+            this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         }
     }
 }

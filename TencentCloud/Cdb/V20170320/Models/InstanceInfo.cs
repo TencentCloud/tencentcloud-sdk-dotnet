@@ -50,7 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoVipInfo RoVipInfo{ get; set; }
 
         /// <summary>
-        /// 内存容量，单位为MB
+        /// 内存容量，单位为 MB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 私有网络ID，例如：51102
+        /// 私有网络 ID，例如：51102
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
@@ -75,13 +75,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public SlaveInfo SlaveInfo{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例 ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 硬盘容量，单位为GB
+        /// 硬盘容量，单位为 GB
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
@@ -106,7 +106,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoGroup[] RoGroups{ get; set; }
 
         /// <summary>
-        /// 子网ID，例如：2333
+        /// 子网 ID，例如：2333
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
@@ -118,7 +118,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目 ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -204,7 +204,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 实例IP
+        /// 实例 IP
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
@@ -234,7 +234,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// 物理ID
+        /// 物理 ID
         /// </summary>
         [JsonProperty("PhysicalId")]
         public string PhysicalId{ get; set; }
@@ -265,11 +265,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// 置放群组ID
+        /// 置放群组 ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
+
+        /// <summary>
+        /// 可用区 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
 
 
         /// <summary>
@@ -317,6 +324,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

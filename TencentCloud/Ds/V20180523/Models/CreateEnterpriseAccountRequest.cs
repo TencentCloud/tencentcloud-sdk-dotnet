@@ -84,6 +84,12 @@ namespace TencentCloud.Ds.V20180523.Models
         [JsonProperty("TransactorPhone")]
         public string TransactorPhone{ get; set; }
 
+        /// <summary>
+        /// 企业联系人邮箱
+        /// </summary>
+        [JsonProperty("Email")]
+        public string Email{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamSimple(map, prefix + "TransactorIdentType", this.TransactorIdentType);
             this.SetParamSimple(map, prefix + "TransactorIdentNo", this.TransactorIdentNo);
             this.SetParamSimple(map, prefix + "TransactorPhone", this.TransactorPhone);
+            this.SetParamSimple(map, prefix + "Email", this.Email);
         }
     }
 }

@@ -102,6 +102,24 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("L5Enable")]
         public string L5Enable{ get; set; }
 
+        /// <summary>
+        /// 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
+        /// </summary>
+        [JsonProperty("Layers")]
+        public LayerVersionSimple[] Layers{ get; set; }
+
+        /// <summary>
+        /// 函数关联的死信队列信息
+        /// </summary>
+        [JsonProperty("DeadLetterConfig")]
+        public DeadLetterConfig DeadLetterConfig{ get; set; }
+
+        /// <summary>
+        /// 是否开启Ons访问能力，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("OnsEnable")]
+        public string OnsEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +139,9 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "Publish", this.Publish);
             this.SetParamSimple(map, prefix + "L5Enable", this.L5Enable);
+            this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
+            this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+            this.SetParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
         }
     }
 }

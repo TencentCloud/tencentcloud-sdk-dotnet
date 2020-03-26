@@ -102,6 +102,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 标签值
+        /// </summary>
+        [JsonProperty("Tag")]
+        public long? Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Iops", this.Iops);
             this.SetParamSimple(map, prefix + "Info", this.Info);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Tag", this.Tag);
         }
     }
 }

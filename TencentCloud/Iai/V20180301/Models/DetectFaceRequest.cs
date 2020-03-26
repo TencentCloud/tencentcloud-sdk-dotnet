@@ -33,7 +33,7 @@ namespace TencentCloud.Iai.V20180301.Models
 
         /// <summary>
         /// 人脸长和宽的最小尺寸，单位为像素。
-        /// 默认为40。建议不低于34。
+        /// 默认为34。建议不低于34。
         /// 低于MinFaceSize值的人脸不会被检测。
         /// </summary>
         [JsonProperty("MinFaceSize")]

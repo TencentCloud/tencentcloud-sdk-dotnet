@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 要查询的CVM实例ID
+        /// 要查询的CVM实例ID或弹性网卡ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

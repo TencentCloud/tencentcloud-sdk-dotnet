@@ -308,6 +308,27 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SnatIps")]
         public SnatIp[] SnatIps{ get; set; }
 
+        /// <summary>
+        /// 性能保障规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
+        /// <summary>
+        /// vip是否被封堵
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsBlock")]
+        public bool? IsBlock{ get; set; }
+
+        /// <summary>
+        /// 封堵或解封时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsBlockTime")]
+        public string IsBlockTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -355,6 +376,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "IPv6Mode", this.IPv6Mode);
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "IsBlock", this.IsBlock);
+            this.SetParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
         }
     }
 }

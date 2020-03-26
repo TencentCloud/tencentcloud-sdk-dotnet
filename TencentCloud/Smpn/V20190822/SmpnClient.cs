@@ -73,6 +73,26 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 企业号码认证
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmpnEpaRequest"/></param>
+        /// <returns><see cref="CreateSmpnEpaResponse"/></returns>
+        public CreateSmpnEpaResponse CreateSmpnEpaSync(CreateSmpnEpaRequest req)
+        {
+             JsonResponseModel<CreateSmpnEpaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSmpnEpa");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSmpnEpaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询号码的标记和标记次数
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnChpRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Smpn.V20190822
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeSmpnChp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnChpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询号码的标记和标记次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmpnChpRequest"/></param>
+        /// <returns><see cref="DescribeSmpnChpResponse"/></returns>
+        public DescribeSmpnChpResponse DescribeSmpnChpSync(DescribeSmpnChpRequest req)
+        {
+             JsonResponseModel<DescribeSmpnChpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSmpnChp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnChpResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 虚假号码识别
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmpnFnrRequest"/></param>
+        /// <returns><see cref="DescribeSmpnFnrResponse"/></returns>
+        public DescribeSmpnFnrResponse DescribeSmpnFnrSync(DescribeSmpnFnrRequest req)
+        {
+             JsonResponseModel<DescribeSmpnFnrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSmpnFnr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnFnrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 号码营销监控
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMhmRequest"/></param>
@@ -133,6 +193,26 @@ namespace TencentCloud.Smpn.V20190822
         }
 
         /// <summary>
+        /// 号码营销监控
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmpnMhmRequest"/></param>
+        /// <returns><see cref="DescribeSmpnMhmResponse"/></returns>
+        public DescribeSmpnMhmResponse DescribeSmpnMhmSync(DescribeSmpnMhmRequest req)
+        {
+             JsonResponseModel<DescribeSmpnMhmResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSmpnMhm");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnMhmResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询号码恶意标记等级
         /// </summary>
         /// <param name="req"><see cref="DescribeSmpnMrlRequest"/></param>
@@ -143,6 +223,26 @@ namespace TencentCloud.Smpn.V20190822
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeSmpnMrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnMrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询号码恶意标记等级
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmpnMrlRequest"/></param>
+        /// <returns><see cref="DescribeSmpnMrlResponse"/></returns>
+        public DescribeSmpnMrlResponse DescribeSmpnMrlSync(DescribeSmpnMrlRequest req)
+        {
+             JsonResponseModel<DescribeSmpnMrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSmpnMrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmpnMrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)

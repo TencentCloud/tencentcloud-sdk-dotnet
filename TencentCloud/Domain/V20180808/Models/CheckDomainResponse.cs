@@ -49,7 +49,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public bool? Premium{ get; set; }
 
         /// <summary>
-        /// 价格
+        /// 域名价格
         /// </summary>
         [JsonProperty("Price")]
         public ulong? Price{ get; set; }
@@ -59,6 +59,46 @@ namespace TencentCloud.Domain.V20180808.Models
         /// </summary>
         [JsonProperty("BlackWord")]
         public bool? BlackWord{ get; set; }
+
+        /// <summary>
+        /// 溢价词描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Describe")]
+        public string Describe{ get; set; }
+
+        /// <summary>
+        /// 溢价词的续费价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeeRenew")]
+        public ulong? FeeRenew{ get; set; }
+
+        /// <summary>
+        /// 域名真实价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RealPrice")]
+        public ulong? RealPrice{ get; set; }
+
+        /// <summary>
+        /// 溢价词的转入价格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeeTransfer")]
+        public ulong? FeeTransfer{ get; set; }
+
+        /// <summary>
+        /// 溢价词的赎回价格
+        /// </summary>
+        [JsonProperty("FeeRestore")]
+        public ulong? FeeRestore{ get; set; }
+
+        /// <summary>
+        /// 检测年限
+        /// </summary>
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -78,6 +118,12 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "Premium", this.Premium);
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "BlackWord", this.BlackWord);
+            this.SetParamSimple(map, prefix + "Describe", this.Describe);
+            this.SetParamSimple(map, prefix + "FeeRenew", this.FeeRenew);
+            this.SetParamSimple(map, prefix + "RealPrice", this.RealPrice);
+            this.SetParamSimple(map, prefix + "FeeTransfer", this.FeeTransfer);
+            this.SetParamSimple(map, prefix + "FeeRestore", this.FeeRestore);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

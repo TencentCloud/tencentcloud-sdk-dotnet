@@ -53,7 +53,7 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
-        /// 输入人脸图片，输出美颜后的人脸图片。
+        /// 用户上传一张人脸图片，精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
         /// </summary>
         /// <param name="req"><see cref="BeautifyPicRequest"/></param>
         /// <returns><see cref="BeautifyPicResponse"/></returns>
@@ -73,7 +73,29 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
-        /// 上传 LUT 格式文件注册唇色ID。最多允许上传1万张素材。
+        /// 用户上传一张人脸图片，精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
+        /// </summary>
+        /// <param name="req"><see cref="BeautifyPicRequest"/></param>
+        /// <returns><see cref="BeautifyPicResponse"/></returns>
+        public BeautifyPicResponse BeautifyPicSync(BeautifyPicRequest req)
+        {
+             JsonResponseModel<BeautifyPicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BeautifyPic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
+        /// 
+        /// 注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
         /// </summary>
         /// <param name="req"><see cref="CreateModelRequest"/></param>
         /// <returns><see cref="CreateModelResponse"/></returns>
@@ -83,6 +105,28 @@ namespace TencentCloud.Fmu.V20191213
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
+        /// 
+        /// 注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRequest"/></param>
+        /// <returns><see cref="CreateModelResponse"/></returns>
+        public CreateModelResponse CreateModelSync(CreateModelRequest req)
+        {
+             JsonResponseModel<CreateModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateModel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +157,26 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 删除已注册的唇色素材。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public DeleteModelResponse DeleteModelSync(DeleteModelRequest req)
+        {
+             JsonResponseModel<DeleteModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询已注册的唇色素材。
         /// </summary>
         /// <param name="req"><see cref="GetModelListRequest"/></param>
@@ -123,6 +187,26 @@ namespace TencentCloud.Fmu.V20191213
              try
              {
                  var strResp = await this.InternalRequest(req, "GetModelList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询已注册的唇色素材。
+        /// </summary>
+        /// <param name="req"><see cref="GetModelListRequest"/></param>
+        /// <returns><see cref="GetModelListResponse"/></returns>
+        public GetModelListResponse GetModelListSync(GetModelListRequest req)
+        {
+             JsonResponseModel<GetModelListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetModelList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -150,6 +234,33 @@ namespace TencentCloud.Fmu.V20191213
              try
              {
                  var strResp = await this.InternalRequest(req, "TryLipstickPic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TryLipstickPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对图片中的人脸嘴唇进行着色，最多支持同时对一张图中的3张人脸进行试唇色。
+        /// 
+        /// 您可以通过事先注册在腾讯云的唇色素材（LUT文件）改变图片中的人脸唇色，也可以输入RGBA模型数值。
+        /// 
+        /// 为了更好的效果，建议您使用事先注册在腾讯云的唇色素材（LUT文件）。
+        /// 
+        /// >     
+        /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="TryLipstickPicRequest"/></param>
+        /// <returns><see cref="TryLipstickPicResponse"/></returns>
+        public TryLipstickPicResponse TryLipstickPicSync(TryLipstickPicRequest req)
+        {
+             JsonResponseModel<TryLipstickPicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TryLipstickPic");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TryLipstickPicResponse>>(strResp);
              }
              catch (JsonSerializationException e)

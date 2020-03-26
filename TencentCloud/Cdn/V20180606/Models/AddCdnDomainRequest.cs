@@ -206,6 +206,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 回源超时配置
+        /// </summary>
+        [JsonProperty("OriginPullTimeout")]
+        public OriginPullTimeout OriginPullTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +247,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         }
     }
 }

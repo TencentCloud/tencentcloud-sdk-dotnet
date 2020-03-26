@@ -34,7 +34,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// 清除表结果列表
         /// </summary>
         [JsonProperty("TableResults")]
-        public TableResult[] TableResults{ get; set; }
+        public TableResultNew[] TableResults{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

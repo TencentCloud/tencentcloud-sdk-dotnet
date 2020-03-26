@@ -48,6 +48,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ModuleId")]
         public long? ModuleId{ get; set; }
 
+        /// <summary>
+        /// 是否打开二进制转Json功能, 取值为字符串 true/false
+        /// </summary>
+        [JsonProperty("EnableProductScript")]
+        public string EnableProductScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "ProductDesc", this.ProductDesc);
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
+            this.SetParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
         }
     }
 }

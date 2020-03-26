@@ -103,6 +103,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("RecoverNotify")]
         public string[] RecoverNotify{ get; set; }
 
+        /// <summary>
+        /// 告警发送语言
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReceiveLanguage")]
+        public string ReceiveLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +129,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NeedSendNotice", this.NeedSendNotice);
             this.SetParamArraySimple(map, prefix + "SendFor.", this.SendFor);
             this.SetParamArraySimple(map, prefix + "RecoverNotify.", this.RecoverNotify);
+            this.SetParamSimple(map, prefix + "ReceiveLanguage", this.ReceiveLanguage);
         }
     }
 }

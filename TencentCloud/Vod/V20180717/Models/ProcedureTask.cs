@@ -40,14 +40,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 已弃用，请使用各个具体任务的 ErrCode。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 已弃用，请使用各个具体任务的 Message。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -56,7 +54,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 媒体文件 ID
         /// <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 FileId；</li>
         /// <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Id。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -65,7 +62,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 媒体文件名称
         /// <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.Name；</li>
         /// <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Name。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -80,6 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 原始视频的元信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
@@ -114,7 +111,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 任务流的优先级，取值范围为 [-10, 10]。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
@@ -124,21 +120,18 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>
         /// <li>Change：只要任务流中每个子任务的状态发生变化，都进行事件通知；</li>
         /// <li>None：不接受该任务流回调。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TasksNotifyMode")]
         public string TasksNotifyMode{ get; set; }
 
         /// <summary>
         /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

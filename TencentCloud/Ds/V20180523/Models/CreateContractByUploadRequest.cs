@@ -55,16 +55,16 @@ namespace TencentCloud.Ds.V20180523.Models
         public string ContractName{ get; set; }
 
         /// <summary>
-        /// 合同发起方帐号ID
-        /// </summary>
-        [JsonProperty("Initiator")]
-        public string Initiator{ get; set; }
-
-        /// <summary>
         /// 备注
         /// </summary>
         [JsonProperty("Remarks")]
         public string Remarks{ get; set; }
+
+        /// <summary>
+        /// 合同发起方腾讯云帐号ID（由平台自动填写）
+        /// </summary>
+        [JsonProperty("Initiator")]
+        public string Initiator{ get; set; }
 
         /// <summary>
         /// 合同长时间未签署的过期时间
@@ -83,8 +83,8 @@ namespace TencentCloud.Ds.V20180523.Models
             this.SetParamArrayObj(map, prefix + "SignInfos.", this.SignInfos);
             this.SetParamSimple(map, prefix + "ContractFile", this.ContractFile);
             this.SetParamSimple(map, prefix + "ContractName", this.ContractName);
-            this.SetParamSimple(map, prefix + "Initiator", this.Initiator);
             this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
+            this.SetParamSimple(map, prefix + "Initiator", this.Initiator);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         }
     }

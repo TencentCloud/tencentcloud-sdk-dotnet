@@ -25,7 +25,7 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 文本内容Base64编码
+        /// 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

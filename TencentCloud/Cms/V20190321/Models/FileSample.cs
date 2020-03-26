@@ -42,6 +42,12 @@ namespace TencentCloud.Cms.V20190321.Models
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
+        /// <summary>
+        /// 文件压缩后云url
+        /// </summary>
+        [JsonProperty("CompressFileUrl")]
+        public string CompressFileUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamSimple(map, prefix + "FileMd5", this.FileMd5);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
         }
     }
 }

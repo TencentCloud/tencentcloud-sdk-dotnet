@@ -31,10 +31,52 @@ namespace TencentCloud.Bm.V20180423.Models
         public string DeviceClassCode{ get; set; }
 
         /// <summary>
-        /// 需要查询自定义机型RAID信息时，传入自定义机型实例ID。InstanceId存在时DeviceClassCode失效。 虽是可选参数，但DeviceClassCode和InstanceId参数，必须要填写一个。
+        /// 需要查询自定义机型RAID信息时，传入自定义机型实例ID。InstanceId存在时其余参数失效。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// CPU型号ID，查询自定义机型时需要传入
+        /// </summary>
+        [JsonProperty("CpuId")]
+        public ulong? CpuId{ get; set; }
+
+        /// <summary>
+        /// 内存大小，单位为G，查询自定义机型时需要传入
+        /// </summary>
+        [JsonProperty("MemSize")]
+        public ulong? MemSize{ get; set; }
+
+        /// <summary>
+        /// 是否有RAID卡，取值：1(有) 0(无)。查询自定义机型时需要传入
+        /// </summary>
+        [JsonProperty("ContainRaidCard")]
+        public ulong? ContainRaidCard{ get; set; }
+
+        /// <summary>
+        /// 系统盘类型ID，查询自定义机型时需要传入
+        /// </summary>
+        [JsonProperty("SystemDiskTypeId")]
+        public ulong? SystemDiskTypeId{ get; set; }
+
+        /// <summary>
+        /// 系统盘数量，查询自定义机型时需要传入
+        /// </summary>
+        [JsonProperty("SystemDiskCount")]
+        public ulong? SystemDiskCount{ get; set; }
+
+        /// <summary>
+        /// 数据盘类型ID，查询自定义机型时可传入
+        /// </summary>
+        [JsonProperty("DataDiskTypeId")]
+        public ulong? DataDiskTypeId{ get; set; }
+
+        /// <summary>
+        /// 数据盘数量，查询自定义机型时可传入
+        /// </summary>
+        [JsonProperty("DataDiskCount")]
+        public ulong? DataDiskCount{ get; set; }
 
 
         /// <summary>
@@ -44,6 +86,13 @@ namespace TencentCloud.Bm.V20180423.Models
         {
             this.SetParamSimple(map, prefix + "DeviceClassCode", this.DeviceClassCode);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "CpuId", this.CpuId);
+            this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "ContainRaidCard", this.ContainRaidCard);
+            this.SetParamSimple(map, prefix + "SystemDiskTypeId", this.SystemDiskTypeId);
+            this.SetParamSimple(map, prefix + "SystemDiskCount", this.SystemDiskCount);
+            this.SetParamSimple(map, prefix + "DataDiskTypeId", this.DataDiskTypeId);
+            this.SetParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
         }
     }
 }

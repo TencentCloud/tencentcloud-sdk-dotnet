@@ -66,6 +66,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
+        /// <summary>
+        /// CPU核数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "SuitInfo", this.SuitInfo);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "Qps", this.Qps);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

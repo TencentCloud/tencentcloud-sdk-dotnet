@@ -49,7 +49,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string MapKey{ get; set; }
 
         /// <summary>
-        /// 拨测目标的ip
+        /// 拨测目标的IP
         /// </summary>
         [JsonProperty("ServerIp")]
         public string ServerIp{ get; set; }

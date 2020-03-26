@@ -93,6 +93,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Deactived")]
         public ulong? Deactived{ get; set; }
 
+        /// <summary>
+        /// 已下线的产品列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeactivedDetail")]
+        public string[] DeactivedDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
             this.SetParamSimple(map, prefix + "OperateUinType", this.OperateUinType);
             this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
+            this.SetParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
         }
     }
 }

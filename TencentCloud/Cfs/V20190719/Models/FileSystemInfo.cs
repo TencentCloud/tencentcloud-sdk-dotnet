@@ -120,6 +120,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
+        /// <summary>
+        /// 应用ID
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
             this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
         }
     }
 }

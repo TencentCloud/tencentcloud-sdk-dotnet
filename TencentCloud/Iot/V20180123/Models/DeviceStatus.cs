@@ -38,12 +38,14 @@ namespace TencentCloud.Iot.V20180123.Models
 
         /// <summary>
         /// 首次上线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstOnline")]
         public string FirstOnline{ get; set; }
 
         /// <summary>
         /// 最后上线时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastOnline")]
         public string LastOnline{ get; set; }

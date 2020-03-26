@@ -54,6 +54,27 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("LastEditUin")]
         public string LastEditUin{ get; set; }
 
+        /// <summary>
+        /// 更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public long? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InsertTime")]
+        public long? InsertTime{ get; set; }
+
+        /// <summary>
+        /// 是否且规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsUnionRule")]
+        public long? IsUnionRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +86,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ViewName", this.ViewName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "LastEditUin", this.LastEditUin);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "InsertTime", this.InsertTime);
+            this.SetParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
         }
     }
 }

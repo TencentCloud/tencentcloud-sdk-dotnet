@@ -73,6 +73,26 @@ namespace TencentCloud.Tia.V20180226
         }
 
         /// <summary>
+        /// 创建训练任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateJobRequest"/></param>
+        /// <returns><see cref="CreateJobResponse"/></returns>
+        public CreateJobResponse CreateJobSync(CreateJobRequest req)
+        {
+             JsonResponseModel<CreateJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 部署模型，用以对外提供服务。有两种部署模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
         /// </summary>
         /// <param name="req"><see cref="CreateModelRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Tia.V20180226
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 部署模型，用以对外提供服务。有两种部署模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
+        /// </summary>
+        /// <param name="req"><see cref="CreateModelRequest"/></param>
+        /// <returns><see cref="CreateModelResponse"/></returns>
+        public CreateModelResponse CreateModelSync(CreateModelRequest req)
+        {
+             JsonResponseModel<CreateModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateModel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Tia.V20180226
         }
 
         /// <summary>
+        /// 删除训练任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJobRequest"/></param>
+        /// <returns><see cref="DeleteJobResponse"/></returns>
+        public DeleteJobResponse DeleteJobSync(DeleteJobRequest req)
+        {
+             JsonResponseModel<DeleteJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除指定的部署模型。模型有两种部署模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
         /// </summary>
         /// <param name="req"><see cref="DeleteModelRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Tia.V20180226
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定的部署模型。模型有两种部署模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteModelRequest"/></param>
+        /// <returns><see cref="DeleteModelResponse"/></returns>
+        public DeleteModelResponse DeleteModelSync(DeleteModelRequest req)
+        {
+             JsonResponseModel<DeleteModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteModel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Tia.V20180226
         }
 
         /// <summary>
+        /// 获取训练任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobRequest"/></param>
+        /// <returns><see cref="DescribeJobResponse"/></returns>
+        public DescribeJobResponse DescribeJobSync(DescribeJobRequest req)
+        {
+             JsonResponseModel<DescribeJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 描述已经部署的某个模型。而模型部署有两种模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
         /// </summary>
         /// <param name="req"><see cref="DescribeModelRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Tia.V20180226
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述已经部署的某个模型。而模型部署有两种模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModelRequest"/></param>
+        /// <returns><see cref="DescribeModelResponse"/></returns>
+        public DescribeModelResponse DescribeModelSync(DescribeModelRequest req)
+        {
+             JsonResponseModel<DescribeModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeModel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Tia.V20180226
         }
 
         /// <summary>
+        /// 安装agent
+        /// </summary>
+        /// <param name="req"><see cref="InstallAgentRequest"/></param>
+        /// <returns><see cref="InstallAgentResponse"/></returns>
+        public InstallAgentResponse InstallAgentSync(InstallAgentRequest req)
+        {
+             JsonResponseModel<InstallAgentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InstallAgent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallAgentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 列举训练任务
         /// </summary>
         /// <param name="req"><see cref="ListJobsRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Tia.V20180226
              try
              {
                  var strResp = await this.InternalRequest(req, "ListJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列举训练任务
+        /// </summary>
+        /// <param name="req"><see cref="ListJobsRequest"/></param>
+        /// <returns><see cref="ListJobsResponse"/></returns>
+        public ListJobsResponse ListJobsSync(ListJobsRequest req)
+        {
+             JsonResponseModel<ListJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListJobsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,6 +393,26 @@ namespace TencentCloud.Tia.V20180226
         }
 
         /// <summary>
+        /// 用以列举已经部署的模型。而部署有两种模式：`无服务器模式` 和 `集群模式`。`无服务器模式` 下，模型文件被部署到无服务器云函数，即 [SCF](https://cloud.tencent.com/product/scf)，用户可以在其控制台上进一步操作。`集群模式` 下，模型文件被部署到 TI-A 的计算集群中。不同部署模式下的模型分开列出。
+        /// </summary>
+        /// <param name="req"><see cref="ListModelsRequest"/></param>
+        /// <returns><see cref="ListModelsResponse"/></returns>
+        public ListModelsResponse ListModelsSync(ListModelsRequest req)
+        {
+             JsonResponseModel<ListModelsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListModels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListModelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询 TI-A 训练任务的日志
         /// </summary>
         /// <param name="req"><see cref="QueryLogsRequest"/></param>
@@ -243,6 +423,26 @@ namespace TencentCloud.Tia.V20180226
              try
              {
                  var strResp = await this.InternalRequest(req, "QueryLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 TI-A 训练任务的日志
+        /// </summary>
+        /// <param name="req"><see cref="QueryLogsRequest"/></param>
+        /// <returns><see cref="QueryLogsResponse"/></returns>
+        public QueryLogsResponse QueryLogsSync(QueryLogsRequest req)
+        {
+             JsonResponseModel<QueryLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)

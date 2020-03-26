@@ -56,7 +56,7 @@ namespace TencentCloud.Iai.V20180301.Models
         public ulong? MaxFaceNum{ get; set; }
 
         /// <summary>
-        /// 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+        /// 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34将影响搜索精度。建议设置为80。
         /// </summary>
         [JsonProperty("MinFaceSize")]
         public ulong? MinFaceSize{ get; set; }

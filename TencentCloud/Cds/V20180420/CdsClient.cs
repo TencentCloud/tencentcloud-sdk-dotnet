@@ -53,6 +53,46 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
+        /// 获取镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDasbImageIdsRequest"/></param>
+        /// <returns><see cref="DescribeDasbImageIdsResponse"/></returns>
+        public async Task<DescribeDasbImageIdsResponse> DescribeDasbImageIds(DescribeDasbImageIdsRequest req)
+        {
+             JsonResponseModel<DescribeDasbImageIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDasbImageIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDasbImageIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取镜像列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDasbImageIdsRequest"/></param>
+        /// <returns><see cref="DescribeDasbImageIdsResponse"/></returns>
+        public DescribeDasbImageIdsResponse DescribeDasbImageIdsSync(DescribeDasbImageIdsRequest req)
+        {
+             JsonResponseModel<DescribeDasbImageIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDasbImageIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDasbImageIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDbauditInstanceTypeRequest"/></param>
@@ -63,6 +103,26 @@ namespace TencentCloud.Cds.V20180420
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDbauditInstanceType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditInstanceTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDbauditInstanceTypeRequest"/></param>
+        /// <returns><see cref="DescribeDbauditInstanceTypeResponse"/></returns>
+        public DescribeDbauditInstanceTypeResponse DescribeDbauditInstanceTypeSync(DescribeDbauditInstanceTypeRequest req)
+        {
+             JsonResponseModel<DescribeDbauditInstanceTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDbauditInstanceType");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditInstanceTypeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -93,6 +153,26 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
+        /// 本接口 (DescribeDbauditInstances) 用于查询数据安全审计实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDbauditInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDbauditInstancesResponse"/></returns>
+        public DescribeDbauditInstancesResponse DescribeDbauditInstancesSync(DescribeDbauditInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDbauditInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDbauditInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDbauditUsedRegionsRequest"/></param>
@@ -103,6 +183,26 @@ namespace TencentCloud.Cds.V20180420
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDbauditUsedRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditUsedRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeDbauditUsedRegions) 用于查询可售卖地域列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDbauditUsedRegionsRequest"/></param>
+        /// <returns><see cref="DescribeDbauditUsedRegionsResponse"/></returns>
+        public DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegionsSync(DescribeDbauditUsedRegionsRequest req)
+        {
+             JsonResponseModel<DescribeDbauditUsedRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDbauditUsedRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDbauditUsedRegionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -133,6 +233,26 @@ namespace TencentCloud.Cds.V20180420
         }
 
         /// <summary>
+        /// 用于查询数据安全审计产品实例价格
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceDbauditInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceDbauditInstanceResponse"/></returns>
+        public InquiryPriceDbauditInstanceResponse InquiryPriceDbauditInstanceSync(InquiryPriceDbauditInstanceRequest req)
+        {
+             JsonResponseModel<InquiryPriceDbauditInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceDbauditInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceDbauditInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
         /// </summary>
         /// <param name="req"><see cref="ModifyDbauditInstancesRenewFlagRequest"/></param>
@@ -143,6 +263,26 @@ namespace TencentCloud.Cds.V20180420
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyDbauditInstancesRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyDbauditInstancesRenewFlag) 用于修改数据安全审计产品实例续费标识
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDbauditInstancesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDbauditInstancesRenewFlagResponse"/></returns>
+        public ModifyDbauditInstancesRenewFlagResponse ModifyDbauditInstancesRenewFlagSync(ModifyDbauditInstancesRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDbauditInstancesRenewFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)

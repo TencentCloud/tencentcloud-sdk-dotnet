@@ -60,6 +60,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }
 
+        /// <summary>
+        /// 配置项版本，精确查询，不传入时查询全量
+        /// </summary>
+        [JsonProperty("ConfigVersion")]
+        public string ConfigVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "ConfigIdList.", this.ConfigIdList);
             this.SetParamSimple(map, prefix + "ConfigName", this.ConfigName);
+            this.SetParamSimple(map, prefix + "ConfigVersion", this.ConfigVersion);
         }
     }
 }

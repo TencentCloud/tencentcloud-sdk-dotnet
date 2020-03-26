@@ -72,6 +72,20 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
+        /// <summary>
+        /// 业务员ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SalesUin")]
+        public string SalesUin{ get; set; }
+
+        /// <summary>
+        /// 业务员姓名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SalesName")]
+        public string SalesName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +100,8 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "HasOverdueBill", this.HasOverdueBill);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
+            this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
         }
     }
 }

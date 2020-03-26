@@ -98,6 +98,40 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Property")]
         public string Property{ get; set; }
 
+        /// <summary>
+        /// 集群当前master数量
+        /// </summary>
+        [JsonProperty("ClusterMaterNodeNum")]
+        public ulong? ClusterMaterNodeNum{ get; set; }
+
+        /// <summary>
+        /// 集群使用镜像id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
+        /// <summary>
+        /// OsCustomizeType
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OsCustomizeType")]
+        public string OsCustomizeType{ get; set; }
+
+        /// <summary>
+        /// 集群运行环境docker或container
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerRuntime")]
+        public string ContainerRuntime{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +150,11 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
             this.SetParamSimple(map, prefix + "Property", this.Property);
+            this.SetParamSimple(map, prefix + "ClusterMaterNodeNum", this.ClusterMaterNodeNum);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         }
     }
 }

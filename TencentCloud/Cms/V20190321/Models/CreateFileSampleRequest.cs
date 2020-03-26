@@ -38,17 +38,13 @@ namespace TencentCloud.Cms.V20190321.Models
         /// 20006：涉毒违法
         /// 20007：谩骂 
         /// 24001：暴恐
-        /// 21000：综合
         /// 20105：广告引流
         /// </summary>
         [JsonProperty("EvilType")]
         public long? EvilType{ get; set; }
 
         /// <summary>
-        /// 文件类型
         /// image：图片
-        /// audio：音频
-        /// video：视频
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }

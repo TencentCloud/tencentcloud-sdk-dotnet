@@ -48,6 +48,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Types")]
         public AvailableType[] Types{ get; set; }
 
+        /// <summary>
+        /// 可用区中英文名称
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneCnName", this.ZoneCnName);
             this.SetParamArrayObj(map, prefix + "Types.", this.Types);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

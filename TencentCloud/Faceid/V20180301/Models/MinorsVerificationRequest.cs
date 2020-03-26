@@ -33,7 +33,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 手机号。11位数字。
+        /// 手机号，11位数字，
+        /// 特别提示：
+        /// 手机号验证只限制在腾讯健康守护可信模型覆盖的数据范围内，与手机号本身在运营商是否实名无关联，不在范围会提示“手机号未实名”，建议客户与传入姓名和身份证号信息组合使用。
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }

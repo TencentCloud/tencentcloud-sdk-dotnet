@@ -102,7 +102,34 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 实例的状态码。取值范围：
+        /// <li>2：表示集群运行中。</li>
+        /// <li>3：表示集群创建中。</li>
+        /// <li>4：表示集群扩容中。</li>
+        /// <li>5：表示集群增加router节点中。</li>
+        /// <li>6：表示集群安装组件中。</li>
+        /// <li>7：表示集群执行命令中。</li>
+        /// <li>8：表示重启服务中。</li>
+        /// <li>9：表示进入维护中。</li>
+        /// <li>10：表示服务暂停中。</li>
+        /// <li>11：表示退出维护中。</li>
+        /// <li>12：表示退出暂停中。</li>
+        /// <li>13：表示配置下发中。</li>
+        /// <li>14：表示销毁集群中。</li>
+        /// <li>15：表示销毁core节点中。</li>
+        /// <li>16：销毁task节点中。</li>
+        /// <li>17：表示销毁router节点中。</li>
+        /// <li>18：表示更改webproxy密码中。</li>
+        /// <li>19：表示集群隔离中。</li>
+        /// <li>20：表示集群冲正中。</li>
+        /// <li>21：表示集群回收中。</li>
+        /// <li>22：表示变配等待中。</li>
+        /// <li>23：表示集群已隔离。</li>
+        /// <li>24：表示缩容节点中。</li>
+        /// <li>33：表示集群等待退费中。</li>
+        /// <li>34：表示集群已退费。</li>
+        /// <li>301：表示创建失败。</li>
+        /// <li>302：表示扩容失败。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -178,6 +205,41 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("AlarmInfo")]
         public string AlarmInfo{ get; set; }
 
+        /// <summary>
+        /// 是否采用新架构
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsWoodpeckerCluster")]
+        public long? IsWoodpeckerCluster{ get; set; }
+
+        /// <summary>
+        /// 元数据库信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaDb")]
+        public string MetaDb{ get; set; }
+
+        /// <summary>
+        /// 标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Hive元数据信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HiveMetaDb")]
+        public string HiveMetaDb{ get; set; }
+
+        /// <summary>
+        /// 集群类型:EMR,CLICKHOUSE,DRUID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceClass")]
+        public string ServiceClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +268,11 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ResourceOrderId", this.ResourceOrderId);
             this.SetParamSimple(map, prefix + "IsTradeCluster", this.IsTradeCluster);
             this.SetParamSimple(map, prefix + "AlarmInfo", this.AlarmInfo);
+            this.SetParamSimple(map, prefix + "IsWoodpeckerCluster", this.IsWoodpeckerCluster);
+            this.SetParamSimple(map, prefix + "MetaDb", this.MetaDb);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
+            this.SetParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
         }
     }
 }

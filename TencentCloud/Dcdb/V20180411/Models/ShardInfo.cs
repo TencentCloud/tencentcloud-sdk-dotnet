@@ -78,6 +78,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
+        /// <summary>
+        /// Cpu核数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public ulong? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Bri.V20190328.Models
         public BRIRequest RequestData{ get; set; }
 
         /// <summary>
-        /// 客户用于计费的资源Id
+        /// 客户用于计费的资源ID
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

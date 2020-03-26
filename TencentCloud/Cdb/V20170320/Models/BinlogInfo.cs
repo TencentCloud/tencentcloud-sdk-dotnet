@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 备份文件名
+        /// binlog 日志备份文件名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 备份快照时间，时间格式：2016-03-17 02:10:37
+        /// 文件存储时间，时间格式：2016-03-17 02:10:37
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
@@ -60,6 +60,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// binlog 文件起始时间
+        /// </summary>
+        [JsonProperty("BinlogStartTime")]
+        public string BinlogStartTime{ get; set; }
+
+        /// <summary>
+        /// binlog 文件截止时间
+        /// </summary>
+        [JsonProperty("BinlogFinishTime")]
+        public string BinlogFinishTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "IntranetUrl", this.IntranetUrl);
             this.SetParamSimple(map, prefix + "InternetUrl", this.InternetUrl);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "BinlogStartTime", this.BinlogStartTime);
+            this.SetParamSimple(map, prefix + "BinlogFinishTime", this.BinlogFinishTime);
         }
     }
 }

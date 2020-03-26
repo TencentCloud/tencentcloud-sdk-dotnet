@@ -49,6 +49,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public long? MaxResults{ get; set; }
 
         /// <summary>
+        /// 云审计模式，有效值：standard | quick，其中standard是标准模式，quick是极速模式。默认为标准模式
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
         /// 查看更多日志的凭证
         /// </summary>
         [JsonProperty("NextToken")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
         }
     }

@@ -37,6 +37,13 @@ namespace TencentCloud.Sts.V20180813.Models
         public ulong? ExpiredTime{ get; set; }
 
         /// <summary>
+        /// 证书有效的时间，以 iso8601 格式的 UTC 时间表示
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Expiration")]
+        public string Expiration{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Sts.V20180813.Models
         {
             this.SetParamObj(map, prefix + "Credentials.", this.Credentials);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "Expiration", this.Expiration);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

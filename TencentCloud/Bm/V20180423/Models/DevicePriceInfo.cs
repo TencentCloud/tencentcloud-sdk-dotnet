@@ -115,7 +115,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 计费时长单位, m:按月计费; d:按天计费
+        /// 计费时长单位, M:按月计费; D:按天计费
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

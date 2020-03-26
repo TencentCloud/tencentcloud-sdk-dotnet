@@ -25,37 +25,39 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 时间长度
+        /// 实例续费的时长。需要结合TimeUnit一起使用。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 资源ID列表
+        /// 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 位置信息
+        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
+        /// 实例计费模式。此处只支持取值为1，表示包年包月。
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 时间单位，默认为m
+        /// 实例续费的时间单位。取值范围：
+        /// <li>m：表示月份。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 货币种类
+        /// 货币种类。取值范围：
+        /// <li>CNY：表示人民币。</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

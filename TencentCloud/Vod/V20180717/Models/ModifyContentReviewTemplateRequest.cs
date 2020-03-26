@@ -61,6 +61,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public PoliticalConfigureInfoForUpdate PoliticalConfigure{ get; set; }
 
         /// <summary>
+        /// 违禁控制参数。违禁内容包括：
+        /// <li>谩骂；</li>
+        /// <li>涉毒违法。</li>
+        /// 注意：此参数尚未支持。
+        /// </summary>
+        [JsonProperty("ProhibitedConfigure")]
+        public ProhibitedConfigureInfoForUpdate ProhibitedConfigure{ get; set; }
+
+        /// <summary>
         /// 用户自定义内容审核控制参数。
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
@@ -98,6 +107,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
             this.SetParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
             this.SetParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+            this.SetParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
             this.SetParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
             this.SetParamSimple(map, prefix + "ReviewWallSwitch", this.ReviewWallSwitch);

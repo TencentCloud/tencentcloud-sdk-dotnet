@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 需要修改描述信息的的CMK ID
+        /// 需要修改描述信息的CMK ID
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }

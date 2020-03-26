@@ -49,7 +49,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写；
+        /// 7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写，且数组长度只能为1；
         /// </summary>
         [JsonProperty("RuleConfig")]
         public CCRuleConfig[] RuleConfig{ get; set; }

@@ -66,6 +66,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
 
+        /// <summary>
+        /// 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+        /// </summary>
+        [JsonProperty("LifecycleTransitionType")]
+        public string LifecycleTransitionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "HeartbeatTimeout", this.HeartbeatTimeout);
             this.SetParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
             this.SetParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+            this.SetParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// 专线通道ID
+        /// 专用通道ID
         /// </summary>
         [JsonProperty("DirectConnectTunnelId")]
         public string DirectConnectTunnelId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectId{ get; set; }
 
         /// <summary>
-        /// 专线通道状态
+        /// 专用通道状态
         /// AVAILABLE:就绪或者已连接
         /// PENDING:申请中
         /// ALLOCATING:配置中
@@ -58,7 +58,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string DirectConnectOwnerAccount{ get; set; }
 
         /// <summary>
-        /// 专线通道的拥有者，开发商账号 ID
+        /// 专用通道的拥有者，开发商账号 ID
         /// </summary>
         [JsonProperty("OwnerAccount")]
         public string OwnerAccount{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// VPC地域
+        /// VPC地域对应的网络名，如ap-guangzhou
         /// </summary>
         [JsonProperty("NetworkRegion")]
         public string NetworkRegion{ get; set; }
@@ -107,7 +107,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public RouteFilterPrefix[] RouteFilterPrefixes{ get; set; }
 
         /// <summary>
-        /// 专线通道的Vlan
+        /// 专用通道的Vlan
         /// </summary>
         [JsonProperty("Vlan")]
         public long? Vlan{ get; set; }
@@ -125,22 +125,84 @@ namespace TencentCloud.Dc.V20180410.Models
         public string CustomerAddress{ get; set; }
 
         /// <summary>
-        /// 专线通道名称
+        /// 专用通道名称
         /// </summary>
         [JsonProperty("DirectConnectTunnelName")]
         public string DirectConnectTunnelName{ get; set; }
 
         /// <summary>
-        /// 专线通道创建时间
+        /// 专用通道创建时间
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 专线通道带宽值
+        /// 专用通道带宽值
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 专用通道标签值
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
+        /// <summary>
+        /// 关联的网络自定义探测ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetDetectId")]
+        public string NetDetectId{ get; set; }
+
+        /// <summary>
+        /// BGP community开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableBGPCommunity")]
+        public bool? EnableBGPCommunity{ get; set; }
+
+        /// <summary>
+        /// 是否为Nat通道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NatType")]
+        public long? NatType{ get; set; }
+
+        /// <summary>
+        /// VPC地域简码，如gz、cd
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcRegion")]
+        public string VpcRegion{ get; set; }
+
+        /// <summary>
+        /// 是否开启BFD
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BfdEnable")]
+        public long? BfdEnable{ get; set; }
+
+        /// <summary>
+        /// 专用通道接入点类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessPointType")]
+        public string AccessPointType{ get; set; }
+
+        /// <summary>
+        /// 专线网关名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DirectConnectGatewayName")]
+        public string DirectConnectGatewayName{ get; set; }
+
+        /// <summary>
+        /// VPC名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
 
 
         /// <summary>
@@ -166,6 +228,15 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "DirectConnectTunnelName", this.DirectConnectTunnelName);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "NetDetectId", this.NetDetectId);
+            this.SetParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
+            this.SetParamSimple(map, prefix + "NatType", this.NatType);
+            this.SetParamSimple(map, prefix + "VpcRegion", this.VpcRegion);
+            this.SetParamSimple(map, prefix + "BfdEnable", this.BfdEnable);
+            this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
+            this.SetParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
         }
     }
 }

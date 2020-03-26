@@ -43,13 +43,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 分页返回结果，分页大小，默认20，不超过100
+        /// 分页返回，每页返回的数目，取值为1-100，默认值为20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 从第几页开始返回，起始页，从0开始，默认为0
+        /// 分页返回，页编号，默认值为第0页
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

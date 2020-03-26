@@ -90,6 +90,40 @@ namespace TencentCloud.Cds.V20180420.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 实例名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 实例公网IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicIp")]
+        public string PublicIp{ get; set; }
+
+        /// <summary>
+        /// 实例私网IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrivateIp")]
+        public string PrivateIp{ get; set; }
+
+        /// <summary>
+        /// 实例类型（版本）
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 实例域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Pdomain")]
+        public string Pdomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +141,11 @@ namespace TencentCloud.Cds.V20180420.Models
             this.SetParamSimple(map, prefix + "IsolatedTimestamp", this.IsolatedTimestamp);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
+            this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "Pdomain", this.Pdomain);
         }
     }
 }

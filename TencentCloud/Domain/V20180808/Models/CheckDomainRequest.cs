@@ -30,6 +30,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
+        /// <summary>
+        /// 年限
+        /// </summary>
+        [JsonProperty("Period")]
+        public string Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Domain.V20180808.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

@@ -73,6 +73,26 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 检查域名是否可以注册
+        /// </summary>
+        /// <param name="req"><see cref="CheckDomainRequest"/></param>
+        /// <returns><see cref="CheckDomainResponse"/></returns>
+        public CheckDomainResponse CheckDomainSync(CheckDomainRequest req)
+        {
+             JsonResponseModel<CheckDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按照域名后缀获取对应的价格列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainPriceListRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Domain.V20180808
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeDomainPriceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainPriceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按照域名后缀获取对应的价格列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainPriceListRequest"/></param>
+        /// <returns><see cref="DescribeDomainPriceListResponse"/></returns>
+        public DescribeDomainPriceListResponse DescribeDomainPriceListSync(DescribeDomainPriceListRequest req)
+        {
+             JsonResponseModel<DescribeDomainPriceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainPriceList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainPriceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)

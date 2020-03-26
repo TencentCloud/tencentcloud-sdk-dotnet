@@ -102,6 +102,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CascadeRelease")]
         public bool? CascadeRelease{ get; set; }
 
+        /// <summary>
+        /// EIP ALG开启的协议类型。
+        /// </summary>
+        [JsonProperty("EipAlgType")]
+        public AlgType EipAlgType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IsEipDirectConnection", this.IsEipDirectConnection);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
+            this.SetParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
         }
     }
 }

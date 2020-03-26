@@ -80,6 +80,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteType")]
         public string RouteType{ get; set; }
 
+        /// <summary>
+        /// 路由表实例ID，例如：rtb-azd4dt1c。
+        /// </summary>
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteDescription", this.RouteDescription);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         }
     }
 }

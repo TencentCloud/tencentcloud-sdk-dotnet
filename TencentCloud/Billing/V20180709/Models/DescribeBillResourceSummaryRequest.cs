@@ -55,6 +55,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("NeedRecordNum")]
         public long? NeedRecordNum{ get; set; }
 
+        /// <summary>
+        /// 查询交易类型。如 按量计费日结，按量计费小时结 等
+        /// </summary>
+        [JsonProperty("ActionType")]
+        public string ActionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "PeriodType", this.PeriodType);
             this.SetParamSimple(map, prefix + "Month", this.Month);
             this.SetParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
+            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
         }
     }
 }

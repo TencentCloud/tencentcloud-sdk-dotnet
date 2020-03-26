@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页返回，从第几页开始返回。从第0页开始，默认第0页
+        /// 分页返回，页编号，默认值为第0页
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

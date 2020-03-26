@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 总记录数
+        /// 总记录数。
         /// </summary>
         [JsonProperty("AllCount")]
         public ulong? AllCount{ get; set; }
 
         /// <summary>
-        /// 域名详细信息列表
+        /// 域名详细信息列表。
         /// </summary>
         [JsonProperty("DomainList")]
         public DomainInfo[] DomainList{ get; set; }

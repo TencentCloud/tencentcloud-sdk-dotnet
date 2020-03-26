@@ -108,6 +108,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ReceiverUserList")]
         public long?[] ReceiverUserList{ get; set; }
 
+        /// <summary>
+        /// 告警接收语言，枚举值（zh-CN，en-US）
+        /// </summary>
+        [JsonProperty("ReceiveLanguage")]
+        public string ReceiveLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NeedSendNotice", this.NeedSendNotice);
             this.SetParamArraySimple(map, prefix + "ReceiverGroupList.", this.ReceiverGroupList);
             this.SetParamArraySimple(map, prefix + "ReceiverUserList.", this.ReceiverUserList);
+            this.SetParamSimple(map, prefix + "ReceiveLanguage", this.ReceiveLanguage);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 用户Id，长度不小于5位， 仅支持字母和数字的组合
+        /// 用户ID，长度不小于5位， 仅支持字母和数字的组合
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string RefundId{ get; set; }
 
         /// <summary>
-        /// 聚鑫分配的支付主MidasAppid
+        /// 聚鑫分配的支付主MidasAppId
         /// </summary>
         [JsonProperty("MidasAppId")]
         public string MidasAppId{ get; set; }
 
         /// <summary>
-        /// 退款金额，单位：分。备 注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额做为退款金额
+        /// 退款金额，单位：分。备注：当该字段为空或者为0 时，系统会默认使用订单当 实付金额作为退款金额
         /// </summary>
         [JsonProperty("TotalRefundAmt")]
         public long? TotalRefundAmt{ get; set; }
 
         /// <summary>
-        /// 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算 出来总和。
+        /// 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
         /// </summary>
         [JsonProperty("SubOrderRefundList")]
         public RefundOutSubOrderRefundList[] SubOrderRefundList{ get; set; }

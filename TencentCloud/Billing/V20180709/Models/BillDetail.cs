@@ -140,25 +140,32 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 商品名称代码
+        /// 商品名称代码（未开放的字段）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 子商品名称代码
+        /// 子商品名称代码 （未开放的字段）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 交易类型代码
+        /// 交易类型代码（未开放的字段）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
+
+        /// <summary>
+        /// 区域ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public string RegionId{ get; set; }
 
 
         /// <summary>
@@ -188,6 +195,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

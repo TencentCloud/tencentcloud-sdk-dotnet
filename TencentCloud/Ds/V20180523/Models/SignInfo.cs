@@ -31,13 +31,13 @@ namespace TencentCloud.Ds.V20180523.Models
         public string AccountResId{ get; set; }
 
         /// <summary>
-        /// 授权时间，格式为年月日时分秒，例20160801095509
+        /// 授权时间（上传合同可不传该参数）
         /// </summary>
         [JsonProperty("AuthorizationTime")]
         public string AuthorizationTime{ get; set; }
 
         /// <summary>
-        /// 授权IP地址
+        /// 授权IP地址（上传合同可不传该参数）
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }

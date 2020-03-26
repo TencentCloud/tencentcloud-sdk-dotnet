@@ -37,13 +37,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string MigrateName{ get; set; }
 
         /// <summary>
-        /// 每页的记录数
+        /// 分页返回，每页返回的数目，取值为1-100，默认值为100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询第几页的记录
+        /// 分页返回，页编号，默认值为第0页
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

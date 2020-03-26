@@ -81,6 +81,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public AudioTrackTemplateInfo[] AudioTrackTemplateSet{ get; set; }
 
         /// <summary>
+        /// 自适应转码格式，取值范围：
+        /// <li>HLS。</li>
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
+        /// <summary>
+        /// 自适应转码输入流参数信息，最多输入10路流。
+        /// </summary>
+        [JsonProperty("StreamInfos")]
+        public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
+
+        /// <summary>
         /// 是否禁止视频低码率转高码率，取值范围：
         /// <li>0：否，</li>
         /// <li>1：是。</li>
@@ -122,6 +135,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
             this.SetParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

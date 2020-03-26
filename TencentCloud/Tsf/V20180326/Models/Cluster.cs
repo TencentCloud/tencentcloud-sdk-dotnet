@@ -199,6 +199,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RunServiceInstanceCount")]
         public long? RunServiceInstanceCount{ get; set; }
 
+        /// <summary>
+        /// 集群所属子网ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// 返回给前端的控制信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperationInfo")]
+        public OperationInfo OperationInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +244,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterLimitCpu", this.ClusterLimitCpu);
             this.SetParamSimple(map, prefix + "ClusterLimitMem", this.ClusterLimitMem);
             this.SetParamSimple(map, prefix + "RunServiceInstanceCount", this.RunServiceInstanceCount);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamObj(map, prefix + "OperationInfo.", this.OperationInfo);
         }
     }
 }

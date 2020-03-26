@@ -48,6 +48,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 是否为管理员账户，默认为否
+        /// </summary>
+        [JsonProperty("IsAdmin")]
+        public bool? IsAdmin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         }
     }
 }

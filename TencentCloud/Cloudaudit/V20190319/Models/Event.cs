@@ -61,7 +61,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string EventName{ get; set; }
 
         /// <summary>
-        /// 事件名称中文描述
+        /// 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
         /// </summary>
         [JsonProperty("EventNameCn")]
         public string EventNameCn{ get; set; }
@@ -91,7 +91,13 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string RequestID{ get; set; }
 
         /// <summary>
-        /// 资源类型中文描述
+        /// 资源地域
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        public string ResourceRegion{ get; set; }
+
+        /// <summary>
+        /// 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
         /// </summary>
         [JsonProperty("ResourceTypeCn")]
         public string ResourceTypeCn{ get; set; }
@@ -131,6 +137,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "EventSource", this.EventSource);
             this.SetParamSimple(map, prefix + "EventTime", this.EventTime);
             this.SetParamSimple(map, prefix + "RequestID", this.RequestID);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
             this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
             this.SetParamSimple(map, prefix + "SourceIPAddress", this.SourceIPAddress);

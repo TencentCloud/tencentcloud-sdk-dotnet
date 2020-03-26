@@ -32,7 +32,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 截图时间点列表，单位为<font color=red>毫秒</font>。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeOffsetSet")]
         public float?[] TimeOffsetSet{ get; set; }

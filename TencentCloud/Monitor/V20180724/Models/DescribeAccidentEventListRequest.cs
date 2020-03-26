@@ -43,13 +43,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 每页返回的数量，默认20
+        /// 分页参数，每页返回的数量，取值1~100，默认20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 页偏移量，默认0
+        /// 分页参数，页偏移量，从0开始计数，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

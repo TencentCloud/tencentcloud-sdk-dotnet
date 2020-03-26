@@ -143,6 +143,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("InstanceGroup")]
         public DescribePolicyGroupListGroupInstanceGroup InstanceGroup{ get; set; }
 
+        /// <summary>
+        /// 且或规则标识, 0表示或规则(任意一条规则满足阈值条件就告警), 1表示且规则(所有规则都满足阈值条件才告警)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsUnionRule")]
+        public long? IsUnionRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +175,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "ReceiverInfos.", this.ReceiverInfos);
             this.SetParamObj(map, prefix + "ConditionsTemp.", this.ConditionsTemp);
             this.SetParamObj(map, prefix + "InstanceGroup.", this.InstanceGroup);
+            this.SetParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         /// vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
         /// vpc-name - String - （过滤条件）私有网络名称。
         /// zone - String - （过滤条件）可用区。
-        /// state - String - （过滤条件）VPC状态。
+        /// state - String - （过滤条件）VPC状态。available: 运营中; pending: 创建中; failed: 创建失败; deleting: 删除中
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -52,6 +52,18 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 排序方向, “asc”、“desc”
+        /// </summary>
+        [JsonProperty("OrderDirection")]
+        public string OrderDirection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +74,8 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         }
     }
 }

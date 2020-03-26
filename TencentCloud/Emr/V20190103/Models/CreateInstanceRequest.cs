@@ -25,124 +25,182 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 产品ID
+        /// 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+        /// <li>1：表示EMR-V1.3.1。</li>
+        /// <li>2：表示EMR-V2.0.1。</li>
+        /// <li>4：表示EMR-V2.1.0。</li>
+        /// <li>7：表示EMR-V3.0.0。</li>
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// VPC设置参数
+        /// 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
         /// </summary>
         [JsonProperty("VPCSettings")]
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// 软件列表
+        /// 部署的组件列表。不同ProductId对应特定版本的组件。例如，当ProductId取值为4时，该参数可以填写Software.0=hadoop-2.8.4&Software.1=zookeeper-3.4.9；当ProductId取值为2时，该参数可以填写Software.0=hadoop-2.7.3&Software.1=zookeeper-3.4.9。
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
 
         /// <summary>
-        /// 资源描述
+        /// 节点资源的规格。
         /// </summary>
         [JsonProperty("ResourceSpec")]
         public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
-        /// 支持HA
+        /// 是否开启节点高可用。取值范围：
+        /// <li>0：表示不开启节点高可用。</li>
+        /// <li>1：表示开启节点高可用。</li>
         /// </summary>
         [JsonProperty("SupportHA")]
         public ulong? SupportHA{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 实例名称。
+        /// <li>长度限制为6-36个字符。</li>
+        /// <li>只允许包含中文、字母、数字、-、_。</li>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 计费类型
+        /// 实例计费模式。取值范围：
+        /// <li>0：表示按量计费。</li>
+        /// <li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 集群位置信息
+        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// 时间长度
+        /// 购买实例的时长。需要结合TimeUnit一起使用。
+        /// <li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 时间单位
+        /// 购买实例的时间单位。取值范围：
+        /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 登录配置
+        /// 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
+        /// <li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
+        /// <li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// COS设置参数
+        /// 开启COS访问需要设置的参数。
         /// </summary>
         [JsonProperty("COSSettings")]
         public COSSettings COSSettings{ get; set; }
 
         /// <summary>
-        /// 安全组ID
+        /// 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
         /// </summary>
         [JsonProperty("SgId")]
         public string SgId{ get; set; }
 
         /// <summary>
-        /// 预执行脚本设置
+        /// 引导操作脚本设置。
         /// </summary>
         [JsonProperty("PreExecutedFileSettings")]
         public PreExecuteFileSettings[] PreExecutedFileSettings{ get; set; }
 
         /// <summary>
-        /// 自动续费
+        /// 包年包月实例是否自动续费。取值范围：
+        /// <li>0：表示不自动续费。</li>
+        /// <li>1：表示自动续费。</li>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// 客户端Token
+        /// 客户端Token。
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+        /// 是否开启集群Master节点公网。取值范围：
+        /// <li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
+        /// <li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
         /// </summary>
         [JsonProperty("NeedMasterWan")]
         public string NeedMasterWan{ get; set; }
 
         /// <summary>
-        /// 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+        /// 是否需要开启外网远程登录，即22号端口。在SgId不为空时，该参数无效。
         /// </summary>
         [JsonProperty("RemoteLoginAtCreate")]
         public long? RemoteLoginAtCreate{ get; set; }
 
         /// <summary>
-        /// 是否开启安全集群，0表示不开启，非0表示开启
+        /// 是否开启安全集群。0表示不开启，非0表示开启。
         /// </summary>
         [JsonProperty("CheckSecurity")]
         public long? CheckSecurity{ get; set; }
 
         /// <summary>
-        /// 访问外部文件系统
+        /// 访问外部文件系统。
         /// </summary>
         [JsonProperty("ExtendFsField")]
         public string ExtendFsField{ get; set; }
+
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 分散置放群组ID列表，当前只支持指定一个。
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupIds")]
+        public string[] DisasterRecoverGroupIds{ get; set; }
+
+        /// <summary>
+        /// 集群维度CBS加密盘，默认0表示不加密，1表示加密
+        /// </summary>
+        [JsonProperty("CbsEncrypt")]
+        public ulong? CbsEncrypt{ get; set; }
+
+        /// <summary>
+        /// hive共享元数据库类型。取值范围：
+        /// <li>EMR_NEW_META：表示集群默认创建</li>
+        /// <li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+        /// <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
+
+        /// <summary>
+        /// EMR-MetaDB实例
+        /// </summary>
+        [JsonProperty("UnifyMetaInstanceId")]
+        public string UnifyMetaInstanceId{ get; set; }
+
+        /// <summary>
+        /// 自定义MetaDB信息
+        /// </summary>
+        [JsonProperty("MetaDBInfo")]
+        public CustomMetaInfo MetaDBInfo{ get; set; }
 
 
         /// <summary>
@@ -170,6 +228,12 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "RemoteLoginAtCreate", this.RemoteLoginAtCreate);
             this.SetParamSimple(map, prefix + "CheckSecurity", this.CheckSecurity);
             this.SetParamSimple(map, prefix + "ExtendFsField", this.ExtendFsField);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+            this.SetParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
+            this.SetParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
+            this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         }
     }
 }

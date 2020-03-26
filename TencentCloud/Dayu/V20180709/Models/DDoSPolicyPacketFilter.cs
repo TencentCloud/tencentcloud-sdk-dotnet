@@ -67,7 +67,12 @@ namespace TencentCloud.Dayu.V20180709.Models
         public ulong? PktlenMax{ get; set; }
 
         /// <summary>
-        /// 是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
+        /// 是否检测载荷，取值范围[
+        /// begin_l3(IP头)
+        /// begin_l4(TCP头)
+        /// begin_l5(载荷)
+        /// no_match(不检测)
+        /// ]
         /// </summary>
         [JsonProperty("MatchBegin")]
         public string MatchBegin{ get; set; }

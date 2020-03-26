@@ -26,30 +26,35 @@ namespace TencentCloud.Monitor.V20180724.Models
         
         /// <summary>
         /// 检测方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcType")]
         public DescribePolicyConditionListConfigManualCalcType CalcType{ get; set; }
 
         /// <summary>
         /// 检测阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CalcValue")]
         public DescribePolicyConditionListConfigManualCalcValue CalcValue{ get; set; }
 
         /// <summary>
         /// 持续时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ContinueTime")]
         public DescribePolicyConditionListConfigManualContinueTime ContinueTime{ get; set; }
 
         /// <summary>
         /// 数据周期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]
         public DescribePolicyConditionListConfigManualPeriod Period{ get; set; }
 
         /// <summary>
         /// 持续周期个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PeriodNum")]
         public DescribePolicyConditionListConfigManualPeriodNum PeriodNum{ get; set; }

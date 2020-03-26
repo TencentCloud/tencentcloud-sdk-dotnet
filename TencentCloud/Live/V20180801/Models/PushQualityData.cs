@@ -120,6 +120,24 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AudioTs")]
         public ulong? AudioTs{ get; set; }
 
+        /// <summary>
+        /// metadata中的视频码率，单位是kbps。
+        /// </summary>
+        [JsonProperty("MetaVideoRate")]
+        public ulong? MetaVideoRate{ get; set; }
+
+        /// <summary>
+        /// metadata中的音频码率，单位是kbps。
+        /// </summary>
+        [JsonProperty("MetaAudioRate")]
+        public ulong? MetaAudioRate{ get; set; }
+
+        /// <summary>
+        /// metadata中的帧率。
+        /// </summary>
+        [JsonProperty("MateFps")]
+        public ulong? MateFps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +160,9 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "LocalTs", this.LocalTs);
             this.SetParamSimple(map, prefix + "VideoTs", this.VideoTs);
             this.SetParamSimple(map, prefix + "AudioTs", this.AudioTs);
+            this.SetParamSimple(map, prefix + "MetaVideoRate", this.MetaVideoRate);
+            this.SetParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
+            this.SetParamSimple(map, prefix + "MateFps", this.MateFps);
         }
     }
 }

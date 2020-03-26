@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// 协议端口模板实例信息。
+        /// </summary>
+        [JsonProperty("ServiceTemplateSet")]
+        public ServiceTemplate[] ServiceTemplateSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ServiceTemplateGroupName", this.ServiceTemplateGroupName);
             this.SetParamArraySimple(map, prefix + "ServiceTemplateIdSet.", this.ServiceTemplateIdSet);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamArrayObj(map, prefix + "ServiceTemplateSet.", this.ServiceTemplateSet);
         }
     }
 }

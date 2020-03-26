@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 任务ID，全局唯一标识录制任务。
+        /// 任务 ID，全局唯一标识录制任务。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

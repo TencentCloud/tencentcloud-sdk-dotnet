@@ -25,6 +25,12 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
+        /// 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
+
+        /// <summary>
         /// 任务状态
         /// 1：已完成
         /// 2：处理中
@@ -44,6 +50,7 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

@@ -42,6 +42,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("UniqueId")]
         public string[] UniqueId{ get; set; }
 
+        /// <summary>
+        /// 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+        /// </summary>
+        [JsonProperty("InstanceGroupId")]
+        public long? InstanceGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArraySimple(map, prefix + "UniqueId.", this.UniqueId);
+            this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         }
     }
 }

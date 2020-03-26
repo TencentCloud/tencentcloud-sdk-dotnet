@@ -46,7 +46,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? StorageType{ get; set; }
 
         /// <summary>
-        /// 盘类型
+        /// 硬盘类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
@@ -80,6 +80,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
+        /// <summary>
+        /// 规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

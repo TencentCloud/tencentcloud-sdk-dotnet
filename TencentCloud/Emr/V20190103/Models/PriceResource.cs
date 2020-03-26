@@ -87,6 +87,34 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DiskCnt")]
         public long? DiskCnt{ get; set; }
 
+        /// <summary>
+        /// 规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 磁盘数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskNum")]
+        public long? DiskNum{ get; set; }
+
+        /// <summary>
+        /// 本地盘的数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalDiskNum")]
+        public long? LocalDiskNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +130,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamArrayObj(map, prefix + "MultiDisks.", this.MultiDisks);
             this.SetParamSimple(map, prefix + "DiskCnt", this.DiskCnt);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
+            this.SetParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
         }
     }
 }

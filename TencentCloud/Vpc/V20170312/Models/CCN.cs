@@ -80,6 +80,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BandwidthLimitType")]
         public string BandwidthLimitType{ get; set; }
 
+        /// <summary>
+        /// 标签键值对。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "QosLevel", this.QosLevel);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string CatTypeName{ get; set; }
 
         /// <summary>
-        /// 任务Id
+        /// 任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Cat.V20180409.Models
         public string Isp{ get; set; }
 
         /// <summary>
-        /// 被拨测Server 的Ip
+        /// 被拨测Server的IP
         /// </summary>
         [JsonProperty("ServerIp")]
         public string ServerIp{ get; set; }
 
         /// <summary>
-        /// 被拨测Server 的域名
+        /// 被拨测Server的域名
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string RespMsg{ get; set; }
 
         /// <summary>
-        /// 客户端ip
+        /// 客户端IP
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }

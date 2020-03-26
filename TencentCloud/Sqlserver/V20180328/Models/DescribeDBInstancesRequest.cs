@@ -49,13 +49,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 页数，默认为 0
+        /// 分页返回，页编号，默认值为第0页
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 页大小，默认为50
+        /// 分页返回，每页返回的数目，取值为1-100，默认值为100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -72,6 +72,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，传空字符串(“”)则按照基础网络筛选。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 实例所属子网的唯一字符串ID，格式如： subnet-xxx，传空字符串(“”)则按照基础网络筛选。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +96,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

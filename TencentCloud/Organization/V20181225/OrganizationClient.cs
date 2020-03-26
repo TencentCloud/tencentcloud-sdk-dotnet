@@ -73,6 +73,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 接受加入企业组织邀请
+        /// </summary>
+        /// <param name="req"><see cref="AcceptOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="AcceptOrganizationInvitationResponse"/></returns>
+        public AcceptOrganizationInvitationResponse AcceptOrganizationInvitationSync(AcceptOrganizationInvitationRequest req)
+        {
+             JsonResponseModel<AcceptOrganizationInvitationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AcceptOrganizationInvitation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcceptOrganizationInvitationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加企业组织单元
         /// </summary>
         /// <param name="req"><see cref="AddOrganizationNodeRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "AddOrganizationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddOrganizationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加企业组织单元
+        /// </summary>
+        /// <param name="req"><see cref="AddOrganizationNodeRequest"/></param>
+        /// <returns><see cref="AddOrganizationNodeResponse"/></returns>
+        public AddOrganizationNodeResponse AddOrganizationNodeSync(AddOrganizationNodeRequest req)
+        {
+             JsonResponseModel<AddOrganizationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddOrganizationNode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddOrganizationNodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 取消企业组织邀请
+        /// </summary>
+        /// <param name="req"><see cref="CancelOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="CancelOrganizationInvitationResponse"/></returns>
+        public CancelOrganizationInvitationResponse CancelOrganizationInvitationSync(CancelOrganizationInvitationRequest req)
+        {
+             JsonResponseModel<CancelOrganizationInvitationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelOrganizationInvitation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelOrganizationInvitationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建企业组织
         /// </summary>
         /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建企业组织
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationRequest"/></param>
+        /// <returns><see cref="CreateOrganizationResponse"/></returns>
+        public CreateOrganizationResponse CreateOrganizationSync(CreateOrganizationRequest req)
+        {
+             JsonResponseModel<CreateOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrganization");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 删除企业组织
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationResponse"/></returns>
+        public DeleteOrganizationResponse DeleteOrganizationSync(DeleteOrganizationRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除企业组织成员
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationMemberFromNodeRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteOrganizationMemberFromNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMemberFromNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除企业组织成员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMemberFromNodeRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMemberFromNodeResponse"/></returns>
+        public DeleteOrganizationMemberFromNodeResponse DeleteOrganizationMemberFromNodeSync(DeleteOrganizationMemberFromNodeRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationMemberFromNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOrganizationMemberFromNode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMemberFromNodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 批量删除企业组织成员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationMembersRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationMembersResponse"/></returns>
+        public DeleteOrganizationMembersResponse DeleteOrganizationMembersSync(DeleteOrganizationMembersRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOrganizationMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量删除企业组织单元
         /// </summary>
         /// <param name="req"><see cref="DeleteOrganizationNodesRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteOrganizationNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除企业组织单元
+        /// </summary>
+        /// <param name="req"><see cref="DeleteOrganizationNodesRequest"/></param>
+        /// <returns><see cref="DeleteOrganizationNodesResponse"/></returns>
+        public DeleteOrganizationNodesResponse DeleteOrganizationNodesSync(DeleteOrganizationNodesRequest req)
+        {
+             JsonResponseModel<DeleteOrganizationNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteOrganizationNodes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteOrganizationNodesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,6 +393,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 拒绝企业组织邀请
+        /// </summary>
+        /// <param name="req"><see cref="DenyOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="DenyOrganizationInvitationResponse"/></returns>
+        public DenyOrganizationInvitationResponse DenyOrganizationInvitationSync(DenyOrganizationInvitationRequest req)
+        {
+             JsonResponseModel<DenyOrganizationInvitationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DenyOrganizationInvitation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DenyOrganizationInvitationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取企业组织信息
         /// </summary>
         /// <param name="req"><see cref="GetOrganizationRequest"/></param>
@@ -243,6 +423,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "GetOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取企业组织信息
+        /// </summary>
+        /// <param name="req"><see cref="GetOrganizationRequest"/></param>
+        /// <returns><see cref="GetOrganizationResponse"/></returns>
+        public GetOrganizationResponse GetOrganizationSync(GetOrganizationRequest req)
+        {
+             JsonResponseModel<GetOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetOrganization");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOrganizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -273,6 +473,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 获取企业组织成员
+        /// </summary>
+        /// <param name="req"><see cref="GetOrganizationMemberRequest"/></param>
+        /// <returns><see cref="GetOrganizationMemberResponse"/></returns>
+        public GetOrganizationMemberResponse GetOrganizationMemberSync(GetOrganizationMemberRequest req)
+        {
+             JsonResponseModel<GetOrganizationMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetOrganizationMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetOrganizationMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取邀请信息列表
         /// </summary>
         /// <param name="req"><see cref="ListOrganizationInvitationsRequest"/></param>
@@ -283,6 +503,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "ListOrganizationInvitations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationInvitationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取邀请信息列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationInvitationsRequest"/></param>
+        /// <returns><see cref="ListOrganizationInvitationsResponse"/></returns>
+        public ListOrganizationInvitationsResponse ListOrganizationInvitationsSync(ListOrganizationInvitationsRequest req)
+        {
+             JsonResponseModel<ListOrganizationInvitationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListOrganizationInvitations");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationInvitationsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,6 +553,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 获取企业组织成员列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationMembersRequest"/></param>
+        /// <returns><see cref="ListOrganizationMembersResponse"/></returns>
+        public ListOrganizationMembersResponse ListOrganizationMembersSync(ListOrganizationMembersRequest req)
+        {
+             JsonResponseModel<ListOrganizationMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListOrganizationMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取企业组织单元成员列表
         /// </summary>
         /// <param name="req"><see cref="ListOrganizationNodeMembersRequest"/></param>
@@ -323,6 +583,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "ListOrganizationNodeMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationNodeMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取企业组织单元成员列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationNodeMembersRequest"/></param>
+        /// <returns><see cref="ListOrganizationNodeMembersResponse"/></returns>
+        public ListOrganizationNodeMembersResponse ListOrganizationNodeMembersSync(ListOrganizationNodeMembersRequest req)
+        {
+             JsonResponseModel<ListOrganizationNodeMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListOrganizationNodeMembers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationNodeMembersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -353,6 +633,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 获取企业组织单元列表
+        /// </summary>
+        /// <param name="req"><see cref="ListOrganizationNodesRequest"/></param>
+        /// <returns><see cref="ListOrganizationNodesResponse"/></returns>
+        public ListOrganizationNodesResponse ListOrganizationNodesSync(ListOrganizationNodesRequest req)
+        {
+             JsonResponseModel<ListOrganizationNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListOrganizationNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListOrganizationNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 移动成员到指定企业组织单元
         /// </summary>
         /// <param name="req"><see cref="MoveOrganizationMembersToNodeRequest"/></param>
@@ -363,6 +663,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "MoveOrganizationMembersToNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MoveOrganizationMembersToNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移动成员到指定企业组织单元
+        /// </summary>
+        /// <param name="req"><see cref="MoveOrganizationMembersToNodeRequest"/></param>
+        /// <returns><see cref="MoveOrganizationMembersToNodeResponse"/></returns>
+        public MoveOrganizationMembersToNodeResponse MoveOrganizationMembersToNodeSync(MoveOrganizationMembersToNodeRequest req)
+        {
+             JsonResponseModel<MoveOrganizationMembersToNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MoveOrganizationMembersToNode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<MoveOrganizationMembersToNodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -393,6 +713,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 退出企业组织
+        /// </summary>
+        /// <param name="req"><see cref="QuitOrganizationRequest"/></param>
+        /// <returns><see cref="QuitOrganizationResponse"/></returns>
+        public QuitOrganizationResponse QuitOrganizationSync(QuitOrganizationRequest req)
+        {
+             JsonResponseModel<QuitOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QuitOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuitOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发送企业组织邀请
         /// </summary>
         /// <param name="req"><see cref="SendOrganizationInvitationRequest"/></param>
@@ -403,6 +743,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "SendOrganizationInvitation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendOrganizationInvitationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送企业组织邀请
+        /// </summary>
+        /// <param name="req"><see cref="SendOrganizationInvitationRequest"/></param>
+        /// <returns><see cref="SendOrganizationInvitationResponse"/></returns>
+        public SendOrganizationInvitationResponse SendOrganizationInvitationSync(SendOrganizationInvitationRequest req)
+        {
+             JsonResponseModel<SendOrganizationInvitationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendOrganizationInvitation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendOrganizationInvitationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -433,6 +793,26 @@ namespace TencentCloud.Organization.V20181225
         }
 
         /// <summary>
+        /// 更新企业成员信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberResponse"/></returns>
+        public UpdateOrganizationMemberResponse UpdateOrganizationMemberSync(UpdateOrganizationMemberRequest req)
+        {
+             JsonResponseModel<UpdateOrganizationMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateOrganizationMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新企业组织单元
         /// </summary>
         /// <param name="req"><see cref="UpdateOrganizationNodeRequest"/></param>
@@ -443,6 +823,26 @@ namespace TencentCloud.Organization.V20181225
              try
              {
                  var strResp = await this.InternalRequest(req, "UpdateOrganizationNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新企业组织单元
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationNodeRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationNodeResponse"/></returns>
+        public UpdateOrganizationNodeResponse UpdateOrganizationNodeSync(UpdateOrganizationNodeRequest req)
+        {
+             JsonResponseModel<UpdateOrganizationNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateOrganizationNode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateOrganizationNodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)

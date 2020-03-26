@@ -234,6 +234,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MemRequest")]
         public string MemRequest{ get; set; }
 
+        /// <summary>
+        /// 子网id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +277,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamSimple(map, prefix + "CpuRequest", this.CpuRequest);
             this.SetParamSimple(map, prefix + "MemRequest", this.MemRequest);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

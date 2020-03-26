@@ -73,7 +73,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public CCRule[] RuleList{ get; set; }
 
         /// <summary>
-        /// IP列表
+        /// IP列表，如果不填时，请传空数组但不能为null；
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }

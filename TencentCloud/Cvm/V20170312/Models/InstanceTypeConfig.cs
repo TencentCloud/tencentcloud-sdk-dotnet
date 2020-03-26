@@ -60,6 +60,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
+        /// <summary>
+        /// FPGA核数，单位：核。
+        /// </summary>
+        [JsonProperty("FPGA")]
+        public long? FPGA{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "GPU", this.GPU);
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "FPGA", this.FPGA);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
+        /// <summary>
+        /// 是否开启SnatPro
+        /// </summary>
+        [JsonProperty("SnatPro")]
+        public bool? SnatPro{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
             this.SetParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
         }
     }
 }

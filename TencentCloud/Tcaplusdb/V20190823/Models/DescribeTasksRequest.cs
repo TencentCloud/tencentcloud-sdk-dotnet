@@ -25,10 +25,10 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 需要查询任务所属的应用ID列表
+        /// 需要查询任务所属的集群ID列表
         /// </summary>
-        [JsonProperty("ApplicationIds")]
-        public string[] ApplicationIds{ get; set; }
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
 
         /// <summary>
         /// 需要查询的任务ID列表
@@ -43,13 +43,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 查询列表偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 任务列表大小
+        /// 查询列表返回记录数
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -60,7 +60,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
             this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

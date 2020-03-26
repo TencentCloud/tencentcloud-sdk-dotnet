@@ -48,6 +48,42 @@ namespace TencentCloud.Bmeip.V20180625.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// EIP实例ID列表
+        /// </summary>
+        [JsonProperty("EipIds")]
+        public string[] EipIds{ get; set; }
+
+        /// <summary>
+        /// EIP IP地址列表
+        /// </summary>
+        [JsonProperty("EipIps")]
+        public string[] EipIps{ get; set; }
+
+        /// <summary>
+        /// EIP名称列表
+        /// </summary>
+        [JsonProperty("EipNames")]
+        public string[] EipNames{ get; set; }
+
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 排序方式，取值：0:增序(默认)，1:降序
+        /// </summary>
+        [JsonProperty("Order")]
+        public ulong? Order{ get; set; }
+
+        /// <summary>
+        /// ACL名称列表，支持模糊查找
+        /// </summary>
+        [JsonProperty("AclNames")]
+        public string[] AclNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +94,12 @@ namespace TencentCloud.Bmeip.V20180625.Models
             this.SetParamArraySimple(map, prefix + "AclIds.", this.AclIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "EipIds.", this.EipIds);
+            this.SetParamArraySimple(map, prefix + "EipIps.", this.EipIps);
+            this.SetParamArraySimple(map, prefix + "EipNames.", this.EipNames);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamArraySimple(map, prefix + "AclNames.", this.AclNames);
         }
     }
 }

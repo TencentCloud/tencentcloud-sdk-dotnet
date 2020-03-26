@@ -25,7 +25,7 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 二维码在图片中的位置，由4个点的坐标表示
+        /// 二维码在图片中的位置，由边界点的坐标表示
         /// </summary>
         [JsonProperty("CodePosition")]
         public CodePosition[] CodePosition{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cms.V20190321.Models
         public string CodeText{ get; set; }
 
         /// <summary>
-        /// 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+        /// 二维码的类型：1:ONED_BARCODE，2:QRCOD，3:WXCODE，4:PDF417，5:DATAMATRIX
         /// </summary>
         [JsonProperty("CodeType")]
         public long? CodeType{ get; set; }

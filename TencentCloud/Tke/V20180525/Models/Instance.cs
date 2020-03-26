@@ -48,6 +48,26 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
+        /// <summary>
+        /// 实例是否封锁状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DrainStatus")]
+        public string DrainStatus{ get; set; }
+
+        /// <summary>
+        /// 节点配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceAdvancedSettings")]
+        public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
+
+        /// <summary>
+        /// 添加时间
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +78,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
             this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
+            this.SetParamSimple(map, prefix + "DrainStatus", this.DrainStatus);
+            this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         }
     }
 }

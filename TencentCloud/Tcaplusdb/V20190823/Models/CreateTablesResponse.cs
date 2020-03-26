@@ -25,16 +25,16 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 批量创建表结果数量
+        /// 批量创建表格结果数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 批量创建表结果列表
+        /// 批量创建表格结果列表
         /// </summary>
         [JsonProperty("TableResults")]
-        public TableResult[] TableResults{ get; set; }
+        public TableResultNew[] TableResults{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

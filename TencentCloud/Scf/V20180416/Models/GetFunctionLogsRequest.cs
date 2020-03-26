@@ -55,7 +55,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 日志过滤条件。可用来区分正确和错误日志，filter.retCode=not0 表示只返回错误日志，filter.retCode=is0 表示只返回正确日志，不传，则返回所有日志
+        /// 日志过滤条件。可用来区分正确和错误日志，filter.RetCode=not0 表示只返回错误日志，filter.RetCode=is0 表示只返回正确日志，不传，则返回所有日志
         /// </summary>
         [JsonProperty("Filter")]
         public LogFilter Filter{ get; set; }

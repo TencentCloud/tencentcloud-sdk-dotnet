@@ -91,7 +91,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
         public string AddTimestamp{ get; set; }
 
         /// <summary>
-        /// https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+        /// https转发类型。0：https。1：spdy。2：http2。3：spdy+http2。
         /// </summary>
         [JsonProperty("ForwardProtocol")]
         public long? ForwardProtocol{ get; set; }

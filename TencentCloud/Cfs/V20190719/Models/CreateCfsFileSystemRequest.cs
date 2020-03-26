@@ -49,19 +49,19 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
+        /// 文件系统存储类型，值为 SD ；其中 SD 为标准型存储， HP为性能存储。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 私有网路（VPC） ID
+        /// 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 子网 ID
+        /// 子网 ID，若网络类型选择的是VPC，该字段为必填。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
+        /// <summary>
+        /// 文件系统标签
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfo[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "MountIP", this.MountIP);
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

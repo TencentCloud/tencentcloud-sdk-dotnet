@@ -30,6 +30,18 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("TldList")]
         public string[] TldList{ get; set; }
 
+        /// <summary>
+        /// 查询购买的年份，默认会列出所有年份的价格
+        /// </summary>
+        [JsonProperty("Year")]
+        public long?[] Year{ get; set; }
+
+        /// <summary>
+        /// 域名的购买类型：new  新购，renew 续费，redem 赎回，tran 转入
+        /// </summary>
+        [JsonProperty("Operation")]
+        public string[] Operation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Domain.V20180808.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "TldList.", this.TldList);
+            this.SetParamArraySimple(map, prefix + "Year.", this.Year);
+            this.SetParamArraySimple(map, prefix + "Operation.", this.Operation);
         }
     }
 }

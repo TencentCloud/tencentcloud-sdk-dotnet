@@ -43,7 +43,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ulong? MigrateType{ get; set; }
 
         /// <summary>
-        /// 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
+        /// 迁移源的类型 1:TencentDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
         /// </summary>
         [JsonProperty("SourceType")]
         public ulong? SourceType{ get; set; }

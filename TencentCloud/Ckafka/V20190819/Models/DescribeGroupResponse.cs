@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// 返回结果集列表
         /// </summary>
         [JsonProperty("Result")]
-        public DescribeGroup[] Result{ get; set; }
+        public GroupResponse Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Result.", this.Result);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

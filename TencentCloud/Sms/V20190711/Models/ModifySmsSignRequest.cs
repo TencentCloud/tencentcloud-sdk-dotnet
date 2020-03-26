@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 待修改的签名Id。
+        /// 待修改的签名 ID。
         /// </summary>
         [JsonProperty("SignId")]
         public ulong? SignId{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public ulong? SignType{ get; set; }
 
         /// <summary>
-        /// 证明类型。其中：
+        /// 证明类型：
         /// 0：三证合一。
         /// 1：企业营业执照。
         /// 2：组织机构代码证书。
@@ -64,15 +64,15 @@ namespace TencentCloud.Sms.V20190711.Models
         public ulong? DocumentType{ get; set; }
 
         /// <summary>
-        /// 是否国际短信。其中：
+        /// 是否国际/港澳台短信：
         /// 0：表示国内短信。
-        /// 1：表示海外短信。
+        /// 1：表示国际/港澳台短信。
         /// </summary>
         [JsonProperty("International")]
         public ulong? International{ get; set; }
 
         /// <summary>
-        /// 签名用途。其中：
+        /// 签名用途：
         /// 0：自用。
         /// 1：他用。
         /// </summary>

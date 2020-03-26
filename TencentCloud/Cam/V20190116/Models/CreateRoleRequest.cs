@@ -48,6 +48,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("ConsoleLogin")]
         public ulong? ConsoleLogin{ get; set; }
 
+        /// <summary>
+        /// 申请角色临时密钥的最长有效期限制(范围：0~43200)
+        /// </summary>
+        [JsonProperty("SessionDuration")]
+        public ulong? SessionDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
+            this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
         }
     }
 }

@@ -67,11 +67,25 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? ConsoleLogin{ get; set; }
 
         /// <summary>
-        /// 角色类型，取user或system
+        /// 角色类型，取user、system或service_linked
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleType")]
         public string RoleType{ get; set; }
+
+        /// <summary>
+        /// 有效时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionDuration")]
+        public ulong? SessionDuration{ get; set; }
+
+        /// <summary>
+        /// 服务相关角色删除TaskId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeletionTaskId")]
+        public string DeletionTaskId{ get; set; }
 
 
         /// <summary>
@@ -87,6 +101,8 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
             this.SetParamSimple(map, prefix + "RoleType", this.RoleType);
+            this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
+            this.SetParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
         }
     }
 }

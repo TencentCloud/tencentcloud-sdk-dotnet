@@ -25,7 +25,7 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 拨测任务id。验证通过后，创建任务时使用，传递给CreateTask 接口。
+        /// 拨测任务ID。验证通过后，创建任务时使用，传递给CreateTask 接口。
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

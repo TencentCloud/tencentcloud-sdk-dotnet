@@ -90,6 +90,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("ActionIfComputeNodeInactive")]
         public string ActionIfComputeNodeInactive{ get; set; }
 
+        /// <summary>
+        /// 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+        /// </summary>
+        [JsonProperty("ResourceMaxRetryCount")]
+        public long? ResourceMaxRetryCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "AgentRunningMode.", this.AgentRunningMode);
             this.SetParamObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
+            this.SetParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
         }
     }
 }

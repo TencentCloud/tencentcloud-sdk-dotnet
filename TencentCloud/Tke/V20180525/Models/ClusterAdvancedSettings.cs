@@ -54,6 +54,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtraArgs")]
         public ClusterExtraArgs ExtraArgs{ get; set; }
 
+        /// <summary>
+        /// 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+        /// </summary>
+        [JsonProperty("IsNonStaticIpMode")]
+        public bool? IsNonStaticIpMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
         }
     }
 }

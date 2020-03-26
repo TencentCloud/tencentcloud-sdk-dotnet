@@ -101,6 +101,41 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
+        /// <summary>
+        /// Router节点个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RouterNodeSize")]
+        public long? RouterNodeSize{ get; set; }
+
+        /// <summary>
+        /// 是否支持HA
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportHA")]
+        public bool? SupportHA{ get; set; }
+
+        /// <summary>
+        /// 是否支持安全模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityOn")]
+        public bool? SecurityOn{ get; set; }
+
+        /// <summary>
+        /// 安全组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// 是否开启Cbs加密
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CbsEncrypt")]
+        public long? CbsEncrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +153,11 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "ComResource.", this.ComResource);
             this.SetParamSimple(map, prefix + "OnCos", this.OnCos);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "RouterNodeSize", this.RouterNodeSize);
+            this.SetParamSimple(map, prefix + "SupportHA", this.SupportHA);
+            this.SetParamSimple(map, prefix + "SecurityOn", this.SecurityOn);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
         }
     }
 }

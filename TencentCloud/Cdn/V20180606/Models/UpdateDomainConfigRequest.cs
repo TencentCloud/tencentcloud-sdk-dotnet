@@ -199,6 +199,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 回源超时配置
+        /// </summary>
+        [JsonProperty("OriginPullTimeout")]
+        public OriginPullTimeout OriginPullTimeout{ get; set; }
+
+        /// <summary>
+        /// 回源S3私有鉴权
+        /// </summary>
+        [JsonProperty("AwsPrivateAccess")]
+        public AwsPrivateAccess AwsPrivateAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +245,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+            this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Hcm.V20181106.Models
         [JsonProperty("RejectNonArithmeticImage")]
         public bool? RejectNonArithmeticImage{ get; set; }
 
+        /// <summary>
+        /// 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+        /// </summary>
+        [JsonProperty("IsAsync")]
+        public long? IsAsync{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "SupportHorizontalImage", this.SupportHorizontalImage);
             this.SetParamSimple(map, prefix + "RejectNonArithmeticImage", this.RejectNonArithmeticImage);
+            this.SetParamSimple(map, prefix + "IsAsync", this.IsAsync);
         }
     }
 }

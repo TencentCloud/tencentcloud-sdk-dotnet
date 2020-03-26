@@ -73,6 +73,26 @@ namespace TencentCloud.Npp.V20190823
         }
 
         /// <summary>
+        /// 回拨呼叫请求
+        /// </summary>
+        /// <param name="req"><see cref="CreateCallBackRequest"/></param>
+        /// <returns><see cref="CreateCallBackResponse"/></returns>
+        public CreateCallBackResponse CreateCallBackSync(CreateCallBackRequest req)
+        {
+             JsonResponseModel<CreateCallBackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCallBack");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCallBackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直拨解绑中间号
         /// </summary>
         /// <param name="req"><see cref="DelVirtualNumRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Npp.V20190823
              try
              {
                  var strResp = await this.InternalRequest(req, "DelVirtualNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DelVirtualNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直拨解绑中间号
+        /// </summary>
+        /// <param name="req"><see cref="DelVirtualNumRequest"/></param>
+        /// <returns><see cref="DelVirtualNumResponse"/></returns>
+        public DelVirtualNumResponse DelVirtualNumSync(DelVirtualNumRequest req)
+        {
+             JsonResponseModel<DelVirtualNumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DelVirtualNum");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DelVirtualNumResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Npp.V20190823
         }
 
         /// <summary>
+        /// 回拨呼叫取消
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCallBackRequest"/></param>
+        /// <returns><see cref="DeleteCallBackResponse"/></returns>
+        public DeleteCallBackResponse DeleteCallBackSync(DeleteCallBackRequest req)
+        {
+             JsonResponseModel<DeleteCallBackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCallBack");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCallBackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 回拨话单获取接口
         /// </summary>
         /// <param name="req"><see cref="DescribeCallBackCdrRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Npp.V20190823
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeCallBackCdr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallBackCdrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回拨话单获取接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallBackCdrRequest"/></param>
+        /// <returns><see cref="DescribeCallBackCdrResponse"/></returns>
+        public DescribeCallBackCdrResponse DescribeCallBackCdrSync(DescribeCallBackCdrRequest req)
+        {
+             JsonResponseModel<DescribeCallBackCdrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCallBackCdr");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallBackCdrResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Npp.V20190823
         }
 
         /// <summary>
+        /// 回拨通话状态获取
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallBackStatusRequest"/></param>
+        /// <returns><see cref="DescribeCallBackStatusResponse"/></returns>
+        public DescribeCallBackStatusResponse DescribeCallBackStatusSync(DescribeCallBackStatusRequest req)
+        {
+             JsonResponseModel<DescribeCallBackStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCallBackStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallBackStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 回拨拉取主叫显号号码集合
         /// </summary>
         /// <param name="req"><see cref="DescribeCallerDisplayListRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Npp.V20190823
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeCallerDisplayList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallerDisplayListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回拨拉取主叫显号号码集合
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallerDisplayListRequest"/></param>
+        /// <returns><see cref="DescribeCallerDisplayListResponse"/></returns>
+        public DescribeCallerDisplayListResponse DescribeCallerDisplayListSync(DescribeCallerDisplayListRequest req)
+        {
+             JsonResponseModel<DescribeCallerDisplayListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCallerDisplayList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallerDisplayListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Npp.V20190823
         }
 
         /// <summary>
+        /// 直拨话单获取接口
+        /// </summary>
+        /// <param name="req"><see cref="Get400CdrRequest"/></param>
+        /// <returns><see cref="Get400CdrResponse"/></returns>
+        public Get400CdrResponse Get400CdrSync(Get400CdrRequest req)
+        {
+             JsonResponseModel<Get400CdrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Get400Cdr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<Get400CdrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直拨获取中间号（App 使用方发起）
         /// </summary>
         /// <param name="req"><see cref="GetVirtualNumRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Npp.V20190823
              try
              {
                  var strResp = await this.InternalRequest(req, "GetVirtualNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVirtualNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直拨获取中间号（App 使用方发起）
+        /// </summary>
+        /// <param name="req"><see cref="GetVirtualNumRequest"/></param>
+        /// <returns><see cref="GetVirtualNumResponse"/></returns>
+        public GetVirtualNumResponse GetVirtualNumSync(GetVirtualNumRequest req)
+        {
+             JsonResponseModel<GetVirtualNumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetVirtualNum");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetVirtualNumResponse>>(strResp);
              }
              catch (JsonSerializationException e)

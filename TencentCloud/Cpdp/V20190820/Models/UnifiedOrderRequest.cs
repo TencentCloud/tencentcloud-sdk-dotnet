@@ -31,7 +31,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string CurrencyType{ get; set; }
 
         /// <summary>
-        /// 聚鑫分配的支付主MidasAppid
+        /// 聚鑫分配的支付主MidasAppId
         /// </summary>
         [JsonProperty("MidasAppId")]
         public string MidasAppId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string ProductDetail{ get; set; }
 
         /// <summary>
-        /// 商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
+        /// 商品ID，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public long? TotalAmt{ get; set; }
 
         /// <summary>
-        /// 用户Id，长度不小于5位，仅支持字母和数字的组合
+        /// 用户ID，长度不小于5位，仅支持字母和数字的组合
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 银行真实渠道.如:bank_ccb
+        /// 银行真实渠道.如:bank_pingan
         /// </summary>
         [JsonProperty("RealChannel")]
         public string RealChannel{ get; set; }
 
         /// <summary>
-        /// 子订单信息列表，格式：子订单号、子应用Id、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+        /// 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
         /// </summary>
         [JsonProperty("SubOrderList")]
         public UnifiedOrderInSubOrderList[] SubOrderList{ get; set; }

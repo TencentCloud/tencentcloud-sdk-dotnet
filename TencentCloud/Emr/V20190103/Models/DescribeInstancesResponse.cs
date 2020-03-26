@@ -25,17 +25,24 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例数量
+        /// 符合条件的实例总数。
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// 集群实例信息列表
+        /// EMR实例详细信息列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterList")]
         public ClusterInstancesInfo[] ClusterList{ get; set; }
+
+        /// <summary>
+        /// 实例关联的标签键列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,6 +58,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
             this.SetParamArrayObj(map, prefix + "ClusterList.", this.ClusterList);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

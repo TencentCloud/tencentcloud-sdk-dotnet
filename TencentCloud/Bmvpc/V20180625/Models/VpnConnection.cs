@@ -120,6 +120,32 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
+        /// <summary>
+        /// VPN网关名称
+        /// </summary>
+        [JsonProperty("VpnGatewayName")]
+        public string VpnGatewayName{ get; set; }
+
+        /// <summary>
+        /// 对端网关名称
+        /// </summary>
+        [JsonProperty("CustomerGatewayName")]
+        public string CustomerGatewayName{ get; set; }
+
+        /// <summary>
+        /// IPSEC VPN通道路由策略目的端地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DestinationCidr")]
+        public string[] DestinationCidr{ get; set; }
+
+        /// <summary>
+        /// IPSEC VPN通道路由策略源端地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceCidr")]
+        public string[] SourceCidr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +168,10 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
+            this.SetParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
+            this.SetParamArraySimple(map, prefix + "DestinationCidr.", this.DestinationCidr);
+            this.SetParamArraySimple(map, prefix + "SourceCidr.", this.SourceCidr);
         }
     }
 }

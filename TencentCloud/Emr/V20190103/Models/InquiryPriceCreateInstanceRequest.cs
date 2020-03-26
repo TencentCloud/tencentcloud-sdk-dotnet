@@ -25,58 +25,96 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 时间单位
+        /// 购买实例的时间单位。取值范围：
+        /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
+        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 时间长度
+        /// 购买实例的时长。需要结合TimeUnit一起使用。
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 询价资源描述
+        /// 询价的节点规格。
         /// </summary>
         [JsonProperty("ResourceSpec")]
         public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
-        /// 货币种类
+        /// 货币种类。取值范围：
+        /// <li>CNY：表示人民币。</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// 计费类型
+        /// 实例计费模式。取值范围：
+        /// <li>0：表示按量计费。</li>
+        /// <li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 是否支持HA， 1 支持，0 不支持
+        /// 是否开启节点高可用。取值范围：
+        /// <li>0：表示不开启节点高可用。</li>
+        /// <li>1：表示开启节点高可用。</li>
         /// </summary>
         [JsonProperty("SupportHA")]
         public ulong? SupportHA{ get; set; }
 
         /// <summary>
-        /// 软件列表
+        /// 部署的组件列表。
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
 
         /// <summary>
-        /// 位置信息
+        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// VPC信息
+        /// 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
         /// </summary>
         [JsonProperty("VPCSettings")]
         public VPCSettings VPCSettings{ get; set; }
+
+        /// <summary>
+        /// hive共享元数据库类型。取值范围：
+        /// <li>EMR_NEW_META：表示集群默认创建</li>
+        /// <li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+        /// <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
+
+        /// <summary>
+        /// EMR-MetaDB实例
+        /// </summary>
+        [JsonProperty("UnifyMetaInstanceId")]
+        public string UnifyMetaInstanceId{ get; set; }
+
+        /// <summary>
+        /// 自定义MetaDB信息
+        /// </summary>
+        [JsonProperty("MetaDBInfo")]
+        public CustomMetaInfo MetaDBInfo{ get; set; }
+
+        /// <summary>
+        /// 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
+        /// <li>1：表示EMR-V1.3.1。</li>
+        /// <li>2：表示EMR-V2.0.1。</li>
+        /// <li>4：表示EMR-V2.1.0。</li>
+        /// <li>7：表示EMR-V3.0.0。</li>
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public ulong? ProductId{ get; set; }
 
 
         /// <summary>
@@ -93,6 +131,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArraySimple(map, prefix + "Software.", this.Software);
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
+            this.SetParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
+            this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

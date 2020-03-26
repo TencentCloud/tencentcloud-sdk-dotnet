@@ -73,6 +73,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 此接口用于为某个 EIP 关联 ACL。
+        /// </summary>
+        /// <param name="req"><see cref="BindEipAclsRequest"/></param>
+        /// <returns><see cref="BindEipAclsResponse"/></returns>
+        public BindEipAclsResponse BindEipAclsSync(BindEipAclsRequest req)
+        {
+             JsonResponseModel<BindEipAclsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindEipAcls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindEipAclsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// BindHosted接口用于绑定黑石弹性公网IP到黑石托管机器上
         /// </summary>
         /// <param name="req"><see cref="BindHostedRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "BindHosted");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindHostedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// BindHosted接口用于绑定黑石弹性公网IP到黑石托管机器上
+        /// </summary>
+        /// <param name="req"><see cref="BindHostedRequest"/></param>
+        /// <returns><see cref="BindHostedResponse"/></returns>
+        public BindHostedResponse BindHostedSync(BindHostedRequest req)
+        {
+             JsonResponseModel<BindHostedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindHosted");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindHostedResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 绑定黑石EIP
+        /// </summary>
+        /// <param name="req"><see cref="BindRsRequest"/></param>
+        /// <returns><see cref="BindRsResponse"/></returns>
+        public BindRsResponse BindRsSync(BindRsRequest req)
+        {
+             JsonResponseModel<BindRsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindRs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindRsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 黑石EIP绑定VPCIP
         /// </summary>
         /// <param name="req"><see cref="BindVpcIpRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "BindVpcIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindVpcIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 黑石EIP绑定VPCIP
+        /// </summary>
+        /// <param name="req"><see cref="BindVpcIpRequest"/></param>
+        /// <returns><see cref="BindVpcIpResponse"/></returns>
+        public BindVpcIpResponse BindVpcIpSync(BindVpcIpRequest req)
+        {
+             JsonResponseModel<BindVpcIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindVpcIp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindVpcIpResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 创建黑石弹性公网IP
+        /// </summary>
+        /// <param name="req"><see cref="CreateEipRequest"/></param>
+        /// <returns><see cref="CreateEipResponse"/></returns>
+        public CreateEipResponse CreateEipSync(CreateEipRequest req)
+        {
+             JsonResponseModel<CreateEipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建黑石弹性公网 EIPACL
         /// </summary>
         /// <param name="req"><see cref="CreateEipAclRequest"/></param>
@@ -163,6 +263,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "CreateEipAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEipAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建黑石弹性公网 EIPACL
+        /// </summary>
+        /// <param name="req"><see cref="CreateEipAclRequest"/></param>
+        /// <returns><see cref="CreateEipAclResponse"/></returns>
+        public CreateEipAclResponse CreateEipAclSync(CreateEipAclRequest req)
+        {
+             JsonResponseModel<CreateEipAclResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEipAcl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEipAclResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -193,6 +313,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 释放黑石弹性公网IP
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEipRequest"/></param>
+        /// <returns><see cref="DeleteEipResponse"/></returns>
+        public DeleteEipResponse DeleteEipSync(DeleteEipRequest req)
+        {
+             JsonResponseModel<DeleteEipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除弹性公网IP ACL
         /// </summary>
         /// <param name="req"><see cref="DeleteEipAclRequest"/></param>
@@ -203,6 +343,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "DeleteEipAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEipAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除弹性公网IP ACL
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEipAclRequest"/></param>
+        /// <returns><see cref="DeleteEipAclResponse"/></returns>
+        public DeleteEipAclResponse DeleteEipAclSync(DeleteEipAclRequest req)
+        {
+             JsonResponseModel<DeleteEipAclResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEipAcl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEipAclResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -233,6 +393,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 查询弹性公网IP ACL
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEipAclsRequest"/></param>
+        /// <returns><see cref="DescribeEipAclsResponse"/></returns>
+        public DescribeEipAclsResponse DescribeEipAclsSync(DescribeEipAclsRequest req)
+        {
+             JsonResponseModel<DescribeEipAclsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEipAcls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEipAclsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询黑石EIP 限额
         /// </summary>
         /// <param name="req"><see cref="DescribeEipQuotaRequest"/></param>
@@ -243,6 +423,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeEipQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEipQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询黑石EIP 限额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEipQuotaRequest"/></param>
+        /// <returns><see cref="DescribeEipQuotaResponse"/></returns>
+        public DescribeEipQuotaResponse DescribeEipQuotaSync(DescribeEipQuotaRequest req)
+        {
+             JsonResponseModel<DescribeEipQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEipQuota");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEipQuotaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -273,6 +473,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 黑石EIP查询任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEipTaskRequest"/></param>
+        /// <returns><see cref="DescribeEipTaskResponse"/></returns>
+        public DescribeEipTaskResponse DescribeEipTaskSync(DescribeEipTaskRequest req)
+        {
+             JsonResponseModel<DescribeEipTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEipTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEipTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 黑石EIP查询接口
         /// </summary>
         /// <param name="req"><see cref="DescribeEipsRequest"/></param>
@@ -283,6 +503,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeEips");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEipsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 黑石EIP查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEipsRequest"/></param>
+        /// <returns><see cref="DescribeEipsResponse"/></returns>
+        public DescribeEipsResponse DescribeEipsSync(DescribeEipsRequest req)
+        {
+             JsonResponseModel<DescribeEipsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEips");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEipsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -313,6 +553,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 修改弹性公网IP ACL
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEipAclRequest"/></param>
+        /// <returns><see cref="ModifyEipAclResponse"/></returns>
+        public ModifyEipAclResponse ModifyEipAclSync(ModifyEipAclRequest req)
+        {
+             JsonResponseModel<ModifyEipAclResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEipAcl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEipAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 黑石EIP修改计费方式
         /// </summary>
         /// <param name="req"><see cref="ModifyEipChargeRequest"/></param>
@@ -323,6 +583,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "ModifyEipCharge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEipChargeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 黑石EIP修改计费方式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEipChargeRequest"/></param>
+        /// <returns><see cref="ModifyEipChargeResponse"/></returns>
+        public ModifyEipChargeResponse ModifyEipChargeSync(ModifyEipChargeRequest req)
+        {
+             JsonResponseModel<ModifyEipChargeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEipCharge");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEipChargeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -353,6 +633,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 更新黑石EIP名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEipNameRequest"/></param>
+        /// <returns><see cref="ModifyEipNameResponse"/></returns>
+        public ModifyEipNameResponse ModifyEipNameSync(ModifyEipNameRequest req)
+        {
+             JsonResponseModel<ModifyEipNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEipName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEipNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑弹性公网IP ACL
         /// </summary>
         /// <param name="req"><see cref="UnbindEipAclsRequest"/></param>
@@ -363,6 +663,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "UnbindEipAcls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindEipAclsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑弹性公网IP ACL
+        /// </summary>
+        /// <param name="req"><see cref="UnbindEipAclsRequest"/></param>
+        /// <returns><see cref="UnbindEipAclsResponse"/></returns>
+        public UnbindEipAclsResponse UnbindEipAclsSync(UnbindEipAclsRequest req)
+        {
+             JsonResponseModel<UnbindEipAclsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindEipAcls");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindEipAclsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -393,6 +713,26 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// UnbindHosted接口用于解绑托管机器上的EIP
+        /// </summary>
+        /// <param name="req"><see cref="UnbindHostedRequest"/></param>
+        /// <returns><see cref="UnbindHostedResponse"/></returns>
+        public UnbindHostedResponse UnbindHostedSync(UnbindHostedRequest req)
+        {
+             JsonResponseModel<UnbindHostedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindHosted");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindHostedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑黑石EIP
         /// </summary>
         /// <param name="req"><see cref="UnbindRsRequest"/></param>
@@ -413,6 +753,66 @@ namespace TencentCloud.Bmeip.V20180625
         }
 
         /// <summary>
+        /// 解绑黑石EIP
+        /// </summary>
+        /// <param name="req"><see cref="UnbindRsRequest"/></param>
+        /// <returns><see cref="UnbindRsResponse"/></returns>
+        public UnbindRsResponse UnbindRsSync(UnbindRsRequest req)
+        {
+             JsonResponseModel<UnbindRsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindRs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindRsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解绑物理机弹性公网IP接口
+        /// </summary>
+        /// <param name="req"><see cref="UnbindRsListRequest"/></param>
+        /// <returns><see cref="UnbindRsListResponse"/></returns>
+        public async Task<UnbindRsListResponse> UnbindRsList(UnbindRsListRequest req)
+        {
+             JsonResponseModel<UnbindRsListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindRsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindRsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解绑物理机弹性公网IP接口
+        /// </summary>
+        /// <param name="req"><see cref="UnbindRsListRequest"/></param>
+        /// <returns><see cref="UnbindRsListResponse"/></returns>
+        public UnbindRsListResponse UnbindRsListSync(UnbindRsListRequest req)
+        {
+             JsonResponseModel<UnbindRsListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindRsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindRsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 黑石EIP解绑VPCIP
         /// </summary>
         /// <param name="req"><see cref="UnbindVpcIpRequest"/></param>
@@ -423,6 +823,26 @@ namespace TencentCloud.Bmeip.V20180625
              try
              {
                  var strResp = await this.InternalRequest(req, "UnbindVpcIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindVpcIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 黑石EIP解绑VPCIP
+        /// </summary>
+        /// <param name="req"><see cref="UnbindVpcIpRequest"/></param>
+        /// <returns><see cref="UnbindVpcIpResponse"/></returns>
+        public UnbindVpcIpResponse UnbindVpcIpSync(UnbindVpcIpRequest req)
+        {
+             JsonResponseModel<UnbindVpcIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindVpcIp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindVpcIpResponse>>(strResp);
              }
              catch (JsonSerializationException e)

@@ -58,6 +58,13 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("Replicas")]
         public string[] Replicas{ get; set; }
 
+        /// <summary>
+        /// 副本实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplicaInfos")]
+        public ReplicaInfo[] ReplicaInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "DesiredWorkers", this.DesiredWorkers);
             this.SetParamSimple(map, prefix + "CurrentWorkers", this.CurrentWorkers);
             this.SetParamArraySimple(map, prefix + "Replicas.", this.Replicas);
+            this.SetParamArrayObj(map, prefix + "ReplicaInfos.", this.ReplicaInfos);
         }
     }
 }

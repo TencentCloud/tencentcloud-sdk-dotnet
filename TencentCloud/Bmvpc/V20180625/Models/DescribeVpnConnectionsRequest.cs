@@ -51,6 +51,30 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// VPN网关实例ID
+        /// </summary>
+        [JsonProperty("VpnGatewayId")]
+        public string VpnGatewayId{ get; set; }
+
+        /// <summary>
+        /// VPN通道名称
+        /// </summary>
+        [JsonProperty("VpnConnectionName")]
+        public string VpnConnectionName{ get; set; }
+
+        /// <summary>
+        /// 排序字段, 支持"CreateTime"排序
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 排序方向, “asc”、“desc”
+        /// </summary>
+        [JsonProperty("OrderDirection")]
+        public string OrderDirection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +85,10 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
+            this.SetParamSimple(map, prefix + "VpnConnectionName", this.VpnConnectionName);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         }
     }
 }

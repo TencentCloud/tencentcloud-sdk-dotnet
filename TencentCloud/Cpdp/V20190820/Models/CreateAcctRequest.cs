@@ -31,7 +31,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MidasAppId{ get; set; }
 
         /// <summary>
-        /// 业务平台的子商户Id，唯一
+        /// 业务平台的子商户ID，唯一
         /// </summary>
         [JsonProperty("SubMchId")]
         public string SubMchId{ get; set; }

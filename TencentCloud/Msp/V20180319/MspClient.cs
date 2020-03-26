@@ -73,6 +73,26 @@ namespace TencentCloud.Msp.V20180319
         }
 
         /// <summary>
+        /// 取消注册迁移任务
+        /// </summary>
+        /// <param name="req"><see cref="DeregisterMigrationTaskRequest"/></param>
+        /// <returns><see cref="DeregisterMigrationTaskResponse"/></returns>
+        public DeregisterMigrationTaskResponse DeregisterMigrationTaskSync(DeregisterMigrationTaskRequest req)
+        {
+             JsonResponseModel<DeregisterMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeregisterMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeregisterMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取指定迁移任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMigrationTaskRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Msp.V20180319
              try
              {
                  var strResp = await this.InternalRequest(req, "DescribeMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定迁移任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationTaskRequest"/></param>
+        /// <returns><see cref="DescribeMigrationTaskResponse"/></returns>
+        public DescribeMigrationTaskResponse DescribeMigrationTaskSync(DescribeMigrationTaskRequest req)
+        {
+             JsonResponseModel<DescribeMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMigrationTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMigrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -113,6 +153,26 @@ namespace TencentCloud.Msp.V20180319
         }
 
         /// <summary>
+        /// 获取迁移项目名称列表
+        /// </summary>
+        /// <param name="req"><see cref="ListMigrationProjectRequest"/></param>
+        /// <returns><see cref="ListMigrationProjectResponse"/></returns>
+        public ListMigrationProjectResponse ListMigrationProjectSync(ListMigrationProjectRequest req)
+        {
+             JsonResponseModel<ListMigrationProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListMigrationProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListMigrationProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取迁移任务列表
         /// </summary>
         /// <param name="req"><see cref="ListMigrationTaskRequest"/></param>
@@ -123,6 +183,26 @@ namespace TencentCloud.Msp.V20180319
              try
              {
                  var strResp = await this.InternalRequest(req, "ListMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取迁移任务列表
+        /// </summary>
+        /// <param name="req"><see cref="ListMigrationTaskRequest"/></param>
+        /// <returns><see cref="ListMigrationTaskResponse"/></returns>
+        public ListMigrationTaskResponse ListMigrationTaskSync(ListMigrationTaskRequest req)
+        {
+             JsonResponseModel<ListMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListMigrationTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListMigrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
@@ -153,6 +233,26 @@ namespace TencentCloud.Msp.V20180319
         }
 
         /// <summary>
+        /// 更改迁移任务所属项目
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrationTaskBelongToProjectRequest"/></param>
+        /// <returns><see cref="ModifyMigrationTaskBelongToProjectResponse"/></returns>
+        public ModifyMigrationTaskBelongToProjectResponse ModifyMigrationTaskBelongToProjectSync(ModifyMigrationTaskBelongToProjectRequest req)
+        {
+             JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMigrationTaskBelongToProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新迁移任务状态
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationTaskStatusRequest"/></param>
@@ -173,6 +273,26 @@ namespace TencentCloud.Msp.V20180319
         }
 
         /// <summary>
+        /// 更新迁移任务状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMigrationTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyMigrationTaskStatusResponse"/></returns>
+        public ModifyMigrationTaskStatusResponse ModifyMigrationTaskStatusSync(ModifyMigrationTaskStatusRequest req)
+        {
+             JsonResponseModel<ModifyMigrationTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMigrationTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 注册迁移任务
         /// </summary>
         /// <param name="req"><see cref="RegisterMigrationTaskRequest"/></param>
@@ -183,6 +303,26 @@ namespace TencentCloud.Msp.V20180319
              try
              {
                  var strResp = await this.InternalRequest(req, "RegisterMigrationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterMigrationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 注册迁移任务
+        /// </summary>
+        /// <param name="req"><see cref="RegisterMigrationTaskRequest"/></param>
+        /// <returns><see cref="RegisterMigrationTaskResponse"/></returns>
+        public RegisterMigrationTaskResponse RegisterMigrationTaskSync(RegisterMigrationTaskRequest req)
+        {
+             JsonResponseModel<RegisterMigrationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterMigrationTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterMigrationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)

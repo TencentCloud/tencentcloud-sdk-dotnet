@@ -56,11 +56,25 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? CreateMode{ get; set; }
 
         /// <summary>
-        /// 是否已下线
+        /// 是否已下线(0:否 1:是)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deactived")]
         public ulong? Deactived{ get; set; }
+
+        /// <summary>
+        /// 已下线的产品列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeactivedDetail")]
+        public string[] DeactivedDetail{ get; set; }
+
+        /// <summary>
+        /// 策略描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -74,6 +88,8 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
             this.SetParamSimple(map, prefix + "CreateMode", this.CreateMode);
             this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
+            this.SetParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

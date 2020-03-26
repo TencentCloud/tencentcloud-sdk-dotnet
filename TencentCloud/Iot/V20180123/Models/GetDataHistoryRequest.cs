@@ -52,7 +52,7 @@ namespace TencentCloud.Iot.V20180123.Models
         /// 查询数据量
         /// </summary>
         [JsonProperty("Size")]
-        public ulong?[] Size{ get; set; }
+        public ulong? Size{ get; set; }
 
         /// <summary>
         /// 时间排序（desc/asc）
@@ -76,7 +76,7 @@ namespace TencentCloud.Iot.V20180123.Models
             this.SetParamArraySimple(map, prefix + "DeviceNames.", this.DeviceNames);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamArraySimple(map, prefix + "Size.", this.Size);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "ScrollId", this.ScrollId);
         }

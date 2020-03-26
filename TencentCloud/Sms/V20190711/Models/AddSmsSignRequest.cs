@@ -44,29 +44,29 @@ namespace TencentCloud.Sms.V20190711.Models
         public ulong? SignType{ get; set; }
 
         /// <summary>
-        /// 证明类型。其中：
+        /// 证明类型：
         /// 0：三证合一。
         /// 1：企业营业执照。
         /// 2：组织机构代码证书。
         /// 3：社会信用代码证书。
-        /// 4：应用后台管理截图(个人开发APP)。
-        /// 5：网站备案后台截图(个人开发网站)。
-        /// 6：小程序设置页面截图(个人认证小程序)。
+        /// 4：应用后台管理截图（个人开发APP）。
+        /// 5：网站备案后台截图（个人开发网站）。
+        /// 6：小程序设置页面截图（个人认证小程序）。
         /// 7：商标注册书。
         /// </summary>
         [JsonProperty("DocumentType")]
         public ulong? DocumentType{ get; set; }
 
         /// <summary>
-        /// 是否国际短信。其中：
+        /// 是否国际/港澳台短信：
         /// 0：表示国内短信。
-        /// 1：表示海外短信。
+        /// 1：表示国际/港澳台短信。
         /// </summary>
         [JsonProperty("International")]
         public ulong? International{ get; set; }
 
         /// <summary>
-        /// 签名用途。其中：
+        /// 签名用途：
         /// 0：自用。
         /// 1：他用。
         /// </summary>

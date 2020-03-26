@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 配置成功后的id。
+        /// 配置成功后的 ID。
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

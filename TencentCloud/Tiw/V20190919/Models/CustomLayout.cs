@@ -31,7 +31,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public Canvas Canvas{ get; set; }
 
         /// <summary>
-        /// 流布局参数
+        /// 流布局参数，每路流的布局不能超出画布区域
         /// </summary>
         [JsonProperty("InputStreamList")]
         public StreamLayout[] InputStreamList{ get; set; }

@@ -54,6 +54,13 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
+        /// <summary>
+        /// 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultDetail")]
+        public SentenceDetail[] ResultDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "StatusStr", this.StatusStr);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
         }
     }
 }

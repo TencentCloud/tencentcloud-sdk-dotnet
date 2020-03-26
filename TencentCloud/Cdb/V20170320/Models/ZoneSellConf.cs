@@ -108,6 +108,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DrZone")]
         public string[] DrZone{ get; set; }
 
+        /// <summary>
+        /// 是否支持跨可用区只读
+        /// </summary>
+        [JsonProperty("IsSupportRemoteRo")]
+        public bool? IsSupportRemoteRo{ get; set; }
+
+        /// <summary>
+        /// 可支持的跨可用区只读区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemoteRoZone")]
+        public string[] RemoteRoZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +141,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "SellType.", this.SellType);
             this.SetParamObj(map, prefix + "ZoneConf.", this.ZoneConf);
             this.SetParamArraySimple(map, prefix + "DrZone.", this.DrZone);
+            this.SetParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
+            this.SetParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
         }
     }
 }

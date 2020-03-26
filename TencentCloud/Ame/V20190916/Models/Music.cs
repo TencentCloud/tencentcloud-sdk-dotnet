@@ -25,7 +25,7 @@ namespace TencentCloud.Ame.V20190916.Models
     {
         
         /// <summary>
-        /// 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+        /// 音乐播放链接相对路径，必须通过在正版曲库直通车控制台上登记的域名进行拼接。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -56,6 +56,13 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("AuditionEnd")]
         public ulong? AuditionEnd{ get; set; }
 
+        /// <summary>
+        /// 音乐播放链接全路径，前提是在正版曲库直通车控制台添加过域名，否则返回空字符。
+        /// 如果添加过多个域名只返回第一个添加域名的播放全路径。
+        /// </summary>
+        [JsonProperty("FullUrl")]
+        public string FullUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "FileExtension", this.FileExtension);
             this.SetParamSimple(map, prefix + "AuditionBegin", this.AuditionBegin);
             this.SetParamSimple(map, prefix + "AuditionEnd", this.AuditionEnd);
+            this.SetParamSimple(map, prefix + "FullUrl", this.FullUrl);
         }
     }
 }

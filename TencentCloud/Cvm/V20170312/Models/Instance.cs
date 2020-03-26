@@ -117,6 +117,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+        /// <br><li>注意：后付费模式本项为null
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
@@ -128,7 +129,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+        /// 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。注意：后付费模式本项为null
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
@@ -197,6 +198,27 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LatestOperationRequestId")]
         public string LatestOperationRequestId{ get; set; }
 
+        /// <summary>
+        /// 分散置放群组ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupId")]
+        public string DisasterRecoverGroupId{ get; set; }
+
+        /// <summary>
+        /// 实例的IPv6地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPv6Addresses")]
+        public string IPv6Addresses{ get; set; }
+
+        /// <summary>
+        /// CAM角色名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -231,6 +253,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+            this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+            this.SetParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         }
     }
 }

@@ -72,6 +72,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("NodeCount")]
         public long? NodeCount{ get; set; }
 
+        /// <summary>
+        /// Cpu核数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Qps", this.Qps);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

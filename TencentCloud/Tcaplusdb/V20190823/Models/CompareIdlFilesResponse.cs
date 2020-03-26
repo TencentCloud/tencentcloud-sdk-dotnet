@@ -25,22 +25,22 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 本次上传校验所有的Idl文件信息列表
+        /// 本次上传校验所有的IDL文件信息列表
         /// </summary>
         [JsonProperty("IdlFiles")]
         public IdlFileInfo[] IdlFiles{ get; set; }
 
         /// <summary>
-        /// 本次校验合法的表数量
+        /// 本次校验合法的表格数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 读取IDL描述文件后,根据用户指示的所选中表解析校验结果
+        /// 读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
         /// </summary>
         [JsonProperty("TableInfos")]
-        public ParsedTableInfo[] TableInfos{ get; set; }
+        public ParsedTableInfoNew[] TableInfos{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

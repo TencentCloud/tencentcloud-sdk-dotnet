@@ -43,7 +43,7 @@ namespace TencentCloud.Ms.V20180408.Models
         public ulong? AppSize{ get; set; }
 
         /// <summary>
-        /// app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+        /// app的文件名
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }

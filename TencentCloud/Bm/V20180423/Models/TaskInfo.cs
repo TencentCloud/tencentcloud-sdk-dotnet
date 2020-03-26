@@ -156,6 +156,20 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("MgtIp")]
         public string MgtIp{ get; set; }
 
+        /// <summary>
+        /// 故障类中文名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskTypeName")]
+        public string TaskTypeName{ get; set; }
+
+        /// <summary>
+        /// 故障类型，取值：unconfirmed (不明确故障)；redundancy (有冗余故障)；nonredundancy (无冗余故障)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskSubType")]
+        public string TaskSubType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +198,8 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "WanIp", this.WanIp);
             this.SetParamSimple(map, prefix + "LanIp", this.LanIp);
             this.SetParamSimple(map, prefix + "MgtIp", this.MgtIp);
+            this.SetParamSimple(map, prefix + "TaskTypeName", this.TaskTypeName);
+            this.SetParamSimple(map, prefix + "TaskSubType", this.TaskSubType);
         }
     }
 }

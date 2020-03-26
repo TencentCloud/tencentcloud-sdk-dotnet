@@ -56,6 +56,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Targets")]
         public Backend[] Targets{ get; set; }
 
+        /// <summary>
+        /// 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndPort")]
+        public long? EndPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
         }
     }
 }

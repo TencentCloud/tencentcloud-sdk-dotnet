@@ -37,7 +37,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 关联的流程 Id，可用于查询流程执行状态
+        /// 关联的流程 ID，可用于查询流程执行状态
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

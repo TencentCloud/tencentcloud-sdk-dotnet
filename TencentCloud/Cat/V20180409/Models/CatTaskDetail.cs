@@ -25,7 +25,7 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 任务Id
+        /// 任务ID
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Cat.V20180409.Models
         public string CatTypeName{ get; set; }
 
         /// <summary>
-        /// 拨测任务的Url
+        /// 拨测任务的URL
         /// </summary>
         [JsonProperty("CgiUrl")]
         public string CgiUrl{ get; set; }
 
         /// <summary>
-        /// 拨测分组id
+        /// 拨测分组ID
         /// </summary>
         [JsonProperty("AgentGroupId")]
         public ulong? AgentGroupId{ get; set; }
 
         /// <summary>
-        /// 告警策略组id
+        /// 告警策略组ID
         /// </summary>
         [JsonProperty("PolicyGroupId")]
         public ulong? PolicyGroupId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 绑定的统一告警主题Id
+        /// 绑定的统一告警主题ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? CheckType{ get; set; }
 
         /// <summary>
-        /// 用户agent 信息
+        /// 用户Agent信息
         /// </summary>
         [JsonProperty("UserAgent")]
         public string UserAgent{ get; set; }
 
         /// <summary>
-        /// 设置的cookie信息
+        /// 设置的Cookie信息
         /// </summary>
         [JsonProperty("Cookie")]
         public string Cookie{ get; set; }
@@ -151,43 +151,43 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? IsHeader{ get; set; }
 
         /// <summary>
-        /// 目的dns服务器
+        /// 目的DNS服务器
         /// </summary>
         [JsonProperty("DnsSvr")]
         public string DnsSvr{ get; set; }
 
         /// <summary>
-        /// 需要检验是否在dns ip列表的ip
+        /// 需要检验是否在DNS IP列表的IP
         /// </summary>
         [JsonProperty("DnsCheckIp")]
         public string DnsCheckIp{ get; set; }
 
         /// <summary>
-        /// dns查询类型
+        /// DNS查询类型
         /// </summary>
         [JsonProperty("DnsQueryType")]
         public string DnsQueryType{ get; set; }
 
         /// <summary>
-        /// 登陆服务器的账号
+        /// 登录服务器的账号
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 登陆服务器的密码
+        /// 登录服务器的密码
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// 是否使用安全链接ssl  0 不使用，1 使用
+        /// 是否使用安全链接SSL， 0 不使用，1 使用
         /// </summary>
         [JsonProperty("UseSecConn")]
         public ulong? UseSecConn{ get; set; }
 
         /// <summary>
-        /// ftp登陆验证方式  0 不验证  1 匿名登陆  2 需要身份验证
+        /// FTP登录验证方式  0 不验证  1 匿名登录  2 需要身份验证
         /// </summary>
         [JsonProperty("NeedAuth")]
         public ulong? NeedAuth{ get; set; }
@@ -199,7 +199,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? ReqDataType{ get; set; }
 
         /// <summary>
-        /// 发起tcp, udp请求的协议请求数据
+        /// 发起TCP, UDP请求的协议请求数据
         /// </summary>
         [JsonProperty("ReqData")]
         public string ReqData{ get; set; }
@@ -211,7 +211,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public ulong? RespDataType{ get; set; }
 
         /// <summary>
-        /// 预期的udp请求的回应数据
+        /// 预期的UDP请求的回应数据
         /// </summary>
         [JsonProperty("RespData")]
         public string RespData{ get; set; }

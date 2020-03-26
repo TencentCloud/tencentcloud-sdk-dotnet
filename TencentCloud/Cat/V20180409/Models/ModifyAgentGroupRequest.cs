@@ -25,7 +25,7 @@ namespace TencentCloud.Cat.V20180409.Models
     {
         
         /// <summary>
-        /// 拨测分组id
+        /// 拨测分组ID
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 是否为默认分组。取值可为0，1
+        /// 是否为默认分组。取值可为0，1。取 1 时表示设置为默认分组
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }

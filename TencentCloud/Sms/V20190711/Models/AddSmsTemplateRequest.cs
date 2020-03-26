@@ -43,7 +43,9 @@ namespace TencentCloud.Sms.V20190711.Models
         public ulong? SmsType{ get; set; }
 
         /// <summary>
-        /// 0表示国内短信，1表示国际/港澳台短信，默认为0。
+        /// 是否国际/港澳台短信：
+        /// 0：表示国内短信。
+        /// 1：表示国际/港澳台短信。
         /// </summary>
         [JsonProperty("International")]
         public ulong? International{ get; set; }

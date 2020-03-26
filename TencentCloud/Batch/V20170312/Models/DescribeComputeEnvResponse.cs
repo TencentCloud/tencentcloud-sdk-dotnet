@@ -85,6 +85,12 @@ namespace TencentCloud.Batch.V20170312.Models
         public string NextAction{ get; set; }
 
         /// <summary>
+        /// 用户添加到计算环境中的计算节点个数
+        /// </summary>
+        [JsonProperty("AttachedComputeNodeCount")]
+        public ulong? AttachedComputeNodeCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +112,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
+            this.SetParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

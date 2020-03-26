@@ -31,7 +31,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MidasAppId{ get; set; }
 
         /// <summary>
-        /// 用户Id，长度不小于5位， 仅支持字母和数字的组合
+        /// 用户ID，长度不小于5位， 仅支持字母和数字的组合
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

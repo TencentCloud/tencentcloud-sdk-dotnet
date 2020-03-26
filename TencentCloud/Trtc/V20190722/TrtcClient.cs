@@ -73,6 +73,26 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomRequest"/></param>
+        /// <returns><see cref="DismissRoomResponse"/></returns>
+        public DismissRoomResponse DismissRoomSync(DismissRoomRequest req)
+        {
+             JsonResponseModel<DismissRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DismissRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
         /// </summary>
         /// <param name="req"><see cref="RemoveUserRequest"/></param>
@@ -83,6 +103,26 @@ namespace TencentCloud.Trtc.V20190722
              try
              {
                  var strResp = await this.InternalRequest(req, "RemoveUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserRequest"/></param>
+        /// <returns><see cref="RemoveUserResponse"/></returns>
+        public RemoveUserResponse RemoveUserSync(RemoveUserRequest req)
+        {
+             JsonResponseModel<RemoveUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserResponse>>(strResp);
              }
              catch (JsonSerializationException e)
