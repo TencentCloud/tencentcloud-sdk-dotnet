@@ -84,12 +84,11 @@ namespace TencentCloudExamples
                 req.TemplateID = "449739";
                 /* 模板参数: 若无模板参数，则设置为空*/
                 req.TemplateParamSet = new String[] {"666"};
-                
-                
+
+
                 // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
                 // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
-                SendSmsResponse resp = client.SendSms(req).
-                    ConfigureAwait(false).GetAwaiter().GetResult();
+                SendSmsResponse resp = client.SendSmsSync(req);
 
                 // 输出json格式的字符串回包
                 Console.WriteLine(AbstractModel.ToJsonString(resp));

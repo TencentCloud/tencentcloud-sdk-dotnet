@@ -30,8 +30,7 @@ namespace TencentCloudExamples
                 req.Addresses = new string[] { "eip-hxlqja90" };
                 req.AddressTemplateId = "ipm-mdunqeb6";
                 req.AddressTemplateName = "TestName";
-                ModifyAddressTemplateAttributeResponse resp = client.ModifyAddressTemplateAttribute(req).
-                    ConfigureAwait(false).GetAwaiter().GetResult();
+                ModifyAddressTemplateAttributeResponse resp = client.ModifyAddressTemplateAttributeSync(req);
                 Console.WriteLine(AbstractModel.ToJsonString(resp));
             }
             catch (Exception e)

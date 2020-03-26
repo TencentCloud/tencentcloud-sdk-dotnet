@@ -80,8 +80,7 @@ namespace TencentCloudExamples
 
                 // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
                 // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
-                RunInstancesResponse resp = client.RunInstances(req).
-                    ConfigureAwait(false).GetAwaiter().GetResult();
+                RunInstancesResponse resp = client.RunInstancesSync(req);
 
                 // 输出json格式的字符串回包
                 Console.WriteLine(AbstractModel.ToJsonString(resp));
