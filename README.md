@@ -112,8 +112,7 @@ namespace TencentCloudExamples
 
                 // 通过client对象调用DescribeInstances方法发起请求。注意请求方法名与请求对象是对应的
                 // 返回的resp是一个DescribeInstancesResponse类的实例，与请求对象对应
-                DescribeInstancesResponse resp = client.DescribeInstances(req).
-                    ConfigureAwait(false).GetAwaiter().GetResult();
+                DescribeInstancesResponse resp = client.DescribeInstancesSync(req);
 
                 // 使用同步接口调用结果
                 // DescribeInstancesResponse resp = client.DescribeInstancesSync(req);
