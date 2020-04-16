@@ -175,6 +175,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("SupportSecurity")]
         public long? SupportSecurity{ get; set; }
 
+        /// <summary>
+        /// 计费类型:(0:按带宽计费  1:按流量计费）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingType")]
+        public long? BillingType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +210,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ForwardIP", this.ForwardIP);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
+            this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
         }
     }
 }

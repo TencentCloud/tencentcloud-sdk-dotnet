@@ -54,6 +54,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
+        /// <summary>
+        /// 活动ID
+        /// </summary>
+        [JsonProperty("ActivityId")]
+        public long? ActivityId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
         }
     }
 }

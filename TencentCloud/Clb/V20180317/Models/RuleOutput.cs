@@ -153,6 +153,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }
 
+        /// <summary>
+        /// QUIC状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuicStatus")]
+        public string QuicStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +186,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "WafDomainId", this.WafDomainId);
             this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+            this.SetParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
         }
     }
 }

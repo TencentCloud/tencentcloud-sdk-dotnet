@@ -37,19 +37,19 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 搜索的事件类型
+        /// 搜索的事件类型：alert 表示告警，fault 表示故障，info 表示信息，为空则表示查询上述所有类型事件
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 起始时间, 为0 表示 当前时间 - 24h
+        /// 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间, 为0 表示当前时间
+        /// 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

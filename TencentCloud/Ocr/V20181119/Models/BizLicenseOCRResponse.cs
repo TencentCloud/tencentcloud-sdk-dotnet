@@ -79,6 +79,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ComposingForm{ get; set; }
 
         /// <summary>
+        /// 成立日期
+        /// </summary>
+        [JsonProperty("SetDate")]
+        public string SetDate{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +105,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "ComposingForm", this.ComposingForm);
+            this.SetParamSimple(map, prefix + "SetDate", this.SetDate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

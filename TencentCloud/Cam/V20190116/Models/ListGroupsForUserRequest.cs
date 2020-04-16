@@ -42,6 +42,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Page")]
         public ulong? Page{ get; set; }
 
+        /// <summary>
+        /// 子账号UIN
+        /// </summary>
+        [JsonProperty("SubUin")]
+        public ulong? SubUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "Rp", this.Rp);
             this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "SubUin", this.SubUin);
         }
     }
 }

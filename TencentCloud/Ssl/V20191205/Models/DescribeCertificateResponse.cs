@@ -25,35 +25,35 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 用户uin。
+        /// 用户 UIN。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 证书来源（trustasia = 亚洲诚信，upload = 用户上传）。
+        /// 证书来源：trustasia = 亚洲诚信，upload = 用户上传。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
+        /// 证书类型：CA = 客户端证书，SVR = 服务器证书。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// 证书类型。
+        /// 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版（EV Pro）， 4 = Symantec 增强型（EV）， 5 = Symantec 企业型专业版（OV Pro）， 6 = Symantec 企业型（OV）， 7 = Symantec 企业型（OV）通配符， 8 = Geotrust 增强型（EV）， 9 = Geotrust 企业型（OV）， 10 = Geotrust 企业型（OV）通配符， 11 = TrustAsia 域名型多域名 SSL 证书， 12 = TrustAsia 域名型（DV）通配符， 13 = TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14 = TrustAsia 企业型（OV）SSL 证书（D3）， 15 = TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16 = TrustAsia 增强型 （EV）SSL 证书（D3）， 17 = TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18 = GlobalSign 企业型（OV）SSL 证书， 19 = GlobalSign 企业型通配符 （OV）SSL 证书， 20 = GlobalSign 增强型 （EV）SSL 证书， 21 = TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22 = GlobalSign 企业型多域名（OV）SSL 证书， 23 = GlobalSign 企业型通配符多域名（OV）SSL 证书， 24 = GlobalSign 增强型多域名（EV）SSL 证书。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
@@ -74,14 +74,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 别名。
+        /// 备注名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 证书类型。
+        /// 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -95,7 +95,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string StatusMsg{ get; set; }
 
         /// <summary>
-        /// 证书验证类型。
+        /// 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VerifyType")]
@@ -137,7 +137,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// 订单ID。
+        /// 订单 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrderId")]
@@ -151,7 +151,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public CertificateExtra CertificateExtra{ get; set; }
 
         /// <summary>
-        /// DV认证信息。
+        /// DV 认证信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthDetail")]
@@ -165,7 +165,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string VulnerabilityReport{ get; set; }
 
         /// <summary>
-        /// 证书ID。
+        /// 证书 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateId")]

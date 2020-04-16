@@ -61,6 +61,12 @@ namespace TencentCloud.Cme.V20191029.Models
         public float? Duration{ get; set; }
 
         /// <summary>
+        /// 视频拍摄时的选择角度，单位：度
+        /// </summary>
+        [JsonProperty("Rotate")]
+        public long? Rotate{ get; set; }
+
+        /// <summary>
         /// 视频流信息。
         /// </summary>
         [JsonProperty("VideoStreamInfoSet")]
@@ -84,6 +90,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "Rotate", this.Rotate);
             this.SetParamArrayObj(map, prefix + "VideoStreamInfoSet.", this.VideoStreamInfoSet);
             this.SetParamArrayObj(map, prefix + "AudioStreamInfoSet.", this.AudioStreamInfoSet);
         }

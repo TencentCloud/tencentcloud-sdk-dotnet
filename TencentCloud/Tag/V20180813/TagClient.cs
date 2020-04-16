@@ -213,6 +213,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 查询资源关联标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
+        public async Task<DescribeResourceTagsResponse> DescribeResourceTags(DescribeResourceTagsRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询资源关联标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
+        public DescribeResourceTagsResponse DescribeResourceTagsSync(DescribeResourceTagsRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询已有资源标签键值对
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsByResourceIdsRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Tag.V20180813
              {
                  var strResp = this.InternalRequestSync(req, "DescribeResourceTagsByResourceIds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsByResourceIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据标签键获取资源标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsByTagKeysRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsByTagKeysResponse"/></returns>
+        public async Task<DescribeResourceTagsByTagKeysResponse> DescribeResourceTagsByTagKeys(DescribeResourceTagsByTagKeysRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsByTagKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceTagsByTagKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsByTagKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据标签键获取资源标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsByTagKeysRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsByTagKeysResponse"/></returns>
+        public DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeysSync(DescribeResourceTagsByTagKeysRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsByTagKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceTagsByTagKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsByTagKeysResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

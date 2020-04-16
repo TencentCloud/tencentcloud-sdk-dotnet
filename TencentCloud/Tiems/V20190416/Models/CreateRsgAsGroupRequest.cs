@@ -43,6 +43,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         public ulong? MinSize{ get; set; }
 
         /// <summary>
+        /// 伸缩组的节点规格
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
         /// 资源组所在的集群名
         /// </summary>
         [JsonProperty("Cluster")]
@@ -54,6 +60,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 伸缩组期望的节点数
+        /// </summary>
+        [JsonProperty("DesiredSize")]
+        public ulong? DesiredSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,8 +75,10 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "RsgId", this.RsgId);
             this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Cluster", this.Cluster);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "DesiredSize", this.DesiredSize);
         }
     }
 }

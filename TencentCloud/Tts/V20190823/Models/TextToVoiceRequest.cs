@@ -26,7 +26,7 @@ namespace TencentCloud.Tts.V20190823.Models
         
         /// <summary>
         /// 合成语音的源文本，按UTF-8编码统一计算。
-        /// 中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
+        /// 中文最大支持110个汉字（全角标点符号算一个汉字）；英文最大支持350个字母（半角标点符号算一个字母）。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 音色<li>0-云小宁，亲和女声(默认)</li><li>1-云小奇，亲和男声</li><li>2-云小晚，成熟男声</li><li>4-云小叶，温暖女声</li><li>5-云小欣，情感女声</li><li>6-云小龙，情感男声</li><li>1000-智侠、情感男声（新）</li><li>1001-智瑜，情感女声（新）</li><li>1002-智聆，通用女声（新）</li><li>1003-智美，客服女声（新）</li><li>1050-WeJack，英文男声（新）</li><li>1051-WeRose，英文女声（新）</li>
+        /// 音色<li>0-云小宁，亲和女声(默认)</li><li>1-云小奇，亲和男声</li><li>2-云小晚，成熟男声</li><li>4-云小叶，温暖女声</li><li>5-云小欣，情感女声</li><li>6-云小龙，情感男声</li><li>7-云小曼，客服女声（新）</li><li>1000-智侠，情感男声（新）</li><li>1001-智瑜，情感女声（新）</li><li>1002-智聆，通用女声（新）</li><li>1003-智美，客服女声（新）</li><li>1050-WeJack，英文男声（新）</li><li>1051-WeRose，英文女声（新）</li>
         /// </summary>
         [JsonProperty("VoiceType")]
         public long? VoiceType{ get; set; }

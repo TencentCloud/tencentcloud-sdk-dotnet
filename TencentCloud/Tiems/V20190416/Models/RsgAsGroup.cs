@@ -102,6 +102,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
+        /// <summary>
+        /// 伸缩组起始节点数
+        /// </summary>
+        [JsonProperty("DesiredSize")]
+        public ulong? DesiredSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+            this.SetParamSimple(map, prefix + "DesiredSize", this.DesiredSize);
         }
     }
 }

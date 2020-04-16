@@ -33,8 +33,9 @@ namespace TencentCloud.Emr.V20190103.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 变配的时长。需要结合TimeUnit一起使用。
-        /// <li>PayMode取值为0时，TimeSpan只能取值为3600。</li>
+        /// 变配的时长。结合TimeUnit一起使用。
+        /// <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+        /// <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }

@@ -83,6 +83,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? ApplicableForCLB{ get; set; }
 
         /// <summary>
+        /// 需要关联的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
@@ -101,6 +107,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
             this.SetParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         }
     }

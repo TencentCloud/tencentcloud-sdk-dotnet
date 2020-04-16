@@ -43,6 +43,14 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 画布宽高比，取值有：
+        /// <li>16:9；</li>
+        /// <li>9:16。</li>
+        /// </summary>
+        [JsonProperty("AspectRatio")]
+        public string AspectRatio{ get; set; }
+
+        /// <summary>
         /// 归属者。
         /// </summary>
         [JsonProperty("Owner")]
@@ -57,6 +65,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
         }
     }

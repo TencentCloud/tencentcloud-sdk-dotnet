@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
+        /// PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4三种版本。
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+        /// 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+        /// 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -102,6 +102,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 活动ID
+        /// </summary>
+        [JsonProperty("ActivityId")]
+        public long? ActivityId{ get; set; }
+
+        /// <summary>
+        /// 实例名
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

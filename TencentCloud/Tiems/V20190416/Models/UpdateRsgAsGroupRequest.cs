@@ -48,6 +48,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
 
+        /// <summary>
+        /// 伸缩组期望的节点数
+        /// </summary>
+        [JsonProperty("DesiredSize")]
+        public ulong? DesiredSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
+            this.SetParamSimple(map, prefix + "DesiredSize", this.DesiredSize);
         }
     }
 }

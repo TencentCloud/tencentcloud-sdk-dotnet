@@ -32,7 +32,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// 项目创建用户UIN。
+        /// 项目创建用户 UIN。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectCreatorUin")]
@@ -53,14 +53,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ProjectResume{ get; set; }
 
         /// <summary>
-        /// 用户UIN。
+        /// 用户 UIN。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public ulong? OwnerUin{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]

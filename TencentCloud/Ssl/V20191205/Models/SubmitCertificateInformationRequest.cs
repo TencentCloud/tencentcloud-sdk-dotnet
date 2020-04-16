@@ -25,25 +25,25 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 证书id。
+        /// 证书 ID。
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Csr生成方式: online = 在线生成, parse = 手动上传 。
+        /// CSR 生成方式：online = 在线生成, parse = 手动上传。
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// 上传的Csr内容。
+        /// 上传的 CSR 内容。
         /// </summary>
         [JsonProperty("CsrContent")]
         public string CsrContent{ get; set; }
 
         /// <summary>
-        /// 绑定证书的域名 。
+        /// 绑定证书的域名。
         /// </summary>
         [JsonProperty("CertificateDomain")]
         public string CertificateDomain{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// 私钥密码 。
+        /// 私钥密码。
         /// </summary>
         [JsonProperty("KeyPassword")]
         public string KeyPassword{ get; set; }
 
         /// <summary>
-        /// 公司名称 。
+        /// 公司名称。
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
@@ -73,19 +73,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string OrganizationDivision{ get; set; }
 
         /// <summary>
-        /// 公司详细地址 。
+        /// 公司详细地址。
         /// </summary>
         [JsonProperty("OrganizationAddress")]
         public string OrganizationAddress{ get; set; }
 
         /// <summary>
-        /// 国家名称 如中国:CN 。
+        /// 国家名称，如中国：CN 。
         /// </summary>
         [JsonProperty("OrganizationCountry")]
         public string OrganizationCountry{ get; set; }
 
         /// <summary>
-        /// 公司所在城市 。
+        /// 公司所在城市。
         /// </summary>
         [JsonProperty("OrganizationCity")]
         public string OrganizationCity{ get; set; }
@@ -97,25 +97,25 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string OrganizationRegion{ get; set; }
 
         /// <summary>
-        /// 公司邮编 。
+        /// 公司邮编。
         /// </summary>
         [JsonProperty("PostalCode")]
         public string PostalCode{ get; set; }
 
         /// <summary>
-        /// 公司座机区号 。
+        /// 公司座机区号。
         /// </summary>
         [JsonProperty("PhoneAreaCode")]
         public string PhoneAreaCode{ get; set; }
 
         /// <summary>
-        /// 公司座机号码 。
+        /// 公司座机号码。
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 证书验证方式 。
+        /// 证书验证方式。
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
@@ -163,13 +163,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ContactLastName{ get; set; }
 
         /// <summary>
-        /// 联系人邮箱地址 。
+        /// 联系人邮箱地址。
         /// </summary>
         [JsonProperty("ContactEmail")]
         public string ContactEmail{ get; set; }
 
         /// <summary>
-        /// 联系人手机号码 。
+        /// 联系人手机号码。
         /// </summary>
         [JsonProperty("ContactNumber")]
         public string ContactNumber{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 区间开始时间
+        /// 区间开始时间（Unix 时间戳，毫秒级）
         /// </summary>
         [JsonProperty("MinTime")]
         public ulong? MinTime{ get; set; }
 
         /// <summary>
-        /// 区间结束时间
+        /// 区间结束时间（Unix 时间戳，毫秒级）
         /// </summary>
         [JsonProperty("MaxTime")]
         public ulong? MaxTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 属性字段名称
+        /// 属性字段名称，对应数据模板中功能属性的标识符
         /// </summary>
         [JsonProperty("FieldName")]
         public string FieldName{ get; set; }

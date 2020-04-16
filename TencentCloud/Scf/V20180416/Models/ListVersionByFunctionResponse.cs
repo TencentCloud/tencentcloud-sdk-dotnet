@@ -38,6 +38,13 @@ namespace TencentCloud.Scf.V20180416.Models
         public FunctionVersion[] Versions{ get; set; }
 
         /// <summary>
+        /// 函数版本总数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +58,7 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamArraySimple(map, prefix + "FunctionVersion.", this.FunctionVersion);
             this.SetParamArrayObj(map, prefix + "Versions.", this.Versions);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

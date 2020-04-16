@@ -2573,6 +2573,46 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取调度域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulingDomainListRequest"/></param>
+        /// <returns><see cref="DescribeSchedulingDomainListResponse"/></returns>
+        public async Task<DescribeSchedulingDomainListResponse> DescribeSchedulingDomainList(DescribeSchedulingDomainListRequest req)
+        {
+             JsonResponseModel<DescribeSchedulingDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSchedulingDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulingDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取调度域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSchedulingDomainListRequest"/></param>
+        /// <returns><see cref="DescribeSchedulingDomainListResponse"/></returns>
+        public DescribeSchedulingDomainListResponse DescribeSchedulingDomainListSync(DescribeSchedulingDomainListRequest req)
+        {
+             JsonResponseModel<DescribeSchedulingDomainListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSchedulingDomainList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSchedulingDomainListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取本月安全统计
         /// </summary>
         /// <param name="req"><see cref="DescribeSecIndexRequest"/></param>

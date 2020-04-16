@@ -59,13 +59,6 @@ namespace TencentCloud.Tione.V20191022.Models
         public string RootAccess{ get; set; }
 
         /// <summary>
-        /// 安全组ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SecurityGroupIds")]
-        public string[] SecurityGroupIds{ get; set; }
-
-        /// <summary>
         /// 子网ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -78,13 +71,6 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         [JsonProperty("VolumeSizeInGB")]
         public ulong? VolumeSizeInGB{ get; set; }
-
-        /// <summary>
-        /// Notebook实例链接
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
 
         /// <summary>
         /// 创建失败原因
@@ -108,13 +94,6 @@ namespace TencentCloud.Tione.V20191022.Models
         public string LastModifiedTime{ get; set; }
 
         /// <summary>
-        /// Notebook实例网卡ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("NetworkInterfaceId")]
-        public string NetworkInterfaceId{ get; set; }
-
-        /// <summary>
         /// Notebook实例日志链接
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -136,6 +115,29 @@ namespace TencentCloud.Tione.V20191022.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// notebook生命周期脚本名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LifecycleScriptsName")]
+        public string LifecycleScriptsName{ get; set; }
+
+        /// <summary>
+        /// 默认存储库名称
+        /// 可以是已创建的存储库名称或者已https://开头的公共git库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultCodeRepository")]
+        public string DefaultCodeRepository{ get; set; }
+
+        /// <summary>
+        /// 其他存储库列表
+        /// 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdditionalCodeRepositories")]
+        public string[] AdditionalCodeRepositories{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -152,17 +154,17 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
             this.SetParamSimple(map, prefix + "DirectInternetAccess", this.DirectInternetAccess);
             this.SetParamSimple(map, prefix + "RootAccess", this.RootAccess);
-            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "FailureReason", this.FailureReason);
             this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
             this.SetParamSimple(map, prefix + "LastModifiedTime", this.LastModifiedTime);
-            this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamSimple(map, prefix + "LogUrl", this.LogUrl);
             this.SetParamSimple(map, prefix + "NotebookInstanceStatus", this.NotebookInstanceStatus);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
+            this.SetParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
+            this.SetParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

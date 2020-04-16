@@ -25,8 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 日期，
-        /// 格式：YYYY-mm-dd。
+        /// 日期，格式：YYYY-mm-dd。
+        /// 第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
         /// </summary>
         [JsonProperty("DayTime")]
         public string DayTime{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string PlayDomain{ get; set; }
 
         /// <summary>
-        /// 页号，范围[1,10]，默认值是1。
+        /// 页号，范围[1,1000]，默认值是1。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }

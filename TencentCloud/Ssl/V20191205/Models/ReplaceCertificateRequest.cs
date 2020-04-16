@@ -25,31 +25,31 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 证书ID。
+        /// 证书 ID。
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 验证类型 DNS,DNS_AUTO,FILE
+        /// 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
         /// </summary>
         [JsonProperty("ValidType")]
         public string ValidType{ get; set; }
 
         /// <summary>
-        /// 类型，可选项：Original、Upload、Online，默认original。
+        /// 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// CSR内容。
+        /// CSR 内容。
         /// </summary>
         [JsonProperty("CsrContent")]
         public string CsrContent{ get; set; }
 
         /// <summary>
-        /// key密码。
+        /// KEY 密码。
         /// </summary>
         [JsonProperty("CsrkeyPassword")]
         public string CsrkeyPassword{ get; set; }

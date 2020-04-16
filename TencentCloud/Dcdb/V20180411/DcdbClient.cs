@@ -899,6 +899,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口（DescribeProjects）用于查询项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public async Task<DescribeProjectsResponse> DescribeProjects(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProjects）用于查询项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询可创建的分布式数据库可售卖的分片规格配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeShardSpecRequest"/></param>

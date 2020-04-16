@@ -1053,6 +1053,86 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesRequest"/></param>
+        /// <returns><see cref="DescribeImagesResponse"/></returns>
+        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest req)
+        {
+             JsonResponseModel<DescribeImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesRequest"/></param>
+        /// <returns><see cref="DescribeImagesResponse"/></returns>
+        public DescribeImagesResponse DescribeImagesSync(DescribeImagesRequest req)
+        {
+             JsonResponseModel<DescribeImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取容器服务支持的所有地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
+        public async Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
+        {
+             JsonResponseModel<DescribeRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取容器服务支持的所有地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
+        public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
+        {
+             JsonResponseModel<DescribeRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询路由表冲突列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteTableConflictsRequest"/></param>
@@ -1124,6 +1204,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterAsGroupAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAsGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAttributeRequest"/></param>
+        /// <returns><see cref="ModifyClusterAttributeResponse"/></returns>
+        public async Task<ModifyClusterAttributeResponse> ModifyClusterAttribute(ModifyClusterAttributeRequest req)
+        {
+             JsonResponseModel<ModifyClusterAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAttributeRequest"/></param>
+        /// <returns><see cref="ModifyClusterAttributeResponse"/></returns>
+        public ModifyClusterAttributeResponse ModifyClusterAttributeSync(ModifyClusterAttributeRequest req)
+        {
+             JsonResponseModel<ModifyClusterAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -43,13 +43,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string Commission{ get; set; }
 
         /// <summary>
-        /// STRING(3)，币种
+        /// STRING(3)，币种。如RMB
         /// </summary>
         [JsonProperty("Ccy")]
         public string Ccy{ get; set; }
 
         /// <summary>
-        /// STRING(20)，支付渠道类型
+        /// STRING(20)，支付渠道类型。
+        /// 0001-微信
+        /// 0002-支付宝
+        /// 0003-京东支付
         /// </summary>
         [JsonProperty("PayChannelType")]
         public string PayChannelType{ get; set; }

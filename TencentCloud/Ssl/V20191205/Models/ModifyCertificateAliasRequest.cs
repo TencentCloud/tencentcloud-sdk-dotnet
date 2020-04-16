@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 证书id。
+        /// 证书 ID。
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 证书备注。
+        /// 备注名称。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

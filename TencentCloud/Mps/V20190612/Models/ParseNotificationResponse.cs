@@ -27,6 +27,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 支持事件类型，目前取值有：
         /// <li>WorkflowTask：视频工作流处理任务。</li>
+        /// <li>EditMediaTask：视频编辑任务。</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -37,6 +38,13 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("WorkflowTaskEvent")]
         public WorkflowTask WorkflowTaskEvent{ get; set; }
+
+        /// <summary>
+        /// 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EditMediaTaskEvent")]
+        public EditMediaTask EditMediaTaskEvent{ get; set; }
 
         /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
@@ -64,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamObj(map, prefix + "WorkflowTaskEvent.", this.WorkflowTaskEvent);
+            this.SetParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

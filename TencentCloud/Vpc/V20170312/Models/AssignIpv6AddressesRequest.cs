@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
+        /// 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。与Ipv6AddressCount必填一个。
         /// </summary>
         [JsonProperty("Ipv6Addresses")]
         public Ipv6Address[] Ipv6Addresses{ get; set; }
 
         /// <summary>
-        /// 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
+        /// 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。与Ipv6Addresses必填一个。
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public ulong? Ipv6AddressCount{ get; set; }

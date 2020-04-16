@@ -49,12 +49,6 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public long? TotalRefundAmt{ get; set; }
 
         /// <summary>
-        /// 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
-        /// </summary>
-        [JsonProperty("SubOrderRefundList")]
-        public RefundOutSubOrderRefundList[] SubOrderRefundList{ get; set; }
-
-        /// <summary>
         /// 聚鑫分配的安全ID
         /// </summary>
         [JsonProperty("MidasSecretId")]
@@ -90,6 +84,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("PlatformRefundAmt")]
         public long? PlatformRefundAmt{ get; set; }
 
+        /// <summary>
+        /// 支持多个子订单批量退款单 个子订单退款支持传 SubOutTradeNo ，也支持传 SubOutTradeNoList ，都传的时候以 SubOutTradeNoList 为准。  如果传了子单退款细节，外 部不需要再传退款金额，平 台应退，商户应退金额，我 们可以直接根据子单退款算出来总和。
+        /// </summary>
+        [JsonProperty("SubOrderRefundList")]
+        public RefundOutSubOrderRefundList[] SubOrderRefundList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,13 +100,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "RefundId", this.RefundId);
             this.SetParamSimple(map, prefix + "MidasAppId", this.MidasAppId);
             this.SetParamSimple(map, prefix + "TotalRefundAmt", this.TotalRefundAmt);
-            this.SetParamArrayObj(map, prefix + "SubOrderRefundList.", this.SubOrderRefundList);
             this.SetParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
             this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
             this.SetParamSimple(map, prefix + "OutTradeNo", this.OutTradeNo);
             this.SetParamSimple(map, prefix + "MchRefundAmt", this.MchRefundAmt);
             this.SetParamSimple(map, prefix + "TransactionId", this.TransactionId);
             this.SetParamSimple(map, prefix + "PlatformRefundAmt", this.PlatformRefundAmt);
+            this.SetParamArrayObj(map, prefix + "SubOrderRefundList.", this.SubOrderRefundList);
         }
     }
 }

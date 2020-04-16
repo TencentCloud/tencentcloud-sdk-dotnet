@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 修改所属项目成功的证书集合
+        /// 修改所属项目成功的证书集合。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SuccessCertificates")]
         public string[] SuccessCertificates{ get; set; }
 
         /// <summary>
-        /// 修改所属项目失败的证书集合
+        /// 修改所属项目失败的证书集合。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FailCertificates")]

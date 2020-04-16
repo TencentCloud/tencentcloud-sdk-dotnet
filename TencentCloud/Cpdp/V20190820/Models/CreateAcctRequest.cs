@@ -96,6 +96,15 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("ShortName")]
         public string ShortName{ get; set; }
 
+        /// <summary>
+        /// 子商户会员类型：
+        /// general:普通子账户
+        /// merchant:商户子账户
+        /// 缺省： general
+        /// </summary>
+        [JsonProperty("SubMerchantMemberType")]
+        public string SubMerchantMemberType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +122,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
             this.SetParamSimple(map, prefix + "SubMchType", this.SubMchType);
             this.SetParamSimple(map, prefix + "ShortName", this.ShortName);
+            this.SetParamSimple(map, prefix + "SubMerchantMemberType", this.SubMerchantMemberType);
         }
     }
 }

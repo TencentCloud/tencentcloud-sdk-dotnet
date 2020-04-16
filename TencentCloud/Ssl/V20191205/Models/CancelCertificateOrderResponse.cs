@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 取消订单成功的证书id
+        /// 取消订单成功的证书 ID。
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }

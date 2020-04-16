@@ -30,6 +30,16 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("CacheRules")]
         public CacheRule[] CacheRules{ get; set; }
 
+        /// <summary>
+        /// 遵循源站 Cache-Control: max-age 配置
+        /// on：开启
+        /// off：关闭
+        /// 开启后，未能匹配 CacheRules 规则的资源将根据源站返回的 max-age 值进行节点缓存；匹配了 CacheRules 规则的资源将按照 CacheRules 中设置的缓存过期时间在节点进行缓存
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FollowOrigin")]
+        public string FollowOrigin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +47,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "CacheRules.", this.CacheRules);
+            this.SetParamSimple(map, prefix + "FollowOrigin", this.FollowOrigin);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DealName{ get; set; }
 
         /// <summary>
+        /// 冻结流水号
+        /// </summary>
+        [JsonProperty("BillId")]
+        public string BillId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
+            this.SetParamSimple(map, prefix + "BillId", this.BillId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

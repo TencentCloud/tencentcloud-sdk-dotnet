@@ -139,7 +139,9 @@ namespace TencentCloud.Vod.V20180717
         /// 
         /// 1. 对一个媒体文件进行剪辑，生成一个新的媒体文件；
         /// 2. 对多个媒体文件进行裁剪拼接，生成一个新的媒体文件；
-        /// 3. 对多个媒体文件的媒体流进行裁剪拼接，生成一个新的媒体文件；
+        /// 3. 对多个媒体文件的媒体流进行裁剪拼接，生成一个新的媒体文件。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [视频合成完成](https://cloud.tencent.com/document/product/266/43000)。
         /// </summary>
         /// <param name="req"><see cref="ComposeMediaRequest"/></param>
         /// <returns><see cref="ComposeMediaResponse"/></returns>
@@ -163,7 +165,9 @@ namespace TencentCloud.Vod.V20180717
         /// 
         /// 1. 对一个媒体文件进行剪辑，生成一个新的媒体文件；
         /// 2. 对多个媒体文件进行裁剪拼接，生成一个新的媒体文件；
-        /// 3. 对多个媒体文件的媒体流进行裁剪拼接，生成一个新的媒体文件；
+        /// 3. 对多个媒体文件的媒体流进行裁剪拼接，生成一个新的媒体文件。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [视频合成完成](https://cloud.tencent.com/document/product/266/43000)。
         /// </summary>
         /// <param name="req"><see cref="ComposeMediaRequest"/></param>
         /// <returns><see cref="ComposeMediaResponse"/></returns>
@@ -298,6 +302,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "CreateAIRecognitionTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建转自适应码流模板，数量上限：100。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<CreateAdaptiveDynamicStreamingTemplateResponse> CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建转自适应码流模板，数量上限：100。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -633,6 +677,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建超级播放器配置，数量上限：100。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
+        /// <returns><see cref="CreateSuperPlayerConfigResponse"/></returns>
+        public async Task<CreateSuperPlayerConfigResponse> CreateSuperPlayerConfig(CreateSuperPlayerConfigRequest req)
+        {
+             JsonResponseModel<CreateSuperPlayerConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSuperPlayerConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSuperPlayerConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建超级播放器配置，数量上限：100。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
+        /// <returns><see cref="CreateSuperPlayerConfigResponse"/></returns>
+        public CreateSuperPlayerConfigResponse CreateSuperPlayerConfigSync(CreateSuperPlayerConfigRequest req)
+        {
+             JsonResponseModel<CreateSuperPlayerConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSuperPlayerConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSuperPlayerConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义转码模板，数量上限：100。
         /// </summary>
         /// <param name="req"><see cref="CreateTranscodeTemplateRequest"/></param>
@@ -828,6 +912,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAIRecognitionTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<DeleteAdaptiveDynamicStreamingTemplateResponse> DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplateSync(DeleteAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1192,6 +1316,48 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSnapshotByTimeOffsetTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotByTimeOffsetTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除超级播放器配置。  
+        /// *注：系统预置播放器配置不允许删除。*
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSuperPlayerConfigRequest"/></param>
+        /// <returns><see cref="DeleteSuperPlayerConfigResponse"/></returns>
+        public async Task<DeleteSuperPlayerConfigResponse> DeleteSuperPlayerConfig(DeleteSuperPlayerConfigRequest req)
+        {
+             JsonResponseModel<DeleteSuperPlayerConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSuperPlayerConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSuperPlayerConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除超级播放器配置。  
+        /// *注：系统预置播放器配置不允许删除。*
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSuperPlayerConfigRequest"/></param>
+        /// <returns><see cref="DeleteSuperPlayerConfigResponse"/></returns>
+        public DeleteSuperPlayerConfigResponse DeleteSuperPlayerConfigSync(DeleteSuperPlayerConfigRequest req)
+        {
+             JsonResponseModel<DeleteSuperPlayerConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSuperPlayerConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSuperPlayerConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2129,6 +2295,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 查询超级播放器配置，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
+        /// <returns><see cref="DescribeSuperPlayerConfigsResponse"/></returns>
+        public async Task<DescribeSuperPlayerConfigsResponse> DescribeSuperPlayerConfigs(DescribeSuperPlayerConfigsRequest req)
+        {
+             JsonResponseModel<DescribeSuperPlayerConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSuperPlayerConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSuperPlayerConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询超级播放器配置，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
+        /// <returns><see cref="DescribeSuperPlayerConfigsResponse"/></returns>
+        public DescribeSuperPlayerConfigsResponse DescribeSuperPlayerConfigsSync(DescribeSuperPlayerConfigsRequest req)
+        {
+             JsonResponseModel<DescribeSuperPlayerConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSuperPlayerConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSuperPlayerConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
@@ -2386,6 +2592,8 @@ namespace TencentCloud.Vod.V20180717
         /// 对于生成的新视频，还可以指定生成后的视频是否要执行任务流。
         /// 
         /// >当对直播流做剪辑、拼接等操作时，请确保流结束后再操作。否则生成的视频可能不完整。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [视频编辑完成](https://cloud.tencent.com/document/product/266/33794)。
         /// </summary>
         /// <param name="req"><see cref="EditMediaRequest"/></param>
         /// <returns><see cref="EditMediaResponse"/></returns>
@@ -2418,6 +2626,8 @@ namespace TencentCloud.Vod.V20180717
         /// 对于生成的新视频，还可以指定生成后的视频是否要执行任务流。
         /// 
         /// >当对直播流做剪辑、拼接等操作时，请确保流结束后再操作。否则生成的视频可能不完整。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [视频编辑完成](https://cloud.tencent.com/document/product/266/33794)。
         /// </summary>
         /// <param name="req"><see cref="EditMediaRequest"/></param>
         /// <returns><see cref="EditMediaResponse"/></returns>
@@ -2680,6 +2890,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAIRecognitionTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<ModifyAdaptiveDynamicStreamingTemplateResponse> ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplateSync(ModifyAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3089,6 +3339,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改超级播放器配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>
+        /// <returns><see cref="ModifySuperPlayerConfigResponse"/></returns>
+        public async Task<ModifySuperPlayerConfigResponse> ModifySuperPlayerConfig(ModifySuperPlayerConfigRequest req)
+        {
+             JsonResponseModel<ModifySuperPlayerConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySuperPlayerConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySuperPlayerConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改超级播放器配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>
+        /// <returns><see cref="ModifySuperPlayerConfigResponse"/></returns>
+        public ModifySuperPlayerConfigResponse ModifySuperPlayerConfigSync(ModifySuperPlayerConfigRequest req)
+        {
+             JsonResponseModel<ModifySuperPlayerConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySuperPlayerConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySuperPlayerConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改用户自定义转码模板信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyTranscodeTemplateRequest"/></param>
@@ -3260,6 +3550,8 @@ namespace TencentCloud.Vod.V20180717
         /// 8. 智能内容审核（鉴黄、鉴恐、鉴政）；
         /// 9. 智能内容分析（标签、分类、封面、按帧标签）；
         /// 10. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -3290,6 +3582,8 @@ namespace TencentCloud.Vod.V20180717
         /// 8. 智能内容审核（鉴黄、鉴恐、鉴政）；
         /// 9. 智能内容分析（标签、分类、封面、按帧标签）；
         /// 10. 智能内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -3313,6 +3607,8 @@ namespace TencentCloud.Vod.V20180717
         /// 有两种方式创建任务流模板：
         /// 1. 在控制台上创建和修改任务流模板；
         /// 2. 通过任务流模板接口创建任务流模板。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaByProcedureRequest"/></param>
         /// <returns><see cref="ProcessMediaByProcedureResponse"/></returns>
@@ -3336,6 +3632,8 @@ namespace TencentCloud.Vod.V20180717
         /// 有两种方式创建任务流模板：
         /// 1. 在控制台上创建和修改任务流模板；
         /// 2. 通过任务流模板接口创建任务流模板。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaByProcedureRequest"/></param>
         /// <returns><see cref="ProcessMediaByProcedureResponse"/></returns>

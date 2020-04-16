@@ -49,6 +49,12 @@ namespace TencentCloud.Tci.V20190318.Models
         public LightStandard[] LightStandardSet{ get; set; }
 
         /// <summary>
+        /// 结果更新回调地址。
+        /// </summary>
+        [JsonProperty("EventsCallBack")]
+        public string EventsCallBack{ get; set; }
+
+        /// <summary>
         /// 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
         /// </summary>
         [JsonProperty("FrameInterval")]
@@ -82,6 +88,7 @@ namespace TencentCloud.Tci.V20190318.Models
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamObj(map, prefix + "Functions.", this.Functions);
             this.SetParamArrayObj(map, prefix + "LightStandardSet.", this.LightStandardSet);
+            this.SetParamSimple(map, prefix + "EventsCallBack", this.EventsCallBack);
             this.SetParamSimple(map, prefix + "FrameInterval", this.FrameInterval);
             this.SetParamArraySimple(map, prefix + "LibrarySet.", this.LibrarySet);
             this.SetParamSimple(map, prefix + "MaxVideoDuration", this.MaxVideoDuration);

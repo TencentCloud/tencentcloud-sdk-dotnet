@@ -85,6 +85,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CardCode{ get; set; }
 
         /// <summary>
+        /// 档案编号
+        /// </summary>
+        [JsonProperty("ArchivesCode")]
+        public string ArchivesCode{ get; set; }
+
+        /// <summary>
+        /// 记录
+        /// </summary>
+        [JsonProperty("Record")]
+        public string Record{ get; set; }
+
+        /// <summary>
         /// Code 告警码列表和释义：
         /// -9102  复印件告警
         /// -9103  翻拍件告警
@@ -126,6 +138,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
             this.SetParamSimple(map, prefix + "CardCode", this.CardCode);
+            this.SetParamSimple(map, prefix + "ArchivesCode", this.ArchivesCode);
+            this.SetParamSimple(map, prefix + "Record", this.Record);
             this.SetParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
             this.SetParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

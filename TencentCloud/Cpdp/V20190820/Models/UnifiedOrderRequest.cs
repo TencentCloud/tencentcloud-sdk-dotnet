@@ -79,12 +79,6 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string RealChannel{ get; set; }
 
         /// <summary>
-        /// 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
-        /// </summary>
-        [JsonProperty("SubOrderList")]
-        public UnifiedOrderInSubOrderList[] SubOrderList{ get; set; }
-
-        /// <summary>
         /// 原始金额
         /// </summary>
         [JsonProperty("OriginalAmt")]
@@ -134,6 +128,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string SubAppId{ get; set; }
 
         /// <summary>
+        /// 子订单信息列表，格式：子订单号、子应用ID、金额。 压缩后最长不可超过65535字节(去除空格，换行，制表符等无意义字符)
+        /// 注：接入银行或其他支付渠道服务商模式下，必传
+        /// </summary>
+        [JsonProperty("SubOrderList")]
+        public UnifiedOrderInSubOrderList[] SubOrderList{ get; set; }
+
+        /// <summary>
         /// 结算应收金额，单位：分
         /// </summary>
         [JsonProperty("TotalMchIncome")]
@@ -172,7 +173,6 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "TotalAmt", this.TotalAmt);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "RealChannel", this.RealChannel);
-            this.SetParamArrayObj(map, prefix + "SubOrderList.", this.SubOrderList);
             this.SetParamSimple(map, prefix + "OriginalAmt", this.OriginalAmt);
             this.SetParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
             this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
@@ -181,6 +181,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Metadata", this.Metadata);
             this.SetParamSimple(map, prefix + "Quantity", this.Quantity);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamArrayObj(map, prefix + "SubOrderList.", this.SubOrderList);
             this.SetParamSimple(map, prefix + "TotalMchIncome", this.TotalMchIncome);
             this.SetParamSimple(map, prefix + "TotalPlatformIncome", this.TotalPlatformIncome);
             this.SetParamSimple(map, prefix + "WxOpenId", this.WxOpenId);

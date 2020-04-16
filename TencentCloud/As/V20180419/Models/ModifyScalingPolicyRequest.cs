@@ -61,7 +61,7 @@ namespace TencentCloud.As.V20180419.Models
         public MetricAlarm MetricAlarm{ get; set; }
 
         /// <summary>
-        /// 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+        /// 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
         /// 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]

@@ -38,6 +38,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// FRONT 为驾驶证主页正面（有红色印章的一面），
+        /// BACK 为驾驶证副页正面（有档案编号的一面）。
+        /// </summary>
+        [JsonProperty("CardSide")]
+        public string CardSide{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "CardSide", this.CardSide);
         }
     }
 }

@@ -25,16 +25,16 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     {
         
         /// <summary>
-        /// 设备主人的AccessId
-        /// </summary>
-        [JsonProperty("AccessId")]
-        public string AccessId{ get; set; }
-
-        /// <summary>
         /// 设备TID
         /// </summary>
         [JsonProperty("Tid")]
         public string Tid{ get; set; }
+
+        /// <summary>
+        /// 设备主人的AccessId
+        /// </summary>
+        [JsonProperty("AccessId")]
+        public string AccessId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AccessId", this.AccessId);
             this.SetParamSimple(map, prefix + "Tid", this.Tid);
+            this.SetParamSimple(map, prefix + "AccessId", this.AccessId);
         }
     }
 }

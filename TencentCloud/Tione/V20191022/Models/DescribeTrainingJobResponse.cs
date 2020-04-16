@@ -26,14 +26,12 @@ namespace TencentCloud.Tione.V20191022.Models
         
         /// <summary>
         /// 算法镜像配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlgorithmSpecification")]
         public AlgorithmSpecification AlgorithmSpecification{ get; set; }
 
         /// <summary>
         /// 任务名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrainingJobName")]
         public string TrainingJobName{ get; set; }
@@ -47,14 +45,12 @@ namespace TencentCloud.Tione.V20191022.Models
 
         /// <summary>
         /// 输入数据配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputDataConfig")]
         public InputDataConfig[] InputDataConfig{ get; set; }
 
         /// <summary>
         /// 输出数据配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputDataConfig")]
         public OutputDataConfig OutputDataConfig{ get; set; }
@@ -68,7 +64,6 @@ namespace TencentCloud.Tione.V20191022.Models
 
         /// <summary>
         /// 计算实例配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceConfig")]
         public ResourceConfig ResourceConfig{ get; set; }
@@ -89,7 +84,6 @@ namespace TencentCloud.Tione.V20191022.Models
 
         /// <summary>
         /// 最近修改时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifiedTime")]
         public string LastModifiedTime{ get; set; }
@@ -117,7 +111,6 @@ namespace TencentCloud.Tione.V20191022.Models
 
         /// <summary>
         /// 详细状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondaryStatus")]
         public string SecondaryStatus{ get; set; }
@@ -138,7 +131,6 @@ namespace TencentCloud.Tione.V20191022.Models
 
         /// <summary>
         /// 任务状态
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrainingJobStatus")]
         public string TrainingJobStatus{ get; set; }

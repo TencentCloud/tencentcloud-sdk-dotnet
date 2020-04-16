@@ -42,6 +42,18 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("ProductDescription")]
         public string ProductDescription{ get; set; }
 
+        /// <summary>
+        /// 主芯片产商ID
+        /// </summary>
+        [JsonProperty("ChipManufactureId")]
+        public string ChipManufactureId{ get; set; }
+
+        /// <summary>
+        /// 主芯片ID
+        /// </summary>
+        [JsonProperty("ChipId")]
+        public string ChipId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
+            this.SetParamSimple(map, prefix + "ChipManufactureId", this.ChipManufactureId);
+            this.SetParamSimple(map, prefix + "ChipId", this.ChipId);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 源 Url。目前可支持直播流及点播文件。
+        /// 源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
         /// 注意：
         /// 1. 多个点播url之间使用空格拼接。
         /// 2. 目前上限支持10个url。
@@ -35,7 +35,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string FromUrl{ get; set; }
 
         /// <summary>
-        /// 目的 Url，目前限制该目标地址为腾讯域名。
+        /// 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
         /// 仅支持：rtmp 协议。
         /// </summary>
         [JsonProperty("ToUrl")]

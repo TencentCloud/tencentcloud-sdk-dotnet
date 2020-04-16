@@ -55,7 +55,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string NetType{ get; set; }
 
         /// <summary>
-        /// 数据协议 (1 使用物模型)
+        /// 数据协议 (1 使用物模型 2 为自定义)
         /// </summary>
         [JsonProperty("DataProtocol")]
         public long? DataProtocol{ get; set; }

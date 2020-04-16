@@ -55,13 +55,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Reponame{ get; set; }
 
         /// <summary>
-        /// 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+        /// 业务容器最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
         /// </summary>
         [JsonProperty("CpuLimit")]
         public string CpuLimit{ get; set; }
 
         /// <summary>
-        /// 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+        /// 业务容器最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
         /// </summary>
         [JsonProperty("MemLimit")]
         public string MemLimit{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string JvmOpts{ get; set; }
 
         /// <summary>
-        /// 分配的 CPU 核数，对应 K8S 的 request
+        /// 业务容器分配的 CPU 核数，对应 K8S 的 request
         /// </summary>
         [JsonProperty("CpuRequest")]
         public string CpuRequest{ get; set; }
 
         /// <summary>
-        /// 分配的内存 MiB 数，对应 K8S 的 request
+        /// 业务容器分配的内存 MiB 数，对应 K8S 的 request
         /// </summary>
         [JsonProperty("MemRequest")]
         public string MemRequest{ get; set; }
@@ -108,6 +108,54 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("UpdateIvl")]
         public long? UpdateIvl{ get; set; }
 
+        /// <summary>
+        /// agent 容器分配的 CPU 核数，对应 K8S 的 request
+        /// </summary>
+        [JsonProperty("AgentCpuRequest")]
+        public string AgentCpuRequest{ get; set; }
+
+        /// <summary>
+        /// agent 容器最大的 CPU 核数，对应 K8S 的 limit
+        /// </summary>
+        [JsonProperty("AgentCpuLimit")]
+        public string AgentCpuLimit{ get; set; }
+
+        /// <summary>
+        /// agent 容器分配的内存 MiB 数，对应 K8S 的 request
+        /// </summary>
+        [JsonProperty("AgentMemRequest")]
+        public string AgentMemRequest{ get; set; }
+
+        /// <summary>
+        /// agent 容器最大的内存 MiB 数，对应 K8S 的 limit
+        /// </summary>
+        [JsonProperty("AgentMemLimit")]
+        public string AgentMemLimit{ get; set; }
+
+        /// <summary>
+        /// istioproxy 容器分配的 CPU 核数，对应 K8S 的 request
+        /// </summary>
+        [JsonProperty("IstioCpuRequest")]
+        public string IstioCpuRequest{ get; set; }
+
+        /// <summary>
+        /// istioproxy 容器最大的 CPU 核数，对应 K8S 的 limit
+        /// </summary>
+        [JsonProperty("IstioCpuLimit")]
+        public string IstioCpuLimit{ get; set; }
+
+        /// <summary>
+        /// istioproxy 容器分配的内存 MiB 数，对应 K8S 的 request
+        /// </summary>
+        [JsonProperty("IstioMemRequest")]
+        public string IstioMemRequest{ get; set; }
+
+        /// <summary>
+        /// istioproxy 容器最大的内存 MiB 数，对应 K8S 的 limit
+        /// </summary>
+        [JsonProperty("IstioMemLimit")]
+        public string IstioMemLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +176,14 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RepoName", this.RepoName);
             this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
             this.SetParamSimple(map, prefix + "UpdateIvl", this.UpdateIvl);
+            this.SetParamSimple(map, prefix + "AgentCpuRequest", this.AgentCpuRequest);
+            this.SetParamSimple(map, prefix + "AgentCpuLimit", this.AgentCpuLimit);
+            this.SetParamSimple(map, prefix + "AgentMemRequest", this.AgentMemRequest);
+            this.SetParamSimple(map, prefix + "AgentMemLimit", this.AgentMemLimit);
+            this.SetParamSimple(map, prefix + "IstioCpuRequest", this.IstioCpuRequest);
+            this.SetParamSimple(map, prefix + "IstioCpuLimit", this.IstioCpuLimit);
+            this.SetParamSimple(map, prefix + "IstioMemRequest", this.IstioMemRequest);
+            this.SetParamSimple(map, prefix + "IstioMemLimit", this.IstioMemLimit);
         }
     }
 }

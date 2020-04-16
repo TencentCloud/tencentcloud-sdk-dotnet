@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 需要制作镜像的实例ID
+        /// 需要制作镜像的实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -56,19 +56,19 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Sysprep{ get; set; }
 
         /// <summary>
-        /// 实例需要制作镜像的数据盘Id
+        /// 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
         /// </summary>
         [JsonProperty("DataDiskIds")]
         public string[] DataDiskIds{ get; set; }
 
         /// <summary>
-        /// 需要制作镜像的快照ID,必须包含一个系统盘快照
+        /// 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
         /// </summary>
         [JsonProperty("SnapshotIds")]
         public string[] SnapshotIds{ get; set; }
 
         /// <summary>
-        /// 检测请求的合法性，但不会对操作的资源产生任何影响
+        /// 检测本次请求的是否成功，但不会对操作的资源产生任何影响
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

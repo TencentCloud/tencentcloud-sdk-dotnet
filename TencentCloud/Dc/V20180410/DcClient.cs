@@ -180,7 +180,7 @@ namespace TencentCloud.Dc.V20180410
 
         /// <summary>
         /// 删除物理专线。
-        /// 只能删除处于状态的物理专线。
+        /// 只能删除处于已连接状态的物理专线。
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectResponse"/></returns>
@@ -201,7 +201,7 @@ namespace TencentCloud.Dc.V20180410
 
         /// <summary>
         /// 删除物理专线。
-        /// 只能删除处于状态的物理专线。
+        /// 只能删除处于已连接状态的物理专线。
         /// </summary>
         /// <param name="req"><see cref="DeleteDirectConnectRequest"/></param>
         /// <returns><see cref="DeleteDirectConnectResponse"/></returns>

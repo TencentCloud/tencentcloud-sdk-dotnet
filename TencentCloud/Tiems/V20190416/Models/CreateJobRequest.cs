@@ -102,6 +102,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("QuantizationInput")]
         public QuantizationInput QuantizationInput{ get; set; }
 
+        /// <summary>
+        /// Cls日志主题ID
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "GpuMemory", this.GpuMemory);
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);
             this.SetParamObj(map, prefix + "QuantizationInput.", this.QuantizationInput);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         }
     }
 }

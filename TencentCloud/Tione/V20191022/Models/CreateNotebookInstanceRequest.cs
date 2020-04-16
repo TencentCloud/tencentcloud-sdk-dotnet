@@ -37,10 +37,10 @@ namespace TencentCloud.Tione.V20191022.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 角色的资源描述
+        /// 数据卷大小(GB)
         /// </summary>
-        [JsonProperty("RoleArn")]
-        public string RoleArn{ get; set; }
+        [JsonProperty("VolumeSizeInGB")]
+        public ulong? VolumeSizeInGB{ get; set; }
 
         /// <summary>
         /// 外网访问权限，可取值Enabled/Disabled
@@ -55,28 +55,30 @@ namespace TencentCloud.Tione.V20191022.Models
         public string RootAccess{ get; set; }
 
         /// <summary>
-        /// 安全组ID
-        /// </summary>
-        [JsonProperty("SecurityGroupIds")]
-        public string[] SecurityGroupIds{ get; set; }
-
-        /// <summary>
         /// 子网ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 数据卷大小(GB)
+        /// 生命周期脚本名称
         /// </summary>
-        [JsonProperty("VolumeSizeInGB")]
-        public ulong? VolumeSizeInGB{ get; set; }
+        [JsonProperty("LifecycleScriptsName")]
+        public string LifecycleScriptsName{ get; set; }
 
         /// <summary>
-        /// Notebook标签
+        /// 默认存储库名称
+        /// 可以是已创建的存储库名称或者已https://开头的公共git库
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("DefaultCodeRepository")]
+        public string DefaultCodeRepository{ get; set; }
+
+        /// <summary>
+        /// 其他存储库列表
+        /// 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+        /// </summary>
+        [JsonProperty("AdditionalCodeRepositories")]
+        public string[] AdditionalCodeRepositories{ get; set; }
 
 
         /// <summary>
@@ -86,13 +88,13 @@ namespace TencentCloud.Tione.V20191022.Models
         {
             this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
-            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
             this.SetParamSimple(map, prefix + "DirectInternetAccess", this.DirectInternetAccess);
             this.SetParamSimple(map, prefix + "RootAccess", this.RootAccess);
-            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
-            this.SetParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
+            this.SetParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
+            this.SetParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
         }
     }
 }

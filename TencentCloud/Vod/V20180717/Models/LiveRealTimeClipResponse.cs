@@ -32,14 +32,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 剪辑固化后的视频的媒体文件的唯一标识。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
         /// 剪辑固化后的视频任务流 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VodTaskId")]
         public string VodTaskId{ get; set; }

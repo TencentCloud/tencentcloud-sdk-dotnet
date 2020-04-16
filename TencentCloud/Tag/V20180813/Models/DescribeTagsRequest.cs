@@ -54,6 +54,18 @@ namespace TencentCloud.Tag.V20180813.Models
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
+        /// <summary>
+        /// 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
+
+        /// <summary>
+        /// 是否展现项目标签
+        /// </summary>
+        [JsonProperty("ShowProject")]
+        public ulong? ShowProject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tag.V20180813.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamSimple(map, prefix + "ShowProject", this.ShowProject);
         }
     }
 }

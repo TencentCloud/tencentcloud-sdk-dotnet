@@ -79,7 +79,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CreatePolicyGroupCondition[] Conditions{ get; set; }
 
         /// <summary>
-        /// 策略组中的时间告警规则
+        /// 策略组中的事件告警规则
         /// </summary>
         [JsonProperty("EventConditions")]
         public CreatePolicyGroupEventCondition[] EventConditions{ get; set; }

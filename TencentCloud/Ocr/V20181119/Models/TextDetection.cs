@@ -50,6 +50,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }
 
+        /// <summary>
+        /// 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+        /// </summary>
+        [JsonProperty("ItemPolygon")]
+        public ItemCoord ItemPolygon{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
         }
     }
 }

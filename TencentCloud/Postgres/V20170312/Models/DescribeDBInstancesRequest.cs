@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件，目前支持：db-instance-id、db-instance-name两种。
+        /// 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -42,6 +42,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 排序方式，包括升序、降序
+        /// </summary>
+        [JsonProperty("OrderByType")]
+        public string OrderByType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }
 }

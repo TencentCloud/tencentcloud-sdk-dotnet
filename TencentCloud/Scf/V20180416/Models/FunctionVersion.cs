@@ -37,6 +37,20 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddTime")]
+        public string AddTime{ get; set; }
+
+        /// <summary>
+        /// 更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModTime")]
+        public string ModTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +59,8 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
+            this.SetParamSimple(map, prefix + "ModTime", this.ModTime);
         }
     }
 }

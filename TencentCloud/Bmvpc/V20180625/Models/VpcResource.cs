@@ -165,6 +165,12 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         [JsonProperty("VpcPeerLimitToSameRegion")]
         public ulong? VpcPeerLimitToSameRegion{ get; set; }
 
+        /// <summary>
+        /// 整型私有网络ID
+        /// </summary>
+        [JsonProperty("IntVpcId")]
+        public ulong? IntVpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +200,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
             this.SetParamSimple(map, prefix + "CcnServiceNum", this.CcnServiceNum);
             this.SetParamSimple(map, prefix + "VpcPeerLimitToAllRegion", this.VpcPeerLimitToAllRegion);
             this.SetParamSimple(map, prefix + "VpcPeerLimitToSameRegion", this.VpcPeerLimitToSameRegion);
+            this.SetParamSimple(map, prefix + "IntVpcId", this.IntVpcId);
         }
     }
 }

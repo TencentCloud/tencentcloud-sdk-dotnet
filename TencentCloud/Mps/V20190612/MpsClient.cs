@@ -1683,6 +1683,54 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
+        /// 
+        /// 1. 对一个文件进行剪辑，生成一个新的视频；
+        /// 2. 对多个文件进行拼接，生成一个新的视频；
+        /// 3. 对多个文件进行剪辑，然后再拼接，生成一个新的视频。
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public async Task<EditMediaResponse> EditMedia(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
+        /// 
+        /// 1. 对一个文件进行剪辑，生成一个新的视频；
+        /// 2. 对多个文件进行拼接，生成一个新的视频；
+        /// 3. 对多个文件进行剪辑，然后再拼接，生成一个新的视频。
+        /// </summary>
+        /// <param name="req"><see cref="EditMediaRequest"/></param>
+        /// <returns><see cref="EditMediaResponse"/></returns>
+        public EditMediaResponse EditMediaSync(EditMediaRequest req)
+        {
+             JsonResponseModel<EditMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EditMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EditMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启用工作流。
         /// </summary>
         /// <param name="req"><see cref="EnableWorkflowRequest"/></param>

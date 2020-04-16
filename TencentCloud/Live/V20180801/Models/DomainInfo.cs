@@ -81,13 +81,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string CurrentCName{ get; set; }
 
         /// <summary>
-        /// 是否租用域名
+        /// 已无效，可忽略。
         /// </summary>
         [JsonProperty("RentTag")]
         public long? RentTag{ get; set; }
 
         /// <summary>
-        /// 租用域名过期时间
+        /// 已无效，可忽略。
         /// </summary>
         [JsonProperty("RentExpireTime")]
         public string RentExpireTime{ get; set; }

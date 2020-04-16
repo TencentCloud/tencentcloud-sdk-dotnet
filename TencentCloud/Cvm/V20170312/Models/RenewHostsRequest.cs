@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 一个或多个待操作的CDH实例ID。
+        /// 一个或多个待操作的CDH实例ID。每次请求的CDH实例的上限为100。
         /// </summary>
         [JsonProperty("HostIds")]
         public string[] HostIds{ get; set; }

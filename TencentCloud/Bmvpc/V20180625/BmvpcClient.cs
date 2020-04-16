@@ -502,7 +502,7 @@ namespace TencentCloud.Bmvpc.V20180625
 
         /// <summary>
         /// 创建黑石私有网络的子网
-        /// 访问管理: 用户可以对VpcId进行授权操作。比如设置资源为["qcs::bmvpc:::unVpc/vpc-xxxxx"]
+        /// 访问管理: 用户可以对VpcId进行授权操作。例如设置资源为["qcs::bmvpc:::unVpc/vpc-xxxxx"]
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>
         /// <returns><see cref="CreateSubnetResponse"/></returns>
@@ -523,7 +523,7 @@ namespace TencentCloud.Bmvpc.V20180625
 
         /// <summary>
         /// 创建黑石私有网络的子网
-        /// 访问管理: 用户可以对VpcId进行授权操作。比如设置资源为["qcs::bmvpc:::unVpc/vpc-xxxxx"]
+        /// 访问管理: 用户可以对VpcId进行授权操作。例如设置资源为["qcs::bmvpc:::unVpc/vpc-xxxxx"]
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>
         /// <returns><see cref="CreateSubnetResponse"/></returns>

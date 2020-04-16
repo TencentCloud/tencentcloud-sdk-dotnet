@@ -54,6 +54,49 @@ namespace TencentCloud.Tione.V20191022.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// notebook生命周期脚本名称
+        /// </summary>
+        [JsonProperty("LifecycleScriptsName")]
+        public string LifecycleScriptsName{ get; set; }
+
+        /// <summary>
+        /// 是否解绑生命周期脚本，默认 false。
+        /// 如果本来就没有绑定脚本，则忽略此参数；
+        /// 如果本来有绑定脚本，此参数为 true 则解绑；
+        /// 如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+        /// </summary>
+        [JsonProperty("DisassociateLifecycleScript")]
+        public bool? DisassociateLifecycleScript{ get; set; }
+
+        /// <summary>
+        /// 默认存储库名称
+        /// 可以是已创建的存储库名称或者已https://开头的公共git库
+        /// </summary>
+        [JsonProperty("DefaultCodeRepository")]
+        public string DefaultCodeRepository{ get; set; }
+
+        /// <summary>
+        /// 其他存储库列表
+        /// 每个元素可以是已创建的存储库名称或者已https://开头的公共git库
+        /// </summary>
+        [JsonProperty("AdditionalCodeRepositories")]
+        public string[] AdditionalCodeRepositories{ get; set; }
+
+        /// <summary>
+        /// 是否取消关联默认存储库，默认false
+        /// 该值为true时，DefaultCodeRepository将被忽略
+        /// </summary>
+        [JsonProperty("DisassociateDefaultCodeRepository")]
+        public bool? DisassociateDefaultCodeRepository{ get; set; }
+
+        /// <summary>
+        /// 是否取消关联其他存储库，默认false
+        /// 该值为true时，AdditionalCodeRepositories将被忽略
+        /// </summary>
+        [JsonProperty("DisassociateAdditionalCodeRepositories")]
+        public bool? DisassociateAdditionalCodeRepositories{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +108,12 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "RootAccess", this.RootAccess);
             this.SetParamSimple(map, prefix + "VolumeSizeInGB", this.VolumeSizeInGB);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
+            this.SetParamSimple(map, prefix + "DisassociateLifecycleScript", this.DisassociateLifecycleScript);
+            this.SetParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
+            this.SetParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
+            this.SetParamSimple(map, prefix + "DisassociateDefaultCodeRepository", this.DisassociateDefaultCodeRepository);
+            this.SetParamSimple(map, prefix + "DisassociateAdditionalCodeRepositories", this.DisassociateAdditionalCodeRepositories);
         }
     }
 }

@@ -893,7 +893,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供修改产品的名称和描述等信息的能力
+        /// 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
         /// </summary>
         /// <param name="req"><see cref="ModifyStudioProductRequest"/></param>
         /// <returns><see cref="ModifyStudioProductResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供修改产品的名称和描述等信息的能力
+        /// 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
         /// </summary>
         /// <param name="req"><see cref="ModifyStudioProductRequest"/></param>
         /// <returns><see cref="ModifyStudioProductResponse"/></returns>

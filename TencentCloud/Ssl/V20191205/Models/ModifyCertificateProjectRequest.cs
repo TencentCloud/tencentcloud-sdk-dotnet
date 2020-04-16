@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 需要修改所属项目的证书id集合，最多100个证书
+        /// 需要修改所属项目的证书 ID 集合，最多100个证书。
         /// </summary>
         [JsonProperty("CertificateIdList")]
         public string[] CertificateIdList{ get; set; }
 
         /// <summary>
-        /// 项目id。
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

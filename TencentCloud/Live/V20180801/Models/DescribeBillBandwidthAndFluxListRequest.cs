@@ -45,8 +45,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 可选值：
         /// Mainland：查询国内数据，
-        /// Oversea：则查询国外数据。
+        /// Oversea：则查询国外数据，
         /// 默认：查询国内+国外的数据。
+        /// 注：LEB（快直播）只支持国内+国外数据查询。
         /// </summary>
         [JsonProperty("MainlandOrOversea")]
         public string MainlandOrOversea{ get; set; }
@@ -61,6 +62,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }
 
+        /// <summary>
+        /// 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
             this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
             this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
         }
     }
 }

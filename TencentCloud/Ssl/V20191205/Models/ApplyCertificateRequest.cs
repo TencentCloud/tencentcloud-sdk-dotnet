@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 验证方式（'DNS_AUTO'， 'DNS'， 'FILE'）：DNS_AUTO = 自动DNS验证。
+        /// 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
         /// </summary>
         [JsonProperty("DvAuthMethod")]
         public string DvAuthMethod{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 证书类型，默认2。免费证书目前只有 2 了。
+        /// 证书类型，目前仅支持类型2。2 = TrustAsia TLS RSA CA。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ContactPhone{ get; set; }
 
         /// <summary>
-        /// 有效期，默认12。
+        /// 有效期，默认12个月，目前仅支持12个月。
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// 加密算法，仅支持RSA。
+        /// 加密算法，仅支持 RSA。
         /// </summary>
         [JsonProperty("CsrEncryptAlgo")]
         public string CsrEncryptAlgo{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CsrKeyParameter{ get; set; }
 
         /// <summary>
-        /// csr的加密密码。
+        /// CSR 的加密密码。
         /// </summary>
         [JsonProperty("CsrKeyPassword")]
         public string CsrKeyPassword{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 原证书id，用于重新申请。
+        /// 原证书 ID，用于重新申请。
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }

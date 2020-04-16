@@ -219,6 +219,86 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
+        /// </summary>
+        /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CancelCommonMixStreamResponse"/></returns>
+        public async Task<CancelCommonMixStreamResponse> CancelCommonMixStream(CancelCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
+        /// </summary>
+        /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CancelCommonMixStreamResponse"/></returns>
+        public CancelCommonMixStreamResponse CancelCommonMixStreamSync(CancelCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CreateCommonMixStreamResponse"/></returns>
+        public async Task<CreateCommonMixStreamResponse> CreateCommonMixStream(CreateCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCommonMixStreamRequest"/></param>
+        /// <returns><see cref="CreateCommonMixStreamResponse"/></returns>
+        public CreateCommonMixStreamResponse CreateCommonMixStreamSync(CreateCommonMixStreamRequest req)
+        {
+             JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCommonMixStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCommonMixStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建回调规则，需要先调用[CreateLiveCallbackTemplate](/document/product/267/32637)接口创建回调模板，将返回的模板id绑定到域名/路径进行使用。
         /// <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
@@ -3283,7 +3363,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 启用状态为停用的直播域名
+        /// 启用状态为停用的直播域名。
         /// </summary>
         /// <param name="req"><see cref="EnableLiveDomainRequest"/></param>
         /// <returns><see cref="EnableLiveDomainResponse"/></returns>
@@ -3303,7 +3383,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 启用状态为停用的直播域名
+        /// 启用状态为停用的直播域名。
         /// </summary>
         /// <param name="req"><see cref="EnableLiveDomainRequest"/></param>
         /// <returns><see cref="EnableLiveDomainResponse"/></returns>

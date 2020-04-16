@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+        /// 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

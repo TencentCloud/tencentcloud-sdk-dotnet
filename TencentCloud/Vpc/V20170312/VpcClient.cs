@@ -579,6 +579,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（AssociateNetworkInterfaceSecurityGroups）用于弹性网卡绑定安全组（SecurityGroup）。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateNetworkInterfaceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateNetworkInterfaceSecurityGroupsResponse"/></returns>
+        public async Task<AssociateNetworkInterfaceSecurityGroupsResponse> AssociateNetworkInterfaceSecurityGroups(AssociateNetworkInterfaceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateNetworkInterfaceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateNetworkInterfaceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNetworkInterfaceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssociateNetworkInterfaceSecurityGroups）用于弹性网卡绑定安全组（SecurityGroup）。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateNetworkInterfaceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateNetworkInterfaceSecurityGroupsResponse"/></returns>
+        public AssociateNetworkInterfaceSecurityGroupsResponse AssociateNetworkInterfaceSecurityGroupsSync(AssociateNetworkInterfaceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateNetworkInterfaceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateNetworkInterfaceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateNetworkInterfaceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
         /// 每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
         /// </summary>
@@ -713,6 +753,92 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。（接口灰度中，如需使用请提工单。）
+        /// * 检测辅助CIDR是否与当前VPC的主CIDR和辅助CIDR存在重叠。
+        /// * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
+        /// * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
+        /// </summary>
+        /// <param name="req"><see cref="CheckAssistantCidrRequest"/></param>
+        /// <returns><see cref="CheckAssistantCidrResponse"/></returns>
+        public async Task<CheckAssistantCidrResponse> CheckAssistantCidr(CheckAssistantCidrRequest req)
+        {
+             JsonResponseModel<CheckAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckAssistantCidrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。（接口灰度中，如需使用请提工单。）
+        /// * 检测辅助CIDR是否与当前VPC的主CIDR和辅助CIDR存在重叠。
+        /// * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
+        /// * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
+        /// </summary>
+        /// <param name="req"><see cref="CheckAssistantCidrRequest"/></param>
+        /// <returns><see cref="CheckAssistantCidrResponse"/></returns>
+        public CheckAssistantCidrResponse CheckAssistantCidrSync(CheckAssistantCidrRequest req)
+        {
+             JsonResponseModel<CheckAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckAssistantCidrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CheckDefaultSubnet）用于预判是否可建默认子网。
+        /// </summary>
+        /// <param name="req"><see cref="CheckDefaultSubnetRequest"/></param>
+        /// <returns><see cref="CheckDefaultSubnetResponse"/></returns>
+        public async Task<CheckDefaultSubnetResponse> CheckDefaultSubnet(CheckDefaultSubnetRequest req)
+        {
+             JsonResponseModel<CheckDefaultSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckDefaultSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckDefaultSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CheckDefaultSubnet）用于预判是否可建默认子网。
+        /// </summary>
+        /// <param name="req"><see cref="CheckDefaultSubnetRequest"/></param>
+        /// <returns><see cref="CheckDefaultSubnetResponse"/></returns>
+        public CheckDefaultSubnetResponse CheckDefaultSubnetSync(CheckDefaultSubnetRequest req)
+        {
+             JsonResponseModel<CheckDefaultSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckDefaultSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckDefaultSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CheckNetDetectState)用于验证网络探测。
         /// </summary>
         /// <param name="req"><see cref="CheckNetDetectStateRequest"/></param>
@@ -824,6 +950,96 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateAddressTemplateGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAddressTemplateGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateAndAttachNetworkInterface）用于创建弹性网卡并绑定云主机。
+        /// * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
+        /// * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
+        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+        /// * 创建弹性网卡同时可以绑定已有安全组。
+        /// * 创建弹性网卡同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndAttachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="CreateAndAttachNetworkInterfaceResponse"/></returns>
+        public async Task<CreateAndAttachNetworkInterfaceResponse> CreateAndAttachNetworkInterface(CreateAndAttachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<CreateAndAttachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAndAttachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAndAttachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateAndAttachNetworkInterface）用于创建弹性网卡并绑定云主机。
+        /// * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
+        /// * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
+        /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+        /// * 创建弹性网卡同时可以绑定已有安全组。
+        /// * 创建弹性网卡同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndAttachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="CreateAndAttachNetworkInterfaceResponse"/></returns>
+        public CreateAndAttachNetworkInterfaceResponse CreateAndAttachNetworkInterfaceSync(CreateAndAttachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<CreateAndAttachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAndAttachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAndAttachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAssistantCidr)用于批量创建辅助CIDR。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
+        /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
+        public async Task<CreateAssistantCidrResponse> CreateAssistantCidr(CreateAssistantCidrRequest req)
+        {
+             JsonResponseModel<CreateAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssistantCidrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAssistantCidr)用于批量创建辅助CIDR。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssistantCidrRequest"/></param>
+        /// <returns><see cref="CreateAssistantCidrResponse"/></returns>
+        public CreateAssistantCidrResponse CreateAssistantCidrSync(CreateAssistantCidrRequest req)
+        {
+             JsonResponseModel<CreateAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssistantCidrResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -948,6 +1164,52 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateCustomerGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomerGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateDefaultSecurityGroup）用于创建（如果项目下未存在默认安全组，则创建；已存在则获取。）默认安全组（SecurityGroup）。
+        /// * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
+        /// * 新建的安全组的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用CreateSecurityGroupPolicies将安全组的规则设置为需要的规则。
+        /// * 创建安全组同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDefaultSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateDefaultSecurityGroupResponse"/></returns>
+        public async Task<CreateDefaultSecurityGroupResponse> CreateDefaultSecurityGroup(CreateDefaultSecurityGroupRequest req)
+        {
+             JsonResponseModel<CreateDefaultSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDefaultSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDefaultSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateDefaultSecurityGroup）用于创建（如果项目下未存在默认安全组，则创建；已存在则获取。）默认安全组（SecurityGroup）。
+        /// * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
+        /// * 新建的安全组的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用CreateSecurityGroupPolicies将安全组的规则设置为需要的规则。
+        /// * 创建安全组同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDefaultSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateDefaultSecurityGroupResponse"/></returns>
+        public CreateDefaultSecurityGroupResponse CreateDefaultSecurityGroupSync(CreateDefaultSecurityGroupRequest req)
+        {
+             JsonResponseModel<CreateDefaultSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDefaultSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDefaultSecurityGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1619,6 +1881,72 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreateSecurityGroupWithPolicies）用于创建新的安全组（SecurityGroup），并且可以同时添加安全组规则（SecurityGroupPolicy）。
+        /// * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
+        /// * 新建的安全组的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用CreateSecurityGroupPolicies将安全组的规则设置为需要的规则。
+        /// 
+        /// 安全组规则说明：
+        /// * Version安全组规则版本号，用户每次更新安全规则版本会自动加1，防止您更新的路由规则已过期，不填不考虑冲突。
+        /// * Protocol字段支持输入TCP, UDP, ICMP, ICMPV6, GRE, ALL。
+        /// * CidrBlock字段允许输入符合cidr格式标准的任意字符串。(展开)在基础网络中，如果CidrBlock包含您的账户内的云服务器之外的设备在腾讯云的内网IP，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// * Ipv6CidrBlock字段允许输入符合IPv6 cidr格式标准的任意字符串。(展开)在基础网络中，如果Ipv6CidrBlock包含您的账户内的云服务器之外的设备在腾讯云的内网IPv6，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// * SecurityGroupId字段允许输入与待修改的安全组位于相同项目中的安全组ID，包括这个安全组ID本身，代表安全组下所有云服务器的内网IP。使用这个字段时，这条规则用来匹配网络报文的过程中会随着被使用的这个ID所关联的云服务器变化而变化，不需要重新修改。
+        /// * Port字段允许输入一个单独端口号，或者用减号分隔的两个端口号代表端口范围，例如80或8000-8010。只有当Protocol字段是TCP或UDP时，Port字段才被接受，即Protocol字段不是TCP或UDP时，Protocol和Port排他关系，不允许同时输入，否则会接口报错。
+        /// * Action字段只允许输入ACCEPT或DROP。
+        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate四者是排他关系，不允许同时输入，Protocol + Port和ServiceTemplate二者是排他关系，不允许同时输入。
+        /// * 一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupWithPoliciesRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupWithPoliciesResponse"/></returns>
+        public async Task<CreateSecurityGroupWithPoliciesResponse> CreateSecurityGroupWithPolicies(CreateSecurityGroupWithPoliciesRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupWithPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSecurityGroupWithPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupWithPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateSecurityGroupWithPolicies）用于创建新的安全组（SecurityGroup），并且可以同时添加安全组规则（SecurityGroupPolicy）。
+        /// * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
+        /// * 新建的安全组的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用CreateSecurityGroupPolicies将安全组的规则设置为需要的规则。
+        /// 
+        /// 安全组规则说明：
+        /// * Version安全组规则版本号，用户每次更新安全规则版本会自动加1，防止您更新的路由规则已过期，不填不考虑冲突。
+        /// * Protocol字段支持输入TCP, UDP, ICMP, ICMPV6, GRE, ALL。
+        /// * CidrBlock字段允许输入符合cidr格式标准的任意字符串。(展开)在基础网络中，如果CidrBlock包含您的账户内的云服务器之外的设备在腾讯云的内网IP，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// * Ipv6CidrBlock字段允许输入符合IPv6 cidr格式标准的任意字符串。(展开)在基础网络中，如果Ipv6CidrBlock包含您的账户内的云服务器之外的设备在腾讯云的内网IPv6，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// * SecurityGroupId字段允许输入与待修改的安全组位于相同项目中的安全组ID，包括这个安全组ID本身，代表安全组下所有云服务器的内网IP。使用这个字段时，这条规则用来匹配网络报文的过程中会随着被使用的这个ID所关联的云服务器变化而变化，不需要重新修改。
+        /// * Port字段允许输入一个单独端口号，或者用减号分隔的两个端口号代表端口范围，例如80或8000-8010。只有当Protocol字段是TCP或UDP时，Port字段才被接受，即Protocol字段不是TCP或UDP时，Protocol和Port排他关系，不允许同时输入，否则会接口报错。
+        /// * Action字段只允许输入ACCEPT或DROP。
+        /// * CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate四者是排他关系，不允许同时输入，Protocol + Port和ServiceTemplate二者是排他关系，不允许同时输入。
+        /// * 一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupWithPoliciesRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupWithPoliciesResponse"/></returns>
+        public CreateSecurityGroupWithPoliciesResponse CreateSecurityGroupWithPoliciesSync(CreateSecurityGroupWithPoliciesRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupWithPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecurityGroupWithPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupWithPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateServiceTemplate）用于创建协议端口模板
         /// </summary>
         /// <param name="req"><see cref="CreateServiceTemplateRequest"/></param>
@@ -2000,6 +2328,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteAddressTemplateGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAddressTemplateGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAssistantCidr)用于删除辅助CIDR。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
+        /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
+        public async Task<DeleteAssistantCidrResponse> DeleteAssistantCidr(DeleteAssistantCidrRequest req)
+        {
+             JsonResponseModel<DeleteAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAssistantCidrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAssistantCidr)用于删除辅助CIDR。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAssistantCidrRequest"/></param>
+        /// <returns><see cref="DeleteAssistantCidrResponse"/></returns>
+        public DeleteAssistantCidrResponse DeleteAssistantCidrSync(DeleteAssistantCidrRequest req)
+        {
+             JsonResponseModel<DeleteAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAssistantCidrResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3083,46 +3451,6 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAddressTemplateInstancesRequest"/></param>
-        /// <returns><see cref="DescribeAddressTemplateInstancesResponse"/></returns>
-        public async Task<DescribeAddressTemplateInstancesResponse> DescribeAddressTemplateInstances(DescribeAddressTemplateInstancesRequest req)
-        {
-             JsonResponseModel<DescribeAddressTemplateInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAddressTemplateInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressTemplateInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（DescribeAddressTemplateInstances）用于查询参数模板IP地址关联的实例列表。本接口不会返回查询的结果，需要根据返回的RequestId调用DescribeVpcTaskResult接口获取结果。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAddressTemplateInstancesRequest"/></param>
-        /// <returns><see cref="DescribeAddressTemplateInstancesResponse"/></returns>
-        public DescribeAddressTemplateInstancesResponse DescribeAddressTemplateInstancesSync(DescribeAddressTemplateInstancesRequest req)
-        {
-             JsonResponseModel<DescribeAddressTemplateInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAddressTemplateInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressTemplateInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeAddressTemplates）用于查询IP地址模板
         /// </summary>
         /// <param name="req"><see cref="DescribeAddressTemplatesRequest"/></param>
@@ -3196,6 +3524,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAssistantCidr）用于查询辅助CIDR列表。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssistantCidrRequest"/></param>
+        /// <returns><see cref="DescribeAssistantCidrResponse"/></returns>
+        public async Task<DescribeAssistantCidrResponse> DescribeAssistantCidr(DescribeAssistantCidrRequest req)
+        {
+             JsonResponseModel<DescribeAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssistantCidrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeAssistantCidr）用于查询辅助CIDR列表。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssistantCidrRequest"/></param>
+        /// <returns><see cref="DescribeAssistantCidrResponse"/></returns>
+        public DescribeAssistantCidrResponse DescribeAssistantCidrSync(DescribeAssistantCidrRequest req)
+        {
+             JsonResponseModel<DescribeAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssistantCidrResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3760,6 +4128,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeGatewayFlowMonitorDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayFlowMonitorDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeGatewayFlowQos）用于查询网关来访IP流控带宽。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayFlowQosRequest"/></param>
+        /// <returns><see cref="DescribeGatewayFlowQosResponse"/></returns>
+        public async Task<DescribeGatewayFlowQosResponse> DescribeGatewayFlowQos(DescribeGatewayFlowQosRequest req)
+        {
+             JsonResponseModel<DescribeGatewayFlowQosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewayFlowQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayFlowQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeGatewayFlowQos）用于查询网关来访IP流控带宽。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayFlowQosRequest"/></param>
+        /// <returns><see cref="DescribeGatewayFlowQosResponse"/></returns>
+        public DescribeGatewayFlowQosResponse DescribeGatewayFlowQosSync(DescribeGatewayFlowQosRequest req)
+        {
+             JsonResponseModel<DescribeGatewayFlowQosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewayFlowQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayFlowQosResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4411,6 +4819,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeSecurityGroupReferences）用于查询安全组被引用信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupReferencesResponse"/></returns>
+        public async Task<DescribeSecurityGroupReferencesResponse> DescribeSecurityGroupReferences(DescribeSecurityGroupReferencesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupReferencesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroupReferences");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupReferencesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSecurityGroupReferences）用于查询安全组被引用信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupReferencesResponse"/></returns>
+        public DescribeSecurityGroupReferencesResponse DescribeSecurityGroupReferencesSync(DescribeSecurityGroupReferencesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupReferencesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroupReferences");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupReferencesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeSecurityGroups）用于查询安全组。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupsRequest"/></param>
@@ -4651,6 +5099,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        ///  本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcInstancesRequest"/></param>
+        /// <returns><see cref="DescribeVpcInstancesResponse"/></returns>
+        public async Task<DescribeVpcInstancesResponse> DescribeVpcInstances(DescribeVpcInstancesRequest req)
+        {
+             JsonResponseModel<DescribeVpcInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcInstancesRequest"/></param>
+        /// <returns><see cref="DescribeVpcInstancesResponse"/></returns>
+        public DescribeVpcInstancesResponse DescribeVpcInstancesSync(DescribeVpcInstancesRequest req)
+        {
+             JsonResponseModel<DescribeVpcInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeVpcIpv6Addresses）用于查询 `VPC` `IPv6` 信息。
         /// 只能查询已使用的`IPv6`信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
         /// </summary>
@@ -4693,6 +5181,104 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 获取私有网络配额，部分私有网络的配额有地域属性。
+        /// LimitTypes取值范围：
+        /// * appid-max-vpcs （每个开发商每个地域可创建的VPC数）
+        /// * vpc-max-subnets（每个VPC可创建的子网数）
+        /// * vpc-max-route-tables（每个VPC可创建的路由表数）
+        /// * route-table-max-policies（每个路由表可添加的策略数）
+        /// * vpc-max-vpn-gateways（每个VPC可创建的VPN网关数）
+        /// * appid-max-custom-gateways（每个开发商可创建的对端网关数）
+        /// * appid-max-vpn-connections（每个开发商可创建的VPN通道数）
+        /// * custom-gateway-max-vpn-connections（每个对端网关可创建的VPN通道数）
+        /// * vpn-gateway-max-custom-gateways（每个VPNGW可以创建的通道数）
+        /// * vpc-max-network-acls（每个VPC可创建的网络ACL数）
+        /// * network-acl-max-inbound-policies（每个网络ACL可添加的入站规则数）
+        /// * network-acl-max-outbound-policies（每个网络ACL可添加的出站规则数）
+        /// * vpc-max-vpcpeers（每个VPC可创建的对等连接数）
+        /// * vpc-max-available-vpcpeers（每个VPC可创建的有效对等连接数）
+        /// * vpc-max-basic-network-interconnections（每个VPC可创建的基础网络云主机与VPC互通数）
+        /// * direct-connection-max-snats（每个专线网关可创建的SNAT数）
+        /// * direct-connection-max-dnats（每个专线网关可创建的DNAT数）
+        /// * direct-connection-max-snapts（每个专线网关可创建的SNAPT数）
+        /// * direct-connection-max-dnapts（每个专线网关可创建的DNAPT数）
+        /// * vpc-max-nat-gateways（每个VPC可创建的NAT网关数）
+        /// * nat-gateway-max-eips（每个NAT可以购买的外网IP数量）
+        /// * vpc-max-enis（每个VPC可创建弹性网卡数）
+        /// * vpc-max-havips（每个VPC可创建HAVIP数）
+        /// * eni-max-private-ips（每个ENI可以绑定的内网IP数（ENI未绑定子机））
+        /// * nat-gateway-max-dnapts（每个NAT网关可创建的DNAPT数）
+        /// * vpc-max-ipv6s（每个VPC可分配的IPv6地址数）
+        /// * eni-max-ipv6s（每个ENI可分配的IPv6地址数）
+        /// * vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcLimitsRequest"/></param>
+        /// <returns><see cref="DescribeVpcLimitsResponse"/></returns>
+        public async Task<DescribeVpcLimitsResponse> DescribeVpcLimits(DescribeVpcLimitsRequest req)
+        {
+             JsonResponseModel<DescribeVpcLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取私有网络配额，部分私有网络的配额有地域属性。
+        /// LimitTypes取值范围：
+        /// * appid-max-vpcs （每个开发商每个地域可创建的VPC数）
+        /// * vpc-max-subnets（每个VPC可创建的子网数）
+        /// * vpc-max-route-tables（每个VPC可创建的路由表数）
+        /// * route-table-max-policies（每个路由表可添加的策略数）
+        /// * vpc-max-vpn-gateways（每个VPC可创建的VPN网关数）
+        /// * appid-max-custom-gateways（每个开发商可创建的对端网关数）
+        /// * appid-max-vpn-connections（每个开发商可创建的VPN通道数）
+        /// * custom-gateway-max-vpn-connections（每个对端网关可创建的VPN通道数）
+        /// * vpn-gateway-max-custom-gateways（每个VPNGW可以创建的通道数）
+        /// * vpc-max-network-acls（每个VPC可创建的网络ACL数）
+        /// * network-acl-max-inbound-policies（每个网络ACL可添加的入站规则数）
+        /// * network-acl-max-outbound-policies（每个网络ACL可添加的出站规则数）
+        /// * vpc-max-vpcpeers（每个VPC可创建的对等连接数）
+        /// * vpc-max-available-vpcpeers（每个VPC可创建的有效对等连接数）
+        /// * vpc-max-basic-network-interconnections（每个VPC可创建的基础网络云主机与VPC互通数）
+        /// * direct-connection-max-snats（每个专线网关可创建的SNAT数）
+        /// * direct-connection-max-dnats（每个专线网关可创建的DNAT数）
+        /// * direct-connection-max-snapts（每个专线网关可创建的SNAPT数）
+        /// * direct-connection-max-dnapts（每个专线网关可创建的DNAPT数）
+        /// * vpc-max-nat-gateways（每个VPC可创建的NAT网关数）
+        /// * nat-gateway-max-eips（每个NAT可以购买的外网IP数量）
+        /// * vpc-max-enis（每个VPC可创建弹性网卡数）
+        /// * vpc-max-havips（每个VPC可创建HAVIP数）
+        /// * eni-max-private-ips（每个ENI可以绑定的内网IP数（ENI未绑定子机））
+        /// * nat-gateway-max-dnapts（每个NAT网关可创建的DNAPT数）
+        /// * vpc-max-ipv6s（每个VPC可分配的IPv6地址数）
+        /// * eni-max-ipv6s（每个ENI可分配的IPv6地址数）
+        /// * vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcLimitsRequest"/></param>
+        /// <returns><see cref="DescribeVpcLimitsResponse"/></returns>
+        public DescribeVpcLimitsResponse DescribeVpcLimitsSync(DescribeVpcLimitsRequest req)
+        {
+             JsonResponseModel<DescribeVpcLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeVpcPrivateIpAddresses）用于查询VPC内网IP信息。<br />
         /// 只能查询已使用的IP信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
         /// </summary>
@@ -4726,6 +5312,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVpcPrivateIpAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看VPC资源
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcResourceDashboardRequest"/></param>
+        /// <returns><see cref="DescribeVpcResourceDashboardResponse"/></returns>
+        public async Task<DescribeVpcResourceDashboardResponse> DescribeVpcResourceDashboard(DescribeVpcResourceDashboardRequest req)
+        {
+             JsonResponseModel<DescribeVpcResourceDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcResourceDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcResourceDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看VPC资源
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcResourceDashboardRequest"/></param>
+        /// <returns><see cref="DescribeVpcResourceDashboardResponse"/></returns>
+        public DescribeVpcResourceDashboardResponse DescribeVpcResourceDashboardSync(DescribeVpcResourceDashboardRequest req)
+        {
+             JsonResponseModel<DescribeVpcResourceDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcResourceDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcResourceDashboardResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5017,6 +5643,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DisableGatewayFlowMonitor）用于关闭网关流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="DisableGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="DisableGatewayFlowMonitorResponse"/></returns>
+        public async Task<DisableGatewayFlowMonitorResponse> DisableGatewayFlowMonitor(DisableGatewayFlowMonitorRequest req)
+        {
+             JsonResponseModel<DisableGatewayFlowMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableGatewayFlowMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableGatewayFlowMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisableGatewayFlowMonitor）用于关闭网关流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="DisableGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="DisableGatewayFlowMonitorResponse"/></returns>
+        public DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitorSync(DisableGatewayFlowMonitorRequest req)
+        {
+             JsonResponseModel<DisableGatewayFlowMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableGatewayFlowMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableGatewayFlowMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DisableRoutes）用于禁用已启用的子网路由
         /// </summary>
         /// <param name="req"><see cref="DisableRoutesRequest"/></param>
@@ -5185,6 +5851,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DisassociateNetworkInterfaceSecurityGroups）用于弹性网卡解绑安全组。支持弹性网卡完全解绑安全组。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateNetworkInterfaceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateNetworkInterfaceSecurityGroupsResponse"/></returns>
+        public async Task<DisassociateNetworkInterfaceSecurityGroupsResponse> DisassociateNetworkInterfaceSecurityGroups(DisassociateNetworkInterfaceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateNetworkInterfaceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateNetworkInterfaceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNetworkInterfaceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateNetworkInterfaceSecurityGroups）用于弹性网卡解绑安全组。支持弹性网卡完全解绑安全组。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateNetworkInterfaceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateNetworkInterfaceSecurityGroupsResponse"/></returns>
+        public DisassociateNetworkInterfaceSecurityGroupsResponse DisassociateNetworkInterfaceSecurityGroupsSync(DisassociateNetworkInterfaceSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateNetworkInterfaceSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateNetworkInterfaceSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateNetworkInterfaceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
         /// </summary>
         /// <param name="req"><see cref="DownloadCustomerGatewayConfigurationRequest"/></param>
@@ -5258,6 +5964,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "EnableCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EnableGatewayFlowMonitor）用于开启网关流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="EnableGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="EnableGatewayFlowMonitorResponse"/></returns>
+        public async Task<EnableGatewayFlowMonitorResponse> EnableGatewayFlowMonitor(EnableGatewayFlowMonitorRequest req)
+        {
+             JsonResponseModel<EnableGatewayFlowMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableGatewayFlowMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGatewayFlowMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EnableGatewayFlowMonitor）用于开启网关流量监控。
+        /// </summary>
+        /// <param name="req"><see cref="EnableGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="EnableGatewayFlowMonitorResponse"/></returns>
+        public EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitorSync(EnableGatewayFlowMonitorRequest req)
+        {
+             JsonResponseModel<EnableGatewayFlowMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableGatewayFlowMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGatewayFlowMonitorResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5759,6 +6505,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口(ModifyAssistantCidr)用于批量修改辅助CIDR，支持新增和删除。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
+        /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
+        public async Task<ModifyAssistantCidrResponse> ModifyAssistantCidr(ModifyAssistantCidrRequest req)
+        {
+             JsonResponseModel<ModifyAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAssistantCidrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAssistantCidr)用于批量修改辅助CIDR，支持新增和删除。（接口灰度中，如需使用请提工单。）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAssistantCidrRequest"/></param>
+        /// <returns><see cref="ModifyAssistantCidrResponse"/></returns>
+        public ModifyAssistantCidrResponse ModifyAssistantCidrSync(ModifyAssistantCidrRequest req)
+        {
+             JsonResponseModel<ModifyAssistantCidrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAssistantCidr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAssistantCidrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口用于修改带宽包属性，包括带宽包名字等
         /// </summary>
         /// <param name="req"><see cref="ModifyBandwidthPackageAttributeRequest"/></param>
@@ -5990,6 +6776,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyFlowLogAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFlowLogAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyGatewayFlowQos）用于调整网关流控带宽。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatewayFlowQosRequest"/></param>
+        /// <returns><see cref="ModifyGatewayFlowQosResponse"/></returns>
+        public async Task<ModifyGatewayFlowQosResponse> ModifyGatewayFlowQos(ModifyGatewayFlowQosRequest req)
+        {
+             JsonResponseModel<ModifyGatewayFlowQosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGatewayFlowQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGatewayFlowQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyGatewayFlowQos）用于调整网关流控带宽。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatewayFlowQosRequest"/></param>
+        /// <returns><see cref="ModifyGatewayFlowQosResponse"/></returns>
+        public ModifyGatewayFlowQosResponse ModifyGatewayFlowQosSync(ModifyGatewayFlowQosRequest req)
+        {
+             JsonResponseModel<ModifyGatewayFlowQosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGatewayFlowQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGatewayFlowQosResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -385,6 +385,46 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
+        /// 本接口（CreateStorage）用于购买云存套餐。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRequest"/></param>
+        /// <returns><see cref="CreateStorageResponse"/></returns>
+        public async Task<CreateStorageResponse> CreateStorage(CreateStorageRequest req)
+        {
+             JsonResponseModel<CreateStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateStorage）用于购买云存套餐。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRequest"/></param>
+        /// <returns><see cref="CreateStorageResponse"/></returns>
+        public CreateStorageResponse CreateStorageSync(CreateStorageRequest req)
+        {
+             JsonResponseModel<CreateStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateTraceIds）用于将设备加到日志跟踪白名单。
         /// </summary>
         /// <param name="req"><see cref="CreateTraceIdsRequest"/></param>
@@ -496,6 +536,46 @@ namespace TencentCloud.Iotvideo.V20191126
              {
                  var strResp = this.InternalRequestSync(req, "CreateUsrToken");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUsrTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteAppUsr）用于删除终端用户。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppUsrRequest"/></param>
+        /// <returns><see cref="DeleteAppUsrResponse"/></returns>
+        public async Task<DeleteAppUsrResponse> DeleteAppUsr(DeleteAppUsrRequest req)
+        {
+             JsonResponseModel<DeleteAppUsrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAppUsr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppUsrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteAppUsr）用于删除终端用户。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppUsrRequest"/></param>
+        /// <returns><see cref="DeleteAppUsrResponse"/></returns>
+        public DeleteAppUsrResponse DeleteAppUsrSync(DeleteAppUsrRequest req)
+        {
+             JsonResponseModel<DeleteAppUsrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAppUsr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppUsrResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1378,6 +1458,46 @@ namespace TencentCloud.Iotvideo.V20191126
              {
                  var strResp = this.InternalRequestSync(req, "DescribePubVersions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePubVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRegistrationStatus）用于查询终端用户的注册状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegistrationStatusRequest"/></param>
+        /// <returns><see cref="DescribeRegistrationStatusResponse"/></returns>
+        public async Task<DescribeRegistrationStatusResponse> DescribeRegistrationStatus(DescribeRegistrationStatusRequest req)
+        {
+             JsonResponseModel<DescribeRegistrationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegistrationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegistrationStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRegistrationStatus）用于查询终端用户的注册状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegistrationStatusRequest"/></param>
+        /// <returns><see cref="DescribeRegistrationStatusResponse"/></returns>
+        public DescribeRegistrationStatusResponse DescribeRegistrationStatusSync(DescribeRegistrationStatusRequest req)
+        {
+             JsonResponseModel<DescribeRegistrationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegistrationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegistrationStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

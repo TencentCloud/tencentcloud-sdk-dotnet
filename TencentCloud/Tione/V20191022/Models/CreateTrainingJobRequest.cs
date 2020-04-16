@@ -25,12 +25,6 @@ namespace TencentCloud.Tione.V20191022.Models
     {
         
         /// <summary>
-        /// 训练任务名称
-        /// </summary>
-        [JsonProperty("TrainingJobName")]
-        public string TrainingJobName{ get; set; }
-
-        /// <summary>
         /// 算法镜像配置
         /// </summary>
         [JsonProperty("AlgorithmSpecification")]
@@ -55,6 +49,12 @@ namespace TencentCloud.Tione.V20191022.Models
         public ResourceConfig ResourceConfig{ get; set; }
 
         /// <summary>
+        /// 训练任务名称
+        /// </summary>
+        [JsonProperty("TrainingJobName")]
+        public string TrainingJobName{ get; set; }
+
+        /// <summary>
         /// 中止条件
         /// </summary>
         [JsonProperty("StoppingCondition")]
@@ -73,16 +73,16 @@ namespace TencentCloud.Tione.V20191022.Models
         public string HyperParameters{ get; set; }
 
         /// <summary>
-        /// 角色名称
-        /// </summary>
-        [JsonProperty("RoleName")]
-        public string RoleName{ get; set; }
-
-        /// <summary>
         /// 环境变量配置
         /// </summary>
         [JsonProperty("EnvConfig")]
         public EnvConfig[] EnvConfig{ get; set; }
+
+        /// <summary>
+        /// 角色名称
+        /// </summary>
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
 
 
         /// <summary>
@@ -90,16 +90,16 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
             this.SetParamObj(map, prefix + "AlgorithmSpecification.", this.AlgorithmSpecification);
             this.SetParamArrayObj(map, prefix + "InputDataConfig.", this.InputDataConfig);
             this.SetParamObj(map, prefix + "OutputDataConfig.", this.OutputDataConfig);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
             this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
             this.SetParamSimple(map, prefix + "HyperParameters", this.HyperParameters);
-            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamArrayObj(map, prefix + "EnvConfig.", this.EnvConfig);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public bool? EnableActionClass{ get; set; }
 
         /// <summary>
-        /// 人脸检测选项
+        /// 人脸检测选项（默认为true，目前不可编辑）
         /// </summary>
         [JsonProperty("EnableFaceDetect")]
         public bool? EnableFaceDetect{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public bool? EnableFaceExpression{ get; set; }
 
         /// <summary>
-        /// 人脸检索选项
+        /// 人脸检索选项（默认为true，目前不可编辑）
         /// </summary>
         [JsonProperty("EnableFaceIdentify")]
         public bool? EnableFaceIdentify{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Tci.V20190318.Models
         public bool? EnableTeacherBodyMovements{ get; set; }
 
         /// <summary>
-        /// 判断老师是否在屏幕中
+        /// 判断老师是否在屏幕中（该功能尚未支持）
         /// </summary>
         [JsonProperty("EnableTeacherOutScreen")]
         public bool? EnableTeacherOutScreen{ get; set; }

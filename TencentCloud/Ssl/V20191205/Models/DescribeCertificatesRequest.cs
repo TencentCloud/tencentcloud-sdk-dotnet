@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 分页偏移量，从0开始
+        /// 分页偏移量，从0开始。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页数量。
+        /// 每页数量，默认20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// 证书类型，可选值：CA，SVR。
+        /// 证书类型：CA = 客户端证书，SVR = 服务器证书。
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 按到期时间排序：DESC降序， ASC 升序。
+        /// 按到期时间排序：DESC = 降序， ASC = 升序。
         /// </summary>
         [JsonProperty("ExpirationSort")]
         public string ExpirationSort{ get; set; }

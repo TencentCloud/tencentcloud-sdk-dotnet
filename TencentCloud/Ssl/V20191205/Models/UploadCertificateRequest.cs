@@ -31,25 +31,25 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificatePublicKey{ get; set; }
 
         /// <summary>
-        /// 私钥内容，证书类型为SVR时必填，为CA时可不填。
+        /// 私钥内容，证书类型为 SVR 时必填，为 CA 时可不填。
         /// </summary>
         [JsonProperty("CertificatePrivateKey")]
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// 证书类型，可选值：CA，SVR，默认SVR。
+        /// 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// 证书别名。
+        /// 备注名称。
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// 项目id。
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

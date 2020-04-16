@@ -97,6 +97,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }
 
+        /// <summary>
+        /// 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+        /// </summary>
+        [JsonProperty("Quic")]
+        public bool? Quic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+            this.SetParamSimple(map, prefix + "Quic", this.Quic);
         }
     }
 }

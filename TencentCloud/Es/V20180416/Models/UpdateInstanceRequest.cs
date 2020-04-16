@@ -138,6 +138,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaPrivateAccess")]
         public string KibanaPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// ES 6.8及以上版本基础版开启或关闭用户认证
+        /// </summary>
+        [JsonProperty("BasicSecurityType")]
+        public long? BasicSecurityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +168,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
             this.SetParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
             this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
+            this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         }
     }
 }

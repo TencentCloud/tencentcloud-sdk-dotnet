@@ -61,7 +61,7 @@ namespace TencentCloud.Bmvpc.V20180625.Models
         public string VpcPeerConnectionName{ get; set; }
 
         /// <summary>
-        /// 对等连接状态
+        /// 对等连接状态。pending:申请中,available:运行中,expired:已过期,rejected:已拒绝,deleted:已删除
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

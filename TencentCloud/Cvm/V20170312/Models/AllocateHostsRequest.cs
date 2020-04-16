@@ -43,7 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ChargePrepaid HostChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+        /// 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式），默认为：'PREPAID'。
         /// </summary>
         [JsonProperty("HostChargeType")]
         public string HostChargeType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HostType{ get; set; }
 
         /// <summary>
-        /// 购买CDH实例数量。
+        /// 购买CDH实例数量，默认为：1。
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }

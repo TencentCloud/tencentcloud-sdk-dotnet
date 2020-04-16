@@ -132,6 +132,13 @@ namespace TencentCloud.Dayu.V20180709.Models
         [JsonProperty("CCLevel")]
         public string CCLevel{ get; set; }
 
+        /// <summary>
+        /// 是否开启Https协议使用Http回源，取值[0(关闭), 1(开启)]，不填写默认是关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HttpsToHttpEnable")]
+        public ulong? HttpsToHttpEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +163,7 @@ namespace TencentCloud.Dayu.V20180709.Models
             this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
             this.SetParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
             this.SetParamSimple(map, prefix + "CCLevel", this.CCLevel);
+            this.SetParamSimple(map, prefix + "HttpsToHttpEnable", this.HttpsToHttpEnable);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ExternalAddr")]
         public string ExternalAddr{ get; set; }
 
+        /// <summary>
+        /// 备份文件大小
+        /// </summary>
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
             this.SetParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

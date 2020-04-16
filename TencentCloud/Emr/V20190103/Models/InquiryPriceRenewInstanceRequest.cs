@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 实例续费的时长。需要结合TimeUnit一起使用。
+        /// 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 实例续费的时间单位。取值范围：
-        /// <li>m：表示月份。</li>
+        /// <li>m：表示月份。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

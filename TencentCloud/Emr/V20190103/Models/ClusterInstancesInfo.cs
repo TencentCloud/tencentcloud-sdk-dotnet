@@ -240,6 +240,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ServiceClass")]
         public string ServiceClass{ get; set; }
 
+        /// <summary>
+        /// 集群所有节点的别名序列化
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AliasInfo")]
+        public string AliasInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -273,6 +280,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
             this.SetParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
+            this.SetParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
         }
     }
 }

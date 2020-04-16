@@ -26,7 +26,6 @@ namespace TencentCloud.Tione.V20191022.Models
         
         /// <summary>
         /// Notebook实例名字
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotebookInstanceName")]
         public string NotebookInstanceName{ get; set; }

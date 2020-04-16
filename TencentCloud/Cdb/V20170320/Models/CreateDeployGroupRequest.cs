@@ -48,6 +48,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("LimitNum")]
         public long? LimitNum{ get; set; }
 
+        /// <summary>
+        /// 置放群组机型属性，可选参数：SH12+SH02、TS85。
+        /// </summary>
+        [JsonProperty("DevClass")]
+        public string[] DevClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArraySimple(map, prefix + "Affinity.", this.Affinity);
             this.SetParamSimple(map, prefix + "LimitNum", this.LimitNum);
+            this.SetParamArraySimple(map, prefix + "DevClass.", this.DevClass);
         }
     }
 }

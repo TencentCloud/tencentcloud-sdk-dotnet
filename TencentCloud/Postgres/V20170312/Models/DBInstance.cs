@@ -168,6 +168,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 用户的AppId
+        /// </summary>
+        [JsonProperty("AppId")]
+        public ulong? AppId{ get; set; }
+
+        /// <summary>
+        /// 实例的Uid
+        /// </summary>
+        [JsonProperty("Uid")]
+        public ulong? Uid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +210,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
         }
     }
 }

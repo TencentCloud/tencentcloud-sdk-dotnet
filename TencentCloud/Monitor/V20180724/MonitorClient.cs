@@ -629,6 +629,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 发送自定义消息告警
+        /// </summary>
+        /// <param name="req"><see cref="SendCustomAlarmMsgRequest"/></param>
+        /// <returns><see cref="SendCustomAlarmMsgResponse"/></returns>
+        public async Task<SendCustomAlarmMsgResponse> SendCustomAlarmMsg(SendCustomAlarmMsgRequest req)
+        {
+             JsonResponseModel<SendCustomAlarmMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendCustomAlarmMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendCustomAlarmMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送自定义消息告警
+        /// </summary>
+        /// <param name="req"><see cref="SendCustomAlarmMsgRequest"/></param>
+        /// <returns><see cref="SendCustomAlarmMsgResponse"/></returns>
+        public SendCustomAlarmMsgResponse SendCustomAlarmMsgSync(SendCustomAlarmMsgRequest req)
+        {
+             JsonResponseModel<SendCustomAlarmMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendCustomAlarmMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendCustomAlarmMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除全部的关联对象
         /// </summary>
         /// <param name="req"><see cref="UnBindingAllPolicyObjectRequest"/></param>

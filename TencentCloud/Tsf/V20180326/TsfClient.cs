@@ -293,7 +293,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建容器部署组
+        /// 创建虚拟机部署组
         /// </summary>
         /// <param name="req"><see cref="CreateGroupRequest"/></param>
         /// <returns><see cref="CreateGroupResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建容器部署组
+        /// 创建虚拟机部署组
         /// </summary>
         /// <param name="req"><see cref="CreateGroupRequest"/></param>
         /// <returns><see cref="CreateGroupResponse"/></returns>
@@ -1768,6 +1768,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribePkgs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePkgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取部署组实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodInstancesRequest"/></param>
+        /// <returns><see cref="DescribePodInstancesResponse"/></returns>
+        public async Task<DescribePodInstancesResponse> DescribePodInstances(DescribePodInstancesRequest req)
+        {
+             JsonResponseModel<DescribePodInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePodInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePodInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取部署组实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePodInstancesRequest"/></param>
+        /// <returns><see cref="DescribePodInstancesResponse"/></returns>
+        public DescribePodInstancesResponse DescribePodInstancesSync(DescribePodInstancesRequest req)
+        {
+             JsonResponseModel<DescribePodInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePodInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePodInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 目标ES版本
+        /// 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
         /// </summary>
         [JsonProperty("EsVersion")]
         public string EsVersion{ get; set; }

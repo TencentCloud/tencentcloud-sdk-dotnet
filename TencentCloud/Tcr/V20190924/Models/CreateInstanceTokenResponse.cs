@@ -25,6 +25,13 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
+        /// 用户名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
         /// 访问凭证
         /// </summary>
         [JsonProperty("Token")]
@@ -48,6 +55,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "ExpTime", this.ExpTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GroupDesc")]
         public string GroupDesc{ get; set; }
 
+        /// <summary>
+        /// 部署组资源类型
+        /// </summary>
+        [JsonProperty("GroupResourceType")]
+        public string GroupResourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "GroupDesc", this.GroupDesc);
+            this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         }
     }
 }

@@ -49,6 +49,14 @@ namespace TencentCloud.Cme.V20191029.Models
         public string[] CategorySet{ get; set; }
 
         /// <summary>
+        /// 列表排序，支持下列排序字段：
+        /// <li>CreateTime：创建时间；</li>
+        /// <li>UpdateTime：更新时间。</li>
+        /// </summary>
+        [JsonProperty("Sort")]
+        public SortBy Sort{ get; set; }
+
+        /// <summary>
         /// 项目归属者。
         /// </summary>
         [JsonProperty("Owner")]
@@ -76,6 +84,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamArraySimple(map, prefix + "AspectRatioSet.", this.AspectRatioSet);
             this.SetParamArraySimple(map, prefix + "CategorySet.", this.CategorySet);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

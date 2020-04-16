@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 策略ID
+        /// 策略ID，入参PolicyId与PolicyName二选一
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("DetachRoleName")]
         public string DetachRoleName{ get; set; }
 
+        /// <summary>
+        /// 策略名，入参PolicyId与PolicyName二选一
+        /// </summary>
+        [JsonProperty("PolicyName")]
+        public string PolicyName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "DetachRoleId", this.DetachRoleId);
             this.SetParamSimple(map, prefix + "DetachRoleName", this.DetachRoleName);
+            this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
         }
     }
 }

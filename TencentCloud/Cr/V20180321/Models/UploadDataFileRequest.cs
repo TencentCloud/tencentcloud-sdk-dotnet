@@ -43,7 +43,7 @@ namespace TencentCloud.Cr.V20180321.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// <p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
+        /// <p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li><li>blacklist：黑名单文件</li></ul>
         /// </summary>
         [JsonProperty("UploadModel")]
         public string UploadModel{ get; set; }

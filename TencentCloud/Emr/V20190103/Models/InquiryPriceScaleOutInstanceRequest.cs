@@ -27,13 +27,15 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// 扩容的时间单位。取值范围：
         /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 扩容的时长。需要结合TimeUnit一起使用。
+        /// 扩容的时长。结合TimeUnit一起使用。
+        /// <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+        /// <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
@@ -47,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// 实例计费模式。取值范围：
         /// <li>0：表示按量计费。</li>
-        /// <li>1：表示包年包月。</li>
+        /// <li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }

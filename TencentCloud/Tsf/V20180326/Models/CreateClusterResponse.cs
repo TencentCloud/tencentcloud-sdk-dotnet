@@ -30,7 +30,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// false：操作失败。
         /// </summary>
         [JsonProperty("Result")]
-        public bool? Result{ get; set; }
+        public string Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

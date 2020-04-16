@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 用户UIN。
+        /// 用户 UIN。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 项目ID。
+        /// 项目 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
@@ -46,14 +46,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版(EV Pro)， 4 = Symantec 增强型(EV)， 5 = Symantec 企业型专业版(OV Pro)， 6 = Symantec 企业型(OV)， 7 = Symantec 企业型(OV)通配符， 8 = Geotrust 增强型(EV)， 9 = Geotrust 企业型(OV)， 10 = Geotrust 企业型(OV)通配符， 11 = TrustAsia 域名型多域名 SSL证书， 12 = TrustAsia 域名型(DV)通配符， 13 = TrustAsia 企业型通配符 （OV）SSL证书(D3)， 14 = TrustAsia 企业型 （OV）SSL证书(D3)， 15 = TrustAsia 企业型多域名 （OV）SSL证书(D3)， 16 = TrustAsia 增强型 （EV）SSL证书(D3)， 17 = TrustAsia 增强型多域名（EV）SSL证书(D3)， 18 = GlobalSign 企业型（OV）SSL证， 19 = GlobalSign 企业型通配符 （OV）SSL证书， 20 = GlobalSign 增强型 （EV）SSL证书， 21 = TrustAsia 企业型通配符多域名 （OV）SSL证书(D3)， 22 = GlobalSign 企业型多域名 （OV）SSL证书， 23 = GlobalSign 企业型通配符多域名 （OV）SSL证书， 24 = GlobalSign 增强型多域名（EV） SSL证书。
+        /// 证书套餐类型：1 = GeoTrust DV SSL CA - G3， 2 = TrustAsia TLS RSA CA， 3 = Symantec 增强型企业版（EV Pro）， 4 = Symantec 增强型（EV）， 5 = Symantec 企业型专业版（OV Pro）， 6 = Symantec 企业型（OV）， 7 = Symantec 企业型（OV）通配符， 8 = Geotrust 增强型（EV）， 9 = Geotrust 企业型（OV）， 10 = Geotrust 企业型（OV）通配符， 11 = TrustAsia 域名型多域名 SSL 证书， 12 = TrustAsia 域名型（DV）通配符， 13 = TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14 = TrustAsia 企业型（OV）SSL 证书（D3）， 15 = TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16 = TrustAsia 增强型 （EV）SSL 证书（D3）， 17 = TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18 = GlobalSign 企业型（OV）SSL 证书， 19 = GlobalSign 企业型通配符 （OV）SSL 证书， 20 = GlobalSign 增强型 （EV）SSL 证书， 21 = TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22 = GlobalSign 企业型多域名（OV）SSL 证书， 23 = GlobalSign 企业型通配符多域名（OV）SSL 证书， 24 = GlobalSign 增强型多域名（EV）SSL 证书。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）。
+        /// 证书类型：CA = 客户端证书，SVR = 服务器证书。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateType")]
@@ -144,7 +144,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// 证书ID
+        /// 证书 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificateId")]

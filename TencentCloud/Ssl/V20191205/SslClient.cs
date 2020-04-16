@@ -53,7 +53,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(ApplyCertificate)用于免费证书申请。
+        /// 本接口（ApplyCertificate）用于免费证书申请。
         /// </summary>
         /// <param name="req"><see cref="ApplyCertificateRequest"/></param>
         /// <returns><see cref="ApplyCertificateResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(ApplyCertificate)用于免费证书申请。
+        /// 本接口（ApplyCertificate）用于免费证书申请。
         /// </summary>
         /// <param name="req"><see cref="ApplyCertificateRequest"/></param>
         /// <returns><see cref="ApplyCertificateResponse"/></returns>
@@ -173,7 +173,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DeleteCertificate)用于删除证书。
+        /// 本接口（DeleteCertificate）用于删除证书。
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>
         /// <returns><see cref="DeleteCertificateResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DeleteCertificate)用于删除证书。
+        /// 本接口（DeleteCertificate）用于删除证书。
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>
         /// <returns><see cref="DeleteCertificateResponse"/></returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DescribeCertificate)用于获取证书信息。
+        /// 本接口（DescribeCertificate）用于获取证书信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
         /// <returns><see cref="DescribeCertificateResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DescribeCertificate)用于获取证书信息。
+        /// 本接口（DescribeCertificate）用于获取证书信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
         /// <returns><see cref="DescribeCertificateResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 获取证书详情
+        /// 获取证书详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateDetailResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 获取证书详情
+        /// 获取证书详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateDetailResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 获取用户账号下有关证书的操作日志
+        /// 获取用户账号下有关证书的操作日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateOperateLogsRequest"/></param>
         /// <returns><see cref="DescribeCertificateOperateLogsResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 获取用户账号下有关证书的操作日志
+        /// 获取用户账号下有关证书的操作日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateOperateLogsRequest"/></param>
         /// <returns><see cref="DescribeCertificateOperateLogsResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DescribeCertificates)用于获取证书列表。
+        /// 本接口（DescribeCertificates）用于获取证书列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificatesRequest"/></param>
         /// <returns><see cref="DescribeCertificatesResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DescribeCertificates)用于获取证书列表。
+        /// 本接口（DescribeCertificates）用于获取证书列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificatesRequest"/></param>
         /// <returns><see cref="DescribeCertificatesResponse"/></returns>
@@ -373,7 +373,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DownloadCertificate)用于下载证书。
+        /// 本接口（DownloadCertificate）用于下载证书。
         /// </summary>
         /// <param name="req"><see cref="DownloadCertificateRequest"/></param>
         /// <returns><see cref="DownloadCertificateResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(DownloadCertificate)用于下载证书。
+        /// 本接口（DownloadCertificate）用于下载证书。
         /// </summary>
         /// <param name="req"><see cref="DownloadCertificateRequest"/></param>
         /// <returns><see cref="DownloadCertificateResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 批量修改证书所属项目
+        /// 批量修改证书所属项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateProjectRequest"/></param>
         /// <returns><see cref="ModifyCertificateProjectResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 批量修改证书所属项目
+        /// 批量修改证书所属项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateProjectRequest"/></param>
         /// <returns><see cref="ModifyCertificateProjectResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(ReplaceCertificate)用于重颁发证书。已申请的免费证书仅支持RSA算法、密钥对参数为2048的证书重颁发。
+        /// 本接口（ReplaceCertificate）用于重颁发证书。已申请的免费证书仅支持 RSA 算法、密钥对参数为2048的证书重颁发，并且目前仅支持1次重颁发。
         /// </summary>
         /// <param name="req"><see cref="ReplaceCertificateRequest"/></param>
         /// <returns><see cref="ReplaceCertificateResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(ReplaceCertificate)用于重颁发证书。已申请的免费证书仅支持RSA算法、密钥对参数为2048的证书重颁发。
+        /// 本接口（ReplaceCertificate）用于重颁发证书。已申请的免费证书仅支持 RSA 算法、密钥对参数为2048的证书重颁发，并且目前仅支持1次重颁发。
         /// </summary>
         /// <param name="req"><see cref="ReplaceCertificateRequest"/></param>
         /// <returns><see cref="ReplaceCertificateResponse"/></returns>
@@ -573,7 +573,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(UploadCertificate)用于上传证书。
+        /// 本接口（UploadCertificate）用于上传证书。
         /// </summary>
         /// <param name="req"><see cref="UploadCertificateRequest"/></param>
         /// <returns><see cref="UploadCertificateResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口(UploadCertificate)用于上传证书。
+        /// 本接口（UploadCertificate）用于上传证书。
         /// </summary>
         /// <param name="req"><see cref="UploadCertificateRequest"/></param>
         /// <returns><see cref="UploadCertificateResponse"/></returns>

@@ -204,6 +204,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
+        /// <summary>
+        /// TencentBackupAddress，腾讯侧备用互联 IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TencentBackupAddress")]
+        public string TencentBackupAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +244,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
             this.SetParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         }
     }
 }

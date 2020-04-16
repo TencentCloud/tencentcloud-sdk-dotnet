@@ -413,7 +413,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
-        /// 根据指定的表信息删除目标表
+        /// 删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteTablesRequest"/></param>
         /// <returns><see cref="DeleteTablesResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
-        /// 根据指定的表信息删除目标表
+        /// 删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteTablesRequest"/></param>
         /// <returns><see cref="DeleteTablesResponse"/></returns>
@@ -764,46 +764,6 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUinInWhitelist");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUinInWhitelistResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改指定的应用名称
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAppNameRequest"/></param>
-        /// <returns><see cref="ModifyAppNameResponse"/></returns>
-        public async Task<ModifyAppNameResponse> ModifyAppName(ModifyAppNameRequest req)
-        {
-             JsonResponseModel<ModifyAppNameResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyAppName");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppNameResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改指定的应用名称
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAppNameRequest"/></param>
-        /// <returns><see cref="ModifyAppNameResponse"/></returns>
-        public ModifyAppNameResponse ModifyAppNameSync(ModifyAppNameRequest req)
-        {
-             JsonResponseModel<ModifyAppNameResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyAppName");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

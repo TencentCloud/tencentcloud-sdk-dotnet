@@ -30,13 +30,14 @@ namespace TencentCloud.Asr.V20190614.Models
         /// 8k_zh_s：电话 8k 中文普通话话者分离，仅用于单声道；
         /// 16k_zh：16k 中文普通话通用；
         /// 16k_en：16k 英语；
-        /// 16k_ca：16k 粤语。
+        /// 16k_ca：16k 粤语；
+        /// 16k_zh_video：16k 音视频领域模型。
         /// </summary>
         [JsonProperty("EngineModelType")]
         public string EngineModelType{ get; set; }
 
         /// <summary>
-        /// 语音声道数。1：单声道；2：双声道（仅在电话 8k 通用模型下支持）。
+        /// 语音声道数。1：单声道；2：双声道（仅支持 8k_zh 引擎模型）。
         /// </summary>
         [JsonProperty("ChannelNum")]
         public ulong? ChannelNum{ get; set; }

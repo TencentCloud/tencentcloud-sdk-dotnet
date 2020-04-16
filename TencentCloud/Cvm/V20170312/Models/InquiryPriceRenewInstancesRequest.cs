@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 试运行。
+        /// 试运行，测试使用，不执行具体逻辑。取值范围：<br><li>TRUE：跳过执行逻辑<br><li>FALSE：执行逻辑<br><br>默认取值：FALSE。
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

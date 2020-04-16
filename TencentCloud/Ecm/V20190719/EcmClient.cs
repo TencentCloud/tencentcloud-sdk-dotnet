@@ -613,6 +613,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 从CVM产品导入镜像到ECM
+        /// </summary>
+        /// <param name="req"><see cref="ImportImageRequest"/></param>
+        /// <returns><see cref="ImportImageResponse"/></returns>
+        public async Task<ImportImageResponse> ImportImage(ImportImageRequest req)
+        {
+             JsonResponseModel<ImportImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从CVM产品导入镜像到ECM
+        /// </summary>
+        /// <param name="req"><see cref="ImportImageRequest"/></param>
+        /// <returns><see cref="ImportImageResponse"/></returns>
+        public ImportImageResponse ImportImageSync(ImportImageRequest req)
+        {
+             JsonResponseModel<ImportImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改实例的属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>

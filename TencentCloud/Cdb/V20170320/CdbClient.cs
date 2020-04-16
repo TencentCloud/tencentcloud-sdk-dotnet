@@ -569,7 +569,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DeleteBackup)用于删除数据库备份。
+        /// 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
@@ -589,7 +589,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DeleteBackup)用于删除数据库备份。
+        /// 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
@@ -1781,6 +1781,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 根据检索条件查询实例错误日志详情。只能查询一个月之内的错误日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorLogDataRequest"/></param>
+        /// <returns><see cref="DescribeErrorLogDataResponse"/></returns>
+        public async Task<DescribeErrorLogDataResponse> DescribeErrorLogData(DescribeErrorLogDataRequest req)
+        {
+             JsonResponseModel<DescribeErrorLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeErrorLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据检索条件查询实例错误日志详情。只能查询一个月之内的错误日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorLogDataRequest"/></param>
+        /// <returns><see cref="DescribeErrorLogDataResponse"/></returns>
+        public DescribeErrorLogDataResponse DescribeErrorLogDataSync(DescribeErrorLogDataRequest req)
+        {
+             JsonResponseModel<DescribeErrorLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeErrorLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
@@ -2052,6 +2092,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRollbackRangeTime");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackRangeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 条件检索实例的慢日志。只允许查看一个月之内的慢日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogDataRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogDataResponse"/></returns>
+        public async Task<DescribeSlowLogDataResponse> DescribeSlowLogData(DescribeSlowLogDataRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 条件检索实例的慢日志。只允许查看一个月之内的慢日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogDataRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogDataResponse"/></returns>
+        public DescribeSlowLogDataResponse DescribeSlowLogDataSync(DescribeSlowLogDataRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

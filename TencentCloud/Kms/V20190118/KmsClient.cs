@@ -213,6 +213,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 创建白盒密钥。 密钥个数的上限为 50。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="CreateWhiteBoxKeyResponse"/></returns>
+        public async Task<CreateWhiteBoxKeyResponse> CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建白盒密钥。 密钥个数的上限为 50。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="CreateWhiteBoxKeyResponse"/></returns>
+        public CreateWhiteBoxKeyResponse CreateWhiteBoxKeySync(CreateWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于解密密文，得到明文数据。
         /// </summary>
         /// <param name="req"><see cref="DecryptRequest"/></param>
@@ -293,6 +333,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 删除白盒密钥, 注意：必须先禁用后，才可以删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DeleteWhiteBoxKeyResponse"/></returns>
+        public async Task<DeleteWhiteBoxKeyResponse> DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除白盒密钥, 注意：必须先禁用后，才可以删除。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DeleteWhiteBoxKeyResponse"/></returns>
+        public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKeySync(DeleteWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取指定KeyId的主密钥属性详情信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeKeyRequest"/></param>
@@ -364,6 +444,166 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "DescribeKeys");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取白盒解密密钥
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxDecryptKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxDecryptKeyResponse"/></returns>
+        public async Task<DescribeWhiteBoxDecryptKeyResponse> DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxDecryptKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取白盒解密密钥
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxDecryptKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxDecryptKeyResponse"/></returns>
+        public DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKeySync(DescribeWhiteBoxDecryptKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxDecryptKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 展示白盒密钥的信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyResponse"/></returns>
+        public async Task<DescribeWhiteBoxKeyResponse> DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 展示白盒密钥的信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyResponse"/></returns>
+        public DescribeWhiteBoxKeyResponse DescribeWhiteBoxKeySync(DescribeWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取白盒密钥列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyDetailsRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyDetailsResponse"/></returns>
+        public async Task<DescribeWhiteBoxKeyDetailsResponse> DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxKeyDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取白盒密钥列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxKeyDetailsRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxKeyDetailsResponse"/></returns>
+        public DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetailsSync(DescribeWhiteBoxKeyDetailsRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxKeyDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取白盒密钥服务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxServiceStatusRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxServiceStatusResponse"/></returns>
+        public async Task<DescribeWhiteBoxServiceStatusResponse> DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxServiceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取白盒密钥服务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxServiceStatusRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxServiceStatusResponse"/></returns>
+        public DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatusSync(DescribeWhiteBoxServiceStatusRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxServiceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,6 +733,86 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 禁用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeyResponse"/></returns>
+        public async Task<DisableWhiteBoxKeyResponse> DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeyResponse"/></returns>
+        public DisableWhiteBoxKeyResponse DisableWhiteBoxKeySync(DisableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量禁用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeysResponse"/></returns>
+        public async Task<DisableWhiteBoxKeysResponse> DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量禁用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="DisableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="DisableWhiteBoxKeysResponse"/></returns>
+        public DisableWhiteBoxKeysResponse DisableWhiteBoxKeysSync(DisableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于启用一个指定的CMK。
         /// </summary>
         /// <param name="req"><see cref="EnableKeyRequest"/></param>
@@ -613,6 +933,86 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 批量启用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>
+        public async Task<EnableWhiteBoxKeyResponse> EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量启用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeyRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>
+        public EnableWhiteBoxKeyResponse EnableWhiteBoxKeySync(EnableWhiteBoxKeyRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableWhiteBoxKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量启用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeysResponse"/></returns>
+        public async Task<EnableWhiteBoxKeysResponse> EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量启用白盒密钥
+        /// </summary>
+        /// <param name="req"><see cref="EnableWhiteBoxKeysRequest"/></param>
+        /// <returns><see cref="EnableWhiteBoxKeysResponse"/></returns>
+        public EnableWhiteBoxKeysResponse EnableWhiteBoxKeysSync(EnableWhiteBoxKeysRequest req)
+        {
+             JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableWhiteBoxKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableWhiteBoxKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
         /// </summary>
         /// <param name="req"><see cref="EncryptRequest"/></param>
@@ -644,6 +1044,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "Encrypt");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用白盒密钥进行加密
+        /// </summary>
+        /// <param name="req"><see cref="EncryptByWhiteBoxRequest"/></param>
+        /// <returns><see cref="EncryptByWhiteBoxResponse"/></returns>
+        public async Task<EncryptByWhiteBoxResponse> EncryptByWhiteBox(EncryptByWhiteBoxRequest req)
+        {
+             JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EncryptByWhiteBox");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptByWhiteBoxResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用白盒密钥进行加密
+        /// </summary>
+        /// <param name="req"><see cref="EncryptByWhiteBoxRequest"/></param>
+        /// <returns><see cref="EncryptByWhiteBoxResponse"/></returns>
+        public EncryptByWhiteBoxResponse EncryptByWhiteBoxSync(EncryptByWhiteBoxRequest req)
+        {
+             JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EncryptByWhiteBox");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptByWhiteBoxResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

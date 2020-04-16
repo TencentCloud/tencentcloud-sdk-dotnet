@@ -42,6 +42,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Public")]
         public bool? Public{ get; set; }
 
+        /// <summary>
+        /// 命名空间的Id
+        /// </summary>
+        [JsonProperty("NamespaceId")]
+        public long? NamespaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
             this.SetParamSimple(map, prefix + "Public", this.Public);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         }
     }
 }

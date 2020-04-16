@@ -26,6 +26,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         
         /// <summary>
         /// 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+        /// 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }

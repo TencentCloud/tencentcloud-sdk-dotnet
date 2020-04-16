@@ -133,6 +133,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public async Task<CreateDBInstancesResponse> CreateDBInstances(CreateDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
         /// </summary>
         /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
@@ -373,6 +413,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public async Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public DescribeDBInstancesResponse DescribeDBInstancesSync(DescribeDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
@@ -444,6 +524,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBXlogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBXlogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口（DescribeDatabases）用来拉取数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public async Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口（DescribeDatabases）用来拉取数据库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public DescribeDatabasesResponse DescribeDatabasesSync(DescribeDatabasesRequest req)
+        {
+             JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabasesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -644,6 +764,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeZones");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
+        public async Task<DestroyDBInstanceResponse> DestroyDBInstance(DestroyDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
+        public DestroyDBInstanceResponse DestroyDBInstanceSync(DestroyDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1164,6 +1324,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "SetAutoRenewFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAutoRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeDBInstance）用于升级实例。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
+        public async Task<UpgradeDBInstanceResponse> UpgradeDBInstance(UpgradeDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpgradeDBInstance）用于升级实例。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
+        public UpgradeDBInstanceResponse UpgradeDBInstanceSync(UpgradeDBInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
+        /// <summary>
+        /// 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。
+        /// </summary>
+        [JsonProperty("ReleaseDuration")]
+        public long? ReleaseDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DstPort", this.DstPort);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "ReleaseDuration", this.ReleaseDuration);
         }
     }
 }

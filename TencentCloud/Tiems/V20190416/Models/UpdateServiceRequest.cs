@@ -84,6 +84,12 @@ namespace TencentCloud.Tiems.V20190416.Models
         [JsonProperty("Gpu")]
         public ulong? Gpu{ get; set; }
 
+        /// <summary>
+        /// Cls日志主题ID
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tiems.V20190416.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         }
     }
 }

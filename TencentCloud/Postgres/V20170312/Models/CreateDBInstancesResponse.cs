@@ -31,6 +31,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] DealNames{ get; set; }
 
         /// <summary>
+        /// 冻结流水号
+        /// </summary>
+        [JsonProperty("BillId")]
+        public string BillId{ get; set; }
+
+        /// <summary>
+        /// 创建成功的实例ID集合，只在后付费情景下有返回值
+        /// </summary>
+        [JsonProperty("DBInstanceIdSet")]
+        public string[] DBInstanceIdSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "BillId", this.BillId);
+            this.SetParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

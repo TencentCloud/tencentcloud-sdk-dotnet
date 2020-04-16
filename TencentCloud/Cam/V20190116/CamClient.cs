@@ -253,6 +253,86 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// mfa校验
+        /// </summary>
+        /// <param name="req"><see cref="CheckRequest"/></param>
+        /// <returns><see cref="CheckResponse"/></returns>
+        public async Task<CheckResponse> Check(CheckRequest req)
+        {
+             JsonResponseModel<CheckResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "Check");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// mfa校验
+        /// </summary>
+        /// <param name="req"><see cref="CheckRequest"/></param>
+        /// <returns><see cref="CheckResponse"/></returns>
+        public CheckResponse CheckSync(CheckRequest req)
+        {
+             JsonResponseModel<CheckResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "Check");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 校验新手机新邮箱接口
+        /// </summary>
+        /// <param name="req"><see cref="CheckNewMfaCodeRequest"/></param>
+        /// <returns><see cref="CheckNewMfaCodeResponse"/></returns>
+        public async Task<CheckNewMfaCodeResponse> CheckNewMfaCode(CheckNewMfaCodeRequest req)
+        {
+             JsonResponseModel<CheckNewMfaCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckNewMfaCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckNewMfaCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 校验新手机新邮箱接口
+        /// </summary>
+        /// <param name="req"><see cref="CheckNewMfaCodeRequest"/></param>
+        /// <returns><see cref="CheckNewMfaCodeResponse"/></returns>
+        public CheckNewMfaCodeResponse CheckNewMfaCodeSync(CheckNewMfaCodeRequest req)
+        {
+             JsonResponseModel<CheckNewMfaCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckNewMfaCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckNewMfaCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 验证自定义多因子Token
         /// </summary>
         /// <param name="req"><see cref="ConsumeCustomMFATokenRequest"/></param>
@@ -653,6 +733,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 查询微信code状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMfaCodeStatusRequest"/></param>
+        /// <returns><see cref="DescribeMfaCodeStatusResponse"/></returns>
+        public async Task<DescribeMfaCodeStatusResponse> DescribeMfaCodeStatus(DescribeMfaCodeStatusRequest req)
+        {
+             JsonResponseModel<DescribeMfaCodeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMfaCodeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMfaCodeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信code状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMfaCodeStatusRequest"/></param>
+        /// <returns><see cref="DescribeMfaCodeStatusResponse"/></returns>
+        public DescribeMfaCodeStatusResponse DescribeMfaCodeStatusSync(DescribeMfaCodeStatusRequest req)
+        {
+             JsonResponseModel<DescribeMfaCodeStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMfaCodeStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMfaCodeStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeRoleList）用于获取账号下的角色列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
@@ -804,6 +924,126 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DetachUserPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起人脸核身
+        /// </summary>
+        /// <param name="req"><see cref="DetectAuthRequest"/></param>
+        /// <returns><see cref="DetectAuthResponse"/></returns>
+        public async Task<DetectAuthResponse> DetectAuth(DetectAuthRequest req)
+        {
+             JsonResponseModel<DetectAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起人脸核身
+        /// </summary>
+        /// <param name="req"><see cref="DetectAuthRequest"/></param>
+        /// <returns><see cref="DetectAuthResponse"/></returns>
+        public DetectAuthResponse DetectAuthSync(DetectAuthRequest req)
+        {
+             JsonResponseModel<DetectAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取并更新人脸核身校验状态实名传递参数比对
+        /// </summary>
+        /// <param name="req"><see cref="DetectMaskAuthRequest"/></param>
+        /// <returns><see cref="DetectMaskAuthResponse"/></returns>
+        public async Task<DetectMaskAuthResponse> DetectMaskAuth(DetectMaskAuthRequest req)
+        {
+             JsonResponseModel<DetectMaskAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectMaskAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectMaskAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取并更新人脸核身校验状态实名传递参数比对
+        /// </summary>
+        /// <param name="req"><see cref="DetectMaskAuthRequest"/></param>
+        /// <returns><see cref="DetectMaskAuthResponse"/></returns>
+        public DetectMaskAuthResponse DetectMaskAuthSync(DetectMaskAuthRequest req)
+        {
+             JsonResponseModel<DetectMaskAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectMaskAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectMaskAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取并且更新人联合身状态
+        /// </summary>
+        /// <param name="req"><see cref="DetectStateRequest"/></param>
+        /// <returns><see cref="DetectStateResponse"/></returns>
+        public async Task<DetectStateResponse> DetectState(DetectStateRequest req)
+        {
+             JsonResponseModel<DetectStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取并且更新人联合身状态
+        /// </summary>
+        /// <param name="req"><see cref="DetectStateRequest"/></param>
+        /// <returns><see cref="DetectStateResponse"/></returns>
+        public DetectStateResponse DetectStateSync(DetectStateRequest req)
+        {
+             JsonResponseModel<DetectStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1164,6 +1404,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "ListAttachedUserPolicies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAttachedUserPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取协作者列表
+        /// </summary>
+        /// <param name="req"><see cref="ListCollaboratorsRequest"/></param>
+        /// <returns><see cref="ListCollaboratorsResponse"/></returns>
+        public async Task<ListCollaboratorsResponse> ListCollaborators(ListCollaboratorsRequest req)
+        {
+             JsonResponseModel<ListCollaboratorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListCollaborators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCollaboratorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取协作者列表
+        /// </summary>
+        /// <param name="req"><see cref="ListCollaboratorsRequest"/></param>
+        /// <returns><see cref="ListCollaboratorsResponse"/></returns>
+        public ListCollaboratorsResponse ListCollaboratorsSync(ListCollaboratorsRequest req)
+        {
+             JsonResponseModel<ListCollaboratorsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListCollaborators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListCollaboratorsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1613,17 +1893,17 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 本接口（UpdatePolicy ）可用于更新策略。
+        /// 本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。
         /// </summary>
-        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
-        /// <returns><see cref="UpdatePolicyResponse"/></returns>
-        public async Task<UpdatePolicyResponse> UpdatePolicy(UpdatePolicyRequest req)
+        /// <param name="req"><see cref="UpdateRoleConsoleLoginRequest"/></param>
+        /// <returns><see cref="UpdateRoleConsoleLoginResponse"/></returns>
+        public async Task<UpdateRoleConsoleLoginResponse> UpdateRoleConsoleLogin(UpdateRoleConsoleLoginRequest req)
         {
-             JsonResponseModel<UpdatePolicyResponse> rsp = null;
+             JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "UpdatePolicy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePolicyResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "UpdateRoleConsoleLogin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRoleConsoleLoginResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1633,17 +1913,17 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 本接口（UpdatePolicy ）可用于更新策略。
+        /// 本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。
         /// </summary>
-        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
-        /// <returns><see cref="UpdatePolicyResponse"/></returns>
-        public UpdatePolicyResponse UpdatePolicySync(UpdatePolicyRequest req)
+        /// <param name="req"><see cref="UpdateRoleConsoleLoginRequest"/></param>
+        /// <returns><see cref="UpdateRoleConsoleLoginResponse"/></returns>
+        public UpdateRoleConsoleLoginResponse UpdateRoleConsoleLoginSync(UpdateRoleConsoleLoginRequest req)
         {
-             JsonResponseModel<UpdatePolicyResponse> rsp = null;
+             JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "UpdatePolicy");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePolicyResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "UpdateRoleConsoleLogin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRoleConsoleLoginResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

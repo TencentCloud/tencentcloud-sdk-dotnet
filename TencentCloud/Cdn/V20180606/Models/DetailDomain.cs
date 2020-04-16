@@ -317,6 +317,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// Scdn配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityConfig")]
+        public SecurityConfig[] SecurityConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -363,6 +370,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Readonly", this.Readonly);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+            this.SetParamArrayObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
         }
     }
 }

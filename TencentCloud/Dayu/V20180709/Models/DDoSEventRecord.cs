@@ -97,6 +97,13 @@ namespace TencentCloud.Dayu.V20180709.Models
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
+        /// <summary>
+        /// 攻击事件Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +122,7 @@ namespace TencentCloud.Dayu.V20180709.Models
             this.SetParamSimple(map, prefix + "OverLoad", this.OverLoad);
             this.SetParamSimple(map, prefix + "AttackStatus", this.AttackStatus);
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

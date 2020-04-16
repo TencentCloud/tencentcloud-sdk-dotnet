@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 指定的内网IP信息，单次最多指定10个。
+        /// 指定的内网IP信息，单次最多指定10个。与SecondaryPrivateIpAddressCount至少提供一个。
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+        /// 新申请的内网IP地址个数，与PrivateIpAddresses至少提供一个。内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
         /// </summary>
         [JsonProperty("SecondaryPrivateIpAddressCount")]
         public ulong? SecondaryPrivateIpAddressCount{ get; set; }

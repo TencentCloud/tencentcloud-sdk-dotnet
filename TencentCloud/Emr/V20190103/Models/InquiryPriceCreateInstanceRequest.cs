@@ -27,13 +27,15 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// 购买实例的时间单位。取值范围：
         /// <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+        /// <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 购买实例的时长。需要结合TimeUnit一起使用。
+        /// 购买实例的时长。结合TimeUnit一起使用。
+        /// <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
+        /// <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
@@ -54,7 +56,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// 实例计费模式。取值范围：
         /// <li>0：表示按量计费。</li>
-        /// <li>1：表示包年包月。</li>
+        /// <li>1：表示包年包月。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
@@ -68,7 +70,11 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? SupportHA{ get; set; }
 
         /// <summary>
-        /// 部署的组件列表。
+        /// 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
+        /// <li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+        /// <li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
+        /// <li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
+        /// <li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }

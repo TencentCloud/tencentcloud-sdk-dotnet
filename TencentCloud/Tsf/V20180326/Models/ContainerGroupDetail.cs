@@ -241,6 +241,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 部署组资源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupResourceType")]
+        public string GroupResourceType{ get; set; }
+
+        /// <summary>
+        /// 部署组实例个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceCount")]
+        public ulong? InstanceCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +292,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "CpuRequest", this.CpuRequest);
             this.SetParamSimple(map, prefix + "MemRequest", this.MemRequest);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         }
     }
 }

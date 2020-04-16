@@ -25,42 +25,42 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// DV认证密钥。
+        /// DV 认证密钥。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthKey")]
         public string DvAuthKey{ get; set; }
 
         /// <summary>
-        /// DV认证值。
+        /// DV 认证值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthValue")]
         public string DvAuthValue{ get; set; }
 
         /// <summary>
-        /// DV认证值域名。
+        /// DV 认证值域名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthDomain")]
         public string DvAuthDomain{ get; set; }
 
         /// <summary>
-        /// DV认证值路径。
+        /// DV 认证值路径。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthPath")]
         public string DvAuthPath{ get; set; }
 
         /// <summary>
-        /// DV认证子域名。
+        /// DV 认证子域名。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuthKeySubDomain")]
         public string DvAuthKeySubDomain{ get; set; }
 
         /// <summary>
-        /// DV认证信息。
+        /// DV 认证信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DvAuths")]

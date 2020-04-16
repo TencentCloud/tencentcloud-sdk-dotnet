@@ -27,12 +27,13 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 类型，取值有：
         /// <li>PERSON：个人。</li>
+        /// <li>TEAM：团队。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Id，当 Type=PERSON，取值为用户 Id。
+        /// Id，当 Type=PERSON，取值为用户 Id，当 Type=TEAM，取值为团队 Id。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

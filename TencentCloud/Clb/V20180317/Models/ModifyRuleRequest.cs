@@ -68,10 +68,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+        /// 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
+
+        /// <summary>
+        /// TRPC被调服务器路由，ForwardType为TRPC时必填
+        /// </summary>
+        [JsonProperty("TrpcCallee")]
+        public string TrpcCallee{ get; set; }
+
+        /// <summary>
+        /// TRPC调用服务接口，ForwardType为TRPC时必填
+        /// </summary>
+        [JsonProperty("TrpcFunc")]
+        public string TrpcFunc{ get; set; }
 
 
         /// <summary>
@@ -87,6 +99,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
             this.SetParamSimple(map, prefix + "ForwardType", this.ForwardType);
+            this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+            this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         }
     }
 }

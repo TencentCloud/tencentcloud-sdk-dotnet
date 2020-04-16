@@ -155,7 +155,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public MasterInfo MasterInfo{ get; set; }
 
         /// <summary>
-        /// 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
+        /// 实例类型，可能的返回值：“HA”-高可用版；“FE”-金融版；“BASIC”-基础版
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

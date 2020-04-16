@@ -25,14 +25,14 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// CSR类型，（online = 在线生成CSR，parse = 粘贴CSR）。
+        /// CSR 类型，（online = 在线生成CSR，parse = 粘贴 CSR）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// CSR内容。
+        /// CSR 内容。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CsrContent")]
@@ -46,7 +46,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateDomain{ get; set; }
 
         /// <summary>
-        /// DNS信息。
+        /// DNS 信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomainList")]

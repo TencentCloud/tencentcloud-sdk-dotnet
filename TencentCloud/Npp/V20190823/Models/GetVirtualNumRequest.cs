@@ -25,7 +25,7 @@ namespace TencentCloud.Npp.V20190823.Models
     {
         
         /// <summary>
-        /// appId 值测试时由腾讯统一分配
+        /// 业务appid
         /// </summary>
         [JsonProperty("BizAppId")]
         public string BizAppId{ get; set; }

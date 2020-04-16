@@ -94,6 +94,27 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
+        /// <summary>
+        /// 启动参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartupParameters")]
+        public string StartupParameters{ get; set; }
+
+        /// <summary>
+        /// 部署组资源类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupResourceType")]
+        public string GroupResourceType{ get; set; }
+
+        /// <summary>
+        /// 应用微服务类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppMicroServiceType")]
+        public string AppMicroServiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +131,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
+            this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+            this.SetParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
         }
     }
 }

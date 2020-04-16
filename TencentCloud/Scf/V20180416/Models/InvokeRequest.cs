@@ -60,6 +60,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
+        /// </summary>
+        [JsonProperty("RoutingKey")]
+        public string RoutingKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ClientContext", this.ClientContext);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
         }
     }
 }

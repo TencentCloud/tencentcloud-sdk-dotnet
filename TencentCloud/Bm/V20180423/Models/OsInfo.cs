@@ -66,6 +66,20 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("MaxPartitionSize")]
         public ulong? MaxPartitionSize{ get; set; }
 
+        /// <summary>
+        /// 黑石版本号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OsMinorVersion")]
+        public string OsMinorVersion{ get; set; }
+
+        /// <summary>
+        /// 黑石版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OsMinorClass")]
+        public string OsMinorClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +93,8 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "OsClass", this.OsClass);
             this.SetParamSimple(map, prefix + "ImageTag", this.ImageTag);
             this.SetParamSimple(map, prefix + "MaxPartitionSize", this.MaxPartitionSize);
+            this.SetParamSimple(map, prefix + "OsMinorVersion", this.OsMinorVersion);
+            this.SetParamSimple(map, prefix + "OsMinorClass", this.OsMinorClass);
         }
     }
 }

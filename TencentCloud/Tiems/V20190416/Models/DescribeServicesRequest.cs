@@ -25,7 +25,7 @@ namespace TencentCloud.Tiems.V20190416.Models
     {
         
         /// <summary>
-        /// 筛选选项，支持按照name等字段进行筛选
+        /// 筛选选项，支持筛选的字段：id, region, zone, cluster, status, runtime, rsg_id
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -210,7 +210,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IPv6Addresses")]
-        public string IPv6Addresses{ get; set; }
+        public string[] IPv6Addresses{ get; set; }
 
         /// <summary>
         /// CAM角色名。
@@ -254,7 +254,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
-            this.SetParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+            this.SetParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         }
     }

@@ -26,7 +26,6 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 图片水印地址，仅当 ImageTemplate.ImageContent 非空，该字段有值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }

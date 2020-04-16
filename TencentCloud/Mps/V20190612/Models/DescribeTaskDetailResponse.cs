@@ -27,6 +27,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 任务类型，目前取值有：
         /// <li>WorkflowTask：视频工作流处理任务。</li>
+        /// <li>EditMediaTask：视频编辑任务。</li>
         /// <li>LiveStreamProcessTask：直播流处理任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
@@ -65,6 +66,13 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("WorkflowTask")]
         public WorkflowTask WorkflowTask{ get; set; }
+
+        /// <summary>
+        /// 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EditMediaTask")]
+        public EditMediaTask EditMediaTask{ get; set; }
 
         /// <summary>
         /// 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
@@ -116,6 +124,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
+            this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
             this.SetParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

@@ -37,58 +37,29 @@ namespace TencentCloud.Tione.V20191022.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 排序字段
-        /// </summary>
-        [JsonProperty("SortBy")]
-        public string SortBy{ get; set; }
-
-        /// <summary>
-        /// 排序方式
+        /// 排序规则。默认取Descending
+        /// Descending 按更新时间降序
+        /// Ascending 按更新时间升序
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
         /// <summary>
-        /// 创建时间晚于
+        /// 过滤条件。
+        /// instance-name - String - 是否必填：否 -（过滤条件）按照名称过滤。
+        /// search-by-name - String - 是否必填：否 -（过滤条件）按照名称检索，模糊匹配。
+        /// lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
+        /// default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
+        /// additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
         /// </summary>
-        [JsonProperty("CreationTimeAfter")]
-        public string CreationTimeAfter{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 创建时间早于
+        /// 【废弃字段】排序字段
         /// </summary>
-        [JsonProperty("CreationTimeBefore")]
-        public string CreationTimeBefore{ get; set; }
-
-        /// <summary>
-        /// 最近修改时间晚于
-        /// </summary>
-        [JsonProperty("LastModifiedTimeAfter")]
-        public string LastModifiedTimeAfter{ get; set; }
-
-        /// <summary>
-        /// 最近修改时间早于
-        /// </summary>
-        [JsonProperty("LastModifiedTimeBefore")]
-        public string LastModifiedTimeBefore{ get; set; }
-
-        /// <summary>
-        /// 根据名称过滤
-        /// </summary>
-        [JsonProperty("NameContains")]
-        public string NameContains{ get; set; }
-
-        /// <summary>
-        /// 根据状态过滤
-        /// </summary>
-        [JsonProperty("StatusEquals")]
-        public string StatusEquals{ get; set; }
-
-        /// <summary>
-        /// 最大返回个数
-        /// </summary>
-        [JsonProperty("MaxResults")]
-        public ulong? MaxResults{ get; set; }
+        [JsonProperty("SortBy")]
+        public string SortBy{ get; set; }
 
 
         /// <summary>
@@ -98,15 +69,9 @@ namespace TencentCloud.Tione.V20191022.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
             this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
-            this.SetParamSimple(map, prefix + "CreationTimeAfter", this.CreationTimeAfter);
-            this.SetParamSimple(map, prefix + "CreationTimeBefore", this.CreationTimeBefore);
-            this.SetParamSimple(map, prefix + "LastModifiedTimeAfter", this.LastModifiedTimeAfter);
-            this.SetParamSimple(map, prefix + "LastModifiedTimeBefore", this.LastModifiedTimeBefore);
-            this.SetParamSimple(map, prefix + "NameContains", this.NameContains);
-            this.SetParamSimple(map, prefix + "StatusEquals", this.StatusEquals);
-            this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
         }
     }
 }

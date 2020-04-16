@@ -142,6 +142,34 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// 当前自定义数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurrentCustomCount")]
+        public long? CurrentCustomCount{ get; set; }
+
+        /// <summary>
+        /// 最大自定义数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxCustomCount")]
+        public long? MaxCustomCount{ get; set; }
+
+        /// <summary>
+        /// 权重
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Weight")]
+        public long? Weight{ get; set; }
+
+        /// <summary>
+        /// 会话可用性状态，是否被屏蔽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailabilityStatus")]
+        public string AvailabilityStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +194,10 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "StatusReason", this.StatusReason);
             this.SetParamSimple(map, prefix + "TerminationTime", this.TerminationTime);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "CurrentCustomCount", this.CurrentCustomCount);
+            this.SetParamSimple(map, prefix + "MaxCustomCount", this.MaxCustomCount);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "AvailabilityStatus", this.AvailabilityStatus);
         }
     }
 }

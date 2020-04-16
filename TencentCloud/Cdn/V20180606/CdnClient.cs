@@ -901,6 +901,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportDataRequest"/></param>
+        /// <returns><see cref="DescribeReportDataResponse"/></returns>
+        public async Task<DescribeReportDataResponse> DescribeReportData(DescribeReportDataRequest req)
+        {
+             JsonResponseModel<DescribeReportDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReportData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReportDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportDataRequest"/></param>
+        /// <returns><see cref="DescribeReportDataResponse"/></returns>
+        public DescribeReportDataResponse DescribeReportDataSync(DescribeReportDataRequest req)
+        {
+             JsonResponseModel<DescribeReportDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReportData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReportDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeTrafficPackages 用于查询境内 CDN 流量包详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeTrafficPackagesRequest"/></param>
