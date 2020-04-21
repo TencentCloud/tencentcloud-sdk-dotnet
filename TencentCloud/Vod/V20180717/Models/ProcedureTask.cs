@@ -83,28 +83,24 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 视频处理任务的执行状态与结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaProcessResultSet")]
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
         /// <summary>
         /// 视频内容审核任务的执行状态与结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiContentReviewResultSet")]
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }
 
         /// <summary>
         /// 视频内容分析任务的执行状态与结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiAnalysisResultSet")]
         public AiAnalysisResult[] AiAnalysisResultSet{ get; set; }
 
         /// <summary>
         /// 视频内容识别任务的执行状态与结果。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiRecognitionResultSet")]
         public AiRecognitionResult[] AiRecognitionResultSet{ get; set; }

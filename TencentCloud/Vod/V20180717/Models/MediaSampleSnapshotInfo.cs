@@ -26,7 +26,6 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 特定规格的采样截图信息集合，每个元素代表一套相同规格的采样截图。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleSnapshotSet")]
         public MediaSampleSnapshotItem[] SampleSnapshotSet{ get; set; }

@@ -26,7 +26,6 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 视频涉政评分，分值为0到100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -36,7 +35,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
@@ -45,14 +43,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 视频鉴政结果标签，取值范围：
         /// <li>politician：政治人物。</li>
         /// <li>violation_photo：违规图标。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 有涉政嫌疑的视频片段列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewPoliticalSegmentItem[] SegmentSet{ get; set; }

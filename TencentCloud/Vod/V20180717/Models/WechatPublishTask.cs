@@ -43,35 +43,30 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 错误码
         /// <li>0：成功；</li>
         /// <li>其他值：失败。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 错误信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// 发布视频文件 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
         /// 微信发布模板 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
         /// 发布视频所对应的转码模板 ID，为 0 代表原始视频。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceDefinition")]
         public ulong? SourceDefinition{ get; set; }
@@ -82,21 +77,18 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>SUCCESS：成功；</li>
         /// <li>AUDITNOTPASS：审核未通过；</li>
         /// <li>NOTTRIGGERED：尚未发起微信发布。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatStatus")]
         public string WechatStatus{ get; set; }
 
         /// <summary>
         /// 微信 Vid。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatVid")]
         public string WechatVid{ get; set; }
 
         /// <summary>
         /// 微信地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WechatUrl")]
         public string WechatUrl{ get; set; }

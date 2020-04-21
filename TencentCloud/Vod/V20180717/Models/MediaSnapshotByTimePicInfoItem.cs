@@ -26,21 +26,18 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeOffset")]
         public float? TimeOffset{ get; set; }
 
         /// <summary>
         /// 该张截图的 URL 地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// 截图如果被打上了水印，被打水印的模板 ID 列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WaterMarkDefinition")]
         public long?[] WaterMarkDefinition{ get; set; }

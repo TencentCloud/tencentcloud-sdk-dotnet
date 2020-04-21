@@ -26,21 +26,18 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 嫌疑片段起始的偏移时间，单位：秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
         /// 嫌疑片段结束的偏移时间，单位：秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
         /// 嫌疑片段置信度。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -50,14 +47,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
         /// 嫌疑关键词列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }

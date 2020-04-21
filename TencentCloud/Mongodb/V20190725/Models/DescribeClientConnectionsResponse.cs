@@ -25,10 +25,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 客户端连接信息，包括客户端IP和对应IP的连接数量
+        /// 客户端连接信息，包括客户端IP和对应IP的连接数量。
         /// </summary>
         [JsonProperty("Clients")]
         public ClientConnection[] Clients{ get; set; }
+
+        /// <summary>
+        /// 满足条件的记录总条数，可用于分页查询。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Clients.", this.Clients);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

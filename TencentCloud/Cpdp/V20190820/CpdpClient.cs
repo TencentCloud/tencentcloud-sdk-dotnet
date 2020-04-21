@@ -53,6 +53,126 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 跨境-提交申报材料
+        /// </summary>
+        /// <param name="req"><see cref="ApplyApplicationMaterialRequest"/></param>
+        /// <returns><see cref="ApplyApplicationMaterialResponse"/></returns>
+        public async Task<ApplyApplicationMaterialResponse> ApplyApplicationMaterial(ApplyApplicationMaterialRequest req)
+        {
+             JsonResponseModel<ApplyApplicationMaterialResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyApplicationMaterial");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyApplicationMaterialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-提交申报材料
+        /// </summary>
+        /// <param name="req"><see cref="ApplyApplicationMaterialRequest"/></param>
+        /// <returns><see cref="ApplyApplicationMaterialResponse"/></returns>
+        public ApplyApplicationMaterialResponse ApplyApplicationMaterialSync(ApplyApplicationMaterialRequest req)
+        {
+             JsonResponseModel<ApplyApplicationMaterialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyApplicationMaterial");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyApplicationMaterialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-汇出指令申请
+        /// </summary>
+        /// <param name="req"><see cref="ApplyOutwardOrderRequest"/></param>
+        /// <returns><see cref="ApplyOutwardOrderResponse"/></returns>
+        public async Task<ApplyOutwardOrderResponse> ApplyOutwardOrder(ApplyOutwardOrderRequest req)
+        {
+             JsonResponseModel<ApplyOutwardOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyOutwardOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyOutwardOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-汇出指令申请
+        /// </summary>
+        /// <param name="req"><see cref="ApplyOutwardOrderRequest"/></param>
+        /// <returns><see cref="ApplyOutwardOrderResponse"/></returns>
+        public ApplyOutwardOrderResponse ApplyOutwardOrderSync(ApplyOutwardOrderRequest req)
+        {
+             JsonResponseModel<ApplyOutwardOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyOutwardOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyOutwardOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-付款人申请
+        /// </summary>
+        /// <param name="req"><see cref="ApplyPayerInfoRequest"/></param>
+        /// <returns><see cref="ApplyPayerInfoResponse"/></returns>
+        public async Task<ApplyPayerInfoResponse> ApplyPayerInfo(ApplyPayerInfoRequest req)
+        {
+             JsonResponseModel<ApplyPayerInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyPayerInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyPayerInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-付款人申请
+        /// </summary>
+        /// <param name="req"><see cref="ApplyPayerInfoRequest"/></param>
+        /// <returns><see cref="ApplyPayerInfoResponse"/></returns>
+        public ApplyPayerInfoResponse ApplyPayerInfoSync(ApplyPayerInfoRequest req)
+        {
+             JsonResponseModel<ApplyPayerInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyPayerInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyPayerInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 正常结算提现失败情况下，发起重新提现的请求接口
         /// </summary>
         /// <param name="req"><see cref="ApplyReWithdrawalRequest"/></param>
@@ -84,6 +204,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "ApplyReWithdrawal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyReWithdrawalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-提交贸易材料
+        /// </summary>
+        /// <param name="req"><see cref="ApplyTradeRequest"/></param>
+        /// <returns><see cref="ApplyTradeResponse"/></returns>
+        public async Task<ApplyTradeResponse> ApplyTrade(ApplyTradeRequest req)
+        {
+             JsonResponseModel<ApplyTradeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyTrade");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyTradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-提交贸易材料
+        /// </summary>
+        /// <param name="req"><see cref="ApplyTradeRequest"/></param>
+        /// <returns><see cref="ApplyTradeResponse"/></returns>
+        public ApplyTradeResponse ApplyTradeSync(ApplyTradeRequest req)
+        {
+             JsonResponseModel<ApplyTradeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyTrade");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyTradeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -829,6 +989,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 跨境-成功申报材料查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryApplicationMaterialRequest"/></param>
+        /// <returns><see cref="QueryApplicationMaterialResponse"/></returns>
+        public async Task<QueryApplicationMaterialResponse> QueryApplicationMaterial(QueryApplicationMaterialRequest req)
+        {
+             JsonResponseModel<QueryApplicationMaterialResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryApplicationMaterial");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryApplicationMaterialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-成功申报材料查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryApplicationMaterialRequest"/></param>
+        /// <returns><see cref="QueryApplicationMaterialResponse"/></returns>
+        public QueryApplicationMaterialResponse QueryApplicationMaterialSync(QueryApplicationMaterialRequest req)
+        {
+             JsonResponseModel<QueryApplicationMaterialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryApplicationMaterial");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryApplicationMaterialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 子商户余额查询
         /// </summary>
         /// <param name="req"><see cref="QueryBalanceRequest"/></param>
@@ -1069,6 +1269,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 跨境-查询汇率
+        /// </summary>
+        /// <param name="req"><see cref="QueryExchangeRateRequest"/></param>
+        /// <returns><see cref="QueryExchangeRateResponse"/></returns>
+        public async Task<QueryExchangeRateResponse> QueryExchangeRate(QueryExchangeRateRequest req)
+        {
+             JsonResponseModel<QueryExchangeRateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryExchangeRate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExchangeRateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-查询汇率
+        /// </summary>
+        /// <param name="req"><see cref="QueryExchangeRateRequest"/></param>
+        /// <returns><see cref="QueryExchangeRateResponse"/></returns>
+        public QueryExchangeRateResponse QueryExchangeRateSync(QueryExchangeRateRequest req)
+        {
+             JsonResponseModel<QueryExchangeRateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryExchangeRate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExchangeRateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 智慧零售-发票查询
         /// </summary>
         /// <param name="req"><see cref="QueryInvoiceRequest"/></param>
@@ -1231,6 +1471,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 跨境-对接方账户余额查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantBalanceRequest"/></param>
+        /// <returns><see cref="QueryMerchantBalanceResponse"/></returns>
+        public async Task<QueryMerchantBalanceResponse> QueryMerchantBalance(QueryMerchantBalanceRequest req)
+        {
+             JsonResponseModel<QueryMerchantBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMerchantBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-对接方账户余额查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantBalanceRequest"/></param>
+        /// <returns><see cref="QueryMerchantBalanceResponse"/></returns>
+        public QueryMerchantBalanceResponse QueryMerchantBalanceSync(QueryMerchantBalanceRequest req)
+        {
+             JsonResponseModel<QueryMerchantBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMerchantBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 智慧零售-查询管理端商户
         /// </summary>
         /// <param name="req"><see cref="QueryMerchantInfoForManagementRequest"/></param>
@@ -1302,6 +1582,86 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryOrder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-查询汇出结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryOutwardOrderRequest"/></param>
+        /// <returns><see cref="QueryOutwardOrderResponse"/></returns>
+        public async Task<QueryOutwardOrderResponse> QueryOutwardOrder(QueryOutwardOrderRequest req)
+        {
+             JsonResponseModel<QueryOutwardOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOutwardOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOutwardOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-查询汇出结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryOutwardOrderRequest"/></param>
+        /// <returns><see cref="QueryOutwardOrderResponse"/></returns>
+        public QueryOutwardOrderResponse QueryOutwardOrderSync(QueryOutwardOrderRequest req)
+        {
+             JsonResponseModel<QueryOutwardOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOutwardOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOutwardOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-付款人查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryPayerInfoRequest"/></param>
+        /// <returns><see cref="QueryPayerInfoResponse"/></returns>
+        public async Task<QueryPayerInfoResponse> QueryPayerInfo(QueryPayerInfoRequest req)
+        {
+             JsonResponseModel<QueryPayerInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryPayerInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryPayerInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-付款人查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryPayerInfoRequest"/></param>
+        /// <returns><see cref="QueryPayerInfoResponse"/></returns>
+        public QueryPayerInfoResponse QueryPayerInfoSync(QueryPayerInfoRequest req)
+        {
+             JsonResponseModel<QueryPayerInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryPayerInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryPayerInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1462,6 +1822,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QuerySmallAmountTransfer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuerySmallAmountTransferResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-贸易材料明细查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryTradeRequest"/></param>
+        /// <returns><see cref="QueryTradeResponse"/></returns>
+        public async Task<QueryTradeResponse> QueryTrade(QueryTradeRequest req)
+        {
+             JsonResponseModel<QueryTradeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryTrade");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryTradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 跨境-贸易材料明细查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryTradeRequest"/></param>
+        /// <returns><see cref="QueryTradeResponse"/></returns>
+        public QueryTradeResponse QueryTradeSync(QueryTradeRequest req)
+        {
+             JsonResponseModel<QueryTradeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryTrade");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryTradeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -38,7 +38,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 人物描述。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 人物标签。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }

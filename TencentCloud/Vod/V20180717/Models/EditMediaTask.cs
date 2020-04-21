@@ -34,7 +34,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 任务流状态，取值：
         /// <li>PROCESSING：处理中；</li>
         /// <li>FINISH：已完成。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -44,14 +43,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>40000：输入参数不合法，请检查输入参数；</li>
         /// <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
         /// <li>70000：内部服务错误，建议重试。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// 错误信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -72,21 +69,18 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
 
         /// <summary>
         /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

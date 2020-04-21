@@ -66,6 +66,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
+        /// <summary>
+        /// 腾讯侧备用互联IP
+        /// </summary>
+        [JsonProperty("TencentBackupAddress")]
+        public string TencentBackupAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
             this.SetParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         }
     }
 }

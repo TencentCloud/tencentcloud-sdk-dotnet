@@ -5441,6 +5441,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewayCcnRoutesRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewayCcnRoutesResponse"/></returns>
+        public async Task<DescribeVpnGatewayCcnRoutesResponse> DescribeVpnGatewayCcnRoutes(DescribeVpnGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpnGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewayCcnRoutesRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewayCcnRoutesResponse"/></returns>
+        public DescribeVpnGatewayCcnRoutesResponse DescribeVpnGatewayCcnRoutesSync(DescribeVpnGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpnGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeVpnGateways）用于查询VPN网关列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewaysRequest"/></param>

@@ -53,6 +53,178 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 申请一个或多个弹性公网IP（简称 EIP）
+        /// </summary>
+        /// <param name="req"><see cref="AllocateAddressesRequest"/></param>
+        /// <returns><see cref="AllocateAddressesResponse"/></returns>
+        public async Task<AllocateAddressesResponse> AllocateAddresses(AllocateAddressesRequest req)
+        {
+             JsonResponseModel<AllocateAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AllocateAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 申请一个或多个弹性公网IP（简称 EIP）
+        /// </summary>
+        /// <param name="req"><see cref="AllocateAddressesRequest"/></param>
+        /// <returns><see cref="AllocateAddressesResponse"/></returns>
+        public AllocateAddressesResponse AllocateAddressesSync(AllocateAddressesRequest req)
+        {
+             JsonResponseModel<AllocateAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AllocateAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡申请内网 IP
+        /// </summary>
+        /// <param name="req"><see cref="AssignPrivateIpAddressesRequest"/></param>
+        /// <returns><see cref="AssignPrivateIpAddressesResponse"/></returns>
+        public async Task<AssignPrivateIpAddressesResponse> AssignPrivateIpAddresses(AssignPrivateIpAddressesRequest req)
+        {
+             JsonResponseModel<AssignPrivateIpAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignPrivateIpAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡申请内网 IP
+        /// </summary>
+        /// <param name="req"><see cref="AssignPrivateIpAddressesRequest"/></param>
+        /// <returns><see cref="AssignPrivateIpAddressesResponse"/></returns>
+        public AssignPrivateIpAddressesResponse AssignPrivateIpAddressesSync(AssignPrivateIpAddressesRequest req)
+        {
+             JsonResponseModel<AssignPrivateIpAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignPrivateIpAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将弹性公网IP（简称 EIP）绑定到实例或弹性网卡的指定内网 IP 上。
+        /// 将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
+        /// 将 EIP 绑定到主网卡的主内网IP上，绑定过程会把其上绑定的普通公网 IP 自动解绑并释放。
+        /// 将 EIP 绑定到指定网卡的内网 IP上（非主网卡的主内网IP），则必须先解绑该 EIP，才能再绑定新的。
+        /// 将 EIP 绑定到NAT网关，请使用接口EipBindNatGateway
+        /// EIP 如果欠费或被封堵，则不能被绑定。
+        /// 只有状态为 UNBIND 的 EIP 才能够被绑定。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateAddressRequest"/></param>
+        /// <returns><see cref="AssociateAddressResponse"/></returns>
+        public async Task<AssociateAddressResponse> AssociateAddress(AssociateAddressRequest req)
+        {
+             JsonResponseModel<AssociateAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将弹性公网IP（简称 EIP）绑定到实例或弹性网卡的指定内网 IP 上。
+        /// 将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
+        /// 将 EIP 绑定到主网卡的主内网IP上，绑定过程会把其上绑定的普通公网 IP 自动解绑并释放。
+        /// 将 EIP 绑定到指定网卡的内网 IP上（非主网卡的主内网IP），则必须先解绑该 EIP，才能再绑定新的。
+        /// 将 EIP 绑定到NAT网关，请使用接口EipBindNatGateway
+        /// EIP 如果欠费或被封堵，则不能被绑定。
+        /// 只有状态为 UNBIND 的 EIP 才能够被绑定。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateAddressRequest"/></param>
+        /// <returns><see cref="AssociateAddressResponse"/></returns>
+        public AssociateAddressResponse AssociateAddressSync(AssociateAddressRequest req)
+        {
+             JsonResponseModel<AssociateAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡绑定云主机
+        /// </summary>
+        /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="AttachNetworkInterfaceResponse"/></returns>
+        public async Task<AttachNetworkInterfaceResponse> AttachNetworkInterface(AttachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<AttachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡绑定云主机
+        /// </summary>
+        /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="AttachNetworkInterfaceResponse"/></returns>
+        public AttachNetworkInterfaceResponse AttachNetworkInterfaceSync(AttachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<AttachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建模块
         /// </summary>
         /// <param name="req"><see cref="CreateModuleRequest"/></param>
@@ -84,6 +256,126 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "CreateModule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateModuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建弹性网卡
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="CreateNetworkInterfaceResponse"/></returns>
+        public async Task<CreateNetworkInterfaceResponse> CreateNetworkInterface(CreateNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<CreateNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建弹性网卡
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="CreateNetworkInterfaceResponse"/></returns>
+        public CreateNetworkInterfaceResponse CreateNetworkInterfaceSync(CreateNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<CreateNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建子网
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubnetRequest"/></param>
+        /// <returns><see cref="CreateSubnetResponse"/></returns>
+        public async Task<CreateSubnetResponse> CreateSubnet(CreateSubnetRequest req)
+        {
+             JsonResponseModel<CreateSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建子网
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubnetRequest"/></param>
+        /// <returns><see cref="CreateSubnetResponse"/></returns>
+        public CreateSubnetResponse CreateSubnetSync(CreateSubnetRequest req)
+        {
+             JsonResponseModel<CreateSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建私有网络
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcRequest"/></param>
+        /// <returns><see cref="CreateVpcResponse"/></returns>
+        public async Task<CreateVpcResponse> CreateVpc(CreateVpcRequest req)
+        {
+             JsonResponseModel<CreateVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建私有网络
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcRequest"/></param>
+        /// <returns><see cref="CreateVpcResponse"/></returns>
+        public CreateVpcResponse CreateVpcSync(CreateVpcRequest req)
+        {
+             JsonResponseModel<CreateVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -164,6 +456,206 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DeleteModule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteModuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除弹性网卡
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="DeleteNetworkInterfaceResponse"/></returns>
+        public async Task<DeleteNetworkInterfaceResponse> DeleteNetworkInterface(DeleteNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<DeleteNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除弹性网卡
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="DeleteNetworkInterfaceResponse"/></returns>
+        public DeleteNetworkInterfaceResponse DeleteNetworkInterfaceSync(DeleteNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<DeleteNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除子网
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubnetRequest"/></param>
+        /// <returns><see cref="DeleteSubnetResponse"/></returns>
+        public async Task<DeleteSubnetResponse> DeleteSubnet(DeleteSubnetRequest req)
+        {
+             JsonResponseModel<DeleteSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除子网
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubnetRequest"/></param>
+        /// <returns><see cref="DeleteSubnetResponse"/></returns>
+        public DeleteSubnetResponse DeleteSubnetSync(DeleteSubnetRequest req)
+        {
+             JsonResponseModel<DeleteSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除私有网络
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcRequest"/></param>
+        /// <returns><see cref="DeleteVpcResponse"/></returns>
+        public async Task<DeleteVpcResponse> DeleteVpc(DeleteVpcRequest req)
+        {
+             JsonResponseModel<DeleteVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除私有网络
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcRequest"/></param>
+        /// <returns><see cref="DeleteVpcResponse"/></returns>
+        public DeleteVpcResponse DeleteVpcSync(DeleteVpcRequest req)
+        {
+             JsonResponseModel<DeleteVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询您账户的弹性公网IP（简称 EIP）在当前地域的配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressQuotaRequest"/></param>
+        /// <returns><see cref="DescribeAddressQuotaResponse"/></returns>
+        public async Task<DescribeAddressQuotaResponse> DescribeAddressQuota(DescribeAddressQuotaRequest req)
+        {
+             JsonResponseModel<DescribeAddressQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddressQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询您账户的弹性公网IP（简称 EIP）在当前地域的配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressQuotaRequest"/></param>
+        /// <returns><see cref="DescribeAddressQuotaResponse"/></returns>
+        public DescribeAddressQuotaResponse DescribeAddressQuotaSync(DescribeAddressQuotaRequest req)
+        {
+             JsonResponseModel<DescribeAddressQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddressQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询弹性公网IP列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressesRequest"/></param>
+        /// <returns><see cref="DescribeAddressesResponse"/></returns>
+        public async Task<DescribeAddressesResponse> DescribeAddresses(DescribeAddressesRequest req)
+        {
+             JsonResponseModel<DescribeAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询弹性公网IP列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddressesRequest"/></param>
+        /// <returns><see cref="DescribeAddressesResponse"/></returns>
+        public DescribeAddressesResponse DescribeAddressesSync(DescribeAddressesRequest req)
+        {
+             JsonResponseModel<DescribeAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddressesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,6 +985,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询弹性网卡列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkInterfacesResponse"/></returns>
+        public async Task<DescribeNetworkInterfacesResponse> DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询弹性网卡列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkInterfacesResponse"/></returns>
+        public DescribeNetworkInterfacesResponse DescribeNetworkInterfacesSync(DescribeNetworkInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNetworkInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNodeRequest"/></param>
@@ -613,6 +1145,170 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询子网列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubnetsRequest"/></param>
+        /// <returns><see cref="DescribeSubnetsResponse"/></returns>
+        public async Task<DescribeSubnetsResponse> DescribeSubnets(DescribeSubnetsRequest req)
+        {
+             JsonResponseModel<DescribeSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询子网列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubnetsRequest"/></param>
+        /// <returns><see cref="DescribeSubnetsResponse"/></returns>
+        public DescribeSubnetsResponse DescribeSubnetsSync(DescribeSubnetsRequest req)
+        {
+             JsonResponseModel<DescribeSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询EIP异步任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public async Task<DescribeTaskResultResponse> DescribeTaskResult(DescribeTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询EIP异步任务执行结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public DescribeTaskResultResponse DescribeTaskResultSync(DescribeTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡解绑云主机
+        /// </summary>
+        /// <param name="req"><see cref="DetachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="DetachNetworkInterfaceResponse"/></returns>
+        public async Task<DetachNetworkInterfaceResponse> DetachNetworkInterface(DetachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<DetachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡解绑云主机
+        /// </summary>
+        /// <param name="req"><see cref="DetachNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="DetachNetworkInterfaceResponse"/></returns>
+        public DetachNetworkInterfaceResponse DetachNetworkInterfaceSync(DetachNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<DetachNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑弹性公网IP（简称 EIP）
+        /// 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
+        /// EIP 如果被封堵，则不能进行解绑定操作。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateAddressRequest"/></param>
+        /// <returns><see cref="DisassociateAddressResponse"/></returns>
+        public async Task<DisassociateAddressResponse> DisassociateAddress(DisassociateAddressRequest req)
+        {
+             JsonResponseModel<DisassociateAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑弹性公网IP（简称 EIP）
+        /// 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
+        /// EIP 如果被封堵，则不能进行解绑定操作。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateAddressRequest"/></param>
+        /// <returns><see cref="DisassociateAddressResponse"/></returns>
+        public DisassociateAddressResponse DisassociateAddressSync(DisassociateAddressRequest req)
+        {
+             JsonResponseModel<DisassociateAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 从CVM产品导入镜像到ECM
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>
@@ -644,6 +1340,170 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ImportImage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡迁移
+        /// </summary>
+        /// <param name="req"><see cref="MigrateNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="MigrateNetworkInterfaceResponse"/></returns>
+        public async Task<MigrateNetworkInterfaceResponse> MigrateNetworkInterface(MigrateNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<MigrateNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MigrateNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡迁移
+        /// </summary>
+        /// <param name="req"><see cref="MigrateNetworkInterfaceRequest"/></param>
+        /// <returns><see cref="MigrateNetworkInterfaceResponse"/></returns>
+        public MigrateNetworkInterfaceResponse MigrateNetworkInterfaceSync(MigrateNetworkInterfaceRequest req)
+        {
+             JsonResponseModel<MigrateNetworkInterfaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MigrateNetworkInterface");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡内网IP迁移。
+        /// 该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
+        /// 迁移前后的弹性网卡必须在同一个子网内。
+        /// </summary>
+        /// <param name="req"><see cref="MigratePrivateIpAddressRequest"/></param>
+        /// <returns><see cref="MigratePrivateIpAddressResponse"/></returns>
+        public async Task<MigratePrivateIpAddressResponse> MigratePrivateIpAddress(MigratePrivateIpAddressRequest req)
+        {
+             JsonResponseModel<MigratePrivateIpAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MigratePrivateIpAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigratePrivateIpAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡内网IP迁移。
+        /// 该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
+        /// 迁移前后的弹性网卡必须在同一个子网内。
+        /// </summary>
+        /// <param name="req"><see cref="MigratePrivateIpAddressRequest"/></param>
+        /// <returns><see cref="MigratePrivateIpAddressResponse"/></returns>
+        public MigratePrivateIpAddressResponse MigratePrivateIpAddressSync(MigratePrivateIpAddressRequest req)
+        {
+             JsonResponseModel<MigratePrivateIpAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MigratePrivateIpAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigratePrivateIpAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改弹性公网IP属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressAttributeRequest"/></param>
+        /// <returns><see cref="ModifyAddressAttributeResponse"/></returns>
+        public async Task<ModifyAddressAttributeResponse> ModifyAddressAttribute(ModifyAddressAttributeRequest req)
+        {
+             JsonResponseModel<ModifyAddressAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAddressAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改弹性公网IP属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressAttributeRequest"/></param>
+        /// <returns><see cref="ModifyAddressAttributeResponse"/></returns>
+        public ModifyAddressAttributeResponse ModifyAddressAttributeSync(ModifyAddressAttributeRequest req)
+        {
+             JsonResponseModel<ModifyAddressAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAddressAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调整弹性公网IP带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyAddressesBandwidthResponse"/></returns>
+        public async Task<ModifyAddressesBandwidthResponse> ModifyAddressesBandwidth(ModifyAddressesBandwidthRequest req)
+        {
+             JsonResponseModel<ModifyAddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调整弹性公网IP带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyAddressesBandwidthResponse"/></returns>
+        public ModifyAddressesBandwidthResponse ModifyAddressesBandwidthSync(ModifyAddressesBandwidthRequest req)
+        {
+             JsonResponseModel<ModifyAddressesBandwidthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAddressesBandwidth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressesBandwidthResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -813,6 +1673,86 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 修改子网属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubnetAttributeRequest"/></param>
+        /// <returns><see cref="ModifySubnetAttributeResponse"/></returns>
+        public async Task<ModifySubnetAttributeResponse> ModifySubnetAttribute(ModifySubnetAttributeRequest req)
+        {
+             JsonResponseModel<ModifySubnetAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubnetAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubnetAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改子网属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubnetAttributeRequest"/></param>
+        /// <returns><see cref="ModifySubnetAttributeResponse"/></returns>
+        public ModifySubnetAttributeResponse ModifySubnetAttributeSync(ModifySubnetAttributeRequest req)
+        {
+             JsonResponseModel<ModifySubnetAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubnetAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubnetAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改私有网络（VPC）的相关属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcAttributeRequest"/></param>
+        /// <returns><see cref="ModifyVpcAttributeResponse"/></returns>
+        public async Task<ModifyVpcAttributeResponse> ModifyVpcAttribute(ModifyVpcAttributeRequest req)
+        {
+             JsonResponseModel<ModifyVpcAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpcAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改私有网络（VPC）的相关属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcAttributeRequest"/></param>
+        /// <returns><see cref="ModifyVpcAttributeResponse"/></returns>
+        public ModifyVpcAttributeResponse ModifyVpcAttributeSync(ModifyVpcAttributeRequest req)
+        {
+             JsonResponseModel<ModifyVpcAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpcAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 只有状态为RUNNING的实例才可以进行此操作；接口调用成功时，实例会进入REBOOTING状态；重启实例成功时，实例会进入RUNNING状态；支持强制重启，强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
         /// </summary>
         /// <param name="req"><see cref="RebootInstancesRequest"/></param>
@@ -844,6 +1784,92 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "RebootInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebootInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 释放一个或多个弹性公网IP（简称 EIP）。
+        /// 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
+        /// 只有状态为 UNBIND 的 EIP 才能进行释放操作。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseAddressesRequest"/></param>
+        /// <returns><see cref="ReleaseAddressesResponse"/></returns>
+        public async Task<ReleaseAddressesResponse> ReleaseAddresses(ReleaseAddressesRequest req)
+        {
+             JsonResponseModel<ReleaseAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 释放一个或多个弹性公网IP（简称 EIP）。
+        /// 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
+        /// 只有状态为 UNBIND 的 EIP 才能进行释放操作。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseAddressesRequest"/></param>
+        /// <returns><see cref="ReleaseAddressesResponse"/></returns>
+        public ReleaseAddressesResponse ReleaseAddressesSync(ReleaseAddressesRequest req)
+        {
+             JsonResponseModel<ReleaseAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡退还内网 IP。
+        /// 退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
+        /// </summary>
+        /// <param name="req"><see cref="RemovePrivateIpAddressesRequest"/></param>
+        /// <returns><see cref="RemovePrivateIpAddressesResponse"/></returns>
+        public async Task<RemovePrivateIpAddressesResponse> RemovePrivateIpAddresses(RemovePrivateIpAddressesRequest req)
+        {
+             JsonResponseModel<RemovePrivateIpAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemovePrivateIpAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemovePrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 弹性网卡退还内网 IP。
+        /// 退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
+        /// </summary>
+        /// <param name="req"><see cref="RemovePrivateIpAddressesRequest"/></param>
+        /// <returns><see cref="RemovePrivateIpAddressesResponse"/></returns>
+        public RemovePrivateIpAddressesResponse RemovePrivateIpAddressesSync(RemovePrivateIpAddressesRequest req)
+        {
+             JsonResponseModel<RemovePrivateIpAddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemovePrivateIpAddresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemovePrivateIpAddressesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -924,6 +1950,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ResetInstancesMaxBandwidth");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetInstancesMaxBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建ECM实例
+        /// </summary>
+        /// <param name="req"><see cref="RunInstancesRequest"/></param>
+        /// <returns><see cref="RunInstancesResponse"/></returns>
+        public async Task<RunInstancesResponse> RunInstances(RunInstancesRequest req)
+        {
+             JsonResponseModel<RunInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RunInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建ECM实例
+        /// </summary>
+        /// <param name="req"><see cref="RunInstancesRequest"/></param>
+        /// <returns><see cref="RunInstancesResponse"/></returns>
+        public RunInstancesResponse RunInstancesSync(RunInstancesRequest req)
+        {
+             JsonResponseModel<RunInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RunInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

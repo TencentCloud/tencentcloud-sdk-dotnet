@@ -38,7 +38,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 小程序审核视频播放地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -53,7 +52,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 小程序审核元素。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReviewSummary")]
         public MediaMiniProgramReviewElem[] ReviewSummary{ get; set; }

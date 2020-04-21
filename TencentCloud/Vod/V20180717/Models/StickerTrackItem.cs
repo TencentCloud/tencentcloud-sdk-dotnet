@@ -91,7 +91,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 对贴图进行的操作，如图像旋转等。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageOperations")]
         public ImageTransform[] ImageOperations{ get; set; }

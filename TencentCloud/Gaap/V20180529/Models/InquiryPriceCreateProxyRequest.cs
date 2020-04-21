@@ -60,6 +60,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Concurrent")]
         public long? Concurrent{ get; set; }
 
+        /// <summary>
+        /// 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+        /// </summary>
+        [JsonProperty("BillingType")]
+        public long? BillingType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Concurrency", this.Concurrency);
             this.SetParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
             this.SetParamSimple(map, prefix + "Concurrent", this.Concurrent);
+            this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
         }
     }
 }

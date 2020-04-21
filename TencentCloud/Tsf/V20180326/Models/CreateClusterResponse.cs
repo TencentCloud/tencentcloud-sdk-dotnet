@@ -25,9 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 创建集群操作是否成功。
-        /// true：操作成功。
-        /// false：操作失败。
+        /// 集群ID
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

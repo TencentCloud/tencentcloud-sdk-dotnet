@@ -26,7 +26,6 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 转自适应码流信息数组。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingSet")]
         public AdaptiveDynamicStreamingInfoItem[] AdaptiveDynamicStreamingSet{ get; set; }

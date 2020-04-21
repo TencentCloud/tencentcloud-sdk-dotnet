@@ -493,6 +493,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 创建触发器
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebhookTriggerRequest"/></param>
+        /// <returns><see cref="CreateWebhookTriggerResponse"/></returns>
+        public async Task<CreateWebhookTriggerResponse> CreateWebhookTrigger(CreateWebhookTriggerRequest req)
+        {
+             JsonResponseModel<CreateWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建触发器
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebhookTriggerRequest"/></param>
+        /// <returns><see cref="CreateWebhookTriggerResponse"/></returns>
+        public CreateWebhookTriggerResponse CreateWebhookTriggerSync(CreateWebhookTriggerRequest req)
+        {
+             JsonResponseModel<CreateWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于删除应用更新触发器
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationTriggerPersonalRequest"/></param>
@@ -853,6 +893,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 删除触发器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebhookTriggerRequest"/></param>
+        /// <returns><see cref="DeleteWebhookTriggerResponse"/></returns>
+        public async Task<DeleteWebhookTriggerResponse> DeleteWebhookTrigger(DeleteWebhookTriggerRequest req)
+        {
+             JsonResponseModel<DeleteWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除触发器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebhookTriggerRequest"/></param>
+        /// <returns><see cref="DeleteWebhookTriggerResponse"/></returns>
+        public DeleteWebhookTriggerResponse DeleteWebhookTriggerSync(DeleteWebhookTriggerRequest req)
+        {
+             JsonResponseModel<DeleteWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询应用更新触发器触发日志
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationTriggerLogPersonalRequest"/></param>
@@ -1084,6 +1164,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImageLifecyclePersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageLifecyclePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器镜像Manifest信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageManifestsRequest"/></param>
+        /// <returns><see cref="DescribeImageManifestsResponse"/></returns>
+        public async Task<DescribeImageManifestsResponse> DescribeImageManifests(DescribeImageManifestsRequest req)
+        {
+             JsonResponseModel<DescribeImageManifestsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageManifests");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageManifestsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器镜像Manifest信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageManifestsRequest"/></param>
+        /// <returns><see cref="DescribeImageManifestsResponse"/></returns>
+        public DescribeImageManifestsResponse DescribeImageManifestsSync(DescribeImageManifestsRequest req)
+        {
+             JsonResponseModel<DescribeImageManifestsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageManifests");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageManifestsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1573,6 +1693,86 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 查询触发器
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebhookTriggerRequest"/></param>
+        /// <returns><see cref="DescribeWebhookTriggerResponse"/></returns>
+        public async Task<DescribeWebhookTriggerResponse> DescribeWebhookTrigger(DescribeWebhookTriggerRequest req)
+        {
+             JsonResponseModel<DescribeWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询触发器
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebhookTriggerRequest"/></param>
+        /// <returns><see cref="DescribeWebhookTriggerResponse"/></returns>
+        public DescribeWebhookTriggerResponse DescribeWebhookTriggerSync(DescribeWebhookTriggerRequest req)
+        {
+             JsonResponseModel<DescribeWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取触发器日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebhookTriggerLogRequest"/></param>
+        /// <returns><see cref="DescribeWebhookTriggerLogResponse"/></returns>
+        public async Task<DescribeWebhookTriggerLogResponse> DescribeWebhookTriggerLog(DescribeWebhookTriggerLogRequest req)
+        {
+             JsonResponseModel<DescribeWebhookTriggerLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebhookTriggerLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebhookTriggerLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取触发器日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebhookTriggerLogRequest"/></param>
+        /// <returns><see cref="DescribeWebhookTriggerLogResponse"/></returns>
+        public DescribeWebhookTriggerLogResponse DescribeWebhookTriggerLogSync(DescribeWebhookTriggerLogRequest req)
+        {
+             JsonResponseModel<DescribeWebhookTriggerLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebhookTriggerLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebhookTriggerLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于在个人版镜像仓库中复制镜像版本
         /// </summary>
         /// <param name="req"><see cref="DuplicateImagePersonalRequest"/></param>
@@ -1924,6 +2124,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "ModifyUserPasswordPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserPasswordPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebhookTriggerRequest"/></param>
+        /// <returns><see cref="ModifyWebhookTriggerResponse"/></returns>
+        public async Task<ModifyWebhookTriggerResponse> ModifyWebhookTrigger(ModifyWebhookTriggerRequest req)
+        {
+             JsonResponseModel<ModifyWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWebhookTriggerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新触发器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebhookTriggerRequest"/></param>
+        /// <returns><see cref="ModifyWebhookTriggerResponse"/></returns>
+        public ModifyWebhookTriggerResponse ModifyWebhookTriggerSync(ModifyWebhookTriggerRequest req)
+        {
+             JsonResponseModel<ModifyWebhookTriggerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWebhookTrigger");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWebhookTriggerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

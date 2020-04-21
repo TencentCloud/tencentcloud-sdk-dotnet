@@ -93,6 +93,12 @@ namespace TencentCloud.Iai.V20180301.Models
         [JsonProperty("NeedPersonInfo")]
         public long? NeedPersonInfo{ get; set; }
 
+        /// <summary>
+        /// 是否开启图片旋转识别支持。0为不开启，1为开启。默认为0。本参数的作用为，当图片中的人脸被旋转且图片没有exif信息时，如果不开启图片旋转识别支持则无法正确检测、识别图片中的人脸。若您确认图片包含exif信息或者您确认输入图中人脸不会出现被旋转情况，请不要开启本参数。开启后，整体耗时将可能增加数百毫秒。
+        /// </summary>
+        [JsonProperty("NeedRotateDetection")]
+        public ulong? NeedRotateDetection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Iai.V20180301.Models
             this.SetParamSimple(map, prefix + "QualityControl", this.QualityControl);
             this.SetParamSimple(map, prefix + "FaceMatchThreshold", this.FaceMatchThreshold);
             this.SetParamSimple(map, prefix + "NeedPersonInfo", this.NeedPersonInfo);
+            this.SetParamSimple(map, prefix + "NeedRotateDetection", this.NeedRotateDetection);
         }
     }
 }

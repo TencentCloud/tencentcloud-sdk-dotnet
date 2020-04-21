@@ -32,6 +32,7 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 通道带宽费用梯度价格。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BandwidthUnitPrice")]
         public BandwidthPriceGradient[] BandwidthUnitPrice{ get; set; }
@@ -49,6 +50,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Currency{ get; set; }
 
         /// <summary>
+        /// 通道的流量费用价格，单位: 元/GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlowUnitPrice")]
+        public float? FlowUnitPrice{ get; set; }
+
+        /// <summary>
+        /// 通道的流量费用折扣价格，单位:元/GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountFlowUnitPrice")]
+        public float? DiscountFlowUnitPrice{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +79,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "BandwidthUnitPrice.", this.BandwidthUnitPrice);
             this.SetParamSimple(map, prefix + "DiscountProxyDailyPrice", this.DiscountProxyDailyPrice);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamSimple(map, prefix + "FlowUnitPrice", this.FlowUnitPrice);
+            this.SetParamSimple(map, prefix + "DiscountFlowUnitPrice", this.DiscountFlowUnitPrice);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

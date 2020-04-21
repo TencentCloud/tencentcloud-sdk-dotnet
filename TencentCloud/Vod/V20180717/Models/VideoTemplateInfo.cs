@@ -53,7 +53,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
         /// <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
         /// 默认值：open。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
@@ -65,7 +64,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
         /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
         /// 默认值：0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
@@ -77,7 +75,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
         /// <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
         /// 默认值：0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
@@ -87,7 +84,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
         /// <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
         /// 默认值：black 。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

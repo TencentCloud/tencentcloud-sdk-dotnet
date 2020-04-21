@@ -44,7 +44,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 对音频片段进行的操作，如音量调节等。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioOperations")]
         public AudioTransform[] AudioOperations{ get; set; }

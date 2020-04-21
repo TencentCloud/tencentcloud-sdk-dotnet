@@ -32,7 +32,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Transitions")]
         public TransitionOpertion[] Transitions{ get; set; }

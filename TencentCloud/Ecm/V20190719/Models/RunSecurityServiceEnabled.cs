@@ -31,7 +31,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 云镜版本：0 基础版，1 专业版
+        /// 云镜版本：0 基础版，1 专业版。目前仅支持基础版
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }

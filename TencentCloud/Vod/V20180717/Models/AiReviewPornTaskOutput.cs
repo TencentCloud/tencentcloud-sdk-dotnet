@@ -36,7 +36,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
@@ -47,14 +46,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>sexy：性感。</li>
         /// <li>vulgar：低俗。</li>
         /// <li>intimacy：亲密行为。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 有涉黄嫌疑的视频片段列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewSegmentItem[] SegmentSet{ get; set; }

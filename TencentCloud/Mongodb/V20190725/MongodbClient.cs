@@ -213,7 +213,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。目前只支持3.2版本的MongoDB实例。
+        /// 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
         /// <returns><see cref="DescribeClientConnectionsResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。目前只支持3.2版本的MongoDB实例。
+        /// 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
         /// <returns><see cref="DescribeClientConnectionsResponse"/></returns>
@@ -324,6 +324,86 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogPatternsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogPatternsResponse"/></returns>
+        public async Task<DescribeSlowLogPatternsResponse> DescribeSlowLogPatterns(DescribeSlowLogPatternsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogPatternsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogPatterns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogPatternsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogPatternsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogPatternsResponse"/></returns>
+        public DescribeSlowLogPatternsResponse DescribeSlowLogPatternsSync(DescribeSlowLogPatternsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogPatternsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogPatterns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogPatternsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSlowLogs）用于获取云数据库慢日志信息。接口只支持查询最近7天内慢日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public async Task<DescribeSlowLogsResponse> DescribeSlowLogs(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSlowLogs）用于获取云数据库慢日志信息。接口只支持查询最近7天内慢日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public DescribeSlowLogsResponse DescribeSlowLogsSync(DescribeSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -524,6 +604,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "RenameInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenameInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
+        /// </summary>
+        /// <param name="req"><see cref="RenewDBInstancesRequest"/></param>
+        /// <returns><see cref="RenewDBInstancesResponse"/></returns>
+        public async Task<RenewDBInstancesResponse> RenewDBInstances(RenewDBInstancesRequest req)
+        {
+             JsonResponseModel<RenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
+        /// </summary>
+        /// <param name="req"><see cref="RenewDBInstancesRequest"/></param>
+        /// <returns><see cref="RenewDBInstancesResponse"/></returns>
+        public RenewDBInstancesResponse RenewDBInstancesSync(RenewDBInstancesRequest req)
+        {
+             JsonResponseModel<RenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
