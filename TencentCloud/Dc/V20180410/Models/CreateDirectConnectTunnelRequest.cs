@@ -117,6 +117,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("CustomerAddress")]
         public string CustomerAddress{ get; set; }
 
+        /// <summary>
+        /// TencentBackupAddress，腾讯侧备用互联 IP
+        /// </summary>
+        [JsonProperty("TencentBackupAddress")]
+        public string TencentBackupAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +143,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "Vlan", this.Vlan);
             this.SetParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
             this.SetParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
+            this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         }
     }
 }

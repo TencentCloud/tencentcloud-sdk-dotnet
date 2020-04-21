@@ -7685,6 +7685,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewayCcnRoutesRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewayCcnRoutesResponse"/></returns>
+        public async Task<ModifyVpnGatewayCcnRoutesResponse> ModifyVpnGatewayCcnRoutes(ModifyVpnGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpnGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpnGatewayCcnRoutesRequest"/></param>
+        /// <returns><see cref="ModifyVpnGatewayCcnRoutesResponse"/></returns>
+        public ModifyVpnGatewayCcnRoutesResponse ModifyVpnGatewayCcnRoutesSync(ModifyVpnGatewayCcnRoutesRequest req)
+        {
+             JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpnGatewayCcnRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（RejectAttachCcnInstances）用于跨账号关联实例时，云联网所有者拒绝关联操作。
         /// </summary>
         /// <param name="req"><see cref="RejectAttachCcnInstancesRequest"/></param>

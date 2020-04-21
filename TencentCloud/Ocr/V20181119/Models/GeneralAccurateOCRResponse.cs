@@ -31,6 +31,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public TextDetection[] TextDetections{ get; set; }
 
         /// <summary>
+        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+        /// </summary>
+        [JsonProperty("Angel")]
+        public float? Angel{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
+            this.SetParamSimple(map, prefix + "Angel", this.Angel);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

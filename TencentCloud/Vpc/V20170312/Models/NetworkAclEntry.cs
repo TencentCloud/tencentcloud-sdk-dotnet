@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// 协议, 取值: TCP,UDP, ICMP。
+        /// 协议, 取值: TCP,UDP, ICMP, ALL。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 端口(all, 单个port,  range)。
+        /// 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }

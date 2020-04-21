@@ -15,38 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AudioModerationRequest : AbstractModel
+    public class VpngwCcnRoutes : AbstractModel
     {
         
         /// <summary>
-        /// 回调URL，音频识别结果将以POST请求方式发送到此地址
+        /// 路由信息ID
         /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
+        [JsonProperty("RouteId")]
+        public string RouteId{ get; set; }
 
         /// <summary>
-        /// 音频内容的base64
+        /// 路由信息是否启用
+        /// ENABLE：启用该路由
+        /// DISABLE：不启用该路由
         /// </summary>
-        [JsonProperty("FileContent")]
-        public string FileContent{ get; set; }
-
-        /// <summary>
-        /// 音频文件的MD5值
-        /// </summary>
-        [JsonProperty("FileMD5")]
-        public string FileMD5{ get; set; }
-
-        /// <summary>
-        /// 音频内容Url ，其中FileUrl和FileContent二选一
-        /// </summary>
-        [JsonProperty("FileUrl")]
-        public string FileUrl{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
-            this.SetParamSimple(map, prefix + "FileContent", this.FileContent);
-            this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);
-            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

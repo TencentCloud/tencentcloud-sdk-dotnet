@@ -733,6 +733,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 查询mfa设备
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMFADeviceCollRequest"/></param>
+        /// <returns><see cref="DescribeMFADeviceCollResponse"/></returns>
+        public async Task<DescribeMFADeviceCollResponse> DescribeMFADeviceColl(DescribeMFADeviceCollRequest req)
+        {
+             JsonResponseModel<DescribeMFADeviceCollResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMFADeviceColl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMFADeviceCollResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询mfa设备
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMFADeviceCollRequest"/></param>
+        /// <returns><see cref="DescribeMFADeviceCollResponse"/></returns>
+        public DescribeMFADeviceCollResponse DescribeMFADeviceCollSync(DescribeMFADeviceCollRequest req)
+        {
+             JsonResponseModel<DescribeMFADeviceCollResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMFADeviceColl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMFADeviceCollResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询微信code状态
         /// </summary>
         /// <param name="req"><see cref="DescribeMfaCodeStatusRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.47</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -967,6 +967,8 @@
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeMFADeviceCollRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeMFADeviceCollResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeMfaCodeStatusRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeMfaCodeStatusResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
@@ -8165,6 +8167,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyVpnConnectionAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayCcnRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayCcnRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayAddress.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
@@ -8248,6 +8252,7 @@
     <Compile Include="Vpc\V20170312\Models\VpnConnection.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGatewayQuota.cs" />
+    <Compile Include="Vpc\V20170312\Models\VpngwCcnRoutes.cs" />
     <Compile Include="Wss\V20180426\WssClient.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertRequest.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertResponse.cs" />
@@ -8587,11 +8592,6 @@
     <Compile Include="Yunjing\V20180228\Models\WeeklyReportMalware.cs" />
     <Compile Include="Yunjing\V20180228\Models\WeeklyReportNonlocalLoginPlace.cs" />
     <Compile Include="Yunjing\V20180228\Models\WeeklyReportVul.cs" />
-    <Compile Include="Yunsou\V20180504\YunsouClient.cs" />
-    <Compile Include="Yunsou\V20180504\Models\DataManipulationRequest.cs" />
-    <Compile Include="Yunsou\V20180504\Models\DataManipulationResponse.cs" />
-    <Compile Include="Yunsou\V20180504\Models\DataSearchRequest.cs" />
-    <Compile Include="Yunsou\V20180504\Models\DataSearchResponse.cs" />
     <Compile Include="Yunsou\V20191115\YunsouClient.cs" />
     <Compile Include="Yunsou\V20191115\Models\DataManipulationRequest.cs" />
     <Compile Include="Yunsou\V20191115\Models\DataManipulationResponse.cs" />
@@ -8602,5 +8602,10 @@
     <Compile Include="Yunsou\V20191115\Models\SearchResult.cs" />
     <Compile Include="Yunsou\V20191115\Models\SearchResultItem.cs" />
     <Compile Include="Yunsou\V20191115\Models\SearchResultSeg.cs" />
+    <Compile Include="Yunsou\V20180504\YunsouClient.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataManipulationRequest.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataManipulationResponse.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataSearchRequest.cs" />
+    <Compile Include="Yunsou\V20180504\Models\DataSearchResponse.cs" />
   </ItemGroup>
 </Project>

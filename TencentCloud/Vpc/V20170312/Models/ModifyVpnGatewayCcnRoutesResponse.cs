@@ -15,28 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AudioModerationResponse : AbstractModel
+    public class ModifyVpnGatewayCcnRoutesResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 业务返回码 
-        /// 60001：成功请求回调任务
-        /// </summary>
-        [JsonProperty("BusinessCode")]
-        public long? BusinessCode{ get; set; }
-
-        /// <summary>
-        /// 识别返回结果
-        /// </summary>
-        [JsonProperty("Data")]
-        public string[] Data{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -49,8 +36,6 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
-            this.SetParamArraySimple(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SensitiveWordsRecognitionResponse : AbstractModel
+    public class ModifyVpnGatewayCcnRoutesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 敏感词数组
+        /// VPN网关实例ID
         /// </summary>
-        [JsonProperty("SensitiveWords")]
-        public string[] SensitiveWords{ get; set; }
+        [JsonProperty("VpnGatewayId")]
+        public string VpnGatewayId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 云联网路由（IDC网段）列表
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Routes")]
+        public VpngwCcnRoutes[] Routes{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SensitiveWords.", this.SensitiveWords);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
+            this.SetParamArrayObj(map, prefix + "Routes.", this.Routes);
         }
     }
 }
