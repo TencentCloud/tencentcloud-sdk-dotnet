@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 总流量，单位：MB。
+        /// 总流量，单位: MB。
         /// </summary>
         [JsonProperty("TotalFlux")]
         public float? TotalFlux{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? TotalRequest{ get; set; }
 
         /// <summary>
-        /// 平均下载流量，单位：MB/s
+        /// 平均下载流量，单位: MB/s。
         /// </summary>
         [JsonProperty("AvgFluxPerSecond")]
         public float? AvgFluxPerSecond{ get; set; }

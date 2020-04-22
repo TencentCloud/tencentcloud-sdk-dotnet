@@ -293,6 +293,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口（DescribeDBInstanceDeal）用于获取MongoDB购买、续费及变配订单详细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDealRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDealResponse"/></returns>
+        public async Task<DescribeDBInstanceDealResponse> DescribeDBInstanceDeal(DescribeDBInstanceDealRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDealResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceDeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceDeal）用于获取MongoDB购买、续费及变配订单详细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDealRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDealResponse"/></returns>
+        public DescribeDBInstanceDealResponse DescribeDBInstanceDealSync(DescribeDBInstanceDealRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceDealResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceDeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceDealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
@@ -444,6 +484,126 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSpecInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDBInstancesResponse"/></returns>
+        public async Task<InquirePriceCreateDBInstancesResponse> InquirePriceCreateDBInstances(InquirePriceCreateDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDBInstancesResponse"/></returns>
+        public InquirePriceCreateDBInstancesResponse InquirePriceCreateDBInstancesSync(InquirePriceCreateDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquirePriceModifyDBInstanceSpec) 用于调整实例的配置询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>
+        public async Task<InquirePriceModifyDBInstanceSpecResponse> InquirePriceModifyDBInstanceSpec(InquirePriceModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquirePriceModifyDBInstanceSpec) 用于调整实例的配置询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDBInstanceSpecResponse"/></returns>
+        public InquirePriceModifyDBInstanceSpecResponse InquirePriceModifyDBInstanceSpecSync(InquirePriceModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquiryPriceRenewDBInstances) 用于续费包年包月实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDBInstancesResponse"/></returns>
+        public async Task<InquirePriceRenewDBInstancesResponse> InquirePriceRenewDBInstances(InquirePriceRenewDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquiryPriceRenewDBInstances) 用于续费包年包月实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDBInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDBInstancesResponse"/></returns>
+        public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstancesSync(InquirePriceRenewDBInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDBInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

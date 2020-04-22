@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 总流量（单位MB）。
+        /// 总流量，单位: MB。
         /// </summary>
         [JsonProperty("TotalFlux")]
         public float? TotalFlux{ get; set; }

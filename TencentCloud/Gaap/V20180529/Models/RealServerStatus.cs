@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerId{ get; set; }
 
         /// <summary>
-        /// 0: 未被绑定 1：被规则或者监听器绑定。
+        /// 0表示未被绑定 1表示被规则或者监听器绑定。
         /// </summary>
         [JsonProperty("BindStatus")]
         public long? BindStatus{ get; set; }

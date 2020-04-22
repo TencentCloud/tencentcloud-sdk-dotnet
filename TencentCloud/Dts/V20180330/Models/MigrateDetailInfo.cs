@@ -37,13 +37,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public long? StepNow{ get; set; }
 
         /// <summary>
-        /// 总进度,如：
+        /// 总进度,如："10"
         /// </summary>
         [JsonProperty("Progress")]
         public string Progress{ get; set; }
 
         /// <summary>
-        /// 当前步骤进度,如:
+        /// 当前步骤进度,如:"1"
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
         public string CurrentStepProgress{ get; set; }

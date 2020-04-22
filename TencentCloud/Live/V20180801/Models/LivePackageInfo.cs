@@ -25,14 +25,14 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 包ID。
+        /// 包 ID。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// 总量。
-        /// 注意：当为流量包时单位为字节；
+        /// 注意：当为流量包时单位为字节。
         /// 当为转码包时单位为分钟。
         /// </summary>
         [JsonProperty("Total")]
@@ -40,7 +40,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 使用量。
-        /// 注意：当为流量包时单位为字节；
+        /// 注意：当为流量包时单位为字节。
         /// 当为转码包时单位为分钟。
         /// </summary>
         [JsonProperty("Used")]
@@ -48,7 +48,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 剩余量。
-        /// 注意：当为流量包时单位为字节；
+        /// 注意：当为流量包时单位为字节。
         /// 当为转码包时单位为分钟。
         /// </summary>
         [JsonProperty("Left")]
@@ -67,19 +67,19 @@ namespace TencentCloud.Live.V20180801.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 包类型，可选值：
-        /// 0：流量包；
-        /// 1：普通转码包；
-        /// 2：极速高清包。
+        /// 包类型，可选值:
+        /// 0: 流量包。
+        /// 1: 普通转码包。
+        /// 2: 极速高清包。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 包状态，可选值：
-        /// 0：未使用；
-        /// 1：使用中；
-        /// 2：已过期。
+        /// 包状态，可选值:
+        /// 0: 未使用。
+        /// 1: 使用中。
+        /// 2: 已过期。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 推流时间
+        /// 推流时间。
         /// UTC 格式，例如：2018-06-29T19:00:00Z。
         /// </summary>
         [JsonProperty("PublishTime")]

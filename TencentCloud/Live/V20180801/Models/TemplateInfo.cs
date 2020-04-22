@@ -32,57 +32,56 @@ namespace TencentCloud.Live.V20180801.Models
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// 视频码率。100-8000kbps
+        /// 视频码率，取值范围：100kbps - 8000kbps。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 音频编码：aac/mp3
-        /// aac/mp3。
+        /// 音频编码，可选 aac 或 mp3。
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// 音频码率。0-500
+        /// 音频码率。取值范围：0kbps - 500kbps。
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// 宽。0-3000
+        /// 宽，取值范围：0-3000。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 高。0-3000
+        /// 高，取值范围：0-3000。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 帧率。0-200
+        /// 帧率。取值范围：0fps - 200fps。
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 关键帧间隔，单位：秒。1-50
+        /// 关键帧间隔，取值范围：1秒 - 50秒。
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// 旋转角度。0 90 180 270
+        /// 旋转角度。可选择：0 90 180 270。
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
 
         /// <summary>
-        /// 编码质量：
-        /// baseline/main/high。
+        /// 编码质量，可选择：
+        /// baseline，main，high。
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
@@ -118,31 +117,31 @@ namespace TencentCloud.Live.V20180801.Models
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 模板名称
+        /// 模板名称。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 模板描述
+        /// 模板描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 是否是急速高清模板，0：否，1：是。默认0。
+        /// 是否是极速高清模板，0：否，1：是。默认0。
         /// </summary>
         [JsonProperty("AiTransCode")]
         public long? AiTransCode{ get; set; }
 
         /// <summary>
-        /// 急速高清相比VideoBitrate少多少码率，0.1到0.5
+        /// 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }

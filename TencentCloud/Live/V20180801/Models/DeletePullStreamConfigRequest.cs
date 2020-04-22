@@ -25,7 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 配置id。
+        /// 配置 ID。
+        /// 1. 在添加拉流配置接口 [CreatePullStreamConfig](/document/api/267/30159) 调用返回值中获取配置 ID。
+        /// 2. 可以从接口 [DescribePullStreamConfigs](/document/api/267/30158) 中查询已创建过的拉流配置列表。
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

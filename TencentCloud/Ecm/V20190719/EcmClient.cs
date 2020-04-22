@@ -1225,6 +1225,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询私有网络列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcsRequest"/></param>
+        /// <returns><see cref="DescribeVpcsResponse"/></returns>
+        public async Task<DescribeVpcsResponse> DescribeVpcs(DescribeVpcsRequest req)
+        {
+             JsonResponseModel<DescribeVpcsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询私有网络列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcsRequest"/></param>
+        /// <returns><see cref="DescribeVpcsResponse"/></returns>
+        public DescribeVpcsResponse DescribeVpcsSync(DescribeVpcsRequest req)
+        {
+             JsonResponseModel<DescribeVpcsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 弹性网卡解绑云主机
         /// </summary>
         /// <param name="req"><see cref="DetachNetworkInterfaceRequest"/></param>

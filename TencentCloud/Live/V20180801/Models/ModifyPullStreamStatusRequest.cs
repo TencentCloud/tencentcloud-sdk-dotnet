@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 配置id列表。
+        /// 配置 ID 列表。
         /// </summary>
         [JsonProperty("ConfigIds")]
         public string[] ConfigIds{ get; set; }

@@ -31,13 +31,15 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 是否启用，0：关闭，1：启用。
+        /// 是否启用:
+        /// 0: 关闭。
+        /// 1: 启用。
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 鉴权key。
+        /// 鉴权 Key。
         /// </summary>
         [JsonProperty("AuthKey")]
         public string AuthKey{ get; set; }
@@ -49,7 +51,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AuthDelta{ get; set; }
 
         /// <summary>
-        /// 鉴权BackKey。
+        /// 鉴权 BackKey。
         /// </summary>
         [JsonProperty("AuthBackKey")]
         public string AuthBackKey{ get; set; }

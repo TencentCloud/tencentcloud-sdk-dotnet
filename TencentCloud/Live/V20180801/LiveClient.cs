@@ -343,7 +343,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板id绑定到域名/路径使用。
+        /// 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
         /// <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveCallbackTemplateRequest"/></param>
@@ -364,7 +364,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板id绑定到域名/路径使用。
+        /// 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
         /// <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveCallbackTemplateRequest"/></param>
@@ -577,8 +577,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板id绑定到流进行使用。
+        /// 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板 ID 绑定到流进行使用。
         /// <br>截图相关文档：[直播截图](/document/product/267/32737)。
+        /// 注意：单个域名仅支持关联一个截图模板。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotRuleRequest"/></param>
         /// <returns><see cref="CreateLiveSnapshotRuleResponse"/></returns>
@@ -598,8 +599,9 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板id绑定到流进行使用。
+        /// 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板 ID 绑定到流进行使用。
         /// <br>截图相关文档：[直播截图](/document/product/267/32737)。
+        /// 注意：单个域名仅支持关联一个截图模板。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotRuleRequest"/></param>
         /// <returns><see cref="CreateLiveSnapshotRuleResponse"/></returns>
@@ -833,7 +835,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除回调规则
+        /// 删除回调规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveCallbackRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveCallbackRuleResponse"/></returns>
@@ -853,7 +855,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除回调规则
+        /// 删除回调规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveCallbackRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveCallbackRuleResponse"/></returns>
@@ -873,7 +875,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除回调模板
+        /// 删除回调模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="DeleteLiveCallbackTemplateResponse"/></returns>
@@ -893,7 +895,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除回调模板
+        /// 删除回调模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="DeleteLiveCallbackTemplateResponse"/></returns>
@@ -1033,7 +1035,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除录制规则
+        /// 删除录制规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveRecordRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveRecordRuleResponse"/></returns>
@@ -1053,7 +1055,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除录制规则
+        /// 删除录制规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveRecordRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveRecordRuleResponse"/></returns>
@@ -1073,7 +1075,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除录制模板
+        /// 删除录制模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="DeleteLiveRecordTemplateResponse"/></returns>
@@ -1093,7 +1095,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除录制模板
+        /// 删除录制模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="DeleteLiveRecordTemplateResponse"/></returns>
@@ -1113,7 +1115,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除截图规则
+        /// 删除截图规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveSnapshotRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveSnapshotRuleResponse"/></returns>
@@ -1133,7 +1135,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除截图规则
+        /// 删除截图规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveSnapshotRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveSnapshotRuleResponse"/></returns>
@@ -1273,7 +1275,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除水印
+        /// 删除水印。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveWatermarkRequest"/></param>
         /// <returns><see cref="DeleteLiveWatermarkResponse"/></returns>
@@ -1293,7 +1295,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除水印
+        /// 删除水印。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveWatermarkRequest"/></param>
         /// <returns><see cref="DeleteLiveWatermarkResponse"/></returns>
@@ -1353,7 +1355,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除直播拉流配置
+        /// 删除直播拉流配置。
         /// </summary>
         /// <param name="req"><see cref="DeletePullStreamConfigRequest"/></param>
         /// <returns><see cref="DeletePullStreamConfigResponse"/></returns>
@@ -1373,7 +1375,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除直播拉流配置
+        /// 删除直播拉流配置。
         /// </summary>
         /// <param name="req"><see cref="DeletePullStreamConfigRequest"/></param>
         /// <returns><see cref="DeletePullStreamConfigResponse"/></returns>
@@ -1595,7 +1597,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个回调模板
+        /// 获取单个回调模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveCallbackTemplateResponse"/></returns>
@@ -1615,7 +1617,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个回调模板
+        /// 获取单个回调模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveCallbackTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveCallbackTemplateResponse"/></returns>
@@ -1955,7 +1957,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取禁推流列表
+        /// 获取禁推流列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
         /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
@@ -1975,7 +1977,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取禁推流列表
+        /// 获取禁推流列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
         /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
@@ -2155,7 +2157,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个录制模板
+        /// 获取单个录制模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveRecordTemplateResponse"/></returns>
@@ -2175,7 +2177,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个录制模板
+        /// 获取单个录制模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveRecordTemplateResponse"/></returns>
@@ -2195,7 +2197,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取录制模板列表
+        /// 获取录制模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveRecordTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveRecordTemplatesResponse"/></returns>
@@ -2215,7 +2217,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取录制模板列表
+        /// 获取录制模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveRecordTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveRecordTemplatesResponse"/></returns>
@@ -2275,7 +2277,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个截图模板
+        /// 获取单个截图模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveSnapshotTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveSnapshotTemplateResponse"/></returns>
@@ -2295,7 +2297,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个截图模板
+        /// 获取单个截图模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveSnapshotTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveSnapshotTemplateResponse"/></returns>
@@ -2315,7 +2317,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取截图模板列表
+        /// 获取截图模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveSnapshotTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveSnapshotTemplatesResponse"/></returns>
@@ -2335,7 +2337,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取截图模板列表
+        /// 获取截图模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveSnapshotTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveSnapshotTemplatesResponse"/></returns>
@@ -2399,7 +2401,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 返回正在直播中的流列表
+        /// 返回正在直播中的流列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>
@@ -2419,7 +2421,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 返回正在直播中的流列表
+        /// 返回正在直播中的流列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>
@@ -2721,7 +2723,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个水印信息
+        /// 获取单个水印信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarkRequest"/></param>
         /// <returns><see cref="DescribeLiveWatermarkResponse"/></returns>
@@ -2741,7 +2743,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个水印信息
+        /// 获取单个水印信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarkRequest"/></param>
         /// <returns><see cref="DescribeLiveWatermarkResponse"/></returns>
@@ -2761,7 +2763,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取水印规则列表
+        /// 获取水印规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarkRulesRequest"/></param>
         /// <returns><see cref="DescribeLiveWatermarkRulesResponse"/></returns>
@@ -2781,7 +2783,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取水印规则列表
+        /// 获取水印规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarkRulesRequest"/></param>
         /// <returns><see cref="DescribeLiveWatermarkRulesResponse"/></returns>
@@ -2801,7 +2803,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 查询水印列表
+        /// 查询水印列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarksRequest"/></param>
         /// <returns><see cref="DescribeLiveWatermarksResponse"/></returns>
@@ -2821,7 +2823,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 查询水印列表
+        /// 查询水印列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarksRequest"/></param>
         /// <returns><see cref="DescribeLiveWatermarksResponse"/></returns>
@@ -3725,7 +3727,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改录制模板配置
+        /// 修改录制模板配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveRecordTemplateResponse"/></returns>
@@ -3745,7 +3747,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改录制模板配置
+        /// 修改录制模板配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveRecordTemplateResponse"/></returns>
@@ -3765,7 +3767,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改截图模板配置
+        /// 修改截图模板配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveSnapshotTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveSnapshotTemplateResponse"/></returns>
@@ -3785,7 +3787,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改截图模板配置
+        /// 修改截图模板配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveSnapshotTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveSnapshotTemplateResponse"/></returns>
@@ -3805,7 +3807,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改转码模板配置
+        /// 修改转码模板配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveTranscodeTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveTranscodeTemplateResponse"/></returns>
@@ -3825,7 +3827,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 修改转码模板配置
+        /// 修改转码模板配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveTranscodeTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveTranscodeTemplateResponse"/></returns>
@@ -4085,7 +4087,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 更新水印
+        /// 更新水印。
         /// </summary>
         /// <param name="req"><see cref="UpdateLiveWatermarkRequest"/></param>
         /// <returns><see cref="UpdateLiveWatermarkResponse"/></returns>
@@ -4105,7 +4107,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 更新水印
+        /// 更新水印。
         /// </summary>
         /// <param name="req"><see cref="UpdateLiveWatermarkRequest"/></param>
         /// <returns><see cref="UpdateLiveWatermarkResponse"/></returns>

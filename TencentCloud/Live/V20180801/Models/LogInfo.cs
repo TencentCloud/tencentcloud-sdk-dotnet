@@ -31,19 +31,19 @@ namespace TencentCloud.Live.V20180801.Models
         public string LogName{ get; set; }
 
         /// <summary>
-        /// 日志Url。
+        /// 日志 URL。
         /// </summary>
         [JsonProperty("LogUrl")]
         public string LogUrl{ get; set; }
 
         /// <summary>
-        /// 日志生成时间
+        /// 日志生成时间。
         /// </summary>
         [JsonProperty("LogTime")]
         public string LogTime{ get; set; }
 
         /// <summary>
-        /// 文件大小
+        /// 文件大小。
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }

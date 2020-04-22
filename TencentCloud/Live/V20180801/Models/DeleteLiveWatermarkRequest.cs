@@ -25,7 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 水印ID。
+        /// 水印 ID。
+        /// 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
         /// </summary>
         [JsonProperty("WatermarkId")]
         public long? WatermarkId{ get; set; }

@@ -32,7 +32,54 @@ namespace TencentCloud.Iotcloud.V20180614.Models
 
         /// <summary>
         /// 行为的JSON字符串，大部分种类举例如下：
-        /// [{"republish":{"topic":"TEST/test"}},{"forward":{"api":"http://127.0.0.1:8080"}},{"ckafka":{"instance":{"id":"ckafka-test","name":""},"topic":{"id":"topic-test","name":"test"},"region":"gz"}},{"cmqqueue":{"queuename":"queue-test-TEST","region":"gz"}},{"mysql":{"instanceid":"cdb-test","region":"gz","username":"test","userpwd":"*****","dbname":"d_mqtt","tablename":"t_test","fieldpairs":[{"field":"test","value":"test"}],"devicetype":"CUSTOM"}}]
+        /// [
+        ///     {
+        ///         "republish": {
+        ///             "topic": "TEST/test"
+        ///         }
+        ///     },
+        ///     {
+        ///         "forward": {
+        ///             "api": "http://127.0.0.1:8080"
+        ///         }
+        ///     },
+        ///     {
+        ///         "ckafka": {
+        ///             "instance": {
+        ///                 "id": "ckafka-test",
+        ///                 "name": ""
+        ///             },
+        ///             "topic": {
+        ///                 "id": "topic-test",
+        ///                 "name": "test"
+        ///             },
+        ///             "region": "gz"
+        ///         }
+        ///     },
+        ///     {
+        ///         "cmqqueue": {
+        ///             "queuename": "queue-test-TEST",
+        ///             "region": "gz"
+        ///         }
+        ///     },
+        ///     {
+        ///         "mysql": {
+        ///             "instanceid": "cdb-test",
+        ///             "region": "gz",
+        ///             "username": "test",
+        ///             "userpwd": "*****",
+        ///             "dbname": "d_mqtt",
+        ///             "tablename": "t_test",
+        ///             "fieldpairs": [
+        ///                 {
+        ///                     "field": "test",
+        ///                     "value": "test"
+        ///                 }
+        ///             ],
+        ///             "devicetype": "CUSTOM"
+        ///         }
+        ///     }
+        /// ]
         /// </summary>
         [JsonProperty("Actions")]
         public string Actions{ get; set; }

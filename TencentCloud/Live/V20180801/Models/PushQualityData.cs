@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+        /// 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 推流客户端ip。
+        /// 推流客户端 IP。
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// 开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+        /// 开始推流时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
         /// </summary>
         [JsonProperty("BeginPushTime")]
         public string BeginPushTime{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? VideoFps{ get; set; }
 
         /// <summary>
-        /// 视频码率，单位是bps。
+        /// 视频码率，单位: bps。
         /// </summary>
         [JsonProperty("VideoRate")]
         public ulong? VideoRate{ get; set; }
@@ -97,43 +97,43 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AudioFps{ get; set; }
 
         /// <summary>
-        /// 音频码率，单位是bps。
+        /// 音频码率，单位: bps。
         /// </summary>
         [JsonProperty("AudioRate")]
         public ulong? AudioRate{ get; set; }
 
         /// <summary>
-        /// 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+        /// 本地流逝时间，单位: ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
         /// </summary>
         [JsonProperty("LocalTs")]
         public ulong? LocalTs{ get; set; }
 
         /// <summary>
-        /// 视频流逝时间，单位是ms。
+        /// 视频流逝时间，单位: ms。
         /// </summary>
         [JsonProperty("VideoTs")]
         public ulong? VideoTs{ get; set; }
 
         /// <summary>
-        /// 音频流逝时间，单位是ms。
+        /// 音频流逝时间，单位: ms。
         /// </summary>
         [JsonProperty("AudioTs")]
         public ulong? AudioTs{ get; set; }
 
         /// <summary>
-        /// metadata中的视频码率，单位是kbps。
+        /// metadata 中的视频码率，单位: kbps。
         /// </summary>
         [JsonProperty("MetaVideoRate")]
         public ulong? MetaVideoRate{ get; set; }
 
         /// <summary>
-        /// metadata中的音频码率，单位是kbps。
+        /// metadata 中的音频码率，单位: kbps。
         /// </summary>
         [JsonProperty("MetaAudioRate")]
         public ulong? MetaAudioRate{ get; set; }
 
         /// <summary>
-        /// metadata中的帧率。
+        /// metadata 中的帧率。
         /// </summary>
         [JsonProperty("MateFps")]
         public ulong? MateFps{ get; set; }

@@ -25,76 +25,85 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 直播域名
+        /// 直播域名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 域名类型。0-推流，1-播放
+        /// 域名类型:
+        /// 0: 推流。
+        /// 1: 播放。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 域名状态。0-停用，1-启用
+        /// 域名状态:
+        /// 0: 停用。
+        /// 1: 启用。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 添加时间
+        /// 添加时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 是否有CName到固定规则域名。0-否，1-是
+        /// 是否有 CName 到固定规则域名:
+        /// 0: 否。
+        /// 1: 是。
         /// </summary>
         [JsonProperty("BCName")]
         public ulong? BCName{ get; set; }
 
         /// <summary>
-        /// cname对应的域名
+        /// cname 对应的域名。
         /// </summary>
         [JsonProperty("TargetDomain")]
         public string TargetDomain{ get; set; }
 
         /// <summary>
-        /// 播放区域，只在Type=1时该参数有意义。
-        /// 1-国内，2-全球，3-海外。
+        /// 播放区域，只在 Type=1 时该参数有意义。
+        /// 1: 国内。
+        /// 2: 全球。
+        /// 3: 海外。
         /// </summary>
         [JsonProperty("PlayType")]
         public long? PlayType{ get; set; }
 
         /// <summary>
-        /// 0：普通直播，
-        /// 1：慢直播。
+        /// 是否慢直播:
+        /// 0: 普通直播。
+        /// 1: 慢直播。
         /// </summary>
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }
 
         /// <summary>
-        /// 当前客户使用的cname信息
+        /// 当前客户使用的 cname 信息。
         /// </summary>
         [JsonProperty("CurrentCName")]
         public string CurrentCName{ get; set; }
 
         /// <summary>
-        /// 已无效，可忽略。
+        /// 失效参数，可忽略。
         /// </summary>
         [JsonProperty("RentTag")]
         public long? RentTag{ get; set; }
 
         /// <summary>
-        /// 已无效，可忽略。
+        /// 失效参数，可忽略。
         /// </summary>
         [JsonProperty("RentExpireTime")]
         public string RentExpireTime{ get; set; }
 
         /// <summary>
-        /// 0：标准直播，
-        /// 1：小程序直播。
+        /// 0: 标准直播。
+        /// 1: 小程序直播。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsMiniProgramLive")]

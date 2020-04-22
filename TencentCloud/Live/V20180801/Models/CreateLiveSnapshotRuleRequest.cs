@@ -31,13 +31,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        /// 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

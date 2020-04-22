@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Taf.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectStateRequest : AbstractModel
+    public class DetectAccountActivityRequest : AbstractModel
     {
         
         /// <summary>
-        /// IP
+        /// 业务入参
         /// </summary>
-        [JsonProperty("ClientIP")]
-        public string ClientIP{ get; set; }
-
-        /// <summary>
-        /// 浏览器UA
-        /// </summary>
-        [JsonProperty("ClientUA")]
-        public string ClientUA{ get; set; }
-
-        /// <summary>
-        /// token
-        /// </summary>
-        [JsonProperty("FaceIdToken")]
-        public string FaceIdToken{ get; set; }
+        [JsonProperty("BusinessSecurityData")]
+        public InputDetectAccountActivity BusinessSecurityData{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
-            this.SetParamSimple(map, prefix + "ClientUA", this.ClientUA);
-            this.SetParamSimple(map, prefix + "FaceIdToken", this.FaceIdToken);
+            this.SetParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
         }
     }
 }

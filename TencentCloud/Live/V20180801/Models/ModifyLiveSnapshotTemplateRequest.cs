@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -64,13 +64,15 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 是否开启鉴黄，0：不开启，1：开启。
+        /// 是否开启鉴黄，默认 0 。
+        /// 0：不开启。
+        /// 1：开启。
         /// </summary>
         [JsonProperty("PornFlag")]
         public long? PornFlag{ get; set; }
 
         /// <summary>
-        /// Cos AppId。
+        /// Cos 应用 ID。
         /// </summary>
         [JsonProperty("CosAppId")]
         public long? CosAppId{ get; set; }

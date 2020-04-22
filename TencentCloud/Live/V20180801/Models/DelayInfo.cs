@@ -31,7 +31,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+        /// 推流路径，与推流和播放地址中的 
+        ///  AppName 保持一致，默认为 live。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -49,7 +50,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? DelayInterval{ get; set; }
 
         /// <summary>
-        /// 创建时间，UTC时间。
+        /// 创建时间，UTC 时间。
         /// 注意：UTC时间和北京时间相差8小时。
         /// 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
         /// </summary>
@@ -57,7 +58,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 过期时间，UTC时间。
+        /// 过期时间，UTC 时间。
         /// 注意：UTC时间和北京时间相差8小时。
         /// 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
         /// </summary>
@@ -65,8 +66,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 当前状态，
-        /// -1：已过期，
+        /// 当前状态:
+        /// -1：已过期。
         /// 1： 生效中。
         /// </summary>
         [JsonProperty("Status")]

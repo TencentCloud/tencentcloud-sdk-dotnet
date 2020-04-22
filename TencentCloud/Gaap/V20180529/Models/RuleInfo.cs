@@ -61,13 +61,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 是否开启健康检查标志，1开启，0关闭
+        /// 是否开启健康检查标志，1表示开启，0表示关闭
         /// </summary>
         [JsonProperty("HealthCheck")]
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+        /// 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
         /// </summary>
         [JsonProperty("RuleStatus")]
         public ulong? RuleStatus{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public BindRealServer[] RealServerSet{ get; set; }
 
         /// <summary>
-        /// 源站的服务状态，0：异常，1：正常。
+        /// 源站的服务状态，0表示异常，1表示正常。
         /// 未开启健康检查时，该状态始终未正常。
         /// 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
         /// </summary>

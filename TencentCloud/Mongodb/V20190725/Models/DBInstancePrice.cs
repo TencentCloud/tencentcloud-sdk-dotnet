@@ -15,37 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyStatus : AbstractModel
+    public class DBInstancePrice : AbstractModel
     {
         
         /// <summary>
-        /// 通道实例ID。
+        /// 单价
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("UnitPrice")]
+        public float? UnitPrice{ get; set; }
 
         /// <summary>
-        /// 通道状态。
-        /// 其中：
-        /// RUNNING表示运行中；
-        /// CREATING表示创建中；
-        /// DESTROYING表示销毁中；
-        /// OPENING表示开启中；
-        /// CLOSING表示关闭中；
-        /// CLOSED表示已关闭；
-        /// ADJUSTING表示配置变更中；
-        /// ISOLATING表示隔离中；
-        /// ISOLATED表示已隔离；
-        /// UNKNOWN表示未知状态。
+        /// 原价
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// 折扣加
+        /// </summary>
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
 
 
         /// <summary>
@@ -53,8 +49,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         }
     }
 }

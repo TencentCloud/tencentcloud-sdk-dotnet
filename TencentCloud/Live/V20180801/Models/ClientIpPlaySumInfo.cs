@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 客户端ip，点分型。
+        /// 客户端 IP，点分型。
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }

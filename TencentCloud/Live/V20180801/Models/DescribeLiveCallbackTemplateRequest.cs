@@ -25,7 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
+        /// 1. 在创建回调模板接口 [CreateLiveCallbackTemplate](/document/product/267/32637) 调用的返回值中获取模板 ID。
+        /// 2. 可以从接口 [DescribeLiveCallbackTemplates](/document/product/267/32632) 查询已经创建的过的模板列表。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

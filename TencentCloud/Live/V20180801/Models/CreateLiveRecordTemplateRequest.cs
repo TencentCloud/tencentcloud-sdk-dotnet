@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板名。非空的字符串
+        /// 模板名。仅支持中文、英文、数字、_、-。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -61,6 +61,7 @@ namespace TencentCloud.Live.V20180801.Models
         public RecordParam AacParam{ get; set; }
 
         /// <summary>
+        /// 直播类型，默认 0。
         /// 0：普通直播，
         /// 1：慢直播。
         /// </summary>

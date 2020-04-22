@@ -44,10 +44,10 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 通道组状态：
-        /// 0 正常运行
-        /// 1 创建中
-        /// 4 销毁中
-        /// 11 迁移中
+        /// 0表示正常运行；
+        /// 1表示创建中；
+        /// 4表示销毁中；
+        /// 11表示迁移中；
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

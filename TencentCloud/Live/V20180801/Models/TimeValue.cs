@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// utc时间，时间格式为yyyy-mm-ddTHH:MM:SSZ。
+        /// UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }

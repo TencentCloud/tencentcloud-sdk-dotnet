@@ -25,10 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 是否属于慢直播模板。默认：0。
-        /// 示例：
-        /// 0 - 标准直播。
-        /// 1 - 慢直播。
+        /// 是否属于慢直播模板，默认：0。
+        /// 0： 标准直播。
+        /// 1：慢直播。
         /// </summary>
         [JsonProperty("IsDelayLive")]
         public long? IsDelayLive{ get; set; }

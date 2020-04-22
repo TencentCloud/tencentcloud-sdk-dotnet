@@ -37,37 +37,37 @@ namespace TencentCloud.Live.V20180801.Models
         public string AppName{ get; set; }
 
         /// <summary>
-        /// 推流客户端ip。
+        /// 推流客户端 IP。
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// 接流服务器ip。
+        /// 接流服务器 IP。
         /// </summary>
         [JsonProperty("ServerIp")]
         public string ServerIp{ get; set; }
 
         /// <summary>
-        /// 推流视频帧率，单位是Hz。
+        /// 推流视频帧率，单位: Hz。
         /// </summary>
         [JsonProperty("VideoFps")]
         public ulong? VideoFps{ get; set; }
 
         /// <summary>
-        /// 推流视频码率，单位是bps。
+        /// 推流视频码率，单位: bps。
         /// </summary>
         [JsonProperty("VideoSpeed")]
         public ulong? VideoSpeed{ get; set; }
 
         /// <summary>
-        /// 推流音频帧率，单位是Hz。
+        /// 推流音频帧率，单位: Hz。
         /// </summary>
         [JsonProperty("AudioFps")]
         public ulong? AudioFps{ get; set; }
 
         /// <summary>
-        /// 推流音频码率，单位是bps。
+        /// 推流音频码率，单位: bps。
         /// </summary>
         [JsonProperty("AudioSpeed")]
         public ulong? AudioSpeed{ get; set; }
@@ -111,19 +111,19 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AsampleRate{ get; set; }
 
         /// <summary>
-        /// metadata中的音频码率，单位是Kbps。
+        /// metadata 中的音频码率，单位: Kbps。
         /// </summary>
         [JsonProperty("MetaAudioSpeed")]
         public ulong? MetaAudioSpeed{ get; set; }
 
         /// <summary>
-        /// metadata中的视频码率，单位是Kbps。
+        /// metadata 中的视频码率，单位: Kbps。
         /// </summary>
         [JsonProperty("MetaVideoSpeed")]
         public ulong? MetaVideoSpeed{ get; set; }
 
         /// <summary>
-        /// metadata中的帧率。
+        /// metadata 中的帧率。
         /// </summary>
         [JsonProperty("MetaFps")]
         public ulong? MetaFps{ get; set; }

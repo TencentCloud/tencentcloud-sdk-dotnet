@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板 Id。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -45,7 +45,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// 音频码率，默认0。0-500
+        /// 音频码率，默认0。
+        /// 范围：0-500。
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
@@ -57,13 +58,14 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 视频码率。100-8000
+        /// 视频码率。
+        /// 范围：100-8000。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 宽。0-3000
+        /// 宽。0-3000。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -81,25 +83,26 @@ namespace TencentCloud.Live.V20180801.Models
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// 高。0-3000
+        /// 高。0-3000。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 帧率。0-200
+        /// 帧率。0-200。
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 关键帧间隔，单位：秒。0-50
+        /// 关键帧间隔，单位：秒。0-50。
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// 旋转角度。0 90 180 270
+        /// 旋转角度。
+        /// 0 90 180 270。
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
@@ -130,7 +133,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? FpsToOrig{ get; set; }
 
         /// <summary>
-        /// 急速高清相比VideoBitrate少多少码率，0.1到0.5
+        /// 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }

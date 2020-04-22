@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.50</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -946,8 +946,6 @@
     <Compile Include="Cam\V20190116\Models\AttachedPolicyOfRole.cs" />
     <Compile Include="Cam\V20190116\Models\CheckNewMfaCodeRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CheckNewMfaCodeResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\CheckRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\CheckResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupRequest.cs" />
@@ -968,10 +966,6 @@
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\DescribeMFADeviceCollRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\DescribeMFADeviceCollResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\DescribeMfaCodeStatusRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\DescribeMfaCodeStatusResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyRequest.cs" />
@@ -980,12 +974,6 @@
     <Compile Include="Cam\V20190116\Models\DetachRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachUserPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachUserPolicyResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\DetectAuthRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\DetectAuthResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\DetectMaskAuthRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\DetectMaskAuthResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\DetectStateRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\DetectStateResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetCustomMFATokenInfoRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetCustomMFATokenInfoResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetGroupRequest.cs" />
@@ -3298,6 +3286,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskResultResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeVpcsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeVpcsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressRequest.cs" />
@@ -4849,12 +4839,15 @@
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DBInstanceInfo.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DBInstancePrice.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeClientConnectionsRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeClientConnectionsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBBackupsRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBBackupsResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeDBInstanceDealRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeDBInstanceDealResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogPatternsRequest.cs" />
@@ -4863,6 +4856,12 @@
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSpecInfoRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSpecInfoResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InquirePriceCreateDBInstancesRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InquirePriceCreateDBInstancesResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InquirePriceModifyDBInstanceSpecRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InquirePriceModifyDBInstanceSpecResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InquirePriceRenewDBInstancesRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InquirePriceRenewDBInstancesResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\InstanceChargePrepaid.cs" />
     <Compile Include="Mongodb\V20190725\Models\InstanceDetail.cs" />
     <Compile Include="Mongodb\V20190725\Models\IsolateDBInstanceRequest.cs" />
@@ -6267,15 +6266,20 @@
     <Compile Include="Sts\V20180813\Models\QueryApiKeyRequest.cs" />
     <Compile Include="Sts\V20180813\Models\QueryApiKeyResponse.cs" />
     <Compile Include="Taf\V20200210\TafClient.cs" />
+    <Compile Include="Taf\V20200210\Models\DetectAccountActivityRequest.cs" />
+    <Compile Include="Taf\V20200210\Models\DetectAccountActivityResponse.cs" />
     <Compile Include="Taf\V20200210\Models\DetectFraudKOLRequest.cs" />
     <Compile Include="Taf\V20200210\Models\DetectFraudKOLResponse.cs" />
     <Compile Include="Taf\V20200210\Models\EnhanceTaDegreeRequest.cs" />
     <Compile Include="Taf\V20200210\Models\EnhanceTaDegreeResponse.cs" />
+    <Compile Include="Taf\V20200210\Models\InputDetectAccountActivity.cs" />
     <Compile Include="Taf\V20200210\Models\InputKolBspData.cs" />
     <Compile Include="Taf\V20200210\Models\InputKolDataList.cs" />
     <Compile Include="Taf\V20200210\Models\InputRecognizeTargetAudience.cs" />
     <Compile Include="Taf\V20200210\Models\InputSendTrafficSecuritySmsMsg.cs" />
     <Compile Include="Taf\V20200210\Models\InputTaBspData.cs" />
+    <Compile Include="Taf\V20200210\Models\OutputDetectAccountActivity.cs" />
+    <Compile Include="Taf\V20200210\Models\OutputDetectAccountActivityValue.cs" />
     <Compile Include="Taf\V20200210\Models\OutputKolData.cs" />
     <Compile Include="Taf\V20200210\Models\OutputKolValue.cs" />
     <Compile Include="Taf\V20200210\Models\OutputRecognizeTargetAudience.cs" />

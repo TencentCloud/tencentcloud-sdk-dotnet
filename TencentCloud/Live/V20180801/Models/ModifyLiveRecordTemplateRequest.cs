@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -43,37 +43,37 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Flv录制参数，开启Flv录制时设置。
+        /// FLV 录制参数，开启 FLV 录制时设置。
         /// </summary>
         [JsonProperty("FlvParam")]
         public RecordParam FlvParam{ get; set; }
 
         /// <summary>
-        /// Hls录制参数，开启hls录制时设置。
+        /// HLS 录制参数，开启 HLS 录制时设置。
         /// </summary>
         [JsonProperty("HlsParam")]
         public RecordParam HlsParam{ get; set; }
 
         /// <summary>
-        /// Mp4录制参数，开启Mp4录制时设置。
+        /// MP4 录制参数，开启 MP4 录制时设置。
         /// </summary>
         [JsonProperty("Mp4Param")]
         public RecordParam Mp4Param{ get; set; }
 
         /// <summary>
-        /// Aac录制参数，开启Aac录制时设置。
+        /// AAC 录制参数，开启 AAC 录制时设置。
         /// </summary>
         [JsonProperty("AacParam")]
         public RecordParam AacParam{ get; set; }
 
         /// <summary>
-        /// HLS录制定制参数
+        /// HLS 录制定制参数。
         /// </summary>
         [JsonProperty("HlsSpecialParam")]
         public HlsSpecialParam HlsSpecialParam{ get; set; }
 
         /// <summary>
-        /// Mp3录制参数，开启Mp3录制时设置。
+        /// MP3 录制参数，开启 MP3 录制时设置。
         /// </summary>
         [JsonProperty("Mp3Param")]
         public RecordParam Mp3Param{ get; set; }

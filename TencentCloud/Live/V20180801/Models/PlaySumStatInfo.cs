@@ -25,19 +25,21 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 域名或流id。
+        /// 域名或流 ID。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
+        /// 平均下载速度，
+        /// 单位: MB/s。
+        /// 计算公式: 每分钟的下载速度求平均值。
         /// </summary>
         [JsonProperty("AvgFluxPerSecond")]
         public float? AvgFluxPerSecond{ get; set; }
 
         /// <summary>
-        /// 总流量，单位是MB。
+        /// 总流量，单位: MB。
         /// </summary>
         [JsonProperty("TotalFlux")]
         public float? TotalFlux{ get; set; }

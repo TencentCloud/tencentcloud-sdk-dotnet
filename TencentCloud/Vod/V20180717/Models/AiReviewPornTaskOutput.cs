@@ -26,7 +26,6 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 视频鉴黄评分，分值为0到100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

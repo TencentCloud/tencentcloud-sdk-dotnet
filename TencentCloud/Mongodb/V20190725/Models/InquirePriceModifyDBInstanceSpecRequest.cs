@@ -15,37 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyStatus : AbstractModel
+    public class InquirePriceModifyDBInstanceSpecRequest : AbstractModel
     {
         
         /// <summary>
-        /// 通道实例ID。
+        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 通道状态。
-        /// 其中：
-        /// RUNNING表示运行中；
-        /// CREATING表示创建中；
-        /// DESTROYING表示销毁中；
-        /// OPENING表示开启中；
-        /// CLOSING表示关闭中；
-        /// CLOSED表示已关闭；
-        /// ADJUSTING表示配置变更中；
-        /// ISOLATING表示隔离中；
-        /// ISOLATED表示已隔离；
-        /// UNKNOWN表示未知状态。
+        /// 变更配置后实例内存大小，单位：GB。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// 变更配置后实例磁盘大小，单位：GB。
+        /// </summary>
+        [JsonProperty("Volume")]
+        public long? Volume{ get; set; }
 
 
         /// <summary>
@@ -54,7 +49,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

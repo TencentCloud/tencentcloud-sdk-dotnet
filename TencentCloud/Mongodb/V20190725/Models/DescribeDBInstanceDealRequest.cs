@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectMaskAuthResponse : AbstractModel
+    public class DescribeDBInstanceDealRequest : AbstractModel
     {
         
         /// <summary>
-        /// 人脸核身Token
+        /// 订单ID，通过CreateDBInstance等接口返回
         /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DealId")]
+        public string DealId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DealId", this.DealId);
         }
     }
 }

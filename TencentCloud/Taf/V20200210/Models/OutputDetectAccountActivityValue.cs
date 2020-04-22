@@ -15,54 +15,43 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Taf.V20200210.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMfaCodeStatusResponse : AbstractModel
+    public class OutputDetectAccountActivityValue : AbstractModel
     {
         
         /// <summary>
-        /// 微信mfa code状态
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
-
-        /// <summary>
-        /// 记住设备
+        /// 用户 ID accountType 不同对应不同的用户 ID。如是 QQ 或微信用户则填入对应的 openId
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RmDevice")]
-        public ulong? RmDevice{ get; set; }
+        [JsonProperty("Uid")]
+        public string Uid{ get; set; }
 
         /// <summary>
-        /// 临时Code
+        /// 操作时间戳，单位：秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Tmpcode")]
-        public string Tmpcode{ get; set; }
+        [JsonProperty("PostTime")]
+        public long? PostTime{ get; set; }
 
         /// <summary>
-        /// 昵称
+        /// 用户操作的真实外网 IP
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Nickname")]
-        public string Nickname{ get; set; }
+        [JsonProperty("UserIp")]
+        public string UserIp{ get; set; }
 
         /// <summary>
-        /// 是否有OpenId
+        /// 0：表示不活跃
+        /// 1 - 4：活跃等级由低到高
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("HasOpenId")]
-        public ulong? HasOpenId{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Level")]
+        public long? Level{ get; set; }
 
 
         /// <summary>
@@ -70,12 +59,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "RmDevice", this.RmDevice);
-            this.SetParamSimple(map, prefix + "Tmpcode", this.Tmpcode);
-            this.SetParamSimple(map, prefix + "Nickname", this.Nickname);
-            this.SetParamSimple(map, prefix + "HasOpenId", this.HasOpenId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "PostTime", this.PostTime);
+            this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
         }
     }
 }

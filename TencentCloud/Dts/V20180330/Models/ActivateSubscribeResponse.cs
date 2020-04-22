@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// 配置数据订阅任务任务ID。
+        /// 配置数据订阅任务ID。
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }

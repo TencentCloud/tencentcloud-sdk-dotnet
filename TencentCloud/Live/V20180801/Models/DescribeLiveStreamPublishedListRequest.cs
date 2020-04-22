@@ -48,7 +48,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+        /// 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }

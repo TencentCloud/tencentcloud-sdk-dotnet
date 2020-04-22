@@ -25,14 +25,15 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板名称，非空的字符串。
+        /// 模板名称。
         /// 长度上限：255字节。
+        /// 仅支持中文、英文、数字、_、-。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Cos AppId。
+        /// Cos 应用 ID。
         /// </summary>
         [JsonProperty("CosAppId")]
         public long? CosAppId{ get; set; }
@@ -52,6 +53,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 描述信息。
         /// 长度上限：1024字节。
+        /// 仅支持中文、英文、数字、_、-。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

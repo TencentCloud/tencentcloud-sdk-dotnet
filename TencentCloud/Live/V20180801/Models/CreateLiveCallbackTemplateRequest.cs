@@ -25,8 +25,9 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板名称，非空的字符串。
+        /// 模板名称。
         /// 长度上限：255字节。
+        /// 仅支持中文、英文、数字、_、-。
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -34,47 +35,49 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 描述信息。
         /// 长度上限：1024字节。
+        /// 仅支持中文、英文、数字、_、-。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 开播回调URL，
+        /// 开播回调 URL，
         /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         [JsonProperty("StreamBeginNotifyUrl")]
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 断流回调URL，
+        /// 断流回调 URL，
         /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 录制回调URL，
+        /// 录制回调 URL，
         /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         [JsonProperty("RecordNotifyUrl")]
         public string RecordNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 截图回调URL，
+        /// 截图回调 URL，
         /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
         /// </summary>
         [JsonProperty("SnapshotNotifyUrl")]
         public string SnapshotNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 鉴黄回调URL，
+        /// 鉴黄回调 URL，
         /// 相关协议文档：[事件消息通知](/document/product/267/32741)。
         /// </summary>
         [JsonProperty("PornCensorshipNotifyUrl")]
         public string PornCensorshipNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+        /// 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
+        /// [事件消息通知](/document/product/267/32744)。
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }

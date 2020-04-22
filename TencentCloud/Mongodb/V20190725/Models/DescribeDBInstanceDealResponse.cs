@@ -15,62 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectStateResponse : AbstractModel
+    public class DescribeDBInstanceDealResponse : AbstractModel
     {
         
         /// <summary>
-        /// 用户uin
-        /// </summary>
-        [JsonProperty("Uin")]
-        public string Uin{ get; set; }
-
-        /// <summary>
-        /// 名字
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 身份证号码
-        /// </summary>
-        [JsonProperty("Idcard")]
-        public string Idcard{ get; set; }
-
-        /// <summary>
-        /// 业务token
-        /// </summary>
-        [JsonProperty("BizToken")]
-        public string BizToken{ get; set; }
-
-        /// <summary>
-        /// ulr地址
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
-        /// 规则id
-        /// </summary>
-        [JsonProperty("RuleId")]
-        public ulong? RuleId{ get; set; }
-
-        /// <summary>
-        /// 状态
+        /// 订单状态，1：未支付，2：已支付，3：发货中，4：发货成功，5：发货失败，6：退款，7：订单关闭，8：超时未支付关闭。
         /// </summary>
         [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 订单原价。
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// 订单折扣价格。
+        /// </summary>
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
+
+        /// <summary>
+        /// 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -84,14 +60,10 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uin", this.Uin);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Idcard", this.Idcard);
-            this.SetParamSimple(map, prefix + "BizToken", this.BizToken);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

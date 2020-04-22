@@ -25,19 +25,19 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 时间点，格式为yyyy-mm-dd HH:MM:SS。
+        /// 时间点，格式: yyyy-mm-dd HH:MM:SS。
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 带宽，（单位Mbps）。
+        /// 带宽，单位: Mbps。
         /// </summary>
         [JsonProperty("Bandwidth")]
         public float? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 流量，（单位MB）。
+        /// 流量，单位: MB。
         /// </summary>
         [JsonProperty("Flux")]
         public float? Flux{ get; set; }

@@ -15,37 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProxyStatus : AbstractModel
+    public class InquirePriceRenewDBInstancesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 通道实例ID。
+        /// 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同，接口单次最多只支持5个实例进行操作。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 通道状态。
-        /// 其中：
-        /// RUNNING表示运行中；
-        /// CREATING表示创建中；
-        /// DESTROYING表示销毁中；
-        /// OPENING表示开启中；
-        /// CLOSING表示关闭中；
-        /// CLOSED表示已关闭；
-        /// ADJUSTING表示配置变更中；
-        /// ISOLATING表示隔离中；
-        /// ISOLATED表示已隔离；
-        /// UNKNOWN表示未知状态。
+        /// 预付费模式（即包年包月）相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("InstanceChargePrepaid")]
+        public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
 
         /// <summary>
@@ -53,8 +42,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         }
     }
 }

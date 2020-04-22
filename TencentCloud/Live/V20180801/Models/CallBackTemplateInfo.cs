@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -43,43 +43,43 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 开播回调URL。
+        /// 开播回调 URL。
         /// </summary>
         [JsonProperty("StreamBeginNotifyUrl")]
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 断流回调URL。
+        /// 断流回调 URL。
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 混流回调URL。
+        /// 混流回调 URL。
         /// </summary>
         [JsonProperty("StreamMixNotifyUrl")]
         public string StreamMixNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 录制回调URL。
+        /// 录制回调 URL。
         /// </summary>
         [JsonProperty("RecordNotifyUrl")]
         public string RecordNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 截图回调URL。
+        /// 截图回调 URL。
         /// </summary>
         [JsonProperty("SnapshotNotifyUrl")]
         public string SnapshotNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 鉴黄回调URL。
+        /// 鉴黄回调 URL。
         /// </summary>
         [JsonProperty("PornCensorshipNotifyUrl")]
         public string PornCensorshipNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 回调的鉴权key
+        /// 回调的鉴权 key。
         /// </summary>
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }

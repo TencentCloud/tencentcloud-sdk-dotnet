@@ -25,13 +25,14 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// HTTP code，可选值包括400,403,404,500,502,503,504
+        /// HTTP code，可选值包括:
+        /// 400，403，404，500，502，503，504。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 总次数
+        /// 总次数。
         /// </summary>
         [JsonProperty("Num")]
         public ulong? Num{ get; set; }

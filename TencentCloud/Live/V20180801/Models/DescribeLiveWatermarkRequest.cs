@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 水印ID。
+        /// 水印 ID。
         /// </summary>
         [JsonProperty("WatermarkId")]
         public ulong? WatermarkId{ get; set; }

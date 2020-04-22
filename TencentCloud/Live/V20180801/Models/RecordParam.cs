@@ -26,8 +26,8 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 录制间隔。
-        /// 单位秒，默认值1800。
-        /// 取值范围:300-7200。
+        /// 单位秒，默认：1800。
+        /// 取值范围：300-7200。
         /// 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
         /// </summary>
         [JsonProperty("RecordInterval")]
@@ -35,20 +35,20 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 录制存储时长。
-        /// 单位秒，取值范围： 0-93312000。
-        /// 0表示永久存储。
+        /// 单位秒，取值范围： 0 - 93312000。
+        /// 0：表示永久存储。
         /// </summary>
         [JsonProperty("StorageTime")]
         public long? StorageTime{ get; set; }
 
         /// <summary>
-        /// 是否开启当前格式录制，0 否 1是。默认值0。
+        /// 是否开启当前格式录制，默认值为0，0：否， 1：是。
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 点播子应用ID。
+        /// 点播子应用 ID。
         /// </summary>
         [JsonProperty("VodSubAppId")]
         public long? VodSubAppId{ get; set; }

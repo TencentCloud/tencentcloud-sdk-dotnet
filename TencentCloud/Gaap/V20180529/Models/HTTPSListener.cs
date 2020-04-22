@@ -50,11 +50,11 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 监听器状态，其中：
-        /// 0， 运行中；
-        /// 1， 创建中；
-        /// 2，销毁中；
-        /// 3，源站调整中；
-        /// 4，配置变更中。
+        /// 0表示运行中；
+        /// 1表示创建中；
+        /// 2表示销毁中；
+        /// 3表示源站调整中；
+        /// 4表示配置变更中。
         /// </summary>
         [JsonProperty("ListenerStatus")]
         public ulong? ListenerStatus{ get; set; }

@@ -31,15 +31,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 开始时间，北京时间，
-        /// 格式：yyyy-mm-dd HH:MM。
+        /// 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，北京时间，
-        /// 格式：yyyy-mm-dd HH:MM。
+        /// 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -54,10 +52,10 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 编码方式，带模块，
         /// 示例：
-        /// liveprocessor_H264 =》直播转码-H264，
-        /// liveprocessor_H265 =》 直播转码-H265，
-        /// topspeed_H264 =》极速高清-H264，
-        /// topspeed_H265 =》极速高清-H265。
+        /// liveprocessor_H264：直播转码-H264，
+        /// liveprocessor_H265： 直播转码-H265，
+        /// topspeed_H264：极速高清-H264，
+        /// topspeed_H265：极速高清-H265。
         /// </summary>
         [JsonProperty("ModuleCodec")]
         public string ModuleCodec{ get; set; }
@@ -69,7 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+        /// 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

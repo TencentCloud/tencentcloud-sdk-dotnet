@@ -63,11 +63,11 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 监听器状态，其中：
-        /// 0， 运行中；
-        /// 1， 创建中；
-        /// 2，销毁中；
-        /// 3，源站调整中；
-        /// 4，配置变更中。
+        /// 0表示运行中；
+        /// 1表示创建中；
+        /// 2表示销毁中；
+        /// 3表示源站调整中；
+        /// 4表示配置变更中。
         /// </summary>
         [JsonProperty("ListenerStatus")]
         public ulong? ListenerStatus{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
+        /// 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
         /// </summary>
         [JsonProperty("BindStatus")]
         public ulong? BindStatus{ get; set; }

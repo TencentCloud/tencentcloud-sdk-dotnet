@@ -44,16 +44,14 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 推流开始时间。
-        /// UTC格式时间，
-        /// 例如：2019-01-07T12:00:00Z。
+        /// UTC格式时间，例如：2019-01-07T12:00:00Z。
         /// </summary>
         [JsonProperty("StreamStartTime")]
         public string StreamStartTime{ get; set; }
 
         /// <summary>
         /// 推流结束时间。
-        /// UTC格式时间，
-        /// 例如：2019-01-07T15:00:00Z。
+        /// UTC格式时间，例如：2019-01-07T15:00:00Z。
         /// </summary>
         [JsonProperty("StreamEndTime")]
         public string StreamEndTime{ get; set; }
@@ -71,7 +69,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// 主播IP。
+        /// 主播 IP。
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -37,19 +37,21 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 截图时间间隔。5-300秒。
+        /// 截图时间间隔，5-300秒。
         /// </summary>
         [JsonProperty("SnapshotInterval")]
         public long? SnapshotInterval{ get; set; }
 
         /// <summary>
-        /// 截图宽度。0-3000 0原始宽度并适配原始比例
+        /// 截图宽度，范围：0-3000。 
+        /// 0：原始宽度并适配原始比例。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 截图高度。0-2000 0原始高度并适配原始比例
+        /// 截图高度，范围：0-2000。
+        /// 0：原始高度并适配原始比例。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
@@ -61,7 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? PornFlag{ get; set; }
 
         /// <summary>
-        /// Cos AppId。
+        /// Cos 应用 ID。
         /// </summary>
         [JsonProperty("CosAppId")]
         public long? CosAppId{ get; set; }
@@ -79,7 +81,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string CosRegion{ get; set; }
 
         /// <summary>
-        /// 模板描述
+        /// 模板描述。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

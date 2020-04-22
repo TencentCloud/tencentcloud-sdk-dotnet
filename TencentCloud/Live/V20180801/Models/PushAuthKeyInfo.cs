@@ -37,13 +37,13 @@ namespace TencentCloud.Live.V20180801.Models
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 主鉴权key。
+        /// 主鉴权 Key。
         /// </summary>
         [JsonProperty("MasterAuthKey")]
         public string MasterAuthKey{ get; set; }
 
         /// <summary>
-        /// 备鉴权key。
+        /// 备鉴权 Key。
         /// </summary>
         [JsonProperty("BackupAuthKey")]
         public string BackupAuthKey{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 证书Id。
+        /// 证书 ID。
         /// </summary>
         [JsonProperty("CertId")]
         public long? CertId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 创建时间，UTC格式。
+        /// 创建时间，UTC 格式。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -55,15 +55,15 @@ namespace TencentCloud.Live.V20180801.Models
         public string HttpsCrt{ get; set; }
 
         /// <summary>
-        /// 证书类型。
-        /// 0：腾讯云托管证书
+        /// 证书类型:
+        /// 0：腾讯云托管证书。
         /// 1：用户添加证书。
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
 
         /// <summary>
-        /// 证书过期时间，UTC格式。
+        /// 证书过期时间，UTC 格式。
         /// </summary>
         [JsonProperty("CertExpireTime")]
         public string CertExpireTime{ get; set; }
