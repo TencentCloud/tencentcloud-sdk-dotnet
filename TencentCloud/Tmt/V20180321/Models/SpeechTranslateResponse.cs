@@ -37,7 +37,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public long? RecognizeStatus{ get; set; }
 
         /// <summary>
-        /// 识别出的源文
+        /// 识别出的原文
         /// </summary>
         [JsonProperty("SourceText")]
         public string SourceText{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public long? Seq{ get; set; }
 
         /// <summary>
-        /// 源语言
+        /// 原语言
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }

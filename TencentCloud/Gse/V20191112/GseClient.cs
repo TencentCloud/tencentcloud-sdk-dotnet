@@ -413,6 +413,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchGameServerSessionsRequest"/></param>
+        /// <returns><see cref="SearchGameServerSessionsResponse"/></returns>
+        public async Task<SearchGameServerSessionsResponse> SearchGameServerSessions(SearchGameServerSessionsRequest req)
+        {
+             JsonResponseModel<SearchGameServerSessionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchGameServerSessions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchGameServerSessionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表
+        /// </summary>
+        /// <param name="req"><see cref="SearchGameServerSessionsRequest"/></param>
+        /// <returns><see cref="SearchGameServerSessionsResponse"/></returns>
+        public SearchGameServerSessionsResponse SearchGameServerSessionsSync(SearchGameServerSessionsRequest req)
+        {
+             JsonResponseModel<SearchGameServerSessionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchGameServerSessions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchGameServerSessionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话
         /// </summary>
         /// <param name="req"><see cref="StartGameServerSessionPlacementRequest"/></param>

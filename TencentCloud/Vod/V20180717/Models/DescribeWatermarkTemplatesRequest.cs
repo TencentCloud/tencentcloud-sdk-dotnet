@@ -33,7 +33,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 水印类型过滤条件，可选值：
         /// <li>image：图片水印；</li>
-        /// <li>text：文字水印。</li>
+        /// <li>text：文字水印；</li>
+        /// <li>svg：SVG 水印。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

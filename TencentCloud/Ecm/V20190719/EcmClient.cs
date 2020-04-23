@@ -1999,6 +1999,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 重置处于运行中状态的实例的密码，需要显式指定强制关机参数ForceStop。如果没有显式指定强制关机参数，则只有处于关机状态的实例才允许执行重置密码操作。
+        /// </summary>
+        /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
+        /// <returns><see cref="ResetInstancesPasswordResponse"/></returns>
+        public async Task<ResetInstancesPasswordResponse> ResetInstancesPassword(ResetInstancesPasswordRequest req)
+        {
+             JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetInstancesPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetInstancesPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置处于运行中状态的实例的密码，需要显式指定强制关机参数ForceStop。如果没有显式指定强制关机参数，则只有处于关机状态的实例才允许执行重置密码操作。
+        /// </summary>
+        /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
+        /// <returns><see cref="ResetInstancesPasswordResponse"/></returns>
+        public ResetInstancesPasswordResponse ResetInstancesPasswordSync(ResetInstancesPasswordRequest req)
+        {
+             JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetInstancesPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetInstancesPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建ECM实例
         /// </summary>
         /// <param name="req"><see cref="RunInstancesRequest"/></param>
@@ -2030,6 +2070,90 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "RunInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。
+        /// </summary>
+        /// <param name="req"><see cref="StartInstancesRequest"/></param>
+        /// <returns><see cref="StartInstancesResponse"/></returns>
+        public async Task<StartInstancesResponse> StartInstances(StartInstancesRequest req)
+        {
+             JsonResponseModel<StartInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。
+        /// </summary>
+        /// <param name="req"><see cref="StartInstancesRequest"/></param>
+        /// <returns><see cref="StartInstancesResponse"/></returns>
+        public StartInstancesResponse StartInstancesSync(StartInstancesRequest req)
+        {
+             JsonResponseModel<StartInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 只有处于"RUNNING"状态的实例才能够进行关机操作；
+        /// 调用成功时，实例会进入STOPPING状态；关闭实例成功时，实例会进入STOPPED状态；
+        /// 支持强制关闭，强制关机的效果等同于关闭物理计算机的电源开关，强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+        /// </summary>
+        /// <param name="req"><see cref="StopInstancesRequest"/></param>
+        /// <returns><see cref="StopInstancesResponse"/></returns>
+        public async Task<StopInstancesResponse> StopInstances(StopInstancesRequest req)
+        {
+             JsonResponseModel<StopInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 只有处于"RUNNING"状态的实例才能够进行关机操作；
+        /// 调用成功时，实例会进入STOPPING状态；关闭实例成功时，实例会进入STOPPED状态；
+        /// 支持强制关闭，强制关机的效果等同于关闭物理计算机的电源开关，强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+        /// </summary>
+        /// <param name="req"><see cref="StopInstancesRequest"/></param>
+        /// <returns><see cref="StopInstancesResponse"/></returns>
+        public StopInstancesResponse StopInstancesSync(StopInstancesRequest req)
+        {
+             JsonResponseModel<StopInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

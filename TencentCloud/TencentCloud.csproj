@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.50</VersionPrefix>
+    <VersionPrefix>3.0.51</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -944,8 +944,6 @@
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\AttachedPolicyOfRole.cs" />
-    <Compile Include="Cam\V20190116\Models\CheckNewMfaCodeRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\CheckNewMfaCodeResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupRequest.cs" />
@@ -956,6 +954,8 @@
     <Compile Include="Cam\V20190116\Models\CreateRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateSAMLProviderResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateServiceLinkedRoleRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateServiceLinkedRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyRequest.cs" />
@@ -964,6 +964,8 @@
     <Compile Include="Cam\V20190116\Models\DeleteRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteServiceLinkedRoleRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteServiceLinkedRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
@@ -984,6 +986,8 @@
     <Compile Include="Cam\V20190116\Models\GetRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetSAMLProviderResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GroupIdOfUidInfo.cs" />
@@ -1011,14 +1015,10 @@
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersResponse.cs" />
-    <Compile Include="Cam\V20190116\Models\LoginActionFlag.cs" />
-    <Compile Include="Cam\V20190116\Models\OffsiteFlag.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\RoleInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SAMLProviderInfo.cs" />
-    <Compile Include="Cam\V20190116\Models\SetFlagRequest.cs" />
-    <Compile Include="Cam\V20190116\Models\SetFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
@@ -3355,6 +3355,8 @@
     <Compile Include="Ecm\V20190719\Models\RemovePrivateIpAddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesMaxBandwidthRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesMaxBandwidthResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ResetInstancesPasswordRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ResetInstancesPasswordResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\RunInstancesRequest.cs" />
@@ -3363,6 +3365,10 @@
     <Compile Include="Ecm\V20190719\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="Ecm\V20190719\Models\SimpleModule.cs" />
     <Compile Include="Ecm\V20190719\Models\SrcImage.cs" />
+    <Compile Include="Ecm\V20190719\Models\StartInstancesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\StartInstancesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\StopInstancesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\StopInstancesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Subnet.cs" />
     <Compile Include="Ecm\V20190719\Models\Tag.cs" />
     <Compile Include="Ecm\V20190719\Models\TagSpecification.cs" />
@@ -3803,6 +3809,8 @@
     <Compile Include="Gse\V20191112\Models\PlacedPlayerSession.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerLatency.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerSession.cs" />
+    <Compile Include="Gse\V20191112\Models\SearchGameServerSessionsRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\SearchGameServerSessionsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementRequest.cs" />
@@ -6996,6 +7004,7 @@
     <Compile Include="Tiia\V20190529\Models\RecognizeCarRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\RecognizeCarResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\RegionDetected.cs" />
+    <Compile Include="Tiia\V20190529\Models\Threshold.cs" />
     <Compile Include="Tione\V20191022\TioneClient.cs" />
     <Compile Include="Tione\V20191022\Models\AlgorithmSpecification.cs" />
     <Compile Include="Tione\V20191022\Models\CodeRepoSummary.cs" />

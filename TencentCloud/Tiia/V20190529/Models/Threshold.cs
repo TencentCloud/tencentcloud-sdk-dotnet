@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetFlagResponse : AbstractModel
+    public class Threshold : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 误识率在百分之一时的推荐阈值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FalseRate1Percent")]
+        public long? FalseRate1Percent{ get; set; }
+
+        /// <summary>
+        /// 误识率在千分之五时的推荐阈值。
+        /// </summary>
+        [JsonProperty("FalseRate5Permil")]
+        public long? FalseRate5Permil{ get; set; }
+
+        /// <summary>
+        /// 误识率在千分之一时的推荐阈值。
+        /// </summary>
+        [JsonProperty("FalseRate1Permil")]
+        public long? FalseRate1Permil{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "FalseRate1Percent", this.FalseRate1Percent);
+            this.SetParamSimple(map, prefix + "FalseRate5Permil", this.FalseRate5Permil);
+            this.SetParamSimple(map, prefix + "FalseRate1Permil", this.FalseRate1Permil);
         }
     }
 }

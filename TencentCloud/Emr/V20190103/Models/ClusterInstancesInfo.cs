@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID
+        /// ID号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
@@ -247,6 +247,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("AliasInfo")]
         public string AliasInfo{ get; set; }
 
+        /// <summary>
+        /// 集群版本Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public long? ProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -281,6 +288,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
             this.SetParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
             this.SetParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

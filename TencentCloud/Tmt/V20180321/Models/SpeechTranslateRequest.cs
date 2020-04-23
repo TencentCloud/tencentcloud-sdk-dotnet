@@ -43,7 +43,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Target{ get; set; }
 
         /// <summary>
-        /// pcm : 146   amr : 33554432   mp3 : 83886080
+        /// pcm : 146   speex : 16779154   mp3 : 83886080
         /// </summary>
         [JsonProperty("AudioFormat")]
         public long? AudioFormat{ get; set; }

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePurgeQuotaResponse : AbstractModel
+    public class DeleteServiceLinkedRoleRequest : AbstractModel
     {
         
         /// <summary>
-        /// URL刷新用量及配额。
+        /// 要删除的服务相关角色的名称。
         /// </summary>
-        [JsonProperty("UrlPurge")]
-        public Quota[] UrlPurge{ get; set; }
-
-        /// <summary>
-        /// 目录刷新用量及配额。
-        /// </summary>
-        [JsonProperty("PathPurge")]
-        public Quota[] PathPurge{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "UrlPurge.", this.UrlPurge);
-            this.SetParamArrayObj(map, prefix + "PathPurge.", this.PathPurge);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
         }
     }
 }

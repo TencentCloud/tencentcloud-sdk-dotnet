@@ -15,30 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiia.V20190529.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectCelebrityResponse : AbstractModel
+    public class GetServiceLinkedRoleDeletionStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// 公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。
+        /// 状态：NOT_STARTED，IN_PROGRESS，SUCCEEDED，FAILED
         /// </summary>
-        [JsonProperty("Faces")]
-        public Face[] Faces{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// 本服务在不同误识率水平下（将图片中的人物识别错误的比例）的推荐阈值，可以用于控制识别结果的精度。 
-        /// FalseRate1Percent, FalseRate5Permil, FalseRate1Permil分别代表误识率在百分之一、千分之五、千分之一情况下的推荐阈值。 
-        /// 因为阈值会存在变动，请勿将此处输出的固定值处理，而是每次取值与confidence对比，来判断本次的识别结果是否可信。
-        ///  例如，如果您业务中可以接受的误识率是1%，则可以将所有confidence>=FalseRate1Percent的结论认为是正确的。
+        /// 失败原因
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
+        /// <summary>
+        /// 服务类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Threshold")]
-        public Threshold Threshold{ get; set; }
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
+        /// <summary>
+        /// 服务名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,8 +62,10 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Faces.", this.Faces);
-            this.SetParamObj(map, prefix + "Threshold.", this.Threshold);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

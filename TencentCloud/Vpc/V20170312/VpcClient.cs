@@ -5321,7 +5321,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查看VPC资源
+        /// 本接口(DescribeVpcResourceDashboard)用于查看VPC资源信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcResourceDashboardRequest"/></param>
         /// <returns><see cref="DescribeVpcResourceDashboardResponse"/></returns>
@@ -5341,7 +5341,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 查看VPC资源
+        /// 本接口(DescribeVpcResourceDashboard)用于查看VPC资源信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcResourceDashboardRequest"/></param>
         /// <returns><see cref="DescribeVpcResourceDashboardResponse"/></returns>

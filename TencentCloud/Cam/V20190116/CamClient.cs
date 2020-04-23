@@ -253,46 +253,6 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 校验新手机新邮箱接口
-        /// </summary>
-        /// <param name="req"><see cref="CheckNewMfaCodeRequest"/></param>
-        /// <returns><see cref="CheckNewMfaCodeResponse"/></returns>
-        public async Task<CheckNewMfaCodeResponse> CheckNewMfaCode(CheckNewMfaCodeRequest req)
-        {
-             JsonResponseModel<CheckNewMfaCodeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CheckNewMfaCode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckNewMfaCodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 校验新手机新邮箱接口
-        /// </summary>
-        /// <param name="req"><see cref="CheckNewMfaCodeRequest"/></param>
-        /// <returns><see cref="CheckNewMfaCodeResponse"/></returns>
-        public CheckNewMfaCodeResponse CheckNewMfaCodeSync(CheckNewMfaCodeRequest req)
-        {
-             JsonResponseModel<CheckNewMfaCodeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CheckNewMfaCode");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckNewMfaCodeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 验证自定义多因子Token
         /// </summary>
         /// <param name="req"><see cref="ConsumeCustomMFATokenRequest"/></param>
@@ -493,6 +453,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 创建服务相关角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="CreateServiceLinkedRoleResponse"/></returns>
+        public async Task<CreateServiceLinkedRoleResponse> CreateServiceLinkedRole(CreateServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<CreateServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceLinkedRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建服务相关角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="CreateServiceLinkedRoleResponse"/></returns>
+        public CreateServiceLinkedRoleResponse CreateServiceLinkedRoleSync(CreateServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<CreateServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceLinkedRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除用户组
         /// </summary>
         /// <param name="req"><see cref="DeleteGroupRequest"/></param>
@@ -644,6 +644,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSAMLProvider");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSAMLProviderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除服务相关角色
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="DeleteServiceLinkedRoleResponse"/></returns>
+        public async Task<DeleteServiceLinkedRoleResponse> DeleteServiceLinkedRole(DeleteServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<DeleteServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceLinkedRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除服务相关角色
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceLinkedRoleRequest"/></param>
+        /// <returns><see cref="DeleteServiceLinkedRoleResponse"/></returns>
+        public DeleteServiceLinkedRoleResponse DeleteServiceLinkedRoleSync(DeleteServiceLinkedRoleRequest req)
+        {
+             JsonResponseModel<DeleteServiceLinkedRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteServiceLinkedRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceLinkedRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1053,6 +1093,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 根据删除TaskId获取服务相关角色删除状态
+        /// </summary>
+        /// <param name="req"><see cref="GetServiceLinkedRoleDeletionStatusRequest"/></param>
+        /// <returns><see cref="GetServiceLinkedRoleDeletionStatusResponse"/></returns>
+        public async Task<GetServiceLinkedRoleDeletionStatusResponse> GetServiceLinkedRoleDeletionStatus(GetServiceLinkedRoleDeletionStatusRequest req)
+        {
+             JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetServiceLinkedRoleDeletionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据删除TaskId获取服务相关角色删除状态
+        /// </summary>
+        /// <param name="req"><see cref="GetServiceLinkedRoleDeletionStatusRequest"/></param>
+        /// <returns><see cref="GetServiceLinkedRoleDeletionStatusResponse"/></returns>
+        public GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatusSync(GetServiceLinkedRoleDeletionStatusRequest req)
+        {
+             JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetServiceLinkedRoleDeletionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询子用户
         /// </summary>
         /// <param name="req"><see cref="GetUserRequest"/></param>
@@ -1373,7 +1453,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 本接口（ListPolicies）可用于查询策略列表
+        /// 本接口（ListPolicies）可用于查询策略列表。
         /// </summary>
         /// <param name="req"><see cref="ListPoliciesRequest"/></param>
         /// <returns><see cref="ListPoliciesResponse"/></returns>
@@ -1393,7 +1473,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 本接口（ListPolicies）可用于查询策略列表
+        /// 本接口（ListPolicies）可用于查询策略列表。
         /// </summary>
         /// <param name="req"><see cref="ListPoliciesRequest"/></param>
         /// <returns><see cref="ListPoliciesResponse"/></returns>
@@ -1564,46 +1644,6 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "RemoveUserFromGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserFromGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 设置用户的登录保护和敏感操作校验方式
-        /// </summary>
-        /// <param name="req"><see cref="SetFlagRequest"/></param>
-        /// <returns><see cref="SetFlagResponse"/></returns>
-        public async Task<SetFlagResponse> SetFlag(SetFlagRequest req)
-        {
-             JsonResponseModel<SetFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SetFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 设置用户的登录保护和敏感操作校验方式
-        /// </summary>
-        /// <param name="req"><see cref="SetFlagRequest"/></param>
-        /// <returns><see cref="SetFlagResponse"/></returns>
-        public SetFlagResponse SetFlagSync(SetFlagRequest req)
-        {
-             JsonResponseModel<SetFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SetFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

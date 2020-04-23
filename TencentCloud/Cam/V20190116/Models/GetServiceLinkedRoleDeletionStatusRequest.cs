@@ -21,14 +21,14 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckNewMfaCodeResponse : AbstractModel
+    public class GetServiceLinkedRoleDeletionStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 删除任务ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DeletionTaskId")]
+        public string DeletionTaskId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
         }
     }
 }

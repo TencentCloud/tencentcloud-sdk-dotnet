@@ -21,38 +21,26 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SetFlagRequest : AbstractModel
+    public class CreateServiceLinkedRoleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 设置用户的uin
+        /// 授权服务，附加了此角色的腾讯云服务主体。
         /// </summary>
-        [JsonProperty("OpUin")]
-        public ulong? OpUin{ get; set; }
+        [JsonProperty("QCSServiceName")]
+        public string[] QCSServiceName{ get; set; }
 
         /// <summary>
-        /// 登录设置
+        /// 自定义后缀，根据您提供的字符串，与服务提供的前缀组合在一起以形成完整的角色名称。
         /// </summary>
-        [JsonProperty("LoginFlag")]
-        public LoginActionFlag LoginFlag{ get; set; }
+        [JsonProperty("CustomSuffix")]
+        public string CustomSuffix{ get; set; }
 
         /// <summary>
-        /// 敏感操作设置
+        /// 角色说明。
         /// </summary>
-        [JsonProperty("ActionFlag")]
-        public LoginActionFlag ActionFlag{ get; set; }
-
-        /// <summary>
-        /// 异地登录设置
-        /// </summary>
-        [JsonProperty("OffsiteFlag")]
-        public OffsiteFlag OffsiteFlag{ get; set; }
-
-        /// <summary>
-        /// 是否需要重置mfa
-        /// </summary>
-        [JsonProperty("NeedResetMfa")]
-        public ulong? NeedResetMfa{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -60,11 +48,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OpUin", this.OpUin);
-            this.SetParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
-            this.SetParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
-            this.SetParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
-            this.SetParamSimple(map, prefix + "NeedResetMfa", this.NeedResetMfa);
+            this.SetParamArraySimple(map, prefix + "QCSServiceName.", this.QCSServiceName);
+            this.SetParamSimple(map, prefix + "CustomSuffix", this.CustomSuffix);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

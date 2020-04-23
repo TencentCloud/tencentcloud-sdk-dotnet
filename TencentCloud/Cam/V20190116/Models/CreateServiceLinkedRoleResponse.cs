@@ -21,38 +21,20 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LoginActionFlag : AbstractModel
+    public class CreateServiceLinkedRoleResponse : AbstractModel
     {
         
         /// <summary>
-        /// 手机
+        /// 角色ID
         /// </summary>
-        [JsonProperty("Phone")]
-        public ulong? Phone{ get; set; }
+        [JsonProperty("RoleId")]
+        public string RoleId{ get; set; }
 
         /// <summary>
-        /// 硬token
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Token")]
-        public ulong? Token{ get; set; }
-
-        /// <summary>
-        /// 软token
-        /// </summary>
-        [JsonProperty("Stoken")]
-        public ulong? Stoken{ get; set; }
-
-        /// <summary>
-        /// 微信
-        /// </summary>
-        [JsonProperty("Wechat")]
-        public ulong? Wechat{ get; set; }
-
-        /// <summary>
-        /// 自定义
-        /// </summary>
-        [JsonProperty("Custom")]
-        public ulong? Custom{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +42,8 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Phone", this.Phone);
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "Stoken", this.Stoken);
-            this.SetParamSimple(map, prefix + "Wechat", this.Wechat);
-            this.SetParamSimple(map, prefix + "Custom", this.Custom);
+            this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

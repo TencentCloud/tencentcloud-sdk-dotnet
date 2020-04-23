@@ -15,44 +15,36 @@
  * under the License.
  */
 
-namespace TencentCloud.Cam.V20190116.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OffsiteFlag : AbstractModel
+    public class StopInstancesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 验证标识
+        /// 需要关机的实例ID列表。在单次请求的过程中，单个region下的请求实例数上限为100。
         /// </summary>
-        [JsonProperty("VerifyFlag")]
-        public ulong? VerifyFlag{ get; set; }
+        [JsonProperty("InstanceIdSet")]
+        public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
-        /// 手机通知
+        /// 是否在正常关闭失败后选择强制关闭实例，默认为false，即否。
         /// </summary>
-        [JsonProperty("NotifyPhone")]
-        public ulong? NotifyPhone{ get; set; }
+        [JsonProperty("ForceStop")]
+        public bool? ForceStop{ get; set; }
 
         /// <summary>
-        /// 邮箱通知
+        /// 实例的关闭模式。取值范围：
+        /// SOFT_FIRST：表示在正常关闭失败后进行强制关闭;
+        /// HARD：直接强制关闭;
+        /// SOFT：仅软关机；
+        /// 默认为SOFT。
         /// </summary>
-        [JsonProperty("NotifyEmail")]
-        public long? NotifyEmail{ get; set; }
-
-        /// <summary>
-        /// 微信通知
-        /// </summary>
-        [JsonProperty("NotifyWechat")]
-        public ulong? NotifyWechat{ get; set; }
-
-        /// <summary>
-        /// 提示
-        /// </summary>
-        [JsonProperty("Tips")]
-        public ulong? Tips{ get; set; }
+        [JsonProperty("StopType")]
+        public string StopType{ get; set; }
 
 
         /// <summary>
@@ -60,11 +52,9 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VerifyFlag", this.VerifyFlag);
-            this.SetParamSimple(map, prefix + "NotifyPhone", this.NotifyPhone);
-            this.SetParamSimple(map, prefix + "NotifyEmail", this.NotifyEmail);
-            this.SetParamSimple(map, prefix + "NotifyWechat", this.NotifyWechat);
-            this.SetParamSimple(map, prefix + "Tips", this.Tips);
+            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+            this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
+            this.SetParamSimple(map, prefix + "StopType", this.StopType);
         }
     }
 }
