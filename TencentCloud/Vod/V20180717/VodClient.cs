@@ -677,6 +677,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于创建点播子应用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubAppIdRequest"/></param>
+        /// <returns><see cref="CreateSubAppIdResponse"/></returns>
+        public async Task<CreateSubAppIdResponse> CreateSubAppId(CreateSubAppIdRequest req)
+        {
+             JsonResponseModel<CreateSubAppIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSubAppId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubAppIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于创建点播子应用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubAppIdRequest"/></param>
+        /// <returns><see cref="CreateSubAppIdResponse"/></returns>
+        public CreateSubAppIdResponse CreateSubAppIdSync(CreateSubAppIdRequest req)
+        {
+             JsonResponseModel<CreateSubAppIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSubAppId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSubAppIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建超级播放器配置，数量上限：100。
         /// </summary>
         /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>

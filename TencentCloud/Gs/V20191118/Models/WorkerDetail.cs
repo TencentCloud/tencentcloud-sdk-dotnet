@@ -76,6 +76,20 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("ServiceState")]
         public string ServiceState{ get; set; }
 
+        /// <summary>
+        /// 用户ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
+        /// <summary>
+        /// 游戏ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GameId")]
+        public string GameId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +103,8 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "ServiceState", this.ServiceState);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "GameId", this.GameId);
         }
     }
 }

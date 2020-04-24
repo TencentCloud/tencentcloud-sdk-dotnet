@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDBInstanceNameResponse : AbstractModel
+    public class ImageOptimization : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// WebpAdapter配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("WebpAdapter")]
+        public WebpAdapter WebpAdapter{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// TpgAdapter配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TpgAdapter")]
+        public TpgAdapter TpgAdapter{ get; set; }
+
+        /// <summary>
+        /// GuetzliAdapter配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GuetzliAdapter")]
+        public GuetzliAdapter GuetzliAdapter{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "WebpAdapter.", this.WebpAdapter);
+            this.SetParamObj(map, prefix + "TpgAdapter.", this.TpgAdapter);
+            this.SetParamObj(map, prefix + "GuetzliAdapter.", this.GuetzliAdapter);
         }
     }
 }

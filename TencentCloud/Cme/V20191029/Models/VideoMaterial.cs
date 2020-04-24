@@ -49,7 +49,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// 媒体文件分辨率。
+        /// 媒体文件分辨率。取值为：LD/SD/HD/FHD/2K/4K。
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

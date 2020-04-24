@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyDBInstanceNameResponse : AbstractModel
+    public class DescribeAllStreamPlayInfoListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// 查询时间点，回传的输入参数中的查询时间。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("QueryTime")]
+        public string QueryTime{ get; set; }
+
+        /// <summary>
+        /// 数据信息列表。
+        /// </summary>
+        [JsonProperty("DataInfoList")]
+        public MonitorStreamPlayInfo[] DataInfoList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +48,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
+            this.SetParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

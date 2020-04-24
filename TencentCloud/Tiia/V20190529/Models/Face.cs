@@ -44,7 +44,6 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
-        /// 当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }

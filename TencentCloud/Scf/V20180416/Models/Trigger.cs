@@ -66,6 +66,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("CustomArgument")]
         public string CustomArgument{ get; set; }
 
+        /// <summary>
+        /// 触发器状态
+        /// </summary>
+        [JsonProperty("AvailableStatus")]
+        public string AvailableStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
+            this.SetParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
         }
     }
 }

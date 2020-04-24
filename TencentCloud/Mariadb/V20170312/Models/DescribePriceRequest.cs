@@ -63,6 +63,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
+        /// <summary>
+        /// 付费类型。postpaid：按量付费   prepaid：预付费
+        /// </summary>
+        [JsonProperty("Paymode")]
+        public string Paymode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +81,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
         }
     }
 }

@@ -1395,6 +1395,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllStreamPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAllStreamPlayInfoListResponse"/></returns>
+        public async Task<DescribeAllStreamPlayInfoListResponse> DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllStreamPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllStreamPlayInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAllStreamPlayInfoListResponse"/></returns>
+        public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoListSync(DescribeAllStreamPlayInfoListRequest req)
+        {
+             JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllStreamPlayInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播计费带宽和流量数据查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>

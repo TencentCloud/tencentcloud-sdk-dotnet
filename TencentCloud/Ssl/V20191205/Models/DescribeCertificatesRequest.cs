@@ -37,7 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索关键词。
+        /// 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

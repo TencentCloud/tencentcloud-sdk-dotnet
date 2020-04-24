@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.51</VersionPrefix>
+    <VersionPrefix>3.0.52</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1536,8 +1536,10 @@
     <Compile Include="Cdn\V20180606\Models\ForceRedirect.cs" />
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
+    <Compile Include="Cdn\V20180606\Models\ImageOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFreqLimit.cs" />
     <Compile Include="Cdn\V20180606\Models\IpStatus.cs" />
@@ -1599,6 +1601,7 @@
     <Compile Include="Cdn\V20180606\Models\TopData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopDetailData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopicInfo.cs" />
+    <Compile Include="Cdn\V20180606\Models\TpgAdapter.cs" />
     <Compile Include="Cdn\V20180606\Models\TrafficPackage.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigResponse.cs" />
@@ -1607,6 +1610,7 @@
     <Compile Include="Cdn\V20180606\Models\UrlRecord.cs" />
     <Compile Include="Cdn\V20180606\Models\VideoSeek.cs" />
     <Compile Include="Cdn\V20180606\Models\ViolationUrl.cs" />
+    <Compile Include="Cdn\V20180606\Models\WebpAdapter.cs" />
     <Compile Include="Cds\V20180420\CdsClient.cs" />
     <Compile Include="Cds\V20180420\Models\CdsAuditInstance.cs" />
     <Compile Include="Cds\V20180420\Models\DbauditTypesInfo.cs" />
@@ -2411,10 +2415,14 @@
     <Compile Include="Cr\V20180321\Models\DownloadRecordListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadReportRequest.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadReportResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryInstantDataRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryInstantDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\SingleBlackApply.cs" />
     <Compile Include="Cr\V20180321\Models\SingleRecord.cs" />
     <Compile Include="Cr\V20180321\Models\UploadDataFileRequest.cs" />
     <Compile Include="Cr\V20180321\Models\UploadDataFileResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\UploadDataJsonRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\UploadDataJsonResponse.cs" />
     <Compile Include="Cr\V20180321\Models\UploadFileRequest.cs" />
     <Compile Include="Cr\V20180321\Models\UploadFileResponse.cs" />
     <Compile Include="Cvm\V20170312\CvmClient.cs" />
@@ -4521,6 +4529,8 @@
     <Compile Include="Live\V20180801\Models\DeleteLiveWatermarkRuleResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeletePullStreamConfigRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeletePullStreamConfigResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeConcurrentRecordStreamNumRequest.cs" />
@@ -4660,6 +4670,7 @@
     <Compile Include="Live\V20180801\Models\ModifyPullStreamConfigResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyPullStreamStatusRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyPullStreamStatusResponse.cs" />
+    <Compile Include="Live\V20180801\Models\MonitorStreamPlayInfo.cs" />
     <Compile Include="Live\V20180801\Models\PlayAuthKeyInfo.cs" />
     <Compile Include="Live\V20180801\Models\PlayCodeTotalInfo.cs" />
     <Compile Include="Live\V20180801\Models\PlayDataInfoByStream.cs" />
@@ -7581,6 +7592,8 @@
     <Compile Include="Vod\V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateSubAppIdRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateSubAppIdResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateSuperPlayerConfigRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateSuperPlayerConfigResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateRequest.cs" />

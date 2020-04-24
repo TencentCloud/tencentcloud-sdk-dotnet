@@ -375,6 +375,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 实时数据查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryInstantDataRequest"/></param>
+        /// <returns><see cref="QueryInstantDataResponse"/></returns>
+        public async Task<QueryInstantDataResponse> QueryInstantData(QueryInstantDataRequest req)
+        {
+             JsonResponseModel<QueryInstantDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryInstantData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInstantDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实时数据查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryInstantDataRequest"/></param>
+        /// <returns><see cref="QueryInstantDataResponse"/></returns>
+        public QueryInstantDataResponse QueryInstantDataSync(QueryInstantDataRequest req)
+        {
+             JsonResponseModel<QueryInstantDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryInstantData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInstantDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。
         /// </summary>
         /// <param name="req"><see cref="UploadDataFileRequest"/></param>
@@ -406,6 +446,46 @@ namespace TencentCloud.Cr.V20180321
              {
                  var strResp = this.InternalRequestSync(req, "UploadDataFile");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadDataFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传Json格式数据，接口返回数据任务ID
+        /// </summary>
+        /// <param name="req"><see cref="UploadDataJsonRequest"/></param>
+        /// <returns><see cref="UploadDataJsonResponse"/></returns>
+        public async Task<UploadDataJsonResponse> UploadDataJson(UploadDataJsonRequest req)
+        {
+             JsonResponseModel<UploadDataJsonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadDataJson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadDataJsonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传Json格式数据，接口返回数据任务ID
+        /// </summary>
+        /// <param name="req"><see cref="UploadDataJsonRequest"/></param>
+        /// <returns><see cref="UploadDataJsonResponse"/></returns>
+        public UploadDataJsonResponse UploadDataJsonSync(UploadDataJsonRequest req)
+        {
+             JsonResponseModel<UploadDataJsonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadDataJson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadDataJsonResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
