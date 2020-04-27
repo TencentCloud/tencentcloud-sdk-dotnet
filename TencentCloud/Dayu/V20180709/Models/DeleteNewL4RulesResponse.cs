@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Dayu.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryInvoiceForManagementResponse : AbstractModel
+    public class DeleteNewL4RulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 发票结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 成功码
         /// </summary>
-        [JsonProperty("Result")]
-        public InvoiceManangementResult Result{ get; set; }
+        [JsonProperty("Success")]
+        public SuccessCode Success{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +42,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamObj(map, prefix + "Success.", this.Success);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

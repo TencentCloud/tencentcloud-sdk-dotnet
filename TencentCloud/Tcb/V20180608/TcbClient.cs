@@ -413,6 +413,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询后付费免费配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvFreeQuotaRequest"/></param>
+        /// <returns><see cref="DescribeEnvFreeQuotaResponse"/></returns>
+        public async Task<DescribeEnvFreeQuotaResponse> DescribeEnvFreeQuota(DescribeEnvFreeQuotaRequest req)
+        {
+             JsonResponseModel<DescribeEnvFreeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvFreeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvFreeQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询后付费免费配额信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvFreeQuotaRequest"/></param>
+        /// <returns><see cref="DescribeEnvFreeQuotaResponse"/></returns>
+        public DescribeEnvFreeQuotaResponse DescribeEnvFreeQuotaSync(DescribeEnvFreeQuotaRequest req)
+        {
+             JsonResponseModel<DescribeEnvFreeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvFreeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvFreeQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询环境个数上限
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvLimitRequest"/></param>

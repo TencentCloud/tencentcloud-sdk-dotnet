@@ -105,14 +105,14 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// 超级网银行号和大小额行号
+        /// 大小额行号，超级网银行号和大小额行号
         /// 二选一
         /// </summary>
         [JsonProperty("CnapsBranchId")]
         public string CnapsBranchId{ get; set; }
 
         /// <summary>
-        /// 超级网银行号和大小额行号
+        /// 超级网银行号，超级网银行号和大小额行号
         /// 二选一
         /// </summary>
         [JsonProperty("EiconBankBranchId")]

@@ -6425,6 +6425,50 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 该接口用于调整具有带宽属性弹性公网IP的网络计费模式
+        /// * 支持BANDWIDTH_PREPAID_BY_MONTH和TRAFFIC_POSTPAID_BY_HOUR两种网络计费模式之间的切换。
+        /// * 每个弹性公网IP支持调整两次，次数超出则无法调整。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressInternetChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyAddressInternetChargeTypeResponse"/></returns>
+        public async Task<ModifyAddressInternetChargeTypeResponse> ModifyAddressInternetChargeType(ModifyAddressInternetChargeTypeRequest req)
+        {
+             JsonResponseModel<ModifyAddressInternetChargeTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAddressInternetChargeType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressInternetChargeTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于调整具有带宽属性弹性公网IP的网络计费模式
+        /// * 支持BANDWIDTH_PREPAID_BY_MONTH和TRAFFIC_POSTPAID_BY_HOUR两种网络计费模式之间的切换。
+        /// * 每个弹性公网IP支持调整两次，次数超出则无法调整。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAddressInternetChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyAddressInternetChargeTypeResponse"/></returns>
+        public ModifyAddressInternetChargeTypeResponse ModifyAddressInternetChargeTypeSync(ModifyAddressInternetChargeTypeRequest req)
+        {
+             JsonResponseModel<ModifyAddressInternetChargeTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAddressInternetChargeType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressInternetChargeTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
         /// </summary>
         /// <param name="req"><see cref="ModifyAddressTemplateAttributeRequest"/></param>

@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Dayu.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryMerchantInfoForManagementResponse : AbstractModel
+    public class DeleteNewL4RulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 商户结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 大禹子产品代号（bgpip表示高防IP）
         /// </summary>
-        [JsonProperty("Result")]
-        public MerchantManagementResult Result{ get; set; }
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 删除接口结构体
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Rule")]
+        public L4DelRule[] Rule{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamArrayObj(map, prefix + "Rule.", this.Rule);
         }
     }
 }

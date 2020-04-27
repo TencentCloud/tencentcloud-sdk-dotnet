@@ -104,6 +104,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
+        /// <summary>
+        /// 模板描述信息，长度限制：256 个字符。
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "RowCount", this.RowCount);
             this.SetParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }
 }

@@ -150,6 +150,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
+        /// <summary>
+        /// 应用名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string[] ApplicationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+            this.SetParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
         }
     }
 }

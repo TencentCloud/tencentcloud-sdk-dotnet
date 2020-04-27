@@ -43,7 +43,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string TaxpayerNum{ get; set; }
 
         /// <summary>
-        /// 注册企业法人代表名称
+        /// 注册企业法定代表人名称
         /// </summary>
         [JsonProperty("LegalPersonName")]
         public string LegalPersonName{ get; set; }

@@ -511,6 +511,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 获取域名图片优化的当前配置，支持Webp、TPG、Guetzli 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
+        /// <returns><see cref="DescribeImageConfigResponse"/></returns>
+        public async Task<DescribeImageConfigResponse> DescribeImageConfig(DescribeImageConfigRequest req)
+        {
+             JsonResponseModel<DescribeImageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名图片优化的当前配置，支持Webp、TPG、Guetzli 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
+        /// <returns><see cref="DescribeImageConfigResponse"/></returns>
+        public DescribeImageConfigResponse DescribeImageConfigSync(DescribeImageConfigRequest req)
+        {
+             JsonResponseModel<DescribeImageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细
         /// 注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
         /// </summary>
@@ -1682,6 +1722,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "UpdateDomainConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新控制台图片优化的相关配置，支持Webp、TPG、Guetzli 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateImageConfigRequest"/></param>
+        /// <returns><see cref="UpdateImageConfigResponse"/></returns>
+        public async Task<UpdateImageConfigResponse> UpdateImageConfig(UpdateImageConfigRequest req)
+        {
+             JsonResponseModel<UpdateImageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateImageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateImageConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新控制台图片优化的相关配置，支持Webp、TPG、Guetzli 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateImageConfigRequest"/></param>
+        /// <returns><see cref="UpdateImageConfigResponse"/></returns>
+        public UpdateImageConfigResponse UpdateImageConfigSync(UpdateImageConfigRequest req)
+        {
+             JsonResponseModel<UpdateImageConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateImageConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateImageConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

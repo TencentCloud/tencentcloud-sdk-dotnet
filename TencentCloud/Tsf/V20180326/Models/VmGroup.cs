@@ -165,18 +165,25 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string MicroserviceType{ get; set; }
 
         /// <summary>
-        /// ApplicationType
+        /// 应用类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
-        /// GroupResourceType
+        /// 部署组资源类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }
+
+        /// <summary>
+        /// 部署组更新时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public long? UpdatedTime{ get; set; }
 
 
         /// <summary>
@@ -206,6 +213,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
             this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         }
     }
 }

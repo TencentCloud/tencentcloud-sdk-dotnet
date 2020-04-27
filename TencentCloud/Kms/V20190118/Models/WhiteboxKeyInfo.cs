@@ -84,6 +84,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("DecryptKey")]
         public string DecryptKey{ get; set; }
 
+        /// <summary>
+        /// 资源ID，格式：creatorUin/$creatorUin/$keyId
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "Algorithm", this.Algorithm);
             this.SetParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
             this.SetParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Gs.V20191118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InvoiceManangementResult : AbstractModel
+    public class QuitQueueRequest : AbstractModel
     {
         
         /// <summary>
-        /// 总数。
+        /// 用户ID
         /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// 发票列表。
+        /// 资源池编号
         /// </summary>
-        [JsonProperty("List")]
-        public InvoiceManagementList[] List{ get; set; }
+        [JsonProperty("SetNumber")]
+        public ulong? SetNumber{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "SetNumber", this.SetNumber);
         }
     }
 }

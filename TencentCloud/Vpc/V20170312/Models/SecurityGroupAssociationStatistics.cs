@@ -66,6 +66,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InstanceStatistics")]
         public InstanceStatistic[] InstanceStatistics{ get; set; }
 
+        /// <summary>
+        /// 所有资源的总计数。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SG", this.SG);
             this.SetParamSimple(map, prefix + "CLB", this.CLB);
             this.SetParamArrayObj(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }

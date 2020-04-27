@@ -83,6 +83,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PornFlag")]
         public long? PornFlag{ get; set; }
 
+        /// <summary>
+        /// Cos Bucket文件夹前缀。
+        /// </summary>
+        [JsonProperty("CosPrefix")]
+        public string CosPrefix{ get; set; }
+
+        /// <summary>
+        /// Cos 文件名称。
+        /// </summary>
+        [JsonProperty("CosFileName")]
+        public string CosFileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +110,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "PornFlag", this.PornFlag);
+            this.SetParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+            this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
         }
     }
 }

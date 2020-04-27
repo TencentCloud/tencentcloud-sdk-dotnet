@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Dayu.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MerchantManagementList : AbstractModel
+    public class DescribeNewL4RulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 企业名称。
+        /// 转发规则列表
         /// </summary>
-        [JsonProperty("TaxpayerName")]
-        public string TaxpayerName{ get; set; }
+        [JsonProperty("Rules")]
+        public NewL4RuleEntry[] Rules{ get; set; }
 
         /// <summary>
-        /// 纳税人识别号(税号)	。
+        /// 总规则数
         /// </summary>
-        [JsonProperty("TaxpayerNum")]
-        public string TaxpayerNum{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 请求流水号。
+        /// 四层健康检查配置列表
         /// </summary>
-        [JsonProperty("SerialNo")]
-        public string SerialNo{ get; set; }
+        [JsonProperty("Healths")]
+        public L4RuleHealth[] Healths{ get; set; }
 
         /// <summary>
-        /// 开票系统ID
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("InvoicePlatformId")]
-        public long? InvoicePlatformId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaxpayerName", this.TaxpayerName);
-            this.SetParamSimple(map, prefix + "TaxpayerNum", this.TaxpayerNum);
-            this.SetParamSimple(map, prefix + "SerialNo", this.SerialNo);
-            this.SetParamSimple(map, prefix + "InvoicePlatformId", this.InvoicePlatformId);
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Healths.", this.Healths);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

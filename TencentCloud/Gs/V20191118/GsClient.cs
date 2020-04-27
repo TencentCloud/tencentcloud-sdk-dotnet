@@ -173,6 +173,46 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 进入排队锁定机器
+        /// </summary>
+        /// <param name="req"><see cref="EnterQueueRequest"/></param>
+        /// <returns><see cref="EnterQueueResponse"/></returns>
+        public async Task<EnterQueueResponse> EnterQueue(EnterQueueRequest req)
+        {
+             JsonResponseModel<EnterQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnterQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnterQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 进入排队锁定机器
+        /// </summary>
+        /// <param name="req"><see cref="EnterQueueRequest"/></param>
+        /// <returns><see cref="EnterQueueResponse"/></returns>
+        public EnterQueueResponse EnterQueueSync(EnterQueueRequest req)
+        {
+             JsonResponseModel<EnterQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnterQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnterQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改机器信息
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkersRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Gs.V20191118
              {
                  var strResp = this.InternalRequestSync(req, "ModifyWorkers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWorkersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 退出排队
+        /// </summary>
+        /// <param name="req"><see cref="QuitQueueRequest"/></param>
+        /// <returns><see cref="QuitQueueResponse"/></returns>
+        public async Task<QuitQueueResponse> QuitQueue(QuitQueueRequest req)
+        {
+             JsonResponseModel<QuitQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QuitQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuitQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 退出排队
+        /// </summary>
+        /// <param name="req"><see cref="QuitQueueRequest"/></param>
+        /// <returns><see cref="QuitQueueResponse"/></returns>
+        public QuitQueueResponse QuitQueueSync(QuitQueueRequest req)
+        {
+             JsonResponseModel<QuitQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QuitQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuitQueueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

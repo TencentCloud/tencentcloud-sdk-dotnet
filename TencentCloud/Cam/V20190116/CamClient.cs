@@ -373,6 +373,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 该接口（CreatePolicyVersion）用于新增策略版本，用户创建了一个策略版本之后可以方便的通过变更策略版本的方式来变更策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyVersionRequest"/></param>
+        /// <returns><see cref="CreatePolicyVersionResponse"/></returns>
+        public async Task<CreatePolicyVersionResponse> CreatePolicyVersion(CreatePolicyVersionRequest req)
+        {
+             JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（CreatePolicyVersion）用于新增策略版本，用户创建了一个策略版本之后可以方便的通过变更策略版本的方式来变更策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyVersionRequest"/></param>
+        /// <returns><see cref="CreatePolicyVersionResponse"/></returns>
+        public CreatePolicyVersionResponse CreatePolicyVersionSync(CreatePolicyVersionRequest req)
+        {
+             JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateRole）用于创建角色。
         /// </summary>
         /// <param name="req"><see cref="CreateRoleRequest"/></param>
@@ -564,6 +604,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DeletePolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeletePolicyVersion）可用于删除一个策略的策略版本。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyVersionRequest"/></param>
+        /// <returns><see cref="DeletePolicyVersionResponse"/></returns>
+        public async Task<DeletePolicyVersionResponse> DeletePolicyVersion(DeletePolicyVersionRequest req)
+        {
+             JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeletePolicyVersion）可用于删除一个策略的策略版本。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyVersionRequest"/></param>
+        /// <returns><see cref="DeletePolicyVersionResponse"/></returns>
+        public DeletePolicyVersionResponse DeletePolicyVersionSync(DeletePolicyVersionRequest req)
+        {
+             JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePolicyVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1004,6 +1084,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "GetPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（GetPolicyVersion）用于查询策略版本详情
+        /// </summary>
+        /// <param name="req"><see cref="GetPolicyVersionRequest"/></param>
+        /// <returns><see cref="GetPolicyVersionResponse"/></returns>
+        public async Task<GetPolicyVersionResponse> GetPolicyVersion(GetPolicyVersionRequest req)
+        {
+             JsonResponseModel<GetPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（GetPolicyVersion）用于查询策略版本详情
+        /// </summary>
+        /// <param name="req"><see cref="GetPolicyVersionRequest"/></param>
+        /// <returns><see cref="GetPolicyVersionResponse"/></returns>
+        public GetPolicyVersionResponse GetPolicyVersionSync(GetPolicyVersionRequest req)
+        {
+             JsonResponseModel<GetPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPolicyVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1493,6 +1613,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 该接口（ListPolicyVersions）用于获取策略版本列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPolicyVersionsRequest"/></param>
+        /// <returns><see cref="ListPolicyVersionsResponse"/></returns>
+        public async Task<ListPolicyVersionsResponse> ListPolicyVersions(ListPolicyVersionsRequest req)
+        {
+             JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListPolicyVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPolicyVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（ListPolicyVersions）用于获取策略版本列表
+        /// </summary>
+        /// <param name="req"><see cref="ListPolicyVersionsRequest"/></param>
+        /// <returns><see cref="ListPolicyVersionsResponse"/></returns>
+        public ListPolicyVersionsResponse ListPolicyVersionsSync(ListPolicyVersionsRequest req)
+        {
+             JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListPolicyVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPolicyVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询SAML身份提供商列表
         /// </summary>
         /// <param name="req"><see cref="ListSAMLProvidersRequest"/></param>
@@ -1644,6 +1804,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "RemoveUserFromGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserFromGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SetDefaultPolicyVersion）可用于设置生效的策略版本。
+        /// </summary>
+        /// <param name="req"><see cref="SetDefaultPolicyVersionRequest"/></param>
+        /// <returns><see cref="SetDefaultPolicyVersionResponse"/></returns>
+        public async Task<SetDefaultPolicyVersionResponse> SetDefaultPolicyVersion(SetDefaultPolicyVersionRequest req)
+        {
+             JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetDefaultPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDefaultPolicyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SetDefaultPolicyVersion）可用于设置生效的策略版本。
+        /// </summary>
+        /// <param name="req"><see cref="SetDefaultPolicyVersionRequest"/></param>
+        /// <returns><see cref="SetDefaultPolicyVersionResponse"/></returns>
+        public SetDefaultPolicyVersionResponse SetDefaultPolicyVersionSync(SetDefaultPolicyVersionRequest req)
+        {
+             JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetDefaultPolicyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDefaultPolicyVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

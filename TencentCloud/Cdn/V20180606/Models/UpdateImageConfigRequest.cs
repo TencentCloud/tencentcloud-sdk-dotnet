@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryMerchantInfoForManagementRequest : AbstractModel
+    public class UpdateImageConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 开票平台ID
+        /// 域名
         /// </summary>
-        [JsonProperty("InvoicePlatformId")]
-        public long? InvoicePlatformId{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// WebpAdapter配置项
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("WebpAdapter")]
+        public WebpAdapter WebpAdapter{ get; set; }
 
         /// <summary>
-        /// 页大小
+        /// TpgAdapter配置项
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("TpgAdapter")]
+        public TpgAdapter TpgAdapter{ get; set; }
 
         /// <summary>
-        /// 接入环境。沙箱环境填sandbox。
+        /// GuetzliAdapter配置项
         /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
+        [JsonProperty("GuetzliAdapter")]
+        public GuetzliAdapter GuetzliAdapter{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InvoicePlatformId", this.InvoicePlatformId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamObj(map, prefix + "WebpAdapter.", this.WebpAdapter);
+            this.SetParamObj(map, prefix + "TpgAdapter.", this.TpgAdapter);
+            this.SetParamObj(map, prefix + "GuetzliAdapter.", this.GuetzliAdapter);
         }
     }
 }

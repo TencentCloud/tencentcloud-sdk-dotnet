@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.52</VersionPrefix>
+    <VersionPrefix>3.0.53</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -950,6 +950,8 @@
     <Compile Include="Cam\V20190116\Models\CreateGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\CreatePolicyVersionRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\CreatePolicyVersionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateRoleRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateSAMLProviderRequest.cs" />
@@ -960,6 +962,8 @@
     <Compile Include="Cam\V20190116\Models\DeleteGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DeletePolicyVersionRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DeletePolicyVersionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteRoleRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteSAMLProviderRequest.cs" />
@@ -982,6 +986,8 @@
     <Compile Include="Cam\V20190116\Models\GetGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetPolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetPolicyVersionRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetPolicyVersionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetRoleRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetSAMLProviderRequest.cs" />
@@ -1009,16 +1015,22 @@
     <Compile Include="Cam\V20190116\Models\ListGroupsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListPoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListPoliciesResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListPolicyVersionsRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ListPolicyVersionsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListSAMLProvidersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListSAMLProvidersResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\PolicyVersionDetail.cs" />
+    <Compile Include="Cam\V20190116\Models\PolicyVersionItem.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\RoleInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SAMLProviderInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\SetDefaultPolicyVersionRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\SetDefaultPolicyVersionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
@@ -1493,6 +1505,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeImageConfigRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeImageConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpStatusRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpStatusResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpVisitRequest.cs" />
@@ -1605,6 +1619,8 @@
     <Compile Include="Cdn\V20180606\Models\TrafficPackage.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\UpdateImageConfigRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\UpdateImageConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdatePayTypeRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdatePayTypeResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\UrlRecord.cs" />
@@ -2295,10 +2311,6 @@
     <Compile Include="Cpdp\V20190820\Models\DownloadBillRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
-    <Compile Include="Cpdp\V20190820\Models\InvoiceManagementList.cs" />
-    <Compile Include="Cpdp\V20190820\Models\InvoiceManangementResult.cs" />
-    <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
-    <Compile Include="Cpdp\V20190820\Models\MerchantManagementResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingRequest.cs" />
@@ -2328,8 +2340,6 @@
     <Compile Include="Cpdp\V20190820\Models\QueryExchangeRateResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangerateData.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangerateResult.cs" />
-    <Compile Include="Cpdp\V20190820\Models\QueryInvoiceForManagementRequest.cs" />
-    <Compile Include="Cpdp\V20190820\Models\QueryInvoiceForManagementResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceResult.cs" />
@@ -2343,8 +2353,6 @@
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantBalanceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantBalanceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantBalanceResult.cs" />
-    <Compile Include="Cpdp\V20190820\Models\QueryMerchantInfoForManagementRequest.cs" />
-    <Compile Include="Cpdp\V20190820\Models\QueryMerchantInfoForManagementResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderRequest.cs" />
@@ -2686,6 +2694,10 @@
     <Compile Include="Dayu\V20180709\Models\CreateL7RulesUploadResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateNetReturnRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateNetReturnResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL4RulesRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL4RulesResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateUnblockIpRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateUnblockIpResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DDoSAlarmThreshold.cs" />
@@ -2707,6 +2719,10 @@
     <Compile Include="Dayu\V20180709\Models\DeleteL4RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DeleteL7RulesRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DeleteL7RulesResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DeleteNewL4RulesRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DeleteNewL4RulesResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DeleteNewL7RulesRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DeleteNewL7RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeActionLogRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeActionLogResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeBGPIPL7RuleMaxCntRequest.cs" />
@@ -2777,6 +2793,12 @@
     <Compile Include="Dayu\V20180709\Models\DescribeL4RulesErrHealthResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeL7HealthConfigRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeL7HealthConfigResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeNewL4RulesErrHealthRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeNewL4RulesErrHealthResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeNewL4RulesRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeNewL4RulesResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeNewL7RulesErrHealthRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeNewL7RulesErrHealthResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribePackIndexRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribePackIndexResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribePcapRequest.cs" />
@@ -2803,6 +2825,8 @@
     <Compile Include="Dayu\V20180709\Models\DescribleL4RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribleL7RulesRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribleL7RulesResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribleNewL7RulesRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribleNewL7RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribleRegionCountRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribleRegionCountResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\IpBlackWhite.cs" />
@@ -2810,6 +2834,7 @@
     <Compile Include="Dayu\V20180709\Models\IpUnBlockData.cs" />
     <Compile Include="Dayu\V20180709\Models\KeyValue.cs" />
     <Compile Include="Dayu\V20180709\Models\KeyValueRecord.cs" />
+    <Compile Include="Dayu\V20180709\Models\L4DelRule.cs" />
     <Compile Include="Dayu\V20180709\Models\L4HealthConfig.cs" />
     <Compile Include="Dayu\V20180709\Models\L4RuleEntry.cs" />
     <Compile Include="Dayu\V20180709\Models\L4RuleHealth.cs" />
@@ -2873,6 +2898,8 @@
     <Compile Include="Dayu\V20180709\Models\ModifyResBindDDoSPolicyResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyResourceRenewFlagRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\ModifyResourceRenewFlagResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\NewL4RuleEntry.cs" />
+    <Compile Include="Dayu\V20180709\Models\NewL7RuleEntry.cs" />
     <Compile Include="Dayu\V20180709\Models\OrderBy.cs" />
     <Compile Include="Dayu\V20180709\Models\Paging.cs" />
     <Compile Include="Dayu\V20180709\Models\ProtocolPort.cs" />
@@ -3779,8 +3806,12 @@
     <Compile Include="Gs\V20191118\Models\DescribeWorkersInfoResponse.cs" />
     <Compile Include="Gs\V20191118\Models\DescribeWorkersRequest.cs" />
     <Compile Include="Gs\V20191118\Models\DescribeWorkersResponse.cs" />
+    <Compile Include="Gs\V20191118\Models\EnterQueueRequest.cs" />
+    <Compile Include="Gs\V20191118\Models\EnterQueueResponse.cs" />
     <Compile Include="Gs\V20191118\Models\ModifyWorkersRequest.cs" />
     <Compile Include="Gs\V20191118\Models\ModifyWorkersResponse.cs" />
+    <Compile Include="Gs\V20191118\Models\QuitQueueRequest.cs" />
+    <Compile Include="Gs\V20191118\Models\QuitQueueResponse.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameRequest.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameResponse.cs" />
     <Compile Include="Gs\V20191118\Models\TrylockWorkerRequest.cs" />
@@ -6541,6 +6572,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUsersRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUsersResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEnvFreeQuotaRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEnvFreeQuotaResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvLimitRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvLimitResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsRequest.cs" />
@@ -6559,6 +6592,7 @@
     <Compile Include="Tcb\V20180608\Models\ModifyDatabaseACLResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEnvResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\StaticStorageInfo.cs" />
@@ -7925,6 +7959,7 @@
     <Compile Include="Vpc\V20170312\Models\AddIp6RulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AddIp6RulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Address.cs" />
+    <Compile Include="Vpc\V20170312\Models\AddressChargePrepaid.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplate.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplateGroup.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplateItem.cs" />
@@ -8259,6 +8294,8 @@
     <Compile Include="Vpc\V20170312\Models\MigratePrivateIpAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyAddressAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyAddressAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyAddressInternetChargeTypeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyAddressInternetChargeTypeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyAddressTemplateAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyAddressTemplateAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyAddressTemplateGroupAttributeRequest.cs" />

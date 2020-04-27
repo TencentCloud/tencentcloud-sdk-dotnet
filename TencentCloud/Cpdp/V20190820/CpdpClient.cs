@@ -1349,46 +1349,6 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 智慧零售-查询管理端发票
-        /// </summary>
-        /// <param name="req"><see cref="QueryInvoiceForManagementRequest"/></param>
-        /// <returns><see cref="QueryInvoiceForManagementResponse"/></returns>
-        public async Task<QueryInvoiceForManagementResponse> QueryInvoiceForManagement(QueryInvoiceForManagementRequest req)
-        {
-             JsonResponseModel<QueryInvoiceForManagementResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryInvoiceForManagement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInvoiceForManagementResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 智慧零售-查询管理端发票
-        /// </summary>
-        /// <param name="req"><see cref="QueryInvoiceForManagementRequest"/></param>
-        /// <returns><see cref="QueryInvoiceForManagementResponse"/></returns>
-        public QueryInvoiceForManagementResponse QueryInvoiceForManagementSync(QueryInvoiceForManagementRequest req)
-        {
-             JsonResponseModel<QueryInvoiceForManagementResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryInvoiceForManagement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInvoiceForManagementResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
         /// 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
         /// </summary>
@@ -1502,46 +1462,6 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryMerchantBalance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantBalanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 智慧零售-查询管理端商户
-        /// </summary>
-        /// <param name="req"><see cref="QueryMerchantInfoForManagementRequest"/></param>
-        /// <returns><see cref="QueryMerchantInfoForManagementResponse"/></returns>
-        public async Task<QueryMerchantInfoForManagementResponse> QueryMerchantInfoForManagement(QueryMerchantInfoForManagementRequest req)
-        {
-             JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "QueryMerchantInfoForManagement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantInfoForManagementResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 智慧零售-查询管理端商户
-        /// </summary>
-        /// <param name="req"><see cref="QueryMerchantInfoForManagementRequest"/></param>
-        /// <returns><see cref="QueryMerchantInfoForManagementResponse"/></returns>
-        public QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagementSync(QueryMerchantInfoForManagementRequest req)
-        {
-             JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "QueryMerchantInfoForManagement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantInfoForManagementResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

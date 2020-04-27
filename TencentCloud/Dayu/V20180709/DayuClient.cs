@@ -653,6 +653,86 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 添加L4转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL4RulesRequest"/></param>
+        /// <returns><see cref="CreateNewL4RulesResponse"/></returns>
+        public async Task<CreateNewL4RulesResponse> CreateNewL4Rules(CreateNewL4RulesRequest req)
+        {
+             JsonResponseModel<CreateNewL4RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNewL4Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL4RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加L4转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL4RulesRequest"/></param>
+        /// <returns><see cref="CreateNewL4RulesResponse"/></returns>
+        public CreateNewL4RulesResponse CreateNewL4RulesSync(CreateNewL4RulesRequest req)
+        {
+             JsonResponseModel<CreateNewL4RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNewL4Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL4RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesResponse"/></returns>
+        public async Task<CreateNewL7RulesResponse> CreateNewL7Rules(CreateNewL7RulesRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesResponse"/></returns>
+        public CreateNewL7RulesResponse CreateNewL7RulesSync(CreateNewL7RulesRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// IP解封操作
         /// </summary>
         /// <param name="req"><see cref="CreateUnblockIpRequest"/></param>
@@ -924,6 +1004,86 @@ namespace TencentCloud.Dayu.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DeleteL7Rules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除L4转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNewL4RulesRequest"/></param>
+        /// <returns><see cref="DeleteNewL4RulesResponse"/></returns>
+        public async Task<DeleteNewL4RulesResponse> DeleteNewL4Rules(DeleteNewL4RulesRequest req)
+        {
+             JsonResponseModel<DeleteNewL4RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNewL4Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNewL4RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除L4转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNewL4RulesRequest"/></param>
+        /// <returns><see cref="DeleteNewL4RulesResponse"/></returns>
+        public DeleteNewL4RulesResponse DeleteNewL4RulesSync(DeleteNewL4RulesRequest req)
+        {
+             JsonResponseModel<DeleteNewL4RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNewL4Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNewL4RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除L7转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNewL7RulesRequest"/></param>
+        /// <returns><see cref="DeleteNewL7RulesResponse"/></returns>
+        public async Task<DeleteNewL7RulesResponse> DeleteNewL7Rules(DeleteNewL7RulesRequest req)
+        {
+             JsonResponseModel<DeleteNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除L7转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNewL7RulesRequest"/></param>
+        /// <returns><see cref="DeleteNewL7RulesResponse"/></returns>
+        public DeleteNewL7RulesResponse DeleteNewL7RulesSync(DeleteNewL7RulesRequest req)
+        {
+             JsonResponseModel<DeleteNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNewL7RulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2333,6 +2493,126 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取L4转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL4RulesRequest"/></param>
+        /// <returns><see cref="DescribeNewL4RulesResponse"/></returns>
+        public async Task<DescribeNewL4RulesResponse> DescribeNewL4Rules(DescribeNewL4RulesRequest req)
+        {
+             JsonResponseModel<DescribeNewL4RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNewL4Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL4RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取L4转发规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL4RulesRequest"/></param>
+        /// <returns><see cref="DescribeNewL4RulesResponse"/></returns>
+        public DescribeNewL4RulesResponse DescribeNewL4RulesSync(DescribeNewL4RulesRequest req)
+        {
+             JsonResponseModel<DescribeNewL4RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNewL4Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL4RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取L4转发规则健康检查异常结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL4RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL4RulesErrHealthResponse"/></returns>
+        public async Task<DescribeNewL4RulesErrHealthResponse> DescribeNewL4RulesErrHealth(DescribeNewL4RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL4RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNewL4RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL4RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取L4转发规则健康检查异常结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL4RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL4RulesErrHealthResponse"/></returns>
+        public DescribeNewL4RulesErrHealthResponse DescribeNewL4RulesErrHealthSync(DescribeNewL4RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL4RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNewL4RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL4RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取L7转发规则健康检查异常结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>
+        public async Task<DescribeNewL7RulesErrHealthResponse> DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNewL7RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取L7转发规则健康检查异常结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>
+        public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealthSync(DescribeNewL7RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNewL7RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取产品总览统计，支持高防包、高防IP、高防IP专业版；
         /// </summary>
         /// <param name="req"><see cref="DescribePackIndexRequest"/></param>
@@ -2844,6 +3124,46 @@ namespace TencentCloud.Dayu.V20180709
              {
                  var strResp = this.InternalRequestSync(req, "DescribleL7Rules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribleL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取7层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribleNewL7RulesRequest"/></param>
+        /// <returns><see cref="DescribleNewL7RulesResponse"/></returns>
+        public async Task<DescribleNewL7RulesResponse> DescribleNewL7Rules(DescribleNewL7RulesRequest req)
+        {
+             JsonResponseModel<DescribleNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribleNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribleNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取7层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribleNewL7RulesRequest"/></param>
+        /// <returns><see cref="DescribleNewL7RulesResponse"/></returns>
+        public DescribleNewL7RulesResponse DescribleNewL7RulesSync(DescribleNewL7RulesRequest req)
+        {
+             JsonResponseModel<DescribleNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribleNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribleNewL7RulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

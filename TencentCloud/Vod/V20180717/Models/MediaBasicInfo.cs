@@ -115,6 +115,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Vid")]
         public string Vid{ get; set; }
 
+        /// <summary>
+        /// 文件类型：
+        /// <li>Video: 视频文件</li>
+        /// <li>Audio: 音频文件</li>
+        /// <li>Image: 图片文件</li>
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +145,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
             this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
         }
     }
 }

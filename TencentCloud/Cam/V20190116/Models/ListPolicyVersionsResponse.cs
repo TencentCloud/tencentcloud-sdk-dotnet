@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MerchantManagementResult : AbstractModel
+    public class ListPolicyVersionsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总数。
+        /// 策略版本列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Total")]
-        public long? Total{ get; set; }
+        [JsonProperty("Versions")]
+        public PolicyVersionItem[] Versions{ get; set; }
 
         /// <summary>
-        /// 商户列表。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("List")]
-        public MerchantManagementList[] List{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamArrayObj(map, prefix + "Versions.", this.Versions);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
