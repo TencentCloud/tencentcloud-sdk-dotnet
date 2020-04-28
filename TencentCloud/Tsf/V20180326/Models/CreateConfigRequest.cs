@@ -60,6 +60,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ConfigType")]
         public string ConfigType{ get; set; }
 
+        /// <summary>
+        /// Base64编码的配置项
+        /// </summary>
+        [JsonProperty("EncodeWithBase64")]
+        public bool? EncodeWithBase64{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "ConfigVersionDesc", this.ConfigVersionDesc);
             this.SetParamSimple(map, prefix + "ConfigType", this.ConfigType);
+            this.SetParamSimple(map, prefix + "EncodeWithBase64", this.EncodeWithBase64);
         }
     }
 }

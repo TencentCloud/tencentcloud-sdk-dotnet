@@ -773,7 +773,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key大小分布
+        /// 查询实例访问的耗时分布
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTookDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTookDistResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例大Key大小分布
+        /// 查询实例访问的耗时分布
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTookDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTookDistResponse"/></returns>

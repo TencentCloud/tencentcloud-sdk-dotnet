@@ -1727,46 +1727,6 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 获取转自适应码流音频轨模板列表，支持根据条件，分页查询。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAudioTrackTemplatesRequest"/></param>
-        /// <returns><see cref="DescribeAudioTrackTemplatesResponse"/></returns>
-        public async Task<DescribeAudioTrackTemplatesResponse> DescribeAudioTrackTemplates(DescribeAudioTrackTemplatesRequest req)
-        {
-             JsonResponseModel<DescribeAudioTrackTemplatesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAudioTrackTemplates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAudioTrackTemplatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取转自适应码流音频轨模板列表，支持根据条件，分页查询。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAudioTrackTemplatesRequest"/></param>
-        /// <returns><see cref="DescribeAudioTrackTemplatesResponse"/></returns>
-        public DescribeAudioTrackTemplatesResponse DescribeAudioTrackTemplatesSync(DescribeAudioTrackTemplatesRequest req)
-        {
-             JsonResponseModel<DescribeAudioTrackTemplatesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAudioTrackTemplates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAudioTrackTemplatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 该接口用于查询点播 CDN 的流量、带宽等统计数据。
         ///    1. 可以查询最近365天内的 CDN 用量数据。
         ///    2.  查询时间跨度不超过90天。
@@ -2490,46 +2450,6 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTranscodeTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTemplatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取转自适应码流视频轨模板列表，支持根据条件，分页查询。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoTrackTemplatesRequest"/></param>
-        /// <returns><see cref="DescribeVideoTrackTemplatesResponse"/></returns>
-        public async Task<DescribeVideoTrackTemplatesResponse> DescribeVideoTrackTemplates(DescribeVideoTrackTemplatesRequest req)
-        {
-             JsonResponseModel<DescribeVideoTrackTemplatesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeVideoTrackTemplates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoTrackTemplatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取转自适应码流视频轨模板列表，支持根据条件，分页查询。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVideoTrackTemplatesRequest"/></param>
-        /// <returns><see cref="DescribeVideoTrackTemplatesResponse"/></returns>
-        public DescribeVideoTrackTemplatesResponse DescribeVideoTrackTemplatesSync(DescribeVideoTrackTemplatesRequest req)
-        {
-             JsonResponseModel<DescribeVideoTrackTemplatesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeVideoTrackTemplates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoTrackTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

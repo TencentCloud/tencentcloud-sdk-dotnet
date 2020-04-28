@@ -39,7 +39,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 查询时间，北京时间，
         /// 格式：yyyymmdd。
-        /// 注意：支持查询近3个月内某天的详细数据。
+        /// 注意：支持查询近1个月内某天的详细数据。
         /// </summary>
         [JsonProperty("DayTime")]
         public string DayTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 起始天时间，北京时间，
         /// 格式：yyyymmdd。
-        /// 注意：支持查询近3个月内的详细数据。
+        /// 注意：支持查询近1个月内的详细数据。
         /// </summary>
         [JsonProperty("StartDayTime")]
         public string StartDayTime{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 结束天时间，北京时间，
         /// 格式：yyyymmdd。
-        /// 注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+        /// 注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
         /// </summary>
         [JsonProperty("EndDayTime")]
         public string EndDayTime{ get; set; }

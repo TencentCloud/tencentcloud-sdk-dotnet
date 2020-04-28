@@ -933,7 +933,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 批量启用白盒密钥
+        /// 启用白盒密钥
         /// </summary>
         /// <param name="req"><see cref="EnableWhiteBoxKeyRequest"/></param>
         /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 批量启用白盒密钥
+        /// 启用白盒密钥
         /// </summary>
         /// <param name="req"><see cref="EnableWhiteBoxKeyRequest"/></param>
         /// <returns><see cref="EnableWhiteBoxKeyResponse"/></returns>

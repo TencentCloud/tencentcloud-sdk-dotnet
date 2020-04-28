@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Date{ get; set; }
 
         /// <summary>
-        /// 请求类型：1——string类型，2——所有类型
+        /// 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
         /// </summary>
         [JsonProperty("SpanType")]
         public long? SpanType{ get; set; }

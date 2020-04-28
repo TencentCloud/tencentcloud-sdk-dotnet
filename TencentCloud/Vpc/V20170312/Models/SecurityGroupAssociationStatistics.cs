@@ -67,7 +67,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public InstanceStatistic[] InstanceStatistics{ get; set; }
 
         /// <summary>
-        /// 所有资源的总计数。
+        /// 所有资源的总计数（不包含被安全组引用数）。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
