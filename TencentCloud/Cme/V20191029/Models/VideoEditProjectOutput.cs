@@ -42,13 +42,6 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
-        /// <summary>
-        /// 素材基础信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaterialBaseInfo")]
-        public MaterialBaseInfo MaterialBaseInfo{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,7 +51,6 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "VodFileId", this.VodFileId);
             this.SetParamSimple(map, prefix + "URL", this.URL);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
-            this.SetParamObj(map, prefix + "MaterialBaseInfo.", this.MaterialBaseInfo);
         }
     }
 }

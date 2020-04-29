@@ -54,6 +54,18 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
+        /// <summary>
+        /// 目标数据库账号
+        /// </summary>
+        [JsonProperty("User")]
+        public string User{ get; set; }
+
+        /// <summary>
+        /// 目标数据库密码
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "User", this.User);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

@@ -42,6 +42,13 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
 
+        /// <summary>
+        /// 素材状态。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaterialStatus")]
+        public MaterialStatus MaterialStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "MaterialUrl", this.MaterialUrl);
             this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+            this.SetParamObj(map, prefix + "MaterialStatus.", this.MaterialStatus);
         }
     }
 }

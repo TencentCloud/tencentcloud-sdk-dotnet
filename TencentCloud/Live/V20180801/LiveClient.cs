@@ -1195,7 +1195,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除转码规则
+        /// 删除转码规则。
+        /// DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配。其中TemplateId必填，其余参数为空时也需要传空字符串进行强匹配。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveTranscodeRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveTranscodeRuleResponse"/></returns>
@@ -1215,7 +1216,8 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除转码规则
+        /// 删除转码规则。
+        /// DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配。其中TemplateId必填，其余参数为空时也需要传空字符串进行强匹配。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveTranscodeRuleRequest"/></param>
         /// <returns><see cref="DeleteLiveTranscodeRuleResponse"/></returns>
@@ -1235,7 +1237,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除转码模板
+        /// 删除转码模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveTranscodeTemplateRequest"/></param>
         /// <returns><see cref="DeleteLiveTranscodeTemplateResponse"/></returns>
@@ -1255,7 +1257,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 删除转码模板
+        /// 删除转码模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteLiveTranscodeTemplateRequest"/></param>
         /// <returns><see cref="DeleteLiveTranscodeTemplateResponse"/></returns>
@@ -2683,7 +2685,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个转码模板
+        /// 获取单个转码模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTemplateResponse"/></returns>
@@ -2703,7 +2705,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取单个转码模板
+        /// 获取单个转码模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTemplateRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTemplateResponse"/></returns>
@@ -2723,7 +2725,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取转码模板列表
+        /// 获取转码模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTemplatesResponse"/></returns>
@@ -2743,7 +2745,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取转码模板列表
+        /// 获取转码模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeLiveTranscodeTemplatesResponse"/></returns>

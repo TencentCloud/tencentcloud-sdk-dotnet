@@ -84,6 +84,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("TokenValidTime")]
         public ulong? TokenValidTime{ get; set; }
 
+        /// <summary>
+        /// 实例内部访问地址
+        /// </summary>
+        [JsonProperty("InternalEndpoint")]
+        public string InternalEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "EnableAnonymous", this.EnableAnonymous);
             this.SetParamSimple(map, prefix + "TokenValidTime", this.TokenValidTime);
+            this.SetParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
         }
     }
 }

@@ -25,7 +25,8 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 模板Id。
+        /// 模板 ID。
+        /// 注意：在创建转码模板接口 [CreateLiveTranscodeTemplate](/document/product/267/32646) 调用的返回值中获取模板 ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

@@ -225,6 +225,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 删除一个函数版本的别名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasRequest"/></param>
+        /// <returns><see cref="DeleteAliasResponse"/></returns>
+        public async Task<DeleteAliasResponse> DeleteAlias(DeleteAliasRequest req)
+        {
+             JsonResponseModel<DeleteAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除一个函数版本的别名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasRequest"/></param>
+        /// <returns><see cref="DeleteAliasResponse"/></returns>
+        public DeleteAliasResponse DeleteAliasSync(DeleteAliasRequest req)
+        {
+             JsonResponseModel<DeleteAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据传入参数删除函数。
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionRequest"/></param>

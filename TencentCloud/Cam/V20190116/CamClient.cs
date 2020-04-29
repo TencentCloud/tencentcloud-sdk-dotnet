@@ -1933,6 +1933,48 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 本接口（UpdatePolicy ）可用于更新策略。
+        /// 如果已存在策略版本，本接口会直接更新策略的默认版本，不会创建新版本，如果不存在任何策略版本，则直接创建一个默认版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
+        /// <returns><see cref="UpdatePolicyResponse"/></returns>
+        public async Task<UpdatePolicyResponse> UpdatePolicy(UpdatePolicyRequest req)
+        {
+             JsonResponseModel<UpdatePolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdatePolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdatePolicy ）可用于更新策略。
+        /// 如果已存在策略版本，本接口会直接更新策略的默认版本，不会创建新版本，如果不存在任何策略版本，则直接创建一个默认版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
+        /// <returns><see cref="UpdatePolicyResponse"/></returns>
+        public UpdatePolicyResponse UpdatePolicySync(UpdatePolicyRequest req)
+        {
+             JsonResponseModel<UpdatePolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdatePolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。
         /// </summary>
         /// <param name="req"><see cref="UpdateRoleConsoleLoginRequest"/></param>

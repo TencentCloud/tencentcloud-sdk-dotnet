@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.54</VersionPrefix>
+    <VersionPrefix>3.0.55</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,6 +46,9 @@
     <Compile Include="Common\Profile\ClientProfile.cs" />
     <Compile Include="Common\Profile\HttpProfile.cs" />
     <Compile Include="Common\Sign.cs" />
+    <Compile Include="Aa\V20200224\AaClient.cs" />
+    <Compile Include="Aa\V20200224\Models\QueryActivityAntiRushRequest.cs" />
+    <Compile Include="Aa\V20200224\Models\QueryActivityAntiRushResponse.cs" />
     <Compile Include="Aai\V20180522\AaiClient.cs" />
     <Compile Include="Aai\V20180522\Models\ChatRequest.cs" />
     <Compile Include="Aai\V20180522\Models\ChatResponse.cs" />
@@ -55,6 +58,14 @@
     <Compile Include="Aai\V20180522\Models\SimultaneousInterpretingResponse.cs" />
     <Compile Include="Aai\V20180522\Models\TextToVoiceRequest.cs" />
     <Compile Include="Aai\V20180522\Models\TextToVoiceResponse.cs" />
+    <Compile Include="Af\V20200226\AfClient.cs" />
+    <Compile Include="Af\V20200226\Models\QueryAntiFraudRequest.cs" />
+    <Compile Include="Af\V20200226\Models\QueryAntiFraudResponse.cs" />
+    <Compile Include="Af\V20200226\Models\RiskDetail.cs" />
+    <Compile Include="Afc\V20200226\AfcClient.cs" />
+    <Compile Include="Afc\V20200226\Models\QueryAntiFraudVipRequest.cs" />
+    <Compile Include="Afc\V20200226\Models\QueryAntiFraudVipResponse.cs" />
+    <Compile Include="Afc\V20200226\Models\RiskDetail.cs" />
     <Compile Include="Ame\V20190916\AmeClient.cs" />
     <Compile Include="Ame\V20190916\Models\Album.cs" />
     <Compile Include="Ame\V20190916\Models\Artist.cs" />
@@ -1037,6 +1048,8 @@
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdatePolicyRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdatePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleConsoleLoginRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleConsoleLoginResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleDescriptionRequest.cs" />
@@ -1332,6 +1345,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRollbackTaskDetailRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRollbackTaskDetailResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeSlowLogDataRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeSlowLogDataResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeSlowLogsRequest.cs" />
@@ -1428,6 +1443,7 @@
     <Compile Include="Cdb\V20170320\Models\RollbackInstancesInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\RollbackTableName.cs" />
     <Compile Include="Cdb\V20170320\Models\RollbackTables.cs" />
+    <Compile Include="Cdb\V20170320\Models\RollbackTask.cs" />
     <Compile Include="Cdb\V20170320\Models\RollbackTimeRange.cs" />
     <Compile Include="Cdb\V20170320\Models\SecurityGroup.cs" />
     <Compile Include="Cdb\V20170320\Models\SellConfig.cs" />
@@ -2139,9 +2155,9 @@
     <Compile Include="Cme\V20191029\Models\ListMediaRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ListMediaResponse.cs" />
     <Compile Include="Cme\V20191029\Models\LoginStatusInfo.cs" />
-    <Compile Include="Cme\V20191029\Models\MaterialBaseInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MaterialBasicInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MaterialInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\MaterialStatus.cs" />
     <Compile Include="Cme\V20191029\Models\MediaImageSpriteInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaMetaData.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyMaterialRequest.cs" />
@@ -3995,6 +4011,12 @@
     <Compile Include="Ie\V20200304\Models\TagTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\TagTaskResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\UrlInfo.cs" />
+    <Compile Include="Iir\V20200417\IirClient.cs" />
+    <Compile Include="Iir\V20200417\Models\Location.cs" />
+    <Compile Include="Iir\V20200417\Models\ProductInfo.cs" />
+    <Compile Include="Iir\V20200417\Models\RecognizeProductRequest.cs" />
+    <Compile Include="Iir\V20200417\Models\RecognizeProductResponse.cs" />
+    <Compile Include="Iir\V20200417\Models\RegionDetected.cs" />
     <Compile Include="Iot\V20180123\IotClient.cs" />
     <Compile Include="Iot\V20180123\Models\Action.cs" />
     <Compile Include="Iot\V20180123\Models\ActivateRuleRequest.cs" />
@@ -4735,6 +4757,9 @@
     <Compile Include="Live\V20180801\Models\UpdateLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\UpdateLiveWatermarkResponse.cs" />
     <Compile Include="Live\V20180801\Models\WatermarkInfo.cs" />
+    <Compile Include="Lp\V20200224\LpClient.cs" />
+    <Compile Include="Lp\V20200224\Models\QueryLoginProtectionRequest.cs" />
+    <Compile Include="Lp\V20200224\Models\QueryLoginProtectionResponse.cs" />
     <Compile Include="Mariadb\V20170312\MariadbClient.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountResponse.cs" />
@@ -5935,6 +5960,9 @@
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ZoneCapacityConf.cs" />
+    <Compile Include="Rp\V20200224\RpClient.cs" />
+    <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionRequest.cs" />
+    <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionResponse.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
@@ -5947,6 +5975,8 @@
     <Compile Include="Scf\V20180416\Models\CreateTriggerRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CreateTriggerResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeadLetterConfig.cs" />
+    <Compile Include="Scf\V20180416\Models\DeleteAliasRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\DeleteAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteLayerVersionRequest.cs" />
@@ -7230,6 +7260,7 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="Tke\V20180525\Models\RegionInstance.cs" />
+    <Compile Include="Tke\V20180525\Models\ResourceDeleteOption.cs" />
     <Compile Include="Tke\V20180525\Models\RouteInfo.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableInfo.cs" />
@@ -7263,10 +7294,25 @@
     <Compile Include="Tmt\V20180321\Models\TextTranslateRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateResponse.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
+    <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\RoomState.cs" />
+    <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
+    <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
     <Compile Include="Tsf\V20180326\TsfClient.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesResponse.cs" />

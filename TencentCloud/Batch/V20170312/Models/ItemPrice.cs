@@ -53,11 +53,11 @@ namespace TencentCloud.Batch.V20170312.Models
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// 折扣，如20代表2折
+        /// 折扣，如20.0代表2折
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
-        public ulong? Discount{ get; set; }
+        public float? Discount{ get; set; }
 
         /// <summary>
         /// 后续合计费用的折扣价，后付费模式使用，单位：元<br><li>如返回了其他时间区间项，如UnitPriceDiscountSecondStep，则本项代表时间区间在(0, 96)小时；若未返回其他时间区间项，则本项代表全时段，即(0, ∞)小时

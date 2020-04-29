@@ -36,6 +36,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// </summary>
+        [JsonProperty("Updatetime")]
+        public long? Updatetime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "Ladder", this.Ladder);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "Updatetime", this.Updatetime);
         }
     }
 }

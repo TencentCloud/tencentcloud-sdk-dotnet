@@ -67,6 +67,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] SecurityPolicy{ get; set; }
 
         /// <summary>
+        /// 集群Kubeconfig文件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Kubeconfig")]
+        public string Kubeconfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +92,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "PgwEndpoint", this.PgwEndpoint);
             this.SetParamArraySimple(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+            this.SetParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

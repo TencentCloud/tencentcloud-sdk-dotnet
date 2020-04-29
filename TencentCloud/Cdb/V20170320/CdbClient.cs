@@ -2101,6 +2101,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeRollbackTaskDetail)用于查询云数据库实例回档任务详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRollbackTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeRollbackTaskDetailResponse"/></returns>
+        public async Task<DescribeRollbackTaskDetailResponse> DescribeRollbackTaskDetail(DescribeRollbackTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeRollbackTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRollbackTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeRollbackTaskDetail)用于查询云数据库实例回档任务详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRollbackTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeRollbackTaskDetailResponse"/></returns>
+        public DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetailSync(DescribeRollbackTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeRollbackTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRollbackTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRollbackTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 条件检索实例的慢日志。只允许查看一个月之内的慢日志
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogDataRequest"/></param>

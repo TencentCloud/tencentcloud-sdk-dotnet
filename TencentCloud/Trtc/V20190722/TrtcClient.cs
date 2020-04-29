@@ -53,6 +53,206 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询指定时间内的用户列表及用户通话质量数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
+        /// <returns><see cref="DescribeCallDetailResponse"/></returns>
+        public async Task<DescribeCallDetailResponse> DescribeCallDetail(DescribeCallDetailRequest req)
+        {
+             JsonResponseModel<DescribeCallDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCallDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间内的用户列表及用户通话质量数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
+        /// <returns><see cref="DescribeCallDetailResponse"/></returns>
+        public DescribeCallDetailResponse DescribeCallDetailSync(DescribeCallDetailRequest req)
+        {
+             JsonResponseModel<DescribeCallDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCallDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeNetworkRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeNetworkResponse"/></returns>
+        public async Task<DescribeRealtimeNetworkResponse> DescribeRealtimeNetwork(DescribeRealtimeNetworkRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRealtimeNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeNetworkRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeNetworkResponse"/></returns>
+        public DescribeRealtimeNetworkResponse DescribeRealtimeNetworkSync(DescribeRealtimeNetworkRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRealtimeNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid维度下实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeQualityRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeQualityResponse"/></returns>
+        public async Task<DescribeRealtimeQualityResponse> DescribeRealtimeQuality(DescribeRealtimeQualityRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeQualityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRealtimeQuality");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid维度下实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeQualityRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeQualityResponse"/></returns>
+        public DescribeRealtimeQualityResponse DescribeRealtimeQualitySync(DescribeRealtimeQualityRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeQualityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRealtimeQuality");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeQualityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid维度下实时规模，可查询24小时内数据，查询起止时间不超过1个小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeScaleRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeScaleResponse"/></returns>
+        public async Task<DescribeRealtimeScaleResponse> DescribeRealtimeScale(DescribeRealtimeScaleRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRealtimeScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid维度下实时规模，可查询24小时内数据，查询起止时间不超过1个小时。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeScaleRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeScaleResponse"/></returns>
+        public DescribeRealtimeScaleResponse DescribeRealtimeScaleSync(DescribeRealtimeScaleRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRealtimeScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询最近5天的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
+        /// <returns><see cref="DescribeRoomInformationResponse"/></returns>
+        public async Task<DescribeRoomInformationResponse> DescribeRoomInformation(DescribeRoomInformationRequest req)
+        {
+             JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoomInformation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询最近5天的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
+        /// <returns><see cref="DescribeRoomInformationResponse"/></returns>
+        public DescribeRoomInformationResponse DescribeRoomInformationSync(DescribeRoomInformationRequest req)
+        {
+             JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoomInformation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>

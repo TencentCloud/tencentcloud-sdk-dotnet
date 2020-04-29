@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 打包格式，可能为 hls 和 dash 两种。
+        /// 打包格式，只能为 HLS。
         /// </summary>
         [JsonProperty("Package")]
         public string Package{ get; set; }

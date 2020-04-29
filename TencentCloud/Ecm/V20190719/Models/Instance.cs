@@ -140,7 +140,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public long? DataDiskSize{ get; set; }
 
         /// <summary>
-        /// UUID
+        /// 实例UUID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UUID")]
@@ -202,6 +202,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DataDisks")]
         public DiskInfo[] DataDisks{ get; set; }
 
+        /// <summary>
+        /// 新实例标志
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewFlag")]
+        public long? NewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -231,6 +238,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "ExpireState", this.ExpireState);
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamSimple(map, prefix + "NewFlag", this.NewFlag);
         }
     }
 }
