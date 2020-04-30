@@ -93,6 +93,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询历史房间和用户数，每分钟1次，可查询最近5天的数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
+        /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>
+        public async Task<DescribeHistoryScaleResponse> DescribeHistoryScale(DescribeHistoryScaleRequest req)
+        {
+             JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHistoryScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询历史房间和用户数，每分钟1次，可查询最近5天的数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
+        /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>
+        public DescribeHistoryScaleResponse DescribeHistoryScaleSync(DescribeHistoryScaleRequest req)
+        {
+             JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHistoryScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeNetworkRequest"/></param>

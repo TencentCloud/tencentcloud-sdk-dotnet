@@ -15,38 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20191126.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBindingRequest : AbstractModel
+    public class ScaleInfomation : AbstractModel
     {
         
         /// <summary>
-        /// 终端用户在IoT Video上的唯一标识ID
+        /// 每天开始的时间
         /// </summary>
-        [JsonProperty("AccessId")]
-        public string AccessId{ get; set; }
+        [JsonProperty("Time")]
+        public ulong? Time{ get; set; }
 
         /// <summary>
-        /// 设备TID
+        /// 房间人数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Tid")]
-        public string Tid{ get; set; }
+        [JsonProperty("UserNumber")]
+        public ulong? UserNumber{ get; set; }
 
         /// <summary>
-        /// 用户角色，owner：主人，guest：访客
+        /// 房间人次
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Role")]
-        public string Role{ get; set; }
+        [JsonProperty("UserCount")]
+        public ulong? UserCount{ get; set; }
 
         /// <summary>
-        /// 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
+        /// 房间数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ForceBind")]
-        public bool? ForceBind{ get; set; }
+        [JsonProperty("RoomNumbers")]
+        public ulong? RoomNumbers{ get; set; }
 
 
         /// <summary>
@@ -54,10 +57,10 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AccessId", this.AccessId);
-            this.SetParamSimple(map, prefix + "Tid", this.Tid);
-            this.SetParamSimple(map, prefix + "Role", this.Role);
-            this.SetParamSimple(map, prefix + "ForceBind", this.ForceBind);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "UserNumber", this.UserNumber);
+            this.SetParamSimple(map, prefix + "UserCount", this.UserCount);
+            this.SetParamSimple(map, prefix + "RoomNumbers", this.RoomNumbers);
         }
     }
 }

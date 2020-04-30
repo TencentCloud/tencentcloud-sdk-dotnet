@@ -53,6 +53,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("VodSubAppId")]
         public long? VodSubAppId{ get; set; }
 
+        /// <summary>
+        /// 录制文件名。
+        /// </summary>
+        [JsonProperty("VodFileName")]
+        public string VodFileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +69,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "StorageTime", this.StorageTime);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
+            this.SetParamSimple(map, prefix + "VodFileName", this.VodFileName);
         }
     }
 }

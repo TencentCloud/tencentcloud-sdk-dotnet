@@ -331,6 +331,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ImageOptimization")]
         public ImageOptimization ImageOptimization{ get; set; }
 
+        /// <summary>
+        /// UA黑白名单配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserAgentFilter")]
+        public UserAgentFilter UserAgentFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -379,6 +386,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
             this.SetParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
             this.SetParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
+            this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
         }
     }
 }

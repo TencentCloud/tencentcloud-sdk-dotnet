@@ -949,6 +949,46 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 使用在线编辑轨道数据直接导出视频。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVideoByEditorTrackDataRequest"/></param>
+        /// <returns><see cref="ExportVideoByEditorTrackDataResponse"/></returns>
+        public async Task<ExportVideoByEditorTrackDataResponse> ExportVideoByEditorTrackData(ExportVideoByEditorTrackDataRequest req)
+        {
+             JsonResponseModel<ExportVideoByEditorTrackDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportVideoByEditorTrackData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVideoByEditorTrackDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用在线编辑轨道数据直接导出视频。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVideoByEditorTrackDataRequest"/></param>
+        /// <returns><see cref="ExportVideoByEditorTrackDataResponse"/></returns>
+        public ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackDataSync(ExportVideoByEditorTrackDataRequest req)
+        {
+             JsonResponseModel<ExportVideoByEditorTrackDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportVideoByEditorTrackData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVideoByEditorTrackDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 导出视频编辑项目，支持指定输出的模板。
         /// </summary>
         /// <param name="req"><see cref="ExportVideoEditProjectRequest"/></param>

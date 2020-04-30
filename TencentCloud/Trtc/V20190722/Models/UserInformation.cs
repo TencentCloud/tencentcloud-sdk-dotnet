@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户进房事件
+        /// 用户进房时间
         /// </summary>
         [JsonProperty("JoinTs")]
         public ulong? JoinTs{ get; set; }

@@ -106,6 +106,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("FilterPunc")]
         public long? FilterPunc{ get; set; }
 
+        /// <summary>
+        /// 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+        /// </summary>
+        [JsonProperty("ConvertNumMode")]
+        public long? ConvertNumMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +131,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
             this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
             this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
+            this.SetParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
         }
     }
 }

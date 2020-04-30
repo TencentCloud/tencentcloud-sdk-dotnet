@@ -44,6 +44,12 @@ namespace TencentCloud.Fmu.V20191213.Models
         [JsonProperty("FaceRect")]
         public FaceRect FaceRect{ get; set; }
 
+        /// <summary>
+        /// 涂妆浓淡[0,100]。建议取值50。本参数仅控制ModelId对应的涂妆浓淡。
+        /// </summary>
+        [JsonProperty("ModelAlpha")]
+        public long? ModelAlpha{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Fmu.V20191213.Models
             this.SetParamObj(map, prefix + "RGBA.", this.RGBA);
             this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamObj(map, prefix + "FaceRect.", this.FaceRect);
+            this.SetParamSimple(map, prefix + "ModelAlpha", this.ModelAlpha);
         }
     }
 }

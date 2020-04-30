@@ -105,6 +105,48 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 为某个函数版本创建一个别名，您可以使用别名来标记特定的函数版本，如DEV/RELEASE版本，也可以随时修改别名指向的版本。
+        /// 一个别名必须指向一个主版本，此外还可以同时指向一个附加版本。调用函数时指定特定的别名，则请求会被发送到别名指向的版本上，您可以配置请求发送到主版本和附加版本的比例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasRequest"/></param>
+        /// <returns><see cref="CreateAliasResponse"/></returns>
+        public async Task<CreateAliasResponse> CreateAlias(CreateAliasRequest req)
+        {
+             JsonResponseModel<CreateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为某个函数版本创建一个别名，您可以使用别名来标记特定的函数版本，如DEV/RELEASE版本，也可以随时修改别名指向的版本。
+        /// 一个别名必须指向一个主版本，此外还可以同时指向一个附加版本。调用函数时指定特定的别名，则请求会被发送到别名指向的版本上，您可以配置请求发送到主版本和附加版本的比例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasRequest"/></param>
+        /// <returns><see cref="CreateAliasResponse"/></returns>
+        public CreateAliasResponse CreateAliasSync(CreateAliasRequest req)
+        {
+             JsonResponseModel<CreateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据传入参数创建新的函数。
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRequest"/></param>
@@ -425,6 +467,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 获取别名的详细信息，包括名称、描述、版本、路由信息等。
+        /// </summary>
+        /// <param name="req"><see cref="GetAliasRequest"/></param>
+        /// <returns><see cref="GetAliasResponse"/></returns>
+        public async Task<GetAliasResponse> GetAlias(GetAliasRequest req)
+        {
+             JsonResponseModel<GetAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取别名的详细信息，包括名称、描述、版本、路由信息等。
+        /// </summary>
+        /// <param name="req"><see cref="GetAliasRequest"/></param>
+        /// <returns><see cref="GetAliasResponse"/></returns>
+        public GetAliasResponse GetAliasSync(GetAliasRequest req)
+        {
+             JsonResponseModel<GetAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
         /// </summary>
         /// <param name="req"><see cref="GetFunctionRequest"/></param>
@@ -616,6 +698,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "Invoke");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回一个函数下的全部别名，可以根据特定函数版本过滤。
+        /// </summary>
+        /// <param name="req"><see cref="ListAliasesRequest"/></param>
+        /// <returns><see cref="ListAliasesResponse"/></returns>
+        public async Task<ListAliasesResponse> ListAliases(ListAliasesRequest req)
+        {
+             JsonResponseModel<ListAliasesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAliases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAliasesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回一个函数下的全部别名，可以根据特定函数版本过滤。
+        /// </summary>
+        /// <param name="req"><see cref="ListAliasesRequest"/></param>
+        /// <returns><see cref="ListAliasesResponse"/></returns>
+        public ListAliasesResponse ListAliasesSync(ListAliasesRequest req)
+        {
+             JsonResponseModel<ListAliasesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAliases");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAliasesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -896,6 +1018,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "PublishVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新别名的配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAliasRequest"/></param>
+        /// <returns><see cref="UpdateAliasResponse"/></returns>
+        public async Task<UpdateAliasResponse> UpdateAlias(UpdateAliasRequest req)
+        {
+             JsonResponseModel<UpdateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAliasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新别名的配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAliasRequest"/></param>
+        /// <returns><see cref="UpdateAliasResponse"/></returns>
+        public UpdateAliasResponse UpdateAliasSync(UpdateAliasRequest req)
+        {
+             JsonResponseModel<UpdateAliasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAlias");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAliasResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

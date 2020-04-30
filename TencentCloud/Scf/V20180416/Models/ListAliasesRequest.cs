@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRollbackTaskDetailRequest : AbstractModel
+    public class ListAliasesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
+        /// 函数名称
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
 
         /// <summary>
-        /// 异步任务 ID。
+        /// 函数所在的命名空间
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
         /// <summary>
-        /// 分页参数，每次请求返回的记录数。默认值为 20，最大值为 100。
+        /// 如果提供此参数，则只返回与该函数版本有关联的别名
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("FunctionVersion")]
+        public string FunctionVersion{ get; set; }
 
         /// <summary>
-        /// 分页偏移量。默认为 0。
+        /// 数据偏移量，默认值为 0
         /// </summary>
         [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        public string Offset{ get; set; }
+
+        /// <summary>
+        /// 返回数据长度，默认值为 20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public string Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "FunctionVersion", this.FunctionVersion);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

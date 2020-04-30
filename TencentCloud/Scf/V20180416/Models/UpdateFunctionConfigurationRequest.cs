@@ -97,6 +97,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Publish{ get; set; }
 
         /// <summary>
+        /// 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("L5Enable")]
+        public string L5Enable{ get; set; }
+
+        /// <summary>
         /// 函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。
         /// </summary>
         [JsonProperty("Layers")]
@@ -126,6 +132,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "Publish", this.Publish);
+            this.SetParamSimple(map, prefix + "L5Enable", this.L5Enable);
             this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
             this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         }

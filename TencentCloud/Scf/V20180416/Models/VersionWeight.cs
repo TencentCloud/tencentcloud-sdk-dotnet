@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sms.V20190711.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PullSmsReplyStatusRequest : AbstractModel
+    public class VersionWeight : AbstractModel
     {
         
         /// <summary>
-        /// 拉取最大条数，最多100条。
+        /// 函数版本名称
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
         /// <summary>
-        /// 短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际 SdkAppid，例如1400006666。
+        /// 该版本的权重
         /// </summary>
-        [JsonProperty("SmsSdkAppid")]
-        public string SmsSdkAppid{ get; set; }
+        [JsonProperty("Weight")]
+        public float? Weight{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Sms.V20190711.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

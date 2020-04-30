@@ -825,6 +825,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询实例管理终端地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
+        /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
+        public async Task<DescribeInstanceVncUrlResponse> DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req)
+        {
+             JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceVncUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceVncUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例管理终端地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
+        /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
+        public DescribeInstanceVncUrlResponse DescribeInstanceVncUrlSync(DescribeInstanceVncUrlRequest req)
+        {
+             JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceVncUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceVncUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取实例的相关信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>

@@ -216,6 +216,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
+        /// <summary>
+        /// 撤销部分商品。0-不撤销，1-撤销
+        /// </summary>
+        [JsonProperty("UndoPart")]
+        public long? UndoPart{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -253,6 +259,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamSimple(map, prefix + "UndoPart", this.UndoPart);
         }
     }
 }

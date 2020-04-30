@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.55</VersionPrefix>
+    <VersionPrefix>3.0.56</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1307,6 +1307,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeDBInstanceConfigResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDBInstanceGTIDRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDBInstanceGTIDResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeDBInstanceInfoRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeDBInstanceInfoResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDBInstanceRebootTimeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDBInstanceRebootTimeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDBInstancesRequest.cs" />
@@ -1567,6 +1569,7 @@
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\GuetzliAdapter.cs" />
+    <Compile Include="Cdn\V20180606\Models\Hsts.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
     <Compile Include="Cdn\V20180606\Models\ImageOptimization.cs" />
@@ -1640,6 +1643,8 @@
     <Compile Include="Cdn\V20180606\Models\UpdatePayTypeRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdatePayTypeResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\UrlRecord.cs" />
+    <Compile Include="Cdn\V20180606\Models\UserAgentFilter.cs" />
+    <Compile Include="Cdn\V20180606\Models\UserAgentFilterRule.cs" />
     <Compile Include="Cdn\V20180606\Models\VideoSeek.cs" />
     <Compile Include="Cdn\V20180606\Models\ViolationUrl.cs" />
     <Compile Include="Cdn\V20180606\Models\WebpAdapter.cs" />
@@ -2137,6 +2142,8 @@
     <Compile Include="Cme\V20191029\Models\DescribeTeamsRequest.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeTeamsResponse.cs" />
     <Compile Include="Cme\V20191029\Models\Entity.cs" />
+    <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoEditProjectRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoEditProjectResponse.cs" />
     <Compile Include="Cme\V20191029\Models\FlattenListMediaRequest.cs" />
@@ -3317,6 +3324,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstanceTypeConfigRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstanceTypeConfigResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeInstanceVncUrlRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeInstanceVncUrlResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstancesDeniedActionsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstancesDeniedActionsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstancesRequest.cs" />
@@ -5965,9 +5974,12 @@
     <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionResponse.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
+    <Compile Include="Scf\V20180416\Models\Alias.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\CreateAliasRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\CreateAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\CreateFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CreateFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\CreateNamespaceRequest.cs" />
@@ -5992,6 +6004,8 @@
     <Compile Include="Scf\V20180416\Models\Function.cs" />
     <Compile Include="Scf\V20180416\Models\FunctionLog.cs" />
     <Compile Include="Scf\V20180416\Models\FunctionVersion.cs" />
+    <Compile Include="Scf\V20180416\Models\GetAliasRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\GetAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionAddressRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionAddressResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionLogsRequest.cs" />
@@ -6004,6 +6018,8 @@
     <Compile Include="Scf\V20180416\Models\InvokeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\LayerVersionInfo.cs" />
     <Compile Include="Scf\V20180416\Models\LayerVersionSimple.cs" />
+    <Compile Include="Scf\V20180416\Models\ListAliasesRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\ListAliasesResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListLayerVersionsRequest.cs" />
@@ -6023,8 +6039,11 @@
     <Compile Include="Scf\V20180416\Models\PublishVersionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\PublishVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\Result.cs" />
+    <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
     <Compile Include="Scf\V20180416\Models\Tag.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
+    <Compile Include="Scf\V20180416\Models\UpdateAliasRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\UpdateAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionConfigurationRequest.cs" />
@@ -6032,6 +6051,8 @@
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceResponse.cs" />
     <Compile Include="Scf\V20180416\Models\Variable.cs" />
+    <Compile Include="Scf\V20180416\Models\VersionMatch.cs" />
+    <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
     <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
     <Compile Include="Smpn\V20190822\SmpnClient.cs" />
     <Compile Include="Smpn\V20190822\Models\CHPRequest.cs" />
@@ -7296,6 +7317,8 @@
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityRequest.cs" />
@@ -7311,6 +7334,7 @@
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RoomState.cs" />
+    <Compile Include="Trtc\V20190722\Models\ScaleInfomation.cs" />
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
     <Compile Include="Tsf\V20180326\TsfClient.cs" />

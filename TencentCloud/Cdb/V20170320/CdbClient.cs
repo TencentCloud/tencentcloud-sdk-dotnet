@@ -1337,6 +1337,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 查询实例基本信息（实例 ID ，实例名称，是否开通加密 ）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
+        public async Task<DescribeDBInstanceInfoResponse> DescribeDBInstanceInfo(DescribeDBInstanceInfoRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例基本信息（实例 ID ，实例名称，是否开通加密 ）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInfoRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInfoResponse"/></returns>
+        public DescribeDBInstanceInfoResponse DescribeDBInstanceInfoSync(DescribeDBInstanceInfoRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceRebootTimeRequest"/></param>

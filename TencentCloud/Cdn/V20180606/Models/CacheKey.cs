@@ -32,6 +32,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }
 
+        /// <summary>
+        /// 缓存是否忽略大小写
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CaseSensitive")]
+        public string CaseSensitive{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -39,6 +46,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
+            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
         }
     }
 }

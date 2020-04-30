@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Sms.V20190711.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PullSmsReplyStatusRequest : AbstractModel
+    public class DescribeHistoryScaleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 拉取最大条数，最多100条。
+        /// 用户sdkappid
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际 SdkAppid，例如1400006666。
+        /// 查询开始时间
         /// </summary>
-        [JsonProperty("SmsSdkAppid")]
-        public string SmsSdkAppid{ get; set; }
+        [JsonProperty("StartTime")]
+        public ulong? StartTime{ get; set; }
+
+        /// <summary>
+        /// 查询结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public ulong? EndTime{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Sms.V20190711.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

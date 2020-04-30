@@ -329,6 +329,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("IsBlockTime")]
         public string IsBlockTime{ get; set; }
 
+        /// <summary>
+        /// IP类型是否是本地BGP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalBgp")]
+        public bool? LocalBgp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -379,6 +386,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
             this.SetParamSimple(map, prefix + "IsBlock", this.IsBlock);
             this.SetParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
+            this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
         }
     }
 }

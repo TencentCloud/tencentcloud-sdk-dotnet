@@ -15,26 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Sms.V20190711.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PullSmsReplyStatusRequest : AbstractModel
+    public class Hsts : AbstractModel
     {
         
         /// <summary>
-        /// 拉取最大条数，最多100条。
+        /// 是否开启，on或off。
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际 SdkAppid，例如1400006666。
+        /// MaxAge数值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SmsSdkAppid")]
-        public string SmsSdkAppid{ get; set; }
+        [JsonProperty("MaxAge")]
+        public long? MaxAge{ get; set; }
+
+        /// <summary>
+        /// 是否包含子域名，on或off。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IncludeSubDomains")]
+        public string IncludeSubDomains{ get; set; }
 
 
         /// <summary>
@@ -42,8 +50,9 @@ namespace TencentCloud.Sms.V20190711.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "MaxAge", this.MaxAge);
+            this.SetParamSimple(map, prefix + "IncludeSubDomains", this.IncludeSubDomains);
         }
     }
 }

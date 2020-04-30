@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Sms.V20190711.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PullSmsReplyStatusRequest : AbstractModel
+    public class CreateAliasResponse : AbstractModel
     {
         
         /// <summary>
-        /// 拉取最大条数，最多100条。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 短信 SdkAppid 在 [短信控制台](https://console.cloud.tencent.com/smsv2) 添加应用后生成的实际 SdkAppid，例如1400006666。
-        /// </summary>
-        [JsonProperty("SmsSdkAppid")]
-        public string SmsSdkAppid{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Sms.V20190711.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
