@@ -907,6 +907,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 获取函数触发器列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggersRequest"/></param>
+        /// <returns><see cref="ListTriggersResponse"/></returns>
+        public async Task<ListTriggersResponse> ListTriggers(ListTriggersRequest req)
+        {
+             JsonResponseModel<ListTriggersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTriggers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTriggersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取函数触发器列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggersRequest"/></param>
+        /// <returns><see cref="ListTriggersResponse"/></returns>
+        public ListTriggersResponse ListTriggersSync(ListTriggersRequest req)
+        {
+             JsonResponseModel<ListTriggersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTriggers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTriggersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据传入的参数查询函数的版本。
         /// </summary>
         /// <param name="req"><see cref="ListVersionByFunctionRequest"/></param>

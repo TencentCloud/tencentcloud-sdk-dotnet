@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Chdfs.V20190718.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFileSystemResponse : AbstractModel
+    public class ListTriggersResponse : AbstractModel
     {
         
         /// <summary>
-        /// 文件系统
+        /// 触发器总数
         /// </summary>
-        [JsonProperty("FileSystem")]
-        public FileSystem FileSystem{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 文件系统已使用容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 触发器列表
         /// </summary>
-        [JsonProperty("FileSystemCapacityUsed")]
-        public ulong? FileSystemCapacityUsed{ get; set; }
-
-        /// <summary>
-        /// 已使用容量（byte）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CapacityUsed")]
-        public ulong? CapacityUsed{ get; set; }
+        [JsonProperty("Triggers")]
+        public TriggerInfo[] Triggers{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -56,9 +48,8 @@ namespace TencentCloud.Chdfs.V20190718.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "FileSystem.", this.FileSystem);
-            this.SetParamSimple(map, prefix + "FileSystemCapacityUsed", this.FileSystemCapacityUsed);
-            this.SetParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Triggers.", this.Triggers);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

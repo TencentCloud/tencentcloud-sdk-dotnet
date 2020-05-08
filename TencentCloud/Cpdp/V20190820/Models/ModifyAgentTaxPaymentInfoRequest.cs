@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CommonMixCropParams : AbstractModel
+    public class ModifyAgentTaxPaymentInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// 裁剪的宽度。取值范围[0，2000]。
+        /// 批次号
         /// </summary>
-        [JsonProperty("CropWidth")]
-        public float? CropWidth{ get; set; }
+        [JsonProperty("BatchNum")]
+        public long? BatchNum{ get; set; }
 
         /// <summary>
-        /// 裁剪的高度。取值范围[0，2000]。
+        /// 新源电子凭证地址
         /// </summary>
-        [JsonProperty("CropHeight")]
-        public float? CropHeight{ get; set; }
+        [JsonProperty("RawElectronicCertUrl")]
+        public string RawElectronicCertUrl{ get; set; }
 
         /// <summary>
-        /// 裁剪的起始X坐标。取值范围[0，2000]。
+        /// 新的文件名
         /// </summary>
-        [JsonProperty("CropStartLocationX")]
-        public float? CropStartLocationX{ get; set; }
-
-        /// <summary>
-        /// 裁剪的起始Y坐标。取值范围[0，2000]。
-        /// </summary>
-        [JsonProperty("CropStartLocationY")]
-        public float? CropStartLocationY{ get; set; }
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CropWidth", this.CropWidth);
-            this.SetParamSimple(map, prefix + "CropHeight", this.CropHeight);
-            this.SetParamSimple(map, prefix + "CropStartLocationX", this.CropStartLocationX);
-            this.SetParamSimple(map, prefix + "CropStartLocationY", this.CropStartLocationY);
+            this.SetParamSimple(map, prefix + "BatchNum", this.BatchNum);
+            this.SetParamSimple(map, prefix + "RawElectronicCertUrl", this.RawElectronicCertUrl);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
         }
     }
 }

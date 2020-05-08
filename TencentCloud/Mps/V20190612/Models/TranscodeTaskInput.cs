@@ -46,6 +46,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
+        /// 马赛克列表，最大可支持 10 张。
+        /// </summary>
+        [JsonProperty("MosaicSet")]
+        public MosaicInput[] MosaicSet{ get; set; }
+
+        /// <summary>
         /// 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -80,6 +86,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);

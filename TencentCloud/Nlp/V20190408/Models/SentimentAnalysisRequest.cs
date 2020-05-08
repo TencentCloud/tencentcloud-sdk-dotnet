@@ -31,7 +31,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 文本所属类型（默认取4值）：
+        /// 待分析文本所属的类型，仅当输入参数Mode取值为2class时有效（默认取4值）：
         /// 1、商品评论类
         /// 2、社交类
         /// 3、美食酒店类
@@ -39,6 +39,14 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         [JsonProperty("Flag")]
         public ulong? Flag{ get; set; }
+
+        /// <summary>
+        /// 情感分类模式选项，可取2class或3class（默认值为2class）
+        /// 1、2class：返回正负面二分类情感结果
+        /// 2、3class：返回正负面及中性三分类情感结果
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
 
         /// <summary>
@@ -48,6 +56,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         {
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "Flag", this.Flag);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

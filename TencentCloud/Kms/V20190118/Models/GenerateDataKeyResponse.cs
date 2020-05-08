@@ -31,13 +31,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
+        /// 生成的数据密钥DataKey的明文，该明文使用base64进行了编码，需base64解码后作为数据密钥本地使用
         /// </summary>
         [JsonProperty("Plaintext")]
         public string Plaintext{ get; set; }
 
         /// <summary>
-        /// DataKey加密后经过base64编码的密文，用户需要自行保存密文
+        /// 数据密钥DataKey加密后的密文，用户需要自行保存该密文，KMS不托管用户的数据密钥。可以通过Decrypt接口从CiphertextBlob中获取数据密钥DataKey明文
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }

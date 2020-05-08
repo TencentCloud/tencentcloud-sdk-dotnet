@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.56</VersionPrefix>
+    <VersionPrefix>3.0.57</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2277,6 +2277,8 @@
     <Compile Include="Cms\V20190321\Models\TextSample.cs" />
     <Compile Include="Cpdp\V20190820\CpdpClient.cs" />
     <Compile Include="Cpdp\V20190820\Models\Acct.cs" />
+    <Compile Include="Cpdp\V20190820\Models\AgentTaxPayment.cs" />
+    <Compile Include="Cpdp\V20190820\Models\AgentTaxPaymentBatch.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyApplicationMaterialRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyApplicationMaterialResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyDeclareData.cs" />
@@ -2315,6 +2317,8 @@
     <Compile Include="Cpdp\V20190820\Models\CloseOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAcctRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAcctResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateInvoiceItem.cs" />
@@ -2331,9 +2335,15 @@
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfosRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfosResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingRequest.cs" />
@@ -2343,6 +2353,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryAcctInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryAgentTaxPaymentBatchRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryAgentTaxPaymentBatchResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryApplicationMaterialRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryApplicationMaterialResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBalanceRequest.cs" />
@@ -5299,6 +5311,7 @@
     <Compile Include="Mps\V20190612\Models\ModifyWatermarkTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyWordSampleRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyWordSampleResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\MosaicInput.cs" />
     <Compile Include="Mps\V20190612\Models\NumberFormat.cs" />
     <Compile Include="Mps\V20190612\Models\OcrFullTextConfigureInfo.cs" />
     <Compile Include="Mps\V20190612\Models\OcrFullTextConfigureInfoForUpdate.cs" />
@@ -6028,6 +6041,8 @@
     <Compile Include="Scf\V20180416\Models\ListLayersResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListNamespacesRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListNamespacesResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\ListTriggersRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\ListTriggersResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListVersionByFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListVersionByFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\LogFilter.cs" />
@@ -6042,6 +6057,7 @@
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
     <Compile Include="Scf\V20180416\Models\Tag.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
+    <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateFunctionCodeRequest.cs" />
@@ -7329,12 +7345,19 @@
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\EncodeParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
     <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RoomState.cs" />
     <Compile Include="Trtc\V20190722\Models\ScaleInfomation.cs" />
+    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
     <Compile Include="Tsf\V20180326\TsfClient.cs" />

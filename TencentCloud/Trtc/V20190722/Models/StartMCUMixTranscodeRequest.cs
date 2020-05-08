@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CommonMixCropParams : AbstractModel
+    public class StartMCUMixTranscodeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 裁剪的宽度。取值范围[0，2000]。
+        /// TRTC的SDKAppId。
         /// </summary>
-        [JsonProperty("CropWidth")]
-        public float? CropWidth{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 裁剪的高度。取值范围[0，2000]。
+        /// 房间号。
         /// </summary>
-        [JsonProperty("CropHeight")]
-        public float? CropHeight{ get; set; }
+        [JsonProperty("RoomId")]
+        public ulong? RoomId{ get; set; }
 
         /// <summary>
-        /// 裁剪的起始X坐标。取值范围[0，2000]。
+        /// 混流输出控制参数。
         /// </summary>
-        [JsonProperty("CropStartLocationX")]
-        public float? CropStartLocationX{ get; set; }
+        [JsonProperty("OutputParams")]
+        public OutputParams OutputParams{ get; set; }
 
         /// <summary>
-        /// 裁剪的起始Y坐标。取值范围[0，2000]。
+        /// 混流输出编码参数。
         /// </summary>
-        [JsonProperty("CropStartLocationY")]
-        public float? CropStartLocationY{ get; set; }
+        [JsonProperty("EncodeParams")]
+        public EncodeParams EncodeParams{ get; set; }
+
+        /// <summary>
+        /// 混流输出布局参数。
+        /// </summary>
+        [JsonProperty("LayoutParams")]
+        public LayoutParams LayoutParams{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CropWidth", this.CropWidth);
-            this.SetParamSimple(map, prefix + "CropHeight", this.CropHeight);
-            this.SetParamSimple(map, prefix + "CropStartLocationX", this.CropStartLocationX);
-            this.SetParamSimple(map, prefix + "CropStartLocationY", this.CropStartLocationY);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamObj(map, prefix + "OutputParams.", this.OutputParams);
+            this.SetParamObj(map, prefix + "EncodeParams.", this.EncodeParams);
+            this.SetParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
         }
     }
 }

@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ft.V20200304.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AgeInfo : AbstractModel
+    public class StopMCUMixTranscodeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 变化到的人脸年龄 [10,80]。
+        /// TRTC的SDKAppId。
         /// </summary>
-        [JsonProperty("Age")]
-        public long? Age{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 人脸框位置。若不输入则选择 Image 或 Url 中面积最大的人脸。  
-        /// 您可以通过 [人脸检测与分析](https://cloud.tencent.com/document/api/867/32800)  接口获取人脸框位置信息。
+        /// 房间号。
         /// </summary>
-        [JsonProperty("FaceRect")]
-        public FaceRect FaceRect{ get; set; }
+        [JsonProperty("RoomId")]
+        public ulong? RoomId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Ft.V20200304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Age", this.Age);
-            this.SetParamObj(map, prefix + "FaceRect.", this.FaceRect);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
         }
     }
 }

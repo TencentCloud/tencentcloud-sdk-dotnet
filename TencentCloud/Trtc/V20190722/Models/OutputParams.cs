@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CommonMixCropParams : AbstractModel
+    public class OutputParams : AbstractModel
     {
         
         /// <summary>
-        /// 裁剪的宽度。取值范围[0，2000]。
+        /// 直播流ID
         /// </summary>
-        [JsonProperty("CropWidth")]
-        public float? CropWidth{ get; set; }
+        [JsonProperty("StreamId")]
+        public string StreamId{ get; set; }
 
         /// <summary>
-        /// 裁剪的高度。取值范围[0，2000]。
+        /// 填0：直播流为音视频(默认); 填1：直播流为纯音频
         /// </summary>
-        [JsonProperty("CropHeight")]
-        public float? CropHeight{ get; set; }
+        [JsonProperty("PureAudioStream")]
+        public ulong? PureAudioStream{ get; set; }
 
         /// <summary>
-        /// 裁剪的起始X坐标。取值范围[0，2000]。
+        /// 自定义录制文件名
         /// </summary>
-        [JsonProperty("CropStartLocationX")]
-        public float? CropStartLocationX{ get; set; }
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
 
         /// <summary>
-        /// 裁剪的起始Y坐标。取值范围[0，2000]。
+        /// 填1：纯音频录制为mp3
         /// </summary>
-        [JsonProperty("CropStartLocationY")]
-        public float? CropStartLocationY{ get; set; }
+        [JsonProperty("RecordAudioOnly")]
+        public ulong? RecordAudioOnly{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CropWidth", this.CropWidth);
-            this.SetParamSimple(map, prefix + "CropHeight", this.CropHeight);
-            this.SetParamSimple(map, prefix + "CropStartLocationX", this.CropStartLocationX);
-            this.SetParamSimple(map, prefix + "CropStartLocationY", this.CropStartLocationY);
+            this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
+            this.SetParamSimple(map, prefix + "PureAudioStream", this.PureAudioStream);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "RecordAudioOnly", this.RecordAudioOnly);
         }
     }
 }

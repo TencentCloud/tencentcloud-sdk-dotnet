@@ -46,10 +46,10 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// 接收人类型。“group” 或 “user”
         /// </summary>
         [JsonProperty("ReceiverType")]
-        public string[] ReceiverType{ get; set; }
+        public string ReceiverType{ get; set; }
 
         /// <summary>
-        /// Id
+        /// ReceiverId
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
@@ -123,7 +123,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "NotifyWay.", this.NotifyWay);
-            this.SetParamArraySimple(map, prefix + "ReceiverType.", this.ReceiverType);
+            this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArraySimple(map, prefix + "SendFor.", this.SendFor);
             this.SetParamArraySimple(map, prefix + "UidList.", this.UidList);

@@ -90,6 +90,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("InstanceGroupIds")]
         public long?[] InstanceGroupIds{ get; set; }
 
+        /// <summary>
+        /// 根据指标名过滤
+        /// </summary>
+        [JsonProperty("MetricNames")]
+        public string[] MetricNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "AlarmStatus.", this.AlarmStatus);
             this.SetParamSimple(map, prefix + "ObjLike", this.ObjLike);
             this.SetParamArraySimple(map, prefix + "InstanceGroupIds.", this.InstanceGroupIds);
+            this.SetParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
         }
     }
 }

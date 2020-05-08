@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 注册号
+        /// 统一社会信用代码（三合一之前为注册号）
         /// </summary>
         [JsonProperty("RegNum")]
         public string RegNum{ get; set; }

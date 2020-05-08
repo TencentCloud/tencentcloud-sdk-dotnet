@@ -627,6 +627,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 直播平台-代理商完税信息录入
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentTaxPaymentInfosRequest"/></param>
+        /// <returns><see cref="CreateAgentTaxPaymentInfosResponse"/></returns>
+        public async Task<CreateAgentTaxPaymentInfosResponse> CreateAgentTaxPaymentInfos(CreateAgentTaxPaymentInfosRequest req)
+        {
+             JsonResponseModel<CreateAgentTaxPaymentInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAgentTaxPaymentInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAgentTaxPaymentInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-代理商完税信息录入
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgentTaxPaymentInfosRequest"/></param>
+        /// <returns><see cref="CreateAgentTaxPaymentInfosResponse"/></returns>
+        public CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfosSync(CreateAgentTaxPaymentInfosRequest req)
+        {
+             JsonResponseModel<CreateAgentTaxPaymentInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAgentTaxPaymentInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAgentTaxPaymentInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
         /// 平台需保存银行返回的子账户账号，后续交易接口都会用到。会员属性字段为预留扩展字段，当前必须送默认值。
         /// </summary>
@@ -789,6 +829,86 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 直播平台-删除代理商完税信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentTaxPaymentInfoRequest"/></param>
+        /// <returns><see cref="DeleteAgentTaxPaymentInfoResponse"/></returns>
+        public async Task<DeleteAgentTaxPaymentInfoResponse> DeleteAgentTaxPaymentInfo(DeleteAgentTaxPaymentInfoRequest req)
+        {
+             JsonResponseModel<DeleteAgentTaxPaymentInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAgentTaxPaymentInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAgentTaxPaymentInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-删除代理商完税信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentTaxPaymentInfoRequest"/></param>
+        /// <returns><see cref="DeleteAgentTaxPaymentInfoResponse"/></returns>
+        public DeleteAgentTaxPaymentInfoResponse DeleteAgentTaxPaymentInfoSync(DeleteAgentTaxPaymentInfoRequest req)
+        {
+             JsonResponseModel<DeleteAgentTaxPaymentInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAgentTaxPaymentInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAgentTaxPaymentInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-删除代理商完税信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentTaxPaymentInfosRequest"/></param>
+        /// <returns><see cref="DeleteAgentTaxPaymentInfosResponse"/></returns>
+        public async Task<DeleteAgentTaxPaymentInfosResponse> DeleteAgentTaxPaymentInfos(DeleteAgentTaxPaymentInfosRequest req)
+        {
+             JsonResponseModel<DeleteAgentTaxPaymentInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAgentTaxPaymentInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAgentTaxPaymentInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-删除代理商完税信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAgentTaxPaymentInfosRequest"/></param>
+        /// <returns><see cref="DeleteAgentTaxPaymentInfosResponse"/></returns>
+        public DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfosSync(DeleteAgentTaxPaymentInfosRequest req)
+        {
+             JsonResponseModel<DeleteAgentTaxPaymentInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAgentTaxPaymentInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAgentTaxPaymentInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
         /// </summary>
         /// <param name="req"><see cref="DownloadBillRequest"/></param>
@@ -820,6 +940,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "DownloadBill");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadBillResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-修改代理商完税信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentTaxPaymentInfoRequest"/></param>
+        /// <returns><see cref="ModifyAgentTaxPaymentInfoResponse"/></returns>
+        public async Task<ModifyAgentTaxPaymentInfoResponse> ModifyAgentTaxPaymentInfo(ModifyAgentTaxPaymentInfoRequest req)
+        {
+             JsonResponseModel<ModifyAgentTaxPaymentInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAgentTaxPaymentInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAgentTaxPaymentInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-修改代理商完税信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAgentTaxPaymentInfoRequest"/></param>
+        /// <returns><see cref="ModifyAgentTaxPaymentInfoResponse"/></returns>
+        public ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfoSync(ModifyAgentTaxPaymentInfoRequest req)
+        {
+             JsonResponseModel<ModifyAgentTaxPaymentInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAgentTaxPaymentInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAgentTaxPaymentInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -980,6 +1140,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryAcctInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAcctInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-查询批次信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryAgentTaxPaymentBatchRequest"/></param>
+        /// <returns><see cref="QueryAgentTaxPaymentBatchResponse"/></returns>
+        public async Task<QueryAgentTaxPaymentBatchResponse> QueryAgentTaxPaymentBatch(QueryAgentTaxPaymentBatchRequest req)
+        {
+             JsonResponseModel<QueryAgentTaxPaymentBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryAgentTaxPaymentBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAgentTaxPaymentBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-查询批次信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryAgentTaxPaymentBatchRequest"/></param>
+        /// <returns><see cref="QueryAgentTaxPaymentBatchResponse"/></returns>
+        public QueryAgentTaxPaymentBatchResponse QueryAgentTaxPaymentBatchSync(QueryAgentTaxPaymentBatchRequest req)
+        {
+             JsonResponseModel<QueryAgentTaxPaymentBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryAgentTaxPaymentBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAgentTaxPaymentBatchResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

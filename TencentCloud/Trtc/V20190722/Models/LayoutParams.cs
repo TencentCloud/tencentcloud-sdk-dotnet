@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CommonMixCropParams : AbstractModel
+    public class LayoutParams : AbstractModel
     {
         
         /// <summary>
-        /// 裁剪的宽度。取值范围[0，2000]。
+        /// 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
         /// </summary>
-        [JsonProperty("CropWidth")]
-        public float? CropWidth{ get; set; }
+        [JsonProperty("Template")]
+        public ulong? Template{ get; set; }
 
         /// <summary>
-        /// 裁剪的高度。取值范围[0，2000]。
+        /// 屏幕分享模板中有效，代表左侧大画面对应的用户ID
         /// </summary>
-        [JsonProperty("CropHeight")]
-        public float? CropHeight{ get; set; }
+        [JsonProperty("MainVideoUserId")]
+        public string MainVideoUserId{ get; set; }
 
         /// <summary>
-        /// 裁剪的起始X坐标。取值范围[0，2000]。
+        /// 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享
         /// </summary>
-        [JsonProperty("CropStartLocationX")]
-        public float? CropStartLocationX{ get; set; }
-
-        /// <summary>
-        /// 裁剪的起始Y坐标。取值范围[0，2000]。
-        /// </summary>
-        [JsonProperty("CropStartLocationY")]
-        public float? CropStartLocationY{ get; set; }
+        [JsonProperty("MainVideoStreamType")]
+        public ulong? MainVideoStreamType{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CropWidth", this.CropWidth);
-            this.SetParamSimple(map, prefix + "CropHeight", this.CropHeight);
-            this.SetParamSimple(map, prefix + "CropStartLocationX", this.CropStartLocationX);
-            this.SetParamSimple(map, prefix + "CropStartLocationY", this.CropStartLocationY);
+            this.SetParamSimple(map, prefix + "Template", this.Template);
+            this.SetParamSimple(map, prefix + "MainVideoUserId", this.MainVideoUserId);
+            this.SetParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
         }
     }
 }

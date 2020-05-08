@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 通话ID
+        /// 通话ID（唯一标识一次通话）= sdkappid+roomgString（房间号）+房间创建时间（unix时间戳，s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
         /// </summary>
         [JsonProperty("CommId")]
         public string CommId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 需查询的用户数组，不填默认返回6个用户
+        /// 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }

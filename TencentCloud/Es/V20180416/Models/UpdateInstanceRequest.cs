@@ -144,6 +144,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("BasicSecurityType")]
         public long? BasicSecurityType{ get; set; }
 
+        /// <summary>
+        /// Kibana内网端口
+        /// </summary>
+        [JsonProperty("KibanaPrivatePort")]
+        public ulong? KibanaPrivatePort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +175,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
             this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+            this.SetParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Nlp.V20190408.Models
         public float? Negative{ get; set; }
 
         /// <summary>
+        /// 中性情感概率，当输入参数Mode取值为3class时有效，否则值为空
+        /// </summary>
+        [JsonProperty("Neutral")]
+        public float? Neutral{ get; set; }
+
+        /// <summary>
         /// 正面情感概率
         /// </summary>
         [JsonProperty("Positive")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Negative", this.Negative);
+            this.SetParamSimple(map, prefix + "Neutral", this.Neutral);
             this.SetParamSimple(map, prefix + "Positive", this.Positive);
             this.SetParamSimple(map, prefix + "Sentiment", this.Sentiment);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
