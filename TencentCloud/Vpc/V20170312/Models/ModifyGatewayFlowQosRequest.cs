@@ -34,10 +34,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 流控带宽值。
+        /// 流控带宽值。取值大于0，表示限流到指定的Mbps；取值等于0，表示完全限流；取值为-1，不限流。
         /// </summary>
         [JsonProperty("Bandwidth")]
-        public ulong? Bandwidth{ get; set; }
+        public long? Bandwidth{ get; set; }
 
         /// <summary>
         /// 限流的云服务器内网IP。

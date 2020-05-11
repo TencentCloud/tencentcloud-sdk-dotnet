@@ -126,6 +126,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("DeadLetterConfig")]
         public DeadLetterConfig DeadLetterConfig{ get; set; }
 
+        /// <summary>
+        /// 公网访问配置
+        /// </summary>
+        [JsonProperty("PublicNetConfig")]
+        public PublicNetConfigIn PublicNetConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "CodeSource", this.CodeSource);
             this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
             this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+            this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Chdfs.V20190718.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+        /// 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
         /// 注意：修改的文件系统容量不能小于当前使用量
         /// </summary>
         [JsonProperty("CapacityQuota")]

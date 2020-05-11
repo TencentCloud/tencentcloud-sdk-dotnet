@@ -39,7 +39,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 待重置密码的实例操作系统的管理员账户。不得超过64个字符。
+        /// 待重置密码的实例操作系统的用户名。不得超过64个字符。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

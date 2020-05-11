@@ -42,6 +42,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
+        /// <summary>
+        /// 接入环境。沙箱环境填sandbox
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "BatchNum", this.BatchNum);
             this.SetParamSimple(map, prefix + "RawElectronicCertUrl", this.RawElectronicCertUrl);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

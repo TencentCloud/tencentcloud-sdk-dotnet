@@ -31,6 +31,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public TextVatInvoice[] VatInvoiceInfos{ get; set; }
 
         /// <summary>
+        /// 明细条目。VatInvoiceInfos中关于明细项的具体条目。
+        /// </summary>
+        [JsonProperty("Items")]
+        public VatInvoiceItem[] Items{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "VatInvoiceInfos.", this.VatInvoiceInfos);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

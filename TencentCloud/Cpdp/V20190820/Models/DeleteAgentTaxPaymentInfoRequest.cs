@@ -30,6 +30,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("BatchNum")]
         public long? BatchNum{ get; set; }
 
+        /// <summary>
+        /// 接入环境。沙箱环境填sandbox
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BatchNum", this.BatchNum);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

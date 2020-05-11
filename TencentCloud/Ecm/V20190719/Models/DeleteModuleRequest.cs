@@ -25,7 +25,7 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 模块ID。如：es-qn46snq8
+        /// 模块ID。如：em-qn46snq8
         /// </summary>
         [JsonProperty("ModuleId")]
         public string ModuleId{ get; set; }

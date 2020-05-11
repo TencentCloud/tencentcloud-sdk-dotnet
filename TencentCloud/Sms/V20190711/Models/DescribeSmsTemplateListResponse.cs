@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20190711.Models
     {
         
         /// <summary>
-        /// 获取短信签名信息响应
+        /// 获取短信模板信息响应
         /// </summary>
         [JsonProperty("DescribeTemplateStatusSet")]
         public DescribeTemplateListStatus[] DescribeTemplateStatusSet{ get; set; }

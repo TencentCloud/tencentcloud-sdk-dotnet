@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GatewayQos : AbstractModel
+    public class ProductSimple : AbstractModel
     {
         
         /// <summary>
-        /// VPC实例ID。
+        /// 命名空间
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
         /// <summary>
-        /// 云服务器内网IP。
+        /// 产品名称
         /// </summary>
-        [JsonProperty("IpAddress")]
-        public string IpAddress{ get; set; }
-
-        /// <summary>
-        /// 流控带宽值。
-        /// </summary>
-        [JsonProperty("Bandwidth")]
-        public long? Bandwidth{ get; set; }
-
-        /// <summary>
-        /// 创建时间。
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
-            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GatewayQos : AbstractModel
+    public class DescribeProductListRequest : AbstractModel
     {
         
         /// <summary>
-        /// VPC实例ID。
+        /// 固定传值monitor
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
+        [JsonProperty("Module")]
+        public string Module{ get; set; }
 
         /// <summary>
-        /// 云服务器内网IP。
+        /// 排序方式：DESC/ASC（区分大小写），默认值DESC
         /// </summary>
-        [JsonProperty("IpAddress")]
-        public string IpAddress{ get; set; }
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
 
         /// <summary>
-        /// 流控带宽值。
+        /// 分页查询的偏移量，默认值0
         /// </summary>
-        [JsonProperty("Bandwidth")]
-        public long? Bandwidth{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 创建时间。
+        /// 分页查询的每页数据量，默认值20
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
-            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Module", this.Module);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

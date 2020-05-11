@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.57</VersionPrefix>
+    <VersionPrefix>3.0.58</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2266,6 +2266,7 @@
     <Compile Include="Cms\V20190321\Models\Logo.cs" />
     <Compile Include="Cms\V20190321\Models\LogoDetail.cs" />
     <Compile Include="Cms\V20190321\Models\OCRDetect.cs" />
+    <Compile Include="Cms\V20190321\Models\PhoneDetect.cs" />
     <Compile Include="Cms\V20190321\Models\RrectF.cs" />
     <Compile Include="Cms\V20190321\Models\Similar.cs" />
     <Compile Include="Cms\V20190321\Models\TextData.cs" />
@@ -5029,6 +5030,8 @@
     <Compile Include="Monitor\V20180724\Models\DescribeProductEventListOverView.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeProductEventListRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeProductEventListResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeProductListRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeProductListResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\Dimension.cs" />
     <Compile Include="Monitor\V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="Monitor\V20180724\Models\GetMonitorDataRequest.cs" />
@@ -5041,6 +5044,7 @@
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmReceiversRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmReceiversResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
+    <Compile Include="Monitor\V20180724\Models\ProductSimple.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\ReceiverInfo.cs" />
@@ -5661,6 +5665,7 @@
     <Compile Include="Ocr\V20181119\Models\TollInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoiceItem.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceInfo.cs" />
@@ -6010,6 +6015,7 @@
     <Compile Include="Scf\V20180416\Models\DeleteNamespaceResponse.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteTriggerRequest.cs" />
     <Compile Include="Scf\V20180416\Models\DeleteTriggerResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\EipConfigIn.cs" />
     <Compile Include="Scf\V20180416\Models\EipConfigOut.cs" />
     <Compile Include="Scf\V20180416\Models\EipOutConfig.cs" />
     <Compile Include="Scf\V20180416\Models\Environment.cs" />
@@ -6048,6 +6054,7 @@
     <Compile Include="Scf\V20180416\Models\LogFilter.cs" />
     <Compile Include="Scf\V20180416\Models\LogSearchContext.cs" />
     <Compile Include="Scf\V20180416\Models\Namespace.cs" />
+    <Compile Include="Scf\V20180416\Models\PublicNetConfigIn.cs" />
     <Compile Include="Scf\V20180416\Models\PublicNetConfigOut.cs" />
     <Compile Include="Scf\V20180416\Models\PublishLayerVersionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\PublishLayerVersionResponse.cs" />

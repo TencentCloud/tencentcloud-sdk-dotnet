@@ -74,6 +74,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public OCRDetect OCRDetect{ get; set; }
 
         /// <summary>
+        /// 手机检测详情
+        /// </summary>
+        [JsonProperty("PhoneDetect")]
+        public PhoneDetect PhoneDetect{ get; set; }
+
+        /// <summary>
         /// 图片涉政详情
         /// </summary>
         [JsonProperty("PolityDetect")]
@@ -110,6 +116,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
             this.SetParamObj(map, prefix + "LogoDetect.", this.LogoDetect);
             this.SetParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
+            this.SetParamObj(map, prefix + "PhoneDetect.", this.PhoneDetect);
             this.SetParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
             this.SetParamObj(map, prefix + "PornDetect.", this.PornDetect);
             this.SetParamObj(map, prefix + "Similar.", this.Similar);
