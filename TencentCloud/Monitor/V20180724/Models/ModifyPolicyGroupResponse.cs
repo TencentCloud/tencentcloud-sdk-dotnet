@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tiw.V20190919.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOnlineRecordCallbackResponse : AbstractModel
+    public class ModifyPolicyGroupResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实时录制事件回调地址，如果未设置回调地址，该字段为空字符串
+        /// 策略组id
         /// </summary>
-        [JsonProperty("Callback")]
-        public string Callback{ get; set; }
-
-        /// <summary>
-        /// 实时录制回调鉴权密钥
-        /// </summary>
-        [JsonProperty("CallbackKey")]
-        public string CallbackKey{ get; set; }
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Callback", this.Callback);
-            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -2071,6 +2071,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 登记挂账(支持撤销)
+        /// </summary>
+        /// <param name="req"><see cref="RegisterBillRequest"/></param>
+        /// <returns><see cref="RegisterBillResponse"/></returns>
+        public async Task<RegisterBillResponse> RegisterBill(RegisterBillRequest req)
+        {
+             JsonResponseModel<RegisterBillResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RegisterBill");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterBillResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 登记挂账(支持撤销)
+        /// </summary>
+        /// <param name="req"><see cref="RegisterBillRequest"/></param>
+        /// <returns><see cref="RegisterBillResponse"/></returns>
+        public RegisterBillResponse RegisterBillSync(RegisterBillRequest req)
+        {
+             JsonResponseModel<RegisterBillResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterBill");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterBillResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 登记挂账(支持撤销)。此接口可实现把不明来账或自有资金等已登记在挂账子账户下的资金调整到普通会员子账户。即通过申请调用此接口，将会减少挂账子账户的资金，调增指定的普通会员子账户的可提现余额及可用余额。此接口不支持把挂账子账户资金清分到功能子账户。
         /// </summary>
         /// <param name="req"><see cref="RegisterBillSupportWithdrawRequest"/></param>

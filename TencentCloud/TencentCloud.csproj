@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.58</VersionPrefix>
+    <VersionPrefix>3.0.59</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2418,6 +2418,8 @@
     <Compile Include="Cpdp\V20190820\Models\RefundOutSubOrderRefundList.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RegisterBillRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RegisterBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevRegisterBillSupportWithdrawRequest.cs" />
@@ -5043,6 +5045,10 @@
     <Compile Include="Monitor\V20180724\Models\MetricSet.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmReceiversRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmReceiversResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyPolicyGroupCondition.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyPolicyGroupEventCondition.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyPolicyGroupRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyPolicyGroupResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Monitor\V20180724\Models\ProductSimple.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataRequest.cs" />

@@ -66,6 +66,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 触发器所属命名空间 Id
+        /// </summary>
+        [JsonProperty("NamespaceId")]
+        public long? NamespaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         }
     }
 }

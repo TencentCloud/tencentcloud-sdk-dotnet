@@ -61,7 +61,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public long? IsEnd{ get; set; }
 
         /// <summary>
-        /// 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+        /// 语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

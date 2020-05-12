@@ -617,6 +617,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 更新策略组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPolicyGroupRequest"/></param>
+        /// <returns><see cref="ModifyPolicyGroupResponse"/></returns>
+        public async Task<ModifyPolicyGroupResponse> ModifyPolicyGroup(ModifyPolicyGroupRequest req)
+        {
+             JsonResponseModel<ModifyPolicyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPolicyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPolicyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新策略组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPolicyGroupRequest"/></param>
+        /// <returns><see cref="ModifyPolicyGroupResponse"/></returns>
+        public ModifyPolicyGroupResponse ModifyPolicyGroupSync(ModifyPolicyGroupRequest req)
+        {
+             JsonResponseModel<ModifyPolicyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPolicyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPolicyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 默认接口请求频率限制：50次/秒。
         /// 默认单租户指标上限：100个。
         /// 单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。

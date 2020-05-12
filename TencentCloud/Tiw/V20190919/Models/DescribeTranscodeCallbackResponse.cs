@@ -31,6 +31,12 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string Callback{ get; set; }
 
         /// <summary>
+        /// 文档转码回调鉴权密钥
+        /// </summary>
+        [JsonProperty("CallbackKey")]
+        public string CallbackKey{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Callback", this.Callback);
+            this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

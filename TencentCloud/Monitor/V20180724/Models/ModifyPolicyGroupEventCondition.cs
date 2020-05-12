@@ -21,27 +21,32 @@ namespace TencentCloud.Monitor.V20180724.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProductSimple : AbstractModel
+    public class ModifyPolicyGroupEventCondition : AbstractModel
     {
         
         /// <summary>
-        /// 命名空间
+        /// 事件id
         /// </summary>
-        [JsonProperty("Namespace")]
-        public string Namespace{ get; set; }
+        [JsonProperty("EventId")]
+        public long? EventId{ get; set; }
 
         /// <summary>
-        /// 产品中文名称
+        /// 告警发送收敛类型。0连续告警，1指数告警
         /// </summary>
-        [JsonProperty("ProductName")]
-        public string ProductName{ get; set; }
+        [JsonProperty("AlarmNotifyType")]
+        public long? AlarmNotifyType{ get; set; }
 
         /// <summary>
-        /// 产品英文名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
         /// </summary>
-        [JsonProperty("ProductEnName")]
-        public string ProductEnName{ get; set; }
+        [JsonProperty("AlarmNotifyPeriod")]
+        public long? AlarmNotifyPeriod{ get; set; }
+
+        /// <summary>
+        /// 规则id，不填表示新增，填写了ruleId表示在已存在的规则基础上进行修改
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public long? RuleId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
-            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
-            this.SetParamSimple(map, prefix + "ProductEnName", this.ProductEnName);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "AlarmNotifyType", this.AlarmNotifyType);
+            this.SetParamSimple(map, prefix + "AlarmNotifyPeriod", this.AlarmNotifyPeriod);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }
