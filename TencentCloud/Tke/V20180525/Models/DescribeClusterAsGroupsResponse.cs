@@ -34,7 +34,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// 集群关联的伸缩组列表
         /// </summary>
         [JsonProperty("ClusterAsGroupSet")]
-        public ClusterAsGroup ClusterAsGroupSet{ get; set; }
+        public ClusterAsGroup[] ClusterAsGroupSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,7 +49,7 @@ namespace TencentCloud.Tke.V20180525.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamObj(map, prefix + "ClusterAsGroupSet.", this.ClusterAsGroupSet);
+            this.SetParamArrayObj(map, prefix + "ClusterAsGroupSet.", this.ClusterAsGroupSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

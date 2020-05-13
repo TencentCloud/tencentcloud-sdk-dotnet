@@ -1879,7 +1879,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取域名证书信息
+        /// 获取域名证书信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveDomainCertRequest"/></param>
         /// <returns><see cref="DescribeLiveDomainCertResponse"/></returns>
@@ -1899,7 +1899,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 获取域名证书信息
+        /// 获取域名证书信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveDomainCertRequest"/></param>
         /// <returns><see cref="DescribeLiveDomainCertResponse"/></returns>

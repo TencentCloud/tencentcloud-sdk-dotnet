@@ -50,6 +50,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Labels")]
         public Label[] Labels{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +66,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsUnschedulable", this.IsUnschedulable);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         }
     }
 }

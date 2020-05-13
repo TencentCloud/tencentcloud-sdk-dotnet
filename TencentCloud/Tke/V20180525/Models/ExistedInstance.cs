@@ -81,16 +81,6 @@ namespace TencentCloud.Tke.V20180525.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 实例计费模式。取值范围：
-        /// PREPAID：表示预付费，即包年包月
-        /// POSTPAID_BY_HOUR：表示后付费，即按量计费
-        /// CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("InstanceChargeType")]
-        public string InstanceChargeType{ get; set; }
-
-        /// <summary>
         /// 实例的CPU核数，单位：核。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -118,6 +108,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// 伸缩组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoscalingGroupId")]
+        public string AutoscalingGroupId{ get; set; }
+
+        /// <summary>
+        /// 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,11 +136,12 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         }
     }
 }

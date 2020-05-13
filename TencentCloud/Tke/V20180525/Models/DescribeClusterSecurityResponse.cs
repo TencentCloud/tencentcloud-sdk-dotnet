@@ -62,6 +62,7 @@ namespace TencentCloud.Tke.V20180525.Models
 
         /// <summary>
         /// 集群访问策略组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecurityPolicy")]
         public string[] SecurityPolicy{ get; set; }
@@ -72,6 +73,13 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("Kubeconfig")]
         public string Kubeconfig{ get; set; }
+
+        /// <summary>
+        /// 集群JnsGw的访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JnsGwEndpoint")]
+        public string JnsGwEndpoint{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -93,6 +101,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "PgwEndpoint", this.PgwEndpoint);
             this.SetParamArraySimple(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
             this.SetParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
+            this.SetParamSimple(map, prefix + "JnsGwEndpoint", this.JnsGwEndpoint);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

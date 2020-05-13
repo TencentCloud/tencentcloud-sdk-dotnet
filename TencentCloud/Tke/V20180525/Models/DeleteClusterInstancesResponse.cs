@@ -25,6 +25,27 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 删除成功的实例ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuccInstanceIds")]
+        public string[] SuccInstanceIds{ get; set; }
+
+        /// <summary>
+        /// 删除失败的实例ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedInstanceIds")]
+        public string[] FailedInstanceIds{ get; set; }
+
+        /// <summary>
+        /// 未匹配到的实例ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NotFoundInstanceIds")]
+        public string[] NotFoundInstanceIds{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +57,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
+            this.SetParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+            this.SetParamArraySimple(map, prefix + "NotFoundInstanceIds.", this.NotFoundInstanceIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

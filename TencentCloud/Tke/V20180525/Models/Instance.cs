@@ -75,6 +75,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("LanIP")]
         public string LanIP{ get; set; }
 
+        /// <summary>
+        /// 资源池ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodePoolId")]
+        public string NodePoolId{ get; set; }
+
+        /// <summary>
+        /// 自动伸缩组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoscalingGroupId")]
+        public string AutoscalingGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +103,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "LanIP", this.LanIP);
+            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+            this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
         }
     }
 }

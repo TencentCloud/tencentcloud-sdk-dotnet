@@ -87,6 +87,34 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("IgnoreDaemonSetsUtilization")]
         public bool? IgnoreDaemonSetsUtilization{ get; set; }
 
+        /// <summary>
+        /// CA做健康性判断的个数，默认3，即超过OkTotalUnreadyCount个数后，CA会进行健康性判断。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OkTotalUnreadyCount")]
+        public long? OkTotalUnreadyCount{ get; set; }
+
+        /// <summary>
+        /// 未就绪节点的最大百分比，此后CA会停止操作
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxTotalUnreadyPercentage")]
+        public long? MaxTotalUnreadyPercentage{ get; set; }
+
+        /// <summary>
+        /// 表示未准备就绪的节点在有资格进行缩减之前应该停留多长时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScaleDownUnreadyTime")]
+        public long? ScaleDownUnreadyTime{ get; set; }
+
+        /// <summary>
+        /// CA删除未在Kubernetes中注册的节点之前等待的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UnregisteredNodeRemovalTime")]
+        public long? UnregisteredNodeRemovalTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +130,10 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "SkipNodesWithLocalStorage", this.SkipNodesWithLocalStorage);
             this.SetParamSimple(map, prefix + "SkipNodesWithSystemPods", this.SkipNodesWithSystemPods);
             this.SetParamSimple(map, prefix + "IgnoreDaemonSetsUtilization", this.IgnoreDaemonSetsUtilization);
+            this.SetParamSimple(map, prefix + "OkTotalUnreadyCount", this.OkTotalUnreadyCount);
+            this.SetParamSimple(map, prefix + "MaxTotalUnreadyPercentage", this.MaxTotalUnreadyPercentage);
+            this.SetParamSimple(map, prefix + "ScaleDownUnreadyTime", this.ScaleDownUnreadyTime);
+            this.SetParamSimple(map, prefix + "UnregisteredNodeRemovalTime", this.UnregisteredNodeRemovalTime);
         }
     }
 }

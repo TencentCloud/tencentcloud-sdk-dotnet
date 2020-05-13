@@ -26,30 +26,35 @@ namespace TencentCloud.Tke.V20180525.Models
         
         /// <summary>
         /// 云盘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// 文件系统(ext3/ext4/xfs)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSystem")]
         public string FileSystem{ get; set; }
 
         /// <summary>
         /// 云盘大小(G）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
         /// 是否自动化格式盘并挂载
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AutoFormatAndMount")]
         public bool? AutoFormatAndMount{ get; set; }
 
         /// <summary>
         /// 挂载目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountTarget")]
         public string MountTarget{ get; set; }

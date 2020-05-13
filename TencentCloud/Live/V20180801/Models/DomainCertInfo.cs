@@ -75,7 +75,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 证书状态
+        /// 证书状态。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
