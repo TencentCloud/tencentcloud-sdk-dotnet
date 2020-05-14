@@ -67,13 +67,6 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 素材标签信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TagSet")]
-        public string[] TagSet{ get; set; }
-
-        /// <summary>
         /// 素材媒体文件的预览图。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -93,7 +86,6 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
-            this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         }
     }

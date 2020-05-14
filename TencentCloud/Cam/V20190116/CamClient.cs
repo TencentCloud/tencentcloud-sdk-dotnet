@@ -1853,6 +1853,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 设置用户的登录保护和敏感操作校验方式
+        /// </summary>
+        /// <param name="req"><see cref="SetMfaFlagRequest"/></param>
+        /// <returns><see cref="SetMfaFlagResponse"/></returns>
+        public async Task<SetMfaFlagResponse> SetMfaFlag(SetMfaFlagRequest req)
+        {
+             JsonResponseModel<SetMfaFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetMfaFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetMfaFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置用户的登录保护和敏感操作校验方式
+        /// </summary>
+        /// <param name="req"><see cref="SetMfaFlagRequest"/></param>
+        /// <returns><see cref="SetMfaFlagResponse"/></returns>
+        public SetMfaFlagResponse SetMfaFlagSync(SetMfaFlagRequest req)
+        {
+             JsonResponseModel<SetMfaFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetMfaFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetMfaFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
         /// </summary>
         /// <param name="req"><see cref="UpdateAssumeRolePolicyRequest"/></param>

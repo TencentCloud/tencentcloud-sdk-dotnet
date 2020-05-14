@@ -37,7 +37,7 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
-        /// 用于指定主题的消息匹配策略。
+        /// 用于指定主题的消息匹配策略。1：表示标签匹配策略；2：表示路由匹配策略，默认值为标签匹配策略。
         /// </summary>
         [JsonProperty("FilterType")]
         public ulong? FilterType{ get; set; }

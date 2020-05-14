@@ -49,12 +49,6 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 素材标签，单个标签长度不能超过10个字符，数组长度不能超过10。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public string[] Tags{ get; set; }
-
-        /// <summary>
         /// 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
         /// </summary>
         [JsonProperty("ClassPath")]
@@ -76,7 +70,6 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "MaterialId", this.MaterialId);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }

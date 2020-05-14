@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTrafficPackagesRequest : AbstractModel
+    public class CreateLaneRequest : AbstractModel
     {
         
         /// <summary>
-        /// 分页查询起始地址，默认 0
+        /// 泳道名称
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("LaneName")]
+        public string LaneName{ get; set; }
 
         /// <summary>
-        /// 分页查询记录个数，默认100，最大1000
+        /// 泳道备注
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 泳道部署组信息
+        /// </summary>
+        [JsonProperty("LaneGroupList")]
+        public LaneGroup[] LaneGroupList{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "LaneName", this.LaneName);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "LaneGroupList.", this.LaneGroupList);
         }
     }
 }

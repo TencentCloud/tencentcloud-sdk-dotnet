@@ -333,6 +333,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建泳道
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaneRequest"/></param>
+        /// <returns><see cref="CreateLaneResponse"/></returns>
+        public async Task<CreateLaneResponse> CreateLane(CreateLaneRequest req)
+        {
+             JsonResponseModel<CreateLaneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLane");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建泳道
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaneRequest"/></param>
+        /// <returns><see cref="CreateLaneResponse"/></returns>
+        public CreateLaneResponse CreateLaneSync(CreateLaneRequest req)
+        {
+             JsonResponseModel<CreateLaneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLane");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaneRuleRequest"/></param>
+        /// <returns><see cref="CreateLaneRuleResponse"/></returns>
+        public async Task<CreateLaneRuleResponse> CreateLaneRule(CreateLaneRuleRequest req)
+        {
+             JsonResponseModel<CreateLaneRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLaneRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaneRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaneRuleRequest"/></param>
+        /// <returns><see cref="CreateLaneRuleResponse"/></returns>
+        public CreateLaneRuleResponse CreateLaneRuleSync(CreateLaneRuleRequest req)
+        {
+             JsonResponseModel<CreateLaneRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLaneRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaneRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新增微服务
         /// </summary>
         /// <param name="req"><see cref="CreateMicroserviceRequest"/></param>
@@ -684,6 +764,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DeleteImageTags");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除泳道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaneRequest"/></param>
+        /// <returns><see cref="DeleteLaneResponse"/></returns>
+        public async Task<DeleteLaneResponse> DeleteLane(DeleteLaneRequest req)
+        {
+             JsonResponseModel<DeleteLaneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLane");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除泳道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaneRequest"/></param>
+        /// <returns><see cref="DeleteLaneResponse"/></returns>
+        public DeleteLaneResponse DeleteLaneSync(DeleteLaneRequest req)
+        {
+             JsonResponseModel<DeleteLaneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLane");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaneResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1657,6 +1777,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询泳道规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaneRulesRequest"/></param>
+        /// <returns><see cref="DescribeLaneRulesResponse"/></returns>
+        public async Task<DescribeLaneRulesResponse> DescribeLaneRules(DescribeLaneRulesRequest req)
+        {
+             JsonResponseModel<DescribeLaneRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLaneRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaneRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询泳道规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaneRulesRequest"/></param>
+        /// <returns><see cref="DescribeLaneRulesResponse"/></returns>
+        public DescribeLaneRulesResponse DescribeLaneRulesSync(DescribeLaneRulesRequest req)
+        {
+             JsonResponseModel<DescribeLaneRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLaneRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaneRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询泳道列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLanesRequest"/></param>
+        /// <returns><see cref="DescribeLanesResponse"/></returns>
+        public async Task<DescribeLanesResponse> DescribeLanes(DescribeLanesRequest req)
+        {
+             JsonResponseModel<DescribeLanesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLanes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLanesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询泳道列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLanesRequest"/></param>
+        /// <returns><see cref="DescribeLanesResponse"/></returns>
+        public DescribeLanesResponse DescribeLanesSync(DescribeLanesRequest req)
+        {
+             JsonResponseModel<DescribeLanesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLanes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLanesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询微服务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMicroserviceRequest"/></param>
@@ -2450,6 +2650,86 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "ModifyContainerReplicas");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyContainerReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新泳道信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaneRequest"/></param>
+        /// <returns><see cref="ModifyLaneResponse"/></returns>
+        public async Task<ModifyLaneResponse> ModifyLane(ModifyLaneRequest req)
+        {
+             JsonResponseModel<ModifyLaneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLane");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新泳道信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaneRequest"/></param>
+        /// <returns><see cref="ModifyLaneResponse"/></returns>
+        public ModifyLaneResponse ModifyLaneSync(ModifyLaneRequest req)
+        {
+             JsonResponseModel<ModifyLaneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLane");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaneRuleRequest"/></param>
+        /// <returns><see cref="ModifyLaneRuleResponse"/></returns>
+        public async Task<ModifyLaneRuleResponse> ModifyLaneRule(ModifyLaneRuleRequest req)
+        {
+             JsonResponseModel<ModifyLaneRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLaneRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaneRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新泳道规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaneRuleRequest"/></param>
+        /// <returns><see cref="ModifyLaneRuleResponse"/></returns>
+        public ModifyLaneRuleResponse ModifyLaneRuleSync(ModifyLaneRuleRequest req)
+        {
+             JsonResponseModel<ModifyLaneRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLaneRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaneRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

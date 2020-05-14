@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTrafficPackagesRequest : AbstractModel
+    public class LoginActionMfaFlag : AbstractModel
     {
         
         /// <summary>
-        /// 分页查询起始地址，默认 0
+        /// 手机
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Phone")]
+        public ulong? Phone{ get; set; }
 
         /// <summary>
-        /// 分页查询记录个数，默认100，最大1000
+        /// 软token
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Stoken")]
+        public ulong? Stoken{ get; set; }
+
+        /// <summary>
+        /// 微信
+        /// </summary>
+        [JsonProperty("Wechat")]
+        public ulong? Wechat{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamSimple(map, prefix + "Stoken", this.Stoken);
+            this.SetParamSimple(map, prefix + "Wechat", this.Wechat);
         }
     }
 }

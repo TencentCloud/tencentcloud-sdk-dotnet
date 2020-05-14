@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTrafficPackagesRequest : AbstractModel
+    public class SetMfaFlagRequest : AbstractModel
     {
         
         /// <summary>
-        /// 分页查询起始地址，默认 0
+        /// 设置用户的uin
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("OpUin")]
+        public ulong? OpUin{ get; set; }
 
         /// <summary>
-        /// 分页查询记录个数，默认100，最大1000
+        /// 登录保护设置
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("LoginFlag")]
+        public LoginActionMfaFlag LoginFlag{ get; set; }
+
+        /// <summary>
+        /// 操作保护设置
+        /// </summary>
+        [JsonProperty("ActionFlag")]
+        public LoginActionMfaFlag ActionFlag{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "OpUin", this.OpUin);
+            this.SetParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
+            this.SetParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
         }
     }
 }

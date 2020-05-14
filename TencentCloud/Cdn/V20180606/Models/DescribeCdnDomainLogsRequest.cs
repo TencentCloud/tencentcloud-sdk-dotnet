@@ -43,7 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 分页查询偏移量，默认为 0 （第一页）
+        /// 分页查询偏移量，默认为 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -64,6 +64,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 指定下载日志的类型。
+        /// access：获取访问日志
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +83,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
         }
     }
 }

@@ -55,12 +55,6 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 素材标签，单个标签长度不能超过10，数组长度不能超过10。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public string[] Tags{ get; set; }
-
-        /// <summary>
         /// 素材预处理任务模板 ID。取值：
         /// <li>10：进行编辑预处理。</li>
         /// </summary>
@@ -84,7 +78,6 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
-            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }

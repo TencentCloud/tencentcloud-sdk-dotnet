@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.60</VersionPrefix>
+    <VersionPrefix>3.0.61</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1034,6 +1034,7 @@
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\LoginActionMfaFlag.cs" />
     <Compile Include="Cam\V20190116\Models\PolicyVersionDetail.cs" />
     <Compile Include="Cam\V20190116\Models\PolicyVersionItem.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupRequest.cs" />
@@ -1042,6 +1043,8 @@
     <Compile Include="Cam\V20190116\Models\SAMLProviderInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SetDefaultPolicyVersionRequest.cs" />
     <Compile Include="Cam\V20190116\Models\SetDefaultPolicyVersionResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\SetMfaFlagRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\SetMfaFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
@@ -7401,6 +7404,10 @@
     <Compile Include="Tsf\V20180326\Models\CreateContainGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateLaneRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateLaneResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateLaneRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateLaneRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateMicroserviceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateMicroserviceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateNamespaceRequest.cs" />
@@ -7420,6 +7427,8 @@
     <Compile Include="Tsf\V20180326\Models\DeleteImageTag.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteImageTagsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteImageTagsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteLaneRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteLaneResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteMicroserviceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteMicroserviceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteNamespaceRequest.cs" />
@@ -7468,6 +7477,10 @@
     <Compile Include="Tsf\V20180326\Models\DescribeGroupsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeLaneRulesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeLaneRulesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeLanesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeLanesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeMicroserviceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeMicroserviceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeMicroservicesRequest.cs" />
@@ -7510,11 +7523,21 @@
     <Compile Include="Tsf\V20180326\Models\ImageTag.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTagsResult.cs" />
     <Compile Include="Tsf\V20180326\Models\Instance.cs" />
+    <Compile Include="Tsf\V20180326\Models\LaneGroup.cs" />
+    <Compile Include="Tsf\V20180326\Models\LaneInfo.cs" />
+    <Compile Include="Tsf\V20180326\Models\LaneInfos.cs" />
+    <Compile Include="Tsf\V20180326\Models\LaneRule.cs" />
+    <Compile Include="Tsf\V20180326\Models\LaneRuleTag.cs" />
+    <Compile Include="Tsf\V20180326\Models\LaneRules.cs" />
     <Compile Include="Tsf\V20180326\Models\Microservice.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerReplicasRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerReplicasResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ModifyLaneRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\ModifyLaneResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ModifyLaneRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\ModifyLaneRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyMicroserviceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyMicroserviceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyUploadInfoRequest.cs" />

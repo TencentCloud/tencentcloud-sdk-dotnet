@@ -50,7 +50,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 分页查询偏移量，默认为 0 （第一页）
+        /// 分页查询偏移量，默认为 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
