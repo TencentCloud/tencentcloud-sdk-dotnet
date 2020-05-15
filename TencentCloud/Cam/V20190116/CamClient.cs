@@ -1853,7 +1853,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 设置用户的登录保护和敏感操作校验方式
+        /// 设置子用户的登录保护和敏感操作校验方式
         /// </summary>
         /// <param name="req"><see cref="SetMfaFlagRequest"/></param>
         /// <returns><see cref="SetMfaFlagResponse"/></returns>
@@ -1873,7 +1873,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 设置用户的登录保护和敏感操作校验方式
+        /// 设置子用户的登录保护和敏感操作校验方式
         /// </summary>
         /// <param name="req"><see cref="SetMfaFlagRequest"/></param>
         /// <returns><see cref="SetMfaFlagResponse"/></returns>

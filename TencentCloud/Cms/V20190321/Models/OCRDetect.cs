@@ -25,6 +25,12 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
+        /// 识别到的详细信息
+        /// </summary>
+        [JsonProperty("Item")]
+        public OCRItem[] Item{ get; set; }
+
+        /// <summary>
         /// 识别到的文本信息
         /// </summary>
         [JsonProperty("TextInfo")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Item.", this.Item);
             this.SetParamSimple(map, prefix + "TextInfo", this.TextInfo);
         }
     }

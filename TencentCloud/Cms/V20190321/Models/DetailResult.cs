@@ -21,32 +21,39 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextModerationRequest : AbstractModel
+    public class DetailResult : AbstractModel
     {
         
         /// <summary>
-        /// 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
+        [JsonProperty("EvilLabel")]
+        public string EvilLabel{ get; set; }
 
         /// <summary>
-        /// 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+        /// 恶意类型
+        /// 100：正常
+        /// 20001：政治
+        /// 20002：色情 
+        /// 20006：涉毒违法
+        /// 20007：谩骂
+        /// 20105：广告引流 
+        /// 24001：暴恐
         /// </summary>
-        [JsonProperty("BizType")]
-        public ulong? BizType{ get; set; }
+        [JsonProperty("EvilType")]
+        public ulong? EvilType{ get; set; }
 
         /// <summary>
-        /// 数据ID，英文字母、下划线、-组成，不超过64个字符
+        /// 该标签下命中的关键词
         /// </summary>
-        [JsonProperty("DataId")]
-        public string DataId{ get; set; }
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 业务应用ID
+        /// 该标签模型命中的分值
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("Score")]
+        public ulong? Score{ get; set; }
 
 
         /// <summary>
@@ -54,10 +61,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "BizType", this.BizType);
-            this.SetParamSimple(map, prefix + "DataId", this.DataId);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
+            this.SetParamSimple(map, prefix + "EvilType", this.EvilType);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
         }
     }
 }

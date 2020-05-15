@@ -53,7 +53,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询指定时间内的用户列表及用户通话质量数据。
+        /// 查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个
         /// </summary>
         /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
         /// <returns><see cref="DescribeCallDetailResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询指定时间内的用户列表及用户通话质量数据。
+        /// 查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个
         /// </summary>
         /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
         /// <returns><see cref="DescribeCallDetailResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询最近5天的数据。
+        /// 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询5天内的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
         /// <returns><see cref="DescribeRoomInformationResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询最近5天的数据。
+        /// 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询5天内的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
         /// <returns><see cref="DescribeRoomInformationResponse"/></returns>

@@ -71,12 +71,6 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 链接标签，单个标签长度不能超过10，数组长度不能超过10。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public string[] Tags{ get; set; }
-
-        /// <summary>
         /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
         /// </summary>
         [JsonProperty("Operator")]
@@ -95,7 +89,6 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "DestinationId", this.DestinationId);
             this.SetParamObj(map, prefix + "DestinationOwner.", this.DestinationOwner);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
-            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }

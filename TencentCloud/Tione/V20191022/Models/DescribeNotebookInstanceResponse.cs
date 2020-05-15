@@ -138,6 +138,13 @@ namespace TencentCloud.Tione.V20191022.Models
         public string[] AdditionalCodeRepositories{ get; set; }
 
         /// <summary>
+        /// 是否开启CLS日志服务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClsAccess")]
+        public string ClsAccess{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -165,6 +172,7 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
             this.SetParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
             this.SetParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
+            this.SetParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

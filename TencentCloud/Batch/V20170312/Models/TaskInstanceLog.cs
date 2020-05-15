@@ -31,14 +31,14 @@ namespace TencentCloud.Batch.V20170312.Models
         public ulong? TaskInstanceIndex{ get; set; }
 
         /// <summary>
-        /// 标准输出日志（Base64编码）
+        /// 标准输出日志（Base64编码，解码后最大日志长度2048字节）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StdoutLog")]
         public string StdoutLog{ get; set; }
 
         /// <summary>
-        /// 标准错误日志（Base64编码）
+        /// 标准错误日志（Base64编码，解码后最大日志长度2048字节）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StderrLog")]

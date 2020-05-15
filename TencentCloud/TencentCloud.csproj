@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.61</VersionPrefix>
+    <VersionPrefix>3.0.62</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2243,10 +2243,12 @@
     <Compile Include="Cms\V20190321\Models\CodeDetail.cs" />
     <Compile Include="Cms\V20190321\Models\CodeDetect.cs" />
     <Compile Include="Cms\V20190321\Models\CodePosition.cs" />
+    <Compile Include="Cms\V20190321\Models\Coordinate.cs" />
     <Compile Include="Cms\V20190321\Models\CreateFileSampleRequest.cs" />
     <Compile Include="Cms\V20190321\Models\CreateFileSampleResponse.cs" />
     <Compile Include="Cms\V20190321\Models\CreateTextSampleRequest.cs" />
     <Compile Include="Cms\V20190321\Models\CreateTextSampleResponse.cs" />
+    <Compile Include="Cms\V20190321\Models\CustomResult.cs" />
     <Compile Include="Cms\V20190321\Models\DeleteFileSampleRequest.cs" />
     <Compile Include="Cms\V20190321\Models\DeleteFileSampleResponse.cs" />
     <Compile Include="Cms\V20190321\Models\DeleteTextSampleRequest.cs" />
@@ -2255,6 +2257,7 @@
     <Compile Include="Cms\V20190321\Models\DescribeFileSampleResponse.cs" />
     <Compile Include="Cms\V20190321\Models\DescribeTextSampleRequest.cs" />
     <Compile Include="Cms\V20190321\Models\DescribeTextSampleResponse.cs" />
+    <Compile Include="Cms\V20190321\Models\DetailResult.cs" />
     <Compile Include="Cms\V20190321\Models\FileSample.cs" />
     <Compile Include="Cms\V20190321\Models\FileSampleInfo.cs" />
     <Compile Include="Cms\V20190321\Models\Filter.cs" />
@@ -2269,6 +2272,7 @@
     <Compile Include="Cms\V20190321\Models\Logo.cs" />
     <Compile Include="Cms\V20190321\Models\LogoDetail.cs" />
     <Compile Include="Cms\V20190321\Models\OCRDetect.cs" />
+    <Compile Include="Cms\V20190321\Models\OCRItem.cs" />
     <Compile Include="Cms\V20190321\Models\PhoneDetect.cs" />
     <Compile Include="Cms\V20190321\Models\RrectF.cs" />
     <Compile Include="Cms\V20190321\Models\Similar.cs" />

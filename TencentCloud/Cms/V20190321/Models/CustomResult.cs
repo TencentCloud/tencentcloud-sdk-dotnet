@@ -21,32 +21,26 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextModerationRequest : AbstractModel
+    public class CustomResult : AbstractModel
     {
         
         /// <summary>
-        /// 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+        /// 命中的自定义关键词
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+        /// 自定义库id
         /// </summary>
-        [JsonProperty("BizType")]
-        public ulong? BizType{ get; set; }
+        [JsonProperty("LibId")]
+        public string LibId{ get; set; }
 
         /// <summary>
-        /// 数据ID，英文字母、下划线、-组成，不超过64个字符
+        /// 自定义词库名称
         /// </summary>
-        [JsonProperty("DataId")]
-        public string DataId{ get; set; }
-
-        /// <summary>
-        /// 业务应用ID
-        /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("LibName")]
+        public string LibName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "BizType", this.BizType);
-            this.SetParamSimple(map, prefix + "DataId", this.DataId);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamSimple(map, prefix + "LibId", this.LibId);
+            this.SetParamSimple(map, prefix + "LibName", this.LibName);
         }
     }
 }

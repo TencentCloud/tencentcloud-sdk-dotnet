@@ -43,18 +43,6 @@ namespace TencentCloud.Msp.V20180319.Models
         public string ServiceSupplier{ get; set; }
 
         /// <summary>
-        /// 迁移任务源信息
-        /// </summary>
-        [JsonProperty("SrcInfo")]
-        public SrcInfo SrcInfo{ get; set; }
-
-        /// <summary>
-        /// 迁移任务目的信息
-        /// </summary>
-        [JsonProperty("DstInfo")]
-        public DstInfo DstInfo{ get; set; }
-
-        /// <summary>
         /// 迁移任务创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -71,6 +59,18 @@ namespace TencentCloud.Msp.V20180319.Models
         /// </summary>
         [JsonProperty("MigrateClass")]
         public string MigrateClass{ get; set; }
+
+        /// <summary>
+        /// 迁移任务源信息
+        /// </summary>
+        [JsonProperty("SrcInfo")]
+        public SrcInfo SrcInfo{ get; set; }
+
+        /// <summary>
+        /// 迁移任务目的信息
+        /// </summary>
+        [JsonProperty("DstInfo")]
+        public DstInfo DstInfo{ get; set; }
 
         /// <summary>
         /// 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
@@ -105,11 +105,11 @@ namespace TencentCloud.Msp.V20180319.Models
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "ServiceSupplier", this.ServiceSupplier);
-            this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
-            this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "MigrateClass", this.MigrateClass);
+            this.SetParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+            this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
             this.SetParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
             this.SetParamSimple(map, prefix + "SrcDatabaseType", this.SrcDatabaseType);
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);

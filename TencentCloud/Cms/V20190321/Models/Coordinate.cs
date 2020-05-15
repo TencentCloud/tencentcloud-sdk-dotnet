@@ -21,32 +21,32 @@ namespace TencentCloud.Cms.V20190321.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TextModerationRequest : AbstractModel
+    public class Coordinate : AbstractModel
     {
         
         /// <summary>
-        /// 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+        /// 左上角横坐标
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
+        [JsonProperty("Cx")]
+        public long? Cx{ get; set; }
 
         /// <summary>
-        /// 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+        /// 左上角纵坐标
         /// </summary>
-        [JsonProperty("BizType")]
-        public ulong? BizType{ get; set; }
+        [JsonProperty("Cy")]
+        public long? Cy{ get; set; }
 
         /// <summary>
-        /// 数据ID，英文字母、下划线、-组成，不超过64个字符
+        /// 高度
         /// </summary>
-        [JsonProperty("DataId")]
-        public string DataId{ get; set; }
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
 
         /// <summary>
-        /// 业务应用ID
+        /// 宽度
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "BizType", this.BizType);
-            this.SetParamSimple(map, prefix + "DataId", this.DataId);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "Cx", this.Cx);
+            this.SetParamSimple(map, prefix + "Cy", this.Cy);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
         }
     }
 }

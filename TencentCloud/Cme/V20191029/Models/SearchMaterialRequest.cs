@@ -46,7 +46,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string[] MaterialTypes{ get; set; }
 
         /// <summary>
-        /// 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64 个字符。
+        /// 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
@@ -68,12 +68,6 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         [JsonProperty("CreateTimeRange")]
         public TimeRange CreateTimeRange{ get; set; }
-
-        /// <summary>
-        /// 标签集合，匹配集合中任意元素。单个标签长度限制：10 个字符。数组长度限制：10。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public string[] Tags{ get; set; }
 
         /// <summary>
         /// 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
@@ -112,7 +106,6 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamObj(map, prefix + "DurationRange.", this.DurationRange);
             this.SetParamObj(map, prefix + "CreateTimeRange.", this.CreateTimeRange);
-            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

@@ -80,6 +80,12 @@ namespace TencentCloud.Tione.V20191022.Models
         [JsonProperty("AdditionalCodeRepositories")]
         public string[] AdditionalCodeRepositories{ get; set; }
 
+        /// <summary>
+        /// 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
+        /// </summary>
+        [JsonProperty("ClsAccess")]
+        public string ClsAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "LifecycleScriptsName", this.LifecycleScriptsName);
             this.SetParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
             this.SetParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
+            this.SetParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
         }
     }
 }

@@ -52,6 +52,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 告警码
         /// -9103	证照翻拍告警
         /// -9102	证照复印件告警
+        /// -9106       证件遮挡告警
         /// </summary>
         [JsonProperty("Warn")]
         public long?[] Warn{ get; set; }
@@ -77,6 +78,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
+        /// 证件类型
+        /// MyKad  身份证
+        /// MyPR    永居证
+        /// MyTentera   军官证
+        /// MyKAS    临时身份证
+        /// POLIS  警察
+        /// IKAD   劳工证
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -95,6 +108,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "Warn.", this.Warn);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
