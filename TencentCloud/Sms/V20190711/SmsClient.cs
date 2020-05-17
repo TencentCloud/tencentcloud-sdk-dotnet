@@ -62,17 +62,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="AddSmsSignResponse"/></returns>
         public async Task<AddSmsSignResponse> AddSmsSign(AddSmsSignRequest req)
         {
-             JsonResponseModel<AddSmsSignResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddSmsSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSmsSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<AddSmsSignRequest, AddSmsSignResponse>(req);
         }
 
         /// <summary>
@@ -85,17 +75,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="AddSmsSignResponse"/></returns>
         public AddSmsSignResponse AddSmsSignSync(AddSmsSignRequest req)
         {
-             JsonResponseModel<AddSmsSignResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AddSmsSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSmsSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<AddSmsSignRequest, AddSmsSignResponse>(req);
         }
 
         /// <summary>
@@ -108,17 +88,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="AddSmsTemplateResponse"/></returns>
         public async Task<AddSmsTemplateResponse> AddSmsTemplate(AddSmsTemplateRequest req)
         {
-             JsonResponseModel<AddSmsTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "AddSmsTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSmsTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<AddSmsTemplateRequest, AddSmsTemplateResponse>(req);
         }
 
         /// <summary>
@@ -131,17 +101,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="AddSmsTemplateResponse"/></returns>
         public AddSmsTemplateResponse AddSmsTemplateSync(AddSmsTemplateRequest req)
         {
-             JsonResponseModel<AddSmsTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "AddSmsTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSmsTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<AddSmsTemplateRequest, AddSmsTemplateResponse>(req);
         }
 
         /// <summary>
@@ -153,17 +113,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="CallbackStatusStatisticsResponse"/></returns>
         public async Task<CallbackStatusStatisticsResponse> CallbackStatusStatistics(CallbackStatusStatisticsRequest req)
         {
-             JsonResponseModel<CallbackStatusStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CallbackStatusStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallbackStatusStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<CallbackStatusStatisticsRequest, CallbackStatusStatisticsResponse>(req);
         }
 
         /// <summary>
@@ -175,17 +125,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="CallbackStatusStatisticsResponse"/></returns>
         public CallbackStatusStatisticsResponse CallbackStatusStatisticsSync(CallbackStatusStatisticsRequest req)
         {
-             JsonResponseModel<CallbackStatusStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CallbackStatusStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CallbackStatusStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<CallbackStatusStatisticsRequest, CallbackStatusStatisticsResponse>(req);
         }
 
         /// <summary>
@@ -197,17 +137,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DeleteSmsSignResponse"/></returns>
         public async Task<DeleteSmsSignResponse> DeleteSmsSign(DeleteSmsSignRequest req)
         {
-             JsonResponseModel<DeleteSmsSignResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteSmsSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSmsSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<DeleteSmsSignRequest, DeleteSmsSignResponse>(req);
         }
 
         /// <summary>
@@ -219,17 +149,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DeleteSmsSignResponse"/></returns>
         public DeleteSmsSignResponse DeleteSmsSignSync(DeleteSmsSignRequest req)
         {
-             JsonResponseModel<DeleteSmsSignResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteSmsSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSmsSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<DeleteSmsSignRequest, DeleteSmsSignResponse>(req);
         }
 
         /// <summary>
@@ -241,17 +161,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DeleteSmsTemplateResponse"/></returns>
         public async Task<DeleteSmsTemplateResponse> DeleteSmsTemplate(DeleteSmsTemplateRequest req)
         {
-             JsonResponseModel<DeleteSmsTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteSmsTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSmsTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<DeleteSmsTemplateRequest, DeleteSmsTemplateResponse>(req);
         }
 
         /// <summary>
@@ -263,17 +173,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DeleteSmsTemplateResponse"/></returns>
         public DeleteSmsTemplateResponse DeleteSmsTemplateSync(DeleteSmsTemplateRequest req)
         {
-             JsonResponseModel<DeleteSmsTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteSmsTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSmsTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<DeleteSmsTemplateRequest, DeleteSmsTemplateResponse>(req);
         }
 
         /// <summary>
@@ -285,17 +185,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DescribeSmsSignListResponse"/></returns>
         public async Task<DescribeSmsSignListResponse> DescribeSmsSignList(DescribeSmsSignListRequest req)
         {
-             JsonResponseModel<DescribeSmsSignListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSmsSignList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsSignListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<DescribeSmsSignListRequest, DescribeSmsSignListResponse>(req);
         }
 
         /// <summary>
@@ -307,17 +197,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DescribeSmsSignListResponse"/></returns>
         public DescribeSmsSignListResponse DescribeSmsSignListSync(DescribeSmsSignListRequest req)
         {
-             JsonResponseModel<DescribeSmsSignListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSmsSignList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsSignListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<DescribeSmsSignListRequest, DescribeSmsSignListResponse>(req);
         }
 
         /// <summary>
@@ -329,17 +209,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DescribeSmsTemplateListResponse"/></returns>
         public async Task<DescribeSmsTemplateListResponse> DescribeSmsTemplateList(DescribeSmsTemplateListRequest req)
         {
-             JsonResponseModel<DescribeSmsTemplateListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSmsTemplateList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsTemplateListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<DescribeSmsTemplateListRequest, DescribeSmsTemplateListResponse>(req);
         }
 
         /// <summary>
@@ -351,17 +221,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="DescribeSmsTemplateListResponse"/></returns>
         public DescribeSmsTemplateListResponse DescribeSmsTemplateListSync(DescribeSmsTemplateListRequest req)
         {
-             JsonResponseModel<DescribeSmsTemplateListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSmsTemplateList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsTemplateListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<DescribeSmsTemplateListRequest, DescribeSmsTemplateListResponse>(req);
         }
 
         /// <summary>
@@ -375,17 +235,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="ModifySmsSignResponse"/></returns>
         public async Task<ModifySmsSignResponse> ModifySmsSign(ModifySmsSignRequest req)
         {
-             JsonResponseModel<ModifySmsSignResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifySmsSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySmsSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<ModifySmsSignRequest, ModifySmsSignResponse>(req);
         }
 
         /// <summary>
@@ -399,17 +249,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="ModifySmsSignResponse"/></returns>
         public ModifySmsSignResponse ModifySmsSignSync(ModifySmsSignRequest req)
         {
-             JsonResponseModel<ModifySmsSignResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifySmsSign");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySmsSignResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<ModifySmsSignRequest, ModifySmsSignResponse>(req);
         }
 
         /// <summary>
@@ -423,17 +263,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="ModifySmsTemplateResponse"/></returns>
         public async Task<ModifySmsTemplateResponse> ModifySmsTemplate(ModifySmsTemplateRequest req)
         {
-             JsonResponseModel<ModifySmsTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifySmsTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySmsTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<ModifySmsTemplateRequest, ModifySmsTemplateResponse>(req);
         }
 
         /// <summary>
@@ -447,17 +277,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="ModifySmsTemplateResponse"/></returns>
         public ModifySmsTemplateResponse ModifySmsTemplateSync(ModifySmsTemplateRequest req)
         {
-             JsonResponseModel<ModifySmsTemplateResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifySmsTemplate");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySmsTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<ModifySmsTemplateRequest, ModifySmsTemplateResponse>(req);
         }
 
         /// <summary>
@@ -470,17 +290,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsReplyStatusResponse"/></returns>
         public async Task<PullSmsReplyStatusResponse> PullSmsReplyStatus(PullSmsReplyStatusRequest req)
         {
-             JsonResponseModel<PullSmsReplyStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PullSmsReplyStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<PullSmsReplyStatusRequest, PullSmsReplyStatusResponse>(req);
         }
 
         /// <summary>
@@ -493,17 +303,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsReplyStatusResponse"/></returns>
         public PullSmsReplyStatusResponse PullSmsReplyStatusSync(PullSmsReplyStatusRequest req)
         {
-             JsonResponseModel<PullSmsReplyStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PullSmsReplyStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<PullSmsReplyStatusRequest, PullSmsReplyStatusResponse>(req);
         }
 
         /// <summary>
@@ -516,17 +316,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsReplyStatusByPhoneNumberResponse"/></returns>
         public async Task<PullSmsReplyStatusByPhoneNumberResponse> PullSmsReplyStatusByPhoneNumber(PullSmsReplyStatusByPhoneNumberRequest req)
         {
-             JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PullSmsReplyStatusByPhoneNumber");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<PullSmsReplyStatusByPhoneNumberRequest, PullSmsReplyStatusByPhoneNumberResponse>(req);
         }
 
         /// <summary>
@@ -539,17 +329,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsReplyStatusByPhoneNumberResponse"/></returns>
         public PullSmsReplyStatusByPhoneNumberResponse PullSmsReplyStatusByPhoneNumberSync(PullSmsReplyStatusByPhoneNumberRequest req)
         {
-             JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PullSmsReplyStatusByPhoneNumber");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsReplyStatusByPhoneNumberResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<PullSmsReplyStatusByPhoneNumberRequest, PullSmsReplyStatusByPhoneNumberResponse>(req);
         }
 
         /// <summary>
@@ -562,17 +342,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsSendStatusResponse"/></returns>
         public async Task<PullSmsSendStatusResponse> PullSmsSendStatus(PullSmsSendStatusRequest req)
         {
-             JsonResponseModel<PullSmsSendStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PullSmsSendStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<PullSmsSendStatusRequest, PullSmsSendStatusResponse>(req);
         }
 
         /// <summary>
@@ -585,17 +355,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsSendStatusResponse"/></returns>
         public PullSmsSendStatusResponse PullSmsSendStatusSync(PullSmsSendStatusRequest req)
         {
-             JsonResponseModel<PullSmsSendStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PullSmsSendStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<PullSmsSendStatusRequest, PullSmsSendStatusResponse>(req);
         }
 
         /// <summary>
@@ -608,17 +368,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsSendStatusByPhoneNumberResponse"/></returns>
         public async Task<PullSmsSendStatusByPhoneNumberResponse> PullSmsSendStatusByPhoneNumber(PullSmsSendStatusByPhoneNumberRequest req)
         {
-             JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "PullSmsSendStatusByPhoneNumber");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<PullSmsSendStatusByPhoneNumberRequest, PullSmsSendStatusByPhoneNumberResponse>(req);
         }
 
         /// <summary>
@@ -631,17 +381,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="PullSmsSendStatusByPhoneNumberResponse"/></returns>
         public PullSmsSendStatusByPhoneNumberResponse PullSmsSendStatusByPhoneNumberSync(PullSmsSendStatusByPhoneNumberRequest req)
         {
-             JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "PullSmsSendStatusByPhoneNumber");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PullSmsSendStatusByPhoneNumberResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<PullSmsSendStatusByPhoneNumberRequest, PullSmsSendStatusByPhoneNumberResponse>(req);
         }
 
         /// <summary>
@@ -653,17 +393,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="SendSmsResponse"/></returns>
         public async Task<SendSmsResponse> SendSms(SendSmsRequest req)
         {
-             JsonResponseModel<SendSmsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendSms");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<SendSmsRequest, SendSmsResponse>(req);
         }
 
         /// <summary>
@@ -675,17 +405,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="SendSmsResponse"/></returns>
         public SendSmsResponse SendSmsSync(SendSmsRequest req)
         {
-             JsonResponseModel<SendSmsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendSms");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendSmsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<SendSmsRequest, SendSmsResponse>(req);
         }
 
         /// <summary>
@@ -697,17 +417,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="SendStatusStatisticsResponse"/></returns>
         public async Task<SendStatusStatisticsResponse> SendStatusStatistics(SendStatusStatisticsRequest req)
         {
-             JsonResponseModel<SendStatusStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendStatusStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendStatusStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<SendStatusStatisticsRequest, SendStatusStatisticsResponse>(req);
         }
 
         /// <summary>
@@ -719,17 +429,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="SendStatusStatisticsResponse"/></returns>
         public SendStatusStatisticsResponse SendStatusStatisticsSync(SendStatusStatisticsRequest req)
         {
-             JsonResponseModel<SendStatusStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendStatusStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendStatusStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<SendStatusStatisticsRequest, SendStatusStatisticsResponse>(req);
         }
 
         /// <summary>
@@ -741,17 +441,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="SmsPackagesStatisticsResponse"/></returns>
         public async Task<SmsPackagesStatisticsResponse> SmsPackagesStatistics(SmsPackagesStatisticsRequest req)
         {
-             JsonResponseModel<SmsPackagesStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SmsPackagesStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmsPackagesStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return await Request<SmsPackagesStatisticsRequest, SmsPackagesStatisticsResponse>(req);
         }
 
         /// <summary>
@@ -763,17 +453,7 @@ namespace TencentCloud.Sms.V20190711
         /// <returns><see cref="SmsPackagesStatisticsResponse"/></returns>
         public SmsPackagesStatisticsResponse SmsPackagesStatisticsSync(SmsPackagesStatisticsRequest req)
         {
-             JsonResponseModel<SmsPackagesStatisticsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SmsPackagesStatistics");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SmsPackagesStatisticsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
+            return RequestSync<SmsPackagesStatisticsRequest, SmsPackagesStatisticsResponse>(req);
         }
 
     }
