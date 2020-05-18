@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.62</VersionPrefix>
+    <VersionPrefix>3.0.63</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3869,21 +3869,29 @@
     <Compile Include="Gse\V20191112\Models\CreateGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\CreateGameServerSessionResponse.cs" />
     <Compile Include="Gse\V20191112\Models\Credentials.cs" />
+    <Compile Include="Gse\V20191112\Models\DeleteScalingPolicyRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DeleteScalingPolicyResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionDetailsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionDetailsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionPlacementResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionQueuesRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionQueuesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribePlayerSessionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribePlayerSessionsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeScalingPoliciesRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeScalingPoliciesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DesiredPlayerSession.cs" />
     <Compile Include="Gse\V20191112\Models\GameProperty.cs" />
     <Compile Include="Gse\V20191112\Models\GameServerSession.cs" />
     <Compile Include="Gse\V20191112\Models\GameServerSessionDetail.cs" />
     <Compile Include="Gse\V20191112\Models\GameServerSessionPlacement.cs" />
+    <Compile Include="Gse\V20191112\Models\GameServerSessionQueue.cs" />
+    <Compile Include="Gse\V20191112\Models\GameServerSessionQueueDestination.cs" />
     <Compile Include="Gse\V20191112\Models\GetGameServerSessionLogUrlRequest.cs" />
     <Compile Include="Gse\V20191112\Models\GetGameServerSessionLogUrlResponse.cs" />
     <Compile Include="Gse\V20191112\Models\GetInstanceAccessRequest.cs" />
@@ -3894,13 +3902,20 @@
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionResponse.cs" />
     <Compile Include="Gse\V20191112\Models\PlacedPlayerSession.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerLatency.cs" />
+    <Compile Include="Gse\V20191112\Models\PlayerLatencyPolicy.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerSession.cs" />
+    <Compile Include="Gse\V20191112\Models\PutScalingPolicyRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\PutScalingPolicyResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\ScalingPolicy.cs" />
     <Compile Include="Gse\V20191112\Models\SearchGameServerSessionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\SearchGameServerSessionsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\SetServerWeightRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\SetServerWeightResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\TargetConfiguration.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionResponse.cs" />
     <Compile Include="Habo\V20181203\HaboClient.cs" />

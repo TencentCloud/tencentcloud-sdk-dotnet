@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AutoRewriteRequest : AbstractModel
+    public class PutScalingPolicyResponse : AbstractModel
     {
         
         /// <summary>
-        /// 负载均衡实例ID。
+        /// 规则名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LoadBalancerId")]
-        public string LoadBalancerId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// HTTPS:443监听器的ID。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ListenerId")]
-        public string ListenerId{ get; set; }
-
-        /// <summary>
-        /// HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
-        /// </summary>
-        [JsonProperty("Domains")]
-        public string[] Domains{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
-            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -21,44 +21,26 @@ namespace TencentCloud.Gse.V20191112.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGameServerSessionsRequest : AbstractModel
+    public class DescribeGameServerSessionQueuesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 别名ID
+        /// 游戏服务器会话队列数组
         /// </summary>
-        [JsonProperty("AliasId")]
-        public string AliasId{ get; set; }
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
 
         /// <summary>
-        /// 舰队ID
-        /// </summary>
-        [JsonProperty("FleetId")]
-        public string FleetId{ get; set; }
-
-        /// <summary>
-        /// 游戏服务器会话ID
-        /// </summary>
-        [JsonProperty("GameServerSessionId")]
-        public string GameServerSessionId{ get; set; }
-
-        /// <summary>
-        /// 单次查询记录数上限
+        /// 要返回的最大结果数
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 页偏移，用于查询下一页
+        /// 偏移
         /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
-
-        /// <summary>
-        /// 游戏服务器会话状态(ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR)
-        /// </summary>
-        [JsonProperty("StatusFilter")]
-        public string StatusFilter{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -66,12 +48,9 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AliasId", this.AliasId);
-            this.SetParamSimple(map, prefix + "FleetId", this.FleetId);
-            this.SetParamSimple(map, prefix + "GameServerSessionId", this.GameServerSessionId);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
-            this.SetParamSimple(map, prefix + "StatusFilter", this.StatusFilter);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

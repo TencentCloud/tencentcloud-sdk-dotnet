@@ -15,32 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Clb.V20180317.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AutoRewriteRequest : AbstractModel
+    public class DescribeScalingPoliciesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 负载均衡实例ID。
+        /// 动态扩缩容配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LoadBalancerId")]
-        public string LoadBalancerId{ get; set; }
+        [JsonProperty("ScalingPolicies")]
+        public ScalingPolicy[] ScalingPolicies{ get; set; }
 
         /// <summary>
-        /// HTTPS:443监听器的ID。
+        /// 返回总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ListenerId")]
-        public string ListenerId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Domains")]
-        public string[] Domains{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
-            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamArrayObj(map, prefix + "ScalingPolicies.", this.ScalingPolicies);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

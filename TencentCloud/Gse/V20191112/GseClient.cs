@@ -93,6 +93,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 用于删除扩缩容配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScalingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteScalingPolicyResponse"/></returns>
+        public async Task<DeleteScalingPolicyResponse> DeleteScalingPolicy(DeleteScalingPolicyRequest req)
+        {
+             JsonResponseModel<DeleteScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除扩缩容配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScalingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteScalingPolicyResponse"/></returns>
+        public DeleteScalingPolicyResponse DeleteScalingPolicySync(DeleteScalingPolicyRequest req)
+        {
+             JsonResponseModel<DeleteScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionDetailsRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "DescribeGameServerSessionPlacement");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGameServerSessionPlacementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeGameServerSessionQueues）用于查询游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGameServerSessionQueuesRequest"/></param>
+        /// <returns><see cref="DescribeGameServerSessionQueuesResponse"/></returns>
+        public async Task<DescribeGameServerSessionQueuesResponse> DescribeGameServerSessionQueues(DescribeGameServerSessionQueuesRequest req)
+        {
+             JsonResponseModel<DescribeGameServerSessionQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGameServerSessionQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGameServerSessionQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeGameServerSessionQueues）用于查询游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGameServerSessionQueuesRequest"/></param>
+        /// <returns><see cref="DescribeGameServerSessionQueuesResponse"/></returns>
+        public DescribeGameServerSessionQueuesResponse DescribeGameServerSessionQueuesSync(DescribeGameServerSessionQueuesRequest req)
+        {
+             JsonResponseModel<DescribeGameServerSessionQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGameServerSessionQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGameServerSessionQueuesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,6 +373,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 用于查询服务部署的动态扩缩容配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeScalingPoliciesResponse"/></returns>
+        public async Task<DescribeScalingPoliciesResponse> DescribeScalingPolicies(DescribeScalingPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeScalingPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScalingPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScalingPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询服务部署的动态扩缩容配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeScalingPoliciesResponse"/></returns>
+        public DescribeScalingPoliciesResponse DescribeScalingPoliciesSync(DescribeScalingPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeScalingPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScalingPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScalingPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL
         /// </summary>
         /// <param name="req"><see cref="GetGameServerSessionLogUrlRequest"/></param>
@@ -413,6 +533,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 用于设置动态扩缩容配置
+        /// </summary>
+        /// <param name="req"><see cref="PutScalingPolicyRequest"/></param>
+        /// <returns><see cref="PutScalingPolicyResponse"/></returns>
+        public async Task<PutScalingPolicyResponse> PutScalingPolicy(PutScalingPolicyRequest req)
+        {
+             JsonResponseModel<PutScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于设置动态扩缩容配置
+        /// </summary>
+        /// <param name="req"><see cref="PutScalingPolicyRequest"/></param>
+        /// <returns><see cref="PutScalingPolicyResponse"/></returns>
+        public PutScalingPolicyResponse PutScalingPolicySync(PutScalingPolicyRequest req)
+        {
+             JsonResponseModel<PutScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表
         /// </summary>
         /// <param name="req"><see cref="SearchGameServerSessionsRequest"/></param>
@@ -444,6 +604,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "SearchGameServerSessions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchGameServerSessionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置服务器权重
+        /// </summary>
+        /// <param name="req"><see cref="SetServerWeightRequest"/></param>
+        /// <returns><see cref="SetServerWeightResponse"/></returns>
+        public async Task<SetServerWeightResponse> SetServerWeight(SetServerWeightRequest req)
+        {
+             JsonResponseModel<SetServerWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetServerWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetServerWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置服务器权重
+        /// </summary>
+        /// <param name="req"><see cref="SetServerWeightRequest"/></param>
+        /// <returns><see cref="SetServerWeightResponse"/></returns>
+        public SetServerWeightResponse SetServerWeightSync(SetServerWeightRequest req)
+        {
+             JsonResponseModel<SetServerWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetServerWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetServerWeightResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

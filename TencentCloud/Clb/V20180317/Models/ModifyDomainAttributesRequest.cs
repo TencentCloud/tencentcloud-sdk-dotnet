@@ -66,6 +66,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("DefaultServer")]
         public bool? DefaultServer{ get; set; }
 
+        /// <summary>
+        /// 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+        /// </summary>
+        [JsonProperty("NewDefaultServerDomain")]
+        public string NewDefaultServerDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+            this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
         }
     }
 }
