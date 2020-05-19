@@ -98,12 +98,41 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 子商户会员类型：
-        /// general:普通子账户
-        /// merchant:商户子账户
-        /// 缺省： general
+        /// general: 普通子账户
+        /// merchant: 商户子账户
+        /// 缺省: general
         /// </summary>
         [JsonProperty("SubMerchantMemberType")]
         public string SubMerchantMemberType{ get; set; }
+
+        /// <summary>
+        /// 子商户密钥
+        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// </summary>
+        [JsonProperty("SubMerchantKey")]
+        public string SubMerchantKey{ get; set; }
+
+        /// <summary>
+        /// 子商户私钥
+        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// </summary>
+        [JsonProperty("SubMerchantPrivateKey")]
+        public string SubMerchantPrivateKey{ get; set; }
+
+        /// <summary>
+        /// 敏感信息加密类型:
+        /// RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+        /// AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+        /// 默认RSA
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public string EncryptType{ get; set; }
+
+        /// <summary>
+        /// 银行生成的子商户账户，已开户的场景需要录入
+        /// </summary>
+        [JsonProperty("SubAcctNo")]
+        public string SubAcctNo{ get; set; }
 
 
         /// <summary>
@@ -123,6 +152,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "SubMchType", this.SubMchType);
             this.SetParamSimple(map, prefix + "ShortName", this.ShortName);
             this.SetParamSimple(map, prefix + "SubMerchantMemberType", this.SubMerchantMemberType);
+            this.SetParamSimple(map, prefix + "SubMerchantKey", this.SubMerchantKey);
+            this.SetParamSimple(map, prefix + "SubMerchantPrivateKey", this.SubMerchantPrivateKey);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
+            this.SetParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
         }
     }
 }

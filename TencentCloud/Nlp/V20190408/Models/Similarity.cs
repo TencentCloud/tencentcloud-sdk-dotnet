@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAcctResponse : AbstractModel
+    public class Similarity : AbstractModel
     {
         
         /// <summary>
-        /// 聚鑫计费SubAppId，代表子商户
+        /// 相似度分数
         /// </summary>
-        [JsonProperty("SubAppId")]
-        public string SubAppId{ get; set; }
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
 
         /// <summary>
-        /// 银行生成的子商户账户
+        /// 目标文本句子
         /// </summary>
-        [JsonProperty("SubAcctNo")]
-        public string SubAcctNo{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }
 }

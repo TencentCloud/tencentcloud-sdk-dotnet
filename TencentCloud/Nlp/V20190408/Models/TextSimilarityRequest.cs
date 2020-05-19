@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAcctResponse : AbstractModel
+    public class TextSimilarityRequest : AbstractModel
     {
         
         /// <summary>
-        /// 聚鑫计费SubAppId，代表子商户
+        /// 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字）
         /// </summary>
-        [JsonProperty("SubAppId")]
-        public string SubAppId{ get; set; }
+        [JsonProperty("SrcText")]
+        public string SrcText{ get; set; }
 
         /// <summary>
-        /// 银行生成的子商户账户
+        /// 需要与源句子计算相似度的一个或多个目标句子（仅支持UTF-8格式，目标句子的数量不超过100个，每个句子不超过500字）
+        /// 注意：每成功计算1个目标句子与源句子的相似度算1次调用
         /// </summary>
-        [JsonProperty("SubAcctNo")]
-        public string SubAcctNo{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TargetText")]
+        public string[] TargetText{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SrcText", this.SrcText);
+            this.SetParamArraySimple(map, prefix + "TargetText.", this.TargetText);
         }
     }
 }

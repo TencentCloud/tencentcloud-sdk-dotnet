@@ -53,6 +53,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 创建异常信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateTroubleInfoRequest"/></param>
+        /// <returns><see cref="CreateTroubleInfoResponse"/></returns>
+        public async Task<CreateTroubleInfoResponse> CreateTroubleInfo(CreateTroubleInfoRequest req)
+        {
+             JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTroubleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建异常信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateTroubleInfoRequest"/></param>
+        /// <returns><see cref="CreateTroubleInfoResponse"/></returns>
+        public CreateTroubleInfoResponse CreateTroubleInfoSync(CreateTroubleInfoRequest req)
+        {
+             JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTroubleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个
         /// </summary>
         /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>

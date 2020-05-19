@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.63</VersionPrefix>
+    <VersionPrefix>3.0.64</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5537,10 +5537,13 @@
     <Compile Include="Nlp\V20190408\Models\SentimentAnalysisResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\SimilarWordsRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\SimilarWordsResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\Similarity.cs" />
     <Compile Include="Nlp\V20190408\Models\TextClassificationRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextClassificationResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextCorrectionRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextCorrectionResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextSimilarityRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextSimilarityResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TripleContent.cs" />
     <Compile Include="Nlp\V20190408\Models\WordEmbeddingRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\WordEmbeddingResponse.cs" />
@@ -7366,6 +7369,8 @@
     <Compile Include="Tmt\V20180321\Models\TextTranslateRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateResponse.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />

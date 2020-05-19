@@ -31,7 +31,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         public ulong? CaptchaType{ get; set; }
 
         /// <summary>
-        /// 验证码返回给用户的票据
+        /// 前端回调函数返回的用户验证票据
         /// </summary>
         [JsonProperty("Ticket")]
         public string Ticket{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 验证票据需要的随机字符串
+        /// 前端回调函数返回的随机字符串
         /// </summary>
         [JsonProperty("Randstr")]
         public string Randstr{ get; set; }

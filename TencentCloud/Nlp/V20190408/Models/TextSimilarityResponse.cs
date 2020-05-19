@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAcctResponse : AbstractModel
+    public class TextSimilarityResponse : AbstractModel
     {
         
         /// <summary>
-        /// 聚鑫计费SubAppId，代表子商户
+        /// 每个目标句子与源句子的相似度分值，按照分值降序排列
         /// </summary>
-        [JsonProperty("SubAppId")]
-        public string SubAppId{ get; set; }
-
-        /// <summary>
-        /// 银行生成的子商户账户
-        /// </summary>
-        [JsonProperty("SubAcctNo")]
-        public string SubAcctNo{ get; set; }
+        [JsonProperty("Similarity")]
+        public Similarity[] Similarity{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
+            this.SetParamArrayObj(map, prefix + "Similarity.", this.Similarity);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

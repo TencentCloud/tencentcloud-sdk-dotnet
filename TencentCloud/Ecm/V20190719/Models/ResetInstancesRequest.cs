@@ -48,6 +48,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("EnhancedService")]
         public EnhancedService EnhancedService{ get; set; }
 
+        /// <summary>
+        /// 是否保留数据盘数据，取值"true"/"false"。默认为"true"
+        /// </summary>
+        [JsonProperty("KeepData")]
+        public string KeepData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+            this.SetParamSimple(map, prefix + "KeepData", this.KeepData);
         }
     }
 }

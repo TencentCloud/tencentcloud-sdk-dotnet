@@ -39,6 +39,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// <summary>
         /// 1 – 小额转账验证
         /// 2 – 短信验证
+        /// 3 - 一分钱转账验证，无需再调CheckAcct验证绑卡
+        /// 4 - 银行四要素验证，无需再调CheckAcct验证绑卡
         /// 每个结算账户每天只能使用一次小额转账验证
         /// </summary>
         [JsonProperty("BindType")]
@@ -118,6 +120,15 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("EiconBankBranchId")]
         public string EiconBankBranchId{ get; set; }
 
+        /// <summary>
+        /// 敏感信息加密类型:
+        /// RSA, rsa非对称加密，使用RSA-PKCS1-v1_5
+        /// AES,  aes对称加密，使用AES256-CBC-PCKS7padding
+        /// 默认RSA
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public string EncryptType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +149,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "CnapsBranchId", this.CnapsBranchId);
             this.SetParamSimple(map, prefix + "EiconBankBranchId", this.EiconBankBranchId);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
         }
     }
 }
