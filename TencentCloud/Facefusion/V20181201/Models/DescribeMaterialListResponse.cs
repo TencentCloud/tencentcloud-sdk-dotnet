@@ -15,36 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Facefusion.V20181201.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CcnInstance : AbstractModel
+    public class DescribeMaterialListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 关联实例ID。
+        /// 素材列表数据
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("MaterialInfos")]
+        public PublicMaterialInfos[] MaterialInfos{ get; set; }
 
         /// <summary>
-        /// 关联实例ID所属大区，例如：ap-guangzhou。
+        /// 素材条数
         /// </summary>
-        [JsonProperty("InstanceRegion")]
-        public string InstanceRegion{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
         /// <summary>
-        /// 关联实例类型，可选值：
-        /// <li>`VPC`：私有网络</li>
-        /// <li>`DIRECTCONNECT`：专线网关</li>
-        /// <li>`BMVPC`：黑石私有网络</li>
-        /// <li>`VPNGW`：VPNGW类型</li>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -52,9 +48,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArrayObj(map, prefix + "MaterialInfos.", this.MaterialInfos);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

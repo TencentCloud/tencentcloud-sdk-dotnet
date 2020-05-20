@@ -15,36 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CcnInstance : AbstractModel
+    public class QueryMerchantInfoForManagementRequest : AbstractModel
     {
         
         /// <summary>
-        /// 关联实例ID。
+        /// 开票平台ID
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("InvoicePlatformId")]
+        public long? InvoicePlatformId{ get; set; }
 
         /// <summary>
-        /// 关联实例ID所属大区，例如：ap-guangzhou。
+        /// 页码
         /// </summary>
-        [JsonProperty("InstanceRegion")]
-        public string InstanceRegion{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 关联实例类型，可选值：
-        /// <li>`VPC`：私有网络</li>
-        /// <li>`DIRECTCONNECT`：专线网关</li>
-        /// <li>`BMVPC`：黑石私有网络</li>
-        /// <li>`VPNGW`：VPNGW类型</li>
+        /// 页大小
         /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 接入环境。沙箱环境填sandbox。
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
 
 
         /// <summary>
@@ -52,9 +54,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "InvoicePlatformId", this.InvoicePlatformId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

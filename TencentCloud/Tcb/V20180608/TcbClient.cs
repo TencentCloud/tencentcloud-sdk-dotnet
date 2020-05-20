@@ -373,6 +373,86 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取环境终端用户新增与登录信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndUserLoginStatisticRequest"/></param>
+        /// <returns><see cref="DescribeEndUserLoginStatisticResponse"/></returns>
+        public async Task<DescribeEndUserLoginStatisticResponse> DescribeEndUserLoginStatistic(DescribeEndUserLoginStatisticRequest req)
+        {
+             JsonResponseModel<DescribeEndUserLoginStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEndUserLoginStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEndUserLoginStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取环境终端用户新增与登录信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndUserLoginStatisticRequest"/></param>
+        /// <returns><see cref="DescribeEndUserLoginStatisticResponse"/></returns>
+        public DescribeEndUserLoginStatisticResponse DescribeEndUserLoginStatisticSync(DescribeEndUserLoginStatisticRequest req)
+        {
+             JsonResponseModel<DescribeEndUserLoginStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEndUserLoginStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEndUserLoginStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取终端用户总量与平台分布情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndUserStatisticRequest"/></param>
+        /// <returns><see cref="DescribeEndUserStatisticResponse"/></returns>
+        public async Task<DescribeEndUserStatisticResponse> DescribeEndUserStatistic(DescribeEndUserStatisticRequest req)
+        {
+             JsonResponseModel<DescribeEndUserStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEndUserStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEndUserStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取终端用户总量与平台分布情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEndUserStatisticRequest"/></param>
+        /// <returns><see cref="DescribeEndUserStatisticResponse"/></returns>
+        public DescribeEndUserStatisticResponse DescribeEndUserStatisticSync(DescribeEndUserStatisticRequest req)
+        {
+             JsonResponseModel<DescribeEndUserStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEndUserStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEndUserStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取终端用户列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEndUsersRequest"/></param>
@@ -524,6 +604,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEnvs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取增值包计费相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtraPkgBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeExtraPkgBillingInfoResponse"/></returns>
+        public async Task<DescribeExtraPkgBillingInfoResponse> DescribeExtraPkgBillingInfo(DescribeExtraPkgBillingInfoRequest req)
+        {
+             JsonResponseModel<DescribeExtraPkgBillingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExtraPkgBillingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtraPkgBillingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取增值包计费相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtraPkgBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeExtraPkgBillingInfoResponse"/></returns>
+        public DescribeExtraPkgBillingInfoResponse DescribeExtraPkgBillingInfoSync(DescribeExtraPkgBillingInfoRequest req)
+        {
+             JsonResponseModel<DescribeExtraPkgBillingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExtraPkgBillingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtraPkgBillingInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

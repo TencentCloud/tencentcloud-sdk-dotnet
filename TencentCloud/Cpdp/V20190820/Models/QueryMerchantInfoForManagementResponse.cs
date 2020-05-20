@@ -15,36 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CcnInstance : AbstractModel
+    public class QueryMerchantInfoForManagementResponse : AbstractModel
     {
         
         /// <summary>
-        /// 关联实例ID。
+        /// 商户结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Result")]
+        public MerchantManagementResult Result{ get; set; }
 
         /// <summary>
-        /// 关联实例ID所属大区，例如：ap-guangzhou。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("InstanceRegion")]
-        public string InstanceRegion{ get; set; }
-
-        /// <summary>
-        /// 关联实例类型，可选值：
-        /// <li>`VPC`：私有网络</li>
-        /// <li>`DIRECTCONNECT`：专线网关</li>
-        /// <li>`BMVPC`：黑石私有网络</li>
-        /// <li>`VPNGW`：VPNGW类型</li>
-        /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -52,9 +43,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

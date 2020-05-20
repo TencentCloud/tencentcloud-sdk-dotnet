@@ -15,36 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CcnInstance : AbstractModel
+    public class MerchantManagementList : AbstractModel
     {
         
         /// <summary>
-        /// 关联实例ID。
+        /// 企业名称。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TaxpayerName")]
+        public string TaxpayerName{ get; set; }
 
         /// <summary>
-        /// 关联实例ID所属大区，例如：ap-guangzhou。
+        /// 纳税人识别号(税号)	。
         /// </summary>
-        [JsonProperty("InstanceRegion")]
-        public string InstanceRegion{ get; set; }
+        [JsonProperty("TaxpayerNum")]
+        public string TaxpayerNum{ get; set; }
 
         /// <summary>
-        /// 关联实例类型，可选值：
-        /// <li>`VPC`：私有网络</li>
-        /// <li>`DIRECTCONNECT`：专线网关</li>
-        /// <li>`BMVPC`：黑石私有网络</li>
-        /// <li>`VPNGW`：VPNGW类型</li>
+        /// 请求流水号。
         /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        [JsonProperty("SerialNo")]
+        public string SerialNo{ get; set; }
+
+        /// <summary>
+        /// 开票系统ID
+        /// </summary>
+        [JsonProperty("InvoicePlatformId")]
+        public long? InvoicePlatformId{ get; set; }
 
 
         /// <summary>
@@ -52,9 +54,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "TaxpayerName", this.TaxpayerName);
+            this.SetParamSimple(map, prefix + "TaxpayerNum", this.TaxpayerNum);
+            this.SetParamSimple(map, prefix + "SerialNo", this.SerialNo);
+            this.SetParamSimple(map, prefix + "InvoicePlatformId", this.InvoicePlatformId);
         }
     }
 }

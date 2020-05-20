@@ -15,36 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Facefusion.V20181201.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CcnInstance : AbstractModel
+    public class DescribeMaterialListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 关联实例ID。
+        /// 活动Id
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ActivityId")]
+        public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// 关联实例ID所属大区，例如：ap-guangzhou。
+        /// 素材Id
         /// </summary>
-        [JsonProperty("InstanceRegion")]
-        public string InstanceRegion{ get; set; }
+        [JsonProperty("MaterialId")]
+        public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 关联实例类型，可选值：
-        /// <li>`VPC`：私有网络</li>
-        /// <li>`DIRECTCONNECT`：专线网关</li>
-        /// <li>`BMVPC`：黑石私有网络</li>
-        /// <li>`VPNGW`：VPNGW类型</li>
+        /// 每次拉取条数
         /// </summary>
-        [JsonProperty("InstanceType")]
-        public string InstanceType{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -52,9 +54,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
-            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
+            this.SetParamSimple(map, prefix + "MaterialId", this.MaterialId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.64</VersionPrefix>
+    <VersionPrefix>3.0.65</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2350,6 +2350,8 @@
     <Compile Include="Cpdp\V20190820\Models\DownloadBillRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MerchantManagementResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
@@ -2396,6 +2398,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantBalanceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantBalanceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantBalanceResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantInfoForManagementRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantInfoForManagementResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderRequest.cs" />
@@ -3536,14 +3540,19 @@
     <Compile Include="Es\V20180416\Models\UpgradeLicenseResponse.cs" />
     <Compile Include="Es\V20180416\Models\ZoneDetail.cs" />
     <Compile Include="Facefusion\V20181201\FacefusionClient.cs" />
+    <Compile Include="Facefusion\V20181201\Models\DescribeMaterialListRequest.cs" />
+    <Compile Include="Facefusion\V20181201\Models\DescribeMaterialListResponse.cs" />
     <Compile Include="Facefusion\V20181201\Models\FaceFusionRequest.cs" />
     <Compile Include="Facefusion\V20181201\Models\FaceFusionResponse.cs" />
+    <Compile Include="Facefusion\V20181201\Models\FaceInfo.cs" />
     <Compile Include="Facefusion\V20181201\Models\FaceRect.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceRequest.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceResponse.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewDetail.cs" />
     <Compile Include="Facefusion\V20181201\Models\FuseFaceReviewResult.cs" />
+    <Compile Include="Facefusion\V20181201\Models\MaterialFaceList.cs" />
     <Compile Include="Facefusion\V20181201\Models\MergeInfo.cs" />
+    <Compile Include="Facefusion\V20181201\Models\PublicMaterialInfos.cs" />
     <Compile Include="Faceid\V20180301\FaceidClient.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCard2EVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCard2EVerificationResponse.cs" />
@@ -6675,6 +6684,10 @@
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEndUserLoginStatisticRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEndUserLoginStatisticResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEndUserStatisticRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEndUserStatisticResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUsersRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUsersResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvFreeQuotaRequest.cs" />
@@ -6683,6 +6696,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeEnvLimitResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvRequest.cs" />
@@ -6690,13 +6705,17 @@
     <Compile Include="Tcb\V20180608\Models\DestroyStaticStoreRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyStaticStoreResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\EndUserInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="Tcb\V20180608\Models\EnvInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FunctionInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\LogServiceInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\LoginStatistic.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyDatabaseACLRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyDatabaseACLResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEnvResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\OrderInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\PlatformStatistic.cs" />
     <Compile Include="Tcb\V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvResponse.cs" />

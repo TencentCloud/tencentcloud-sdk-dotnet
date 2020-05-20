@@ -1671,6 +1671,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 智慧零售-查询管理端商户
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantInfoForManagementRequest"/></param>
+        /// <returns><see cref="QueryMerchantInfoForManagementResponse"/></returns>
+        public async Task<QueryMerchantInfoForManagementResponse> QueryMerchantInfoForManagement(QueryMerchantInfoForManagementRequest req)
+        {
+             JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMerchantInfoForManagement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantInfoForManagementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智慧零售-查询管理端商户
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantInfoForManagementRequest"/></param>
+        /// <returns><see cref="QueryMerchantInfoForManagementResponse"/></returns>
+        public QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagementSync(QueryMerchantInfoForManagementRequest req)
+        {
+             JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMerchantInfoForManagement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantInfoForManagementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据订单号，或者用户Id，查询支付订单状态 
         /// </summary>
         /// <param name="req"><see cref="QueryOrderRequest"/></param>
