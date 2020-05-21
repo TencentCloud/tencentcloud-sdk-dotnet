@@ -101,6 +101,12 @@ namespace TencentCloud.Dayu.V20180709.Models
         [JsonProperty("BasicIspCode")]
         public ulong? BasicIspCode{ get; set; }
 
+        /// <summary>
+        /// 可选字段，当协议取值HTTPS时，必填
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +124,7 @@ namespace TencentCloud.Dayu.V20180709.Models
             this.SetParamSimple(map, prefix + "BasicDeviceType", this.BasicDeviceType);
             this.SetParamSimple(map, prefix + "BasicIpInstance", this.BasicIpInstance);
             this.SetParamSimple(map, prefix + "BasicIspCode", this.BasicIspCode);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

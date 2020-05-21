@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Time{ get; set; }
 
         /// <summary>
-        /// 当前时间取值
+        /// 当前时间取值，unix时间戳
         /// </summary>
         [JsonProperty("Value")]
         public float? Value{ get; set; }

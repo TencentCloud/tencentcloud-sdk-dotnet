@@ -197,6 +197,13 @@ namespace TencentCloud.Ic.V20190307.Models
         [JsonProperty("Provider")]
         public long? Provider{ get; set; }
 
+        /// <summary>
+        /// 实名验证(浙江联通)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CertificationState")]
+        public long? CertificationState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -229,6 +236,7 @@ namespace TencentCloud.Ic.V20190307.Models
             this.SetParamSimple(map, prefix + "AllowArrears", this.AllowArrears);
             this.SetParamSimple(map, prefix + "NeedSms", this.NeedSms);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
+            this.SetParamSimple(map, prefix + "CertificationState", this.CertificationState);
         }
     }
 }

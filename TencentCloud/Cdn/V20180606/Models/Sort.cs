@@ -28,6 +28,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// 排序字段，当前支持：
         /// createTime，域名创建时间
         /// certExpireTime，证书过期时间
+        /// 默认createTime。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
