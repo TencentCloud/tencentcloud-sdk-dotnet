@@ -53,6 +53,46 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
+        /// 广交会商品企业信息发布内容审核
+        /// </summary>
+        /// <param name="req"><see cref="CommonMediaRecognitionRequest"/></param>
+        /// <returns><see cref="CommonMediaRecognitionResponse"/></returns>
+        public async Task<CommonMediaRecognitionResponse> CommonMediaRecognition(CommonMediaRecognitionRequest req)
+        {
+             JsonResponseModel<CommonMediaRecognitionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CommonMediaRecognition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CommonMediaRecognitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 广交会商品企业信息发布内容审核
+        /// </summary>
+        /// <param name="req"><see cref="CommonMediaRecognitionRequest"/></param>
+        /// <returns><see cref="CommonMediaRecognitionResponse"/></returns>
+        public CommonMediaRecognitionResponse CommonMediaRecognitionSync(CommonMediaRecognitionRequest req)
+        {
+             JsonResponseModel<CommonMediaRecognitionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CommonMediaRecognition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CommonMediaRecognitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
         /// <br>
         /// 通过该接口可以将图片新增到样本库。

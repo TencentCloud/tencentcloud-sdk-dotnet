@@ -26,7 +26,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         
         /// <summary>
         /// 过滤条件。
-        /// zone      String      是否必填：否     （过滤条件）按照可用区中文名过滤,支持模糊匹配。
+        /// zone      String      是否必填：否     （过滤条件）按照可用区英文标识符过滤。
+        /// zone-name      String      是否必填：否     （过滤条件）按照可用区中文名过滤,支持模糊匹配。
         /// module-id      String      是否必填：否     （过滤条件）按照模块ID过滤。
         /// instance-id      String      是否必填：否      （过滤条件）按照实例ID过滤。
         /// instance-name      String      是否必填：否      （过滤条件）按照实例名称过滤,支持模糊匹配。
@@ -36,6 +37,10 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// internet-service-provider      String      是否必填：否      （过滤条件）按照实例公网IP所属的运营商进行过滤。
         /// tag-key      String      是否必填：否      （过滤条件）按照标签键进行过滤。
         /// tag:tag-key      String      是否必填：否      （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+        /// instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+        /// module-name      String      是否必填：否      （过滤条件）按照模块名称过滤,支持模糊匹配。
+        /// image-id      String      是否必填：否      （过滤条件）按照实例的镜像ID过滤。
+        /// 
         /// 若不传Filters参数则表示查询所有相关的实例信息。
         /// 单次请求的Filter.Values的上限为5。
         /// </summary>
@@ -54,6 +59,21 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 指定排序字段。目前支持的可选值如下
+        /// timestamp 按实例创建时间排序。
+        /// 注意：目前仅支持按创建时间排序，后续可能会有扩展。
+        /// 如果不传，默认按实例创建时间排序
+        /// </summary>
+        [JsonProperty("OrderByField")]
+        public string OrderByField{ get; set; }
+
+        /// <summary>
+        /// 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+        /// </summary>
+        [JsonProperty("OrderDirection")]
+        public long? OrderDirection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +83,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "OrderByField", this.OrderByField);
+            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         }
     }
 }

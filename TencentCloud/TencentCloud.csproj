@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.66</VersionPrefix>
+    <VersionPrefix>3.0.67</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2240,9 +2240,14 @@
     <Compile Include="Cmq\V20190304\Models\UnbindDeadLetterRequest.cs" />
     <Compile Include="Cmq\V20190304\Models\UnbindDeadLetterResponse.cs" />
     <Compile Include="Cms\V20190321\CmsClient.cs" />
+    <Compile Include="Cms\V20190321\Models\CallBackAck.cs" />
+    <Compile Include="Cms\V20190321\Models\CallBackData.cs" />
     <Compile Include="Cms\V20190321\Models\CodeDetail.cs" />
     <Compile Include="Cms\V20190321\Models\CodeDetect.cs" />
     <Compile Include="Cms\V20190321\Models\CodePosition.cs" />
+    <Compile Include="Cms\V20190321\Models\CommonMediaRecognitionRequest.cs" />
+    <Compile Include="Cms\V20190321\Models\CommonMediaRecognitionResponse.cs" />
+    <Compile Include="Cms\V20190321\Models\ContentMsgGjh.cs" />
     <Compile Include="Cms\V20190321\Models\Coordinate.cs" />
     <Compile Include="Cms\V20190321\Models\CreateFileSampleRequest.cs" />
     <Compile Include="Cms\V20190321\Models\CreateFileSampleResponse.cs" />
@@ -2271,6 +2276,11 @@
     <Compile Include="Cms\V20190321\Models\ImageTerrorDetect.cs" />
     <Compile Include="Cms\V20190321\Models\Logo.cs" />
     <Compile Include="Cms\V20190321\Models\LogoDetail.cs" />
+    <Compile Include="Cms\V20190321\Models\MediaGjh.cs" />
+    <Compile Include="Cms\V20190321\Models\MediaInfoTypeGjh.cs" />
+    <Compile Include="Cms\V20190321\Models\MessageCommonGjh.cs" />
+    <Compile Include="Cms\V20190321\Models\MessageContentGjh.cs" />
+    <Compile Include="Cms\V20190321\Models\MessageIdGjh.cs" />
     <Compile Include="Cms\V20190321\Models\OCRDetect.cs" />
     <Compile Include="Cms\V20190321\Models\OCRItem.cs" />
     <Compile Include="Cms\V20190321\Models\PhoneDetect.cs" />
@@ -2283,6 +2293,7 @@
     <Compile Include="Cms\V20190321\Models\TextOutputID.cs" />
     <Compile Include="Cms\V20190321\Models\TextOutputRes.cs" />
     <Compile Include="Cms\V20190321\Models\TextSample.cs" />
+    <Compile Include="Cms\V20190321\Models\UserInfoGjh.cs" />
     <Compile Include="Cpdp\V20190820\CpdpClient.cs" />
     <Compile Include="Cpdp\V20190820\Models\Acct.cs" />
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPayment.cs" />

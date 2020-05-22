@@ -30,9 +30,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>AsrWordsRecognition：语音关键词识别，</li>
         /// <li>OcrWordsRecognition：文本关键词识别，</li>
         /// <li>AsrFullTextRecognition：语音全文识别，</li>
-        /// <li>OcrFullTextRecognition：文本全文识别，</li>
-        /// <li>HeadTailRecognition：视频片头片尾识别，</li>
-        /// <li>ObjectRecognition：物体识别。</li>
+        /// <li>OcrFullTextRecognition：文本全文识别。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

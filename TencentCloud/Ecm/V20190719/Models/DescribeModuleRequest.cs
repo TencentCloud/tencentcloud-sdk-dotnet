@@ -28,6 +28,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// 过滤条件。
         /// module-name - string - 是否必填：否 - （过滤条件）按照模块名称过滤。
         /// module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
+        /// image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
+        /// instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
+        /// 
         /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
         /// </summary>
         [JsonProperty("Filters")]
@@ -45,6 +48,22 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 指定排序字段。目前支持的可选值如下
+        /// instance-num 按实例数量排序。
+        /// node-num 按节点数量排序。
+        /// timestamp 按实例创建时间排序。
+        /// 如果不传，默认按实例创建时间排序
+        /// </summary>
+        [JsonProperty("OrderByField")]
+        public string OrderByField{ get; set; }
+
+        /// <summary>
+        /// 指定排序是降序还是升序。0表示降序； 1表示升序。如果不传默认为降序
+        /// </summary>
+        [JsonProperty("OrderDirection")]
+        public long? OrderDirection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +73,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "OrderByField", this.OrderByField);
+            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         }
     }
 }
