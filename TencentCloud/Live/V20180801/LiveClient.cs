@@ -2443,7 +2443,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 返回正在直播中的流列表。
+        /// 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>
@@ -2463,7 +2463,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 返回正在直播中的流列表。
+        /// 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveStreamOnlineListRequest"/></param>
         /// <returns><see cref="DescribeLiveStreamOnlineListResponse"/></returns>

@@ -719,7 +719,7 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// https://ai.tencent.com/ailab/zh/news/detial?id=22
         /// 
-        /// https://ai.tencent.com/ailab/nlp/embedding.html 
+        /// https://ai.tencent.com/ailab/nlp/zh/embedding.html
         /// </summary>
         /// <param name="req"><see cref="WordEmbeddingRequest"/></param>
         /// <returns><see cref="WordEmbeddingResponse"/></returns>
@@ -747,7 +747,7 @@ namespace TencentCloud.Nlp.V20190408
         /// 
         /// https://ai.tencent.com/ailab/zh/news/detial?id=22
         /// 
-        /// https://ai.tencent.com/ailab/nlp/embedding.html 
+        /// https://ai.tencent.com/ailab/nlp/zh/embedding.html
         /// </summary>
         /// <param name="req"><see cref="WordEmbeddingRequest"/></param>
         /// <returns><see cref="WordEmbeddingResponse"/></returns>

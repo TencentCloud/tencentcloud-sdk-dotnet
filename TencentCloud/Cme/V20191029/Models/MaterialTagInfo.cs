@@ -15,35 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Cme.V20191029.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputDetectAccountActivity : AbstractModel
+    public class MaterialTagInfo : AbstractModel
     {
         
         /// <summary>
-        /// 返回码（0，成功，其他失败）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签类型，取值为：
+        /// <li>PRESET：预置标签；</li>
         /// </summary>
-        [JsonProperty("Code")]
-        public long? Code{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 返回码对应的信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签 Id 。当标签类型为 PRESET 时，标签 Id 为预置标签 Id 。
         /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 返回活跃度信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签名称。
         /// </summary>
-        [JsonProperty("Value")]
-        public OutputDetectAccountActivityValue Value{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -51,9 +49,9 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

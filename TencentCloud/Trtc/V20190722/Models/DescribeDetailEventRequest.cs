@@ -21,11 +21,11 @@ namespace TencentCloud.Trtc.V20190722.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCallDetailRequest : AbstractModel
+    public class DescribeDetailEventRequest : AbstractModel
     {
         
         /// <summary>
-        /// 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+        /// 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
         /// </summary>
         [JsonProperty("CommId")]
         public string CommId{ get; set; }
@@ -43,35 +43,16 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 用户sdkappid
+        /// 用户id
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
+        /// 房间号
         /// </summary>
-        [JsonProperty("UserIds")]
-        public string[] UserIds{ get; set; }
-
-        /// <summary>
-        /// 需查询的指标，不填则只返回用户列表，填all则返回所有指标。
-        /// appCpu：APP CPU使用率；
-        /// sysCpu：系统 CPU使用率；
-        /// aBit：上/下行音频码率；
-        /// aBlock：音频卡顿时长；
-        /// vBit：上/下行视频码率；
-        /// vCapFps：视频采集帧率；
-        /// vEncFps：视频发送帧率；
-        /// vDecFps：渲染帧率；
-        /// vBlock：视频卡顿时长；
-        /// aLoss：上/下行音频丢包；
-        /// vLoss：上/下行视频丢包；
-        /// vWidth：上/下行分辨率宽；
-        /// vHeight：上/下行分辨率高
-        /// </summary>
-        [JsonProperty("DataType")]
-        public string[] DataType{ get; set; }
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
 
 
         /// <summary>
@@ -82,9 +63,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "CommId", this.CommId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-            this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
         }
     }
 }

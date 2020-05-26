@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectAccountActivityResponse : AbstractModel
+    public class EventList : AbstractModel
     {
         
         /// <summary>
-        /// 回包数据
+        /// 数据内容
         /// </summary>
-        [JsonProperty("Data")]
-        public OutputDetectAccountActivity Data{ get; set; }
+        [JsonProperty("Content")]
+        public EventMessage[] Content{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 发送端的userId
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("PeerId")]
+        public string PeerId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "PeerId", this.PeerId);
         }
     }
 }

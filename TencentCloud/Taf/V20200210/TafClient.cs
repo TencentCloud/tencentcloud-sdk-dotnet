@@ -53,46 +53,6 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// DetectAccountActivity
-        /// </summary>
-        /// <param name="req"><see cref="DetectAccountActivityRequest"/></param>
-        /// <returns><see cref="DetectAccountActivityResponse"/></returns>
-        public async Task<DetectAccountActivityResponse> DetectAccountActivity(DetectAccountActivityRequest req)
-        {
-             JsonResponseModel<DetectAccountActivityResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DetectAccountActivity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectAccountActivityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// DetectAccountActivity
-        /// </summary>
-        /// <param name="req"><see cref="DetectAccountActivityRequest"/></param>
-        /// <returns><see cref="DetectAccountActivityResponse"/></returns>
-        public DetectAccountActivityResponse DetectAccountActivitySync(DetectAccountActivityRequest req)
-        {
-             JsonResponseModel<DetectAccountActivityResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DetectAccountActivity");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectAccountActivityResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// DetectFraudKOL
         /// </summary>
         /// <param name="req"><see cref="DetectFraudKOLRequest"/></param>

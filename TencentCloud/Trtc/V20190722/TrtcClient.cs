@@ -133,6 +133,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询用户某次通话内的进退房，视频开关等详细事件。可查询5天内数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetailEventRequest"/></param>
+        /// <returns><see cref="DescribeDetailEventResponse"/></returns>
+        public async Task<DescribeDetailEventResponse> DescribeDetailEvent(DescribeDetailEventRequest req)
+        {
+             JsonResponseModel<DescribeDetailEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDetailEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDetailEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户某次通话内的进退房，视频开关等详细事件。可查询5天内数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetailEventRequest"/></param>
+        /// <returns><see cref="DescribeDetailEventResponse"/></returns>
+        public DescribeDetailEventResponse DescribeDetailEventSync(DescribeDetailEventRequest req)
+        {
+             JsonResponseModel<DescribeDetailEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDetailEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDetailEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询历史房间和用户数，每分钟1次，可查询最近5天的数据
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>

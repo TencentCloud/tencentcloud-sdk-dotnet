@@ -55,7 +55,15 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string TroubleUserId{ get; set; }
 
         /// <summary>
-        /// 异常类型
+        /// 异常类型。
+        /// 1. 仅视频异常
+        /// 2. 仅声音异常
+        /// 3. 音视频都异常
+        /// 5. 进房异常
+        /// 4. 切课
+        /// 6. 求助
+        /// 7. 问题反馈
+        /// 8. 投诉
         /// </summary>
         [JsonProperty("TroubleType")]
         public ulong? TroubleType{ get; set; }

@@ -70,6 +70,12 @@ namespace TencentCloud.Cme.V20191029.Models
         public TimeRange CreateTimeRange{ get; set; }
 
         /// <summary>
+        /// 按标签检索，填入检索的标签名。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string[] Tags{ get; set; }
+
+        /// <summary>
         /// 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
         /// </summary>
         [JsonProperty("Sort")]
@@ -106,6 +112,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamObj(map, prefix + "DurationRange.", this.DurationRange);
             this.SetParamObj(map, prefix + "CreateTimeRange.", this.CreateTimeRange);
+            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

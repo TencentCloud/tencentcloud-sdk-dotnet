@@ -66,6 +66,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
+        /// <summary>
+        /// 判断用户是否已经离开房间
+        /// </summary>
+        [JsonProperty("Finished")]
+        public bool? Finished{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
             this.SetParamSimple(map, prefix + "ClientIp", this.ClientIp);
+            this.SetParamSimple(map, prefix + "Finished", this.Finished);
         }
     }
 }

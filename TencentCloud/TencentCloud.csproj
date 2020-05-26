@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.67</VersionPrefix>
+    <VersionPrefix>3.0.68</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2168,6 +2168,7 @@
     <Compile Include="Cme\V20191029\Models\MaterialBasicInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MaterialInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MaterialStatus.cs" />
+    <Compile Include="Cme\V20191029\Models\MaterialTagInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaImageSpriteInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaMetaData.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyMaterialRequest.cs" />
@@ -6441,20 +6442,15 @@
     <Compile Include="Sts\V20180813\Models\QueryApiKeyRequest.cs" />
     <Compile Include="Sts\V20180813\Models\QueryApiKeyResponse.cs" />
     <Compile Include="Taf\V20200210\TafClient.cs" />
-    <Compile Include="Taf\V20200210\Models\DetectAccountActivityRequest.cs" />
-    <Compile Include="Taf\V20200210\Models\DetectAccountActivityResponse.cs" />
     <Compile Include="Taf\V20200210\Models\DetectFraudKOLRequest.cs" />
     <Compile Include="Taf\V20200210\Models\DetectFraudKOLResponse.cs" />
     <Compile Include="Taf\V20200210\Models\EnhanceTaDegreeRequest.cs" />
     <Compile Include="Taf\V20200210\Models\EnhanceTaDegreeResponse.cs" />
-    <Compile Include="Taf\V20200210\Models\InputDetectAccountActivity.cs" />
     <Compile Include="Taf\V20200210\Models\InputKolBspData.cs" />
     <Compile Include="Taf\V20200210\Models\InputKolDataList.cs" />
     <Compile Include="Taf\V20200210\Models\InputRecognizeTargetAudience.cs" />
     <Compile Include="Taf\V20200210\Models\InputSendTrafficSecuritySmsMsg.cs" />
     <Compile Include="Taf\V20200210\Models\InputTaBspData.cs" />
-    <Compile Include="Taf\V20200210\Models\OutputDetectAccountActivity.cs" />
-    <Compile Include="Taf\V20200210\Models\OutputDetectAccountActivityValue.cs" />
     <Compile Include="Taf\V20200210\Models\OutputKolData.cs" />
     <Compile Include="Taf\V20200210\Models\OutputKolValue.cs" />
     <Compile Include="Taf\V20200210\Models\OutputRecognizeTargetAudience.cs" />
@@ -7403,6 +7399,8 @@
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeDetailEventRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeDetailEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
@@ -7416,6 +7414,8 @@
     <Compile Include="Trtc\V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\EncodeParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\EventList.cs" />
+    <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
