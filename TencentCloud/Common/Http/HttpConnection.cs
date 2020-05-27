@@ -69,6 +69,14 @@ namespace TencentCloud.Common.Http
             // 计算签名时将charset添加到了Content-Type中
             request.ContentType = headers[contentTypeName] + "; charset=utf-8";
             headers.Remove(contentTypeName);
+            // Bug fix:
+            // 通过Host属性设置Host值。如果通过Header集合添加Host值，则会引发异常，错误消息为：
+            // “The 'Host' header must be modified using the appropriate property or method”。
+            if (headers.ContainsKey("Host"))
+            {
+                request.Host = headers["Host"];
+                headers.Remove("Host");
+            }
             foreach (KeyValuePair<string, string> kvp in headers)
             {
                 request.Headers.Add(kvp.Key, kvp.Value);
