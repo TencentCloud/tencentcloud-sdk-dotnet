@@ -15,38 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CallDeviceActionSyncRequest : AbstractModel
+    public class QueryAgentStatementsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品Id
+        /// 结算单日期，月结算单填每月1日
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("Date")]
+        public string Date{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// 日结算单:daily
+        /// 月结算单:monthly
         /// </summary>
-        [JsonProperty("DeviceName")]
-        public string DeviceName{ get; set; }
-
-        /// <summary>
-        /// 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
-        /// </summary>
-        [JsonProperty("ActionId")]
-        public string ActionId{ get; set; }
-
-        /// <summary>
-        /// 输入参数
-        /// </summary>
-        [JsonProperty("InputParams")]
-        public string InputParams{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -54,10 +43,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
-            this.SetParamSimple(map, prefix + "ActionId", this.ActionId);
-            this.SetParamSimple(map, prefix + "InputParams", this.InputParams);
+            this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

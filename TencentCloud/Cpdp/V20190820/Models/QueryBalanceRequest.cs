@@ -61,6 +61,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("MidasSignature")]
         public string MidasSignature{ get; set; }
 
+        /// <summary>
+        /// 环境名:
+        /// release: 现网环境
+        /// sandbox: 沙箱环境
+        /// development: 开发环境
+        /// 缺省: release
+        /// </summary>
+        [JsonProperty("MidasEnvironment")]
+        public string MidasEnvironment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +83,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "PageOffset", this.PageOffset);
             this.SetParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
             this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
+            this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         }
     }
 }

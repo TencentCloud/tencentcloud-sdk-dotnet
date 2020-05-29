@@ -37,8 +37,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// 1：小额鉴权
-        /// 2：短信校验鉴权
+        /// 1 – 小额转账验证
+        /// 2 – 短信验证
+        /// 每个结算账户每天只能使用一次小额转账验证
         /// </summary>
         [JsonProperty("BindType")]
         public long? BindType{ get; set; }
@@ -91,6 +92,25 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("CurrencyAmt")]
         public string CurrencyAmt{ get; set; }
 
+        /// <summary>
+        /// 敏感信息加密类型:
+        /// RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+        /// AES: aes对称加密，使用AES256-CBC-PCKS7padding
+        /// 缺省: RSA
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public string EncryptType{ get; set; }
+
+        /// <summary>
+        /// 环境名:
+        /// release: 现网环境
+        /// sandbox: 沙箱环境
+        /// development: 开发环境
+        /// 缺省: release
+        /// </summary>
+        [JsonProperty("MidasEnvironment")]
+        public string MidasEnvironment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +127,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "CurrencyType", this.CurrencyType);
             this.SetParamSimple(map, prefix + "CurrencyUnit", this.CurrencyUnit);
             this.SetParamSimple(map, prefix + "CurrencyAmt", this.CurrencyAmt);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
+            this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         }
     }
 }

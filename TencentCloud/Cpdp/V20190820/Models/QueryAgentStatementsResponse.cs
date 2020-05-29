@@ -15,38 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotexplorer.V20190423.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CallDeviceActionSyncRequest : AbstractModel
+    public class QueryAgentStatementsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 产品Id
+        /// 文件下载链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DeviceName")]
-        public string DeviceName{ get; set; }
-
-        /// <summary>
-        /// 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
-        /// </summary>
-        [JsonProperty("ActionId")]
-        public string ActionId{ get; set; }
-
-        /// <summary>
-        /// 输入参数
-        /// </summary>
-        [JsonProperty("InputParams")]
-        public string InputParams{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +43,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
-            this.SetParamSimple(map, prefix + "ActionId", this.ActionId);
-            this.SetParamSimple(map, prefix + "InputParams", this.InputParams);
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

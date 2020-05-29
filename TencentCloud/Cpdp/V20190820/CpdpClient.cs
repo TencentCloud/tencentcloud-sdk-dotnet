@@ -1149,6 +1149,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 直播平台-查询代理商结算单链接
+        /// </summary>
+        /// <param name="req"><see cref="QueryAgentStatementsRequest"/></param>
+        /// <returns><see cref="QueryAgentStatementsResponse"/></returns>
+        public async Task<QueryAgentStatementsResponse> QueryAgentStatements(QueryAgentStatementsRequest req)
+        {
+             JsonResponseModel<QueryAgentStatementsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryAgentStatements");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAgentStatementsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-查询代理商结算单链接
+        /// </summary>
+        /// <param name="req"><see cref="QueryAgentStatementsRequest"/></param>
+        /// <returns><see cref="QueryAgentStatementsResponse"/></returns>
+        public QueryAgentStatementsResponse QueryAgentStatementsSync(QueryAgentStatementsRequest req)
+        {
+             JsonResponseModel<QueryAgentStatementsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryAgentStatements");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryAgentStatementsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播平台-查询批次信息
         /// </summary>
         /// <param name="req"><see cref="QueryAgentTaxPaymentBatchRequest"/></param>

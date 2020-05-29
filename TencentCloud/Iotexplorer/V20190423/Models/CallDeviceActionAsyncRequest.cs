@@ -37,7 +37,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 动作Id
+        /// 产品数据模板中行为功能的标识符，由开发者自行根据设备的应用场景定义
         /// </summary>
         [JsonProperty("ActionId")]
         public string ActionId{ get; set; }

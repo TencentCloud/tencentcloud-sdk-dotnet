@@ -48,6 +48,25 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("MidasSignature")]
         public string MidasSignature{ get; set; }
 
+        /// <summary>
+        /// 敏感信息加密类型:
+        /// RSA: rsa非对称加密，使用RSA-PKCS1-v1_5
+        /// AES: aes对称加密，使用AES256-CBC-PCKS7padding
+        /// 缺省: RSA
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public string EncryptType{ get; set; }
+
+        /// <summary>
+        /// 环境名:
+        /// release: 现网环境
+        /// sandbox: 沙箱环境
+        /// development: 开发环境
+        /// 缺省: release
+        /// </summary>
+        [JsonProperty("MidasEnvironment")]
+        public string MidasEnvironment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +77,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
             this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
+            this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         }
     }
 }

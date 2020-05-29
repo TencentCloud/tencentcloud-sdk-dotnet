@@ -53,7 +53,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供给用户异步调用设备动作的能力
+        /// 提供给用户异步调用设备行为的能力
         /// </summary>
         /// <param name="req"><see cref="CallDeviceActionAsyncRequest"/></param>
         /// <returns><see cref="CallDeviceActionAsyncResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供给用户异步调用设备动作的能力
+        /// 提供给用户异步调用设备行为的能力
         /// </summary>
         /// <param name="req"><see cref="CallDeviceActionAsyncRequest"/></param>
         /// <returns><see cref="CallDeviceActionAsyncResponse"/></returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 为用户提供同步调用设备动作的能力。
+        /// 为用户提供同步调用设备行为的能力。
         /// </summary>
         /// <param name="req"><see cref="CallDeviceActionSyncRequest"/></param>
         /// <returns><see cref="CallDeviceActionSyncResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 为用户提供同步调用设备动作的能力。
+        /// 为用户提供同步调用设备行为的能力。
         /// </summary>
         /// <param name="req"><see cref="CallDeviceActionSyncRequest"/></param>
         /// <returns><see cref="CallDeviceActionSyncResponse"/></returns>
