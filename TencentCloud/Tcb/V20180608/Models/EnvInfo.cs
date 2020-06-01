@@ -117,6 +117,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("IsAutoDegrade")]
         public bool? IsAutoDegrade{ get; set; }
 
+        /// <summary>
+        /// 环境渠道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnvChannel")]
+        public string EnvChannel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "LogServices.", this.LogServices);
             this.SetParamArrayObj(map, prefix + "StaticStorages.", this.StaticStorages);
             this.SetParamSimple(map, prefix + "IsAutoDegrade", this.IsAutoDegrade);
+            this.SetParamSimple(map, prefix + "EnvChannel", this.EnvChannel);
         }
     }
 }

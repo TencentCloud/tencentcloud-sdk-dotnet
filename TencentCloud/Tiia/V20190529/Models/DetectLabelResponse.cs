@@ -46,6 +46,14 @@ namespace TencentCloud.Tiia.V20190529.Models
         public DetectLabelItem[] AlbumLabels{ get; set; }
 
         /// <summary>
+        /// News新闻版标签结果数组。如未选择NEWS场景，则为空。
+        /// 新闻版目前为测试阶段，暂不提供每个标签的一级、二级分类信息的输出。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewsLabels")]
+        public DetectLabelItem[] NewsLabels{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -60,6 +68,7 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "CameraLabels.", this.CameraLabels);
             this.SetParamArrayObj(map, prefix + "AlbumLabels.", this.AlbumLabels);
+            this.SetParamArrayObj(map, prefix + "NewsLabels.", this.NewsLabels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

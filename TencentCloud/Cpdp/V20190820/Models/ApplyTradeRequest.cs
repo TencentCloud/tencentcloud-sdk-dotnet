@@ -43,7 +43,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string PayerId{ get; set; }
 
         /// <summary>
-        /// 付款人姓名
+        /// 收款人姓名
         /// </summary>
         [JsonProperty("PayeeName")]
         public string PayeeName{ get; set; }

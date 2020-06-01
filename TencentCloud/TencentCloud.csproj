@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.70</VersionPrefix>
+    <VersionPrefix>3.0.71</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3349,6 +3349,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeBaseOverviewResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeConfigRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeConfigResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstanceTypeConfigRequest.cs" />
@@ -3405,6 +3407,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyAddressAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyAddressesBandwidthRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyAddressesBandwidthResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyDefaultSubnetRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyDefaultSubnetResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageRequest.cs" />
@@ -3940,6 +3944,87 @@
     <Compile Include="Hcm\V20181106\Models\EvaluationResponse.cs" />
     <Compile Include="Hcm\V20181106\Models\ItemCoord.cs" />
     <Compile Include="Hcm\V20181106\Models\ItemInfo.cs" />
+    <Compile Include="Iai\V20200303\IaiClient.cs" />
+    <Compile Include="Iai\V20200303\Models\AnalyzeFaceRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\AnalyzeFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\Candidate.cs" />
+    <Compile Include="Iai\V20200303\Models\CheckSimilarPersonRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\CheckSimilarPersonResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\CompareFaceRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\CompareFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\CopyPersonRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\CopyPersonResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\CreateFaceRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\CreateFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\CreateGroupRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\CreateGroupResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\CreatePersonRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\CreatePersonResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DeleteFaceRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DeleteFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DeleteGroupRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DeleteGroupResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DeletePersonFromGroupRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DeletePersonFromGroupResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DeletePersonRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DeletePersonResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectFaceRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectLiveFaceRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectLiveFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceAttributesInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceHairAttributesInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceQualityCompleteness.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceQualityInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceRect.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceShape.cs" />
+    <Compile Include="Iai\V20200303\Models\GetCheckSimilarPersonJobIdListRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetCheckSimilarPersonJobIdListResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetGroupInfoRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetGroupInfoResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetGroupListRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetGroupListResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonBaseInfoRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonBaseInfoResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonGroupInfoRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonGroupInfoResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonListNumRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonListNumResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonListRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetPersonListResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetSimilarPersonResultRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetSimilarPersonResultResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GroupCandidate.cs" />
+    <Compile Include="Iai\V20200303\Models\GroupExDescriptionInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\GroupInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\JobIdInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\ModifyGroupRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\ModifyGroupResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\PersonExDescriptionInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\PersonGroupInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\PersonInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\Point.cs" />
+    <Compile Include="Iai\V20200303\Models\Result.cs" />
+    <Compile Include="Iai\V20200303\Models\ResultsReturnsByGroup.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchFacesRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchFacesResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchFacesReturnsByGroupRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchFacesReturnsByGroupResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchPersonsRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchPersonsResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchPersonsReturnsByGroupRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\SearchPersonsReturnsByGroupResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\VerifyFaceRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\VerifyFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\VerifyPersonRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\VerifyPersonResponse.cs" />
     <Compile Include="Iai\V20180301\IaiClient.cs" />
     <Compile Include="Iai\V20180301\Models\AnalyzeFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\AnalyzeFaceResponse.cs" />
@@ -6696,6 +6781,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribePostpayPackageFreeQuotasRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribePostpayPackageFreeQuotasResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvRequest.cs" />
@@ -6713,6 +6800,7 @@
     <Compile Include="Tcb\V20180608\Models\ModifyEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEnvResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\OrderInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\PackageFreeQuotaInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\PlatformStatistic.cs" />
     <Compile Include="Tcb\V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvRequest.cs" />
@@ -7254,8 +7342,12 @@
     <Compile Include="Tiw\V20190919\Models\PauseOnlineRecordResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\ResumeOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\ResumeOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackKeyRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackKeyResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackKeyRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackKeyResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordRequest.cs" />

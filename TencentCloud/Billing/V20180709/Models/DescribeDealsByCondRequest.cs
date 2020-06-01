@@ -72,6 +72,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
+        /// <summary>
+        /// 大订单号
+        /// </summary>
+        [JsonProperty("BigDealId")]
+        public string BigDealId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
+            this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
         }
     }
 }

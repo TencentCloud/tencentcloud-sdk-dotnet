@@ -67,7 +67,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string PayerContactName{ get; set; }
 
         /// <summary>
-        /// 付款人联系电话 (PayerType=CORPORATE 必填)
+        /// 付款人联系电话
         /// </summary>
         [JsonProperty("PayerContactNumber")]
         public string PayerContactNumber{ get; set; }

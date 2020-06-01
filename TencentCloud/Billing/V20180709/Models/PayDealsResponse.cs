@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 此次操作支付成功的订单号数组
+        /// 此次操作支付成功的子订单号数组
         /// </summary>
         [JsonProperty("OrderIds")]
         public string[] OrderIds{ get; set; }
@@ -35,6 +35,12 @@ namespace TencentCloud.Billing.V20180709.Models
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
+
+        /// <summary>
+        /// 此次操作支付成功的大订单号数组
+        /// </summary>
+        [JsonProperty("BigDealIds")]
+        public string[] BigDealIds{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamArraySimple(map, prefix + "OrderIds.", this.OrderIds);
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

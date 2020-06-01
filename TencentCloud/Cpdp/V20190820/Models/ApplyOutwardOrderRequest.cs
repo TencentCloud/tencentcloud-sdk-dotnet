@@ -49,7 +49,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string TargetCurrency{ get; set; }
 
         /// <summary>
-        /// 收款人类型
+        /// 收款人类型（银行卡填"BANK_ACCOUNT"）
         /// </summary>
         [JsonProperty("PayeeType")]
         public string PayeeType{ get; set; }
@@ -73,49 +73,51 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public float? TargetAmount{ get; set; }
 
         /// <summary>
-        /// 收款人姓名
+        /// 收款人姓名（PayeeType为"BANK_COUNT"时必填）
         /// </summary>
         [JsonProperty("PayeeName")]
         public string PayeeName{ get; set; }
 
         /// <summary>
-        /// 收款人地址
+        /// 收款人地址（PayeeType为"BANK_COUNT"时必填）
         /// </summary>
         [JsonProperty("PayeeAddress")]
         public string PayeeAddress{ get; set; }
 
         /// <summary>
-        /// 收款人银行账号类型
+        /// 收款人银行账号类型（PayeeType为"BANK_COUNT"时必填）
+        /// 个人填"INDIVIDUAL"
+        /// 企业填"CORPORATE"
         /// </summary>
         [JsonProperty("PayeeBankAccountType")]
         public string PayeeBankAccountType{ get; set; }
 
         /// <summary>
-        /// 收款人国家或地区编码
+        /// 收款人国家或地区编码（PayeeType为"BANK_COUNT"时必填）
         /// </summary>
         [JsonProperty("PayeeCountryCode")]
         public string PayeeCountryCode{ get; set; }
 
         /// <summary>
-        /// 收款人开户银行名称
+        /// 收款人开户银行名称（PayeeType为"BANK_COUNT"时必填）
         /// </summary>
         [JsonProperty("PayeeBankName")]
         public string PayeeBankName{ get; set; }
 
         /// <summary>
-        /// 收款人开户银行地址
+        /// 收款人开户银行地址（PayeeType为"BANK_COUNT"时必填）
         /// </summary>
         [JsonProperty("PayeeBankAddress")]
         public string PayeeBankAddress{ get; set; }
 
         /// <summary>
-        /// 收款人开户银行所在国家或地区编码
+        /// 收款人开户银行所在国家或地区编码（PayeeType为"BANK_COUNT"时必填）
         /// </summary>
         [JsonProperty("PayeeBankDistrict")]
         public string PayeeBankDistrict{ get; set; }
 
         /// <summary>
-        /// 收款银行SwiftCode
+        /// 收款银行SwiftCode（PayeeType为"BANK_COUNT"时必填）
         /// </summary>
         [JsonProperty("PayeeBankSwiftCode")]
         public string PayeeBankSwiftCode{ get; set; }

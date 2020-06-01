@@ -373,6 +373,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 设置实时录制回调鉴权密钥
+        /// </summary>
+        /// <param name="req"><see cref="SetOnlineRecordCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetOnlineRecordCallbackKeyResponse"/></returns>
+        public async Task<SetOnlineRecordCallbackKeyResponse> SetOnlineRecordCallbackKey(SetOnlineRecordCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetOnlineRecordCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetOnlineRecordCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetOnlineRecordCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置实时录制回调鉴权密钥
+        /// </summary>
+        /// <param name="req"><see cref="SetOnlineRecordCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetOnlineRecordCallbackKeyResponse"/></returns>
+        public SetOnlineRecordCallbackKeyResponse SetOnlineRecordCallbackKeySync(SetOnlineRecordCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetOnlineRecordCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetOnlineRecordCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetOnlineRecordCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置文档转码回调地址
         /// </summary>
         /// <param name="req"><see cref="SetTranscodeCallbackRequest"/></param>
@@ -404,6 +444,46 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "SetTranscodeCallback");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTranscodeCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置文档转码回调鉴权密钥
+        /// </summary>
+        /// <param name="req"><see cref="SetTranscodeCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetTranscodeCallbackKeyResponse"/></returns>
+        public async Task<SetTranscodeCallbackKeyResponse> SetTranscodeCallbackKey(SetTranscodeCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetTranscodeCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetTranscodeCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTranscodeCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置文档转码回调鉴权密钥
+        /// </summary>
+        /// <param name="req"><see cref="SetTranscodeCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetTranscodeCallbackKeyResponse"/></returns>
+        public SetTranscodeCallbackKeyResponse SetTranscodeCallbackKeySync(SetTranscodeCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetTranscodeCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetTranscodeCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTranscodeCallbackKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -653,6 +653,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取后付费免费额度
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostpayPackageFreeQuotasRequest"/></param>
+        /// <returns><see cref="DescribePostpayPackageFreeQuotasResponse"/></returns>
+        public async Task<DescribePostpayPackageFreeQuotasResponse> DescribePostpayPackageFreeQuotas(DescribePostpayPackageFreeQuotasRequest req)
+        {
+             JsonResponseModel<DescribePostpayPackageFreeQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePostpayPackageFreeQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePostpayPackageFreeQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取后付费免费额度
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostpayPackageFreeQuotasRequest"/></param>
+        /// <returns><see cref="DescribePostpayPackageFreeQuotasResponse"/></returns>
+        public DescribePostpayPackageFreeQuotasResponse DescribePostpayPackageFreeQuotasSync(DescribePostpayPackageFreeQuotasRequest req)
+        {
+             JsonResponseModel<DescribePostpayPackageFreeQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePostpayPackageFreeQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePostpayPackageFreeQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询指定指标的配额使用量
         /// </summary>
         /// <param name="req"><see cref="DescribeQuotaDataRequest"/></param>

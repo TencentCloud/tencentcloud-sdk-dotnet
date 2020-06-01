@@ -133,6 +133,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
+        /// <summary>
+        /// 大订单号
+        /// </summary>
+        [JsonProperty("BigDealId")]
+        public string BigDealId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +163,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+            this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
         }
     }
 }

@@ -305,7 +305,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 创建子网
+        /// 创建子网，若创建成功，则此子网会成为此可用区的默认子网。
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>
         /// <returns><see cref="CreateSubnetResponse"/></returns>
@@ -325,7 +325,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 创建子网
+        /// 创建子网，若创建成功，则此子网会成为此可用区的默认子网。
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>
         /// <returns><see cref="CreateSubnetResponse"/></returns>
@@ -505,7 +505,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 删除子网
+        /// 删除子网，若子网为可用区下的默认子网，则默认子网会回退到系统自动创建的默认子网，非用户最新创建的子网。若默认子网不满足需求，可调用设置默认子网接口设置。
         /// </summary>
         /// <param name="req"><see cref="DeleteSubnetRequest"/></param>
         /// <returns><see cref="DeleteSubnetResponse"/></returns>
@@ -525,7 +525,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 删除子网
+        /// 删除子网，若子网为可用区下的默认子网，则默认子网会回退到系统自动创建的默认子网，非用户最新创建的子网。若默认子网不满足需求，可调用设置默认子网接口设置。
         /// </summary>
         /// <param name="req"><see cref="DeleteSubnetRequest"/></param>
         /// <returns><see cref="DeleteSubnetResponse"/></returns>
@@ -736,6 +736,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DescribeConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可用区的默认子网
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultSubnetRequest"/></param>
+        /// <returns><see cref="DescribeDefaultSubnetResponse"/></returns>
+        public async Task<DescribeDefaultSubnetResponse> DescribeDefaultSubnet(DescribeDefaultSubnetRequest req)
+        {
+             JsonResponseModel<DescribeDefaultSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDefaultSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可用区的默认子网
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultSubnetRequest"/></param>
+        /// <returns><see cref="DescribeDefaultSubnetResponse"/></returns>
+        public DescribeDefaultSubnetResponse DescribeDefaultSubnetSync(DescribeDefaultSubnetRequest req)
+        {
+             JsonResponseModel<DescribeDefaultSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDefaultSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultSubnetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1584,6 +1624,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAddressesBandwidth");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAddressesBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改在一个可用区下创建实例时使用的默认子网（创建实例时，未填写VPC参数时使用的sunbetId）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultSubnetRequest"/></param>
+        /// <returns><see cref="ModifyDefaultSubnetResponse"/></returns>
+        public async Task<ModifyDefaultSubnetResponse> ModifyDefaultSubnet(ModifyDefaultSubnetRequest req)
+        {
+             JsonResponseModel<ModifyDefaultSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDefaultSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改在一个可用区下创建实例时使用的默认子网（创建实例时，未填写VPC参数时使用的sunbetId）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultSubnetRequest"/></param>
+        /// <returns><see cref="ModifyDefaultSubnetResponse"/></returns>
+        public ModifyDefaultSubnetResponse ModifyDefaultSubnetSync(ModifyDefaultSubnetRequest req)
+        {
+             JsonResponseModel<ModifyDefaultSubnetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDefaultSubnet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultSubnetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

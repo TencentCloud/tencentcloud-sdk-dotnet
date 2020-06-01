@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 需要支付的一个或者多个订单号
+        /// 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
         /// </summary>
         [JsonProperty("OrderIds")]
         public string[] OrderIds{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
+        /// <summary>
+        /// 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+        /// </summary>
+        [JsonProperty("BigDealIds")]
+        public string[] BigDealIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamArraySimple(map, prefix + "OrderIds.", this.OrderIds);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+            this.SetParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
         }
     }
 }
