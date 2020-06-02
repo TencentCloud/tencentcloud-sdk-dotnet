@@ -55,6 +55,9 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// 额外配置，传入JSON字符串。
+        /// {
+        /// "BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+        /// }
         /// </summary>
         [JsonProperty("Optional")]
         public string Optional{ get; set; }

@@ -493,6 +493,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 在所有mongos上执行FlushRouterConfig命令
+        /// </summary>
+        /// <param name="req"><see cref="FlushInstanceRouterConfigRequest"/></param>
+        /// <returns><see cref="FlushInstanceRouterConfigResponse"/></returns>
+        public async Task<FlushInstanceRouterConfigResponse> FlushInstanceRouterConfig(FlushInstanceRouterConfigRequest req)
+        {
+             JsonResponseModel<FlushInstanceRouterConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FlushInstanceRouterConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlushInstanceRouterConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在所有mongos上执行FlushRouterConfig命令
+        /// </summary>
+        /// <param name="req"><see cref="FlushInstanceRouterConfigRequest"/></param>
+        /// <returns><see cref="FlushInstanceRouterConfigResponse"/></returns>
+        public FlushInstanceRouterConfigResponse FlushInstanceRouterConfigSync(FlushInstanceRouterConfigRequest req)
+        {
+             JsonResponseModel<FlushInstanceRouterConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FlushInstanceRouterConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlushInstanceRouterConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于创建数据库实例询价。本接口参数中必须传入region参数，否则无法通过校验。本接口仅允许针对购买限制范围内的实例配置进行询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateDBInstancesRequest"/></param>

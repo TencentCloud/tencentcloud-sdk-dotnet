@@ -26,6 +26,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BestFrameBase64")]
         public string BestFrameBase64{ get; set; }
@@ -49,6 +50,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 最佳截图列表，仅在配置了返回多张最佳截图时返回。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BestFrameList")]
+        public string[] BestFrameList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +72,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Sim", this.Sim);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArraySimple(map, prefix + "BestFrameList.", this.BestFrameList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

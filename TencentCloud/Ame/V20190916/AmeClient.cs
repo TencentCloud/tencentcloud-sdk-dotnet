@@ -53,6 +53,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 根据歌曲ID查询歌曲信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeItemByIdRequest"/></param>
+        /// <returns><see cref="DescribeItemByIdResponse"/></returns>
+        public async Task<DescribeItemByIdResponse> DescribeItemById(DescribeItemByIdRequest req)
+        {
+             JsonResponseModel<DescribeItemByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeItemById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeItemByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据歌曲ID查询歌曲信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeItemByIdRequest"/></param>
+        /// <returns><see cref="DescribeItemByIdResponse"/></returns>
+        public DescribeItemByIdResponse DescribeItemByIdSync(DescribeItemByIdRequest req)
+        {
+             JsonResponseModel<DescribeItemByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeItemById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeItemByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 分类内容下歌曲列表获取，根据CategoryID或CategoryCode
         /// </summary>
         /// <param name="req"><see cref="DescribeItemsRequest"/></param>

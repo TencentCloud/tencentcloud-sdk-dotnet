@@ -21,32 +21,14 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateTablesRequest : AbstractModel
+    public class DescribeClusterTagsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 待创建表格所属集群ID
+        /// 集群ID列表
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// 用户选定的建表格IDL文件列表
-        /// </summary>
-        [JsonProperty("IdlFiles")]
-        public IdlFileInfo[] IdlFiles{ get; set; }
-
-        /// <summary>
-        /// 待创建表格信息列表
-        /// </summary>
-        [JsonProperty("SelectedTables")]
-        public SelectedTableInfoNew[] SelectedTables{ get; set; }
-
-        /// <summary>
-        /// 表格标签列表
-        /// </summary>
-        [JsonProperty("ResourceTags")]
-        public TagInfoUnit[] ResourceTags{ get; set; }
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
-            this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
-            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         }
     }
 }

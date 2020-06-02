@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetActionSequenceRequest : AbstractModel
+    public class DisassociateDhcpIpWithAddressIpRequest : AbstractModel
     {
         
         /// <summary>
-        /// 取值FourAction时 返回四种动作的动作序列
+        /// `DhcpIp`唯一`ID`，形如：`dhcpip-9o233uri`。必须是已绑定`EIP`的`DhcpIp`。
         /// </summary>
-        [JsonProperty("ActionType")]
-        public string ActionType{ get; set; }
+        [JsonProperty("DhcpIpId")]
+        public string DhcpIpId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "DhcpIpId", this.DhcpIpId);
         }
     }
 }

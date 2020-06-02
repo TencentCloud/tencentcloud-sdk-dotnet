@@ -21,32 +21,43 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateTableGroupRequest : AbstractModel
+    public class TagsInfoOfTable : AbstractModel
     {
         
         /// <summary>
-        /// 表格组所属集群ID
+        /// 表格实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("TableInstanceId")]
+        public string TableInstanceId{ get; set; }
 
         /// <summary>
-        /// 表格组名称，可以采用中文、英文或数字字符，最大长度32个字符
+        /// 表格名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TableGroupName")]
-        public string TableGroupName{ get; set; }
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
 
         /// <summary>
-        /// 表格组ID，可以由用户指定，但在同一个集群内不能重复，如果不指定则采用自增的模式
+        /// 表格组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TableGroupId")]
         public string TableGroupId{ get; set; }
 
         /// <summary>
-        /// 表格组标签列表
+        /// 标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ResourceTags")]
-        public TagInfoUnit[] ResourceTags{ get; set; }
+        [JsonProperty("Tags")]
+        public TagInfoUnit[] Tags{ get; set; }
+
+        /// <summary>
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Error")]
+        public ErrorInfo Error{ get; set; }
 
 
         /// <summary>
@@ -54,10 +65,11 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "TableGroupName", this.TableGroupName);
+            this.SetParamSimple(map, prefix + "TableInstanceId", this.TableInstanceId);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
-            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "Error.", this.Error);
         }
     }
 }

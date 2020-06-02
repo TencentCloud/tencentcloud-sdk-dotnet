@@ -31,12 +31,6 @@ namespace TencentCloud.Ecm.V20190719.Models
         public ZoneInstanceCountISP[] ZoneInstanceCountISPSet{ get; set; }
 
         /// <summary>
-        /// 模块ID
-        /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
-
-        /// <summary>
         /// 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
         /// Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
         /// </summary>
@@ -44,13 +38,19 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 公网出带宽上限，单位：Mbps
+        /// 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// 镜像ID，不传则使用模块下的默认值
+        /// 模块ID。如果未传该参数，则必须传ImageId，InstanceType，DataDiskSize，InternetMaxBandwidthOut参数
+        /// </summary>
+        [JsonProperty("ModuleId")]
+        public string ModuleId{ get; set; }
+
+        /// <summary>
+        /// 镜像ID。如果未传该参数或者传的值为空，则使用模块下的默认值
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
@@ -100,6 +100,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 机型。如果未传该参数或者传的值为空，则使用模块下的默认值
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 数据盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+        /// </summary>
+        [JsonProperty("DataDiskSize")]
+        public long? DataDiskSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,9 +119,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "ZoneInstanceCountISPSet.", this.ZoneInstanceCountISPSet);
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
@@ -117,6 +129,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
         }
     }
 }

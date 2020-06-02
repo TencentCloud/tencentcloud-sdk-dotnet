@@ -21,32 +21,36 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateTablesRequest : AbstractModel
+    public class TagsInfoOfTableGroup : AbstractModel
     {
         
         /// <summary>
-        /// 待创建表格所属集群ID
+        /// 集群ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 用户选定的建表格IDL文件列表
+        /// 表格组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IdlFiles")]
-        public IdlFileInfo[] IdlFiles{ get; set; }
+        [JsonProperty("TableGroupId")]
+        public string TableGroupId{ get; set; }
 
         /// <summary>
-        /// 待创建表格信息列表
+        /// 标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SelectedTables")]
-        public SelectedTableInfoNew[] SelectedTables{ get; set; }
+        [JsonProperty("Tags")]
+        public TagInfoUnit[] Tags{ get; set; }
 
         /// <summary>
-        /// 表格标签列表
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ResourceTags")]
-        public TagInfoUnit[] ResourceTags{ get; set; }
+        [JsonProperty("Error")]
+        public ErrorInfo Error{ get; set; }
 
 
         /// <summary>
@@ -55,9 +59,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
-            this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
-            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "Error.", this.Error);
         }
     }
 }

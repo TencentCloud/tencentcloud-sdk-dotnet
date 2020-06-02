@@ -453,6 +453,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 获取集群关联的标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterTagsRequest"/></param>
+        /// <returns><see cref="DescribeClusterTagsResponse"/></returns>
+        public async Task<DescribeClusterTagsResponse> DescribeClusterTags(DescribeClusterTagsRequest req)
+        {
+             JsonResponseModel<DescribeClusterTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群关联的标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterTagsRequest"/></param>
+        /// <returns><see cref="DescribeClusterTagsResponse"/></returns>
+        public DescribeClusterTagsResponse DescribeClusterTagsSync(DescribeClusterTagsRequest req)
+        {
+             JsonResponseModel<DescribeClusterTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询TcaplusDB集群列表，包含集群详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>
@@ -573,6 +613,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 获取表格组关联的标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableGroupTagsRequest"/></param>
+        /// <returns><see cref="DescribeTableGroupTagsResponse"/></returns>
+        public async Task<DescribeTableGroupTagsResponse> DescribeTableGroupTags(DescribeTableGroupTagsRequest req)
+        {
+             JsonResponseModel<DescribeTableGroupTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTableGroupTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableGroupTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取表格组关联的标签列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableGroupTagsRequest"/></param>
+        /// <returns><see cref="DescribeTableGroupTagsResponse"/></returns>
+        public DescribeTableGroupTagsResponse DescribeTableGroupTagsSync(DescribeTableGroupTagsRequest req)
+        {
+             JsonResponseModel<DescribeTableGroupTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTableGroupTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableGroupTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询表格组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTableGroupsRequest"/></param>
@@ -604,6 +684,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTableGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取表格标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableTagsRequest"/></param>
+        /// <returns><see cref="DescribeTableTagsResponse"/></returns>
+        public async Task<DescribeTableTagsResponse> DescribeTableTags(DescribeTableTagsRequest req)
+        {
+             JsonResponseModel<DescribeTableTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTableTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取表格标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTableTagsRequest"/></param>
+        /// <returns><see cref="DescribeTableTagsResponse"/></returns>
+        public DescribeTableTagsResponse DescribeTableTagsSync(DescribeTableTagsRequest req)
+        {
+             JsonResponseModel<DescribeTableTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTableTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTableTagsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -853,6 +973,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 修改集群标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterTagsResponse"/></returns>
+        public async Task<ModifyClusterTagsResponse> ModifyClusterTags(ModifyClusterTagsRequest req)
+        {
+             JsonResponseModel<ModifyClusterTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterTagsRequest"/></param>
+        /// <returns><see cref="ModifyClusterTagsResponse"/></returns>
+        public ModifyClusterTagsResponse ModifyClusterTagsSync(ModifyClusterTagsRequest req)
+        {
+             JsonResponseModel<ModifyClusterTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改TcaplusDB表格组名称
         /// </summary>
         /// <param name="req"><see cref="ModifyTableGroupNameRequest"/></param>
@@ -884,6 +1044,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTableGroupName");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTableGroupNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改表格组标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTableGroupTagsRequest"/></param>
+        /// <returns><see cref="ModifyTableGroupTagsResponse"/></returns>
+        public async Task<ModifyTableGroupTagsResponse> ModifyTableGroupTags(ModifyTableGroupTagsRequest req)
+        {
+             JsonResponseModel<ModifyTableGroupTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTableGroupTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTableGroupTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改表格组标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTableGroupTagsRequest"/></param>
+        /// <returns><see cref="ModifyTableGroupTagsResponse"/></returns>
+        public ModifyTableGroupTagsResponse ModifyTableGroupTagsSync(ModifyTableGroupTagsRequest req)
+        {
+             JsonResponseModel<ModifyTableGroupTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTableGroupTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTableGroupTagsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -964,6 +1164,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTableQuotas");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTableQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改表格标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTableTagsRequest"/></param>
+        /// <returns><see cref="ModifyTableTagsResponse"/></returns>
+        public async Task<ModifyTableTagsResponse> ModifyTableTags(ModifyTableTagsRequest req)
+        {
+             JsonResponseModel<ModifyTableTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTableTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTableTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改表格标签
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTableTagsRequest"/></param>
+        /// <returns><see cref="ModifyTableTagsResponse"/></returns>
+        public ModifyTableTagsResponse ModifyTableTagsSync(ModifyTableTagsRequest req)
+        {
+             JsonResponseModel<ModifyTableTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTableTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTableTagsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetActionSequenceRequest : AbstractModel
+    public class FlushInstanceRouterConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 取值FourAction时 返回四种动作的动作序列
+        /// 实例ID
         /// </summary>
-        [JsonProperty("ActionType")]
-        public string ActionType{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

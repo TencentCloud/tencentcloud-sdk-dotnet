@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.71</VersionPrefix>
+    <VersionPrefix>3.0.72</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,8 @@
     <Compile Include="Ame\V20190916\Models\Album.cs" />
     <Compile Include="Ame\V20190916\Models\Artist.cs" />
     <Compile Include="Ame\V20190916\Models\DataInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeItemByIdRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeItemByIdResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeItemsRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeItemsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeLyricRequest.cs" />
@@ -5074,6 +5076,8 @@
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSpecInfoRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSpecInfoResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\FlushInstanceRouterConfigRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\FlushInstanceRouterConfigResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\InquirePriceCreateDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\InquirePriceCreateDBInstancesResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\InquirePriceModifyDBInstanceSpecRequest.cs" />
@@ -6702,14 +6706,20 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeClusterTagsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeClusterTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClustersRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClustersResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeIdlFileInfosRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeIdlFileInfosResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupTagsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupsResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableTagsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTablesInRecycleRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTablesInRecycleResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTablesRequest.cs" />
@@ -6726,12 +6736,18 @@
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterNameResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterPasswordRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterPasswordResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterTagsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableGroupNameRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableGroupNameResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableGroupTagsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableGroupTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableMemosRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableMemosResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableQuotasRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableQuotasResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableTagsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ParsedTableInfoNew.cs" />
@@ -6745,6 +6761,10 @@
     <Compile Include="Tcaplusdb\V20190823\Models\TableInfoNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableResultNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableRollbackResultNew.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\TagInfoUnit.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\TagsInfoOfCluster.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\TagsInfoOfTable.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\TagsInfoOfTableGroup.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TaskInfoNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesResponse.cs" />
@@ -8240,6 +8260,8 @@
     <Compile Include="Vpc\V20170312\Models\AssistantCidr.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateAddressResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\AssociateDhcpIpWithAddressIpRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\AssociateDhcpIpWithAddressIpResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNetworkAclSubnetsRequest.cs" />
@@ -8285,6 +8307,8 @@
     <Compile Include="Vpc\V20170312\Models\CreateDefaultSecurityGroupResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateDefaultVpcRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateDefaultVpcResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateDhcpIpRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateDhcpIpResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateDirectConnectGatewayCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateDirectConnectGatewayCcnRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateDirectConnectGatewayRequest.cs" />
@@ -8345,6 +8369,8 @@
     <Compile Include="Vpc\V20170312\Models\DeleteCcnResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteCustomerGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteCustomerGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteDhcpIpRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteDhcpIpResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteDirectConnectGatewayCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteDirectConnectGatewayCcnRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteDirectConnectGatewayRequest.cs" />
@@ -8415,6 +8441,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeCustomerGatewayVendorsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeCustomerGatewaysRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeCustomerGatewaysResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeDhcpIpsRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeDhcpIpsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeDirectConnectGatewayCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeDirectConnectGatewayCcnRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeDirectConnectGatewaysRequest.cs" />
@@ -8498,6 +8526,7 @@
     <Compile Include="Vpc\V20170312\Models\DetachClassicLinkVpcResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DetachNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DetachNetworkInterfaceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DhcpIp.cs" />
     <Compile Include="Vpc\V20170312\Models\DirectConnectGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\DirectConnectGatewayCcnRoute.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableCcnRoutesRequest.cs" />
@@ -8508,6 +8537,8 @@
     <Compile Include="Vpc\V20170312\Models\DisableRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateAddressResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateDhcpIpWithAddressIpRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateDhcpIpWithAddressIpResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkAclSubnetsRequest.cs" />
@@ -8572,6 +8603,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCustomerGatewayAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCustomerGatewayAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyDhcpIpAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyDhcpIpAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyDirectConnectGatewayAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyDirectConnectGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyFlowLogAttributeRequest.cs" />

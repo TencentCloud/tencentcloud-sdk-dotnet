@@ -15,33 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralBasicOCRResponse : AbstractModel
+    public class ModifyDhcpIpAttributeResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
-        /// </summary>
-        [JsonProperty("TextDetections")]
-        public TextDetection[] TextDetections{ get; set; }
-
-        /// <summary>
-        /// 检测到的语言类型，目前支持的语言类型参考入参LanguageType说明。
-        /// </summary>
-        [JsonProperty("Language")]
-        public string Language{ get; set; }
-
-        /// <summary>
-        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
-        /// </summary>
-        [JsonProperty("Angel")]
-        public float? Angel{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -54,9 +36,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
-            this.SetParamSimple(map, prefix + "Language", this.Language);
-            this.SetParamSimple(map, prefix + "Angel", this.Angel);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

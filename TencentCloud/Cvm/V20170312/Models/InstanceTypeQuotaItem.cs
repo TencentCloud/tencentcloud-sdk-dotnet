@@ -104,6 +104,30 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("SoldOutReason")]
         public string SoldOutReason{ get; set; }
 
+        /// <summary>
+        /// 内网带宽，单位Gbps。
+        /// </summary>
+        [JsonProperty("InstanceBandwidth")]
+        public float? InstanceBandwidth{ get; set; }
+
+        /// <summary>
+        /// 网络收发包能力，单位万PPS。
+        /// </summary>
+        [JsonProperty("InstancePps")]
+        public long? InstancePps{ get; set; }
+
+        /// <summary>
+        /// 本地存储块数量。
+        /// </summary>
+        [JsonProperty("StorageBlockAmount")]
+        public long? StorageBlockAmount{ get; set; }
+
+        /// <summary>
+        /// 处理器型号。
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +147,10 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Price.", this.Price);
             this.SetParamSimple(map, prefix + "SoldOutReason", this.SoldOutReason);
+            this.SetParamSimple(map, prefix + "InstanceBandwidth", this.InstanceBandwidth);
+            this.SetParamSimple(map, prefix + "InstancePps", this.InstancePps);
+            this.SetParamSimple(map, prefix + "StorageBlockAmount", this.StorageBlockAmount);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

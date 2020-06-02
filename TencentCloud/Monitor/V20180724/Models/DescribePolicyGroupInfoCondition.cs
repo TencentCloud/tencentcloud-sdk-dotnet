@@ -87,6 +87,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ContinueTime")]
         public long? ContinueTime{ get; set; }
 
+        /// <summary>
+        /// 告警指标名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "CalcType", this.CalcType);
             this.SetParamSimple(map, prefix + "CalcValue", this.CalcValue);
             this.SetParamSimple(map, prefix + "ContinueTime", this.ContinueTime);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
         }
     }
 }

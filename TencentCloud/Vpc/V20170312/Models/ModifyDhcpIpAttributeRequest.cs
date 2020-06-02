@@ -15,30 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralAccurateOCRRequest : AbstractModel
+    public class ModifyDhcpIpAttributeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 图片的 Base64 值。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
-        /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// `DhcpIp`唯一`ID`，形如：`dhcpip-9o233uri`。
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
+        [JsonProperty("DhcpIpId")]
+        public string DhcpIpId{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
-        /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// `DhcpIp`名称，可任意命名，但不得超过60个字符。
         /// </summary>
-        [JsonProperty("ImageUrl")]
-        public string ImageUrl{ get; set; }
+        [JsonProperty("DhcpIpName")]
+        public string DhcpIpName{ get; set; }
 
 
         /// <summary>
@@ -46,8 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "DhcpIpId", this.DhcpIpId);
+            this.SetParamSimple(map, prefix + "DhcpIpName", this.DhcpIpName);
         }
     }
 }

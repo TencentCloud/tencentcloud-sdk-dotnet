@@ -26,7 +26,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// 用于活体检测的视频，视频的BASE64值；
-        /// BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+        /// BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
         /// </summary>
         [JsonProperty("VideoBase64")]
         public string VideoBase64{ get; set; }
@@ -47,7 +47,10 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ValidateData{ get; set; }
 
         /// <summary>
-        /// 本接口不需要传递此参数。
+        /// 额外配置，传入JSON字符串。
+        /// {
+        /// "BestFrameNum": 2  //需要返回多张最佳截图，取值范围1-10
+        /// }
         /// </summary>
         [JsonProperty("Optional")]
         public string Optional{ get; set; }

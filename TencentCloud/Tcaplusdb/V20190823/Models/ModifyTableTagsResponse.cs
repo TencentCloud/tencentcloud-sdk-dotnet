@@ -15,40 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LivenessResponse : AbstractModel
+    public class ModifyTableTagsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回结果总数
         /// </summary>
-        [JsonProperty("BestFrameBase64")]
-        public string BestFrameBase64{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        /// 返回结果
         /// </summary>
-        [JsonProperty("Result")]
-        public string Result{ get; set; }
-
-        /// <summary>
-        /// 业务结果描述。
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 最佳最佳截图列表，仅在配置了返回多张最佳截图时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("BestFrameList")]
-        public string[] BestFrameList{ get; set; }
+        [JsonProperty("TableResults")]
+        public TableResultNew[] TableResults{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -62,10 +48,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArraySimple(map, prefix + "BestFrameList.", this.BestFrameList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "TableResults.", this.TableResults);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

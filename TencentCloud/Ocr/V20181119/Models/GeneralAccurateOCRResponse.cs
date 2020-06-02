@@ -25,13 +25,13 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 检测到的文本信息，具体内容请点击左侧链接。
+        /// 检测到的文本信息，包括文本行内容、置信度、文本行坐标以及文本行旋转纠正后的坐标，具体内容请点击左侧链接。
         /// </summary>
         [JsonProperty("TextDetections")]
         public TextDetection[] TextDetections{ get; set; }
 
         /// <summary>
-        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
+        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
         /// </summary>
         [JsonProperty("Angel")]
         public float? Angel{ get; set; }

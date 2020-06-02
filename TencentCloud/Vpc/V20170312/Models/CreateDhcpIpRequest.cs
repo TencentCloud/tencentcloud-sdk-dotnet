@@ -15,30 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralAccurateOCRRequest : AbstractModel
+    public class CreateDhcpIpRequest : AbstractModel
     {
         
         /// <summary>
-        /// 图片的 Base64 值。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
-        /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// 私有网络`ID`。
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
-        /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// 子网`ID`。
         /// </summary>
-        [JsonProperty("ImageUrl")]
-        public string ImageUrl{ get; set; }
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// `DhcpIp`名称。
+        /// </summary>
+        [JsonProperty("DhcpIpName")]
+        public string DhcpIpName{ get; set; }
+
+        /// <summary>
+        /// 新申请的内网IP地址个数。总数不能超过64个。
+        /// </summary>
+        [JsonProperty("SecondaryPrivateIpAddressCount")]
+        public ulong? SecondaryPrivateIpAddressCount{ get; set; }
 
 
         /// <summary>
@@ -46,8 +54,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "DhcpIpName", this.DhcpIpName);
+            this.SetParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
         }
     }
 }

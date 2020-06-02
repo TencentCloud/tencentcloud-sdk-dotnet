@@ -499,6 +499,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDhcpIpWithAddressIpRequest"/></param>
+        /// <returns><see cref="AssociateDhcpIpWithAddressIpResponse"/></returns>
+        public async Task<AssociateDhcpIpWithAddressIpResponse> AssociateDhcpIpWithAddressIp(AssociateDhcpIpWithAddressIpRequest req)
+        {
+             JsonResponseModel<AssociateDhcpIpWithAddressIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateDhcpIpWithAddressIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDhcpIpWithAddressIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDhcpIpWithAddressIpRequest"/></param>
+        /// <returns><see cref="AssociateDhcpIpWithAddressIpResponse"/></returns>
+        public AssociateDhcpIpWithAddressIpResponse AssociateDhcpIpWithAddressIpSync(AssociateDhcpIpWithAddressIpRequest req)
+        {
+             JsonResponseModel<AssociateDhcpIpWithAddressIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateDhcpIpWithAddressIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDhcpIpWithAddressIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
         /// </summary>
         /// <param name="req"><see cref="AssociateNatGatewayAddressRequest"/></param>
@@ -1266,6 +1308,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateDefaultVpc");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDefaultVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateDhcpIp）用于创建DhcpIp
+        /// </summary>
+        /// <param name="req"><see cref="CreateDhcpIpRequest"/></param>
+        /// <returns><see cref="CreateDhcpIpResponse"/></returns>
+        public async Task<CreateDhcpIpResponse> CreateDhcpIp(CreateDhcpIpRequest req)
+        {
+             JsonResponseModel<CreateDhcpIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDhcpIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDhcpIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateDhcpIp）用于创建DhcpIp
+        /// </summary>
+        /// <param name="req"><see cref="CreateDhcpIpRequest"/></param>
+        /// <returns><see cref="CreateDhcpIpResponse"/></returns>
+        public CreateDhcpIpResponse CreateDhcpIpSync(CreateDhcpIpRequest req)
+        {
+             JsonResponseModel<CreateDhcpIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDhcpIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDhcpIpResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2500,6 +2582,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteCustomerGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomerGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDhcpIp）用于删除DhcpIp
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDhcpIpRequest"/></param>
+        /// <returns><see cref="DeleteDhcpIpResponse"/></returns>
+        public async Task<DeleteDhcpIpResponse> DeleteDhcpIp(DeleteDhcpIpRequest req)
+        {
+             JsonResponseModel<DeleteDhcpIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDhcpIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDhcpIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDhcpIp）用于删除DhcpIp
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDhcpIpRequest"/></param>
+        /// <returns><see cref="DeleteDhcpIpResponse"/></returns>
+        public DeleteDhcpIpResponse DeleteDhcpIpSync(DeleteDhcpIpRequest req)
+        {
+             JsonResponseModel<DeleteDhcpIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDhcpIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDhcpIpResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3932,6 +4054,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCustomerGateways");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomerGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDhcpIps）用于查询DhcpIp列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDhcpIpsRequest"/></param>
+        /// <returns><see cref="DescribeDhcpIpsResponse"/></returns>
+        public async Task<DescribeDhcpIpsResponse> DescribeDhcpIps(DescribeDhcpIpsRequest req)
+        {
+             JsonResponseModel<DescribeDhcpIpsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDhcpIps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDhcpIpsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDhcpIps）用于查询DhcpIp列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDhcpIpsRequest"/></param>
+        /// <returns><see cref="DescribeDhcpIpsResponse"/></returns>
+        public DescribeDhcpIpsResponse DescribeDhcpIpsSync(DescribeDhcpIpsRequest req)
+        {
+             JsonResponseModel<DescribeDhcpIpsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDhcpIps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDhcpIpsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5819,6 +5981,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateDhcpIpWithAddressIpRequest"/></param>
+        /// <returns><see cref="DisassociateDhcpIpWithAddressIpResponse"/></returns>
+        public async Task<DisassociateDhcpIpWithAddressIpResponse> DisassociateDhcpIpWithAddressIp(DisassociateDhcpIpWithAddressIpRequest req)
+        {
+             JsonResponseModel<DisassociateDhcpIpWithAddressIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateDhcpIpWithAddressIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateDhcpIpWithAddressIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateDhcpIpWithAddressIpRequest"/></param>
+        /// <returns><see cref="DisassociateDhcpIpWithAddressIpResponse"/></returns>
+        public DisassociateDhcpIpWithAddressIpResponse DisassociateDhcpIpWithAddressIpSync(DisassociateDhcpIpWithAddressIpRequest req)
+        {
+             JsonResponseModel<DisassociateDhcpIpWithAddressIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateDhcpIpWithAddressIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateDhcpIpWithAddressIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
         /// </summary>
         /// <param name="req"><see cref="DisassociateNatGatewayAddressRequest"/></param>
@@ -6788,6 +6992,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCustomerGatewayAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDhcpIpAttribute）用于修改DhcpIp属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDhcpIpAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDhcpIpAttributeResponse"/></returns>
+        public async Task<ModifyDhcpIpAttributeResponse> ModifyDhcpIpAttribute(ModifyDhcpIpAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDhcpIpAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDhcpIpAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDhcpIpAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDhcpIpAttribute）用于修改DhcpIp属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDhcpIpAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDhcpIpAttributeResponse"/></returns>
+        public ModifyDhcpIpAttributeResponse ModifyDhcpIpAttributeSync(ModifyDhcpIpAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDhcpIpAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDhcpIpAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDhcpIpAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

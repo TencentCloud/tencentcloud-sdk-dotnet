@@ -15,30 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GeneralAccurateOCRRequest : AbstractModel
+    public class ModifyClusterTagsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 图片的 Base64 值。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
-        /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+        /// 待修改标签的集群ID
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
-        /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// 待增加或修改的标签列表
         /// </summary>
-        [JsonProperty("ImageUrl")]
-        public string ImageUrl{ get; set; }
+        [JsonProperty("ReplaceTags")]
+        public TagInfoUnit[] ReplaceTags{ get; set; }
+
+        /// <summary>
+        /// 待删除的标签
+        /// </summary>
+        [JsonProperty("DeleteTags")]
+        public TagInfoUnit[] DeleteTags{ get; set; }
 
 
         /// <summary>
@@ -46,8 +48,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "ReplaceTags.", this.ReplaceTags);
+            this.SetParamArrayObj(map, prefix + "DeleteTags.", this.DeleteTags);
         }
     }
 }
