@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 取值FourAction时 返回四种动作的动作序列
+        /// 默认不需要使用
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }

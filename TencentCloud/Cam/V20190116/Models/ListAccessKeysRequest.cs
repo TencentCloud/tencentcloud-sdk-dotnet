@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TransactionPolicy : AbstractModel
+    public class ListAccessKeysRequest : AbstractModel
     {
         
         /// <summary>
-        /// 第一次回查时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 指定用户Uin，不填默认列出当前用户访问密钥
         /// </summary>
-        [JsonProperty("FirstQueryInterval")]
-        public ulong? FirstQueryInterval{ get; set; }
-
-        /// <summary>
-        /// 最大查询次数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaxQueryCount")]
-        public ulong? MaxQueryCount{ get; set; }
+        [JsonProperty("TargetUin")]
+        public ulong? TargetUin{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FirstQueryInterval", this.FirstQueryInterval);
-            this.SetParamSimple(map, prefix + "MaxQueryCount", this.MaxQueryCount);
+            this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
         }
     }
 }

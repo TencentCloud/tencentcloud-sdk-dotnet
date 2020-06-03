@@ -15,46 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Kms.V20190118.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateWhiteBoxKeyResponse : AbstractModel
+    public class ListAccessKeysResponse : AbstractModel
     {
         
         /// <summary>
-        /// 用于加密的密钥，base64编码
-        /// </summary>
-        [JsonProperty("EncryptKey")]
-        public string EncryptKey{ get; set; }
-
-        /// <summary>
-        /// 用于解密的密钥，base64编码
-        /// </summary>
-        [JsonProperty("DecryptKey")]
-        public string DecryptKey{ get; set; }
-
-        /// <summary>
-        /// 白盒密钥的全局唯一标识符
-        /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
-
-        /// <summary>
-        /// 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+        /// 访问密钥列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TagCode")]
-        public ulong? TagCode{ get; set; }
-
-        /// <summary>
-        /// 标签操作的返回信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TagMsg")]
-        public string TagMsg{ get; set; }
+        [JsonProperty("AccessKeys")]
+        public AccessKey[] AccessKeys{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -68,11 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
-            this.SetParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
-            this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
+            this.SetParamArrayObj(map, prefix + "AccessKeys.", this.AccessKeys);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

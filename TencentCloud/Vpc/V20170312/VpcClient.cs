@@ -499,8 +499,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// 本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）。<br />
         /// </summary>
         /// <param name="req"><see cref="AssociateDhcpIpWithAddressIpRequest"/></param>
         /// <returns><see cref="AssociateDhcpIpWithAddressIpResponse"/></returns>
@@ -520,8 +519,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// 本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）。<br />
         /// </summary>
         /// <param name="req"><see cref="AssociateDhcpIpWithAddressIpRequest"/></param>
         /// <returns><see cref="AssociateDhcpIpWithAddressIpResponse"/></returns>
@@ -5981,8 +5979,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// 本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定。<br />
         /// </summary>
         /// <param name="req"><see cref="DisassociateDhcpIpWithAddressIpRequest"/></param>
         /// <returns><see cref="DisassociateDhcpIpWithAddressIpResponse"/></returns>
@@ -6002,8 +5999,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口
+        /// 本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定。<br />
         /// </summary>
         /// <param name="req"><see cref="DisassociateDhcpIpWithAddressIpRequest"/></param>
         /// <returns><see cref="DisassociateDhcpIpWithAddressIpResponse"/></returns>

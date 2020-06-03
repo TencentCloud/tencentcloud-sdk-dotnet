@@ -32,7 +32,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// CDN已配置证书的域名列表
+        /// 已配置证书的CDN域名列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertifiedDomains")]

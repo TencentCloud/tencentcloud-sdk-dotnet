@@ -25,13 +25,13 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
-        /// queue总数量
+        /// 总队列数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// queue列表
+        /// 队列详情列表。
         /// </summary>
         [JsonProperty("QueueSet")]
         public QueueSet[] QueueSet{ get; set; }

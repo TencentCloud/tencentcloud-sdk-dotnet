@@ -26,6 +26,7 @@ namespace TencentCloud.Sms.V20190711.Models
         
         /// <summary>
         /// 拉取起始时间，UNIX 时间戳（时间：秒）。
+        /// 注：最大可拉取当前时期7天前的数据。
         /// </summary>
         [JsonProperty("SendDateTime")]
         public ulong? SendDateTime{ get; set; }
@@ -55,6 +56,12 @@ namespace TencentCloud.Sms.V20190711.Models
         [JsonProperty("SmsSdkAppid")]
         public string SmsSdkAppid{ get; set; }
 
+        /// <summary>
+        /// 拉取截止时间，UNIX 时间戳（时间：秒）。
+        /// </summary>
+        [JsonProperty("EndDateTime")]
+        public ulong? EndDateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Sms.V20190711.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
             this.SetParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+            this.SetParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
         }
     }
 }

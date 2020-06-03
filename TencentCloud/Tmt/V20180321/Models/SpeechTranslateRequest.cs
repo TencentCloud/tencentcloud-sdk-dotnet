@@ -37,7 +37,7 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string Source{ get; set; }
 
         /// <summary>
-        /// 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+        /// 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }

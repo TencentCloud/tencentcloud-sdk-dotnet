@@ -41,6 +41,7 @@ namespace TencentCloud.Sms.V20190711.Models
         /// <summary>
         /// 申请签名状态。其中：
         /// 0：表示审核通过。
+        /// 1：表示审核中。
         /// -1：表示审核未通过或审核失败。
         /// </summary>
         [JsonProperty("StatusCode")]

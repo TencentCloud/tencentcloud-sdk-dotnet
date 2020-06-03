@@ -37,19 +37,19 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 目前只支持过滤TopicName ， 且只能填一个过滤值
+        /// 目前只支持过滤TopicName ， 且只能填一个过滤值。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 标签匹配
+        /// 标签匹配。
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 精确匹配TopicName
+        /// 精确匹配TopicName。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

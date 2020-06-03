@@ -1293,6 +1293,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 列出指定CAM用户的访问密钥
+        /// </summary>
+        /// <param name="req"><see cref="ListAccessKeysRequest"/></param>
+        /// <returns><see cref="ListAccessKeysResponse"/></returns>
+        public async Task<ListAccessKeysResponse> ListAccessKeys(ListAccessKeysRequest req)
+        {
+             JsonResponseModel<ListAccessKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAccessKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAccessKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出指定CAM用户的访问密钥
+        /// </summary>
+        /// <param name="req"><see cref="ListAccessKeysRequest"/></param>
+        /// <returns><see cref="ListAccessKeysResponse"/></returns>
+        public ListAccessKeysResponse ListAccessKeysSync(ListAccessKeysRequest req)
+        {
+             JsonResponseModel<ListAccessKeysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAccessKeys");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAccessKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ListAttachedGroupPolicies）可用于查询用户组关联的策略列表。
         /// </summary>
         /// <param name="req"><see cref="ListAttachedGroupPoliciesRequest"/></param>

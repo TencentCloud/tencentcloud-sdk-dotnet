@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TransactionPolicy : AbstractModel
+    public class AccessKey : AbstractModel
     {
         
         /// <summary>
-        /// 第一次回查时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 访问密钥标识
         /// </summary>
-        [JsonProperty("FirstQueryInterval")]
-        public ulong? FirstQueryInterval{ get; set; }
+        [JsonProperty("AccessKeyId")]
+        public string AccessKeyId{ get; set; }
 
         /// <summary>
-        /// 最大查询次数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 密钥状态，激活（Active）或未激活（Inactive）
         /// </summary>
-        [JsonProperty("MaxQueryCount")]
-        public ulong? MaxQueryCount{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FirstQueryInterval", this.FirstQueryInterval);
-            this.SetParamSimple(map, prefix + "MaxQueryCount", this.MaxQueryCount);
+            this.SetParamSimple(map, prefix + "AccessKeyId", this.AccessKeyId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

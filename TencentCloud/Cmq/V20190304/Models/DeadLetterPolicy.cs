@@ -25,35 +25,35 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
-        /// DeadLetterQueueName
+        /// 死信队列名字。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterQueueName")]
         public string DeadLetterQueueName{ get; set; }
 
         /// <summary>
-        /// DeadLetterQueue
+        /// 死信队列。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeadLetterQueue")]
         public string DeadLetterQueue{ get; set; }
 
         /// <summary>
-        /// Policy
+        /// 死信队列策略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Policy")]
         public ulong? Policy{ get; set; }
 
         /// <summary>
-        /// MaxTimeToLive
+        /// 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxTimeToLive")]
         public ulong? MaxTimeToLive{ get; set; }
 
         /// <summary>
-        /// MaxReceiveCount
+        /// 最大接收次数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxReceiveCount")]

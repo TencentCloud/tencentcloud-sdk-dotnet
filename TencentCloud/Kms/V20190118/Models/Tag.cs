@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cmq.V20190304.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TransactionPolicy : AbstractModel
+    public class Tag : AbstractModel
     {
         
         /// <summary>
-        /// 第一次回查时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签键
         /// </summary>
-        [JsonProperty("FirstQueryInterval")]
-        public ulong? FirstQueryInterval{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// 最大查询次数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签值
         /// </summary>
-        [JsonProperty("MaxQueryCount")]
-        public ulong? MaxQueryCount{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FirstQueryInterval", this.FirstQueryInterval);
-            this.SetParamSimple(map, prefix + "MaxQueryCount", this.MaxQueryCount);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

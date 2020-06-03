@@ -42,6 +42,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "Algorithm", this.Algorithm);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

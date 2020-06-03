@@ -493,7 +493,7 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
-        /// 查询主题详情
+        /// 查询主题详情 
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicDetailRequest"/></param>
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Cmq.V20190304
         }
 
         /// <summary>
-        /// 查询主题详情
+        /// 查询主题详情 
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicDetailRequest"/></param>
         /// <returns><see cref="DescribeTopicDetailResponse"/></returns>

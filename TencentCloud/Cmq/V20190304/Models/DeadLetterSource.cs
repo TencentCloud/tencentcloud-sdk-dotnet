@@ -25,14 +25,14 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
-        /// QueueId
+        /// 消息队列ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueId")]
         public string QueueId{ get; set; }
 
         /// <summary>
-        /// QueueName
+        /// 消息队列名字。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueueName")]

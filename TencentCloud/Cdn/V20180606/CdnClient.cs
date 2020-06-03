@@ -391,7 +391,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 校验证书并提取SSL证书中包含的域名，返回CDN已接入的域名列表，及已配置证书的域名列表
+        /// DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>
         /// <returns><see cref="DescribeCertDomainsResponse"/></returns>
@@ -411,7 +411,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 校验证书并提取SSL证书中包含的域名，返回CDN已接入的域名列表，及已配置证书的域名列表
+        /// DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>
         /// <returns><see cref="DescribeCertDomainsResponse"/></returns>
@@ -511,7 +511,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 获取域名图片优化的当前配置，支持Webp、TPG、Guetzli 
+        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG 和 Guetzli。 
         /// </summary>
         /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
         /// <returns><see cref="DescribeImageConfigResponse"/></returns>
@@ -531,7 +531,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 获取域名图片优化的当前配置，支持Webp、TPG、Guetzli 
+        /// DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG 和 Guetzli。 
         /// </summary>
         /// <param name="req"><see cref="DescribeImageConfigRequest"/></param>
         /// <returns><see cref="DescribeImageConfigResponse"/></returns>
@@ -1729,7 +1729,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 更新控制台图片优化的相关配置，支持Webp、TPG、Guetzli 
+        /// UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 
         /// </summary>
         /// <param name="req"><see cref="UpdateImageConfigRequest"/></param>
         /// <returns><see cref="UpdateImageConfigResponse"/></returns>
@@ -1749,7 +1749,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 更新控制台图片优化的相关配置，支持Webp、TPG、Guetzli 
+        /// UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 
         /// </summary>
         /// <param name="req"><see cref="UpdateImageConfigRequest"/></param>
         /// <returns><see cref="UpdateImageConfigResponse"/></returns>

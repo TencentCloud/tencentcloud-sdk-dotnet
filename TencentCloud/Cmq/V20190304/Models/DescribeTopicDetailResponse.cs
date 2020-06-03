@@ -25,13 +25,13 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
-        /// TotalCount
+        /// 主题列表总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// TopicSet
+        /// 主题详情列表。
         /// </summary>
         [JsonProperty("TopicSet")]
         public TopicSet[] TopicSet{ get; set; }
