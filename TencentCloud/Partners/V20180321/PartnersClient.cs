@@ -293,6 +293,46 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 传入代客uin，查客户级别，客户审核状态，客户实名认证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentClientGradeRequest"/></param>
+        /// <returns><see cref="DescribeAgentClientGradeResponse"/></returns>
+        public async Task<DescribeAgentClientGradeResponse> DescribeAgentClientGrade(DescribeAgentClientGradeRequest req)
+        {
+             JsonResponseModel<DescribeAgentClientGradeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentClientGrade");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentClientGradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 传入代客uin，查客户级别，客户审核状态，客户实名认证状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentClientGradeRequest"/></param>
+        /// <returns><see cref="DescribeAgentClientGradeResponse"/></returns>
+        public DescribeAgentClientGradeResponse DescribeAgentClientGradeSync(DescribeAgentClientGradeRequest req)
+        {
+             JsonResponseModel<DescribeAgentClientGradeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAgentClientGrade");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentClientGradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 代理商可查询自己名下待审核客户列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentClientsRequest"/></param>

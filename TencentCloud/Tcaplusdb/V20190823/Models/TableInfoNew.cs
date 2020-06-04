@@ -130,14 +130,14 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public long? ReservedVolume{ get; set; }
 
         /// <summary>
-        /// 表格预留读QPS
+        /// 表格预留读CU
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReservedReadQps")]
         public long? ReservedReadQps{ get; set; }
 
         /// <summary>
-        /// 表格预留写QPS
+        /// 表格预留写CU
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReservedWriteQps")]

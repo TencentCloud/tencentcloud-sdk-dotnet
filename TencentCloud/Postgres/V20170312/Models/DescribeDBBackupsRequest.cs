@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。
+        /// 备份列表分页返回，每页返回数量，默认为 20，最小为1，最大值为 100。（当该参数不传或者传0时按默认值处理）
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

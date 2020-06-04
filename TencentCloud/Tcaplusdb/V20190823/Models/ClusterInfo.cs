@@ -43,7 +43,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 集群数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+        /// 集群数据描述语言类型，如：`PROTO`,`TDR`
         /// </summary>
         [JsonProperty("IdlType")]
         public string IdlType{ get; set; }

@@ -213,6 +213,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 开通后付费资源
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostpayPackageRequest"/></param>
+        /// <returns><see cref="CreatePostpayPackageResponse"/></returns>
+        public async Task<CreatePostpayPackageResponse> CreatePostpayPackage(CreatePostpayPackageRequest req)
+        {
+             JsonResponseModel<CreatePostpayPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePostpayPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostpayPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开通后付费资源
+        /// </summary>
+        /// <param name="req"><see cref="CreatePostpayPackageRequest"/></param>
+        /// <returns><see cref="CreatePostpayPackageResponse"/></returns>
+        public CreatePostpayPackageResponse CreatePostpayPackageSync(CreatePostpayPackageRequest req)
+        {
+             JsonResponseModel<CreatePostpayPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePostpayPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePostpayPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
         /// </summary>
         /// <param name="req"><see cref="CreateStaticStoreRequest"/></param>

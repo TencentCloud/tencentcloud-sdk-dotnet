@@ -67,13 +67,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public long? ReservedVolume{ get; set; }
 
         /// <summary>
-        /// 表格预留读QPS
+        /// 表格预留读CU
         /// </summary>
         [JsonProperty("ReservedReadQps")]
         public long? ReservedReadQps{ get; set; }
 
         /// <summary>
-        /// 表格预留写QPS
+        /// 表格预留写CU
         /// </summary>
         [JsonProperty("ReservedWriteQps")]
         public long? ReservedWriteQps{ get; set; }

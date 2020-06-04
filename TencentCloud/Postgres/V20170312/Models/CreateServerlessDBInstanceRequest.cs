@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+        /// 可用区ID。公测阶段仅支持ap-shanghai-2、ap-beijing-1,ap-guangzhou-2.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceName{ get; set; }
 
         /// <summary>
-        /// PostgreSQL内核版本，目前只支持：9.3.5、9.5.4、10.4三种版本。
+        /// PostgreSQL内核版本，目前只支持：10.4。
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL数据库字符集，目前支持UTF8、LATIN1两种。
+        /// PostgreSQL数据库字符集，目前支持UTF8。
         /// </summary>
         [JsonProperty("DBCharset")]
         public string DBCharset{ get; set; }

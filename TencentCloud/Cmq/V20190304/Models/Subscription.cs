@@ -25,84 +25,88 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
-        /// SubscriptionName
+        /// 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }
 
         /// <summary>
-        /// SubscriptionId
+        /// 订阅 ID。订阅 ID 在拉取监控数据时会用到。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubscriptionId")]
         public string SubscriptionId{ get; set; }
 
         /// <summary>
-        /// TopicOwner
+        /// 订阅拥有者的 APPID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicOwner")]
         public ulong? TopicOwner{ get; set; }
 
         /// <summary>
-        /// MsgCount
+        /// 该订阅待投递的消息数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MsgCount")]
         public ulong? MsgCount{ get; set; }
 
         /// <summary>
-        /// LastModifyTime
+        /// 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public ulong? LastModifyTime{ get; set; }
 
         /// <summary>
-        /// CreateTime
+        /// 订阅的创建时间。返回 Unix 时间戳，精确到秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// BindingKey
+        /// 表示订阅接收消息的过滤策略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BindingKey")]
         public string[] BindingKey{ get; set; }
 
         /// <summary>
-        /// Endpoint
+        /// 接收通知的 endpoint，根据协议 protocol 区分：对于 HTTP，endpoint 必须以http://开头，host 可以是域名或 IP；对于 queue，则填 queueName。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// FilterTags
+        /// 描述用户创建订阅时选择的过滤策略：
+        /// filterType = 1表示用户使用 filterTag 标签过滤
+        /// filterType = 2表示用户使用 bindingKey 过滤。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FilterTags")]
         public string[] FilterTags{ get; set; }
 
         /// <summary>
-        /// Protocol
+        /// 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// NotifyStrategy
+        /// 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
+        /// （1）BACKOFF_RETRY，退避重试。每隔一定时间重试一次，重试够一定次数后，就把该消息丢弃，继续推送下一条消息；
+        /// （2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyStrategy")]
         public string NotifyStrategy{ get; set; }
 
         /// <summary>
-        /// NotifyContentFormat
+        /// 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotifyContentFormat")]

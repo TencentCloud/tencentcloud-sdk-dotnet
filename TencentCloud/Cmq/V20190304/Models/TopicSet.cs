@@ -104,7 +104,7 @@ namespace TencentCloud.Cmq.V20190304.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 主题是否开启消息轨迹。true表示开启，false表示不开启
+        /// 消息轨迹。true表示开启，false表示不开启。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Trace")]

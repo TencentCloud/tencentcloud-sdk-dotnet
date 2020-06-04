@@ -109,7 +109,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// 实例名
+        /// 实例名(后续支持)
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
