@@ -61,6 +61,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <li>miniapp</li>
         /// <li>qcloud</li>
         /// 用法同CreateEnv接口的Source参数
+        /// 和 Channel 参数同时传，或者同时不传；EnvId 为空时必传。
         /// </summary>
         [JsonProperty("EnvSource")]
         public string EnvSource{ get; set; }
@@ -68,6 +69,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <summary>
         /// 如果envsource为miniapp, channel可以为ide或api;
         /// 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+        /// 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }

@@ -253,6 +253,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（CreateMultiDevicesTask）用于创建产品级别的批量创建设备任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiDevicesTaskRequest"/></param>
+        /// <returns><see cref="CreateMultiDevicesTaskResponse"/></returns>
+        public async Task<CreateMultiDevicesTaskResponse> CreateMultiDevicesTask(CreateMultiDevicesTaskRequest req)
+        {
+             JsonResponseModel<CreateMultiDevicesTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMultiDevicesTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMultiDevicesTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateMultiDevicesTask）用于创建产品级别的批量创建设备任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiDevicesTaskRequest"/></param>
+        /// <returns><see cref="CreateMultiDevicesTaskResponse"/></returns>
+        public CreateMultiDevicesTaskResponse CreateMultiDevicesTaskSync(CreateMultiDevicesTaskRequest req)
+        {
+             JsonResponseModel<CreateMultiDevicesTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMultiDevicesTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMultiDevicesTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateProduct）用于创建一个新的物联网通信产品 
         /// </summary>
         /// <param name="req"><see cref="CreateProductRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = this.InternalRequestSync(req, "CreateTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateTaskFileUrl）用于获取产品级任务文件上传链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFileUrlRequest"/></param>
+        /// <returns><see cref="CreateTaskFileUrlResponse"/></returns>
+        public async Task<CreateTaskFileUrlResponse> CreateTaskFileUrl(CreateTaskFileUrlRequest req)
+        {
+             JsonResponseModel<CreateTaskFileUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTaskFileUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskFileUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateTaskFileUrl）用于获取产品级任务文件上传链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFileUrlRequest"/></param>
+        /// <returns><see cref="CreateTaskFileUrlResponse"/></returns>
+        public CreateTaskFileUrlResponse CreateTaskFileUrlSync(CreateTaskFileUrlRequest req)
+        {
+             JsonResponseModel<CreateTaskFileUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTaskFileUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskFileUrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,7 +653,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDevice）用于查看设备信息 
+        /// 本接口（DescribeDevice）用于查看设备信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
         /// <returns><see cref="DescribeDeviceResponse"/></returns>
@@ -593,7 +673,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（DescribeDevice）用于查看设备信息 
+        /// 本接口（DescribeDevice）用于查看设备信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
         /// <returns><see cref="DescribeDeviceResponse"/></returns>
@@ -844,6 +924,86 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMultiDevices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMultiDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProductTask）用于查看产品级别的任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductTaskRequest"/></param>
+        /// <returns><see cref="DescribeProductTaskResponse"/></returns>
+        public async Task<DescribeProductTaskResponse> DescribeProductTask(DescribeProductTaskRequest req)
+        {
+             JsonResponseModel<DescribeProductTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProductTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProductTask）用于查看产品级别的任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductTaskRequest"/></param>
+        /// <returns><see cref="DescribeProductTaskResponse"/></returns>
+        public DescribeProductTaskResponse DescribeProductTaskSync(DescribeProductTaskRequest req)
+        {
+             JsonResponseModel<DescribeProductTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProductTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProductTasks）用于查看产品级别的任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductTasksRequest"/></param>
+        /// <returns><see cref="DescribeProductTasksResponse"/></returns>
+        public async Task<DescribeProductTasksResponse> DescribeProductTasks(DescribeProductTasksRequest req)
+        {
+             JsonResponseModel<DescribeProductTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProductTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProductTasks）用于查看产品级别的任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductTasksRequest"/></param>
+        /// <returns><see cref="DescribeProductTasksResponse"/></returns>
+        public DescribeProductTasksResponse DescribeProductTasksSync(DescribeProductTasksRequest req)
+        {
+             JsonResponseModel<DescribeProductTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProductTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.74</VersionPrefix>
+    <VersionPrefix>3.0.75</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4471,8 +4471,12 @@
     <Compile Include="Iotcloud\V20180614\Models\CreateLoraDeviceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateMultiDeviceRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateMultiDeviceResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\CreateMultiDevicesTaskRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\CreateMultiDevicesTaskResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateProductRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateProductResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\CreateTaskFileUrlRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\CreateTaskFileUrlResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateTaskRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateTaskResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateTopicPolicyRequest.cs" />
@@ -4501,6 +4505,10 @@
     <Compile Include="Iotcloud\V20180614\Models\DescribeMultiDevTaskResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeMultiDevicesRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeMultiDevicesResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductTaskRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductTaskResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductTasksRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductTasksResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductsRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductsResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeTaskRequest.cs" />
@@ -4518,6 +4526,7 @@
     <Compile Include="Iotcloud\V20180614\Models\ProductInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ProductMetadata.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ProductProperties.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\ProductTaskInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\PublishAsDeviceRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\PublishAsDeviceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\PublishMessageRequest.cs" />
@@ -4526,6 +4535,7 @@
     <Compile Include="Iotcloud\V20180614\Models\PublishToDeviceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ReplaceTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ReplaceTopicRuleResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\ResetDeviceResult.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ResetDeviceStateRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ResetDeviceStateResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\Task.cs" />

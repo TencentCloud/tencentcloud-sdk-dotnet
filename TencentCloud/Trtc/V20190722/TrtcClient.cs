@@ -173,7 +173,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询历史房间和用户数，每分钟1次，可查询最近5天的数据
+        /// 可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近5天的数据。当天未结束，无法查到当天的房间数与用户数。
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
         /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询历史房间和用户数，每分钟1次，可查询最近5天的数据
+        /// 可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近5天的数据。当天未结束，无法查到当天的房间数与用户数。
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
         /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>

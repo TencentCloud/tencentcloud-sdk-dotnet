@@ -25,6 +25,18 @@ namespace TencentCloud.Iotcloud.V20180614.Models
     {
         
         /// <summary>
+        /// 批量重置设备成功数
+        /// </summary>
+        [JsonProperty("SuccessCount")]
+        public ulong? SuccessCount{ get; set; }
+
+        /// <summary>
+        /// 批量重置设备结果
+        /// </summary>
+        [JsonProperty("ResetDeviceResults")]
+        public ResetDeviceResult[] ResetDeviceResults{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+            this.SetParamArrayObj(map, prefix + "ResetDeviceResults.", this.ResetDeviceResults);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

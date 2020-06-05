@@ -15,26 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Monitor.V20180724.Models
+namespace TencentCloud.Iotcloud.V20180614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBaseMetricsRequest : AbstractModel
+    public class ResetDeviceResult : AbstractModel
     {
         
         /// <summary>
-        /// 业务命名空间，各个云产品的业务命名空间不同。如需获取业务命名空间，请前往各产品监控指标文档，例如云服务器的命名空间，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
+        /// 设备名
         /// </summary>
-        [JsonProperty("Namespace")]
-        public string Namespace{ get; set; }
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 指标名，各个云产品的指标名不同。如需获取指标名，请前往各产品监控指标文档，例如云服务器的指标名，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
+        /// 是否成功
         /// </summary>
-        [JsonProperty("MetricName")]
-        public string MetricName{ get; set; }
+        [JsonProperty("Success")]
+        public bool? Success{ get; set; }
+
+        /// <summary>
+        /// 失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
-            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "Success", this.Success);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

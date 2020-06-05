@@ -42,6 +42,13 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 属性描述名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

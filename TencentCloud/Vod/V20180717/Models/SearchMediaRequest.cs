@@ -101,6 +101,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// 文件类型：
+        /// <li>Video: 视频文件</li>
+        /// <li>Audio: 音频文件</li>
+        /// <li>Image: 图片文件</li>
+        /// </summary>
+        [JsonProperty("Categories")]
+        public string[] Categories{ get; set; }
+
+        /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -123,6 +132,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
