@@ -112,7 +112,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// OsCustomizeType
+        /// OsCustomizeType 系统定制类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OsCustomizeType")]
@@ -131,6 +131,13 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// 删除保护开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -155,6 +162,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

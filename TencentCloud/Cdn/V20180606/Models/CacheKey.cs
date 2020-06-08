@@ -33,6 +33,41 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string FullUrlCache{ get; set; }
 
         /// <summary>
+        /// 是否使用请求参数作为CacheKey的一部分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueryString")]
+        public QueryStringKey QueryString{ get; set; }
+
+        /// <summary>
+        /// 是否使用请求头部作为CacheKey的一部分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Header")]
+        public HeaderKey Header{ get; set; }
+
+        /// <summary>
+        /// 是否使用Cookie作为CacheKey的一部分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cookie")]
+        public CookieKey Cookie{ get; set; }
+
+        /// <summary>
+        /// 是否使用请求协议作为CacheKey的一部分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public SchemeKey Scheme{ get; set; }
+
+        /// <summary>
+        /// 是否使用自定义字符串作为CacheKey的一部分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CacheTag")]
+        public CacheTagKey CacheTag{ get; set; }
+
+        /// <summary>
         /// 缓存是否忽略大小写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -46,6 +81,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
+            this.SetParamObj(map, prefix + "QueryString.", this.QueryString);
+            this.SetParamObj(map, prefix + "Header.", this.Header);
+            this.SetParamObj(map, prefix + "Cookie.", this.Cookie);
+            this.SetParamObj(map, prefix + "Scheme.", this.Scheme);
+            this.SetParamObj(map, prefix + "CacheTag.", this.CacheTag);
             this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
         }
     }
