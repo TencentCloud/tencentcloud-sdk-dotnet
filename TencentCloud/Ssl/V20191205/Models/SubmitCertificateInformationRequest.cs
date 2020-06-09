@@ -121,13 +121,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// 管理人姓。
+        /// 管理人名。
         /// </summary>
         [JsonProperty("AdminFirstName")]
         public string AdminFirstName{ get; set; }
 
         /// <summary>
-        /// 管理人名。
+        /// 管理人姓。
         /// </summary>
         [JsonProperty("AdminLastName")]
         public string AdminLastName{ get; set; }
@@ -151,13 +151,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string AdminPosition{ get; set; }
 
         /// <summary>
-        /// 联系人姓。
+        /// 联系人名。
         /// </summary>
         [JsonProperty("ContactFirstName")]
         public string ContactFirstName{ get; set; }
 
         /// <summary>
-        /// 联系人名。
+        /// 联系人姓。
         /// </summary>
         [JsonProperty("ContactLastName")]
         public string ContactLastName{ get; set; }

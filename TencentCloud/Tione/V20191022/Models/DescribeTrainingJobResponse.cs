@@ -110,7 +110,16 @@ namespace TencentCloud.Tione.V20191022.Models
         public ModelArtifacts ModelArtifacts{ get; set; }
 
         /// <summary>
-        /// 详细状态
+        /// 详细状态，取值范围
+        /// Starting：启动中
+        /// Downloading: 准备训练数据
+        /// Training: 正在训练
+        /// Uploading: 上传训练结果
+        /// Completed：已完成
+        /// Failed: 失败
+        /// MaxRuntimeExceeded: 任务超过最大运行时间
+        /// Stopping: 停止中
+        /// Stopped：已停止
         /// </summary>
         [JsonProperty("SecondaryStatus")]
         public string SecondaryStatus{ get; set; }
@@ -130,7 +139,12 @@ namespace TencentCloud.Tione.V20191022.Models
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 任务状态
+        /// 训练任务状态，取值范围
+        /// InProgress：运行中
+        /// Completed: 已完成
+        /// Failed: 失败
+        /// Stopping: 停止中
+        /// Stopped：已停止
         /// </summary>
         [JsonProperty("TrainingJobStatus")]
         public string TrainingJobStatus{ get; set; }

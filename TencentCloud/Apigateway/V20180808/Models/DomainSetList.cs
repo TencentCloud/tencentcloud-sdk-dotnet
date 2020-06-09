@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 域名解析状态。True 表示正常解析，Flase 表示解析失败。
+        /// 域名解析状态。True 表示正常解析，False 表示解析失败。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

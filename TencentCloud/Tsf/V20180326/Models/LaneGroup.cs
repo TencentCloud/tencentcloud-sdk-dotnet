@@ -25,13 +25,6 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 泳道ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("LaneId")]
-        public string LaneId{ get; set; }
-
-        /// <summary>
         /// 部署组ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -51,6 +44,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         [JsonProperty("LaneGroupId")]
         public string LaneGroupId{ get; set; }
+
+        /// <summary>
+        /// 泳道ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaneId")]
+        public string LaneId{ get; set; }
 
         /// <summary>
         /// 部署组名
@@ -114,10 +114,10 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LaneId", this.LaneId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Entrance", this.Entrance);
             this.SetParamSimple(map, prefix + "LaneGroupId", this.LaneGroupId);
+            this.SetParamSimple(map, prefix + "LaneId", this.LaneId);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);

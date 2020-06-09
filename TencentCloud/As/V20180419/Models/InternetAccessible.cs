@@ -45,6 +45,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("PublicIpAssigned")]
         public bool? PublicIpAssigned{ get; set; }
 
+        /// <summary>
+        /// 带宽包ID。可通过[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口返回值中的`BandwidthPackageId`获取。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BandwidthPackageId")]
+        public string BandwidthPackageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
+            this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         }
     }
 }
