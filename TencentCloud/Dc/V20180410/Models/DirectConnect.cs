@@ -202,6 +202,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("ChargeState")]
         public string ChargeState{ get; set; }
 
+        /// <summary>
+        /// 物理专线开通时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +241,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
             this.SetParamSimple(map, prefix + "IdcCity", this.IdcCity);
             this.SetParamSimple(map, prefix + "ChargeState", this.ChargeState);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
         }
     }
 }

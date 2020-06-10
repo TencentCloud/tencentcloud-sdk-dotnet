@@ -36,6 +36,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("HonorCooldown")]
         public bool? HonorCooldown{ get; set; }
 
+        /// <summary>
+        /// 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
+        /// </summary>
+        [JsonProperty("TriggerSource")]
+        public string TriggerSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "AutoScalingPolicyId", this.AutoScalingPolicyId);
             this.SetParamSimple(map, prefix + "HonorCooldown", this.HonorCooldown);
+            this.SetParamSimple(map, prefix + "TriggerSource", this.TriggerSource);
         }
     }
 }

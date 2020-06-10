@@ -1173,7 +1173,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（EnableTopicRule）用于启用规则
+        /// 本接口（EnableTopicRule）用于启用规则 
         /// </summary>
         /// <param name="req"><see cref="EnableTopicRuleRequest"/></param>
         /// <returns><see cref="EnableTopicRuleResponse"/></returns>
@@ -1193,7 +1193,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（EnableTopicRule）用于启用规则
+        /// 本接口（EnableTopicRule）用于启用规则 
         /// </summary>
         /// <param name="req"><see cref="EnableTopicRuleRequest"/></param>
         /// <returns><see cref="EnableTopicRuleResponse"/></returns>

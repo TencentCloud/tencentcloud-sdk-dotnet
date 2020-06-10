@@ -72,6 +72,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("ReservedMsg")]
         public string ReservedMsg{ get; set; }
 
+        /// <summary>
+        /// STRING(12)，接入环境，默认接入沙箱环境。接入正式环境填"prod"
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "StartDate", this.StartDate);
             this.SetParamSimple(map, prefix + "EndDate", this.EndDate);
             this.SetParamSimple(map, prefix + "ReservedMsg", this.ReservedMsg);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

@@ -67,13 +67,6 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("CacheTag")]
         public CacheTagKey CacheTag{ get; set; }
 
-        /// <summary>
-        /// 缓存是否忽略大小写
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CaseSensitive")]
-        public string CaseSensitive{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,7 +79,6 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Cookie.", this.Cookie);
             this.SetParamObj(map, prefix + "Scheme.", this.Scheme);
             this.SetParamObj(map, prefix + "CacheTag.", this.CacheTag);
-            this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
         }
     }
 }

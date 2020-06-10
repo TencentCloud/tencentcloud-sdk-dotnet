@@ -31,13 +31,15 @@ namespace TencentCloud.Tione.V20191022.Models
         public string NotebookLifecycleScriptsName{ get; set; }
 
         /// <summary>
-        /// 创建脚本
+        /// 创建脚本，base64编码
+        /// base64后的脚本长度不能超过16384个字符
         /// </summary>
         [JsonProperty("CreateScript")]
         public string CreateScript{ get; set; }
 
         /// <summary>
-        /// 启动脚本
+        /// 启动脚本，base64编码
+        /// base64后的脚本长度不能超过16384个字符
         /// </summary>
         [JsonProperty("StartScript")]
         public string StartScript{ get; set; }

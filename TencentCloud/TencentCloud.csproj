@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.77</VersionPrefix>
+    <VersionPrefix>3.0.78</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1421,6 +1421,11 @@
     <Compile Include="Cdb\V20170320\Models\AddTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditFilter.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditLogFile.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditLogFilter.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditPolicy.cs" />
+    <Compile Include="Cdb\V20170320\Models\AuditRule.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupConfig.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupItem.cs" />
@@ -1434,6 +1439,12 @@
     <Compile Include="Cdb\V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateAccountsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateAccountsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateAuditLogFileRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateAuditLogFileResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateAuditPolicyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateAuditPolicyResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateAuditRuleRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\CreateAuditRuleResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateBackupRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateBackupResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateDBImportJobRequest.cs" />
@@ -1451,6 +1462,12 @@
     <Compile Include="Cdb\V20170320\Models\DatabasePrivilege.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteAuditLogFileRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteAuditLogFileResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteAuditPolicyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteAuditPolicyResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteAuditRuleRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DeleteAuditRuleResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteBackupRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteBackupResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteDeployGroupsRequest.cs" />
@@ -1466,6 +1483,14 @@
     <Compile Include="Cdb\V20170320\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAsyncRequestInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditConfigRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditConfigResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditLogFilesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditPoliciesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditPoliciesResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditRulesRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeAuditRulesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupConfigResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupDatabasesRequest.cs" />
@@ -1575,6 +1600,10 @@
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPasswordResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPrivilegesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPrivilegesResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAuditConfigRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAuditConfigResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAuditRuleRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAuditRuleResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAutoRenewFlagRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAutoRenewFlagResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyBackupConfigRequest.cs" />
@@ -1755,7 +1784,6 @@
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="Cdn\V20180606\Models\HeaderKey.cs" />
-    <Compile Include="Cdn\V20180606\Models\Hsts.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
     <Compile Include="Cdn\V20180606\Models\ImageOptimization.cs" />

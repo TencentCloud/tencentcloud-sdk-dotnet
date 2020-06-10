@@ -79,7 +79,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 可用`IP`数。
+        /// 可用`IPv4`数。
         /// </summary>
         [JsonProperty("AvailableIpAddressCount")]
         public ulong? AvailableIpAddressCount{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? IsRemoteVpcSnat{ get; set; }
 
         /// <summary>
-        /// 子网`IP`总数。
+        /// 子网`IPv4`总数。
         /// </summary>
         [JsonProperty("TotalIpAddressCount")]
         public ulong? TotalIpAddressCount{ get; set; }

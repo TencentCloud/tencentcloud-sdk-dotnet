@@ -253,6 +253,126 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public async Task<CreateAuditLogFileResponse> CreateAuditLogFile(CreateAuditLogFileRequest req)
+        {
+             JsonResponseModel<CreateAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public CreateAuditLogFileResponse CreateAuditLogFileSync(CreateAuditLogFileRequest req)
+        {
+             JsonResponseModel<CreateAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAuditPolicy)用于创建云数据库实例的审计策略，即将审计规则绑定到具体的云数据库实例上。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditPolicyRequest"/></param>
+        /// <returns><see cref="CreateAuditPolicyResponse"/></returns>
+        public async Task<CreateAuditPolicyResponse> CreateAuditPolicy(CreateAuditPolicyRequest req)
+        {
+             JsonResponseModel<CreateAuditPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAuditPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAuditPolicy)用于创建云数据库实例的审计策略，即将审计规则绑定到具体的云数据库实例上。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditPolicyRequest"/></param>
+        /// <returns><see cref="CreateAuditPolicyResponse"/></returns>
+        public CreateAuditPolicyResponse CreateAuditPolicySync(CreateAuditPolicyRequest req)
+        {
+             JsonResponseModel<CreateAuditPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAuditPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleResponse"/></returns>
+        public async Task<CreateAuditRuleResponse> CreateAuditRule(CreateAuditRuleRequest req)
+        {
+             JsonResponseModel<CreateAuditRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAuditRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleResponse"/></returns>
+        public CreateAuditRuleResponse CreateAuditRuleSync(CreateAuditRuleRequest req)
+        {
+             JsonResponseModel<CreateAuditRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAuditRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAuditRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateBackup)用于创建数据库备份。
         /// </summary>
         /// <param name="req"><see cref="CreateBackupRequest"/></param>
@@ -569,6 +689,126 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public async Task<DeleteAuditLogFileResponse> DeleteAuditLogFile(DeleteAuditLogFileRequest req)
+        {
+             JsonResponseModel<DeleteAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public DeleteAuditLogFileResponse DeleteAuditLogFileSync(DeleteAuditLogFileRequest req)
+        {
+             JsonResponseModel<DeleteAuditLogFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAuditLogFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditLogFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAuditPolicy)用于删除用户的审计策略。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAuditPolicyResponse"/></returns>
+        public async Task<DeleteAuditPolicyResponse> DeleteAuditPolicy(DeleteAuditPolicyRequest req)
+        {
+             JsonResponseModel<DeleteAuditPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAuditPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAuditPolicy)用于删除用户的审计策略。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAuditPolicyResponse"/></returns>
+        public DeleteAuditPolicyResponse DeleteAuditPolicySync(DeleteAuditPolicyRequest req)
+        {
+             JsonResponseModel<DeleteAuditPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAuditPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAuditRule)用于删除用户的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleResponse"/></returns>
+        public async Task<DeleteAuditRuleResponse> DeleteAuditRule(DeleteAuditRuleRequest req)
+        {
+             JsonResponseModel<DeleteAuditRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAuditRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteAuditRule)用于删除用户的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleResponse"/></returns>
+        public DeleteAuditRuleResponse DeleteAuditRuleSync(DeleteAuditRuleRequest req)
+        {
+             JsonResponseModel<DeleteAuditRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAuditRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAuditRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
@@ -840,6 +1080,166 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAsyncRequestInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public async Task<DescribeAuditConfigResponse> DescribeAuditConfig(DescribeAuditConfigRequest req)
+        {
+             JsonResponseModel<DescribeAuditConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public DescribeAuditConfigResponse DescribeAuditConfigSync(DescribeAuditConfigRequest req)
+        {
+             JsonResponseModel<DescribeAuditConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public async Task<DescribeAuditLogFilesResponse> DescribeAuditLogFiles(DescribeAuditLogFilesRequest req)
+        {
+             JsonResponseModel<DescribeAuditLogFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditLogFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditLogFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
+        {
+             JsonResponseModel<DescribeAuditLogFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditLogFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditLogFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditPolicies)用于查询云数据库实例的审计策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAuditPoliciesResponse"/></returns>
+        public async Task<DescribeAuditPoliciesResponse> DescribeAuditPolicies(DescribeAuditPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeAuditPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditPolicies)用于查询云数据库实例的审计策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAuditPoliciesResponse"/></returns>
+        public DescribeAuditPoliciesResponse DescribeAuditPoliciesSync(DescribeAuditPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeAuditPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRulesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRulesResponse"/></returns>
+        public async Task<DescribeAuditRulesResponse> DescribeAuditRules(DescribeAuditRulesRequest req)
+        {
+             JsonResponseModel<DescribeAuditRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuditRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRulesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRulesResponse"/></returns>
+        public DescribeAuditRulesResponse DescribeAuditRulesSync(DescribeAuditRulesRequest req)
+        {
+             JsonResponseModel<DescribeAuditRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuditRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuditRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2778,6 +3178,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountPrivileges");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAuditConfig)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditConfigRequest"/></param>
+        /// <returns><see cref="ModifyAuditConfigResponse"/></returns>
+        public async Task<ModifyAuditConfigResponse> ModifyAuditConfig(ModifyAuditConfigRequest req)
+        {
+             JsonResponseModel<ModifyAuditConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAuditConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAuditConfig)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditConfigRequest"/></param>
+        /// <returns><see cref="ModifyAuditConfigResponse"/></returns>
+        public ModifyAuditConfigResponse ModifyAuditConfigSync(ModifyAuditConfigRequest req)
+        {
+             JsonResponseModel<ModifyAuditConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAuditConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAuditRule)用于修改用户的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleResponse"/></returns>
+        public async Task<ModifyAuditRuleResponse> ModifyAuditRule(ModifyAuditRuleRequest req)
+        {
+             JsonResponseModel<ModifyAuditRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAuditRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAuditRule)用于修改用户的审计规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleResponse"/></returns>
+        public ModifyAuditRuleResponse ModifyAuditRuleSync(ModifyAuditRuleRequest req)
+        {
+             JsonResponseModel<ModifyAuditRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAuditRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAuditRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

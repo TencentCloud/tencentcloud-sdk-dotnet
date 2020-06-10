@@ -15,34 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Hsts : AbstractModel
+    public class DeleteAuditLogFileResponse : AbstractModel
     {
         
         /// <summary>
-        /// 是否开启，on或off。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// MaxAge数值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaxAge")]
-        public long? MaxAge{ get; set; }
-
-        /// <summary>
-        /// 是否包含子域名，on或off。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("IncludeSubDomains")]
-        public string IncludeSubDomains{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "MaxAge", this.MaxAge);
-            this.SetParamSimple(map, prefix + "IncludeSubDomains", this.IncludeSubDomains);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

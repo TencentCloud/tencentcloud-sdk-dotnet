@@ -26,12 +26,13 @@ namespace TencentCloud.Tione.V20191022.Models
         
         /// <summary>
         /// Notebook实例名称
+        /// 规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
         /// </summary>
         [JsonProperty("NotebookInstanceName")]
         public string NotebookInstanceName{ get; set; }
 
         /// <summary>
-        /// session有效时间，秒
+        /// session有效时间，秒，取值范围[1800, 43200]
         /// </summary>
         [JsonProperty("SessionExpirationDurationInSeconds")]
         public long? SessionExpirationDurationInSeconds{ get; set; }

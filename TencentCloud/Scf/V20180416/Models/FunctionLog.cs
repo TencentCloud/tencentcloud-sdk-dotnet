@@ -96,6 +96,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
+        /// <summary>
+        /// 重试次数
+        /// </summary>
+        [JsonProperty("RetryNum")]
+        public ulong? RetryNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Log", this.Log);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "RetryNum", this.RetryNum);
         }
     }
 }
