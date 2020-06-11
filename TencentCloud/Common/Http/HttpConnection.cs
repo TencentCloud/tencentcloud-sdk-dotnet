@@ -39,7 +39,7 @@ namespace TencentCloud.Common.Http
             this.timeout = timeout;
             if (!string.IsNullOrEmpty(proxy))
             {
-                client = new FluentClient(baseUrl, new WebProxy(proxy));
+                client = new FluentClient(new Uri(baseUrl), new WebProxy(proxy));
             }
             else
             {
@@ -118,7 +118,7 @@ namespace TencentCloud.Common.Http
             request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
             headers.Remove("Authorization");
             StringContent body = new StringContent("", Encoding.UTF8, headers["Content-Type"]);
-            request = request.WithBodyContent(body);
+            request = request.WithBody(body);
             headers.Remove("Content-Type");
             foreach (KeyValuePair<string, string> kvp in headers)
             {
@@ -141,7 +141,7 @@ namespace TencentCloud.Common.Http
             request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
             headers.Remove("Authorization");
             StringContent body = new StringContent(payload, Encoding.UTF8, headers["Content-Type"]);
-            request = request.WithBodyContent(body);
+            request = request.WithBody(body);
             headers.Remove("Content-Type");
             foreach (KeyValuePair<string, string> kvp in headers)
             {
