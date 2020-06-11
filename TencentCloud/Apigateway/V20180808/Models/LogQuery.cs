@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Apigateway.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHTTPListenerRequest : AbstractModel
+    public class LogQuery : AbstractModel
     {
         
         /// <summary>
-        /// 监听器名称
+        /// 检索字段
         /// </summary>
-        [JsonProperty("ListenerName")]
-        public string ListenerName{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+        /// 操作符
         /// </summary>
-        [JsonProperty("Port")]
-        public ulong? Port{ get; set; }
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
         /// <summary>
-        /// 通道ID，与GroupId不能同时设置，对应为通道创建监听器
+        /// 检索值
         /// </summary>
-        [JsonProperty("ProxyId")]
-        public string ProxyId{ get; set; }
-
-        /// <summary>
-        /// 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

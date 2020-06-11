@@ -66,6 +66,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("SearchValue")]
         public string SearchValue{ get; set; }
 
+        /// <summary>
+        /// 过滤条件，通道组ID
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchValue", this.SearchValue);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

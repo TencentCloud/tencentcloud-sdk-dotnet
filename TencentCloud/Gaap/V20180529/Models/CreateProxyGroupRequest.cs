@@ -48,6 +48,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+        /// </summary>
+        [JsonProperty("AccessRegionSet")]
+        public AccessConfiguration[] AccessRegionSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
         }
     }
 }

@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHTTPListenerRequest : AbstractModel
+    public class CreateSecurityGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// 监听器名称
+        /// 安全组名称，可任意命名，但不得超过60个字符。
         /// </summary>
-        [JsonProperty("ListenerName")]
-        public string ListenerName{ get; set; }
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
 
         /// <summary>
-        /// 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+        /// 安全组备注，最多100个字符。
         /// </summary>
-        [JsonProperty("Port")]
-        public ulong? Port{ get; set; }
+        [JsonProperty("GroupDescription")]
+        public string GroupDescription{ get; set; }
 
         /// <summary>
-        /// 通道ID，与GroupId不能同时设置，对应为通道创建监听器
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
         /// </summary>
-        [JsonProperty("ProxyId")]
-        public string ProxyId{ get; set; }
-
-        /// <summary>
-        /// 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

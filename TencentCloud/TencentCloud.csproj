@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.78</VersionPrefix>
+    <VersionPrefix>3.0.79</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -197,6 +197,7 @@
     <Compile Include="Apigateway\V20180808\Models\IPStrategyApi.cs" />
     <Compile Include="Apigateway\V20180808\Models\IPStrategyApiStatus.cs" />
     <Compile Include="Apigateway\V20180808\Models\IPStrategysStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\LogQuery.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroService.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroServiceReq.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiEnvironmentStrategyRequest.cs" />
@@ -2044,6 +2045,8 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeInstancesDetailResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeRouteRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeRouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicAttributesRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicAttributesResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicDetailRequest.cs" />
@@ -2080,6 +2083,8 @@
     <Compile Include="Ckafka\V20190819\Models\OperateResponseData.cs" />
     <Compile Include="Ckafka\V20190819\Models\Partition.cs" />
     <Compile Include="Ckafka\V20190819\Models\PartitionOffset.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Route.cs" />
+    <Compile Include="Ckafka\V20190819\Models\RouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\SubscribedInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\Tag.cs" />
     <Compile Include="Ckafka\V20190819\Models\Topic.cs" />
@@ -3540,6 +3545,8 @@
     <Compile Include="Ecm\V20190719\Models\CreateModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSubnetResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateVpcRequest.cs" />
@@ -3669,6 +3676,7 @@
     <Compile Include="Ecm\V20190719\Models\RunInstancesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Ecm\V20190719\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="Ecm\V20190719\Models\SecurityGroup.cs" />
     <Compile Include="Ecm\V20190719\Models\SimpleModule.cs" />
     <Compile Include="Ecm\V20190719\Models\SrcImage.cs" />
     <Compile Include="Ecm\V20190719\Models\StartInstancesRequest.cs" />
@@ -3839,6 +3847,7 @@
     <Compile Include="Ft\V20200304\Models\SwapGenderPicRequest.cs" />
     <Compile Include="Ft\V20200304\Models\SwapGenderPicResponse.cs" />
     <Compile Include="Gaap\V20180529\GaapClient.cs" />
+    <Compile Include="Gaap\V20180529\Models\AccessConfiguration.cs" />
     <Compile Include="Gaap\V20180529\Models\AccessRegionDetial.cs" />
     <Compile Include="Gaap\V20180529\Models\AccessRegionDomainConf.cs" />
     <Compile Include="Gaap\V20180529\Models\AddRealServersRequest.cs" />
@@ -3857,6 +3866,8 @@
     <Compile Include="Gaap\V20180529\Models\CheckProxyCreateResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CloseProxiesRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CloseProxiesResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\CloseProxyGroupRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\CloseProxyGroupResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CloseSecurityPolicyRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CloseSecurityPolicyResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CountryAreaMap.cs" />
@@ -4018,6 +4029,8 @@
     <Compile Include="Gaap\V20180529\Models\NewRealServer.cs" />
     <Compile Include="Gaap\V20180529\Models\OpenProxiesRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\OpenProxiesResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\OpenProxyGroupRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\OpenProxyGroupResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\OpenSecurityPolicyRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\OpenSecurityPolicyResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\ProxyGroupDetail.cs" />
@@ -8503,6 +8516,7 @@
     <Compile Include="Vpc\V20170312\Models\BandwidthPackage.cs" />
     <Compile Include="Vpc\V20170312\Models\CCN.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnAttachedInstance.cs" />
+    <Compile Include="Vpc\V20170312\Models\CcnBandwidthInfo.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnInstance.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnRegionBandwidthLimit.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnRoute.cs" />
@@ -8784,6 +8798,8 @@
     <Compile Include="Vpc\V20170312\Models\FlowLog.cs" />
     <Compile Include="Vpc\V20170312\Models\GatewayFlowMonitorDetail.cs" />
     <Compile Include="Vpc\V20170312\Models\GatewayQos.cs" />
+    <Compile Include="Vpc\V20170312\Models\GetCcnRegionBandwidthLimitsRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\GetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\HaVip.cs" />
     <Compile Include="Vpc\V20170312\Models\HaVipAssociateAddressIpRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\HaVipAssociateAddressIpResponse.cs" />

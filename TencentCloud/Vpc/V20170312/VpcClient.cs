@@ -6303,6 +6303,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（GetCcnRegionBandwidthLimits）用于查询云联网相关地域带宽信息，其中预付费模式的云联网仅支持地域间限速，后付费模式的云联网支持地域间限速和地域出口限速。
+        /// </summary>
+        /// <param name="req"><see cref="GetCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="GetCcnRegionBandwidthLimitsResponse"/></returns>
+        public async Task<GetCcnRegionBandwidthLimitsResponse> GetCcnRegionBandwidthLimits(GetCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<GetCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（GetCcnRegionBandwidthLimits）用于查询云联网相关地域带宽信息，其中预付费模式的云联网仅支持地域间限速，后付费模式的云联网支持地域间限速和地域出口限速。
+        /// </summary>
+        /// <param name="req"><see cref="GetCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="GetCcnRegionBandwidthLimitsResponse"/></returns>
+        public GetCcnRegionBandwidthLimitsResponse GetCcnRegionBandwidthLimitsSync(GetCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<GetCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
         /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
         /// </summary>

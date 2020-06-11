@@ -773,6 +773,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 查看路由信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteRequest"/></param>
+        /// <returns><see cref="DescribeRouteResponse"/></returns>
+        public async Task<DescribeRouteResponse> DescribeRoute(DescribeRouteRequest req)
+        {
+             JsonResponseModel<DescribeRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看路由信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteRequest"/></param>
+        /// <returns><see cref="DescribeRouteResponse"/></returns>
+        public DescribeRouteResponse DescribeRouteSync(DescribeRouteRequest req)
+        {
+             JsonResponseModel<DescribeRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口请求域名：https://ckafka.tencentcloudapi.com
         /// 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
         /// </summary>

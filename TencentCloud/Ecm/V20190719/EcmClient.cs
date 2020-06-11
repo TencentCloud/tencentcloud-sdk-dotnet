@@ -305,6 +305,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 创建安全组
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupResponse"/></returns>
+        public async Task<CreateSecurityGroupResponse> CreateSecurityGroup(CreateSecurityGroupRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建安全组
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupResponse"/></returns>
+        public CreateSecurityGroupResponse CreateSecurityGroupSync(CreateSecurityGroupRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建子网，若创建成功，则此子网会成为此可用区的默认子网。
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>

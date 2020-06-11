@@ -15,38 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateHTTPListenerRequest : AbstractModel
+    public class GetCcnRegionBandwidthLimitsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 监听器名称
+        /// 云联网（CCN）各地域出带宽带宽详情。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ListenerName")]
-        public string ListenerName{ get; set; }
+        [JsonProperty("CcnBandwidthSet")]
+        public CcnBandwidthInfo[] CcnBandwidthSet{ get; set; }
 
         /// <summary>
-        /// 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+        /// 符合条件的对象数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Port")]
-        public ulong? Port{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 通道ID，与GroupId不能同时设置，对应为通道创建监听器
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ProxyId")]
-        public string ProxyId{ get; set; }
-
-        /// <summary>
-        /// 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
-        /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +50,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamArrayObj(map, prefix + "CcnBandwidthSet.", this.CcnBandwidthSet);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

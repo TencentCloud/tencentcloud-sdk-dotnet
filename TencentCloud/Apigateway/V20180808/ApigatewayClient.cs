@@ -1077,7 +1077,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 用于搜索日志
+        /// 本接口DescribeLogSearch用于搜索日志
         /// </summary>
         /// <param name="req"><see cref="DescribeLogSearchRequest"/></param>
         /// <returns><see cref="DescribeLogSearchResponse"/></returns>
@@ -1097,7 +1097,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 用于搜索日志
+        /// 本接口DescribeLogSearch用于搜索日志
         /// </summary>
         /// <param name="req"><see cref="DescribeLogSearchRequest"/></param>
         /// <returns><see cref="DescribeLogSearchResponse"/></returns>

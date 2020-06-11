@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 精确查询，支持apiid/reqid搜索
+        /// 保留字段
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -67,10 +67,26 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 模糊查询，根据关键字检索日志
+        /// 保留字段
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
+
+        /// <summary>
+        /// 检索条件,支持的检索条件如下：
+        /// req_id：“=”
+        /// api_id：“=”
+        /// cip：“=”
+        /// uip：“:”
+        /// err_msg：“:”
+        /// rsp_st：“=” 、“!=” 、 “:” 、 “>” 、 “<”
+        /// req_t：”>=“ 、 ”<=“
+        /// 
+        /// 说明：
+        /// “:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+        /// </summary>
+        [JsonProperty("LogQuerys")]
+        public LogQuery[] LogQuerys{ get; set; }
 
 
         /// <summary>
@@ -86,6 +102,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "ConText", this.ConText);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamArrayObj(map, prefix + "LogQuerys.", this.LogQuerys);
         }
     }
 }

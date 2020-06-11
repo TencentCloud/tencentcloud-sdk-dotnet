@@ -48,6 +48,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Concurrent")]
         public ulong? Concurrent{ get; set; }
 
+        /// <summary>
+        /// 如果在通道组下创建通道，需要填写通道组的ID
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Concurrent", this.Concurrent);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

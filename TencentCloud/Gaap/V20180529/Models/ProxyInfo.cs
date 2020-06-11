@@ -176,11 +176,25 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? SupportSecurity{ get; set; }
 
         /// <summary>
-        /// 计费类型:(0:按带宽计费  1:按流量计费）
+        /// 计费类型: 0表示按带宽计费  1表示按流量计费。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }
+
+        /// <summary>
+        /// 关联了解析的域名列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelatedGlobalDomains")]
+        public string[] RelatedGlobalDomains{ get; set; }
+
+        /// <summary>
+        /// 配置变更时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifyConfigTime")]
+        public ulong? ModifyConfigTime{ get; set; }
 
 
         /// <summary>
@@ -211,6 +225,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
+            this.SetParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
+            this.SetParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
         }
     }
 }

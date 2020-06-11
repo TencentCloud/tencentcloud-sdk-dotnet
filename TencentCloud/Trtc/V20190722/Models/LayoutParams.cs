@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string MainVideoUserId{ get; set; }
 
         /// <summary>
-        /// 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享
+        /// 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
         /// </summary>
         [JsonProperty("MainVideoStreamType")]
         public ulong? MainVideoStreamType{ get; set; }

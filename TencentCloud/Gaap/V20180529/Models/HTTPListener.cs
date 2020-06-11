@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 监听器协议
+        /// 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTP
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

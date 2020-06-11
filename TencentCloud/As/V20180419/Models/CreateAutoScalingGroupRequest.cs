@@ -125,7 +125,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ZonesCheckPolicy{ get; set; }
 
         /// <summary>
-        /// 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+        /// 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

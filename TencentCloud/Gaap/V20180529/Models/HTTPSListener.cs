@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 监听器协议， 值为：HTTP
+        /// 监听器协议， HTTP表示HTTP，HTTPS表示HTTPS，此结构取值HTTPS
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -93,8 +93,8 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 监听器认证方式。其中，
-        /// 0，单向认证；
-        /// 1，双向认证。
+        /// 0表示单向认证；
+        /// 1表示双向认证。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthType")]

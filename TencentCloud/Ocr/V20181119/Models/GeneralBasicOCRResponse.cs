@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Language{ get; set; }
 
         /// <summary>
-        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。
+        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
         /// </summary>
         [JsonProperty("Angel")]
         public float? Angel{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 直播流ID
+        /// 直播流ID，该流ID不能与用户旁路的流ID相同。
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }

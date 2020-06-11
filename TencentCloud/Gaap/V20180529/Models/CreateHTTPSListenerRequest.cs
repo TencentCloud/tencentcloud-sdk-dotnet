@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// 通道ID
+        /// 通道ID，与GroupId之间只能设置一个。表示创建通道的监听器。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
@@ -75,6 +75,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyClientCertificateIds")]
         public string[] PolyClientCertificateIds{ get; set; }
 
+        /// <summary>
+        /// 通道组ID，与ProxyId之间只能设置一个。表示创建通道组的监听器。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
             this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

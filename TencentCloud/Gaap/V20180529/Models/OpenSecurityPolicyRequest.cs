@@ -30,6 +30,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
+        /// <summary>
+        /// 安全策略ID
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

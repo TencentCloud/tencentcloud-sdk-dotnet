@@ -31,6 +31,12 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Text{ get; set; }
 
         /// <summary>
+        /// 指定要加载的自定义词库ID。
+        /// </summary>
+        [JsonProperty("DictId")]
+        public string DictId{ get; set; }
+
+        /// <summary>
         /// 词法分析模式（默认取2值）：
         /// 1、高精度（混合粒度分词能力）；
         /// 2、高性能（单粒度分词能力）；
@@ -45,6 +51,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "DictId", this.DictId);
             this.SetParamSimple(map, prefix + "Flag", this.Flag);
         }
     }

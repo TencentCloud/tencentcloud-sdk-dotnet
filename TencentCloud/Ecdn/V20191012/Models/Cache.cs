@@ -31,7 +31,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public CacheRule[] CacheRules{ get; set; }
 
         /// <summary>
-        /// 遵循源站 Cache-Control: max-age 配置
+        /// 遵循源站 Cache-Control: max-age 配置，白名单功能。
         /// on：开启
         /// off：关闭
         /// 开启后，未能匹配 CacheRules 规则的资源将根据源站返回的 max-age 值进行节点缓存；匹配了 CacheRules 规则的资源将按照 CacheRules 中设置的缓存过期时间在节点进行缓存

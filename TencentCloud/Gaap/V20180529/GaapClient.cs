@@ -255,6 +255,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 本接口（CloseProxyGroup）用于关闭通道组。通道组关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyGroupRequest"/></param>
+        /// <returns><see cref="CloseProxyGroupResponse"/></returns>
+        public async Task<CloseProxyGroupResponse> CloseProxyGroup(CloseProxyGroupRequest req)
+        {
+             JsonResponseModel<CloseProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseProxyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloseProxyGroup）用于关闭通道组。通道组关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyGroupRequest"/></param>
+        /// <returns><see cref="CloseProxyGroupResponse"/></returns>
+        public CloseProxyGroupResponse CloseProxyGroupSync(CloseProxyGroupRequest req)
+        {
+             JsonResponseModel<CloseProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseProxyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 关闭安全策略
         /// </summary>
         /// <param name="req"><see cref="CloseSecurityPolicyRequest"/></param>
@@ -3210,6 +3250,46 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "OpenProxies");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProxiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（OpenProxyGroup）用于开启一条通道组中的所有通道
+        /// </summary>
+        /// <param name="req"><see cref="OpenProxyGroupRequest"/></param>
+        /// <returns><see cref="OpenProxyGroupResponse"/></returns>
+        public async Task<OpenProxyGroupResponse> OpenProxyGroup(OpenProxyGroupRequest req)
+        {
+             JsonResponseModel<OpenProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProxyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（OpenProxyGroup）用于开启一条通道组中的所有通道
+        /// </summary>
+        /// <param name="req"><see cref="OpenProxyGroupRequest"/></param>
+        /// <returns><see cref="OpenProxyGroupResponse"/></returns>
+        public OpenProxyGroupResponse OpenProxyGroupSync(OpenProxyGroupRequest req)
+        {
+             JsonResponseModel<OpenProxyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenProxyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProxyGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

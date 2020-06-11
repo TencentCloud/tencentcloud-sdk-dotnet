@@ -61,7 +61,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? Concurrent{ get; set; }
 
         /// <summary>
-        /// 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+        /// 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
         /// </summary>
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }

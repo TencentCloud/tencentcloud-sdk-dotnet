@@ -15,29 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteProxyGroupRequest : AbstractModel
+    public class RouteResponse : AbstractModel
     {
         
         /// <summary>
-        /// 需要删除的通道组ID。
+        /// 路由信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
-
-        /// <summary>
-        /// 强制删除标识。其中：
-        /// 0，不强制删除，
-        /// 1，强制删除。
-        /// 默认为0，当通道组中存在通道或通道组中存在监听器/规则绑定了源站时，且Force为0时，该操作会返回失败。
-        /// </summary>
-        [JsonProperty("Force")]
-        public ulong? Force{ get; set; }
+        [JsonProperty("Routers")]
+        public Route[] Routers{ get; set; }
 
 
         /// <summary>
@@ -45,8 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "Force", this.Force);
+            this.SetParamArrayObj(map, prefix + "Routers.", this.Routers);
         }
     }
 }
