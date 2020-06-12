@@ -48,6 +48,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("RedSerialNo")]
         public string RedSerialNo{ get; set; }
 
+        /// <summary>
+        /// 门店编号
+        /// </summary>
+        [JsonProperty("StoreNo")]
+        public string StoreNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "OrderSn", this.OrderSn);
             this.SetParamSimple(map, prefix + "RedSerialNo", this.RedSerialNo);
+            this.SetParamSimple(map, prefix + "StoreNo", this.StoreNo);
         }
     }
 }

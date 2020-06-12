@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.79</VersionPrefix>
+    <VersionPrefix>3.0.80</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5992,6 +5992,7 @@
     <Compile Include="Ocr\V20181119\Models\PassportOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\ProductDataRecord.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\QrcodeImgSize.cs" />
@@ -5999,6 +6000,8 @@
     <Compile Include="Ocr\V20181119\Models\QrcodeOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\QrcodePositionObj.cs" />
     <Compile Include="Ocr\V20181119\Models\QrcodeResultsInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\QueryBarCodeRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\QueryBarCodeResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\QuestionBlockObj.cs" />
     <Compile Include="Ocr\V20181119\Models\QuestionObj.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRRequest.cs" />

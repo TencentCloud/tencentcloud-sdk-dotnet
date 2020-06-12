@@ -222,6 +222,24 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("UndoPart")]
         public long? UndoPart{ get; set; }
 
+        /// <summary>
+        /// 订单下单时间（格式 YYYMMDD）
+        /// </summary>
+        [JsonProperty("OrderDate")]
+        public string OrderDate{ get; set; }
+
+        /// <summary>
+        /// 订单级别（单位为分）
+        /// </summary>
+        [JsonProperty("Discount")]
+        public long? Discount{ get; set; }
+
+        /// <summary>
+        /// 门店编码
+        /// </summary>
+        [JsonProperty("StoreNo")]
+        public string StoreNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -260,6 +278,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
             this.SetParamSimple(map, prefix + "UndoPart", this.UndoPart);
+            this.SetParamSimple(map, prefix + "OrderDate", this.OrderDate);
+            this.SetParamSimple(map, prefix + "Discount", this.Discount);
+            this.SetParamSimple(map, prefix + "StoreNo", this.StoreNo);
         }
     }
 }

@@ -997,7 +997,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeIPStrategyApisStatus）用于查询IP策略绑定的API列表
+        /// 本接口（DescribeIPStrategyApisStatus）用于查询IP策略可以绑定的API列表。即服务下所有API和该策略已绑定API的差集。
         /// </summary>
         /// <param name="req"><see cref="DescribeIPStrategyApisStatusRequest"/></param>
         /// <returns><see cref="DescribeIPStrategyApisStatusResponse"/></returns>
@@ -1017,7 +1017,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（DescribeIPStrategyApisStatus）用于查询IP策略绑定的API列表
+        /// 本接口（DescribeIPStrategyApisStatus）用于查询IP策略可以绑定的API列表。即服务下所有API和该策略已绑定API的差集。
         /// </summary>
         /// <param name="req"><see cref="DescribeIPStrategyApisStatusRequest"/></param>
         /// <returns><see cref="DescribeIPStrategyApisStatusResponse"/></returns>

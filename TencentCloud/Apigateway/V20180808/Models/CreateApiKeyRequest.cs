@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 密钥类型，支持 auto 和 manunal（自定义密钥），默认为 auto。
+        /// 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
         /// </summary>
         [JsonProperty("AccessKeyType")]
         public string AccessKeyType{ get; set; }

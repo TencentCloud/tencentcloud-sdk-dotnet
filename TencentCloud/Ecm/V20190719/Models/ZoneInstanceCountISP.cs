@@ -37,10 +37,28 @@ namespace TencentCloud.Ecm.V20190719.Models
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 运营商。
+        /// 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
         /// </summary>
         [JsonProperty("ISP")]
         public string ISP{ get; set; }
+
+        /// <summary>
+        /// 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 指定子网编号，SubnetId与VpcId必须同时指定或不指定
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
+        /// </summary>
+        [JsonProperty("PrivateIpAddresses")]
+        public string[] PrivateIpAddresses{ get; set; }
 
 
         /// <summary>
@@ -51,6 +69,9 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "ISP", this.ISP);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         }
     }
 }

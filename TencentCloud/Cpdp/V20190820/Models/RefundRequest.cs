@@ -90,6 +90,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("SubOrderRefundList")]
         public RefundOutSubOrderRefundList[] SubOrderRefundList{ get; set; }
 
+        /// <summary>
+        /// 环境名:
+        /// release: 现网环境
+        /// sandbox: 沙箱环境
+        /// development: 开发环境
+        /// 缺省: release
+        /// </summary>
+        [JsonProperty("MidasEnvironment")]
+        public string MidasEnvironment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +117,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "TransactionId", this.TransactionId);
             this.SetParamSimple(map, prefix + "PlatformRefundAmt", this.PlatformRefundAmt);
             this.SetParamArrayObj(map, prefix + "SubOrderRefundList.", this.SubOrderRefundList);
+            this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         }
     }
 }
