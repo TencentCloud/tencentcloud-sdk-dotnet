@@ -51,6 +51,9 @@ namespace TencentCloud.Tione.V20191022.Models
         /// lifecycle-name - String - 是否必填：否 -（过滤条件）按照生命周期脚本名称过滤。
         /// default-code-repo-name - String - 是否必填：否 -（过滤条件）按照默认存储库名称过滤。
         /// additional-code-repo-name - String - 是否必填：否 -（过滤条件）按照其他存储库名称过滤。
+        /// billing-status - String - 是否必填：否 - （过滤条件）按照计费状态过滤，可取以下值
+        ///    StorageOnly：仅存储计费的实例
+        ///    Computing：计算和存储都计费的实例
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

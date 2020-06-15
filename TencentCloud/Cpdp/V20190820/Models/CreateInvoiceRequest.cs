@@ -223,13 +223,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public long? UndoPart{ get; set; }
 
         /// <summary>
-        /// 订单下单时间（格式 YYYMMDD）
+        /// 订单下单时间（格式 YYYYMMDD）
         /// </summary>
         [JsonProperty("OrderDate")]
         public string OrderDate{ get; set; }
 
         /// <summary>
-        /// 订单级别（单位为分）
+        /// 订单级别折扣（单位为分）
         /// </summary>
         [JsonProperty("Discount")]
         public long? Discount{ get; set; }

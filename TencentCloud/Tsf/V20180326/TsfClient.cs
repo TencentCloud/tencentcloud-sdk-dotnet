@@ -1135,6 +1135,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询API详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiDetailResponse"/></returns>
+        public async Task<DescribeApiDetailResponse> DescribeApiDetail(DescribeApiDetailRequest req)
+        {
+             JsonResponseModel<DescribeApiDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiDetailResponse"/></returns>
+        public DescribeApiDetailResponse DescribeApiDetailSync(DescribeApiDetailRequest req)
+        {
+             JsonResponseModel<DescribeApiDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API 版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiVersionsRequest"/></param>
+        /// <returns><see cref="DescribeApiVersionsResponse"/></returns>
+        public async Task<DescribeApiVersionsResponse> DescribeApiVersions(DescribeApiVersionsRequest req)
+        {
+             JsonResponseModel<DescribeApiVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API 版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiVersionsRequest"/></param>
+        /// <returns><see cref="DescribeApiVersionsResponse"/></returns>
+        public DescribeApiVersionsResponse DescribeApiVersionsSync(DescribeApiVersionsRequest req)
+        {
+             JsonResponseModel<DescribeApiVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取应用详情
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationRequest"/></param>
@@ -1928,6 +2008,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMicroservices");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMicroservicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务API列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsApiListRequest"/></param>
+        /// <returns><see cref="DescribeMsApiListResponse"/></returns>
+        public async Task<DescribeMsApiListResponse> DescribeMsApiList(DescribeMsApiListRequest req)
+        {
+             JsonResponseModel<DescribeMsApiListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMsApiList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMsApiListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务API列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsApiListRequest"/></param>
+        /// <returns><see cref="DescribeMsApiListResponse"/></returns>
+        public DescribeMsApiListResponse DescribeMsApiListSync(DescribeMsApiListRequest req)
+        {
+             JsonResponseModel<DescribeMsApiListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMsApiList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMsApiListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

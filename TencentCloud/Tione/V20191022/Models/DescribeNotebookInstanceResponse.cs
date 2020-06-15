@@ -102,6 +102,12 @@ namespace TencentCloud.Tione.V20191022.Models
 
         /// <summary>
         /// Notebook实例状态
+        /// 
+        /// Pending: 创建中
+        /// Inservice: 运行中
+        /// Stopping: 停止中
+        /// Stopped: 已停止
+        /// Failed: 失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotebookInstanceStatus")]
@@ -145,6 +151,27 @@ namespace TencentCloud.Tione.V20191022.Models
         public string ClsAccess{ get; set; }
 
         /// <summary>
+        /// 是否预付费实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Prepay")]
+        public bool? Prepay{ get; set; }
+
+        /// <summary>
+        /// 实例运行截止时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public string Deadline{ get; set; }
+
+        /// <summary>
+        /// 自动停止配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StoppingCondition")]
+        public StoppingCondition StoppingCondition{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -173,6 +200,9 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "DefaultCodeRepository", this.DefaultCodeRepository);
             this.SetParamArraySimple(map, prefix + "AdditionalCodeRepositories.", this.AdditionalCodeRepositories);
             this.SetParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
+            this.SetParamSimple(map, prefix + "Prepay", this.Prepay);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

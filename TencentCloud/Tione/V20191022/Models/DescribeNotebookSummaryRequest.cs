@@ -21,23 +21,15 @@ namespace TencentCloud.Tione.V20191022.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeNotebookInstanceRequest : AbstractModel
+    public class DescribeNotebookSummaryRequest : AbstractModel
     {
         
-        /// <summary>
-        /// Notebook实例名称
-        /// 规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
-        /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
         }
     }
 }

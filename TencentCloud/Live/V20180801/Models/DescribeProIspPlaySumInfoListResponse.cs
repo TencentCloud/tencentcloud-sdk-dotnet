@@ -73,7 +73,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ProIspPlaySumInfo[] DataInfoList{ get; set; }
 
         /// <summary>
-        /// 平均带宽。
+        /// 下载速度，单位：MB/s，计算方式：总流量/总时长。
         /// </summary>
         [JsonProperty("AvgFluxPerSecond")]
         public float? AvgFluxPerSecond{ get; set; }

@@ -26,6 +26,7 @@ namespace TencentCloud.Tione.V20191022.Models
         
         /// <summary>
         /// Notebook实例名称
+        /// 规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
         /// </summary>
         [JsonProperty("NotebookInstanceName")]
         public string NotebookInstanceName{ get; set; }
@@ -62,9 +63,7 @@ namespace TencentCloud.Tione.V20191022.Models
 
         /// <summary>
         /// 是否解绑生命周期脚本，默认 false。
-        /// 如果本来就没有绑定脚本，则忽略此参数；
-        /// 如果本来有绑定脚本，此参数为 true 则解绑；
-        /// 如果本来有绑定脚本，此参数为 false，则需要额外填入 LifecycleScriptsName
+        /// 该值为true时，LifecycleScriptsName将被忽略
         /// </summary>
         [JsonProperty("DisassociateLifecycleScript")]
         public bool? DisassociateLifecycleScript{ get; set; }
@@ -103,6 +102,20 @@ namespace TencentCloud.Tione.V20191022.Models
         [JsonProperty("ClsAccess")]
         public string ClsAccess{ get; set; }
 
+        /// <summary>
+        /// 自动停止，可取值Enabled/Disabled
+        /// 取值为Disabled的时候StoppingCondition将被忽略
+        /// 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+        /// </summary>
+        [JsonProperty("AutoStopping")]
+        public string AutoStopping{ get; set; }
+
+        /// <summary>
+        /// 自动停止配置，只在AutoStopping为Enabled的时候生效
+        /// </summary>
+        [JsonProperty("StoppingCondition")]
+        public StoppingCondition StoppingCondition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +134,8 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "DisassociateDefaultCodeRepository", this.DisassociateDefaultCodeRepository);
             this.SetParamSimple(map, prefix + "DisassociateAdditionalCodeRepositories", this.DisassociateAdditionalCodeRepositories);
             this.SetParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
+            this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
+            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
         }
     }
 }

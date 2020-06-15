@@ -46,7 +46,12 @@ namespace TencentCloud.Tione.V20191022.Models
         public string NotebookInstanceName{ get; set; }
 
         /// <summary>
-        /// notebook实例状态
+        /// notebook实例状态，取值范围：
+        /// Pending: 创建中
+        /// Inservice: 运行中
+        /// Stopping: 停止中
+        /// Stopped: 已停止
+        /// Failed: 失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NotebookInstanceStatus")]
@@ -60,11 +65,46 @@ namespace TencentCloud.Tione.V20191022.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 算力Id
+        /// 实例ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 启动时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartupTime")]
+        public string StartupTime{ get; set; }
+
+        /// <summary>
+        /// 运行截止时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public string Deadline{ get; set; }
+
+        /// <summary>
+        /// 自动停止配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StoppingCondition")]
+        public StoppingCondition StoppingCondition{ get; set; }
+
+        /// <summary>
+        /// 是否是预付费实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Prepay")]
+        public bool? Prepay{ get; set; }
+
+        /// <summary>
+        /// 计费标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BillingLabel")]
+        public BillingLabel BillingLabel{ get; set; }
 
 
         /// <summary>
@@ -78,6 +118,11 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "NotebookInstanceStatus", this.NotebookInstanceStatus);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "StartupTime", this.StartupTime);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamSimple(map, prefix + "Prepay", this.Prepay);
+            this.SetParamObj(map, prefix + "BillingLabel.", this.BillingLabel);
         }
     }
 }
