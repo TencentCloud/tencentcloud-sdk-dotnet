@@ -106,6 +106,20 @@ namespace TencentCloud.Tione.V20191022.Models
         [JsonProperty("BillingLabel")]
         public BillingLabel BillingLabel{ get; set; }
 
+        /// <summary>
+        /// 运行时长，秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuntimeInSeconds")]
+        public long? RuntimeInSeconds{ get; set; }
+
+        /// <summary>
+        /// 剩余时长，秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemainTimeInSeconds")]
+        public long? RemainTimeInSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +137,8 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
             this.SetParamSimple(map, prefix + "Prepay", this.Prepay);
             this.SetParamObj(map, prefix + "BillingLabel.", this.BillingLabel);
+            this.SetParamSimple(map, prefix + "RuntimeInSeconds", this.RuntimeInSeconds);
+            this.SetParamSimple(map, prefix + "RemainTimeInSeconds", this.RemainTimeInSeconds);
         }
     }
 }
