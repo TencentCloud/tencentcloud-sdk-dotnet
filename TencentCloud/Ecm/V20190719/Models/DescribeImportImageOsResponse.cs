@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMediaInfoResponse : AbstractModel
+    public class DescribeImportImageOsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 新的视频封面 URL。
-        /// * 注意：仅当请求携带 CoverData 时此返回值有效。 *
+        /// 支持的导入镜像的操作系统类型
         /// </summary>
-        [JsonProperty("CoverUrl")]
-        public string CoverUrl{ get; set; }
+        [JsonProperty("ImportImageOsListSupported")]
+        public ImageOsList ImportImageOsListSupported{ get; set; }
+
+        /// <summary>
+        /// 支持的导入镜像的操作系统版本
+        /// </summary>
+        [JsonProperty("ImportImageOsVersionSet")]
+        public OsVersion[] ImportImageOsVersionSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +48,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+            this.SetParamObj(map, prefix + "ImportImageOsListSupported.", this.ImportImageOsListSupported);
+            this.SetParamArrayObj(map, prefix + "ImportImageOsVersionSet.", this.ImportImageOsVersionSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

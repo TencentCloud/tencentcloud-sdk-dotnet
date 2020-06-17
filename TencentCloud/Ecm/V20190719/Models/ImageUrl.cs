@@ -15,27 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMediaInfoResponse : AbstractModel
+    public class ImageUrl : AbstractModel
     {
         
         /// <summary>
-        /// 新的视频封面 URL。
-        /// * 注意：仅当请求携带 CoverData 时此返回值有效。 *
+        /// 镜像文件COS链接，如设置私有读写，需授权腾讯云ECM运营账号访问权限。
         /// </summary>
-        [JsonProperty("CoverUrl")]
-        public string CoverUrl{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ImageFile")]
+        public string ImageFile{ get; set; }
 
 
         /// <summary>
@@ -43,8 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ImageFile", this.ImageFile);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// 读写策略：填写r、w、rw，表示只读、只写、读写
+        /// 读写策略：填写r、rw，表示只读、读写
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }

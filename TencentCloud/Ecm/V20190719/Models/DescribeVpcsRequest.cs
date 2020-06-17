@@ -25,6 +25,12 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("EcmRegion")]
+        public string EcmRegion{ get; set; }
+
+        /// <summary>
         /// VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
         /// </summary>
         [JsonProperty("VpcIds")]
@@ -54,23 +60,17 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
-        /// <summary>
-        /// 地域
-        /// </summary>
-        [JsonProperty("EcmRegion")]
-        public string EcmRegion{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
             this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         }
     }
 }

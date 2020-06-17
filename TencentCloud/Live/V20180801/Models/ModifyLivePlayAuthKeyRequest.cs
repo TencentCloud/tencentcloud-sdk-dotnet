@@ -25,31 +25,35 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 域名。
+        /// 播放域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
         /// 是否启用，0：关闭，1：启用。
+        /// 不传表示不修改当前值。
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
         /// 鉴权key。
+        /// 不传表示不修改当前值。
         /// </summary>
         [JsonProperty("AuthKey")]
         public string AuthKey{ get; set; }
 
         /// <summary>
         /// 有效时间，单位：秒。
+        /// 不传表示不修改当前值。
         /// </summary>
         [JsonProperty("AuthDelta")]
         public ulong? AuthDelta{ get; set; }
 
         /// <summary>
-        /// 鉴权backkey。
+        /// 鉴权备用key。
+        /// 不传表示不修改当前值。
         /// </summary>
         [JsonProperty("AuthBackKey")]
         public string AuthBackKey{ get; set; }

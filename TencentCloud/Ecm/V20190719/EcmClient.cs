@@ -785,6 +785,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询导入镜像任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomImageTaskRequest"/></param>
+        /// <returns><see cref="DescribeCustomImageTaskResponse"/></returns>
+        public async Task<DescribeCustomImageTaskResponse> DescribeCustomImageTask(DescribeCustomImageTaskRequest req)
+        {
+             JsonResponseModel<DescribeCustomImageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomImageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomImageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询导入镜像任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomImageTaskRequest"/></param>
+        /// <returns><see cref="DescribeCustomImageTaskResponse"/></returns>
+        public DescribeCustomImageTaskResponse DescribeCustomImageTaskSync(DescribeCustomImageTaskRequest req)
+        {
+             JsonResponseModel<DescribeCustomImageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomImageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomImageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询可用区的默认子网
         /// </summary>
         /// <param name="req"><see cref="DescribeDefaultSubnetRequest"/></param>
@@ -856,6 +896,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询外部导入镜像支持的OS列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImportImageOsRequest"/></param>
+        /// <returns><see cref="DescribeImportImageOsResponse"/></returns>
+        public async Task<DescribeImportImageOsResponse> DescribeImportImageOs(DescribeImportImageOsRequest req)
+        {
+             JsonResponseModel<DescribeImportImageOsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImportImageOs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImportImageOsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询外部导入镜像支持的OS列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImportImageOsRequest"/></param>
+        /// <returns><see cref="DescribeImportImageOsResponse"/></returns>
+        public DescribeImportImageOsResponse DescribeImportImageOsSync(DescribeImportImageOsRequest req)
+        {
+             JsonResponseModel<DescribeImportImageOsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImportImageOs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImportImageOsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1460,6 +1540,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从腾讯云COS导入自定义镜像
+        /// </summary>
+        /// <param name="req"><see cref="ImportCustomImageRequest"/></param>
+        /// <returns><see cref="ImportCustomImageResponse"/></returns>
+        public async Task<ImportCustomImageResponse> ImportCustomImage(ImportCustomImageRequest req)
+        {
+             JsonResponseModel<ImportCustomImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportCustomImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportCustomImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从腾讯云COS导入自定义镜像
+        /// </summary>
+        /// <param name="req"><see cref="ImportCustomImageRequest"/></param>
+        /// <returns><see cref="ImportCustomImageResponse"/></returns>
+        public ImportCustomImageResponse ImportCustomImageSync(ImportCustomImageRequest req)
+        {
+             JsonResponseModel<ImportCustomImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportCustomImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportCustomImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -32,18 +32,21 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 是否启用，0：关闭，1：启用。
+        /// 不传表示不修改当前值。
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
         /// 主鉴权key。
+        /// 不传表示不修改当前值。
         /// </summary>
         [JsonProperty("MasterAuthKey")]
         public string MasterAuthKey{ get; set; }
 
         /// <summary>
         /// 备鉴权key。
+        /// 不传表示不修改当前值。
         /// </summary>
         [JsonProperty("BackupAuthKey")]
         public string BackupAuthKey{ get; set; }

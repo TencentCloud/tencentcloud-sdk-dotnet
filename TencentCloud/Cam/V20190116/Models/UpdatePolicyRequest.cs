@@ -25,13 +25,13 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 策略ID
+        /// 策略ID，与PolicyName二选一必填
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// 策略名
+        /// 策略名，与PolicyId二选一必填
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }

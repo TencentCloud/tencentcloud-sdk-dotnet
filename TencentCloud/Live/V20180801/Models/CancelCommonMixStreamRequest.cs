@@ -26,6 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 混流会话（申请混流开始到取消混流结束）标识 ID。
+        /// 该值与CreateCommonMixStream中的MixStreamSessionId保持一致。
         /// </summary>
         [JsonProperty("MixStreamSessionId")]
         public string MixStreamSessionId{ get; set; }

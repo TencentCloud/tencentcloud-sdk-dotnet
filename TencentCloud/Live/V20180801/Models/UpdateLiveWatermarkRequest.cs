@@ -38,19 +38,20 @@ namespace TencentCloud.Live.V20180801.Models
         public string PictureUrl{ get; set; }
 
         /// <summary>
-        /// 显示位置，X轴偏移，默认 0。
+        /// 显示位置，X轴偏移，单位是百分比，默认 0。
         /// </summary>
         [JsonProperty("XPosition")]
         public long? XPosition{ get; set; }
 
         /// <summary>
-        /// 显示位置，Y轴偏移，默认 0。
+        /// 显示位置，Y轴偏移，单位是百分比，默认 0。
         /// </summary>
         [JsonProperty("YPosition")]
         public long? YPosition{ get; set; }
 
         /// <summary>
         /// 水印名称。
+        /// 最长16字节。
         /// </summary>
         [JsonProperty("WatermarkName")]
         public string WatermarkName{ get; set; }

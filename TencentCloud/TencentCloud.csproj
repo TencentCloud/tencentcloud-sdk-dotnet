@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.82</VersionPrefix>
+    <VersionPrefix>3.0.83</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3569,10 +3569,14 @@
     <Compile Include="Ecm\V20190719\Models\DescribeBaseOverviewResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeConfigRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeConfigResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeCustomImageTaskRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeCustomImageTaskResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImageResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeImportImageOsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeImportImageOsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstanceTypeConfigRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstanceTypeConfigResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstanceVncUrlRequest.cs" />
@@ -3610,6 +3614,11 @@
     <Compile Include="Ecm\V20190719\Models\ISP.cs" />
     <Compile Include="Ecm\V20190719\Models\ISPCounter.cs" />
     <Compile Include="Ecm\V20190719\Models\Image.cs" />
+    <Compile Include="Ecm\V20190719\Models\ImageOsList.cs" />
+    <Compile Include="Ecm\V20190719\Models\ImageTask.cs" />
+    <Compile Include="Ecm\V20190719\Models\ImageUrl.cs" />
+    <Compile Include="Ecm\V20190719\Models\ImportCustomImageRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ImportCustomImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ImportImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ImportImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Instance.cs" />
@@ -3650,6 +3659,7 @@
     <Compile Include="Ecm\V20190719\Models\Node.cs" />
     <Compile Include="Ecm\V20190719\Models\NodeInstanceNum.cs" />
     <Compile Include="Ecm\V20190719\Models\OperatorAction.cs" />
+    <Compile Include="Ecm\V20190719\Models\OsVersion.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakBase.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakFamilyInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakNetwork.cs" />

@@ -37,7 +37,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 状态，0： 关闭  1：打开。
+        /// HTTPS开启状态，0： 关闭  1：打开。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
