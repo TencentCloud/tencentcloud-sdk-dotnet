@@ -25,19 +25,19 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 识别出的文本行内容
+        /// 识别出的文本行内容。
         /// </summary>
         [JsonProperty("DetectedText")]
         public string DetectedText{ get; set; }
 
         /// <summary>
-        /// 置信度 0 ~100
+        /// 置信度 0 ~100。
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 文本行坐标，以四个顶点坐标表示
+        /// 文本行坐标，以四个顶点坐标表示。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Polygon")]
@@ -49,6 +49,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }
 
+        /// <summary>
+        /// 单词在原图中的四点坐标。
+        /// </summary>
+        [JsonProperty("WordCoordPoint")]
+        public WordCoordPoint[] WordCoordPoint{ get; set; }
+
+        /// <summary>
+        /// 候选字符集(包含候选字Character以及置信度Confidence)。
+        /// </summary>
+        [JsonProperty("CandWord")]
+        public CandWord[] CandWord{ get; set; }
+
+        /// <summary>
+        /// 识别出来的单词信息（包括单词Character和单词置信度confidence）
+        /// </summary>
+        [JsonProperty("Words")]
+        public Words[] Words{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +77,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamArrayObj(map, prefix + "WordCoordPoint.", this.WordCoordPoint);
+            this.SetParamArrayObj(map, prefix + "CandWord.", this.CandWord);
+            this.SetParamArrayObj(map, prefix + "Words.", this.Words);
         }
     }
 }

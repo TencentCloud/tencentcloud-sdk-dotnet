@@ -43,6 +43,20 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 单词四点坐标开关，开启可返回图片中单词的四点坐标。
+        /// 该参数默认值为false。
+        /// </summary>
+        [JsonProperty("EnableCoordPoint")]
+        public bool? EnableCoordPoint{ get; set; }
+
+        /// <summary>
+        /// 候选字开关，开启可返回识别时多个可能的候选字（每个候选字对应其置信度）。
+        /// 该参数默认值为false。
+        /// </summary>
+        [JsonProperty("EnableCandWord")]
+        public bool? EnableCandWord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "EnableCoordPoint", this.EnableCoordPoint);
+            this.SetParamSimple(map, prefix + "EnableCandWord", this.EnableCandWord);
         }
     }
 }
