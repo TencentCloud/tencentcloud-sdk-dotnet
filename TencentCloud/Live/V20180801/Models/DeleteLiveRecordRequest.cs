@@ -31,8 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 任务ID，全局唯一标识录制任务。
-        /// 从接口 [CreateLiveRecord](/document/product/267/30148) 的返回值中获取TaskId。
+        /// 任务ID，由CreateLiveRecord接口返回。
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

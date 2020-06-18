@@ -44,7 +44,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 是非返回头像。默认不返回。
+        /// 是否返回头像。默认不返回。
         /// </summary>
         [JsonProperty("RetProfile")]
         public bool? RetProfile{ get; set; }

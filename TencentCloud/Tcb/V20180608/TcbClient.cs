@@ -893,6 +893,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 管理终端用户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEndUserRequest"/></param>
+        /// <returns><see cref="ModifyEndUserResponse"/></returns>
+        public async Task<ModifyEndUserResponse> ModifyEndUser(ModifyEndUserRequest req)
+        {
+             JsonResponseModel<ModifyEndUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEndUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEndUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 管理终端用户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEndUserRequest"/></param>
+        /// <returns><see cref="ModifyEndUserResponse"/></returns>
+        public ModifyEndUserResponse ModifyEndUserSync(ModifyEndUserRequest req)
+        {
+             JsonResponseModel<ModifyEndUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEndUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEndUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新环境信息
         /// </summary>
         /// <param name="req"><see cref="ModifyEnvRequest"/></param>

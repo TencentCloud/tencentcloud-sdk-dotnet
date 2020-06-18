@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopLiveRecordRequest : AbstractModel
+    public class ModifyEndUserRequest : AbstractModel
     {
         
         /// <summary>
-        /// 流名称。
+        /// 环境ID
         /// </summary>
-        [JsonProperty("StreamName")]
-        public string StreamName{ get; set; }
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
 
         /// <summary>
-        /// 任务ID，由CreateLiveRecord接口返回。
+        /// C端用户端的唯一ID
         /// </summary>
-        [JsonProperty("TaskId")]
-        public long? TaskId{ get; set; }
+        [JsonProperty("UUId")]
+        public string UUId{ get; set; }
+
+        /// <summary>
+        /// 帐号的状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "UUId", this.UUId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
