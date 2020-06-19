@@ -51,6 +51,17 @@ namespace TencentCloud.Bda.V20200324.Models
         [JsonProperty("MaxBodyNum")]
         public ulong? MaxBodyNum{ get; set; }
 
+        /// <summary>
+        /// 是否返回年龄、性别、朝向等属性。 
+        /// 可选项有 Age、Bag、Gender、UpperBodyCloth、LowerBodyCloth、Orientation。  
+        /// 如果此参数为空则为不需要返回。 
+        /// 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
+        /// 关于各属性的详细描述，参见下文出参。 
+        /// 最多返回面积最大的 5 个人体属性信息，超过 5 个人体（第 6 个及以后的人体）的 BodyAttributesInfo 不具备参考意义。
+        /// </summary>
+        [JsonProperty("AttributesOptions")]
+        public AttributesOptions AttributesOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +71,7 @@ namespace TencentCloud.Bda.V20200324.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "MaxBodyNum", this.MaxBodyNum);
+            this.SetParamObj(map, prefix + "AttributesOptions.", this.AttributesOptions);
         }
     }
 }

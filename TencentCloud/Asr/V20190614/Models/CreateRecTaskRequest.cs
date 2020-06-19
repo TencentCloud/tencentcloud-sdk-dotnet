@@ -87,19 +87,19 @@ namespace TencentCloud.Asr.V20190614.Models
         public string HotwordId{ get; set; }
 
         /// <summary>
-        /// 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。
+        /// 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
         /// </summary>
         [JsonProperty("FilterDirty")]
         public long? FilterDirty{ get; set; }
 
         /// <summary>
-        /// 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。
+        /// 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
         /// </summary>
         [JsonProperty("FilterModal")]
         public long? FilterModal{ get; set; }
 
         /// <summary>
-        /// 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+        /// 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为 1。
         /// </summary>
         [JsonProperty("ConvertNumMode")]
         public long? ConvertNumMode{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("UpdateIvl")]
         public long? UpdateIvl{ get; set; }
 
+        /// <summary>
+        /// 子网ID
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "ProtocolPorts.", this.ProtocolPorts);
             this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
             this.SetParamSimple(map, prefix + "UpdateIvl", this.UpdateIvl);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

@@ -21,28 +21,20 @@ namespace TencentCloud.Bda.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BodyDetectResult : AbstractModel
+    public class UpperBodyClothTexture : AbstractModel
     {
         
         /// <summary>
-        /// 检测出的人体置信度。 
-        /// 误识率百分之十对应的阈值是0.14；误识率百分之五对应的阈值是0.32；误识率百分之二对应的阈值是0.62；误识率百分之一对应的阈值是0.81。 
-        /// 通常情况建议使用阈值0.32，可适用大多数情况。
+        /// 上衣纹理信息，返回值为以下集合中的一个, {纯色, 格子, 大色块}。
         /// </summary>
-        [JsonProperty("Confidence")]
-        public float? Confidence{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 图中检测出来的人体框
+        /// Type识别概率值，[0.0,1.0], 代表判断正确的概率。如0.8则代表有Type值有80%概率正确。
         /// </summary>
-        [JsonProperty("BodyRect")]
-        public BodyRect BodyRect{ get; set; }
-
-        /// <summary>
-        /// 图中检测出的人体属性信息。
-        /// </summary>
-        [JsonProperty("BodyAttributeInfo")]
-        public BodyAttributeInfo BodyAttributeInfo{ get; set; }
+        [JsonProperty("Probability")]
+        public float? Probability{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Bda.V20200324.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
-            this.SetParamObj(map, prefix + "BodyRect.", this.BodyRect);
-            this.SetParamObj(map, prefix + "BodyAttributeInfo.", this.BodyAttributeInfo);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Probability", this.Probability);
         }
     }
 }

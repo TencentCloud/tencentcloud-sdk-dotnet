@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.85</VersionPrefix>
+    <VersionPrefix>3.0.86</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -536,6 +536,10 @@
     <Compile Include="Batch\V20170312\Models\TerminateTaskInstanceResponse.cs" />
     <Compile Include="Batch\V20170312\Models\VirtualPrivateCloud.cs" />
     <Compile Include="Bda\V20200324\BdaClient.cs" />
+    <Compile Include="Bda\V20200324\Models\Age.cs" />
+    <Compile Include="Bda\V20200324\Models\AttributesOptions.cs" />
+    <Compile Include="Bda\V20200324\Models\Bag.cs" />
+    <Compile Include="Bda\V20200324\Models\BodyAttributeInfo.cs" />
     <Compile Include="Bda\V20200324\Models\BodyDetectResult.cs" />
     <Compile Include="Bda\V20200324\Models\BodyRect.cs" />
     <Compile Include="Bda\V20200324\Models\Candidate.cs" />
@@ -551,15 +555,21 @@
     <Compile Include="Bda\V20200324\Models\DeletePersonResponse.cs" />
     <Compile Include="Bda\V20200324\Models\DetectBodyRequest.cs" />
     <Compile Include="Bda\V20200324\Models\DetectBodyResponse.cs" />
+    <Compile Include="Bda\V20200324\Models\Gender.cs" />
     <Compile Include="Bda\V20200324\Models\GetGroupListRequest.cs" />
     <Compile Include="Bda\V20200324\Models\GetGroupListResponse.cs" />
     <Compile Include="Bda\V20200324\Models\GetPersonListRequest.cs" />
     <Compile Include="Bda\V20200324\Models\GetPersonListResponse.cs" />
     <Compile Include="Bda\V20200324\Models\GroupInfo.cs" />
+    <Compile Include="Bda\V20200324\Models\LowerBodyCloth.cs" />
+    <Compile Include="Bda\V20200324\Models\LowerBodyClothColor.cs" />
+    <Compile Include="Bda\V20200324\Models\LowerBodyClothLength.cs" />
+    <Compile Include="Bda\V20200324\Models\LowerBodyClothType.cs" />
     <Compile Include="Bda\V20200324\Models\ModifyGroupRequest.cs" />
     <Compile Include="Bda\V20200324\Models\ModifyGroupResponse.cs" />
     <Compile Include="Bda\V20200324\Models\ModifyPersonInfoRequest.cs" />
     <Compile Include="Bda\V20200324\Models\ModifyPersonInfoResponse.cs" />
+    <Compile Include="Bda\V20200324\Models\Orientation.cs" />
     <Compile Include="Bda\V20200324\Models\PersonInfo.cs" />
     <Compile Include="Bda\V20200324\Models\SearchTraceRequest.cs" />
     <Compile Include="Bda\V20200324\Models\SearchTraceResponse.cs" />
@@ -567,6 +577,10 @@
     <Compile Include="Bda\V20200324\Models\SegmentPortraitPicResponse.cs" />
     <Compile Include="Bda\V20200324\Models\Trace.cs" />
     <Compile Include="Bda\V20200324\Models\TraceInfo.cs" />
+    <Compile Include="Bda\V20200324\Models\UpperBodyCloth.cs" />
+    <Compile Include="Bda\V20200324\Models\UpperBodyClothColor.cs" />
+    <Compile Include="Bda\V20200324\Models\UpperBodyClothSleeve.cs" />
+    <Compile Include="Bda\V20200324\Models\UpperBodyClothTexture.cs" />
     <Compile Include="Billing\V20180709\BillingClient.cs" />
     <Compile Include="Billing\V20180709\Models\ActionSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\BillDetail.cs" />
