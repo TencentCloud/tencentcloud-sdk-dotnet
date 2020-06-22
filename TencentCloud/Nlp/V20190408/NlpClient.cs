@@ -135,6 +135,166 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
+        /// 根据指定的名称、描述创建自定义词库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDictRequest"/></param>
+        /// <returns><see cref="CreateDictResponse"/></returns>
+        public async Task<CreateDictResponse> CreateDict(CreateDictRequest req)
+        {
+             JsonResponseModel<CreateDictResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDictResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据指定的名称、描述创建自定义词库。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDictRequest"/></param>
+        /// <returns><see cref="CreateDictResponse"/></returns>
+        public CreateDictResponse CreateDictSync(CreateDictRequest req)
+        {
+             JsonResponseModel<CreateDictResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDictResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 向指定的词库中添加词条。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWordItemsRequest"/></param>
+        /// <returns><see cref="CreateWordItemsResponse"/></returns>
+        public async Task<CreateWordItemsResponse> CreateWordItems(CreateWordItemsRequest req)
+        {
+             JsonResponseModel<CreateWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 向指定的词库中添加词条。
+        /// </summary>
+        /// <param name="req"><see cref="CreateWordItemsRequest"/></param>
+        /// <returns><see cref="CreateWordItemsResponse"/></returns>
+        public CreateWordItemsResponse CreateWordItemsSync(CreateWordItemsRequest req)
+        {
+             JsonResponseModel<CreateWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义词库，会附带相应删除词库包含的所有词条。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDictRequest"/></param>
+        /// <returns><see cref="DeleteDictResponse"/></returns>
+        public async Task<DeleteDictResponse> DeleteDict(DeleteDictRequest req)
+        {
+             JsonResponseModel<DeleteDictResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDictResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义词库，会附带相应删除词库包含的所有词条。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDictRequest"/></param>
+        /// <returns><see cref="DeleteDictResponse"/></returns>
+        public DeleteDictResponse DeleteDictSync(DeleteDictRequest req)
+        {
+             JsonResponseModel<DeleteDictResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDictResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除自定义词库中的词条。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWordItemsRequest"/></param>
+        /// <returns><see cref="DeleteWordItemsResponse"/></returns>
+        public async Task<DeleteWordItemsResponse> DeleteWordItems(DeleteWordItemsRequest req)
+        {
+             JsonResponseModel<DeleteWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除自定义词库中的词条。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWordItemsRequest"/></param>
+        /// <returns><see cref="DeleteWordItemsResponse"/></returns>
+        public DeleteWordItemsResponse DeleteWordItemsSync(DeleteWordItemsRequest req)
+        {
+             JsonResponseModel<DeleteWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 句法依存分析接口能够分析出句子中词与词之间的相互依存关系，并揭示其句法结构，包括主谓关系、动宾关系、核心关系等等，可用于提取句子主干、提取句子核心词等，在机器翻译、自动问答、知识抽取等领域都有很好的应用。
         /// </summary>
         /// <param name="req"><see cref="DependencyParsingRequest"/></param>
@@ -166,6 +326,86 @@ namespace TencentCloud.Nlp.V20190408
              {
                  var strResp = this.InternalRequestSync(req, "DependencyParsing");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DependencyParsingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据id或名称查询自定义词库信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDictRequest"/></param>
+        /// <returns><see cref="DescribeDictResponse"/></returns>
+        public async Task<DescribeDictResponse> DescribeDict(DescribeDictRequest req)
+        {
+             JsonResponseModel<DescribeDictResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDictResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据id或名称查询自定义词库信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDictRequest"/></param>
+        /// <returns><see cref="DescribeDictResponse"/></returns>
+        public DescribeDictResponse DescribeDictSync(DescribeDictRequest req)
+        {
+             JsonResponseModel<DescribeDictResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDictResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回属于当前用户的所有自定义词库列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDictsRequest"/></param>
+        /// <returns><see cref="DescribeDictsResponse"/></returns>
+        public async Task<DescribeDictsResponse> DescribeDicts(DescribeDictsRequest req)
+        {
+             JsonResponseModel<DescribeDictsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDicts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回属于当前用户的所有自定义词库列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDictsRequest"/></param>
+        /// <returns><see cref="DescribeDictsResponse"/></returns>
+        public DescribeDictsResponse DescribeDictsSync(DescribeDictsRequest req)
+        {
+             JsonResponseModel<DescribeDictsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDicts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDictsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -295,6 +535,46 @@ namespace TencentCloud.Nlp.V20190408
         }
 
         /// <summary>
+        /// 依据自定义词库的ID，查询对应的词条信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWordItemsRequest"/></param>
+        /// <returns><see cref="DescribeWordItemsResponse"/></returns>
+        public async Task<DescribeWordItemsResponse> DescribeWordItems(DescribeWordItemsRequest req)
+        {
+             JsonResponseModel<DescribeWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 依据自定义词库的ID，查询对应的词条信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWordItemsRequest"/></param>
+        /// <returns><see cref="DescribeWordItemsResponse"/></returns>
+        public DescribeWordItemsResponse DescribeWordItemsSync(DescribeWordItemsRequest req)
+        {
+             JsonResponseModel<DescribeWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
         /// </summary>
         /// <param name="req"><see cref="KeywordsExtractionRequest"/></param>
@@ -382,6 +662,46 @@ namespace TencentCloud.Nlp.V20190408
              {
                  var strResp = this.InternalRequestSync(req, "LexicalAnalysis");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<LexicalAnalysisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定自定义词库中的词条是否存在。
+        /// </summary>
+        /// <param name="req"><see cref="SearchWordItemsRequest"/></param>
+        /// <returns><see cref="SearchWordItemsResponse"/></returns>
+        public async Task<SearchWordItemsResponse> SearchWordItems(SearchWordItemsRequest req)
+        {
+             JsonResponseModel<SearchWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchWordItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定自定义词库中的词条是否存在。
+        /// </summary>
+        /// <param name="req"><see cref="SearchWordItemsRequest"/></param>
+        /// <returns><see cref="SearchWordItemsResponse"/></returns>
+        public SearchWordItemsResponse SearchWordItemsSync(SearchWordItemsRequest req)
+        {
+             JsonResponseModel<SearchWordItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchWordItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchWordItemsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -702,6 +1022,46 @@ namespace TencentCloud.Nlp.V20190408
              {
                  var strResp = this.InternalRequestSync(req, "TextSimilarity");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TextSimilarityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改自定义词库元数据信息，包括名称、描述。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDictRequest"/></param>
+        /// <returns><see cref="UpdateDictResponse"/></returns>
+        public async Task<UpdateDictResponse> UpdateDict(UpdateDictRequest req)
+        {
+             JsonResponseModel<UpdateDictResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDictResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改自定义词库元数据信息，包括名称、描述。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDictRequest"/></param>
+        /// <returns><see cref="UpdateDictResponse"/></returns>
+        public UpdateDictResponse UpdateDictSync(UpdateDictRequest req)
+        {
+             JsonResponseModel<UpdateDictResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDict");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDictResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

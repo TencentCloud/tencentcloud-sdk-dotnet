@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnterQueueRequest : AbstractModel
+    public class DictInfo : AbstractModel
     {
         
         /// <summary>
-        /// true：第一次请求排队 false：已在排队中，查询当前排名
+        /// 自定义词库ID。
         /// </summary>
-        [JsonProperty("First")]
-        public bool? First{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 游戏ID
+        /// 自定义词库名称。
         /// </summary>
-        [JsonProperty("GameId")]
-        public string GameId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 资源池编号
+        /// 自定义词库描述信息。
         /// </summary>
-        [JsonProperty("SetNumber")]
-        public ulong? SetNumber{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
-        /// 游戏用户IP，用于就近调度，例如125.127.178.228
+        /// 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
         /// </summary>
-        [JsonProperty("UserIp")]
-        public string UserIp{ get; set; }
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "First", this.First);
-            this.SetParamSimple(map, prefix + "GameId", this.GameId);
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "SetNumber", this.SetNumber);
-            this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

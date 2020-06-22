@@ -24,12 +24,19 @@ namespace TencentCloud.Ecm.V20190719.Models
     public class DescribeNodeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 过滤条件，name取值为： InstanceFamily-实例系列
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

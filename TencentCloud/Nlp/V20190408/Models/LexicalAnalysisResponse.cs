@@ -26,9 +26,10 @@ namespace TencentCloud.Nlp.V20190408.Models
         
         /// <summary>
         /// 命名实体识别结果。取值范围：
-        /// <li>PER：表示人名</li>
-        /// <li>LOC：表示地名</li>
-        /// <li>ORG：表示机构团体名</li>
+        /// <li>PER：表示人名，如刘德华、贝克汉姆</li>
+        /// <li>LOC：表示地名，如北京、华山</li>
+        /// <li>ORG：表示机构团体名，如腾讯、最高人民法院、人大附中</li>
+        /// <li>PRODUCTION：表示产品名，如QQ、微信、iPhone</li>
         /// </summary>
         [JsonProperty("NerTokens")]
         public NerToken[] NerTokens{ get; set; }

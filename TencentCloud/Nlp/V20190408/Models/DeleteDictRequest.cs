@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeNotebookInstanceRequest : AbstractModel
+    public class DeleteDictRequest : AbstractModel
     {
         
         /// <summary>
-        /// Notebook实例名称
-        /// 规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+        /// 要删除的自定义词库ID。
         /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
+        [JsonProperty("DictId")]
+        public string DictId{ get; set; }
 
 
         /// <summary>
@@ -37,7 +36,7 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+            this.SetParamSimple(map, prefix + "DictId", this.DictId);
         }
     }
 }

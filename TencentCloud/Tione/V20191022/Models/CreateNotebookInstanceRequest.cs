@@ -26,7 +26,7 @@ namespace TencentCloud.Tione.V20191022.Models
         
         /// <summary>
         /// Notebook实例名称，不能超过63个字符
-        /// 规则：^[a-zA-Z0-9](-*[a-zA-Z0-9])*$
+        /// 规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
         /// </summary>
         [JsonProperty("NotebookInstanceName")]
         public string NotebookInstanceName{ get; set; }

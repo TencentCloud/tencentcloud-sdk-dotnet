@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeNotebookInstanceRequest : AbstractModel
+    public class CreateWordItemsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Notebook实例名称
-        /// 规则：“^\[a-zA-Z0-9\](-\*\[a-zA-Z0-9\])\*$”
+        /// 待添加的词条集合。
         /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
+        [JsonProperty("WordItems")]
+        public WordItem[] WordItems{ get; set; }
+
+        /// <summary>
+        /// 自定义词库ID。
+        /// </summary>
+        [JsonProperty("DictId")]
+        public string DictId{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
+            this.SetParamArrayObj(map, prefix + "WordItems.", this.WordItems);
+            this.SetParamSimple(map, prefix + "DictId", this.DictId);
         }
     }
 }

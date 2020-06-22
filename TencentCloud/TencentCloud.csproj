@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.86</VersionPrefix>
+    <VersionPrefix>3.0.87</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5870,14 +5870,29 @@
     <Compile Include="Nlp\V20190408\Models\ChatBotRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\ChatBotResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\ClassificationResult.cs" />
+    <Compile Include="Nlp\V20190408\Models\CreateDictRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\CreateDictResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\CreateWordItemsRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\CreateWordItemsResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\DeleteDictRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\DeleteDictResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\DeleteWordItemsRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\DeleteWordItemsResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DependencyParsingRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\DependencyParsingResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\DescribeDictRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\DescribeDictResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\DescribeDictsRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\DescribeDictsResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeEntityRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeEntityResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeRelationRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeRelationResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeTripleRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeTripleResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\DescribeWordItemsRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\DescribeWordItemsResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\DictInfo.cs" />
     <Compile Include="Nlp\V20190408\Models\DpToken.cs" />
     <Compile Include="Nlp\V20190408\Models\EntityRelationContent.cs" />
     <Compile Include="Nlp\V20190408\Models\EntityRelationObject.cs" />
@@ -5889,6 +5904,9 @@
     <Compile Include="Nlp\V20190408\Models\LexicalAnalysisResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\NerToken.cs" />
     <Compile Include="Nlp\V20190408\Models\PosToken.cs" />
+    <Compile Include="Nlp\V20190408\Models\SearchResult.cs" />
+    <Compile Include="Nlp\V20190408\Models\SearchWordItemsRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\SearchWordItemsResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\SentenceEmbeddingRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\SentenceEmbeddingResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\SentenceSimilarityRequest.cs" />
@@ -5905,8 +5923,11 @@
     <Compile Include="Nlp\V20190408\Models\TextSimilarityRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextSimilarityResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TripleContent.cs" />
+    <Compile Include="Nlp\V20190408\Models\UpdateDictRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\UpdateDictResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\WordEmbeddingRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\WordEmbeddingResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\WordItem.cs" />
     <Compile Include="Nlp\V20190408\Models\WordSimilarityRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\WordSimilarityResponse.cs" />
     <Compile Include="Npp\V20190823\NppClient.cs" />

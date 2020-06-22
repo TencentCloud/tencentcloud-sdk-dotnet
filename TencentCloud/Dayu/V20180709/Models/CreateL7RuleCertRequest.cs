@@ -31,7 +31,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Business{ get; set; }
 
         /// <summary>
-        /// 资源实例ID，比如高防IP实例的ID，高防IP专业版实例的ID
+        /// 资源实例ID，例如高防IP实例的ID，高防IP专业版实例的ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

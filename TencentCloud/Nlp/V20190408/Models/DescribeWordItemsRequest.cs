@@ -15,44 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnterQueueRequest : AbstractModel
+    public class DescribeWordItemsRequest : AbstractModel
     {
         
         /// <summary>
-        /// true：第一次请求排队 false：已在排队中，查询当前排名
+        /// 自定义词库ID。
         /// </summary>
-        [JsonProperty("First")]
-        public bool? First{ get; set; }
+        [JsonProperty("DictId")]
+        public string DictId{ get; set; }
 
         /// <summary>
-        /// 游戏ID
+        /// 每页数据量，范围为1~100，默认为10。
         /// </summary>
-        [JsonProperty("GameId")]
-        public string GameId{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 用户ID
+        /// 分页偏移量，从0开始，默认为0。
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 资源池编号
+        /// 待检索的词条文本，支持模糊匹配。
         /// </summary>
-        [JsonProperty("SetNumber")]
-        public ulong? SetNumber{ get; set; }
-
-        /// <summary>
-        /// 游戏用户IP，用于就近调度，例如125.127.178.228
-        /// </summary>
-        [JsonProperty("UserIp")]
-        public string UserIp{ get; set; }
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "First", this.First);
-            this.SetParamSimple(map, prefix + "GameId", this.GameId);
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "SetNumber", this.SetNumber);
-            this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
+            this.SetParamSimple(map, prefix + "DictId", this.DictId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }
 }
