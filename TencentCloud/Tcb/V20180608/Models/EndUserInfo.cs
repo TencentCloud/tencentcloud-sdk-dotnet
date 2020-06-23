@@ -96,6 +96,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("IsDisabled")]
         public bool? IsDisabled{ get; set; }
 
+        /// <summary>
+        /// 是否设置过密码
+        /// </summary>
+        [JsonProperty("HasPassword")]
+        public bool? HasPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "IsAnonymous", this.IsAnonymous);
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
+            this.SetParamSimple(map, prefix + "HasPassword", this.HasPassword);
         }
     }
 }

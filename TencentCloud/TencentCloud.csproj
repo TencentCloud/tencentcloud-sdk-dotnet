@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.87</VersionPrefix>
+    <VersionPrefix>3.0.88</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7793,8 +7793,12 @@
     <Compile Include="Tmt\V20180321\Models\TextTranslateRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateResponse.cs" />
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
+    <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
+    <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeDetailEventRequest.cs" />

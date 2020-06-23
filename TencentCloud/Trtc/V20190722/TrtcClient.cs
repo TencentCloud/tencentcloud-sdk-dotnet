@@ -93,6 +93,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询SDKAppID下用户的异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询24小时内数据，查询起止时间不超过1个小时。支持跨天查询。异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
+        /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
+        public async Task<DescribeAbnormalEventResponse> DescribeAbnormalEvent(DescribeAbnormalEventRequest req)
+        {
+             JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAbnormalEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAbnormalEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询SDKAppID下用户的异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询24小时内数据，查询起止时间不超过1个小时。支持跨天查询。异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
+        /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
+        public DescribeAbnormalEventResponse DescribeAbnormalEventSync(DescribeAbnormalEventRequest req)
+        {
+             JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAbnormalEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAbnormalEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询指定时间内的用户列表及用户通话质量数据。可查询5天内数据，查询起止时间不超过1个小时，查询用户不超过6个，不支持跨天查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
