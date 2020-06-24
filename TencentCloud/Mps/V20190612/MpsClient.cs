@@ -133,6 +133,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 创建转自适应码流模板，数量上限：100。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<CreateAdaptiveDynamicStreamingTemplateResponse> CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建转自适应码流模板，数量上限：100。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="CreateAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义转动图模板，数量上限：16。
         /// </summary>
         /// <param name="req"><see cref="CreateAnimatedGraphicsTemplateRequest"/></param>
@@ -639,6 +679,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 删除转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<DeleteAdaptiveDynamicStreamingTemplateResponse> DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplateSync(DeleteAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除用户自定义转动图模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
@@ -1110,6 +1190,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAIRecognitionTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIRecognitionTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询转自适应码流模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdaptiveDynamicStreamingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAdaptiveDynamicStreamingTemplatesResponse"/></returns>
+        public async Task<DescribeAdaptiveDynamicStreamingTemplatesResponse> DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询转自适应码流模板，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdaptiveDynamicStreamingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAdaptiveDynamicStreamingTemplatesResponse"/></returns>
+        public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplatesSync(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAdaptiveDynamicStreamingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAdaptiveDynamicStreamingTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1888,6 +2008,46 @@ namespace TencentCloud.Mps.V20190612
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAIRecognitionTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public async Task<ModifyAdaptiveDynamicStreamingTemplateResponse> ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改转自适应码流模板
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAdaptiveDynamicStreamingTemplateRequest"/></param>
+        /// <returns><see cref="ModifyAdaptiveDynamicStreamingTemplateResponse"/></returns>
+        public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplateSync(ModifyAdaptiveDynamicStreamingTemplateRequest req)
+        {
+             JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAdaptiveDynamicStreamingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -54,6 +54,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ImageSpriteTaskSet")]
         public ImageSpriteTaskInput[] ImageSpriteTaskSet{ get; set; }
 
+        /// <summary>
+        /// 转自适应码流任务列表。
+        /// </summary>
+        [JsonProperty("AdaptiveDynamicStreamingTaskSet")]
+        public AdaptiveDynamicStreamingTaskInput[] AdaptiveDynamicStreamingTaskSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "SnapshotByTimeOffsetTaskSet.", this.SnapshotByTimeOffsetTaskSet);
             this.SetParamArrayObj(map, prefix + "SampleSnapshotTaskSet.", this.SampleSnapshotTaskSet);
             this.SetParamArrayObj(map, prefix + "ImageSpriteTaskSet.", this.ImageSpriteTaskSet);
+            this.SetParamArrayObj(map, prefix + "AdaptiveDynamicStreamingTaskSet.", this.AdaptiveDynamicStreamingTaskSet);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.88</VersionPrefix>
+    <VersionPrefix>3.0.89</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4628,6 +4628,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\ControlDeviceDataResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateDeviceRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateDeviceResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\CreateLoRaGatewayRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\CreateLoRaGatewayResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateProjectRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateProjectResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateStudioProductRequest.cs" />
@@ -4656,12 +4658,16 @@
     <Compile Include="Iotexplorer\V20190423\Models\EventHistoryItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetDeviceListRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetDeviceListResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetLoRaGatewayListRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetLoRaGatewayListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetProjectListRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetProjectListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetStudioProductListRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetStudioProductListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ListEventHistoryRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ListEventHistoryResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\LoRaGatewayItem.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\LoRaGatewayLocation.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyModelDefinitionRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyModelDefinitionResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyProjectRequest.cs" />
@@ -5445,6 +5451,10 @@
     <Compile Include="Mps\V20190612\MpsClient.cs" />
     <Compile Include="Mps\V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Mps\V20190612\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingInfoItem.cs" />
+    <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
+    <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingTemplate.cs" />
+    <Compile Include="Mps\V20190612\Models\AdaptiveStreamTemplate.cs" />
     <Compile Include="Mps\V20190612\Models\AiAnalysisResult.cs" />
     <Compile Include="Mps\V20190612\Models\AiAnalysisTaskClassificationInput.cs" />
     <Compile Include="Mps\V20190612\Models\AiAnalysisTaskClassificationOutput.cs" />
@@ -5544,6 +5554,8 @@
     <Compile Include="Mps\V20190612\Models\CreateAIAnalysisTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\CreateAIRecognitionTemplateRequest.cs" />
     <Compile Include="Mps\V20190612\Models\CreateAIRecognitionTemplateResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\CreateAdaptiveDynamicStreamingTemplateRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\CreateAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\CreateAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="Mps\V20190612\Models\CreateAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\CreateContentReviewTemplateRequest.cs" />
@@ -5568,6 +5580,8 @@
     <Compile Include="Mps\V20190612\Models\DeleteAIAnalysisTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\DeleteAIRecognitionTemplateRequest.cs" />
     <Compile Include="Mps\V20190612\Models\DeleteAIRecognitionTemplateResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\DeleteAdaptiveDynamicStreamingTemplateRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\DeleteAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\DeleteAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="Mps\V20190612\Models\DeleteAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\DeleteContentReviewTemplateRequest.cs" />
@@ -5592,6 +5606,8 @@
     <Compile Include="Mps\V20190612\Models\DescribeAIAnalysisTemplatesResponse.cs" />
     <Compile Include="Mps\V20190612\Models\DescribeAIRecognitionTemplatesRequest.cs" />
     <Compile Include="Mps\V20190612\Models\DescribeAIRecognitionTemplatesResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\DescribeAdaptiveDynamicStreamingTemplatesRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\DescribeAdaptiveDynamicStreamingTemplatesResponse.cs" />
     <Compile Include="Mps\V20190612\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
     <Compile Include="Mps\V20190612\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
     <Compile Include="Mps\V20190612\Models\DescribeContentReviewTemplatesRequest.cs" />
@@ -5669,6 +5685,7 @@
     <Compile Include="Mps\V20190612\Models\MediaImageSpriteItem.cs" />
     <Compile Include="Mps\V20190612\Models\MediaInputInfo.cs" />
     <Compile Include="Mps\V20190612\Models\MediaMetaData.cs" />
+    <Compile Include="Mps\V20190612\Models\MediaProcessTaskAdaptiveDynamicStreamingResult.cs" />
     <Compile Include="Mps\V20190612\Models\MediaProcessTaskAnimatedGraphicResult.cs" />
     <Compile Include="Mps\V20190612\Models\MediaProcessTaskImageSpriteResult.cs" />
     <Compile Include="Mps\V20190612\Models\MediaProcessTaskInput.cs" />
@@ -5685,6 +5702,8 @@
     <Compile Include="Mps\V20190612\Models\ModifyAIAnalysisTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyAIRecognitionTemplateRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyAIRecognitionTemplateResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\ModifyAdaptiveDynamicStreamingTemplateRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\ModifyAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyAnimatedGraphicsTemplateResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ModifyContentReviewTemplateRequest.cs" />
