@@ -9,8 +9,4 @@
     <ProjectReference Include="..\TencentCloud\TencentCloud.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="TencentCloudSDK" Version="3.0.0" />
-  </ItemGroup>
-
 </Project>
