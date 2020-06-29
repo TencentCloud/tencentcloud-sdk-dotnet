@@ -15,34 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartNotebookInstanceRequest : AbstractModel
+    public class FieldInfo : AbstractModel
     {
         
         /// <summary>
-        /// Notebook实例名称
+        /// 表格字段名称
         /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
+        [JsonProperty("FieldName")]
+        public string FieldName{ get; set; }
 
         /// <summary>
-        /// 自动停止，可取值Enabled/Disabled
-        /// 取值为Disabled的时候StoppingCondition将被忽略
-        /// 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+        /// 字段是否是主键字段
         /// </summary>
-        [JsonProperty("AutoStopping")]
-        public string AutoStopping{ get; set; }
+        [JsonProperty("IsPrimaryKey")]
+        public string IsPrimaryKey{ get; set; }
 
         /// <summary>
-        /// 自动停止配置，只在AutoStopping为Enabled的时候生效
+        /// 字段类型
         /// </summary>
-        [JsonProperty("StoppingCondition")]
-        public StoppingCondition StoppingCondition{ get; set; }
+        [JsonProperty("FieldType")]
+        public string FieldType{ get; set; }
+
+        /// <summary>
+        /// 字段长度
+        /// </summary>
+        [JsonProperty("FieldSize")]
+        public long? FieldSize{ get; set; }
 
 
         /// <summary>
@@ -50,9 +54,10 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
-            this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
-            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
+            this.SetParamSimple(map, prefix + "IsPrimaryKey", this.IsPrimaryKey);
+            this.SetParamSimple(map, prefix + "FieldType", this.FieldType);
+            this.SetParamSimple(map, prefix + "FieldSize", this.FieldSize);
         }
     }
 }

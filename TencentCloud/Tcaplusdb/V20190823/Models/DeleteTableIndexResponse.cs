@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartNotebookInstanceRequest : AbstractModel
+    public class DeleteTableIndexResponse : AbstractModel
     {
         
         /// <summary>
-        /// Notebook实例名称
+        /// 删除表格分布式索引结果数量
         /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 自动停止，可取值Enabled/Disabled
-        /// 取值为Disabled的时候StoppingCondition将被忽略
-        /// 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+        /// 删除表格分布式索引结果列表
         /// </summary>
-        [JsonProperty("AutoStopping")]
-        public string AutoStopping{ get; set; }
+        [JsonProperty("TableResults")]
+        public TableResultNew[] TableResults{ get; set; }
 
         /// <summary>
-        /// 自动停止配置，只在AutoStopping为Enabled的时候生效
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("StoppingCondition")]
-        public StoppingCondition StoppingCondition{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,9 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
-            this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
-            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "TableResults.", this.TableResults);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

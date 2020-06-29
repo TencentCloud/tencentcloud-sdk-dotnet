@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 查询起始日期，如：2018-09-09
+        /// 查询起始日期：yyyy-MM-dd HH:mm:ss
         /// 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
         /// 返回大于等于起始日期当天 00:00:00 点产生的数据
         /// 仅支持 90 天内数据查询
@@ -34,7 +34,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束日期，如：2018-09-10
+        /// 查询结束日期：yyyy-MM-dd HH:mm:ss
         /// 仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
         /// 返回小于等于结束日期当天 23:59:59 产生的数据
         /// EndTime 需要大于等于 StartTime

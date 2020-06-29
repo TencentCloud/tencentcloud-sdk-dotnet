@@ -15,34 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartNotebookInstanceRequest : AbstractModel
+    public class DeviceFingerprint : AbstractModel
     {
         
         /// <summary>
-        /// Notebook实例名称
+        /// 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
         /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
+        [JsonProperty("Identity")]
+        public string Identity{ get; set; }
 
         /// <summary>
-        /// 自动停止，可取值Enabled/Disabled
-        /// 取值为Disabled的时候StoppingCondition将被忽略
-        /// 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+        /// 描述信息，如：IP，设备名称等，最大1024字节
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AutoStopping")]
-        public string AutoStopping{ get; set; }
-
-        /// <summary>
-        /// 自动停止配置，只在AutoStopping为Enabled的时候生效
-        /// </summary>
-        [JsonProperty("StoppingCondition")]
-        public StoppingCondition StoppingCondition{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -50,9 +43,8 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
-            this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
-            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamSimple(map, prefix + "Identity", this.Identity);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

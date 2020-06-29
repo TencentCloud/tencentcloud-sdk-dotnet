@@ -413,6 +413,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 删除表格的分布式索引
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableIndexRequest"/></param>
+        /// <returns><see cref="DeleteTableIndexResponse"/></returns>
+        public async Task<DeleteTableIndexResponse> DeleteTableIndex(DeleteTableIndexRequest req)
+        {
+             JsonResponseModel<DeleteTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTableIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除表格的分布式索引
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTableIndexRequest"/></param>
+        /// <returns><see cref="DeleteTableIndexResponse"/></returns>
+        public DeleteTableIndexResponse DeleteTableIndexSync(DeleteTableIndexRequest req)
+        {
+             JsonResponseModel<DeleteTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTableIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteTablesRequest"/></param>
@@ -1324,6 +1364,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "RollbackTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollbackTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置表格分布式索引
+        /// </summary>
+        /// <param name="req"><see cref="SetTableIndexRequest"/></param>
+        /// <returns><see cref="SetTableIndexResponse"/></returns>
+        public async Task<SetTableIndexResponse> SetTableIndex(SetTableIndexRequest req)
+        {
+             JsonResponseModel<SetTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTableIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置表格分布式索引
+        /// </summary>
+        /// <param name="req"><see cref="SetTableIndexRequest"/></param>
+        /// <returns><see cref="SetTableIndexResponse"/></returns>
+        public SetTableIndexResponse SetTableIndexSync(SetTableIndexRequest req)
+        {
+             JsonResponseModel<SetTableIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetTableIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTableIndexResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

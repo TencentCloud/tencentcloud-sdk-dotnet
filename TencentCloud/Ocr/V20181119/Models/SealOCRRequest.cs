@@ -15,34 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartNotebookInstanceRequest : AbstractModel
+    public class SealOCRRequest : AbstractModel
     {
         
         /// <summary>
-        /// Notebook实例名称
+        /// 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+        /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
         /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
+        [JsonProperty("ImageBase64")]
+        public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 自动停止，可取值Enabled/Disabled
-        /// 取值为Disabled的时候StoppingCondition将被忽略
-        /// 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+        /// 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
+        /// 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
         /// </summary>
-        [JsonProperty("AutoStopping")]
-        public string AutoStopping{ get; set; }
-
-        /// <summary>
-        /// 自动停止配置，只在AutoStopping为Enabled的时候生效
-        /// </summary>
-        [JsonProperty("StoppingCondition")]
-        public StoppingCondition StoppingCondition{ get; set; }
+        [JsonProperty("ImageUrl")]
+        public string ImageUrl{ get; set; }
 
 
         /// <summary>
@@ -50,9 +44,8 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
-            this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
-            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         }
     }
 }

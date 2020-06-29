@@ -25,13 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 查询起始时间
+        /// 查询起始时间：yyyy-MM-dd
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// 查询结束时间：yyyy-MM-dd
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -39,8 +39,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// 报表类型
         /// daily：日报表
-        /// weekly：周报表
-        /// monthly：月报表
+        /// weekly：周报表（周一至周日）
+        /// monthly：月报表（自然月）
         /// </summary>
         [JsonProperty("ReportType")]
         public string ReportType{ get; set; }

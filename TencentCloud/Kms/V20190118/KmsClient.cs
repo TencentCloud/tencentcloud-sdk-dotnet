@@ -493,6 +493,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 获取指定密钥的设备指纹列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxDeviceFingerprintsRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxDeviceFingerprintsResponse"/></returns>
+        public async Task<DescribeWhiteBoxDeviceFingerprintsResponse> DescribeWhiteBoxDeviceFingerprints(DescribeWhiteBoxDeviceFingerprintsRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteBoxDeviceFingerprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定密钥的设备指纹列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteBoxDeviceFingerprintsRequest"/></param>
+        /// <returns><see cref="DescribeWhiteBoxDeviceFingerprintsResponse"/></returns>
+        public DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprintsSync(DescribeWhiteBoxDeviceFingerprintsRequest req)
+        {
+             JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteBoxDeviceFingerprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 展示白盒密钥的信息
         /// </summary>
         /// <param name="req"><see cref="DescribeWhiteBoxKeyRequest"/></param>
@@ -1486,6 +1526,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "ListKeys");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 覆盖指定密钥的设备指纹信息
+        /// </summary>
+        /// <param name="req"><see cref="OverwriteWhiteBoxDeviceFingerprintsRequest"/></param>
+        /// <returns><see cref="OverwriteWhiteBoxDeviceFingerprintsResponse"/></returns>
+        public async Task<OverwriteWhiteBoxDeviceFingerprintsResponse> OverwriteWhiteBoxDeviceFingerprints(OverwriteWhiteBoxDeviceFingerprintsRequest req)
+        {
+             JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OverwriteWhiteBoxDeviceFingerprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 覆盖指定密钥的设备指纹信息
+        /// </summary>
+        /// <param name="req"><see cref="OverwriteWhiteBoxDeviceFingerprintsRequest"/></param>
+        /// <returns><see cref="OverwriteWhiteBoxDeviceFingerprintsResponse"/></returns>
+        public OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprintsSync(OverwriteWhiteBoxDeviceFingerprintsRequest req)
+        {
+             JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OverwriteWhiteBoxDeviceFingerprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

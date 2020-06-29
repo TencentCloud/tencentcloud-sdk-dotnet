@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.89</VersionPrefix>
+    <VersionPrefix>3.0.90</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4179,6 +4179,8 @@
     <Compile Include="Gse\V20191112\Models\SetServerWeightResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\StartMatchPlacementRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\StartMatchPlacementResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementResponse.cs" />
     <Compile Include="Gse\V20191112\Models\TargetConfiguration.cs" />
@@ -4851,12 +4853,15 @@
     <Compile Include="Kms\V20190118\Models\DescribeKeysResponse.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxDecryptKeyRequest.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxDecryptKeyResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxDeviceFingerprintsRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxDeviceFingerprintsResponse.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxKeyDetailsRequest.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxKeyDetailsResponse.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxKeyRequest.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxServiceStatusRequest.cs" />
     <Compile Include="Kms\V20190118\Models\DescribeWhiteBoxServiceStatusResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\DeviceFingerprint.cs" />
     <Compile Include="Kms\V20190118\Models\DisableKeyRequest.cs" />
     <Compile Include="Kms\V20190118\Models\DisableKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\DisableKeyRotationRequest.cs" />
@@ -4903,6 +4908,8 @@
     <Compile Include="Kms\V20190118\Models\ListKeyDetailResponse.cs" />
     <Compile Include="Kms\V20190118\Models\ListKeysRequest.cs" />
     <Compile Include="Kms\V20190118\Models\ListKeysResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\OverwriteWhiteBoxDeviceFingerprintsRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\OverwriteWhiteBoxDeviceFingerprintsResponse.cs" />
     <Compile Include="Kms\V20190118\Models\ReEncryptRequest.cs" />
     <Compile Include="Kms\V20190118\Models\ReEncryptResponse.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionRequest.cs" />
@@ -6074,6 +6081,8 @@
     <Compile Include="Ocr\V20181119\Models\Rect.cs" />
     <Compile Include="Ocr\V20181119\Models\ResidenceBookletOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ResidenceBookletOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\SealOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\SealOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\ShipInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\ShipInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ShipInvoiceOCRResponse.cs" />
@@ -7011,6 +7020,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteIdlFilesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableIndexRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableIndexResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeClusterTagsRequest.cs" />
@@ -7036,6 +7047,7 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeUinInWhitelistRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeUinInWhitelistResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ErrorInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\FieldInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\Filter.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\IdlFileInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\IdlFileInfoWithoutContent.cs" />
@@ -7064,6 +7076,9 @@
     <Compile Include="Tcaplusdb\V20190823\Models\RollbackTablesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\RollbackTablesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\SelectedTableInfoNew.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SelectedTableWithField.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableGroupInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableInfoNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableResultNew.cs" />

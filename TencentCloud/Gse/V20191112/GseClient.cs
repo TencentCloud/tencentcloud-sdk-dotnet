@@ -693,6 +693,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（StartMatchPlacement）用于开始匹配放置游戏服务器会话
+        /// </summary>
+        /// <param name="req"><see cref="StartMatchPlacementRequest"/></param>
+        /// <returns><see cref="StartMatchPlacementResponse"/></returns>
+        public async Task<StartMatchPlacementResponse> StartMatchPlacement(StartMatchPlacementRequest req)
+        {
+             JsonResponseModel<StartMatchPlacementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartMatchPlacement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchPlacementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（StartMatchPlacement）用于开始匹配放置游戏服务器会话
+        /// </summary>
+        /// <param name="req"><see cref="StartMatchPlacementRequest"/></param>
+        /// <returns><see cref="StartMatchPlacementResponse"/></returns>
+        public StartMatchPlacementResponse StartMatchPlacementSync(StartMatchPlacementRequest req)
+        {
+             JsonResponseModel<StartMatchPlacementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartMatchPlacement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchPlacementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话
         /// </summary>
         /// <param name="req"><see cref="StopGameServerSessionPlacementRequest"/></param>

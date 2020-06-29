@@ -125,6 +125,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// ipv4：指定查询 ipv4 对应指标
         /// ipv6：指定查询 ipv6 对应指标
         /// 指定IP协议查询时，不可同时指定省份、运营商查询
+        /// 注意：非IPv6白名单用户不可指定ipv4、ipv6进行查询
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }

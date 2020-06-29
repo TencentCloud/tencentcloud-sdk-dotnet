@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// 填0：直播流为音视频(默认); 填1：直播流为纯音频
+        /// 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
         /// </summary>
         [JsonProperty("PureAudioStream")]
         public ulong? PureAudioStream{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 填1：纯音频录制为mp3
+        /// 取值范围[0,1]，填1：指定录制文件格式为mp3
         /// </summary>
         [JsonProperty("RecordAudioOnly")]
         public ulong? RecordAudioOnly{ get; set; }

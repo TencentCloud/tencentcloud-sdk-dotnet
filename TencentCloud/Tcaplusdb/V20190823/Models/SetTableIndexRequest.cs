@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartNotebookInstanceRequest : AbstractModel
+    public class SetTableIndexRequest : AbstractModel
     {
         
         /// <summary>
-        /// Notebook实例名称
+        /// 表所属集群实例ID
         /// </summary>
-        [JsonProperty("NotebookInstanceName")]
-        public string NotebookInstanceName{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 自动停止，可取值Enabled/Disabled
-        /// 取值为Disabled的时候StoppingCondition将被忽略
-        /// 取值为Enabled的时候读取StoppingCondition作为自动停止的配置
+        /// 待创建分布式索引表格列表
         /// </summary>
-        [JsonProperty("AutoStopping")]
-        public string AutoStopping{ get; set; }
-
-        /// <summary>
-        /// 自动停止配置，只在AutoStopping为Enabled的时候生效
-        /// </summary>
-        [JsonProperty("StoppingCondition")]
-        public StoppingCondition StoppingCondition{ get; set; }
+        [JsonProperty("SelectedTables")]
+        public SelectedTableWithField[] SelectedTables{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NotebookInstanceName", this.NotebookInstanceName);
-            this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
-            this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
         }
     }
 }

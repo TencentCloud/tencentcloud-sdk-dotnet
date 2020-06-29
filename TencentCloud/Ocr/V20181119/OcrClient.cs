@@ -2159,6 +2159,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 印章识别已支持各类印章，包括发票章，财务章等，适用于公文，票据等场景。
+        /// </summary>
+        /// <param name="req"><see cref="SealOCRRequest"/></param>
+        /// <returns><see cref="SealOCRResponse"/></returns>
+        public async Task<SealOCRResponse> SealOCR(SealOCRRequest req)
+        {
+             JsonResponseModel<SealOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SealOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SealOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 印章识别已支持各类印章，包括发票章，财务章等，适用于公文，票据等场景。
+        /// </summary>
+        /// <param name="req"><see cref="SealOCRRequest"/></param>
+        /// <returns><see cref="SealOCRResponse"/></returns>
+        public SealOCRResponse SealOCRSync(SealOCRRequest req)
+        {
+             JsonResponseModel<SealOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SealOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SealOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持识别轮船票的发票代码、发票号码、日期、姓名、票价等字段。
         /// </summary>
         /// <param name="req"><see cref="ShipInvoiceOCRRequest"/></param>

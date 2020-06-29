@@ -25,55 +25,55 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 混流-输出流音频采样率
+        /// 混流-输出流音频采样率。取值为[96000, 88200, 64000, 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000]。
         /// </summary>
         [JsonProperty("AudioSampleRate")]
         public ulong? AudioSampleRate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流音频码率，单位Kbps
+        /// 混流-输出流音频码率。取值范围[8,500]，单位为Kbps。
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public ulong? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流音频声道数
+        /// 混流-输出流音频声道数，取值范围[1,2]。
         /// </summary>
         [JsonProperty("AudioChannels")]
         public ulong? AudioChannels{ get; set; }
 
         /// <summary>
-        /// 混流-输出流宽，音视频输出时必填
+        /// 混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
         /// </summary>
         [JsonProperty("VideoWidth")]
         public ulong? VideoWidth{ get; set; }
 
         /// <summary>
-        /// 混流-输出流高，音视频输出时必填
+        /// 混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
         /// </summary>
         [JsonProperty("VideoHeight")]
         public ulong? VideoHeight{ get; set; }
 
         /// <summary>
-        /// 混流-输出流码率，单位Kbps，音视频输出时必填
+        /// 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为Kbps。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流帧率，音视频输出时必填
+        /// 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
         /// </summary>
         [JsonProperty("VideoFramerate")]
         public ulong? VideoFramerate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流gop，音视频输出时必填
+        /// 混流-输出流gop，音视频输出时必填。取值范围[1,5]，单位为秒。
         /// </summary>
         [JsonProperty("VideoGop")]
         public ulong? VideoGop{ get; set; }
 
         /// <summary>
-        /// 混流-输出流背景色
+        /// 混流-输出流背景色。
         /// </summary>
         [JsonProperty("BackgroundColor")]
         public ulong? BackgroundColor{ get; set; }
