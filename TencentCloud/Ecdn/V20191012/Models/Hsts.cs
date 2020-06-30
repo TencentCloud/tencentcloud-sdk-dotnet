@@ -15,42 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Ecdn.V20191012.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryStringKey : AbstractModel
+    public class Hsts : AbstractModel
     {
         
         /// <summary>
-        /// on | off CacheKey是否由QueryString组成
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 是否开启，on或off。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 是否重新排序
+        /// MaxAge数值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Reorder")]
-        public string Reorder{ get; set; }
+        [JsonProperty("MaxAge")]
+        public long? MaxAge{ get; set; }
 
         /// <summary>
-        /// includeAll | excludeAll | includeCustom | excludeAll 使用/排除部分url参数
+        /// 是否包含子域名，on或off。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Action")]
-        public string Action{ get; set; }
-
-        /// <summary>
-        /// 使用/排除的url参数名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("IncludeSubDomains")]
+        public string IncludeSubDomains{ get; set; }
 
 
         /// <summary>
@@ -59,9 +51,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Reorder", this.Reorder);
-            this.SetParamSimple(map, prefix + "Action", this.Action);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "MaxAge", this.MaxAge);
+            this.SetParamSimple(map, prefix + "IncludeSubDomains", this.IncludeSubDomains);
         }
     }
 }

@@ -333,6 +333,46 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
+        /// 检测图片中人体的14个关键点。建议用于人体图像清晰、无遮挡的场景。支持一张图片中存在多个人体的识别。
+        /// </summary>
+        /// <param name="req"><see cref="DetectBodyJointsRequest"/></param>
+        /// <returns><see cref="DetectBodyJointsResponse"/></returns>
+        public async Task<DetectBodyJointsResponse> DetectBodyJoints(DetectBodyJointsRequest req)
+        {
+             JsonResponseModel<DetectBodyJointsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectBodyJoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectBodyJointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 检测图片中人体的14个关键点。建议用于人体图像清晰、无遮挡的场景。支持一张图片中存在多个人体的识别。
+        /// </summary>
+        /// <param name="req"><see cref="DetectBodyJointsRequest"/></param>
+        /// <returns><see cref="DetectBodyJointsResponse"/></returns>
+        public DetectBodyJointsResponse DetectBodyJointsSync(DetectBodyJointsRequest req)
+        {
+             JsonResponseModel<DetectBodyJointsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectBodyJoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectBodyJointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取人体库列表。
         /// </summary>
         /// <param name="req"><see cref="GetGroupListRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.90</VersionPrefix>
+    <VersionPrefix>3.0.91</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -541,7 +541,9 @@
     <Compile Include="Bda\V20200324\Models\Bag.cs" />
     <Compile Include="Bda\V20200324\Models\BodyAttributeInfo.cs" />
     <Compile Include="Bda\V20200324\Models\BodyDetectResult.cs" />
+    <Compile Include="Bda\V20200324\Models\BodyJointsResult.cs" />
     <Compile Include="Bda\V20200324\Models\BodyRect.cs" />
+    <Compile Include="Bda\V20200324\Models\BoundRect.cs" />
     <Compile Include="Bda\V20200324\Models\Candidate.cs" />
     <Compile Include="Bda\V20200324\Models\CreateGroupRequest.cs" />
     <Compile Include="Bda\V20200324\Models\CreateGroupResponse.cs" />
@@ -553,6 +555,8 @@
     <Compile Include="Bda\V20200324\Models\DeleteGroupResponse.cs" />
     <Compile Include="Bda\V20200324\Models\DeletePersonRequest.cs" />
     <Compile Include="Bda\V20200324\Models\DeletePersonResponse.cs" />
+    <Compile Include="Bda\V20200324\Models\DetectBodyJointsRequest.cs" />
+    <Compile Include="Bda\V20200324\Models\DetectBodyJointsResponse.cs" />
     <Compile Include="Bda\V20200324\Models\DetectBodyRequest.cs" />
     <Compile Include="Bda\V20200324\Models\DetectBodyResponse.cs" />
     <Compile Include="Bda\V20200324\Models\Gender.cs" />
@@ -561,6 +565,7 @@
     <Compile Include="Bda\V20200324\Models\GetPersonListRequest.cs" />
     <Compile Include="Bda\V20200324\Models\GetPersonListResponse.cs" />
     <Compile Include="Bda\V20200324\Models\GroupInfo.cs" />
+    <Compile Include="Bda\V20200324\Models\KeyPointInfo.cs" />
     <Compile Include="Bda\V20200324\Models\LowerBodyCloth.cs" />
     <Compile Include="Bda\V20200324\Models\LowerBodyClothColor.cs" />
     <Compile Include="Bda\V20200324\Models\LowerBodyClothLength.cs" />
@@ -1720,7 +1725,6 @@
     <Compile Include="Cdn\V20180606\Models\Cache.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheOptResult.cs" />
-    <Compile Include="Cdn\V20180606\Models\CacheTagKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CappingRule.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnData.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnIp.cs" />
@@ -1731,7 +1735,6 @@
     <Compile Include="Cdn\V20180606\Models\Compatibility.cs" />
     <Compile Include="Cdn\V20180606\Models\Compression.cs" />
     <Compile Include="Cdn\V20180606\Models\CompressionRule.cs" />
-    <Compile Include="Cdn\V20180606\Models\CookieKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainRequest.cs" />
@@ -1798,7 +1801,7 @@
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\GuetzliAdapter.cs" />
-    <Compile Include="Cdn\V20180606\Models\HeaderKey.cs" />
+    <Compile Include="Cdn\V20180606\Models\Hsts.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
     <Compile Include="Cdn\V20180606\Models\ImageOptimization.cs" />
@@ -1831,7 +1834,6 @@
     <Compile Include="Cdn\V20180606\Models\PushTask.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheResponse.cs" />
-    <Compile Include="Cdn\V20180606\Models\QueryStringKey.cs" />
     <Compile Include="Cdn\V20180606\Models\Quota.cs" />
     <Compile Include="Cdn\V20180606\Models\RangeOriginPull.cs" />
     <Compile Include="Cdn\V20180606\Models\Referer.cs" />
@@ -1844,7 +1846,6 @@
     <Compile Include="Cdn\V20180606\Models\ResourceOriginData.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeader.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeaderCache.cs" />
-    <Compile Include="Cdn\V20180606\Models\SchemeKey.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\SecurityConfig.cs" />
@@ -2023,6 +2024,9 @@
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupTopic.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateInstancePreData.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateInstancePreRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateInstancePreResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreatePartitionRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreatePartitionResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
@@ -3519,6 +3523,7 @@
     <Compile Include="Ecdn\V20191012\Models\DomainLogs.cs" />
     <Compile Include="Ecdn\V20191012\Models\EcdnData.cs" />
     <Compile Include="Ecdn\V20191012\Models\ForceRedirect.cs" />
+    <Compile Include="Ecdn\V20191012\Models\Hsts.cs" />
     <Compile Include="Ecdn\V20191012\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Ecdn\V20191012\Models\Https.cs" />
     <Compile Include="Ecdn\V20191012\Models\IpFilter.cs" />

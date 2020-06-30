@@ -25,13 +25,13 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+        /// 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
         /// </summary>
         [JsonProperty("SrcText")]
         public string SrcText{ get; set; }
 
         /// <summary>
-        /// 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+        /// 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
         /// </summary>
         [JsonProperty("TargetText")]
         public string TargetText{ get; set; }

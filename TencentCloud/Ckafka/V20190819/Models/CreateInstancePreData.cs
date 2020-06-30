@@ -15,27 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheTagKey : AbstractModel
+    public class CreateInstancePreData : AbstractModel
     {
         
         /// <summary>
-        /// 是否使用CacheTag作为CacheKey的一部分
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// 自定义CacheTag的值
+        /// CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
+
+        /// <summary>
+        /// 订单号列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealNames")]
+        public string[] DealNames{ get; set; }
 
 
         /// <summary>
@@ -43,8 +44,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         }
     }
 }

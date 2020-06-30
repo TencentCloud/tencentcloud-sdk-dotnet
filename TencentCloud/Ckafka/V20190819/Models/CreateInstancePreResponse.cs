@@ -15,28 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HeaderKey : AbstractModel
+    public class CreateInstancePreResponse : AbstractModel
     {
         
         /// <summary>
-        /// 是否组成Cachekey
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 返回的code，0为正常，非0为错误
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public string ReturnCode{ get; set; }
 
         /// <summary>
-        /// 组成CacheKey的header 逗号分隔
+        /// 成功消息
+        /// </summary>
+        [JsonProperty("ReturnMessage")]
+        public string ReturnMessage{ get; set; }
+
+        /// <summary>
+        /// 操作型返回的Data数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Data")]
+        public CreateInstancePreData Data{ get; set; }
 
 
         /// <summary>
@@ -44,8 +49,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
         }
     }
 }

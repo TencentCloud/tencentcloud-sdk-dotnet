@@ -110,7 +110,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// 直播录制文件的唯一标识
+        /// 直播录制文件的唯一标识。
         /// </summary>
         [JsonProperty("Vid")]
         public string Vid{ get; set; }
@@ -123,6 +123,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
+
+        /// <summary>
+        /// 文件状态：Normal：正常，Forbidden：封禁。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -146,6 +152,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamSimple(map, prefix + "Category", this.Category);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

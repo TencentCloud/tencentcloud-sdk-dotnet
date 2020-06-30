@@ -73,7 +73,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public ulong? DeviceType{ get; set; }
 
         /// <summary>
-        /// IMEI
+        /// 国际移动设备识别码 IMEI
         /// </summary>
         [JsonProperty("Imei")]
         public string Imei{ get; set; }
@@ -163,6 +163,20 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Labels")]
         public DeviceLabel[] Labels{ get; set; }
 
+        /// <summary>
+        /// MQTT客户端IP地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientIP")]
+        public string ClientIP{ get; set; }
+
+        /// <summary>
+        /// ota最后更新时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirmwareUpdateTime")]
+        public ulong? FirmwareUpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +205,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "CertState", this.CertState);
             this.SetParamSimple(map, prefix + "EnableState", this.EnableState);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
+            this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
+            this.SetParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
         }
     }
 }

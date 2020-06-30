@@ -15,29 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Bda.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheKey : AbstractModel
+    public class BoundRect : AbstractModel
     {
         
         /// <summary>
-        /// 是否开启全路径缓存
-        /// on：开启全路径缓存（即关闭参数过滤）
-        /// off：关闭全路径缓存（即开启参数过滤）
+        /// 人体框左上角横坐标。
         /// </summary>
-        [JsonProperty("FullUrlCache")]
-        public string FullUrlCache{ get; set; }
+        [JsonProperty("X")]
+        public long? X{ get; set; }
 
         /// <summary>
-        /// 是否忽略大小写缓存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 人体框左上角纵坐标。
         /// </summary>
-        [JsonProperty("IgnoreCase")]
-        public string IgnoreCase{ get; set; }
+        [JsonProperty("Y")]
+        public long? Y{ get; set; }
+
+        /// <summary>
+        /// 人体宽度。
+        /// </summary>
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
+
+        /// <summary>
+        /// 人体高度。
+        /// </summary>
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
 
 
         /// <summary>
@@ -45,8 +54,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
-            this.SetParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
+            this.SetParamSimple(map, prefix + "X", this.X);
+            this.SetParamSimple(map, prefix + "Y", this.Y);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
         }
     }
 }

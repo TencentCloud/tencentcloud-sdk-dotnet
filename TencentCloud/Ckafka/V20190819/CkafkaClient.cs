@@ -93,6 +93,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 创建实例(预付费包年包月)
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
+        /// <returns><see cref="CreateInstancePreResponse"/></returns>
+        public async Task<CreateInstancePreResponse> CreateInstancePre(CreateInstancePreRequest req)
+        {
+             JsonResponseModel<CreateInstancePreResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstancePre");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancePreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建实例(预付费包年包月)
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
+        /// <returns><see cref="CreateInstancePreResponse"/></returns>
+        public CreateInstancePreResponse CreateInstancePreSync(CreateInstancePreRequest req)
+        {
+             JsonResponseModel<CreateInstancePreResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstancePre");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancePreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于增加主题中的分区
         /// </summary>
         /// <param name="req"><see cref="CreatePartitionRequest"/></param>

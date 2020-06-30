@@ -21,21 +21,28 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CookieKey : AbstractModel
+    public class Hsts : AbstractModel
     {
         
         /// <summary>
-        /// on | off 是否使用Cookie作为Cache的一部分
+        /// 是否开启，on或off。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 使用的cookie 逗号分割
+        /// MaxAge数值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("MaxAge")]
+        public long? MaxAge{ get; set; }
+
+        /// <summary>
+        /// 是否包含子域名，on或off。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IncludeSubDomains")]
+        public string IncludeSubDomains{ get; set; }
 
 
         /// <summary>
@@ -44,7 +51,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "MaxAge", this.MaxAge);
+            this.SetParamSimple(map, prefix + "IncludeSubDomains", this.IncludeSubDomains);
         }
     }
 }

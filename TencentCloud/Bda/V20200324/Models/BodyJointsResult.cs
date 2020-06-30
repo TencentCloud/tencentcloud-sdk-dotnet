@@ -15,29 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Bda.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheKey : AbstractModel
+    public class BodyJointsResult : AbstractModel
     {
         
         /// <summary>
-        /// 是否开启全路径缓存
-        /// on：开启全路径缓存（即关闭参数过滤）
-        /// off：关闭全路径缓存（即开启参数过滤）
+        /// 图中检测出来的人体框。
         /// </summary>
-        [JsonProperty("FullUrlCache")]
-        public string FullUrlCache{ get; set; }
+        [JsonProperty("BoundBox")]
+        public BoundRect BoundBox{ get; set; }
 
         /// <summary>
-        /// 是否忽略大小写缓存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 14个人体关键点的坐标，人体关键点详见KeyPointInfo。
         /// </summary>
-        [JsonProperty("IgnoreCase")]
-        public string IgnoreCase{ get; set; }
+        [JsonProperty("BodyJoints")]
+        public KeyPointInfo[] BodyJoints{ get; set; }
+
+        /// <summary>
+        /// 检测出的人体置信度，0-1之间，数值越高越准确。
+        /// </summary>
+        [JsonProperty("Confidence")]
+        public float? Confidence{ get; set; }
 
 
         /// <summary>
@@ -45,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
-            this.SetParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
+            this.SetParamObj(map, prefix + "BoundBox.", this.BoundBox);
+            this.SetParamArrayObj(map, prefix + "BodyJoints.", this.BodyJoints);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
         }
     }
 }
