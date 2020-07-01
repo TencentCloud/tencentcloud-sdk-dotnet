@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Aa.V20200224.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenDBExtranetAccessRequest : AbstractModel
+    public class QueryActivityAntiRushAdvancedRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-hez4fh0v
+        /// 业务入参
         /// </summary>
-        [JsonProperty("DBInstanceId")]
-        public string DBInstanceId{ get; set; }
-
-        /// <summary>
-        /// 是否开通Ipv6外网，1：是，0：否
-        /// </summary>
-        [JsonProperty("IsIpv6")]
-        public long? IsIpv6{ get; set; }
+        [JsonProperty("BusinessSecurityData")]
+        public InputActivityAntiRushAdvanced BusinessSecurityData{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
-            this.SetParamSimple(map, prefix + "IsIpv6", this.IsIpv6);
+            this.SetParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
         }
     }
 }

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Aa.V20200224.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenDBExtranetAccessRequest : AbstractModel
+    public class OutputActivityAntiRushAdvanced : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-hez4fh0v
+        /// 返回码。0表示成功，非0标识失败错误码。
         /// </summary>
-        [JsonProperty("DBInstanceId")]
-        public string DBInstanceId{ get; set; }
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
 
         /// <summary>
-        /// 是否开通Ipv6外网，1：是，0：否
+        /// UTF-8编码，出错消息。
         /// </summary>
-        [JsonProperty("IsIpv6")]
-        public long? IsIpv6{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
+        /// 服务调用结果。
+        /// </summary>
+        [JsonProperty("Value")]
+        public OutputActivityAntiRushAdvancedValue Value{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
-            this.SetParamSimple(map, prefix + "IsIpv6", this.IsIpv6);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamObj(map, prefix + "Value.", this.Value);
         }
     }
 }

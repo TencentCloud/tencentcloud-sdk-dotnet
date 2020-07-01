@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Dayu.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenDBExtranetAccessRequest : AbstractModel
+    public class ModifyNewDomainRulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-hez4fh0v
+        /// 成功码
         /// </summary>
-        [JsonProperty("DBInstanceId")]
-        public string DBInstanceId{ get; set; }
+        [JsonProperty("Success")]
+        public SuccessCode Success{ get; set; }
 
         /// <summary>
-        /// 是否开通Ipv6外网，1：是，0：否
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("IsIpv6")]
-        public long? IsIpv6{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
-            this.SetParamSimple(map, prefix + "IsIpv6", this.IsIpv6);
+            this.SetParamObj(map, prefix + "Success.", this.Success);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

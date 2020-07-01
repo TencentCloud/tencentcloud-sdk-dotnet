@@ -114,6 +114,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 是否需要支持Ipv6，1：是，0：否
+        /// </summary>
+        [JsonProperty("NeedSupportIpv6")]
+        public ulong? NeedSupportIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         }
     }
 }

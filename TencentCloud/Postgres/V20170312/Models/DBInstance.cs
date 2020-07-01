@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// SubnetId
+        /// 子网ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceName{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolated（已隔离）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、readonly（只读）、restarting（重启中）
         /// </summary>
         [JsonProperty("DBInstanceStatus")]
         public string DBInstanceStatus{ get; set; }
@@ -180,6 +180,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Uid")]
         public ulong? Uid{ get; set; }
 
+        /// <summary>
+        /// 实例是否支持Ipv6，1：支持，0：不支持
+        /// </summary>
+        [JsonProperty("SupportIpv6")]
+        public ulong? SupportIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
+            this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
         }
     }
 }

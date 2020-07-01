@@ -4253,6 +4253,86 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 修改7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public async Task<ModifyNewDomainRulesResponse> ModifyNewDomainRules(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public ModifyNewDomainRulesResponse ModifyNewDomainRulesSync(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改4层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewL4RuleRequest"/></param>
+        /// <returns><see cref="ModifyNewL4RuleResponse"/></returns>
+        public async Task<ModifyNewL4RuleResponse> ModifyNewL4Rule(ModifyNewL4RuleRequest req)
+        {
+             JsonResponseModel<ModifyNewL4RuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNewL4Rule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewL4RuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改4层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewL4RuleRequest"/></param>
+        /// <returns><see cref="ModifyNewL4RuleResponse"/></returns>
+        public ModifyNewL4RuleResponse ModifyNewL4RuleSync(ModifyNewL4RuleRequest req)
+        {
+             JsonResponseModel<ModifyNewL4RuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNewL4Rule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewL4RuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 资源实例绑定DDoS高级策略
         /// </summary>
         /// <param name="req"><see cref="ModifyResBindDDoSPolicyRequest"/></param>

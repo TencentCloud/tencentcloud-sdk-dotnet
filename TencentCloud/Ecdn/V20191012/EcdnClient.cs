@@ -431,7 +431,7 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
-        /// PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+        /// PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
         /// </summary>
         /// <param name="req"><see cref="PurgePathCacheRequest"/></param>
         /// <returns><see cref="PurgePathCacheResponse"/></returns>
@@ -451,7 +451,7 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
-        /// PurgeUrlsCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+        /// PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
         /// </summary>
         /// <param name="req"><see cref="PurgePathCacheRequest"/></param>
         /// <returns><see cref="PurgePathCacheResponse"/></returns>

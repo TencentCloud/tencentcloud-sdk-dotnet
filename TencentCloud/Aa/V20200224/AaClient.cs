@@ -92,5 +92,45 @@ namespace TencentCloud.Aa.V20200224
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 活动防刷高级版，支持对网赚众包、网赚防刷、引流反诈骗场景的检测识别
+        /// </summary>
+        /// <param name="req"><see cref="QueryActivityAntiRushAdvancedRequest"/></param>
+        /// <returns><see cref="QueryActivityAntiRushAdvancedResponse"/></returns>
+        public async Task<QueryActivityAntiRushAdvancedResponse> QueryActivityAntiRushAdvanced(QueryActivityAntiRushAdvancedRequest req)
+        {
+             JsonResponseModel<QueryActivityAntiRushAdvancedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryActivityAntiRushAdvanced");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityAntiRushAdvancedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 活动防刷高级版，支持对网赚众包、网赚防刷、引流反诈骗场景的检测识别
+        /// </summary>
+        /// <param name="req"><see cref="QueryActivityAntiRushAdvancedRequest"/></param>
+        /// <returns><see cref="QueryActivityAntiRushAdvancedResponse"/></returns>
+        public QueryActivityAntiRushAdvancedResponse QueryActivityAntiRushAdvancedSync(QueryActivityAntiRushAdvancedRequest req)
+        {
+             JsonResponseModel<QueryActivityAntiRushAdvancedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryActivityAntiRushAdvanced");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryActivityAntiRushAdvancedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

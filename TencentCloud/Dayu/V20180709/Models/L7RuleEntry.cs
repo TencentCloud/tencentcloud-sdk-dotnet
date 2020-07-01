@@ -139,6 +139,13 @@ namespace TencentCloud.Dayu.V20180709.Models
         [JsonProperty("HttpsToHttpEnable")]
         public ulong? HttpsToHttpEnable{ get; set; }
 
+        /// <summary>
+        /// 接入端口值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VirtualPort")]
+        public ulong? VirtualPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +171,7 @@ namespace TencentCloud.Dayu.V20180709.Models
             this.SetParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
             this.SetParamSimple(map, prefix + "CCLevel", this.CCLevel);
             this.SetParamSimple(map, prefix + "HttpsToHttpEnable", this.HttpsToHttpEnable);
+            this.SetParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
         }
     }
 }

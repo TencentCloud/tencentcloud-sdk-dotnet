@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Dayu.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenDBExtranetAccessRequest : AbstractModel
+    public class ModifyNewDomainRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-hez4fh0v
+        /// 大禹子产品代号（bgpip表示高防IP）
         /// </summary>
-        [JsonProperty("DBInstanceId")]
-        public string DBInstanceId{ get; set; }
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
 
         /// <summary>
-        /// 是否开通Ipv6外网，1：是，0：否
+        /// 资源ID
         /// </summary>
-        [JsonProperty("IsIpv6")]
-        public long? IsIpv6{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 域名转发规则
+        /// </summary>
+        [JsonProperty("Rule")]
+        public NewL7RuleEntry Rule{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
-            this.SetParamSimple(map, prefix + "IsIpv6", this.IsIpv6);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "Rule.", this.Rule);
         }
     }
 }

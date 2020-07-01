@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Postgres.V20170312.Models
+namespace TencentCloud.Aa.V20200224.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DBInstanceNetInfo : AbstractModel
+    public class QQAccountInfo : AbstractModel
     {
         
         /// <summary>
-        /// DNS域名
+        /// QQ的OpenID。
         /// </summary>
-        [JsonProperty("Address")]
-        public string Address{ get; set; }
+        [JsonProperty("QQOpenId")]
+        public string QQOpenId{ get; set; }
 
         /// <summary>
-        /// IP地址
+        /// QQ分配给网站或应用的AppId，用来唯一标识网站或应用。
         /// </summary>
-        [JsonProperty("Ip")]
-        public string Ip{ get; set; }
+        [JsonProperty("AppIdUser")]
+        public string AppIdUser{ get; set; }
 
         /// <summary>
-        /// 连接Port地址
+        /// 用于标识QQ用户登录后所关联业务自身的账号ID。
         /// </summary>
-        [JsonProperty("Port")]
-        public ulong? Port{ get; set; }
+        [JsonProperty("AssociateAccount")]
+        public string AssociateAccount{ get; set; }
 
         /// <summary>
-        /// 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
+        /// 账号绑定的手机号。
         /// </summary>
-        [JsonProperty("NetType")]
-        public string NetType{ get; set; }
+        [JsonProperty("MobilePhone")]
+        public string MobilePhone{ get; set; }
 
         /// <summary>
-        /// 网络连接状态
+        /// 用户设备号。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("DeviceId")]
+        public bool? DeviceId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Address", this.Address);
-            this.SetParamSimple(map, prefix + "Ip", this.Ip);
-            this.SetParamSimple(map, prefix + "Port", this.Port);
-            this.SetParamSimple(map, prefix + "NetType", this.NetType);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "QQOpenId", this.QQOpenId);
+            this.SetParamSimple(map, prefix + "AppIdUser", this.AppIdUser);
+            this.SetParamSimple(map, prefix + "AssociateAccount", this.AssociateAccount);
+            this.SetParamSimple(map, prefix + "MobilePhone", this.MobilePhone);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
         }
     }
 }
