@@ -30,6 +30,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 是否IPv6，默认0
+        /// </summary>
+        [JsonProperty("Ipv6Flag")]
+        public long? Ipv6Flag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
         }
     }
 }

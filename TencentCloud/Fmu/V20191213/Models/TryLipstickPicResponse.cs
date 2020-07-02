@@ -25,10 +25,16 @@ namespace TencentCloud.Fmu.V20191213.Models
     {
         
         /// <summary>
-        /// 结果图片Base64信息。
+        /// RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
         /// </summary>
         [JsonProperty("ResultImage")]
         public string ResultImage{ get; set; }
+
+        /// <summary>
+        /// RspImgType 为 url 时，返回处理后的图片 url 数据。
+        /// </summary>
+        [JsonProperty("ResultUrl")]
+        public string ResultUrl{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Fmu.V20191213.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ResultImage", this.ResultImage);
+            this.SetParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

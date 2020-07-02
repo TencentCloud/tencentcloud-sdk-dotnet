@@ -43,6 +43,12 @@ namespace TencentCloud.Partners.V20180321.Models
         public string ClientGrade{ get; set; }
 
         /// <summary>
+        /// 客户类型：1，个人；2，企业；3，其他
+        /// </summary>
+        [JsonProperty("ClientType")]
+        public ulong? ClientType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
             this.SetParamSimple(map, prefix + "AuthState", this.AuthState);
             this.SetParamSimple(map, prefix + "ClientGrade", this.ClientGrade);
+            this.SetParamSimple(map, prefix + "ClientType", this.ClientType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -240,6 +240,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("StoreNo")]
         public string StoreNo{ get; set; }
 
+        /// <summary>
+        /// 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+        /// </summary>
+        [JsonProperty("InvoiceChannel")]
+        public long? InvoiceChannel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -281,6 +287,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "OrderDate", this.OrderDate);
             this.SetParamSimple(map, prefix + "Discount", this.Discount);
             this.SetParamSimple(map, prefix + "StoreNo", this.StoreNo);
+            this.SetParamSimple(map, prefix + "InvoiceChannel", this.InvoiceChannel);
         }
     }
 }

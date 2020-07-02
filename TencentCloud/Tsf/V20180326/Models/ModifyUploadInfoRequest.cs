@@ -54,6 +54,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
+        /// <summary>
+        /// 程序包仓库类型
+        /// </summary>
+        [JsonProperty("RepositoryType")]
+        public string RepositoryType{ get; set; }
+
+        /// <summary>
+        /// 程序包仓库id
+        /// </summary>
+        [JsonProperty("RepositoryId")]
+        public string RepositoryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+            this.SetParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
         }
     }
 }

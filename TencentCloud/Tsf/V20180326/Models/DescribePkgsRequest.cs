@@ -60,6 +60,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 程序包仓库类型
+        /// </summary>
+        [JsonProperty("RepositoryType")]
+        public string RepositoryType{ get; set; }
+
+        /// <summary>
+        /// 程序包仓库id
+        /// </summary>
+        [JsonProperty("RepositoryId")]
+        public string RepositoryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+            this.SetParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
         }
     }
 }

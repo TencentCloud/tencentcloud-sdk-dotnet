@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.92</VersionPrefix>
+    <VersionPrefix>3.0.93</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2535,6 +2535,7 @@
     <Compile Include="Cpdp\V20190820\Models\Acct.cs" />
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPayment.cs" />
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPaymentBatch.cs" />
+    <Compile Include="Cpdp\V20190820\Models\AnchorContractInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyApplicationMaterialRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyApplicationMaterialResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyDeclareData.cs" />
@@ -2595,8 +2596,12 @@
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfosRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfosResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DescribeChargeDetailRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DescribeChargeDetailResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ExecuteMemberTransactionRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ExecuteMemberTransactionResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementResult.cs" />
@@ -2615,6 +2620,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryAgentStatementsResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAgentTaxPaymentBatchRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAgentTaxPaymentBatchResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryAnchorContractInfoRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryAnchorContractInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryApplicationMaterialRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryApplicationMaterialResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBalanceRequest.cs" />
@@ -2674,8 +2681,12 @@
     <Compile Include="Cpdp\V20190820\Models\QueryTradeRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryTradeResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryTradeResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RechargeByThirdPayRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RechargeByThirdPayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RechargeMemberThirdPayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RechargeMemberThirdPayResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RefundMemberTransactionRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RefundMemberTransactionResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundOutSubOrderRefundList.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundResponse.cs" />
@@ -2683,14 +2694,14 @@
     <Compile Include="Cpdp\V20190820\Models\RegisterBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawResponse.cs" />
-    <Compile Include="Cpdp\V20190820\Models\RevRegisterBillSupportWithdrawRequest.cs" />
-    <Compile Include="Cpdp\V20190820\Models\RevRegisterBillSupportWithdrawResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevResigterBillSupportWithdrawRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevResigterBillSupportWithdrawResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ReviseMbrPropertyRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ReviseMbrPropertyResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevokeMemberRechargeThirdPayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevokeMemberRechargeThirdPayResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RevokeRechargeByThirdPayRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RevokeRechargeByThirdPayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\TranItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\TransactionItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\TransferItem.cs" />
@@ -4388,6 +4399,9 @@
     <Compile Include="Ic\V20190307\Models\DescribeCardResponse.cs" />
     <Compile Include="Ic\V20190307\Models\DescribeCardsRequest.cs" />
     <Compile Include="Ic\V20190307\Models\DescribeCardsResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\RenewCardsRequest.cs" />
+    <Compile Include="Ic\V20190307\Models\RenewCardsResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\ResRenew.cs" />
     <Compile Include="Ic\V20190307\Models\SendMultiSmsRequest.cs" />
     <Compile Include="Ic\V20190307\Models\SendMultiSmsResponse.cs" />
     <Compile Include="Ic\V20190307\Models\SendSmsRequest.cs" />
@@ -7664,6 +7678,8 @@
     <Compile Include="Tione\V20191022\Models\DescribeNotebookSummaryResponse.cs" />
     <Compile Include="Tione\V20191022\Models\DescribeTrainingJobRequest.cs" />
     <Compile Include="Tione\V20191022\Models\DescribeTrainingJobResponse.cs" />
+    <Compile Include="Tione\V20191022\Models\DescribeTrainingJobsRequest.cs" />
+    <Compile Include="Tione\V20191022\Models\DescribeTrainingJobsResponse.cs" />
     <Compile Include="Tione\V20191022\Models\EnvConfig.cs" />
     <Compile Include="Tione\V20191022\Models\FileSystemDataSource.cs" />
     <Compile Include="Tione\V20191022\Models\Filter.cs" />
@@ -7683,6 +7699,7 @@
     <Compile Include="Tione\V20191022\Models\StopTrainingJobRequest.cs" />
     <Compile Include="Tione\V20191022\Models\StopTrainingJobResponse.cs" />
     <Compile Include="Tione\V20191022\Models\StoppingCondition.cs" />
+    <Compile Include="Tione\V20191022\Models\TrainingJobSummary.cs" />
     <Compile Include="Tione\V20191022\Models\UpdateCodeRepositoryRequest.cs" />
     <Compile Include="Tione\V20191022\Models\UpdateCodeRepositoryResponse.cs" />
     <Compile Include="Tione\V20191022\Models\UpdateNotebookInstanceRequest.cs" />
@@ -7929,6 +7946,8 @@
     <Compile Include="Tsf\V20180326\Models\CreateNamespaceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreatePublicConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreatePublicConfigResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateRepositoryRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateServerlessGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateServerlessGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApplicationRequest.cs" />
@@ -7952,6 +7971,8 @@
     <Compile Include="Tsf\V20180326\Models\DeletePkgsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeletePublicConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeletePublicConfigResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteRepositoryRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteServerlessGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteServerlessGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeployContainerGroupRequest.cs" />
@@ -8022,6 +8043,10 @@
     <Compile Include="Tsf\V20180326\Models\DescribePublicConfigsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeReleasedConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeReleasedConfigResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeRepositoriesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeRepositoriesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeRepositoryRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeServerlessGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeServerlessGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeServerlessGroupsRequest.cs" />
@@ -8068,6 +8093,7 @@
     <Compile Include="Tsf\V20180326\Models\Namespace.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfoDetail.cs" />
+    <Compile Include="Tsf\V20180326\Models\PkgBind.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgList.cs" />
     <Compile Include="Tsf\V20180326\Models\PropertyField.cs" />
@@ -8078,6 +8104,8 @@
     <Compile Include="Tsf\V20180326\Models\ReleasePublicConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RemoveInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\RemoveInstancesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\RepositoryInfo.cs" />
+    <Compile Include="Tsf\V20180326\Models\RepositoryList.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationPublicConfigRequest.cs" />
@@ -8114,6 +8142,8 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleApplication.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageVmGroup.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateRepositoryRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroupSimple.cs" />
     <Compile Include="Tts\V20190823\TtsClient.cs" />

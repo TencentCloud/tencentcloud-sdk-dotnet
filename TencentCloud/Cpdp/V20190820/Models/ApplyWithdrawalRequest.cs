@@ -118,6 +118,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("MidasEnvironment")]
         public string MidasEnvironment{ get; set; }
 
+        /// <summary>
+        /// 手续费金额
+        /// </summary>
+        [JsonProperty("CommissionAmount")]
+        public string CommissionAmount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +144,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
             this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+            this.SetParamSimple(map, prefix + "CommissionAmount", this.CommissionAmount);
         }
     }
 }

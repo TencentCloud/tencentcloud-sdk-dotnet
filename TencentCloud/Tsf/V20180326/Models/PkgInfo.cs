@@ -80,6 +80,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("PkgPubStatus")]
         public long? PkgPubStatus{ get; set; }
 
+        /// <summary>
+        /// 程序包关联关系
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PkgBindInfo")]
+        public PkgBind[] PkgBindInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "UploadTime", this.UploadTime);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
             this.SetParamSimple(map, prefix + "PkgPubStatus", this.PkgPubStatus);
+            this.SetParamArrayObj(map, prefix + "PkgBindInfo.", this.PkgBindInfo);
         }
     }
 }

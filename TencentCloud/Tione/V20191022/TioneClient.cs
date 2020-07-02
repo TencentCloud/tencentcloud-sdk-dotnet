@@ -693,6 +693,46 @@ namespace TencentCloud.Tione.V20191022
         }
 
         /// <summary>
+        /// 查询训练任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingJobsRequest"/></param>
+        /// <returns><see cref="DescribeTrainingJobsResponse"/></returns>
+        public async Task<DescribeTrainingJobsResponse> DescribeTrainingJobs(DescribeTrainingJobsRequest req)
+        {
+             JsonResponseModel<DescribeTrainingJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrainingJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrainingJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询训练任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrainingJobsRequest"/></param>
+        /// <returns><see cref="DescribeTrainingJobsResponse"/></returns>
+        public DescribeTrainingJobsResponse DescribeTrainingJobsSync(DescribeTrainingJobsRequest req)
+        {
+             JsonResponseModel<DescribeTrainingJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrainingJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrainingJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启动Notebook实例
         /// </summary>
         /// <param name="req"><see cref="StartNotebookInstanceRequest"/></param>

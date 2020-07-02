@@ -173,6 +173,54 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
+        /// 批量为卡片续费，此接口建议调用至少间隔10s,如果出现返回deal lock failed相关的错误，请过10s再重试。
+        /// 续费的必要条件：
+        /// 1、单次续费的卡片不可以超过 100张。
+        /// 2、只对单卡续费，不支持池卡
+        /// 3、销户和未激活的卡片不支持续费。
+        /// </summary>
+        /// <param name="req"><see cref="RenewCardsRequest"/></param>
+        /// <returns><see cref="RenewCardsResponse"/></returns>
+        public async Task<RenewCardsResponse> RenewCards(RenewCardsRequest req)
+        {
+             JsonResponseModel<RenewCardsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewCards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewCardsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量为卡片续费，此接口建议调用至少间隔10s,如果出现返回deal lock failed相关的错误，请过10s再重试。
+        /// 续费的必要条件：
+        /// 1、单次续费的卡片不可以超过 100张。
+        /// 2、只对单卡续费，不支持池卡
+        /// 3、销户和未激活的卡片不支持续费。
+        /// </summary>
+        /// <param name="req"><see cref="RenewCardsRequest"/></param>
+        /// <returns><see cref="RenewCardsResponse"/></returns>
+        public RenewCardsResponse RenewCardsSync(RenewCardsRequest req)
+        {
+             JsonResponseModel<RenewCardsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewCards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewCardsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 群发短信
         /// </summary>
         /// <param name="req"><see cref="SendMultiSmsRequest"/></param>

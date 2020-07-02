@@ -150,6 +150,19 @@ namespace TencentCloud.Tione.V20191022.Models
         public string TrainingJobStatus{ get; set; }
 
         /// <summary>
+        /// 训练任务日志链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogUrl")]
+        public string LogUrl{ get; set; }
+
+        /// <summary>
+        /// 训练任务实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -178,6 +191,8 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamArrayObj(map, prefix + "SecondaryStatusTransitions.", this.SecondaryStatusTransitions);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "TrainingJobStatus", this.TrainingJobStatus);
+            this.SetParamSimple(map, prefix + "LogUrl", this.LogUrl);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

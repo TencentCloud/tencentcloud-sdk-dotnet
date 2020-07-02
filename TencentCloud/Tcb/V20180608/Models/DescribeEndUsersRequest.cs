@@ -31,6 +31,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EnvId{ get; set; }
 
         /// <summary>
+        /// 可选参数，偏移量，默认 0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 可选参数，拉取数量，默认 20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
         /// 按照 uuid 列表过滤，最大个数为100
         /// </summary>
         [JsonProperty("UUIds")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "UUIds.", this.UUIds);
         }
     }

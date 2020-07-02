@@ -132,6 +132,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// Midas环境参数
+        /// </summary>
+        [JsonProperty("MidasEnvironment")]
+        public string MidasEnvironment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "TranType", this.TranType);
             this.SetParamSimple(map, prefix + "ReservedMessage", this.ReservedMessage);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
         }
     }
 }

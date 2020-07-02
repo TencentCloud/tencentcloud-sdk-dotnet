@@ -48,6 +48,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ZoneState")]
         public string ZoneState{ get; set; }
 
+        /// <summary>
+        /// 该可用区是否支持Ipv6
+        /// </summary>
+        [JsonProperty("ZoneSupportIpv6")]
+        public ulong? ZoneSupportIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneState", this.ZoneState);
+            this.SetParamSimple(map, prefix + "ZoneSupportIpv6", this.ZoneSupportIpv6);
         }
     }
 }

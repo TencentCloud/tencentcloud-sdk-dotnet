@@ -56,6 +56,18 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
+        /// <summary>
+        /// 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+        /// </summary>
+        [JsonProperty("InvoiceChannel")]
+        public long? InvoiceChannel{ get; set; }
+
+        /// <summary>
+        /// 当渠道为线下渠道时，必填
+        /// </summary>
+        [JsonProperty("SellerTaxpayerNum")]
+        public string SellerTaxpayerNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +79,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "OrderSn", this.OrderSn);
             this.SetParamSimple(map, prefix + "IsRed", this.IsRed);
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamSimple(map, prefix + "InvoiceChannel", this.InvoiceChannel);
+            this.SetParamSimple(map, prefix + "SellerTaxpayerNum", this.SellerTaxpayerNum);
         }
     }
 }

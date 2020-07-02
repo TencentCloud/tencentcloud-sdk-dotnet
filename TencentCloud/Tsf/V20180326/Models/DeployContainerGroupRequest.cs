@@ -156,6 +156,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("IstioMemLimit")]
         public string IstioMemLimit{ get; set; }
 
+        /// <summary>
+        /// kubernetes滚动更新策略的MaxSurge参数
+        /// </summary>
+        [JsonProperty("MaxSurge")]
+        public string MaxSurge{ get; set; }
+
+        /// <summary>
+        /// kubernetes滚动更新策略的MaxUnavailable参数
+        /// </summary>
+        [JsonProperty("MaxUnavailable")]
+        public string MaxUnavailable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "IstioCpuLimit", this.IstioCpuLimit);
             this.SetParamSimple(map, prefix + "IstioMemRequest", this.IstioMemRequest);
             this.SetParamSimple(map, prefix + "IstioMemLimit", this.IstioMemLimit);
+            this.SetParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
+            this.SetParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
         }
     }
 }

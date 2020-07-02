@@ -15,46 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Ic.V20190307.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RevRegisterBillSupportWithdrawResponse : AbstractModel
+    public class RenewCardsResponse : AbstractModel
     {
         
         /// <summary>
-        /// String(20)，返回码
-        /// </summary>
-        [JsonProperty("TxnReturnCode")]
-        public string TxnReturnCode{ get; set; }
-
-        /// <summary>
-        /// String(100)，返回信息
-        /// </summary>
-        [JsonProperty("TxnReturnMsg")]
-        public string TxnReturnMsg{ get; set; }
-
-        /// <summary>
-        /// String(22)，交易流水号
-        /// </summary>
-        [JsonProperty("CnsmrSeqNo")]
-        public string CnsmrSeqNo{ get; set; }
-
-        /// <summary>
-        /// STRING(52)，见证系统流水号
+        /// 续费成功的订单id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FrontSeqNo")]
-        public string FrontSeqNo{ get; set; }
-
-        /// <summary>
-        /// STRING(1027)，保留域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ReservedMsg")]
-        public string ReservedMsg{ get; set; }
+        [JsonProperty("Data")]
+        public ResRenew Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -68,11 +43,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TxnReturnCode", this.TxnReturnCode);
-            this.SetParamSimple(map, prefix + "TxnReturnMsg", this.TxnReturnMsg);
-            this.SetParamSimple(map, prefix + "CnsmrSeqNo", this.CnsmrSeqNo);
-            this.SetParamSimple(map, prefix + "FrontSeqNo", this.FrontSeqNo);
-            this.SetParamSimple(map, prefix + "ReservedMsg", this.ReservedMsg);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

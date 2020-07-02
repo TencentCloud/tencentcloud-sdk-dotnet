@@ -37,6 +37,27 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Content")]
         public PkgInfo[] Content{ get; set; }
 
+        /// <summary>
+        /// 程序包仓库id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepositoryId")]
+        public string RepositoryId{ get; set; }
+
+        /// <summary>
+        /// 程序包仓库类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepositoryType")]
+        public string RepositoryType{ get; set; }
+
+        /// <summary>
+        /// 程序包仓库名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepositoryName")]
+        public string RepositoryName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +66,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
+            this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+            this.SetParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
         }
     }
 }

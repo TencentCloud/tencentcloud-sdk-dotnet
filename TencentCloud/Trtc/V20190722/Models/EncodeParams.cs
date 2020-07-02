@@ -78,6 +78,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("BackgroundColor")]
         public ulong? BackgroundColor{ get; set; }
 
+        /// <summary>
+        /// 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
+        /// </summary>
+        [JsonProperty("BackgroundImageId")]
+        public ulong? BackgroundImageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "VideoFramerate", this.VideoFramerate);
             this.SetParamSimple(map, prefix + "VideoGop", this.VideoGop);
             this.SetParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
+            this.SetParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
         }
     }
 }

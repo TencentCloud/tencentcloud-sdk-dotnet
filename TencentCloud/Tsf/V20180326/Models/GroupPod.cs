@@ -115,6 +115,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
+        /// <summary>
+        /// 节点实例id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeInstanceId")]
+        public string NodeInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ServiceInstanceStatus", this.ServiceInstanceStatus);
             this.SetParamSimple(map, prefix + "InstanceAvailableStatus", this.InstanceAvailableStatus);
             this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "NodeInstanceId", this.NodeInstanceId);
         }
     }
 }

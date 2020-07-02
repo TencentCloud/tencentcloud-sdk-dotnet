@@ -122,6 +122,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
+        /// <summary>
+        /// 是否支持IPv6
+        /// </summary>
+        [JsonProperty("Ipv6Flag")]
+        public long? Ipv6Flag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +149,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
         }
     }
 }

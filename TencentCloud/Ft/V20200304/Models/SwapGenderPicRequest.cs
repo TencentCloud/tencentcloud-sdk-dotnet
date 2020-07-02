@@ -48,6 +48,12 @@ namespace TencentCloud.Ft.V20200304.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+        /// </summary>
+        [JsonProperty("RspImgType")]
+        public string RspImgType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +63,7 @@ namespace TencentCloud.Ft.V20200304.Models
             this.SetParamArrayObj(map, prefix + "GenderInfos.", this.GenderInfos);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "RspImgType", this.RspImgType);
         }
     }
 }

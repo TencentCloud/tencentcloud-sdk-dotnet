@@ -54,6 +54,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("PkgDesc")]
         public string PkgDesc{ get; set; }
 
+        /// <summary>
+        /// 程序包仓库类型
+        /// </summary>
+        [JsonProperty("RepositoryType")]
+        public string RepositoryType{ get; set; }
+
+        /// <summary>
+        /// 程序包仓库id
+        /// </summary>
+        [JsonProperty("RepositoryId")]
+        public string RepositoryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "PkgVersion", this.PkgVersion);
             this.SetParamSimple(map, prefix + "PkgType", this.PkgType);
             this.SetParamSimple(map, prefix + "PkgDesc", this.PkgDesc);
+            this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+            this.SetParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
         }
     }
 }

@@ -65,6 +65,12 @@ namespace TencentCloud.Fmu.V20191213.Models
         [JsonProperty("EyeEnlarging")]
         public ulong? EyeEnlarging{ get; set; }
 
+        /// <summary>
+        /// 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+        /// </summary>
+        [JsonProperty("RspImgType")]
+        public string RspImgType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Fmu.V20191213.Models
             this.SetParamSimple(map, prefix + "Smoothing", this.Smoothing);
             this.SetParamSimple(map, prefix + "FaceLifting", this.FaceLifting);
             this.SetParamSimple(map, prefix + "EyeEnlarging", this.EyeEnlarging);
+            this.SetParamSimple(map, prefix + "RspImgType", this.RspImgType);
         }
     }
 }
