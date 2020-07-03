@@ -21,11 +21,11 @@ namespace TencentCloud.Cpdp.V20190820.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RechargeByThirdPayRequest : AbstractModel
+    public class DescribeOrderStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 请求类型 此接口固定填：MemberRechargeThirdPayReq
+        /// 请求类型，此接口固定填：QueryOrderStatusReq
         /// </summary>
         [JsonProperty("RequestType")]
         public string RequestType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public long? PayChannelSubId{ get; set; }
 
         /// <summary>
-        /// 交易订单号
+        /// 交易订单号或流水号，提现，充值或会员交易请求时的CnsmrSeqNo值
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
@@ -67,16 +67,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string PlatformShortNumber{ get; set; }
 
         /// <summary>
-        /// 聚鑫分配的安全ID
+        /// 功能标志 0：会员间交易 1：提现 2：充值
         /// </summary>
-        [JsonProperty("MidasSecretId")]
-        public string MidasSecretId{ get; set; }
+        [JsonProperty("QueryType")]
+        public string QueryType{ get; set; }
 
         /// <summary>
-        /// 聚鑫分配的支付主MidasAppId
+        /// 银行流水号
         /// </summary>
-        [JsonProperty("MidasAppId")]
-        public string MidasAppId{ get; set; }
+        [JsonProperty("TransSequenceNumber")]
+        public string TransSequenceNumber{ get; set; }
 
         /// <summary>
         /// 计费签名
@@ -85,82 +85,40 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MidasSignature{ get; set; }
 
         /// <summary>
-        /// 交易流水号
+        /// 聚鑫分配的支付主MidasAppId
         /// </summary>
-        [JsonProperty("TransSequenceNumber")]
-        public string TransSequenceNumber{ get; set; }
+        [JsonProperty("MidasAppId")]
+        public string MidasAppId{ get; set; }
 
         /// <summary>
-        /// 子账户账号
+        /// 聚鑫分配的安全ID
         /// </summary>
-        [JsonProperty("BankSubAccountNumber")]
-        public string BankSubAccountNumber{ get; set; }
+        [JsonProperty("MidasSecretId")]
+        public string MidasSecretId{ get; set; }
 
         /// <summary>
-        /// 交易手续费
-        /// </summary>
-        [JsonProperty("TransFee")]
-        public string TransFee{ get; set; }
-
-        /// <summary>
-        /// 第三方支付渠道类型 0001-微信 0002-支付宝 0003-京东支付
-        /// </summary>
-        [JsonProperty("ThirdPayChannel")]
-        public string ThirdPayChannel{ get; set; }
-
-        /// <summary>
-        /// 第三方渠道商户号
-        /// </summary>
-        [JsonProperty("ThirdPayChannelMerchantCode")]
-        public string ThirdPayChannelMerchantCode{ get; set; }
-
-        /// <summary>
-        /// 第三方渠道订单号或流水号
-        /// </summary>
-        [JsonProperty("ThirdPayChannelOrderId")]
-        public string ThirdPayChannelOrderId{ get; set; }
-
-        /// <summary>
-        /// 交易金额
-        /// </summary>
-        [JsonProperty("CurrencyAmount")]
-        public string CurrencyAmount{ get; set; }
-
-        /// <summary>
-        /// 单位，1：元，2：角，3：分
-        /// </summary>
-        [JsonProperty("CurrencyUnit")]
-        public string CurrencyUnit{ get; set; }
-
-        /// <summary>
-        /// 币种
-        /// </summary>
-        [JsonProperty("CurrencyType")]
-        public string CurrencyType{ get; set; }
-
-        /// <summary>
-        /// 交易网会员代码
-        /// </summary>
-        [JsonProperty("TransNetMemberCode")]
-        public string TransNetMemberCode{ get; set; }
-
-        /// <summary>
-        /// midas环境参数
+        /// Midas环境参数
         /// </summary>
         [JsonProperty("MidasEnvironment")]
         public string MidasEnvironment{ get; set; }
 
         /// <summary>
-        /// 保留域
+        /// 保留字段
         /// </summary>
         [JsonProperty("ReservedMessage")]
         public string ReservedMessage{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// 子账户账号 暂未使用
         /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("BankSubAccountNumber")]
+        public string BankSubAccountNumber{ get; set; }
+
+        /// <summary>
+        /// 交易日期 暂未使用
+        /// </summary>
+        [JsonProperty("TransDate")]
+        public string TransDate{ get; set; }
 
 
         /// <summary>
@@ -175,22 +133,15 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
             this.SetParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
             this.SetParamSimple(map, prefix + "PlatformShortNumber", this.PlatformShortNumber);
-            this.SetParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
-            this.SetParamSimple(map, prefix + "MidasAppId", this.MidasAppId);
-            this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
+            this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
             this.SetParamSimple(map, prefix + "TransSequenceNumber", this.TransSequenceNumber);
-            this.SetParamSimple(map, prefix + "BankSubAccountNumber", this.BankSubAccountNumber);
-            this.SetParamSimple(map, prefix + "TransFee", this.TransFee);
-            this.SetParamSimple(map, prefix + "ThirdPayChannel", this.ThirdPayChannel);
-            this.SetParamSimple(map, prefix + "ThirdPayChannelMerchantCode", this.ThirdPayChannelMerchantCode);
-            this.SetParamSimple(map, prefix + "ThirdPayChannelOrderId", this.ThirdPayChannelOrderId);
-            this.SetParamSimple(map, prefix + "CurrencyAmount", this.CurrencyAmount);
-            this.SetParamSimple(map, prefix + "CurrencyUnit", this.CurrencyUnit);
-            this.SetParamSimple(map, prefix + "CurrencyType", this.CurrencyType);
-            this.SetParamSimple(map, prefix + "TransNetMemberCode", this.TransNetMemberCode);
+            this.SetParamSimple(map, prefix + "MidasSignature", this.MidasSignature);
+            this.SetParamSimple(map, prefix + "MidasAppId", this.MidasAppId);
+            this.SetParamSimple(map, prefix + "MidasSecretId", this.MidasSecretId);
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
             this.SetParamSimple(map, prefix + "ReservedMessage", this.ReservedMessage);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "BankSubAccountNumber", this.BankSubAccountNumber);
+            this.SetParamSimple(map, prefix + "TransDate", this.TransDate);
         }
     }
 }

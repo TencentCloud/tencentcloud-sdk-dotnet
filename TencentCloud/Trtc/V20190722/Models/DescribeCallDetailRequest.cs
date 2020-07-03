@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）。通过 DescribeRoomInformation（查询房间列表）接口获取。
+        /// 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
         /// </summary>
         [JsonProperty("CommId")]
         public string CommId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 用户sdkappid
+        /// 用户sdkappid（1400188366）
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }

@@ -949,6 +949,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 查询单笔订单交易状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrderStatusRequest"/></param>
+        /// <returns><see cref="DescribeOrderStatusResponse"/></returns>
+        public async Task<DescribeOrderStatusResponse> DescribeOrderStatus(DescribeOrderStatusRequest req)
+        {
+             JsonResponseModel<DescribeOrderStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrderStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrderStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单笔订单交易状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrderStatusRequest"/></param>
+        /// <returns><see cref="DescribeOrderStatusResponse"/></returns>
+        public DescribeOrderStatusResponse DescribeOrderStatusSync(DescribeOrderStatusRequest req)
+        {
+             JsonResponseModel<DescribeOrderStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrderStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrderStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
         /// </summary>
         /// <param name="req"><see cref="DownloadBillRequest"/></param>

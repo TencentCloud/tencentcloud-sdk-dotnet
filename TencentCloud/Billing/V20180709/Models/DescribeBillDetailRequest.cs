@@ -68,7 +68,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? NeedRecordNum{ get; set; }
 
         /// <summary>
-        /// 查询指定产品信息
+        /// 查询指定产品信息（暂时未开放获取）
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }

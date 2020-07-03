@@ -31,10 +31,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 路由策略唯一ID。
+        /// 路由策略ID。不能和RouteItemIds同时使用。
         /// </summary>
         [JsonProperty("RouteIds")]
         public ulong?[] RouteIds{ get; set; }
+
+        /// <summary>
+        /// 路由策略唯一ID。不能和RouteIds同时使用。
+        /// </summary>
+        [JsonProperty("RouteItemIds")]
+        public string[] RouteItemIds{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
             this.SetParamArraySimple(map, prefix + "RouteIds.", this.RouteIds);
+            this.SetParamArraySimple(map, prefix + "RouteItemIds.", this.RouteItemIds);
         }
     }
 }

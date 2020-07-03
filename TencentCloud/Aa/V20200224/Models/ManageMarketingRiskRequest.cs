@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Aa.V20200224.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DisableRoutesRequest : AbstractModel
+    public class ManageMarketingRiskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 路由表唯一ID。
+        /// 业务入参
         /// </summary>
-        [JsonProperty("RouteTableId")]
-        public string RouteTableId{ get; set; }
-
-        /// <summary>
-        /// 路由策略ID。不能和RouteItemIds同时使用。
-        /// </summary>
-        [JsonProperty("RouteIds")]
-        public ulong?[] RouteIds{ get; set; }
-
-        /// <summary>
-        /// 路由策略唯一ID。不能和RouteIds同时使用。
-        /// </summary>
-        [JsonProperty("RouteItemIds")]
-        public string[] RouteItemIds{ get; set; }
+        [JsonProperty("BusinessSecurityData")]
+        public InputManageMarketingRisk BusinessSecurityData{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
-            this.SetParamArraySimple(map, prefix + "RouteIds.", this.RouteIds);
-            this.SetParamArraySimple(map, prefix + "RouteItemIds.", this.RouteItemIds);
+            this.SetParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
         }
     }
 }

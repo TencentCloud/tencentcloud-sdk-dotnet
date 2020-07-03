@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 查询开始时间，24小时内，，本地unix时间戳（1588031999s）
+        /// 查询开始时间，24小时内，本地unix时间戳（1588031999s）
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 需查询的数据类型
-        /// sendLossRateRaw：上行丢包率；
+        /// sendLossRateRaw：上行丢包率
         /// recvLossRateRaw：下行丢包率
         /// </summary>
         [JsonProperty("DataType")]

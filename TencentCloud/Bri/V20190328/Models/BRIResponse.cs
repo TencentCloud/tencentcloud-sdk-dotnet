@@ -55,7 +55,7 @@ namespace TencentCloud.Bri.V20190328.Models
         /// 1) 安全   说明: APK为正规应用
         /// 2) 一般   说明: APK为未发现问题的正常应用
         /// 3) 风险   说明: APK为外挂或色情等风险应用
-        /// 4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
+        /// 4) 病毒   说明: APK为包含恶意代码的恶意软件,可能破坏系统或者其他app正常使用
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

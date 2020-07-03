@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.93</VersionPrefix>
+    <VersionPrefix>3.0.94</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,11 +48,17 @@
     <Compile Include="Common\Sign.cs" />
     <Compile Include="Aa\V20200224\AaClient.cs" />
     <Compile Include="Aa\V20200224\Models\AccountInfo.cs" />
+    <Compile Include="Aa\V20200224\Models\CrowdAntiRushInfo.cs" />
     <Compile Include="Aa\V20200224\Models\InputActivityAntiRushAdvanced.cs" />
+    <Compile Include="Aa\V20200224\Models\InputManageMarketingRisk.cs" />
+    <Compile Include="Aa\V20200224\Models\ManageMarketingRiskRequest.cs" />
+    <Compile Include="Aa\V20200224\Models\ManageMarketingRiskResponse.cs" />
     <Compile Include="Aa\V20200224\Models\OnlineScamInfo.cs" />
     <Compile Include="Aa\V20200224\Models\OtherAccountInfo.cs" />
     <Compile Include="Aa\V20200224\Models\OutputActivityAntiRushAdvanced.cs" />
     <Compile Include="Aa\V20200224\Models\OutputActivityAntiRushAdvancedValue.cs" />
+    <Compile Include="Aa\V20200224\Models\OutputManageMarketingRisk.cs" />
+    <Compile Include="Aa\V20200224\Models\OutputManageMarketingRiskValue.cs" />
     <Compile Include="Aa\V20200224\Models\QQAccountInfo.cs" />
     <Compile Include="Aa\V20200224\Models\QueryActivityAntiRushAdvancedRequest.cs" />
     <Compile Include="Aa\V20200224\Models\QueryActivityAntiRushAdvancedResponse.cs" />
@@ -2598,6 +2604,8 @@
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfosResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DescribeChargeDetailRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DescribeChargeDetailResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DescribeOrderStatusRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DescribeOrderStatusResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ExecuteMemberTransactionRequest.cs" />
@@ -5003,6 +5011,8 @@
     <Compile Include="Live\V20180801\Models\CreateLiveWatermarkRuleResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreatePullStreamConfigRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreatePullStreamConfigResponse.cs" />
+    <Compile Include="Live\V20180801\Models\CreateRecordTaskRequest.cs" />
+    <Compile Include="Live\V20180801\Models\CreateRecordTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\DayStreamPlayInfo.cs" />
     <Compile Include="Live\V20180801\Models\DelayInfo.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveCallbackRuleRequest.cs" />
@@ -5033,6 +5043,8 @@
     <Compile Include="Live\V20180801\Models\DeleteLiveWatermarkRuleResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeletePullStreamConfigRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeletePullStreamConfigResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteRecordTaskRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteRecordTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListRequest.cs" />
@@ -5197,6 +5209,8 @@
     <Compile Include="Live\V20180801\Models\SnapshotTemplateInfo.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\StopLiveRecordResponse.cs" />
+    <Compile Include="Live\V20180801\Models\StopRecordTaskRequest.cs" />
+    <Compile Include="Live\V20180801\Models\StopRecordTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\StreamEventInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamNameInfo.cs" />
     <Compile Include="Live\V20180801\Models\StreamOnlineInfo.cs" />

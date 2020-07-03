@@ -15,35 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tione.V20191022.Models
+namespace TencentCloud.Aa.V20200224.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputDataConfig : AbstractModel
+    public class OutputManageMarketingRisk : AbstractModel
     {
         
         /// <summary>
-        /// cos输出桶
+        /// 返回码。0表示成功，非0标识失败错误码。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CosOutputBucket")]
-        public string CosOutputBucket{ get; set; }
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
 
         /// <summary>
-        /// cos输出key前缀
+        /// UTF-8编码，出错消息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CosOutputKeyPrefix")]
-        public string CosOutputKeyPrefix{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
         /// <summary>
-        /// 文件系统输出，如果指定了文件系统，那么Cos输出会被忽略
+        /// 业务详情。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FileSystemDataSource")]
-        public FileSystemDataSource FileSystemDataSource{ get; set; }
+        [JsonProperty("Value")]
+        public OutputManageMarketingRiskValue Value{ get; set; }
 
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CosOutputBucket", this.CosOutputBucket);
-            this.SetParamSimple(map, prefix + "CosOutputKeyPrefix", this.CosOutputKeyPrefix);
-            this.SetParamObj(map, prefix + "FileSystemDataSource.", this.FileSystemDataSource);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamObj(map, prefix + "Value.", this.Value);
         }
     }
 }

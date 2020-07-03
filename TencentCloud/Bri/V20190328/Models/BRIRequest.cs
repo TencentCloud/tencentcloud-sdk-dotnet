@@ -25,7 +25,7 @@ namespace TencentCloud.Bri.V20190328.Models
     {
         
         /// <summary>
-        /// 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+        /// 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
@@ -73,10 +73,40 @@ namespace TencentCloud.Bri.V20190328.Models
         public string PhoneNumber{ get; set; }
 
         /// <summary>
+        /// QQ号 (业务名为bri_social时必填, 除非已填Wechat)
+        /// </summary>
+        [JsonProperty("QQ")]
+        public string QQ{ get; set; }
+
+        /// <summary>
+        /// QQ号的可疑标签
+        /// </summary>
+        [JsonProperty("QQTag")]
+        public string QQTag{ get; set; }
+
+        /// <summary>
+        /// 业务场景 (1-注册, 2-登录, 3-发消息)
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
+
+        /// <summary>
         /// 网址 (业务名为bri_url时必填)
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
+
+        /// <summary>
+        /// 微信号 (业务名为bri_social时必填, 除非已填QQ)
+        /// </summary>
+        [JsonProperty("Wechat")]
+        public string Wechat{ get; set; }
+
+        /// <summary>
+        /// 微信号的可疑标签
+        /// </summary>
+        [JsonProperty("WechatTag")]
+        public string WechatTag{ get; set; }
 
 
         /// <summary>
@@ -92,7 +122,12 @@ namespace TencentCloud.Bri.V20190328.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
+            this.SetParamSimple(map, prefix + "QQ", this.QQ);
+            this.SetParamSimple(map, prefix + "QQTag", this.QQTag);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Wechat", this.Wechat);
+            this.SetParamSimple(map, prefix + "WechatTag", this.WechatTag);
         }
     }
 }

@@ -71,6 +71,15 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }
 
+        /// <summary>
+        /// 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
+        /// 
+        /// 该参数目前仅用于 `RunInstances` 接口。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +92,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DisableRoutesRequest : AbstractModel
+    public class DeleteRecordTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 路由表唯一ID。
+        /// 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
         /// </summary>
-        [JsonProperty("RouteTableId")]
-        public string RouteTableId{ get; set; }
-
-        /// <summary>
-        /// 路由策略ID。不能和RouteItemIds同时使用。
-        /// </summary>
-        [JsonProperty("RouteIds")]
-        public ulong?[] RouteIds{ get; set; }
-
-        /// <summary>
-        /// 路由策略唯一ID。不能和RouteIds同时使用。
-        /// </summary>
-        [JsonProperty("RouteItemIds")]
-        public string[] RouteItemIds{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
-            this.SetParamArraySimple(map, prefix + "RouteIds.", this.RouteIds);
-            this.SetParamArraySimple(map, prefix + "RouteItemIds.", this.RouteItemIds);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }
