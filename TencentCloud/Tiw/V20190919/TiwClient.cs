@@ -333,7 +333,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置实时录制回调地址
+        /// 设置实时录制回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40258
         /// </summary>
         /// <param name="req"><see cref="SetOnlineRecordCallbackRequest"/></param>
         /// <returns><see cref="SetOnlineRecordCallbackResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置实时录制回调地址
+        /// 设置实时录制回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40258
         /// </summary>
         /// <param name="req"><see cref="SetOnlineRecordCallbackRequest"/></param>
         /// <returns><see cref="SetOnlineRecordCallbackResponse"/></returns>
@@ -373,7 +373,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置实时录制回调鉴权密钥
+        /// 设置实时录制回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
         /// </summary>
         /// <param name="req"><see cref="SetOnlineRecordCallbackKeyRequest"/></param>
         /// <returns><see cref="SetOnlineRecordCallbackKeyResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置实时录制回调鉴权密钥
+        /// 设置实时录制回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
         /// </summary>
         /// <param name="req"><see cref="SetOnlineRecordCallbackKeyRequest"/></param>
         /// <returns><see cref="SetOnlineRecordCallbackKeyResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置文档转码回调地址
+        /// 设置文档转码回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
         /// </summary>
         /// <param name="req"><see cref="SetTranscodeCallbackRequest"/></param>
         /// <returns><see cref="SetTranscodeCallbackResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置文档转码回调地址
+        /// 设置文档转码回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
         /// </summary>
         /// <param name="req"><see cref="SetTranscodeCallbackRequest"/></param>
         /// <returns><see cref="SetTranscodeCallbackResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置文档转码回调鉴权密钥
+        /// 设置文档转码回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
         /// </summary>
         /// <param name="req"><see cref="SetTranscodeCallbackKeyRequest"/></param>
         /// <returns><see cref="SetTranscodeCallbackKeyResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 设置文档转码回调鉴权密钥
+        /// 设置文档转码回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
         /// </summary>
         /// <param name="req"><see cref="SetTranscodeCallbackKeyRequest"/></param>
         /// <returns><see cref="SetTranscodeCallbackKeyResponse"/></returns>

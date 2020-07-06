@@ -31,7 +31,8 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+        /// 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
+        /// 回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
         /// </summary>
         [JsonProperty("Callback")]
         public string Callback{ get; set; }

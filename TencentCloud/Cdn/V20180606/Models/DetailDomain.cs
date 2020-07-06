@@ -338,6 +338,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
 
+        /// <summary>
+        /// 访问控制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessControl")]
+        public AccessControl AccessControl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -387,6 +394,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
             this.SetParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
             this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
+            this.SetParamObj(map, prefix + "AccessControl.", this.AccessControl);
         }
     }
 }

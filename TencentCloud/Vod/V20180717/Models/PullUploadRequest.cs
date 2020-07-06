@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+        /// 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
         /// 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
         /// </summary>
         [JsonProperty("MediaUrl")]
@@ -91,6 +91,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
+        /// <summary>
+        /// 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
+        /// </summary>
+        [JsonProperty("SourceContext")]
+        public string SourceContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
         }
     }
 }

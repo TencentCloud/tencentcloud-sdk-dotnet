@@ -293,7 +293,7 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
-        /// 检测给定图片中的人体（Body）的位置信息（属性信息将在后续开放）。
+        /// 检测给定图片中的人体（Body）的位置信息及属性信息。
         /// </summary>
         /// <param name="req"><see cref="DetectBodyRequest"/></param>
         /// <returns><see cref="DetectBodyResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
-        /// 检测给定图片中的人体（Body）的位置信息（属性信息将在后续开放）。
+        /// 检测给定图片中的人体（Body）的位置信息及属性信息。
         /// </summary>
         /// <param name="req"><see cref="DetectBodyRequest"/></param>
         /// <returns><see cref="DetectBodyResponse"/></returns>

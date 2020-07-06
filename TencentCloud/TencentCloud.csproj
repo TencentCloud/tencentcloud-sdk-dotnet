@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.94</VersionPrefix>
+    <VersionPrefix>3.0.95</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1727,6 +1727,8 @@
     <Compile Include="Cdb\V20170320\Models\ZoneConf.cs" />
     <Compile Include="Cdb\V20170320\Models\ZoneSellConf.cs" />
     <Compile Include="Cdn\V20180606\CdnClient.cs" />
+    <Compile Include="Cdn\V20180606\Models\AccessControl.cs" />
+    <Compile Include="Cdn\V20180606\Models\AccessControlRule.cs" />
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvanceCacheRule.cs" />
@@ -1742,6 +1744,7 @@
     <Compile Include="Cdn\V20180606\Models\Cache.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheOptResult.cs" />
+    <Compile Include="Cdn\V20180606\Models\CacheTagKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CappingRule.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnData.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnIp.cs" />
@@ -1752,6 +1755,7 @@
     <Compile Include="Cdn\V20180606\Models\Compatibility.cs" />
     <Compile Include="Cdn\V20180606\Models\Compression.cs" />
     <Compile Include="Cdn\V20180606\Models\CompressionRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\CookieKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainRequest.cs" />
@@ -1818,6 +1822,7 @@
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\GuetzliAdapter.cs" />
+    <Compile Include="Cdn\V20180606\Models\HeaderKey.cs" />
     <Compile Include="Cdn\V20180606\Models\Hsts.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
@@ -1851,6 +1856,7 @@
     <Compile Include="Cdn\V20180606\Models\PushTask.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\QueryStringKey.cs" />
     <Compile Include="Cdn\V20180606\Models\Quota.cs" />
     <Compile Include="Cdn\V20180606\Models\RangeOriginPull.cs" />
     <Compile Include="Cdn\V20180606\Models\Referer.cs" />
@@ -1863,6 +1869,8 @@
     <Compile Include="Cdn\V20180606\Models\ResourceOriginData.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeader.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeaderCache.cs" />
+    <Compile Include="Cdn\V20180606\Models\Revalidate.cs" />
+    <Compile Include="Cdn\V20180606\Models\SchemeKey.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\SecurityConfig.cs" />

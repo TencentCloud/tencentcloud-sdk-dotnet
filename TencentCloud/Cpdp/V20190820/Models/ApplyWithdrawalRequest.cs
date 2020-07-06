@@ -124,6 +124,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("CommissionAmount")]
         public string CommissionAmount{ get; set; }
 
+        /// <summary>
+        /// 提现单号，长度32字节
+        /// </summary>
+        [JsonProperty("WithdrawOrderId")]
+        public string WithdrawOrderId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +151,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
             this.SetParamSimple(map, prefix + "CommissionAmount", this.CommissionAmount);
+            this.SetParamSimple(map, prefix + "WithdrawOrderId", this.WithdrawOrderId);
         }
     }
 }

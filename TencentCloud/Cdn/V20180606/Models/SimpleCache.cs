@@ -72,6 +72,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("CompareMaxAge")]
         public string CompareMaxAge{ get; set; }
 
+        /// <summary>
+        /// 总是回源站校验
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Revalidate")]
+        public Revalidate Revalidate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +90,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "IgnoreCacheControl", this.IgnoreCacheControl);
             this.SetParamSimple(map, prefix + "IgnoreSetCookie", this.IgnoreSetCookie);
             this.SetParamSimple(map, prefix + "CompareMaxAge", this.CompareMaxAge);
+            this.SetParamObj(map, prefix + "Revalidate.", this.Revalidate);
         }
     }
 }

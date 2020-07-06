@@ -66,6 +66,30 @@ namespace TencentCloud.Hcm.V20181106.Models
         [JsonProperty("IsAsync")]
         public long? IsAsync{ get; set; }
 
+        /// <summary>
+        /// 是否展开耦合算式中的竖式计算
+        /// </summary>
+        [JsonProperty("EnableDispRelatedVertical")]
+        public bool? EnableDispRelatedVertical{ get; set; }
+
+        /// <summary>
+        /// 是否展示竖式算式的中间结果和格式控制字符
+        /// </summary>
+        [JsonProperty("EnableDispMidresult")]
+        public bool? EnableDispMidresult{ get; set; }
+
+        /// <summary>
+        /// 是否开启pdf识别，默认开启
+        /// </summary>
+        [JsonProperty("EnablePdfRecognize")]
+        public bool? EnablePdfRecognize{ get; set; }
+
+        /// <summary>
+        /// pdf页码，从0开始，默认为0
+        /// </summary>
+        [JsonProperty("PdfPageIndex")]
+        public long? PdfPageIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +103,10 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "SupportHorizontalImage", this.SupportHorizontalImage);
             this.SetParamSimple(map, prefix + "RejectNonArithmeticImage", this.RejectNonArithmeticImage);
             this.SetParamSimple(map, prefix + "IsAsync", this.IsAsync);
+            this.SetParamSimple(map, prefix + "EnableDispRelatedVertical", this.EnableDispRelatedVertical);
+            this.SetParamSimple(map, prefix + "EnableDispMidresult", this.EnableDispMidresult);
+            this.SetParamSimple(map, prefix + "EnablePdfRecognize", this.EnablePdfRecognize);
+            this.SetParamSimple(map, prefix + "PdfPageIndex", this.PdfPageIndex);
         }
     }
 }

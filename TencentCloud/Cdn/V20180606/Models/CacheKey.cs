@@ -39,6 +39,41 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }
 
+        /// <summary>
+        /// CacheKey中包含请求参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueryString")]
+        public QueryStringKey QueryString{ get; set; }
+
+        /// <summary>
+        /// CacheKey中包含Cookie
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cookie")]
+        public CookieKey Cookie{ get; set; }
+
+        /// <summary>
+        /// CacheKey中包含请求头部
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Header")]
+        public HeaderKey Header{ get; set; }
+
+        /// <summary>
+        /// CacheKey中包含自定义字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CacheTag")]
+        public CacheTagKey CacheTag{ get; set; }
+
+        /// <summary>
+        /// CacheKey中包含请求协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public SchemeKey Scheme{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +82,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
             this.SetParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
+            this.SetParamObj(map, prefix + "QueryString.", this.QueryString);
+            this.SetParamObj(map, prefix + "Cookie.", this.Cookie);
+            this.SetParamObj(map, prefix + "Header.", this.Header);
+            this.SetParamObj(map, prefix + "CacheTag.", this.CacheTag);
+            this.SetParamObj(map, prefix + "Scheme.", this.Scheme);
         }
     }
 }
