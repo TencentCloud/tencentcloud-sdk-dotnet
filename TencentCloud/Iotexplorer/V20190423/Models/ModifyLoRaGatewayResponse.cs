@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcaplusdb.V20190823.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RegionInfo : AbstractModel
+    public class ModifyLoRaGatewayResponse : AbstractModel
     {
         
         /// <summary>
-        /// 地域Ap-Code
+        /// 返回网关数据
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("Gateway")]
+        public LoRaGatewayItem Gateway{ get; set; }
 
         /// <summary>
-        /// 地域缩写
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RegionAbbr")]
-        public string RegionAbbr{ get; set; }
-
-        /// <summary>
-        /// 地域ID
-        /// </summary>
-        [JsonProperty("RegionId")]
-        public ulong? RegionId{ get; set; }
-
-        /// <summary>
-        /// 是否支持ipv6，0:不支持，1:支持
-        /// </summary>
-        [JsonProperty("Ipv6Enable")]
-        public ulong? Ipv6Enable{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
-            this.SetParamSimple(map, prefix + "RegionAbbr", this.RegionAbbr);
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamObj(map, prefix + "Gateway.", this.Gateway);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -109,6 +109,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("OldPasswordExpireTime")]
         public string OldPasswordExpireTime{ get; set; }
 
+        /// <summary>
+        /// TcaplusDB SDK连接参数，接入ipv6地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApiAccessIpv6")]
+        public string ApiAccessIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +136,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ApiAccessIp", this.ApiAccessIp);
             this.SetParamSimple(map, prefix + "ApiAccessPort", this.ApiAccessPort);
             this.SetParamSimple(map, prefix + "OldPasswordExpireTime", this.OldPasswordExpireTime);
+            this.SetParamSimple(map, prefix + "ApiAccessIpv6", this.ApiAccessIpv6);
         }
     }
 }

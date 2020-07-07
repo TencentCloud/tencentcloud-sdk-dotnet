@@ -60,6 +60,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("ResourceTags")]
         public TagInfoUnit[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// 集群是否开启IPv6功能
+        /// </summary>
+        [JsonProperty("Ipv6Enable")]
+        public long? Ipv6Enable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
         }
     }
 }

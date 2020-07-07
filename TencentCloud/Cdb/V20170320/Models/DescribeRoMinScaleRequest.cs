@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcaplusdb.V20190823.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RegionInfo : AbstractModel
+    public class DescribeRoMinScaleRequest : AbstractModel
     {
         
         /// <summary>
-        /// 地域Ap-Code
+        /// 只读实例ID，格式如：cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，该参数与MasterInstanceId参数不能同时为空。
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("RoInstanceId")]
+        public string RoInstanceId{ get; set; }
 
         /// <summary>
-        /// 地域缩写
+        /// 主实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同，该参数与RoInstanceId参数不能同时为空。注意，当传入参数包含RoInstanceId时，返回值为只读实例升级时的最小规格；当传入参数只包含MasterInstanceId时，返回值为只读实例购买时的最小规格。
         /// </summary>
-        [JsonProperty("RegionAbbr")]
-        public string RegionAbbr{ get; set; }
-
-        /// <summary>
-        /// 地域ID
-        /// </summary>
-        [JsonProperty("RegionId")]
-        public ulong? RegionId{ get; set; }
-
-        /// <summary>
-        /// 是否支持ipv6，0:不支持，1:支持
-        /// </summary>
-        [JsonProperty("Ipv6Enable")]
-        public ulong? Ipv6Enable{ get; set; }
+        [JsonProperty("MasterInstanceId")]
+        public string MasterInstanceId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
-            this.SetParamSimple(map, prefix + "RegionAbbr", this.RegionAbbr);
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
-            this.SetParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+            this.SetParamSimple(map, prefix + "RoInstanceId", this.RoInstanceId);
+            this.SetParamSimple(map, prefix + "MasterInstanceId", this.MasterInstanceId);
         }
     }
 }

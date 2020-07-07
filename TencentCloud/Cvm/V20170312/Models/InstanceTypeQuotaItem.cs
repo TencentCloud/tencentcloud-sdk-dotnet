@@ -128,6 +128,24 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CpuType")]
         public string CpuType{ get; set; }
 
+        /// <summary>
+        /// 实例的GPU数量。
+        /// </summary>
+        [JsonProperty("Gpu")]
+        public long? Gpu{ get; set; }
+
+        /// <summary>
+        /// 实例的FPGA数量。
+        /// </summary>
+        [JsonProperty("Fpga")]
+        public long? Fpga{ get; set; }
+
+        /// <summary>
+        /// 实例备注信息。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +169,9 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstancePps", this.InstancePps);
             this.SetParamSimple(map, prefix + "StorageBlockAmount", this.StorageBlockAmount);
             this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
+            this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
+            this.SetParamSimple(map, prefix + "Fpga", this.Fpga);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

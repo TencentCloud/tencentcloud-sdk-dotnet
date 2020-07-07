@@ -66,7 +66,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 策略关联操作者主张号
+        /// 策略关联操作者主帐号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateOwnerUin")]

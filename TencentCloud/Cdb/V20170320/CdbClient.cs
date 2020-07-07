@@ -2501,6 +2501,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeRoMinScale)用于获取只读实例购买、升级时的最小规格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoMinScaleRequest"/></param>
+        /// <returns><see cref="DescribeRoMinScaleResponse"/></returns>
+        public async Task<DescribeRoMinScaleResponse> DescribeRoMinScale(DescribeRoMinScaleRequest req)
+        {
+             JsonResponseModel<DescribeRoMinScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoMinScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoMinScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeRoMinScale)用于获取只读实例购买、升级时的最小规格。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoMinScaleRequest"/></param>
+        /// <returns><see cref="DescribeRoMinScaleResponse"/></returns>
+        public DescribeRoMinScaleResponse DescribeRoMinScaleSync(DescribeRoMinScaleRequest req)
+        {
+             JsonResponseModel<DescribeRoMinScaleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoMinScale");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoMinScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeRollbackRangeTime)用于查询云数据库实例可回档的时间范围。
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackRangeTimeRequest"/></param>

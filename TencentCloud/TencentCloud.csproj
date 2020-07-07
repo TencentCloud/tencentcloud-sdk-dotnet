@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.95</VersionPrefix>
+    <VersionPrefix>3.0.96</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1590,6 +1590,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRoMinScaleRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeRoMinScaleResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackRangeTimeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRollbackTaskDetailRequest.cs" />
@@ -4688,6 +4690,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\CreateStudioProductResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteDeviceRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DeleteLoRaGatewayRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DeleteLoRaGatewayResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteProjectRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteProjectResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteStudioProductRequest.cs" />
@@ -4720,6 +4724,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\ListEventHistoryResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\LoRaGatewayItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\LoRaGatewayLocation.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\ModifyLoRaGatewayRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\ModifyLoRaGatewayResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyModelDefinitionRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyModelDefinitionResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyProjectRequest.cs" />

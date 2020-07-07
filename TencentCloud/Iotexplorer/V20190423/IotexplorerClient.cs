@@ -373,6 +373,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 删除  LoRa 网关的接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoRaGatewayRequest"/></param>
+        /// <returns><see cref="DeleteLoRaGatewayResponse"/></returns>
+        public async Task<DeleteLoRaGatewayResponse> DeleteLoRaGateway(DeleteLoRaGatewayRequest req)
+        {
+             JsonResponseModel<DeleteLoRaGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoRaGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoRaGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除  LoRa 网关的接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoRaGatewayRequest"/></param>
+        /// <returns><see cref="DeleteLoRaGatewayResponse"/></returns>
+        public DeleteLoRaGatewayResponse DeleteLoRaGatewaySync(DeleteLoRaGatewayRequest req)
+        {
+             JsonResponseModel<DeleteLoRaGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoRaGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoRaGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供删除某个项目的能力
         /// </summary>
         /// <param name="req"><see cref="DeleteProjectRequest"/></param>
@@ -884,6 +924,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "ListEventHistory");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEventHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改 LoRa 网关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoRaGatewayRequest"/></param>
+        /// <returns><see cref="ModifyLoRaGatewayResponse"/></returns>
+        public async Task<ModifyLoRaGatewayResponse> ModifyLoRaGateway(ModifyLoRaGatewayRequest req)
+        {
+             JsonResponseModel<ModifyLoRaGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoRaGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoRaGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改 LoRa 网关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoRaGatewayRequest"/></param>
+        /// <returns><see cref="ModifyLoRaGatewayResponse"/></returns>
+        public ModifyLoRaGatewayResponse ModifyLoRaGatewaySync(ModifyLoRaGatewayRequest req)
+        {
+             JsonResponseModel<ModifyLoRaGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoRaGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoRaGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
