@@ -118,7 +118,7 @@ namespace TencentCloud.Common.Http
             request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
             headers.Remove("Authorization");
             StringContent body = new StringContent("", Encoding.UTF8, headers["Content-Type"]);
-            request = request.WithBody(body);
+            request = request.WithBodyContent(body);
             headers.Remove("Content-Type");
             foreach (KeyValuePair<string, string> kvp in headers)
             {
@@ -141,7 +141,7 @@ namespace TencentCloud.Common.Http
             request = request.WithAuthentication("TC3-HMAC-SHA256", headers["Authorization"].Substring("TC3-HMAC-SHA256".Length));
             headers.Remove("Authorization");
             StringContent body = new StringContent(payload, Encoding.UTF8, headers["Content-Type"]);
-            request = request.WithBody(body);
+            request = request.WithBodyContent(body);
             headers.Remove("Content-Type");
             foreach (KeyValuePair<string, string> kvp in headers)
             {
