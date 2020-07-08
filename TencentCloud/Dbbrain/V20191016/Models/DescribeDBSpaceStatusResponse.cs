@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Es.V20180416.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EsDictionaryInfo : AbstractModel
+    public class DescribeDBSpaceStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// 启用词词典列表
+        /// 磁盘增长量(MB)。
         /// </summary>
-        [JsonProperty("MainDict")]
-        public DictInfo[] MainDict{ get; set; }
+        [JsonProperty("Growth")]
+        public long? Growth{ get; set; }
 
         /// <summary>
-        /// 停用词词典列表
+        /// 磁盘剩余(MB)。
         /// </summary>
-        [JsonProperty("Stopwords")]
-        public DictInfo[] Stopwords{ get; set; }
+        [JsonProperty("Remain")]
+        public long? Remain{ get; set; }
 
         /// <summary>
-        /// QQ分词词典列表
+        /// 磁盘总量(MB)。
         /// </summary>
-        [JsonProperty("QQDict")]
-        public DictInfo[] QQDict{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
-        /// 同义词词典列表
+        /// 预计可用天数。
         /// </summary>
-        [JsonProperty("Synonym")]
-        public DictInfo[] Synonym{ get; set; }
+        [JsonProperty("AvailableDays")]
+        public long? AvailableDays{ get; set; }
 
         /// <summary>
-        /// 更新词典类型
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("UpdateType")]
-        public string UpdateType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "MainDict.", this.MainDict);
-            this.SetParamArrayObj(map, prefix + "Stopwords.", this.Stopwords);
-            this.SetParamArrayObj(map, prefix + "QQDict.", this.QQDict);
-            this.SetParamArrayObj(map, prefix + "Synonym.", this.Synonym);
-            this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
+            this.SetParamSimple(map, prefix + "Growth", this.Growth);
+            this.SetParamSimple(map, prefix + "Remain", this.Remain);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "AvailableDays", this.AvailableDays);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -70,6 +70,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DiskCount")]
         public ulong? DiskCount{ get; set; }
 
+        /// <summary>
+        /// 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+        /// </summary>
+        [JsonProperty("DiskEncrypt")]
+        public ulong? DiskEncrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
+            this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
         }
     }
 }

@@ -15,50 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstancesRequest : AbstractModel
+    public class DescribeTopSpaceTablesRequest : AbstractModel
     {
         
         /// <summary>
-        /// （过滤条件）按照实例ID过滤
+        /// 实例 ID 。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// （过滤条件）按照实例名称过滤，支持模糊查询
-        /// </summary>
-        [JsonProperty("SearchWord")]
-        public string SearchWord{ get; set; }
-
-        /// <summary>
-        /// （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
-        /// </summary>
-        [JsonProperty("Status")]
-        public long?[] Status{ get; set; }
-
-        /// <summary>
-        /// 偏移量，不填默认为0
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 返回数量，不填则默认10，最大值100
+        /// 返回的Top表数量，最大值为20，默认为最大值。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 匹配标签key值。
+        /// 筛选Top表所用的排序字段，可选字段包含DataLength、IndexLength、TotalLength、DataFree、FragRatio、TableRows、PhysicalFileSize，默认为 PhysicalFileSize。
         /// </summary>
-        [JsonProperty("TagKey")]
-        public string TagKey{ get; set; }
+        [JsonProperty("SortBy")]
+        public string SortBy{ get; set; }
 
 
         /// <summary>
@@ -67,11 +49,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
-            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
         }
     }
 }

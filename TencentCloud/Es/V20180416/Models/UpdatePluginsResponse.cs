@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TimeValue : AbstractModel
+    public class UpdatePluginsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 时间，unix时间戳（1590065877s)
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Time")]
-        public ulong? Time{ get; set; }
-
-        /// <summary>
-        /// 当前时间返回参数取值，如（bigvCapFps在1590065877取值为0，则Value：0 ）
-        /// </summary>
-        [JsonProperty("Value")]
-        public float? Value{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Time", this.Time);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

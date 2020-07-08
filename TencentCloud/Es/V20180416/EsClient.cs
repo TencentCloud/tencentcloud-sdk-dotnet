@@ -347,6 +347,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 变更插件列表
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePluginsRequest"/></param>
+        /// <returns><see cref="UpdatePluginsResponse"/></returns>
+        public async Task<UpdatePluginsResponse> UpdatePlugins(UpdatePluginsRequest req)
+        {
+             JsonResponseModel<UpdatePluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdatePlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 变更插件列表
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePluginsRequest"/></param>
+        /// <returns><see cref="UpdatePluginsResponse"/></returns>
+        public UpdatePluginsResponse UpdatePluginsSync(UpdatePluginsRequest req)
+        {
+             JsonResponseModel<UpdatePluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdatePlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 升级ES集群版本
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>

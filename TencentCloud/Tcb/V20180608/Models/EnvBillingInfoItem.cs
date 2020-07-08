@@ -44,6 +44,7 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 状态。包含以下取值：
+        /// <li> 空字符串：初始化中</li>
         /// <li> NORMAL：正常</li>
         /// <li> ISOLATE：隔离</li>
         /// </summary>

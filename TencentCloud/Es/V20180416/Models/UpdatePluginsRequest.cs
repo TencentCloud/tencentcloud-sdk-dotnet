@@ -21,38 +21,32 @@ namespace TencentCloud.Es.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EsDictionaryInfo : AbstractModel
+    public class UpdatePluginsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 启用词词典列表
+        /// 实例ID
         /// </summary>
-        [JsonProperty("MainDict")]
-        public DictInfo[] MainDict{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 停用词词典列表
+        /// 需要安装的插件名列表
         /// </summary>
-        [JsonProperty("Stopwords")]
-        public DictInfo[] Stopwords{ get; set; }
+        [JsonProperty("InstallPluginList")]
+        public string[] InstallPluginList{ get; set; }
 
         /// <summary>
-        /// QQ分词词典列表
+        /// 需要卸载的插件名列表
         /// </summary>
-        [JsonProperty("QQDict")]
-        public DictInfo[] QQDict{ get; set; }
+        [JsonProperty("RemovePluginList")]
+        public string[] RemovePluginList{ get; set; }
 
         /// <summary>
-        /// 同义词词典列表
+        /// 是否强制重启
         /// </summary>
-        [JsonProperty("Synonym")]
-        public DictInfo[] Synonym{ get; set; }
-
-        /// <summary>
-        /// 更新词典类型
-        /// </summary>
-        [JsonProperty("UpdateType")]
-        public string UpdateType{ get; set; }
+        [JsonProperty("ForceRestart")]
+        public bool? ForceRestart{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "MainDict.", this.MainDict);
-            this.SetParamArrayObj(map, prefix + "Stopwords.", this.Stopwords);
-            this.SetParamArrayObj(map, prefix + "QQDict.", this.QQDict);
-            this.SetParamArrayObj(map, prefix + "Synonym.", this.Synonym);
-            this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "InstallPluginList.", this.InstallPluginList);
+            this.SetParamArraySimple(map, prefix + "RemovePluginList.", this.RemovePluginList);
+            this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         }
     }
 }

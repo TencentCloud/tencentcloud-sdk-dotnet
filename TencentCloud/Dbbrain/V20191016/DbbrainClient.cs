@@ -133,6 +133,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSpaceStatusRequest"/></param>
+        /// <returns><see cref="DescribeDBSpaceStatusResponse"/></returns>
+        public async Task<DescribeDBSpaceStatusResponse> DescribeDBSpaceStatus(DescribeDBSpaceStatusRequest req)
+        {
+             JsonResponseModel<DescribeDBSpaceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBSpaceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSpaceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSpaceStatusRequest"/></param>
+        /// <returns><see cref="DescribeDBSpaceStatusResponse"/></returns>
+        public DescribeDBSpaceStatusResponse DescribeDBSpaceStatusSync(DescribeDBSpaceStatusRequest req)
+        {
+             JsonResponseModel<DescribeDBSpaceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBSpaceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSpaceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取慢日志统计柱状图
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogTimeSeriesStatsRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSlowLogTopSqls");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogTopSqlsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例Top表的实时空间统计信息，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTablesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTablesResponse"/></returns>
+        public async Task<DescribeTopSpaceTablesResponse> DescribeTopSpaceTables(DescribeTopSpaceTablesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例Top表的实时空间统计信息，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTablesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTablesResponse"/></returns>
+        public DescribeTopSpaceTablesResponse DescribeTopSpaceTablesSync(DescribeTopSpaceTablesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTablesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

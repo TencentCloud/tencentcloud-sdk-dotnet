@@ -36,6 +36,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ParamList")]
         public Parameter[] ParamList{ get; set; }
 
+        /// <summary>
+        /// 模板id，ParamList和TemplateId必须至少传其中之一
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public long? TemplateId{ get; set; }
+
+        /// <summary>
+        /// 执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
+        /// </summary>
+        [JsonProperty("WaitSwitch")]
+        public long? WaitSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         }
     }
 }
