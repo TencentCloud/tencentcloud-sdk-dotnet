@@ -152,6 +152,10 @@ namespace TencentCloudExamples
 
 源码可以参考这篇文章：[https://cloud.tencent.com/developer/article/1395819](https://cloud.tencent.com/developer/article/1395819)
 
+# 常见问题
+
+SDK 依赖的 FluentClient 使用的是3.2版本，但这个包目前发布了4.0版本且不兼容低版本，在 nuget 中升级此包到4.0版本会导致无法调用或调用失败等问题。
+
 # 旧版SDK
 
 我们推荐您使用新版 SDK ， 如果需要旧版 SDK ，请访问 [qcloudapi sdk for dotnet](https://github.com/qcloudapi/qcloudapi-sdk-dotnet)
