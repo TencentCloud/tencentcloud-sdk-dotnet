@@ -60,7 +60,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// 证书办法者名称。
+        /// 证书颁发者名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductZhName")]

@@ -97,7 +97,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string TranFee{ get; set; }
 
         /// <summary>
-        /// 挂账金额
+        /// 挂账金额，以元为单位
         /// </summary>
         [JsonProperty("OrderAmt")]
         public string OrderAmt{ get; set; }

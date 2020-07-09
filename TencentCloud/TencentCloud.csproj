@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.97</VersionPrefix>
+    <VersionPrefix>3.0.98</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2522,6 +2522,7 @@
     <Compile Include="Cms\V20190321\Models\DescribeTextSampleRequest.cs" />
     <Compile Include="Cms\V20190321\Models\DescribeTextSampleResponse.cs" />
     <Compile Include="Cms\V20190321\Models\DetailResult.cs" />
+    <Compile Include="Cms\V20190321\Models\Device.cs" />
     <Compile Include="Cms\V20190321\Models\FileSample.cs" />
     <Compile Include="Cms\V20190321\Models\FileSampleInfo.cs" />
     <Compile Include="Cms\V20190321\Models\Filter.cs" />
@@ -2547,6 +2548,7 @@
     <Compile Include="Cms\V20190321\Models\TextOutputID.cs" />
     <Compile Include="Cms\V20190321\Models\TextOutputRes.cs" />
     <Compile Include="Cms\V20190321\Models\TextSample.cs" />
+    <Compile Include="Cms\V20190321\Models\User.cs" />
     <Compile Include="Cpdp\V20190820\CpdpClient.cs" />
     <Compile Include="Cpdp\V20190820\Models\Acct.cs" />
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPayment.cs" />
@@ -6004,8 +6006,6 @@
     <Compile Include="Nlp\V20190408\Models\SearchWordItemsResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\SentenceEmbeddingRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\SentenceEmbeddingResponse.cs" />
-    <Compile Include="Nlp\V20190408\Models\SentenceSimilarityRequest.cs" />
-    <Compile Include="Nlp\V20190408\Models\SentenceSimilarityResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\SentimentAnalysisRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\SentimentAnalysisResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\SimilarWordsRequest.cs" />
@@ -7510,6 +7510,46 @@
     <Compile Include="Tcr\V20190924\Models\WebhookTarget.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTrigger.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTriggerLog.cs" />
+    <Compile Include="Tdmq\V20200217\TdmqClient.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Connection.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Consumer.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ConsumersSchedule.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateTopicRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateTopicResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteTopicsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteTopicsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeProducersRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeProducersResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeSubscriptionsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeSubscriptionsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeTopicsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeTopicsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Environment.cs" />
+    <Compile Include="Tdmq\V20200217\Models\FilterSubscription.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyTopicRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyTopicResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\PartitionsTopic.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Producer.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Subscription.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SubscriptionTopic.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Topic.cs" />
+    <Compile Include="Tdmq\V20200217\Models\TopicRecord.cs" />
     <Compile Include="Tia\V20180226\TiaClient.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobRequest.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobResponse.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 交易状态 （（0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
+        /// 交易状态 （0：成功，1：失败，2：待确认, 5：待处理，6：处理中）
         /// </summary>
         [JsonProperty("OrderStatus")]
         public string OrderStatus{ get; set; }

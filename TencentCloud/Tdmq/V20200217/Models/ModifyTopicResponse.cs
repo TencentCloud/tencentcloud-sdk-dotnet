@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SentenceSimilarityRequest : AbstractModel
+    public class ModifyTopicResponse : AbstractModel
     {
         
         /// <summary>
-        /// 计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
+        /// 分区数，必须比原分区数大，不填则不修复分区数，修改分区数仅对非全局顺序消息起效果。
         /// </summary>
-        [JsonProperty("SrcText")]
-        public string SrcText{ get; set; }
+        [JsonProperty("Partitions")]
+        public ulong? Partitions{ get; set; }
 
         /// <summary>
-        /// 计算相似度的目标句子（仅支持UTF-8格式，不超过500字符）
+        /// 备注，128字符以内。
         /// </summary>
-        [JsonProperty("TargetText")]
-        public string TargetText{ get; set; }
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SrcText", this.SrcText);
-            this.SetParamSimple(map, prefix + "TargetText", this.TargetText);
+            this.SetParamSimple(map, prefix + "Partitions", this.Partitions);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

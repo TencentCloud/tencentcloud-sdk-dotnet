@@ -1549,7 +1549,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 从腾讯云COS导入自定义镜像
+        /// 导入自定义镜像，支持 RAW、VHD、QCOW2、VMDK 镜像格式
         /// </summary>
         /// <param name="req"><see cref="ImportCustomImageRequest"/></param>
         /// <returns><see cref="ImportCustomImageResponse"/></returns>
@@ -1569,7 +1569,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 从腾讯云COS导入自定义镜像
+        /// 导入自定义镜像，支持 RAW、VHD、QCOW2、VMDK 镜像格式
         /// </summary>
         /// <param name="req"><see cref="ImportCustomImageRequest"/></param>
         /// <returns><see cref="ImportCustomImageResponse"/></returns>

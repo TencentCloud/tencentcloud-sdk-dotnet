@@ -127,7 +127,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MidasSignature{ get; set; }
 
         /// <summary>
-        /// 交易流水号
+        /// 交易流水号 
+        /// 生成方式：用户短号+日期（6位）+ 随机编号（10位）例如：F088722005120904930798
+        /// 短号：F08872  日期： 200512   随机编号：0904930798
         /// </summary>
         [JsonProperty("TransSequenceNumber")]
         public string TransSequenceNumber{ get; set; }
@@ -152,7 +154,11 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string PlatformShortNumber{ get; set; }
 
         /// <summary>
-        /// 0,登记挂账，1，撤销挂账
+        /// 1：下单预支付 
+        /// 2：确认并付款
+        /// 3：退款
+        /// 6：直接支付T+1
+        /// 9：直接支付T+0
         /// </summary>
         [JsonProperty("TransType")]
         public string TransType{ get; set; }

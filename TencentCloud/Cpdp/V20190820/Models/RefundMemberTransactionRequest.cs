@@ -61,7 +61,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string InSubAccountNumber{ get; set; }
 
         /// <summary>
-        /// 计费秘钥
+        /// 聚鑫分配的安全ID
         /// </summary>
         [JsonProperty("MidasSecretId")]
         public string MidasSecretId{ get; set; }

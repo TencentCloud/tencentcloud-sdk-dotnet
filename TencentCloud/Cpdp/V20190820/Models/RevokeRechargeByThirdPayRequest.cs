@@ -91,7 +91,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string TransSequenceNumber{ get; set; }
 
         /// <summary>
-        /// 申请撤销的手续费金额
+        /// 申请撤销的手续费金额,以元为单位
         /// </summary>
         [JsonProperty("TransFee")]
         public string TransFee{ get; set; }

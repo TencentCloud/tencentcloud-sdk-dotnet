@@ -97,7 +97,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string BankSubAccountNumber{ get; set; }
 
         /// <summary>
-        /// 交易手续费
+        /// 交易手续费，以元为单位
         /// </summary>
         [JsonProperty("TransFee")]
         public string TransFee{ get; set; }

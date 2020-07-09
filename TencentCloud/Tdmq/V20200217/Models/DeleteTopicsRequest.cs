@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CustomResult : AbstractModel
+    public class DeleteTopicsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 命中的自定义关键词
+        /// 主题集合，每次最多删除20个。
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
-
-        /// <summary>
-        /// 自定义库id
-        /// </summary>
-        [JsonProperty("LibId")]
-        public string LibId{ get; set; }
-
-        /// <summary>
-        /// 自定义词库名称
-        /// </summary>
-        [JsonProperty("LibName")]
-        public string LibName{ get; set; }
-
-        /// <summary>
-        /// 命中的自定义关键词的类型
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("TopicSets")]
+        public TopicRecord[] TopicSets{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "LibId", this.LibId);
-            this.SetParamSimple(map, prefix + "LibName", this.LibName);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "TopicSets.", this.TopicSets);
         }
     }
 }

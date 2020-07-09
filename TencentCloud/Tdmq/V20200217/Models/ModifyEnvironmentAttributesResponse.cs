@@ -15,38 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CustomResult : AbstractModel
+    public class ModifyEnvironmentAttributesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 命中的自定义关键词
+        /// 环境（命名空间）名称。
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 自定义库id
+        /// 未消费消息过期时间，单位：秒。
         /// </summary>
-        [JsonProperty("LibId")]
-        public string LibId{ get; set; }
+        [JsonProperty("MsgTTL")]
+        public ulong? MsgTTL{ get; set; }
 
         /// <summary>
-        /// 自定义词库名称
+        /// 备注，字符串最长不超过128。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("LibName")]
-        public string LibName{ get; set; }
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
         /// <summary>
-        /// 命中的自定义关键词的类型
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +55,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "LibId", this.LibId);
-            this.SetParamSimple(map, prefix + "LibName", this.LibName);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CustomResult : AbstractModel
+    public class FilterSubscription : AbstractModel
     {
         
         /// <summary>
-        /// 命中的自定义关键词
+        /// 是否仅展示包含真实消费者的订。
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("ConsumerHasCount")]
+        public bool? ConsumerHasCount{ get; set; }
 
         /// <summary>
-        /// 自定义库id
+        /// 是否仅展示消息堆积的订阅。
         /// </summary>
-        [JsonProperty("LibId")]
-        public string LibId{ get; set; }
+        [JsonProperty("ConsumerHasBacklog")]
+        public bool? ConsumerHasBacklog{ get; set; }
 
         /// <summary>
-        /// 自定义词库名称
+        /// 是否仅展示存在消息超期丢弃的订阅。
         /// </summary>
-        [JsonProperty("LibName")]
-        public string LibName{ get; set; }
-
-        /// <summary>
-        /// 命中的自定义关键词的类型
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("ConsumerHasExpired")]
+        public bool? ConsumerHasExpired{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "LibId", this.LibId);
-            this.SetParamSimple(map, prefix + "LibName", this.LibName);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ConsumerHasCount", this.ConsumerHasCount);
+            this.SetParamSimple(map, prefix + "ConsumerHasBacklog", this.ConsumerHasBacklog);
+            this.SetParamSimple(map, prefix + "ConsumerHasExpired", this.ConsumerHasExpired);
         }
     }
 }

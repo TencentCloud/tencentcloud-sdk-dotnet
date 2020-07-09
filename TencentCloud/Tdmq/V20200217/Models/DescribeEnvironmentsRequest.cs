@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CustomResult : AbstractModel
+    public class DescribeEnvironmentsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 命中的自定义关键词
+        /// 环境（命名空间）名称，模糊搜索。
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 自定义库id
+        /// 起始下标，不填默认为0。
         /// </summary>
-        [JsonProperty("LibId")]
-        public string LibId{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 自定义词库名称
+        /// 返回数量，不填则默认为10，最大值为20。
         /// </summary>
-        [JsonProperty("LibName")]
-        public string LibName{ get; set; }
-
-        /// <summary>
-        /// 命中的自定义关键词的类型
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "LibId", this.LibId);
-            this.SetParamSimple(map, prefix + "LibName", this.LibName);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

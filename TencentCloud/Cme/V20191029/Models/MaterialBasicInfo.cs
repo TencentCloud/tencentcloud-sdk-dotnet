@@ -67,14 +67,14 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 素材绑定的标签信息列表。
+        /// 素材绑定的标签信息列表 。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagInfoSet")]
         public MaterialTagInfo[] TagInfoSet{ get; set; }
 
         /// <summary>
         /// 素材媒体文件的预览图。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }

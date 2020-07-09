@@ -43,7 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 是否返回图片
+        /// 是否返回图片，默认false
         /// </summary>
         [JsonProperty("RetImage")]
         public bool? RetImage{ get; set; }

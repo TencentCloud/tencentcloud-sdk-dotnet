@@ -37,7 +37,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。
+        /// 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
         /// </summary>
         [JsonProperty("ISP")]
         public string ISP{ get; set; }

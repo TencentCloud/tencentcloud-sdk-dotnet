@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SentenceSimilarityResponse : AbstractModel
+    public class CreateEnvironmentRequest : AbstractModel
     {
         
         /// <summary>
-        /// 两个文本的相似度
+        /// 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
         /// </summary>
-        [JsonProperty("Similarity")]
-        public float? Similarity{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 未消费消息过期时间，单位：秒，最小60，最大1296000，（15天）。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("MsgTTL")]
+        public ulong? MsgTTL{ get; set; }
+
+        /// <summary>
+        /// 说明，128个字符以内。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Similarity", this.Similarity);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }
