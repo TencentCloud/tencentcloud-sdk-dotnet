@@ -139,6 +139,20 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("BigDealId")]
         public string BigDealId{ get; set; }
 
+        /// <summary>
+        /// 退费公式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Formula")]
+        public string Formula{ get; set; }
+
+        /// <summary>
+        /// 退费涉及订单信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RefReturnDeals")]
+        public string RefReturnDeals{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +178,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
             this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
+            this.SetParamSimple(map, prefix + "Formula", this.Formula);
+            this.SetParamSimple(map, prefix + "RefReturnDeals", this.RefReturnDeals);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 素材媒体文件的 URL 地址。
+        /// 素材媒体文件的展示 URL 地址。
         /// </summary>
         [JsonProperty("MaterialUrl")]
         public string MaterialUrl{ get; set; }
@@ -47,6 +47,18 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
+
+        /// <summary>
+        /// 素材媒体文件的原始 URL 地址。
+        /// </summary>
+        [JsonProperty("OriginalUrl")]
+        public string OriginalUrl{ get; set; }
+
+        /// <summary>
+        /// 云点播媒资 FileId。
+        /// </summary>
+        [JsonProperty("VodFileId")]
+        public string VodFileId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "MaterialUrl", this.MaterialUrl);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "OriginalUrl", this.OriginalUrl);
+            this.SetParamSimple(map, prefix + "VodFileId", this.VodFileId);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public RouteTableAssociation[] AssociationSet{ get; set; }
 
         /// <summary>
-        /// 路由表策略集合。
+        /// IPv4路由策略集合。
         /// </summary>
         [JsonProperty("RouteSet")]
         public Route[] RouteSet{ get; set; }
