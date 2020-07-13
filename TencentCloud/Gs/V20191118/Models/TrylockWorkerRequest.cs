@@ -54,6 +54,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
+        /// <summary>
+        /// 分组ID
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "GameRegion", this.GameRegion);
             this.SetParamSimple(map, prefix + "SetNo", this.SetNo);
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

@@ -101,6 +101,12 @@ namespace TencentCloud.Domain.V20180808.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
+        /// 是否支持北京备案  true 支持  false 不支持
+        /// </summary>
+        [JsonProperty("RecordSupport")]
+        public bool? RecordSupport{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -124,6 +130,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "FeeTransfer", this.FeeTransfer);
             this.SetParamSimple(map, prefix + "FeeRestore", this.FeeRestore);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "RecordSupport", this.RecordSupport);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

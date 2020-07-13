@@ -53,7 +53,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 检查域名是否可以注册
+        /// 检查域名是否可以注册。
         /// </summary>
         /// <param name="req"><see cref="CheckDomainRequest"/></param>
         /// <returns><see cref="CheckDomainResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 检查域名是否可以注册
+        /// 检查域名是否可以注册。
         /// </summary>
         /// <param name="req"><see cref="CheckDomainRequest"/></param>
         /// <returns><see cref="CheckDomainResponse"/></returns>
