@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceUpgradeDBInstanceRequest : AbstractModel
+    public class TableSpaceTimeSeries : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-njj2mtpl
+        /// 表名。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
 
         /// <summary>
-        /// 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+        /// 库名。
         /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
+        [JsonProperty("TableSchema")]
+        public string TableSchema{ get; set; }
 
         /// <summary>
-        /// 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+        /// 库表的存储引擎。
         /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
+        [JsonProperty("Engine")]
+        public string Engine{ get; set; }
 
         /// <summary>
-        /// 实例升级后的CPU核心数，其值不能比当前实例CPU小
+        /// 单位时间间隔内的空间指标数据。
         /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("SeriesData")]
+        public MonitorFloatMetricSeriesData SeriesData{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "TableSchema", this.TableSchema);
+            this.SetParamSimple(map, prefix + "Engine", this.Engine);
+            this.SetParamObj(map, prefix + "SeriesData.", this.SeriesData);
         }
     }
 }

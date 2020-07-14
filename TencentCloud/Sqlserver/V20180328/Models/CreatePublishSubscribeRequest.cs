@@ -21,32 +21,32 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceUpgradeDBInstanceRequest : AbstractModel
+    public class CreatePublishSubscribeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-njj2mtpl
+        /// 发布实例ID，形如mssql-j8kv137v
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("PublishInstanceId")]
+        public string PublishInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+        /// 订阅实例ID，形如mssql-j8kv137v
         /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
+        [JsonProperty("SubscribeInstanceId")]
+        public string SubscribeInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+        /// 数据库的订阅发布关系集合
         /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
+        [JsonProperty("DatabaseTupleSet")]
+        public DatabaseTuple[] DatabaseTupleSet{ get; set; }
 
         /// <summary>
-        /// 实例升级后的CPU核心数，其值不能比当前实例CPU小
+        /// 发布订阅的名称，默认值为：default_name
         /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("PublishSubscribeName")]
+        public string PublishSubscribeName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "PublishInstanceId", this.PublishInstanceId);
+            this.SetParamSimple(map, prefix + "SubscribeInstanceId", this.SubscribeInstanceId);
+            this.SetParamArrayObj(map, prefix + "DatabaseTupleSet.", this.DatabaseTupleSet);
+            this.SetParamSimple(map, prefix + "PublishSubscribeName", this.PublishSubscribeName);
         }
     }
 }

@@ -21,32 +21,32 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceUpgradeDBInstanceRequest : AbstractModel
+    public class DatabaseTupleStatus : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-njj2mtpl
+        /// 发布数据库名称
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("PublishDatabase")]
+        public string PublishDatabase{ get; set; }
 
         /// <summary>
-        /// 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+        /// 订阅数据库名称
         /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
+        [JsonProperty("SubscribeDatabase")]
+        public string SubscribeDatabase{ get; set; }
 
         /// <summary>
-        /// 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+        /// 最近一次同步时间
         /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
+        [JsonProperty("LastSyncTime")]
+        public string LastSyncTime{ get; set; }
 
         /// <summary>
-        /// 实例升级后的CPU核心数，其值不能比当前实例CPU小
+        /// 数据库之间的发布订阅状态 running，success，fail，unknow
         /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "PublishDatabase", this.PublishDatabase);
+            this.SetParamSimple(map, prefix + "SubscribeDatabase", this.SubscribeDatabase);
+            this.SetParamSimple(map, prefix + "LastSyncTime", this.LastSyncTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

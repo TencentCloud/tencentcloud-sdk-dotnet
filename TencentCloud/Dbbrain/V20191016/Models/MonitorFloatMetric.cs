@@ -15,38 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Dbbrain.V20191016.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceUpgradeDBInstanceRequest : AbstractModel
+    public class MonitorFloatMetric : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-njj2mtpl
+        /// 指标名称。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Metric")]
+        public string Metric{ get; set; }
 
         /// <summary>
-        /// 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+        /// 指标单位。
         /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
 
         /// <summary>
-        /// 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+        /// 指标值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
-
-        /// <summary>
-        /// 实例升级后的CPU核心数，其值不能比当前实例CPU小
-        /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("Values")]
+        public float?[] Values{ get; set; }
 
 
         /// <summary>
@@ -54,10 +49,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Metric", this.Metric);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

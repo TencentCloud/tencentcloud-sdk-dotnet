@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Tag.V20180813.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceUpgradeDBInstanceRequest : AbstractModel
+    public class DescribeTagValuesSeqRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-njj2mtpl
+        /// 标签键列表
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+        /// 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
         /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
+        [JsonProperty("CreateUin")]
+        public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+        /// 数据偏移量，默认为 0, 必须为Limit参数的整数倍
         /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 实例升级后的CPU核心数，其值不能比当前实例CPU小
+        /// 每页大小，默认为 15
         /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

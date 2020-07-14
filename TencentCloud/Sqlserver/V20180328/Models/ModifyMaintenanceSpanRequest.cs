@@ -21,44 +21,32 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeDBInstanceRequest : AbstractModel
+    public class ModifyMaintenanceSpanRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-j8kv137v
+        /// 实例ID，形如mssql-k8voqdlz
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+        /// 以周为单位，表示允许周几维护，例如：[1,2,3,4,5,6,7]表示周一到周日均为可维护日，本参数不填，则不修改此值。
         /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
+        [JsonProperty("Weekly")]
+        public long?[] Weekly{ get; set; }
 
         /// <summary>
-        /// 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+        /// 每天可维护的开始时间，例如：10:24标识可维护时间窗10点24分开始，本参数不填，则不修改此值。
         /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+        /// 每天可维护的持续时间，单位是h，例如：1 表示从可维护的开始时间起持续1小时，本参数不填，则不修改此值。
         /// </summary>
-        [JsonProperty("AutoVoucher")]
-        public long? AutoVoucher{ get; set; }
-
-        /// <summary>
-        /// 代金券ID，目前单个订单只能使用一张代金券
-        /// </summary>
-        [JsonProperty("VoucherIds")]
-        public string[] VoucherIds{ get; set; }
-
-        /// <summary>
-        /// 实例升级后的CPU核心数
-        /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("Span")]
+        public ulong? Span{ get; set; }
 
 
         /// <summary>
@@ -67,11 +55,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
-            this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamArraySimple(map, prefix + "Weekly.", this.Weekly);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Span", this.Span);
         }
     }
 }

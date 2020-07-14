@@ -53,6 +53,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
+        /// </summary>
+        /// <param name="req"><see cref="CompleteExpansionRequest"/></param>
+        /// <returns><see cref="CompleteExpansionResponse"/></returns>
+        public async Task<CompleteExpansionResponse> CompleteExpansion(CompleteExpansionRequest req)
+        {
+             JsonResponseModel<CompleteExpansionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CompleteExpansion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompleteExpansionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
+        /// </summary>
+        /// <param name="req"><see cref="CompleteExpansionRequest"/></param>
+        /// <returns><see cref="CompleteExpansionResponse"/></returns>
+        public CompleteExpansionResponse CompleteExpansionSync(CompleteExpansionRequest req)
+        {
+             JsonResponseModel<CompleteExpansionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CompleteExpansion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompleteExpansionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateAccount）用于创建实例账号
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
@@ -253,6 +293,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（CreatePublishSubscribe）用于创建两个数据库之间的发布订阅关系。作为订阅者，不能再充当发布者，作为发布者可以有多个订阅者实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublishSubscribeRequest"/></param>
+        /// <returns><see cref="CreatePublishSubscribeResponse"/></returns>
+        public async Task<CreatePublishSubscribeResponse> CreatePublishSubscribe(CreatePublishSubscribeRequest req)
+        {
+             JsonResponseModel<CreatePublishSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePublishSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePublishSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreatePublishSubscribe）用于创建两个数据库之间的发布订阅关系。作为订阅者，不能再充当发布者，作为发布者可以有多个订阅者实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublishSubscribeRequest"/></param>
+        /// <returns><see cref="CreatePublishSubscribeResponse"/></returns>
+        public CreatePublishSubscribeResponse CreatePublishSubscribeSync(CreatePublishSubscribeRequest req)
+        {
+             JsonResponseModel<CreatePublishSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePublishSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePublishSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteAccount）用于删除实例账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>
@@ -364,6 +444,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DeleteMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeletePublishSubscribe）用于删除两个数据库间的发布订阅关系。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DeletePublishSubscribeResponse"/></returns>
+        public async Task<DeletePublishSubscribeResponse> DeletePublishSubscribe(DeletePublishSubscribeRequest req)
+        {
+             JsonResponseModel<DeletePublishSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePublishSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePublishSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeletePublishSubscribe）用于删除两个数据库间的发布订阅关系。
+        /// </summary>
+        /// <param name="req"><see cref="DeletePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DeletePublishSubscribeResponse"/></returns>
+        public DeletePublishSubscribeResponse DeletePublishSubscribeSync(DeletePublishSubscribeRequest req)
+        {
+             JsonResponseModel<DeletePublishSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePublishSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePublishSubscribeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,6 +693,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceSpanResponse"/></returns>
+        public async Task<DescribeMaintenanceSpanResponse> DescribeMaintenanceSpan(DescribeMaintenanceSpanRequest req)
+        {
+             JsonResponseModel<DescribeMaintenanceSpanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMaintenanceSpan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaintenanceSpanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceSpanResponse"/></returns>
+        public DescribeMaintenanceSpanResponse DescribeMaintenanceSpanSync(DescribeMaintenanceSpanRequest req)
+        {
+             JsonResponseModel<DescribeMaintenanceSpanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMaintenanceSpan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaintenanceSpanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
         /// </summary>
         /// <param name="req"><see cref="DescribeMigrationDetailRequest"/></param>
@@ -724,6 +884,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProductConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribePublishSubscribe）用于查询发布订阅关系列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DescribePublishSubscribeResponse"/></returns>
+        public async Task<DescribePublishSubscribeResponse> DescribePublishSubscribe(DescribePublishSubscribeRequest req)
+        {
+             JsonResponseModel<DescribePublishSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePublishSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublishSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribePublishSubscribe）用于查询发布订阅关系列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DescribePublishSubscribeResponse"/></returns>
+        public DescribePublishSubscribeResponse DescribePublishSubscribeSync(DescribePublishSubscribeRequest req)
+        {
+             JsonResponseModel<DescribePublishSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePublishSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublishSubscribeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1093,6 +1293,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（ModifyBackupStrategy）用于修改备份策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupStrategyRequest"/></param>
+        /// <returns><see cref="ModifyBackupStrategyResponse"/></returns>
+        public async Task<ModifyBackupStrategyResponse> ModifyBackupStrategy(ModifyBackupStrategyRequest req)
+        {
+             JsonResponseModel<ModifyBackupStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyBackupStrategy）用于修改备份策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupStrategyRequest"/></param>
+        /// <returns><see cref="ModifyBackupStrategyResponse"/></returns>
+        public ModifyBackupStrategyResponse ModifyBackupStrategySync(ModifyBackupStrategyRequest req)
+        {
+             JsonResponseModel<ModifyBackupStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceName）用于修改实例名字。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
@@ -1293,6 +1533,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceSpanResponse"/></returns>
+        public async Task<ModifyMaintenanceSpanResponse> ModifyMaintenanceSpan(ModifyMaintenanceSpanRequest req)
+        {
+             JsonResponseModel<ModifyMaintenanceSpanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMaintenanceSpan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintenanceSpanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceSpanResponse"/></returns>
+        public ModifyMaintenanceSpanResponse ModifyMaintenanceSpanSync(ModifyMaintenanceSpanRequest req)
+        {
+             JsonResponseModel<ModifyMaintenanceSpanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMaintenanceSpan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintenanceSpanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyMigration）可以修改已有的迁移任务信息
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationRequest"/></param>
@@ -1324,6 +1604,86 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPublishSubscribeName）修改发布订阅的名称。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublishSubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifyPublishSubscribeNameResponse"/></returns>
+        public async Task<ModifyPublishSubscribeNameResponse> ModifyPublishSubscribeName(ModifyPublishSubscribeNameRequest req)
+        {
+             JsonResponseModel<ModifyPublishSubscribeNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPublishSubscribeName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPublishSubscribeNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyPublishSubscribeName）修改发布订阅的名称。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublishSubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifyPublishSubscribeNameResponse"/></returns>
+        public ModifyPublishSubscribeNameResponse ModifyPublishSubscribeNameSync(ModifyPublishSubscribeNameRequest req)
+        {
+             JsonResponseModel<ModifyPublishSubscribeNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPublishSubscribeName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPublishSubscribeNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBackupsRequest"/></param>
+        /// <returns><see cref="RemoveBackupsResponse"/></returns>
+        public async Task<RemoveBackupsResponse> RemoveBackups(RemoveBackupsRequest req)
+        {
+             JsonResponseModel<RemoveBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBackupsRequest"/></param>
+        /// <returns><see cref="RemoveBackupsResponse"/></returns>
+        public RemoveBackupsResponse RemoveBackupsSync(RemoveBackupsRequest req)
+        {
+             JsonResponseModel<RemoveBackupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveBackups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveBackupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

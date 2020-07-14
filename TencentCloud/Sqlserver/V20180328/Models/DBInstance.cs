@@ -216,6 +216,34 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
+        /// <summary>
+        /// 实例隔离操作
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateOperator")]
+        public string IsolateOperator{ get; set; }
+
+        /// <summary>
+        /// 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubFlag")]
+        public string SubFlag{ get; set; }
+
+        /// <summary>
+        /// 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ROFlag")]
+        public string ROFlag{ get; set; }
+
+        /// <summary>
+        /// 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HAFlag")]
+        public string HAFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +282,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "IsolateOperator", this.IsolateOperator);
+            this.SetParamSimple(map, prefix + "SubFlag", this.SubFlag);
+            this.SetParamSimple(map, prefix + "ROFlag", this.ROFlag);
+            this.SetParamSimple(map, prefix + "HAFlag", this.HAFlag);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.100</VersionPrefix>
+    <VersionPrefix>3.0.101</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3254,13 +3254,18 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetric.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetric.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TimeSlice.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
@@ -6727,6 +6732,8 @@
     <Compile Include="Sqlserver\V20180328\Models\AccountPrivilegeModifyInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\AccountRemark.cs" />
     <Compile Include="Sqlserver\V20180328\Models\Backup.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateAccountRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateAccountResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateBackupRequest.cs" />
@@ -6737,12 +6744,16 @@
     <Compile Include="Sqlserver\V20180328\Models\CreateDBResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreatePublishSubscribeRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreatePublishSubscribeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBCreateInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBDetail.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBInstance.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBPrivilege.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBPrivilegeModifyInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBRemark.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DatabaseTuple.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DatabaseTupleStatus.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DbRollbackTimeInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DealInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteAccountRequest.cs" />
@@ -6751,6 +6762,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DeleteDBResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeletePublishSubscribeRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeletePublishSubscribeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupsRequest.cs" />
@@ -6761,6 +6774,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeMaintenanceSpanRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeMaintenanceSpanResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDetailRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDetailResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationsRequest.cs" />
@@ -6769,6 +6784,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeProductConfigResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribePublishSubscribeRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribePublishSubscribeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeRollbackTimeRequest.cs" />
@@ -6794,6 +6811,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountPrivilegeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupStrategyRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupStrategyResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceProjectRequest.cs" />
@@ -6804,9 +6823,16 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyMaintenanceSpanRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyMaintenanceSpanResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyPublishSubscribeNameRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyPublishSubscribeNameResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\PublishSubscribe.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RegionInfo.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\RemoveBackupsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\RemoveBackupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RenewDBInstanceRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RenewDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ResetAccountPasswordRequest.cs" />
@@ -6934,6 +6960,8 @@
     <Compile Include="Tag\V20180813\TagClient.cs" />
     <Compile Include="Tag\V20180813\Models\AddResourceTagRequest.cs" />
     <Compile Include="Tag\V20180813\Models\AddResourceTagResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\AttachResourcesTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\AttachResourcesTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\CreateTagRequest.cs" />
     <Compile Include="Tag\V20180813\Models\CreateTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DeleteResourceTagRequest.cs" />
@@ -6942,6 +6970,8 @@
     <Compile Include="Tag\V20180813\Models\DeleteTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsSeqRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByResourceIdsSeqResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByTagKeysRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsByTagKeysResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsRequest.cs" />
@@ -6952,10 +6982,18 @@
     <Compile Include="Tag\V20180813\Models\DescribeTagKeysResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagValuesRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagValuesResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagValuesSeqRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagValuesSeqResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagsSeqRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeTagsSeqResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DetachResourcesTagRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DetachResourcesTagResponse.cs" />
     <Compile Include="Tag\V20180813\Models\ModifyResourceTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\ModifyResourceTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\ModifyResourcesTagValueRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\ModifyResourcesTagValueResponse.cs" />
     <Compile Include="Tag\V20180813\Models\ResourceIdTag.cs" />
     <Compile Include="Tag\V20180813\Models\ResourceTag.cs" />
     <Compile Include="Tag\V20180813\Models\Tag.cs" />

@@ -53,7 +53,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// 路由策略ID。
+        /// 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
         /// </summary>
         [JsonProperty("RouteId")]
         public ulong? RouteId{ get; set; }

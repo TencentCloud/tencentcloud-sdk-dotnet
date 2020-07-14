@@ -21,44 +21,32 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeDBInstanceRequest : AbstractModel
+    public class ModifyBackupStrategyRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-j8kv137v
+        /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+        /// 备份类型，当前只支持按天备份，取值为daily
         /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
+        [JsonProperty("BackupType")]
+        public string BackupType{ get; set; }
 
         /// <summary>
-        /// 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+        /// 备份时间点，取值为0-23的整数
         /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
+        [JsonProperty("BackupTime")]
+        public ulong? BackupTime{ get; set; }
 
         /// <summary>
-        /// 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+        /// BackupType取值为daily时，表示备份间隔天数。当前取值只能为1
         /// </summary>
-        [JsonProperty("AutoVoucher")]
-        public long? AutoVoucher{ get; set; }
-
-        /// <summary>
-        /// 代金券ID，目前单个订单只能使用一张代金券
-        /// </summary>
-        [JsonProperty("VoucherIds")]
-        public string[] VoucherIds{ get; set; }
-
-        /// <summary>
-        /// 实例升级后的CPU核心数
-        /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
+        [JsonProperty("BackupDay")]
+        public ulong? BackupDay{ get; set; }
 
 
         /// <summary>
@@ -67,11 +55,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
-            this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
+            this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
+            this.SetParamSimple(map, prefix + "BackupDay", this.BackupDay);
         }
     }
 }

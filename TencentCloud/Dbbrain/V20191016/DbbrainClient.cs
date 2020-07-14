@@ -253,6 +253,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 获取实例占用空间最大的前几张表在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTableTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTableTimeSeriesResponse"/></returns>
+        public async Task<DescribeTopSpaceTableTimeSeriesResponse> DescribeTopSpaceTableTimeSeries(DescribeTopSpaceTableTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceTableTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例占用空间最大的前几张表在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceTableTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceTableTimeSeriesResponse"/></returns>
+        public DescribeTopSpaceTableTimeSeriesResponse DescribeTopSpaceTableTimeSeriesSync(DescribeTopSpaceTableTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceTableTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取实例Top表的实时空间统计信息，默认返回按大小排序。
         /// </summary>
         /// <param name="req"><see cref="DescribeTopSpaceTablesRequest"/></param>

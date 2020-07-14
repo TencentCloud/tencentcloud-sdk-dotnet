@@ -102,6 +102,42 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 安全组列表，填写形如sg-xxx的安全组ID
+        /// </summary>
+        [JsonProperty("SecurityGroupList")]
+        public string[] SecurityGroupList{ get; set; }
+
+        /// <summary>
+        /// 可维护时间窗配置，以周为单位，表示周几允许维护，1-7分别代表周一到周末
+        /// </summary>
+        [JsonProperty("Weekly")]
+        public long?[] Weekly{ get; set; }
+
+        /// <summary>
+        /// 可维护时间窗配置，每天可维护的开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 可维护时间窗配置，持续时间，单位：小时
+        /// </summary>
+        [JsonProperty("Span")]
+        public long? Span{ get; set; }
+
+        /// <summary>
+        /// 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
+        /// </summary>
+        [JsonProperty("HAType")]
+        public string HAType{ get; set; }
+
+        /// <summary>
+        /// 是否跨可用区部署，默认值为false
+        /// </summary>
+        [JsonProperty("MultiZones")]
+        public bool? MultiZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +157,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupList.", this.SecurityGroupList);
+            this.SetParamArraySimple(map, prefix + "Weekly.", this.Weekly);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Span", this.Span);
+            this.SetParamSimple(map, prefix + "HAType", this.HAType);
+            this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
         }
     }
 }

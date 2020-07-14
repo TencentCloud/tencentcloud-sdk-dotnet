@@ -21,32 +21,14 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceUpgradeDBInstanceRequest : AbstractModel
+    public class CompleteExpansionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID，形如mssql-njj2mtpl
+        /// 实例ID，形如mssql-j8kv137v
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
-        /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
-
-        /// <summary>
-        /// 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
-        /// </summary>
-        [JsonProperty("Storage")]
-        public long? Storage{ get; set; }
-
-        /// <summary>
-        /// 实例升级后的CPU核心数，其值不能比当前实例CPU小
-        /// </summary>
-        [JsonProperty("Cpu")]
-        public long? Cpu{ get; set; }
 
 
         /// <summary>
@@ -55,9 +37,6 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "Storage", this.Storage);
-            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

@@ -15,41 +15,47 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Tag.V20180813.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeHaVipsRequest : AbstractModel
+    public class DescribeResourceTagsByResourceIdsSeqRequest : AbstractModel
     {
         
         /// <summary>
-        /// `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+        /// 业务类型
         /// </summary>
-        [JsonProperty("HaVipIds")]
-        public string[] HaVipIds{ get; set; }
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-        /// <li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-        /// <li>havip-name - String - `HAVIP`名称。</li>
-        /// <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-        /// <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-        /// <li>vip - String - `HAVIP`的地址`VIP`。</li>
-        /// <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+        /// 资源前缀
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("ResourcePrefix")]
+        public string ResourcePrefix{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 资源唯一标记
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
+
+        /// <summary>
+        /// 资源所在地域
+        /// </summary>
+        [JsonProperty("ResourceRegion")]
+        public string ResourceRegion{ get; set; }
+
+        /// <summary>
+        /// 数据偏移量，默认为 0, 必须为Limit参数的整数倍
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量
+        /// 每页大小，默认为 15
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -60,8 +66,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "HaVipIds.", this.HaVipIds);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "ResourcePrefix", this.ResourcePrefix);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

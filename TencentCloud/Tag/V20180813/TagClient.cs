@@ -93,6 +93,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 给多个资源关联某个标签
+        /// </summary>
+        /// <param name="req"><see cref="AttachResourcesTagRequest"/></param>
+        /// <returns><see cref="AttachResourcesTagResponse"/></returns>
+        public async Task<AttachResourcesTagResponse> AttachResourcesTag(AttachResourcesTagRequest req)
+        {
+             JsonResponseModel<AttachResourcesTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachResourcesTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachResourcesTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 给多个资源关联某个标签
+        /// </summary>
+        /// <param name="req"><see cref="AttachResourcesTagRequest"/></param>
+        /// <returns><see cref="AttachResourcesTagResponse"/></returns>
+        public AttachResourcesTagResponse AttachResourcesTagSync(AttachResourcesTagRequest req)
+        {
+             JsonResponseModel<AttachResourcesTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachResourcesTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachResourcesTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于创建一对标签键和标签值
         /// </summary>
         /// <param name="req"><see cref="CreateTagRequest"/></param>
@@ -293,6 +333,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 按顺序查看资源关联的标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsByResourceIdsSeqRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsByResourceIdsSeqResponse"/></returns>
+        public async Task<DescribeResourceTagsByResourceIdsSeqResponse> DescribeResourceTagsByResourceIdsSeq(DescribeResourceTagsByResourceIdsSeqRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsByResourceIdsSeqResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceTagsByResourceIdsSeq");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsByResourceIdsSeqResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按顺序查看资源关联的标签
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsByResourceIdsSeqRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsByResourceIdsSeqResponse"/></returns>
+        public DescribeResourceTagsByResourceIdsSeqResponse DescribeResourceTagsByResourceIdsSeqSync(DescribeResourceTagsByResourceIdsSeqRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsByResourceIdsSeqResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceTagsByResourceIdsSeq");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsByResourceIdsSeqResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据标签键获取资源标签
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsByTagKeysRequest"/></param>
@@ -453,6 +533,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 用于查询已建立的标签列表中的标签值。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagValuesSeqRequest"/></param>
+        /// <returns><see cref="DescribeTagValuesSeqResponse"/></returns>
+        public async Task<DescribeTagValuesSeqResponse> DescribeTagValuesSeq(DescribeTagValuesSeqRequest req)
+        {
+             JsonResponseModel<DescribeTagValuesSeqResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagValuesSeq");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagValuesSeqResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询已建立的标签列表中的标签值。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagValuesSeqRequest"/></param>
+        /// <returns><see cref="DescribeTagValuesSeqResponse"/></returns>
+        public DescribeTagValuesSeqResponse DescribeTagValuesSeqSync(DescribeTagValuesSeqRequest req)
+        {
+             JsonResponseModel<DescribeTagValuesSeqResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTagValuesSeq");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagValuesSeqResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询已建立的标签列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTagsRequest"/></param>
@@ -493,6 +613,86 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 用于查询已建立的标签列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagsSeqRequest"/></param>
+        /// <returns><see cref="DescribeTagsSeqResponse"/></returns>
+        public async Task<DescribeTagsSeqResponse> DescribeTagsSeq(DescribeTagsSeqRequest req)
+        {
+             JsonResponseModel<DescribeTagsSeqResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagsSeq");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagsSeqResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询已建立的标签列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagsSeqRequest"/></param>
+        /// <returns><see cref="DescribeTagsSeqResponse"/></returns>
+        public DescribeTagsSeqResponse DescribeTagsSeqSync(DescribeTagsSeqRequest req)
+        {
+             JsonResponseModel<DescribeTagsSeqResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTagsSeq");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagsSeqResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑多个资源关联的某个标签
+        /// </summary>
+        /// <param name="req"><see cref="DetachResourcesTagRequest"/></param>
+        /// <returns><see cref="DetachResourcesTagResponse"/></returns>
+        public async Task<DetachResourcesTagResponse> DetachResourcesTag(DetachResourcesTagRequest req)
+        {
+             JsonResponseModel<DetachResourcesTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachResourcesTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachResourcesTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑多个资源关联的某个标签
+        /// </summary>
+        /// <param name="req"><see cref="DetachResourcesTagRequest"/></param>
+        /// <returns><see cref="DetachResourcesTagResponse"/></returns>
+        public DetachResourcesTagResponse DetachResourcesTagSync(DetachResourcesTagRequest req)
+        {
+             JsonResponseModel<DetachResourcesTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachResourcesTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachResourcesTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于修改资源关联的所有标签
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>
@@ -524,6 +724,46 @@ namespace TencentCloud.Tag.V20180813
              {
                  var strResp = this.InternalRequestSync(req, "ModifyResourceTags");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改多个资源关联的某个标签键对应的标签值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcesTagValueRequest"/></param>
+        /// <returns><see cref="ModifyResourcesTagValueResponse"/></returns>
+        public async Task<ModifyResourcesTagValueResponse> ModifyResourcesTagValue(ModifyResourcesTagValueRequest req)
+        {
+             JsonResponseModel<ModifyResourcesTagValueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourcesTagValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcesTagValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改多个资源关联的某个标签键对应的标签值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcesTagValueRequest"/></param>
+        /// <returns><see cref="ModifyResourcesTagValueResponse"/></returns>
+        public ModifyResourcesTagValueResponse ModifyResourcesTagValueSync(ModifyResourcesTagValueRequest req)
+        {
+             JsonResponseModel<ModifyResourcesTagValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourcesTagValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcesTagValueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
