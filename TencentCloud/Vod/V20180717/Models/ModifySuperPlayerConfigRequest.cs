@@ -63,6 +63,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public ResolutionNameInfo[] ResolutionNames{ get; set; }
 
         /// <summary>
+        /// 播放时使用的域名。填 Default 表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 播放时使用的 Scheme。取值范围：
+        /// <li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+        /// <li>HTTP；</li>
+        /// <li>HTTPS。</li>
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
+
+        /// <summary>
         /// 模板描述信息，长度限制：256 个字符。
         /// </summary>
         [JsonProperty("Comment")]
@@ -86,6 +101,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
             this.SetParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
             this.SetParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }

@@ -1093,6 +1093,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询实例维护时间窗，在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
+        public async Task<DescribeMaintenanceWindowResponse> DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例维护时间窗，在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
+        public DescribeMaintenanceWindowResponse DescribeMaintenanceWindowSync(DescribeMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口查询指定可用区和实例类型下 Redis 的售卖规格， 如果用户不在购买白名单中，将不能查询该可用区或该类型的售卖规格详情。申请购买某地域白名单可以提交工单
         /// </summary>
         /// <param name="req"><see cref="DescribeProductInfoRequest"/></param>
@@ -1933,6 +1973,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
+        public async Task<ModifyMaintenanceWindowResponse> ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
+        public ModifyMaintenanceWindowResponse ModifyMaintenanceWindowSync(ModifyMaintenanceWindowRequest req)
+        {
+             JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMaintenanceWindow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMaintenanceWindowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改实例网络配置
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkConfigRequest"/></param>
@@ -2204,6 +2284,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将原本实例升级到高版本实例，或者将主从版实例升级到集群版实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
+        public async Task<UpgradeInstanceVersionResponse> UpgradeInstanceVersion(UpgradeInstanceVersionRequest req)
+        {
+             JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeInstanceVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将原本实例升级到高版本实例，或者将主从版实例升级到集群版实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceVersionResponse"/></returns>
+        public UpgradeInstanceVersionResponse UpgradeInstanceVersionSync(UpgradeInstanceVersionRequest req)
+        {
+             JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeInstanceVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeInstanceVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

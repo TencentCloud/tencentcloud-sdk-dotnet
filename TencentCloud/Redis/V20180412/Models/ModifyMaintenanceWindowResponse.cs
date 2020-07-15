@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyWorkersRequest : AbstractModel
+    public class ModifyMaintenanceWindowResponse : AbstractModel
     {
         
         /// <summary>
-        /// 批量机器ID，最多不超过100个
+        /// 修改状态：success 或者 failed
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// 资源池编号，修改有效范围为[1,100]，在idle状态下才能修改成功
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("SetNo")]
-        public ulong? SetNo{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "SetNo", this.SetNo);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

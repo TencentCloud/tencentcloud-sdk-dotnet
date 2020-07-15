@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeWorkersResponse : AbstractModel
+    public class UpgradeInstanceVersionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 空闲机器总数量
+        /// 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
         /// </summary>
-        [JsonProperty("Idle")]
-        public ulong? Idle{ get; set; }
+        [JsonProperty("TargetInstanceType")]
+        public string TargetInstanceType{ get; set; }
 
         /// <summary>
-        /// 区域个数
+        /// 切换模式：1-维护时间窗切换，2-立即切换
         /// </summary>
-        [JsonProperty("RegionNum")]
-        public ulong? RegionNum{ get; set; }
+        [JsonProperty("SwitchOption")]
+        public long? SwitchOption{ get; set; }
 
         /// <summary>
-        /// 各个区域的机器情况
+        /// 实例ID
         /// </summary>
-        [JsonProperty("RegionDetail")]
-        public WorkerRegionInfo[] RegionDetail{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Idle", this.Idle);
-            this.SetParamSimple(map, prefix + "RegionNum", this.RegionNum);
-            this.SetParamArrayObj(map, prefix + "RegionDetail.", this.RegionDetail);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TargetInstanceType", this.TargetInstanceType);
+            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

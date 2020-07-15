@@ -15,15 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyWorkersResponse : AbstractModel
+    public class UpgradeInstanceVersionResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 订单ID
+        /// </summary>
+        [JsonProperty("DealId")]
+        public string DealId{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +42,7 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DealId", this.DealId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

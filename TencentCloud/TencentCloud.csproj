@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.101</VersionPrefix>
+    <VersionPrefix>3.0.102</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4178,22 +4178,10 @@
     <Compile Include="Gs\V20191118\GsClient.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionRequest.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionResponse.cs" />
-    <Compile Include="Gs\V20191118\Models\DescribeWorkersInfoRequest.cs" />
-    <Compile Include="Gs\V20191118\Models\DescribeWorkersInfoResponse.cs" />
-    <Compile Include="Gs\V20191118\Models\DescribeWorkersRequest.cs" />
-    <Compile Include="Gs\V20191118\Models\DescribeWorkersResponse.cs" />
-    <Compile Include="Gs\V20191118\Models\EnterQueueRequest.cs" />
-    <Compile Include="Gs\V20191118\Models\EnterQueueResponse.cs" />
-    <Compile Include="Gs\V20191118\Models\ModifyWorkersRequest.cs" />
-    <Compile Include="Gs\V20191118\Models\ModifyWorkersResponse.cs" />
-    <Compile Include="Gs\V20191118\Models\QuitQueueRequest.cs" />
-    <Compile Include="Gs\V20191118\Models\QuitQueueResponse.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameRequest.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameResponse.cs" />
     <Compile Include="Gs\V20191118\Models\TrylockWorkerRequest.cs" />
     <Compile Include="Gs\V20191118\Models\TrylockWorkerResponse.cs" />
-    <Compile Include="Gs\V20191118\Models\WorkerDetail.cs" />
-    <Compile Include="Gs\V20191118\Models\WorkerRegionInfo.cs" />
     <Compile Include="Gse\V20191112\GseClient.cs" />
     <Compile Include="Gse\V20191112\Models\CreateGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\CreateGameServerSessionResponse.cs" />
@@ -6426,6 +6414,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeInstanceShardsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
@@ -6483,6 +6473,8 @@
     <Compile Include="Redis\V20180412\Models\ModifyInstanceParamsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyMaintenanceWindowRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\Outbound.cs" />
@@ -6508,6 +6500,8 @@
     <Compile Include="Redis\V20180412\Models\TradeDealDetail.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ZoneCapacityConf.cs" />
     <Compile Include="Rp\V20200224\RpClient.cs" />
     <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionRequest.cs" />

@@ -84,6 +84,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
+        /// 播放时使用的域名。值为 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 播放时使用的 Scheme。取值范围：
+        /// <li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>
+        /// <li>HTTP；</li>
+        /// <li>HTTPS。</li>
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
+
+        /// <summary>
         /// 模板描述信息。
         /// </summary>
         [JsonProperty("Comment")]
@@ -104,6 +119,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "ResolutionNameSet.", this.ResolutionNameSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
     }

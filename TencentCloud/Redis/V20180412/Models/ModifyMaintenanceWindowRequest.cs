@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnterQueueResponse : AbstractModel
+    public class ModifyMaintenanceWindowRequest : AbstractModel
     {
         
         /// <summary>
-        /// 排名
+        /// 实例ID
         /// </summary>
-        [JsonProperty("Rank")]
-        public ulong? Rank{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 机器锁定成功
+        /// 维护时间窗起始时间，如：17:00
         /// </summary>
-        [JsonProperty("LockSuccess")]
-        public bool? LockSuccess{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 维护时间窗结束时间，如：19:00
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Rank", this.Rank);
-            this.SetParamSimple(map, prefix + "LockSuccess", this.LockSuccess);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

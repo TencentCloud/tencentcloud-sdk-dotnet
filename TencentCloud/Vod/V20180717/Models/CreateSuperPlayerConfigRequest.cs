@@ -31,12 +31,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模板描述信息，长度限制：256 个字符。
-        /// </summary>
-        [JsonProperty("Comment")]
-        public string Comment{ get; set; }
-
-        /// <summary>
         /// 播放 DRM 保护的自适应码流开关：
         /// <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
         /// <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
@@ -77,6 +71,26 @@ namespace TencentCloud.Vod.V20180717.Models
         public ResolutionNameInfo[] ResolutionNames{ get; set; }
 
         /// <summary>
+        /// 播放时使用的域名。不填或者填 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 播放时使用的 Scheme。不填或者填 Default，表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme。其他可选值：
+        /// <li>HTTP；</li>
+        /// <li>HTTPS。</li>
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
+
+        /// <summary>
+        /// 模板描述信息，长度限制：256 个字符。
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -89,12 +103,14 @@ namespace TencentCloud.Vod.V20180717.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
             this.SetParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
             this.SetParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

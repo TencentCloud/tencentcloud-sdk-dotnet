@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QuitQueueRequest : AbstractModel
+    public class DescribeMaintenanceWindowResponse : AbstractModel
     {
         
         /// <summary>
-        /// 用户ID
+        /// 维护时间窗起始时间，如：17:00
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// 资源池编号
+        /// 维护时间窗结束时间，如：19:00
         /// </summary>
-        [JsonProperty("SetNumber")]
-        public ulong? SetNumber{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "SetNumber", this.SetNumber);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
