@@ -132,6 +132,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("PublicNetConfig")]
         public PublicNetConfigIn PublicNetConfig{ get; set; }
 
+        /// <summary>
+        /// 文件系统配置参数，用于云函数挂载文件系统
+        /// </summary>
+        [JsonProperty("CfsConfig")]
+        public CfsConfig CfsConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "Layers.", this.Layers);
             this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+            this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         }
     }
 }

@@ -173,6 +173,46 @@ namespace TencentCloud.Yunjing.V20180228
         }
 
         /// <summary>
+        /// 根据策略信息创建基线策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineStrategyRequest"/></param>
+        /// <returns><see cref="CreateBaselineStrategyResponse"/></returns>
+        public async Task<CreateBaselineStrategyResponse> CreateBaselineStrategy(CreateBaselineStrategyRequest req)
+        {
+             JsonResponseModel<CreateBaselineStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBaselineStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBaselineStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据策略信息创建基线策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateBaselineStrategyRequest"/></param>
+        /// <returns><see cref="CreateBaselineStrategyResponse"/></returns>
+        public CreateBaselineStrategyResponse CreateBaselineStrategySync(CreateBaselineStrategyRequest req)
+        {
+             JsonResponseModel<CreateBaselineStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBaselineStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBaselineStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
         /// </summary>
         /// <param name="req"><see cref="CreateOpenPortTaskRequest"/></param>

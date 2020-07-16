@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员ID
+        /// 人员ID，取值为创建人员接口中的PersonId
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 待删除的人脸ID列表
+        /// 待删除的人脸ID列表，数组元素取值为增加人脸接口返回的FaceId
         /// </summary>
         [JsonProperty("FaceIds")]
         public string[] FaceIds{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// 资源六段式描述
+        /// [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }

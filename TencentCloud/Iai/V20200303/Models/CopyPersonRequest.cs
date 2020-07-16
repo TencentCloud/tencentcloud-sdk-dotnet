@@ -25,13 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员ID
+        /// 人员ID，取值为创建人员接口中的PersonId
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 待加入的人员库列表
+        /// 待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }

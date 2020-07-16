@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 人员ID
+        /// 人员ID，取值为创建人员接口中的PersonId
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }

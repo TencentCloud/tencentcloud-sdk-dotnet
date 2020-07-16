@@ -276,6 +276,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("AutoFlag")]
         public long? AutoFlag{ get; set; }
 
+        /// <summary>
+        /// 资源类型, host/pod
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HardwareResourceType")]
+        public string HardwareResourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +325,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Destroyable", this.Destroyable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
+            this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         }
     }
 }

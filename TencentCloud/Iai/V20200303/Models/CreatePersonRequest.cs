@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 待加入的人员库ID。
+        /// 待加入的人员库ID，取值为创建人员库接口中的GroupId
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

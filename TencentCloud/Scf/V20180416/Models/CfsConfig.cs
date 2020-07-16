@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyPersonBaseInfoRequest : AbstractModel
+    public class CfsConfig : AbstractModel
     {
         
         /// <summary>
-        /// 人员ID，取值为创建人员接口中的PersonId
+        /// 文件系统信息列表
         /// </summary>
-        [JsonProperty("PersonId")]
-        public string PersonId{ get; set; }
-
-        /// <summary>
-        /// 需要修改的人员名称
-        /// </summary>
-        [JsonProperty("PersonName")]
-        public string PersonName{ get; set; }
-
-        /// <summary>
-        /// 需要修改的人员性别，1代表男性，2代表女性
-        /// </summary>
-        [JsonProperty("Gender")]
-        public long? Gender{ get; set; }
+        [JsonProperty("CfsInsList")]
+        public CfsInsInfo[] CfsInsList{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
-            this.SetParamSimple(map, prefix + "PersonName", this.PersonName);
-            this.SetParamSimple(map, prefix + "Gender", this.Gender);
+            this.SetParamArrayObj(map, prefix + "CfsInsList.", this.CfsInsList);
         }
     }
 }

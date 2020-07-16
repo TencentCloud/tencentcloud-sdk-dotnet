@@ -58,6 +58,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 资源类型:支持all/host/pod，默认为all
+        /// </summary>
+        [JsonProperty("HardwareResourceType")]
+        public string HardwareResourceType{ get; set; }
+
+        /// <summary>
+        /// 支持搜索的字段
+        /// </summary>
+        [JsonProperty("SearchFields")]
+        public SearchItem[] SearchFields{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +80,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+            this.SetParamArrayObj(map, prefix + "SearchFields.", this.SearchFields);
         }
     }
 }

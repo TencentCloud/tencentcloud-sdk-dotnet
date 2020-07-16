@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.102</VersionPrefix>
+    <VersionPrefix>3.0.103</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3804,11 +3804,13 @@
     <Compile Include="Emr\V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="Emr\V20190103\Models\OutterResource.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
+    <Compile Include="Emr\V20190103\Models\PodSpec.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="Emr\V20190103\Models\PriceResource.cs" />
     <Compile Include="Emr\V20190103\Models\Resource.cs" />
     <Compile Include="Emr\V20190103\Models\ScaleOutInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\ScaleOutInstanceResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\SearchItem.cs" />
     <Compile Include="Emr\V20190103\Models\Tag.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceResponse.cs" />
@@ -6509,6 +6511,8 @@
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
+    <Compile Include="Scf\V20180416\Models\CfsConfig.cs" />
+    <Compile Include="Scf\V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionRequest.cs" />
     <Compile Include="Scf\V20180416\Models\CopyFunctionResponse.cs" />
@@ -9361,6 +9365,8 @@
     <Compile Include="Yunjing\V20180228\Models\CloseProVersionResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\Component.cs" />
     <Compile Include="Yunjing\V20180228\Models\ComponentStatistics.cs" />
+    <Compile Include="Yunjing\V20180228\Models\CreateBaselineStrategyRequest.cs" />
+    <Compile Include="Yunjing\V20180228\Models\CreateBaselineStrategyResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\CreateOpenPortTaskRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\CreateOpenPortTaskResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\CreateProcessTaskRequest.cs" />
