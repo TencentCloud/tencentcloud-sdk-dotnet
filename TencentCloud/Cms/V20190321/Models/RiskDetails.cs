@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Cms.V20190321.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSimilarPersonResultRequest : AbstractModel
+    public class RiskDetails : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
+        /// 风险关键词
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
+
+        /// <summary>
+        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
+        /// </summary>
+        [JsonProperty("Lable")]
+        public string Lable{ get; set; }
+
+        /// <summary>
+        /// 风险等级，1:疑似，2：恶意
+        /// </summary>
+        [JsonProperty("Level")]
+        public long? Level{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+            this.SetParamSimple(map, prefix + "Lable", this.Lable);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
         }
     }
 }

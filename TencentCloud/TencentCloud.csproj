@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.103</VersionPrefix>
+    <VersionPrefix>3.0.104</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2539,6 +2539,7 @@
     <Compile Include="Cms\V20190321\Models\OCRDetect.cs" />
     <Compile Include="Cms\V20190321\Models\OCRItem.cs" />
     <Compile Include="Cms\V20190321\Models\PhoneDetect.cs" />
+    <Compile Include="Cms\V20190321\Models\RiskDetails.cs" />
     <Compile Include="Cms\V20190321\Models\RrectF.cs" />
     <Compile Include="Cms\V20190321\Models\Similar.cs" />
     <Compile Include="Cms\V20190321\Models\TextData.cs" />
@@ -3028,6 +3029,8 @@
     <Compile Include="Dayu\V20180709\Models\CreateNewL4RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesUploadRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\CreateNewL7RulesUploadResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateUnblockIpRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\CreateUnblockIpResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DDoSAlarmThreshold.cs" />

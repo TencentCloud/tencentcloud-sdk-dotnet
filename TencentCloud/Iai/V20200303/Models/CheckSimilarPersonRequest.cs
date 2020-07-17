@@ -27,6 +27,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// <summary>
         /// 待整理的人员库列表。 
         /// 人员库总人数不可超过200万，人员库个数不可超过10个。
+        /// 数组元素取值为创建人员库接口中的GroupId
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }

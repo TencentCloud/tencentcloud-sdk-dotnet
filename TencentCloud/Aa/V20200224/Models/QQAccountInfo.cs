@@ -52,7 +52,7 @@ namespace TencentCloud.Aa.V20200224.Models
         /// 用户设备号。
         /// </summary>
         [JsonProperty("DeviceId")]
-        public bool? DeviceId{ get; set; }
+        public string DeviceId{ get; set; }
 
 
         /// <summary>

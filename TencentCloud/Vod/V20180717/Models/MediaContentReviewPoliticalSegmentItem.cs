@@ -67,7 +67,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>bureau_politician：厅局级领导人；</li>
         /// <li>county_politician：县处级领导人；</li>
         /// <li>rural_politician：乡科级领导人；</li>
-        /// <li>sensitive_politician：敏感政治人物。</li>
+        /// <li>sensitive_politician：敏感政治人物；</li>
+        /// <li>foreign_politician：国外领导人。</li>
         /// entertainment：
         /// <li>sensitive_entertainment：敏感娱乐人物。</li>
         /// sport：
@@ -77,7 +78,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// scholar：
         /// <li>sensitive_scholar：敏感教育学者。</li>
         /// celebrity：
-        /// <li>sensitive_celebrity：敏感知名人物。</li>
+        /// <li>sensitive_celebrity：敏感知名人物；</li>
+        /// <li>historical_celebrity：历史知名人物。</li>
         /// military：
         /// <li>sensitive_military：敏感军事人物。</li>
         /// </summary>

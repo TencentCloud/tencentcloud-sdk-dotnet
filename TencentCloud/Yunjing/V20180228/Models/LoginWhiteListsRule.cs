@@ -60,6 +60,18 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
+        /// <summary>
+        /// 起始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
             this.SetParamSimple(map, prefix + "HostIp", this.HostIp);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

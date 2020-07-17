@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Dayu.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSimilarPersonResultRequest : AbstractModel
+    public class CreateNewL7RulesUploadRequest : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
+        /// 大禹子产品代号（bgpip表示高防IP）
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
+        /// <summary>
+        /// 资源ID列表
+        /// </summary>
+        [JsonProperty("IdList")]
+        public string[] IdList{ get; set; }
+
+        /// <summary>
+        /// 资源IP列表
+        /// </summary>
+        [JsonProperty("VipList")]
+        public string[] VipList{ get; set; }
+
+        /// <summary>
+        /// 规则列表
+        /// </summary>
+        [JsonProperty("Rules")]
+        public L7RuleEntry[] Rules{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
+            this.SetParamArraySimple(map, prefix + "VipList.", this.VipList);
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
         }
     }
 }

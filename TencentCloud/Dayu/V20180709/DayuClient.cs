@@ -733,6 +733,46 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 批量上传7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesUploadRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesUploadResponse"/></returns>
+        public async Task<CreateNewL7RulesUploadResponse> CreateNewL7RulesUpload(CreateNewL7RulesUploadRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesUploadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNewL7RulesUpload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesUploadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量上传7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNewL7RulesUploadRequest"/></param>
+        /// <returns><see cref="CreateNewL7RulesUploadResponse"/></returns>
+        public CreateNewL7RulesUploadResponse CreateNewL7RulesUploadSync(CreateNewL7RulesUploadRequest req)
+        {
+             JsonResponseModel<CreateNewL7RulesUploadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNewL7RulesUpload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNewL7RulesUploadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// IP解封操作
         /// </summary>
         /// <param name="req"><see cref="CreateUnblockIpRequest"/></param>

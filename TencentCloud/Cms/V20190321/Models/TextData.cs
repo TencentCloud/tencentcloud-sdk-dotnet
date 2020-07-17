@@ -74,6 +74,12 @@ namespace TencentCloud.Cms.V20190321.Models
         public TextOutputRes Res{ get; set; }
 
         /// <summary>
+        /// 账号风险检测结果
+        /// </summary>
+        [JsonProperty("RiskDetails")]
+        public RiskDetails[] RiskDetails{ get; set; }
+
+        /// <summary>
         /// 最终使用的BizType
         /// </summary>
         [JsonProperty("BizType")]
@@ -116,6 +122,7 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamArrayObj(map, prefix + "DetailResult.", this.DetailResult);
             this.SetParamObj(map, prefix + "ID.", this.ID);
             this.SetParamObj(map, prefix + "Res.", this.Res);
+            this.SetParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
