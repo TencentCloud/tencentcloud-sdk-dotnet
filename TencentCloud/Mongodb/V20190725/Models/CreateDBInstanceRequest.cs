@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+        /// 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 机器类型，HIO：高IO型；HIO10G：高IO万兆型
+        /// 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
 
         /// <summary>
-        /// 实例类型，REPLSET-副本集，SHARD-分片集群
+        /// 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
+        /// 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数；若为单节点实例，该参数设置为0
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public ulong? ReplicateSetNum{ get; set; }
@@ -120,6 +120,30 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 是否自动选择代金券，可选值为：1 - 是；0 - 否； 默认为0
+        /// </summary>
+        [JsonProperty("AutoVoucher")]
+        public ulong? AutoVoucher{ get; set; }
+
+        /// <summary>
+        /// 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+        /// </summary>
+        [JsonProperty("Clone")]
+        public long? Clone{ get; set; }
+
+        /// <summary>
+        /// 若是只读，灾备实例，Father必须填写，即主实例ID
+        /// </summary>
+        [JsonProperty("Father")]
+        public string Father{ get; set; }
+
+        /// <summary>
+        /// 安全组
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string[] SecurityGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +166,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+            this.SetParamSimple(map, prefix + "Clone", this.Clone);
+            this.SetParamSimple(map, prefix + "Father", this.Father);
+            this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         }
     }
 }

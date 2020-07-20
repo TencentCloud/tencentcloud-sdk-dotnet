@@ -24,12 +24,28 @@ namespace TencentCloud.Yunjing.V20180228.Models
     public class DescribeTagsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 云主机类型。
+        /// <li>CVM：表示虚拟主机</li>
+        /// <li>BM:  表示黑石物理机</li>
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
+        /// 机器所属地域。如：ap-guangzhou，ap-shanghai
+        /// </summary>
+        [JsonProperty("MachineRegion")]
+        public string MachineRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "MachineRegion", this.MachineRegion);
         }
     }
 }

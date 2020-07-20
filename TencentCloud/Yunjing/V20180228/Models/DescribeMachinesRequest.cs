@@ -53,7 +53,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// <summary>
         /// 过滤条件。
         /// <li>Keywords - String - 是否必填：否 - 查询关键字 </li>
-        /// <li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线）</li>
+        /// <li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装）</li>
         /// <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版）</li>
         /// 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
         /// </summary>

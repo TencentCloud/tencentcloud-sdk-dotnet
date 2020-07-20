@@ -25,7 +25,7 @@ namespace TencentCloud.Cms.V20190321.Models
     {
         
         /// <summary>
-        /// 风险关键词
+        /// 预留字段，暂时不使用
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }

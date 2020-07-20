@@ -36,6 +36,12 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 标签ID
+        /// </summary>
+        [JsonProperty("TagId")]
+        public ulong? TagId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "Rid", this.Rid);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "TagId", this.TagId);
         }
     }
 }

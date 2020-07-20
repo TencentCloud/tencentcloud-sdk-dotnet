@@ -103,6 +103,33 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
 
+        /// <summary>
+        /// 基线风险数。
+        /// </summary>
+        [JsonProperty("BaselineNum")]
+        public long? BaselineNum{ get; set; }
+
+        /// <summary>
+        /// 网络风险数。
+        /// </summary>
+        [JsonProperty("CyberAttackNum")]
+        public long? CyberAttackNum{ get; set; }
+
+        /// <summary>
+        /// 风险状态。
+        /// <li>SAFE：安全</li>
+        /// <li>RISK：风险</li>
+        /// <li>UNKNOWN：未知</li>
+        /// </summary>
+        [JsonProperty("SecurityStatus")]
+        public string SecurityStatus{ get; set; }
+
+        /// <summary>
+        /// 入侵事件数
+        /// </summary>
+        [JsonProperty("InvasionNum")]
+        public long? InvasionNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +148,10 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "MalwareNum", this.MalwareNum);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamSimple(map, prefix + "BaselineNum", this.BaselineNum);
+            this.SetParamSimple(map, prefix + "CyberAttackNum", this.CyberAttackNum);
+            this.SetParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
+            this.SetParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
         }
     }
 }

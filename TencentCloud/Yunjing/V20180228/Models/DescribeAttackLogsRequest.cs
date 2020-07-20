@@ -45,6 +45,18 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 主机安全客户端ID
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
+        /// <summary>
+        /// 云主机机器ID
+        /// </summary>
+        [JsonProperty("Quuid")]
+        public string Quuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +66,8 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
         }
     }
 }

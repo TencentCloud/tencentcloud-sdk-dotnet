@@ -108,6 +108,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
+        /// <summary>
+        /// 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+        /// </summary>
+        [JsonProperty("Clone")]
+        public long? Clone{ get; set; }
+
+        /// <summary>
+        /// 父实例Id，当Clone为3或者4时，这个必须填
+        /// </summary>
+        [JsonProperty("Father")]
+        public string Father{ get; set; }
+
+        /// <summary>
+        /// 安全组
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string[] SecurityGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +146,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Clone", this.Clone);
+            this.SetParamSimple(map, prefix + "Father", this.Father);
+            this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         }
     }
 }
