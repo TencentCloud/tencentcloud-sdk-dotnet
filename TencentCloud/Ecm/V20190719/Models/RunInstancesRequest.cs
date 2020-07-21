@@ -118,6 +118,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 系统盘大小，单位是G。如果未传该参数或者传的值为0，则使用模块下的默认值
+        /// </summary>
+        [JsonProperty("SystemDiskSize")]
+        public ulong? SystemDiskSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +144,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);
         }
     }
 }

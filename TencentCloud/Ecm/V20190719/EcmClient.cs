@@ -225,6 +225,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRequest"/></param>
+        /// <returns><see cref="CreateImageResponse"/></returns>
+        public async Task<CreateImageResponse> CreateImage(CreateImageRequest req)
+        {
+             JsonResponseModel<CreateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRequest"/></param>
+        /// <returns><see cref="CreateImageResponse"/></returns>
+        public CreateImageResponse CreateImageSync(CreateImageRequest req)
+        {
+             JsonResponseModel<CreateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建模块
         /// </summary>
         /// <param name="req"><see cref="CreateModuleRequest"/></param>
@@ -1425,6 +1465,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 本接口(DescribeTaskStatus)用于获取异步任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public async Task<DescribeTaskStatusResponse> DescribeTaskStatus(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeTaskStatus)用于获取异步任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskStatusResponse"/></returns>
+        public DescribeTaskStatusResponse DescribeTaskStatusSync(DescribeTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询私有网络列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcsRequest"/></param>
@@ -1824,6 +1904,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDefaultSubnet");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyImageAttribute）用于修改镜像属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageAttributeRequest"/></param>
+        /// <returns><see cref="ModifyImageAttributeResponse"/></returns>
+        public async Task<ModifyImageAttributeResponse> ModifyImageAttribute(ModifyImageAttributeRequest req)
+        {
+             JsonResponseModel<ModifyImageAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyImageAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImageAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyImageAttribute）用于修改镜像属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageAttributeRequest"/></param>
+        /// <returns><see cref="ModifyImageAttributeResponse"/></returns>
+        public ModifyImageAttributeResponse ModifyImageAttributeSync(ModifyImageAttributeRequest req)
+        {
+             JsonResponseModel<ModifyImageAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyImageAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImageAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

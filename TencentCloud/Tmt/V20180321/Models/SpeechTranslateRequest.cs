@@ -78,6 +78,12 @@ namespace TencentCloud.Tmt.V20180321.Models
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
+        /// <summary>
+        /// 该参数已废弃
+        /// </summary>
+        [JsonProperty("TransType")]
+        public long? TransType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "TransType", this.TransType);
         }
     }
 }

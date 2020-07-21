@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.105</VersionPrefix>
+    <VersionPrefix>3.0.106</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,28 @@
     <Compile Include="Ame\V20190916\Models\ReportDataRequest.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataResponse.cs" />
     <Compile Include="Ame\V20190916\Models\Station.cs" />
+    <Compile Include="Ams\V20200608\AmsClient.cs" />
+    <Compile Include="Ams\V20200608\Models\AudioResult.cs" />
+    <Compile Include="Ams\V20200608\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="Ams\V20200608\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="Ams\V20200608\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="Ams\V20200608\Models\AudioSegments.cs" />
+    <Compile Include="Ams\V20200608\Models\BucketInfo.cs" />
+    <Compile Include="Ams\V20200608\Models\CreateAudioModerationTaskRequest.cs" />
+    <Compile Include="Ams\V20200608\Models\CreateAudioModerationTaskResponse.cs" />
+    <Compile Include="Ams\V20200608\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Ams\V20200608\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="Ams\V20200608\Models\ImageResult.cs" />
+    <Compile Include="Ams\V20200608\Models\ImageResultResult.cs" />
+    <Compile Include="Ams\V20200608\Models\ImageResultsResultDetail.cs" />
+    <Compile Include="Ams\V20200608\Models\ImageResultsResultDetailLocation.cs" />
+    <Compile Include="Ams\V20200608\Models\ImageSegments.cs" />
+    <Compile Include="Ams\V20200608\Models\InputInfo.cs" />
+    <Compile Include="Ams\V20200608\Models\MediaInfo.cs" />
+    <Compile Include="Ams\V20200608\Models\StorageInfo.cs" />
+    <Compile Include="Ams\V20200608\Models\TaskInput.cs" />
+    <Compile Include="Ams\V20200608\Models\TaskLabel.cs" />
+    <Compile Include="Ams\V20200608\Models\TaskResult.cs" />
     <Compile Include="Apigateway\V20180808\ApigatewayClient.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategy.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
@@ -3619,6 +3641,8 @@
     <Compile Include="Ecm\V20190719\Models\AttachNetworkInterfaceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\City.cs" />
     <Compile Include="Ecm\V20190719\Models\Country.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateImageRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateModuleRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceRequest.cs" />
@@ -3679,6 +3703,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskResultResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeVpcsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeVpcsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceRequest.cs" />
@@ -3716,6 +3742,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyAddressesBandwidthResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyDefaultSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyDefaultSubnetResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyImageAttributeRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageRequest.cs" />
@@ -3774,6 +3802,8 @@
     <Compile Include="Ecm\V20190719\Models\Subnet.cs" />
     <Compile Include="Ecm\V20190719\Models\Tag.cs" />
     <Compile Include="Ecm\V20190719\Models\TagSpecification.cs" />
+    <Compile Include="Ecm\V20190719\Models\TaskInput.cs" />
+    <Compile Include="Ecm\V20190719\Models\TaskOutput.cs" />
     <Compile Include="Ecm\V20190719\Models\TerminateInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\TerminateInstancesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\VpcInfo.cs" />

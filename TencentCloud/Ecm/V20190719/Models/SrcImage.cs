@@ -66,6 +66,24 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
+        /// <summary>
+        /// 来源实例名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 来源实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 来源镜像类型
+        /// </summary>
+        [JsonProperty("ImageType")]
+        public string ImageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ImageType", this.ImageType);
         }
     }
 }

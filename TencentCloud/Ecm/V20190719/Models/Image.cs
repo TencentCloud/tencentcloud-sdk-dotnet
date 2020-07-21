@@ -108,6 +108,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SrcImage")]
         public SrcImage SrcImage{ get; set; }
 
+        /// <summary>
+        /// 镜像来源类型
+        /// </summary>
+        [JsonProperty("ImageSource")]
+        public string ImageSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "ImageOwner", this.ImageOwner);
             this.SetParamSimple(map, prefix + "ImageSize", this.ImageSize);
             this.SetParamObj(map, prefix + "SrcImage.", this.SrcImage);
+            this.SetParamSimple(map, prefix + "ImageSource", this.ImageSource);
         }
     }
 }

@@ -112,6 +112,20 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
+        /// <summary>
+        /// 带宽上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 计费模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +146,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
             this.SetParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
             this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }
