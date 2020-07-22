@@ -25,22 +25,28 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板
+        /// 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
         /// </summary>
         [JsonProperty("Template")]
         public ulong? Template{ get; set; }
 
         /// <summary>
-        /// 屏幕分享模板中有效，代表左侧大画面对应的用户ID
+        /// 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
         /// </summary>
         [JsonProperty("MainVideoUserId")]
         public string MainVideoUserId{ get; set; }
 
         /// <summary>
-        /// 屏幕分享模板中有效，代表左侧大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0
+        /// 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
         /// </summary>
         [JsonProperty("MainVideoStreamType")]
         public ulong? MainVideoStreamType{ get; set; }
+
+        /// <summary>
+        /// 画中画模板中有效，代表小画面的布局参数。
+        /// </summary>
+        [JsonProperty("SmallVideoLayoutParams")]
+        public SmallVideoLayoutParams SmallVideoLayoutParams{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Template", this.Template);
             this.SetParamSimple(map, prefix + "MainVideoUserId", this.MainVideoUserId);
             this.SetParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
+            this.SetParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
         }
     }
 }

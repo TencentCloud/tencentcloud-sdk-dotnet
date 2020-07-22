@@ -93,6 +93,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 备份实例接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
+        public async Task<CreateBackupDBInstanceResponse> CreateBackupDBInstance(CreateBackupDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateBackupDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 备份实例接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
+        public CreateBackupDBInstanceResponse CreateBackupDBInstanceSync(CreateBackupDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateBackupDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "CreateDBInstanceHour");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceHourResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询异步任务状态接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public async Task<DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询异步任务状态接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfoSync(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -844,6 +924,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "RenewDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例用户的密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
+        /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>
+        public async Task<ResetDBInstancePasswordResponse> ResetDBInstancePassword(ResetDBInstancePasswordRequest req)
+        {
+             JsonResponseModel<ResetDBInstancePasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetDBInstancePassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDBInstancePasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例用户的密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
+        /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>
+        public ResetDBInstancePasswordResponse ResetDBInstancePasswordSync(ResetDBInstancePasswordRequest req)
+        {
+             JsonResponseModel<ResetDBInstancePasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetDBInstancePassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetDBInstancePasswordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

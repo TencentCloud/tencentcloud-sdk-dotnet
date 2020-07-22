@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAuditPolicyRequest : AbstractModel
+    public class DescribeAsyncRequestInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// 审计策略 ID。
+        /// 异步请求Id
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
-
-        /// <summary>
-        /// 实例 ID。
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("AsyncRequestId")]
+        public string AsyncRequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
         }
     }
 }

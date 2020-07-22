@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAuditPolicyRequest : AbstractModel
+    public class ResetDBInstancePasswordResponse : AbstractModel
     {
         
         /// <summary>
-        /// 审计策略 ID。
+        /// 异步请求Id，用户查询该流程的运行状态
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("AsyncRequestId")]
+        public string AsyncRequestId{ get; set; }
 
         /// <summary>
-        /// 实例 ID。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

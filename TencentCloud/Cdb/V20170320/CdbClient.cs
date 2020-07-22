@@ -649,6 +649,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(CreateRoInstanceIp)用于创建云数据库只读实例的独立VIP。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoInstanceIpRequest"/></param>
+        /// <returns><see cref="CreateRoInstanceIpResponse"/></returns>
+        public async Task<CreateRoInstanceIpResponse> CreateRoInstanceIp(CreateRoInstanceIpRequest req)
+        {
+             JsonResponseModel<CreateRoInstanceIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRoInstanceIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoInstanceIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateRoInstanceIp)用于创建云数据库只读实例的独立VIP。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoInstanceIpRequest"/></param>
+        /// <returns><see cref="CreateRoInstanceIpResponse"/></returns>
+        public CreateRoInstanceIpResponse CreateRoInstanceIpSync(CreateRoInstanceIpRequest req)
+        {
+             JsonResponseModel<CreateRoInstanceIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRoInstanceIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoInstanceIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteAccounts)用于删除云数据库的账户。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>

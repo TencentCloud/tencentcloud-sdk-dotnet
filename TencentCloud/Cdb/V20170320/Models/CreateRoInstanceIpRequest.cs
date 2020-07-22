@@ -21,20 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAuditPolicyRequest : AbstractModel
+    public class CreateRoInstanceIpRequest : AbstractModel
     {
         
         /// <summary>
-        /// 审计策略 ID。
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
-
-        /// <summary>
-        /// 实例 ID。
+        /// 只读实例ID，格式如：cdbro-3i70uj0k，与云数据库控制台页面中显示的只读实例ID相同。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 子网描述符，例如：subnet-1typ0s7d。
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         }
     }
 }

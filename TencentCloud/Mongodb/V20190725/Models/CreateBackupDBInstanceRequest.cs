@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAuditPolicyRequest : AbstractModel
+    public class CreateBackupDBInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 审计策略 ID。
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
-
-        /// <summary>
-        /// 实例 ID。
+        /// 实例id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 0-逻辑备份，1-物理备份
+        /// </summary>
+        [JsonProperty("BackupMethod")]
+        public long? BackupMethod{ get; set; }
+
+        /// <summary>
+        /// 备份备注
+        /// </summary>
+        [JsonProperty("BackupRemark")]
+        public string BackupRemark{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamSimple(map, prefix + "BackupRemark", this.BackupRemark);
         }
     }
 }

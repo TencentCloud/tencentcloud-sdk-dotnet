@@ -31,12 +31,6 @@ namespace TencentCloud.Tione.V20191022.Models
         public AlgorithmSpecification AlgorithmSpecification{ get; set; }
 
         /// <summary>
-        /// 输入数据配置
-        /// </summary>
-        [JsonProperty("InputDataConfig")]
-        public InputDataConfig[] InputDataConfig{ get; set; }
-
-        /// <summary>
         /// 输出数据配置
         /// </summary>
         [JsonProperty("OutputDataConfig")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Tione.V20191022.Models
         /// </summary>
         [JsonProperty("TrainingJobName")]
         public string TrainingJobName{ get; set; }
+
+        /// <summary>
+        /// 输入数据配置
+        /// </summary>
+        [JsonProperty("InputDataConfig")]
+        public InputDataConfig[] InputDataConfig{ get; set; }
 
         /// <summary>
         /// 中止条件
@@ -91,10 +91,10 @@ namespace TencentCloud.Tione.V20191022.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "AlgorithmSpecification.", this.AlgorithmSpecification);
-            this.SetParamArrayObj(map, prefix + "InputDataConfig.", this.InputDataConfig);
             this.SetParamObj(map, prefix + "OutputDataConfig.", this.OutputDataConfig);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
             this.SetParamSimple(map, prefix + "TrainingJobName", this.TrainingJobName);
+            this.SetParamArrayObj(map, prefix + "InputDataConfig.", this.InputDataConfig);
             this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
             this.SetParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
             this.SetParamSimple(map, prefix + "HyperParameters", this.HyperParameters);

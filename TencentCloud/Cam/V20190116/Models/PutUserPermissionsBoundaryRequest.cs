@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAuditPolicyRequest : AbstractModel
+    public class PutUserPermissionsBoundaryRequest : AbstractModel
     {
         
         /// <summary>
-        /// 审计策略 ID。
+        /// 子账号Uin
         /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
+        [JsonProperty("TargetUin")]
+        public long? TargetUin{ get; set; }
 
         /// <summary>
-        /// 实例 ID。
+        /// 策略ID
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("PolicyId")]
+        public long? PolicyId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
