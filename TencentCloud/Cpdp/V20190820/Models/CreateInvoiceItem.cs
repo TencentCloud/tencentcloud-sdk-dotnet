@@ -37,7 +37,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string TaxCode{ get; set; }
 
         /// <summary>
-        /// 不含税商品总价（商品含税价总额/（1+税率））。单位为分
+        /// 不含税商品总价（商品含税价总额/（1+税率））。InvoicePlatformId 为1时，该金额为含税总金额。单位为分。
         /// </summary>
         [JsonProperty("TotalPrice")]
         public long? TotalPrice{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string Total{ get; set; }
 
         /// <summary>
-        /// 不含税商品单价
+        /// 不含税商品单价。InvoicePlatformId 为1时，该金额为含税单价。
         /// </summary>
         [JsonProperty("Price")]
         public string Price{ get; set; }

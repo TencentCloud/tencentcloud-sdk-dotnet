@@ -1619,6 +1619,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询直播转推计费带宽，查询时间范围最大支持3个月内的数据，时间跨度最长31天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliverBandwidthListRequest"/></param>
+        /// <returns><see cref="DescribeDeliverBandwidthListResponse"/></returns>
+        public async Task<DescribeDeliverBandwidthListResponse> DescribeDeliverBandwidthList(DescribeDeliverBandwidthListRequest req)
+        {
+             JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeliverBandwidthList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliverBandwidthListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询直播转推计费带宽，查询时间范围最大支持3个月内的数据，时间跨度最长31天。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliverBandwidthListRequest"/></param>
+        /// <returns><see cref="DescribeDeliverBandwidthListResponse"/></returns>
+        public DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthListSync(DescribeDeliverBandwidthListRequest req)
+        {
+             JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeliverBandwidthList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliverBandwidthListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询按省份和运营商分组的下行播放数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupProIspPlayInfoListRequest"/></param>

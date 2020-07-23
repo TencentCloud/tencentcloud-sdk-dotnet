@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 分区数，必须比原分区数大，不填则不修复分区数，修改分区数仅对非全局顺序消息起效果。
+        /// 分区数
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }

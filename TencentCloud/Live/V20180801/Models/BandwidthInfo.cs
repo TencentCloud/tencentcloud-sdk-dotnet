@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FilterSubscription : AbstractModel
+    public class BandwidthInfo : AbstractModel
     {
         
         /// <summary>
-        /// 是否仅展示包含真实消费者的订阅。
+        /// 返回格式：
+        /// yyyy-mm-dd HH:MM:SS
+        /// 根据粒度会有不同程度的缩减。
         /// </summary>
-        [JsonProperty("ConsumerHasCount")]
-        public bool? ConsumerHasCount{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// 是否仅展示消息堆积的订阅。
+        /// 带宽。
         /// </summary>
-        [JsonProperty("ConsumerHasBacklog")]
-        public bool? ConsumerHasBacklog{ get; set; }
-
-        /// <summary>
-        /// 是否仅展示存在消息超期丢弃的订阅。
-        /// </summary>
-        [JsonProperty("ConsumerHasExpired")]
-        public bool? ConsumerHasExpired{ get; set; }
+        [JsonProperty("Bandwidth")]
+        public float? Bandwidth{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConsumerHasCount", this.ConsumerHasCount);
-            this.SetParamSimple(map, prefix + "ConsumerHasBacklog", this.ConsumerHasBacklog);
-            this.SetParamSimple(map, prefix + "ConsumerHasExpired", this.ConsumerHasExpired);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }
     }
 }

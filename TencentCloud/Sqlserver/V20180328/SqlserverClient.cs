@@ -933,6 +933,126 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DescribeReadOnlyGroupByReadOnlyInstance）用于通过只读副本实例ID查询其所在的只读组。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupByReadOnlyInstanceRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupByReadOnlyInstanceResponse"/></returns>
+        public async Task<DescribeReadOnlyGroupByReadOnlyInstanceResponse> DescribeReadOnlyGroupByReadOnlyInstance(DescribeReadOnlyGroupByReadOnlyInstanceRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupByReadOnlyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReadOnlyGroupByReadOnlyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupByReadOnlyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeReadOnlyGroupByReadOnlyInstance）用于通过只读副本实例ID查询其所在的只读组。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupByReadOnlyInstanceRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupByReadOnlyInstanceResponse"/></returns>
+        public DescribeReadOnlyGroupByReadOnlyInstanceResponse DescribeReadOnlyGroupByReadOnlyInstanceSync(DescribeReadOnlyGroupByReadOnlyInstanceRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupByReadOnlyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReadOnlyGroupByReadOnlyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupByReadOnlyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeReadOnlyGroupDetails）用于查询只读组详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupDetailsResponse"/></returns>
+        public async Task<DescribeReadOnlyGroupDetailsResponse> DescribeReadOnlyGroupDetails(DescribeReadOnlyGroupDetailsRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReadOnlyGroupDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeReadOnlyGroupDetails）用于查询只读组详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupDetailsResponse"/></returns>
+        public DescribeReadOnlyGroupDetailsResponse DescribeReadOnlyGroupDetailsSync(DescribeReadOnlyGroupDetailsRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReadOnlyGroupDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeReadOnlyGroupList）用于查询只读组列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupListRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupListResponse"/></returns>
+        public async Task<DescribeReadOnlyGroupListResponse> DescribeReadOnlyGroupList(DescribeReadOnlyGroupListRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReadOnlyGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeReadOnlyGroupList）用于查询只读组列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupListRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupListResponse"/></returns>
+        public DescribeReadOnlyGroupListResponse DescribeReadOnlyGroupListSync(DescribeReadOnlyGroupListRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReadOnlyGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeRegions) 用于查询售卖地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
@@ -1644,6 +1764,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyPublishSubscribeName");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPublishSubscribeNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyReadOnlyGroupDetails）用于修改只读组详情。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyGroupDetailsResponse"/></returns>
+        public async Task<ModifyReadOnlyGroupDetailsResponse> ModifyReadOnlyGroupDetails(ModifyReadOnlyGroupDetailsRequest req)
+        {
+             JsonResponseModel<ModifyReadOnlyGroupDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyReadOnlyGroupDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReadOnlyGroupDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyReadOnlyGroupDetails）用于修改只读组详情。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyGroupDetailsResponse"/></returns>
+        public ModifyReadOnlyGroupDetailsResponse ModifyReadOnlyGroupDetailsSync(ModifyReadOnlyGroupDetailsRequest req)
+        {
+             JsonResponseModel<ModifyReadOnlyGroupDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyReadOnlyGroupDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReadOnlyGroupDetailsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

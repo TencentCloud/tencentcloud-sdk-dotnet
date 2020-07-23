@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FilterSubscription : AbstractModel
+    public class ModifyReadOnlyGroupDetailsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 是否仅展示包含真实消费者的订阅。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ConsumerHasCount")]
-        public bool? ConsumerHasCount{ get; set; }
-
-        /// <summary>
-        /// 是否仅展示消息堆积的订阅。
-        /// </summary>
-        [JsonProperty("ConsumerHasBacklog")]
-        public bool? ConsumerHasBacklog{ get; set; }
-
-        /// <summary>
-        /// 是否仅展示存在消息超期丢弃的订阅。
-        /// </summary>
-        [JsonProperty("ConsumerHasExpired")]
-        public bool? ConsumerHasExpired{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConsumerHasCount", this.ConsumerHasCount);
-            this.SetParamSimple(map, prefix + "ConsumerHasBacklog", this.ConsumerHasBacklog);
-            this.SetParamSimple(map, prefix + "ConsumerHasExpired", this.ConsumerHasExpired);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

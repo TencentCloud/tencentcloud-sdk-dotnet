@@ -43,6 +43,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Data")]
         public QueryInvoiceResultData Data{ get; set; }
 
+        /// <summary>
+        /// 订单数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Order")]
+        public Order Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "Code", this.Code);
             this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamObj(map, prefix + "Order.", this.Order);
         }
     }
 }

@@ -37,13 +37,13 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 最大实例数，取值范围为0-2000。
+        /// 最小实例数，取值范围为0-2000。
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// 最小实例数，取值范围为0-2000。
+        /// 最大实例数，取值范围为0-2000。
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

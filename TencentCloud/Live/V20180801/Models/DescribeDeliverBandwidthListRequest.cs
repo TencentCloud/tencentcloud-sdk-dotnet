@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FilterSubscription : AbstractModel
+    public class DescribeDeliverBandwidthListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 是否仅展示包含真实消费者的订阅。
+        /// 起始时间，格式为%Y-%m-%d %H:%M:%S。
         /// </summary>
-        [JsonProperty("ConsumerHasCount")]
-        public bool? ConsumerHasCount{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// 是否仅展示消息堆积的订阅。
+        /// 结束时间，格式为%Y-%m-%d %H:%M:%S，支持最近三个月的数据查询，时间跨度最大是1个月。
         /// </summary>
-        [JsonProperty("ConsumerHasBacklog")]
-        public bool? ConsumerHasBacklog{ get; set; }
-
-        /// <summary>
-        /// 是否仅展示存在消息超期丢弃的订阅。
-        /// </summary>
-        [JsonProperty("ConsumerHasExpired")]
-        public bool? ConsumerHasExpired{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConsumerHasCount", this.ConsumerHasCount);
-            this.SetParamSimple(map, prefix + "ConsumerHasBacklog", this.ConsumerHasBacklog);
-            this.SetParamSimple(map, prefix + "ConsumerHasExpired", this.ConsumerHasExpired);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

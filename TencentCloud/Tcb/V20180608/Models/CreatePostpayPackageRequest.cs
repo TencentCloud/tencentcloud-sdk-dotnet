@@ -74,6 +74,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
+        /// <summary>
+        /// 扩展ID
+        /// </summary>
+        [JsonProperty("ExtensionId")]
+        public string ExtensionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "EnvSource", this.EnvSource);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
         }
     }
 }

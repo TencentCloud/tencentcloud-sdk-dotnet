@@ -25,7 +25,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 开票平台ID。0：高灯
+        /// 开票平台ID。0：高灯，1：票易通
         /// </summary>
         [JsonProperty("InvoicePlatformId")]
         public long? InvoicePlatformId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public long? TaxAmount{ get; set; }
 
         /// <summary>
-        /// 不含税总金额（单位为分）
+        /// 不含税总金额（单位为分）。InvoicePlatformId 为1时，传默认值-1
         /// </summary>
         [JsonProperty("AmountWithoutTax")]
         public long? AmountWithoutTax{ get; set; }
