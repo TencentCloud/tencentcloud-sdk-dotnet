@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RiskDetails : AbstractModel
+    public class ModifyDBInstanceSecurityGroupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 预留字段，暂时不使用
+        /// 实例 ID，格式如：mssql-c1nl9rpv 或者 mssqlro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
+        /// 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
         /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
-
-        /// <summary>
-        /// 预留字段，暂时不用
-        /// </summary>
-        [JsonProperty("Lable")]
-        public string Lable{ get; set; }
-
-        /// <summary>
-        /// 风险等级，1:疑似，2：恶意
-        /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("SecurityGroupIdSet")]
+        public string[] SecurityGroupIdSet{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Lable", this.Lable);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIdSet.", this.SecurityGroupIdSet);
         }
     }
 }

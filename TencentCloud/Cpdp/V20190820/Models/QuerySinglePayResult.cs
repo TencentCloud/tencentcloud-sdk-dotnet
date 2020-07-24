@@ -15,38 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RiskDetails : AbstractModel
+    public class QuerySinglePayResult : AbstractModel
     {
         
         /// <summary>
-        /// 预留字段，暂时不使用
+        /// 受理状态（S：处理成功；F：处理失败）
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("HandleStatus")]
+        public string HandleStatus{ get; set; }
 
         /// <summary>
-        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
+        /// 受理状态描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
+        [JsonProperty("HandleMsg")]
+        public string HandleMsg{ get; set; }
 
         /// <summary>
-        /// 预留字段，暂时不用
+        /// 业务流水号
         /// </summary>
-        [JsonProperty("Lable")]
-        public string Lable{ get; set; }
+        [JsonProperty("SerialNo")]
+        public string SerialNo{ get; set; }
 
         /// <summary>
-        /// 风险等级，1:疑似，2：恶意
+        /// 支付明细
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("Items")]
+        public QuerySinglePayItem[] Items{ get; set; }
 
 
         /// <summary>
@@ -54,10 +56,10 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Lable", this.Lable);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "HandleStatus", this.HandleStatus);
+            this.SetParamSimple(map, prefix + "HandleMsg", this.HandleMsg);
+            this.SetParamSimple(map, prefix + "SerialNo", this.SerialNo);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
         }
     }
 }

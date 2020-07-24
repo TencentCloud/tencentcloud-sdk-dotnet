@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RiskDetails : AbstractModel
+    public class CreateClsLogSetRequest : AbstractModel
     {
         
         /// <summary>
-        /// 预留字段，暂时不使用
+        /// 日志集的保存周期，单位：天，最大 90。
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
+        /// 日志集的名字，不能和cls其他日志集重名。不填默认为clb_logset。
         /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
-
-        /// <summary>
-        /// 预留字段，暂时不用
-        /// </summary>
-        [JsonProperty("Lable")]
-        public string Lable{ get; set; }
-
-        /// <summary>
-        /// 风险等级，1:疑似，2：恶意
-        /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("LogsetName")]
+        public string LogsetName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Lable", this.Lable);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
         }
     }
 }

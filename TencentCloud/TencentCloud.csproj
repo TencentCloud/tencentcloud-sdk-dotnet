@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.108</VersionPrefix>
+    <VersionPrefix>3.0.109</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2198,6 +2198,8 @@
     <Compile Include="Clb\V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTargetInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterItem.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateClsLogSetRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateListenerRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateLoadBalancerRequest.cs" />
@@ -2208,6 +2210,8 @@
     <Compile Include="Clb\V20180317\Models\CreateRuleResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTargetGroupRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTargetGroupResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateTopicRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\CreateTopicResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteLoadBalancerListenersRequest.cs" />
@@ -2240,6 +2244,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBTargetsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBTargetsResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeClsLogSetRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
@@ -2568,6 +2574,10 @@
     <Compile Include="Cms\V20190321\Models\ImageTerrorDetect.cs" />
     <Compile Include="Cms\V20190321\Models\Logo.cs" />
     <Compile Include="Cms\V20190321\Models\LogoDetail.cs" />
+    <Compile Include="Cms\V20190321\Models\ManualReviewContent.cs" />
+    <Compile Include="Cms\V20190321\Models\ManualReviewData.cs" />
+    <Compile Include="Cms\V20190321\Models\ManualReviewRequest.cs" />
+    <Compile Include="Cms\V20190321\Models\ManualReviewResponse.cs" />
     <Compile Include="Cms\V20190321\Models\OCRDetect.cs" />
     <Compile Include="Cms\V20190321\Models\OCRItem.cs" />
     <Compile Include="Cms\V20190321\Models\PhoneDetect.cs" />
@@ -2643,6 +2653,9 @@
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateSinglePayRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateSinglePayResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateSinglePayResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfosRequest.cs" />
@@ -2728,6 +2741,10 @@
     <Compile Include="Cpdp\V20190820\Models\QueryReconciliationDocumentResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryRefundRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryRefundResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QuerySinglePayItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QuerySinglePayRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QuerySinglePayResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QuerySinglePayResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySingleTransactionStatusRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySingleTransactionStatusResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySmallAmountTransferRequest.cs" />
@@ -6786,6 +6803,8 @@
     <Compile Include="Sqlserver\V20180328\Models\AccountPrivilege.cs" />
     <Compile Include="Sqlserver\V20180328\Models\AccountPrivilegeModifyInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\AccountRemark.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\Backup.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionResponse.cs" />
@@ -6793,6 +6812,8 @@
     <Compile Include="Sqlserver\V20180328\Models\CreateAccountResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateBackupRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateBackupResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateBasicDBInstancesRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateBasicDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateDBRequest.cs" />
@@ -6801,6 +6822,8 @@
     <Compile Include="Sqlserver\V20180328\Models\CreateMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreatePublishSubscribeRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreatePublishSubscribeResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateReadOnlyDBInstancesRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateReadOnlyDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBCreateInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBDetail.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DBInstance.cs" />
@@ -6813,6 +6836,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DealInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteAccountRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteAccountResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeleteDBInstanceRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeleteDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteDBRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteDBResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteMigrationRequest.cs" />
@@ -6825,6 +6850,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusRequest.cs" />
@@ -6839,6 +6866,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeProductConfigResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribePublishSubscribeRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribePublishSubscribeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeReadOnlyGroupByReadOnlyInstanceRequest.cs" />
@@ -6855,6 +6884,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeSlowlogsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeZonesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeZonesResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\InquiryPriceCreateDBInstancesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\InquiryPriceCreateDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\InquiryPriceRenewDBInstanceRequest.cs" />
@@ -6880,6 +6911,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceProjectResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceRenewFlagRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceRenewFlagResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBNameRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkRequest.cs" />
@@ -6901,6 +6934,8 @@
     <Compile Include="Sqlserver\V20180328\Models\RemoveBackupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RenewDBInstanceRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RenewDBInstanceResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\RenewPostpaidDBInstanceRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\RenewPostpaidDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RestartDBInstanceRequest.cs" />
@@ -6911,6 +6946,8 @@
     <Compile Include="Sqlserver\V20180328\Models\RollbackInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RunMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RunMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\SecurityGroup.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\SecurityGroupPolicy.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SpecInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\TerminateDBInstanceRequest.cs" />

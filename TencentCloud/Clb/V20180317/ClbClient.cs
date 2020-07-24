@@ -259,6 +259,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 创建clb专有日志集，此日志集用于存储clb的日志。
+        /// </summary>
+        /// <param name="req"><see cref="CreateClsLogSetRequest"/></param>
+        /// <returns><see cref="CreateClsLogSetResponse"/></returns>
+        public async Task<CreateClsLogSetResponse> CreateClsLogSet(CreateClsLogSetRequest req)
+        {
+             JsonResponseModel<CreateClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClsLogSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建clb专有日志集，此日志集用于存储clb的日志。
+        /// </summary>
+        /// <param name="req"><see cref="CreateClsLogSetRequest"/></param>
+        /// <returns><see cref="CreateClsLogSetResponse"/></returns>
+        public CreateClsLogSetResponse CreateClsLogSetSync(CreateClsLogSetRequest req)
+        {
+             JsonResponseModel<CreateClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClsLogSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在一个负载均衡实例下创建监听器。
         /// 本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
@@ -458,6 +498,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "CreateTargetGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTargetGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建主题，默认开启全文索引和键值索引。如果不存在clb专有日志集，则创建失败。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicRequest"/></param>
+        /// <returns><see cref="CreateTopicResponse"/></returns>
+        public async Task<CreateTopicResponse> CreateTopic(CreateTopicRequest req)
+        {
+             JsonResponseModel<CreateTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建主题，默认开启全文索引和键值索引。如果不存在clb专有日志集，则创建失败。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicRequest"/></param>
+        /// <returns><see cref="CreateTopicResponse"/></returns>
+        public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
+        {
+             JsonResponseModel<CreateTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1114,6 +1194,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClassicalLBTargets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicalLBTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户的clb独占日志集。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
+        /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
+        public async Task<DescribeClsLogSetResponse> DescribeClsLogSet(DescribeClsLogSetRequest req)
+        {
+             JsonResponseModel<DescribeClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClsLogSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户的clb独占日志集。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
+        /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
+        public DescribeClsLogSetResponse DescribeClsLogSetSync(DescribeClsLogSetRequest req)
+        {
+             JsonResponseModel<DescribeClsLogSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClsLogSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClsLogSetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RiskDetails : AbstractModel
+    public class DescribeClsLogSetResponse : AbstractModel
     {
         
         /// <summary>
-        /// 预留字段，暂时不使用
+        /// 日志集的 ID。
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("LogsetId")]
+        public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
-
-        /// <summary>
-        /// 预留字段，暂时不用
-        /// </summary>
-        [JsonProperty("Lable")]
-        public string Lable{ get; set; }
-
-        /// <summary>
-        /// 风险等级，1:疑似，2：恶意
-        /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Lable", this.Lable);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

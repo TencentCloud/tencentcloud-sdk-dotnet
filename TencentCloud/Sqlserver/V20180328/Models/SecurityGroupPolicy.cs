@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cms.V20190321.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RiskDetails : AbstractModel
+    public class SecurityGroupPolicy : AbstractModel
     {
         
         /// <summary>
-        /// 预留字段，暂时不使用
+        /// 策略，ACCEPT 或者 DROP
         /// </summary>
-        [JsonProperty("Keywords")]
-        public string[] Keywords{ get; set; }
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
 
         /// <summary>
-        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
+        /// 目的 IP 或 IP 段，例如172.16.0.0/12
         /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
+        [JsonProperty("CidrIp")]
+        public string CidrIp{ get; set; }
 
         /// <summary>
-        /// 预留字段，暂时不用
+        /// 端口或者端口范围
         /// </summary>
-        [JsonProperty("Lable")]
-        public string Lable{ get; set; }
+        [JsonProperty("PortRange")]
+        public string PortRange{ get; set; }
 
         /// <summary>
-        /// 风险等级，1:疑似，2：恶意
+        /// 网络协议，支持 UDP、TCP等
         /// </summary>
-        [JsonProperty("Level")]
-        public long? Level{ get; set; }
+        [JsonProperty("IpProtocol")]
+        public string IpProtocol{ get; set; }
+
+        /// <summary>
+        /// 规则限定的方向，OUTPUT-出战规则  INPUT-进站规则
+        /// </summary>
+        [JsonProperty("Dir")]
+        public string Dir{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cms.V20190321.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-            this.SetParamSimple(map, prefix + "Label", this.Label);
-            this.SetParamSimple(map, prefix + "Lable", this.Lable);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "CidrIp", this.CidrIp);
+            this.SetParamSimple(map, prefix + "PortRange", this.PortRange);
+            this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
+            this.SetParamSimple(map, prefix + "Dir", this.Dir);
         }
     }
 }

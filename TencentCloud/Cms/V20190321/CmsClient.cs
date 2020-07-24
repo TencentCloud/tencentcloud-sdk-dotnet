@@ -357,6 +357,46 @@ namespace TencentCloud.Cms.V20190321
         }
 
         /// <summary>
+        /// 人工审核对外接口
+        /// </summary>
+        /// <param name="req"><see cref="ManualReviewRequest"/></param>
+        /// <returns><see cref="ManualReviewResponse"/></returns>
+        public async Task<ManualReviewResponse> ManualReview(ManualReviewRequest req)
+        {
+             JsonResponseModel<ManualReviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManualReview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualReviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 人工审核对外接口
+        /// </summary>
+        /// <param name="req"><see cref="ManualReviewRequest"/></param>
+        /// <returns><see cref="ManualReviewResponse"/></returns>
+        public ManualReviewResponse ManualReviewSync(ManualReviewRequest req)
+        {
+             JsonResponseModel<ManualReviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManualReview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManualReviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
         /// </summary>
         /// <param name="req"><see cref="TextModerationRequest"/></param>

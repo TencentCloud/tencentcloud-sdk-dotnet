@@ -31,13 +31,13 @@ namespace TencentCloud.Ams.V20200608.Models
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 回调签名key，具体可以查看签名文档。
+        /// 异步检测结果回调通知接收URL。支持HTTP和HTTPS
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+        /// 回调签名key，具体可以查看签名文档。
         /// </summary>
         [JsonProperty("Seed")]
         public string Seed{ get; set; }

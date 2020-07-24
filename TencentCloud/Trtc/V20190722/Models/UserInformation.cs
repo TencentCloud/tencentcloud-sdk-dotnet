@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? JoinTs{ get; set; }
 
         /// <summary>
-        /// 用户退房时间
+        /// 用户退房时间，用户没有退房则返回当前时间
         /// </summary>
         [JsonProperty("LeaveTs")]
         public ulong? LeaveTs{ get; set; }

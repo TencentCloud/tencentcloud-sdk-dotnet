@@ -49,13 +49,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 分页index（不填默认只返回10个）
+        /// 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
         /// </summary>
         [JsonProperty("PageNumber")]
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小（不填默认返回10个,最多不超过100条）
+        /// 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }

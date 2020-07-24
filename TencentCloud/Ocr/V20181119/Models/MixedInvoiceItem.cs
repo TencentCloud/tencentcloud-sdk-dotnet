@@ -52,7 +52,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X,Y), (Width, Height), Angle)，详情可参考OpenCV文档。
+        /// 识别出的图片在混贴票据图片中的位置信息。与Angel结合可以得出原图位置，组成RotatedRect((X+0.5*Width,Y+0.5*Height), (Width, Height), Angle)，详情可参考OpenCV文档。
         /// </summary>
         [JsonProperty("Rect")]
         public Rect Rect{ get; set; }

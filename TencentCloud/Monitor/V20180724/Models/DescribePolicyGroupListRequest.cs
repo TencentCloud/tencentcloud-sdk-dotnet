@@ -108,6 +108,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ReceiverType")]
         public string ReceiverType{ get; set; }
 
+        /// <summary>
+        /// 过滤条件，告警策略是否已启动或停止
+        /// </summary>
+        [JsonProperty("IsOpen")]
+        public bool? IsOpen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Dimensions", this.Dimensions);
             this.SetParamSimple(map, prefix + "ConditionTempGroupId", this.ConditionTempGroupId);
             this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
+            this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
         }
     }
 }

@@ -829,6 +829,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 银企直连-单笔支付接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateSinglePayRequest"/></param>
+        /// <returns><see cref="CreateSinglePayResponse"/></returns>
+        public async Task<CreateSinglePayResponse> CreateSinglePay(CreateSinglePayRequest req)
+        {
+             JsonResponseModel<CreateSinglePayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSinglePay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSinglePayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 银企直连-单笔支付接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateSinglePayRequest"/></param>
+        /// <returns><see cref="CreateSinglePayResponse"/></returns>
+        public CreateSinglePayResponse CreateSinglePaySync(CreateSinglePayRequest req)
+        {
+             JsonResponseModel<CreateSinglePayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSinglePay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSinglePayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播平台-删除代理商完税信息
         /// </summary>
         /// <param name="req"><see cref="DeleteAgentTaxPaymentInfoRequest"/></param>
@@ -2102,6 +2142,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryRefund");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryRefundResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 银企直连-单笔支付状态查询接口
+        /// </summary>
+        /// <param name="req"><see cref="QuerySinglePayRequest"/></param>
+        /// <returns><see cref="QuerySinglePayResponse"/></returns>
+        public async Task<QuerySinglePayResponse> QuerySinglePay(QuerySinglePayRequest req)
+        {
+             JsonResponseModel<QuerySinglePayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QuerySinglePay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuerySinglePayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 银企直连-单笔支付状态查询接口
+        /// </summary>
+        /// <param name="req"><see cref="QuerySinglePayRequest"/></param>
+        /// <returns><see cref="QuerySinglePayResponse"/></returns>
+        public QuerySinglePayResponse QuerySinglePaySync(QuerySinglePayRequest req)
+        {
+             JsonResponseModel<QuerySinglePayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QuerySinglePay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuerySinglePayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
