@@ -63,7 +63,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在一个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
+        /// 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -104,6 +104,25 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("ConvertNumMode")]
         public long? ConvertNumMode{ get; set; }
 
+        /// <summary>
+        /// 附加参数
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
+        /// <summary>
+        /// 是否开启话者分离，0：不开启，1：开启(仅支持8k_zh/16k_zh引擎模型，单声道音频)
+        /// </summary>
+        [JsonProperty("SpeakerDiarization")]
+        public long? SpeakerDiarization{ get; set; }
+
+        /// <summary>
+        /// 话者分离人数（需配合开启话者分离使用），支持2-10（8k_zh仅支持2， 16k_zh支持2-10）
+        /// 注：话者分离目前是beta版本，请根据您的需要谨慎使用
+        /// </summary>
+        [JsonProperty("SpeakerNumber")]
+        public long? SpeakerNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +141,9 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
             this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
             this.SetParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "SpeakerDiarization", this.SpeakerDiarization);
+            this.SetParamSimple(map, prefix + "SpeakerNumber", this.SpeakerNumber);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Asr.V20190614.Models
         public string Result{ get; set; }
 
         /// <summary>
+        /// 请求的音频时长，单位为ms
+        /// </summary>
+        [JsonProperty("AudioDuration")]
+        public long? AudioDuration{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Asr.V20190614.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

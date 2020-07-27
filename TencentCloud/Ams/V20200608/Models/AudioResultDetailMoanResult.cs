@@ -49,6 +49,12 @@ namespace TencentCloud.Ams.V20200608.Models
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }
 
+        /// <summary>
+        /// 子标签码
+        /// </summary>
+        [JsonProperty("SubLabelCode")]
+        public string SubLabelCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Ams.V20200608.Models
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
         }
     }
 }
