@@ -139,6 +139,92 @@ namespace TencentCloud.Ams.V20200608
         }
 
         /// <summary>
+        /// 创建业务配置，1个账号最多可以创建20个配置。在创建业务配置之前，你需要以下步骤：
+        /// 1. 开通COS存储捅功能，新建存储桶，cms_segments
+        /// 2. 授权天御对 cms_segments存储桶对读写权限。
+        /// 这个存储桶用来存储 视频转换过程中生成对音频和图片。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBizConfigRequest"/></param>
+        /// <returns><see cref="CreateBizConfigResponse"/></returns>
+        public async Task<CreateBizConfigResponse> CreateBizConfig(CreateBizConfigRequest req)
+        {
+             JsonResponseModel<CreateBizConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBizConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBizConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建业务配置，1个账号最多可以创建20个配置。在创建业务配置之前，你需要以下步骤：
+        /// 1. 开通COS存储捅功能，新建存储桶，cms_segments
+        /// 2. 授权天御对 cms_segments存储桶对读写权限。
+        /// 这个存储桶用来存储 视频转换过程中生成对音频和图片。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBizConfigRequest"/></param>
+        /// <returns><see cref="CreateBizConfigResponse"/></returns>
+        public CreateBizConfigResponse CreateBizConfigSync(CreateBizConfigRequest req)
+        {
+             JsonResponseModel<CreateBizConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBizConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBizConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看单个配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizConfigRequest"/></param>
+        /// <returns><see cref="DescribeBizConfigResponse"/></returns>
+        public async Task<DescribeBizConfigResponse> DescribeBizConfig(DescribeBizConfigRequest req)
+        {
+             JsonResponseModel<DescribeBizConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBizConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看单个配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizConfigRequest"/></param>
+        /// <returns><see cref="DescribeBizConfigResponse"/></returns>
+        public DescribeBizConfigResponse DescribeBizConfigSync(DescribeBizConfigRequest req)
+        {
+             JsonResponseModel<DescribeBizConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBizConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>

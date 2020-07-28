@@ -1363,6 +1363,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询负载均衡的详细信息，包括监听器，规则及后端目标。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancersDetailRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancersDetailResponse"/></returns>
+        public async Task<DescribeLoadBalancersDetailResponse> DescribeLoadBalancersDetail(DescribeLoadBalancersDetailRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancersDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancersDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡的详细信息，包括监听器，规则及后端目标。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancersDetailRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancersDetailResponse"/></returns>
+        public DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetailSync(DescribeLoadBalancersDetailRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancersDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancersDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
         /// </summary>
         /// <param name="req"><see cref="DescribeRewriteRequest"/></param>

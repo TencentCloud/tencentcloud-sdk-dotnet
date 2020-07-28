@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ic.V20190307.Models
+namespace TencentCloud.Ams.V20200608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenewCardsRequest : AbstractModel
+    public class CreateBizConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID
+        /// 业务ID
         /// </summary>
-        [JsonProperty("Sdkappid")]
-        public ulong? Sdkappid{ get; set; }
+        [JsonProperty("BizType")]
+        public string BizType{ get; set; }
 
         /// <summary>
-        /// 续费的iccid
+        /// 审核分类信息
         /// </summary>
-        [JsonProperty("Iccids")]
-        public string[] Iccids{ get; set; }
+        [JsonProperty("MediaModeration")]
+        public MediaModerationConfig MediaModeration{ get; set; }
 
         /// <summary>
-        /// 续费的周期（单位：月）
+        /// 页面名称
         /// </summary>
-        [JsonProperty("RenewNum")]
-        public ulong? RenewNum{ get; set; }
+        [JsonProperty("BizName")]
+        public string BizName{ get; set; }
+
+        /// <summary>
+        /// 审核内容，可选：Polity (政治); Porn (色情); Illegal(违法);Abuse (谩骂); Terror (暴恐); Ad (广告);
+        /// </summary>
+        [JsonProperty("ModerationCategories")]
+        public string[] ModerationCategories{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Ic.V20190307.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Sdkappid", this.Sdkappid);
-            this.SetParamArraySimple(map, prefix + "Iccids.", this.Iccids);
-            this.SetParamSimple(map, prefix + "RenewNum", this.RenewNum);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
+            this.SetParamObj(map, prefix + "MediaModeration.", this.MediaModeration);
+            this.SetParamSimple(map, prefix + "BizName", this.BizName);
+            this.SetParamArraySimple(map, prefix + "ModerationCategories.", this.ModerationCategories);
         }
     }
 }

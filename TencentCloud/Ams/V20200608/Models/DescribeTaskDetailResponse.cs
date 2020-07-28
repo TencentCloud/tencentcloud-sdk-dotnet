@@ -39,7 +39,8 @@ namespace TencentCloud.Ams.V20200608.Models
         public string DataId{ get; set; }
 
         /// <summary>
-        /// 业务类型
+        /// 业务类型，用于调用识别策略模板；
+        /// （暂未发布功能，敬请期待）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BizType")]
@@ -53,7 +54,7 @@ namespace TencentCloud.Ams.V20200608.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 状态，可选值：
+        /// 查询内容审核任务的状态，可选值：
         /// FINISH 已完成
         /// PENDING 等待中
         /// RUNNING 进行中
@@ -65,74 +66,74 @@ namespace TencentCloud.Ams.V20200608.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 审核建议
-        /// 可选：
-        /// Pass 通过
-        /// Reveiw 建议复审
-        /// Block 确认违规
+        /// 智能审核服务对于内容违规类型的等级，可选值：
+        /// Pass 建议通过；
+        /// Reveiw 建议复审；
+        /// Block 建议屏蔽；
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 审核结果
+        /// 智能审核服务对于内容违规类型的判断，详见返回值列表
+        /// 如：Label：Porn（色情）；
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public TaskLabel[] Labels{ get; set; }
 
         /// <summary>
-        /// 媒体解码信息
+        /// 传入媒体的解码信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaInfo")]
         public MediaInfo MediaInfo{ get; set; }
 
         /// <summary>
-        /// 任务信息
+        /// 审核任务的信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputInfo")]
         public InputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 审核任务的创建时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 审核任务的更新时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 在秒后重试
+        /// 在N秒后重试
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TryInSeconds")]
         public long? TryInSeconds{ get; set; }
 
         /// <summary>
-        /// 音频结果
+        /// 视频/音频审核中的音频结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioSegments")]
         public AudioSegments[] AudioSegments{ get; set; }
 
         /// <summary>
-        /// 图片结果
+        /// 视频审核中的图片结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSegments")]

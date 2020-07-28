@@ -15,22 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Clb.V20180317.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopContainerGroupResponse : AbstractModel
+    public class DescribeLoadBalancersDetailResponse : AbstractModel
     {
         
         /// <summary>
-        /// 停止操作是否成功。
-        /// true：停止成功
-        /// false：停止失败
+        /// 负载均衡详情列表总数。
         /// </summary>
-        [JsonProperty("Result")]
-        public bool? Result{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 负载均衡详情列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerDetailSet")]
+        public LoadBalancerDetail[] LoadBalancerDetailSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +49,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "LoadBalancerDetailSet.", this.LoadBalancerDetailSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

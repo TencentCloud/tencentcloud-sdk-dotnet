@@ -15,23 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopContainerGroupResponse : AbstractModel
+    public class UnbindCloudResourceResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 停止操作是否成功。
-        /// true：停止成功
-        /// false：停止失败
-        /// </summary>
-        [JsonProperty("Result")]
-        public bool? Result{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -44,7 +36,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

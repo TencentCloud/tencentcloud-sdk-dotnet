@@ -192,13 +192,13 @@ namespace TencentCloud.Ic.V20190307.Models
         public long? NeedSms{ get; set; }
 
         /// <summary>
-        /// 服务
+        /// 供应商
         /// </summary>
         [JsonProperty("Provider")]
         public long? Provider{ get; set; }
 
         /// <summary>
-        /// 实名验证(浙江联通)
+        /// 实名认证 0:无 1:未实名 2:已实名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertificationState")]

@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopContainerGroupResponse : AbstractModel
+    public class BindCloudResourceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 停止操作是否成功。
-        /// true：停止成功
-        /// false：停止失败
+        /// cmk的ID
         /// </summary>
-        [JsonProperty("Result")]
-        public bool? Result{ get; set; }
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 云产品的唯一性标识符
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// 资源/实例ID，由调用方根据自己的云产品特征来定义，以字符串形式做存储。
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

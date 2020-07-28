@@ -133,6 +133,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 记录当前key被哪个云产品的那个资源所使用。如果当前key设置了自动过期，则取消该设置，确保当前key不会自动失效。如果当前关联关系已经创建，也返回成功。
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudResourceRequest"/></param>
+        /// <returns><see cref="BindCloudResourceResponse"/></returns>
+        public async Task<BindCloudResourceResponse> BindCloudResource(BindCloudResourceRequest req)
+        {
+             JsonResponseModel<BindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 记录当前key被哪个云产品的那个资源所使用。如果当前key设置了自动过期，则取消该设置，确保当前key不会自动失效。如果当前关联关系已经创建，也返回成功。
+        /// </summary>
+        /// <param name="req"><see cref="BindCloudResourceRequest"/></param>
+        /// <returns><see cref="BindCloudResourceResponse"/></returns>
+        public BindCloudResourceResponse BindCloudResourceSync(BindCloudResourceRequest req)
+        {
+             JsonResponseModel<BindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 取消CMK的计划删除操作
         /// </summary>
         /// <param name="req"><see cref="CancelKeyDeletionRequest"/></param>
@@ -1646,6 +1686,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "ScheduleKeyDeletion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScheduleKeyDeletionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定（key, 资源，云产品）的记录，以表明：指定的云产品的资源已不再使用当前的key。
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCloudResourceRequest"/></param>
+        /// <returns><see cref="UnbindCloudResourceResponse"/></returns>
+        public async Task<UnbindCloudResourceResponse> UnbindCloudResource(UnbindCloudResourceRequest req)
+        {
+             JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定（key, 资源，云产品）的记录，以表明：指定的云产品的资源已不再使用当前的key。
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCloudResourceRequest"/></param>
+        /// <returns><see cref="UnbindCloudResourceResponse"/></returns>
+        public UnbindCloudResourceResponse UnbindCloudResourceSync(UnbindCloudResourceRequest req)
+        {
+             JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindCloudResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCloudResourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
