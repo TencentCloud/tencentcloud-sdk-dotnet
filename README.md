@@ -29,9 +29,43 @@
 
 每个接口都有一个对应的 Request 结构和一个 Response 结构。例如云服务器的查询实例列表接口 DescribeInstances 有对应的请求结构体 DescribeInstancesRequest 和返回结构体 DescribeInstancesResponse 。
 
-下面以云服务器查询实例列表接口为例，介绍 SDK 的基础用法。出于演示的目的，有一些非必要的内容也加上去了，以尽量展示 SDK 常用的功能，但也显得臃肿。在实际编写代码使用 SDK 的时候，应尽量简化。
+下面以云服务器查询实例列表接口为例，介绍 SDK 的基础用法。
 
+### 简略版
+
+```c#
+using System;
+using System.Threading.Tasks;
+using TencentCloud.Common;
+using TencentCloud.Cvm.V20170312;
+using TencentCloud.Cvm.V20170312.Models;
+
+namespace TencentCloudExamples
+{
+    class DescribeInstances
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Credential cred = new Credential {"SecretId", "SecretKey"};
+                CvmClient client = new CvmClient(cred, "ap-guangzhou");
+                DescribeInstancesRequest req = new DescribeInstancesRequest();
+                DescribeInstancesResponse resp = client.DescribeInstancesSync(req);
+                Console.WriteLine(AbstractModel.ToJsonString(resp));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+        }
+    }
+}
 ```
+
+### 详细版
+
+```c#
 using System;
 using System.Threading.Tasks;
 using TencentCloud.Common;
