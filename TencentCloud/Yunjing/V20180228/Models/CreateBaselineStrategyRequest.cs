@@ -31,19 +31,19 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// 检测周期
+        /// 检测周期, 表示每隔多少天进行检测.示例: 2, 表示每2天进行检测一次.
         /// </summary>
         [JsonProperty("ScanCycle")]
         public ulong? ScanCycle{ get; set; }
 
         /// <summary>
-        /// 定期检测时间，该时间下发扫描
+        /// 定期检测时间，该时间下发扫描. 示例:“22:00”, 表示在22:00下发检测
         /// </summary>
         [JsonProperty("ScanAt")]
         public string ScanAt{ get; set; }
 
         /// <summary>
-        /// 该策略下选择的基线id数组
+        /// 该策略下选择的基线id数组. 示例: [1,3,5,7]
         /// </summary>
         [JsonProperty("CategoryIds")]
         public ulong?[] CategoryIds{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Yunjing.V20180228.Models
         public ulong? IsGlobal{ get; set; }
 
         /// <summary>
-        /// 云主机类型：cvm：虚拟主机，bms：裸金属，ecm：边缘计算主机
+        /// 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 主机地域
+        /// 主机地域. 示例: "ap-bj"
         /// </summary>
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }
 
         /// <summary>
-        /// 主机id数组
+        /// 主机id数组. 示例: ["quuid1","quuid2"]
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }

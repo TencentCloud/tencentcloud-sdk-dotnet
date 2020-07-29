@@ -90,6 +90,13 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("InternalEndpoint")]
         public string InternalEndpoint{ get; set; }
 
+        /// <summary>
+        /// 实例云标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "EnableAnonymous", this.EnableAnonymous);
             this.SetParamSimple(map, prefix + "TokenValidTime", this.TokenValidTime);
             this.SetParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
+            this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

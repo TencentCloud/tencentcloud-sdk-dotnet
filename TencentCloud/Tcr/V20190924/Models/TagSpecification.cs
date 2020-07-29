@@ -21,26 +21,22 @@ namespace TencentCloud.Tcr.V20190924.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateInstanceRequest : AbstractModel
+    public class TagSpecification : AbstractModel
     {
         
         /// <summary>
-        /// 企业版实例名称
+        /// 默认值为instance
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RegistryName")]
-        public string RegistryName{ get; set; }
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 企业版实例类型
+        /// 云标签数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RegistryType")]
-        public string RegistryType{ get; set; }
-
-        /// <summary>
-        /// 云标签描述
-        /// </summary>
-        [JsonProperty("TagSpecification")]
-        public TagSpecification TagSpecification{ get; set; }
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Tcr.V20190924.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegistryName", this.RegistryName);
-            this.SetParamSimple(map, prefix + "RegistryType", this.RegistryType);
-            this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

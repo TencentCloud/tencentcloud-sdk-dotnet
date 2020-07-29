@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.111</VersionPrefix>
+    <VersionPrefix>3.0.112</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7648,8 +7648,10 @@
     <Compile Include="Tcr\V20190924\Models\RespLimit.cs" />
     <Compile Include="Tcr\V20190924\Models\SameImagesResp.cs" />
     <Compile Include="Tcr\V20190924\Models\SearchUserRepositoryResp.cs" />
+    <Compile Include="Tcr\V20190924\Models\Tag.cs" />
     <Compile Include="Tcr\V20190924\Models\TagInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\TagInfoResp.cs" />
+    <Compile Include="Tcr\V20190924\Models\TagSpecification.cs" />
     <Compile Include="Tcr\V20190924\Models\TcrImageInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\TcrInstanceToken.cs" />
     <Compile Include="Tcr\V20190924\Models\TcrNamespaceInfo.cs" />
