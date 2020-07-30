@@ -21,20 +21,20 @@ namespace TencentCloud.Tag.V20180813.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTagsRequest : AbstractModel
+    public class DescribeResourcesByTagsUnionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+        /// 标签过滤数组
         /// </summary>
-        [JsonProperty("TagKey")]
-        public string TagKey{ get; set; }
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+        /// 创建标签者uin
         /// </summary>
-        [JsonProperty("TagValue")]
-        public string TagValue{ get; set; }
+        [JsonProperty("CreateUin")]
+        public ulong? CreateUin{ get; set; }
 
         /// <summary>
         /// 数据偏移量，默认为 0, 必须为Limit参数的整数倍
@@ -49,22 +49,28 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+        /// 资源前缀
         /// </summary>
-        [JsonProperty("CreateUin")]
-        public ulong? CreateUin{ get; set; }
+        [JsonProperty("ResourcePrefix")]
+        public string ResourcePrefix{ get; set; }
 
         /// <summary>
-        /// 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
+        /// 资源唯一标记
         /// </summary>
-        [JsonProperty("TagKeys")]
-        public string[] TagKeys{ get; set; }
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 是否展现项目标签
+        /// 资源所在地域
         /// </summary>
-        [JsonProperty("ShowProject")]
-        public ulong? ShowProject{ get; set; }
+        [JsonProperty("ResourceRegion")]
+        public string ResourceRegion{ get; set; }
+
+        /// <summary>
+        /// 业务类型
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
 
 
         /// <summary>
@@ -72,13 +78,14 @@ namespace TencentCloud.Tag.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
-            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
-            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
-            this.SetParamSimple(map, prefix + "ShowProject", this.ShowProject);
+            this.SetParamSimple(map, prefix + "ResourcePrefix", this.ResourcePrefix);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
         }
     }
 }

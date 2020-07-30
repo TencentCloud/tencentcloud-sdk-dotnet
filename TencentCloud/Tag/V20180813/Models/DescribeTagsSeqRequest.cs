@@ -55,7 +55,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只会本值
+        /// 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }

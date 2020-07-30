@@ -86,10 +86,22 @@ namespace TencentCloud.Cms.V20190321.Models
         public ulong? BizType{ get; set; }
 
         /// <summary>
+        /// 和请求中的DataId一致，原样返回
+        /// </summary>
+        [JsonProperty("DataId")]
+        public string DataId{ get; set; }
+
+        /// <summary>
         /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
         /// </summary>
         [JsonProperty("EvilLabel")]
         public string EvilLabel{ get; set; }
+
+        /// <summary>
+        /// 输出的其他信息，不同客户内容不同
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
 
         /// <summary>
         /// 命中的关键词
@@ -124,7 +136,9 @@ namespace TencentCloud.Cms.V20190321.Models
             this.SetParamObj(map, prefix + "Res.", this.Res);
             this.SetParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
+            this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);

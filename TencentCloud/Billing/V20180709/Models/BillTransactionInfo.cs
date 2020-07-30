@@ -78,6 +78,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("Freezing")]
         public long? Freezing{ get; set; }
 
+        /// <summary>
+        /// 交易渠道
+        /// </summary>
+        [JsonProperty("PayChannel")]
+        public string PayChannel{ get; set; }
+
+        /// <summary>
+        /// 扣费模式：trade 包年包月(预付费)，hourh  按量-小时结，hourd 按量-日结，hourm 按量-月结，month 按量-月结
+        /// </summary>
+        [JsonProperty("DeductMode")]
+        public string DeductMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Cash", this.Cash);
             this.SetParamSimple(map, prefix + "Incentive", this.Incentive);
             this.SetParamSimple(map, prefix + "Freezing", this.Freezing);
+            this.SetParamSimple(map, prefix + "PayChannel", this.PayChannel);
+            this.SetParamSimple(map, prefix + "DeductMode", this.DeductMode);
         }
     }
 }

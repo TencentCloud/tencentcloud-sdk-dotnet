@@ -587,6 +587,46 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
+        /// 在前后景分割的基础上优化多分类分割，支持对头发、五官等的分割，既作为换发型、挂件等底层技术，也可用于扣人头、扣人脸等玩法
+        /// </summary>
+        /// <param name="req"><see cref="SegmentCustomizedPortraitPicRequest"/></param>
+        /// <returns><see cref="SegmentCustomizedPortraitPicResponse"/></returns>
+        public async Task<SegmentCustomizedPortraitPicResponse> SegmentCustomizedPortraitPic(SegmentCustomizedPortraitPicRequest req)
+        {
+             JsonResponseModel<SegmentCustomizedPortraitPicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SegmentCustomizedPortraitPic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SegmentCustomizedPortraitPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在前后景分割的基础上优化多分类分割，支持对头发、五官等的分割，既作为换发型、挂件等底层技术，也可用于扣人头、扣人脸等玩法
+        /// </summary>
+        /// <param name="req"><see cref="SegmentCustomizedPortraitPicRequest"/></param>
+        /// <returns><see cref="SegmentCustomizedPortraitPicResponse"/></returns>
+        public SegmentCustomizedPortraitPicResponse SegmentCustomizedPortraitPicSync(SegmentCustomizedPortraitPicRequest req)
+        {
+             JsonResponseModel<SegmentCustomizedPortraitPicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SegmentCustomizedPortraitPic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SegmentCustomizedPortraitPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 识别传入图片中人体的完整轮廓，进行抠像。
         /// </summary>
         /// <param name="req"><see cref="SegmentPortraitPicRequest"/></param>

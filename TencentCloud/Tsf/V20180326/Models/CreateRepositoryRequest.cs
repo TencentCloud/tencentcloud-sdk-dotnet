@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string RepositoryName{ get; set; }
 
         /// <summary>
-        /// 仓库类型
+        /// 仓库类型（默认仓库：default，私有仓库：private）
         /// </summary>
         [JsonProperty("RepositoryType")]
         public string RepositoryType{ get; set; }

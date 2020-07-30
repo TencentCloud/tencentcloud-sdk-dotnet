@@ -453,6 +453,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 通过标签查询资源列表并集
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesByTagsUnionRequest"/></param>
+        /// <returns><see cref="DescribeResourcesByTagsUnionResponse"/></returns>
+        public async Task<DescribeResourcesByTagsUnionResponse> DescribeResourcesByTagsUnion(DescribeResourcesByTagsUnionRequest req)
+        {
+             JsonResponseModel<DescribeResourcesByTagsUnionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourcesByTagsUnion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesByTagsUnionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过标签查询资源列表并集
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesByTagsUnionRequest"/></param>
+        /// <returns><see cref="DescribeResourcesByTagsUnionResponse"/></returns>
+        public DescribeResourcesByTagsUnionResponse DescribeResourcesByTagsUnionSync(DescribeResourcesByTagsUnionRequest req)
+        {
+             JsonResponseModel<DescribeResourcesByTagsUnionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourcesByTagsUnion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesByTagsUnionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询已建立的标签列表中的标签键。
         /// </summary>
         /// <param name="req"><see cref="DescribeTagKeysRequest"/></param>

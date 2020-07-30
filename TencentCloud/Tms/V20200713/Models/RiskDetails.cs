@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Tms.V20200713.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePullStreamConfigsRequest : AbstractModel
+    public class RiskDetails : AbstractModel
     {
         
         /// <summary>
-        /// 配置 ID。
-        /// 获取途径：从 CreatePullStreamConfig 接口返回值获取。
+        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
         /// </summary>
-        [JsonProperty("ConfigId")]
-        public string ConfigId{ get; set; }
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
+        /// <summary>
+        /// 风险等级，1:疑似，2：恶意
+        /// </summary>
+        [JsonProperty("Level")]
+        public long? Level{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
         }
     }
 }

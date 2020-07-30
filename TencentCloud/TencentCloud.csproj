@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.112</VersionPrefix>
+    <VersionPrefix>3.0.113</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -623,8 +623,11 @@
     <Compile Include="Bda\V20200324\Models\PersonInfo.cs" />
     <Compile Include="Bda\V20200324\Models\SearchTraceRequest.cs" />
     <Compile Include="Bda\V20200324\Models\SearchTraceResponse.cs" />
+    <Compile Include="Bda\V20200324\Models\SegmentCustomizedPortraitPicRequest.cs" />
+    <Compile Include="Bda\V20200324\Models\SegmentCustomizedPortraitPicResponse.cs" />
     <Compile Include="Bda\V20200324\Models\SegmentPortraitPicRequest.cs" />
     <Compile Include="Bda\V20200324\Models\SegmentPortraitPicResponse.cs" />
+    <Compile Include="Bda\V20200324\Models\SegmentationOptions.cs" />
     <Compile Include="Bda\V20200324\Models\Trace.cs" />
     <Compile Include="Bda\V20200324\Models\TraceInfo.cs" />
     <Compile Include="Bda\V20200324\Models\UpperBodyCloth.cs" />
@@ -7096,6 +7099,8 @@
     <Compile Include="Tag\V20180813\Models\DescribeResourceTagsResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsResponse.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsUnionRequest.cs" />
+    <Compile Include="Tag\V20180813\Models\DescribeResourcesByTagsUnionResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagKeysRequest.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagKeysResponse.cs" />
     <Compile Include="Tag\V20180813\Models\DescribeTagValuesRequest.cs" />
@@ -8083,6 +8088,13 @@
     <Compile Include="Tkgdq\V20190411\Models\EntityRelationObject.cs" />
     <Compile Include="Tkgdq\V20190411\Models\EntityRelationSubject.cs" />
     <Compile Include="Tkgdq\V20190411\Models\TripleContent.cs" />
+    <Compile Include="Tms\V20200713\TmsClient.cs" />
+    <Compile Include="Tms\V20200713\Models\DetailResults.cs" />
+    <Compile Include="Tms\V20200713\Models\Device.cs" />
+    <Compile Include="Tms\V20200713\Models\RiskDetails.cs" />
+    <Compile Include="Tms\V20200713\Models\TextModerationRequest.cs" />
+    <Compile Include="Tms\V20200713\Models\TextModerationResponse.cs" />
+    <Compile Include="Tms\V20200713\Models\User.cs" />
     <Compile Include="Tmt\V20180321\TmtClient.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageRecord.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageTranslateRequest.cs" />
