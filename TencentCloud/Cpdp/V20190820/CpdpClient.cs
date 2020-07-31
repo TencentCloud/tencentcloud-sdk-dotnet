@@ -1109,6 +1109,86 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
+        /// </summary>
+        /// <param name="req"><see cref="MigrateOrderRefundRequest"/></param>
+        /// <returns><see cref="MigrateOrderRefundResponse"/></returns>
+        public async Task<MigrateOrderRefundResponse> MigrateOrderRefund(MigrateOrderRefundRequest req)
+        {
+             JsonResponseModel<MigrateOrderRefundResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MigrateOrderRefund");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateOrderRefundResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
+        /// </summary>
+        /// <param name="req"><see cref="MigrateOrderRefundRequest"/></param>
+        /// <returns><see cref="MigrateOrderRefundResponse"/></returns>
+        public MigrateOrderRefundResponse MigrateOrderRefundSync(MigrateOrderRefundRequest req)
+        {
+             JsonResponseModel<MigrateOrderRefundResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MigrateOrderRefund");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateOrderRefundResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
+        /// </summary>
+        /// <param name="req"><see cref="MigrateOrderRefundQueryRequest"/></param>
+        /// <returns><see cref="MigrateOrderRefundQueryResponse"/></returns>
+        public async Task<MigrateOrderRefundQueryResponse> MigrateOrderRefundQuery(MigrateOrderRefundQueryRequest req)
+        {
+             JsonResponseModel<MigrateOrderRefundQueryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MigrateOrderRefundQuery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateOrderRefundQueryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
+        /// </summary>
+        /// <param name="req"><see cref="MigrateOrderRefundQueryRequest"/></param>
+        /// <returns><see cref="MigrateOrderRefundQueryResponse"/></returns>
+        public MigrateOrderRefundQueryResponse MigrateOrderRefundQuerySync(MigrateOrderRefundQueryRequest req)
+        {
+             JsonResponseModel<MigrateOrderRefundQueryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MigrateOrderRefundQuery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateOrderRefundQueryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播平台-修改代理商完税信息
         /// </summary>
         /// <param name="req"><see cref="ModifyAgentTaxPaymentInfoRequest"/></param>

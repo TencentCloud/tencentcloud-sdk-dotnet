@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.113</VersionPrefix>
+    <VersionPrefix>3.0.114</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2683,6 +2683,10 @@
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundQueryRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundQueryResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
