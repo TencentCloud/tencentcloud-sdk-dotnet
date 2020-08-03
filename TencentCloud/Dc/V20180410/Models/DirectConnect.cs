@@ -209,6 +209,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
+        /// <summary>
+        /// 物理专线是否已签署用户协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SignLaw")]
+        public bool? SignLaw{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -242,6 +249,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "IdcCity", this.IdcCity);
             this.SetParamSimple(map, prefix + "ChargeState", this.ChargeState);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
         }
     }
 }

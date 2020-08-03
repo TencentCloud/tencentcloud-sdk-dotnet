@@ -25,7 +25,7 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 镜像名称
+        /// 镜像名称。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 镜像描述
+        /// 镜像描述。
         /// </summary>
         [JsonProperty("ImageDescription")]
         public string ImageDescription{ get; set; }

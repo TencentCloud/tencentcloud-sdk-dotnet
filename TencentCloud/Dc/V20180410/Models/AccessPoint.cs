@@ -60,6 +60,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
+        /// <summary>
+        /// 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvailablePortType")]
+        public string[] AvailablePortType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +79,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamArraySimple(map, prefix + "LineOperator.", this.LineOperator);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
         }
     }
 }

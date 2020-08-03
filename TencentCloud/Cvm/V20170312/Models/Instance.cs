@@ -219,6 +219,20 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群`ID`。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HpcClusterId")]
+        public string HpcClusterId{ get; set; }
+
+        /// <summary>
+        /// 高性能计算集群`IP`列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RdmaIpAddresses")]
+        public string[] RdmaIpAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -256,6 +270,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
             this.SetParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+            this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+            this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
         }
     }
 }

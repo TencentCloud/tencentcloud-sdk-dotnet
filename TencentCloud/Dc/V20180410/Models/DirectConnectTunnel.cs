@@ -211,6 +211,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("TencentBackupAddress")]
         public string TencentBackupAddress{ get; set; }
 
+        /// <summary>
+        /// 专用通道关联的物理专线是否签署了用户协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SignLaw")]
+        public bool? SignLaw{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -245,6 +252,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
+            this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
         }
     }
 }

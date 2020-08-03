@@ -133,7 +133,10 @@ namespace TencentCloud.Live.V20180801.Models
         public long? FpsToOrig{ get; set; }
 
         /// <summary>
-        /// 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+        /// 极速高清视频码率压缩比。
+        /// 极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+        /// 
+        /// 取值范围：0.0到0.5
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }

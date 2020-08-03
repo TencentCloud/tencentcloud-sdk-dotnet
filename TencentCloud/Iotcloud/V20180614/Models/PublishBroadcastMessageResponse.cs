@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Iotcloud.V20180614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HlsSpecialParam : AbstractModel
+    public class PublishBroadcastMessageResponse : AbstractModel
     {
         
         /// <summary>
-        /// HLS续流超时时间。
-        /// 取值范围[0，1800]。
+        /// 广播消息任务ID
         /// </summary>
-        [JsonProperty("FlowContinueDuration")]
-        public ulong? FlowContinueDuration{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowContinueDuration", this.FlowContinueDuration);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

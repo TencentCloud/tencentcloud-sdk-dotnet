@@ -1253,6 +1253,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 发布广播消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishBroadcastMessageRequest"/></param>
+        /// <returns><see cref="PublishBroadcastMessageResponse"/></returns>
+        public async Task<PublishBroadcastMessageResponse> PublishBroadcastMessage(PublishBroadcastMessageRequest req)
+        {
+             JsonResponseModel<PublishBroadcastMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishBroadcastMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishBroadcastMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布广播消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishBroadcastMessageRequest"/></param>
+        /// <returns><see cref="PublishBroadcastMessageResponse"/></returns>
+        public PublishBroadcastMessageResponse PublishBroadcastMessageSync(PublishBroadcastMessageRequest req)
+        {
+             JsonResponseModel<PublishBroadcastMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishBroadcastMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishBroadcastMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（PublishMessage）用于向某个主题发消息。 
         /// </summary>
         /// <param name="req"><see cref="PublishMessageRequest"/></param>
@@ -1284,6 +1324,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = this.InternalRequestSync(req, "PublishMessage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布RRPC消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishRRPCMessageRequest"/></param>
+        /// <returns><see cref="PublishRRPCMessageResponse"/></returns>
+        public async Task<PublishRRPCMessageResponse> PublishRRPCMessage(PublishRRPCMessageRequest req)
+        {
+             JsonResponseModel<PublishRRPCMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishRRPCMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishRRPCMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布RRPC消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishRRPCMessageRequest"/></param>
+        /// <returns><see cref="PublishRRPCMessageResponse"/></returns>
+        public PublishRRPCMessageResponse PublishRRPCMessageSync(PublishRRPCMessageRequest req)
+        {
+             JsonResponseModel<PublishRRPCMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishRRPCMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishRRPCMessageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

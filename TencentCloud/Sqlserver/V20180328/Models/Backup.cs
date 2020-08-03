@@ -90,6 +90,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupWay")]
         public long? BackupWay{ get; set; }
 
+        /// <summary>
+        /// 备份名称，可自定义
+        /// </summary>
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
             this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
         }
     }
 }

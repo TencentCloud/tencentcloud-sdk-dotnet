@@ -132,6 +132,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群ID。
+        /// </summary>
+        [JsonProperty("HpcClusterId")]
+        public string HpcClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+            this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         }
     }
 }
