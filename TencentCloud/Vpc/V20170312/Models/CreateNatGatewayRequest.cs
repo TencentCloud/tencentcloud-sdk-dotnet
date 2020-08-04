@@ -72,6 +72,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// NAT网关所属子网
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

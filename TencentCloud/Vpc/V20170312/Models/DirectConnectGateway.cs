@@ -105,6 +105,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EnableBGPCommunity")]
         public bool? EnableBGPCommunity{ get; set; }
 
+        /// <summary>
+        /// 绑定的NAT网关ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NatGatewayId")]
+        public string NatGatewayId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +130,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
             this.SetParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
             this.SetParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
+            this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
         }
     }
 }

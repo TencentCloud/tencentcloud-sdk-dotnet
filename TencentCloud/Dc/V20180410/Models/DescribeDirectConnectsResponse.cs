@@ -37,6 +37,13 @@ namespace TencentCloud.Dc.V20180410.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
+        /// 用户名下物理专线是否都签署了用户协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllSignLaw")]
+        public bool? AllSignLaw{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Dc.V20180410.Models
         {
             this.SetParamArrayObj(map, prefix + "DirectConnectSet.", this.DirectConnectSet);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "AllSignLaw", this.AllSignLaw);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

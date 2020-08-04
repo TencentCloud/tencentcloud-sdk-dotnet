@@ -15,29 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGameServerSessionsResponse : AbstractModel
+    public class DisassociateDirectConnectGatewayNatGatewayResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 游戏服务器会话列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("GameServerSessions")]
-        public GameServerSession[] GameServerSessions{ get; set; }
-
-        /// <summary>
-        /// 页偏移，用于查询下一页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -50,8 +36,6 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GameServerSessions.", this.GameServerSessions);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

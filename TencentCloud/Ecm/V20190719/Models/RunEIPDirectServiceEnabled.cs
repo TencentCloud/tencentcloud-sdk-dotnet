@@ -21,26 +21,18 @@ namespace TencentCloud.Ecm.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnhancedService : AbstractModel
+    public class RunEIPDirectServiceEnabled : AbstractModel
     {
         
         /// <summary>
-        /// 是否开启云镜服务。
+        /// 是否开通IP直通。取值范围：
+        /// TRUE：表示开通IP直通
+        /// FALSE：表示不开通IP直通
+        /// 默认取值：TRUE。
+        /// windows镜像目前不支持IP直通。
         /// </summary>
-        [JsonProperty("SecurityService")]
-        public RunSecurityServiceEnabled SecurityService{ get; set; }
-
-        /// <summary>
-        /// 是否开启云监控服务。
-        /// </summary>
-        [JsonProperty("MonitorService")]
-        public RunMonitorServiceEnabled MonitorService{ get; set; }
-
-        /// <summary>
-        /// 是否开通IP直通。若不指定该参数，则Linux镜像默认开通，windows镜像暂不支持IP直通。
-        /// </summary>
-        [JsonProperty("EIPDirectService")]
-        public RunEIPDirectServiceEnabled EIPDirectService{ get; set; }
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
 
 
         /// <summary>
@@ -48,9 +40,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SecurityService.", this.SecurityService);
-            this.SetParamObj(map, prefix + "MonitorService.", this.MonitorService);
-            this.SetParamObj(map, prefix + "EIPDirectService.", this.EIPDirectService);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

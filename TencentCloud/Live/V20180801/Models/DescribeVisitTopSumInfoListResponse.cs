@@ -46,7 +46,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string TopIndex{ get; set; }
 
         /// <summary>
-        /// 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+        /// 排序指标，可选值包括” AvgFluxPerSecond”(按每秒平均流量排序)，”TotalRequest”（默认，按总请求数排序）,“TotalFlux”（按总流量排序）。
         /// </summary>
         [JsonProperty("OrderParam")]
         public string OrderParam{ get; set; }

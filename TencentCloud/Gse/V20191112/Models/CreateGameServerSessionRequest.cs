@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public ulong? MaximumPlayerSessionCount{ get; set; }
 
         /// <summary>
-        /// 别名ID
+        /// 别名ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
         /// </summary>
         [JsonProperty("AliasId")]
         public string AliasId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string CreatorId{ get; set; }
 
         /// <summary>
-        /// 舰队ID
+        /// 舰队ID。每个请求需要指定别名ID 或者舰队 ID，如果两个同时指定时，优先选择舰队 ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }

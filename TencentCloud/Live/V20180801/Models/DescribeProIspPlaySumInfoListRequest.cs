@@ -40,13 +40,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+        /// 统计的类型，可选值：”Province”(省份)，”Isp”(运营商)，“CountryOrArea”(国家或地区)。
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
 
         /// <summary>
-        /// 不填则为总体数据。
+        /// 播放域名列表，不填则为全部。
         /// </summary>
         [JsonProperty("PlayDomains")]
         public string[] PlayDomains{ get; set; }

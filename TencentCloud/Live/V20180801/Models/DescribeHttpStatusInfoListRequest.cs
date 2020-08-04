@@ -27,7 +27,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 起始时间，北京时间，
         /// 格式：yyyy-mm-dd HH:MM:SS。
-        /// StartTime不能为3个月前。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -35,7 +34,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 结束时间，北京时间，
         /// 格式：yyyy-mm-dd HH:MM:SS。
-        /// 注：EndTime 和 StartTime 只支持最近1天的数据查询。
+        /// 注：最大时间跨度支持1天，支持最近3个月的数据查询。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

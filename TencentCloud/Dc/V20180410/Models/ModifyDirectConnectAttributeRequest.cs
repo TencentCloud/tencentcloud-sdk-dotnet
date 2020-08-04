@@ -90,6 +90,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("FaultReportContactNumber")]
         public string FaultReportContactNumber{ get; set; }
 
+        /// <summary>
+        /// 物理专线申请者补签用户使用协议
+        /// </summary>
+        [JsonProperty("SignLaw")]
+        public bool? SignLaw{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+            this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
         }
     }
 }

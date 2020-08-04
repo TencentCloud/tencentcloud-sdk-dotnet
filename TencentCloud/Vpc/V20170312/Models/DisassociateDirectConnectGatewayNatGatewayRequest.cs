@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Vpc.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeGameServerSessionsResponse : AbstractModel
+    public class DisassociateDirectConnectGatewayNatGatewayRequest : AbstractModel
     {
         
         /// <summary>
-        /// 游戏服务器会话列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 专线网关ID。
         /// </summary>
-        [JsonProperty("GameServerSessions")]
-        public GameServerSession[] GameServerSessions{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
-        /// 页偏移，用于查询下一页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// NAT网关ID。
         /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
+        [JsonProperty("NatGatewayId")]
+        public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DirectConnectGatewayId")]
+        public string DirectConnectGatewayId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,9 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "GameServerSessions.", this.GameServerSessions);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+            this.SetParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
         }
     }
 }

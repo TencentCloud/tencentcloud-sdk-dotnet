@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.115</VersionPrefix>
+    <VersionPrefix>3.0.116</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3833,6 +3833,7 @@
     <Compile Include="Ecm\V20190719\Models\ResetInstancesPasswordResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\RunEIPDirectServiceEnabled.cs" />
     <Compile Include="Ecm\V20190719\Models\RunInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\RunInstancesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\RunMonitorServiceEnabled.cs" />
@@ -8913,6 +8914,8 @@
     <Compile Include="Vpc\V20170312\Models\AssociateAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateDhcpIpWithAddressIpRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateDhcpIpWithAddressIpResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\AssociateDirectConnectGatewayNatGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\AssociateDirectConnectGatewayNatGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNatGatewayAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\AssociateNetworkAclSubnetsRequest.cs" />
@@ -9191,6 +9194,8 @@
     <Compile Include="Vpc\V20170312\Models\DisassociateAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateDhcpIpWithAddressIpRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateDhcpIpWithAddressIpResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateDirectConnectGatewayNatGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateDirectConnectGatewayNatGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNatGatewayAddressResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkAclSubnetsRequest.cs" />
