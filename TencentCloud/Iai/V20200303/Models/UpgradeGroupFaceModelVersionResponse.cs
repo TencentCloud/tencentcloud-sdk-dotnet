@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Iai.V20200303.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WordItem : AbstractModel
+    public class UpgradeGroupFaceModelVersionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 词条文本内容。
+        /// 升级任务ID，用于查询、获取升级的进度和结果。
         /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
         /// <summary>
-        /// 词条创建时间。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// 词条的词性。
-        /// </summary>
-        [JsonProperty("Pos")]
-        public string Pos{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "Pos", this.Pos);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

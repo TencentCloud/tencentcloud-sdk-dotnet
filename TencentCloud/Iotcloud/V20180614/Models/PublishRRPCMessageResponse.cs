@@ -31,7 +31,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public long? MessageId{ get; set; }
 
         /// <summary>
-        /// 设备回复的的消息内容，采用base64编码
+        /// 设备回复的消息内容，采用base64编码
         /// </summary>
         [JsonProperty("PayloadBase64")]
         public string PayloadBase64{ get; set; }

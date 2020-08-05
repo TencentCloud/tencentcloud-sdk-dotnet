@@ -120,6 +120,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
+        /// <summary>
+        /// 机型外部代号
+        /// </summary>
+        [JsonProperty("DeviceClassCode")]
+        public string DeviceClassCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "NicDescription", this.NicDescription);
             this.SetParamSimple(map, prefix + "RaidDescription", this.RaidDescription);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "DeviceClassCode", this.DeviceClassCode);
         }
     }
 }

@@ -1993,6 +1993,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 修改模块配置，已关联实例的模块不支持调整配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleConfigRequest"/></param>
+        /// <returns><see cref="ModifyModuleConfigResponse"/></returns>
+        public async Task<ModifyModuleConfigResponse> ModifyModuleConfig(ModifyModuleConfigRequest req)
+        {
+             JsonResponseModel<ModifyModuleConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyModuleConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模块配置，已关联实例的模块不支持调整配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleConfigRequest"/></param>
+        /// <returns><see cref="ModifyModuleConfigResponse"/></returns>
+        public ModifyModuleConfigResponse ModifyModuleConfigSync(ModifyModuleConfigRequest req)
+        {
+             JsonResponseModel<ModifyModuleConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyModuleConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ModifyModuleImage
         /// </summary>
         /// <param name="req"><see cref="ModifyModuleImageRequest"/></param>

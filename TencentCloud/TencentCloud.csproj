@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.116</VersionPrefix>
+    <VersionPrefix>3.0.117</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3791,6 +3791,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleConfigRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleConfigResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNameRequest.cs" />
@@ -4381,6 +4383,10 @@
     <Compile Include="Iai\V20200303\Models\GetPersonListResponse.cs" />
     <Compile Include="Iai\V20200303\Models\GetSimilarPersonResultRequest.cs" />
     <Compile Include="Iai\V20200303\Models\GetSimilarPersonResultResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\GetUpgradeGroupFaceModelVersionResultResponse.cs" />
     <Compile Include="Iai\V20200303\Models\GroupCandidate.cs" />
     <Compile Include="Iai\V20200303\Models\GroupExDescriptionInfo.cs" />
     <Compile Include="Iai\V20200303\Models\GroupInfo.cs" />
@@ -4405,6 +4411,9 @@
     <Compile Include="Iai\V20200303\Models\SearchPersonsResponse.cs" />
     <Compile Include="Iai\V20200303\Models\SearchPersonsReturnsByGroupRequest.cs" />
     <Compile Include="Iai\V20200303\Models\SearchPersonsReturnsByGroupResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\UpgradeGroupFaceModelVersionRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\UpgradeGroupFaceModelVersionResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\UpgradeJobInfo.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonRequest.cs" />

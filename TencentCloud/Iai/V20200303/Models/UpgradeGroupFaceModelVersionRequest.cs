@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Iai.V20200303.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WordItem : AbstractModel
+    public class UpgradeGroupFaceModelVersionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 词条文本内容。
+        /// 需要升级的人员库ID。
         /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// 词条创建时间。
+        /// 需要升级至的算法模型版本。默认为最新版本。
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// 词条的词性。
-        /// </summary>
-        [JsonProperty("Pos")]
-        public string Pos{ get; set; }
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "Pos", this.Pos);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         }
     }
 }

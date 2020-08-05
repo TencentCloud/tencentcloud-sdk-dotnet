@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 返回负载均衡列表数目，默认20，最大值1000。
+        /// 返回负载均衡列表数目，默认20，最大值100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

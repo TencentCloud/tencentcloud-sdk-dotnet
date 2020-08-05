@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WordItem : AbstractModel
+    public class ModifyModuleConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// 词条文本内容。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
-
-        /// <summary>
-        /// 词条创建时间。
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// 词条的词性。
-        /// </summary>
-        [JsonProperty("Pos")]
-        public string Pos{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "Pos", this.Pos);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

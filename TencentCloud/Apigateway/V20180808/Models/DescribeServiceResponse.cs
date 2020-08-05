@@ -151,6 +151,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? SetId{ get; set; }
 
         /// <summary>
+        /// 服务绑定的标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -182,6 +189,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "SetId", this.SetId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

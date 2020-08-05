@@ -34,6 +34,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_zh_video：16k 音视频领域；
         /// • 16k_en：16k 英语；
         /// • 16k_ca：16k 粤语；
+        /// • 16k_jp：16k 日语；
         /// </summary>
         [JsonProperty("EngineModelType")]
         public string EngineModelType{ get; set; }

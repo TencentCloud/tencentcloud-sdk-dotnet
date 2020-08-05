@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WordItem : AbstractModel
+    public class ModifyModuleConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 词条文本内容。
+        /// 模块ID。
         /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
+        [JsonProperty("ModuleId")]
+        public string ModuleId{ get; set; }
 
         /// <summary>
-        /// 词条创建时间。
+        /// 机型ID。
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 词条的词性。
+        /// 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
         /// </summary>
-        [JsonProperty("Pos")]
-        public string Pos{ get; set; }
+        [JsonProperty("DefaultDataDiskSize")]
+        public long? DefaultDataDiskSize{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "Pos", this.Pos);
+            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "DefaultDataDiskSize", this.DefaultDataDiskSize);
         }
     }
 }
