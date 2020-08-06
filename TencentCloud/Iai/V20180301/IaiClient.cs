@@ -1053,6 +1053,86 @@ namespace TencentCloud.Iai.V20180301
         }
 
         /// <summary>
+        /// 获取人员库升级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="GetUpgradeGroupFaceModelVersionJobListRequest"/></param>
+        /// <returns><see cref="GetUpgradeGroupFaceModelVersionJobListResponse"/></returns>
+        public async Task<GetUpgradeGroupFaceModelVersionJobListResponse> GetUpgradeGroupFaceModelVersionJobList(GetUpgradeGroupFaceModelVersionJobListRequest req)
+        {
+             JsonResponseModel<GetUpgradeGroupFaceModelVersionJobListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetUpgradeGroupFaceModelVersionJobList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUpgradeGroupFaceModelVersionJobListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取人员库升级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="GetUpgradeGroupFaceModelVersionJobListRequest"/></param>
+        /// <returns><see cref="GetUpgradeGroupFaceModelVersionJobListResponse"/></returns>
+        public GetUpgradeGroupFaceModelVersionJobListResponse GetUpgradeGroupFaceModelVersionJobListSync(GetUpgradeGroupFaceModelVersionJobListRequest req)
+        {
+             JsonResponseModel<GetUpgradeGroupFaceModelVersionJobListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetUpgradeGroupFaceModelVersionJobList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUpgradeGroupFaceModelVersionJobListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 人员库升级结果查询
+        /// </summary>
+        /// <param name="req"><see cref="GetUpgradeGroupFaceModelVersionResultRequest"/></param>
+        /// <returns><see cref="GetUpgradeGroupFaceModelVersionResultResponse"/></returns>
+        public async Task<GetUpgradeGroupFaceModelVersionResultResponse> GetUpgradeGroupFaceModelVersionResult(GetUpgradeGroupFaceModelVersionResultRequest req)
+        {
+             JsonResponseModel<GetUpgradeGroupFaceModelVersionResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetUpgradeGroupFaceModelVersionResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUpgradeGroupFaceModelVersionResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 人员库升级结果查询
+        /// </summary>
+        /// <param name="req"><see cref="GetUpgradeGroupFaceModelVersionResultRequest"/></param>
+        /// <returns><see cref="GetUpgradeGroupFaceModelVersionResultResponse"/></returns>
+        public GetUpgradeGroupFaceModelVersionResultResponse GetUpgradeGroupFaceModelVersionResultSync(GetUpgradeGroupFaceModelVersionResultRequest req)
+        {
+             JsonResponseModel<GetUpgradeGroupFaceModelVersionResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetUpgradeGroupFaceModelVersionResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUpgradeGroupFaceModelVersionResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改人员库名称、备注、自定义描述字段名称。
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupRequest"/></param>
@@ -1164,6 +1244,54 @@ namespace TencentCloud.Iai.V20180301
              {
                  var strResp = this.InternalRequestSync(req, "ModifyPersonGroupInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPersonGroupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于回滚人员库的人脸识别算法模型版本。单个人员库有且仅有一次回滚机会。
+        /// 
+        /// 回滚操作会在10s内生效，回滚操作中，您对人员库的操作可能会失效。
+        /// 
+        /// 注：给客户我会写10s内生效，我们实际上越快越好。待讨论。
+        /// </summary>
+        /// <param name="req"><see cref="RevertGroupFaceModelVersionRequest"/></param>
+        /// <returns><see cref="RevertGroupFaceModelVersionResponse"/></returns>
+        public async Task<RevertGroupFaceModelVersionResponse> RevertGroupFaceModelVersion(RevertGroupFaceModelVersionRequest req)
+        {
+             JsonResponseModel<RevertGroupFaceModelVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RevertGroupFaceModelVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RevertGroupFaceModelVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于回滚人员库的人脸识别算法模型版本。单个人员库有且仅有一次回滚机会。
+        /// 
+        /// 回滚操作会在10s内生效，回滚操作中，您对人员库的操作可能会失效。
+        /// 
+        /// 注：给客户我会写10s内生效，我们实际上越快越好。待讨论。
+        /// </summary>
+        /// <param name="req"><see cref="RevertGroupFaceModelVersionRequest"/></param>
+        /// <returns><see cref="RevertGroupFaceModelVersionResponse"/></returns>
+        public RevertGroupFaceModelVersionResponse RevertGroupFaceModelVersionSync(RevertGroupFaceModelVersionRequest req)
+        {
+             JsonResponseModel<RevertGroupFaceModelVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RevertGroupFaceModelVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RevertGroupFaceModelVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1410,6 +1538,50 @@ namespace TencentCloud.Iai.V20180301
              {
                  var strResp = this.InternalRequestSync(req, "SearchPersonsReturnsByGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchPersonsReturnsByGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级人员库。升级过程中，人员库仍然为原算法版本，人员库相关操作仍然支持。升级完成后，人员库为新算法版本。
+        /// 单个人员库有且仅支持一次回滚操作。
+        /// 注：此处QPS限制为10。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGroupFaceModelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeGroupFaceModelVersionResponse"/></returns>
+        public async Task<UpgradeGroupFaceModelVersionResponse> UpgradeGroupFaceModelVersion(UpgradeGroupFaceModelVersionRequest req)
+        {
+             JsonResponseModel<UpgradeGroupFaceModelVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeGroupFaceModelVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGroupFaceModelVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级人员库。升级过程中，人员库仍然为原算法版本，人员库相关操作仍然支持。升级完成后，人员库为新算法版本。
+        /// 单个人员库有且仅支持一次回滚操作。
+        /// 注：此处QPS限制为10。
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGroupFaceModelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeGroupFaceModelVersionResponse"/></returns>
+        public UpgradeGroupFaceModelVersionResponse UpgradeGroupFaceModelVersionSync(UpgradeGroupFaceModelVersionRequest req)
+        {
+             JsonResponseModel<UpgradeGroupFaceModelVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeGroupFaceModelVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGroupFaceModelVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

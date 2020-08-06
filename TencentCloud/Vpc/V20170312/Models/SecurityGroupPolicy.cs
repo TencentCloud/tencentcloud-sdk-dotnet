@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 安全组规则索引号。
+        /// 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
         /// </summary>
         [JsonProperty("PolicyIndex")]
         public long? PolicyIndex{ get; set; }
 
         /// <summary>
-        /// 协议, 取值: TCP,UDP, ICMP。
+        /// 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

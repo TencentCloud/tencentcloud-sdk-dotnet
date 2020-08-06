@@ -86,6 +86,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+        /// </summary>
+        [JsonProperty("RoutePriorityFlag")]
+        public bool? RoutePriorityFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
         }
     }
 }

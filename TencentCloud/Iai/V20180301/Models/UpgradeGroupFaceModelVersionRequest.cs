@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Iai.V20180301.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterRoutesRequest : AbstractModel
+    public class UpgradeGroupFaceModelVersionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 路由表名称。
+        /// 需要升级的人员库ID。
         /// </summary>
-        [JsonProperty("RouteTableName")]
-        public string RouteTableName{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+        /// 需要升级至的算法模型版本。默认为最新版本。
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         }
     }
 }

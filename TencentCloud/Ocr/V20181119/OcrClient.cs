@@ -753,7 +753,7 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// 适用于文字较多、版式复杂、对识别准召率要求较高的场景，如试卷试题、网络图片、街景店招牌、法律卷宗等场景。
         /// 
-        /// 产品优势：与通用印刷体识别的基础上，提供更高精度的文字识别服务，在文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
+        /// 产品优势：与通用印刷体识别相比，提供更高精度的文字识别服务，在文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
         /// 
         /// 通用印刷体识别不同版本的差异如下：
         /// <table style="width:715px">
@@ -833,7 +833,7 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// 适用于文字较多、版式复杂、对识别准召率要求较高的场景，如试卷试题、网络图片、街景店招牌、法律卷宗等场景。
         /// 
-        /// 产品优势：与通用印刷体识别的基础上，提供更高精度的文字识别服务，在文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
+        /// 产品优势：与通用印刷体识别相比，提供更高精度的文字识别服务，在文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
         /// 
         /// 通用印刷体识别不同版本的差异如下：
         /// <table style="width:715px">
@@ -2232,6 +2232,50 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "ResidenceBookletOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResidenceBookletOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持网约车驾驶证重要字段的自动定位与识别，重点字段的识别准确度达到99%以上。
+        /// 
+        /// 网约车驾驶证：包括姓名、证号、起始日期、截止日期、发证日期。
+        /// </summary>
+        /// <param name="req"><see cref="RideHailingDriverLicenseOCRRequest"/></param>
+        /// <returns><see cref="RideHailingDriverLicenseOCRResponse"/></returns>
+        public async Task<RideHailingDriverLicenseOCRResponse> RideHailingDriverLicenseOCR(RideHailingDriverLicenseOCRRequest req)
+        {
+             JsonResponseModel<RideHailingDriverLicenseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RideHailingDriverLicenseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RideHailingDriverLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持网约车驾驶证重要字段的自动定位与识别，重点字段的识别准确度达到99%以上。
+        /// 
+        /// 网约车驾驶证：包括姓名、证号、起始日期、截止日期、发证日期。
+        /// </summary>
+        /// <param name="req"><see cref="RideHailingDriverLicenseOCRRequest"/></param>
+        /// <returns><see cref="RideHailingDriverLicenseOCRResponse"/></returns>
+        public RideHailingDriverLicenseOCRResponse RideHailingDriverLicenseOCRSync(RideHailingDriverLicenseOCRRequest req)
+        {
+             JsonResponseModel<RideHailingDriverLicenseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RideHailingDriverLicenseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RideHailingDriverLicenseOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

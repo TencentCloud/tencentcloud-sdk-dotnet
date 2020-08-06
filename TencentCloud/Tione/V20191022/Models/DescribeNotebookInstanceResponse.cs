@@ -172,6 +172,13 @@ namespace TencentCloud.Tione.V20191022.Models
         public StoppingCondition StoppingCondition{ get; set; }
 
         /// <summary>
+        /// Cls配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClsConfig")]
+        public ClsConfig ClsConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -203,6 +210,7 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "Prepay", this.Prepay);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamObj(map, prefix + "ClsConfig.", this.ClsConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

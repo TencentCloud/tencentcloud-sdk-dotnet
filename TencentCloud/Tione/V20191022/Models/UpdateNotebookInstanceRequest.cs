@@ -116,6 +116,12 @@ namespace TencentCloud.Tione.V20191022.Models
         [JsonProperty("StoppingCondition")]
         public StoppingCondition StoppingCondition{ get; set; }
 
+        /// <summary>
+        /// 接入日志的配置
+        /// </summary>
+        [JsonProperty("ClsConfig")]
+        public ClsConfig ClsConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "ClsAccess", this.ClsAccess);
             this.SetParamSimple(map, prefix + "AutoStopping", this.AutoStopping);
             this.SetParamObj(map, prefix + "StoppingCondition.", this.StoppingCondition);
+            this.SetParamObj(map, prefix + "ClsConfig.", this.ClsConfig);
         }
     }
 }

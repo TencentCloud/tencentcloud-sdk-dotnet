@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Iai.V20180301.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterRoutesRequest : AbstractModel
+    public class GetUpgradeGroupFaceModelVersionJobListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 路由表名称。
+        /// 人员库升级任务信息列表。
         /// </summary>
-        [JsonProperty("RouteTableName")]
-        public string RouteTableName{ get; set; }
+        [JsonProperty("JobInfos")]
+        public UpgradeJobInfo[] JobInfos{ get; set; }
 
         /// <summary>
-        /// 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+        /// 升级任务总数量。
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("JobNum")]
+        public ulong? JobNum{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "JobInfos.", this.JobInfos);
+            this.SetParamSimple(map, prefix + "JobNum", this.JobNum);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

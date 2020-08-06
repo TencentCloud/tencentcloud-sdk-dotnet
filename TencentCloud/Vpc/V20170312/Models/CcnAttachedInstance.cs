@@ -96,6 +96,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnUin")]
         public string CcnUin{ get; set; }
 
+        /// <summary>
+        /// 关联实例所属的大地域，如: CHINA_MAINLAND
+        /// </summary>
+        [JsonProperty("InstanceArea")]
+        public string InstanceArea{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +118,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "AttachedTime", this.AttachedTime);
             this.SetParamSimple(map, prefix + "CcnUin", this.CcnUin);
+            this.SetParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
         }
     }
 }

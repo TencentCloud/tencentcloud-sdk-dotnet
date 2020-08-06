@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Tione.V20191022.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClusterRoutesRequest : AbstractModel
+    public class ClsConfig : AbstractModel
     {
         
         /// <summary>
-        /// 路由表名称。
+        /// 接入类型，可选项为free、customer
         /// </summary>
-        [JsonProperty("RouteTableName")]
-        public string RouteTableName{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 过滤条件,当前只支持按照单个条件GatewayIP进行过滤（可选）
+        /// 自定义CLS的日志集ID，只有当Type为customer时生效
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("LogSetId")]
+        public string LogSetId{ get; set; }
+
+        /// <summary>
+        /// 自定义CLS的日志主题ID，只有当Type为customer时生效
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
         }
     }
 }

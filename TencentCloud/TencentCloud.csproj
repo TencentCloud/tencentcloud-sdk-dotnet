@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.117</VersionPrefix>
+    <VersionPrefix>3.0.118</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4403,6 +4403,8 @@
     <Compile Include="Iai\V20200303\Models\Point.cs" />
     <Compile Include="Iai\V20200303\Models\Result.cs" />
     <Compile Include="Iai\V20200303\Models\ResultsReturnsByGroup.cs" />
+    <Compile Include="Iai\V20200303\Models\RevertGroupFaceModelVersionRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\RevertGroupFaceModelVersionResponse.cs" />
     <Compile Include="Iai\V20200303\Models\SearchFacesRequest.cs" />
     <Compile Include="Iai\V20200303\Models\SearchFacesResponse.cs" />
     <Compile Include="Iai\V20200303\Models\SearchFacesReturnsByGroupRequest.cs" />
@@ -4471,6 +4473,10 @@
     <Compile Include="Iai\V20180301\Models\GetPersonListResponse.cs" />
     <Compile Include="Iai\V20180301\Models\GetSimilarPersonResultRequest.cs" />
     <Compile Include="Iai\V20180301\Models\GetSimilarPersonResultResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
+    <Compile Include="Iai\V20180301\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
+    <Compile Include="Iai\V20180301\Models\GetUpgradeGroupFaceModelVersionResultResponse.cs" />
     <Compile Include="Iai\V20180301\Models\GroupCandidate.cs" />
     <Compile Include="Iai\V20180301\Models\GroupExDescriptionInfo.cs" />
     <Compile Include="Iai\V20180301\Models\GroupInfo.cs" />
@@ -4487,6 +4493,8 @@
     <Compile Include="Iai\V20180301\Models\Point.cs" />
     <Compile Include="Iai\V20180301\Models\Result.cs" />
     <Compile Include="Iai\V20180301\Models\ResultsReturnsByGroup.cs" />
+    <Compile Include="Iai\V20180301\Models\RevertGroupFaceModelVersionRequest.cs" />
+    <Compile Include="Iai\V20180301\Models\RevertGroupFaceModelVersionResponse.cs" />
     <Compile Include="Iai\V20180301\Models\SearchFacesRequest.cs" />
     <Compile Include="Iai\V20180301\Models\SearchFacesResponse.cs" />
     <Compile Include="Iai\V20180301\Models\SearchFacesReturnsByGroupRequest.cs" />
@@ -4495,6 +4503,9 @@
     <Compile Include="Iai\V20180301\Models\SearchPersonsResponse.cs" />
     <Compile Include="Iai\V20180301\Models\SearchPersonsReturnsByGroupRequest.cs" />
     <Compile Include="Iai\V20180301\Models\SearchPersonsReturnsByGroupResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\UpgradeGroupFaceModelVersionRequest.cs" />
+    <Compile Include="Iai\V20180301\Models\UpgradeGroupFaceModelVersionResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\UpgradeJobInfo.cs" />
     <Compile Include="Iai\V20180301\Models\VerifyFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\VerifyFaceResponse.cs" />
     <Compile Include="Iai\V20180301\Models\VerifyPersonRequest.cs" />
@@ -6255,6 +6266,8 @@
     <Compile Include="Ocr\V20181119\Models\Rect.cs" />
     <Compile Include="Ocr\V20181119\Models\ResidenceBookletOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ResidenceBookletOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\RideHailingDriverLicenseOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\RideHailingDriverLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\SealOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\SealOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\ShipInvoiceInfo.cs" />
@@ -7899,6 +7912,7 @@
     <Compile Include="Tione\V20191022\TioneClient.cs" />
     <Compile Include="Tione\V20191022\Models\AlgorithmSpecification.cs" />
     <Compile Include="Tione\V20191022\Models\BillingLabel.cs" />
+    <Compile Include="Tione\V20191022\Models\ClsConfig.cs" />
     <Compile Include="Tione\V20191022\Models\CodeRepoSummary.cs" />
     <Compile Include="Tione\V20191022\Models\CosDataSource.cs" />
     <Compile Include="Tione\V20191022\Models\CreateCodeRepositoryRequest.cs" />
