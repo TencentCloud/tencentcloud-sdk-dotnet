@@ -21,29 +21,23 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBackupRequest : AbstractModel
+    public class ModifyBackupNameRequest : AbstractModel
     {
         
         /// <summary>
-        /// 备份策略(0-实例备份 1-多库备份)
-        /// </summary>
-        [JsonProperty("Strategy")]
-        public long? Strategy{ get; set; }
-
-        /// <summary>
-        /// 需要备份库名的列表(多库备份才填写)
-        /// </summary>
-        [JsonProperty("DBNames")]
-        public string[] DBNames{ get; set; }
-
-        /// <summary>
-        /// 实例ID，形如mssql-i1z41iwd
+        /// 实例ID，格式如：mssql-3l3fgqn7
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+        /// 要修改名称的备份ID，可通过DescribeBackups 接口获取。
+        /// </summary>
+        [JsonProperty("BackupId")]
+        public ulong? BackupId{ get; set; }
+
+        /// <summary>
+        /// 修改的备份名称
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
@@ -54,9 +48,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
-            this.SetParamArraySimple(map, prefix + "DBNames.", this.DBNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
         }
     }

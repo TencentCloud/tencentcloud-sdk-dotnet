@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.118</VersionPrefix>
+    <VersionPrefix>3.0.119</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6628,6 +6628,16 @@
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionRequest.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ZoneCapacityConf.cs" />
+    <Compile Include="Rkp\V20191209\RkpClient.cs" />
+    <Compile Include="Rkp\V20191209\Models\DevInfoQ.cs" />
+    <Compile Include="Rkp\V20191209\Models\GetOpenIdRequest.cs" />
+    <Compile Include="Rkp\V20191209\Models\GetOpenIdResponse.cs" />
+    <Compile Include="Rkp\V20191209\Models\GetTokenRequest.cs" />
+    <Compile Include="Rkp\V20191209\Models\GetTokenResponse.cs" />
+    <Compile Include="Rkp\V20191209\Models\QueryDevAndRiskRequest.cs" />
+    <Compile Include="Rkp\V20191209\Models\QueryDevAndRiskResponse.cs" />
+    <Compile Include="Rkp\V20191209\Models\RiskDetail.cs" />
+    <Compile Include="Rkp\V20191209\Models\RiskInfo.cs" />
     <Compile Include="Rp\V20200224\RpClient.cs" />
     <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionRequest.cs" />
     <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionResponse.cs" />
@@ -6895,8 +6905,12 @@
     <Compile Include="Sqlserver\V20180328\Models\DeletePublishSubscribeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupByFlowIdRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupByFlowIdResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupsResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeCrossRegionZoneRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeCrossRegionZoneResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBSecurityGroupsRequest.cs" />
@@ -6952,6 +6966,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountPrivilegeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupNameRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyBackupStrategyRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyBackupStrategyResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBInstanceNameRequest.cs" />

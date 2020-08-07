@@ -15,38 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Rkp.V20191209.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateBackupRequest : AbstractModel
+    public class DevInfoQ : AbstractModel
     {
         
         /// <summary>
-        /// 备份策略(0-实例备份 1-多库备份)
+        /// devid
         /// </summary>
-        [JsonProperty("Strategy")]
-        public long? Strategy{ get; set; }
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
 
         /// <summary>
-        /// 需要备份库名的列表(多库备份才填写)
+        /// 风险值
         /// </summary>
-        [JsonProperty("DBNames")]
-        public string[] DBNames{ get; set; }
+        [JsonProperty("RiskScore")]
+        public long? RiskScore{ get; set; }
 
         /// <summary>
-        /// 实例ID，形如mssql-i1z41iwd
+        /// 风险详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("RiskInfo")]
+        public RiskDetail[] RiskInfo{ get; set; }
 
         /// <summary>
-        /// 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
+        /// 概率值
         /// </summary>
-        [JsonProperty("BackupName")]
-        public string BackupName{ get; set; }
+        [JsonProperty("Probability")]
+        public float? Probability{ get; set; }
 
 
         /// <summary>
@@ -54,10 +55,10 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
-            this.SetParamArraySimple(map, prefix + "DBNames.", this.DBNames);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "RiskScore", this.RiskScore);
+            this.SetParamArrayObj(map, prefix + "RiskInfo.", this.RiskInfo);
+            this.SetParamSimple(map, prefix + "Probability", this.Probability);
         }
     }
 }

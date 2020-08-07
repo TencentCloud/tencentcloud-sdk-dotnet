@@ -15,40 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Rkp.V20191209.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PhoneVerificationResponse : AbstractModel
+    public class GetTokenResponse : AbstractModel
     {
         
         /// <summary>
-        /// 认证结果码:
-        /// 收费结果码
-        /// 0: 认证通过
-        /// -1: 手机号已实名，但是身份证和姓名均与实名信息不一致 
-        /// -2: 手机号已实名，手机号和证件号一致，姓名不一致
-        /// -3: 手机号已实名，手机号和姓名一致，身份证不一致
-        /// -4: 信息不一致
-        /// -5: 手机号未实名
-        /// 不收费结果码
-        /// -6: 手机号码不合法
-        /// -7: 身份证号码有误
-        /// -8: 姓名校验不通过
-        /// -9: 没有记录
-        /// -10: 认证未通过
-        /// -11: 验证中心服务繁忙
+        /// 返回token
         /// </summary>
-        [JsonProperty("Result")]
-        public string Result{ get; set; }
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
 
         /// <summary>
-        /// 业务结果描述。
+        /// 过期时间
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -62,8 +48,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

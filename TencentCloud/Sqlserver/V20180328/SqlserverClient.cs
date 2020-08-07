@@ -693,6 +693,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口(DescribeBackupByFlowId)用于通过备份创建流程的ID查询创建的备份详情，流程ID可从接口CreateBackup中获得。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupByFlowIdRequest"/></param>
+        /// <returns><see cref="DescribeBackupByFlowIdResponse"/></returns>
+        public async Task<DescribeBackupByFlowIdResponse> DescribeBackupByFlowId(DescribeBackupByFlowIdRequest req)
+        {
+             JsonResponseModel<DescribeBackupByFlowIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupByFlowId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupByFlowIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupByFlowId)用于通过备份创建流程的ID查询创建的备份详情，流程ID可从接口CreateBackup中获得。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupByFlowIdRequest"/></param>
+        /// <returns><see cref="DescribeBackupByFlowIdResponse"/></returns>
+        public DescribeBackupByFlowIdResponse DescribeBackupByFlowIdSync(DescribeBackupByFlowIdRequest req)
+        {
+             JsonResponseModel<DescribeBackupByFlowIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupByFlowId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupByFlowIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeBackups)用于查询备份列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupsRequest"/></param>
@@ -724,6 +764,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCrossRegionZone)根据主实例查询备机的容灾地域和可用区。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossRegionZoneRequest"/></param>
+        /// <returns><see cref="DescribeCrossRegionZoneResponse"/></returns>
+        public async Task<DescribeCrossRegionZoneResponse> DescribeCrossRegionZone(DescribeCrossRegionZoneRequest req)
+        {
+             JsonResponseModel<DescribeCrossRegionZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossRegionZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossRegionZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCrossRegionZone)根据主实例查询备机的容灾地域和可用区。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossRegionZoneRequest"/></param>
+        /// <returns><see cref="DescribeCrossRegionZoneResponse"/></returns>
+        public DescribeCrossRegionZoneResponse DescribeCrossRegionZoneSync(DescribeCrossRegionZoneRequest req)
+        {
+             JsonResponseModel<DescribeCrossRegionZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossRegionZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossRegionZoneResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1684,6 +1764,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyBackupName)用于修改备份名称。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
+        /// <returns><see cref="ModifyBackupNameResponse"/></returns>
+        public async Task<ModifyBackupNameResponse> ModifyBackupName(ModifyBackupNameRequest req)
+        {
+             JsonResponseModel<ModifyBackupNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyBackupName)用于修改备份名称。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
+        /// <returns><see cref="ModifyBackupNameResponse"/></returns>
+        public ModifyBackupNameResponse ModifyBackupNameSync(ModifyBackupNameRequest req)
+        {
+             JsonResponseModel<ModifyBackupNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

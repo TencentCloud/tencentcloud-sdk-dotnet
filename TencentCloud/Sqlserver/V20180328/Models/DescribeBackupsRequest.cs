@@ -54,6 +54,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 按照备份名称筛选，不填则不筛选此项
+        /// </summary>
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
+
+        /// <summary>
+        /// 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public long? Strategy{ get; set; }
+
+        /// <summary>
+        /// 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+        /// </summary>
+        [JsonProperty("BackupWay")]
+        public long? BackupWay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
+            this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
         }
     }
 }

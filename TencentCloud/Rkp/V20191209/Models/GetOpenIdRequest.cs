@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Rkp.V20191209.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PhoneVerificationRequest : AbstractModel
+    public class GetOpenIdRequest : AbstractModel
     {
         
         /// <summary>
-        /// 身份证号
+        /// dev临时token，通过sdk接口获取
         /// </summary>
-        [JsonProperty("IdCard")]
-        public string IdCard{ get; set; }
+        [JsonProperty("DeviceToken")]
+        public string DeviceToken{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// 业务ID
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("BusinessId")]
+        public long? BusinessId{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 业务侧账号体系下的用户ID
         /// </summary>
-        [JsonProperty("Phone")]
-        public string Phone{ get; set; }
+        [JsonProperty("BusinessUserId")]
+        public string BusinessUserId{ get; set; }
 
         /// <summary>
-        /// 有加密需求的用户，接入传入kms的CiphertextBlob
+        /// 平台：0-Android， 1-iOS， 2-web
         /// </summary>
-        [JsonProperty("CiphertextBlob")]
-        public string CiphertextBlob{ get; set; }
+        [JsonProperty("Platform")]
+        public long? Platform{ get; set; }
 
         /// <summary>
-        /// 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+        /// 选项
         /// </summary>
-        [JsonProperty("EncryptList")]
-        public string[] EncryptList{ get; set; }
+        [JsonProperty("Option")]
+        public string Option{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Phone", this.Phone);
-            this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
-            this.SetParamArraySimple(map, prefix + "EncryptList.", this.EncryptList);
+            this.SetParamSimple(map, prefix + "DeviceToken", this.DeviceToken);
+            this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
+            this.SetParamSimple(map, prefix + "BusinessUserId", this.BusinessUserId);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
+            this.SetParamSimple(map, prefix + "Option", this.Option);
         }
     }
 }

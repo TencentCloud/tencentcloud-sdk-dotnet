@@ -140,6 +140,13 @@ namespace TencentCloud.Ams.V20200608.Models
         public ImageSegments[] ImageSegments{ get; set; }
 
         /// <summary>
+        /// 音频识别总文本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioText")]
+        public string AudioText{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -166,6 +173,7 @@ namespace TencentCloud.Ams.V20200608.Models
             this.SetParamSimple(map, prefix + "TryInSeconds", this.TryInSeconds);
             this.SetParamArrayObj(map, prefix + "AudioSegments.", this.AudioSegments);
             this.SetParamArrayObj(map, prefix + "ImageSegments.", this.ImageSegments);
+            this.SetParamSimple(map, prefix + "AudioText", this.AudioText);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
