@@ -15,32 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AllocateIp6AddressesBandwidthRequest : AbstractModel
+    public class ModifyModuleIpDirectRequest : AbstractModel
     {
         
         /// <summary>
-        /// 需要开通公网访问能力的IPV6地址
+        /// 模块ID。
         /// </summary>
-        [JsonProperty("Ip6Addresses")]
-        public string[] Ip6Addresses{ get; set; }
+        [JsonProperty("ModuleId")]
+        public string ModuleId{ get; set; }
 
         /// <summary>
-        /// 带宽，单位Mbps。默认是1Mbps
+        /// 是否关闭IP直通。取值范围：
+        /// 1：表示关闭IP直通
+        /// 0：表示开通IP直通
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
-
-        /// <summary>
-        /// 网络计费模式。IPV6当前对带宽上移账户支持"TRAFFIC_POSTPAID_BY_HOUR"，对带宽非上移支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
-        /// </summary>
-        [JsonProperty("InternetChargeType")]
-        public string InternetChargeType{ get; set; }
+        [JsonProperty("CloseIpDirect")]
+        public bool? CloseIpDirect{ get; set; }
 
 
         /// <summary>
@@ -48,9 +44,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ip6Addresses.", this.Ip6Addresses);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
+            this.SetParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
         }
     }
 }

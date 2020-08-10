@@ -145,7 +145,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string InstallDependency{ get; set; }
 
         /// <summary>
-        /// 函数状态
+        /// 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -244,7 +244,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public CfsConfig CfsConfig{ get; set; }
 
         /// <summary>
-        /// 函数的计费状态
+        /// 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailableStatus")]
@@ -256,6 +256,12 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
+
+        /// <summary>
+        /// 函数初始化超时时间
+        /// </summary>
+        [JsonProperty("InitTimeout")]
+        public long? InitTimeout{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -307,6 +313,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
+            this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

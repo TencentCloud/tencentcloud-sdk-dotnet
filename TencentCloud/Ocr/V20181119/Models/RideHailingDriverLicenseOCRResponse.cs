@@ -31,7 +31,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 证号，对应网约车驾驶证字段：证号、从业资格证号、驾驶员证号、身份证号
+        /// 证号，对应网约车驾驶证字段：证号/从业资格证号/驾驶员证号/身份证号
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 有效期截止时间，对应网约车驾驶证字段：有效期至、营运期限止
+        /// 有效期截止时间，对应网约车驾驶证字段：有效期至/营运期限止
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// 初始发证日期，对应网约车驾驶证字段：初始领证日期、发证日期
+        /// 初始发证日期，对应网约车驾驶证字段：初始领证日期/发证日期
         /// </summary>
         [JsonProperty("ReleaseDate")]
         public string ReleaseDate{ get; set; }

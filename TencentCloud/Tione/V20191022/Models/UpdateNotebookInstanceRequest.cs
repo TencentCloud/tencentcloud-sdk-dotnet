@@ -97,7 +97,7 @@ namespace TencentCloud.Tione.V20191022.Models
         public bool? DisassociateAdditionalCodeRepositories{ get; set; }
 
         /// <summary>
-        /// 是否开启CLS日志服务，可取值Enabled/Disabled
+        /// 已弃用，请使用ClsConfig配置。是否开启CLS日志服务，可取值Enabled/Disabled
         /// </summary>
         [JsonProperty("ClsAccess")]
         public string ClsAccess{ get; set; }
@@ -117,7 +117,7 @@ namespace TencentCloud.Tione.V20191022.Models
         public StoppingCondition StoppingCondition{ get; set; }
 
         /// <summary>
-        /// 接入日志的配置
+        /// 接入日志的配置，默认使用免费日志服务。
         /// </summary>
         [JsonProperty("ClsConfig")]
         public ClsConfig ClsConfig{ get; set; }

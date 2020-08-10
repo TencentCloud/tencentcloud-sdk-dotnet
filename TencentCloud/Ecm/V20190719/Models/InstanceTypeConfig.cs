@@ -67,7 +67,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public InstanceFamilyTypeConfig InstanceFamilyTypeConfig{ get; set; }
 
         /// <summary>
-        /// 机型额外信息
+        /// 机型额外信息 是一个json字符串，如果存在则表示特殊机型，格式如下：{"dataDiskSize":3200,"systemDiskSize":60, "systemDiskSizeShow":"系统盘默认60G","dataDiskSizeShow":"本地NVMe SSD 硬盘3200 GB"}
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtInfo")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.119</VersionPrefix>
+    <VersionPrefix>3.0.120</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3795,6 +3795,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyModuleConfigResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleIpDirectRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleIpDirectResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNameRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNameResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNetworkRequest.cs" />
@@ -3958,6 +3960,8 @@
     <Compile Include="Faceid\V20180301\Models\BankCard4EVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCardVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCardVerificationResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\CheckIdCardInformationRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\CheckIdCardInformationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectAuthRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectAuthResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectDetail.cs" />
@@ -6165,6 +6169,7 @@
     <Compile Include="Ocr\V20181119\Models\BankCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\BizLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\BizLicenseOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\BizLicenseVerifyResult.cs" />
     <Compile Include="Ocr\V20181119\Models\BusInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\BusInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\BusInvoiceOCRResponse.cs" />
@@ -6307,6 +6312,10 @@
     <Compile Include="Ocr\V20181119\Models\VehicleRegCertInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VehicleRegCertOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VehicleRegCertOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VerifyBasicBizLicenseRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\VerifyBasicBizLicenseResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VerifyBizLicenseRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\VerifyBizLicenseResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VinOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VinOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\WaybillOCRRequest.cs" />

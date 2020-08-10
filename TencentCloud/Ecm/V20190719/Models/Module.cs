@@ -81,6 +81,19 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DefaultBandwidth")]
         public long? DefaultBandwidth{ get; set; }
 
+        /// <summary>
+        /// 标签集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
+        /// <summary>
+        /// 是否关闭IP直通
+        /// </summary>
+        [JsonProperty("CloseIpDirect")]
+        public long? CloseIpDirect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +109,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "DefaultImage.", this.DefaultImage);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "DefaultBandwidth", this.DefaultBandwidth);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
         }
     }
 }

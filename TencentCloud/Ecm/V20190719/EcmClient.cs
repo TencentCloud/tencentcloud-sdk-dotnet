@@ -2033,7 +2033,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// ModifyModuleImage
+        /// 修改模块的默认镜像
         /// </summary>
         /// <param name="req"><see cref="ModifyModuleImageRequest"/></param>
         /// <returns><see cref="ModifyModuleImageResponse"/></returns>
@@ -2053,7 +2053,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// ModifyModuleImage
+        /// 修改模块的默认镜像
         /// </summary>
         /// <param name="req"><see cref="ModifyModuleImageRequest"/></param>
         /// <returns><see cref="ModifyModuleImageResponse"/></returns>
@@ -2064,6 +2064,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ModifyModuleImage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模块IP直通。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleIpDirectRequest"/></param>
+        /// <returns><see cref="ModifyModuleIpDirectResponse"/></returns>
+        public async Task<ModifyModuleIpDirectResponse> ModifyModuleIpDirect(ModifyModuleIpDirectRequest req)
+        {
+             JsonResponseModel<ModifyModuleIpDirectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyModuleIpDirect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleIpDirectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模块IP直通。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleIpDirectRequest"/></param>
+        /// <returns><see cref="ModifyModuleIpDirectResponse"/></returns>
+        public ModifyModuleIpDirectResponse ModifyModuleIpDirectSync(ModifyModuleIpDirectRequest req)
+        {
+             JsonResponseModel<ModifyModuleIpDirectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyModuleIpDirect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleIpDirectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -60,6 +60,20 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DefaultDataDiskSize")]
         public long? DefaultDataDiskSize{ get; set; }
 
+        /// <summary>
+        /// 是否关闭IP直通。取值范围：
+        /// 1：表示关闭IP直通
+        /// 0：表示开通IP直通
+        /// </summary>
+        [JsonProperty("CloseIpDirect")]
+        public bool? CloseIpDirect{ get; set; }
+
+        /// <summary>
+        /// 标签列表。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +86,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "DefaultSystemDiskSize", this.DefaultSystemDiskSize);
             this.SetParamSimple(map, prefix + "DefaultDataDiskSize", this.DefaultDataDiskSize);
+            this.SetParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

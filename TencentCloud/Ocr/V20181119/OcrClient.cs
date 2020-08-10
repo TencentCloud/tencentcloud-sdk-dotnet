@@ -2241,9 +2241,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口支持网约车驾驶证重要字段的自动定位与识别，重点字段的识别准确度达到99%以上。
-        /// 
-        /// 网约车驾驶证：包括姓名、证号、起始日期、截止日期、发证日期。
+        /// 本接口支持网约车驾驶证关键字段的识别，包括姓名、证号、起始日期、截止日期、发证日期。
         /// </summary>
         /// <param name="req"><see cref="RideHailingDriverLicenseOCRRequest"/></param>
         /// <returns><see cref="RideHailingDriverLicenseOCRResponse"/></returns>
@@ -2263,9 +2261,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// 本接口支持网约车驾驶证重要字段的自动定位与识别，重点字段的识别准确度达到99%以上。
-        /// 
-        /// 网约车驾驶证：包括姓名、证号、起始日期、截止日期、发证日期。
+        /// 本接口支持网约车驾驶证关键字段的识别，包括姓名、证号、起始日期、截止日期、发证日期。
         /// </summary>
         /// <param name="req"><see cref="RideHailingDriverLicenseOCRRequest"/></param>
         /// <returns><see cref="RideHailingDriverLicenseOCRResponse"/></returns>
@@ -2728,6 +2724,88 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "VehicleRegCertOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<VehicleRegCertOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持营业执照信息的识别与准确性核验。您可以通过输入营业执照关键字段或传入营业执照图片提供所需的验证信息，接口返回真实的企业工商照面信息及核验结果，包括统一社会信用代码、经营期限、法人姓名、经营状态、经营业务范围、状态信息、原注册号、要核验的工商注册号、工商注册号、要核验的企业名称、企业名称、要核验的注册住址、注册住址、核验结果、注册资本共16个基础字段。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyBasicBizLicenseRequest"/></param>
+        /// <returns><see cref="VerifyBasicBizLicenseResponse"/></returns>
+        public async Task<VerifyBasicBizLicenseResponse> VerifyBasicBizLicense(VerifyBasicBizLicenseRequest req)
+        {
+             JsonResponseModel<VerifyBasicBizLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyBasicBizLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyBasicBizLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持营业执照信息的识别与准确性核验。您可以通过输入营业执照关键字段或传入营业执照图片提供所需的验证信息，接口返回真实的企业工商照面信息及核验结果，包括统一社会信用代码、经营期限、法人姓名、经营状态、经营业务范围、状态信息、原注册号、要核验的工商注册号、工商注册号、要核验的企业名称、企业名称、要核验的注册住址、注册住址、核验结果、注册资本共16个基础字段。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyBasicBizLicenseRequest"/></param>
+        /// <returns><see cref="VerifyBasicBizLicenseResponse"/></returns>
+        public VerifyBasicBizLicenseResponse VerifyBasicBizLicenseSync(VerifyBasicBizLicenseRequest req)
+        {
+             JsonResponseModel<VerifyBasicBizLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyBasicBizLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyBasicBizLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持营业执照信息的识别与准确性核验，返回的营业执照信息比营业执照识别及核验（基础版）接口更详细。
+        /// 您可以通过输入营业执照关键字段或传入营业执照图片提供所需的验证信息，接口返回真实的企业工商照面信息及核验结果，包括统一社会信用代码、组织机构代码、经营期限、法人姓名、经营状态、经营业务范围及方式、注册资金、注册币种、登记机关、开业日期、企业（机构）类型、注销日期、吊销日期、许可经营项目、一般经营项目、核准时间、省、地级市、区/县、住所所在行政区划代码、行业门类代码、行业门类名称、国民经济行业代码、国民经济行业名称、经营（业务）范围、要核验的工商注册号、工商注册号、要核验的企业名称、企业名称、要核验的注册住址、注册住址、核验结果共33个详细字段。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyBizLicenseRequest"/></param>
+        /// <returns><see cref="VerifyBizLicenseResponse"/></returns>
+        public async Task<VerifyBizLicenseResponse> VerifyBizLicense(VerifyBizLicenseRequest req)
+        {
+             JsonResponseModel<VerifyBizLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyBizLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyBizLicenseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持营业执照信息的识别与准确性核验，返回的营业执照信息比营业执照识别及核验（基础版）接口更详细。
+        /// 您可以通过输入营业执照关键字段或传入营业执照图片提供所需的验证信息，接口返回真实的企业工商照面信息及核验结果，包括统一社会信用代码、组织机构代码、经营期限、法人姓名、经营状态、经营业务范围及方式、注册资金、注册币种、登记机关、开业日期、企业（机构）类型、注销日期、吊销日期、许可经营项目、一般经营项目、核准时间、省、地级市、区/县、住所所在行政区划代码、行业门类代码、行业门类名称、国民经济行业代码、国民经济行业名称、经营（业务）范围、要核验的工商注册号、工商注册号、要核验的企业名称、企业名称、要核验的注册住址、注册住址、核验结果共33个详细字段。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyBizLicenseRequest"/></param>
+        /// <returns><see cref="VerifyBizLicenseResponse"/></returns>
+        public VerifyBizLicenseResponse VerifyBizLicenseSync(VerifyBizLicenseRequest req)
+        {
+             JsonResponseModel<VerifyBizLicenseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyBizLicense");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyBizLicenseResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

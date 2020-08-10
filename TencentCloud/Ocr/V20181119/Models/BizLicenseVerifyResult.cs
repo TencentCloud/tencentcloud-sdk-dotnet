@@ -15,32 +15,37 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AllocateIp6AddressesBandwidthRequest : AbstractModel
+    public class BizLicenseVerifyResult : AbstractModel
     {
         
         /// <summary>
-        /// 需要开通公网访问能力的IPV6地址
+        /// “0“：一致
+        /// “-1”：此号未查询到结果
         /// </summary>
-        [JsonProperty("Ip6Addresses")]
-        public string[] Ip6Addresses{ get; set; }
+        [JsonProperty("RegNum")]
+        public string RegNum{ get; set; }
 
         /// <summary>
-        /// 带宽，单位Mbps。默认是1Mbps
+        /// “0“：一致
+        /// “-1”：不一致
+        /// “”：不验真
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 网络计费模式。IPV6当前对带宽上移账户支持"TRAFFIC_POSTPAID_BY_HOUR"，对带宽非上移支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+        /// “0“：一致
+        /// “-1”：不一致
+        /// “”：不验真
         /// </summary>
-        [JsonProperty("InternetChargeType")]
-        public string InternetChargeType{ get; set; }
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
 
 
         /// <summary>
@@ -48,9 +53,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ip6Addresses.", this.Ip6Addresses);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamSimple(map, prefix + "RegNum", this.RegNum);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
         }
     }
 }

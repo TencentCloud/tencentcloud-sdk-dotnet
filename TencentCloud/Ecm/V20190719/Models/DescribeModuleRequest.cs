@@ -30,7 +30,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// module-id - string - 是否必填：否 - （过滤条件）按照模块ID过滤。
         /// image-id      String      是否必填：否      （过滤条件）按照镜像ID过滤。
         /// instance-family      String      是否必填：否      （过滤条件）按照机型family过滤。
-        /// 
+        /// security-group-id - string 是否必填：否 - （过滤条件）按照模块绑定的安全组id过滤。
         /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
         /// </summary>
         [JsonProperty("Filters")]

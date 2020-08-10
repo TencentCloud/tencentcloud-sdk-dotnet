@@ -21,20 +21,14 @@ namespace TencentCloud.Ecm.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TagSpecification : AbstractModel
+    public class ModifyModuleIpDirectResponse : AbstractModel
     {
         
         /// <summary>
-        /// 资源类型，目前仅支持"instance"、"module"
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ResourceType")]
-        public string ResourceType{ get; set; }
-
-        /// <summary>
-        /// 标签列表
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -138,6 +138,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("CfsConfig")]
         public CfsConfig CfsConfig{ get; set; }
 
+        /// <summary>
+        /// 函数初始化超时时间
+        /// </summary>
+        [JsonProperty("InitTimeout")]
+        public long? InitTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+            this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         }
     }
 }

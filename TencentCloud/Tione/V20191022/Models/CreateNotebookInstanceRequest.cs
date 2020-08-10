@@ -90,6 +90,7 @@ namespace TencentCloud.Tione.V20191022.Models
         public string[] AdditionalCodeRepositories{ get; set; }
 
         /// <summary>
+        /// 已弃用，请使用ClsConfig配置。
         /// 是否开启CLS日志服务，可取值Enabled/Disabled，默认为Disabled
         /// 开启后，Notebook运行的日志会收集到CLS中，CLS会产生费用，请根据需要选择
         /// </summary>
@@ -112,7 +113,7 @@ namespace TencentCloud.Tione.V20191022.Models
         public string AutoStopping{ get; set; }
 
         /// <summary>
-        /// 接入日志的配置
+        /// 接入日志的配置，默认接入免费日志
         /// </summary>
         [JsonProperty("ClsConfig")]
         public ClsConfig ClsConfig{ get; set; }
