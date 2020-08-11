@@ -40,6 +40,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Cos Bucket名称。
+        /// 注：CosBucket参数值不能包含-[appid] 部分。
         /// </summary>
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }

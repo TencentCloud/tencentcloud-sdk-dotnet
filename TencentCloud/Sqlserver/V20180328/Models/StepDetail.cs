@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeployGroupRequest : AbstractModel
+    public class StepDetail : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 具体步骤返回信息
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("Msg")]
+        public string Msg{ get; set; }
 
         /// <summary>
-        /// 程序包ID
+        /// 当前步骤状态，0成功，-2未开始
         /// </summary>
-        [JsonProperty("PkgId")]
-        public string PkgId{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// 部署组启动参数
+        /// 步骤名称
         /// </summary>
-        [JsonProperty("StartupParameters")]
-        public string StartupParameters{ get; set; }
-
-        /// <summary>
-        /// 部署应用描述信息
-        /// </summary>
-        [JsonProperty("DeployDesc")]
-        public string DeployDesc{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
-            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
-            this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "Msg", this.Msg);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

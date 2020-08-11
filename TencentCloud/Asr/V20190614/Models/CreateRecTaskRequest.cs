@@ -76,7 +76,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// 数据长度，当 SourceType 值为1时必须填写，为0可不写（此数据长度为数据未进行base64编码时的数据长度）。
+        /// 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
         /// </summary>
         [JsonProperty("DataLen")]
         public ulong? DataLen{ get; set; }
@@ -124,6 +124,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("SpeakerNumber")]
         public long? SpeakerNumber{ get; set; }
 
+        /// <summary>
+        /// 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+        /// </summary>
+        [JsonProperty("FilterPunc")]
+        public long? FilterPunc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +151,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "SpeakerDiarization", this.SpeakerDiarization);
             this.SetParamSimple(map, prefix + "SpeakerNumber", this.SpeakerNumber);
+            this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
         }
     }
 }

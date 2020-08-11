@@ -573,6 +573,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 删除指定镜像
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRequest"/></param>
+        /// <returns><see cref="DeleteImageResponse"/></returns>
+        public async Task<DeleteImageResponse> DeleteImage(DeleteImageRequest req)
+        {
+             JsonResponseModel<DeleteImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定镜像
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageRequest"/></param>
+        /// <returns><see cref="DeleteImageResponse"/></returns>
+        public DeleteImageResponse DeleteImageSync(DeleteImageRequest req)
+        {
+             JsonResponseModel<DeleteImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于删除个人版全局镜像版本自动清理策略
         /// </summary>
         /// <param name="req"><see cref="DeleteImageLifecycleGlobalPersonalRequest"/></param>

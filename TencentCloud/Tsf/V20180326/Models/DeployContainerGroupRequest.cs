@@ -168,6 +168,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MaxUnavailable")]
         public string MaxUnavailable{ get; set; }
 
+        /// <summary>
+        /// 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
+        /// </summary>
+        [JsonProperty("HealthCheckSettings")]
+        public HealthCheckSettings HealthCheckSettings{ get; set; }
+
+        /// <summary>
+        /// 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
+        /// </summary>
+        [JsonProperty("Envs")]
+        public Env[] Envs{ get; set; }
+
+        /// <summary>
+        /// 容器部署组的网络设置。
+        /// </summary>
+        [JsonProperty("ServiceSetting")]
+        public ServiceSetting ServiceSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +216,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "IstioMemLimit", this.IstioMemLimit);
             this.SetParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
             this.SetParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
+            this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+            this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
+            this.SetParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.120</VersionPrefix>
+    <VersionPrefix>3.0.121</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6273,6 +6273,8 @@
     <Compile Include="Ocr\V20181119\Models\ResidenceBookletOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RideHailingDriverLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\RideHailingDriverLicenseOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\RideHailingTransportLicenseOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\RideHailingTransportLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\SealOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\SealOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\ShipInvoiceInfo.cs" />
@@ -6301,9 +6303,12 @@
     <Compile Include="Ocr\V20181119\Models\TollInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoice.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceItem.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoiceVerifyRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoiceVerifyResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceOCRResponse.cs" />
@@ -6876,6 +6881,8 @@
     <Compile Include="Sqlserver\V20180328\Models\Backup.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CompleteMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CompleteMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateAccountRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateAccountResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateBackupRequest.cs" />
@@ -6930,6 +6937,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMaintenanceSpanRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMaintenanceSpanResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDatabasesRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDatabasesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDetailRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDetailResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationsRequest.cs" />
@@ -7000,6 +7009,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyReadOnlyGroupDetailsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyReadOnlyGroupDetailsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\PublishSubscribe.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\QueryMigrationCheckProcessRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\QueryMigrationCheckProcessResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ReadOnlyGroup.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ReadOnlyInstance.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ReadOnlyInstanceWeightPair.cs" />
@@ -7024,6 +7035,11 @@
     <Compile Include="Sqlserver\V20180328\Models\SecurityGroupPolicy.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SpecInfo.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StartMigrationCheckRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StartMigrationCheckResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StepDetail.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StopMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StopMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\TerminateDBInstanceRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\TerminateDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\UpgradeDBInstanceRequest.cs" />
@@ -7614,6 +7630,8 @@
     <Compile Include="Tcr\V20190924\Models\DeleteImageLifecyclePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImagePersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImagePersonalResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteImageRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteImageResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespacePersonalRequest.cs" />
@@ -8369,6 +8387,8 @@
     <Compile Include="Tsf\V20180326\Models\ExpandGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPod.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPodResult.cs" />
+    <Compile Include="Tsf\V20180326\Models\HealthCheckSetting.cs" />
+    <Compile Include="Tsf\V20180326\Models\HealthCheckSettings.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTag.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTagsResult.cs" />
     <Compile Include="Tsf\V20180326\Models\Instance.cs" />
@@ -8417,6 +8437,7 @@
     <Compile Include="Tsf\V20180326\Models\RollbackConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroupPage.cs" />
+    <Compile Include="Tsf\V20180326\Models\ServiceSetting.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkInstancesRequest.cs" />

@@ -15,38 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeployGroupRequest : AbstractModel
+    public class RideHailingTransportLicenseOCRRequest : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+        /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("ImageBase64")]
+        public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 程序包ID
+        /// 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
+        /// 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
         /// </summary>
-        [JsonProperty("PkgId")]
-        public string PkgId{ get; set; }
-
-        /// <summary>
-        /// 部署组启动参数
-        /// </summary>
-        [JsonProperty("StartupParameters")]
-        public string StartupParameters{ get; set; }
-
-        /// <summary>
-        /// 部署应用描述信息
-        /// </summary>
-        [JsonProperty("DeployDesc")]
-        public string DeployDesc{ get; set; }
+        [JsonProperty("ImageUrl")]
+        public string ImageUrl{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
-            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
-            this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         }
     }
 }

@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeployGroupRequest : AbstractModel
+    public class QueryMigrationCheckProcessRequest : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 迁移任务ID
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
-
-        /// <summary>
-        /// 程序包ID
-        /// </summary>
-        [JsonProperty("PkgId")]
-        public string PkgId{ get; set; }
-
-        /// <summary>
-        /// 部署组启动参数
-        /// </summary>
-        [JsonProperty("StartupParameters")]
-        public string StartupParameters{ get; set; }
-
-        /// <summary>
-        /// 部署应用描述信息
-        /// </summary>
-        [JsonProperty("DeployDesc")]
-        public string DeployDesc{ get; set; }
+        [JsonProperty("MigrateId")]
+        public long? MigrateId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
-            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
-            this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "MigrateId", this.MigrateId);
         }
     }
 }

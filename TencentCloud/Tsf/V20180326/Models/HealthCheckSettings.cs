@@ -21,32 +21,22 @@ namespace TencentCloud.Tsf.V20180326.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeployGroupRequest : AbstractModel
+    public class HealthCheckSettings : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 存活健康检查
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("LivenessProbe")]
+        public HealthCheckSetting LivenessProbe{ get; set; }
 
         /// <summary>
-        /// 程序包ID
+        /// 就绪健康检查
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PkgId")]
-        public string PkgId{ get; set; }
-
-        /// <summary>
-        /// 部署组启动参数
-        /// </summary>
-        [JsonProperty("StartupParameters")]
-        public string StartupParameters{ get; set; }
-
-        /// <summary>
-        /// 部署应用描述信息
-        /// </summary>
-        [JsonProperty("DeployDesc")]
-        public string DeployDesc{ get; set; }
+        [JsonProperty("ReadinessProbe")]
+        public HealthCheckSetting ReadinessProbe{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
-            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
-            this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamObj(map, prefix + "LivenessProbe.", this.LivenessProbe);
+            this.SetParamObj(map, prefix + "ReadinessProbe.", this.ReadinessProbe);
         }
     }
 }

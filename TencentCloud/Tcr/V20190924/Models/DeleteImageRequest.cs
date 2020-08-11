@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Tcr.V20190924.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeployGroupRequest : AbstractModel
+    public class DeleteImageRequest : AbstractModel
     {
         
         /// <summary>
-        /// 部署组ID
+        /// 实例Id
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 程序包ID
+        /// 镜像仓库名称
         /// </summary>
-        [JsonProperty("PkgId")]
-        public string PkgId{ get; set; }
+        [JsonProperty("RepositoryName")]
+        public string RepositoryName{ get; set; }
 
         /// <summary>
-        /// 部署组启动参数
+        /// 镜像版本
         /// </summary>
-        [JsonProperty("StartupParameters")]
-        public string StartupParameters{ get; set; }
+        [JsonProperty("ImageVersion")]
+        public string ImageVersion{ get; set; }
 
         /// <summary>
-        /// 部署应用描述信息
+        /// 命名空间名称
         /// </summary>
-        [JsonProperty("DeployDesc")]
-        public string DeployDesc{ get; set; }
+        [JsonProperty("NamespaceName")]
+        public string NamespaceName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
-            this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
-            this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
+            this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+            this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         }
     }
 }
