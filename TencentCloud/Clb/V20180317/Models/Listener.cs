@@ -119,6 +119,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetGroup")]
         public BasicTargetGroupInfo TargetGroup{ get; set; }
 
+        /// <summary>
+        /// 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionType")]
+        public string SessionType{ get; set; }
+
+        /// <summary>
+        /// 是否开启长连接（本参数仅对于HTTP/HTTPS监听器有意义）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public long? KeepaliveEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +153,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
+            this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         }
     }
 }

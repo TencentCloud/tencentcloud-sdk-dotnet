@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Iai.V20200303.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MLIDPassportOCRRequest : AbstractModel
+    public class Hair : AbstractModel
     {
         
         /// <summary>
-        /// 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+        /// 头发长度信息。
+        /// AttributeItem对应的Type为 —— 0：光头，1：短发，2：中发，3：长发，4：绑发。
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
+        [JsonProperty("Length")]
+        public AttributeItem Length{ get; set; }
 
         /// <summary>
-        /// 是否返回图片，默认false
+        /// 刘海信息。
+        /// AttributeItem对应的Type为 —— 0：无刘海，1：有刘海。
         /// </summary>
-        [JsonProperty("RetImage")]
-        public bool? RetImage{ get; set; }
+        [JsonProperty("Bang")]
+        public AttributeItem Bang{ get; set; }
+
+        /// <summary>
+        /// 头发颜色信息。
+        /// AttributeItem对应的Type为 —— 0：黑色，1：金色，2：棕色，3：灰白色。
+        /// </summary>
+        [JsonProperty("Color")]
+        public AttributeItem Color{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "RetImage", this.RetImage);
+            this.SetParamObj(map, prefix + "Length.", this.Length);
+            this.SetParamObj(map, prefix + "Bang.", this.Bang);
+            this.SetParamObj(map, prefix + "Color.", this.Color);
         }
     }
 }

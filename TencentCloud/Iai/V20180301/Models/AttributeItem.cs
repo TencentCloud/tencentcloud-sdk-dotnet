@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Iai.V20180301.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MLIDPassportOCRRequest : AbstractModel
+    public class AttributeItem : AbstractModel
     {
         
         /// <summary>
-        /// 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+        /// 属性值
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
 
         /// <summary>
-        /// 是否返回图片，默认false
+        /// Type识别概率值，【0,1】,代表判断正确的概率。
         /// </summary>
-        [JsonProperty("RetImage")]
-        public bool? RetImage{ get; set; }
+        [JsonProperty("Probability")]
+        public float? Probability{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "RetImage", this.RetImage);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Probability", this.Probability);
         }
     }
 }

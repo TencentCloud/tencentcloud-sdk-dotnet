@@ -85,6 +85,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
+        /// <summary>
+        /// 会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+        /// </summary>
+        [JsonProperty("SessionType")]
+        public string SessionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
+            this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
         }
     }
 }

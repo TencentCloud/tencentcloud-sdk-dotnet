@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Ame.V20190916.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MLIDPassportOCRRequest : AbstractModel
+    public class DescribePackageItemsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+        /// 歌曲信息数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
+        [JsonProperty("PackageItems")]
+        public PackageItem[] PackageItems{ get; set; }
 
         /// <summary>
-        /// 是否返回图片，默认false
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RetImage")]
-        public bool? RetImage{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "RetImage", this.RetImage);
+            this.SetParamArrayObj(map, prefix + "PackageItems.", this.PackageItems);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

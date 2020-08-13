@@ -433,6 +433,48 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 查询指定域名的区域、运营商明细数据
+        /// 注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDistrictIspDataRequest"/></param>
+        /// <returns><see cref="DescribeDistrictIspDataResponse"/></returns>
+        public async Task<DescribeDistrictIspDataResponse> DescribeDistrictIspData(DescribeDistrictIspDataRequest req)
+        {
+             JsonResponseModel<DescribeDistrictIspDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDistrictIspData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDistrictIspDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定域名的区域、运营商明细数据
+        /// 注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDistrictIspDataRequest"/></param>
+        /// <returns><see cref="DescribeDistrictIspDataResponse"/></returns>
+        public DescribeDistrictIspDataResponse DescribeDistrictIspDataSync(DescribeDistrictIspDataRequest req)
+        {
+             JsonResponseModel<DescribeDistrictIspDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDistrictIspData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDistrictIspDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainsRequest"/></param>

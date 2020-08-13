@@ -153,6 +153,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("RefReturnDeals")]
         public string RefReturnDeals{ get; set; }
 
+        /// <summary>
+        /// 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +186,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
             this.SetParamSimple(map, prefix + "Formula", this.Formula);
             this.SetParamSimple(map, prefix + "RefReturnDeals", this.RefReturnDeals);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

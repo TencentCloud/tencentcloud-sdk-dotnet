@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 环境ID
+        /// 环境ID，需要系统自动创建环境时，此字段不传
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
@@ -51,12 +51,6 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string FreeQuota{ get; set; }
 
         /// <summary>
-        /// 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-        /// </summary>
-        [JsonProperty("Alias")]
-        public string Alias{ get; set; }
-
-        /// <summary>
         /// 环境创建来源，取值：
         /// <li>miniapp</li>
         /// <li>qcloud</li>
@@ -67,8 +61,14 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EnvSource{ get; set; }
 
         /// <summary>
+        /// 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
+        /// <summary>
         /// 如果envsource为miniapp, channel可以为ide或api;
-        /// 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud
+        /// 如果envsource为qcloud, channel可以为qc_console,cocos, qq, cloudgame,dcloud,serverless_framework
         /// 和 EnvSource 参数同时传，或者同时不传；EnvId 为空时必传。
         /// </summary>
         [JsonProperty("Channel")]
@@ -90,8 +90,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "WxAppId", this.WxAppId);
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
-            this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "EnvSource", this.EnvSource);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
         }

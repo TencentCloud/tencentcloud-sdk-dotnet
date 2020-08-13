@@ -21,42 +21,50 @@ namespace TencentCloud.Ame.V20190916.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Item : AbstractModel
+    public class PackageItem : AbstractModel
     {
         
         /// <summary>
-        /// Song ID
+        /// 订单id
+        /// </summary>
+        [JsonProperty("OrderId")]
+        public string OrderId{ get; set; }
+
+        /// <summary>
+        /// 歌曲名
+        /// </summary>
+        [JsonProperty("TrackName")]
+        public string TrackName{ get; set; }
+
+        /// <summary>
+        /// 歌曲ID
         /// </summary>
         [JsonProperty("ItemID")]
         public string ItemID{ get; set; }
 
         /// <summary>
-        /// Song info
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 专辑图片
         /// </summary>
-        [JsonProperty("DataInfo")]
-        public DataInfo DataInfo{ get; set; }
+        [JsonProperty("Img")]
+        public string Img{ get; set; }
 
         /// <summary>
-        /// 专辑信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 歌手名
         /// </summary>
-        [JsonProperty("Album")]
-        public Album Album{ get; set; }
+        [JsonProperty("ArtistName")]
+        public string ArtistName{ get; set; }
 
         /// <summary>
-        /// 多个歌手集合
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 歌曲时长
         /// </summary>
-        [JsonProperty("Artists")]
-        public Artist[] Artists{ get; set; }
+        [JsonProperty("Duration")]
+        public string Duration{ get; set; }
 
         /// <summary>
-        /// 歌曲状态，1:添加进购物车；2:核销进曲库包
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 授权区域，global: 全球 CN: 中国
         /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("AuthorizedArea")]
+        public string AuthorizedArea{ get; set; }
 
 
         /// <summary>
@@ -64,11 +72,13 @@ namespace TencentCloud.Ame.V20190916.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
+            this.SetParamSimple(map, prefix + "TrackName", this.TrackName);
             this.SetParamSimple(map, prefix + "ItemID", this.ItemID);
-            this.SetParamObj(map, prefix + "DataInfo.", this.DataInfo);
-            this.SetParamObj(map, prefix + "Album.", this.Album);
-            this.SetParamArrayObj(map, prefix + "Artists.", this.Artists);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Img", this.Img);
+            this.SetParamSimple(map, prefix + "ArtistName", this.ArtistName);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamSimple(map, prefix + "AuthorizedArea", this.AuthorizedArea);
         }
     }
 }

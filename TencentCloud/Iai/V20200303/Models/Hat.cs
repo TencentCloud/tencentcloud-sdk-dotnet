@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Iai.V20200303.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MLIDPassportOCRRequest : AbstractModel
+    public class Hat : AbstractModel
     {
         
         /// <summary>
-        /// 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+        /// 帽子佩戴状态信息。
+        /// AttributeItem对应的Type为 —— 0：不戴帽子，1：普通帽子，2：头盔，3：保安帽。
         /// </summary>
-        [JsonProperty("ImageBase64")]
-        public string ImageBase64{ get; set; }
+        [JsonProperty("Style")]
+        public AttributeItem Style{ get; set; }
 
         /// <summary>
-        /// 是否返回图片，默认false
+        /// 帽子颜色。
+        /// AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系子。
         /// </summary>
-        [JsonProperty("RetImage")]
-        public bool? RetImage{ get; set; }
+        [JsonProperty("Color")]
+        public AttributeItem Color{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-            this.SetParamSimple(map, prefix + "RetImage", this.RetImage);
+            this.SetParamObj(map, prefix + "Style.", this.Style);
+            this.SetParamObj(map, prefix + "Color.", this.Color);
         }
     }
 }

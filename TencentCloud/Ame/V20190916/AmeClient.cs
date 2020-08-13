@@ -213,6 +213,86 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 查询曲库包已核验歌曲列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageItemsRequest"/></param>
+        /// <returns><see cref="DescribePackageItemsResponse"/></returns>
+        public async Task<DescribePackageItemsResponse> DescribePackageItems(DescribePackageItemsRequest req)
+        {
+             JsonResponseModel<DescribePackageItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePackageItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackageItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询曲库包已核验歌曲列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackageItemsRequest"/></param>
+        /// <returns><see cref="DescribePackageItemsResponse"/></returns>
+        public DescribePackageItemsResponse DescribePackageItemsSync(DescribePackageItemsRequest req)
+        {
+             JsonResponseModel<DescribePackageItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePackageItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackageItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询已购曲库包列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackagesRequest"/></param>
+        /// <returns><see cref="DescribePackagesResponse"/></returns>
+        public async Task<DescribePackagesResponse> DescribePackages(DescribePackagesRequest req)
+        {
+             JsonResponseModel<DescribePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询已购曲库包列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackagesRequest"/></param>
+        /// <returns><see cref="DescribePackagesResponse"/></returns>
+        public DescribePackagesResponse DescribePackagesSync(DescribePackagesRequest req)
+        {
+             JsonResponseModel<DescribePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取素材库列表时使用
         /// </summary>
         /// <param name="req"><see cref="DescribeStationsRequest"/></param>

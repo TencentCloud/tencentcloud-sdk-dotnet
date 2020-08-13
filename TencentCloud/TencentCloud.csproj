@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.121</VersionPrefix>
+    <VersionPrefix>3.0.122</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -95,15 +95,22 @@
     <Compile Include="Ame\V20190916\Models\DescribeLyricResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeMusicRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeMusicResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribePackageItemsRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribePackageItemsResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribePackagesRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribePackagesResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeStationsRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeStationsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\ImagePath.cs" />
     <Compile Include="Ame\V20190916\Models\Item.cs" />
     <Compile Include="Ame\V20190916\Models\Lyric.cs" />
     <Compile Include="Ame\V20190916\Models\Music.cs" />
+    <Compile Include="Ame\V20190916\Models\Package.cs" />
+    <Compile Include="Ame\V20190916\Models\PackageItem.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataRequest.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataResponse.cs" />
     <Compile Include="Ame\V20190916\Models\Station.cs" />
+    <Compile Include="Ame\V20190916\Models\UseRange.cs" />
     <Compile Include="Ams\V20200608\AmsClient.cs" />
     <Compile Include="Ams\V20200608\Models\AudioResult.cs" />
     <Compile Include="Ams\V20200608\Models\AudioResultDetailLanguageResult.cs" />
@@ -1815,6 +1822,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribeCdnIpResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeDistrictIspDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeDistrictIspDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsRequest.cs" />
@@ -1850,6 +1859,7 @@
     <Compile Include="Cdn\V20180606\Models\DisableCachesResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableClsLogTopicRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableClsLogTopicResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DistrictIspInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainAreaConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainLog.cs" />
@@ -4335,8 +4345,11 @@
     <Compile Include="Hcm\V20181106\Models\ItemCoord.cs" />
     <Compile Include="Hcm\V20181106\Models\ItemInfo.cs" />
     <Compile Include="Iai\V20200303\IaiClient.cs" />
+    <Compile Include="Iai\V20200303\Models\AnalyzeDenseLandmarksRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\AnalyzeDenseLandmarksResponse.cs" />
     <Compile Include="Iai\V20200303\Models\AnalyzeFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\AnalyzeFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\AttributeItem.cs" />
     <Compile Include="Iai\V20200303\Models\Candidate.cs" />
     <Compile Include="Iai\V20200303\Models\CheckSimilarPersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\CheckSimilarPersonResponse.cs" />
@@ -4358,13 +4371,20 @@
     <Compile Include="Iai\V20200303\Models\DeletePersonFromGroupResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DeletePersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DeletePersonResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DenseFaceShape.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectFaceAttributesRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectFaceAttributesResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
     <Compile Include="Iai\V20200303\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\Eye.cs" />
+    <Compile Include="Iai\V20200303\Models\Eyebrow.cs" />
     <Compile Include="Iai\V20200303\Models\FaceAttributesInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceDetailAttributesInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\FaceDetailInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceHairAttributesInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceQualityCompleteness.cs" />
@@ -4394,6 +4414,9 @@
     <Compile Include="Iai\V20200303\Models\GroupCandidate.cs" />
     <Compile Include="Iai\V20200303\Models\GroupExDescriptionInfo.cs" />
     <Compile Include="Iai\V20200303\Models\GroupInfo.cs" />
+    <Compile Include="Iai\V20200303\Models\Hair.cs" />
+    <Compile Include="Iai\V20200303\Models\Hat.cs" />
+    <Compile Include="Iai\V20200303\Models\HeadPose.cs" />
     <Compile Include="Iai\V20200303\Models\JobIdInfo.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupResponse.cs" />
@@ -4401,6 +4424,7 @@
     <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoResponse.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonGroupInfoResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\Mouth.cs" />
     <Compile Include="Iai\V20200303\Models\PersonExDescriptionInfo.cs" />
     <Compile Include="Iai\V20200303\Models\PersonGroupInfo.cs" />
     <Compile Include="Iai\V20200303\Models\PersonInfo.cs" />
@@ -4425,8 +4449,11 @@
     <Compile Include="Iai\V20200303\Models\VerifyPersonRequest.cs" />
     <Compile Include="Iai\V20200303\Models\VerifyPersonResponse.cs" />
     <Compile Include="Iai\V20180301\IaiClient.cs" />
+    <Compile Include="Iai\V20180301\Models\AnalyzeDenseLandmarksRequest.cs" />
+    <Compile Include="Iai\V20180301\Models\AnalyzeDenseLandmarksResponse.cs" />
     <Compile Include="Iai\V20180301\Models\AnalyzeFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\AnalyzeFaceResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\AttributeItem.cs" />
     <Compile Include="Iai\V20180301\Models\Candidate.cs" />
     <Compile Include="Iai\V20180301\Models\CheckSimilarPersonRequest.cs" />
     <Compile Include="Iai\V20180301\Models\CheckSimilarPersonResponse.cs" />
@@ -4448,13 +4475,20 @@
     <Compile Include="Iai\V20180301\Models\DeletePersonFromGroupResponse.cs" />
     <Compile Include="Iai\V20180301\Models\DeletePersonRequest.cs" />
     <Compile Include="Iai\V20180301\Models\DeletePersonResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\DenseFaceShape.cs" />
+    <Compile Include="Iai\V20180301\Models\DetectFaceAttributesRequest.cs" />
+    <Compile Include="Iai\V20180301\Models\DetectFaceAttributesResponse.cs" />
     <Compile Include="Iai\V20180301\Models\DetectFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\DetectFaceResponse.cs" />
     <Compile Include="Iai\V20180301\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\DetectLiveFaceResponse.cs" />
     <Compile Include="Iai\V20180301\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
     <Compile Include="Iai\V20180301\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\Eye.cs" />
+    <Compile Include="Iai\V20180301\Models\Eyebrow.cs" />
     <Compile Include="Iai\V20180301\Models\FaceAttributesInfo.cs" />
+    <Compile Include="Iai\V20180301\Models\FaceDetailAttributesInfo.cs" />
+    <Compile Include="Iai\V20180301\Models\FaceDetailInfo.cs" />
     <Compile Include="Iai\V20180301\Models\FaceHairAttributesInfo.cs" />
     <Compile Include="Iai\V20180301\Models\FaceInfo.cs" />
     <Compile Include="Iai\V20180301\Models\FaceQualityCompleteness.cs" />
@@ -4484,6 +4518,9 @@
     <Compile Include="Iai\V20180301\Models\GroupCandidate.cs" />
     <Compile Include="Iai\V20180301\Models\GroupExDescriptionInfo.cs" />
     <Compile Include="Iai\V20180301\Models\GroupInfo.cs" />
+    <Compile Include="Iai\V20180301\Models\Hair.cs" />
+    <Compile Include="Iai\V20180301\Models\Hat.cs" />
+    <Compile Include="Iai\V20180301\Models\HeadPose.cs" />
     <Compile Include="Iai\V20180301\Models\JobIdInfo.cs" />
     <Compile Include="Iai\V20180301\Models\ModifyGroupRequest.cs" />
     <Compile Include="Iai\V20180301\Models\ModifyGroupResponse.cs" />
@@ -4491,6 +4528,7 @@
     <Compile Include="Iai\V20180301\Models\ModifyPersonBaseInfoResponse.cs" />
     <Compile Include="Iai\V20180301\Models\ModifyPersonGroupInfoRequest.cs" />
     <Compile Include="Iai\V20180301\Models\ModifyPersonGroupInfoResponse.cs" />
+    <Compile Include="Iai\V20180301\Models\Mouth.cs" />
     <Compile Include="Iai\V20180301\Models\PersonExDescriptionInfo.cs" />
     <Compile Include="Iai\V20180301\Models\PersonGroupInfo.cs" />
     <Compile Include="Iai\V20180301\Models\PersonInfo.cs" />
