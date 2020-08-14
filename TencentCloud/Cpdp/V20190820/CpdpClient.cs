@@ -869,6 +869,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 微信商户发起批量转账
+        /// </summary>
+        /// <param name="req"><see cref="CreateTransferBatchRequest"/></param>
+        /// <returns><see cref="CreateTransferBatchResponse"/></returns>
+        public async Task<CreateTransferBatchResponse> CreateTransferBatch(CreateTransferBatchRequest req)
+        {
+             JsonResponseModel<CreateTransferBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTransferBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTransferBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 微信商户发起批量转账
+        /// </summary>
+        /// <param name="req"><see cref="CreateTransferBatchRequest"/></param>
+        /// <returns><see cref="CreateTransferBatchResponse"/></returns>
+        public CreateTransferBatchResponse CreateTransferBatchSync(CreateTransferBatchRequest req)
+        {
+             JsonResponseModel<CreateTransferBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTransferBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTransferBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播平台-删除代理商完税信息
         /// </summary>
         /// <param name="req"><see cref="DeleteAgentTaxPaymentInfoRequest"/></param>
@@ -2382,6 +2422,86 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryTrade");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryTradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过商家批次单号或者微信批次号查询批次单
+        /// </summary>
+        /// <param name="req"><see cref="QueryTransferBatchRequest"/></param>
+        /// <returns><see cref="QueryTransferBatchResponse"/></returns>
+        public async Task<QueryTransferBatchResponse> QueryTransferBatch(QueryTransferBatchRequest req)
+        {
+             JsonResponseModel<QueryTransferBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryTransferBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryTransferBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过商家批次单号或者微信批次号查询批次单
+        /// </summary>
+        /// <param name="req"><see cref="QueryTransferBatchRequest"/></param>
+        /// <returns><see cref="QueryTransferBatchResponse"/></returns>
+        public QueryTransferBatchResponse QueryTransferBatchSync(QueryTransferBatchRequest req)
+        {
+             JsonResponseModel<QueryTransferBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryTransferBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryTransferBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过商家或者微信批次明细单号查询明细单
+        /// </summary>
+        /// <param name="req"><see cref="QueryTransferDetailRequest"/></param>
+        /// <returns><see cref="QueryTransferDetailResponse"/></returns>
+        public async Task<QueryTransferDetailResponse> QueryTransferDetail(QueryTransferDetailRequest req)
+        {
+             JsonResponseModel<QueryTransferDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryTransferDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryTransferDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过商家或者微信批次明细单号查询明细单
+        /// </summary>
+        /// <param name="req"><see cref="QueryTransferDetailRequest"/></param>
+        /// <returns><see cref="QueryTransferDetailResponse"/></returns>
+        public QueryTransferDetailResponse QueryTransferDetailSync(QueryTransferDetailRequest req)
+        {
+             JsonResponseModel<QueryTransferDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryTransferDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryTransferDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

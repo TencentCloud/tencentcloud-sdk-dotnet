@@ -84,6 +84,13 @@ namespace TencentCloud.Tione.V20191022.Models
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
+        /// <summary>
+        /// 在资源不足（ResourceInsufficient）时后台不定时尝试重新创建训练任务。可取值Enabled/Disabled
+        /// 默认值为Disabled即不重新尝试。设为Enabled时重新尝试有一定的时间期限，定义在 StoppingCondition 中 MaxWaitTimeInSecond中 ，默认值为1天，超过该期限创建失败。
+        /// </summary>
+        [JsonProperty("RetryWhenResourceInsufficient")]
+        public string RetryWhenResourceInsufficient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Tione.V20191022.Models
             this.SetParamSimple(map, prefix + "HyperParameters", this.HyperParameters);
             this.SetParamArrayObj(map, prefix + "EnvConfig.", this.EnvConfig);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamSimple(map, prefix + "RetryWhenResourceInsufficient", this.RetryWhenResourceInsufficient);
         }
     }
 }

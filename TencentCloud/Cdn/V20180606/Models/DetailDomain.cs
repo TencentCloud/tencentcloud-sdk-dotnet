@@ -345,6 +345,29 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AccessControl")]
         public AccessControl AccessControl{ get; set; }
 
+        /// <summary>
+        /// 是否支持高级配置项
+        /// on：支持
+        /// off：不支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Advance")]
+        public string Advance{ get; set; }
+
+        /// <summary>
+        /// URL重定向配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UrlRedirect")]
+        public UrlRedirect UrlRedirect{ get; set; }
+
+        /// <summary>
+        /// 访问端口配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessPort")]
+        public long?[] AccessPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -395,6 +418,9 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
             this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
             this.SetParamObj(map, prefix + "AccessControl.", this.AccessControl);
+            this.SetParamSimple(map, prefix + "Advance", this.Advance);
+            this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
+            this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
         }
     }
 }

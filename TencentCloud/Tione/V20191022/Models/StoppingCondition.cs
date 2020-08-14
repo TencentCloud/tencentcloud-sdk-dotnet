@@ -31,6 +31,13 @@ namespace TencentCloud.Tione.V20191022.Models
         [JsonProperty("MaxRuntimeInSeconds")]
         public ulong? MaxRuntimeInSeconds{ get; set; }
 
+        /// <summary>
+        /// 最长等待运行时间（秒）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxWaitTimeInSeconds")]
+        public ulong? MaxWaitTimeInSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Tione.V20191022.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MaxRuntimeInSeconds", this.MaxRuntimeInSeconds);
+            this.SetParamSimple(map, prefix + "MaxWaitTimeInSeconds", this.MaxWaitTimeInSeconds);
         }
     }
 }

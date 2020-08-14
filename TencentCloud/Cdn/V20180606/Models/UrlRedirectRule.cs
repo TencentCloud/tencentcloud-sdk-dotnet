@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DestroyEnvRequest : AbstractModel
+    public class UrlRedirectRule : AbstractModel
     {
         
         /// <summary>
-        /// 环境Id
+        /// 重定向状态码，301 | 302
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("RedirectStatusCode")]
+        public long? RedirectStatusCode{ get; set; }
 
         /// <summary>
-        /// 针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
+        /// 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
         /// </summary>
-        [JsonProperty("IsForce")]
-        public bool? IsForce{ get; set; }
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
 
         /// <summary>
-        /// 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
+        /// 目标URL，必须以“/”开头，最大长度1024字符。
         /// </summary>
-        [JsonProperty("BypassCheck")]
-        public bool? BypassCheck{ get; set; }
+        [JsonProperty("RedirectUrl")]
+        public string RedirectUrl{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamSimple(map, prefix + "IsForce", this.IsForce);
-            this.SetParamSimple(map, prefix + "BypassCheck", this.BypassCheck);
+            this.SetParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         }
     }
 }

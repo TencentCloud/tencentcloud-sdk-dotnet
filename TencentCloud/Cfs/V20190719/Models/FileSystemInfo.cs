@@ -85,7 +85,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 文件系统绑定的预付费存储包（暂未支持）
+        /// 文件系统绑定的预付费存储包
         /// </summary>
         [JsonProperty("StorageResourcePkg")]
         public string StorageResourcePkg{ get; set; }
@@ -126,6 +126,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
+        /// <summary>
+        /// 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+        /// </summary>
+        [JsonProperty("BandwidthLimit")]
+        public float? BandwidthLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         }
     }
 }

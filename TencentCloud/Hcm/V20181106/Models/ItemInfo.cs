@@ -55,6 +55,13 @@ namespace TencentCloud.Hcm.V20181106.Models
         [JsonProperty("ExpressionType")]
         public string ExpressionType{ get; set; }
 
+        /// <summary>
+        /// 文本行置信度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ItemConf")]
+        public float? ItemConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
             this.SetParamSimple(map, prefix + "Answer", this.Answer);
             this.SetParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
+            this.SetParamSimple(map, prefix + "ItemConf", this.ItemConf);
         }
     }
 }

@@ -90,6 +90,12 @@ namespace TencentCloud.Hcm.V20181106.Models
         [JsonProperty("PdfPageIndex")]
         public long? PdfPageIndex{ get; set; }
 
+        /// <summary>
+        /// 是否返回LaTex，默认为0返回普通格式，设置成1返回LaTex格式
+        /// </summary>
+        [JsonProperty("LaTex")]
+        public long? LaTex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "EnableDispMidresult", this.EnableDispMidresult);
             this.SetParamSimple(map, prefix + "EnablePdfRecognize", this.EnablePdfRecognize);
             this.SetParamSimple(map, prefix + "PdfPageIndex", this.PdfPageIndex);
+            this.SetParamSimple(map, prefix + "LaTex", this.LaTex);
         }
     }
 }

@@ -15,32 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcb.V20180608.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DestroyEnvRequest : AbstractModel
+    public class UrlRedirect : AbstractModel
     {
         
         /// <summary>
-        /// 环境Id
+        /// URL重定向配置开关
+        /// on：开启
+        /// off：关闭
         /// </summary>
-        [JsonProperty("EnvId")]
-        public string EnvId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 针对预付费 删除隔离中的环境时要传true 正常环境直接跳过隔离期删除
+        /// URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsForce")]
-        public bool? IsForce{ get; set; }
-
-        /// <summary>
-        /// 是否绕过资源检查，资源包等额外资源，默认为false，如果为true，则不检查资源是否有数据，直接删除。
-        /// </summary>
-        [JsonProperty("BypassCheck")]
-        public bool? BypassCheck{ get; set; }
+        [JsonProperty("PathRules")]
+        public UrlRedirectRule[] PathRules{ get; set; }
 
 
         /// <summary>
@@ -48,9 +45,8 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
-            this.SetParamSimple(map, prefix + "IsForce", this.IsForce);
-            this.SetParamSimple(map, prefix + "BypassCheck", this.BypassCheck);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
         }
     }
 }

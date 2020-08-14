@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 手机号码。不支持电信手机号。
+        /// 手机号码
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }

@@ -217,6 +217,24 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
 
+        /// <summary>
+        /// 访问控制
+        /// </summary>
+        [JsonProperty("AccessControl")]
+        public AccessControl AccessControl{ get; set; }
+
+        /// <summary>
+        /// URL重定向配置
+        /// </summary>
+        [JsonProperty("UrlRedirect")]
+        public UrlRedirect UrlRedirect{ get; set; }
+
+        /// <summary>
+        /// 访问端口配置
+        /// </summary>
+        [JsonProperty("AccessPort")]
+        public long?[] AccessPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +272,9 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
             this.SetParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
+            this.SetParamObj(map, prefix + "AccessControl.", this.AccessControl);
+            this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
+            this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
         }
     }
 }

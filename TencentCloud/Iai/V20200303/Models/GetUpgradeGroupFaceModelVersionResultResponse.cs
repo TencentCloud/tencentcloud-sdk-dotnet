@@ -39,7 +39,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// 0表示升级中，1表示升级完毕，2表示回滚完毕。
+        /// 0表示升级中，1表示升级完毕，2表示回滚完毕，3表示升级失败。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

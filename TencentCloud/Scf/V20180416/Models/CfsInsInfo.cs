@@ -61,21 +61,24 @@ namespace TencentCloud.Scf.V20180416.Models
         public string RemoteMountDir{ get; set; }
 
         /// <summary>
-        /// 文件系统ip
+        /// 文件系统ip，配置 cfs 时无需填写。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpAddress")]
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// 文件系统所在的私有网络id
+        /// 文件系统所在的私有网络id，配置 cfs 时无需填写。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountVpcId")]
         public string MountVpcId{ get; set; }
 
         /// <summary>
-        /// 文件系统所在私有网络的子网id
+        /// 文件系统所在私有网络的子网id，配置 cfs 时无需填写。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MountSubnetId")]
