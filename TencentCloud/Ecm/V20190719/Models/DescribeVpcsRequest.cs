@@ -25,12 +25,6 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 地域
-        /// </summary>
-        [JsonProperty("EcmRegion")]
-        public string EcmRegion{ get; set; }
-
-        /// <summary>
         /// VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
         /// </summary>
         [JsonProperty("VpcIds")]
@@ -38,12 +32,12 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 过滤条件，参数不支持同时指定VpcIds和Filters。
-        /// vpc-name - String - （过滤条件）VPC实例名称。
-        /// is-default - String - （过滤条件）是否默认VPC。
-        /// vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
-        /// cidr-block - String - （过滤条件）vpc的cidr。
-        /// tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-        /// tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+        /// vpc-name - String - VPC实例名称，只支持单值的模糊查询。
+        /// vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
+        /// cidr-block - String - vpc的cidr，只支持单值的模糊查询。
+        /// region - String - vpc的region。
+        /// tag-key - String -是否必填：否- 按照标签键进行过滤。
+        /// tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -60,17 +54,30 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("EcmRegion")]
+        public string EcmRegion{ get; set; }
+
+        /// <summary>
+        /// 排序方式：time时间倒序, default按照网络规划排序
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
             this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
         }
     }
 }

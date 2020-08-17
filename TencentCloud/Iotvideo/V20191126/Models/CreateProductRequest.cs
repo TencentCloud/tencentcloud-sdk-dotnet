@@ -31,12 +31,6 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         public string ProductModel{ get; set; }
 
         /// <summary>
-        /// 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
-        /// </summary>
-        [JsonProperty("Features")]
-        public string[] Features{ get; set; }
-
-        /// <summary>
         /// 产品名称
         /// 仅支持中文、英文、数字、下划线，不超过32个字符
         /// </summary>
@@ -51,6 +45,12 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         public string ProductDescription{ get; set; }
 
         /// <summary>
+        /// 设备功能码（ypsxth:音频双向通话 ，spdxth:视频单向通话）
+        /// </summary>
+        [JsonProperty("Features")]
+        public string[] Features{ get; set; }
+
+        /// <summary>
         /// 主芯片产商ID
         /// </summary>
         [JsonProperty("ChipManufactureId")]
@@ -62,6 +62,24 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("ChipId")]
         public string ChipId{ get; set; }
 
+        /// <summary>
+        /// 地域：
+        /// China-Mainland（中国大陆）
+        /// China-Hong Kong, Macao and Taiwan（港澳台地区）
+        /// America（美国）
+        /// Europe（欧洲）
+        /// India（印度）
+        /// Other-Overseas（其他境外地区）
+        /// </summary>
+        [JsonProperty("ProductRegion")]
+        public string ProductRegion{ get; set; }
+
+        /// <summary>
+        /// 设备类型, 0-普通视频设备，1-NVR设备
+        /// </summary>
+        [JsonProperty("ProductCate")]
+        public ulong? ProductCate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,11 +87,13 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductModel", this.ProductModel);
-            this.SetParamArraySimple(map, prefix + "Features.", this.Features);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
+            this.SetParamArraySimple(map, prefix + "Features.", this.Features);
             this.SetParamSimple(map, prefix + "ChipManufactureId", this.ChipManufactureId);
             this.SetParamSimple(map, prefix + "ChipId", this.ChipId);
+            this.SetParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
+            this.SetParamSimple(map, prefix + "ProductCate", this.ProductCate);
         }
     }
 }

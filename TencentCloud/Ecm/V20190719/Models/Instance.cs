@@ -216,6 +216,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// VPC属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VirtualPrivateCloud")]
+        public VirtualPrivateCloud VirtualPrivateCloud{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +254,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamSimple(map, prefix + "NewFlag", this.NewFlag);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
         }
     }
 }

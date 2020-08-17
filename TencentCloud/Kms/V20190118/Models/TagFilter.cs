@@ -21,27 +21,20 @@ namespace TencentCloud.Kms.V20190118.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeWhiteBoxKeyDetailsResponse : AbstractModel
+    public class TagFilter : AbstractModel
     {
         
         /// <summary>
-        /// 白盒密钥信息列表
+        /// 标签键
         /// </summary>
-        [JsonProperty("KeyInfos")]
-        public WhiteboxKeyInfo[] KeyInfos{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// key总数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签值
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TagValue")]
+        public string[] TagValue{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "KeyInfos.", this.KeyInfos);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamArraySimple(map, prefix + "TagValue.", this.TagValue);
         }
     }
 }

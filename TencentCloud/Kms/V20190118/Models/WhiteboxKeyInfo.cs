@@ -90,6 +90,13 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// 是否有设备指纹与当前密钥绑定
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceFingerprintBind")]
+        public bool? DeviceFingerprintBind{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
             this.SetParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "DeviceFingerprintBind", this.DeviceFingerprintBind);
         }
     }
 }

@@ -109,6 +109,41 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 可用区名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
+        /// <summary>
+        /// 实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceCount")]
+        public ulong? InstanceCount{ get; set; }
+
+        /// <summary>
+        /// VPC的 IPv4 CIDR。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcCidrBlock")]
+        public string VpcCidrBlock{ get; set; }
+
+        /// <summary>
+        /// VPC的 IPv6 CIDR。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcIpv6CidrBlock")]
+        public string VpcIpv6CidrBlock{ get; set; }
+
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +164,11 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+            this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
+            this.SetParamSimple(map, prefix + "VpcIpv6CidrBlock", this.VpcIpv6CidrBlock);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

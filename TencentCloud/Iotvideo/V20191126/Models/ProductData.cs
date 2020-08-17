@@ -94,6 +94,26 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("ChipId")]
         public string ChipId{ get; set; }
 
+        /// <summary>
+        /// 产品类别，0：普通视频设备；1：NVR设备
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductCate")]
+        public long? ProductCate{ get; set; }
+
+        /// <summary>
+        /// 产品地区
+        /// China-Mainland（中国大陆）
+        /// China-Hong Kong, Macao and Taiwan（港澳台地区）
+        /// America（美国）
+        /// Europe（欧洲）
+        /// India（印度）
+        /// Other-Overseas（其他境外地区）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductRegion")]
+        public string ProductRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +130,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "ProductModel", this.ProductModel);
             this.SetParamSimple(map, prefix + "ChipManufactureId", this.ChipManufactureId);
             this.SetParamSimple(map, prefix + "ChipId", this.ChipId);
+            this.SetParamSimple(map, prefix + "ProductCate", this.ProductCate);
+            this.SetParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
         }
     }
 }

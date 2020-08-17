@@ -21,38 +21,42 @@ namespace TencentCloud.Ecm.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyVpcAttributeRequest : AbstractModel
+    public class VirtualPrivateCloud : AbstractModel
     {
         
         /// <summary>
-        /// VPC实例ID。形如：vpc-f49l6u0z。
+        /// 私有网络ID，形如vpc-xxx。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// ECM 地域
+        /// 私有网络子网ID，形如subnet-xxx。
         /// </summary>
-        [JsonProperty("EcmRegion")]
-        public string EcmRegion{ get; set; }
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 私有网络名称，可任意命名，但不得超过60个字符。
+        /// 是否用作公网网关。公网网关只有在实例拥有公网IP以及处于私有网络下时才能正常使用。取值范围：
+        /// TRUE：表示用作公网网关
+        /// FALSE：表示不用作公网网关
+        /// 
+        /// 默认取值：FALSE。
         /// </summary>
-        [JsonProperty("VpcName")]
-        public string VpcName{ get; set; }
+        [JsonProperty("AsVpcGateway")]
+        public bool? AsVpcGateway{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// 私有网络子网 IP 数组，在创建实例、修改实例vpc属性操作中可使用此参数。
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("PrivateIpAddresses")]
+        public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// 私有网络描述
+        /// 为弹性网卡指定随机生成的 IPv6 地址数量。
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("Ipv6AddressCount")]
+        public long? Ipv6AddressCount{ get; set; }
 
 
         /// <summary>
@@ -61,10 +65,10 @@ namespace TencentCloud.Ecm.V20190719.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
-            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "AsVpcGateway", this.AsVpcGateway);
+            this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+            this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
         }
     }
 }

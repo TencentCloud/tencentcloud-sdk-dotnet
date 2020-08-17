@@ -66,6 +66,39 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
+        /// <summary>
+        /// 设备功能码
+        /// ypsxth : 音频双向通话;	
+        /// spdxth : 视频单向通话(监控);
+        /// NVR0824 : NVR设备,大于8路，小于等于24路;
+        /// WifiKeepalive : Wifi保活(低功耗产品);
+        /// Alexa : Alexa接入;
+        /// Google : Google接入;
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FuncCode")]
+        public string[] FuncCode{ get; set; }
+
+        /// <summary>
+        /// 产品类别，0 : 普通视频设备；1 : NVR设备
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductCate")]
+        public long? ProductCate{ get; set; }
+
+        /// <summary>
+        /// 产品地域
+        /// China-Mainland（中国大陆）
+        /// China-Hong Kong, Macao and Taiwan（港澳台地区）
+        /// America（美国）
+        /// Europe（欧洲）
+        /// India（印度）
+        /// Other-Overseas（其他境外地区）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductRegion")]
+        public string ProductRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +112,9 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "IotModelRevision", this.IotModelRevision);
             this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
+            this.SetParamArraySimple(map, prefix + "FuncCode.", this.FuncCode);
+            this.SetParamSimple(map, prefix + "ProductCate", this.ProductCate);
+            this.SetParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
         }
     }
 }

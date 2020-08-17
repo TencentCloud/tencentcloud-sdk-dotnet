@@ -72,6 +72,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }
 
+        /// <summary>
+        /// 标签过滤条件
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

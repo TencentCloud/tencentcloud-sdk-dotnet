@@ -25,12 +25,6 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// ECM 地域
-        /// </summary>
-        [JsonProperty("EcmRegion")]
-        public string EcmRegion{ get; set; }
-
-        /// <summary>
         /// 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
         /// </summary>
         [JsonProperty("SubnetIds")]
@@ -38,15 +32,15 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 过滤条件，参数不支持同时指定SubnetIds和Filters。
-        /// subnet-id - String - （过滤条件）Subnet实例名称。
-        /// vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-        /// cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。
-        /// is-default - Boolean - （过滤条件）是否是默认子网。
-        /// is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。
-        /// subnet-name - String - （过滤条件）子网名称。
-        /// zone - String - （过滤条件）可用区。
-        /// tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
-        /// tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例
+        /// subnet-id - String - Subnet实例名称。
+        /// subnet-name - String - 子网名称。只支持单值的模糊查询。
+        /// cidr-block - String - 子网网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+        /// vpc-id - String - VPC实例ID，形如：vpc-f49l6u0z。
+        /// vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的模糊查询。
+        /// region - String - ECM地域
+        /// zone - String - 可用区。
+        /// tag-key - String -是否必填：否- 按照标签键进行过滤。
+        /// tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -63,17 +57,30 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
+        /// <summary>
+        /// ECM 地域
+        /// </summary>
+        [JsonProperty("EcmRegion")]
+        public string EcmRegion{ get; set; }
+
+        /// <summary>
+        /// 排序方式：time时间倒序, default按照网络规划排序
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
             this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+        /// vpc的cidr，只能为10.*.0.0/16，172.[16-31].0.0/16，192.168.0.0/16这三个内网网段内。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string EcmRegion{ get; set; }
 
         /// <summary>
-        /// 是否开启组播。true: 开启, false: 不开启。
+        /// 是否开启组播。true: 开启, false: 不开启。暂不支持
         /// </summary>
         [JsonProperty("EnableMulticast")]
         public string EnableMulticast{ get; set; }
 
         /// <summary>
-        /// DNS地址，最多支持4个
+        /// DNS地址，最多支持4个，暂不支持
         /// </summary>
         [JsonProperty("DnsServers")]
         public string[] DnsServers{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// 域名，暂不支持
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
@@ -65,6 +65,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 描述信息
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

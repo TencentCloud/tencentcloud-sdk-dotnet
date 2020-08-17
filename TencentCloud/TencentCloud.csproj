@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.123</VersionPrefix>
+    <VersionPrefix>3.0.124</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3876,6 +3876,7 @@
     <Compile Include="Ecm\V20190719\Models\TaskOutput.cs" />
     <Compile Include="Ecm\V20190719\Models\TerminateInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\TerminateInstancesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\VirtualPrivateCloud.cs" />
     <Compile Include="Ecm\V20190719\Models\VpcInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\ZoneInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\ZoneInstanceCountISP.cs" />
@@ -5132,6 +5133,7 @@
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionResponse.cs" />
     <Compile Include="Kms\V20190118\Models\Tag.cs" />
+    <Compile Include="Kms\V20190118\Models\TagFilter.cs" />
     <Compile Include="Kms\V20190118\Models\UnbindCloudResourceRequest.cs" />
     <Compile Include="Kms\V20190118\Models\UnbindCloudResourceResponse.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateAliasRequest.cs" />

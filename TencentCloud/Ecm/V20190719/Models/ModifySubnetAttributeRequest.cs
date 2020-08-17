@@ -48,6 +48,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("EnableBroadcast")]
         public string EnableBroadcast{ get; set; }
 
+        /// <summary>
+        /// 子网的标签键值
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
             this.SetParamSimple(map, prefix + "EnableBroadcast", this.EnableBroadcast);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
