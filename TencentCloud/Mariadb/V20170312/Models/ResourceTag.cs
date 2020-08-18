@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopGameRequest : AbstractModel
+    public class ResourceTag : AbstractModel
     {
         
         /// <summary>
-        /// 游戏用户ID
+        /// 标签键key
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// 用于多人游戏，游戏主机用户ID
+        /// 标签值value
         /// </summary>
-        [JsonProperty("HostUserId")]
-        public string HostUserId{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

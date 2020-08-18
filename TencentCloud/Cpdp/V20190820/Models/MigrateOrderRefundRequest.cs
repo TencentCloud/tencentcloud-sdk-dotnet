@@ -72,6 +72,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
+        /// <summary>
+        /// 退款原因
+        /// </summary>
+        [JsonProperty("RefundReason")]
+        public string RefundReason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "ThirdChannelOrderId", this.ThirdChannelOrderId);
             this.SetParamSimple(map, prefix + "PayAmt", this.PayAmt);
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamSimple(map, prefix + "RefundReason", this.RefundReason);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.124</VersionPrefix>
+    <VersionPrefix>3.0.125</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1997,6 +1997,8 @@
     <Compile Include="Cfs\V20190719\Models\DeleteMountTargetResponse.cs" />
     <Compile Include="Cfs\V20190719\Models\DescribeAvailableZoneInfoRequest.cs" />
     <Compile Include="Cfs\V20190719\Models\DescribeAvailableZoneInfoResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsFileSystemClientsRequest.cs" />
+    <Compile Include="Cfs\V20190719\Models\DescribeCfsFileSystemClientsResponse.cs" />
     <Compile Include="Cfs\V20190719\Models\DescribeCfsFileSystemsRequest.cs" />
     <Compile Include="Cfs\V20190719\Models\DescribeCfsFileSystemsResponse.cs" />
     <Compile Include="Cfs\V20190719\Models\DescribeCfsPGroupsRequest.cs" />
@@ -2007,6 +2009,7 @@
     <Compile Include="Cfs\V20190719\Models\DescribeCfsServiceStatusResponse.cs" />
     <Compile Include="Cfs\V20190719\Models\DescribeMountTargetsRequest.cs" />
     <Compile Include="Cfs\V20190719\Models\DescribeMountTargetsResponse.cs" />
+    <Compile Include="Cfs\V20190719\Models\FileSystemClient.cs" />
     <Compile Include="Cfs\V20190719\Models\FileSystemInfo.cs" />
     <Compile Include="Cfs\V20190719\Models\MountInfo.cs" />
     <Compile Include="Cfs\V20190719\Models\PGroup.cs" />
@@ -3449,6 +3452,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeSqlLogsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ExpandShardConfig.cs" />
+    <Compile Include="Dcdb\V20180411\Models\FlushBinlogRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\FlushBinlogResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesRequest.cs" />
@@ -3473,6 +3478,7 @@
     <Compile Include="Dcdb\V20180411\Models\RenewDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ResourceTag.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardZoneChooseInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\SpecConfig.cs" />
@@ -4771,6 +4777,8 @@
     <Compile Include="Iotcloud\V20180614\Models\DeleteProductResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteTopicRuleResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeAllDevicesRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeAllDevicesResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceClientKeyRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceClientKeyResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceRequest.cs" />
@@ -4797,6 +4805,7 @@
     <Compile Include="Iotcloud\V20180614\Models\DescribeTasksResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceLabel.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DeviceProperty.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceTag.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DisableTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DisableTopicRuleResponse.cs" />
@@ -5141,6 +5150,27 @@
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionResponse.cs" />
     <Compile Include="Kms\V20190118\Models\WhiteboxKeyInfo.cs" />
+    <Compile Include="Lighthouse\V20200324\LighthouseClient.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Bundle.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Filter.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Instance.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\InstancePrice.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\InternetAccessible.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\LoginSettings.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Price.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\RebootInstancesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\RebootInstancesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ResetInstanceRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ResetInstanceResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\StartInstancesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\StartInstancesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\StopInstancesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\StopInstancesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\SystemDisk.cs" />
     <Compile Include="Live\V20180801\LiveClient.cs" />
     <Compile Include="Live\V20180801\Models\AddDelayLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\AddDelayLiveStreamResponse.cs" />
@@ -5471,6 +5501,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeUpgradePriceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeUpgradePriceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\FlushBinlogRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\FlushBinlogResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\InitDBInstancesRequest.cs" />
@@ -5501,6 +5533,7 @@
     <Compile Include="Mariadb\V20170312\Models\RenewDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ResourceTag.cs" />
     <Compile Include="Mariadb\V20170312\Models\ResourceUsageMonitorSet.cs" />
     <Compile Include="Mariadb\V20170312\Models\RestartDBInstancesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\RestartDBInstancesResponse.cs" />

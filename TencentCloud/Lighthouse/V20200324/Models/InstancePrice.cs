@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopGameRequest : AbstractModel
+    public class InstancePrice : AbstractModel
     {
         
         /// <summary>
-        /// 游戏用户ID
+        /// 套餐单价原价。
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("OriginalBundlePrice")]
+        public float? OriginalBundlePrice{ get; set; }
 
         /// <summary>
-        /// 用于多人游戏，游戏主机用户ID
+        /// 原价。
         /// </summary>
-        [JsonProperty("HostUserId")]
-        public string HostUserId{ get; set; }
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// 折扣。
+        /// </summary>
+        [JsonProperty("Discount")]
+        public long? Discount{ get; set; }
+
+        /// <summary>
+        /// 折后价。
+        /// </summary>
+        [JsonProperty("DiscountPrice")]
+        public float? DiscountPrice{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamSimple(map, prefix + "OriginalBundlePrice", this.OriginalBundlePrice);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "Discount", this.Discount);
+            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         }
     }
 }

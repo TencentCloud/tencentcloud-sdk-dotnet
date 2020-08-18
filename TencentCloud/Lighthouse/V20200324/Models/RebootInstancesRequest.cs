@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopGameRequest : AbstractModel
+    public class RebootInstancesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 游戏用户ID
+        /// 实例 ID 列表。每次请求批量实例的上限为 100。
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
-
-        /// <summary>
-        /// 用于多人游戏，游戏主机用户ID
-        /// </summary>
-        [JsonProperty("HostUserId")]
-        public string HostUserId{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

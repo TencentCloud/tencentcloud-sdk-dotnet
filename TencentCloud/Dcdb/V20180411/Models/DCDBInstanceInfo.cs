@@ -37,7 +37,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// AppID
+        /// 应用ID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string IsolatedTimestamp{ get; set; }
 
         /// <summary>
-        /// UIN
+        /// 账号ID
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -259,6 +259,41 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
+        /// <summary>
+        /// 实例IPv6标志
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6Flag")]
+        public ulong? Ipv6Flag{ get; set; }
+
+        /// <summary>
+        /// 内网IPv6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vipv6")]
+        public string Vipv6{ get; set; }
+
+        /// <summary>
+        /// 外网IPv6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WanVipv6")]
+        public string WanVipv6{ get; set; }
+
+        /// <summary>
+        /// 外网IPv6端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WanPortIpv6")]
+        public ulong? WanPortIpv6{ get; set; }
+
+        /// <summary>
+        /// 外网IPv6状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WanStatusIpv6")]
+        public ulong? WanStatusIpv6{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -304,6 +339,11 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "WanStatus", this.WanStatus);
             this.SetParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+            this.SetParamSimple(map, prefix + "Vipv6", this.Vipv6);
+            this.SetParamSimple(map, prefix + "WanVipv6", this.WanVipv6);
+            this.SetParamSimple(map, prefix + "WanPortIpv6", this.WanPortIpv6);
+            this.SetParamSimple(map, prefix + "WanStatusIpv6", this.WanStatusIpv6);
         }
     }
 }

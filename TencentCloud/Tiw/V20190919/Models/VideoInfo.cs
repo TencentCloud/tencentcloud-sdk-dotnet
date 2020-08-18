@@ -77,6 +77,18 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 视频分辨率的宽
+        /// </summary>
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
+
+        /// <summary>
+        /// 视频分辨率的高
+        /// </summary>
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +103,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "VideoId", this.VideoId);
             this.SetParamSimple(map, prefix + "VideoType", this.VideoType);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
         }
     }
 }

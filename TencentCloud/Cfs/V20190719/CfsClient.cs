@@ -373,6 +373,46 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// 查询挂载该文件系统的客户端。此功能需要客户端安装CFS监控插件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsFileSystemClientsRequest"/></param>
+        /// <returns><see cref="DescribeCfsFileSystemClientsResponse"/></returns>
+        public async Task<DescribeCfsFileSystemClientsResponse> DescribeCfsFileSystemClients(DescribeCfsFileSystemClientsRequest req)
+        {
+             JsonResponseModel<DescribeCfsFileSystemClientsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCfsFileSystemClients");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsFileSystemClientsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询挂载该文件系统的客户端。此功能需要客户端安装CFS监控插件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfsFileSystemClientsRequest"/></param>
+        /// <returns><see cref="DescribeCfsFileSystemClientsResponse"/></returns>
+        public DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClientsSync(DescribeCfsFileSystemClientsRequest req)
+        {
+             JsonResponseModel<DescribeCfsFileSystemClientsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCfsFileSystemClients");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfsFileSystemClientsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeCfsFileSystems）用于查询文件系统
         /// </summary>
         /// <param name="req"><see cref="DescribeCfsFileSystemsRequest"/></param>

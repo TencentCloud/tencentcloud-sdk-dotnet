@@ -114,6 +114,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("ExclusterIds")]
         public string[] ExclusterIds{ get; set; }
 
+        /// <summary>
+        /// 按标签key查询
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
             this.SetParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
             this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         }
     }
 }

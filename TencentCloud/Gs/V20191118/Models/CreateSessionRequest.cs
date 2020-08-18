@@ -91,7 +91,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public ulong? MinBitrate{ get; set; }
 
         /// <summary>
-        /// 帧率，可设置为30、45或60
+        /// 帧率，可设置为30、45、60、90、120、144
         /// </summary>
         [JsonProperty("Fps")]
         public ulong? Fps{ get; set; }
@@ -107,6 +107,12 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         [JsonProperty("Optimization")]
         public ulong? Optimization{ get; set; }
+
+        /// <summary>
+        /// 用于多人游戏，游戏主机用户ID
+        /// </summary>
+        [JsonProperty("HostUserId")]
+        public string HostUserId{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "Optimization", this.Optimization);
+            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
         }
     }
 }

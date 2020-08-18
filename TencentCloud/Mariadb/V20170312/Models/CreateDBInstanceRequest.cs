@@ -123,6 +123,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }
 
+        /// <summary>
+        /// 标签键值对数组
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +151,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopGameRequest : AbstractModel
+    public class SystemDisk : AbstractModel
     {
         
         /// <summary>
-        /// 游戏用户ID
+        /// 系统盘类型。
+        /// 取值范围： 
+        /// <li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
         /// <summary>
-        /// 用于多人游戏，游戏主机用户ID
+        /// 系统盘大小，单位：GB。
         /// </summary>
-        [JsonProperty("HostUserId")]
-        public string HostUserId{ get; set; }
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// 系统盘ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
         }
     }
 }

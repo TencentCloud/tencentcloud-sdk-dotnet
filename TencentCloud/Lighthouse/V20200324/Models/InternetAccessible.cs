@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gs.V20191118.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StopGameRequest : AbstractModel
+    public class InternetAccessible : AbstractModel
     {
         
         /// <summary>
-        /// 游戏用户ID
+        /// 网络计费类型。
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("InternetChargeType")]
+        public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// 用于多人游戏，游戏主机用户ID
+        /// 公网出带宽上限，单位：Mbps。
         /// </summary>
-        [JsonProperty("HostUserId")]
-        public string HostUserId{ get; set; }
+        [JsonProperty("InternetMaxBandwidthOut")]
+        public long? InternetMaxBandwidthOut{ get; set; }
+
+        /// <summary>
+        /// 是否分配公网 IP。
+        /// </summary>
+        [JsonProperty("PublicIpAssigned")]
+        public bool? PublicIpAssigned{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Gs.V20191118.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
         }
     }
 }

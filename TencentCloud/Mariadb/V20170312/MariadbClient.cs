@@ -1179,6 +1179,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 相当于在mysqld中执行flush logs，完成切分的binlog将展示在实例控制台binlog列表里。
+        /// </summary>
+        /// <param name="req"><see cref="FlushBinlogRequest"/></param>
+        /// <returns><see cref="FlushBinlogResponse"/></returns>
+        public async Task<FlushBinlogResponse> FlushBinlog(FlushBinlogRequest req)
+        {
+             JsonResponseModel<FlushBinlogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FlushBinlog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlushBinlogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 相当于在mysqld中执行flush logs，完成切分的binlog将展示在实例控制台binlog列表里。
+        /// </summary>
+        /// <param name="req"><see cref="FlushBinlogRequest"/></param>
+        /// <returns><see cref="FlushBinlogResponse"/></returns>
+        public FlushBinlogResponse FlushBinlogSync(FlushBinlogRequest req)
+        {
+             JsonResponseModel<FlushBinlogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FlushBinlog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlushBinlogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>

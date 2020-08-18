@@ -93,10 +93,17 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// -9105 身份证框内遮挡告警，
         /// -9104 临时身份证告警，
         /// -9106 身份证 PS 告警。
+        /// -8001 图片模糊告警
         /// 多个会 |  隔开如 "-9101|-9106|-9104"
         /// </summary>
         [JsonProperty("Warnings")]
         public string Warnings{ get; set; }
+
+        /// <summary>
+        /// 图片质量分数，当请求Config中配置图片模糊告警该参数才有意义，取值范围（0～100），目前默认阈值是50分，低于50分会触发模糊告警。
+        /// </summary>
+        [JsonProperty("Quality")]
+        public float? Quality{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -121,6 +128,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IdNum", this.IdNum);
             this.SetParamSimple(map, prefix + "Portrait", this.Portrait);
             this.SetParamSimple(map, prefix + "Warnings", this.Warnings);
+            this.SetParamSimple(map, prefix + "Quality", this.Quality);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

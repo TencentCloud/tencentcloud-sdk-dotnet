@@ -128,6 +128,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Ipv6Flag")]
         public long? Ipv6Flag{ get; set; }
 
+        /// <summary>
+        /// 标签键值对数组
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

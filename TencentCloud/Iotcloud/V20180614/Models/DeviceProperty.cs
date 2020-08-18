@@ -21,20 +21,36 @@ namespace TencentCloud.Iotcloud.V20180614.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLoraDeviceRequest : AbstractModel
+    public class DeviceProperty : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 产品ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// 产品名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
+        /// <summary>
+        /// 设备名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
+
+        /// <summary>
+        /// 设备资源ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -43,7 +59,9 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

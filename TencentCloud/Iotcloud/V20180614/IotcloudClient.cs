@@ -653,6 +653,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 查询所有设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllDevicesRequest"/></param>
+        /// <returns><see cref="DescribeAllDevicesResponse"/></returns>
+        public async Task<DescribeAllDevicesResponse> DescribeAllDevices(DescribeAllDevicesRequest req)
+        {
+             JsonResponseModel<DescribeAllDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询所有设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllDevicesRequest"/></param>
+        /// <returns><see cref="DescribeAllDevicesResponse"/></returns>
+        public DescribeAllDevicesResponse DescribeAllDevicesSync(DescribeAllDevicesRequest req)
+        {
+             JsonResponseModel<DescribeAllDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDevice）用于查看设备信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
@@ -813,7 +853,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 获取lora类型设备的详细信息
+        /// 获取lora类型设备的详细信息 
         /// </summary>
         /// <param name="req"><see cref="DescribeLoraDeviceRequest"/></param>
         /// <returns><see cref="DescribeLoraDeviceResponse"/></returns>
@@ -833,7 +873,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 获取lora类型设备的详细信息
+        /// 获取lora类型设备的详细信息 
         /// </summary>
         /// <param name="req"><see cref="DescribeLoraDeviceRequest"/></param>
         /// <returns><see cref="DescribeLoraDeviceResponse"/></returns>
