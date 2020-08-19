@@ -15,32 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfs.V20190719.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AvailableType : AbstractModel
+    public class HostVolumeContext : AbstractModel
     {
         
         /// <summary>
-        /// 协议与售卖详情
+        /// Pod挂载宿主机的目录。资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Protocols")]
-        public AvailableProtoStatus[] Protocols{ get; set; }
-
-        /// <summary>
-        /// 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// 是否支持预付费。返回值中 true 为支持、false 为不支持
-        /// </summary>
-        [JsonProperty("Prepayment")]
-        public bool? Prepayment{ get; set; }
+        [JsonProperty("VolumePath")]
+        public string VolumePath{ get; set; }
 
 
         /// <summary>
@@ -48,9 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Protocols.", this.Protocols);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Prepayment", this.Prepayment);
+            this.SetParamSimple(map, prefix + "VolumePath", this.VolumePath);
         }
     }
 }

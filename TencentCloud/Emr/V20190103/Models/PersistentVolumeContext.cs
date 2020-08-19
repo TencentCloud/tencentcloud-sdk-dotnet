@@ -15,35 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tke.V20180525.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClusterExtraArgs : AbstractModel
+    public class PersistentVolumeContext : AbstractModel
     {
         
         /// <summary>
-        /// kube-apiserver自定义参数，参数格式为["k1=v1", "k1=v2"]， 例如["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"]
+        /// 磁盘大小，单位为GB。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("KubeAPIServer")]
-        public string[] KubeAPIServer{ get; set; }
+        [JsonProperty("DiskSize")]
+        public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// kube-controller-manager自定义参数
+        /// 磁盘类型。CLOUD_PREMIUM;CLOUD_SSD
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("KubeControllerManager")]
-        public string[] KubeControllerManager{ get; set; }
-
-        /// <summary>
-        /// kube-scheduler自定义参数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("KubeScheduler")]
-        public string[] KubeScheduler{ get; set; }
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
 
         /// <summary>
@@ -51,9 +44,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "KubeAPIServer.", this.KubeAPIServer);
-            this.SetParamArraySimple(map, prefix + "KubeControllerManager.", this.KubeControllerManager);
-            this.SetParamArraySimple(map, prefix + "KubeScheduler.", this.KubeScheduler);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

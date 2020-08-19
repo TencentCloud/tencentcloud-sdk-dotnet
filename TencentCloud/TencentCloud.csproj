@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.125</VersionPrefix>
+    <VersionPrefix>3.0.126</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3899,6 +3899,7 @@
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
+    <Compile Include="Emr\V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceRenewInstanceRequest.cs" />
@@ -3913,8 +3914,10 @@
     <Compile Include="Emr\V20190103\Models\NewResourceSpec.cs" />
     <Compile Include="Emr\V20190103\Models\NodeHardwareInfo.cs" />
     <Compile Include="Emr\V20190103\Models\OutterResource.cs" />
+    <Compile Include="Emr\V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
     <Compile Include="Emr\V20190103\Models\PodSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\PodVolume.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="Emr\V20190103\Models\PriceResource.cs" />
     <Compile Include="Emr\V20190103\Models\Resource.cs" />

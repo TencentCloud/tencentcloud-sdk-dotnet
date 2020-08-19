@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// API 的前端参数位置，如 head。目前支持 head、query、path。
+        /// API 的前端参数位置，如 header。目前支持 header、query、path。
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }

@@ -55,10 +55,22 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。
+        /// 资源对宿主机的挂载点，指定的挂载点对应了宿主机的路径，该挂载点在Pod中作为数据存储目录使用。弃用
         /// </summary>
         [JsonProperty("DataVolumes")]
         public string[] DataVolumes{ get; set; }
+
+        /// <summary>
+        /// Eks集群-CPU类型，当前支持"intel"和"amd"
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
+        /// <summary>
+        /// Pod节点数据目录挂载信息。
+        /// </summary>
+        [JsonProperty("PodVolumes")]
+        public PodVolume[] PodVolumes{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamArraySimple(map, prefix + "DataVolumes.", this.DataVolumes);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
+            this.SetParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
         }
     }
 }

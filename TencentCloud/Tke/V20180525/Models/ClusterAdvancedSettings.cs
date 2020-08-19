@@ -78,6 +78,24 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("KubeProxyMode")]
         public string KubeProxyMode{ get; set; }
 
+        /// <summary>
+        /// 是否开启审计开关
+        /// </summary>
+        [JsonProperty("AuditEnabled")]
+        public bool? AuditEnabled{ get; set; }
+
+        /// <summary>
+        /// 审计日志上传到的logset日志集
+        /// </summary>
+        [JsonProperty("AuditLogsetId")]
+        public string AuditLogsetId{ get; set; }
+
+        /// <summary>
+        /// 审计日志上传到的topic
+        /// </summary>
+        [JsonProperty("AuditLogTopicId")]
+        public string AuditLogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
+            this.SetParamSimple(map, prefix + "AuditEnabled", this.AuditEnabled);
+            this.SetParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
+            this.SetParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
         }
     }
 }

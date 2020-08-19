@@ -693,7 +693,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供查看茶品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
+        /// 提供查看产品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
         /// </summary>
         /// <param name="req"><see cref="DescribeStudioProductRequest"/></param>
         /// <returns><see cref="DescribeStudioProductResponse"/></returns>
@@ -713,7 +713,7 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
-        /// 提供查看茶品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
+        /// 提供查看产品详细信息的能力，包括产品的ID、数据协议、认证类型等重要参数
         /// </summary>
         /// <param name="req"><see cref="DescribeStudioProductRequest"/></param>
         /// <returns><see cref="DescribeStudioProductResponse"/></returns>

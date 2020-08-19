@@ -82,6 +82,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("CallbackKey")]
         public string CallbackKey{ get; set; }
 
+        /// <summary>
+        /// 混流回调 URL，
+        /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
+        /// </summary>
+        [JsonProperty("StreamMixNotifyUrl")]
+        public string StreamMixNotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
             this.SetParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+            this.SetParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
         }
     }
 }

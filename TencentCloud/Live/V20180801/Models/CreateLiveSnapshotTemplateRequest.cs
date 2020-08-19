@@ -86,12 +86,18 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// Cos Bucket文件夹前缀。
+        /// 如不传，实际按默认值
+        /// /{Year}-{Month}-{Day}
+        /// 生效
         /// </summary>
         [JsonProperty("CosPrefix")]
         public string CosPrefix{ get; set; }
 
         /// <summary>
         /// Cos 文件名称。
+        /// 如不传，实际按默认值
+        /// {StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
+        /// 生效
         /// </summary>
         [JsonProperty("CosFileName")]
         public string CosFileName{ get; set; }
