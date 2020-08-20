@@ -25,16 +25,16 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片的 Base64 值。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
+        /// 图片/PDF的 Base64 值。
+        /// 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
         /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。
-        /// 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
+        /// 图片/PDF的 Url 地址。
+        /// 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
         /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
         /// </summary>
         [JsonProperty("ImageUrl")]
@@ -54,16 +54,29 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// spa\fre\ger\por\
         /// vie\may\rus\ita\
         /// hol\swe\fin\dan\
-        /// nor\hun\tha\lat
+        /// nor\hun\tha\lat\ara
         /// 可选值分别表示：
         /// 中英文混合、自动识别、日语、韩语、
         /// 西班牙语、法语、德语、葡萄牙语、
         /// 越南语、马来语、俄语、意大利语、
         /// 荷兰语、瑞典语、芬兰语、丹麦语、
-        /// 挪威语、匈牙利语、泰语、拉丁语系。
+        /// 挪威语、匈牙利语、泰语、拉丁语系、
+        /// 阿拉伯语。
         /// </summary>
         [JsonProperty("LanguageType")]
         public string LanguageType{ get; set; }
+
+        /// <summary>
+        /// 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+        /// </summary>
+        [JsonProperty("IsPdf")]
+        public bool? IsPdf{ get; set; }
+
+        /// <summary>
+        /// 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+        /// </summary>
+        [JsonProperty("PdfPageNumber")]
+        public ulong? PdfPageNumber{ get; set; }
 
 
         /// <summary>
@@ -75,6 +88,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
             this.SetParamSimple(map, prefix + "LanguageType", this.LanguageType);
+            this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
+            this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         }
     }
 }

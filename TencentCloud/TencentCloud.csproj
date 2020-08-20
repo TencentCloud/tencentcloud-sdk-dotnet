@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.126</VersionPrefix>
+    <VersionPrefix>3.0.127</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6576,6 +6576,7 @@
     <Compile Include="Postgres\V20170312\Models\SlowlogDetail.cs" />
     <Compile Include="Postgres\V20170312\Models\SpecInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\SpecItemInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\Tag.cs" />
     <Compile Include="Postgres\V20170312\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\Xlog.cs" />
@@ -9013,6 +9014,7 @@
     <Compile Include="Vod\V20180717\Models\TerrorismOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="Vod\V20180717\Models\TextWatermarkTemplateInputForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\TimeRange.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodePlayInfo2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTaskInput.cs" />

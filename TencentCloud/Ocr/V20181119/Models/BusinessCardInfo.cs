@@ -37,6 +37,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+        /// </summary>
+        [JsonProperty("ItemCoord")]
+        public ItemCoord ItemCoord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
         }
     }
 }

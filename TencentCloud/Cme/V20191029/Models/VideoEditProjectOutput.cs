@@ -25,6 +25,12 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
+        /// 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+        /// </summary>
+        [JsonProperty("MaterialId")]
+        public string MaterialId{ get; set; }
+
+        /// <summary>
         /// 云点播媒资 FileId。
         /// </summary>
         [JsonProperty("VodFileId")]
@@ -49,6 +55,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "MaterialId", this.MaterialId);
             this.SetParamSimple(map, prefix + "VodFileId", this.VodFileId);
             this.SetParamSimple(map, prefix + "URL", this.URL);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);

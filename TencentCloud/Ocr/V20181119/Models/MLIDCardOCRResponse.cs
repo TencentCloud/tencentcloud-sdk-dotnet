@@ -64,7 +64,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// 扩展字段:
+        /// 扩展字段：
         /// {
         ///     ID:{
         ///         Confidence:0.9999
@@ -90,6 +90,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 出生日期（目前该字段仅支持IKAD劳工证）
+        /// </summary>
+        [JsonProperty("Birthday")]
+        public string Birthday{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -109,6 +115,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

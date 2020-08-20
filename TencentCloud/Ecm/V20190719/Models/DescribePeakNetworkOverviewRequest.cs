@@ -38,7 +38,7 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 过滤条件。
-        /// region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。
+        /// region    String      是否必填：否     （过滤条件）按照region过滤,不支持模糊匹配。注意 region 填上需要查询ecm region才能返回数据。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

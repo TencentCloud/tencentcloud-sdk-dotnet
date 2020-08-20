@@ -295,14 +295,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public string IPv6Mode{ get; set; }
 
         /// <summary>
-        /// 是否开启SnatPro
+        /// 是否开启SnatPro。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
         /// <summary>
-        /// 开启SnatPro负载均衡后，SnatIp列表
+        /// 开启SnatPro负载均衡后，SnatIp列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnatIps")]
@@ -335,6 +335,20 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }
+
+        /// <summary>
+        /// 7层独占标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterTag")]
+        public string ClusterTag{ get; set; }
+
+        /// <summary>
+        /// 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MixIpTarget")]
+        public bool? MixIpTarget{ get; set; }
 
 
         /// <summary>
@@ -387,6 +401,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "IsBlock", this.IsBlock);
             this.SetParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
             this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+            this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+            this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
         }
     }
 }

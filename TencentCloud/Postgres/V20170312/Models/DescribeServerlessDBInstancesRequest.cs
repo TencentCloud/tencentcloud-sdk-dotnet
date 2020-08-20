@@ -42,6 +42,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 排序指标，目前支持实例创建时间CreateTime
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 排序方式，包括升序、降序
+        /// </summary>
+        [JsonProperty("OrderByType")]
+        public string OrderByType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Filter.", this.Filter);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }
 }

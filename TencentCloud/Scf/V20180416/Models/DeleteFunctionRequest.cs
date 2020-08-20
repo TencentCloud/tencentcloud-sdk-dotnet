@@ -36,6 +36,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// 函数版本
+        /// </summary>
+        [JsonProperty("Qualifier")]
+        public string Qualifier{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Scf.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
         }
     }
 }

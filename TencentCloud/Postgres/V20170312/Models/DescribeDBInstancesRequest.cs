@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode。
+        /// 过滤条件，目前支持：db-instance-id、db-instance-name、db-project-id、db-pay-mode、db-tag-key。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

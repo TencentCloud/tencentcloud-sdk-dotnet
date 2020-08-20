@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Scf.V20180416.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListLayersRequest : AbstractModel
+    public class Tag : AbstractModel
     {
         
         /// <summary>
-        /// 适配的运行时
+        /// 标签键
         /// </summary>
-        [JsonProperty("CompatibleRuntime")]
-        public string CompatibleRuntime{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// 偏移位置
+        /// 标签值
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 查询数目限制
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 查询key，模糊匹配名称
-        /// </summary>
-        [JsonProperty("SearchKey")]
-        public string SearchKey{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CompatibleRuntime", this.CompatibleRuntime);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

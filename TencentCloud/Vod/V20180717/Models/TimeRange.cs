@@ -15,38 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Scf.V20180416.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ListLayersRequest : AbstractModel
+    public class TimeRange : AbstractModel
     {
         
         /// <summary>
-        /// 适配的运行时
+        /// <li>大于等于此时间（起始时间）。</li>
+        /// <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
         /// </summary>
-        [JsonProperty("CompatibleRuntime")]
-        public string CompatibleRuntime{ get; set; }
+        [JsonProperty("After")]
+        public string After{ get; set; }
 
         /// <summary>
-        /// 偏移位置
+        /// <li>小于等于此时间（结束时间）。</li>
+        /// <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 查询数目限制
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 查询key，模糊匹配名称
-        /// </summary>
-        [JsonProperty("SearchKey")]
-        public string SearchKey{ get; set; }
+        [JsonProperty("Before")]
+        public string Before{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CompatibleRuntime", this.CompatibleRuntime);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamSimple(map, prefix + "After", this.After);
+            this.SetParamSimple(map, prefix + "Before", this.Before);
         }
     }
 }

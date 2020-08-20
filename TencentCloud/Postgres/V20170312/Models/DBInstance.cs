@@ -186,6 +186,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("SupportIpv6")]
         public ulong? SupportIpv6{ get; set; }
 
+        /// <summary>
+        /// 实例绑定的标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +226,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

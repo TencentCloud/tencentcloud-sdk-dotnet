@@ -1203,7 +1203,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 获取用户的clb独占日志集。
+        /// 获取用户的clb专有日志集
         /// </summary>
         /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
         /// <returns><see cref="DescribeClsLogSetResponse"/></returns>
@@ -1223,7 +1223,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 获取用户的clb独占日志集。
+        /// 获取用户的clb专有日志集
         /// </summary>
         /// <param name="req"><see cref="DescribeClsLogSetRequest"/></param>
         /// <returns><see cref="DescribeClsLogSetResponse"/></returns>

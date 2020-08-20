@@ -60,14 +60,14 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// projectId
+        /// 项目id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// VpcId
+        /// 私有网络Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VpcId")]
@@ -122,6 +122,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBDatabaseList")]
         public string[] DBDatabaseList{ get; set; }
 
+        /// <summary>
+        /// 实例绑定的标签数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
             this.SetParamArrayObj(map, prefix + "DBAccountSet.", this.DBAccountSet);
             this.SetParamArraySimple(map, prefix + "DBDatabaseList.", this.DBDatabaseList);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }
