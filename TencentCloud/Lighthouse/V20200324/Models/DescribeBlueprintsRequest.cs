@@ -21,30 +21,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstancesRequest : AbstractModel
+    public class DescribeBlueprintsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID 列表。每次请求批量实例的上限为 100。
+        /// 镜像 ID 列表。
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
-
-        /// <summary>
-        /// 过滤器列表。
-        /// <li>instance-name</li>按照【实例名称】进行过滤。
-        /// 类型：String
-        /// 必选：否
-        /// <li>private-ip-address</li>按照【实例主网卡的内网 IP】进行过滤。
-        /// 类型：String
-        /// 必选：否
-        /// <li>public-ip-address</li>按照【实例主网卡的公网 IP】进行过滤。
-        /// 类型：String
-        /// 必选：否
-        /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("BlueprintIds")]
+        public string[] BlueprintIds{ get; set; }
 
         /// <summary>
         /// 偏移量，默认为 0。
@@ -58,16 +42,34 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 过滤器列表。
+        /// <li>blueprint-id</li>按照【镜像 ID】进行过滤。
+        /// 类型：String
+        /// 必选：否
+        /// <li>blueprint-type</li>按照【镜像类型】进行过滤。
+        /// 取值： APP_OS（预置应用的系统 ）；PURE_OS（纯净的 OS 系统）。
+        /// 类型：String
+        /// 必选：否
+        /// <li>platform-type</li>按照【镜像平台类型】进行过滤。
+        /// 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）。
+        /// 类型：String
+        /// 必选：否
+        /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BlueprintIds 和 Filters 。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "BlueprintIds.", this.BlueprintIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

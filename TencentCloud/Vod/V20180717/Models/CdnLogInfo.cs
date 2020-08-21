@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstancesAttributeRequest : AbstractModel
+    public class CdnLogInfo : AbstractModel
     {
         
         /// <summary>
-        /// 待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
+        /// 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
         /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
+        [JsonProperty("Date")]
+        public string Date{ get; set; }
 
         /// <summary>
-        /// 修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
+        /// 日志名称，格式为：日期小时-域名
+        /// 如 2018120101-test.vod2.mqcloud.com。
         /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。限制不超过5个。
+        /// 日志下载链接，24小时内下载有效。
         /// </summary>
-        [JsonProperty("SecurityGroups")]
-        public string[] SecurityGroups{ get; set; }
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

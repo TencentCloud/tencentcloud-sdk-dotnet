@@ -1403,6 +1403,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询用户当前地域下的各项配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaRequest"/></param>
+        /// <returns><see cref="DescribeQuotaResponse"/></returns>
+        public async Task<DescribeQuotaResponse> DescribeQuota(DescribeQuotaRequest req)
+        {
+             JsonResponseModel<DescribeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户当前地域下的各项配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaRequest"/></param>
+        /// <returns><see cref="DescribeQuotaResponse"/></returns>
+        public DescribeQuotaResponse DescribeQuotaSync(DescribeQuotaRequest req)
+        {
+             JsonResponseModel<DescribeQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
         /// </summary>
         /// <param name="req"><see cref="DescribeRewriteRequest"/></param>

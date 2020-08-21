@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.127</VersionPrefix>
+    <VersionPrefix>3.0.128</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2278,6 +2278,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancersDetailResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancersResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeQuotaRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeQuotaResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeRewriteRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeRewriteResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeTargetGroupInstancesRequest.cs" />
@@ -2330,6 +2332,7 @@
     <Compile Include="Clb\V20180317\Models\ModifyTargetPortResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyTargetWeightRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyTargetWeightResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\Quota.cs" />
     <Compile Include="Clb\V20180317\Models\RegisterTargetGroupInstancesRequest.cs" />
     <Compile Include="Clb\V20180317\Models\RegisterTargetGroupInstancesResponse.cs" />
     <Compile Include="Clb\V20180317\Models\RegisterTargetsRequest.cs" />
@@ -3700,6 +3703,7 @@
     <Compile Include="Ecdn\V20191012\Models\UpdateDomainConfigResponse.cs" />
     <Compile Include="Ecm\V20190719\EcmClient.cs" />
     <Compile Include="Ecm\V20190719\Models\Address.cs" />
+    <Compile Include="Ecm\V20190719\Models\AddressTemplateSpecification.cs" />
     <Compile Include="Ecm\V20190719\Models\AllocateAddressesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AllocateAddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Area.cs" />
@@ -3708,6 +3712,8 @@
     <Compile Include="Ecm\V20190719\Models\AssistantCidr.cs" />
     <Compile Include="Ecm\V20190719\Models\AssociateAddressRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AssociateAddressResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\AttachNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AttachNetworkInterfaceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\City.cs" />
@@ -3718,6 +3724,8 @@
     <Compile Include="Ecm\V20190719\Models\CreateModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupPoliciesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupPoliciesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSubnetRequest.cs" />
@@ -3730,6 +3738,10 @@
     <Compile Include="Ecm\V20190719\Models\DeleteModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteNetworkInterfaceResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupPoliciesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupPoliciesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSubnetResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteVpcRequest.cs" />
@@ -3770,6 +3782,14 @@
     <Compile Include="Ecm\V20190719\Models\DescribePeakBaseOverviewResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakNetworkOverviewRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakNetworkOverviewResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupAssociationStatisticsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupAssociationStatisticsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupLimitsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupLimitsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupPoliciesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupPoliciesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskResultRequest.cs" />
@@ -3782,6 +3802,8 @@
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DiskInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\EipQuota.cs" />
     <Compile Include="Ecm\V20190719\Models\EnhancedService.cs" />
@@ -3800,6 +3822,7 @@
     <Compile Include="Ecm\V20190719\Models\InstanceFamilyConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceFamilyTypeConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceOperator.cs" />
+    <Compile Include="Ecm\V20190719\Models\InstanceStatistic.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceTypeConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\Internet.cs" />
     <Compile Include="Ecm\V20190719\Models\Ipv6Address.cs" />
@@ -3827,6 +3850,12 @@
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNameResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNetworkRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNetworkResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleSecurityGroupsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleSecurityGroupsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupAttributeRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupAttributeResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupPoliciesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupPoliciesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifySubnetAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifySubnetAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyVpcAttributeRequest.cs" />
@@ -3857,6 +3886,8 @@
     <Compile Include="Ecm\V20190719\Models\ReleaseAddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\RemovePrivateIpAddressesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\RemovePrivateIpAddressesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReplaceSecurityGroupPolicyRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReplaceSecurityGroupPolicyResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesMaxBandwidthRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesMaxBandwidthResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesPasswordRequest.cs" />
@@ -3869,6 +3900,11 @@
     <Compile Include="Ecm\V20190719\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Ecm\V20190719\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="Ecm\V20190719\Models\SecurityGroup.cs" />
+    <Compile Include="Ecm\V20190719\Models\SecurityGroupAssociationStatistics.cs" />
+    <Compile Include="Ecm\V20190719\Models\SecurityGroupLimitSet.cs" />
+    <Compile Include="Ecm\V20190719\Models\SecurityGroupPolicy.cs" />
+    <Compile Include="Ecm\V20190719\Models\SecurityGroupPolicySet.cs" />
+    <Compile Include="Ecm\V20190719\Models\ServiceTemplateSpecification.cs" />
     <Compile Include="Ecm\V20190719\Models\SimpleModule.cs" />
     <Compile Include="Ecm\V20190719\Models\SrcImage.cs" />
     <Compile Include="Ecm\V20190719\Models\StartInstancesRequest.cs" />
@@ -5154,7 +5190,10 @@
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionResponse.cs" />
     <Compile Include="Kms\V20190118\Models\WhiteboxKeyInfo.cs" />
     <Compile Include="Lighthouse\V20200324\LighthouseClient.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Blueprint.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Bundle.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesRequest.cs" />
@@ -8126,6 +8165,7 @@
     <Compile Include="Tiw\V20190919\Models\OmittedDuration.cs" />
     <Compile Include="Tiw\V20190919\Models\PauseOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\PauseOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\RecordControl.cs" />
     <Compile Include="Tiw\V20190919\Models\ResumeOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\ResumeOnlineRecordResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\SetOnlineRecordCallbackKeyRequest.cs" />
@@ -8140,6 +8180,7 @@
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StopOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\StopOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\StreamControl.cs" />
     <Compile Include="Tiw\V20190919\Models\StreamLayout.cs" />
     <Compile Include="Tiw\V20190919\Models\VideoInfo.cs" />
     <Compile Include="Tiw\V20190919\Models\Whiteboard.cs" />
@@ -8251,11 +8292,14 @@
     <Compile Include="Tkgdq\V20190411\Models\EntityRelationSubject.cs" />
     <Compile Include="Tkgdq\V20190411\Models\TripleContent.cs" />
     <Compile Include="Tms\V20200713\TmsClient.cs" />
+    <Compile Include="Tms\V20200713\Models\AccountTipoffAccessRequest.cs" />
+    <Compile Include="Tms\V20200713\Models\AccountTipoffAccessResponse.cs" />
     <Compile Include="Tms\V20200713\Models\DetailResults.cs" />
     <Compile Include="Tms\V20200713\Models\Device.cs" />
     <Compile Include="Tms\V20200713\Models\RiskDetails.cs" />
     <Compile Include="Tms\V20200713\Models\TextModerationRequest.cs" />
     <Compile Include="Tms\V20200713\Models\TextModerationResponse.cs" />
+    <Compile Include="Tms\V20200713\Models\TipoffResponse.cs" />
     <Compile Include="Tms\V20200713\Models\User.cs" />
     <Compile Include="Tmt\V20180321\TmtClient.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageRecord.cs" />
@@ -8675,6 +8719,7 @@
     <Compile Include="Vod\V20180717\Models\AudioTransform.cs" />
     <Compile Include="Vod\V20180717\Models\AudioVolumeParam.cs" />
     <Compile Include="Vod\V20180717\Models\Canvas.cs" />
+    <Compile Include="Vod\V20180717\Models\CdnLogInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ClassificationConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ClassificationConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ClipFileInfo2017.cs" />
@@ -8773,6 +8818,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCDNUsageDataRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeCDNUsageDataResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeCdnLogsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeCdnLogsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />

@@ -21,26 +21,26 @@ namespace TencentCloud.Ecm.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstancesAttributeRequest : AbstractModel
+    public class ModifySecurityGroupPoliciesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
+        /// 安全组实例ID，例如esg-33ocnj9n，可通过DescribeSecurityGroups获取。
         /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
+        [JsonProperty("SecurityGroupId")]
+        public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
+        /// 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
         /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
+        [JsonProperty("SecurityGroupPolicySet")]
+        public SecurityGroupPolicySet SecurityGroupPolicySet{ get; set; }
 
         /// <summary>
-        /// 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。限制不超过5个。
+        /// 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
         /// </summary>
-        [JsonProperty("SecurityGroups")]
-        public string[] SecurityGroups{ get; set; }
+        [JsonProperty("SortPolicys")]
+        public bool? SortPolicys{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
+            this.SetParamSimple(map, prefix + "SortPolicys", this.SortPolicys);
         }
     }
 }

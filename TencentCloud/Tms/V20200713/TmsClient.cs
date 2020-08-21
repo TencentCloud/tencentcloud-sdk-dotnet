@@ -53,6 +53,46 @@ namespace TencentCloud.Tms.V20200713
         }
 
         /// <summary>
+        /// 举报恶意账号
+        /// </summary>
+        /// <param name="req"><see cref="AccountTipoffAccessRequest"/></param>
+        /// <returns><see cref="AccountTipoffAccessResponse"/></returns>
+        public async Task<AccountTipoffAccessResponse> AccountTipoffAccess(AccountTipoffAccessRequest req)
+        {
+             JsonResponseModel<AccountTipoffAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AccountTipoffAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AccountTipoffAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 举报恶意账号
+        /// </summary>
+        /// <param name="req"><see cref="AccountTipoffAccessRequest"/></param>
+        /// <returns><see cref="AccountTipoffAccessResponse"/></returns>
+        public AccountTipoffAccessResponse AccountTipoffAccessSync(AccountTipoffAccessRequest req)
+        {
+             JsonResponseModel<AccountTipoffAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AccountTipoffAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AccountTipoffAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
         /// </summary>
         /// <param name="req"><see cref="TextModerationRequest"/></param>

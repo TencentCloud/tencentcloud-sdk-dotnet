@@ -15,45 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstancesRequest : AbstractModel
+    public class DescribeSecurityGroupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID 列表。每次请求批量实例的上限为 100。
+        /// 安全组实例ID，例如：esg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 过滤器列表。
-        /// <li>instance-name</li>按照【实例名称】进行过滤。
-        /// 类型：String
-        /// 必选：否
-        /// <li>private-ip-address</li>按照【实例主网卡的内网 IP】进行过滤。
-        /// 类型：String
-        /// 必选：否
-        /// <li>public-ip-address</li>按照【实例主网卡的公网 IP】进行过滤。
-        /// 类型：String
-        /// 必选：否
-        /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。
+        /// 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
+        /// security-group-id - String - （过滤条件）安全组ID。
+        /// security-group-name - String - （过滤条件）安全组名称。
+        /// tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。
+        /// tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为 0。
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100。
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -64,7 +58,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

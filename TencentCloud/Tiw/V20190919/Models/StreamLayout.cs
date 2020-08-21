@@ -47,6 +47,15 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("BackgroundColor")]
         public string BackgroundColor{ get; set; }
 
+        /// <summary>
+        /// 视频画面填充模式。
+        /// 
+        /// 0 - 自适应模式，对视频画面进行等比例缩放，在指定区域内显示完整的画面。此模式可能存在黑边。
+        /// 1 - 全屏模式，对视频画面进行等比例缩放，让画面填充满整个指定区域。此模式不会存在黑边，但会将超出区域的那一部分画面裁剪掉。
+        /// </summary>
+        [JsonProperty("FillMode")]
+        public long? FillMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +65,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
             this.SetParamSimple(map, prefix + "InputStreamId", this.InputStreamId);
             this.SetParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
+            this.SetParamSimple(map, prefix + "FillMode", this.FillMode);
         }
     }
 }

@@ -21,26 +21,26 @@ namespace TencentCloud.Ecm.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyInstancesAttributeRequest : AbstractModel
+    public class ModifySecurityGroupAttributeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 待修改的实例ID列表。在单次请求的过程中，请求实例数上限为100。
+        /// 安全组实例ID，例如esg-33ocnj9n，可通过DescribeSecurityGroups获取。
         /// </summary>
-        [JsonProperty("InstanceIdSet")]
-        public string[] InstanceIdSet{ get; set; }
+        [JsonProperty("SecurityGroupId")]
+        public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 修改成功后显示的实例名称，不得超过60个字符，不传则名称显示为空。
+        /// 安全组名称，可任意命名，但不得超过60个字符。
         /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
 
         /// <summary>
-        /// 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。限制不超过5个。
+        /// 安全组备注，最多100个字符。
         /// </summary>
-        [JsonProperty("SecurityGroups")]
-        public string[] SecurityGroups{ get; set; }
+        [JsonProperty("GroupDescription")]
+        public string GroupDescription{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
         }
     }
 }

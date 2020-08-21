@@ -50,7 +50,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string RecordUserSig{ get; set; }
 
         /// <summary>
-        /// 白板的 IM 群组 Id，默认同房间号
+        /// （已废弃，设置无效）白板的 IM 群组 Id，默认同房间号
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -90,6 +90,12 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("AudioFileNeeded")]
         public bool? AudioFileNeeded{ get; set; }
 
+        /// <summary>
+        /// 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+        /// </summary>
+        [JsonProperty("RecordControl")]
+        public RecordControl RecordControl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +112,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "MixStream.", this.MixStream);
             this.SetParamArraySimple(map, prefix + "Extras.", this.Extras);
             this.SetParamSimple(map, prefix + "AudioFileNeeded", this.AudioFileNeeded);
+            this.SetParamObj(map, prefix + "RecordControl.", this.RecordControl);
         }
     }
 }

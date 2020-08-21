@@ -38,6 +38,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 系统盘类型。
+        /// 取值范围： 
+        /// <li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
         /// </summary>
         [JsonProperty("SystemDiskType")]
         public string SystemDiskType{ get; set; }

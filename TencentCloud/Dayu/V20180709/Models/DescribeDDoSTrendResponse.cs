@@ -68,7 +68,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 值数组
+        /// 值数组，攻击流量带宽单位为Mbps，包速率单位为pps
         /// </summary>
         [JsonProperty("Data")]
         public ulong?[] Data{ get; set; }

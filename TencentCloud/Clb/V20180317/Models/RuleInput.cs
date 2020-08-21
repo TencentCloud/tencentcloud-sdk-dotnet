@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// 健康检查信息
+        /// 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }

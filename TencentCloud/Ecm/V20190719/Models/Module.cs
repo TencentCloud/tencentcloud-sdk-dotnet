@@ -94,6 +94,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("CloseIpDirect")]
         public long? CloseIpDirect{ get; set; }
 
+        /// <summary>
+        /// 默认安全组id列表
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "DefaultBandwidth", this.DefaultBandwidth);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

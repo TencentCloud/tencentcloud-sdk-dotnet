@@ -185,6 +185,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 绑定安全组
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public async Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定安全组
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public AssociateSecurityGroupsResponse AssociateSecurityGroupsSync(AssociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 弹性网卡绑定云主机
         /// </summary>
         /// <param name="req"><see cref="AttachNetworkInterfaceRequest"/></param>
@@ -385,6 +425,68 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 在 SecurityGroupPolicySet 参数中：
+        /// 
+        /// Version 安全组规则版本号，用户每次更新安全规则版本会自动加1，防止您更新的路由规则已过期，不填不考虑冲突。
+        /// 在创建出站和入站规则（Egress 和 Ingress）时：
+        /// Protocol 字段支持输入TCP, UDP, ICMP, ICMPV6, GRE, ALL。
+        /// CidrBlock 字段允许输入符合cidr格式标准的任意字符串。(展开)在基础网络中，如果 CidrBlock 包含您的账户内的云服务器之外的设备在腾讯云的内网 IP，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// Ipv6CidrBlock 字段允许输入符合IPv6 cidr格式标准的任意字符串。(展开)在基础网络中，如果Ipv6CidrBlock 包含您的账户内的云服务器之外的设备在腾讯云的内网 IPv6，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// SecurityGroupId 字段允许输入与待修改的安全组位于相同项目中的安全组 ID，包括这个安全组 ID 本身，代表安全组下所有云服务器的内网 IP。使用这个字段时，这条规则用来匹配网络报文的过程中会随着被使用的这个 ID 所关联的云服务器变化而变化，不需要重新修改。
+        /// Port 字段允许输入一个单独端口号，或者用减号分隔的两个端口号代表端口范围，例如80或8000-8010。只有当 Protocol 字段是 TCP 或 UDP 时，Port 字段才被接受，即 Protocol 字段不是 TCP 或 UDP 时，Protocol 和 Port 排他关系，不允许同时输入，否则会接口报错。
+        /// Action 字段只允许输入 ACCEPT 或 DROP。
+        /// CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系，不允许同时输入，Protocol + Port 和 ServiceTemplate 二者是排他关系，不允许同时输入。
+        /// 一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupPoliciesResponse"/></returns>
+        public async Task<CreateSecurityGroupPoliciesResponse> CreateSecurityGroupPolicies(CreateSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在 SecurityGroupPolicySet 参数中：
+        /// 
+        /// Version 安全组规则版本号，用户每次更新安全规则版本会自动加1，防止您更新的路由规则已过期，不填不考虑冲突。
+        /// 在创建出站和入站规则（Egress 和 Ingress）时：
+        /// Protocol 字段支持输入TCP, UDP, ICMP, ICMPV6, GRE, ALL。
+        /// CidrBlock 字段允许输入符合cidr格式标准的任意字符串。(展开)在基础网络中，如果 CidrBlock 包含您的账户内的云服务器之外的设备在腾讯云的内网 IP，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// Ipv6CidrBlock 字段允许输入符合IPv6 cidr格式标准的任意字符串。(展开)在基础网络中，如果Ipv6CidrBlock 包含您的账户内的云服务器之外的设备在腾讯云的内网 IPv6，并不代表此规则允许您访问这些设备，租户之间网络隔离规则优先于安全组中的内网规则。
+        /// SecurityGroupId 字段允许输入与待修改的安全组位于相同项目中的安全组 ID，包括这个安全组 ID 本身，代表安全组下所有云服务器的内网 IP。使用这个字段时，这条规则用来匹配网络报文的过程中会随着被使用的这个 ID 所关联的云服务器变化而变化，不需要重新修改。
+        /// Port 字段允许输入一个单独端口号，或者用减号分隔的两个端口号代表端口范围，例如80或8000-8010。只有当 Protocol 字段是 TCP 或 UDP 时，Port 字段才被接受，即 Protocol 字段不是 TCP 或 UDP 时，Protocol 和 Port 排他关系，不允许同时输入，否则会接口报错。
+        /// Action 字段只允许输入 ACCEPT 或 DROP。
+        /// CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系，不允许同时输入，Protocol + Port 和 ServiceTemplate 二者是排他关系，不允许同时输入。
+        /// 一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupPoliciesResponse"/></returns>
+        public CreateSecurityGroupPoliciesResponse CreateSecurityGroupPoliciesSync(CreateSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建子网，若创建成功，则此子网会成为此可用区的默认子网。
         /// </summary>
         /// <param name="req"><see cref="CreateSubnetRequest"/></param>
@@ -576,6 +678,90 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNetworkInterface");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 只有当前账号下的安全组允许被删除。
+        /// 安全组实例ID如果在其他安全组的规则中被引用，则无法直接删除。这种情况下，需要先进行规则修改，再删除安全组。
+        /// 删除的安全组无法再找回，请谨慎调用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupResponse"/></returns>
+        public async Task<DeleteSecurityGroupResponse> DeleteSecurityGroup(DeleteSecurityGroupRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 只有当前账号下的安全组允许被删除。
+        /// 安全组实例ID如果在其他安全组的规则中被引用，则无法直接删除。这种情况下，需要先进行规则修改，再删除安全组。
+        /// 删除的安全组无法再找回，请谨慎调用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupResponse"/></returns>
+        public DeleteSecurityGroupResponse DeleteSecurityGroupSync(DeleteSecurityGroupRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupPoliciesResponse"/></returns>
+        public async Task<DeleteSecurityGroupPoliciesResponse> DeleteSecurityGroupPolicies(DeleteSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupPoliciesResponse"/></returns>
+        public DeleteSecurityGroupPoliciesResponse DeleteSecurityGroupPoliciesSync(DeleteSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupPoliciesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1385,6 +1571,166 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询安全组关联实例统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupAssociationStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupAssociationStatisticsResponse"/></returns>
+        public async Task<DescribeSecurityGroupAssociationStatisticsResponse> DescribeSecurityGroupAssociationStatistics(DescribeSecurityGroupAssociationStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroupAssociationStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全组关联实例统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupAssociationStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupAssociationStatisticsResponse"/></returns>
+        public DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatisticsSync(DescribeSecurityGroupAssociationStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroupAssociationStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupAssociationStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户安全组配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupLimitsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupLimitsResponse"/></returns>
+        public async Task<DescribeSecurityGroupLimitsResponse> DescribeSecurityGroupLimits(DescribeSecurityGroupLimitsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroupLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户安全组配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupLimitsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupLimitsResponse"/></returns>
+        public DescribeSecurityGroupLimitsResponse DescribeSecurityGroupLimitsSync(DescribeSecurityGroupLimitsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroupLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupPoliciesResponse"/></returns>
+        public async Task<DescribeSecurityGroupPoliciesResponse> DescribeSecurityGroupPolicies(DescribeSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupPoliciesResponse"/></returns>
+        public DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPoliciesSync(DescribeSecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看安全组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupsResponse"/></returns>
+        public async Task<DescribeSecurityGroupsResponse> DescribeSecurityGroups(DescribeSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看安全组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupsResponse"/></returns>
+        public DescribeSecurityGroupsResponse DescribeSecurityGroupsSync(DescribeSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询子网列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSubnetsRequest"/></param>
@@ -1620,6 +1966,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑安全组
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public async Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑安全组
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2193,6 +2579,126 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 修改模块默认安全组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyModuleSecurityGroupsResponse"/></returns>
+        public async Task<ModifyModuleSecurityGroupsResponse> ModifyModuleSecurityGroups(ModifyModuleSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyModuleSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyModuleSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模块默认安全组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyModuleSecurityGroupsResponse"/></returns>
+        public ModifyModuleSecurityGroupsResponse ModifyModuleSecurityGroupsSync(ModifyModuleSecurityGroupsRequest req)
+        {
+             JsonResponseModel<ModifyModuleSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyModuleSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改安全组属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupAttributeResponse"/></returns>
+        public async Task<ModifySecurityGroupAttributeResponse> ModifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest req)
+        {
+             JsonResponseModel<ModifySecurityGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySecurityGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改安全组属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupAttributeResponse"/></returns>
+        public ModifySecurityGroupAttributeResponse ModifySecurityGroupAttributeSync(ModifySecurityGroupAttributeRequest req)
+        {
+             JsonResponseModel<ModifySecurityGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySecurityGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改安全组出站和入站规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupPoliciesResponse"/></returns>
+        public async Task<ModifySecurityGroupPoliciesResponse> ModifySecurityGroupPolicies(ModifySecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<ModifySecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改安全组出站和入站规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupPoliciesRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupPoliciesResponse"/></returns>
+        public ModifySecurityGroupPoliciesResponse ModifySecurityGroupPoliciesSync(ModifySecurityGroupPoliciesRequest req)
+        {
+             JsonResponseModel<ModifySecurityGroupPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySecurityGroupPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityGroupPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改子网属性
         /// </summary>
         /// <param name="req"><see cref="ModifySubnetAttributeRequest"/></param>
@@ -2390,6 +2896,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "RemovePrivateIpAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemovePrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 替换单条安全组路由规则, 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceSecurityGroupPolicyRequest"/></param>
+        /// <returns><see cref="ReplaceSecurityGroupPolicyResponse"/></returns>
+        public async Task<ReplaceSecurityGroupPolicyResponse> ReplaceSecurityGroupPolicy(ReplaceSecurityGroupPolicyRequest req)
+        {
+             JsonResponseModel<ReplaceSecurityGroupPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceSecurityGroupPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceSecurityGroupPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 替换单条安全组路由规则, 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceSecurityGroupPolicyRequest"/></param>
+        /// <returns><see cref="ReplaceSecurityGroupPolicyResponse"/></returns>
+        public ReplaceSecurityGroupPolicyResponse ReplaceSecurityGroupPolicySync(ReplaceSecurityGroupPolicyRequest req)
+        {
+             JsonResponseModel<ReplaceSecurityGroupPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceSecurityGroupPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceSecurityGroupPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
