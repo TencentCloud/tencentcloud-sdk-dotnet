@@ -1279,6 +1279,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 查询用户可购买的竞价机型信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpotTypeConfigRequest"/></param>
+        /// <returns><see cref="DescribeSpotTypeConfigResponse"/></returns>
+        public async Task<DescribeSpotTypeConfigResponse> DescribeSpotTypeConfig(DescribeSpotTypeConfigRequest req)
+        {
+             JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpotTypeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpotTypeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户可购买的竞价机型信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpotTypeConfigRequest"/></param>
+        /// <returns><see cref="DescribeSpotTypeConfigResponse"/></returns>
+        public DescribeSpotTypeConfigResponse DescribeSpotTypeConfigSync(DescribeSpotTypeConfigRequest req)
+        {
+             JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSpotTypeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpotTypeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneInstanceConfigInfosRequest"/></param>

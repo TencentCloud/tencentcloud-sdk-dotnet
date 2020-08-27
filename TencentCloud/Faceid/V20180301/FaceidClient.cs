@@ -173,6 +173,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 银行卡基础信息查询
+        /// </summary>
+        /// <param name="req"><see cref="CheckBankCardInformationRequest"/></param>
+        /// <returns><see cref="CheckBankCardInformationResponse"/></returns>
+        public async Task<CheckBankCardInformationResponse> CheckBankCardInformation(CheckBankCardInformationRequest req)
+        {
+             JsonResponseModel<CheckBankCardInformationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckBankCardInformation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckBankCardInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 银行卡基础信息查询
+        /// </summary>
+        /// <param name="req"><see cref="CheckBankCardInformationRequest"/></param>
+        /// <returns><see cref="CheckBankCardInformationResponse"/></returns>
+        public CheckBankCardInformationResponse CheckBankCardInformationSync(CheckBankCardInformationRequest req)
+        {
+             JsonResponseModel<CheckBankCardInformationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckBankCardInformation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckBankCardInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与公安权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
         /// </summary>
         /// <param name="req"><see cref="CheckIdCardInformationRequest"/></param>

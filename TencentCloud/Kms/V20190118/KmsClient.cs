@@ -1373,6 +1373,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 获取支持的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRegionsRequest"/></param>
+        /// <returns><see cref="GetRegionsResponse"/></returns>
+        public async Task<GetRegionsResponse> GetRegions(GetRegionsRequest req)
+        {
+             JsonResponseModel<GetRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取支持的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="GetRegionsRequest"/></param>
+        /// <returns><see cref="GetRegionsResponse"/></returns>
+        public GetRegionsResponse GetRegionsSync(GetRegionsRequest req)
+        {
+             JsonResponseModel<GetRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询该用户是否已开通KMS服务
         /// </summary>
         /// <param name="req"><see cref="GetServiceStatusRequest"/></param>

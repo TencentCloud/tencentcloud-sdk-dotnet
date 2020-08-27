@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 镜像 ID。
+        /// 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
         /// </summary>
         [JsonProperty("BlueprintId")]
         public string BlueprintId{ get; set; }

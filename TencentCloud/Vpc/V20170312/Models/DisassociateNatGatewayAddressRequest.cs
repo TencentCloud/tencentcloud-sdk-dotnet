@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 绑定NAT网关的弹性IP数组。
+        /// 待解绑NAT网关的弹性IP数组。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }

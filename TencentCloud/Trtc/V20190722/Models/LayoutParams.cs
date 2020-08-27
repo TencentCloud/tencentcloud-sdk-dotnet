@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("SmallVideoLayoutParams")]
         public SmallVideoLayoutParams SmallVideoLayoutParams{ get; set; }
 
+        /// <summary>
+        /// 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+        /// </summary>
+        [JsonProperty("MainVideoRightAlign")]
+        public ulong? MainVideoRightAlign{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MainVideoUserId", this.MainVideoUserId);
             this.SetParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
             this.SetParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
+            this.SetParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
         }
     }
 }

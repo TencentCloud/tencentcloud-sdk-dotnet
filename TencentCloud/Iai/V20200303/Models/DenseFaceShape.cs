@@ -109,7 +109,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public Point[] CentralAxis{ get; set; }
 
         /// <summary>
-        /// 下轮廓的 XX 个点。
+        /// 下巴轮廓的 XX 个点。
         /// </summary>
         [JsonProperty("Chin")]
         public Point[] Chin{ get; set; }

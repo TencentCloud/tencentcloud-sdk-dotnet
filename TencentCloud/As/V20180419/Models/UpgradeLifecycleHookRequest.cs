@@ -55,7 +55,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩向通知目标发送的附加信息，默认值为''
+        /// 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }

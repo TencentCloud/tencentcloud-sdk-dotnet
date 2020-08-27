@@ -93,6 +93,86 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 视频美颜
+        /// </summary>
+        /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
+        /// <returns><see cref="BeautifyVideoResponse"/></returns>
+        public async Task<BeautifyVideoResponse> BeautifyVideo(BeautifyVideoRequest req)
+        {
+             JsonResponseModel<BeautifyVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BeautifyVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 视频美颜
+        /// </summary>
+        /// <param name="req"><see cref="BeautifyVideoRequest"/></param>
+        /// <returns><see cref="BeautifyVideoResponse"/></returns>
+        public BeautifyVideoResponse BeautifyVideoSync(BeautifyVideoRequest req)
+        {
+             JsonResponseModel<BeautifyVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BeautifyVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BeautifyVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 撤销视频美颜任务请求
+        /// </summary>
+        /// <param name="req"><see cref="CancelBeautifyVideoJobRequest"/></param>
+        /// <returns><see cref="CancelBeautifyVideoJobResponse"/></returns>
+        public async Task<CancelBeautifyVideoJobResponse> CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req)
+        {
+             JsonResponseModel<CancelBeautifyVideoJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelBeautifyVideoJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelBeautifyVideoJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 撤销视频美颜任务请求
+        /// </summary>
+        /// <param name="req"><see cref="CancelBeautifyVideoJobRequest"/></param>
+        /// <returns><see cref="CancelBeautifyVideoJobResponse"/></returns>
+        public CancelBeautifyVideoJobResponse CancelBeautifyVideoJobSync(CancelBeautifyVideoJobRequest req)
+        {
+             JsonResponseModel<CancelBeautifyVideoJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelBeautifyVideoJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelBeautifyVideoJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
         /// 
         /// 注：您也可以直接使用 [试唇色接口](https://cloud.tencent.com/document/product/1172/40706)，通过输入RGBA模型数值的方式指定唇色，更简单易用。
@@ -208,6 +288,46 @@ namespace TencentCloud.Fmu.V20191213
              {
                  var strResp = this.InternalRequestSync(req, "GetModelList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetModelListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询视频美颜处理进度
+        /// </summary>
+        /// <param name="req"><see cref="QueryBeautifyVideoJobRequest"/></param>
+        /// <returns><see cref="QueryBeautifyVideoJobResponse"/></returns>
+        public async Task<QueryBeautifyVideoJobResponse> QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req)
+        {
+             JsonResponseModel<QueryBeautifyVideoJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryBeautifyVideoJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBeautifyVideoJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询视频美颜处理进度
+        /// </summary>
+        /// <param name="req"><see cref="QueryBeautifyVideoJobRequest"/></param>
+        /// <returns><see cref="QueryBeautifyVideoJobResponse"/></returns>
+        public QueryBeautifyVideoJobResponse QueryBeautifyVideoJobSync(QueryBeautifyVideoJobRequest req)
+        {
+             JsonResponseModel<QueryBeautifyVideoJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryBeautifyVideoJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBeautifyVideoJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

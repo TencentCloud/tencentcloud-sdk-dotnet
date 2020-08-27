@@ -31,7 +31,7 @@ namespace TencentCloud.Ams.V20200608.Models
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 异步检测结果回调通知接收URL。支持HTTP和HTTPS
+        /// 审核类型，这里可选：AUDIO (点播音频)和 LIVE_AUDIO（直播音频）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

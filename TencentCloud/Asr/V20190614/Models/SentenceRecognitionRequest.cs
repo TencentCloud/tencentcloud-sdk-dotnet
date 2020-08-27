@@ -45,6 +45,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_en：16k 英语；
         /// • 16k_ca：16k 粤语；
         /// • 16k_ja：16k 日语；
+        /// •16k_wuu-SH：16k 上海话方言。
         /// </summary>
         [JsonProperty("EngSerViceType")]
         public string EngSerViceType{ get; set; }

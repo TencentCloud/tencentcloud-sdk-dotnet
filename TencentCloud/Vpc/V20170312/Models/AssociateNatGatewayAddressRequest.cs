@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? AddressCount{ get; set; }
 
         /// <summary>
-        /// 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
+        /// 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// 弹性IP可以区，自动分配弹性IP时传递。
+        /// 弹性IP可用区，自动分配弹性IP时传递。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

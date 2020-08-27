@@ -32,7 +32,7 @@ namespace TencentCloud.Sms.V20190711.Models
         public string[] PhoneNumberSet{ get; set; }
 
         /// <summary>
-        /// 模板 ID，必须填写已审核通过的模板 ID。模板ID可登录 [短信控制台](https://console.cloud.tencent.com/smsv2) 查看。
+        /// 模板 ID，必须填写已审核通过的模板 ID。模板ID可登录 [短信控制台](https://console.cloud.tencent.com/smsv2) 查看，若向境外手机号发送短信，仅支持使用国际/港澳台短信模板。
         /// </summary>
         [JsonProperty("TemplateID")]
         public string TemplateID{ get; set; }

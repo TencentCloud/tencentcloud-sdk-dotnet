@@ -292,6 +292,20 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }
 
+        /// <summary>
+        /// Tendis实例的磁盘大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MonitorVersion")]
+        public string MonitorVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -341,6 +355,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "Vip6", this.Vip6);
             this.SetParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
         }
     }
 }

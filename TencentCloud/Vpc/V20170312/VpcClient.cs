@@ -833,6 +833,52 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口用于服务商操作跨境专线合规化资质审批。
+        /// * 服务商只能操作提交到本服务商的审批单，后台会校验身份。即只授权给服务商的`APPID` 调用本接口。
+        /// * 只有当审批单为 `PENDING` 状态时，才能审批操作。
+        /// * `APPROVED` 状态的审批单，可以再次操作为 `DENY`；`DENY` 状态的审批单，也可以再次操作为 `APPROVED`。
+        /// </summary>
+        /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="AuditCrossBorderComplianceResponse"/></returns>
+        public async Task<AuditCrossBorderComplianceResponse> AuditCrossBorderCompliance(AuditCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<AuditCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AuditCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuditCrossBorderComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于服务商操作跨境专线合规化资质审批。
+        /// * 服务商只能操作提交到本服务商的审批单，后台会校验身份。即只授权给服务商的`APPID` 调用本接口。
+        /// * 只有当审批单为 `PENDING` 状态时，才能审批操作。
+        /// * `APPROVED` 状态的审批单，可以再次操作为 `DENY`；`DENY` 状态的审批单，也可以再次操作为 `APPROVED`。
+        /// </summary>
+        /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="AuditCrossBorderComplianceResponse"/></returns>
+        public AuditCrossBorderComplianceResponse AuditCrossBorderComplianceSync(AuditCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<AuditCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AuditCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuditCrossBorderComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。（接口灰度中，如需使用请提工单。）
         /// * 检测辅助CIDR是否与当前VPC的主CIDR和辅助CIDR存在重叠。
         /// * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
@@ -4012,6 +4058,48 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClassicLinkInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClassicLinkInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询用户创建跨境专线合规化资质审批单。
+        /// 服务商可以查询服务名下的任意 `APPID` 创建的审批单；非服务商，只能查询自己审批单。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderComplianceResponse"/></returns>
+        public async Task<DescribeCrossBorderComplianceResponse> DescribeCrossBorderCompliance(DescribeCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询用户创建跨境专线合规化资质审批单。
+        /// 服务商可以查询服务名下的任意 `APPID` 创建的审批单；非服务商，只能查询自己审批单。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderComplianceResponse"/></returns>
+        public DescribeCrossBorderComplianceResponse DescribeCrossBorderComplianceSync(DescribeCrossBorderComplianceRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossBorderCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderComplianceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

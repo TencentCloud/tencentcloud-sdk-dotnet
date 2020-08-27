@@ -33,6 +33,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 项目类别，取值有：
         /// <li>VIDEO_EDIT：视频编辑。</li>
+        /// <li>SWITCHER：导播台。</li>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
@@ -57,6 +58,18 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
+        /// <summary>
+        /// 项目描述信息。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 导播台信息，仅当项目类型为 SWITCHER 时有效。
+        /// </summary>
+        [JsonProperty("SwitcherProjectInput")]
+        public SwitcherProjectInput SwitcherProjectInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +81,8 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
         }
     }
 }

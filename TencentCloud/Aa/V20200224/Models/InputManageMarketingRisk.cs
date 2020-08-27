@@ -31,16 +31,6 @@ namespace TencentCloud.Aa.V20200224.Models
         public AccountInfo Account{ get; set; }
 
         /// <summary>
-        /// 场景类型。
-        /// 1：活动防刷
-        /// 2：登录保护
-        /// 3：注册保护
-        /// 4：活动防刷高级版（网赚）
-        /// </summary>
-        [JsonProperty("SceneType")]
-        public long? SceneType{ get; set; }
-
-        /// <summary>
         /// 登录来源的外网IP
         /// </summary>
         [JsonProperty("UserIp")]
@@ -51,6 +41,16 @@ namespace TencentCloud.Aa.V20200224.Models
         /// </summary>
         [JsonProperty("PostTime")]
         public ulong? PostTime{ get; set; }
+
+        /// <summary>
+        /// 场景类型。(后续不再支持，请使用SceneCode字段)
+        /// 1：活动防刷
+        /// 2：登录保护
+        /// 3：注册保护
+        /// 4：活动防刷高级版（网赚）
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public long? SceneType{ get; set; }
 
         /// <summary>
         /// 用户唯一标识。
@@ -138,6 +138,18 @@ namespace TencentCloud.Aa.V20200224.Models
         [JsonProperty("CrowdAntiRush")]
         public CrowdAntiRushInfo CrowdAntiRush{ get; set; }
 
+        /// <summary>
+        /// 场景Code，控制台上获取
+        /// </summary>
+        [JsonProperty("SceneCode")]
+        public string SceneCode{ get; set; }
+
+        /// <summary>
+        /// 详细信息
+        /// </summary>
+        [JsonProperty("Details")]
+        public InputDetails[] Details{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,9 +157,9 @@ namespace TencentCloud.Aa.V20200224.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Account.", this.Account);
-            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "PostTime", this.PostTime);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "DeviceToken", this.DeviceToken);
             this.SetParamSimple(map, prefix + "DeviceBusinessId", this.DeviceBusinessId);
@@ -162,6 +174,8 @@ namespace TencentCloud.Aa.V20200224.Models
             this.SetParamSimple(map, prefix + "MacAddress", this.MacAddress);
             this.SetParamSimple(map, prefix + "VendorId", this.VendorId);
             this.SetParamObj(map, prefix + "CrowdAntiRush.", this.CrowdAntiRush);
+            this.SetParamSimple(map, prefix + "SceneCode", this.SceneCode);
+            this.SetParamArrayObj(map, prefix + "Details.", this.Details);
         }
     }
 }

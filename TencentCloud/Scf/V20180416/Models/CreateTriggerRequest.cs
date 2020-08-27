@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+        /// 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
