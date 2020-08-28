@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Dts.V20180330.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SecurityGroupPolicySet : AbstractModel
+    public class ModifySubscribeAutoRenewFlagResponse : AbstractModel
     {
         
         /// <summary>
-        /// 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
-
-        /// <summary>
-        /// 出站规则。其中出站规则和入站规则必须选一个。
-        /// </summary>
-        [JsonProperty("Egress")]
-        public SecurityGroupPolicy[] Egress{ get; set; }
-
-        /// <summary>
-        /// 入站规则。其中出站规则和入站规则必须选一个。
-        /// </summary>
-        [JsonProperty("Ingress")]
-        public SecurityGroupPolicy[] Ingress{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Version", this.Version);
-            this.SetParamArrayObj(map, prefix + "Egress.", this.Egress);
-            this.SetParamArrayObj(map, prefix + "Ingress.", this.Ingress);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

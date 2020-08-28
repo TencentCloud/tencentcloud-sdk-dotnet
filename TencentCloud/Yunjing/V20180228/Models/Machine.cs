@@ -130,6 +130,12 @@ namespace TencentCloud.Yunjing.V20180228.Models
         [JsonProperty("InvasionNum")]
         public long? InvasionNum{ get; set; }
 
+        /// <summary>
+        /// 地域信息
+        /// </summary>
+        [JsonProperty("RegionInfo")]
+        public RegionInfo RegionInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -152,6 +158,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
             this.SetParamSimple(map, prefix + "CyberAttackNum", this.CyberAttackNum);
             this.SetParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
             this.SetParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
+            this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
         }
     }
 }

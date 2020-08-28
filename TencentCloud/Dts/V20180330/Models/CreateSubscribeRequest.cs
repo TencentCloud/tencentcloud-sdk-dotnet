@@ -54,6 +54,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
 
+        /// <summary>
+        /// 实例资源标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItem[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

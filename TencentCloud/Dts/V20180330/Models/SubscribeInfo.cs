@@ -150,6 +150,20 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("SdkConsumedTime")]
         public string SdkConsumedTime{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItem[] Tags{ get; set; }
+
+        /// <summary>
+        /// 自动续费标识。0-不自动续费，1-自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +191,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SdkConsumedTime", this.SdkConsumedTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }

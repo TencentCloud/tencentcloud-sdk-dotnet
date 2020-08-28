@@ -93,6 +93,46 @@ namespace TencentCloud.Ft.V20200304
         }
 
         /// <summary>
+        /// 人像动漫化
+        /// </summary>
+        /// <param name="req"><see cref="FaceCartoonPicRequest"/></param>
+        /// <returns><see cref="FaceCartoonPicResponse"/></returns>
+        public async Task<FaceCartoonPicResponse> FaceCartoonPic(FaceCartoonPicRequest req)
+        {
+             JsonResponseModel<FaceCartoonPicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FaceCartoonPic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FaceCartoonPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 人像动漫化
+        /// </summary>
+        /// <param name="req"><see cref="FaceCartoonPicRequest"/></param>
+        /// <returns><see cref="FaceCartoonPicResponse"/></returns>
+        public FaceCartoonPicResponse FaceCartoonPicSync(FaceCartoonPicRequest req)
+        {
+             JsonResponseModel<FaceCartoonPicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FaceCartoonPic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FaceCartoonPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸性别转换的图片。男变女可实现美颜、淡妆、加刘海和长发的效果；女变男可实现加胡须、变短发的效果。 
         /// </summary>
         /// <param name="req"><see cref="SwapGenderPicRequest"/></param>

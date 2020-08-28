@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.129</VersionPrefix>
+    <VersionPrefix>3.0.130</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2111,6 +2111,7 @@
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupTopic.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateInstancePreData.cs" />
@@ -2162,6 +2163,12 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByOffsetRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByOffsetResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByTimestampRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByTimestampResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Filter.cs" />
     <Compile Include="Ckafka\V20190819\Models\Group.cs" />
     <Compile Include="Ckafka\V20190819\Models\GroupInfoMember.cs" />
@@ -3608,6 +3615,8 @@
     <Compile Include="Dts\V20180330\Models\MigrateStepDetailInfo.cs" />
     <Compile Include="Dts\V20180330\Models\ModifyMigrateJobRequest.cs" />
     <Compile Include="Dts\V20180330\Models\ModifyMigrateJobResponse.cs" />
+    <Compile Include="Dts\V20180330\Models\ModifySubscribeAutoRenewFlagRequest.cs" />
+    <Compile Include="Dts\V20180330\Models\ModifySubscribeAutoRenewFlagResponse.cs" />
     <Compile Include="Dts\V20180330\Models\ModifySubscribeConsumeTimeRequest.cs" />
     <Compile Include="Dts\V20180330\Models\ModifySubscribeConsumeTimeResponse.cs" />
     <Compile Include="Dts\V20180330\Models\ModifySubscribeNameRequest.cs" />
@@ -3640,6 +3649,8 @@
     <Compile Include="Dts\V20180330\Models\SyncJobInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SyncOption.cs" />
     <Compile Include="Dts\V20180330\Models\SyncStepDetailInfo.cs" />
+    <Compile Include="Dts\V20180330\Models\TagFilter.cs" />
+    <Compile Include="Dts\V20180330\Models\TagItem.cs" />
     <Compile Include="Ecc\V20181213\EccClient.cs" />
     <Compile Include="Ecc\V20181213\Models\Aspect.cs" />
     <Compile Include="Ecc\V20181213\Models\CompostionContext.cs" />
@@ -4102,6 +4113,8 @@
     <Compile Include="Ft\V20200304\Models\AgeInfo.cs" />
     <Compile Include="Ft\V20200304\Models\ChangeAgePicRequest.cs" />
     <Compile Include="Ft\V20200304\Models\ChangeAgePicResponse.cs" />
+    <Compile Include="Ft\V20200304\Models\FaceCartoonPicRequest.cs" />
+    <Compile Include="Ft\V20200304\Models\FaceCartoonPicResponse.cs" />
     <Compile Include="Ft\V20200304\Models\FaceRect.cs" />
     <Compile Include="Ft\V20200304\Models\GenderInfo.cs" />
     <Compile Include="Ft\V20200304\Models\SwapGenderPicRequest.cs" />
@@ -9939,6 +9952,7 @@
     <Compile Include="Yunjing\V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RecoverMalwaresResponse.cs" />
+    <Compile Include="Yunjing\V20180228\Models\RegionInfo.cs" />
     <Compile Include="Yunjing\V20180228\Models\RenewProVersionRequest.cs" />
     <Compile Include="Yunjing\V20180228\Models\RenewProVersionResponse.cs" />
     <Compile Include="Yunjing\V20180228\Models\RescanImpactedHostRequest.cs" />

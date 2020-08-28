@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Dts.V20180330.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SecurityGroupPolicySet : AbstractModel
+    public class ModifySubscribeAutoRenewFlagRequest : AbstractModel
     {
         
         /// <summary>
-        /// 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+        /// 订阅实例ID，例如：subs-8uey736k
         /// </summary>
-        [JsonProperty("Version")]
-        public string Version{ get; set; }
+        [JsonProperty("SubscribeId")]
+        public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 出站规则。其中出站规则和入站规则必须选一个。
+        /// 自动续费标识。1-自动续费，0-不自动续费
         /// </summary>
-        [JsonProperty("Egress")]
-        public SecurityGroupPolicy[] Egress{ get; set; }
-
-        /// <summary>
-        /// 入站规则。其中出站规则和入站规则必须选一个。
-        /// </summary>
-        [JsonProperty("Ingress")]
-        public SecurityGroupPolicy[] Ingress{ get; set; }
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Version", this.Version);
-            this.SetParamArrayObj(map, prefix + "Egress.", this.Egress);
-            this.SetParamArrayObj(map, prefix + "Ingress.", this.Ingress);
+            this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }

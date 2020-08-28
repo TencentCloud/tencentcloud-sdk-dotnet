@@ -90,6 +90,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
+        /// <summary>
+        /// 标签过滤条件
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

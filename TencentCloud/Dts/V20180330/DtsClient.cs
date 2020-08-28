@@ -851,6 +851,46 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
+        /// 修改订阅实例自动续费标识
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>
+        public async Task<ModifySubscribeAutoRenewFlagResponse> ModifySubscribeAutoRenewFlag(ModifySubscribeAutoRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifySubscribeAutoRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubscribeAutoRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeAutoRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改订阅实例自动续费标识
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>
+        public ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlagSync(ModifySubscribeAutoRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifySubscribeAutoRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubscribeAutoRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeAutoRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifySubscribeConsumeTime)用于修改数据订阅通道的消费时间点
         /// </summary>
         /// <param name="req"><see cref="ModifySubscribeConsumeTimeRequest"/></param>

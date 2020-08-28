@@ -1015,6 +1015,126 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 根据指定offset位置的消息
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageByOffsetResponse"/></returns>
+        public async Task<FetchMessageByOffsetResponse> FetchMessageByOffset(FetchMessageByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FetchMessageByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据指定offset位置的消息
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageByOffsetResponse"/></returns>
+        public FetchMessageByOffsetResponse FetchMessageByOffsetSync(FetchMessageByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FetchMessageByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据位点查询消息列表
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageListByOffsetResponse"/></returns>
+        public async Task<FetchMessageListByOffsetResponse> FetchMessageListByOffset(FetchMessageListByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FetchMessageListByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据位点查询消息列表
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageListByOffsetResponse"/></returns>
+        public FetchMessageListByOffsetResponse FetchMessageListByOffsetSync(FetchMessageListByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FetchMessageListByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据时间戳查询消息列表
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByTimestampRequest"/></param>
+        /// <returns><see cref="FetchMessageListByTimestampResponse"/></returns>
+        public async Task<FetchMessageListByTimestampResponse> FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req)
+        {
+             JsonResponseModel<FetchMessageListByTimestampResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FetchMessageListByTimestamp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByTimestampResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据时间戳查询消息列表
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByTimestampRequest"/></param>
+        /// <returns><see cref="FetchMessageListByTimestampResponse"/></returns>
+        public FetchMessageListByTimestampResponse FetchMessageListByTimestampSync(FetchMessageListByTimestampRequest req)
+        {
+             JsonResponseModel<FetchMessageListByTimestampResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FetchMessageListByTimestamp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageListByTimestampResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置Groups 消费分组offset
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupOffsetsRequest"/></param>
