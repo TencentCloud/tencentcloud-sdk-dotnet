@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSecurityGroupPoliciesRequest : AbstractModel
+    public class ScdnTypeData : AbstractModel
     {
         
         /// <summary>
-        /// 安全组实例ID，例如：esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。
+        /// 攻击类型
         /// </summary>
-        [JsonProperty("SecurityGroupId")]
-        public string SecurityGroupId{ get; set; }
+        [JsonProperty("AttackType")]
+        public string AttackType{ get; set; }
+
+        /// <summary>
+        /// 攻击值
+        /// </summary>
+        [JsonProperty("Value")]
+        public ulong? Value{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamSimple(map, prefix + "AttackType", this.AttackType);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

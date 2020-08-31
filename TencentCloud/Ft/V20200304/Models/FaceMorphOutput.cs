@@ -21,26 +21,29 @@ namespace TencentCloud.Ft.V20200304.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FaceCartoonPicResponse : AbstractModel
+    public class FaceMorphOutput : AbstractModel
     {
         
         /// <summary>
-        /// 结果图片Base64信息。
+        /// 人像渐变输出的url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ResultImage")]
-        public string ResultImage{ get; set; }
+        [JsonProperty("MorphUrl")]
+        public string MorphUrl{ get; set; }
 
         /// <summary>
-        /// RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+        /// 人像渐变输出的结果MD5，用于校验
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ResultUrl")]
-        public string ResultUrl{ get; set; }
+        [JsonProperty("MorphMd5")]
+        public string MorphMd5{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 人像渐变输出的结果封面图base64字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("CoverImage")]
+        public string CoverImage{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Ft.V20200304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResultImage", this.ResultImage);
-            this.SetParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "MorphUrl", this.MorphUrl);
+            this.SetParamSimple(map, prefix + "MorphMd5", this.MorphMd5);
+            this.SetParamSimple(map, prefix + "CoverImage", this.CoverImage);
         }
     }
 }

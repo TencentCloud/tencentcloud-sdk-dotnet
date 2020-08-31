@@ -15,32 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Ft.V20200304.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FaceCartoonPicResponse : AbstractModel
+    public class ScdnTopData : AbstractModel
     {
         
         /// <summary>
-        /// 结果图片Base64信息。
+        /// 时间
         /// </summary>
-        [JsonProperty("ResultImage")]
-        public string ResultImage{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+        /// 数值
         /// </summary>
-        [JsonProperty("ResultUrl")]
-        public string ResultUrl{ get; set; }
+        [JsonProperty("Value")]
+        public ulong? Value{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 运营商
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Isp")]
+        public string Isp{ get; set; }
+
+        /// <summary>
+        /// IP地址
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
+        /// <summary>
+        /// 区域
+        /// </summary>
+        [JsonProperty("District")]
+        public string District{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Ft.V20200304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResultImage", this.ResultImage);
-            this.SetParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Isp", this.Isp);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamSimple(map, prefix + "District", this.District);
         }
     }
 }

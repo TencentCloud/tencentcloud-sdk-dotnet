@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Ft.V20200304.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSecurityGroupPoliciesRequest : AbstractModel
+    public class GradientInfo : AbstractModel
     {
         
         /// <summary>
-        /// 安全组实例ID，例如：esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。
+        /// 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片2s
         /// </summary>
-        [JsonProperty("SecurityGroupId")]
-        public string SecurityGroupId{ get; set; }
+        [JsonProperty("Tempo")]
+        public float? Tempo{ get; set; }
+
+        /// <summary>
+        /// 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s
+        /// </summary>
+        [JsonProperty("MorphTime")]
+        public float? MorphTime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamSimple(map, prefix + "Tempo", this.Tempo);
+            this.SetParamSimple(map, prefix + "MorphTime", this.MorphTime);
         }
     }
 }

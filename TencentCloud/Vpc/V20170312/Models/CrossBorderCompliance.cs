@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
-        /// 法人。
+        /// 法定代表人。
         /// </summary>
         [JsonProperty("LegalPerson")]
         public string LegalPerson{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// 跨境专线服务受理单。
+        /// 服务受理单。
         /// </summary>
         [JsonProperty("ServiceHandlingForm")]
         public string ServiceHandlingForm{ get; set; }

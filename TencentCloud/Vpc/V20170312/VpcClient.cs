@@ -833,9 +833,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口用于服务商操作跨境专线合规化资质审批。
+        /// 本接口（AuditCrossBorderCompliance）用于服务商操作合规化资质审批。
         /// * 服务商只能操作提交到本服务商的审批单，后台会校验身份。即只授权给服务商的`APPID` 调用本接口。
-        /// * 只有当审批单为 `PENDING` 状态时，才能审批操作。
         /// * `APPROVED` 状态的审批单，可以再次操作为 `DENY`；`DENY` 状态的审批单，也可以再次操作为 `APPROVED`。
         /// </summary>
         /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
@@ -856,9 +855,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口用于服务商操作跨境专线合规化资质审批。
+        /// 本接口（AuditCrossBorderCompliance）用于服务商操作合规化资质审批。
         /// * 服务商只能操作提交到本服务商的审批单，后台会校验身份。即只授权给服务商的`APPID` 调用本接口。
-        /// * 只有当审批单为 `PENDING` 状态时，才能审批操作。
         /// * `APPROVED` 状态的审批单，可以再次操作为 `DENY`；`DENY` 状态的审批单，也可以再次操作为 `APPROVED`。
         /// </summary>
         /// <param name="req"><see cref="AuditCrossBorderComplianceRequest"/></param>
@@ -4067,7 +4065,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口用于查询用户创建跨境专线合规化资质审批单。
+        /// 本接口（DescribeCrossBorderCompliance）用于查询用户创建的合规化资质审批单。
         /// 服务商可以查询服务名下的任意 `APPID` 创建的审批单；非服务商，只能查询自己审批单。
         /// </summary>
         /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>
@@ -4088,7 +4086,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口用于查询用户创建跨境专线合规化资质审批单。
+        /// 本接口（DescribeCrossBorderCompliance）用于查询用户创建的合规化资质审批单。
         /// 服务商可以查询服务名下的任意 `APPID` 创建的审批单；非服务商，只能查询自己审批单。
         /// </summary>
         /// <param name="req"><see cref="DescribeCrossBorderComplianceRequest"/></param>

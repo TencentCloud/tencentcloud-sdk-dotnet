@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.130</VersionPrefix>
+    <VersionPrefix>3.0.131</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1814,6 +1814,8 @@
     <Compile Include="Cdn\V20180606\Models\CookieKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteClsLogTopicRequest.cs" />
@@ -1856,6 +1858,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribePushTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeTrafficPackagesRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeTrafficPackagesResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeUrlViolationsRequest.cs" />
@@ -1929,6 +1933,9 @@
     <Compile Include="Cdn\V20180606\Models\ResponseHeader.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeaderCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Revalidate.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnTopData.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnTopUrlData.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnTypeData.cs" />
     <Compile Include="Cdn\V20180606\Models\SchemeKey.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\SearchClsLogResponse.cs" />
@@ -4111,12 +4118,20 @@
     <Compile Include="Fmu\V20191213\Models\TryLipstickPicResponse.cs" />
     <Compile Include="Ft\V20200304\FtClient.cs" />
     <Compile Include="Ft\V20200304\Models\AgeInfo.cs" />
+    <Compile Include="Ft\V20200304\Models\CancelFaceMorphJobRequest.cs" />
+    <Compile Include="Ft\V20200304\Models\CancelFaceMorphJobResponse.cs" />
     <Compile Include="Ft\V20200304\Models\ChangeAgePicRequest.cs" />
     <Compile Include="Ft\V20200304\Models\ChangeAgePicResponse.cs" />
     <Compile Include="Ft\V20200304\Models\FaceCartoonPicRequest.cs" />
     <Compile Include="Ft\V20200304\Models\FaceCartoonPicResponse.cs" />
+    <Compile Include="Ft\V20200304\Models\FaceMorphOutput.cs" />
     <Compile Include="Ft\V20200304\Models\FaceRect.cs" />
     <Compile Include="Ft\V20200304\Models\GenderInfo.cs" />
+    <Compile Include="Ft\V20200304\Models\GradientInfo.cs" />
+    <Compile Include="Ft\V20200304\Models\MorphFaceRequest.cs" />
+    <Compile Include="Ft\V20200304\Models\MorphFaceResponse.cs" />
+    <Compile Include="Ft\V20200304\Models\QueryFaceMorphJobRequest.cs" />
+    <Compile Include="Ft\V20200304\Models\QueryFaceMorphJobResponse.cs" />
     <Compile Include="Ft\V20200304\Models\SwapGenderPicRequest.cs" />
     <Compile Include="Ft\V20200304\Models\SwapGenderPicResponse.cs" />
     <Compile Include="Gaap\V20180529\GaapClient.cs" />

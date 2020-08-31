@@ -127,12 +127,6 @@ namespace TencentCloud.Aa.V20200224.Models
         public string MacAddress{ get; set; }
 
         /// <summary>
-        /// 手机制造商ID，如果手机注册，请带上此信息。
-        /// </summary>
-        [JsonProperty("VendorId")]
-        public string VendorId{ get; set; }
-
-        /// <summary>
         /// 网赚防刷相关信息。SceneType为4时填写。
         /// </summary>
         [JsonProperty("CrowdAntiRush")]
@@ -149,6 +143,14 @@ namespace TencentCloud.Aa.V20200224.Models
         /// </summary>
         [JsonProperty("Details")]
         public InputDetails[] Details{ get; set; }
+
+        /// <summary>
+        /// 设备类型：
+        /// 1：Android
+        /// 2：IOS
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public long? DeviceType{ get; set; }
 
 
         /// <summary>
@@ -172,10 +174,10 @@ namespace TencentCloud.Aa.V20200224.Models
             this.SetParamSimple(map, prefix + "UserAgent", this.UserAgent);
             this.SetParamSimple(map, prefix + "XForwardedFor", this.XForwardedFor);
             this.SetParamSimple(map, prefix + "MacAddress", this.MacAddress);
-            this.SetParamSimple(map, prefix + "VendorId", this.VendorId);
             this.SetParamObj(map, prefix + "CrowdAntiRush.", this.CrowdAntiRush);
             this.SetParamSimple(map, prefix + "SceneCode", this.SceneCode);
             this.SetParamArrayObj(map, prefix + "Details.", this.Details);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
         }
     }
 }

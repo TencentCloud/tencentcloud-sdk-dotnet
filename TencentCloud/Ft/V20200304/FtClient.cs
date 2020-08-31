@@ -53,6 +53,46 @@ namespace TencentCloud.Ft.V20200304
         }
 
         /// <summary>
+        /// 撤销人像渐变任务请求
+        /// </summary>
+        /// <param name="req"><see cref="CancelFaceMorphJobRequest"/></param>
+        /// <returns><see cref="CancelFaceMorphJobResponse"/></returns>
+        public async Task<CancelFaceMorphJobResponse> CancelFaceMorphJob(CancelFaceMorphJobRequest req)
+        {
+             JsonResponseModel<CancelFaceMorphJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelFaceMorphJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelFaceMorphJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 撤销人像渐变任务请求
+        /// </summary>
+        /// <param name="req"><see cref="CancelFaceMorphJobRequest"/></param>
+        /// <returns><see cref="CancelFaceMorphJobResponse"/></returns>
+        public CancelFaceMorphJobResponse CancelFaceMorphJobSync(CancelFaceMorphJobRequest req)
+        {
+             JsonResponseModel<CancelFaceMorphJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelFaceMorphJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelFaceMorphJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户上传一张人脸图片，基于人脸编辑与生成算法，输出一张人脸变老或变年轻的图片，支持实现人脸不同年龄的变化。
         /// </summary>
         /// <param name="req"><see cref="ChangeAgePicRequest"/></param>
@@ -124,6 +164,86 @@ namespace TencentCloud.Ft.V20200304
              {
                  var strResp = this.InternalRequestSync(req, "FaceCartoonPic");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<FaceCartoonPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户上传2-5张人脸照片，输出一段人脸变换特效视频
+        /// </summary>
+        /// <param name="req"><see cref="MorphFaceRequest"/></param>
+        /// <returns><see cref="MorphFaceResponse"/></returns>
+        public async Task<MorphFaceResponse> MorphFace(MorphFaceRequest req)
+        {
+             JsonResponseModel<MorphFaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MorphFace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MorphFaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户上传2-5张人脸照片，输出一段人脸变换特效视频
+        /// </summary>
+        /// <param name="req"><see cref="MorphFaceRequest"/></param>
+        /// <returns><see cref="MorphFaceResponse"/></returns>
+        public MorphFaceResponse MorphFaceSync(MorphFaceRequest req)
+        {
+             JsonResponseModel<MorphFaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MorphFace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MorphFaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询人像渐变处理进度
+        /// </summary>
+        /// <param name="req"><see cref="QueryFaceMorphJobRequest"/></param>
+        /// <returns><see cref="QueryFaceMorphJobResponse"/></returns>
+        public async Task<QueryFaceMorphJobResponse> QueryFaceMorphJob(QueryFaceMorphJobRequest req)
+        {
+             JsonResponseModel<QueryFaceMorphJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFaceMorphJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFaceMorphJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询人像渐变处理进度
+        /// </summary>
+        /// <param name="req"><see cref="QueryFaceMorphJobRequest"/></param>
+        /// <returns><see cref="QueryFaceMorphJobResponse"/></returns>
+        public QueryFaceMorphJobResponse QueryFaceMorphJobSync(QueryFaceMorphJobRequest req)
+        {
+             JsonResponseModel<QueryFaceMorphJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFaceMorphJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFaceMorphJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

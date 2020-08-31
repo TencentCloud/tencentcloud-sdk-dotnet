@@ -50,7 +50,7 @@ namespace TencentCloud.Bm.V20180423.Models
 
         /// <summary>
         /// 设备操作状态ID，取值：
-        /// <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
+        /// <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li><li>23：故障待重装</li>
         /// </summary>
         [JsonProperty("OperateStatus")]
         public ulong? OperateStatus{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// AppId
+        /// 用户AppId
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }

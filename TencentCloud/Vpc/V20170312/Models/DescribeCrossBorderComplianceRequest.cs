@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
-        /// （模糊查询）法人。
+        /// （模糊查询）法定代表人。
         /// </summary>
         [JsonProperty("LegalPerson")]
         public string LegalPerson{ get; set; }
@@ -103,13 +103,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// （精确匹配）服务开始时间。
+        /// （精确匹配）服务开始日期，如：`2020-07-28`。
         /// </summary>
         [JsonProperty("ServiceStartDate")]
         public string ServiceStartDate{ get; set; }
 
         /// <summary>
-        /// （精确匹配）服务开始时间。
+        /// （精确匹配）服务结束日期，如：`2021-07-28`。
         /// </summary>
         [JsonProperty("ServiceEndDate")]
         public string ServiceEndDate{ get; set; }

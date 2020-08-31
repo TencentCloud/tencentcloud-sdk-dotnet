@@ -133,6 +133,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// CreateScdnLogTask 用于创建事件日志任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>
+        /// <returns><see cref="CreateScdnLogTaskResponse"/></returns>
+        public async Task<CreateScdnLogTaskResponse> CreateScdnLogTask(CreateScdnLogTaskRequest req)
+        {
+             JsonResponseModel<CreateScdnLogTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScdnLogTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnLogTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateScdnLogTask 用于创建事件日志任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>
+        /// <returns><see cref="CreateScdnLogTaskResponse"/></returns>
+        public CreateScdnLogTaskResponse CreateScdnLogTaskSync(CreateScdnLogTaskRequest req)
+        {
+             JsonResponseModel<CreateScdnLogTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateScdnLogTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnLogTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DeleteCdnDomain 用于删除指定加速域名
         /// </summary>
         /// <param name="req"><see cref="DeleteCdnDomainRequest"/></param>
@@ -1014,6 +1054,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "DescribeReportData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReportDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取SCDN的Top数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>
+        /// <returns><see cref="DescribeScdnTopDataResponse"/></returns>
+        public async Task<DescribeScdnTopDataResponse> DescribeScdnTopData(DescribeScdnTopDataRequest req)
+        {
+             JsonResponseModel<DescribeScdnTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScdnTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取SCDN的Top数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>
+        /// <returns><see cref="DescribeScdnTopDataResponse"/></returns>
+        public DescribeScdnTopDataResponse DescribeScdnTopDataSync(DescribeScdnTopDataRequest req)
+        {
+             JsonResponseModel<DescribeScdnTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScdnTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnTopDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

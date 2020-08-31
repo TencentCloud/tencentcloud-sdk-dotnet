@@ -15,26 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Ft.V20200304.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FaceCartoonPicResponse : AbstractModel
+    public class DescribeScdnTopDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// 结果图片Base64信息。
+        /// WAF 攻击类型统计
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ResultImage")]
-        public string ResultImage{ get; set; }
+        [JsonProperty("TopTypeData")]
+        public ScdnTypeData[] TopTypeData{ get; set; }
 
         /// <summary>
-        /// RspImgType 为 url 时，返回处理后的图片 url 数据。(默认为base64)
+        /// TOP 攻击源 IP 统计
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ResultUrl")]
-        public string ResultUrl{ get; set; }
+        [JsonProperty("TopIpData")]
+        public ScdnTopData[] TopIpData{ get; set; }
+
+        /// <summary>
+        /// 查询的SCDN类型，当前仅支持 waf
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// TOP URL 统计
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopUrlData")]
+        public ScdnTopUrlData[] TopUrlData{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +63,10 @@ namespace TencentCloud.Ft.V20200304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResultImage", this.ResultImage);
-            this.SetParamSimple(map, prefix + "ResultUrl", this.ResultUrl);
+            this.SetParamArrayObj(map, prefix + "TopTypeData.", this.TopTypeData);
+            this.SetParamArrayObj(map, prefix + "TopIpData.", this.TopIpData);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamArrayObj(map, prefix + "TopUrlData.", this.TopUrlData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

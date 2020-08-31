@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Ft.V20200304.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSecurityGroupPoliciesRequest : AbstractModel
+    public class MorphFaceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 安全组实例ID，例如：esg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/1108/47697)获取。
+        /// 人像渐变任务的Job id
         /// </summary>
-        [JsonProperty("SecurityGroupId")]
-        public string SecurityGroupId{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
+
+        /// <summary>
+        /// 预估处理时间，粒度为秒
+        /// </summary>
+        [JsonProperty("EstimatedProcessTime")]
+        public long? EstimatedProcessTime{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "EstimatedProcessTime", this.EstimatedProcessTime);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
