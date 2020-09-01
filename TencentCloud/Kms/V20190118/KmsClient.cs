@@ -53,6 +53,46 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 对密钥进行归档，被归档的密钥只能用于解密，不能加密
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveKeyRequest"/></param>
+        /// <returns><see cref="ArchiveKeyResponse"/></returns>
+        public async Task<ArchiveKeyResponse> ArchiveKey(ArchiveKeyRequest req)
+        {
+             JsonResponseModel<ArchiveKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ArchiveKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ArchiveKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对密钥进行归档，被归档的密钥只能用于解密，不能加密
+        /// </summary>
+        /// <param name="req"><see cref="ArchiveKeyRequest"/></param>
+        /// <returns><see cref="ArchiveKeyResponse"/></returns>
+        public ArchiveKeyResponse ArchiveKeySync(ArchiveKeyRequest req)
+        {
+             JsonResponseModel<ArchiveKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ArchiveKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ArchiveKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 使用指定的RSA非对称密钥的私钥进行数据解密，密文必须是使用对应公钥加密的。处于Enabled 状态的非对称密钥才能进行解密操作。
         /// </summary>
         /// <param name="req"><see cref="AsymmetricRsaDecryptRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "BindCloudResource");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindCloudResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消密钥归档，取消后密钥的状态变为Enabled。
+        /// </summary>
+        /// <param name="req"><see cref="CancelKeyArchiveRequest"/></param>
+        /// <returns><see cref="CancelKeyArchiveResponse"/></returns>
+        public async Task<CancelKeyArchiveResponse> CancelKeyArchive(CancelKeyArchiveRequest req)
+        {
+             JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelKeyArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyArchiveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消密钥归档，取消后密钥的状态变为Enabled。
+        /// </summary>
+        /// <param name="req"><see cref="CancelKeyArchiveRequest"/></param>
+        /// <returns><see cref="CancelKeyArchiveResponse"/></returns>
+        public CancelKeyArchiveResponse CancelKeyArchiveSync(CancelKeyArchiveRequest req)
+        {
+             JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelKeyArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelKeyArchiveResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

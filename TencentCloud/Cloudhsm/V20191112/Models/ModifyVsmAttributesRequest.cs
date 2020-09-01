@@ -52,7 +52,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string[] SgIds{ get; set; }
 
         /// <summary>
-        /// VpcId
+        /// 虚拟专网Id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

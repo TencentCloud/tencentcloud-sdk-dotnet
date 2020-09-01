@@ -26,35 +26,41 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 模板名称，例：900 900p 仅支持字母和数字的组合。
+        /// 长度限制：
+        ///   标准转码：1-10个字符
+        ///   极速高清转码：3-10个字符
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
         /// 视频码率。范围：100-8000。
-        /// 注意：码率必须是100的倍数。
+        /// 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 视频编码：h264/h265，默认h264。
-        /// </summary>
-        [JsonProperty("Vcodec")]
-        public string Vcodec{ get; set; }
-
-        /// <summary>
-        /// 音频编码：aac，默认原始音频格式。
+        /// 音频编码：aac，默认aac。
         /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
 
         /// <summary>
-        /// 音频码率：默认0。0-500。
+        /// 音频码率，默认0。
+        /// 范围：0-500。
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
+
+        /// <summary>
+        /// 视频编码：h264/h265/origin，默认h264。
+        /// 
+        /// origin: 保持原始编码格式
+        /// </summary>
+        [JsonProperty("Vcodec")]
+        public string Vcodec{ get; set; }
 
         /// <summary>
         /// 模板描述。
@@ -65,6 +71,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 宽，默认0。
         /// 范围[0-3000]
+        /// 数值必须是2的倍数，0是原始宽度
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -84,24 +91,28 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 高，默认0。
         /// 范围[0-3000]
+        /// 数值必须是2的倍数，0是原始宽度
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
         /// 帧率，默认0。
+        /// 范围0-60
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
         /// 关键帧间隔，单位：秒。默认原始的间隔
+        /// 范围2-6
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// 是否旋转，0：否，1：是。默认0。
+        /// 旋转角度，默认0。
+        /// 可取值：0，90，180，270
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
@@ -146,6 +157,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }
 
+        /// <summary>
+        /// 是否以短边作为高度，0：否，1：是。默认0。
+        /// </summary>
+        [JsonProperty("ShortEdgeAsHeight")]
+        public long? ShortEdgeAsHeight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,9 +171,9 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
-            this.SetParamSimple(map, prefix + "Vcodec", this.Vcodec);
             this.SetParamSimple(map, prefix + "Acodec", this.Acodec);
             this.SetParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
+            this.SetParamSimple(map, prefix + "Vcodec", this.Vcodec);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "NeedVideo", this.NeedVideo);
@@ -171,6 +188,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "FpsToOrig", this.FpsToOrig);
             this.SetParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
             this.SetParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
+            this.SetParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
         }
     }
 }

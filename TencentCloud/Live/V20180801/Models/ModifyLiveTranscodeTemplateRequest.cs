@@ -31,15 +31,16 @@ namespace TencentCloud.Live.V20180801.Models
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 视频编码：
-        /// h264/h265。
+        /// 视频编码：h264/h265/origin，默认h264。
+        /// 
+        /// origin: 保持原始编码格式
         /// </summary>
         [JsonProperty("Vcodec")]
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// 音频编码：
-        /// aac/mp3。
+        /// 音频编码：aac，默认aac。
+        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
@@ -59,13 +60,14 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 视频码率。范围：100kbps - 8000kbps。
-        /// 注意：码率必须是100的倍数。
+        /// 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
         /// 宽。0-3000。
+        /// 数值必须是2的倍数，0是原始宽度
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -84,25 +86,28 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 高。0-3000。
+        /// 数值必须是2的倍数，0是原始宽度
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 帧率。0-200。
+        /// 帧率，默认0。
+        /// 范围0-60
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 关键帧间隔，单位：秒。0-50。
+        /// 关键帧间隔，单位：秒。
+        /// 范围2-6
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// 旋转角度。
-        /// 0 90 180 270。
+        /// 旋转角度，默认0。
+        /// 可取值：0，90，180，270
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
@@ -141,6 +146,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }
 
+        /// <summary>
+        /// 是否以短边作为高度，0：否，1：是。默认0。
+        /// </summary>
+        [JsonProperty("ShortEdgeAsHeight")]
+        public long? ShortEdgeAsHeight{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +176,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "HeightToOrig", this.HeightToOrig);
             this.SetParamSimple(map, prefix + "FpsToOrig", this.FpsToOrig);
             this.SetParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
+            this.SetParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
         }
     }
 }

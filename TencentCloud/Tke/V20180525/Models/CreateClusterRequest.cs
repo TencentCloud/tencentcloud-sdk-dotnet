@@ -72,6 +72,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceDataDiskMountSettings")]
         public InstanceDataDiskMountSetting[] InstanceDataDiskMountSettings{ get; set; }
 
+        /// <summary>
+        /// 需要安装的扩展组件信息
+        /// </summary>
+        [JsonProperty("ExtensionAddons")]
+        public ExtensionAddon[] ExtensionAddons{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
             this.SetParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
+            this.SetParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
         }
     }
 }

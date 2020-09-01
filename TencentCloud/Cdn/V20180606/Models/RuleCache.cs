@@ -21,29 +21,39 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Cache : AbstractModel
+    public class RuleCache : AbstractModel
     {
         
         /// <summary>
-        /// 基础缓存过期时间配置
+        /// CacheType 对应类型下的匹配内容：
+        /// all 时填充 *
+        /// file 时填充后缀名，如 jpg、txt
+        /// directory 时填充路径，如 /xxx/test
+        /// path 时填充绝对路径，如 /xxx/test.html
+        /// index 时填充 /
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SimpleCache")]
-        public SimpleCache SimpleCache{ get; set; }
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// 高级缓存过期时间配置（功能灰度中，尚未全量）
+        /// 规则类型：
+        /// all：所有文件生效
+        /// file：指定文件后缀生效
+        /// directory：指定路径生效
+        /// path：指定绝对路径生效
+        /// index：首页
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AdvancedCache")]
-        public AdvancedCache AdvancedCache{ get; set; }
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
 
         /// <summary>
-        /// 高级路径缓存配置
+        /// 缓存配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RuleCache")]
-        public RuleCache[] RuleCache{ get; set; }
+        [JsonProperty("CacheConfig")]
+        public RuleCacheConfig CacheConfig{ get; set; }
 
 
         /// <summary>
@@ -51,9 +61,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
-            this.SetParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
-            this.SetParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamObj(map, prefix + "CacheConfig.", this.CacheConfig);
         }
     }
 }

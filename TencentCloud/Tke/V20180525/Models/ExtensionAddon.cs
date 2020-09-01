@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Cache : AbstractModel
+    public class ExtensionAddon : AbstractModel
     {
         
         /// <summary>
-        /// 基础缓存过期时间配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 扩展组件名称
         /// </summary>
-        [JsonProperty("SimpleCache")]
-        public SimpleCache SimpleCache{ get; set; }
+        [JsonProperty("AddonName")]
+        public string AddonName{ get; set; }
 
         /// <summary>
-        /// 高级缓存过期时间配置（功能灰度中，尚未全量）
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 扩展组件信息(扩展组件资源对象的json字符串描述)
         /// </summary>
-        [JsonProperty("AdvancedCache")]
-        public AdvancedCache AdvancedCache{ get; set; }
-
-        /// <summary>
-        /// 高级路径缓存配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("RuleCache")]
-        public RuleCache[] RuleCache{ get; set; }
+        [JsonProperty("AddonParam")]
+        public string AddonParam{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
-            this.SetParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
-            this.SetParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
+            this.SetParamSimple(map, prefix + "AddonName", this.AddonName);
+            this.SetParamSimple(map, prefix + "AddonParam", this.AddonParam);
         }
     }
 }

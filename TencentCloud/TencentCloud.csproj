@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.131</VersionPrefix>
+    <VersionPrefix>3.0.132</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1332,6 +1332,7 @@
     <Compile Include="Captcha\V20190722\Models\CaptchaOperDataTryTimesDistributeUnit.cs" />
     <Compile Include="Captcha\V20190722\Models\CaptchaOperDataTryTimesUnit.cs" />
     <Compile Include="Captcha\V20190722\Models\CaptchaQueryData.cs" />
+    <Compile Include="Captcha\V20190722\Models\CaptchaTicketDataRes.cs" />
     <Compile Include="Captcha\V20190722\Models\CaptchaUserAllAppId.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaAppIdInfoRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaAppIdInfoResponse.cs" />
@@ -1343,8 +1344,13 @@
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaOperDataResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaResultRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaResultResponse.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaTicketDataRequest.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaTicketDataResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaUserAllAppIdRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaUserAllAppIdResponse.cs" />
+    <Compile Include="Captcha\V20190722\Models\TicketAmountUnit.cs" />
+    <Compile Include="Captcha\V20190722\Models\TicketInterceptUnit.cs" />
+    <Compile Include="Captcha\V20190722\Models\TicketThroughUnit.cs" />
     <Compile Include="Captcha\V20190722\Models\UpdateCaptchaAppIdInfoRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\UpdateCaptchaAppIdInfoResponse.cs" />
     <Compile Include="Cat\V20180409\CatClient.cs" />
@@ -1798,6 +1804,9 @@
     <Compile Include="Cdn\V20180606\Models\BandwidthAlert.cs" />
     <Compile Include="Cdn\V20180606\Models\BriefDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\Cache.cs" />
+    <Compile Include="Cdn\V20180606\Models\CacheConfigCache.cs" />
+    <Compile Include="Cdn\V20180606\Models\CacheConfigFollowOrigin.cs" />
+    <Compile Include="Cdn\V20180606\Models\CacheConfigNoCache.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheOptResult.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheTagKey.cs" />
@@ -1894,6 +1903,7 @@
     <Compile Include="Cdn\V20180606\Models\IpFreqLimit.cs" />
     <Compile Include="Cdn\V20180606\Models\IpStatus.cs" />
     <Compile Include="Cdn\V20180606\Models\Ipv6.cs" />
+    <Compile Include="Cdn\V20180606\Models\KeyRule.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsRequest.cs" />
@@ -1933,6 +1943,9 @@
     <Compile Include="Cdn\V20180606\Models\ResponseHeader.cs" />
     <Compile Include="Cdn\V20180606\Models\ResponseHeaderCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Revalidate.cs" />
+    <Compile Include="Cdn\V20180606\Models\RuleCache.cs" />
+    <Compile Include="Cdn\V20180606\Models\RuleCacheConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\RuleQueryString.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopUrlData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTypeData.cs" />
@@ -5143,12 +5156,16 @@
     <Compile Include="Iotvideo\V20191126\Models\VersionData.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
     <Compile Include="Kms\V20190118\Models\AlgorithmInfo.cs" />
+    <Compile Include="Kms\V20190118\Models\ArchiveKeyRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\ArchiveKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\AsymmetricRsaDecryptRequest.cs" />
     <Compile Include="Kms\V20190118\Models\AsymmetricRsaDecryptResponse.cs" />
     <Compile Include="Kms\V20190118\Models\AsymmetricSm2DecryptRequest.cs" />
     <Compile Include="Kms\V20190118\Models\AsymmetricSm2DecryptResponse.cs" />
     <Compile Include="Kms\V20190118\Models\BindCloudResourceRequest.cs" />
     <Compile Include="Kms\V20190118\Models\BindCloudResourceResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\CancelKeyArchiveRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\CancelKeyArchiveResponse.cs" />
     <Compile Include="Kms\V20190118\Models\CancelKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\CancelKeyDeletionResponse.cs" />
     <Compile Include="Kms\V20190118\Models\CreateKeyRequest.cs" />
@@ -8306,6 +8323,7 @@
     <Compile Include="Tke\V20180525\Models\ExistedInstance.cs" />
     <Compile Include="Tke\V20180525\Models\ExistedInstancesForNode.cs" />
     <Compile Include="Tke\V20180525\Models\ExistedInstancesPara.cs" />
+    <Compile Include="Tke\V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="Tke\V20180525\Models\Filter.cs" />
     <Compile Include="Tke\V20180525\Models\ImageInstance.cs" />
     <Compile Include="Tke\V20180525\Models\Instance.cs" />

@@ -49,7 +49,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+        /// CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport | Archived
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }

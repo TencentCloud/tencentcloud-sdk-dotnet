@@ -15,35 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Captcha.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Cache : AbstractModel
+    public class DescribeCaptchaTicketDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// 基础缓存过期时间配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 成功返回 0 其它失败
         /// </summary>
-        [JsonProperty("SimpleCache")]
-        public SimpleCache SimpleCache{ get; set; }
+        [JsonProperty("CaptchaCode")]
+        public long? CaptchaCode{ get; set; }
 
         /// <summary>
-        /// 高级缓存过期时间配置（功能灰度中，尚未全量）
+        /// 返回信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AdvancedCache")]
-        public AdvancedCache AdvancedCache{ get; set; }
+        [JsonProperty("CaptchaMsg")]
+        public string CaptchaMsg{ get; set; }
 
         /// <summary>
-        /// 高级路径缓存配置
+        /// 验证码票据信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RuleCache")]
-        public RuleCache[] RuleCache{ get; set; }
+        [JsonProperty("Data")]
+        public CaptchaTicketDataRes Data{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +56,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
-            this.SetParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
-            this.SetParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
+            this.SetParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);
+            this.SetParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

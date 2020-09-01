@@ -47,6 +47,12 @@ namespace TencentCloud.Ft.V20200304.Models
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }
 
+        /// <summary>
+        /// 是否取消全图动漫化效果。
+        /// </summary>
+        [JsonProperty("DisableGlobalEffect")]
+        public string DisableGlobalEffect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +62,7 @@ namespace TencentCloud.Ft.V20200304.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "RspImgType", this.RspImgType);
+            this.SetParamSimple(map, prefix + "DisableGlobalEffect", this.DisableGlobalEffect);
         }
     }
 }

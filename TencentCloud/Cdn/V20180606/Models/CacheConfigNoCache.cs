@@ -21,29 +21,27 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Cache : AbstractModel
+    public class CacheConfigNoCache : AbstractModel
     {
         
         /// <summary>
-        /// 基础缓存过期时间配置
+        /// 不缓存配置开关
+        /// on：开启
+        /// off：关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("SimpleCache")]
-        public SimpleCache SimpleCache{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 高级缓存过期时间配置（功能灰度中，尚未全量）
+        /// 总是回源站校验
+        /// on：开启
+        /// off：关闭
+        /// 默认为关闭状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AdvancedCache")]
-        public AdvancedCache AdvancedCache{ get; set; }
-
-        /// <summary>
-        /// 高级路径缓存配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("RuleCache")]
-        public RuleCache[] RuleCache{ get; set; }
+        [JsonProperty("Revalidate")]
+        public string Revalidate{ get; set; }
 
 
         /// <summary>
@@ -51,9 +49,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
-            this.SetParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
-            this.SetParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Revalidate", this.Revalidate);
         }
     }
 }

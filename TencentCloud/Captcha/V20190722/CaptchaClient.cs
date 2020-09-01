@@ -253,6 +253,46 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
+        /// 验证码控制台票据验证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaTicketDataRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaTicketDataResponse"/></returns>
+        public async Task<DescribeCaptchaTicketDataResponse> DescribeCaptchaTicketData(DescribeCaptchaTicketDataRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaTicketDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCaptchaTicketData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaTicketDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 验证码控制台票据验证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaTicketDataRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaTicketDataResponse"/></returns>
+        public DescribeCaptchaTicketDataResponse DescribeCaptchaTicketDataSync(DescribeCaptchaTicketDataRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaTicketDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaTicketData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaTicketDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 安全验证码获取用户注册所有APPId和应用名称
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaUserAllAppIdRequest"/></param>
