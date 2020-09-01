@@ -472,8 +472,8 @@ namespace TencentCloud.Common
         public long ToTimestamp()
         {
 #if NET45
-            DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1, 0, 0, 0, 0));
-            DateTime nowTime = DateTime.Now;
+            DateTime startTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            DateTime nowTime = DateTime.UtcNow;
             long unixTime = (long)Math.Round((nowTime - startTime).TotalMilliseconds, MidpointRounding.AwayFromZero);
             return unixTime;
 #endif
