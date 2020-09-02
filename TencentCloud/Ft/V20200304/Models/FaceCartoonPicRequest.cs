@@ -48,7 +48,7 @@ namespace TencentCloud.Ft.V20200304.Models
         public string RspImgType{ get; set; }
 
         /// <summary>
-        /// 是否取消全图动漫化效果。
+        /// 关闭全图动漫化，传入true（不分大小写）即关闭全图动漫化。
         /// </summary>
         [JsonProperty("DisableGlobalEffect")]
         public string DisableGlobalEffect{ get; set; }

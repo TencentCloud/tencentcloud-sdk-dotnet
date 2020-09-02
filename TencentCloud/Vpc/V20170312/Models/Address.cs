@@ -114,6 +114,26 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
+        /// <summary>
+        /// 是否本地带宽EIP
+        /// </summary>
+        [JsonProperty("LocalBgp")]
+        public bool? LocalBgp{ get; set; }
+
+        /// <summary>
+        /// 弹性公网IP的带宽值。注意，非带宽上移账户的弹性公网IP没有带宽属性，值为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 弹性公网IP的网络计费模式。注意，非带宽上移账户的弹性公网IP没有网络计费模式属性，值为空。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternetChargeType")]
+        public string InternetChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +155,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
             this.SetParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
             this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+            this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         }
     }
 }
