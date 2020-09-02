@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using TencentCloud.Common.Http;
@@ -77,6 +78,42 @@ namespace TencentCloud.Common
         /// API version.
         /// </summary>
         public string ApiVersion { get; set; }
+
+        protected async Task<TResponse> Request<TRequest, TResponse>(TRequest request, [CallerMemberName] string actionName = "") where TRequest : AbstractModel
+        {
+            JsonResponseModel<TResponse> result = null;
+            try
+            {
+                var stringResponse = await InternalRequest(request, actionName);
+                result = JsonConvert.DeserializeObject<JsonResponseModel<TResponse>>(stringResponse);
+            }
+            catch (JsonSerializationException e)
+            {
+                throw new TencentCloudSDKException(e.Message);
+            }
+            return result.Response;
+        }
+
+        protected TResponse RequestSync<TRequest, TResponse>(TRequest request, [CallerMemberName] string actionName = "") where TRequest : AbstractModel
+        {
+            JsonResponseModel<TResponse> result = null;
+            try
+            {
+                // Use Substring to remove "Sync" in actionName
+                // e.g. Change actionName variable from "AddSmsSignSync" to "AddSmsSign"
+                if (actionName.EndsWith("Sync"))
+                {
+                    actionName = actionName.Substring(0, actionName.Length - 4);
+                }
+                var stringResponse = this.InternalRequestSync(request, actionName);
+                result = JsonConvert.DeserializeObject<JsonResponseModel<TResponse>>(stringResponse);
+            }
+            catch (JsonSerializationException e)
+            {
+                throw new TencentCloudSDKException(e.Message);
+            }
+            return result.Response;
+        }
 
         protected async Task<string> InternalRequest(AbstractModel request, string actionName)
         {
