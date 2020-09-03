@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.135</VersionPrefix>
+    <VersionPrefix>3.0.136</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7302,6 +7302,8 @@
     <Compile Include="Ssm\V20190923\Models\RestoreSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\RestoreSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\SecretMetadata.cs" />
+    <Compile Include="Ssm\V20190923\Models\Tag.cs" />
+    <Compile Include="Ssm\V20190923\Models\TagFilter.cs" />
     <Compile Include="Ssm\V20190923\Models\UpdateDescriptionRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\UpdateDescriptionResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\UpdateSecretRequest.cs" />

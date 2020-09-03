@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+        /// CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
         /// </summary>
         [JsonProperty("RunInstancePara")]
         public string RunInstancePara{ get; set; }

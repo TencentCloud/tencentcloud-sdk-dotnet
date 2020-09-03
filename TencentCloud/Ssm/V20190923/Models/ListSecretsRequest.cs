@@ -54,6 +54,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("SearchSecretName")]
         public string SearchSecretName{ get; set; }
 
+        /// <summary>
+        /// 标签过滤条件
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

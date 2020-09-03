@@ -37,6 +37,20 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string VersionId{ get; set; }
 
         /// <summary>
+        /// 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagCode")]
+        public ulong? TagCode{ get; set; }
+
+        /// <summary>
+        /// 标签操作的返回信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagMsg")]
+        public string TagMsg{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +64,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
+            this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

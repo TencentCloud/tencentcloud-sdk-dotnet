@@ -213,7 +213,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建redis实例
+        /// 本接口(CreateInstances)用于创建redis实例。
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建redis实例
+        /// 本接口(CreateInstances)用于创建redis实例。
         /// </summary>
         /// <param name="req"><see cref="CreateInstancesRequest"/></param>
         /// <returns><see cref="CreateInstancesResponse"/></returns>
@@ -1933,7 +1933,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例参数
+        /// 本接口(ModifyInstanceParams)用于修改实例参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例参数
+        /// 本接口(ModifyInstanceParams)用于修改实例参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>

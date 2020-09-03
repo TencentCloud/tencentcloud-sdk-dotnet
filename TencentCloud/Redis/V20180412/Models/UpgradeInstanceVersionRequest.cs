@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 目标实例类型，同CreateInstances接口的Type，即实例要变更的目标类型
+        /// 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
         /// </summary>
         [JsonProperty("TargetInstanceType")]
         public string TargetInstanceType{ get; set; }

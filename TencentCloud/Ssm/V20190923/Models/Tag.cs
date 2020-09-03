@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ft.V20200304.Models
+namespace TencentCloud.Ssm.V20190923.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GradientInfo : AbstractModel
+    public class Tag : AbstractModel
     {
         
         /// <summary>
-        /// 图片的展示时长，即单张图片静止不变的时间。GIF默认每张图片0.7s，视频默认每张图片0.5s。最大取值1s。
+        /// 标签键
         /// </summary>
-        [JsonProperty("Tempo")]
-        public float? Tempo{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// 人像渐变的最长时间，即单张图片使用渐变特效的时间。 GIF默认值为0.5s，视频默值认为1s。最大取值1s。
+        /// 标签值
         /// </summary>
-        [JsonProperty("MorphTime")]
-        public float? MorphTime{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ft.V20200304.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Tempo", this.Tempo);
-            this.SetParamSimple(map, prefix + "MorphTime", this.MorphTime);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

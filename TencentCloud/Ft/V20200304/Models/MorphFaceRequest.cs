@@ -52,7 +52,7 @@ namespace TencentCloud.Ft.V20200304.Models
         public GradientInfo[] GradientInfos{ get; set; }
 
         /// <summary>
-        /// 视频帧率，取值[1,60]。默认10
+        /// 视频帧率，取值[1,25]。默认10
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }

@@ -60,6 +60,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("SecretString")]
         public string SecretString{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
             this.SetParamSimple(map, prefix + "SecretString", this.SecretString);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

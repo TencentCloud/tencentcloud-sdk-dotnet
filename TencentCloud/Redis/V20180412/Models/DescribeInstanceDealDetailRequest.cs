@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 订单ID数组
+        /// 订单交易ID数组，即 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的输出参数DealId。
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }
