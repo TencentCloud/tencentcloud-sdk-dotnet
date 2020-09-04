@@ -87,6 +87,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 通道组是否包含微软通道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyType")]
+        public ulong? ProxyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
         }
     }
 }

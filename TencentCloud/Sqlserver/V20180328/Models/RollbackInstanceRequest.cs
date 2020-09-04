@@ -48,6 +48,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
+        /// <summary>
+        /// 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+        /// </summary>
+        [JsonProperty("TargetInstanceId")]
+        public string TargetInstanceId{ get; set; }
+
+        /// <summary>
+        /// 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
+        /// </summary>
+        [JsonProperty("RenameRestore")]
+        public RenameRestoreDatabase[] RenameRestore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
+            this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
         }
     }
 }

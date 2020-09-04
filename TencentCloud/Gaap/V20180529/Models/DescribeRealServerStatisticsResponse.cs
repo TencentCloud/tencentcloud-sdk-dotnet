@@ -25,10 +25,16 @@ namespace TencentCloud.Gaap.V20180529.Models
     {
         
         /// <summary>
-        /// 源站状态统计数据
+        /// 指定监听器的源站状态统计数据
         /// </summary>
         [JsonProperty("StatisticsData")]
         public StatisticsDataInfo[] StatisticsData{ get; set; }
+
+        /// <summary>
+        /// 多个源站状态统计数据
+        /// </summary>
+        [JsonProperty("RsStatisticsData")]
+        public MetricStatisticsInfo[] RsStatisticsData{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "StatisticsData.", this.StatisticsData);
+            this.SetParamArrayObj(map, prefix + "RsStatisticsData.", this.RsStatisticsData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

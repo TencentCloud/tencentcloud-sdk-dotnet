@@ -85,6 +85,22 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string SetDate{ get; set; }
 
         /// <summary>
+        /// Code 告警码列表和释义：
+        /// -20001 非营业执照
+        /// 注：告警码可以同时存在多个
+        /// </summary>
+        [JsonProperty("RecognizeWarnCode")]
+        public long?[] RecognizeWarnCode{ get; set; }
+
+        /// <summary>
+        /// 告警码说明：
+        /// OCR_WARNING_TPYE_NOT_MATCH 非营业执照
+        /// 注：告警信息可以同时存在多个
+        /// </summary>
+        [JsonProperty("RecognizeWarnMsg")]
+        public string[] RecognizeWarnMsg{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +122,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "ComposingForm", this.ComposingForm);
             this.SetParamSimple(map, prefix + "SetDate", this.SetDate);
+            this.SetParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
+            this.SetParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

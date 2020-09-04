@@ -173,6 +173,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
+        /// </summary>
+        /// <param name="req"><see cref="CreateVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateVerifyRecordResponse"/></returns>
+        public async Task<CreateVerifyRecordResponse> CreateVerifyRecord(CreateVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
+        /// </summary>
+        /// <param name="req"><see cref="CreateVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateVerifyRecordResponse"/></returns>
+        public CreateVerifyRecordResponse CreateVerifyRecordSync(CreateVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DeleteCdnDomain 用于删除指定加速域名
         /// </summary>
         /// <param name="req"><see cref="DeleteCdnDomainRequest"/></param>
@@ -1924,6 +1964,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "UpdatePayType");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePayTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 验证域名解析值
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainRecordRequest"/></param>
+        /// <returns><see cref="VerifyDomainRecordResponse"/></returns>
+        public async Task<VerifyDomainRecordResponse> VerifyDomainRecord(VerifyDomainRecordRequest req)
+        {
+             JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyDomainRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 验证域名解析值
+        /// </summary>
+        /// <param name="req"><see cref="VerifyDomainRecordRequest"/></param>
+        /// <returns><see cref="VerifyDomainRecordResponse"/></returns>
+        public VerifyDomainRecordResponse VerifyDomainRecordSync(VerifyDomainRecordRequest req)
+        {
+             JsonResponseModel<VerifyDomainRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyDomainRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyDomainRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

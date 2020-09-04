@@ -37,16 +37,34 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
+        /// L7层规则ID
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
+        /// <summary>
         /// 统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
         /// </summary>
         [JsonProperty("WithinTime")]
         public ulong? WithinTime{ get; set; }
 
         /// <summary>
-        /// 规则ID
+        /// 统计开始时间(2020-08-19 00:00:00)
         /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 统计结束时间(2020-08-19 23:59:59)
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 统计的数据粒度，单位：秒，仅支持1分钟-60和5分钟-300粒度
+        /// </summary>
+        [JsonProperty("Granularity")]
+        public ulong? Granularity{ get; set; }
 
 
         /// <summary>
@@ -56,8 +74,11 @@ namespace TencentCloud.Gaap.V20180529.Models
         {
             this.SetParamSimple(map, prefix + "RealServerId", this.RealServerId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
-            this.SetParamSimple(map, prefix + "WithinTime", this.WithinTime);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "WithinTime", this.WithinTime);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
         }
     }
 }

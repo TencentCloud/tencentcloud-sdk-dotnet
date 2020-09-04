@@ -43,7 +43,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string GameId{ get; set; }
 
         /// <summary>
-        /// 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+        /// 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
         /// </summary>
         [JsonProperty("GameRegion")]
         public string GameRegion{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 资源池编号，1表示正式，2表示测试
+        /// 【将废弃】资源池编号，比如1表示正式，2表示测试
         /// </summary>
         [JsonProperty("SetNo")]
         public ulong? SetNo{ get; set; }
@@ -109,10 +109,16 @@ namespace TencentCloud.Gs.V20191118.Models
         public ulong? Optimization{ get; set; }
 
         /// <summary>
-        /// 用于多人游戏，游戏主机用户ID
+        /// 【多人云游】游戏主机用户ID
         /// </summary>
         [JsonProperty("HostUserId")]
         public string HostUserId{ get; set; }
+
+        /// <summary>
+        /// 【多人云游】角色；Player表示玩家；Viewer表示观察者
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "Optimization", this.Optimization);
             this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

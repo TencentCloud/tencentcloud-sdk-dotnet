@@ -36,6 +36,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
+        /// <summary>
+        /// 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
+        /// </summary>
+        [JsonProperty("TargetInstanceId")]
+        public string TargetInstanceId{ get; set; }
+
+        /// <summary>
+        /// 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
+        /// </summary>
+        [JsonProperty("RenameRestore")]
+        public RenameRestoreDatabase[] RenameRestore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
+            this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
         }
     }
 }

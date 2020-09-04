@@ -73,6 +73,18 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("DataType")]
         public string[] DataType{ get; set; }
 
+        /// <summary>
+        /// 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public string PageNumber{ get; set; }
+
+        /// <summary>
+        /// 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,最大不超过100）
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public string PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +97,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

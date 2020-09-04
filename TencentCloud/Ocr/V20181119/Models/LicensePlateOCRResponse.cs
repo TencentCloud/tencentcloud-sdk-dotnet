@@ -37,6 +37,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Confidence{ get; set; }
 
         /// <summary>
+        /// 文本行在原图片中的像素坐标框。
+        /// </summary>
+        [JsonProperty("Rect")]
+        public Rect Rect{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamObj(map, prefix + "Rect.", this.Rect);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

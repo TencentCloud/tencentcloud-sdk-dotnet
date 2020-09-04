@@ -25,19 +25,19 @@ namespace TencentCloud.Ams.V20200608.Models
     {
         
         /// <summary>
-        /// 业务ID
+        /// 业务类型，仅限英文字母、数字和下划线（_）组成，长度不超过8位
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 审核分类信息
+        /// 配置信息，
         /// </summary>
         [JsonProperty("MediaModeration")]
         public MediaModerationConfig MediaModeration{ get; set; }
 
         /// <summary>
-        /// 页面名称
+        /// 业务名称，用于标识业务场景，长度不超过32位
         /// </summary>
         [JsonProperty("BizName")]
         public string BizName{ get; set; }

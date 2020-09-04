@@ -60,6 +60,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("MigrateDBSet")]
         public MigrateDB[] MigrateDBSet{ get; set; }
 
+        /// <summary>
+        /// 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。SourceType=5的情况下有效。
+        /// </summary>
+        [JsonProperty("RenameRestore")]
+        public RenameRestoreDatabase[] RenameRestore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamObj(map, prefix + "Source.", this.Source);
             this.SetParamObj(map, prefix + "Target.", this.Target);
             this.SetParamArrayObj(map, prefix + "MigrateDBSet.", this.MigrateDBSet);
+            this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
         }
     }
 }

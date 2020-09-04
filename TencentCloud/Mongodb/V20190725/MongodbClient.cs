@@ -333,7 +333,47 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持7天内的备份查询。
+        /// 本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentOpRequest"/></param>
+        /// <returns><see cref="DescribeCurrentOpResponse"/></returns>
+        public async Task<DescribeCurrentOpResponse> DescribeCurrentOp(DescribeCurrentOpRequest req)
+        {
+             JsonResponseModel<DescribeCurrentOpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCurrentOp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurrentOpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentOpRequest"/></param>
+        /// <returns><see cref="DescribeCurrentOpResponse"/></returns>
+        public DescribeCurrentOpResponse DescribeCurrentOpSync(DescribeCurrentOpRequest req)
+        {
+             JsonResponseModel<DescribeCurrentOpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCurrentOp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurrentOpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -353,7 +393,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持7天内的备份查询。
+        /// 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -764,6 +804,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "IsolateDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
+        /// </summary>
+        /// <param name="req"><see cref="KillOpsRequest"/></param>
+        /// <returns><see cref="KillOpsResponse"/></returns>
+        public async Task<KillOpsResponse> KillOps(KillOpsRequest req)
+        {
+             JsonResponseModel<KillOpsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KillOps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillOpsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
+        /// </summary>
+        /// <param name="req"><see cref="KillOpsRequest"/></param>
+        /// <returns><see cref="KillOpsResponse"/></returns>
+        public KillOpsResponse KillOpsSync(KillOpsRequest req)
+        {
+             JsonResponseModel<KillOpsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KillOps");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillOpsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

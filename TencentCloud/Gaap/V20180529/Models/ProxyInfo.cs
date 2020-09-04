@@ -196,6 +196,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ModifyConfigTime")]
         public ulong? ModifyConfigTime{ get; set; }
 
+        /// <summary>
+        /// 通道类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyType")]
+        public ulong? ProxyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +234,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
             this.SetParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
             this.SetParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
+            this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
         }
     }
 }

@@ -1253,6 +1253,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 本接口（DescribeProxySlowLog）用于查询代理慢查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxySlowLogRequest"/></param>
+        /// <returns><see cref="DescribeProxySlowLogResponse"/></returns>
+        public async Task<DescribeProxySlowLogResponse> DescribeProxySlowLog(DescribeProxySlowLogRequest req)
+        {
+             JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxySlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxySlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProxySlowLog）用于查询代理慢查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxySlowLogRequest"/></param>
+        /// <returns><see cref="DescribeProxySlowLogResponse"/></returns>
+        public DescribeProxySlowLogResponse DescribeProxySlowLogSync(DescribeProxySlowLogRequest req)
+        {
+             JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxySlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxySlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实例慢查询记录
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>
