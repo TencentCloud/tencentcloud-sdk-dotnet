@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.137</VersionPrefix>
+    <VersionPrefix>3.0.138</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2952,6 +2952,8 @@
     <Compile Include="Cvm\V20170312\Models\DescribeKeyPairsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesConfigInfosRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesConfigInfosResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesOfferingsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesRequest.cs" />
@@ -2978,6 +2980,8 @@
     <Compile Include="Cvm\V20170312\Models\ImportImageResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ImportKeyPairRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ImportKeyPairResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\InquirePricePurchaseReservedInstancesOfferingRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\InquirePricePurchaseReservedInstancesOfferingResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\InquiryPriceModifyInstancesChargeTypeRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\InquiryPriceModifyInstancesChargeTypeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\InquiryPriceRenewInstancesRequest.cs" />
@@ -3039,6 +3043,11 @@
     <Compile Include="Cvm\V20170312\Models\RenewHostsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\RenewInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\RenewInstancesResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\ReservedInstanceConfigInfoItem.cs" />
+    <Compile Include="Cvm\V20170312\Models\ReservedInstanceFamilyItem.cs" />
+    <Compile Include="Cvm\V20170312\Models\ReservedInstancePrice.cs" />
+    <Compile Include="Cvm\V20170312\Models\ReservedInstancePriceItem.cs" />
+    <Compile Include="Cvm\V20170312\Models\ReservedInstanceTypeItem.cs" />
     <Compile Include="Cvm\V20170312\Models\ReservedInstances.cs" />
     <Compile Include="Cvm\V20170312\Models\ReservedInstancesOffering.cs" />
     <Compile Include="Cvm\V20170312\Models\ResetInstanceRequest.cs" />

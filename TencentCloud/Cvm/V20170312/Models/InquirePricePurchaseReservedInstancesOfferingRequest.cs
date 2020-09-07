@@ -21,14 +21,14 @@ namespace TencentCloud.Cvm.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PurchaseReservedInstancesOfferingRequest : AbstractModel
+    public class InquirePricePurchaseReservedInstancesOfferingRequest : AbstractModel
     {
         
         /// <summary>
         /// 购买预留实例计费数量
         /// </summary>
         [JsonProperty("InstanceCount")]
-        public long? InstanceCount{ get; set; }
+        public ulong? InstanceCount{ get; set; }
 
         /// <summary>
         /// 预留实例计费配置ID

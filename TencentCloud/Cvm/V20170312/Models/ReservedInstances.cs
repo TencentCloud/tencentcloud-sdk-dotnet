@@ -31,8 +31,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ReservedInstancesId{ get; set; }
 
         /// <summary>
-        /// 预留实例计费的类型。形如：S3.MEDIUM4。
-        /// 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
+        /// 预留实例计费的规格。形如：S3.MEDIUM4。
+        /// 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费规格列表</a>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -97,6 +97,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("OfferingType")]
         public string OfferingType{ get; set; }
 
+        /// <summary>
+        /// 预留实例计费的类型。形如：S3。
+        /// 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
+        /// </summary>
+        [JsonProperty("InstanceFamily")]
+        public string InstanceFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "CurrencyCode", this.CurrencyCode);
             this.SetParamSimple(map, prefix + "OfferingType", this.OfferingType);
+            this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
         }
     }
 }

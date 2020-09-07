@@ -1239,6 +1239,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
+        public async Task<DescribeReservedInstancesConfigInfosResponse> DescribeReservedInstancesConfigInfos(DescribeReservedInstancesConfigInfosRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesConfigInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReservedInstancesConfigInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
+        public DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfosSync(DescribeReservedInstancesConfigInfosRequest req)
+        {
+             JsonResponseModel<DescribeReservedInstancesConfigInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReservedInstancesConfigInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
         /// </summary>
         /// <param name="req"><see cref="DescribeReservedInstancesOfferingsRequest"/></param>
@@ -1570,6 +1610,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ImportKeyPair");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价,
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
+        public async Task<InquirePricePurchaseReservedInstancesOfferingResponse> InquirePricePurchaseReservedInstancesOffering(InquirePricePurchaseReservedInstancesOfferingRequest req)
+        {
+             JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePricePurchaseReservedInstancesOffering");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价,
+        /// </summary>
+        /// <param name="req"><see cref="InquirePricePurchaseReservedInstancesOfferingRequest"/></param>
+        /// <returns><see cref="InquirePricePurchaseReservedInstancesOfferingResponse"/></returns>
+        public InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOfferingSync(InquirePricePurchaseReservedInstancesOfferingRequest req)
+        {
+             JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePricePurchaseReservedInstancesOffering");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
