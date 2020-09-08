@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenameRestoreDatabase : AbstractModel
+    public class DescribeClusterKubeconfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// 库的名字，如果oldName不存在则返回失败。
-        /// 在用于离线迁移任务时可不填。
+        /// 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
         /// </summary>
-        [JsonProperty("OldName")]
-        public string OldName{ get; set; }
+        [JsonProperty("Kubeconfig")]
+        public string Kubeconfig{ get; set; }
 
         /// <summary>
-        /// 库的新名字，如果不填则按照系统默认方式命名恢复的库。在用于离线迁移任务时，不填则按照OldName命名，OldName和NewName不能同时不填。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("NewName")]
-        public string NewName{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OldName", this.OldName);
-            this.SetParamSimple(map, prefix + "NewName", this.NewName);
+            this.SetParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

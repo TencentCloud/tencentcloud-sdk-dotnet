@@ -25,58 +25,63 @@ namespace TencentCloud.Tms.V20200713.Models
     {
         
         /// <summary>
-        /// 最终使用的BizType
+        /// 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 是否恶意 0：正常 1：可疑
+        /// 数据是否属于恶意类型。
+        ///  0：正常 1：可疑
         /// </summary>
         [JsonProperty("EvilFlag")]
         public long? EvilFlag{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+        /// 机器识别后判断违规所属类型。
+        /// Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 建议值,Block：打击,Review：待复审,Normal：正常
+        /// 建议您拿到判断结果后的执行操作。
+        /// Block：建议打击，Review：建议复审，Normal：建议通过。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 命中的关键词
+        /// 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
+        /// 如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 命中的模型分值
+        /// 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
+        /// （如：色情 99.99，则该样本属于色情的置信度非常高。）
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 返回的详细结果
+        /// 接口识别样本后返回的详细结果。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailResults")]
         public DetailResults[] DetailResults{ get; set; }
 
         /// <summary>
-        /// 账号风险检测结果
+        /// 接口识别样本中存在违规账号风险的检测结果。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskDetails")]
         public RiskDetails[] RiskDetails{ get; set; }
 
         /// <summary>
-        /// 预留字段，不同客户返回结果不同
+        /// 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extra")]

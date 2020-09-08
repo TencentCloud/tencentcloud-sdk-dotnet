@@ -43,13 +43,13 @@ namespace TencentCloud.Tms.V20200713.Models
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 用户相关信息
+        /// 账号相关信息字段，填入后可识别违规风险账号。
         /// </summary>
         [JsonProperty("User")]
         public User User{ get; set; }
 
         /// <summary>
-        /// 设备相关信息
+        /// 设备相关信息字段，填入后可识别违规风险设备。
         /// </summary>
         [JsonProperty("Device")]
         public Device Device{ get; set; }

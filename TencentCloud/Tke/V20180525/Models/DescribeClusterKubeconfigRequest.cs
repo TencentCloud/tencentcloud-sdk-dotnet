@@ -15,27 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenameRestoreDatabase : AbstractModel
+    public class DescribeClusterKubeconfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 库的名字，如果oldName不存在则返回失败。
-        /// 在用于离线迁移任务时可不填。
+        /// 集群ID
         /// </summary>
-        [JsonProperty("OldName")]
-        public string OldName{ get; set; }
-
-        /// <summary>
-        /// 库的新名字，如果不填则按照系统默认方式命名恢复的库。在用于离线迁移任务时，不填则按照OldName命名，OldName和NewName不能同时不填。
-        /// </summary>
-        [JsonProperty("NewName")]
-        public string NewName{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +36,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OldName", this.OldName);
-            this.SetParamSimple(map, prefix + "NewName", this.NewName);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }
