@@ -381,6 +381,46 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 根据地域获取KMS密钥别名
+        /// </summary>
+        /// <param name="req"><see cref="ListKeyAliasByRegionRequest"/></param>
+        /// <returns><see cref="ListKeyAliasByRegionResponse"/></returns>
+        public async Task<ListKeyAliasByRegionResponse> ListKeyAliasByRegion(ListKeyAliasByRegionRequest req)
+        {
+             JsonResponseModel<ListKeyAliasByRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListKeyAliasByRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeyAliasByRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据地域获取KMS密钥别名
+        /// </summary>
+        /// <param name="req"><see cref="ListKeyAliasByRegionRequest"/></param>
+        /// <returns><see cref="ListKeyAliasByRegionResponse"/></returns>
+        public ListKeyAliasByRegionResponse ListKeyAliasByRegionSync(ListKeyAliasByRegionRequest req)
+        {
+             JsonResponseModel<ListKeyAliasByRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListKeyAliasByRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListKeyAliasByRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于对操作日志进行检索，便于用户进行查询相关的操作信息。
         /// </summary>
         /// <param name="req"><see cref="LookUpEventsRequest"/></param>

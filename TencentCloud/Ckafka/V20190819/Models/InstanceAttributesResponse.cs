@@ -193,6 +193,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Features")]
+        public string[] Features{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +233,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MaxGroupNum", this.MaxGroupNum);
             this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArraySimple(map, prefix + "Features.", this.Features);
         }
     }
 }

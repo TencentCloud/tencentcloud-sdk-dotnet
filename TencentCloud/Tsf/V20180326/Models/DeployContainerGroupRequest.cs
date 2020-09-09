@@ -31,12 +31,6 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 镜像server
-        /// </summary>
-        [JsonProperty("Server")]
-        public string Server{ get; set; }
-
-        /// <summary>
         /// 镜像版本名称,如v1
         /// </summary>
         [JsonProperty("TagName")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         [JsonProperty("InstanceNum")]
         public long? InstanceNum{ get; set; }
+
+        /// <summary>
+        /// 镜像server
+        /// </summary>
+        [JsonProperty("Server")]
+        public string Server{ get; set; }
 
         /// <summary>
         /// 旧版镜像名，如/tsf/nginx
@@ -193,9 +193,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "TagName", this.TagName);
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
+            this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "Reponame", this.Reponame);
             this.SetParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
             this.SetParamSimple(map, prefix + "MemLimit", this.MemLimit);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.139</VersionPrefix>
+    <VersionPrefix>3.0.140</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2417,12 +2417,15 @@
     <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\InquireAuditCreditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\KeyMetadata.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\ListAuditsRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\ListAuditsResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\ListCmqEnableRegionResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\ListCosEnableRegionResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListKeyAliasByRegionRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ListKeyAliasByRegionResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\LookupAttribute.cs" />
