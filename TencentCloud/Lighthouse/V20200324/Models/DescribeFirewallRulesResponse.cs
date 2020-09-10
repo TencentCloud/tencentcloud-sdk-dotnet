@@ -15,36 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetFederationTokenRequest : AbstractModel
+    public class DescribeFirewallRulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 您可以自定义调用方英文名称，由字母组成。
+        /// 符合条件的防火墙规则数量。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 授予该临时证书权限的CAM策略
-        /// 注意：
-        /// 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
-        /// 2、策略中不能包含 principal 元素。
-        /// 3、该参数需要做urlencode。
+        /// 防火墙规则详细信息列表。
         /// </summary>
-        [JsonProperty("Policy")]
-        public string Policy{ get; set; }
+        [JsonProperty("FirewallRuleSet")]
+        public FirewallRuleInfo[] FirewallRuleSet{ get; set; }
 
         /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DurationSeconds")]
-        public ulong? DurationSeconds{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -52,9 +48,9 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Policy", this.Policy);
-            this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "FirewallRuleSet.", this.FirewallRuleSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

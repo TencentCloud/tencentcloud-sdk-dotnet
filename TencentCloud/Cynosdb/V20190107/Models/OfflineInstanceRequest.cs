@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Credentials : AbstractModel
+    public class OfflineInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// token。token长度和绑定的策略有关，最长不超过4096字节。
+        /// 集群ID
         /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 临时证书密钥ID。最长不超过1024字节。
+        /// 实例ID数组
         /// </summary>
-        [JsonProperty("TmpSecretId")]
-        public string TmpSecretId{ get; set; }
-
-        /// <summary>
-        /// 临时证书密钥Key。最长不超过1024字节。
-        /// </summary>
-        [JsonProperty("TmpSecretKey")]
-        public string TmpSecretKey{ get; set; }
+        [JsonProperty("InstanceIdList")]
+        public string[] InstanceIdList{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
-            this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         }
     }
 }

@@ -15,36 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetFederationTokenRequest : AbstractModel
+    public class DescribeFirewallRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 您可以自定义调用方英文名称，由字母组成。
+        /// 实例 ID。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 授予该临时证书权限的CAM策略
-        /// 注意：
-        /// 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
-        /// 2、策略中不能包含 principal 元素。
-        /// 3、该参数需要做urlencode。
+        /// 偏移量，默认为 0。
         /// </summary>
-        [JsonProperty("Policy")]
-        public string Policy{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
+        /// 返回数量，默认为 20，最大值为 100。
         /// </summary>
-        [JsonProperty("DurationSeconds")]
-        public ulong? DurationSeconds{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -52,9 +48,9 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Policy", this.Policy);
-            this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Credentials : AbstractModel
+    public class FirewallRule : AbstractModel
     {
         
         /// <summary>
-        /// token。token长度和绑定的策略有关，最长不超过4096字节。
+        /// 协议，取值：TCP，UDP，ALL。
         /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
         /// <summary>
-        /// 临时证书密钥ID。最长不超过1024字节。
+        /// 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
         /// </summary>
-        [JsonProperty("TmpSecretId")]
-        public string TmpSecretId{ get; set; }
-
-        /// <summary>
-        /// 临时证书密钥Key。最长不超过1024字节。
-        /// </summary>
-        [JsonProperty("TmpSecretKey")]
-        public string TmpSecretKey{ get; set; }
+        [JsonProperty("Port")]
+        public string Port{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
-            this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

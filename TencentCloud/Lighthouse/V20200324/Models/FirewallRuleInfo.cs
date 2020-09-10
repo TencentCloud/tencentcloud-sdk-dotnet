@@ -15,36 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetFederationTokenRequest : AbstractModel
+    public class FirewallRuleInfo : AbstractModel
     {
         
         /// <summary>
-        /// 您可以自定义调用方英文名称，由字母组成。
+        /// 应用类型，取值：自定义，HTTP(80)，HTTPS(443)，Linux登录(22)，Windows登录(3389)，MySQL(3306)，SQL Server(1433)，全部TCP，全部UDP，ALL。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("AppType")]
+        public string AppType{ get; set; }
 
         /// <summary>
-        /// 授予该临时证书权限的CAM策略
-        /// 注意：
-        /// 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
-        /// 2、策略中不能包含 principal 元素。
-        /// 3、该参数需要做urlencode。
+        /// 协议，取值：TCP，UDP，ALL。
         /// </summary>
-        [JsonProperty("Policy")]
-        public string Policy{ get; set; }
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
         /// <summary>
-        /// 指定临时证书的有效期，单位：秒，默认1800秒，主账号最长可设定有效期为7200秒，子账号最长可设定有效期为129600秒。
+        /// 端口，取值：ALL，单独的端口，逗号分隔的离散端口，减号分隔的端口范围。
         /// </summary>
-        [JsonProperty("DurationSeconds")]
-        public ulong? DurationSeconds{ get; set; }
+        [JsonProperty("Port")]
+        public string Port{ get; set; }
 
 
         /// <summary>
@@ -52,9 +48,9 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Policy", this.Policy);
-            this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

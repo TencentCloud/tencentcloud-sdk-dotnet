@@ -120,19 +120,25 @@ namespace TencentCloud.Live.V20180801.Models
         public string Profile{ get; set; }
 
         /// <summary>
-        /// 是否不超过原始码率。0：否，1：是。默认0。
+        /// 当设置的码率>原始码率时，是否以原始码率为准。
+        /// 0：否， 1：是
+        /// 默认 0。
         /// </summary>
         [JsonProperty("BitrateToOrig")]
         public long? BitrateToOrig{ get; set; }
 
         /// <summary>
-        /// 是否不超过原始高。0：否，1：是。默认0。
+        /// 当设置的高度>原始高度时，是否以原始高度为准。
+        /// 0：否， 1：是
+        /// 默认 0。
         /// </summary>
         [JsonProperty("HeightToOrig")]
         public long? HeightToOrig{ get; set; }
 
         /// <summary>
-        /// 是否不超过原始帧率。0：否，1：是。默认0。
+        /// 当设置的帧率>原始帧率时，是否以原始帧率为准。
+        /// 0：否， 1：是
+        /// 默认 0。
         /// </summary>
         [JsonProperty("FpsToOrig")]
         public long? FpsToOrig{ get; set; }

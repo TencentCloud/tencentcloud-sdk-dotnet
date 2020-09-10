@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.140</VersionPrefix>
+    <VersionPrefix>3.0.141</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3143,6 +3143,7 @@
     <Compile Include="Cynosdb\V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\CynosdbCluster.cs" />
     <Compile Include="Cynosdb\V20190107\Models\CynosdbClusterDetail.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\CynosdbInstanceDetail.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeBackupConfigRequest.cs" />
@@ -3153,6 +3154,8 @@
     <Compile Include="Cynosdb\V20190107\Models\DescribeClusterDetailResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeClustersRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeClustersResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceDetailRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceDetailResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceSpecsRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceSpecsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeMaintainPeriodRequest.cs" />
@@ -3175,6 +3178,8 @@
     <Compile Include="Cynosdb\V20190107\Models\ObjectTask.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineClusterRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineClusterResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\OfflineInstanceRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\OfflineInstanceResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\QueryFilter.cs" />
     <Compile Include="Cynosdb\V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\SetRenewFlagResponse.cs" />
@@ -5323,13 +5328,21 @@
     <Compile Include="Lighthouse\V20200324\LighthouseClient.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Blueprint.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Bundle.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateFirewallRulesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateFirewallRulesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DeleteFirewallRulesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DeleteFirewallRulesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeFirewallRulesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeFirewallRulesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Filter.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\FirewallRule.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\FirewallRuleInfo.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Instance.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InstancePrice.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InternetAccessible.cs" />

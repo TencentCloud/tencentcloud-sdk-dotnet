@@ -53,6 +53,102 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
+        /// 
+        /// * Protocol 字段支持输入 TCP，UDP，或 ALL。
+        /// 
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirewallRulesRequest"/></param>
+        /// <returns><see cref="CreateFirewallRulesResponse"/></returns>
+        public async Task<CreateFirewallRulesResponse> CreateFirewallRules(CreateFirewallRulesRequest req)
+        {
+             JsonResponseModel<CreateFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
+        /// 
+        /// * Protocol 字段支持输入 TCP，UDP，或 ALL。
+        /// 
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirewallRulesRequest"/></param>
+        /// <returns><see cref="CreateFirewallRulesResponse"/></returns>
+        public CreateFirewallRulesResponse CreateFirewallRulesSync(CreateFirewallRulesRequest req)
+        {
+             JsonResponseModel<CreateFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
+        /// 
+        /// * Protocol 字段支持输入 TCP，UDP，或 ALL。
+        /// 
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirewallRulesRequest"/></param>
+        /// <returns><see cref="DeleteFirewallRulesResponse"/></returns>
+        public async Task<DeleteFirewallRulesResponse> DeleteFirewallRules(DeleteFirewallRulesRequest req)
+        {
+             JsonResponseModel<DeleteFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
+        /// 
+        /// * Protocol 字段支持输入 TCP，UDP，或 ALL。
+        /// 
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirewallRulesRequest"/></param>
+        /// <returns><see cref="DeleteFirewallRulesResponse"/></returns>
+        public DeleteFirewallRulesResponse DeleteFirewallRulesSync(DeleteFirewallRulesRequest req)
+        {
+             JsonResponseModel<DeleteFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeBlueprints）用于查询镜像信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBlueprintsRequest"/></param>
@@ -124,6 +220,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBundles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBundlesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallRulesRequest"/></param>
+        /// <returns><see cref="DescribeFirewallRulesResponse"/></returns>
+        public async Task<DescribeFirewallRulesResponse> DescribeFirewallRules(DescribeFirewallRulesRequest req)
+        {
+             JsonResponseModel<DescribeFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallRulesRequest"/></param>
+        /// <returns><see cref="DescribeFirewallRulesResponse"/></returns>
+        public DescribeFirewallRulesResponse DescribeFirewallRulesSync(DescribeFirewallRulesRequest req)
+        {
+             JsonResponseModel<DescribeFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

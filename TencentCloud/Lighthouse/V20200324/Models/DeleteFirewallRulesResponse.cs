@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Sts.V20180813.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Credentials : AbstractModel
+    public class DeleteFirewallRulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// token。token长度和绑定的策略有关，最长不超过4096字节。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Token")]
-        public string Token{ get; set; }
-
-        /// <summary>
-        /// 临时证书密钥ID。最长不超过1024字节。
-        /// </summary>
-        [JsonProperty("TmpSecretId")]
-        public string TmpSecretId{ get; set; }
-
-        /// <summary>
-        /// 临时证书密钥Key。最长不超过1024字节。
-        /// </summary>
-        [JsonProperty("TmpSecretKey")]
-        public string TmpSecretKey{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Sts.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Token", this.Token);
-            this.SetParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
-            this.SetParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

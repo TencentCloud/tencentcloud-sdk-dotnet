@@ -333,6 +333,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 本接口(DescribeInstanceDetail)用于查询实例详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDetailResponse"/></returns>
+        public async Task<DescribeInstanceDetailResponse> DescribeInstanceDetail(DescribeInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstanceDetail)用于查询实例详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDetailResponse"/></returns>
+        public DescribeInstanceDetailResponse DescribeInstanceDetailSync(DescribeInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstanceSpecs）用于查询实例规格
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSpecsRequest"/></param>
@@ -533,7 +573,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(IsolateInstance)用于隔离实例访问。
+        /// 本接口(IsolateInstance)用于隔离实例。
         /// </summary>
         /// <param name="req"><see cref="IsolateInstanceRequest"/></param>
         /// <returns><see cref="IsolateInstanceResponse"/></returns>
@@ -553,7 +593,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// 本接口(IsolateInstance)用于隔离实例访问。
+        /// 本接口(IsolateInstance)用于隔离实例。
         /// </summary>
         /// <param name="req"><see cref="IsolateInstanceRequest"/></param>
         /// <returns><see cref="IsolateInstanceResponse"/></returns>
@@ -724,6 +764,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "OfflineCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下线实例
+        /// </summary>
+        /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
+        /// <returns><see cref="OfflineInstanceResponse"/></returns>
+        public async Task<OfflineInstanceResponse> OfflineInstance(OfflineInstanceRequest req)
+        {
+             JsonResponseModel<OfflineInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OfflineInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下线实例
+        /// </summary>
+        /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
+        /// <returns><see cref="OfflineInstanceResponse"/></returns>
+        public OfflineInstanceResponse OfflineInstanceSync(OfflineInstanceRequest req)
+        {
+             JsonResponseModel<OfflineInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OfflineInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OfflineInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
