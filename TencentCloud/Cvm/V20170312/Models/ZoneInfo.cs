@@ -57,6 +57,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> ap-beijing-2 </li>
         /// <li> ap-beijing-3 </li>
         /// <li> ap-beijing-4 </li>
+        /// <li> ap-beijing-5 </li>
         /// <li> na-siliconvalley-1 </li>
         /// <li> na-siliconvalley-2 </li>
         /// <li> eu-frankfurt-1 </li>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.141</VersionPrefix>
+    <VersionPrefix>3.0.142</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3143,7 +3143,9 @@
     <Compile Include="Cynosdb\V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\CynosdbCluster.cs" />
     <Compile Include="Cynosdb\V20190107\Models\CynosdbClusterDetail.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\CynosdbInstance.cs" />
     <Compile Include="Cynosdb\V20190107\Models\CynosdbInstanceDetail.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\CynosdbInstanceGrp.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeBackupConfigRequest.cs" />
@@ -3152,14 +3154,20 @@
     <Compile Include="Cynosdb\V20190107\Models\DescribeBackupListResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeClusterDetailRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeClusterDetailResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeClusterInstanceGrpsRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeClusterInstanceGrpsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeClustersRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeClustersResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceDetailRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceDetailResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceSpecsRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeInstanceSpecsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeMaintainPeriodRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeMaintainPeriodResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeRollbackTimeRangeRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeRollbackTimeRangeResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeRollbackTimeValidityRequest.cs" />
@@ -3180,7 +3188,9 @@
     <Compile Include="Cynosdb\V20190107\Models\OfflineClusterResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineInstanceResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\PolicyRule.cs" />
     <Compile Include="Cynosdb\V20190107\Models\QueryFilter.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\SecurityGroup.cs" />
     <Compile Include="Cynosdb\V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\SetRenewFlagResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\UpgradeInstanceRequest.cs" />
