@@ -168,6 +168,18 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("MidasEnvironment")]
         public string MidasEnvironment{ get; set; }
 
+        /// <summary>
+        /// 微信商户应用ID
+        /// </summary>
+        [JsonProperty("WxAppId")]
+        public string WxAppId{ get; set; }
+
+        /// <summary>
+        /// 微信商户子应用ID
+        /// </summary>
+        [JsonProperty("WxSubAppId")]
+        public string WxSubAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +209,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "WxOpenId", this.WxOpenId);
             this.SetParamSimple(map, prefix + "WxSubOpenId", this.WxSubOpenId);
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+            this.SetParamSimple(map, prefix + "WxAppId", this.WxAppId);
+            this.SetParamSimple(map, prefix + "WxSubAppId", this.WxSubAppId);
         }
     }
 }

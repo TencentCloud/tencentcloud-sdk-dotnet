@@ -37,8 +37,8 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? RoomId{ get; set; }
 
         /// <summary>
-        /// 用于实时录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
-        /// 该ID必须是一个单独的未在SDK中使用的ID，实时录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
+        /// 用于录制服务进房的用户ID，格式为`tic_record_user_${RoomId}_${Random}`，其中 `${RoomId} `与录制房间号对应，`${Random}`为一个随机字符串。
+        /// 该ID必须是一个单独的未在SDK中使用的ID，录制服务使用这个用户ID进入房间进行音视频与白板录制，若该ID和SDK中使用的ID重复，会导致SDK和录制服务互踢，影响正常录制。
         /// </summary>
         [JsonProperty("RecordUserId")]
         public string RecordUserId{ get; set; }
@@ -56,19 +56,19 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 实时录制视频拼接参数
+        /// 录制视频拼接参数
         /// </summary>
         [JsonProperty("Concat")]
         public Concat Concat{ get; set; }
 
         /// <summary>
-        /// 实时录制白板参数，例如白板宽高等
+        /// 录制白板参数，例如白板宽高等
         /// </summary>
         [JsonProperty("Whiteboard")]
         public Whiteboard Whiteboard{ get; set; }
 
         /// <summary>
-        /// 实时录制混流参数
+        /// 录制混流参数
         /// 特别说明：
         /// 1. 混流功能需要根据额外开通， 请联系腾讯云互动白板客服人员
         /// 2. 使用混流功能，必须提供 Extras 参数，且 Extras 参数中必须包含 "MIX_STREAM"
@@ -91,10 +91,27 @@ namespace TencentCloud.Tiw.V20190919.Models
         public bool? AudioFileNeeded{ get; set; }
 
         /// <summary>
-        /// 实时录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
+        /// 录制控制参数，用于更精细地指定需要录制哪些流，某一路流是否禁用音频，是否只录制小画面等
         /// </summary>
         [JsonProperty("RecordControl")]
         public RecordControl RecordControl{ get; set; }
+
+        /// <summary>
+        /// 录制模式
+        /// 
+        /// REALTIME_MODE - 实时录制模式（默认）
+        /// VIDEO_GENERATION_MODE - 视频生成模式（内测中，需邮件申请开通）
+        /// </summary>
+        [JsonProperty("RecordMode")]
+        public string RecordMode{ get; set; }
+
+        /// <summary>
+        /// 聊天群组ID，此字段仅适用于`视频生成模式`
+        /// 
+        /// 在`视频生成模式`下，默认会记录白板群组内的非白板信令消息，如果指定了`ChatGroupId`，则会记录指定群ID的聊天消息。
+        /// </summary>
+        [JsonProperty("ChatGroupId")]
+        public string ChatGroupId{ get; set; }
 
 
         /// <summary>
@@ -113,6 +130,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamArraySimple(map, prefix + "Extras.", this.Extras);
             this.SetParamSimple(map, prefix + "AudioFileNeeded", this.AudioFileNeeded);
             this.SetParamObj(map, prefix + "RecordControl.", this.RecordControl);
+            this.SetParamSimple(map, prefix + "RecordMode", this.RecordMode);
+            this.SetParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
         }
     }
 }

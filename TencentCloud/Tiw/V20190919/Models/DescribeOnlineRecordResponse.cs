@@ -105,6 +105,13 @@ namespace TencentCloud.Tiw.V20190919.Models
         public VideoInfo[] VideoInfos{ get; set; }
 
         /// <summary>
+        /// 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplayUrl")]
+        public string ReplayUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -128,6 +135,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "ExceptionCnt", this.ExceptionCnt);
             this.SetParamArrayObj(map, prefix + "OmittedDurations.", this.OmittedDurations);
             this.SetParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
+            this.SetParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -212,6 +212,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OriginPullTimeout")]
         public OriginPullTimeout OriginPullTimeout{ get; set; }
 
+        /// <summary>
+        /// 标签配置
+        /// </summary>
+        [JsonProperty("Tag")]
+        public Tag[] Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -248,6 +254,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }

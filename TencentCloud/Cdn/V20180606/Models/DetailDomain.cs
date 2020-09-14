@@ -368,6 +368,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AccessPort")]
         public long?[] AccessPort{ get; set; }
 
+        /// <summary>
+        /// 标签配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public Tag[] Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -421,6 +428,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Advance", this.Advance);
             this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
             this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }

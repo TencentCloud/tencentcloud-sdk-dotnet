@@ -26,7 +26,7 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 日期，格式：YYYY-mm-dd。
-        /// 第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。
+        /// 第二天凌晨3点出昨天的数据，建议在这个时间点之后查询最新数据。支持最近3个月的数据查询。
         /// </summary>
         [JsonProperty("DayTime")]
         public string DayTime{ get; set; }

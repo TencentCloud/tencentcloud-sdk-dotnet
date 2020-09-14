@@ -93,7 +93,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询实时录制任务状态与结果
+        /// 查询录制任务状态与结果
         /// </summary>
         /// <param name="req"><see cref="DescribeOnlineRecordRequest"/></param>
         /// <returns><see cref="DescribeOnlineRecordResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
-        /// 查询实时录制任务状态与结果
+        /// 查询录制任务状态与结果
         /// </summary>
         /// <param name="req"><see cref="DescribeOnlineRecordRequest"/></param>
         /// <returns><see cref="DescribeOnlineRecordResponse"/></returns>
