@@ -373,6 +373,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取云托管代码上传url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseBuildServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseBuildServiceResponse"/></returns>
+        public async Task<DescribeCloudBaseBuildServiceResponse> DescribeCloudBaseBuildService(DescribeCloudBaseBuildServiceRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseBuildServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseBuildService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseBuildServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云托管代码上传url
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseBuildServiceRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseBuildServiceResponse"/></returns>
+        public DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildServiceSync(DescribeCloudBaseBuildServiceRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseBuildServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseBuildService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseBuildServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取数据库权限
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseACLRequest"/></param>

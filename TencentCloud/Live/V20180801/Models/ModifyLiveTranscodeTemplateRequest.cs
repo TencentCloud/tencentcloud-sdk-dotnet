@@ -59,7 +59,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 视频码率。范围：100kbps - 8000kbps。
+        /// 视频码率。范围：0kbps - 8000kbps。
+        /// 0为保持原始码率。
         /// 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
         /// </summary>
         [JsonProperty("VideoBitrate")]

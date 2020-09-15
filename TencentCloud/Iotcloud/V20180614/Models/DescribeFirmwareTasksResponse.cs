@@ -15,41 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Iotcloud.V20180614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubscribedInfo : AbstractModel
+    public class DescribeFirmwareTasksResponse : AbstractModel
     {
         
         /// <summary>
-        /// 订阅的主题名
-        /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
-
-        /// <summary>
-        /// 订阅的分区
+        /// 固件升级任务列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Partition")]
-        public long?[] Partition{ get; set; }
+        [JsonProperty("TaskInfos")]
+        public FirmwareTaskInfo[] TaskInfos{ get; set; }
 
         /// <summary>
-        /// 分区offset信息
+        /// 固件升级任务总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PartitionOffset")]
-        public PartitionOffset[] PartitionOffset{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 订阅的主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -57,10 +50,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamArraySimple(map, prefix + "Partition.", this.Partition);
-            this.SetParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamArrayObj(map, prefix + "TaskInfos.", this.TaskInfos);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -15,41 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Iotcloud.V20180614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubscribedInfo : AbstractModel
+    public class DescribeFirmwareTaskStatisticsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 订阅的主题名
-        /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
-
-        /// <summary>
-        /// 订阅的分区
+        /// 升级成功的设备总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Partition")]
-        public long?[] Partition{ get; set; }
+        [JsonProperty("SuccessTotal")]
+        public ulong? SuccessTotal{ get; set; }
 
         /// <summary>
-        /// 分区offset信息
+        /// 升级失败的设备总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PartitionOffset")]
-        public PartitionOffset[] PartitionOffset{ get; set; }
+        [JsonProperty("FailureTotal")]
+        public ulong? FailureTotal{ get; set; }
 
         /// <summary>
-        /// 订阅的主题ID
+        /// 正在升级的设备总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("UpgradingTotal")]
+        public ulong? UpgradingTotal{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -57,10 +57,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamArraySimple(map, prefix + "Partition.", this.Partition);
-            this.SetParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "SuccessTotal", this.SuccessTotal);
+            this.SetParamSimple(map, prefix + "FailureTotal", this.FailureTotal);
+            this.SetParamSimple(map, prefix + "UpgradingTotal", this.UpgradingTotal);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

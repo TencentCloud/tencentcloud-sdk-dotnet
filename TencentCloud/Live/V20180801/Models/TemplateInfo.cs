@@ -25,81 +25,100 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 视频编码：
-        /// h264/h265。
+        /// 视频编码：h264/h265/origin，默认h264。
+        /// 
+        /// origin: 保持原始编码格式
         /// </summary>
         [JsonProperty("Vcodec")]
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// 视频码率，取值范围：100kbps - 8000kbps。
+        /// 视频码率。范围：0kbps - 8000kbps。
+        /// 0为保持原始码率。
+        /// 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public long? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 音频编码，可选 aac 或 mp3。
+        /// 音频编码：aac，默认aac。
+        /// 注意：当前该参数未生效，待后续支持！
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
 
         /// <summary>
         /// 音频码率。取值范围：0kbps - 500kbps。
+        /// 默认0。
         /// </summary>
         [JsonProperty("AudioBitrate")]
         public long? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// 宽，取值范围：0-3000。
+        /// 宽，默认0。
+        /// 范围[0-3000]
+        /// 数值必须是2的倍数，0是原始宽度
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 高，取值范围：0-3000。
+        /// 高，默认0。
+        /// 范围[0-3000]
+        /// 数值必须是2的倍数，0是原始宽度
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 帧率。取值范围：0fps - 200fps。
+        /// 帧率，默认0。
+        /// 范围0-60fps
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 关键帧间隔，取值范围：1秒 - 50秒。
+        /// 关键帧间隔，单位：秒。
+        /// 默认原始的间隔
+        /// 范围2-6
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }
 
         /// <summary>
-        /// 旋转角度。可选择：0 90 180 270。
+        /// 旋转角度，默认0。
+        /// 可取值：0，90，180，270
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
 
         /// <summary>
-        /// 编码质量，可选择：
-        /// baseline，main，high。
+        /// 编码质量：
+        /// baseline/main/high。默认baseline
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
         /// <summary>
-        /// 是否不超过原始码率。0：否，1：是。
+        /// 当设置的码率>原始码率时，是否以原始码率为准。
+        /// 0：否， 1：是
+        /// 默认 0。
         /// </summary>
         [JsonProperty("BitrateToOrig")]
         public long? BitrateToOrig{ get; set; }
 
         /// <summary>
-        /// 是否不超过原始高度。0：否，1：是。
+        /// 当设置的高度>原始高度时，是否以原始高度为准。
+        /// 0：否， 1：是
+        /// 默认 0。
         /// </summary>
         [JsonProperty("HeightToOrig")]
         public long? HeightToOrig{ get; set; }
 
         /// <summary>
-        /// 是否不超过原始帧率。0：否，1：是。
+        /// 当设置的帧率>原始帧率时，是否以原始帧率为准。
+        /// 0：否， 1：是
+        /// 默认 0。
         /// </summary>
         [JsonProperty("FpsToOrig")]
         public long? FpsToOrig{ get; set; }
@@ -141,10 +160,20 @@ namespace TencentCloud.Live.V20180801.Models
         public long? AiTransCode{ get; set; }
 
         /// <summary>
-        /// 极速高清相比 VideoBitrate 少多少码率，0.1到0.5。
+        /// 极速高清视频码率压缩比。
+        /// 极速高清目标码率=VideoBitrate * (1-AdaptBitratePercent)
+        /// 
+        /// 取值范围：0.0到0.5
         /// </summary>
         [JsonProperty("AdaptBitratePercent")]
         public float? AdaptBitratePercent{ get; set; }
+
+        /// <summary>
+        /// 是否以短边作为高度，0：否，1：是。默认0。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShortEdgeAsHeight")]
+        public long? ShortEdgeAsHeight{ get; set; }
 
 
         /// <summary>
@@ -172,6 +201,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
             this.SetParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
+            this.SetParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
         }
     }
 }

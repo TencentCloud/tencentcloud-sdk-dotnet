@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Yunjing.V20180228.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExportAttackLogsResponse : AbstractModel
+    public class DescribeCloudBaseBuildServiceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 导出文件下载链接地址。
+        /// 环境id
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string DownloadUrl{ get; set; }
+        [JsonProperty("EnvId")]
+        public string EnvId{ get; set; }
 
         /// <summary>
-        /// 导出任务ID
+        /// 服务名
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// build类型,枚举值有: cloudbaserun, framework-ci
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("CIBusiness")]
+        public string CIBusiness{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "CIBusiness", this.CIBusiness);
         }
     }
 }

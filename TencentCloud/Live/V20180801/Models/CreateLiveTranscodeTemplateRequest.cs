@@ -34,7 +34,8 @@ namespace TencentCloud.Live.V20180801.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 视频码率。范围：100-8000。
+        /// 视频码率。范围：0kbps - 8000kbps。
+        /// 0为保持原始码率。
         /// 注: 转码模板有码率唯一要求，最终保存的码率可能与输入码率有所差别。
         /// </summary>
         [JsonProperty("VideoBitrate")]
@@ -98,13 +99,14 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 帧率，默认0。
-        /// 范围0-60
+        /// 范围0-60fps
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 关键帧间隔，单位：秒。默认原始的间隔
+        /// 关键帧间隔，单位：秒。
+        /// 默认原始的间隔
         /// 范围2-6
         /// </summary>
         [JsonProperty("Gop")]

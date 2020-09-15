@@ -25,13 +25,13 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期。
+        /// 开始时间（xxxx-xx-xx）如2019-08-14，默认为一周之前的日期，不应与当前日期间隔超过90天。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天。
+        /// 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过90天。当开始与结束间隔不超过30天时返回1小时粒度的数据，否则返回3小时粒度的数据。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

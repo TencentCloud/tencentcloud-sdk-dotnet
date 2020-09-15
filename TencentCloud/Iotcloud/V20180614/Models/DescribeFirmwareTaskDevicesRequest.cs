@@ -15,41 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Iotcloud.V20180614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubscribedInfo : AbstractModel
+    public class DescribeFirmwareTaskDevicesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 订阅的主题名
+        /// 产品ID
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
+        [JsonProperty("ProductID")]
+        public string ProductID{ get; set; }
 
         /// <summary>
-        /// 订阅的分区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 固件版本
         /// </summary>
-        [JsonProperty("Partition")]
-        public long?[] Partition{ get; set; }
+        [JsonProperty("FirmwareVersion")]
+        public string FirmwareVersion{ get; set; }
 
         /// <summary>
-        /// 分区offset信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 筛选条件
         /// </summary>
-        [JsonProperty("PartitionOffset")]
-        public PartitionOffset[] PartitionOffset{ get; set; }
+        [JsonProperty("Filters")]
+        public SearchKeyword[] Filters{ get; set; }
 
         /// <summary>
-        /// 订阅的主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 查询偏移量
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 查询的数量
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -57,10 +60,11 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamArraySimple(map, prefix + "Partition.", this.Partition);
-            this.SetParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "ProductID", this.ProductID);
+            this.SetParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

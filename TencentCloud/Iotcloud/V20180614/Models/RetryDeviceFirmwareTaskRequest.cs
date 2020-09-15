@@ -15,41 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Iotcloud.V20180614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubscribedInfo : AbstractModel
+    public class RetryDeviceFirmwareTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 订阅的主题名
+        /// 产品ID
         /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
+        [JsonProperty("ProductID")]
+        public string ProductID{ get; set; }
 
         /// <summary>
-        /// 订阅的分区
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 设备名称
         /// </summary>
-        [JsonProperty("Partition")]
-        public long?[] Partition{ get; set; }
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 分区offset信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 固件版本号
         /// </summary>
-        [JsonProperty("PartitionOffset")]
-        public PartitionOffset[] PartitionOffset{ get; set; }
+        [JsonProperty("FirmwareVersion")]
+        public string FirmwareVersion{ get; set; }
 
         /// <summary>
-        /// 订阅的主题ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 固件升级任务ID
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
 
 
         /// <summary>
@@ -57,10 +54,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamArraySimple(map, prefix + "Partition.", this.Partition);
-            this.SetParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "ProductID", this.ProductID);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

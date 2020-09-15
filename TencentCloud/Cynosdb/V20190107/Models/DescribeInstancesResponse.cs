@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Yunjing.V20180228.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExportAttackLogsResponse : AbstractModel
+    public class DescribeInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 导出文件下载链接地址。
+        /// 实例个数
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string DownloadUrl{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 导出任务ID
+        /// 实例列表
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("InstanceSet")]
+        public CynosdbInstance[] InstanceSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

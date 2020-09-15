@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Yunjing.V20180228.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExportAttackLogsResponse : AbstractModel
+    public class DescribeCloudBaseBuildServiceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 导出文件下载链接地址。
+        /// 上传url
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string DownloadUrl{ get; set; }
+        [JsonProperty("UploadUrl")]
+        public string UploadUrl{ get; set; }
 
         /// <summary>
-        /// 导出任务ID
+        /// heder
         /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("UploadHeaders")]
+        public KVPair[] UploadHeaders{ get; set; }
+
+        /// <summary>
+        /// 包名
+        /// </summary>
+        [JsonProperty("PackageName")]
+        public string PackageName{ get; set; }
+
+        /// <summary>
+        /// 包版本
+        /// </summary>
+        [JsonProperty("PackageVersion")]
+        public string PackageVersion{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +60,10 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "UploadUrl", this.UploadUrl);
+            this.SetParamArrayObj(map, prefix + "UploadHeaders.", this.UploadHeaders);
+            this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
+            this.SetParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

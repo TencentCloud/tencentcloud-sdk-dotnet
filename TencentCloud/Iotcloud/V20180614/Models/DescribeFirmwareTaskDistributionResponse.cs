@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Yunjing.V20180228.Models
+namespace TencentCloud.Iotcloud.V20180614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ExportAttackLogsResponse : AbstractModel
+    public class DescribeFirmwareTaskDistributionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 导出文件下载链接地址。
+        /// 固件升级任务状态分布信息
         /// </summary>
-        [JsonProperty("DownloadUrl")]
-        public string DownloadUrl{ get; set; }
-
-        /// <summary>
-        /// 导出任务ID
-        /// </summary>
-        [JsonProperty("TaskId")]
-        public string TaskId{ get; set; }
+        [JsonProperty("StatusInfos")]
+        public StatusStatistic[] StatusInfos{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +42,7 @@ namespace TencentCloud.Yunjing.V20180228.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
-            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "StatusInfos.", this.StatusInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
