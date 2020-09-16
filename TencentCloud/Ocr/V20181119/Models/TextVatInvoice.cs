@@ -36,6 +36,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 字段在原图中的中的四点坐标。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Polygon")]
+        public Polygon Polygon{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +52,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamObj(map, prefix + "Polygon.", this.Polygon);
         }
     }
 }

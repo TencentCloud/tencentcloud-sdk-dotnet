@@ -15,44 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Block : AbstractModel
+    public class Polygon : AbstractModel
     {
         
         /// <summary>
-        /// 区块编号
+        /// 左上顶点坐标
         /// </summary>
-        [JsonProperty("BlockNum")]
-        public ulong? BlockNum{ get; set; }
+        [JsonProperty("LeftTop")]
+        public Coord LeftTop{ get; set; }
 
         /// <summary>
-        /// 区块数据Hash数值
+        /// 右上顶点坐标
         /// </summary>
-        [JsonProperty("DataHash")]
-        public string DataHash{ get; set; }
+        [JsonProperty("RightTop")]
+        public Coord RightTop{ get; set; }
 
         /// <summary>
-        /// 区块ID，与区块编号一致
+        /// 右下顶点坐标
         /// </summary>
-        [JsonProperty("BlockId")]
-        public ulong? BlockId{ get; set; }
+        [JsonProperty("RightBottom")]
+        public Coord RightBottom{ get; set; }
 
         /// <summary>
-        /// 前一个区块Hash
+        /// 左下顶点坐标
         /// </summary>
-        [JsonProperty("PreHash")]
-        public string PreHash{ get; set; }
-
-        /// <summary>
-        /// 区块内的交易数量
-        /// </summary>
-        [JsonProperty("TxCount")]
-        public ulong? TxCount{ get; set; }
+        [JsonProperty("LeftBottom")]
+        public Coord LeftBottom{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BlockNum", this.BlockNum);
-            this.SetParamSimple(map, prefix + "DataHash", this.DataHash);
-            this.SetParamSimple(map, prefix + "BlockId", this.BlockId);
-            this.SetParamSimple(map, prefix + "PreHash", this.PreHash);
-            this.SetParamSimple(map, prefix + "TxCount", this.TxCount);
+            this.SetParamObj(map, prefix + "LeftTop.", this.LeftTop);
+            this.SetParamObj(map, prefix + "RightTop.", this.RightTop);
+            this.SetParamObj(map, prefix + "RightBottom.", this.RightBottom);
+            this.SetParamObj(map, prefix + "LeftBottom.", this.LeftBottom);
         }
     }
 }

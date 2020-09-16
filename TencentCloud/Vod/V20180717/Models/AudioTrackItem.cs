@@ -25,7 +25,10 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+        /// 音频片段的媒体素材来源，可以是：
+        /// <li>点播的媒体文件 ID；</li>
+        /// <li>其他媒体文件的下载 URL。</li>
+        /// 注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }

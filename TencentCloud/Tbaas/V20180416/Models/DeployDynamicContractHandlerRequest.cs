@@ -31,7 +31,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 操作名，固定字段：deploy_by_dynamic_contract
+        /// 操作名，固定字段：deploy_dynamic_contract
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

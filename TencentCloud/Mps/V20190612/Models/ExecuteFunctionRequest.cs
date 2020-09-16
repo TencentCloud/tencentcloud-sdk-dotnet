@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Captcha.V20190722.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CaptchaUserAllAppId : AbstractModel
+    public class ExecuteFunctionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 验证码应用ID
+        /// 调用后端接口名称。
         /// </summary>
-        [JsonProperty("CaptchaAppId")]
-        public long? CaptchaAppId{ get; set; }
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
 
         /// <summary>
-        /// 注册应用名称
+        /// 接口参数，具体参数格式调用时与后端协调。
         /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
-
-        /// <summary>
-        /// 腾讯云APPID
-        /// </summary>
-        [JsonProperty("TcAppId")]
-        public long? TcAppId{ get; set; }
-
-        /// <summary>
-        /// 渠道信息
-        /// </summary>
-        [JsonProperty("ChannelInfo")]
-        public string ChannelInfo{ get; set; }
+        [JsonProperty("FunctionArg")]
+        public string FunctionArg{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaptchaAppId", this.CaptchaAppId);
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
-            this.SetParamSimple(map, prefix + "TcAppId", this.TcAppId);
-            this.SetParamSimple(map, prefix + "ChannelInfo", this.ChannelInfo);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "FunctionArg", this.FunctionArg);
         }
     }
 }

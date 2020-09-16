@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Captcha.V20190722.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CaptchaUserAllAppId : AbstractModel
+    public class StatusReason : AbstractModel
     {
         
         /// <summary>
-        /// 验证码应用ID
+        /// 错误码
         /// </summary>
-        [JsonProperty("CaptchaAppId")]
-        public long? CaptchaAppId{ get; set; }
+        [JsonProperty("ErrorCode")]
+        public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// 注册应用名称
+        /// 错误描述
         /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
-
-        /// <summary>
-        /// 腾讯云APPID
-        /// </summary>
-        [JsonProperty("TcAppId")]
-        public long? TcAppId{ get; set; }
-
-        /// <summary>
-        /// 渠道信息
-        /// </summary>
-        [JsonProperty("ChannelInfo")]
-        public string ChannelInfo{ get; set; }
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaptchaAppId", this.CaptchaAppId);
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
-            this.SetParamSimple(map, prefix + "TcAppId", this.TcAppId);
-            this.SetParamSimple(map, prefix + "ChannelInfo", this.ChannelInfo);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         }
     }
 }

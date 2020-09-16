@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Block : AbstractModel
+    public class OffsiteFlag : AbstractModel
     {
         
         /// <summary>
-        /// 区块编号
+        /// 验证标识
         /// </summary>
-        [JsonProperty("BlockNum")]
-        public ulong? BlockNum{ get; set; }
+        [JsonProperty("VerifyFlag")]
+        public ulong? VerifyFlag{ get; set; }
 
         /// <summary>
-        /// 区块数据Hash数值
+        /// 手机通知
         /// </summary>
-        [JsonProperty("DataHash")]
-        public string DataHash{ get; set; }
+        [JsonProperty("NotifyPhone")]
+        public ulong? NotifyPhone{ get; set; }
 
         /// <summary>
-        /// 区块ID，与区块编号一致
+        /// 邮箱通知
         /// </summary>
-        [JsonProperty("BlockId")]
-        public ulong? BlockId{ get; set; }
+        [JsonProperty("NotifyEmail")]
+        public long? NotifyEmail{ get; set; }
 
         /// <summary>
-        /// 前一个区块Hash
+        /// 微信通知
         /// </summary>
-        [JsonProperty("PreHash")]
-        public string PreHash{ get; set; }
+        [JsonProperty("NotifyWechat")]
+        public ulong? NotifyWechat{ get; set; }
 
         /// <summary>
-        /// 区块内的交易数量
+        /// 提示
         /// </summary>
-        [JsonProperty("TxCount")]
-        public ulong? TxCount{ get; set; }
+        [JsonProperty("Tips")]
+        public ulong? Tips{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BlockNum", this.BlockNum);
-            this.SetParamSimple(map, prefix + "DataHash", this.DataHash);
-            this.SetParamSimple(map, prefix + "BlockId", this.BlockId);
-            this.SetParamSimple(map, prefix + "PreHash", this.PreHash);
-            this.SetParamSimple(map, prefix + "TxCount", this.TxCount);
+            this.SetParamSimple(map, prefix + "VerifyFlag", this.VerifyFlag);
+            this.SetParamSimple(map, prefix + "NotifyPhone", this.NotifyPhone);
+            this.SetParamSimple(map, prefix + "NotifyEmail", this.NotifyEmail);
+            this.SetParamSimple(map, prefix + "NotifyWechat", this.NotifyWechat);
+            this.SetParamSimple(map, prefix + "Tips", this.Tips);
         }
     }
 }

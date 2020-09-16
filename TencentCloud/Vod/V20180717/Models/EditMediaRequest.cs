@@ -75,10 +75,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+        /// 用于任务去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 保留字段，特殊用途时使用。
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
 
         /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -101,6 +107,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

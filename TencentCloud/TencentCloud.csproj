@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.144</VersionPrefix>
+    <VersionPrefix>3.0.145</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1243,6 +1243,8 @@
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachRolePolicyRequest.cs" />
@@ -1294,7 +1296,9 @@
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\LoginActionFlag.cs" />
     <Compile Include="Cam\V20190116\Models\LoginActionMfaFlag.cs" />
+    <Compile Include="Cam\V20190116\Models\OffsiteFlag.cs" />
     <Compile Include="Cam\V20190116\Models\PolicyVersionDetail.cs" />
     <Compile Include="Cam\V20190116\Models\PolicyVersionItem.cs" />
     <Compile Include="Cam\V20190116\Models\PutRolePermissionsBoundaryRequest.cs" />
@@ -6149,6 +6153,8 @@
     <Compile Include="Mps\V20190612\Models\EditMediaTaskOutput.cs" />
     <Compile Include="Mps\V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="Mps\V20190612\Models\EnableWorkflowResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\ExecuteFunctionRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="Mps\V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="Mps\V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\FrameTagConfigureInfo.cs" />
@@ -6566,6 +6572,7 @@
     <Compile Include="Ocr\V20181119\Models\PassportOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\Polygon.cs" />
     <Compile Include="Ocr\V20181119\Models\ProductDataRecord.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRResponse.cs" />
@@ -7045,6 +7052,7 @@
     <Compile Include="Scf\V20180416\Models\PublishVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\Result.cs" />
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
+    <Compile Include="Scf\V20180416\Models\StatusReason.cs" />
     <Compile Include="Scf\V20180416\Models\Tag.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />

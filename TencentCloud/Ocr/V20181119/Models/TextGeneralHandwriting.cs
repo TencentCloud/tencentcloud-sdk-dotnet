@@ -50,6 +50,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("AdvancedInfo")]
         public string AdvancedInfo{ get; set; }
 
+        /// <summary>
+        /// 字的坐标数组，以四个顶点坐标表示
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WordPolygon")]
+        public Polygon[] WordPolygon{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +67,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamArrayObj(map, prefix + "WordPolygon.", this.WordPolygon);
         }
     }
 }

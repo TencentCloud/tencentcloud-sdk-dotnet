@@ -15,44 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Block : AbstractModel
+    public class DescribeSafeAuthFlagResponse : AbstractModel
     {
         
         /// <summary>
-        /// 区块编号
+        /// 登录保护设置
         /// </summary>
-        [JsonProperty("BlockNum")]
-        public ulong? BlockNum{ get; set; }
+        [JsonProperty("LoginFlag")]
+        public LoginActionFlag LoginFlag{ get; set; }
 
         /// <summary>
-        /// 区块数据Hash数值
+        /// 敏感操作保护设置
         /// </summary>
-        [JsonProperty("DataHash")]
-        public string DataHash{ get; set; }
+        [JsonProperty("ActionFlag")]
+        public LoginActionFlag ActionFlag{ get; set; }
 
         /// <summary>
-        /// 区块ID，与区块编号一致
+        /// 异地登录保护设置
         /// </summary>
-        [JsonProperty("BlockId")]
-        public ulong? BlockId{ get; set; }
+        [JsonProperty("OffsiteFlag")]
+        public OffsiteFlag OffsiteFlag{ get; set; }
 
         /// <summary>
-        /// 前一个区块Hash
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PreHash")]
-        public string PreHash{ get; set; }
-
-        /// <summary>
-        /// 区块内的交易数量
-        /// </summary>
-        [JsonProperty("TxCount")]
-        public ulong? TxCount{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BlockNum", this.BlockNum);
-            this.SetParamSimple(map, prefix + "DataHash", this.DataHash);
-            this.SetParamSimple(map, prefix + "BlockId", this.BlockId);
-            this.SetParamSimple(map, prefix + "PreHash", this.PreHash);
-            this.SetParamSimple(map, prefix + "TxCount", this.TxCount);
+            this.SetParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
+            this.SetParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
+            this.SetParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

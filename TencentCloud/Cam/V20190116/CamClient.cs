@@ -933,6 +933,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 查询安全设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
+        public async Task<DescribeSafeAuthFlagResponse> DescribeSafeAuthFlag(DescribeSafeAuthFlagRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSafeAuthFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全设置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
+        /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
+        public DescribeSafeAuthFlagResponse DescribeSafeAuthFlagSync(DescribeSafeAuthFlagRequest req)
+        {
+             JsonResponseModel<DescribeSafeAuthFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSafeAuthFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafeAuthFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
         /// </summary>
         /// <param name="req"><see cref="DetachGroupPolicyRequest"/></param>

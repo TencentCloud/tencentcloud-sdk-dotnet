@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+        /// 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
@@ -97,10 +97,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 搜索关键词，支持实例Id、实例名称、完整IP
+        /// 搜索关键词，支持实例ID、实例名称、完整IP
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
+
+        /// <summary>
+        /// Tag信息
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo Tags{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

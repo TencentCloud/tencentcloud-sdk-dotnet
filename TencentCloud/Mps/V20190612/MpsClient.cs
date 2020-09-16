@@ -1891,6 +1891,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 本接口仅用于定制开发的特殊场景，除非云视频处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
+        /// <returns><see cref="ExecuteFunctionResponse"/></returns>
+        public async Task<ExecuteFunctionResponse> ExecuteFunction(ExecuteFunctionRequest req)
+        {
+             JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExecuteFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口仅用于定制开发的特殊场景，除非云视频处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
+        /// <returns><see cref="ExecuteFunctionResponse"/></returns>
+        public ExecuteFunctionResponse ExecuteFunctionSync(ExecuteFunctionRequest req)
+        {
+             JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExecuteFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对已发起的任务进行管理。
         /// > 注意：目前仅支持终止执行中的直播流处理任务。
         /// </summary>
