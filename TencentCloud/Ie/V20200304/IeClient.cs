@@ -93,6 +93,86 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
+        /// 创建画质重生任务，对视频进行转码、去噪、去划痕、去毛刺、超分、细节增强和色彩增强。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMediaQualityRestorationTaskRequest"/></param>
+        /// <returns><see cref="CreateMediaQualityRestorationTaskResponse"/></returns>
+        public async Task<CreateMediaQualityRestorationTaskResponse> CreateMediaQualityRestorationTask(CreateMediaQualityRestorationTaskRequest req)
+        {
+             JsonResponseModel<CreateMediaQualityRestorationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMediaQualityRestorationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaQualityRestorationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建画质重生任务，对视频进行转码、去噪、去划痕、去毛刺、超分、细节增强和色彩增强。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMediaQualityRestorationTaskRequest"/></param>
+        /// <returns><see cref="CreateMediaQualityRestorationTaskResponse"/></returns>
+        public CreateMediaQualityRestorationTaskResponse CreateMediaQualityRestorationTaskSync(CreateMediaQualityRestorationTaskRequest req)
+        {
+             JsonResponseModel<CreateMediaQualityRestorationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMediaQualityRestorationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaQualityRestorationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口可以智能检测视频画面中抖动重影、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等在内的多个场景，还可以自动检测视频无音频异常、无声音片段。
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityControlTaskRequest"/></param>
+        /// <returns><see cref="CreateQualityControlTaskResponse"/></returns>
+        public async Task<CreateQualityControlTaskResponse> CreateQualityControlTask(CreateQualityControlTaskRequest req)
+        {
+             JsonResponseModel<CreateQualityControlTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateQualityControlTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQualityControlTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口可以智能检测视频画面中抖动重影、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等在内的多个场景，还可以自动检测视频无音频异常、无声音片段。
+        /// </summary>
+        /// <param name="req"><see cref="CreateQualityControlTaskRequest"/></param>
+        /// <returns><see cref="CreateQualityControlTaskResponse"/></returns>
+        public CreateQualityControlTaskResponse CreateQualityControlTaskSync(CreateQualityControlTaskRequest req)
+        {
+             JsonResponseModel<CreateQualityControlTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateQualityControlTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQualityControlTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取智能编辑任务结果。
         /// </summary>
         /// <param name="req"><see cref="DescribeEditingTaskResultRequest"/></param>
@@ -124,6 +204,126 @@ namespace TencentCloud.Ie.V20200304
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEditingTaskResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEditingTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取画质重生任务结果，查看结束后的文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaQualityRestorationTaskRusultRequest"/></param>
+        /// <returns><see cref="DescribeMediaQualityRestorationTaskRusultResponse"/></returns>
+        public async Task<DescribeMediaQualityRestorationTaskRusultResponse> DescribeMediaQualityRestorationTaskRusult(DescribeMediaQualityRestorationTaskRusultRequest req)
+        {
+             JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMediaQualityRestorationTaskRusult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取画质重生任务结果，查看结束后的文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaQualityRestorationTaskRusultRequest"/></param>
+        /// <returns><see cref="DescribeMediaQualityRestorationTaskRusultResponse"/></returns>
+        public DescribeMediaQualityRestorationTaskRusultResponse DescribeMediaQualityRestorationTaskRusultSync(DescribeMediaQualityRestorationTaskRusultRequest req)
+        {
+             JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMediaQualityRestorationTaskRusult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取质检任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityControlTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeQualityControlTaskResultResponse"/></returns>
+        public async Task<DescribeQualityControlTaskResultResponse> DescribeQualityControlTaskResult(DescribeQualityControlTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeQualityControlTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQualityControlTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityControlTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取质检任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityControlTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeQualityControlTaskResultResponse"/></returns>
+        public DescribeQualityControlTaskResultResponse DescribeQualityControlTaskResultSync(DescribeQualityControlTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeQualityControlTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQualityControlTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityControlTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除正在进行的画质重生任务
+        /// </summary>
+        /// <param name="req"><see cref="StopMediaQualityRestorationTaskRequest"/></param>
+        /// <returns><see cref="StopMediaQualityRestorationTaskResponse"/></returns>
+        public async Task<StopMediaQualityRestorationTaskResponse> StopMediaQualityRestorationTask(StopMediaQualityRestorationTaskRequest req)
+        {
+             JsonResponseModel<StopMediaQualityRestorationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopMediaQualityRestorationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaQualityRestorationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除正在进行的画质重生任务
+        /// </summary>
+        /// <param name="req"><see cref="StopMediaQualityRestorationTaskRequest"/></param>
+        /// <returns><see cref="StopMediaQualityRestorationTaskResponse"/></returns>
+        public StopMediaQualityRestorationTaskResponse StopMediaQualityRestorationTaskSync(StopMediaQualityRestorationTaskRequest req)
+        {
+             JsonResponseModel<StopMediaQualityRestorationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopMediaQualityRestorationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaQualityRestorationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

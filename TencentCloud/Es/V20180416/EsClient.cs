@@ -293,6 +293,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 用于重启集群节点
+        /// </summary>
+        /// <param name="req"><see cref="RestartNodesRequest"/></param>
+        /// <returns><see cref="RestartNodesResponse"/></returns>
+        public async Task<RestartNodesResponse> RestartNodes(RestartNodesRequest req)
+        {
+             JsonResponseModel<RestartNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于重启集群节点
+        /// </summary>
+        /// <param name="req"><see cref="RestartNodesRequest"/></param>
+        /// <returns><see cref="RestartNodesResponse"/></returns>
+        public RestartNodesResponse RestartNodesSync(RestartNodesRequest req)
+        {
+             JsonResponseModel<RestartNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对集群进行节点规格变更，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
         /// - InstanceName：修改实例名称(仅用于标识实例)
         /// - NodeInfoList: 修改节点配置（节点横向扩缩容，纵向扩缩容，增加主节点，增加冷节点等）

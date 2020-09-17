@@ -1541,6 +1541,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 海外分区直播计费带宽和流量数据查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBillBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribeAreaBillBandwidthAndFluxListResponse"/></returns>
+        public async Task<DescribeAreaBillBandwidthAndFluxListResponse> DescribeAreaBillBandwidthAndFluxList(DescribeAreaBillBandwidthAndFluxListRequest req)
+        {
+             JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAreaBillBandwidthAndFluxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 海外分区直播计费带宽和流量数据查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAreaBillBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribeAreaBillBandwidthAndFluxListResponse"/></returns>
+        public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxListSync(DescribeAreaBillBandwidthAndFluxListRequest req)
+        {
+             JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAreaBillBandwidthAndFluxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播计费带宽和流量数据查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillBandwidthAndFluxListRequest"/></param>

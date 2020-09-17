@@ -35,7 +35,7 @@ namespace TencentCloud.Ie.V20200304.Models
         /// 视频地址格式，可选值： 
         /// 0：音视频 ;
         /// 1：直播流。 
-        /// 默认为0。其他非0非1值默认为0。
+        /// 默认为0。其他非0非1值默认为0。画质重生任务只支持0。
         /// </summary>
         [JsonProperty("Format")]
         public long? Format{ get; set; }

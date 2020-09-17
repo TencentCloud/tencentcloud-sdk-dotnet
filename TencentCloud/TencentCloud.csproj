@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.145</VersionPrefix>
+    <VersionPrefix>3.0.146</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1344,6 +1344,12 @@
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaDataResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaDataSumRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaDataSumResponse.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniDataRequest.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniDataResponse.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniDataSumRequest.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniDataSumResponse.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniOperDataRequest.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniOperDataResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaOperDataRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaOperDataResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaResultRequest.cs" />
@@ -3843,10 +3849,22 @@
     <Compile Include="Ecm\V20190719\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\AttachNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AttachNetworkInterfaceResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\Backend.cs" />
+    <Compile Include="Ecm\V20190719\Models\BatchDeregisterTargetsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\BatchDeregisterTargetsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\BatchModifyTargetWeightRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\BatchModifyTargetWeightResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\BatchRegisterTargetsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\BatchRegisterTargetsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\BatchTarget.cs" />
     <Compile Include="Ecm\V20190719\Models\City.cs" />
     <Compile Include="Ecm\V20190719\Models\Country.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateImageResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateListenerRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateListenerResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateLoadBalancerRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateLoadBalancerResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateModuleRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceRequest.cs" />
@@ -3861,6 +3879,12 @@
     <Compile Include="Ecm\V20190719\Models\CreateVpcResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteImageResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteListenerRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteListenerResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteLoadBalancerListenersRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteLoadBalancerListenersResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteLoadBalancerRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteLoadBalancerResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteModuleRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteNetworkInterfaceRequest.cs" />
@@ -3897,6 +3921,12 @@
     <Compile Include="Ecm\V20190719\Models\DescribeInstancesDeniedActionsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeListenersRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeListenersResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeLoadBalanceTaskStatusRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeLoadBalanceTaskStatusResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeLoadBalancersRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeLoadBalancersResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeModuleDetailRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeModuleDetailResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeModuleRequest.cs" />
@@ -3919,6 +3949,10 @@
     <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeTargetHealthRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeTargetHealthResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeTargetsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeTargetsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskResultRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTaskStatusRequest.cs" />
@@ -3935,6 +3969,7 @@
     <Compile Include="Ecm\V20190719\Models\EipQuota.cs" />
     <Compile Include="Ecm\V20190719\Models\EnhancedService.cs" />
     <Compile Include="Ecm\V20190719\Models\Filter.cs" />
+    <Compile Include="Ecm\V20190719\Models\HealthCheck.cs" />
     <Compile Include="Ecm\V20190719\Models\ISP.cs" />
     <Compile Include="Ecm\V20190719\Models\ISPCounter.cs" />
     <Compile Include="Ecm\V20190719\Models\Image.cs" />
@@ -3953,6 +3988,12 @@
     <Compile Include="Ecm\V20190719\Models\InstanceTypeConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\Internet.cs" />
     <Compile Include="Ecm\V20190719\Models\Ipv6Address.cs" />
+    <Compile Include="Ecm\V20190719\Models\Listener.cs" />
+    <Compile Include="Ecm\V20190719\Models\ListenerBackend.cs" />
+    <Compile Include="Ecm\V20190719\Models\ListenerHealth.cs" />
+    <Compile Include="Ecm\V20190719\Models\LoadBalancer.cs" />
+    <Compile Include="Ecm\V20190719\Models\LoadBalancerHealth.cs" />
+    <Compile Include="Ecm\V20190719\Models\LoadBalancerInternetAccessible.cs" />
     <Compile Include="Ecm\V20190719\Models\MigrateNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\MigrateNetworkInterfaceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\MigratePrivateIpAddressRequest.cs" />
@@ -3967,6 +4008,10 @@
     <Compile Include="Ecm\V20190719\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyListenerRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyListenerResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyLoadBalancerAttributesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyLoadBalancerAttributesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleConfigRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleConfigResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageRequest.cs" />
@@ -3985,6 +4030,10 @@
     <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupPoliciesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifySubnetAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifySubnetAttributeResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyTargetPortRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyTargetPortResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyTargetWeightRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyTargetWeightResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyVpcAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyVpcAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Module.cs" />
@@ -4021,6 +4070,7 @@
     <Compile Include="Ecm\V20190719\Models\ResetInstancesPasswordResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\RuleHealth.cs" />
     <Compile Include="Ecm\V20190719\Models\RunEIPDirectServiceEnabled.cs" />
     <Compile Include="Ecm\V20190719\Models\RunInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\RunInstancesResponse.cs" />
@@ -4040,7 +4090,11 @@
     <Compile Include="Ecm\V20190719\Models\StopInstancesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Subnet.cs" />
     <Compile Include="Ecm\V20190719\Models\Tag.cs" />
+    <Compile Include="Ecm\V20190719\Models\TagInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\TagSpecification.cs" />
+    <Compile Include="Ecm\V20190719\Models\Target.cs" />
+    <Compile Include="Ecm\V20190719\Models\TargetHealth.cs" />
+    <Compile Include="Ecm\V20190719\Models\TargetsWeightRule.cs" />
     <Compile Include="Ecm\V20190719\Models\TaskInput.cs" />
     <Compile Include="Ecm\V20190719\Models\TaskOutput.cs" />
     <Compile Include="Ecm\V20190719\Models\TerminateInstancesRequest.cs" />
@@ -4120,6 +4174,8 @@
     <Compile Include="Es\V20180416\Models\OperationDetail.cs" />
     <Compile Include="Es\V20180416\Models\RestartInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\RestartInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\RestartNodesRequest.cs" />
+    <Compile Include="Es\V20180416\Models\RestartNodesResponse.cs" />
     <Compile Include="Es\V20180416\Models\SubTaskDetail.cs" />
     <Compile Include="Es\V20180416\Models\TagInfo.cs" />
     <Compile Include="Es\V20180416\Models\TaskDetail.cs" />
@@ -4775,10 +4831,14 @@
     <Compile Include="Ic\V20190307\Models\SmsRet.cs" />
     <Compile Include="Ic\V20190307\Models\SmsSid.cs" />
     <Compile Include="Ie\V20200304\IeClient.cs" />
+    <Compile Include="Ie\V20200304\Models\ArtifactReduction.cs" />
+    <Compile Include="Ie\V20200304\Models\AudioInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\AudioInfoResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\CallbackInfo.cs" />
     <Compile Include="Ie\V20200304\Models\ClassificationEditingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\ClassificationTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\ClassificationTaskResultItem.cs" />
+    <Compile Include="Ie\V20200304\Models\ColorEnhance.cs" />
     <Compile Include="Ie\V20200304\Models\CosAuthMode.cs" />
     <Compile Include="Ie\V20200304\Models\CosInfo.cs" />
     <Compile Include="Ie\V20200304\Models\CoverEditingInfo.cs" />
@@ -4786,26 +4846,58 @@
     <Compile Include="Ie\V20200304\Models\CoverTaskResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\CreateEditingTaskRequest.cs" />
     <Compile Include="Ie\V20200304\Models\CreateEditingTaskResponse.cs" />
+    <Compile Include="Ie\V20200304\Models\CreateMediaQualityRestorationTaskRequest.cs" />
+    <Compile Include="Ie\V20200304\Models\CreateMediaQualityRestorationTaskResponse.cs" />
+    <Compile Include="Ie\V20200304\Models\CreateQualityControlTaskRequest.cs" />
+    <Compile Include="Ie\V20200304\Models\CreateQualityControlTaskResponse.cs" />
+    <Compile Include="Ie\V20200304\Models\DarInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\Denoising.cs" />
     <Compile Include="Ie\V20200304\Models\DescribeEditingTaskResultRequest.cs" />
     <Compile Include="Ie\V20200304\Models\DescribeEditingTaskResultResponse.cs" />
+    <Compile Include="Ie\V20200304\Models\DescribeMediaQualityRestorationTaskRusultRequest.cs" />
+    <Compile Include="Ie\V20200304\Models\DescribeMediaQualityRestorationTaskRusultResponse.cs" />
+    <Compile Include="Ie\V20200304\Models\DescribeQualityControlTaskResultRequest.cs" />
+    <Compile Include="Ie\V20200304\Models\DescribeQualityControlTaskResultResponse.cs" />
     <Compile Include="Ie\V20200304\Models\DownInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\EditInfo.cs" />
     <Compile Include="Ie\V20200304\Models\EditingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\EditingTaskResult.cs" />
+    <Compile Include="Ie\V20200304\Models\FaceProtect.cs" />
+    <Compile Include="Ie\V20200304\Models\FileInfo.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsEditingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsTaskResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsTaskResultItemSegment.cs" />
+    <Compile Include="Ie\V20200304\Models\LowLightEnhance.cs" />
+    <Compile Include="Ie\V20200304\Models\MediaQualityRestorationTaskResult.cs" />
+    <Compile Include="Ie\V20200304\Models\MuxInfo.cs" />
     <Compile Include="Ie\V20200304\Models\OpeningEndingEditingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\OpeningEndingTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\OpeningEndingTaskResultItem.cs" />
+    <Compile Include="Ie\V20200304\Models\PicMarkInfoItem.cs" />
+    <Compile Include="Ie\V20200304\Models\QualityControlInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\QualityControlInfoTaskResult.cs" />
+    <Compile Include="Ie\V20200304\Models\QualityControlItem.cs" />
+    <Compile Include="Ie\V20200304\Models\QualityControlResultItems.cs" />
     <Compile Include="Ie\V20200304\Models\SaveInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\ScratchRepair.cs" />
+    <Compile Include="Ie\V20200304\Models\SegmentInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\Sharp.cs" />
+    <Compile Include="Ie\V20200304\Models\StopMediaQualityRestorationTaskRequest.cs" />
+    <Compile Include="Ie\V20200304\Models\StopMediaQualityRestorationTaskResponse.cs" />
     <Compile Include="Ie\V20200304\Models\StripEditingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\StripTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\StripTaskResultItem.cs" />
+    <Compile Include="Ie\V20200304\Models\SubTaskResultItem.cs" />
+    <Compile Include="Ie\V20200304\Models\SubTaskTranscodeInfo.cs" />
     <Compile Include="Ie\V20200304\Models\TagEditingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\TagTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\TagTaskResultItem.cs" />
+    <Compile Include="Ie\V20200304\Models\TargetInfo.cs" />
     <Compile Include="Ie\V20200304\Models\UrlInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\VideoEnhance.cs" />
+    <Compile Include="Ie\V20200304\Models\VideoInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\VideoInfoResultItem.cs" />
     <Compile Include="Iir\V20200417\IirClient.cs" />
     <Compile Include="Iir\V20200417\Models\Location.cs" />
     <Compile Include="Iir\V20200417\Models\ProductInfo.cs" />
@@ -5406,6 +5498,8 @@
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\AddLiveWatermarkResponse.cs" />
     <Compile Include="Live\V20180801\Models\BandwidthInfo.cs" />
+    <Compile Include="Live\V20180801\Models\BillAreaInfo.cs" />
+    <Compile Include="Live\V20180801\Models\BillCountryInfo.cs" />
     <Compile Include="Live\V20180801\Models\BillDataInfo.cs" />
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertResponse.cs" />
@@ -5484,6 +5578,8 @@
     <Compile Include="Live\V20180801\Models\DeleteRecordTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeAreaBillBandwidthAndFluxListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeAreaBillBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeConcurrentRecordStreamNumRequest.cs" />
@@ -6587,6 +6683,8 @@
     <Compile Include="Ocr\V20181119\Models\QuestionObj.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeThaiIDCardOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\Rect.cs" />
     <Compile Include="Ocr\V20181119\Models\ResidenceBookletOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ResidenceBookletOCRResponse.cs" />

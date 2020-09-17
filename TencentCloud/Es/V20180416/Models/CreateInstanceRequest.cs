@@ -194,6 +194,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("BasicSecurityType")]
         public ulong? BasicSecurityType{ get; set; }
 
+        /// <summary>
+        /// 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public long? SceneType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +233,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
         }
     }
 }

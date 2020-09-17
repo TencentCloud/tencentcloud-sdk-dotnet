@@ -49,8 +49,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 当结果码为0或者-1时，该字段的值为年龄区间。
-        /// 格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
+        /// 该字段的值为年龄区间。格式为[a,b)，
+        /// [0,8)表示年龄小于8周岁区间，不包括8岁；
+        /// [8,16)表示年龄8-16周岁区间，不包括16岁；
+        /// [16,18)表示年龄16-18周岁区间，不包括18岁；
+        /// [18,+)表示年龄大于18周岁。
         /// </summary>
         [JsonProperty("AgeRange")]
         public string AgeRange{ get; set; }

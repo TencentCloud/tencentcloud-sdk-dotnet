@@ -173,6 +173,126 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
+        /// 安全验证码小程序插件分类查询数据接口（内测中），请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniDataRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniDataResponse"/></returns>
+        public async Task<DescribeCaptchaMiniDataResponse> DescribeCaptchaMiniData(DescribeCaptchaMiniDataRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安全验证码小程序插件分类查询数据接口（内测中），请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniDataRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniDataResponse"/></returns>
+        public DescribeCaptchaMiniDataResponse DescribeCaptchaMiniDataSync(DescribeCaptchaMiniDataRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安全验证码小程序插件查询请求数据概况（内测中）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniDataSumRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniDataSumResponse"/></returns>
+        public async Task<DescribeCaptchaMiniDataSumResponse> DescribeCaptchaMiniDataSum(DescribeCaptchaMiniDataSumRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniDataSumResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniDataSum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataSumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安全验证码小程序插件查询请求数据概况（内测中）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniDataSumRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniDataSumResponse"/></returns>
+        public DescribeCaptchaMiniDataSumResponse DescribeCaptchaMiniDataSumSync(DescribeCaptchaMiniDataSumRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniDataSumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniDataSum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniDataSumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安全验证码小程序插件用户操作数据查询（内测中）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniOperDataRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniOperDataResponse"/></returns>
+        public async Task<DescribeCaptchaMiniOperDataResponse> DescribeCaptchaMiniOperData(DescribeCaptchaMiniOperDataRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniOperDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniOperData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniOperDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安全验证码小程序插件用户操作数据查询（内测中）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniOperDataRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniOperDataResponse"/></returns>
+        public DescribeCaptchaMiniOperDataResponse DescribeCaptchaMiniOperDataSync(DescribeCaptchaMiniOperDataRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniOperDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniOperData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniOperDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaOperDataRequest"/></param>
@@ -253,7 +373,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 验证码控制台票据验证信息
+        /// 安全验证码用户操作票据数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaTicketDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaTicketDataResponse"/></returns>
@@ -273,7 +393,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 验证码控制台票据验证信息
+        /// 安全验证码用户操作票据数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaTicketDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaTicketDataResponse"/></returns>

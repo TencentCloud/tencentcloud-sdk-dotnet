@@ -74,13 +74,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string[] DataType{ get; set; }
 
         /// <summary>
-        /// 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+        /// 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
         /// </summary>
         [JsonProperty("PageNumber")]
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,最大不超过100）
+        /// 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }

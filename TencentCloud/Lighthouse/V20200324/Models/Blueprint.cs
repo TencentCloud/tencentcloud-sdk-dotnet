@@ -78,6 +78,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 镜像所需系统盘大小
+        /// </summary>
+        [JsonProperty("RequiredSystemDiskSize")]
+        public long? RequiredSystemDiskSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "PlatformType", this.PlatformType);
             this.SetParamSimple(map, prefix + "BlueprintType", this.BlueprintType);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "RequiredSystemDiskSize", this.RequiredSystemDiskSize);
         }
     }
 }

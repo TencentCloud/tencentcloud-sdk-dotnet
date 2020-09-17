@@ -54,6 +54,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MainVideoRightAlign")]
         public ulong? MainVideoRightAlign{ get; set; }
 
+        /// <summary>
+        /// 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+        /// </summary>
+        [JsonProperty("MixVideoUids")]
+        public string[] MixVideoUids{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
             this.SetParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
             this.SetParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
+            this.SetParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
         }
     }
 }

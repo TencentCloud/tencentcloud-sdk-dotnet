@@ -352,6 +352,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SecurityType")]
         public ulong? SecurityType{ get; set; }
 
+        /// <summary>
+        /// 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public long? SceneType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -410,6 +417,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
             this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
         }
     }
 }

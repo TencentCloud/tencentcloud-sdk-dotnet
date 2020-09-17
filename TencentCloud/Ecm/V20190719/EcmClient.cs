@@ -265,6 +265,126 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 批量解绑后端服务。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeregisterTargetsRequest"/></param>
+        /// <returns><see cref="BatchDeregisterTargetsResponse"/></returns>
+        public async Task<BatchDeregisterTargetsResponse> BatchDeregisterTargets(BatchDeregisterTargetsRequest req)
+        {
+             JsonResponseModel<BatchDeregisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDeregisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeregisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解绑后端服务。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDeregisterTargetsRequest"/></param>
+        /// <returns><see cref="BatchDeregisterTargetsResponse"/></returns>
+        public BatchDeregisterTargetsResponse BatchDeregisterTargetsSync(BatchDeregisterTargetsRequest req)
+        {
+             JsonResponseModel<BatchDeregisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDeregisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDeregisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量修改监听器绑定的后端机器的转发权重。
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyTargetWeightRequest"/></param>
+        /// <returns><see cref="BatchModifyTargetWeightResponse"/></returns>
+        public async Task<BatchModifyTargetWeightResponse> BatchModifyTargetWeight(BatchModifyTargetWeightRequest req)
+        {
+             JsonResponseModel<BatchModifyTargetWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchModifyTargetWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量修改监听器绑定的后端机器的转发权重。
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyTargetWeightRequest"/></param>
+        /// <returns><see cref="BatchModifyTargetWeightResponse"/></returns>
+        public BatchModifyTargetWeightResponse BatchModifyTargetWeightSync(BatchModifyTargetWeightRequest req)
+        {
+             JsonResponseModel<BatchModifyTargetWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchModifyTargetWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量绑定后端目标。
+        /// </summary>
+        /// <param name="req"><see cref="BatchRegisterTargetsRequest"/></param>
+        /// <returns><see cref="BatchRegisterTargetsResponse"/></returns>
+        public async Task<BatchRegisterTargetsResponse> BatchRegisterTargets(BatchRegisterTargetsRequest req)
+        {
+             JsonResponseModel<BatchRegisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchRegisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量绑定后端目标。
+        /// </summary>
+        /// <param name="req"><see cref="BatchRegisterTargetsRequest"/></param>
+        /// <returns><see cref="BatchRegisterTargetsResponse"/></returns>
+        public BatchRegisterTargetsResponse BatchRegisterTargetsSync(BatchRegisterTargetsRequest req)
+        {
+             JsonResponseModel<BatchRegisterTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchRegisterTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchRegisterTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
         /// </summary>
         /// <param name="req"><see cref="CreateImageRequest"/></param>
@@ -296,6 +416,86 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "CreateImage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建负载均衡监听器。
+        /// </summary>
+        /// <param name="req"><see cref="CreateListenerRequest"/></param>
+        /// <returns><see cref="CreateListenerResponse"/></returns>
+        public async Task<CreateListenerResponse> CreateListener(CreateListenerRequest req)
+        {
+             JsonResponseModel<CreateListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建负载均衡监听器。
+        /// </summary>
+        /// <param name="req"><see cref="CreateListenerRequest"/></param>
+        /// <returns><see cref="CreateListenerResponse"/></returns>
+        public CreateListenerResponse CreateListenerSync(CreateListenerRequest req)
+        {
+             JsonResponseModel<CreateListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
+        public async Task<CreateLoadBalancerResponse> CreateLoadBalancer(CreateLoadBalancerRequest req)
+        {
+             JsonResponseModel<CreateLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
+        /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
+        public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
+        {
+             JsonResponseModel<CreateLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoadBalancerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -598,6 +798,126 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DeleteImage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除负载均衡监听器。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteListenerRequest"/></param>
+        /// <returns><see cref="DeleteListenerResponse"/></returns>
+        public async Task<DeleteListenerResponse> DeleteListener(DeleteListenerRequest req)
+        {
+             JsonResponseModel<DeleteListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除负载均衡监听器。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteListenerRequest"/></param>
+        /// <returns><see cref="DeleteListenerResponse"/></returns>
+        public DeleteListenerResponse DeleteListenerSync(DeleteListenerRequest req)
+        {
+             JsonResponseModel<DeleteListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
+        public async Task<DeleteLoadBalancerResponse> DeleteLoadBalancer(DeleteLoadBalancerRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
+        public DeleteLoadBalancerResponse DeleteLoadBalancerSync(DeleteLoadBalancerRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除负载均衡多个监听器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerListenersRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerListenersResponse"/></returns>
+        public async Task<DeleteLoadBalancerListenersResponse> DeleteLoadBalancerListeners(DeleteLoadBalancerListenersRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoadBalancerListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除负载均衡多个监听器
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoadBalancerListenersRequest"/></param>
+        /// <returns><see cref="DeleteLoadBalancerListenersResponse"/></returns>
+        public DeleteLoadBalancerListenersResponse DeleteLoadBalancerListenersSync(DeleteLoadBalancerListenersRequest req)
+        {
+             JsonResponseModel<DeleteLoadBalancerListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoadBalancerListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoadBalancerListenersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1331,6 +1651,126 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询负载均衡的监听器列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListenersRequest"/></param>
+        /// <returns><see cref="DescribeListenersResponse"/></returns>
+        public async Task<DescribeListenersResponse> DescribeListeners(DescribeListenersRequest req)
+        {
+             JsonResponseModel<DescribeListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡的监听器列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListenersRequest"/></param>
+        /// <returns><see cref="DescribeListenersResponse"/></returns>
+        public DescribeListenersResponse DescribeListenersSync(DescribeListenersRequest req)
+        {
+             JsonResponseModel<DescribeListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡相关的任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalanceTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalanceTaskStatusResponse"/></returns>
+        public async Task<DescribeLoadBalanceTaskStatusResponse> DescribeLoadBalanceTaskStatus(DescribeLoadBalanceTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalanceTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalanceTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalanceTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡相关的任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalanceTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalanceTaskStatusResponse"/></returns>
+        public DescribeLoadBalanceTaskStatusResponse DescribeLoadBalanceTaskStatusSync(DescribeLoadBalanceTaskStatusRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalanceTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalanceTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalanceTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancersResponse"/></returns>
+        public async Task<DescribeLoadBalancersResponse> DescribeLoadBalancers(DescribeLoadBalancersRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancersResponse"/></returns>
+        public DescribeLoadBalancersResponse DescribeLoadBalancersSync(DescribeLoadBalancersRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取模块列表
         /// </summary>
         /// <param name="req"><see cref="DescribeModuleRequest"/></param>
@@ -1762,6 +2202,86 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSubnets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取负载均衡后端服务的健康检查状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetHealthRequest"/></param>
+        /// <returns><see cref="DescribeTargetHealthResponse"/></returns>
+        public async Task<DescribeTargetHealthResponse> DescribeTargetHealth(DescribeTargetHealthRequest req)
+        {
+             JsonResponseModel<DescribeTargetHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTargetHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取负载均衡后端服务的健康检查状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetHealthRequest"/></param>
+        /// <returns><see cref="DescribeTargetHealthResponse"/></returns>
+        public DescribeTargetHealthResponse DescribeTargetHealthSync(DescribeTargetHealthRequest req)
+        {
+             JsonResponseModel<DescribeTargetHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTargetHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡绑定的后端服务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetsRequest"/></param>
+        /// <returns><see cref="DescribeTargetsResponse"/></returns>
+        public async Task<DescribeTargetsResponse> DescribeTargets(DescribeTargetsRequest req)
+        {
+             JsonResponseModel<DescribeTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询负载均衡绑定的后端服务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTargetsRequest"/></param>
+        /// <returns><see cref="DescribeTargetsResponse"/></returns>
+        public DescribeTargetsResponse DescribeTargetsSync(DescribeTargetsRequest req)
+        {
+             JsonResponseModel<DescribeTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTargetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2379,6 +2899,86 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 修改负载均衡监听器属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyListenerRequest"/></param>
+        /// <returns><see cref="ModifyListenerResponse"/></returns>
+        public async Task<ModifyListenerResponse> ModifyListener(ModifyListenerRequest req)
+        {
+             JsonResponseModel<ModifyListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改负载均衡监听器属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyListenerRequest"/></param>
+        /// <returns><see cref="ModifyListenerResponse"/></returns>
+        public ModifyListenerResponse ModifyListenerSync(ModifyListenerRequest req)
+        {
+             JsonResponseModel<ModifyListenerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyListener");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyListenerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改负载均衡实例的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerAttributesResponse"/></returns>
+        public async Task<ModifyLoadBalancerAttributesResponse> ModifyLoadBalancerAttributes(ModifyLoadBalancerAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancerAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改负载均衡实例的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerAttributesResponse"/></returns>
+        public ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributesSync(ModifyLoadBalancerAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancerAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改模块配置，已关联实例的模块不支持调整配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyModuleConfigRequest"/></param>
@@ -2730,6 +3330,86 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ModifySubnetAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubnetAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改监听器绑定的后端机器的端口。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetPortRequest"/></param>
+        /// <returns><see cref="ModifyTargetPortResponse"/></returns>
+        public async Task<ModifyTargetPortResponse> ModifyTargetPort(ModifyTargetPortRequest req)
+        {
+             JsonResponseModel<ModifyTargetPortResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTargetPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改监听器绑定的后端机器的端口。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetPortRequest"/></param>
+        /// <returns><see cref="ModifyTargetPortResponse"/></returns>
+        public ModifyTargetPortResponse ModifyTargetPortSync(ModifyTargetPortRequest req)
+        {
+             JsonResponseModel<ModifyTargetPortResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTargetPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改监听器绑定的后端机器的转发权重。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetWeightRequest"/></param>
+        /// <returns><see cref="ModifyTargetWeightResponse"/></returns>
+        public async Task<ModifyTargetWeightResponse> ModifyTargetWeight(ModifyTargetWeightRequest req)
+        {
+             JsonResponseModel<ModifyTargetWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTargetWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetWeightResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改监听器绑定的后端机器的转发权重。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTargetWeightRequest"/></param>
+        /// <returns><see cref="ModifyTargetWeightResponse"/></returns>
+        public ModifyTargetWeightResponse ModifyTargetWeightSync(ModifyTargetWeightRequest req)
+        {
+             JsonResponseModel<ModifyTargetWeightResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTargetWeight");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTargetWeightResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

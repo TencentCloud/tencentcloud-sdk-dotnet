@@ -53,7 +53,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
+        /// 本接口 (AssociateSecurityGroups) 用于安全组批量绑定多个指定实例。
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
         /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
+        /// 本接口 (AssociateSecurityGroups) 用于安全组批量绑定多个指定实例。
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
         /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
@@ -1853,7 +1853,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组
+        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
@@ -1873,7 +1873,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组
+        /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>

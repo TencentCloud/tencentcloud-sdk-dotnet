@@ -45,6 +45,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         ///     "LiveMsg": null,      // 活体检测阶段的错误信息
         ///     "Comparestatus": null,// 一比一阶段的错误码。0为成功
         ///     "Comparemsg": null,   // 一比一阶段的错误信息
+        ///     "Sim": null, // 比对相似度
         ///     "Location": null, // 地理位置信息
         ///     "Extra": "",          // DetectAuth结果传进来的Extra信息
         ///     "Detail": {           // 活体一比一信息详情
