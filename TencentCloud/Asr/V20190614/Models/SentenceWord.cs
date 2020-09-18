@@ -21,26 +21,26 @@ namespace TencentCloud.Asr.V20190614.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetAsrVocabListRequest : AbstractModel
+    public class SentenceWord : AbstractModel
     {
         
         /// <summary>
-        /// 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
+        /// 词结果
         /// </summary>
-        [JsonProperty("TagInfos")]
-        public string[] TagInfos{ get; set; }
+        [JsonProperty("Word")]
+        public string Word{ get; set; }
 
         /// <summary>
-        /// 分页Offset
+        /// 词在音频中的开始时间
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// 词在音频中的结束时间
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Asr.V20190614.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TagInfos.", this.TagInfos);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Word", this.Word);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

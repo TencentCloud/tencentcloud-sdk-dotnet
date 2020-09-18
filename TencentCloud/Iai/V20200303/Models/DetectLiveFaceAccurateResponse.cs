@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Asr.V20190614.Models
+namespace TencentCloud.Iai.V20200303.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetAsrVocabListRequest : AbstractModel
+    public class DetectLiveFaceAccurateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
+        /// 活体打分，取值范围 [0,100]，根据活体分数对应的阈值区间来判断是否为翻拍。目前阈值可分为[5,10,40,70,90]，其中推荐阈值为40。
         /// </summary>
-        [JsonProperty("TagInfos")]
-        public string[] TagInfos{ get; set; }
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
 
         /// <summary>
-        /// 分页Offset
+        /// 人脸识别所用的算法模型版本。
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("FaceModelVersion")]
+        public string FaceModelVersion{ get; set; }
 
         /// <summary>
-        /// 分页Limit
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Asr.V20190614.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TagInfos.", this.TagInfos);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

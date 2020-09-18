@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.146</VersionPrefix>
+    <VersionPrefix>3.0.147</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -455,10 +455,14 @@
     <Compile Include="Asr\V20190614\Models\GetAsrVocabListResponse.cs" />
     <Compile Include="Asr\V20190614\Models\GetAsrVocabRequest.cs" />
     <Compile Include="Asr\V20190614\Models\GetAsrVocabResponse.cs" />
+    <Compile Include="Asr\V20190614\Models\GetCustomizationListRequest.cs" />
+    <Compile Include="Asr\V20190614\Models\GetCustomizationListResponse.cs" />
     <Compile Include="Asr\V20190614\Models\HotWord.cs" />
+    <Compile Include="Asr\V20190614\Models\Model.cs" />
     <Compile Include="Asr\V20190614\Models\SentenceDetail.cs" />
     <Compile Include="Asr\V20190614\Models\SentenceRecognitionRequest.cs" />
     <Compile Include="Asr\V20190614\Models\SentenceRecognitionResponse.cs" />
+    <Compile Include="Asr\V20190614\Models\SentenceWord.cs" />
     <Compile Include="Asr\V20190614\Models\SentenceWords.cs" />
     <Compile Include="Asr\V20190614\Models\SetVocabStateRequest.cs" />
     <Compile Include="Asr\V20190614\Models\SetVocabStateResponse.cs" />
@@ -1350,6 +1354,8 @@
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniDataSumResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniOperDataRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniOperDataResponse.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniResultRequest.cs" />
+    <Compile Include="Captcha\V20190722\Models\DescribeCaptchaMiniResultResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaOperDataRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaOperDataResponse.cs" />
     <Compile Include="Captcha\V20190722\Models\DescribeCaptchaResultRequest.cs" />
@@ -4635,6 +4641,8 @@
     <Compile Include="Iai\V20200303\Models\DetectFaceAttributesResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectFaceResponse.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectLiveFaceAccurateRequest.cs" />
+    <Compile Include="Iai\V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />

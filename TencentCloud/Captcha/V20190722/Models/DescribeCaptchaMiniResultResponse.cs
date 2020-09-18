@@ -15,26 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Asr.V20190614.Models
+namespace TencentCloud.Captcha.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetAsrVocabListResponse : AbstractModel
+    public class DescribeCaptchaMiniResultResponse : AbstractModel
     {
         
         /// <summary>
-        /// 热词表列表
+        /// 1       ticket verification succeeded     票据验证成功
+        /// 8       ticket expired     票据超时
+        /// 10     ticket format error     票据格式不正确
+        /// 15     ticket decryption failed     验证码解密失败
+        /// 16     CaptchaAppId wrong format      检查CaptchaAppId错误
+        /// 26     system internal error     系统内部错误
+        /// 100    param err appsecretkey     参数校验错误
+        /// 21      ticket error     差别，票据验证错误
         /// </summary>
-        [JsonProperty("VocabList")]
-        public Vocab[] VocabList{ get; set; }
+        [JsonProperty("CaptchaCode")]
+        public long? CaptchaCode{ get; set; }
 
         /// <summary>
-        /// 热词列表总数
+        /// 状态描述及验证错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("CaptchaMsg")]
+        public string CaptchaMsg{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +56,8 @@ namespace TencentCloud.Asr.V20190614.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "VocabList.", this.VocabList);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);
+            this.SetParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -73,6 +73,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
 
+        /// <summary>
+        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public long? KeepaliveEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         }
     }
 }

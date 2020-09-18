@@ -21,53 +21,53 @@ namespace TencentCloud.Asr.V20190614.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Vocab : AbstractModel
+    public class Model : AbstractModel
     {
         
         /// <summary>
-        /// 热词表名称
+        /// 模型名称
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
 
         /// <summary>
-        /// 热词表描述
+        /// 模型文件名称
         /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("DictName")]
+        public string DictName{ get; set; }
 
         /// <summary>
-        /// 热词表ID
+        /// 模型Id
         /// </summary>
-        [JsonProperty("VocabId")]
-        public string VocabId{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
         /// <summary>
-        /// 词权重列表
+        /// 模型类型，“8k”或者”16k“
         /// </summary>
-        [JsonProperty("WordWeights")]
-        public HotWord[] WordWeights{ get; set; }
+        [JsonProperty("ModelType")]
+        public string ModelType{ get; set; }
 
         /// <summary>
-        /// 词表创建时间
+        /// 服务类型
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 词表更新时间
+        /// 模型状态，-1下线状态，1上线状态, 0训练中, -2 训练失败
         /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
+        [JsonProperty("ModelState")]
+        public long? ModelState{ get; set; }
 
         /// <summary>
-        /// 热词表状态，1为默认状态即在识别时默认加载该热词表进行识别，0为初始状态
+        /// 最后更新时间
         /// </summary>
-        [JsonProperty("State")]
-        public long? State{ get; set; }
+        [JsonProperty("AtUpdated")]
+        public string AtUpdated{ get; set; }
 
         /// <summary>
-        /// 标签数组
+        /// 标签信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagInfos")]
@@ -79,13 +79,13 @@ namespace TencentCloud.Asr.V20190614.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "VocabId", this.VocabId);
-            this.SetParamArrayObj(map, prefix + "WordWeights.", this.WordWeights);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
+            this.SetParamSimple(map, prefix + "DictName", this.DictName);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamSimple(map, prefix + "ModelState", this.ModelState);
+            this.SetParamSimple(map, prefix + "AtUpdated", this.AtUpdated);
             this.SetParamArraySimple(map, prefix + "TagInfos.", this.TagInfos);
         }
     }

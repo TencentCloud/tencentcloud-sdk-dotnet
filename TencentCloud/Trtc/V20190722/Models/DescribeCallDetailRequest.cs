@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 用户sdkappid（1400188366）
+        /// 用户SDKAppID（1400188366）
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
@@ -74,13 +74,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string[] DataType{ get; set; }
 
         /// <summary>
-        /// 只查询用户列表时，设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
+        /// 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
         /// </summary>
         [JsonProperty("PageNumber")]
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// 只查询用户列表时，设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）
+        /// 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,DataType，UserIds不为null，PageSize最大不超过6，DataType，UserIds为null，PageSize最大不超过100）
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }

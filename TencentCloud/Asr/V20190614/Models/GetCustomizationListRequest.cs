@@ -21,7 +21,7 @@ namespace TencentCloud.Asr.V20190614.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetAsrVocabListRequest : AbstractModel
+    public class GetCustomizationListRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,16 +31,16 @@ namespace TencentCloud.Asr.V20190614.Models
         public string[] TagInfos{ get; set; }
 
         /// <summary>
-        /// 分页Offset
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 分页Limit
+        /// 分页大小
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Asr.V20190614.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "TagInfos.", this.TagInfos);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

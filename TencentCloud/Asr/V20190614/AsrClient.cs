@@ -369,6 +369,46 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
+        /// 查询自学习模型列表
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomizationListRequest"/></param>
+        /// <returns><see cref="GetCustomizationListResponse"/></returns>
+        public async Task<GetCustomizationListResponse> GetCustomizationList(GetCustomizationListRequest req)
+        {
+             JsonResponseModel<GetCustomizationListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetCustomizationList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCustomizationListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自学习模型列表
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomizationListRequest"/></param>
+        /// <returns><see cref="GetCustomizationListResponse"/></returns>
+        public GetCustomizationListResponse GetCustomizationListSync(GetCustomizationListRequest req)
+        {
+             JsonResponseModel<GetCustomizationListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetCustomizationList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCustomizationListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于对60秒之内的短音频文件进行识别。
         /// <br>•   支持中文普通话、英语、粤语、日语、上海话方言。
         /// <br>•   支持本地语音文件上传和语音URL上传两种请求方式，音频时长不能超过60s。

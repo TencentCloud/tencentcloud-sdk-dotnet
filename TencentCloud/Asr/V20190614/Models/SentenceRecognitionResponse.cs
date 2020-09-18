@@ -37,6 +37,20 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? AudioDuration{ get; set; }
 
         /// <summary>
+        /// 词时间戳列表的长度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WordSize")]
+        public long? WordSize{ get; set; }
+
+        /// <summary>
+        /// 词时间戳列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WordList")]
+        public SentenceWord[] WordList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +64,8 @@ namespace TencentCloud.Asr.V20190614.Models
         {
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+            this.SetParamSimple(map, prefix + "WordSize", this.WordSize);
+            this.SetParamArrayObj(map, prefix + "WordList.", this.WordList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
