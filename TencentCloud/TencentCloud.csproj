@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.147</VersionPrefix>
+    <VersionPrefix>3.0.148</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7829,6 +7829,10 @@
     <Compile Include="Tcb\V20180608\Models\AuthDomain.cs" />
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoDetail.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoName.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateAuthDomainRequest.cs" />
@@ -7846,6 +7850,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUserLoginStatisticRequest.cs" />

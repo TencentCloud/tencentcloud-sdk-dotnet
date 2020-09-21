@@ -38,6 +38,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
+        /// <summary>
+        /// 磁盘数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskNum")]
+        public long? DiskNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
         }
     }
 }

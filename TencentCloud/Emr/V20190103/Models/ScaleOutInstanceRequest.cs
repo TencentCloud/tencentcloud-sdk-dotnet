@@ -128,6 +128,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("PodSpec")]
         public PodSpec PodSpec{ get; set; }
 
+        /// <summary>
+        /// 使用clickhouse集群扩容时，选择的机器分组名称
+        /// </summary>
+        [JsonProperty("ClickHouseClusterName")]
+        public string ClickHouseClusterName{ get; set; }
+
+        /// <summary>
+        /// 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+        /// </summary>
+        [JsonProperty("ClickHouseClusterType")]
+        public string ClickHouseClusterType{ get; set; }
+
+        /// <summary>
+        /// 规则扩容指定 yarn node label
+        /// </summary>
+        [JsonProperty("YarnNodeLabel")]
+        public string YarnNodeLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +168,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
             this.SetParamObj(map, prefix + "PodSpec.", this.PodSpec);
+            this.SetParamSimple(map, prefix + "ClickHouseClusterName", this.ClickHouseClusterName);
+            this.SetParamSimple(map, prefix + "ClickHouseClusterType", this.ClickHouseClusterType);
+            this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
         }
     }
 }

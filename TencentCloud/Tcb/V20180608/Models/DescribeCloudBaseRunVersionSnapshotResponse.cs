@@ -15,20 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAsyncRequestInfoRequest : AbstractModel
+    public class DescribeCloudBaseRunVersionSnapshotResponse : AbstractModel
     {
         
         /// <summary>
-        /// 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+        /// 版本历史
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("Snapshots")]
+        public CloudRunServiceSimpleVersionSnapshot[] Snapshots{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamArrayObj(map, prefix + "Snapshots.", this.Snapshots);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

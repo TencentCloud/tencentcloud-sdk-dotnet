@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAsyncRequestInfoRequest : AbstractModel
+    public class CloudBaseCodeRepoDetail : AbstractModel
     {
         
         /// <summary>
-        /// 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+        /// repo的名字
         /// </summary>
-        [JsonProperty("AsyncRequestId")]
-        public string AsyncRequestId{ get; set; }
+        [JsonProperty("Name")]
+        public CloudBaseCodeRepoName Name{ get; set; }
+
+        /// <summary>
+        /// repo的url
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamObj(map, prefix + "Name.", this.Name);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

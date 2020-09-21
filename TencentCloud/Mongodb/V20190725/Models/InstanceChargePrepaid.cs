@@ -26,6 +26,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。默认为1。
+        /// （InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
@@ -37,6 +38,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
         /// 
         /// 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+        /// （InquirePriceRenewDBInstances，RenewDBInstances调用时必填）
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

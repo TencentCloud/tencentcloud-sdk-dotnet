@@ -413,6 +413,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询版本历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunVersionSnapshotRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunVersionSnapshotResponse"/></returns>
+        public async Task<DescribeCloudBaseRunVersionSnapshotResponse> DescribeCloudBaseRunVersionSnapshot(DescribeCloudBaseRunVersionSnapshotRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunVersionSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunVersionSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunVersionSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询版本历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunVersionSnapshotRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunVersionSnapshotResponse"/></returns>
+        public DescribeCloudBaseRunVersionSnapshotResponse DescribeCloudBaseRunVersionSnapshotSync(DescribeCloudBaseRunVersionSnapshotRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunVersionSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunVersionSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunVersionSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取数据库权限
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseACLRequest"/></param>
