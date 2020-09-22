@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.148</VersionPrefix>
+    <VersionPrefix>3.0.149</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2152,7 +2152,6 @@
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupTopic.cs" />
-    <Compile Include="Ckafka\V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateInstancePreData.cs" />
@@ -2204,12 +2203,6 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
-    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetRequest.cs" />
-    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetResponse.cs" />
-    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByOffsetRequest.cs" />
-    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByOffsetResponse.cs" />
-    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByTimestampRequest.cs" />
-    <Compile Include="Ckafka\V20190819\Models\FetchMessageListByTimestampResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Filter.cs" />
     <Compile Include="Ckafka\V20190819\Models\Group.cs" />
     <Compile Include="Ckafka\V20190819\Models\GroupInfoMember.cs" />
@@ -8467,6 +8460,8 @@
     <Compile Include="Tiw\V20190919\Models\Concat.cs" />
     <Compile Include="Tiw\V20190919\Models\CreateTranscodeRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\CreateTranscodeResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\CreateVideoGenerationTaskRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\CreateVideoGenerationTaskResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\CustomLayout.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordCallbackResponse.cs" />
@@ -8476,6 +8471,10 @@
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeVideoGenerationTaskCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeVideoGenerationTaskCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeVideoGenerationTaskRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeVideoGenerationTaskResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\LayoutParams.cs" />
     <Compile Include="Tiw\V20190919\Models\MixStream.cs" />
     <Compile Include="Tiw\V20190919\Models\OmittedDuration.cs" />
@@ -8492,6 +8491,10 @@
     <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackKeyResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\SetTranscodeCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackKeyRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackKeyResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StopOnlineRecordRequest.cs" />

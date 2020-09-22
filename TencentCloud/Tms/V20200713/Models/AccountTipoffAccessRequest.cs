@@ -31,7 +31,7 @@ namespace TencentCloud.Tms.V20200713.Models
         public string ReportedAccount{ get; set; }
 
         /// <summary>
-        /// 被举报账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+        /// 被举报账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
         /// </summary>
         [JsonProperty("ReportedAccountType")]
         public long? ReportedAccountType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tms.V20200713.Models
         public string SenderAccount{ get; set; }
 
         /// <summary>
-        /// 举报者账号类型(1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-手机号 8-微信号 0-其它string)
+        /// 举报者账号类型(1-手机号 2-QQ号 3-微信号 4-QQ群号 5-微信openid 6-QQopenid 0-其它)
         /// </summary>
         [JsonProperty("SenderAccountType")]
         public long? SenderAccountType{ get; set; }

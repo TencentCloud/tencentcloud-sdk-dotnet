@@ -93,6 +93,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 创建视频生成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoGenerationTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoGenerationTaskResponse"/></returns>
+        public async Task<CreateVideoGenerationTaskResponse> CreateVideoGenerationTask(CreateVideoGenerationTaskRequest req)
+        {
+             JsonResponseModel<CreateVideoGenerationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVideoGenerationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVideoGenerationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建视频生成任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoGenerationTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoGenerationTaskResponse"/></returns>
+        public CreateVideoGenerationTaskResponse CreateVideoGenerationTaskSync(CreateVideoGenerationTaskRequest req)
+        {
+             JsonResponseModel<CreateVideoGenerationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVideoGenerationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVideoGenerationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询录制任务状态与结果
         /// </summary>
         /// <param name="req"><see cref="DescribeOnlineRecordRequest"/></param>
@@ -244,6 +284,86 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTranscodeCallback");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录制视频生成任务状态与结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoGenerationTaskRequest"/></param>
+        /// <returns><see cref="DescribeVideoGenerationTaskResponse"/></returns>
+        public async Task<DescribeVideoGenerationTaskResponse> DescribeVideoGenerationTask(DescribeVideoGenerationTaskRequest req)
+        {
+             JsonResponseModel<DescribeVideoGenerationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVideoGenerationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoGenerationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录制视频生成任务状态与结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoGenerationTaskRequest"/></param>
+        /// <returns><see cref="DescribeVideoGenerationTaskResponse"/></returns>
+        public DescribeVideoGenerationTaskResponse DescribeVideoGenerationTaskSync(DescribeVideoGenerationTaskRequest req)
+        {
+             JsonResponseModel<DescribeVideoGenerationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVideoGenerationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoGenerationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录制视频生成回调地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoGenerationTaskCallbackRequest"/></param>
+        /// <returns><see cref="DescribeVideoGenerationTaskCallbackResponse"/></returns>
+        public async Task<DescribeVideoGenerationTaskCallbackResponse> DescribeVideoGenerationTaskCallback(DescribeVideoGenerationTaskCallbackRequest req)
+        {
+             JsonResponseModel<DescribeVideoGenerationTaskCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVideoGenerationTaskCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoGenerationTaskCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录制视频生成回调地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoGenerationTaskCallbackRequest"/></param>
+        /// <returns><see cref="DescribeVideoGenerationTaskCallbackResponse"/></returns>
+        public DescribeVideoGenerationTaskCallbackResponse DescribeVideoGenerationTaskCallbackSync(DescribeVideoGenerationTaskCallbackRequest req)
+        {
+             JsonResponseModel<DescribeVideoGenerationTaskCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVideoGenerationTaskCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoGenerationTaskCallbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -484,6 +604,86 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "SetTranscodeCallbackKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTranscodeCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置录制视频生成回调地址
+        /// </summary>
+        /// <param name="req"><see cref="SetVideoGenerationTaskCallbackRequest"/></param>
+        /// <returns><see cref="SetVideoGenerationTaskCallbackResponse"/></returns>
+        public async Task<SetVideoGenerationTaskCallbackResponse> SetVideoGenerationTaskCallback(SetVideoGenerationTaskCallbackRequest req)
+        {
+             JsonResponseModel<SetVideoGenerationTaskCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetVideoGenerationTaskCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVideoGenerationTaskCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置录制视频生成回调地址
+        /// </summary>
+        /// <param name="req"><see cref="SetVideoGenerationTaskCallbackRequest"/></param>
+        /// <returns><see cref="SetVideoGenerationTaskCallbackResponse"/></returns>
+        public SetVideoGenerationTaskCallbackResponse SetVideoGenerationTaskCallbackSync(SetVideoGenerationTaskCallbackRequest req)
+        {
+             JsonResponseModel<SetVideoGenerationTaskCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetVideoGenerationTaskCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVideoGenerationTaskCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置视频生成回调鉴权密钥
+        /// </summary>
+        /// <param name="req"><see cref="SetVideoGenerationTaskCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetVideoGenerationTaskCallbackKeyResponse"/></returns>
+        public async Task<SetVideoGenerationTaskCallbackKeyResponse> SetVideoGenerationTaskCallbackKey(SetVideoGenerationTaskCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetVideoGenerationTaskCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置视频生成回调鉴权密钥
+        /// </summary>
+        /// <param name="req"><see cref="SetVideoGenerationTaskCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetVideoGenerationTaskCallbackKeyResponse"/></returns>
+        public SetVideoGenerationTaskCallbackKeyResponse SetVideoGenerationTaskCallbackKeySync(SetVideoGenerationTaskCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetVideoGenerationTaskCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

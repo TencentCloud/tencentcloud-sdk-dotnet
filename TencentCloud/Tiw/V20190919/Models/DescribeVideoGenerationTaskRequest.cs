@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Tiw.V20190919.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FetchMessageByOffsetRequest : AbstractModel
+    public class DescribeVideoGenerationTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例Id
+        /// 客户的SdkAppId
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 主题名
+        /// 录制视频生成的任务Id
         /// </summary>
-        [JsonProperty("Topic")]
-        public string Topic{ get; set; }
-
-        /// <summary>
-        /// 分区id
-        /// </summary>
-        [JsonProperty("Partition")]
-        public long? Partition{ get; set; }
-
-        /// <summary>
-        /// 位点信息
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Topic", this.Topic);
-            this.SetParamSimple(map, prefix + "Partition", this.Partition);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

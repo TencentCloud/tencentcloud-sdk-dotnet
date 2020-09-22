@@ -50,6 +50,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("RelatedType")]
         public ulong? RelatedType{ get; set; }
 
+        /// <summary>
+        /// 策略关联时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachmentTime")]
+        public string AttachmentTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +67,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "RelatedType", this.RelatedType);
+            this.SetParamSimple(map, prefix + "AttachmentTime", this.AttachmentTime);
         }
     }
 }

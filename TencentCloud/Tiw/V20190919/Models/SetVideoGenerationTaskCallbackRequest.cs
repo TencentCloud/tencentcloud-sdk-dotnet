@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Tiw.V20190919.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class FetchMessageByOffsetResponse : AbstractModel
+    public class SetVideoGenerationTaskCallbackRequest : AbstractModel
     {
         
         /// <summary>
-        /// 返回结果
+        /// 客户的SdkAppId
         /// </summary>
-        [JsonProperty("Result")]
-        public ConsumerRecord Result{ get; set; }
+        [JsonProperty("SdkAppId")]
+        public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 课后录制任务结果回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持 http或https协议，即回调地址以http://或https://开头
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Callback")]
+        public string Callback{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "Callback", this.Callback);
         }
     }
 }

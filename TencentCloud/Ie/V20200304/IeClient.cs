@@ -53,7 +53,7 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
-        /// 创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
+        /// 创建编辑理解任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
         /// </summary>
         /// <param name="req"><see cref="CreateEditingTaskRequest"/></param>
         /// <returns><see cref="CreateEditingTaskResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
-        /// 创建智能编辑任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
+        /// 创建编辑理解任务，可以同时选择视频标签识别、分类识别、智能拆条、智能集锦、智能封面和片头片尾识别中的一项或者多项能力。
         /// </summary>
         /// <param name="req"><see cref="CreateEditingTaskRequest"/></param>
         /// <returns><see cref="CreateEditingTaskResponse"/></returns>
@@ -173,7 +173,7 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
-        /// 获取智能编辑任务结果。
+        /// 获取编辑理解任务结果。
         /// </summary>
         /// <param name="req"><see cref="DescribeEditingTaskResultRequest"/></param>
         /// <returns><see cref="DescribeEditingTaskResultResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
-        /// 获取智能编辑任务结果。
+        /// 获取编辑理解任务结果。
         /// </summary>
         /// <param name="req"><see cref="DescribeEditingTaskResultRequest"/></param>
         /// <returns><see cref="DescribeEditingTaskResultResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
-        /// 获取质检任务结果
+        /// 获取媒体质检任务结果
         /// </summary>
         /// <param name="req"><see cref="DescribeQualityControlTaskResultRequest"/></param>
         /// <returns><see cref="DescribeQualityControlTaskResultResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
-        /// 获取质检任务结果
+        /// 获取媒体质检任务结果
         /// </summary>
         /// <param name="req"><see cref="DescribeQualityControlTaskResultRequest"/></param>
         /// <returns><see cref="DescribeQualityControlTaskResultResponse"/></returns>

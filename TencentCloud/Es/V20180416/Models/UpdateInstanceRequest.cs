@@ -44,7 +44,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+        /// 配置项（JSON格式字符串）
         /// </summary>
         [JsonProperty("EsConfig")]
         public string EsConfig{ get; set; }
