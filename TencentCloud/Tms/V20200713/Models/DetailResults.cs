@@ -31,7 +31,7 @@ namespace TencentCloud.Tms.V20200713.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// 建议值,Block：打击,Review：待复审,Normal：正常
+        /// 建议值,Block：打击,Review：待复审,Pass：正常
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]

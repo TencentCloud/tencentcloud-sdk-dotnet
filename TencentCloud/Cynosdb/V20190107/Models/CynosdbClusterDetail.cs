@@ -156,6 +156,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 实例绑定的tag数组信息
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

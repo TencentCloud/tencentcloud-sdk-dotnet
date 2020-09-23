@@ -33,6 +33,9 @@ namespace TencentCloud.Batch.V20170312.Models
         /// <summary>
         /// 过滤条件
         /// <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+        /// <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
+        /// <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
+        /// <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
         /// 与TaskTemplateIds参数不能同时指定。
         /// </summary>
         [JsonProperty("Filters")]

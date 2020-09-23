@@ -174,6 +174,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
+        /// <summary>
+        /// 集群绑定的tag数组
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

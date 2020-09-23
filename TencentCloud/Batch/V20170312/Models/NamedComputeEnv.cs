@@ -96,6 +96,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("ResourceMaxRetryCount")]
         public long? ResourceMaxRetryCount{ get; set; }
 
+        /// <summary>
+        /// 标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
             this.SetParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

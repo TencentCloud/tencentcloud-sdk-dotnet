@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Batch.V20170312.Models
+namespace TencentCloud.Asr.V20190614.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateTaskTemplateRequest : AbstractModel
+    public class ModifyCustomizationRequest : AbstractModel
     {
         
         /// <summary>
-        /// 任务模板名称
+        /// 要修改的模型ID
         /// </summary>
-        [JsonProperty("TaskTemplateName")]
-        public string TaskTemplateName{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
         /// <summary>
-        /// 任务模板内容，参数要求与任务一致
+        /// 要修改的模型名称，长度需在1-20个字符之间
         /// </summary>
-        [JsonProperty("TaskTemplateInfo")]
-        public Task TaskTemplateInfo{ get; set; }
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
 
         /// <summary>
-        /// 任务模板描述
+        /// 要修改的模型类型，为8k或者16k
         /// </summary>
-        [JsonProperty("TaskTemplateDescription")]
-        public string TaskTemplateDescription{ get; set; }
+        [JsonProperty("ModelType")]
+        public string ModelType{ get; set; }
 
         /// <summary>
-        /// 标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
+        /// 要修改的模型语料的下载地址，目前仅支持腾讯云cos
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("TextUrl")]
+        public string TextUrl{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskTemplateName", this.TaskTemplateName);
-            this.SetParamObj(map, prefix + "TaskTemplateInfo.", this.TaskTemplateInfo);
-            this.SetParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
+            this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
+            this.SetParamSimple(map, prefix + "TextUrl", this.TextUrl);
         }
     }
 }

@@ -84,6 +84,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("AttachedComputeNodeCount")]
         public ulong? AttachedComputeNodeCount{ get; set; }
 
+        /// <summary>
+        /// 计算环境绑定的标签列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
             this.SetParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

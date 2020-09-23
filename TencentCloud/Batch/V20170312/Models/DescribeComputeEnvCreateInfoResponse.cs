@@ -86,6 +86,13 @@ namespace TencentCloud.Batch.V20170312.Models
         public long? DesiredComputeNodeCount{ get; set; }
 
         /// <summary>
+        /// 计算环境绑定的标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -107,6 +114,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Authentications.", this.Authentications);
             this.SetParamArrayObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

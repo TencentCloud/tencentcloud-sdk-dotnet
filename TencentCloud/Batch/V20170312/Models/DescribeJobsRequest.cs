@@ -36,6 +36,9 @@ namespace TencentCloud.Batch.V20170312.Models
         /// <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
         /// <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
         /// <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+        /// <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
+        /// <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
+        /// <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
         /// 与JobIds参数不能同时指定。
         /// </summary>
         [JsonProperty("Filters")]

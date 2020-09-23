@@ -103,6 +103,46 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
+        /// 用户使用该接口可以创建自学习模型，以供识别调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomizationRequest"/></param>
+        /// <returns><see cref="CreateCustomizationResponse"/></returns>
+        public async Task<CreateCustomizationResponse> CreateCustomization(CreateCustomizationRequest req)
+        {
+             JsonResponseModel<CreateCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户使用该接口可以创建自学习模型，以供识别调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomizationRequest"/></param>
+        /// <returns><see cref="CreateCustomizationResponse"/></returns>
+        public CreateCustomizationResponse CreateCustomizationSync(CreateCustomizationRequest req)
+        {
+             JsonResponseModel<CreateCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口服务对时长5小时以内的录音文件进行识别，异步返回识别全部结果。
         /// <br>• 支持中文普通话、英语、粤语、日语和上海话方言
         /// <br>• 支持通用、音视频领域
@@ -203,6 +243,46 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
+        /// 用户通过该接口可以删除自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomizationRequest"/></param>
+        /// <returns><see cref="DeleteCustomizationResponse"/></returns>
+        public async Task<DeleteCustomizationResponse> DeleteCustomization(DeleteCustomizationRequest req)
+        {
+             JsonResponseModel<DeleteCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以删除自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomizationRequest"/></param>
+        /// <returns><see cref="DeleteCustomizationResponse"/></returns>
+        public DeleteCustomizationResponse DeleteCustomizationSync(DeleteCustomizationRequest req)
+        {
+             JsonResponseModel<DeleteCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在调用录音文件识别请求接口后，有回调和轮询两种方式获取识别结果。
         /// <br>• 当采用回调方式时，识别完成后会将结果通过 POST 请求的形式通知到用户在请求时填写的回调 URL，具体请参见[ 录音识别结果回调 ](https://cloud.tencent.com/document/product/1093/37139#callback)。
         /// <br>• 当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见下文说明。
@@ -282,6 +362,46 @@ namespace TencentCloud.Asr.V20190614
              {
                  var strResp = this.InternalRequestSync(req, "DownloadAsrVocab");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadAsrVocabResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以下载自学习模型的语料
+        /// </summary>
+        /// <param name="req"><see cref="DownloadCustomizationRequest"/></param>
+        /// <returns><see cref="DownloadCustomizationResponse"/></returns>
+        public async Task<DownloadCustomizationResponse> DownloadCustomization(DownloadCustomizationRequest req)
+        {
+             JsonResponseModel<DownloadCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以下载自学习模型的语料
+        /// </summary>
+        /// <param name="req"><see cref="DownloadCustomizationRequest"/></param>
+        /// <returns><see cref="DownloadCustomizationResponse"/></returns>
+        public DownloadCustomizationResponse DownloadCustomizationSync(DownloadCustomizationRequest req)
+        {
+             JsonResponseModel<DownloadCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadCustomizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -402,6 +522,86 @@ namespace TencentCloud.Asr.V20190614
              {
                  var strResp = this.InternalRequestSync(req, "GetCustomizationList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCustomizationListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationResponse"/></returns>
+        public async Task<ModifyCustomizationResponse> ModifyCustomization(ModifyCustomizationRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationResponse"/></returns>
+        public ModifyCustomizationResponse ModifyCustomizationSync(ModifyCustomizationRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该接口，用户可以修改自学习模型状态，上下线自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationStateRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationStateResponse"/></returns>
+        public async Task<ModifyCustomizationStateResponse> ModifyCustomizationState(ModifyCustomizationStateRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomizationState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该接口，用户可以修改自学习模型状态，上下线自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationStateRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationStateResponse"/></returns>
+        public ModifyCustomizationStateResponse ModifyCustomizationStateSync(ModifyCustomizationStateRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomizationState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -72,6 +72,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("StateIfCreateCvmFailed")]
         public string StateIfCreateCvmFailed{ get; set; }
 
+        /// <summary>
+        /// 标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "TaskExecutionDependOn", this.TaskExecutionDependOn);
             this.SetParamSimple(map, prefix + "StateIfCreateCvmFailed", this.StateIfCreateCvmFailed);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

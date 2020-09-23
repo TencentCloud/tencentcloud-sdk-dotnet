@@ -627,7 +627,7 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
-        /// 识别传入图片中人体的完整轮廓，进行抠像。
+        /// 即二分类人像分割，识别传入图片中人体的完整轮廓，进行抠像。
         /// </summary>
         /// <param name="req"><see cref="SegmentPortraitPicRequest"/></param>
         /// <returns><see cref="SegmentPortraitPicResponse"/></returns>
@@ -647,7 +647,7 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
-        /// 识别传入图片中人体的完整轮廓，进行抠像。
+        /// 即二分类人像分割，识别传入图片中人体的完整轮廓，进行抠像。
         /// </summary>
         /// <param name="req"><see cref="SegmentPortraitPicRequest"/></param>
         /// <returns><see cref="SegmentPortraitPicResponse"/></returns>

@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Batch.V20170312.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateTaskTemplateRequest : AbstractModel
+    public class DescribeSafeAuthFlagCollResponse : AbstractModel
     {
         
         /// <summary>
-        /// 任务模板名称
+        /// 登录保护设置
         /// </summary>
-        [JsonProperty("TaskTemplateName")]
-        public string TaskTemplateName{ get; set; }
+        [JsonProperty("LoginFlag")]
+        public LoginActionFlag LoginFlag{ get; set; }
 
         /// <summary>
-        /// 任务模板内容，参数要求与任务一致
+        /// 敏感操作保护设置
         /// </summary>
-        [JsonProperty("TaskTemplateInfo")]
-        public Task TaskTemplateInfo{ get; set; }
+        [JsonProperty("ActionFlag")]
+        public LoginActionFlag ActionFlag{ get; set; }
 
         /// <summary>
-        /// 任务模板描述
+        /// 异地登录保护设置
         /// </summary>
-        [JsonProperty("TaskTemplateDescription")]
-        public string TaskTemplateDescription{ get; set; }
+        [JsonProperty("OffsiteFlag")]
+        public OffsiteFlag OffsiteFlag{ get; set; }
 
         /// <summary>
-        /// 标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TaskTemplateName", this.TaskTemplateName);
-            this.SetParamObj(map, prefix + "TaskTemplateInfo.", this.TaskTemplateInfo);
-            this.SetParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
+            this.SetParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
+            this.SetParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
