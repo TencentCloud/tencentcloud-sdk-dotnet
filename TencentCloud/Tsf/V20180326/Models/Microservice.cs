@@ -73,6 +73,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RunInstanceCount")]
         public long? RunInstanceCount{ get; set; }
 
+        /// <summary>
+        /// 微服务的离线实例数目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CriticalInstanceCount")]
+        public long? CriticalInstanceCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "RunInstanceCount", this.RunInstanceCount);
+            this.SetParamSimple(map, prefix + "CriticalInstanceCount", this.CriticalInstanceCount);
         }
     }
 }

@@ -50,7 +50,7 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-        /// 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
+        /// 目前默认为0：身份证，其他证件类型暂不支持。
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }

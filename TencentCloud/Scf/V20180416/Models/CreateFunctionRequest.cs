@@ -144,6 +144,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("InitTimeout")]
         public long? InitTimeout{ get; set; }
 
+        /// <summary>
+        /// 函数 Tag 参数，以键值对数组形式传入
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

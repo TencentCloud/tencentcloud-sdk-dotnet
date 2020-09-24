@@ -25,7 +25,7 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// 验证码类型，9：滑块验证码
+        /// 固定填值：9（滑块验证码）
         /// </summary>
         [JsonProperty("CaptchaType")]
         public ulong? CaptchaType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 验证码应用ID
+        /// 验证码应用APPID
         /// </summary>
         [JsonProperty("CaptchaAppId")]
         public ulong? CaptchaAppId{ get; set; }

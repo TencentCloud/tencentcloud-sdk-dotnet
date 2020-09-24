@@ -319,6 +319,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesTrafficPackagesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesTrafficPackagesResponse"/></returns>
+        public async Task<DescribeInstancesTrafficPackagesResponse> DescribeInstancesTrafficPackages(DescribeInstancesTrafficPackagesRequest req)
+        {
+             JsonResponseModel<DescribeInstancesTrafficPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesTrafficPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesTrafficPackagesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesTrafficPackagesResponse"/></returns>
+        public DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackagesSync(DescribeInstancesTrafficPackagesRequest req)
+        {
+             JsonResponseModel<DescribeInstancesTrafficPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesTrafficPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（RebootInstances）用于重启实例。
         /// 
         /// * 只有状态为 RUNNING 的实例才可以进行此操作。

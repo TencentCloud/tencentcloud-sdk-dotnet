@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Captcha.V20190722.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCaptchaMiniResultResponse : AbstractModel
+    public class DescribeAllNamespacesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 1       ticket verification succeeded     票据验证成功
-        /// 7       CaptchaAppId does not match     票据与验证码应用APPID不匹配
-        /// 8       ticket expired     票据超时
-        /// 10     ticket format error     票据格式不正确
-        /// 15     ticket decryption failed     票据解密失败
-        /// 16     CaptchaAppId wrong format     检查验证码应用APPID错误
-        /// 21     ticket error     票据验证错误
-        /// 26     system internal error     系统内部错误
-        /// 100   param err     参数校验错误
+        /// 云产品的名字空间
         /// </summary>
-        [JsonProperty("CaptchaCode")]
-        public long? CaptchaCode{ get; set; }
+        [JsonProperty("QceNamespaces")]
+        public CommonNamespace QceNamespaces{ get; set; }
 
         /// <summary>
-        /// 状态描述及验证错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 自定义监控的命名空间
         /// </summary>
-        [JsonProperty("CaptchaMsg")]
-        public string CaptchaMsg{ get; set; }
+        [JsonProperty("CustomNamespaces")]
+        public CommonNamespace CustomNamespaces{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -57,8 +48,8 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);
-            this.SetParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
+            this.SetParamObj(map, prefix + "QceNamespaces.", this.QceNamespaces);
+            this.SetParamObj(map, prefix + "CustomNamespaces.", this.CustomNamespaces);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

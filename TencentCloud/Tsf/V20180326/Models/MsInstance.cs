@@ -164,6 +164,41 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
+        /// <summary>
+        /// 服务状态，passing 在线，critical 离线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceStatus")]
+        public string ServiceStatus{ get; set; }
+
+        /// <summary>
+        /// 注册时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegistrationTime")]
+        public long? RegistrationTime{ get; set; }
+
+        /// <summary>
+        /// 上次心跳时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastHeartbeatTime")]
+        public long? LastHeartbeatTime{ get; set; }
+
+        /// <summary>
+        /// 实例注册id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegistrationId")]
+        public long? RegistrationId{ get; set; }
+
+        /// <summary>
+        /// 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HiddenStatus")]
+        public string HiddenStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +225,11 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
             this.SetParamSimple(map, prefix + "ApplicationPackageVersion", this.ApplicationPackageVersion);
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+            this.SetParamSimple(map, prefix + "RegistrationTime", this.RegistrationTime);
+            this.SetParamSimple(map, prefix + "LastHeartbeatTime", this.LastHeartbeatTime);
+            this.SetParamSimple(map, prefix + "RegistrationId", this.RegistrationId);
+            this.SetParamSimple(map, prefix + "HiddenStatus", this.HiddenStatus);
         }
     }
 }

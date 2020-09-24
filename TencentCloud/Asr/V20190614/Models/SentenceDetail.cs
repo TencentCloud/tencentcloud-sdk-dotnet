@@ -66,6 +66,13 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("Words")]
         public SentenceWords[] Words{ get; set; }
 
+        /// <summary>
+        /// 单句语速
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpeechSpeed")]
+        public float? SpeechSpeed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "EndMs", this.EndMs);
             this.SetParamSimple(map, prefix + "WordsNum", this.WordsNum);
             this.SetParamArrayObj(map, prefix + "Words.", this.Words);
+            this.SetParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
         }
     }
 }

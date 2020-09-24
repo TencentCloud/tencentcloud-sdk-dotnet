@@ -186,6 +186,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ServiceSetting")]
         public ServiceSetting ServiceSetting{ get; set; }
 
+        /// <summary>
+        /// 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
+        /// </summary>
+        [JsonProperty("DeployAgent")]
+        public bool? DeployAgent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
             this.SetParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
+            this.SetParamSimple(map, prefix + "DeployAgent", this.DeployAgent);
         }
     }
 }

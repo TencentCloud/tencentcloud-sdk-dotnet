@@ -213,6 +213,86 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 告警2.0-告警历史列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmHistoriesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmHistoriesResponse"/></returns>
+        public async Task<DescribeAlarmHistoriesResponse> DescribeAlarmHistories(DescribeAlarmHistoriesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmHistoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAlarmHistories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmHistoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 告警2.0-告警历史列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmHistoriesRequest"/></param>
+        /// <returns><see cref="DescribeAlarmHistoriesResponse"/></returns>
+        public DescribeAlarmHistoriesResponse DescribeAlarmHistoriesSync(DescribeAlarmHistoriesRequest req)
+        {
+             JsonResponseModel<DescribeAlarmHistoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAlarmHistories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAlarmHistoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取所有名字空间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeAllNamespacesResponse"/></returns>
+        public async Task<DescribeAllNamespacesResponse> DescribeAllNamespaces(DescribeAllNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeAllNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取所有名字空间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeAllNamespacesResponse"/></returns>
+        public DescribeAllNamespacesResponse DescribeAllNamespacesSync(DescribeAllNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeAllNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取基础指标详情
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseMetricsRequest"/></param>

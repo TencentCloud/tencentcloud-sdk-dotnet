@@ -61,7 +61,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EnvSource{ get; set; }
 
         /// <summary>
-        /// 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+        /// 环境别名，要以a-z开头，不能包含  a-z,0-9,-  以外的字符
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
@@ -80,6 +80,14 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ExtensionId")]
         public string ExtensionId{ get; set; }
 
+        /// <summary>
+        /// 订单标记。建议使用方统一转大小写之后再判断。
+        /// <li>QuickStart：快速启动来源</li>
+        /// <li>Activity：活动来源</li>
+        /// </summary>
+        [JsonProperty("Flag")]
+        public string Flag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +102,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
+            this.SetParamSimple(map, prefix + "Flag", this.Flag);
         }
     }
 }
