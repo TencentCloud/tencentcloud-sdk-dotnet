@@ -1474,6 +1474,9 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// 
+        /// >     
+        /// - 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
         /// </summary>
         /// <param name="req"><see cref="SearchFacesRequest"/></param>
         /// <returns><see cref="SearchFacesResponse"/></returns>
@@ -1506,6 +1509,9 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// 
+        /// >     
+        /// - 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
         /// </summary>
         /// <param name="req"><see cref="SearchFacesRequest"/></param>
         /// <returns><see cref="SearchFacesResponse"/></returns>
@@ -1538,6 +1544,8 @@ namespace TencentCloud.Iai.V20200303
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// 
+        /// >     
+        /// - 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
         /// </summary>
         /// <param name="req"><see cref="SearchFacesReturnsByGroupRequest"/></param>
         /// <returns><see cref="SearchFacesReturnsByGroupResponse"/></returns>
@@ -1570,6 +1578,8 @@ namespace TencentCloud.Iai.V20200303
         /// >     
         /// - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
         /// 
+        /// >     
+        /// - 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
         /// </summary>
         /// <param name="req"><see cref="SearchFacesReturnsByGroupRequest"/></param>
         /// <returns><see cref="SearchFacesReturnsByGroupResponse"/></returns>

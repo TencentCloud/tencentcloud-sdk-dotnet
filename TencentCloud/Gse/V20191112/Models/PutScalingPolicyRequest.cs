@@ -25,43 +25,43 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 基于规则的扩缩容配置
+        /// 基于规则的扩缩容配置服务部署ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 策略名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 调整值
+        /// 扩缩容调整值
         /// </summary>
         [JsonProperty("ScalingAdjustment")]
         public long? ScalingAdjustment{ get; set; }
 
         /// <summary>
-        /// 调整类型
+        /// 扩缩容调整类型
         /// </summary>
         [JsonProperty("ScalingAdjustmentType")]
         public string ScalingAdjustmentType{ get; set; }
 
         /// <summary>
-        /// 指标阈值
+        /// 扩缩容指标阈值
         /// </summary>
         [JsonProperty("Threshold")]
         public float? Threshold{ get; set; }
 
         /// <summary>
-        /// 比较符
+        /// 策略比较符，取值：>,>=,<,<=
         /// </summary>
         [JsonProperty("ComparisonOperator")]
         public string ComparisonOperator{ get; set; }
 
         /// <summary>
-        /// 时间长度（分钟）
+        /// 持续时间长度（分钟）
         /// </summary>
         [JsonProperty("EvaluationPeriods")]
         public long? EvaluationPeriods{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 策略类型
+        /// 策略类型，取值：TargetBased表示基于目标的策略；RuleBased表示基于规则的策略
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }

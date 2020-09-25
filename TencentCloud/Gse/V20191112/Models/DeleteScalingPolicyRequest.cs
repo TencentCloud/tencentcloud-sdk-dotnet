@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// 策略名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

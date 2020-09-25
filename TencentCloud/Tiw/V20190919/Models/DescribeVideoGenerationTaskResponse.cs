@@ -43,7 +43,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 录制视频生成进度（0-100，100表示视频生成完成 ）
+        /// 已废弃
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
@@ -64,10 +64,16 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? TotalTime{ get; set; }
 
         /// <summary>
-        /// 录制视频生成列表
+        /// 已废弃，请使用`VideoInfoList`参数
         /// </summary>
         [JsonProperty("VideoInfos")]
         public VideoInfo VideoInfos{ get; set; }
+
+        /// <summary>
+        /// 录制视频生成视频列表
+        /// </summary>
+        [JsonProperty("VideoInfoList")]
+        public VideoInfo[] VideoInfoList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -88,6 +94,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
             this.SetParamObj(map, prefix + "VideoInfos.", this.VideoInfos);
+            this.SetParamArrayObj(map, prefix + "VideoInfoList.", this.VideoInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

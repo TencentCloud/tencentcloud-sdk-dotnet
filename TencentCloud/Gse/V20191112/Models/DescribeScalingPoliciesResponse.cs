@@ -25,14 +25,14 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 动态扩缩容配置
+        /// 动态扩缩容配置策略数组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScalingPolicies")]
         public ScalingPolicy[] ScalingPolicies{ get; set; }
 
         /// <summary>
-        /// 返回总数
+        /// 动态扩缩容配置策略总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

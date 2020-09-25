@@ -1863,6 +1863,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// * 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsStateRequest"/></param>
+        /// <returns><see cref="DescribeEventsStateResponse"/></returns>
+        public async Task<DescribeEventsStateResponse> DescribeEventsState(DescribeEventsStateRequest req)
+        {
+             JsonResponseModel<DescribeEventsStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEventsState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// * 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsStateRequest"/></param>
+        /// <returns><see cref="DescribeEventsStateResponse"/></returns>
+        public DescribeEventsStateResponse DescribeEventsStateSync(DescribeEventsStateRequest req)
+        {
+             JsonResponseModel<DescribeEventsStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEventsState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询雪碧图模板，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeImageSpriteTemplatesRequest"/></param>

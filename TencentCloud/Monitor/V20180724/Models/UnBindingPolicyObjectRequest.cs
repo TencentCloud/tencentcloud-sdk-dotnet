@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 待删除对象实例的唯一id列表
+        /// 待删除对象实例的唯一id列表，UniqueId从调用[获取已绑定对象列表接口](https://cloud.tencent.com/document/api/248/40570)的出参的List中得到
         /// </summary>
         [JsonProperty("UniqueId")]
         public string[] UniqueId{ get; set; }

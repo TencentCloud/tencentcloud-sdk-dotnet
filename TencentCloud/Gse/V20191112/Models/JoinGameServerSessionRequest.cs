@@ -25,19 +25,19 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 游戏服务器会话ID
+        /// 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }
 
         /// <summary>
-        /// 玩家ID
+        /// 玩家ID，最大长度1024个ASCII字符
         /// </summary>
         [JsonProperty("PlayerId")]
         public string PlayerId{ get; set; }
 
         /// <summary>
-        /// 玩家自定义信息
+        /// 玩家自定义数据，最大长度2048个ASCII字符
         /// </summary>
         [JsonProperty("PlayerData")]
         public string PlayerData{ get; set; }

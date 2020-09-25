@@ -31,6 +31,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("DestinationArn")]
         public string DestinationArn{ get; set; }
 
+        /// <summary>
+        /// 服务部署组目的的状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FleetStatus")]
+        public string FleetStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Gse.V20191112.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DestinationArn", this.DestinationArn);
+            this.SetParamSimple(map, prefix + "FleetStatus", this.FleetStatus);
         }
     }
 }

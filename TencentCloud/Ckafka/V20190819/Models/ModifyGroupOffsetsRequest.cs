@@ -66,6 +66,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 需要重新设置的partition的列表，如果没有指定Topics参数。则重置全部topics的对应的Partition列表里的partition。指定Topics时则重置指定的topic列表的对应的Partitions列表的partition。
+        /// </summary>
+        [JsonProperty("Partitions")]
+        public long?[] Partitions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Shift", this.Shift);
             this.SetParamSimple(map, prefix + "ShiftTimestamp", this.ShiftTimestamp);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArraySimple(map, prefix + "Partitions.", this.Partitions);
         }
     }
 }

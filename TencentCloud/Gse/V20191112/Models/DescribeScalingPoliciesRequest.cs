@@ -31,19 +31,19 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 状态过滤条件
+        /// 状态过滤条件，取值：ACTIVE表示活跃
         /// </summary>
         [JsonProperty("StatusFilter")]
         public string StatusFilter{ get; set; }
 
         /// <summary>
-        /// 结果返回最大数量
+        /// 返回结果偏移，最小值0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回结果偏移
+        /// 结果返回最大数量，最小值0，最大值100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

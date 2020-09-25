@@ -25,7 +25,8 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId
+        /// 希望搜索的人员库列表，上限100个。数组元素取值为创建人员库接口中的GroupId。
+        /// 不可同时搜索不同算法模型版本（FaceModelVersion）的人员库。
         /// </summary>
         [JsonProperty("GroupIds")]
         public string[] GroupIds{ get; set; }

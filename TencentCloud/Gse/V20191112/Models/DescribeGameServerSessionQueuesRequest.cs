@@ -25,19 +25,19 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 游戏服务器会话队列数组
+        /// 游戏服务器会话队列名称数组，单个名字长度1~128
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// 要返回的最大结果数
+        /// 结果返回最大数量，最小值0，最大值100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移
+        /// 返回结果偏移，最小值0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

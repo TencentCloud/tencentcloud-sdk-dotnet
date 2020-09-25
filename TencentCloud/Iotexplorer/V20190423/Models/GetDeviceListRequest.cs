@@ -42,6 +42,18 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
+        /// </summary>
+        [JsonProperty("FirmwareVersion")]
+        public string FirmwareVersion{ get; set; }
+
+        /// <summary>
+        /// 需要过滤的设备名称
+        /// </summary>
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
         }
     }
 }

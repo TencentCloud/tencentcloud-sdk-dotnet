@@ -32,7 +32,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public GameServerSessionQueue[] GameServerSessionQueues{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// 游戏服务器会话队列总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

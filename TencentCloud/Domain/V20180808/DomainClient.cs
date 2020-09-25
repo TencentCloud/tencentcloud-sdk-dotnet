@@ -93,6 +93,50 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainBaseInfoRequest"/></param>
+        /// <returns><see cref="DescribeDomainBaseInfoResponse"/></returns>
+        public async Task<DescribeDomainBaseInfoResponse> DescribeDomainBaseInfo(DescribeDomainBaseInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainBaseInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainBaseInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainBaseInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainBaseInfoRequest"/></param>
+        /// <returns><see cref="DescribeDomainBaseInfoResponse"/></returns>
+        public DescribeDomainBaseInfoResponse DescribeDomainBaseInfoSync(DescribeDomainBaseInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainBaseInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainBaseInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainBaseInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按照域名后缀获取对应的价格列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainPriceListRequest"/></param>

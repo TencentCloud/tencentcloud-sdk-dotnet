@@ -25,13 +25,13 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 属性名称
+        /// 属性名称，最大长度不超过32个ASCII字符
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 属性值
+        /// 属性值，最大长度不超过96个ASCII字符
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

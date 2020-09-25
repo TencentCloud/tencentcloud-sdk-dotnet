@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 游戏服务器会话ID
+        /// 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Gse.V20191112.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 页偏移，用于查询下一页
+        /// 页偏移，用于查询下一页，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
         /// <summary>
-        /// 玩家ID
+        /// 玩家ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
         /// </summary>
         [JsonProperty("PlayerId")]
         public string PlayerId{ get; set; }
 
         /// <summary>
-        /// 玩家会话ID
+        /// 玩家会话ID，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
         /// </summary>
         [JsonProperty("PlayerSessionId")]
         public string PlayerSessionId{ get; set; }

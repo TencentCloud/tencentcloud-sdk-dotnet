@@ -31,14 +31,14 @@ namespace TencentCloud.Gse.V20191112.Models
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 创建者ID
+        /// 创建者ID，最大长度不超过1024个ASCII字符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatorId")]
         public string CreatorId{ get; set; }
 
         /// <summary>
-        /// 当前玩家数量
+        /// 当前玩家数量，最小值不小于0
         /// </summary>
         [JsonProperty("CurrentPlayerSessionCount")]
         public ulong? CurrentPlayerSessionCount{ get; set; }
@@ -57,21 +57,21 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 游戏属性
+        /// 游戏属性，最大长度不超过16组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GameProperties")]
         public GameProperty[] GameProperties{ get; set; }
 
         /// <summary>
-        /// 游戏服务器会话属性详情
+        /// 游戏服务器会话属性详情，最大长度不超过4096个ASCII字符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GameServerSessionData")]
         public string GameServerSessionData{ get; set; }
 
         /// <summary>
-        /// 游戏服务器会话ID
+        /// 游戏服务器会话ID，最小长度不小于1个ASCII字符，最大长度不超过48个ASCII字符
         /// </summary>
         [JsonProperty("GameServerSessionId")]
         public string GameServerSessionId{ get; set; }
@@ -83,40 +83,40 @@ namespace TencentCloud.Gse.V20191112.Models
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// 对战进程详情
+        /// 对战进程详情，最大长度不超过400000个ASCII字符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchmakerData")]
         public string MatchmakerData{ get; set; }
 
         /// <summary>
-        /// 最大玩家数量
+        /// 最大玩家数量，最小值不小于0
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }
 
         /// <summary>
-        /// 游戏服务器会话名称
+        /// 游戏服务器会话名称，最大长度不超过1024个ASCII字符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 玩家会话创建策略
+        /// 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlayerSessionCreationPolicy")]
         public string PlayerSessionCreationPolicy{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// 端口号，最小值不小于1，最大值不超过60000
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 游戏服务器会话状态
+        /// 游戏服务器会话状态（ACTIVE,ACTIVATING,TERMINATED,TERMINATING,ERROR）
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -136,7 +136,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string TerminationTime{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// 实例类型，最大长度不超过128个ASCII字符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
@@ -164,7 +164,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// 会话可用性状态，是否被屏蔽
+        /// 会话可用性状态，是否被屏蔽（Enable,Disable）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AvailabilityStatus")]
