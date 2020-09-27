@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+using System;
 using System.Threading.Tasks;
 using TencentCloud.Common;
 using TencentCloud.Common.Profile;
@@ -21,7 +37,7 @@ namespace TencentCloudExamples
                 Credential cred = new Credential {
                     SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                     SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
-                };               
+                };
 
                 // 实例化一个client选项，可选的，没有特殊需求可以跳过
                 ClientProfile clientProfile = new ClientProfile();
@@ -53,7 +69,7 @@ namespace TencentCloudExamples
                 // 属性可能是基本类型，也可能引用了另一个数据结构。
                 // 推荐使用IDE进行开发，可以方便的跳转查阅各个接口和数据结构的文档说明。
                 DescribeInstancesRequest req = new DescribeInstancesRequest();
-              
+
                 // 基本类型的设置。
                 // 此接口允许设置返回的实例数量。此处指定为只返回一个。
                 // SDK采用的是指针风格指定参数，即使对于基本类型你也需要用指针来对参数赋值。
@@ -89,7 +105,6 @@ namespace TencentCloudExamples
                 // 也可以取出单个值。
                 // 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
                 Console.WriteLine(resp.TotalCount);
-    
             }
             catch (Exception e)
             {

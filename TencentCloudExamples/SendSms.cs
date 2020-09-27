@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+using System;
 using System.Threading.Tasks;
 using TencentCloud.Common;
 using TencentCloud.Common.Profile;
@@ -60,14 +76,14 @@ namespace TencentCloudExamples
 	             * 属性可能是基本类型，也可能引用了另一个数据结构
 	             * 推荐使用IDE进行开发，可以方便的跳转查阅各个接口和数据结构的文档说明 */
                 SendSmsRequest req = new SendSmsRequest();
-              
+
                 /* 基本类型的设置:
 	             * SDK采用的是指针风格指定参数，即使对于基本类型你也需要用指针来对参数赋值。
 	             * SDK提供对基本类型的指针引用封装函数
 	             * 帮助链接：
 	             * 短信控制台: https://console.cloud.tencent.com/sms/smslist
 	             * sms helper: https://cloud.tencent.com/document/product/382/3773 */
-                
+
                 req.SmsSdkAppid = "1400787878";
                 /* 短信签名内容: 使用 UTF-8 编码，必须填写已审核通过的签名，签名信息可登录 [短信控制台] 查看 */
                 req.Sign = "xxx";
