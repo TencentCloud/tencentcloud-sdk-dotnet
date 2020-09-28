@@ -37,10 +37,16 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// 快照的保留时间，FALSE表示非永久保留，TRUE表示永久保留。仅支持将非永久快照修改为永久快照。
+        /// 快照的保留方式，FALSE表示非永久保留，TRUE表示永久保留。
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
+
+        /// <summary>
+        /// 快照的到期时间；设置好快照将会被同时设置为非永久保留方式；超过到期时间后快照将会被自动删除。
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public string Deadline{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

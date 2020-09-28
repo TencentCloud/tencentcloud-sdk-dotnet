@@ -53,6 +53,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
+        /// <summary>
+        /// 时间戳进制设置
+        /// dec：十进制
+        /// hex：十六进制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeFormat")]
+        public string TimeFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +72,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
         }
     }
 }

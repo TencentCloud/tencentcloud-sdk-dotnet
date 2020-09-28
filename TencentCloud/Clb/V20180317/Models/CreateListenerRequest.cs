@@ -92,7 +92,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SessionType{ get; set; }
 
         /// <summary>
-        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }

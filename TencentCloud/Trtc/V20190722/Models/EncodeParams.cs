@@ -61,7 +61,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流帧率，音视频输出时必填。取值为[6,12,15,24,30,48,60]，不在上述帧率值内系统会自动调整。
+        /// 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
         /// </summary>
         [JsonProperty("VideoFramerate")]
         public ulong? VideoFramerate{ get; set; }

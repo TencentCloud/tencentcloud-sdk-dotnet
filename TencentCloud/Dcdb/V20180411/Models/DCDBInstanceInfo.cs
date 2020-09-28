@@ -294,6 +294,27 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("WanStatusIpv6")]
         public ulong? WanStatusIpv6{ get; set; }
 
+        /// <summary>
+        /// DCN标志，0-无，1-主实例，2-灾备实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DcnFlag")]
+        public long? DcnFlag{ get; set; }
+
+        /// <summary>
+        /// DCN状态，0-无，1-创建中，2-同步中，3-已断开
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DcnStatus")]
+        public long? DcnStatus{ get; set; }
+
+        /// <summary>
+        /// DCN灾备实例数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DcnDstNum")]
+        public long? DcnDstNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -344,6 +365,9 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "WanVipv6", this.WanVipv6);
             this.SetParamSimple(map, prefix + "WanPortIpv6", this.WanPortIpv6);
             this.SetParamSimple(map, prefix + "WanStatusIpv6", this.WanStatusIpv6);
+            this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+            this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+            this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
         }
     }
 }

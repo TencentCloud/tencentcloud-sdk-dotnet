@@ -36,6 +36,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
+        /// <summary>
+        /// 快照的到期时间，到期后该快照将会自动删除
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public string Deadline{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }
 }

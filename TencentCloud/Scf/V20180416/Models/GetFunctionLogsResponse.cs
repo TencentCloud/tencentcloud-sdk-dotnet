@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public FunctionLog[] Data{ get; set; }
 
         /// <summary>
-        /// 日志服务分页参数
+        /// 该字段已下线
         /// </summary>
         [JsonProperty("SearchContext")]
         public LogSearchContext SearchContext{ get; set; }

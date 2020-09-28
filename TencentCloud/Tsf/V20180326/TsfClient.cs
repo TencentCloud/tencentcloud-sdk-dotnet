@@ -1095,6 +1095,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 删除任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskRequest"/></param>
+        /// <returns><see cref="DeleteTaskResponse"/></returns>
+        public async Task<DeleteTaskResponse> DeleteTask(DeleteTaskRequest req)
+        {
+             JsonResponseModel<DeleteTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskRequest"/></param>
+        /// <returns><see cref="DeleteTaskResponse"/></returns>
+        public DeleteTaskResponse DeleteTaskSync(DeleteTaskRequest req)
+        {
+             JsonResponseModel<DeleteTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 部署容器应用
         /// </summary>
         /// <param name="req"><see cref="DeployContainerGroupRequest"/></param>

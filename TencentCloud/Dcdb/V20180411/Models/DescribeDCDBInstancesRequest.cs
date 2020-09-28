@@ -114,6 +114,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
 
+        /// <summary>
+        /// 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+        /// </summary>
+        [JsonProperty("FilterInstanceType")]
+        public string FilterInstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
             this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
         }
     }
 }

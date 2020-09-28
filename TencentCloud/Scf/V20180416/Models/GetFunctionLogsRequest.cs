@@ -91,7 +91,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 服务日志相关参数，第一页日志 Offset 为空字符串，后续分页按响应字段里的SearchContext填写
+        /// 该字段已下线
         /// </summary>
         [JsonProperty("SearchContext")]
         public LogSearchContext SearchContext{ get; set; }

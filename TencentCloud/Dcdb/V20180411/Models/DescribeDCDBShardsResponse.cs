@@ -37,6 +37,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public DCDBShardInfo[] Shards{ get; set; }
 
         /// <summary>
+        /// 灾备标志，0-无，1-主实例，2-灾备实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DcnFlag")]
+        public long? DcnFlag{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Shards.", this.Shards);
+            this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 起始端口号
+        /// 起始端口号，最小值1025
         /// </summary>
         [JsonProperty("FromPort")]
         public ulong? FromPort{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 终止端口号
+        /// 终止端口号，最大值60000
         /// </summary>
         [JsonProperty("ToPort")]
         public ulong? ToPort{ get; set; }
