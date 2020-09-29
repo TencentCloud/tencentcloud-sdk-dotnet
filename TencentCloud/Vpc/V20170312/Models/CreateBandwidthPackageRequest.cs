@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageName{ get; set; }
 
         /// <summary>
-        /// 带宽包数量(非上移账户只能填1)
+        /// 带宽包数量(传统账户类型只能填1)
         /// </summary>
         [JsonProperty("BandwidthPackageCount")]
         public ulong? BandwidthPackageCount{ get; set; }

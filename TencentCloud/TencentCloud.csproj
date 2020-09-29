@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.153</VersionPrefix>
+    <VersionPrefix>3.0.154</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -9042,6 +9042,7 @@
     <Compile Include="Tsf\V20180326\Models\AddInstanceResult.cs" />
     <Compile Include="Tsf\V20180326\Models\AddInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\AddInstancesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\AdvanceSettings.cs" />
     <Compile Include="Tsf\V20180326\Models\ApiDefinitionDescr.cs" />
     <Compile Include="Tsf\V20180326\Models\ApiDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ApiRequestDescr.cs" />
@@ -9056,6 +9057,8 @@
     <Compile Include="Tsf\V20180326\Models\ContainGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainGroupResult.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainerGroupDetail.cs" />
+    <Compile Include="Tsf\V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CosCredentials.cs" />
     <Compile Include="Tsf\V20180326\Models\CosDownloadInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\CosUploadInfo.cs" />
@@ -9083,6 +9086,8 @@
     <Compile Include="Tsf\V20180326\Models\CreateRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateServerlessGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateServerlessGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateTaskRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateTaskResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApplicationRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApplicationResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteConfigRequest.cs" />
@@ -9126,6 +9131,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeApplicationResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeApplicationsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeApplicationsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeBasicResourceUsageRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeBasicResourceUsageResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeConfigReleaseLogsRequest.cs" />
@@ -9144,6 +9151,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeDownloadInfoRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeDownloadInfoResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeFlowLastBatchStateRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupRequest.cs" />
@@ -9194,9 +9203,23 @@
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleGroupsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleNamespacesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleNamespacesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUploadInfoRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUploadInfoResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableTaskFlowRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableTaskFlowResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableTaskRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableTaskResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableTaskFlowRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableTaskFlowResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableTaskRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableTaskResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\Env.cs" />
+    <Compile Include="Tsf\V20180326\Models\ExecuteTaskFlowRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\ExecuteTaskFlowResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ExecuteTaskRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\ExecuteTaskResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ExpandGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ExpandGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPod.cs" />
@@ -9230,11 +9253,18 @@
     <Compile Include="Tsf\V20180326\Models\Namespace.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfoDetail.cs" />
+    <Compile Include="Tsf\V20180326\Models\OverviewBasicResourceUsage.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgBind.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgList.cs" />
     <Compile Include="Tsf\V20180326\Models\PropertyField.cs" />
     <Compile Include="Tsf\V20180326\Models\ProtocolPort.cs" />
+    <Compile Include="Tsf\V20180326\Models\RedoTaskBatchRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\RedoTaskBatchResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\RedoTaskFlowBatchRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\RedoTaskFlowBatchResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\RedoTaskRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\RedoTaskResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ReleaseConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ReleaseConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ReleasePublicConfigRequest.cs" />
@@ -9252,6 +9282,7 @@
     <Compile Include="Tsf\V20180326\Models\ServerlessGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroupPage.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceSetting.cs" />
+    <Compile Include="Tsf\V20180326\Models\ShardArgument.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkInstancesRequest.cs" />
@@ -9266,7 +9297,16 @@
     <Compile Include="Tsf\V20180326\Models\StopContainerGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\StopGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\StopGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\StopTaskBatchRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\StopTaskBatchResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\StopTaskExecuteRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\StopTaskExecuteResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\TaskFlowLastBatchState.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskIdInfo.cs" />
+    <Compile Include="Tsf\V20180326\Models\TaskLastExecuteStatus.cs" />
+    <Compile Include="Tsf\V20180326\Models\TaskRule.cs" />
+    <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfApiListResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageApplication.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageCluster.cs" />
@@ -9436,6 +9476,8 @@
     <Compile Include="Vod\V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateContentReviewTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateImageProcessingTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateImageProcessingTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
@@ -9469,6 +9511,8 @@
     <Compile Include="Vod\V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteContentReviewTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteImageProcessingTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteImageProcessingTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteImageSpriteTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteMediaRequest.cs" />
@@ -9507,6 +9551,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeEventsStateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeEventsStateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageProcessingTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageProcessingTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -9568,6 +9614,10 @@
     <Compile Include="Vod\V20180717\Models\HighlightSegmentItem.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageCenterCut.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageOperation.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageProcessingTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageScale.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageTransform.cs" />

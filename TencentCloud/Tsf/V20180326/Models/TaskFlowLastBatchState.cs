@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AllocateIp6AddressesBandwidthRequest : AbstractModel
+    public class TaskFlowLastBatchState : AbstractModel
     {
         
         /// <summary>
-        /// 需要开通公网访问能力的IPV6地址
+        /// 批次ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Ip6Addresses")]
-        public string[] Ip6Addresses{ get; set; }
+        [JsonProperty("FlowBatchId")]
+        public string FlowBatchId{ get; set; }
 
         /// <summary>
-        /// 带宽，单位Mbps。默认是1Mbps
+        /// 批次历史ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
+        [JsonProperty("FlowBatchLogId")]
+        public string FlowBatchLogId{ get; set; }
 
         /// <summary>
-        /// 网络计费模式。IPV6当前对标准账户类型支持"TRAFFIC_POSTPAID_BY_HOUR"，对传统账户类型支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+        /// 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InternetChargeType")]
-        public string InternetChargeType{ get; set; }
+        [JsonProperty("State")]
+        public string State{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Ip6Addresses.", this.Ip6Addresses);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamSimple(map, prefix + "FlowBatchId", this.FlowBatchId);
+            this.SetParamSimple(map, prefix + "FlowBatchLogId", this.FlowBatchLogId);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

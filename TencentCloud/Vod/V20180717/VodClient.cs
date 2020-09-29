@@ -479,6 +479,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="CreateImageProcessingTemplateResponse"/></returns>
+        public async Task<CreateImageProcessingTemplateResponse> CreateImageProcessingTemplate(CreateImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageProcessingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="CreateImageProcessingTemplateResponse"/></returns>
+        public CreateImageProcessingTemplateResponse CreateImageProcessingTemplateSync(CreateImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageProcessingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义雪碧图模板，数量上限：16。
         /// </summary>
         /// <param name="req"><see cref="CreateImageSpriteTemplateRequest"/></param>
@@ -1116,6 +1156,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义图片处理模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteImageProcessingTemplateResponse"/></returns>
+        public async Task<DeleteImageProcessingTemplateResponse> DeleteImageProcessingTemplate(DeleteImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageProcessingTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义图片处理模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageProcessingTemplateRequest"/></param>
+        /// <returns><see cref="DeleteImageProcessingTemplateResponse"/></returns>
+        public DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplateSync(DeleteImageProcessingTemplateRequest req)
+        {
+             JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImageProcessingTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageProcessingTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1894,6 +1974,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEventsState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取图片处理模板列表，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageProcessingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeImageProcessingTemplatesResponse"/></returns>
+        public async Task<DescribeImageProcessingTemplatesResponse> DescribeImageProcessingTemplates(DescribeImageProcessingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageProcessingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取图片处理模板列表，支持根据条件，分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageProcessingTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeImageProcessingTemplatesResponse"/></returns>
+        public DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplatesSync(DescribeImageProcessingTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageProcessingTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

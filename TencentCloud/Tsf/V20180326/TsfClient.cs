@@ -133,6 +133,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 对执行失败的任务批次执行续跑
+        /// </summary>
+        /// <param name="req"><see cref="ContinueRunFailedTaskBatchRequest"/></param>
+        /// <returns><see cref="ContinueRunFailedTaskBatchResponse"/></returns>
+        public async Task<ContinueRunFailedTaskBatchResponse> ContinueRunFailedTaskBatch(ContinueRunFailedTaskBatchRequest req)
+        {
+             JsonResponseModel<ContinueRunFailedTaskBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ContinueRunFailedTaskBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueRunFailedTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对执行失败的任务批次执行续跑
+        /// </summary>
+        /// <param name="req"><see cref="ContinueRunFailedTaskBatchRequest"/></param>
+        /// <returns><see cref="ContinueRunFailedTaskBatchResponse"/></returns>
+        public ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatchSync(ContinueRunFailedTaskBatchRequest req)
+        {
+             JsonResponseModel<ContinueRunFailedTaskBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ContinueRunFailedTaskBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueRunFailedTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建应用
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
@@ -604,6 +644,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "CreateServerlessGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServerlessGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskRequest"/></param>
+        /// <returns><see cref="CreateTaskResponse"/></returns>
+        public async Task<CreateTaskResponse> CreateTask(CreateTaskRequest req)
+        {
+             JsonResponseModel<CreateTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskRequest"/></param>
+        /// <returns><see cref="CreateTaskResponse"/></returns>
+        public CreateTaskResponse CreateTaskSync(CreateTaskRequest req)
+        {
+             JsonResponseModel<CreateTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1455,6 +1535,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// TSF基本资源信息概览接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicResourceUsageRequest"/></param>
+        /// <returns><see cref="DescribeBasicResourceUsageResponse"/></returns>
+        public async Task<DescribeBasicResourceUsageResponse> DescribeBasicResourceUsage(DescribeBasicResourceUsageRequest req)
+        {
+             JsonResponseModel<DescribeBasicResourceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBasicResourceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicResourceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// TSF基本资源信息概览接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicResourceUsageRequest"/></param>
+        /// <returns><see cref="DescribeBasicResourceUsageResponse"/></returns>
+        public DescribeBasicResourceUsageResponse DescribeBasicResourceUsageSync(DescribeBasicResourceUsageRequest req)
+        {
+             JsonResponseModel<DescribeBasicResourceUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBasicResourceUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicResourceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群实例
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterInstancesRequest"/></param>
@@ -1808,6 +1928,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDownloadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDownloadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询工作流最新一个批次的状态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowLastBatchStateRequest"/></param>
+        /// <returns><see cref="DescribeFlowLastBatchStateResponse"/></returns>
+        public async Task<DescribeFlowLastBatchStateResponse> DescribeFlowLastBatchState(DescribeFlowLastBatchStateRequest req)
+        {
+             JsonResponseModel<DescribeFlowLastBatchStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowLastBatchState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowLastBatchStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询工作流最新一个批次的状态信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowLastBatchStateRequest"/></param>
+        /// <returns><see cref="DescribeFlowLastBatchStateResponse"/></returns>
+        public DescribeFlowLastBatchStateResponse DescribeFlowLastBatchStateSync(DescribeFlowLastBatchStateRequest req)
+        {
+             JsonResponseModel<DescribeFlowLastBatchStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowLastBatchState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowLastBatchStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2817,6 +2977,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询任务最近一次执行状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLastStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskLastStatusResponse"/></returns>
+        public async Task<DescribeTaskLastStatusResponse> DescribeTaskLastStatus(DescribeTaskLastStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskLastStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskLastStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLastStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务最近一次执行状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskLastStatusRequest"/></param>
+        /// <returns><see cref="DescribeTaskLastStatusResponse"/></returns>
+        public DescribeTaskLastStatusResponse DescribeTaskLastStatusSync(DescribeTaskLastStatusRequest req)
+        {
+             JsonResponseModel<DescribeTaskLastStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskLastStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLastStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
         /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
         /// </summary>
@@ -2850,6 +3050,246 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUploadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用任务
+        /// </summary>
+        /// <param name="req"><see cref="DisableTaskRequest"/></param>
+        /// <returns><see cref="DisableTaskResponse"/></returns>
+        public async Task<DisableTaskResponse> DisableTask(DisableTaskRequest req)
+        {
+             JsonResponseModel<DisableTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用任务
+        /// </summary>
+        /// <param name="req"><see cref="DisableTaskRequest"/></param>
+        /// <returns><see cref="DisableTaskResponse"/></returns>
+        public DisableTaskResponse DisableTaskSync(DisableTaskRequest req)
+        {
+             JsonResponseModel<DisableTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用工作流
+        /// </summary>
+        /// <param name="req"><see cref="DisableTaskFlowRequest"/></param>
+        /// <returns><see cref="DisableTaskFlowResponse"/></returns>
+        public async Task<DisableTaskFlowResponse> DisableTaskFlow(DisableTaskFlowRequest req)
+        {
+             JsonResponseModel<DisableTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用工作流
+        /// </summary>
+        /// <param name="req"><see cref="DisableTaskFlowRequest"/></param>
+        /// <returns><see cref="DisableTaskFlowResponse"/></returns>
+        public DisableTaskFlowResponse DisableTaskFlowSync(DisableTaskFlowRequest req)
+        {
+             JsonResponseModel<DisableTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用任务
+        /// </summary>
+        /// <param name="req"><see cref="EnableTaskRequest"/></param>
+        /// <returns><see cref="EnableTaskResponse"/></returns>
+        public async Task<EnableTaskResponse> EnableTask(EnableTaskRequest req)
+        {
+             JsonResponseModel<EnableTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用任务
+        /// </summary>
+        /// <param name="req"><see cref="EnableTaskRequest"/></param>
+        /// <returns><see cref="EnableTaskResponse"/></returns>
+        public EnableTaskResponse EnableTaskSync(EnableTaskRequest req)
+        {
+             JsonResponseModel<EnableTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用工作流
+        /// </summary>
+        /// <param name="req"><see cref="EnableTaskFlowRequest"/></param>
+        /// <returns><see cref="EnableTaskFlowResponse"/></returns>
+        public async Task<EnableTaskFlowResponse> EnableTaskFlow(EnableTaskFlowRequest req)
+        {
+             JsonResponseModel<EnableTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用工作流
+        /// </summary>
+        /// <param name="req"><see cref="EnableTaskFlowRequest"/></param>
+        /// <returns><see cref="EnableTaskFlowResponse"/></returns>
+        public EnableTaskFlowResponse EnableTaskFlowSync(EnableTaskFlowRequest req)
+        {
+             JsonResponseModel<EnableTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 执行一次任务。
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
+        /// <returns><see cref="ExecuteTaskResponse"/></returns>
+        public async Task<ExecuteTaskResponse> ExecuteTask(ExecuteTaskRequest req)
+        {
+             JsonResponseModel<ExecuteTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExecuteTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 执行一次任务。
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteTaskRequest"/></param>
+        /// <returns><see cref="ExecuteTaskResponse"/></returns>
+        public ExecuteTaskResponse ExecuteTaskSync(ExecuteTaskRequest req)
+        {
+             JsonResponseModel<ExecuteTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExecuteTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 执行一次工作流
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteTaskFlowRequest"/></param>
+        /// <returns><see cref="ExecuteTaskFlowResponse"/></returns>
+        public async Task<ExecuteTaskFlowResponse> ExecuteTaskFlow(ExecuteTaskFlowRequest req)
+        {
+             JsonResponseModel<ExecuteTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExecuteTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 执行一次工作流
+        /// </summary>
+        /// <param name="req"><see cref="ExecuteTaskFlowRequest"/></param>
+        /// <returns><see cref="ExecuteTaskFlowResponse"/></returns>
+        public ExecuteTaskFlowResponse ExecuteTaskFlowSync(ExecuteTaskFlowRequest req)
+        {
+             JsonResponseModel<ExecuteTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExecuteTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExecuteTaskFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3132,6 +3572,126 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "ModifyUploadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUploadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行任务
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskRequest"/></param>
+        /// <returns><see cref="RedoTaskResponse"/></returns>
+        public async Task<RedoTaskResponse> RedoTask(RedoTaskRequest req)
+        {
+             JsonResponseModel<RedoTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RedoTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行任务
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskRequest"/></param>
+        /// <returns><see cref="RedoTaskResponse"/></returns>
+        public RedoTaskResponse RedoTaskSync(RedoTaskRequest req)
+        {
+             JsonResponseModel<RedoTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RedoTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行任务批次
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskBatchRequest"/></param>
+        /// <returns><see cref="RedoTaskBatchResponse"/></returns>
+        public async Task<RedoTaskBatchResponse> RedoTaskBatch(RedoTaskBatchRequest req)
+        {
+             JsonResponseModel<RedoTaskBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RedoTaskBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行任务批次
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskBatchRequest"/></param>
+        /// <returns><see cref="RedoTaskBatchResponse"/></returns>
+        public RedoTaskBatchResponse RedoTaskBatchSync(RedoTaskBatchRequest req)
+        {
+             JsonResponseModel<RedoTaskBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RedoTaskBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行工作流批次
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskFlowBatchRequest"/></param>
+        /// <returns><see cref="RedoTaskFlowBatchResponse"/></returns>
+        public async Task<RedoTaskFlowBatchResponse> RedoTaskFlowBatch(RedoTaskFlowBatchRequest req)
+        {
+             JsonResponseModel<RedoTaskFlowBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RedoTaskFlowBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskFlowBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行工作流批次
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskFlowBatchRequest"/></param>
+        /// <returns><see cref="RedoTaskFlowBatchResponse"/></returns>
+        public RedoTaskFlowBatchResponse RedoTaskFlowBatchSync(RedoTaskFlowBatchRequest req)
+        {
+             JsonResponseModel<RedoTaskFlowBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RedoTaskFlowBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskFlowBatchResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3612,6 +4172,126 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "StopGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止执行中的任务批次， 非运行中的任务不可调用。
+        /// </summary>
+        /// <param name="req"><see cref="StopTaskBatchRequest"/></param>
+        /// <returns><see cref="StopTaskBatchResponse"/></returns>
+        public async Task<StopTaskBatchResponse> StopTaskBatch(StopTaskBatchRequest req)
+        {
+             JsonResponseModel<StopTaskBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopTaskBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止执行中的任务批次， 非运行中的任务不可调用。
+        /// </summary>
+        /// <param name="req"><see cref="StopTaskBatchRequest"/></param>
+        /// <returns><see cref="StopTaskBatchResponse"/></returns>
+        public StopTaskBatchResponse StopTaskBatchSync(StopTaskBatchRequest req)
+        {
+             JsonResponseModel<StopTaskBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopTaskBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止正在某个节点上执行的任务
+        /// </summary>
+        /// <param name="req"><see cref="StopTaskExecuteRequest"/></param>
+        /// <returns><see cref="StopTaskExecuteResponse"/></returns>
+        public async Task<StopTaskExecuteResponse> StopTaskExecute(StopTaskExecuteRequest req)
+        {
+             JsonResponseModel<StopTaskExecuteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopTaskExecute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopTaskExecuteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止正在某个节点上执行的任务
+        /// </summary>
+        /// <param name="req"><see cref="StopTaskExecuteRequest"/></param>
+        /// <returns><see cref="StopTaskExecuteResponse"/></returns>
+        public StopTaskExecuteResponse StopTaskExecuteSync(StopTaskExecuteRequest req)
+        {
+             JsonResponseModel<StopTaskExecuteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopTaskExecute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopTaskExecuteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止一个工作流批次
+        /// </summary>
+        /// <param name="req"><see cref="TerminateTaskFlowBatchRequest"/></param>
+        /// <returns><see cref="TerminateTaskFlowBatchResponse"/></returns>
+        public async Task<TerminateTaskFlowBatchResponse> TerminateTaskFlowBatch(TerminateTaskFlowBatchRequest req)
+        {
+             JsonResponseModel<TerminateTaskFlowBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateTaskFlowBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateTaskFlowBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止一个工作流批次
+        /// </summary>
+        /// <param name="req"><see cref="TerminateTaskFlowBatchRequest"/></param>
+        /// <returns><see cref="TerminateTaskFlowBatchResponse"/></returns>
+        public TerminateTaskFlowBatchResponse TerminateTaskFlowBatchSync(TerminateTaskFlowBatchRequest req)
+        {
+             JsonResponseModel<TerminateTaskFlowBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateTaskFlowBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateTaskFlowBatchResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

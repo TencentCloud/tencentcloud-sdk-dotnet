@@ -15,37 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PhoneVerificationResponse : AbstractModel
+    public class DescribeBasicResourceUsageResponse : AbstractModel
     {
         
         /// <summary>
-        /// 认证结果码:
-        /// 收费结果码
-        /// 0: 认证通过
-        /// -4: 信息不一致（手机号已实名，但姓名和身份证号与实名信息不一致）
-        /// -5: 手机号未实名
-        /// 不收费结果码
-        /// -6: 手机号码不合法
-        /// -7: 身份证号码有误
-        /// -8: 姓名校验不通过
-        /// -9: 没有记录
-        /// -10: 认证未通过
-        /// -11: 验证中心服务繁忙
+        /// TSF基本资源信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
-        public string Result{ get; set; }
-
-        /// <summary>
-        /// 业务结果描述。
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        public OverviewBasicResourceUsage Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,8 +43,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

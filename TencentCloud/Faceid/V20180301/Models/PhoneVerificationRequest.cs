@@ -54,6 +54,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("EncryptList")]
         public string[] EncryptList{ get; set; }
 
+        /// <summary>
+        /// 有加密需求的用户，传入CBC加密的初试向量
+        /// </summary>
+        [JsonProperty("Iv")]
+        public string Iv{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
             this.SetParamArraySimple(map, prefix + "EncryptList.", this.EncryptList);
+            this.SetParamSimple(map, prefix + "Iv", this.Iv);
         }
     }
 }

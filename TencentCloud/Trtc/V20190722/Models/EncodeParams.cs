@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]。
+        /// 混流-输出流音频采样率。取值为[48000, 44100, 32000,24000,, 16000, 12000, 8000]，单位是Hz。
         /// </summary>
         [JsonProperty("AudioSampleRate")]
         public ulong? AudioSampleRate{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流音频声道数，取值范围[1,2]。
+        /// 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
         /// </summary>
         [JsonProperty("AudioChannels")]
         public ulong? AudioChannels{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// 混流-输出流帧率，音视频输出时必填。取值范围[1,60]。
+        /// 混流-输出流帧率，音视频输出时必填。取值范围[1,60]，表示混流的输出帧率可选范围为1到60fps。
         /// </summary>
         [JsonProperty("VideoFramerate")]
         public ulong? VideoFramerate{ get; set; }
