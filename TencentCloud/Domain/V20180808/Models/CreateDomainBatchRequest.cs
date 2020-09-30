@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Domain.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveRecordTemplateRequest : AbstractModel
+    public class CreateDomainBatchRequest : AbstractModel
     {
         
         /// <summary>
-        /// [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+        /// 模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// 购买域名的年限，可选值：[1-10]
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
+        /// <summary>
+        /// 批量购买的域名,最多为4000个
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
+
+        /// <summary>
+        /// 付费模式 0手动在线付费，1使用余额付费
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
 
 
         /// <summary>
@@ -37,6 +55,9 @@ namespace TencentCloud.Live.V20180801.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

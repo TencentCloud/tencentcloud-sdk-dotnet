@@ -53,6 +53,50 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="CheckBatchStatusRequest"/></param>
+        /// <returns><see cref="CheckBatchStatusResponse"/></returns>
+        public async Task<CheckBatchStatusResponse> CheckBatchStatus(CheckBatchStatusRequest req)
+        {
+             JsonResponseModel<CheckBatchStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckBatchStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckBatchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="CheckBatchStatusRequest"/></param>
+        /// <returns><see cref="CheckBatchStatusResponse"/></returns>
+        public CheckBatchStatusResponse CheckBatchStatusSync(CheckBatchStatusRequest req)
+        {
+             JsonResponseModel<CheckBatchStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckBatchStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckBatchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 检查域名是否可以注册。
         /// </summary>
         /// <param name="req"><see cref="CheckDomainRequest"/></param>
@@ -84,6 +128,50 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "CheckDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( CreateDomainBatch ) 用于批量注册域名 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainBatchRequest"/></param>
+        /// <returns><see cref="CreateDomainBatchResponse"/></returns>
+        public async Task<CreateDomainBatchResponse> CreateDomainBatch(CreateDomainBatchRequest req)
+        {
+             JsonResponseModel<CreateDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( CreateDomainBatch ) 用于批量注册域名 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDomainBatchRequest"/></param>
+        /// <returns><see cref="CreateDomainBatchResponse"/></returns>
+        public CreateDomainBatchResponse CreateDomainBatchSync(CreateDomainBatchRequest req)
+        {
+             JsonResponseModel<CreateDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainBatchResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -137,6 +225,50 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口 (  DescribeDomainNameList ) 获取域名列表。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainNameListRequest"/></param>
+        /// <returns><see cref="DescribeDomainNameListResponse"/></returns>
+        public async Task<DescribeDomainNameListResponse> DescribeDomainNameList(DescribeDomainNameListRequest req)
+        {
+             JsonResponseModel<DescribeDomainNameListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainNameList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainNameListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (  DescribeDomainNameList ) 获取域名列表。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainNameListRequest"/></param>
+        /// <returns><see cref="DescribeDomainNameListResponse"/></returns>
+        public DescribeDomainNameListResponse DescribeDomainNameListSync(DescribeDomainNameListRequest req)
+        {
+             JsonResponseModel<DescribeDomainNameListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainNameList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainNameListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按照域名后缀获取对应的价格列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainPriceListRequest"/></param>
@@ -168,6 +300,50 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDomainPriceList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainPriceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeTemplateList) 用于获取模板列表。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeTemplateListResponse"/></returns>
+        public async Task<DescribeTemplateListResponse> DescribeTemplateList(DescribeTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeTemplateList) 用于获取模板列表。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeTemplateListResponse"/></returns>
+        public DescribeTemplateListResponse DescribeTemplateListSync(DescribeTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTemplateListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

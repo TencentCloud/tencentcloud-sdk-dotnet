@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveRecordTemplateRequest : AbstractModel
+    public class PlayerDataMap : AbstractModel
     {
         
         /// <summary>
-        /// [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+        /// 玩家自定义数据键，最小长度不小于1个ASCII字符，最大长度不超过1024个ASCII字符
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
+        /// <summary>
+        /// 玩家自定义数据值，最小长度不小于1个ASCII字符，最大长度不超过2048个ASCII字符
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

@@ -124,6 +124,29 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("EnvChannel")]
         public string EnvChannel{ get; set; }
 
+        /// <summary>
+        /// 支付方式。包含以下取值：
+        /// <li> prepayment：预付费</li>
+        /// <li> postpaid：后付费</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// 是否为默认环境
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// 环境所属地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +168,9 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "StaticStorages.", this.StaticStorages);
             this.SetParamSimple(map, prefix + "IsAutoDegrade", this.IsAutoDegrade);
             this.SetParamSimple(map, prefix + "EnvChannel", this.EnvChannel);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

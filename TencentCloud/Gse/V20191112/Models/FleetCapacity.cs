@@ -15,47 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IpFilter : AbstractModel
+    public class FleetCapacity : AbstractModel
     {
         
         /// <summary>
-        /// IP 黑白名单配置开关
-        /// on：开启
-        /// off：关闭
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// IP 黑白名单类型
-        /// whitelist：白名单
-        /// blacklist：黑名单
+        /// 服务部署 Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FilterType")]
-        public string FilterType{ get; set; }
+        [JsonProperty("FleetId")]
+        public string FleetId{ get; set; }
 
         /// <summary>
-        /// IP 黑白名单列表
-        /// 支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
-        /// 最多可填充 50 个白名单或 50 个黑名单
+        /// 服务器类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Filters")]
-        public string[] Filters{ get; set; }
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
 
         /// <summary>
-        /// IP 黑白名单分路径配置，白名单功能
+        /// 服务器实例统计数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FilterRules")]
-        public IpFilterPathRule[] FilterRules{ get; set; }
+        [JsonProperty("InstanceCounts")]
+        public InstanceCounts InstanceCounts{ get; set; }
+
+        /// <summary>
+        /// 服务器伸缩容间隔
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScalingInterval")]
+        public ulong? ScalingInterval{ get; set; }
 
 
         /// <summary>
@@ -63,10 +58,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
-            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
-            this.SetParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+            this.SetParamSimple(map, prefix + "FleetId", this.FleetId);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamObj(map, prefix + "InstanceCounts.", this.InstanceCounts);
+            this.SetParamSimple(map, prefix + "ScalingInterval", this.ScalingInterval);
         }
     }
 }

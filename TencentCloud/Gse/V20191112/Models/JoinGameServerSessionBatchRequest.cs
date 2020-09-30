@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveRecordTemplateRequest : AbstractModel
+    public class JoinGameServerSessionBatchRequest : AbstractModel
     {
         
         /// <summary>
-        /// [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+        /// 游戏服务器会话ID，最小长度1个ASCII字符，最大长度不超过256个ASCII字符
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("GameServerSessionId")]
+        public string GameServerSessionId{ get; set; }
+
+        /// <summary>
+        /// 玩家ID列表，最小1组，最大25组
+        /// </summary>
+        [JsonProperty("PlayerIds")]
+        public string[] PlayerIds{ get; set; }
+
+        /// <summary>
+        /// 玩家自定义数据
+        /// </summary>
+        [JsonProperty("PlayerDataMap")]
+        public PlayerDataMap PlayerDataMap{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "GameServerSessionId", this.GameServerSessionId);
+            this.SetParamArraySimple(map, prefix + "PlayerIds.", this.PlayerIds);
+            this.SetParamObj(map, prefix + "PlayerDataMap.", this.PlayerDataMap);
         }
     }
 }

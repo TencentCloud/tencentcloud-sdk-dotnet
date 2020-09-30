@@ -15,38 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpStatusRequest : AbstractModel
+    public class DescribeFleetStatisticSummaryResponse : AbstractModel
     {
         
         /// <summary>
-        /// 加速域名
+        /// 总时长，单位秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("TotalUsedTimeSeconds")]
+        public string TotalUsedTimeSeconds{ get; set; }
 
         /// <summary>
-        /// 节点类型：
-        /// edge：表示边缘节点
-        /// last：表示回源层节点
-        /// 不填充情况下，默认返回边缘节点信息
+        /// 总流量，单位MB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Layer")]
-        public string Layer{ get; set; }
+        [JsonProperty("TotalUsedFlowMegaBytes")]
+        public float? TotalUsedFlowMegaBytes{ get; set; }
 
         /// <summary>
-        /// 查询区域：
-        /// mainland: 国内节点
-        /// overseas: 海外节点
-        /// global: 全球节点
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,9 +50,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Layer", this.Layer);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "TotalUsedTimeSeconds", this.TotalUsedTimeSeconds);
+            this.SetParamSimple(map, prefix + "TotalUsedFlowMegaBytes", this.TotalUsedFlowMegaBytes);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

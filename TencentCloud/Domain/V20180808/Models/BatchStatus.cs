@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Domain.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveRecordTemplateRequest : AbstractModel
+    public class BatchStatus : AbstractModel
     {
         
         /// <summary>
-        /// [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+        /// 批量任务id
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("LogId")]
+        public ulong? LogId{ get; set; }
+
+        /// <summary>
+        /// 批量任务状态  doing：进行中  success：成功  failed：失败  partial_success：部分成功
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 批量任务类型
+        /// </summary>
+        [JsonProperty("BatchAction")]
+        public string BatchAction{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "LogId", this.LogId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "BatchAction", this.BatchAction);
         }
     }
 }

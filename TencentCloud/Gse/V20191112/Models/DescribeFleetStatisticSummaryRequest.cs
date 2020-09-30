@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveRecordTemplateRequest : AbstractModel
+    public class DescribeFleetStatisticSummaryRequest : AbstractModel
     {
         
         /// <summary>
-        /// [DescribeLiveRecordTemplates](/document/product/267/32609)接口获取到的模板 ID。
+        /// 服务部署 Id
         /// </summary>
-        [JsonProperty("TemplateId")]
-        public long? TemplateId{ get; set; }
+        [JsonProperty("FleetId")]
+        public string FleetId{ get; set; }
+
+        /// <summary>
+        /// 查询开始时间
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// 查询结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "FleetId", this.FleetId);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

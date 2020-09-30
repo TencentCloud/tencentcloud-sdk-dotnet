@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpStatusRequest : AbstractModel
+    public class UpdateGameServerSessionQueueRequest : AbstractModel
     {
         
         /// <summary>
-        /// 加速域名
+        /// 游戏服务器会话队列名字，长度1~128
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 节点类型：
-        /// edge：表示边缘节点
-        /// last：表示回源层节点
-        /// 不填充情况下，默认返回边缘节点信息
+        /// 目的服务部署（可为别名）列表
         /// </summary>
-        [JsonProperty("Layer")]
-        public string Layer{ get; set; }
+        [JsonProperty("Destinations")]
+        public GameServerSessionQueueDestination[] Destinations{ get; set; }
 
         /// <summary>
-        /// 查询区域：
-        /// mainland: 国内节点
-        /// overseas: 海外节点
-        /// global: 全球节点
+        /// 延迟策略集合
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("PlayerLatencyPolicies")]
+        public PlayerLatencyPolicy[] PlayerLatencyPolicies{ get; set; }
+
+        /// <summary>
+        /// 超时时间
+        /// </summary>
+        [JsonProperty("TimeoutInSeconds")]
+        public ulong? TimeoutInSeconds{ get; set; }
 
 
         /// <summary>
@@ -54,9 +54,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Layer", this.Layer);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);
+            this.SetParamArrayObj(map, prefix + "PlayerLatencyPolicies.", this.PlayerLatencyPolicies);
+            this.SetParamSimple(map, prefix + "TimeoutInSeconds", this.TimeoutInSeconds);
         }
     }
 }

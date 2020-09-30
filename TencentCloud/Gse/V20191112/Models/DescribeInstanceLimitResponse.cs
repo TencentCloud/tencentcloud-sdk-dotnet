@@ -21,14 +21,20 @@ namespace TencentCloud.Gse.V20191112.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartMatchPlacementResponse : AbstractModel
+    public class DescribeInstanceLimitResponse : AbstractModel
     {
         
         /// <summary>
-        /// 游戏服务器会话放置
+        /// 限额
         /// </summary>
-        [JsonProperty("GameServerSessionPlacement")]
-        public GameServerSessionPlacement GameServerSessionPlacement{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 详细信息
+        /// </summary>
+        [JsonProperty("ExtraInfos")]
+        public ExtraInfos[] ExtraInfos{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +48,8 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "GameServerSessionPlacement.", this.GameServerSessionPlacement);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "ExtraInfos.", this.ExtraInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

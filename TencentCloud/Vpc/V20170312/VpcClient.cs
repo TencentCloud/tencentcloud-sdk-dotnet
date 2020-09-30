@@ -3785,6 +3785,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeBandwidthPackageBillUsage) 用于查询后付费共享带宽包当前的计费用量.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageBillUsageRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageBillUsageResponse"/></returns>
+        public async Task<DescribeBandwidthPackageBillUsageResponse> DescribeBandwidthPackageBillUsage(DescribeBandwidthPackageBillUsageRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageBillUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthPackageBillUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageBillUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeBandwidthPackageBillUsage) 用于查询后付费共享带宽包当前的计费用量.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageBillUsageRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageBillUsageResponse"/></returns>
+        public DescribeBandwidthPackageBillUsageResponse DescribeBandwidthPackageBillUsageSync(DescribeBandwidthPackageBillUsageRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageBillUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBandwidthPackageBillUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageBillUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口用于查询账户在当前地域的带宽包上限数量以及使用数量
         /// </summary>
         /// <param name="req"><see cref="DescribeBandwidthPackageQuotaRequest"/></param>
@@ -3816,6 +3856,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBandwidthPackageQuota");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeBandwidthPackageResources) 用于根据共享带宽包唯一ID查询共享带宽包内的资源列表，支持按条件过滤查询结果和分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageResourcesResponse"/></returns>
+        public async Task<DescribeBandwidthPackageResourcesResponse> DescribeBandwidthPackageResources(DescribeBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeBandwidthPackageResources) 用于根据共享带宽包唯一ID查询共享带宽包内的资源列表，支持按条件过滤查询结果和分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBandwidthPackageResourcesRequest"/></param>
+        /// <returns><see cref="DescribeBandwidthPackageResourcesResponse"/></returns>
+        public DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResourcesSync(DescribeBandwidthPackageResourcesRequest req)
+        {
+             JsonResponseModel<DescribeBandwidthPackageResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBandwidthPackageResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBandwidthPackageResourcesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

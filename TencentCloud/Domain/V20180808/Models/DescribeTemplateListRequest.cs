@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Domain.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpStatusRequest : AbstractModel
+    public class DescribeTemplateListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 加速域名
+        /// 偏移量，默认为0。
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 节点类型：
-        /// edge：表示边缘节点
-        /// last：表示回源层节点
-        /// 不填充情况下，默认返回边缘节点信息
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
-        [JsonProperty("Layer")]
-        public string Layer{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询区域：
-        /// mainland: 国内节点
-        /// overseas: 海外节点
-        /// global: 全球节点
+        /// 用户注册类型，默认:all , 个人：I ,企业: E
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -54,9 +54,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamSimple(map, prefix + "Layer", this.Layer);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

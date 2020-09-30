@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.154</VersionPrefix>
+    <VersionPrefix>3.0.155</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1933,6 +1933,7 @@
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
     <Compile Include="Cdn\V20180606\Models\ImageOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFilter.cs" />
+    <Compile Include="Cdn\V20180606\Models\IpFilterPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFreqLimit.cs" />
     <Compile Include="Cdn\V20180606\Models\IpStatus.cs" />
     <Compile Include="Cdn\V20180606\Models\Ipv6.cs" />
@@ -3880,14 +3881,27 @@
     <Compile Include="Dcdb\V20180411\Models\UpgradeDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ZonesInfo.cs" />
     <Compile Include="Domain\V20180808\DomainClient.cs" />
+    <Compile Include="Domain\V20180808\Models\BatchStatus.cs" />
+    <Compile Include="Domain\V20180808\Models\CertificateInfo.cs" />
+    <Compile Include="Domain\V20180808\Models\CheckBatchStatusRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\CheckBatchStatusResponse.cs" />
     <Compile Include="Domain\V20180808\Models\CheckDomainRequest.cs" />
     <Compile Include="Domain\V20180808\Models\CheckDomainResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\ContactInfo.cs" />
+    <Compile Include="Domain\V20180808\Models\CreateDomainBatchRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\CreateDomainBatchResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainBaseInfoRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainBaseInfoResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeDomainNameListRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeDomainNameListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainPriceListRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainPriceListResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeTemplateListRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeTemplateListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBaseInfo.cs" />
+    <Compile Include="Domain\V20180808\Models\DomainList.cs" />
     <Compile Include="Domain\V20180808\Models\PriceInfo.cs" />
+    <Compile Include="Domain\V20180808\Models\TemplateInfo.cs" />
     <Compile Include="Drm\V20181115\DrmClient.cs" />
     <Compile Include="Drm\V20181115\Models\AddFairPlayPemRequest.cs" />
     <Compile Include="Drm\V20181115\Models\AddFairPlayPemResponse.cs" />
@@ -4812,6 +4826,10 @@
     <Compile Include="Gse\V20191112\Models\CreateAliasResponse.cs" />
     <Compile Include="Gse\V20191112\Models\CreateAssetRequest.cs" />
     <Compile Include="Gse\V20191112\Models\CreateAssetResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\CreateFleetRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\CreateFleetResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\CreateGameServerSessionQueueRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\CreateGameServerSessionQueueResponse.cs" />
     <Compile Include="Gse\V20191112\Models\CreateGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\CreateGameServerSessionResponse.cs" />
     <Compile Include="Gse\V20191112\Models\Credentials.cs" />
@@ -4821,6 +4839,8 @@
     <Compile Include="Gse\V20191112\Models\DeleteAssetResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DeleteFleetRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DeleteFleetResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DeleteGameServerSessionQueueRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DeleteGameServerSessionQueueResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DeleteScalingPolicyRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DeleteScalingPolicyResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAliasRequest.cs" />
@@ -4833,10 +4853,18 @@
     <Compile Include="Gse\V20191112\Models\DescribeCcnInstancesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetAttributesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetAttributesResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetCapacityRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetCapacityResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetEventsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetEventsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetPortSettingsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetPortSettingsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticDetailsRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticDetailsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticFlowsRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticFlowsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticSummaryRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticSummaryResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetUtilizationRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetUtilizationResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionDetailsRequest.cs" />
@@ -4847,8 +4875,12 @@
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionQueuesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeGameServerSessionsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeInstanceLimitRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeInstanceLimitResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeInstanceTypesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeInstanceTypesResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeInstancesExtendRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeInstancesExtendResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribePlayerSessionsRequest.cs" />
@@ -4865,7 +4897,12 @@
     <Compile Include="Gse\V20191112\Models\DetachCcnInstancesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DetachCcnInstancesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\Event.cs" />
+    <Compile Include="Gse\V20191112\Models\ExtraInfos.cs" />
     <Compile Include="Gse\V20191112\Models\FleetAttributes.cs" />
+    <Compile Include="Gse\V20191112\Models\FleetCapacity.cs" />
+    <Compile Include="Gse\V20191112\Models\FleetStatisticDetail.cs" />
+    <Compile Include="Gse\V20191112\Models\FleetStatisticFlows.cs" />
+    <Compile Include="Gse\V20191112\Models\FleetStatisticTimes.cs" />
     <Compile Include="Gse\V20191112\Models\FleetUtilization.cs" />
     <Compile Include="Gse\V20191112\Models\GameProperty.cs" />
     <Compile Include="Gse\V20191112\Models\GameServerSession.cs" />
@@ -4886,7 +4923,11 @@
     <Compile Include="Gse\V20191112\Models\InboundPermissionRevocations.cs" />
     <Compile Include="Gse\V20191112\Models\Instance.cs" />
     <Compile Include="Gse\V20191112\Models\InstanceAccess.cs" />
+    <Compile Include="Gse\V20191112\Models\InstanceCounts.cs" />
+    <Compile Include="Gse\V20191112\Models\InstanceExtend.cs" />
     <Compile Include="Gse\V20191112\Models\InstanceTypeInfo.cs" />
+    <Compile Include="Gse\V20191112\Models\JoinGameServerSessionBatchRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\JoinGameServerSessionBatchResponse.cs" />
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\JoinGameServerSessionResponse.cs" />
     <Compile Include="Gse\V20191112\Models\ListAliasesRequest.cs" />
@@ -4894,6 +4935,7 @@
     <Compile Include="Gse\V20191112\Models\ListFleetsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\ListFleetsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\PlacedPlayerSession.cs" />
+    <Compile Include="Gse\V20191112\Models\PlayerDataMap.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerLatency.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerLatencyPolicy.cs" />
     <Compile Include="Gse\V20191112\Models\PlayerSession.cs" />
@@ -4915,8 +4957,6 @@
     <Compile Include="Gse\V20191112\Models\StartFleetActionsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StartGameServerSessionPlacementResponse.cs" />
-    <Compile Include="Gse\V20191112\Models\StartMatchPlacementRequest.cs" />
-    <Compile Include="Gse\V20191112\Models\StartMatchPlacementResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StopFleetActionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StopFleetActionsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementRequest.cs" />
@@ -4928,8 +4968,12 @@
     <Compile Include="Gse\V20191112\Models\UpdateAssetResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetAttributesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetAttributesResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateFleetCapacityRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateFleetCapacityResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetPortSettingsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetPortSettingsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionQueueRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionQueueResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateRuntimeConfigurationRequest.cs" />
@@ -9870,6 +9914,7 @@
     <Compile Include="Vpc\V20170312\Models\AuditCrossBorderComplianceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\AuditCrossBorderComplianceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\BandwidthPackage.cs" />
+    <Compile Include="Vpc\V20170312\Models\BandwidthPackageBillBandwidth.cs" />
     <Compile Include="Vpc\V20170312\Models\CCN.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnAttachedInstance.cs" />
     <Compile Include="Vpc\V20170312\Models\CcnBandwidthInfo.cs" />
@@ -10020,8 +10065,12 @@
     <Compile Include="Vpc\V20170312\Models\DescribeAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAssistantCidrRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAssistantCidrResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageBillUsageRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageBillUsageResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageQuotaRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageQuotaResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageResourcesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackageResourcesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackagesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeBandwidthPackagesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeCcnAttachedInstancesRequest.cs" />

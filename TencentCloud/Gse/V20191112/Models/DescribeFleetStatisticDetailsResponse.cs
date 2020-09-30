@@ -15,47 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IpFilter : AbstractModel
+    public class DescribeFleetStatisticDetailsResponse : AbstractModel
     {
         
         /// <summary>
-        /// IP 黑白名单配置开关
-        /// on：开启
-        /// off：关闭
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// IP 黑白名单类型
-        /// whitelist：白名单
-        /// blacklist：黑名单
+        /// 服务部署统计详情列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FilterType")]
-        public string FilterType{ get; set; }
+        [JsonProperty("DetailList")]
+        public FleetStatisticDetail[] DetailList{ get; set; }
 
         /// <summary>
-        /// IP 黑白名单列表
-        /// 支持 X.X.X.X 形式 IP，或 /8、 /16、/24 形式网段
-        /// 最多可填充 50 个白名单或 50 个黑名单
+        /// 记录总数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Filters")]
-        public string[] Filters{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// IP 黑白名单分路径配置，白名单功能
+        /// 统计时间类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FilterRules")]
-        public IpFilterPathRule[] FilterRules{ get; set; }
+        [JsonProperty("TimeType")]
+        public string TimeType{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -63,10 +57,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
-            this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
-            this.SetParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+            this.SetParamArrayObj(map, prefix + "DetailList.", this.DetailList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "TimeType", this.TimeType);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

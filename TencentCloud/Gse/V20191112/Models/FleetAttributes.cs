@@ -120,14 +120,14 @@ namespace TencentCloud.Gse.V20191112.Models
         public string TerminationTime{ get; set; }
 
         /// <summary>
-        /// 时限保护时间
+        /// 时限保护超时时间，默认60分钟，最小值5，最大值1440
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GameServerSessionProtectionTimeLimit")]
         public ulong? GameServerSessionProtectionTimeLimit{ get; set; }
 
         /// <summary>
-        /// 计费状态
+        /// 计费状态：未开通、已开通、异常、欠费隔离、销毁、解冻
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BillingStatus")]

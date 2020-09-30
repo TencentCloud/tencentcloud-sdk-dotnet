@@ -21,17 +21,9 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IpFilter : AbstractModel
+    public class IpFilterPathRule : AbstractModel
     {
         
-        /// <summary>
-        /// IP 黑白名单配置开关
-        /// on：开启
-        /// off：关闭
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
         /// <summary>
         /// IP 黑白名单类型
         /// whitelist：白名单
@@ -51,11 +43,26 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] Filters{ get; set; }
 
         /// <summary>
-        /// IP 黑白名单分路径配置，白名单功能
+        /// 规则类型：
+        /// all：所有文件生效
+        /// file：指定文件后缀生效
+        /// directory：指定路径生效
+        /// path：指定绝对路径生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FilterRules")]
-        public IpFilterPathRule[] FilterRules{ get; set; }
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// RuleType 对应类型下的匹配内容：
+        /// all 时填充 *
+        /// file 时填充后缀名，如 jpg、txt
+        /// directory 时填充路径，如 /xxx/test/
+        /// path 时填充绝对路径，如 /xxx/test.html
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
 
 
         /// <summary>
@@ -63,10 +70,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
-            this.SetParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
         }
     }
 }

@@ -195,6 +195,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（CreateFleet）用于创建服务器舰队
+        /// </summary>
+        /// <param name="req"><see cref="CreateFleetRequest"/></param>
+        /// <returns><see cref="CreateFleetResponse"/></returns>
+        public async Task<CreateFleetResponse> CreateFleet(CreateFleetRequest req)
+        {
+             JsonResponseModel<CreateFleetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFleet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFleetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateFleet）用于创建服务器舰队
+        /// </summary>
+        /// <param name="req"><see cref="CreateFleetRequest"/></param>
+        /// <returns><see cref="CreateFleetResponse"/></returns>
+        public CreateFleetResponse CreateFleetSync(CreateFleetRequest req)
+        {
+             JsonResponseModel<CreateFleetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFleet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFleetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateGameServerSession）用于创建游戏服务会话
         /// </summary>
         /// <param name="req"><see cref="CreateGameServerSessionRequest"/></param>
@@ -226,6 +266,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "CreateGameServerSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGameServerSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="CreateGameServerSessionQueueRequest"/></param>
+        /// <returns><see cref="CreateGameServerSessionQueueResponse"/></returns>
+        public async Task<CreateGameServerSessionQueueResponse> CreateGameServerSessionQueue(CreateGameServerSessionQueueRequest req)
+        {
+             JsonResponseModel<CreateGameServerSessionQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGameServerSessionQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGameServerSessionQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="CreateGameServerSessionQueueRequest"/></param>
+        /// <returns><see cref="CreateGameServerSessionQueueResponse"/></returns>
+        public CreateGameServerSessionQueueResponse CreateGameServerSessionQueueSync(CreateGameServerSessionQueueRequest req)
+        {
+             JsonResponseModel<CreateGameServerSessionQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGameServerSessionQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGameServerSessionQueueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -346,6 +426,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "DeleteFleet");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFleetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteGameServerSessionQueue）用于删除游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGameServerSessionQueueRequest"/></param>
+        /// <returns><see cref="DeleteGameServerSessionQueueResponse"/></returns>
+        public async Task<DeleteGameServerSessionQueueResponse> DeleteGameServerSessionQueue(DeleteGameServerSessionQueueRequest req)
+        {
+             JsonResponseModel<DeleteGameServerSessionQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGameServerSessionQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGameServerSessionQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteGameServerSessionQueue）用于删除游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGameServerSessionQueueRequest"/></param>
+        /// <returns><see cref="DeleteGameServerSessionQueueResponse"/></returns>
+        public DeleteGameServerSessionQueueResponse DeleteGameServerSessionQueueSync(DeleteGameServerSessionQueueRequest req)
+        {
+             JsonResponseModel<DeleteGameServerSessionQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGameServerSessionQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGameServerSessionQueueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -595,6 +715,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 用于查询服务部署容量配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetCapacityRequest"/></param>
+        /// <returns><see cref="DescribeFleetCapacityResponse"/></returns>
+        public async Task<DescribeFleetCapacityResponse> DescribeFleetCapacity(DescribeFleetCapacityRequest req)
+        {
+             JsonResponseModel<DescribeFleetCapacityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFleetCapacity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetCapacityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询服务部署容量配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetCapacityRequest"/></param>
+        /// <returns><see cref="DescribeFleetCapacityResponse"/></returns>
+        public DescribeFleetCapacityResponse DescribeFleetCapacitySync(DescribeFleetCapacityRequest req)
+        {
+             JsonResponseModel<DescribeFleetCapacityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFleetCapacity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetCapacityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeFleetEvents）用于查询部署服务器舰队相关的事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetEventsRequest"/></param>
@@ -666,6 +826,126 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFleetPortSettings");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetPortSettingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetStatisticDetailsRequest"/></param>
+        /// <returns><see cref="DescribeFleetStatisticDetailsResponse"/></returns>
+        public async Task<DescribeFleetStatisticDetailsResponse> DescribeFleetStatisticDetails(DescribeFleetStatisticDetailsRequest req)
+        {
+             JsonResponseModel<DescribeFleetStatisticDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFleetStatisticDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetStatisticDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetStatisticDetailsRequest"/></param>
+        /// <returns><see cref="DescribeFleetStatisticDetailsResponse"/></returns>
+        public DescribeFleetStatisticDetailsResponse DescribeFleetStatisticDetailsSync(DescribeFleetStatisticDetailsRequest req)
+        {
+             JsonResponseModel<DescribeFleetStatisticDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFleetStatisticDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetStatisticDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetStatisticFlowsRequest"/></param>
+        /// <returns><see cref="DescribeFleetStatisticFlowsResponse"/></returns>
+        public async Task<DescribeFleetStatisticFlowsResponse> DescribeFleetStatisticFlows(DescribeFleetStatisticFlowsRequest req)
+        {
+             JsonResponseModel<DescribeFleetStatisticFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFleetStatisticFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetStatisticFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetStatisticFlowsRequest"/></param>
+        /// <returns><see cref="DescribeFleetStatisticFlowsResponse"/></returns>
+        public DescribeFleetStatisticFlowsResponse DescribeFleetStatisticFlowsSync(DescribeFleetStatisticFlowsRequest req)
+        {
+             JsonResponseModel<DescribeFleetStatisticFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFleetStatisticFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetStatisticFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetStatisticSummaryRequest"/></param>
+        /// <returns><see cref="DescribeFleetStatisticSummaryResponse"/></returns>
+        public async Task<DescribeFleetStatisticSummaryResponse> DescribeFleetStatisticSummary(DescribeFleetStatisticSummaryRequest req)
+        {
+             JsonResponseModel<DescribeFleetStatisticSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFleetStatisticSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetStatisticSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetStatisticSummaryRequest"/></param>
+        /// <returns><see cref="DescribeFleetStatisticSummaryResponse"/></returns>
+        public DescribeFleetStatisticSummaryResponse DescribeFleetStatisticSummarySync(DescribeFleetStatisticSummaryRequest req)
+        {
+             JsonResponseModel<DescribeFleetStatisticSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFleetStatisticSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetStatisticSummaryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -875,6 +1155,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 查询用户实例数限额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLimitRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLimitResponse"/></returns>
+        public async Task<DescribeInstanceLimitResponse> DescribeInstanceLimit(DescribeInstanceLimitRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户实例数限额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLimitRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLimitResponse"/></returns>
+        public DescribeInstanceLimitResponse DescribeInstanceLimitSync(DescribeInstanceLimitRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstanceTypes）用于获取服务器实例类型列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceTypesRequest"/></param>
@@ -946,6 +1266,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstances）用于查询实例扩展信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesExtendRequest"/></param>
+        /// <returns><see cref="DescribeInstancesExtendResponse"/></returns>
+        public async Task<DescribeInstancesExtendResponse> DescribeInstancesExtend(DescribeInstancesExtendRequest req)
+        {
+             JsonResponseModel<DescribeInstancesExtendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesExtend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesExtendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstances）用于查询实例扩展信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesExtendRequest"/></param>
+        /// <returns><see cref="DescribeInstancesExtendResponse"/></returns>
+        public DescribeInstancesExtendResponse DescribeInstancesExtendSync(DescribeInstancesExtendRequest req)
+        {
+             JsonResponseModel<DescribeInstancesExtendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesExtend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesExtendResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1397,6 +1757,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（JoinGameServerSessionBatch）用于加入游戏服务器会话
+        /// </summary>
+        /// <param name="req"><see cref="JoinGameServerSessionBatchRequest"/></param>
+        /// <returns><see cref="JoinGameServerSessionBatchResponse"/></returns>
+        public async Task<JoinGameServerSessionBatchResponse> JoinGameServerSessionBatch(JoinGameServerSessionBatchRequest req)
+        {
+             JsonResponseModel<JoinGameServerSessionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "JoinGameServerSessionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<JoinGameServerSessionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（JoinGameServerSessionBatch）用于加入游戏服务器会话
+        /// </summary>
+        /// <param name="req"><see cref="JoinGameServerSessionBatchRequest"/></param>
+        /// <returns><see cref="JoinGameServerSessionBatchResponse"/></returns>
+        public JoinGameServerSessionBatchResponse JoinGameServerSessionBatchSync(JoinGameServerSessionBatchRequest req)
+        {
+             JsonResponseModel<JoinGameServerSessionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "JoinGameServerSessionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<JoinGameServerSessionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ListAliases）用于检索帐户下的所有别名
         /// </summary>
         /// <param name="req"><see cref="ListAliasesRequest"/></param>
@@ -1717,46 +2117,6 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
-        /// 本接口（StartMatchPlacement）用于开始匹配放置游戏服务器会话
-        /// </summary>
-        /// <param name="req"><see cref="StartMatchPlacementRequest"/></param>
-        /// <returns><see cref="StartMatchPlacementResponse"/></returns>
-        public async Task<StartMatchPlacementResponse> StartMatchPlacement(StartMatchPlacementRequest req)
-        {
-             JsonResponseModel<StartMatchPlacementResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartMatchPlacement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchPlacementResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（StartMatchPlacement）用于开始匹配放置游戏服务器会话
-        /// </summary>
-        /// <param name="req"><see cref="StartMatchPlacementRequest"/></param>
-        /// <returns><see cref="StartMatchPlacementResponse"/></returns>
-        public StartMatchPlacementResponse StartMatchPlacementSync(StartMatchPlacementRequest req)
-        {
-             JsonResponseModel<StartMatchPlacementResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartMatchPlacement");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchPlacementResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（StopFleetActions）用于停止服务器舰队自动扩缩容，改为手动扩缩容
         /// </summary>
         /// <param name="req"><see cref="StopFleetActionsRequest"/></param>
@@ -1957,6 +2317,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 用于更新服务部署容量配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFleetCapacityRequest"/></param>
+        /// <returns><see cref="UpdateFleetCapacityResponse"/></returns>
+        public async Task<UpdateFleetCapacityResponse> UpdateFleetCapacity(UpdateFleetCapacityRequest req)
+        {
+             JsonResponseModel<UpdateFleetCapacityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateFleetCapacity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFleetCapacityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于更新服务部署容量配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFleetCapacityRequest"/></param>
+        /// <returns><see cref="UpdateFleetCapacityResponse"/></returns>
+        public UpdateFleetCapacityResponse UpdateFleetCapacitySync(UpdateFleetCapacityRequest req)
+        {
+             JsonResponseModel<UpdateFleetCapacityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateFleetCapacity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFleetCapacityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UpdateFleetPortSettings）用于更新服务器舰队安全组
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetPortSettingsRequest"/></param>
@@ -2028,6 +2428,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "UpdateGameServerSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGameServerSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateGameServerSessionQueue）用于修改游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGameServerSessionQueueRequest"/></param>
+        /// <returns><see cref="UpdateGameServerSessionQueueResponse"/></returns>
+        public async Task<UpdateGameServerSessionQueueResponse> UpdateGameServerSessionQueue(UpdateGameServerSessionQueueRequest req)
+        {
+             JsonResponseModel<UpdateGameServerSessionQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGameServerSessionQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGameServerSessionQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateGameServerSessionQueue）用于修改游戏服务器会话队列
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGameServerSessionQueueRequest"/></param>
+        /// <returns><see cref="UpdateGameServerSessionQueueResponse"/></returns>
+        public UpdateGameServerSessionQueueResponse UpdateGameServerSessionQueueSync(UpdateGameServerSessionQueueRequest req)
+        {
+             JsonResponseModel<UpdateGameServerSessionQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGameServerSessionQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGameServerSessionQueueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
