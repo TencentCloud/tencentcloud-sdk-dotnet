@@ -31,7 +31,7 @@ namespace TencentCloud.Common.Http
         {
             private static readonly ConcurrentDictionary<string, HttpClientHolder> httpclients = new ConcurrentDictionary<string, HttpClientHolder>();
 
-            public static HttpClient getClient(string proxy)
+            public static HttpClient GetClient(string proxy)
             {
                 string key = string.IsNullOrEmpty(proxy) ? "" : proxy;
                 HttpClientHolder result = httpclients.GetOrAdd(key, (k) =>
@@ -98,7 +98,7 @@ namespace TencentCloud.Common.Http
             }
             else
             {
-                this.http = HttpClientHolder.getClient(this.proxy);
+                this.http = HttpClientHolder.GetClient(this.proxy);
             }
         }
 
@@ -117,20 +117,20 @@ namespace TencentCloud.Common.Http
             string fullurl = AppendQuery(urlBuilder, param);
             string payload = "";
             Dictionary<string, string> headers = new Dictionary<string, string>();
-            return await this.send(HttpMethod.Get, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Get, fullurl, payload, headers);
         }
 
         public async Task<HttpResponseMessage> GetRequestAsync(string path, string queryString, Dictionary<string, string> headers)
         {
             string fullurl = $"{this.baseUrl.TrimEnd('/')}{path}?{queryString}";
             string payload = "";
-            return await this.send(HttpMethod.Get, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Get, fullurl, payload, headers);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string path, string payload, Dictionary<string, string> headers)
         {
             string fullurl = $"{baseUrl.TrimEnd('/')}{path}";
-            return await this.send(HttpMethod.Post, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
         }
 
         public async Task<HttpResponseMessage> PostRequestAsync(string url, Dictionary<string, string> param)
@@ -140,10 +140,10 @@ namespace TencentCloud.Common.Http
             string payload = AppendQuery(payloadBuilder, param);
             Dictionary<string, string> headers = new Dictionary<string, string>();
             headers["Content-Type"] = "application/x-www-form-urlencoded";
-            return await this.send(HttpMethod.Post, fullurl, payload, headers);
+            return await this.Send(HttpMethod.Post, fullurl, payload, headers);
         }
 
-        private async Task<HttpResponseMessage> send(HttpMethod method, string url, string payload, Dictionary<string, string> headers)
+        private async Task<HttpResponseMessage> Send(HttpMethod method, string url, string payload, Dictionary<string, string> headers)
         {
             using (var cts = new System.Threading.CancellationTokenSource(timeout * 1000))
             {
