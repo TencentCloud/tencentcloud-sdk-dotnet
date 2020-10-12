@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAddressesBandwidthRequest : AbstractModel
+    public class ListScdnLogTasksResponse : AbstractModel
     {
         
         /// <summary>
-        /// EIP唯一标识ID列表，形如'eip-xxxx'
+        /// 日志下载任务详情
         /// </summary>
-        [JsonProperty("AddressIds")]
-        public string[] AddressIds{ get; set; }
+        [JsonProperty("TaskList")]
+        public ScdnLogTaskDetail[] TaskList{ get; set; }
 
         /// <summary>
-        /// 调整带宽目标值
+        /// 查询到的下载任务的总数
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 包月带宽起始时间(已废弃，输入无效)
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// 包月带宽结束时间(已废弃，输入无效)
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AddressIds.", this.AddressIds);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "TaskList.", this.TaskList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

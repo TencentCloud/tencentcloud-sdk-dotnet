@@ -21,7 +21,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAddressesBandwidthRequest : AbstractModel
+    public class RenewAddressesRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,22 +31,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] AddressIds{ get; set; }
 
         /// <summary>
-        /// 调整带宽目标值
+        /// 续费参数
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
-
-        /// <summary>
-        /// 包月带宽起始时间(已废弃，输入无效)
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// 包月带宽结束时间(已废弃，输入无效)
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("AddressChargePrepaid")]
+        public AddressChargePrepaid AddressChargePrepaid{ get; set; }
 
 
         /// <summary>
@@ -55,9 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "AddressIds.", this.AddressIds);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
         }
     }
 }

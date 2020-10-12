@@ -31,13 +31,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// 目前只支持传当月1号 00:00:00，且必须和EndTime为相同月份，不支持跨月查询，例 2018-09-01 00:00:00
+        /// 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 目前只支持传当月最后一天 23:59:59，且必须和BeginTime为相同月份，不支持跨月查询，例 2018-09-30 23:59:59
+        /// 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09-03 03:01:45，EndTime 为 2018-09-25 12:01:45，查询结果是 2018 年 9 月数据。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

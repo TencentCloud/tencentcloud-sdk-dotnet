@@ -293,6 +293,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 删除SCDN域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScdnDomainRequest"/></param>
+        /// <returns><see cref="DeleteScdnDomainResponse"/></returns>
+        public async Task<DeleteScdnDomainResponse> DeleteScdnDomain(DeleteScdnDomainRequest req)
+        {
+             JsonResponseModel<DeleteScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除SCDN域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScdnDomainRequest"/></param>
+        /// <returns><see cref="DeleteScdnDomainResponse"/></returns>
+        public DeleteScdnDomainResponse DeleteScdnDomainSync(DeleteScdnDomainRequest req)
+        {
+             JsonResponseModel<DeleteScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeBillingData 用于查询实际计费数据明细。
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
@@ -432,7 +472,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribeCdnIp 用于查询 CDN IP 归属。
-        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）
+        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）  
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>
@@ -453,7 +493,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribeCdnIp 用于查询 CDN IP 归属。
-        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）
+        /// （注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）  
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>
@@ -1496,6 +1536,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "ListClsTopicDomains");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListClsTopicDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
+        /// </summary>
+        /// <param name="req"><see cref="ListScdnLogTasksRequest"/></param>
+        /// <returns><see cref="ListScdnLogTasksResponse"/></returns>
+        public async Task<ListScdnLogTasksResponse> ListScdnLogTasks(ListScdnLogTasksRequest req)
+        {
+             JsonResponseModel<ListScdnLogTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListScdnLogTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListScdnLogTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
+        /// </summary>
+        /// <param name="req"><see cref="ListScdnLogTasksRequest"/></param>
+        /// <returns><see cref="ListScdnLogTasksResponse"/></returns>
+        public ListScdnLogTasksResponse ListScdnLogTasksSync(ListScdnLogTasksRequest req)
+        {
+             JsonResponseModel<ListScdnLogTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListScdnLogTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListScdnLogTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

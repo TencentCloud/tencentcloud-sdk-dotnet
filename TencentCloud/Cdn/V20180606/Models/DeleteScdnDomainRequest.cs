@@ -15,37 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeReservedInstancesConfigInfosRequest : AbstractModel
+    public class DeleteScdnDomainRequest : AbstractModel
     {
         
         /// <summary>
-        /// zone
-        /// 按照预留实例计费可购买的可用区进行过滤。形如：ap-guangzhou-1。
-        /// 类型：String
-        /// 必选：否
-        /// 可选项：各地域可用区列表
-        /// 
-        /// product-description
-        /// 按照预留实例计费的平台描述（即操作系统）进行过滤。形如：linux。
-        /// 类型：String
-        /// 必选：否
-        /// 可选项：linux
-        /// 
-        /// duration
-        /// 按照预留实例计费有效期，即预留实例计费购买时长进行过滤。形如：31536000。
-        /// 类型：Integer
-        /// 计量单位：秒
-        /// 必选：否
-        /// 可选项：31536000 (1年)
+        /// 域名
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
 
         /// <summary>
@@ -53,7 +36,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

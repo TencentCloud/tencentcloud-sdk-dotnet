@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Tcex.V20200727.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAddressesBandwidthRequest : AbstractModel
+    public class InvokeServiceRequest : AbstractModel
     {
         
         /// <summary>
-        /// EIP唯一标识ID列表，形如'eip-xxxx'
+        /// 待调用的服务ID。
         /// </summary>
-        [JsonProperty("AddressIds")]
-        public string[] AddressIds{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 调整带宽目标值
+        /// 要调用服务的状态：0表示调试版本，1表示上线版本
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
+        [JsonProperty("ServiceStatus")]
+        public long? ServiceStatus{ get; set; }
 
         /// <summary>
-        /// 包月带宽起始时间(已废弃，输入无效)
+        /// 用于测试的文档的URL。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("FileUrl")]
+        public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 包月带宽结束时间(已废弃，输入无效)
+        /// 用于测试的文本，当此值不为空时，调用内容以此参数的值为准。
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("Input")]
+        public string Input{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AddressIds.", this.AddressIds);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+            this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
+            this.SetParamSimple(map, prefix + "Input", this.Input);
         }
     }
 }

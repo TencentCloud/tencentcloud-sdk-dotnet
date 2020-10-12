@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.155</VersionPrefix>
+    <VersionPrefix>3.0.156</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1862,6 +1862,8 @@
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteClsLogTopicRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteClsLogTopicResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DeleteScdnDomainRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DeleteScdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeBillingDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeBillingDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataRequest.cs" />
@@ -1942,6 +1944,8 @@
     <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\LogSetInfo.cs" />
@@ -1980,6 +1984,7 @@
     <Compile Include="Cdn\V20180606\Models\RuleCache.cs" />
     <Compile Include="Cdn\V20180606\Models\RuleCacheConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\RuleQueryString.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnLogTaskDetail.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopUrlData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTypeData.cs" />
@@ -8293,6 +8298,12 @@
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\StorageInfo.cs" />
+    <Compile Include="Tcex\V20200727\TcexClient.cs" />
+    <Compile Include="Tcex\V20200727\Models\AlgorithmResult.cs" />
+    <Compile Include="Tcex\V20200727\Models\DescribeInvocationResultRequest.cs" />
+    <Compile Include="Tcex\V20200727\Models\DescribeInvocationResultResponse.cs" />
+    <Compile Include="Tcex\V20200727\Models\InvokeServiceRequest.cs" />
+    <Compile Include="Tcex\V20200727\Models\InvokeServiceResponse.cs" />
     <Compile Include="Tci\V20190318\TciClient.cs" />
     <Compile Include="Tci\V20190318\Models\AIAssistantRequest.cs" />
     <Compile Include="Tci\V20190318\Models\AIAssistantResponse.cs" />
@@ -8907,6 +8918,8 @@
     <Compile Include="Tiw\V20190919\Models\VideoInfo.cs" />
     <Compile Include="Tiw\V20190919\Models\Whiteboard.cs" />
     <Compile Include="Tke\V20180525\TkeClient.cs" />
+    <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
@@ -10332,6 +10345,8 @@
     <Compile Include="Vpc\V20170312\Models\RemoveBandwidthPackageResourcesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\RemoveIp6RulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\RemoveIp6RulesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\RenewAddressesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\RenewAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\RenewVpnGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\RenewVpnGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ReplaceDirectConnectGatewayCcnRoutesRequest.cs" />

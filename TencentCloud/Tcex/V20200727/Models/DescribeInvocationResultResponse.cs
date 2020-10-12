@@ -15,38 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Tcex.V20200727.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAddressesBandwidthRequest : AbstractModel
+    public class DescribeInvocationResultResponse : AbstractModel
     {
         
         /// <summary>
-        /// EIP唯一标识ID列表，形如'eip-xxxx'
+        /// 服务的调用结果
         /// </summary>
-        [JsonProperty("AddressIds")]
-        public string[] AddressIds{ get; set; }
+        [JsonProperty("Results")]
+        public AlgorithmResult[] Results{ get; set; }
 
         /// <summary>
-        /// 调整带宽目标值
+        /// 0:获取结果失败
+        /// 1：结果还没有生成，继续轮询
+        /// 2：获取结果成功
         /// </summary>
-        [JsonProperty("InternetMaxBandwidthOut")]
-        public long? InternetMaxBandwidthOut{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// 包月带宽起始时间(已废弃，输入无效)
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// 包月带宽结束时间(已废弃，输入无效)
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +50,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AddressIds.", this.AddressIds);
-            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "Results.", this.Results);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

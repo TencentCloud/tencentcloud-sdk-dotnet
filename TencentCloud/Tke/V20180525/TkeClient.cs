@@ -53,6 +53,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 通过此接口，可以获取集群的tke:admin的ClusterRole，即管理员角色，可以用于CAM侧高权限的用户，通过CAM策略给予子账户此接口权限，进而可以通过此接口直接获取到kubernetes集群内的管理员角色。
+        /// </summary>
+        /// <param name="req"><see cref="AcquireClusterAdminRoleRequest"/></param>
+        /// <returns><see cref="AcquireClusterAdminRoleResponse"/></returns>
+        public async Task<AcquireClusterAdminRoleResponse> AcquireClusterAdminRole(AcquireClusterAdminRoleRequest req)
+        {
+             JsonResponseModel<AcquireClusterAdminRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AcquireClusterAdminRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcquireClusterAdminRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口，可以获取集群的tke:admin的ClusterRole，即管理员角色，可以用于CAM侧高权限的用户，通过CAM策略给予子账户此接口权限，进而可以通过此接口直接获取到kubernetes集群内的管理员角色。
+        /// </summary>
+        /// <param name="req"><see cref="AcquireClusterAdminRoleRequest"/></param>
+        /// <returns><see cref="AcquireClusterAdminRoleResponse"/></returns>
+        public AcquireClusterAdminRoleResponse AcquireClusterAdminRoleSync(AcquireClusterAdminRoleRequest req)
+        {
+             JsonResponseModel<AcquireClusterAdminRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AcquireClusterAdminRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcquireClusterAdminRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加已经存在的实例到集群
         /// </summary>
         /// <param name="req"><see cref="AddExistedInstancesRequest"/></param>
