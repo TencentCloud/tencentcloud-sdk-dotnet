@@ -84,6 +84,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("RequiredSystemDiskSize")]
         public long? RequiredSystemDiskSize{ get; set; }
 
+        /// <summary>
+        /// 镜像状态，取值：ONLINE、OFFLINE
+        /// </summary>
+        [JsonProperty("BlueprintState")]
+        public string BlueprintState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "BlueprintType", this.BlueprintType);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "RequiredSystemDiskSize", this.RequiredSystemDiskSize);
+            this.SetParamSimple(map, prefix + "BlueprintState", this.BlueprintState);
         }
     }
 }

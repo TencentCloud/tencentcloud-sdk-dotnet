@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.156</VersionPrefix>
+    <VersionPrefix>3.0.157</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2096,6 +2096,45 @@
     <Compile Include="Cfs\V20190719\Models\UpdateCfsPGroupResponse.cs" />
     <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleRequest.cs" />
     <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleResponse.cs" />
+    <Compile Include="Cfw\V20190904\CfwClient.cs" />
+    <Compile Include="Cfw\V20190904\Models\AcListsData.cs" />
+    <Compile Include="Cfw\V20190904\Models\CreateAcRulesRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\CreateAcRulesResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DeleteAcRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DeleteAcRuleResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DeleteAllAccessControlRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DeleteAllAccessControlRuleResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeAcListsRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeAcListsResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeNatRuleOverviewRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeNatRuleOverviewResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeRuleOverviewRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeRuleOverviewResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeSwitchListsRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeSwitchListsResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeSyncAssetStatusRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeSyncAssetStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeTableStatusRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeTableStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeVpcRuleOverviewRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyAcRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyAcRuleResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyAllRuleStatusRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyAllRuleStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyAllSwitchStatusRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyAllSwitchStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyItemSwitchStatusRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyItemSwitchStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifySequenceRulesRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifySequenceRulesResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyTableStatusRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyTableStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\RuleInfoData.cs" />
+    <Compile Include="Cfw\V20190904\Models\RunSyncAssetRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\RunSyncAssetResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\SequenceData.cs" />
+    <Compile Include="Cfw\V20190904\Models\SwitchListsData.cs" />
     <Compile Include="Chdfs\V20190718\ChdfsClient.cs" />
     <Compile Include="Chdfs\V20190718\Models\AccessGroup.cs" />
     <Compile Include="Chdfs\V20190718\Models\AccessRule.cs" />
@@ -8255,6 +8294,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeDownloadFileRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeDownloadFileResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUserLoginStatisticRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUserLoginStatisticResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUserStatisticRequest.cs" />
@@ -8614,6 +8655,8 @@
     <Compile Include="Tdmq\V20200217\Models\DeleteTopicsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentRolesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentRolesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeProducersRequest.cs" />
@@ -8623,6 +8666,7 @@
     <Compile Include="Tdmq\V20200217\Models\DescribeTopicsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeTopicsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\Environment.cs" />
+    <Compile Include="Tdmq\V20200217\Models\EnvironmentRole.cs" />
     <Compile Include="Tdmq\V20200217\Models\FilterSubscription.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />

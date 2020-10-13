@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAssetResponse : AbstractModel
+    public class DescribeDownloadFileRequest : AbstractModel
     {
         
         /// <summary>
-        /// 生成包ID
+        /// 代码uri
         /// </summary>
-        [JsonProperty("AssetId")]
-        public string AssetId{ get; set; }
-
-        /// <summary>
-        /// 生成包的全局唯一资源标识符
-        /// </summary>
-        [JsonProperty("AssetArn")]
-        public string AssetArn{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("CodeUri")]
+        public string CodeUri{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssetId", this.AssetId);
-            this.SetParamSimple(map, prefix + "AssetArn", this.AssetArn);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "CodeUri", this.CodeUri);
         }
     }
 }

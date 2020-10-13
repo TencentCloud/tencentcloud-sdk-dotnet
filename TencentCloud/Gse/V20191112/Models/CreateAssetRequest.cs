@@ -54,6 +54,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("OperateSystem")]
         public string OperateSystem{ get; set; }
 
+        /// <summary>
+        /// 生成包支持的操作系统镜像id
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "AssetVersion", this.AssetVersion);
             this.SetParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
             this.SetParamSimple(map, prefix + "OperateSystem", this.OperateSystem);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
         }
     }
 }

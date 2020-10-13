@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Tdmq.V20200217.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAssetsRequest : AbstractModel
+    public class DescribeEnvironmentRolesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 生成包可部署地域
+        /// 环境（命名空间）
         /// </summary>
-        [JsonProperty("AssetRegion")]
-        public string AssetRegion{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 偏移，代表页数，与asset实际数量相关
+        /// 起始下标，不填默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 前端界面每页显示的最大条数，不超过100
+        /// 返回数量，不填则默认为10，最大值为20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
-        /// </summary>
-        [JsonProperty("Filter")]
-        public string Filter{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Filter", this.Filter);
         }
     }
 }

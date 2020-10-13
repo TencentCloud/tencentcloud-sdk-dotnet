@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAssetsRequest : AbstractModel
+    public class ModifySequenceRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 生成包可部署地域
+        /// 边Id值
         /// </summary>
-        [JsonProperty("AssetRegion")]
-        public string AssetRegion{ get; set; }
+        [JsonProperty("EdgeId")]
+        public string EdgeId{ get; set; }
 
         /// <summary>
-        /// 偏移，代表页数，与asset实际数量相关
+        /// 修改数据
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Data")]
+        public SequenceData[] Data{ get; set; }
 
         /// <summary>
-        /// 前端界面每页显示的最大条数，不超过100
+        /// NAT地域
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
         /// <summary>
-        /// 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
+        /// 0：出向，1：入向
         /// </summary>
-        [JsonProperty("Filter")]
-        public string Filter{ get; set; }
+        [JsonProperty("Direction")]
+        public ulong? Direction{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Filter", this.Filter);
+            this.SetParamSimple(map, prefix + "EdgeId", this.EdgeId);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

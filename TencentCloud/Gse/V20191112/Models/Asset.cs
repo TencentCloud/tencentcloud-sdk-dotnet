@@ -72,6 +72,24 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("BindFleetNum")]
         public long? BindFleetNum{ get; set; }
 
+        /// <summary>
+        /// 生成包的全局唯一资源标识符
+        /// </summary>
+        [JsonProperty("AssetArn")]
+        public string AssetArn{ get; set; }
+
+        /// <summary>
+        /// 生成包支持的操作系统镜像id
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
+        /// <summary>
+        /// 生成包支持的操作系统类型
+        /// </summary>
+        [JsonProperty("OsType")]
+        public string OsType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "BindFleetNum", this.BindFleetNum);
+            this.SetParamSimple(map, prefix + "AssetArn", this.AssetArn);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "OsType", this.OsType);
         }
     }
 }

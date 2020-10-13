@@ -333,6 +333,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取环境角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentRolesResponse"/></returns>
+        public async Task<DescribeEnvironmentRolesResponse> DescribeEnvironmentRoles(DescribeEnvironmentRolesRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvironmentRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取环境角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentRolesResponse"/></returns>
+        public DescribeEnvironmentRolesResponse DescribeEnvironmentRolesSync(DescribeEnvironmentRolesRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvironmentRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取租户下环境列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>

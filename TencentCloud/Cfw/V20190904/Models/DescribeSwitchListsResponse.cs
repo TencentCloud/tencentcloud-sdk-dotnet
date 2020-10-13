@@ -15,26 +15,46 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAssetResponse : AbstractModel
+    public class DescribeSwitchListsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 生成包ID
+        /// 总条数
         /// </summary>
-        [JsonProperty("AssetId")]
-        public string AssetId{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 生成包的全局唯一资源标识符
+        /// 列表数据
         /// </summary>
-        [JsonProperty("AssetArn")]
-        public string AssetArn{ get; set; }
+        [JsonProperty("Data")]
+        public SwitchListsData[] Data{ get; set; }
+
+        /// <summary>
+        /// 区域列表
+        /// </summary>
+        [JsonProperty("AreaLists")]
+        public string[] AreaLists{ get; set; }
+
+        /// <summary>
+        /// 打开个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OnNum")]
+        public ulong? OnNum{ get; set; }
+
+        /// <summary>
+        /// 关闭个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OffNum")]
+        public ulong? OffNum{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +68,11 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssetId", this.AssetId);
-            this.SetParamSimple(map, prefix + "AssetArn", this.AssetArn);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArraySimple(map, prefix + "AreaLists.", this.AreaLists);
+            this.SetParamSimple(map, prefix + "OnNum", this.OnNum);
+            this.SetParamSimple(map, prefix + "OffNum", this.OffNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

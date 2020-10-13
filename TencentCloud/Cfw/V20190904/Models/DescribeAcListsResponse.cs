@@ -15,26 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAssetResponse : AbstractModel
+    public class DescribeAcListsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 生成包ID
+        /// 总条数
         /// </summary>
-        [JsonProperty("AssetId")]
-        public string AssetId{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 生成包的全局唯一资源标识符
+        /// 访问控制列表数据
         /// </summary>
-        [JsonProperty("AssetArn")]
-        public string AssetArn{ get; set; }
+        [JsonProperty("Data")]
+        public AcListsData[] Data{ get; set; }
+
+        /// <summary>
+        /// 不算筛选条数的总条数
+        /// </summary>
+        [JsonProperty("AllTotal")]
+        public ulong? AllTotal{ get; set; }
+
+        /// <summary>
+        /// 访问控制规则全部启用/全部停用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Enable")]
+        public ulong? Enable{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +61,10 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssetId", this.AssetId);
-            this.SetParamSimple(map, prefix + "AssetArn", this.AssetArn);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "AllTotal", this.AllTotal);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

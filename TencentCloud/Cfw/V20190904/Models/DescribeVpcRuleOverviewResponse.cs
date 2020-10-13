@@ -15,38 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAssetsRequest : AbstractModel
+    public class DescribeVpcRuleOverviewResponse : AbstractModel
     {
         
         /// <summary>
-        /// 生成包可部署地域
+        /// 阻断策略规则数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("AssetRegion")]
-        public string AssetRegion{ get; set; }
+        [JsonProperty("StrategyNum")]
+        public ulong? StrategyNum{ get; set; }
 
         /// <summary>
-        /// 偏移，代表页数，与asset实际数量相关
+        /// 启用规则数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("StartRuleNum")]
+        public ulong? StartRuleNum{ get; set; }
 
         /// <summary>
-        /// 前端界面每页显示的最大条数，不超过100
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
-
-        /// <summary>
-        /// 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
-        /// </summary>
-        [JsonProperty("Filter")]
-        public string Filter{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +50,9 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Filter", this.Filter);
+            this.SetParamSimple(map, prefix + "StrategyNum", this.StrategyNum);
+            this.SetParamSimple(map, prefix + "StartRuleNum", this.StartRuleNum);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

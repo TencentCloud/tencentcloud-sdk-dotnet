@@ -55,9 +55,9 @@ namespace TencentCloud.Live.V20180801.Models
         public string HttpsCrt{ get; set; }
 
         /// <summary>
-        /// 证书类型:
-        /// 0：腾讯云托管证书。
-        /// 1：用户添加证书。
+        /// 证书类型。
+        /// 0：用户添加证书，
+        /// 1：腾讯云托管证书。
         /// </summary>
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }

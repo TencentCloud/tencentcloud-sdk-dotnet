@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAssetsRequest : AbstractModel
+    public class ModifyAllSwitchStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 生成包可部署地域
+        /// 状态，0：关闭，1：开启
         /// </summary>
-        [JsonProperty("AssetRegion")]
-        public string AssetRegion{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// 偏移，代表页数，与asset实际数量相关
+        /// 0: 边界防火墙开关，1：vpc防火墙开关
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 前端界面每页显示的最大条数，不超过100
+        /// 选中的防火墙开关Id
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Ids")]
+        public string[] Ids{ get; set; }
 
         /// <summary>
-        /// 搜索条件，支持包ID或包名字过滤，该字段会逐步废弃，建议使用 Filters 字段
+        /// NAT开关切换类型，1,单个子网，2，同开同关，3，全部
         /// </summary>
-        [JsonProperty("Filter")]
-        public string Filter{ get; set; }
+        [JsonProperty("ChangeType")]
+        public long? ChangeType{ get; set; }
+
+        /// <summary>
+        /// NAT实例所在地域
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Filter", this.Filter);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "ChangeType", this.ChangeType);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -493,6 +493,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取下载文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDownloadFileRequest"/></param>
+        /// <returns><see cref="DescribeDownloadFileResponse"/></returns>
+        public async Task<DescribeDownloadFileResponse> DescribeDownloadFile(DescribeDownloadFileRequest req)
+        {
+             JsonResponseModel<DescribeDownloadFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDownloadFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDownloadFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取下载文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDownloadFileRequest"/></param>
+        /// <returns><see cref="DescribeDownloadFileResponse"/></returns>
+        public DescribeDownloadFileResponse DescribeDownloadFileSync(DescribeDownloadFileRequest req)
+        {
+             JsonResponseModel<DescribeDownloadFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDownloadFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDownloadFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取环境终端用户新增与登录信息
         /// </summary>
         /// <param name="req"><see cref="DescribeEndUserLoginStatisticRequest"/></param>

@@ -66,6 +66,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Enable")]
         public string Enable{ get; set; }
 
+        /// <summary>
+        /// 用户自定义参数，仅支持timer触发器
+        /// </summary>
+        [JsonProperty("CustomArgument")]
+        public string CustomArgument{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
         }
     }
 }
