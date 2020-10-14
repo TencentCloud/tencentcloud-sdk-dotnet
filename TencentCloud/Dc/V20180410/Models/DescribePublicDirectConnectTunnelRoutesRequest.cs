@@ -15,38 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Dc.V20180410.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InboundPermission : AbstractModel
+    public class DescribePublicDirectConnectTunnelRoutesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 起始端口号，最小值1025
+        /// 专用通道ID
         /// </summary>
-        [JsonProperty("FromPort")]
-        public ulong? FromPort{ get; set; }
+        [JsonProperty("DirectConnectTunnelId")]
+        public string DirectConnectTunnelId{ get; set; }
 
         /// <summary>
-        /// IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
+        /// 过滤条件：
+        /// route-type：路由类型，取值：BGP/STATIC
+        /// route-subnet：路由cidr，取值如：192.68.1.0/24
         /// </summary>
-        [JsonProperty("IpRange")]
-        public string IpRange{ get; set; }
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 协议类型：TCP或者UDP
+        /// 偏移量，默认为0
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 终止端口号，最大值60000
+        /// 返回数量，默认为20，最大值为100
         /// </summary>
-        [JsonProperty("ToPort")]
-        public ulong? ToPort{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -54,10 +56,10 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FromPort", this.FromPort);
-            this.SetParamSimple(map, prefix + "IpRange", this.IpRange);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamSimple(map, prefix + "ToPort", this.ToPort);
+            this.SetParamSimple(map, prefix + "DirectConnectTunnelId", this.DirectConnectTunnelId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

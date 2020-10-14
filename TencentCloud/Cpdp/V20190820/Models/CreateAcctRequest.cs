@@ -50,21 +50,21 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 子商户联系人
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("Contact")]
         public string Contact{ get; set; }
 
         /// <summary>
         /// 联系人手机号
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
         /// 邮箱 
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
@@ -107,14 +107,14 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 子商户密钥
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("SubMerchantKey")]
         public string SubMerchantKey{ get; set; }
 
         /// <summary>
         /// 子商户私钥
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("SubMerchantPrivateKey")]
         public string SubMerchantPrivateKey{ get; set; }

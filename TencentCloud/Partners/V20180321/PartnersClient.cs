@@ -453,6 +453,46 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 可以查询代理商下指定客户的自付订单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentSelfPayDealsRequest"/></param>
+        /// <returns><see cref="DescribeAgentSelfPayDealsResponse"/></returns>
+        public async Task<DescribeAgentSelfPayDealsResponse> DescribeAgentSelfPayDeals(DescribeAgentSelfPayDealsRequest req)
+        {
+             JsonResponseModel<DescribeAgentSelfPayDealsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentSelfPayDeals");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentSelfPayDealsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可以查询代理商下指定客户的自付订单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentSelfPayDealsRequest"/></param>
+        /// <returns><see cref="DescribeAgentSelfPayDealsResponse"/></returns>
+        public DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDealsSync(DescribeAgentSelfPayDealsRequest req)
+        {
+             JsonResponseModel<DescribeAgentSelfPayDealsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAgentSelfPayDeals");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentSelfPayDealsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
         /// </summary>
         /// <param name="req"><see cref="DescribeClientBalanceRequest"/></param>

@@ -38,14 +38,14 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 用于提现
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("SettleAcctNo")]
         public string SettleAcctNo{ get; set; }
 
         /// <summary>
         /// 结算账户户名
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("SettleAcctName")]
         public string SettleAcctName{ get; set; }
@@ -82,7 +82,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 会员证件号码
-        /// <敏感信息>加密详见《商户端接口敏感信息加密说明》
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("IdCode")]
         public string IdCode{ get; set; }

@@ -301,6 +301,46 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDirectConnectTunnelExtraRequest"/></param>
+        /// <returns><see cref="DescribeDirectConnectTunnelExtraResponse"/></returns>
+        public async Task<DescribeDirectConnectTunnelExtraResponse> DescribeDirectConnectTunnelExtra(DescribeDirectConnectTunnelExtraRequest req)
+        {
+             JsonResponseModel<DescribeDirectConnectTunnelExtraResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDirectConnectTunnelExtra");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectTunnelExtraResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDirectConnectTunnelExtraRequest"/></param>
+        /// <returns><see cref="DescribeDirectConnectTunnelExtraResponse"/></returns>
+        public DescribeDirectConnectTunnelExtraResponse DescribeDirectConnectTunnelExtraSync(DescribeDirectConnectTunnelExtraRequest req)
+        {
+             JsonResponseModel<DescribeDirectConnectTunnelExtraResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDirectConnectTunnelExtra");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDirectConnectTunnelExtraResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询专用通道列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDirectConnectTunnelsRequest"/></param>
@@ -381,6 +421,46 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicDirectConnectTunnelRoutesRequest"/></param>
+        /// <returns><see cref="DescribePublicDirectConnectTunnelRoutesResponse"/></returns>
+        public async Task<DescribePublicDirectConnectTunnelRoutesResponse> DescribePublicDirectConnectTunnelRoutes(DescribePublicDirectConnectTunnelRoutesRequest req)
+        {
+             JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePublicDirectConnectTunnelRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublicDirectConnectTunnelRoutesRequest"/></param>
+        /// <returns><see cref="DescribePublicDirectConnectTunnelRoutesResponse"/></returns>
+        public DescribePublicDirectConnectTunnelRoutesResponse DescribePublicDirectConnectTunnelRoutesSync(DescribePublicDirectConnectTunnelRoutesRequest req)
+        {
+             JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePublicDirectConnectTunnelRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改物理专线的属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDirectConnectAttributeRequest"/></param>
@@ -452,6 +532,46 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDirectConnectTunnelAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectTunnelAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDirectConnectTunnelExtraRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectTunnelExtraResponse"/></returns>
+        public async Task<ModifyDirectConnectTunnelExtraResponse> ModifyDirectConnectTunnelExtra(ModifyDirectConnectTunnelExtraRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectTunnelExtraResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDirectConnectTunnelExtra");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectTunnelExtraResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDirectConnectTunnelExtraRequest"/></param>
+        /// <returns><see cref="ModifyDirectConnectTunnelExtraResponse"/></returns>
+        public ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtraSync(ModifyDirectConnectTunnelExtraRequest req)
+        {
+             JsonResponseModel<ModifyDirectConnectTunnelExtraResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDirectConnectTunnelExtra");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDirectConnectTunnelExtraResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.157</VersionPrefix>
+    <VersionPrefix>3.0.158</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3799,6 +3799,8 @@
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
     <Compile Include="Dc\V20180410\Models\AccessPoint.cs" />
+    <Compile Include="Dc\V20180410\Models\BFDInfo.cs" />
+    <Compile Include="Dc\V20180410\Models\BGPStatus.cs" />
     <Compile Include="Dc\V20180410\Models\BgpPeer.cs" />
     <Compile Include="Dc\V20180410\Models\CreateDirectConnectRequest.cs" />
     <Compile Include="Dc\V20180410\Models\CreateDirectConnectResponse.cs" />
@@ -3810,17 +3812,26 @@
     <Compile Include="Dc\V20180410\Models\DeleteDirectConnectTunnelResponse.cs" />
     <Compile Include="Dc\V20180410\Models\DescribeAccessPointsRequest.cs" />
     <Compile Include="Dc\V20180410\Models\DescribeAccessPointsResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribeDirectConnectTunnelExtraRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribeDirectConnectTunnelExtraResponse.cs" />
     <Compile Include="Dc\V20180410\Models\DescribeDirectConnectTunnelsRequest.cs" />
     <Compile Include="Dc\V20180410\Models\DescribeDirectConnectTunnelsResponse.cs" />
     <Compile Include="Dc\V20180410\Models\DescribeDirectConnectsRequest.cs" />
     <Compile Include="Dc\V20180410\Models\DescribeDirectConnectsResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribePublicDirectConnectTunnelRoutesRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\DescribePublicDirectConnectTunnelRoutesResponse.cs" />
     <Compile Include="Dc\V20180410\Models\DirectConnect.cs" />
     <Compile Include="Dc\V20180410\Models\DirectConnectTunnel.cs" />
+    <Compile Include="Dc\V20180410\Models\DirectConnectTunnelExtra.cs" />
+    <Compile Include="Dc\V20180410\Models\DirectConnectTunnelRoute.cs" />
     <Compile Include="Dc\V20180410\Models\Filter.cs" />
     <Compile Include="Dc\V20180410\Models\ModifyDirectConnectAttributeRequest.cs" />
     <Compile Include="Dc\V20180410\Models\ModifyDirectConnectAttributeResponse.cs" />
     <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelAttributeRequest.cs" />
     <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelAttributeResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelExtraRequest.cs" />
+    <Compile Include="Dc\V20180410\Models\ModifyDirectConnectTunnelExtraResponse.cs" />
+    <Compile Include="Dc\V20180410\Models\NQAInfo.cs" />
     <Compile Include="Dc\V20180410\Models\RejectDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\RejectDirectConnectTunnelResponse.cs" />
     <Compile Include="Dc\V20180410\Models\RouteFilterPrefix.cs" />
@@ -7259,6 +7270,8 @@
     <Compile Include="Partners\V20180321\Models\DescribeAgentDealsCacheResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentPayDealsRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentPayDealsResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsRequest.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeRebateInfosRequest.cs" />

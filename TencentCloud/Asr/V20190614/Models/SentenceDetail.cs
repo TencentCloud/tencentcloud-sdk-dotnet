@@ -67,7 +67,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public SentenceWords[] Words{ get; set; }
 
         /// <summary>
-        /// 单句语速
+        /// 单句语速，单位：字数/秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpeechSpeed")]

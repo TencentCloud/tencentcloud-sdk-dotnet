@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gse.V20191112.Models
+namespace TencentCloud.Dc.V20180410.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InboundPermission : AbstractModel
+    public class NQAInfo : AbstractModel
     {
         
         /// <summary>
-        /// 起始端口号，最小值1025
+        /// 健康检查次数
         /// </summary>
-        [JsonProperty("FromPort")]
-        public ulong? FromPort{ get; set; }
+        [JsonProperty("ProbeFailedTimes")]
+        public long? ProbeFailedTimes{ get; set; }
 
         /// <summary>
-        /// IP 段范围，合法的 CIDR 地址类型，如所有IPv4来源：0.0.0.0/0
+        /// 健康检查间隔
         /// </summary>
-        [JsonProperty("IpRange")]
-        public string IpRange{ get; set; }
+        [JsonProperty("Interval")]
+        public long? Interval{ get; set; }
 
         /// <summary>
-        /// 协议类型：TCP或者UDP
+        /// 健康检查地址
         /// </summary>
-        [JsonProperty("Protocol")]
-        public string Protocol{ get; set; }
-
-        /// <summary>
-        /// 终止端口号，最大值60000
-        /// </summary>
-        [JsonProperty("ToPort")]
-        public ulong? ToPort{ get; set; }
+        [JsonProperty("DestinationIp")]
+        public string DestinationIp{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Gse.V20191112.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FromPort", this.FromPort);
-            this.SetParamSimple(map, prefix + "IpRange", this.IpRange);
-            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
-            this.SetParamSimple(map, prefix + "ToPort", this.ToPort);
+            this.SetParamSimple(map, prefix + "ProbeFailedTimes", this.ProbeFailedTimes);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamSimple(map, prefix + "DestinationIp", this.DestinationIp);
         }
     }
 }
