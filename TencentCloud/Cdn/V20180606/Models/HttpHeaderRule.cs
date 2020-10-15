@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PublicIPAddressInfo : AbstractModel
+    public class HttpHeaderRule : AbstractModel
     {
         
         /// <summary>
-        /// 计费模式。
+        /// http头部设置方式，支持add，set或del，分别表示新增，设置或删除头部。
         /// </summary>
-        [JsonProperty("ChargeMode")]
-        public string ChargeMode{ get; set; }
+        [JsonProperty("HeaderMode")]
+        public string HeaderMode{ get; set; }
 
         /// <summary>
-        /// 实例的公网ip。
+        /// http头部名称。
         /// </summary>
-        [JsonProperty("PublicIPAddress")]
-        public string PublicIPAddress{ get; set; }
+        [JsonProperty("HeaderName")]
+        public string HeaderName{ get; set; }
 
         /// <summary>
-        /// 实例的公网ip所属的运营商。
+        /// http头部值。
         /// </summary>
-        [JsonProperty("ISP")]
-        public ISP ISP{ get; set; }
-
-        /// <summary>
-        /// 实例的最大出带宽上限，单位为Mbps。
-        /// </summary>
-        [JsonProperty("MaxBandwidthOut")]
-        public long? MaxBandwidthOut{ get; set; }
+        [JsonProperty("HeaderValue")]
+        public string HeaderValue{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChargeMode", this.ChargeMode);
-            this.SetParamSimple(map, prefix + "PublicIPAddress", this.PublicIPAddress);
-            this.SetParamObj(map, prefix + "ISP.", this.ISP);
-            this.SetParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "HeaderMode", this.HeaderMode);
+            this.SetParamSimple(map, prefix + "HeaderName", this.HeaderName);
+            this.SetParamSimple(map, prefix + "HeaderValue", this.HeaderValue);
         }
     }
 }

@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ecm.V20190719.Models
+namespace TencentCloud.Mgobe.V20190929.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PublicIPAddressInfo : AbstractModel
+    public class DismissRoomRequest : AbstractModel
     {
         
         /// <summary>
-        /// 计费模式。
+        /// 表示游戏资源唯一 ID, 由后台自动分配, 无法修改。
         /// </summary>
-        [JsonProperty("ChargeMode")]
-        public string ChargeMode{ get; set; }
+        [JsonProperty("GameId")]
+        public string GameId{ get; set; }
 
         /// <summary>
-        /// 实例的公网ip。
+        /// 表示游戏房间唯一ID。
         /// </summary>
-        [JsonProperty("PublicIPAddress")]
-        public string PublicIPAddress{ get; set; }
-
-        /// <summary>
-        /// 实例的公网ip所属的运营商。
-        /// </summary>
-        [JsonProperty("ISP")]
-        public ISP ISP{ get; set; }
-
-        /// <summary>
-        /// 实例的最大出带宽上限，单位为Mbps。
-        /// </summary>
-        [JsonProperty("MaxBandwidthOut")]
-        public long? MaxBandwidthOut{ get; set; }
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChargeMode", this.ChargeMode);
-            this.SetParamSimple(map, prefix + "PublicIPAddress", this.PublicIPAddress);
-            this.SetParamObj(map, prefix + "ISP.", this.ISP);
-            this.SetParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "GameId", this.GameId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
         }
     }
 }

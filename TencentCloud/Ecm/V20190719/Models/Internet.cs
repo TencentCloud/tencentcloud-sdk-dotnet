@@ -38,6 +38,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("PublicIPAddressSet")]
         public PublicIPAddressInfo[] PublicIPAddressSet{ get; set; }
 
+        /// <summary>
+        /// 实例网络相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceNetworkInfoSet")]
+        public InstanceNetworkInfo[] InstanceNetworkInfoSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         {
             this.SetParamArrayObj(map, prefix + "PrivateIPAddressSet.", this.PrivateIPAddressSet);
             this.SetParamArrayObj(map, prefix + "PublicIPAddressSet.", this.PublicIPAddressSet);
+            this.SetParamArrayObj(map, prefix + "InstanceNetworkInfoSet.", this.InstanceNetworkInfoSet);
         }
     }
 }

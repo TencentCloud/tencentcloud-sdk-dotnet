@@ -21,32 +21,22 @@ namespace TencentCloud.Ecm.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PublicIPAddressInfo : AbstractModel
+    public class AddressInfo : AbstractModel
     {
         
         /// <summary>
-        /// 计费模式。
+        /// 实例的外网ip相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ChargeMode")]
-        public string ChargeMode{ get; set; }
+        [JsonProperty("PublicIPAddressInfo")]
+        public PublicIPAddressInfo PublicIPAddressInfo{ get; set; }
 
         /// <summary>
-        /// 实例的公网ip。
+        /// 实例的内网ip相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PublicIPAddress")]
-        public string PublicIPAddress{ get; set; }
-
-        /// <summary>
-        /// 实例的公网ip所属的运营商。
-        /// </summary>
-        [JsonProperty("ISP")]
-        public ISP ISP{ get; set; }
-
-        /// <summary>
-        /// 实例的最大出带宽上限，单位为Mbps。
-        /// </summary>
-        [JsonProperty("MaxBandwidthOut")]
-        public long? MaxBandwidthOut{ get; set; }
+        [JsonProperty("PrivateIPAddressInfo")]
+        public PrivateIPAddressInfo PrivateIPAddressInfo{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChargeMode", this.ChargeMode);
-            this.SetParamSimple(map, prefix + "PublicIPAddress", this.PublicIPAddress);
-            this.SetParamObj(map, prefix + "ISP.", this.ISP);
-            this.SetParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+            this.SetParamObj(map, prefix + "PublicIPAddressInfo.", this.PublicIPAddressInfo);
+            this.SetParamObj(map, prefix + "PrivateIPAddressInfo.", this.PrivateIPAddressInfo);
         }
     }
 }

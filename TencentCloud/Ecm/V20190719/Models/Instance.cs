@@ -223,6 +223,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("VirtualPrivateCloud")]
         public VirtualPrivateCloud VirtualPrivateCloud{ get; set; }
 
+        /// <summary>
+        /// 实例运营商字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ISP")]
+        public string ISP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -255,6 +262,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "NewFlag", this.NewFlag);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
+            this.SetParamSimple(map, prefix + "ISP", this.ISP);
         }
     }
 }

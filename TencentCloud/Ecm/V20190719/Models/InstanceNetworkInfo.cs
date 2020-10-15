@@ -21,32 +21,34 @@ namespace TencentCloud.Ecm.V20190719.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PublicIPAddressInfo : AbstractModel
+    public class InstanceNetworkInfo : AbstractModel
     {
         
         /// <summary>
-        /// 计费模式。
+        /// 实例内外网ip相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ChargeMode")]
-        public string ChargeMode{ get; set; }
+        [JsonProperty("AddressInfoSet")]
+        public AddressInfo[] AddressInfoSet{ get; set; }
 
         /// <summary>
-        /// 实例的公网ip。
+        /// 网卡ID。
         /// </summary>
-        [JsonProperty("PublicIPAddress")]
-        public string PublicIPAddress{ get; set; }
+        [JsonProperty("NetworkInterfaceId")]
+        public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// 实例的公网ip所属的运营商。
+        /// 网卡名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ISP")]
-        public ISP ISP{ get; set; }
+        [JsonProperty("NetworkInterfaceName")]
+        public string NetworkInterfaceName{ get; set; }
 
         /// <summary>
-        /// 实例的最大出带宽上限，单位为Mbps。
+        /// 主网卡属性。true为主网卡，false为辅助网卡。
         /// </summary>
-        [JsonProperty("MaxBandwidthOut")]
-        public long? MaxBandwidthOut{ get; set; }
+        [JsonProperty("Primary")]
+        public bool? Primary{ get; set; }
 
 
         /// <summary>
@@ -54,10 +56,10 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChargeMode", this.ChargeMode);
-            this.SetParamSimple(map, prefix + "PublicIPAddress", this.PublicIPAddress);
-            this.SetParamObj(map, prefix + "ISP.", this.ISP);
-            this.SetParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+            this.SetParamArrayObj(map, prefix + "AddressInfoSet.", this.AddressInfoSet);
+            this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
+            this.SetParamSimple(map, prefix + "NetworkInterfaceName", this.NetworkInterfaceName);
+            this.SetParamSimple(map, prefix + "Primary", this.Primary);
         }
     }
 }

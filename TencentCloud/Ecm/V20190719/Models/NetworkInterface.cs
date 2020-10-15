@@ -131,6 +131,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("EniType")]
         public ulong? EniType{ get; set; }
 
+        /// <summary>
+        /// EcmRegion ecm区域
+        /// </summary>
+        [JsonProperty("EcmRegion")]
+        public string EcmRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -153,6 +159,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
+            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         }
     }
 }

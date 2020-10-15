@@ -25,12 +25,6 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// ECM 地域
-        /// </summary>
-        [JsonProperty("EcmRegion")]
-        public string EcmRegion{ get; set; }
-
-        /// <summary>
         /// 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
         /// </summary>
         [JsonProperty("NetworkInterfaceIds")]
@@ -65,17 +59,23 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// ECM 地域
+        /// </summary>
+        [JsonProperty("EcmRegion")]
+        public string EcmRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
             this.SetParamArraySimple(map, prefix + "NetworkInterfaceIds.", this.NetworkInterfaceIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
         }
     }
 }
