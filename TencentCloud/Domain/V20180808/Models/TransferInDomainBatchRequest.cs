@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20191126.Models
+namespace TencentCloud.Domain.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class TransferInDomainBatchRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 转入的域名名称数组。
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 域名转移码数组。
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("PassWords")]
+        public string[] PassWords{ get; set; }
+
+        /// <summary>
+        /// 模板ID。
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// 付费模式 0手动在线付费，1使用余额付费。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamArraySimple(map, prefix + "PassWords.", this.PassWords);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

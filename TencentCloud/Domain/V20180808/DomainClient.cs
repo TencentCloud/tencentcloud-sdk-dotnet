@@ -53,6 +53,50 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyDomainInfoRequest"/></param>
+        /// <returns><see cref="BatchModifyDomainInfoResponse"/></returns>
+        public async Task<BatchModifyDomainInfoResponse> BatchModifyDomainInfo(BatchModifyDomainInfoRequest req)
+        {
+             JsonResponseModel<BatchModifyDomainInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchModifyDomainInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyDomainInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="BatchModifyDomainInfoRequest"/></param>
+        /// <returns><see cref="BatchModifyDomainInfoResponse"/></returns>
+        public BatchModifyDomainInfoResponse BatchModifyDomainInfoSync(BatchModifyDomainInfoRequest req)
+        {
+             JsonResponseModel<BatchModifyDomainInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchModifyDomainInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyDomainInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
         /// 
         /// 默认接口请求频率限制：20次/秒。
@@ -344,6 +388,182 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTemplateList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainOwnerBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainOwnerBatchResponse"/></returns>
+        public async Task<ModifyDomainOwnerBatchResponse> ModifyDomainOwnerBatch(ModifyDomainOwnerBatchRequest req)
+        {
+             JsonResponseModel<ModifyDomainOwnerBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainOwnerBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainOwnerBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainOwnerBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainOwnerBatchResponse"/></returns>
+        public ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatchSync(ModifyDomainOwnerBatchRequest req)
+        {
+             JsonResponseModel<ModifyDomainOwnerBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainOwnerBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainOwnerBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="TransferInDomainBatchRequest"/></param>
+        /// <returns><see cref="TransferInDomainBatchResponse"/></returns>
+        public async Task<TransferInDomainBatchResponse> TransferInDomainBatch(TransferInDomainBatchRequest req)
+        {
+             JsonResponseModel<TransferInDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TransferInDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransferInDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="TransferInDomainBatchRequest"/></param>
+        /// <returns><see cref="TransferInDomainBatchResponse"/></returns>
+        public TransferInDomainBatchResponse TransferInDomainBatchSync(TransferInDomainBatchRequest req)
+        {
+             JsonResponseModel<TransferInDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TransferInDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransferInDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( TransferInDomainBatch ) 用于批量禁止域名转移 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="TransferProhibitionBatchRequest"/></param>
+        /// <returns><see cref="TransferProhibitionBatchResponse"/></returns>
+        public async Task<TransferProhibitionBatchResponse> TransferProhibitionBatch(TransferProhibitionBatchRequest req)
+        {
+             JsonResponseModel<TransferProhibitionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TransferProhibitionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransferProhibitionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( TransferInDomainBatch ) 用于批量禁止域名转移 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="TransferProhibitionBatchRequest"/></param>
+        /// <returns><see cref="TransferProhibitionBatchResponse"/></returns>
+        public TransferProhibitionBatchResponse TransferProhibitionBatchSync(TransferProhibitionBatchRequest req)
+        {
+             JsonResponseModel<TransferProhibitionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TransferProhibitionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransferProhibitionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProhibitionBatchRequest"/></param>
+        /// <returns><see cref="UpdateProhibitionBatchResponse"/></returns>
+        public async Task<UpdateProhibitionBatchResponse> UpdateProhibitionBatch(UpdateProhibitionBatchRequest req)
+        {
+             JsonResponseModel<UpdateProhibitionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateProhibitionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProhibitionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProhibitionBatchRequest"/></param>
+        /// <returns><see cref="UpdateProhibitionBatchResponse"/></returns>
+        public UpdateProhibitionBatchResponse UpdateProhibitionBatchSync(UpdateProhibitionBatchRequest req)
+        {
+             JsonResponseModel<UpdateProhibitionBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateProhibitionBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProhibitionBatchResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

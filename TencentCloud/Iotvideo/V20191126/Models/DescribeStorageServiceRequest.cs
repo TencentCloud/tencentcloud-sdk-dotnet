@@ -21,20 +21,20 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class DescribeStorageServiceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 云存服务ID
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 是否返回已结束的订单信息(已过期/已退订/已转移)
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("GetFinishedOrder")]
+        public bool? GetFinishedOrder{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "GetFinishedOrder", this.GetFinishedOrder);
         }
     }
 }

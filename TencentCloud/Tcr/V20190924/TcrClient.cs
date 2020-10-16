@@ -1533,6 +1533,86 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 查询创建从实例任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstanceCreateTasksRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstanceCreateTasksResponse"/></returns>
+        public async Task<DescribeReplicationInstanceCreateTasksResponse> DescribeReplicationInstanceCreateTasks(DescribeReplicationInstanceCreateTasksRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReplicationInstanceCreateTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询创建从实例任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstanceCreateTasksRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstanceCreateTasksResponse"/></returns>
+        public DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasksSync(DescribeReplicationInstanceCreateTasksRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReplicationInstanceCreateTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询从实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstancesResponse"/></returns>
+        public async Task<DescribeReplicationInstancesResponse> DescribeReplicationInstances(DescribeReplicationInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReplicationInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询从实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReplicationInstancesResponse"/></returns>
+        public DescribeReplicationInstancesResponse DescribeReplicationInstancesSync(DescribeReplicationInstancesRequest req)
+        {
+             JsonResponseModel<DescribeReplicationInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReplicationInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询镜像仓库列表或指定镜像仓库信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRepositoriesRequest"/></param>

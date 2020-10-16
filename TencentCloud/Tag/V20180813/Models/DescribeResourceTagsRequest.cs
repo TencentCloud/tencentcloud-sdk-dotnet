@@ -67,7 +67,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否是Cos的资源id
+        /// 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
         /// </summary>
         [JsonProperty("CosResourceId")]
         public ulong? CosResourceId{ get; set; }

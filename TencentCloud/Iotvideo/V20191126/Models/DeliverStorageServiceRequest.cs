@@ -21,20 +21,32 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class DeliverStorageServiceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 待转移的源云存服务ID
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("SrcServiceId")]
+        public string SrcServiceId{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 设备TID
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("Tid")]
+        public string Tid{ get; set; }
+
+        /// <summary>
+        /// 视频流通道号。(对于存在多路视频流的设备，如NVR设备，与设备实际视频流通道号对应)
+        /// </summary>
+        [JsonProperty("ChnNum")]
+        public long? ChnNum{ get; set; }
+
+        /// <summary>
+        /// 设备主人用户在IoT Video平台的注册ID。该参数用于验证Paas/Saas平台的设备/用户关系链是否一致
+        /// </summary>
+        [JsonProperty("AccessId")]
+        public string AccessId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "SrcServiceId", this.SrcServiceId);
+            this.SetParamSimple(map, prefix + "Tid", this.Tid);
+            this.SetParamSimple(map, prefix + "ChnNum", this.ChnNum);
+            this.SetParamSimple(map, prefix + "AccessId", this.AccessId);
         }
     }
 }

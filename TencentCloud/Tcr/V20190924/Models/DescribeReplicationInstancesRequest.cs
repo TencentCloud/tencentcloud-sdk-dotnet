@@ -15,50 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tag.V20180813.Models
+namespace TencentCloud.Tcr.V20190924.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeResourceTagsByResourceIdsRequest : AbstractModel
+    public class DescribeReplicationInstancesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 业务类型
+        /// 实例Id
         /// </summary>
-        [JsonProperty("ServiceType")]
-        public string ServiceType{ get; set; }
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 资源前缀
-        /// </summary>
-        [JsonProperty("ResourcePrefix")]
-        public string ResourcePrefix{ get; set; }
-
-        /// <summary>
-        /// 资源ID数组，大小不超过50
-        /// </summary>
-        [JsonProperty("ResourceIds")]
-        public string[] ResourceIds{ get; set; }
-
-        /// <summary>
-        /// 资源所在地域
-        /// </summary>
-        [JsonProperty("ResourceRegion")]
-        public string ResourceRegion{ get; set; }
-
-        /// <summary>
-        /// 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+        /// 偏移量,默认0
         /// </summary>
         [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 每页大小，默认为 15
+        /// 最大输出条数，默认20，最大为100
         /// </summary>
         [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -66,10 +48,7 @@ namespace TencentCloud.Tag.V20180813.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
-            this.SetParamSimple(map, prefix + "ResourcePrefix", this.ResourcePrefix);
-            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
-            this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

@@ -351,6 +351,46 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
+        /// DescribeIpStatus 用于查询域名所在加速平台的所有节点明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpStatusRequest"/></param>
+        /// <returns><see cref="DescribeIpStatusResponse"/></returns>
+        public async Task<DescribeIpStatusResponse> DescribeIpStatus(DescribeIpStatusRequest req)
+        {
+             JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeIpStatus 用于查询域名所在加速平台的所有节点明细。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpStatusRequest"/></param>
+        /// <returns><see cref="DescribeIpStatusResponse"/></returns>
+        public DescribeIpStatusResponse DescribeIpStatusSync(DescribeIpStatusRequest req)
+        {
+             JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询刷新接口的用量配额。
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeQuotaRequest"/></param>

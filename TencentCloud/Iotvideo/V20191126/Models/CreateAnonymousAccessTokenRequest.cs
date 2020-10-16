@@ -21,20 +21,26 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class CreateAnonymousAccessTokenRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// Token的TTL(time to alive)分钟数,最大值1440(即24小时)
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("TtlMinutes")]
+        public long? TtlMinutes{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 设备ID。创建Token时, 此参数为必须项
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("Tid")]
+        public string Tid{ get; set; }
+
+        /// <summary>
+        /// 旧的AccessToken。续期Token时，此参数为必须
+        /// </summary>
+        [JsonProperty("OldAccessToken")]
+        public string OldAccessToken{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "TtlMinutes", this.TtlMinutes);
+            this.SetParamSimple(map, prefix + "Tid", this.Tid);
+            this.SetParamSimple(map, prefix + "OldAccessToken", this.OldAccessToken);
         }
     }
 }

@@ -15,26 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20191126.Models
+namespace TencentCloud.Ecdn.V20191012.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class DescribeIpStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 加速域名
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 查询区域：
+        /// mainland: 国内节点
+        /// overseas: 海外节点
+        /// global: 全球节点
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -42,8 +45,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

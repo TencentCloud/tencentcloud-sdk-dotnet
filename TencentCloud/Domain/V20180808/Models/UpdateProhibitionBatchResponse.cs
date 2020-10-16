@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20191126.Models
+namespace TencentCloud.Domain.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class UpdateProhibitionBatchResponse : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 日志ID
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("LogId")]
+        public ulong? LogId{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "LogId", this.LogId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

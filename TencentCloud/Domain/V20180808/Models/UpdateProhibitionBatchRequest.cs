@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20191126.Models
+namespace TencentCloud.Domain.V20180808.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class UpdateProhibitionBatchRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 批量操作的域名。
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 是否开启禁止域名更新。
+        /// True:开启禁止域名更新状态。
+        /// False：关闭禁止域名更新状态。
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

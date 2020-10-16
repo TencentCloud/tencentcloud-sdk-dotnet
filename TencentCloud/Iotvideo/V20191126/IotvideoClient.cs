@@ -53,6 +53,86 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
+        /// 清除设备激活码
+        /// </summary>
+        /// <param name="req"><see cref="ClearDeviceActiveCodeRequest"/></param>
+        /// <returns><see cref="ClearDeviceActiveCodeResponse"/></returns>
+        public async Task<ClearDeviceActiveCodeResponse> ClearDeviceActiveCode(ClearDeviceActiveCodeRequest req)
+        {
+             JsonResponseModel<ClearDeviceActiveCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ClearDeviceActiveCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearDeviceActiveCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清除设备激活码
+        /// </summary>
+        /// <param name="req"><see cref="ClearDeviceActiveCodeRequest"/></param>
+        /// <returns><see cref="ClearDeviceActiveCodeResponse"/></returns>
+        public ClearDeviceActiveCodeResponse ClearDeviceActiveCodeSync(ClearDeviceActiveCodeRequest req)
+        {
+             JsonResponseModel<ClearDeviceActiveCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ClearDeviceActiveCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearDeviceActiveCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建匿名访问Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAnonymousAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateAnonymousAccessTokenResponse"/></returns>
+        public async Task<CreateAnonymousAccessTokenResponse> CreateAnonymousAccessToken(CreateAnonymousAccessTokenRequest req)
+        {
+             JsonResponseModel<CreateAnonymousAccessTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAnonymousAccessToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAnonymousAccessTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建匿名访问Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateAnonymousAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateAnonymousAccessTokenResponse"/></returns>
+        public CreateAnonymousAccessTokenResponse CreateAnonymousAccessTokenSync(CreateAnonymousAccessTokenRequest req)
+        {
+             JsonResponseModel<CreateAnonymousAccessTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAnonymousAccessToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAnonymousAccessTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateAppUsr）用于接收由厂商云发送过来的注册请求,建立厂商云终端用户与IoT Video终端用户的映射关系。
         /// </summary>
         /// <param name="req"><see cref="CreateAppUsrRequest"/></param>
@@ -416,6 +496,46 @@ namespace TencentCloud.Iotvideo.V20191126
              {
                  var strResp = this.InternalRequestSync(req, "CreateStorage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageServiceRequest"/></param>
+        /// <returns><see cref="CreateStorageServiceResponse"/></returns>
+        public async Task<CreateStorageServiceResponse> CreateStorageService(CreateStorageServiceRequest req)
+        {
+             JsonResponseModel<CreateStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageServiceRequest"/></param>
+        /// <returns><see cref="CreateStorageServiceResponse"/></returns>
+        public CreateStorageServiceResponse CreateStorageServiceSync(CreateStorageServiceRequest req)
+        {
+             JsonResponseModel<CreateStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -856,6 +976,46 @@ namespace TencentCloud.Iotvideo.V20191126
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTraceIds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTraceIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将已购买的云存服务转移到另一设备
+        /// </summary>
+        /// <param name="req"><see cref="DeliverStorageServiceRequest"/></param>
+        /// <returns><see cref="DeliverStorageServiceResponse"/></returns>
+        public async Task<DeliverStorageServiceResponse> DeliverStorageService(DeliverStorageServiceRequest req)
+        {
+             JsonResponseModel<DeliverStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeliverStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeliverStorageServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将已购买的云存服务转移到另一设备
+        /// </summary>
+        /// <param name="req"><see cref="DeliverStorageServiceRequest"/></param>
+        /// <returns><see cref="DeliverStorageServiceResponse"/></returns>
+        public DeliverStorageServiceResponse DeliverStorageServiceSync(DeliverStorageServiceRequest req)
+        {
+             JsonResponseModel<DeliverStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeliverStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeliverStorageServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1547,6 +1707,46 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
+        /// 查询云存服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageServiceRequest"/></param>
+        /// <returns><see cref="DescribeStorageServiceResponse"/></returns>
+        public async Task<DescribeStorageServiceResponse> DescribeStorageService(DescribeStorageServiceRequest req)
+        {
+             JsonResponseModel<DescribeStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStorageServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云存服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageServiceRequest"/></param>
+        /// <returns><see cref="DescribeStorageServiceResponse"/></returns>
+        public DescribeStorageServiceResponse DescribeStorageServiceSync(DescribeStorageServiceRequest req)
+        {
+             JsonResponseModel<DescribeStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStorageServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeTraceIds）用于查询设备日志跟踪白名单。
         /// </summary>
         /// <param name="req"><see cref="DescribeTraceIdsRequest"/></param>
@@ -1882,6 +2082,46 @@ namespace TencentCloud.Iotvideo.V20191126
              {
                  var strResp = this.InternalRequestSync(req, "ModifyProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 退订已购买的云存服务
+        /// </summary>
+        /// <param name="req"><see cref="RefundStorageServiceRequest"/></param>
+        /// <returns><see cref="RefundStorageServiceResponse"/></returns>
+        public async Task<RefundStorageServiceResponse> RefundStorageService(RefundStorageServiceRequest req)
+        {
+             JsonResponseModel<RefundStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefundStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundStorageServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 退订已购买的云存服务
+        /// </summary>
+        /// <param name="req"><see cref="RefundStorageServiceRequest"/></param>
+        /// <returns><see cref="RefundStorageServiceResponse"/></returns>
+        public RefundStorageServiceResponse RefundStorageServiceSync(RefundStorageServiceRequest req)
+        {
+             JsonResponseModel<RefundStorageServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefundStorageService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundStorageServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

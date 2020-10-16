@@ -21,20 +21,32 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class CreateAnonymousAccessTokenResponse : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 终端用户在IoT Video上的唯一标识ID
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("AccessId")]
+        public string AccessId{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// IoT Video平台的AccessToken
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("AccessToken")]
+        public string AccessToken{ get; set; }
+
+        /// <summary>
+        /// Token的过期时间，单位秒(UTC时间)
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "AccessId", this.AccessId);
+            this.SetParamSimple(map, prefix + "AccessToken", this.AccessToken);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

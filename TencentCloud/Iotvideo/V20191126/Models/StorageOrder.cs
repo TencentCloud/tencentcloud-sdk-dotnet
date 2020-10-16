@@ -21,20 +21,38 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class StorageOrder : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 定单唯一性ID
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("OrderId")]
+        public string OrderId{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 云存套餐ID
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("PkgId")]
+        public string PkgId{ get; set; }
+
+        /// <summary>
+        /// 定单服务状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 定单服务生效时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// 定单服务失效时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
 
 
         /// <summary>
@@ -42,8 +60,11 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
+            this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

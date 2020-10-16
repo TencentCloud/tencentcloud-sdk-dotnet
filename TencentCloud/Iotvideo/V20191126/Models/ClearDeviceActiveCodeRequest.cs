@@ -21,20 +21,14 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class ClearDeviceActiveCodeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 设备TID列表，0<元素数量<=100
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
-
-        /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
-        /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("Tids")]
+        public string[] Tids{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamArraySimple(map, prefix + "Tids.", this.Tids);
         }
     }
 }

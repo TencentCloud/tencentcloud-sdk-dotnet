@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20191126.Models
+namespace TencentCloud.Faceid.V20180301.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateGencodeRequest : AbstractModel
+    public class GetFaceIdResultRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// SDK人脸核身流程的标识，调用GetFaceIdToken接口时生成。
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("FaceIdToken")]
+        public string FaceIdToken{ get; set; }
 
         /// <summary>
-        /// 物模型发布版本号,-1代表未发布的，保存的是草稿箱的版本。1代表已发布的物模型。
+        /// 是否需要拉取视频，默认false不需要
         /// </summary>
-        [JsonProperty("Revision")]
-        public long? Revision{ get; set; }
+        [JsonProperty("IsNeedVideo")]
+        public bool? IsNeedVideo{ get; set; }
+
+        /// <summary>
+        /// 是否需要拉取截帧，默认false不需要
+        /// </summary>
+        [JsonProperty("IsNeedBestFrame")]
+        public bool? IsNeedBestFrame{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "Revision", this.Revision);
+            this.SetParamSimple(map, prefix + "FaceIdToken", this.FaceIdToken);
+            this.SetParamSimple(map, prefix + "IsNeedVideo", this.IsNeedVideo);
+            this.SetParamSimple(map, prefix + "IsNeedBestFrame", this.IsNeedBestFrame);
         }
     }
 }

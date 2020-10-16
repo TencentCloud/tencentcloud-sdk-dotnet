@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.159</VersionPrefix>
+    <VersionPrefix>3.0.160</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3938,6 +3938,8 @@
     <Compile Include="Dcdb\V20180411\Models\UpgradeDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ZonesInfo.cs" />
     <Compile Include="Domain\V20180808\DomainClient.cs" />
+    <Compile Include="Domain\V20180808\Models\BatchModifyDomainInfoRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\BatchModifyDomainInfoResponse.cs" />
     <Compile Include="Domain\V20180808\Models\BatchStatus.cs" />
     <Compile Include="Domain\V20180808\Models\CertificateInfo.cs" />
     <Compile Include="Domain\V20180808\Models\CheckBatchStatusRequest.cs" />
@@ -3957,8 +3959,16 @@
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBaseInfo.cs" />
     <Compile Include="Domain\V20180808\Models\DomainList.cs" />
+    <Compile Include="Domain\V20180808\Models\ModifyDomainOwnerBatchRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\ModifyDomainOwnerBatchResponse.cs" />
     <Compile Include="Domain\V20180808\Models\PriceInfo.cs" />
     <Compile Include="Domain\V20180808\Models\TemplateInfo.cs" />
+    <Compile Include="Domain\V20180808\Models\TransferInDomainBatchRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\TransferInDomainBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\TransferProhibitionBatchRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\TransferProhibitionBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\UpdateProhibitionBatchRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\UpdateProhibitionBatchResponse.cs" />
     <Compile Include="Drm\V20181115\DrmClient.cs" />
     <Compile Include="Drm\V20181115\Models\AddFairPlayPemRequest.cs" />
     <Compile Include="Drm\V20181115\Models\AddFairPlayPemResponse.cs" />
@@ -4131,6 +4141,8 @@
     <Compile Include="Ecdn\V20191012\Models\DescribeEcdnDomainStatisticsResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribeEcdnStatisticsRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribeEcdnStatisticsResponse.cs" />
+    <Compile Include="Ecdn\V20191012\Models\DescribeIpStatusRequest.cs" />
+    <Compile Include="Ecdn\V20191012\Models\DescribeIpStatusResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribePurgeQuotaRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribePurgeQuotaResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribePurgeTasksRequest.cs" />
@@ -4148,6 +4160,7 @@
     <Compile Include="Ecdn\V20191012\Models\Https.cs" />
     <Compile Include="Ecdn\V20191012\Models\IpFilter.cs" />
     <Compile Include="Ecdn\V20191012\Models\IpFreqLimit.cs" />
+    <Compile Include="Ecdn\V20191012\Models\IpStatus.cs" />
     <Compile Include="Ecdn\V20191012\Models\Origin.cs" />
     <Compile Include="Ecdn\V20191012\Models\PurgePathCacheRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\PurgePathCacheResponse.cs" />
@@ -4562,6 +4575,10 @@
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoEnhancedResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetFaceIdResultRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetFaceIdResultResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetFaceIdTokenRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetFaceIdTokenResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetLiveCodeRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetLiveCodeResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardOCRVerificationRequest.cs" />
@@ -5680,6 +5697,10 @@
     <Compile Include="Iotvideo\V20191126\IotvideoClient.cs" />
     <Compile Include="Iotvideo\V20191126\Models\BindDevInfo.cs" />
     <Compile Include="Iotvideo\V20191126\Models\BindUsrInfo.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\ClearDeviceActiveCodeRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\ClearDeviceActiveCodeResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\CreateAnonymousAccessTokenRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\CreateAnonymousAccessTokenResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateAppUsrRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateAppUsrResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateBindingRequest.cs" />
@@ -5698,6 +5719,8 @@
     <Compile Include="Iotvideo\V20191126\Models\CreateProductResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateStorageRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateStorageResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\CreateStorageServiceRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\CreateStorageServiceResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateTraceIdsRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateTraceIdsResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateUploadPathRequest.cs" />
@@ -5720,6 +5743,8 @@
     <Compile Include="Iotvideo\V20191126\Models\DeleteProductResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DeleteTraceIdsRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DeleteTraceIdsResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DeliverStorageServiceRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DeliverStorageServiceResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeBindDevRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeBindDevResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeBindUsrRequest.cs" />
@@ -5754,6 +5779,8 @@
     <Compile Include="Iotvideo\V20191126\Models\DescribeRegistrationStatusResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeRunLogRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeRunLogResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DescribeStorageServiceRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DescribeStorageServiceResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeTraceIdsRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeTraceIdsResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeTraceStatusRequest.cs" />
@@ -5781,6 +5808,8 @@
     <Compile Include="Iotvideo\V20191126\Models\OtaPubHistory.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ProductBase.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ProductData.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\RefundStorageServiceRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\RefundStorageServiceResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\RegisteredStatus.cs" />
     <Compile Include="Iotvideo\V20191126\Models\RunDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\RunDeviceResponse.cs" />
@@ -5796,6 +5825,7 @@
     <Compile Include="Iotvideo\V20191126\Models\SendOnlineMsgResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\SetMessageQueueRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\SetMessageQueueResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\StorageOrder.cs" />
     <Compile Include="Iotvideo\V20191126\Models\TraceStatus.cs" />
     <Compile Include="Iotvideo\V20191126\Models\UpgradeDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\UpgradeDeviceResponse.cs" />
@@ -8584,6 +8614,10 @@
     <Compile Include="Tcr\V20190924\Models\DescribeNamespacePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeNamespacesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstanceCreateTasksRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstanceCreateTasksResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstancesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeReplicationInstancesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeRepositoriesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeRepositoriesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeRepositoryFilterPersonalRequest.cs" />
@@ -8630,6 +8664,7 @@
     <Compile Include="Tcr\V20190924\Models\Registry.cs" />
     <Compile Include="Tcr\V20190924\Models\RegistryCondition.cs" />
     <Compile Include="Tcr\V20190924\Models\RegistryStatus.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationRegistry.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoInfoResp.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoIsExistResp.cs" />
@@ -8641,6 +8676,7 @@
     <Compile Include="Tcr\V20190924\Models\TagInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\TagInfoResp.cs" />
     <Compile Include="Tcr\V20190924\Models\TagSpecification.cs" />
+    <Compile Include="Tcr\V20190924\Models\TaskDetail.cs" />
     <Compile Include="Tcr\V20190924\Models\TcrImageInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\TcrInstanceToken.cs" />
     <Compile Include="Tcr\V20190924\Models\TcrNamespaceInfo.cs" />

@@ -15,57 +15,46 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Ecdn.V20191012.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CdnIp : AbstractModel
+    public class IpStatus : AbstractModel
     {
         
         /// <summary>
-        /// 指定查询的 IP
+        /// 节点 IP
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// IP 归属：
-        /// yes：节点归属于腾讯云 CDN
-        /// no：节点不属于腾讯云 CDN
+        /// 节点所属区域
         /// </summary>
-        [JsonProperty("Platform")]
-        public string Platform{ get; set; }
+        [JsonProperty("District")]
+        public string District{ get; set; }
 
         /// <summary>
-        /// 节点所处的省份/国家
-        /// unknown 表示节点位置未知
+        /// 节点所属运营商
         /// </summary>
-        [JsonProperty("Location")]
-        public string Location{ get; set; }
+        [JsonProperty("Isp")]
+        public string Isp{ get; set; }
 
         /// <summary>
-        /// 节点上下线历史记录
-        /// </summary>
-        [JsonProperty("History")]
-        public CdnIpHistory[] History{ get; set; }
-
-        /// <summary>
-        /// 节点的所在区域
-        /// mainland：中国境内加速节点
-        /// overseas：中国境外加速节点
-        /// unknown：服务地域无法获取
-        /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
-
-        /// <summary>
-        /// 节点的所在城市
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 节点所在城市
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
+
+        /// <summary>
+        /// 节点状态
+        /// online：上线状态，正常调度服务中
+        /// offline：下线状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -74,11 +63,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
-            this.SetParamSimple(map, prefix + "Platform", this.Platform);
-            this.SetParamSimple(map, prefix + "Location", this.Location);
-            this.SetParamArrayObj(map, prefix + "History.", this.History);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "District", this.District);
+            this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamSimple(map, prefix + "City", this.City);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
