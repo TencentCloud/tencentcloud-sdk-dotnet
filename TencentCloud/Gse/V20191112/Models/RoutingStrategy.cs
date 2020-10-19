@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 别名的路由策略的类型SIMPLE/TERMINAL
+        /// 别名的路由策略的类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 与终端路由策略一起使用的消息文本
+        /// 与终端路由策略一起使用的消息文本，长度不小于1字符不超过1024字符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]

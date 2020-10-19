@@ -25,25 +25,26 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 基于规则的扩缩容配置服务部署ID
+        /// 扩缩容配置服务器舰队ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 策略名称
+        /// 扩缩容策略名称，最小长度为1，最大长度为1024
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 扩缩容调整值
+        /// 扩缩容调整值，ScalingAdjustmentType取值PercentChangeInCapacity时，取值范围-99~99
+        /// ScalingAdjustmentType取值ChangeInCapacity或ExactCapacity时，最小值要缩容的最多CVM个数，最大值为实际最大的CVM个数限额
         /// </summary>
         [JsonProperty("ScalingAdjustment")]
         public long? ScalingAdjustment{ get; set; }
 
         /// <summary>
-        /// 扩缩容调整类型
+        /// 扩缩容调整类型，取值（ChangeInCapacity，ExactCapacity，PercentChangeInCapacity）
         /// </summary>
         [JsonProperty("ScalingAdjustmentType")]
         public string ScalingAdjustmentType{ get; set; }
@@ -55,19 +56,21 @@ namespace TencentCloud.Gse.V20191112.Models
         public float? Threshold{ get; set; }
 
         /// <summary>
-        /// 策略比较符，取值：>,>=,<,<=
+        /// 扩缩容策略比较符，取值：>,>=,<,<=
         /// </summary>
         [JsonProperty("ComparisonOperator")]
         public string ComparisonOperator{ get; set; }
 
         /// <summary>
-        /// 持续时间长度（分钟）
+        /// 单个策略持续时间长度（分钟）
         /// </summary>
         [JsonProperty("EvaluationPeriods")]
         public long? EvaluationPeriods{ get; set; }
 
         /// <summary>
-        /// 指标名称
+        /// 扩缩容参与计算的指标名称，PolicyType取值RuleBased，
+        /// MetricName取值（AvailableGameServerSessions，AvailableCustomCount，PercentAvailableCustomCount，ActiveInstances，IdleInstances，CurrentPlayerSessions和PercentIdleInstances）；
+        /// PolicyType取值TargetBased时，MetricName取值PercentAvailableGameSessions
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
@@ -79,7 +82,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// 扩缩容配置类型
+        /// 扩缩容目标值配置，只有TargetBased类型的策略生效
         /// </summary>
         [JsonProperty("TargetConfiguration")]
         public TargetConfiguration TargetConfiguration{ get; set; }

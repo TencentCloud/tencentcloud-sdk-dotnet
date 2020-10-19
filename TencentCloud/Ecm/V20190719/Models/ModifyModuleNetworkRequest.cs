@@ -31,10 +31,16 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string ModuleId{ get; set; }
 
         /// <summary>
-        /// 默认带宽上限
+        /// 默认出带宽上限
         /// </summary>
         [JsonProperty("DefaultBandwidth")]
         public long? DefaultBandwidth{ get; set; }
+
+        /// <summary>
+        /// 默认入带宽上限
+        /// </summary>
+        [JsonProperty("DefaultBandwidthIn")]
+        public long? DefaultBandwidthIn{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         {
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "DefaultBandwidth", this.DefaultBandwidth);
+            this.SetParamSimple(map, prefix + "DefaultBandwidthIn", this.DefaultBandwidthIn);
         }
     }
 }

@@ -1333,6 +1333,46 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取业务流量曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBizTrendResponse"/></returns>
+        public async Task<DescribeBizTrendResponse> DescribeBizTrend(DescribeBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取业务流量曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBizTrendResponse"/></returns>
+        public DescribeBizTrendResponse DescribeBizTrendSync(DescribeBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
         /// </summary>
         /// <param name="req"><see cref="DescribeCCAlarmThresholdRequest"/></param>

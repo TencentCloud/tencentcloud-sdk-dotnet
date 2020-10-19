@@ -25,13 +25,13 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 服务部署ID
+        /// 服务器舰队ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 策略名称
+        /// 扩缩容策略名称，最小长度为0，最大长度为1024
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

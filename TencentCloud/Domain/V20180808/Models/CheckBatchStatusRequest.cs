@@ -25,7 +25,7 @@ namespace TencentCloud.Domain.V20180808.Models
     {
         
         /// <summary>
-        /// 批量任务id数组，最多 200 个
+        /// 操作日志 ID数组，最多 200 个
         /// </summary>
         [JsonProperty("LogIds")]
         public ulong?[] LogIds{ get; set; }

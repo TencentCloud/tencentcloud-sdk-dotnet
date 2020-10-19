@@ -25,19 +25,19 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 游戏会话进程超时
+        /// 游戏会话进程超时，最小值1，最大值600，单位秒
         /// </summary>
         [JsonProperty("GameServerSessionActivationTimeoutSeconds")]
         public ulong? GameServerSessionActivationTimeoutSeconds{ get; set; }
 
         /// <summary>
-        /// 最大游戏会话数
+        /// 最大游戏会话数，最小值1，最大值2147483647
         /// </summary>
         [JsonProperty("MaxConcurrentGameServerSessionActivations")]
         public ulong? MaxConcurrentGameServerSessionActivations{ get; set; }
 
         /// <summary>
-        /// 服务进程配置
+        /// 服务进程配置，至少有一个进程配置
         /// </summary>
         [JsonProperty("ServerProcesses")]
         public ServerProcesse[] ServerProcesses{ get; set; }

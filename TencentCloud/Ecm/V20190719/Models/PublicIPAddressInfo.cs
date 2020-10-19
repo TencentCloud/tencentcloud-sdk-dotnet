@@ -48,6 +48,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("MaxBandwidthOut")]
         public long? MaxBandwidthOut{ get; set; }
 
+        /// <summary>
+        /// 实例的最大入带宽上限，单位为Mbps。
+        /// </summary>
+        [JsonProperty("MaxBandwidthIn")]
+        public long? MaxBandwidthIn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "PublicIPAddress", this.PublicIPAddress);
             this.SetParamObj(map, prefix + "ISP.", this.ISP);
             this.SetParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "MaxBandwidthIn", this.MaxBandwidthIn);
         }
     }
 }

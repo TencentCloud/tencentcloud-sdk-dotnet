@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 目的服务部署（可为别名）列表
+        /// 目的服务器舰队（可为别名）列表
         /// </summary>
         [JsonProperty("Destinations")]
         public GameServerSessionQueueDestination[] Destinations{ get; set; }

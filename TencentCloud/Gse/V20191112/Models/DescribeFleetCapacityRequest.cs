@@ -25,19 +25,19 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 服务部署 Id列表
+        /// 服务器舰队ID列表
         /// </summary>
         [JsonProperty("FleetIds")]
         public string[] FleetIds{ get; set; }
 
         /// <summary>
-        /// 结果返回最大数量
+        /// 结果返回最大数量，最大值 100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 返回结果偏移
+        /// 返回结果偏移，最小值 0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

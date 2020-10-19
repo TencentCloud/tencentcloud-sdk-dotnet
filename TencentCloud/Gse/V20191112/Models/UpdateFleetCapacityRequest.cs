@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 服务部署ID
+        /// 服务器舰队ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Gse.V20191112.Models
         public ulong? DesiredInstances{ get; set; }
 
         /// <summary>
-        /// 服务器实例数最小限制
+        /// 服务器实例数最小限制，最小值0，最大值不超过最高配额查看各地区最高配额减1
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// 服务器实例数最大限制
+        /// 服务器实例数最大限制，最小值1，最大值不超过最高配额查看各地区最高配额
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
 
         /// <summary>
-        /// 服务器伸缩容间隔
+        /// 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
         /// </summary>
         [JsonProperty("ScalingInterval")]
         public ulong? ScalingInterval{ get; set; }

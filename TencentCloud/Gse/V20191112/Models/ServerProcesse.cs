@@ -25,19 +25,19 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 并发执行数量
+        /// 并发执行数量，所有进程并发执行总数最小值1，最大值50
         /// </summary>
         [JsonProperty("ConcurrentExecutions")]
         public ulong? ConcurrentExecutions{ get; set; }
 
         /// <summary>
-        /// 启动路径：/local/game/ 或 C:\game\
+        /// 启动路径：Linux路径/local/game/ 或WIndows路径C:\game\，最小长度1，最大长度1024
         /// </summary>
         [JsonProperty("LaunchPath")]
         public string LaunchPath{ get; set; }
 
         /// <summary>
-        /// 启动参数
+        /// 启动参数，最小长度0，最大长度1024
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }

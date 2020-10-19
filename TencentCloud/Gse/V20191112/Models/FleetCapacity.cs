@@ -32,7 +32,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 服务器类型
+        /// 服务器类型，如S3.LARGE8,S2.LARGE8,S5.LARGE8等
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
@@ -46,7 +46,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public InstanceCounts InstanceCounts{ get; set; }
 
         /// <summary>
-        /// 服务器伸缩容间隔
+        /// 服务器伸缩容间隔，单位分钟，最小值3，最大值30，默认值10
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScalingInterval")]

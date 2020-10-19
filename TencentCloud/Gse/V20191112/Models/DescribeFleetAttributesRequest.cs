@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string[] FleetIds{ get; set; }
 
         /// <summary>
-        /// 结果返回最大数量，最小值0，最大值1000
+        /// 结果返回最大数量，默认值20，最大值100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

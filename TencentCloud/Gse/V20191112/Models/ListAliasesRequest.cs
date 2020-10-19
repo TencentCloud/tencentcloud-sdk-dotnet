@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 路由策略类型，有效值SIMPLE|TERMINAL
+        /// 路由策略类型，有效值常规别名(SIMPLE)、终止别名(TERMINAL)
         /// </summary>
         [JsonProperty("RoutingStrategyType")]
         public string RoutingStrategyType{ get; set; }

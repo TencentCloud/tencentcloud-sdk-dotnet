@@ -43,7 +43,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public InboundPermission[] InboundPermissions{ get; set; }
 
         /// <summary>
-        /// 服务器类型，例如S5.LARGE8
+        /// 服务器类型，参数根据[获取服务器实例类型列表](https://cloud.tencent.com/document/product/1165/48732)接口获取。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string NewGameServerSessionProtectionPolicy{ get; set; }
 
         /// <summary>
-        /// VPC 网络 Id，弃用，对等链接已不再使用
+        /// VPC 网络 Id，对等连接已不再使用
         /// </summary>
         [JsonProperty("PeerVpcId")]
         public string PeerVpcId{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Gse.V20191112.Models
         public RuntimeConfiguration RuntimeConfiguration{ get; set; }
 
         /// <summary>
-        /// VPC 子网，弃用，对等链接已不再使用
+        /// VPC 子网，对等连接已不再使用
         /// </summary>
         [JsonProperty("SubNetId")]
         public string SubNetId{ get; set; }
 
         /// <summary>
-        /// 时限保护超时时间，默认60分钟，最小值5，最大值1440
+        /// 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
         /// </summary>
         [JsonProperty("GameServerSessionProtectionTimeLimit")]
         public long? GameServerSessionProtectionTimeLimit{ get; set; }

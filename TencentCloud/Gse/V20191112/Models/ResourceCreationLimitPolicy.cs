@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public ulong? NewGameServerSessionsPerCreator{ get; set; }
 
         /// <summary>
-        /// 单位时间，最小值1，默认3
+        /// 单位时间，最小值1，默认3，单位分钟
         /// </summary>
         [JsonProperty("PolicyPeriodInMinutes")]
         public ulong? PolicyPeriodInMinutes{ get; set; }

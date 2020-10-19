@@ -25,14 +25,14 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 服务部署 Id 列表
+        /// 服务器舰队 Id 列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FleetIds")]
         public string[] FleetIds{ get; set; }
 
         /// <summary>
-        /// 服务部署 Id 总数，最小值0
+        /// 服务器舰队 Id 总数，最小值0
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

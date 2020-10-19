@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 服务部署ID
+        /// 服务器舰队ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }

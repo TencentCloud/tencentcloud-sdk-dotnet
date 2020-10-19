@@ -37,7 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 业务核验结果，如下几个结果码会计费
+        /// 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

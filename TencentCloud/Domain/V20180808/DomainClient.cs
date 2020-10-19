@@ -97,7 +97,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
+        /// 本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
         /// 
         /// 默认接口请求频率限制：20次/秒。
         /// </summary>
@@ -119,7 +119,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( CheckBatchStatus ) 用于检查批量任务状态 。
+        /// 本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
         /// 
         /// 默认接口请求频率限制：20次/秒。
         /// </summary>
@@ -216,6 +216,94 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "CreateDomainBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTemplateRequest"/></param>
+        /// <returns><see cref="CreateTemplateResponse"/></returns>
+        public async Task<CreateTemplateResponse> CreateTemplate(CreateTemplateRequest req)
+        {
+             JsonResponseModel<CreateTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="CreateTemplateRequest"/></param>
+        /// <returns><see cref="CreateTemplateResponse"/></returns>
+        public CreateTemplateResponse CreateTemplateSync(CreateTemplateRequest req)
+        {
+             JsonResponseModel<CreateTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( DeleteTemplate ) 用于删除域名信息模板。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTemplateRequest"/></param>
+        /// <returns><see cref="DeleteTemplateResponse"/></returns>
+        public async Task<DeleteTemplateResponse> DeleteTemplate(DeleteTemplateRequest req)
+        {
+             JsonResponseModel<DeleteTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( DeleteTemplate ) 用于删除域名信息模板。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTemplateRequest"/></param>
+        /// <returns><see cref="DeleteTemplateResponse"/></returns>
+        public DeleteTemplateResponse DeleteTemplateSync(DeleteTemplateRequest req)
+        {
+             JsonResponseModel<DeleteTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -397,6 +485,50 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口 ( ModifyDomainDNSBatch) 用于批量修改域名DNS信息 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainDNSBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainDNSBatchResponse"/></returns>
+        public async Task<ModifyDomainDNSBatchResponse> ModifyDomainDNSBatch(ModifyDomainDNSBatchRequest req)
+        {
+             JsonResponseModel<ModifyDomainDNSBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainDNSBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainDNSBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( ModifyDomainDNSBatch) 用于批量修改域名DNS信息 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainDNSBatchRequest"/></param>
+        /// <returns><see cref="ModifyDomainDNSBatchResponse"/></returns>
+        public ModifyDomainDNSBatchResponse ModifyDomainDNSBatchSync(ModifyDomainDNSBatchRequest req)
+        {
+             JsonResponseModel<ModifyDomainDNSBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainDNSBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainDNSBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
         /// 
         /// 默认接口请求频率限制：20次/秒。
@@ -432,6 +564,94 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDomainOwnerBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainOwnerBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( RenewDomainBatch ) 用于批量续费域名 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RenewDomainBatchRequest"/></param>
+        /// <returns><see cref="RenewDomainBatchResponse"/></returns>
+        public async Task<RenewDomainBatchResponse> RenewDomainBatch(RenewDomainBatchRequest req)
+        {
+             JsonResponseModel<RenewDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( RenewDomainBatch ) 用于批量续费域名 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="RenewDomainBatchRequest"/></param>
+        /// <returns><see cref="RenewDomainBatchResponse"/></returns>
+        public RenewDomainBatchResponse RenewDomainBatchSync(RenewDomainBatchRequest req)
+        {
+             JsonResponseModel<RenewDomainBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewDomainBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="SetDomainAutoRenewRequest"/></param>
+        /// <returns><see cref="SetDomainAutoRenewResponse"/></returns>
+        public async Task<SetDomainAutoRenewResponse> SetDomainAutoRenew(SetDomainAutoRenewRequest req)
+        {
+             JsonResponseModel<SetDomainAutoRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetDomainAutoRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDomainAutoRenewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="SetDomainAutoRenewRequest"/></param>
+        /// <returns><see cref="SetDomainAutoRenewResponse"/></returns>
+        public SetDomainAutoRenewResponse SetDomainAutoRenewSync(SetDomainAutoRenewRequest req)
+        {
+             JsonResponseModel<SetDomainAutoRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetDomainAutoRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDomainAutoRenewResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -564,6 +784,50 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "UpdateProhibitionBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProhibitionBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( UploadImage ) 用于上传资质照片 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="UploadImageRequest"/></param>
+        /// <returns><see cref="UploadImageResponse"/></returns>
+        public async Task<UploadImageResponse> UploadImage(UploadImageRequest req)
+        {
+             JsonResponseModel<UploadImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( UploadImage ) 用于上传资质照片 。
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="UploadImageRequest"/></param>
+        /// <returns><see cref="UploadImageResponse"/></returns>
+        public UploadImageResponse UploadImageSync(UploadImageRequest req)
+        {
+             JsonResponseModel<UploadImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

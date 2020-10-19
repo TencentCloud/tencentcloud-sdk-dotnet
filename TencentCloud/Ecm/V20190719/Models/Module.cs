@@ -76,7 +76,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 默认带宽
+        /// 默认出带宽
         /// </summary>
         [JsonProperty("DefaultBandwidth")]
         public long? DefaultBandwidth{ get; set; }
@@ -100,6 +100,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 默认入带宽
+        /// </summary>
+        [JsonProperty("DefaultBandwidthIn")]
+        public long? DefaultBandwidthIn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +124,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "DefaultBandwidthIn", this.DefaultBandwidthIn);
         }
     }
 }

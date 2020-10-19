@@ -43,7 +43,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// CompareLib为上传照片比对时必传，base64后图片最大8MB。
+        /// CompareLib为上传照片比对时必传，Base64后图片最大8MB。
+        /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 开始部署游戏服务器会话的唯一标识符
+        /// 开始部署游戏服务器会话的唯一标识符，最大值48个ASCII字符，模式：[a-zA-Z0-9-]+
         /// </summary>
         [JsonProperty("PlacementId")]
         public string PlacementId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string GameServerSessionQueueName{ get; set; }
 
         /// <summary>
-        /// 游戏服务器允许同时连接到游戏会话的最大玩家数量
+        /// 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Gse.V20191112.Models
         public GameProperty[] GameProperties{ get; set; }
 
         /// <summary>
-        /// 游戏服务器会话数据
+        /// 游戏服务器会话数据，最大长度不超过4096个ASCII字符
         /// </summary>
         [JsonProperty("GameServerSessionData")]
         public string GameServerSessionData{ get; set; }
 
         /// <summary>
-        /// 游戏服务器会话名称
+        /// 游戏服务器会话名称，最大长度不超过4096个ASCII字符
         /// </summary>
         [JsonProperty("GameServerSessionName")]
         public string GameServerSessionName{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 服务部署 Id
+        /// 服务器舰队ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间
+        /// 查询开始时间，时间格式: YYYY-MM-DD hh:mm:ss
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// 查询结束时间，时间格式: YYYY-MM-DD hh:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 分页时返回服务部署事件的数量，默认为20，最大值为100
+        /// 分页时返回服务器舰队事件的数量，默认为20，最大值为100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

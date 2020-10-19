@@ -25,7 +25,7 @@ namespace TencentCloud.Gse.V20191112.Models
     {
         
         /// <summary>
-        /// 服务舰队ID
+        /// 服务器舰队ID
         /// </summary>
         [JsonProperty("FleetId")]
         public string FleetId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 权重
+        /// 权重，最小值0，最大值10，默认值5
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

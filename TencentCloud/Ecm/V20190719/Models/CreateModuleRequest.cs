@@ -80,6 +80,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
+        /// <summary>
+        /// 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
+        /// </summary>
+        [JsonProperty("DefaultBandWidthIn")]
+        public long? DefaultBandWidthIn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "DefaultBandWidthIn", this.DefaultBandWidthIn);
         }
     }
 }

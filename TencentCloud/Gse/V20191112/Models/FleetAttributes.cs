@@ -106,7 +106,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 服务器舰队停止状态
+        /// 服务器舰队停止状态，为空时表示自动扩缩容
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StoppedActions")]

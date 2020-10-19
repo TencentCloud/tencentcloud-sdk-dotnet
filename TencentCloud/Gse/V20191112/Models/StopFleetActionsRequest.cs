@@ -31,7 +31,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 服务器舰队扩展策略，为空或者AUTO_SCALING
+        /// 服务器舰队扩展策略，值为["AUTO_SCALING"]
         /// </summary>
         [JsonProperty("Actions")]
         public string[] Actions{ get; set; }

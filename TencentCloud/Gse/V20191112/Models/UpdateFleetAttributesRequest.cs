@@ -31,19 +31,19 @@ namespace TencentCloud.Gse.V20191112.Models
         public string FleetId{ get; set; }
 
         /// <summary>
-        /// 服务器舰队描述
+        /// 服务器舰队描述，最小长度0，最大长度100
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 服务器舰队名称
+        /// 服务器舰队名称，最小长度1，最大长度50
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 新建游戏会话保护策略
+        /// 保护策略：不保护NoProtection、完全保护FullProtection、时限保护TimeLimitProtection
         /// </summary>
         [JsonProperty("NewGameSessionProtectionPolicy")]
         public string NewGameSessionProtectionPolicy{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public ResourceCreationLimitPolicy ResourceCreationLimitPolicy{ get; set; }
 
         /// <summary>
-        /// 时限保护超时时间，默认60分钟
+        /// 时限保护超时时间，默认60分钟，最小值5，最大值1440；当NewGameSessionProtectionPolicy为TimeLimitProtection时参数有效
         /// </summary>
         [JsonProperty("GameServerSessionProtectionTimeLimit")]
         public long? GameServerSessionProtectionTimeLimit{ get; set; }

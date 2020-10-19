@@ -25,15 +25,17 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 用于人脸比对的照片，图片的BASE64值；
-        /// BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+        /// 用于人脸比对的照片，图片的Base64值；
+        /// Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+        /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 用于活体检测的视频，视频的BASE64值；
-        /// BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
+        /// 用于活体检测的视频，视频的Base64值；
+        /// Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
+        /// 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
         /// </summary>
         [JsonProperty("VideoBase64")]
         public string VideoBase64{ get; set; }

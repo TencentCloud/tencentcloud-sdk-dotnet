@@ -31,10 +31,16 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
-        /// 修改后的最大带宽上限。
+        /// 修改后的最大出带宽上限。
         /// </summary>
         [JsonProperty("MaxBandwidthOut")]
         public long? MaxBandwidthOut{ get; set; }
+
+        /// <summary>
+        /// 修改后的最大入带宽上限。
+        /// </summary>
+        [JsonProperty("MaxBandwidthIn")]
+        public long? MaxBandwidthIn{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
             this.SetParamSimple(map, prefix + "MaxBandwidthOut", this.MaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "MaxBandwidthIn", this.MaxBandwidthIn);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.160</VersionPrefix>
+    <VersionPrefix>3.0.161</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3593,6 +3593,8 @@
     <Compile Include="Dayu\V20180709\Models\DescribeBasicCCThresholdResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeBasicDeviceThresholdRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeBasicDeviceThresholdResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeBizTrendRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeCCAlarmThresholdRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeCCAlarmThresholdResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeCCEvListRequest.cs" />
@@ -3949,6 +3951,10 @@
     <Compile Include="Domain\V20180808\Models\ContactInfo.cs" />
     <Compile Include="Domain\V20180808\Models\CreateDomainBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\CreateDomainBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\CreateTemplateRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\CreateTemplateResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DeleteTemplateRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DeleteTemplateResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainBaseInfoRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainBaseInfoResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainNameListRequest.cs" />
@@ -3959,9 +3965,15 @@
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBaseInfo.cs" />
     <Compile Include="Domain\V20180808\Models\DomainList.cs" />
+    <Compile Include="Domain\V20180808\Models\ModifyDomainDNSBatchRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\ModifyDomainDNSBatchResponse.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainOwnerBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainOwnerBatchResponse.cs" />
     <Compile Include="Domain\V20180808\Models\PriceInfo.cs" />
+    <Compile Include="Domain\V20180808\Models\RenewDomainBatchRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\RenewDomainBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\SetDomainAutoRenewRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\SetDomainAutoRenewResponse.cs" />
     <Compile Include="Domain\V20180808\Models\TemplateInfo.cs" />
     <Compile Include="Domain\V20180808\Models\TransferInDomainBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\TransferInDomainBatchResponse.cs" />
@@ -3969,6 +3981,8 @@
     <Compile Include="Domain\V20180808\Models\TransferProhibitionBatchResponse.cs" />
     <Compile Include="Domain\V20180808\Models\UpdateProhibitionBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\UpdateProhibitionBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\UploadImageRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\UploadImageResponse.cs" />
     <Compile Include="Drm\V20181115\DrmClient.cs" />
     <Compile Include="Drm\V20181115\Models\AddFairPlayPemRequest.cs" />
     <Compile Include="Drm\V20181115\Models\AddFairPlayPemResponse.cs" />
@@ -4895,6 +4909,7 @@
     <Compile Include="Gse\V20191112\Models\Alias.cs" />
     <Compile Include="Gse\V20191112\Models\Asset.cs" />
     <Compile Include="Gse\V20191112\Models\AssetCredentials.cs" />
+    <Compile Include="Gse\V20191112\Models\AssetSupportSys.cs" />
     <Compile Include="Gse\V20191112\Models\AttachCcnInstancesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\AttachCcnInstancesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\CcnInstanceSets.cs" />
@@ -4923,6 +4938,8 @@
     <Compile Include="Gse\V20191112\Models\DescribeAliasResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAssetRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAssetResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeAssetSystemsRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeAssetSystemsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAssetsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAssetsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeCcnInstancesRequest.cs" />
@@ -5046,6 +5063,8 @@
     <Compile Include="Gse\V20191112\Models\UpdateFleetAttributesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetCapacityRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetCapacityResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateFleetNameRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateFleetNameResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetPortSettingsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetPortSettingsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateGameServerSessionQueueRequest.cs" />

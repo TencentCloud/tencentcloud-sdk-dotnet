@@ -43,13 +43,13 @@ namespace TencentCloud.Gse.V20191112.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 玩家会话创建策略（ACCEPT_ALL,DENY_ALL）
+        /// 玩家会话创建策略，包括允许所有玩家加入和禁止所有玩家加入（ACCEPT_ALL,DENY_ALL）
         /// </summary>
         [JsonProperty("PlayerSessionCreationPolicy")]
         public string PlayerSessionCreationPolicy{ get; set; }
 
         /// <summary>
-        /// 保护策略(NoProtection,TimeLimitProtection,FullProtection)
+        /// 保护策略，包括不保护、时限保护和完全保护(NoProtection,TimeLimitProtection,FullProtection)
         /// </summary>
         [JsonProperty("ProtectionPolicy")]
         public string ProtectionPolicy{ get; set; }

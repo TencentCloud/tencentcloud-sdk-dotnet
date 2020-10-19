@@ -31,13 +31,13 @@ namespace TencentCloud.Gse.V20191112.Models
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// 结果返回最大值，最小值0，最大值1000
+        /// 结果返回最大值，暂未使用
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 结果返回偏移，最小值0
+        /// 结果返回偏移，暂未使用
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

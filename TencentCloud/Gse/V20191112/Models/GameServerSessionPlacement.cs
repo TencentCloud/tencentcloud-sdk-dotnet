@@ -85,7 +85,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public GameProperty[] GameProperties{ get; set; }
 
         /// <summary>
-        /// 最大玩家数量
+        /// 游戏服务器允许同时连接到游戏会话的最大玩家数量，最小值1，最大值为玩家会话最大限额
         /// </summary>
         [JsonProperty("MaximumPlayerSessionCount")]
         public ulong? MaximumPlayerSessionCount{ get; set; }
