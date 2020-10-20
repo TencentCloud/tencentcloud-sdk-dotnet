@@ -88,7 +88,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// 任务实例统计指标
         /// </summary>
         [JsonProperty("TaskInstanceMetrics")]
-        public TaskInstanceView TaskInstanceMetrics{ get; set; }
+        public TaskInstanceMetrics TaskInstanceMetrics{ get; set; }
 
         /// <summary>
         /// 作业失败原因
@@ -102,6 +102,13 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 下一步动作
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextAction")]
+        public string NextAction{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -128,6 +135,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamObj(map, prefix + "TaskInstanceMetrics.", this.TaskInstanceMetrics);
             this.SetParamSimple(map, prefix + "StateReason", this.StateReason);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NextAction", this.NextAction);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

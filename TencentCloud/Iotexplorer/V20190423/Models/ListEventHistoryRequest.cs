@@ -66,6 +66,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
+        /// <summary>
+        /// 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

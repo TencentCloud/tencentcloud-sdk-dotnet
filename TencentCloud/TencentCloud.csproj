@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.161</VersionPrefix>
+    <VersionPrefix>3.0.162</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1536,6 +1536,8 @@
     <Compile Include="Cbs\V20170312\Models\UnbindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\UnbindAutoSnapshotPolicyResponse.cs" />
     <Compile Include="Ccc\V20200210\CccClient.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\SeatUserInfo.cs" />
@@ -7953,6 +7955,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ReadOnlyGroup.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ReadOnlyInstance.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ReadOnlyInstanceWeightPair.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\RecycleDBInstanceRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\RecycleDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RegionInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RemoveBackupsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\RemoveBackupsResponse.cs" />

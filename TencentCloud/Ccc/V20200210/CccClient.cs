@@ -53,6 +53,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建 SDK 登录 Token。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSDKLoginTokenRequest"/></param>
+        /// <returns><see cref="CreateSDKLoginTokenResponse"/></returns>
+        public async Task<CreateSDKLoginTokenResponse> CreateSDKLoginToken(CreateSDKLoginTokenRequest req)
+        {
+             JsonResponseModel<CreateSDKLoginTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSDKLoginToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSDKLoginTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 SDK 登录 Token。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSDKLoginTokenRequest"/></param>
+        /// <returns><see cref="CreateSDKLoginTokenResponse"/></returns>
+        public CreateSDKLoginTokenResponse CreateSDKLoginTokenSync(CreateSDKLoginTokenRequest req)
+        {
+             JsonResponseModel<CreateSDKLoginTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSDKLoginToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSDKLoginTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取电话服务记录与录音
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCdrRequest"/></param>

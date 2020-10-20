@@ -2373,6 +2373,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（RecycleDBInstance）用于主动回收已下线的SQLSERVER实例
+        /// </summary>
+        /// <param name="req"><see cref="RecycleDBInstanceRequest"/></param>
+        /// <returns><see cref="RecycleDBInstanceResponse"/></returns>
+        public async Task<RecycleDBInstanceResponse> RecycleDBInstance(RecycleDBInstanceRequest req)
+        {
+             JsonResponseModel<RecycleDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecycleDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecycleDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RecycleDBInstance）用于主动回收已下线的SQLSERVER实例
+        /// </summary>
+        /// <param name="req"><see cref="RecycleDBInstanceRequest"/></param>
+        /// <returns><see cref="RecycleDBInstanceResponse"/></returns>
+        public RecycleDBInstanceResponse RecycleDBInstanceSync(RecycleDBInstanceRequest req)
+        {
+             JsonResponseModel<RecycleDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecycleDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecycleDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
         /// </summary>
         /// <param name="req"><see cref="RemoveBackupsRequest"/></param>
