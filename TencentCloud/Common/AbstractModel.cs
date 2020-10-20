@@ -22,7 +22,7 @@ namespace TencentCloud.Common
 {
     public abstract class AbstractModel
     {
-        internal abstract void ToMap(Dictionary<string, string> map, string prefix);
+        public abstract void ToMap(Dictionary<string, string> map, string prefix);
 
         protected void SetParamSimple<V>(Dictionary<string, string> map, String key, V value)
         {
