@@ -413,6 +413,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建grafana监控面板
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusDashboardRequest"/></param>
+        /// <returns><see cref="CreatePrometheusDashboardResponse"/></returns>
+        public async Task<CreatePrometheusDashboardResponse> CreatePrometheusDashboard(CreatePrometheusDashboardRequest req)
+        {
+             JsonResponseModel<CreatePrometheusDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建grafana监控面板
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusDashboardRequest"/></param>
+        /// <returns><see cref="CreatePrometheusDashboardResponse"/></returns>
+        public CreatePrometheusDashboardResponse CreatePrometheusDashboardSync(CreatePrometheusDashboardRequest req)
+        {
+             JsonResponseModel<CreatePrometheusDashboardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusDashboard");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除集群(YUNAPI V3版本)
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterRequest"/></param>
@@ -1164,6 +1204,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取关联目标集群的实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAgentInstancesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAgentInstancesResponse"/></returns>
+        public async Task<DescribePrometheusAgentInstancesResponse> DescribePrometheusAgentInstances(DescribePrometheusAgentInstancesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusAgentInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusAgentInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusAgentInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取关联目标集群的实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAgentInstancesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAgentInstancesResponse"/></returns>
+        public DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstancesSync(DescribePrometheusAgentInstancesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusAgentInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusAgentInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusAgentInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

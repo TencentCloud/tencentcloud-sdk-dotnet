@@ -86,6 +86,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
+        /// <summary>
+        /// 视频恒定码率控制因子，取值范围为[0, 51]。
+        /// 如果指定该参数，将使用 CRF 的码率控制方式做转码。取0值表示禁用 CRF 模式。
+        /// </summary>
+        [JsonProperty("Vcrf")]
+        public ulong? Vcrf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
         }
     }
 }

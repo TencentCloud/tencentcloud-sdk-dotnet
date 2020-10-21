@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.162</VersionPrefix>
+    <VersionPrefix>3.0.163</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2332,7 +2332,10 @@
     <Compile Include="Clb\V20180317\Models\ClassicalLoadBalancerInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTargetInfo.cs" />
+    <Compile Include="Clb\V20180317\Models\Cluster.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterItem.cs" />
+    <Compile Include="Clb\V20180317\Models\ClusterResource.cs" />
+    <Compile Include="Clb\V20180317\Models\ClustersZone.cs" />
     <Compile Include="Clb\V20180317\Models\CreateClsLogSetRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateListenerRequest.cs" />
@@ -2381,6 +2384,10 @@
     <Compile Include="Clb\V20180317\Models\DescribeClassicalLBTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeClusterResourcesRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeClusterResourcesResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeExclusiveClustersRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeExclusiveClustersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
@@ -6905,6 +6912,7 @@
     <Compile Include="Mps\V20190612\Models\TextWatermarkTemplateInputForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\TranscodeTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\TranscodeTemplate.cs" />
+    <Compile Include="Mps\V20190612\Models\UrlInputInfo.cs" />
     <Compile Include="Mps\V20190612\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="Mps\V20190612\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\UserDefineConfigureInfo.cs" />
@@ -9069,6 +9077,8 @@
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DataDisk.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
@@ -9108,6 +9118,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeImagesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeImagesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusAgentInstancesRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusAgentInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
@@ -9459,6 +9471,7 @@
     <Compile Include="Tsf\V20180326\Models\RevocationPublicConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RollbackConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\RollbackConfigResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\SchedulingStrategy.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroupPage.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceSetting.cs" />

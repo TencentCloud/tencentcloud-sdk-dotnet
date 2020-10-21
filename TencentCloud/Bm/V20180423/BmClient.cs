@@ -537,7 +537,7 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
-        /// 获取获取设备类型
+        /// 获取设备类型
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceClassRequest"/></param>
         /// <returns><see cref="DescribeDeviceClassResponse"/></returns>
@@ -557,7 +557,7 @@ namespace TencentCloud.Bm.V20180423
         }
 
         /// <summary>
-        /// 获取获取设备类型
+        /// 获取设备类型
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceClassRequest"/></param>
         /// <returns><see cref="DescribeDeviceClassResponse"/></returns>

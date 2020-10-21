@@ -32,12 +32,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+        /// 文字水印不支持截图打水印。
         /// </summary>
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
 
         /// <summary>
         /// SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+        /// SVG 水印不支持截图打水印。
         /// </summary>
         [JsonProperty("SvgContent")]
         public string SvgContent{ get; set; }

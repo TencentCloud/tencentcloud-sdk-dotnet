@@ -1243,6 +1243,86 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询独占集群中资源列表，支持按集群ID、vip、负载均衡ID、是否闲置为过滤条件检索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterResourcesRequest"/></param>
+        /// <returns><see cref="DescribeClusterResourcesResponse"/></returns>
+        public async Task<DescribeClusterResourcesResponse> DescribeClusterResources(DescribeClusterResourcesRequest req)
+        {
+             JsonResponseModel<DescribeClusterResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询独占集群中资源列表，支持按集群ID、vip、负载均衡ID、是否闲置为过滤条件检索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterResourcesRequest"/></param>
+        /// <returns><see cref="DescribeClusterResourcesResponse"/></returns>
+        public DescribeClusterResourcesResponse DescribeClusterResourcesSync(DescribeClusterResourcesRequest req)
+        {
+             JsonResponseModel<DescribeClusterResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群信息列表，支持以集群类型、集群唯一ID、集群名字、集群标签、集群内vip、集群内负载均衡唯一id、集群网络类型、可用区等条件进行检索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveClustersRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveClustersResponse"/></returns>
+        public async Task<DescribeExclusiveClustersResponse> DescribeExclusiveClusters(DescribeExclusiveClustersRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExclusiveClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询集群信息列表，支持以集群类型、集群唯一ID、集群名字、集群标签、集群内vip、集群内负载均衡唯一id、集群网络类型、可用区等条件进行检索
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveClustersRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveClustersResponse"/></returns>
+        public DescribeExclusiveClustersResponse DescribeExclusiveClustersSync(DescribeExclusiveClustersRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExclusiveClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeListeners 接口可根据负载均衡器 ID，监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
         /// </summary>
         /// <param name="req"><see cref="DescribeListenersRequest"/></param>

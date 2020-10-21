@@ -192,6 +192,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DeployAgent")]
         public bool? DeployAgent{ get; set; }
 
+        /// <summary>
+        /// 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+        /// </summary>
+        [JsonProperty("SchedulingStrategy")]
+        public SchedulingStrategy SchedulingStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "Envs.", this.Envs);
             this.SetParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
             this.SetParamSimple(map, prefix + "DeployAgent", this.DeployAgent);
+            this.SetParamObj(map, prefix + "SchedulingStrategy.", this.SchedulingStrategy);
         }
     }
 }

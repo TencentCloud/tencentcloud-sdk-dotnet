@@ -15,33 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MediaInputInfo : AbstractModel
+    public class DescribePrometheusAgentInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 输入来源对象的类型，可以支持 COS 和 URL 两种。
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
-        /// </summary>
-        [JsonProperty("CosInputInfo")]
-        public CosInputInfo CosInputInfo{ get; set; }
-
-        /// <summary>
-        /// 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+        /// 关联该集群的实例列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UrlInputInfo")]
-        public UrlInputInfo UrlInputInfo{ get; set; }
+        [JsonProperty("Instances")]
+        public string[] Instances{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +43,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         internal override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
-            this.SetParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
+            this.SetParamArraySimple(map, prefix + "Instances.", this.Instances);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

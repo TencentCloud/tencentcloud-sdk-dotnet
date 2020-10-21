@@ -60,6 +60,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
+        /// <summary>
+        /// 是否开启高可用
+        /// </summary>
+        [JsonProperty("IsHaEnable")]
+        public string IsHaEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
             this.SetParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
         }
     }
 }

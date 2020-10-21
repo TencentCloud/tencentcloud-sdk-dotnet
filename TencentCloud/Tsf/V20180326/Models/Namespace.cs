@@ -115,6 +115,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("NamespaceType")]
         public string NamespaceType{ get; set; }
 
+        /// <summary>
+        /// 是否开启高可用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsHaEnable")]
+        public string IsHaEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NamespaceResourceType", this.NamespaceResourceType);
             this.SetParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
+            this.SetParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
         }
     }
 }

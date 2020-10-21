@@ -96,6 +96,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("AuditLogTopicId")]
         public string AuditLogTopicId{ get; set; }
 
+        /// <summary>
+        /// 区分单网卡多IP模式和独立网卡模式
+        /// </summary>
+        [JsonProperty("VpcCniType")]
+        public string VpcCniType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AuditEnabled", this.AuditEnabled);
             this.SetParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
             this.SetParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
+            this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
         }
     }
 }

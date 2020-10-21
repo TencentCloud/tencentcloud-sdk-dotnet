@@ -48,6 +48,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DeployDesc")]
         public string DeployDesc{ get; set; }
 
+        /// <summary>
+        /// 是否允许强制启动
+        /// </summary>
+        [JsonProperty("ForceStart")]
+        public bool? ForceStart{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
             this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
             this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "ForceStart", this.ForceStart);
         }
     }
 }

@@ -213,6 +213,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("OperationInfo")]
         public OperationInfo OperationInfo{ get; set; }
 
+        /// <summary>
+        /// 集群版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterVersion")]
+        public string ClusterVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +253,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RunServiceInstanceCount", this.RunServiceInstanceCount);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamObj(map, prefix + "OperationInfo.", this.OperationInfo);
+            this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         }
     }
 }

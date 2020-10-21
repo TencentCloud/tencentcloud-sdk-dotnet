@@ -60,6 +60,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 状态过滤，online、offline、single_online
+        /// </summary>
+        [JsonProperty("Status")]
+        public string[] Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
         }
     }
 }
