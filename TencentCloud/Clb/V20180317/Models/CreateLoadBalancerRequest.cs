@@ -106,6 +106,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
+        /// 指定Vip申请负载均衡
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
+        /// <summary>
         /// 独占集群信息
         /// </summary>
         [JsonProperty("ExclusiveCluster")]
@@ -142,6 +148,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);

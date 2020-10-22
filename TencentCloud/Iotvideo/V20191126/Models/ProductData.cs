@@ -121,6 +121,13 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("AccessMode")]
         public long? AccessMode{ get; set; }
 
+        /// <summary>
+        /// linux,android,liteos
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Os")]
+        public string Os{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +147,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "ProductCate", this.ProductCate);
             this.SetParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
+            this.SetParamSimple(map, prefix + "Os", this.Os);
         }
     }
 }

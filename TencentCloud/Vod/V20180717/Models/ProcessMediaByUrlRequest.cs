@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+        /// API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
