@@ -52,7 +52,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);

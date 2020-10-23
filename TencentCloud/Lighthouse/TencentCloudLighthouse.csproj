@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudLighthouseSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200324\LighthouseClient.cs" />
+    <Compile Include="V20200324\Models\Blueprint.cs" />
+    <Compile Include="V20200324\Models\Bundle.cs" />
+    <Compile Include="V20200324\Models\CreateFirewallRulesRequest.cs" />
+    <Compile Include="V20200324\Models\CreateFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\DeleteFirewallRulesRequest.cs" />
+    <Compile Include="V20200324\Models\DeleteFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeBlueprintsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeBlueprintsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeBundlesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeBundlesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallRulesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesTrafficPackagesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesTrafficPackagesResponse.cs" />
+    <Compile Include="V20200324\Models\Filter.cs" />
+    <Compile Include="V20200324\Models\FirewallRule.cs" />
+    <Compile Include="V20200324\Models\FirewallRuleInfo.cs" />
+    <Compile Include="V20200324\Models\Instance.cs" />
+    <Compile Include="V20200324\Models\InstancePrice.cs" />
+    <Compile Include="V20200324\Models\InstanceTrafficPackage.cs" />
+    <Compile Include="V20200324\Models\InternetAccessible.cs" />
+    <Compile Include="V20200324\Models\LoginSettings.cs" />
+    <Compile Include="V20200324\Models\Price.cs" />
+    <Compile Include="V20200324\Models\RebootInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\RebootInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\ResetInstanceRequest.cs" />
+    <Compile Include="V20200324\Models\ResetInstanceResponse.cs" />
+    <Compile Include="V20200324\Models\StartInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\StartInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\StopInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\StopInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\SystemDisk.cs" />
+    <Compile Include="V20200324\Models\TrafficPackage.cs" />
+  </ItemGroup>
+</Project>

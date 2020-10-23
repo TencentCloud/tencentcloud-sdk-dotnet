@@ -40,7 +40,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

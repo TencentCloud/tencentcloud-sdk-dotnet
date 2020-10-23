@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCfwSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190904\CfwClient.cs" />
+    <Compile Include="V20190904\Models\AcListsData.cs" />
+    <Compile Include="V20190904\Models\CreateAcRulesRequest.cs" />
+    <Compile Include="V20190904\Models\CreateAcRulesResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteAcRuleRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteAcRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteAllAccessControlRuleRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteAllAccessControlRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeAcListsRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeAcListsResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatRuleOverviewRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatRuleOverviewResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeRuleOverviewRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeRuleOverviewResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeSwitchListsRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeSwitchListsResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeSyncAssetStatusRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeSyncAssetStatusResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeTableStatusRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeTableStatusResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeVpcRuleOverviewRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAcRuleRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAcRuleResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAllRuleStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAllRuleStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAllSwitchStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAllSwitchStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyItemSwitchStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyItemSwitchStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifySequenceRulesRequest.cs" />
+    <Compile Include="V20190904\Models\ModifySequenceRulesResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyTableStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyTableStatusResponse.cs" />
+    <Compile Include="V20190904\Models\RuleInfoData.cs" />
+    <Compile Include="V20190904\Models\RunSyncAssetRequest.cs" />
+    <Compile Include="V20190904\Models\RunSyncAssetResponse.cs" />
+    <Compile Include="V20190904\Models\SequenceData.cs" />
+    <Compile Include="V20190904\Models\SwitchListsData.cs" />
+  </ItemGroup>
+</Project>

@@ -76,7 +76,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
             this.SetParamSimple(map, prefix + "ValueType", this.ValueType);

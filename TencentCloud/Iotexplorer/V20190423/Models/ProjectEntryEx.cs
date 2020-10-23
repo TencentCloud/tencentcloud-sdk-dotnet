@@ -76,7 +76,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);

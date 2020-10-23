@@ -42,7 +42,7 @@ namespace TencentCloud.Tione.V20191022.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "CosDataSource.", this.CosDataSource);
             this.SetParamObj(map, prefix + "FileSystemDataSource.", this.FileSystemDataSource);

@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudGmeSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180711\GmeClient.cs" />
+    <Compile Include="V20180711\Models\AppStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\CreateAppRequest.cs" />
+    <Compile Include="V20180711\Models\CreateAppResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeAppStatisticsRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeAppStatisticsResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeFilterResultListRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeFilterResultListResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeFilterResultRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeFilterResultResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeScanResult.cs" />
+    <Compile Include="V20180711\Models\DescribeScanResultListRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeScanResultListResponse.cs" />
+    <Compile Include="V20180711\Models\ModifyAppStatusRequest.cs" />
+    <Compile Include="V20180711\Models\ModifyAppStatusResponse.cs" />
+    <Compile Include="V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\RealtimeSpeechConf.cs" />
+    <Compile Include="V20180711\Models\ScanDetail.cs" />
+    <Compile Include="V20180711\Models\ScanPiece.cs" />
+    <Compile Include="V20180711\Models\ScanVoiceRequest.cs" />
+    <Compile Include="V20180711\Models\ScanVoiceResponse.cs" />
+    <Compile Include="V20180711\Models\ScanVoiceResult.cs" />
+    <Compile Include="V20180711\Models\Tag.cs" />
+    <Compile Include="V20180711\Models\Task.cs" />
+    <Compile Include="V20180711\Models\VoiceFilter.cs" />
+    <Compile Include="V20180711\Models\VoiceFilterConf.cs" />
+    <Compile Include="V20180711\Models\VoiceFilterInfo.cs" />
+    <Compile Include="V20180711\Models\VoiceFilterRequest.cs" />
+    <Compile Include="V20180711\Models\VoiceFilterResponse.cs" />
+    <Compile Include="V20180711\Models\VoiceFilterStatisticsItem.cs" />
+    <Compile Include="V20180711\Models\VoiceMessageConf.cs" />
+    <Compile Include="V20180711\Models\VoiceMessageStatisticsItem.cs" />
+  </ItemGroup>
+</Project>

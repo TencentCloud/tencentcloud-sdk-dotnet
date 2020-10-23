@@ -1,0 +1,311 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCdbSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20170320\CdbClient.cs" />
+    <Compile Include="V20170320\Models\Account.cs" />
+    <Compile Include="V20170320\Models\AccountInfo.cs" />
+    <Compile Include="V20170320\Models\AddTimeWindowRequest.cs" />
+    <Compile Include="V20170320\Models\AddTimeWindowResponse.cs" />
+    <Compile Include="V20170320\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170320\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\AuditFilter.cs" />
+    <Compile Include="V20170320\Models\AuditLogFile.cs" />
+    <Compile Include="V20170320\Models\AuditLogFilter.cs" />
+    <Compile Include="V20170320\Models\AuditPolicy.cs" />
+    <Compile Include="V20170320\Models\AuditRule.cs" />
+    <Compile Include="V20170320\Models\BackupConfig.cs" />
+    <Compile Include="V20170320\Models\BackupInfo.cs" />
+    <Compile Include="V20170320\Models\BackupItem.cs" />
+    <Compile Include="V20170320\Models\BackupSummaryItem.cs" />
+    <Compile Include="V20170320\Models\BalanceRoGroupLoadRequest.cs" />
+    <Compile Include="V20170320\Models\BalanceRoGroupLoadResponse.cs" />
+    <Compile Include="V20170320\Models\BinlogInfo.cs" />
+    <Compile Include="V20170320\Models\CloseWanServiceRequest.cs" />
+    <Compile Include="V20170320\Models\CloseWanServiceResponse.cs" />
+    <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
+    <Compile Include="V20170320\Models\CommonTimeWindow.cs" />
+    <Compile Include="V20170320\Models\CreateAccountsRequest.cs" />
+    <Compile Include="V20170320\Models\CreateAccountsResponse.cs" />
+    <Compile Include="V20170320\Models\CreateAuditLogFileRequest.cs" />
+    <Compile Include="V20170320\Models\CreateAuditLogFileResponse.cs" />
+    <Compile Include="V20170320\Models\CreateAuditPolicyRequest.cs" />
+    <Compile Include="V20170320\Models\CreateAuditPolicyResponse.cs" />
+    <Compile Include="V20170320\Models\CreateAuditRuleRequest.cs" />
+    <Compile Include="V20170320\Models\CreateAuditRuleResponse.cs" />
+    <Compile Include="V20170320\Models\CreateBackupRequest.cs" />
+    <Compile Include="V20170320\Models\CreateBackupResponse.cs" />
+    <Compile Include="V20170320\Models\CreateDBImportJobRequest.cs" />
+    <Compile Include="V20170320\Models\CreateDBImportJobResponse.cs" />
+    <Compile Include="V20170320\Models\CreateDBInstanceHourRequest.cs" />
+    <Compile Include="V20170320\Models\CreateDBInstanceHourResponse.cs" />
+    <Compile Include="V20170320\Models\CreateDBInstanceRequest.cs" />
+    <Compile Include="V20170320\Models\CreateDBInstanceResponse.cs" />
+    <Compile Include="V20170320\Models\CreateDeployGroupRequest.cs" />
+    <Compile Include="V20170320\Models\CreateDeployGroupResponse.cs" />
+    <Compile Include="V20170320\Models\CreateParamTemplateRequest.cs" />
+    <Compile Include="V20170320\Models\CreateParamTemplateResponse.cs" />
+    <Compile Include="V20170320\Models\CreateRoInstanceIpRequest.cs" />
+    <Compile Include="V20170320\Models\CreateRoInstanceIpResponse.cs" />
+    <Compile Include="V20170320\Models\DBSwitchInfo.cs" />
+    <Compile Include="V20170320\Models\DatabaseNameInfo.cs" />
+    <Compile Include="V20170320\Models\DatabasePrivilege.cs" />
+    <Compile Include="V20170320\Models\DeleteAccountsRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteAccountsResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteAuditLogFileRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteAuditLogFileResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteAuditPolicyRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteAuditPolicyResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteAuditRuleRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteAuditRuleResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteBackupRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteBackupResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteDeployGroupsRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteDeployGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteParamTemplateRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteParamTemplateResponse.cs" />
+    <Compile Include="V20170320\Models\DeleteTimeWindowRequest.cs" />
+    <Compile Include="V20170320\Models\DeleteTimeWindowResponse.cs" />
+    <Compile Include="V20170320\Models\DeployGroupInfo.cs" />
+    <Compile Include="V20170320\Models\DescribeAccountPrivilegesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAsyncRequestInfoRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditConfigRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditConfigResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditLogFilesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditPoliciesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditPoliciesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditRulesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeAuditRulesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupConfigRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupConfigResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupDatabasesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupDatabasesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupOverviewRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupOverviewResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupSummariesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupSummariesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupTablesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupTablesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBackupsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBinlogBackupOverviewRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBinlogBackupOverviewResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeBinlogsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeBinlogsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBImportRecordsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBImportRecordsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceCharsetRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceCharsetResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceConfigRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceConfigResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceGTIDRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceGTIDResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceInfoRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceInfoResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceRebootTimeRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstanceRebootTimeResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstancesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBPriceRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBPriceResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBSwitchRecordsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBSwitchRecordsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDBZoneConfigRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDBZoneConfigResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDataBackupOverviewRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDataBackupOverviewResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDatabasesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDefaultParamsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDefaultParamsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDeployGroupListRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDeployGroupListResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeDeviceMonitorInfoRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeDeviceMonitorInfoResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeErrorLogDataRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeErrorLogDataResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeInstanceParamRecordsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeInstanceParamRecordsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeInstanceParamsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeInstanceParamsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeParamTemplateInfoRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeParamTemplateInfoResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeParamTemplatesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeParamTemplatesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeRoGroupsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeRoGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeRoMinScaleRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeRoMinScaleResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeRollbackRangeTimeRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeRollbackRangeTimeResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeRollbackTaskDetailRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeRollbackTaskDetailResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeSlowLogDataRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeSlowLogDataResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeSlowLogsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeSlowLogsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeSupportedPrivilegesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeSupportedPrivilegesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeTablesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeTablesResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeTagsOfInstanceIdsRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeTagsOfInstanceIdsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeTasksRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeTimeWindowRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeTimeWindowResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeUploadedFilesRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeUploadedFilesResponse.cs" />
+    <Compile Include="V20170320\Models\DeviceCpuInfo.cs" />
+    <Compile Include="V20170320\Models\DeviceCpuRateInfo.cs" />
+    <Compile Include="V20170320\Models\DeviceDiskInfo.cs" />
+    <Compile Include="V20170320\Models\DeviceMemInfo.cs" />
+    <Compile Include="V20170320\Models\DeviceNetInfo.cs" />
+    <Compile Include="V20170320\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170320\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\DrInfo.cs" />
+    <Compile Include="V20170320\Models\ErrlogItem.cs" />
+    <Compile Include="V20170320\Models\ImportRecord.cs" />
+    <Compile Include="V20170320\Models\Inbound.cs" />
+    <Compile Include="V20170320\Models\InitDBInstancesRequest.cs" />
+    <Compile Include="V20170320\Models\InitDBInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\InquiryPriceUpgradeInstancesRequest.cs" />
+    <Compile Include="V20170320\Models\InquiryPriceUpgradeInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\InstanceInfo.cs" />
+    <Compile Include="V20170320\Models\InstanceRebootTime.cs" />
+    <Compile Include="V20170320\Models\InstanceRollbackRangeTime.cs" />
+    <Compile Include="V20170320\Models\IsolateDBInstanceRequest.cs" />
+    <Compile Include="V20170320\Models\IsolateDBInstanceResponse.cs" />
+    <Compile Include="V20170320\Models\MasterInfo.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountDescriptionRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountPasswordRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountPasswordResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountPrivilegesRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyAuditConfigRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyAuditConfigResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyAuditRuleRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyAuditRuleResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyAutoRenewFlagRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyAutoRenewFlagResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyBackupConfigRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceProjectRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceProjectResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceVipVportRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyDBInstanceVipVportResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyInstanceParamRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyInstanceParamResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyInstanceTagRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyInstanceTagResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyNameOrDescByDpIdRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyNameOrDescByDpIdResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyParamTemplateRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyParamTemplateResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyRoGroupInfoRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyRoGroupInfoResponse.cs" />
+    <Compile Include="V20170320\Models\ModifyTimeWindowRequest.cs" />
+    <Compile Include="V20170320\Models\ModifyTimeWindowResponse.cs" />
+    <Compile Include="V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
+    <Compile Include="V20170320\Models\OfflineIsolatedInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\OpenDBInstanceGTIDRequest.cs" />
+    <Compile Include="V20170320\Models\OpenDBInstanceGTIDResponse.cs" />
+    <Compile Include="V20170320\Models\OpenWanServiceRequest.cs" />
+    <Compile Include="V20170320\Models\OpenWanServiceResponse.cs" />
+    <Compile Include="V20170320\Models\Outbound.cs" />
+    <Compile Include="V20170320\Models\ParamInfo.cs" />
+    <Compile Include="V20170320\Models\ParamRecord.cs" />
+    <Compile Include="V20170320\Models\ParamTemplateInfo.cs" />
+    <Compile Include="V20170320\Models\Parameter.cs" />
+    <Compile Include="V20170320\Models\ParameterDetail.cs" />
+    <Compile Include="V20170320\Models\RegionSellConf.cs" />
+    <Compile Include="V20170320\Models\ReleaseIsolatedDBInstancesRequest.cs" />
+    <Compile Include="V20170320\Models\ReleaseIsolatedDBInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\ReleaseResult.cs" />
+    <Compile Include="V20170320\Models\RenewDBInstanceRequest.cs" />
+    <Compile Include="V20170320\Models\RenewDBInstanceResponse.cs" />
+    <Compile Include="V20170320\Models\RestartDBInstancesRequest.cs" />
+    <Compile Include="V20170320\Models\RestartDBInstancesResponse.cs" />
+    <Compile Include="V20170320\Models\RoGroup.cs" />
+    <Compile Include="V20170320\Models\RoGroupAttr.cs" />
+    <Compile Include="V20170320\Models\RoInstanceInfo.cs" />
+    <Compile Include="V20170320\Models\RoVipInfo.cs" />
+    <Compile Include="V20170320\Models\RoWeightValue.cs" />
+    <Compile Include="V20170320\Models\RollbackDBName.cs" />
+    <Compile Include="V20170320\Models\RollbackInstancesInfo.cs" />
+    <Compile Include="V20170320\Models\RollbackTableName.cs" />
+    <Compile Include="V20170320\Models\RollbackTables.cs" />
+    <Compile Include="V20170320\Models\RollbackTask.cs" />
+    <Compile Include="V20170320\Models\RollbackTimeRange.cs" />
+    <Compile Include="V20170320\Models\SecurityGroup.cs" />
+    <Compile Include="V20170320\Models\SellConfig.cs" />
+    <Compile Include="V20170320\Models\SellType.cs" />
+    <Compile Include="V20170320\Models\SlaveConfig.cs" />
+    <Compile Include="V20170320\Models\SlaveInfo.cs" />
+    <Compile Include="V20170320\Models\SlaveInstanceInfo.cs" />
+    <Compile Include="V20170320\Models\SlowLogInfo.cs" />
+    <Compile Include="V20170320\Models\SlowLogItem.cs" />
+    <Compile Include="V20170320\Models\SqlFileInfo.cs" />
+    <Compile Include="V20170320\Models\StartBatchRollbackRequest.cs" />
+    <Compile Include="V20170320\Models\StartBatchRollbackResponse.cs" />
+    <Compile Include="V20170320\Models\StopDBImportJobRequest.cs" />
+    <Compile Include="V20170320\Models\StopDBImportJobResponse.cs" />
+    <Compile Include="V20170320\Models\SwitchForUpgradeRequest.cs" />
+    <Compile Include="V20170320\Models\SwitchForUpgradeResponse.cs" />
+    <Compile Include="V20170320\Models\TableNameInfo.cs" />
+    <Compile Include="V20170320\Models\TablePrivilege.cs" />
+    <Compile Include="V20170320\Models\TagInfo.cs" />
+    <Compile Include="V20170320\Models\TagInfoUnit.cs" />
+    <Compile Include="V20170320\Models\TagsInfoOfInstance.cs" />
+    <Compile Include="V20170320\Models\TaskDetail.cs" />
+    <Compile Include="V20170320\Models\UpgradeDBInstanceEngineVersionRequest.cs" />
+    <Compile Include="V20170320\Models\UpgradeDBInstanceEngineVersionResponse.cs" />
+    <Compile Include="V20170320\Models\UpgradeDBInstanceRequest.cs" />
+    <Compile Include="V20170320\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20170320\Models\UploadInfo.cs" />
+    <Compile Include="V20170320\Models\VerifyRootAccountRequest.cs" />
+    <Compile Include="V20170320\Models\VerifyRootAccountResponse.cs" />
+    <Compile Include="V20170320\Models\ZoneConf.cs" />
+    <Compile Include="V20170320\Models\ZoneSellConf.cs" />
+  </ItemGroup>
+</Project>

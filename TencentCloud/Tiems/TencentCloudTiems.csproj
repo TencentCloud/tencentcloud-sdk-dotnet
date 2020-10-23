@@ -1,0 +1,102 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{F85B6832-BF7B-3803-96B9-6B26D3FE0F69}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTiemsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190416\TiemsClient.cs" />
+    <Compile Include="V20190416\Models\Conditions.cs" />
+    <Compile Include="V20190416\Models\Config.cs" />
+    <Compile Include="V20190416\Models\CreateJobRequest.cs" />
+    <Compile Include="V20190416\Models\CreateJobResponse.cs" />
+    <Compile Include="V20190416\Models\CreateRsgAsGroupRequest.cs" />
+    <Compile Include="V20190416\Models\CreateRsgAsGroupResponse.cs" />
+    <Compile Include="V20190416\Models\CreateRuntimeRequest.cs" />
+    <Compile Include="V20190416\Models\CreateRuntimeResponse.cs" />
+    <Compile Include="V20190416\Models\CreateServiceConfigRequest.cs" />
+    <Compile Include="V20190416\Models\CreateServiceConfigResponse.cs" />
+    <Compile Include="V20190416\Models\CreateServiceRequest.cs" />
+    <Compile Include="V20190416\Models\CreateServiceResponse.cs" />
+    <Compile Include="V20190416\Models\DeleteInstanceRequest.cs" />
+    <Compile Include="V20190416\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="V20190416\Models\DeleteJobRequest.cs" />
+    <Compile Include="V20190416\Models\DeleteJobResponse.cs" />
+    <Compile Include="V20190416\Models\DeleteResourceGroupRequest.cs" />
+    <Compile Include="V20190416\Models\DeleteResourceGroupResponse.cs" />
+    <Compile Include="V20190416\Models\DeleteRsgAsGroupRequest.cs" />
+    <Compile Include="V20190416\Models\DeleteRsgAsGroupResponse.cs" />
+    <Compile Include="V20190416\Models\DeleteRuntimeRequest.cs" />
+    <Compile Include="V20190416\Models\DeleteRuntimeResponse.cs" />
+    <Compile Include="V20190416\Models\DeleteServiceConfigRequest.cs" />
+    <Compile Include="V20190416\Models\DeleteServiceConfigResponse.cs" />
+    <Compile Include="V20190416\Models\DeleteServiceRequest.cs" />
+    <Compile Include="V20190416\Models\DeleteServiceResponse.cs" />
+    <Compile Include="V20190416\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20190416\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190416\Models\DescribeResourceGroupsRequest.cs" />
+    <Compile Include="V20190416\Models\DescribeResourceGroupsResponse.cs" />
+    <Compile Include="V20190416\Models\DescribeRsgAsGroupActivitiesRequest.cs" />
+    <Compile Include="V20190416\Models\DescribeRsgAsGroupActivitiesResponse.cs" />
+    <Compile Include="V20190416\Models\DescribeRsgAsGroupsRequest.cs" />
+    <Compile Include="V20190416\Models\DescribeRsgAsGroupsResponse.cs" />
+    <Compile Include="V20190416\Models\DescribeRuntimesRequest.cs" />
+    <Compile Include="V20190416\Models\DescribeRuntimesResponse.cs" />
+    <Compile Include="V20190416\Models\DescribeServiceConfigsRequest.cs" />
+    <Compile Include="V20190416\Models\DescribeServiceConfigsResponse.cs" />
+    <Compile Include="V20190416\Models\DescribeServicesRequest.cs" />
+    <Compile Include="V20190416\Models\DescribeServicesResponse.cs" />
+    <Compile Include="V20190416\Models\DisableRsgAsGroupRequest.cs" />
+    <Compile Include="V20190416\Models\DisableRsgAsGroupResponse.cs" />
+    <Compile Include="V20190416\Models\EnableRsgAsGroupRequest.cs" />
+    <Compile Include="V20190416\Models\EnableRsgAsGroupResponse.cs" />
+    <Compile Include="V20190416\Models\ExposeInfo.cs" />
+    <Compile Include="V20190416\Models\ExposeServiceRequest.cs" />
+    <Compile Include="V20190416\Models\ExposeServiceResponse.cs" />
+    <Compile Include="V20190416\Models\Filter.cs" />
+    <Compile Include="V20190416\Models\Instance.cs" />
+    <Compile Include="V20190416\Models\Job.cs" />
+    <Compile Include="V20190416\Models\JobStatus.cs" />
+    <Compile Include="V20190416\Models\ModelService.cs" />
+    <Compile Include="V20190416\Models\Option.cs" />
+    <Compile Include="V20190416\Models\PredictInput.cs" />
+    <Compile Include="V20190416\Models\QuantizationInput.cs" />
+    <Compile Include="V20190416\Models\ReplicaInfo.cs" />
+    <Compile Include="V20190416\Models\ResourceGroup.cs" />
+    <Compile Include="V20190416\Models\RsgAsActivityRelatedInstance.cs" />
+    <Compile Include="V20190416\Models\RsgAsGroup.cs" />
+    <Compile Include="V20190416\Models\RsgAsGroupActivity.cs" />
+    <Compile Include="V20190416\Models\Runtime.cs" />
+    <Compile Include="V20190416\Models\Scaler.cs" />
+    <Compile Include="V20190416\Models\ServiceStatus.cs" />
+    <Compile Include="V20190416\Models\UpdateJobRequest.cs" />
+    <Compile Include="V20190416\Models\UpdateJobResponse.cs" />
+    <Compile Include="V20190416\Models\UpdateRsgAsGroupRequest.cs" />
+    <Compile Include="V20190416\Models\UpdateRsgAsGroupResponse.cs" />
+    <Compile Include="V20190416\Models\UpdateServiceRequest.cs" />
+    <Compile Include="V20190416\Models\UpdateServiceResponse.cs" />
+  </ItemGroup>
+</Project>

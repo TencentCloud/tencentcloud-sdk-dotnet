@@ -1,0 +1,102 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{063A4C4C-6C7D-3224-9E41-E2850C3FB7E6}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCatSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180409\CatClient.cs" />
+    <Compile Include="V20180409\Models\AgentGroup.cs" />
+    <Compile Include="V20180409\Models\AlarmInfo.cs" />
+    <Compile Include="V20180409\Models\AlarmTopic.cs" />
+    <Compile Include="V20180409\Models\BindAlarmPolicyRequest.cs" />
+    <Compile Include="V20180409\Models\BindAlarmPolicyResponse.cs" />
+    <Compile Include="V20180409\Models\CatAgent.cs" />
+    <Compile Include="V20180409\Models\CatLog.cs" />
+    <Compile Include="V20180409\Models\CatReturnDetail.cs" />
+    <Compile Include="V20180409\Models\CatReturnSummary.cs" />
+    <Compile Include="V20180409\Models\CatTaskDetail.cs" />
+    <Compile Include="V20180409\Models\CreateAgentGroupRequest.cs" />
+    <Compile Include="V20180409\Models\CreateAgentGroupResponse.cs" />
+    <Compile Include="V20180409\Models\CreateTaskExRequest.cs" />
+    <Compile Include="V20180409\Models\CreateTaskExResponse.cs" />
+    <Compile Include="V20180409\Models\DataPoint.cs" />
+    <Compile Include="V20180409\Models\DataPointMetric.cs" />
+    <Compile Include="V20180409\Models\DeleteAgentGroupRequest.cs" />
+    <Compile Include="V20180409\Models\DeleteAgentGroupResponse.cs" />
+    <Compile Include="V20180409\Models\DeleteTasksRequest.cs" />
+    <Compile Include="V20180409\Models\DeleteTasksResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeAgentGroupsRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeAgentGroupsResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeAgentsRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeAgentsResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeAlarmTopicRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeAlarmTopicResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeAlarmsByTaskRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeAlarmsByTaskResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeAlarmsRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeAlarmsResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeCatLogsRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeCatLogsResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeTasksByTypeRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeTasksByTypeResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeUserLimitRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeUserLimitResponse.cs" />
+    <Compile Include="V20180409\Models\DimensionsDetail.cs" />
+    <Compile Include="V20180409\Models\GetAvailRatioHistoryRequest.cs" />
+    <Compile Include="V20180409\Models\GetAvailRatioHistoryResponse.cs" />
+    <Compile Include="V20180409\Models\GetDailyAvailRatioRequest.cs" />
+    <Compile Include="V20180409\Models\GetDailyAvailRatioResponse.cs" />
+    <Compile Include="V20180409\Models\GetRealAvailRatioRequest.cs" />
+    <Compile Include="V20180409\Models\GetRealAvailRatioResponse.cs" />
+    <Compile Include="V20180409\Models\GetRespTimeTrendExRequest.cs" />
+    <Compile Include="V20180409\Models\GetRespTimeTrendExResponse.cs" />
+    <Compile Include="V20180409\Models\GetResultSummaryRequest.cs" />
+    <Compile Include="V20180409\Models\GetResultSummaryResponse.cs" />
+    <Compile Include="V20180409\Models\GetReturnCodeHistoryRequest.cs" />
+    <Compile Include="V20180409\Models\GetReturnCodeHistoryResponse.cs" />
+    <Compile Include="V20180409\Models\GetReturnCodeInfoRequest.cs" />
+    <Compile Include="V20180409\Models\GetReturnCodeInfoResponse.cs" />
+    <Compile Include="V20180409\Models\GetTaskTotalNumberRequest.cs" />
+    <Compile Include="V20180409\Models\GetTaskTotalNumberResponse.cs" />
+    <Compile Include="V20180409\Models\IspDetail.cs" />
+    <Compile Include="V20180409\Models\ModifyAgentGroupRequest.cs" />
+    <Compile Include="V20180409\Models\ModifyAgentGroupResponse.cs" />
+    <Compile Include="V20180409\Models\ModifyTaskExRequest.cs" />
+    <Compile Include="V20180409\Models\ModifyTaskExResponse.cs" />
+    <Compile Include="V20180409\Models\PauseTaskRequest.cs" />
+    <Compile Include="V20180409\Models\PauseTaskResponse.cs" />
+    <Compile Include="V20180409\Models\ProvinceDetail.cs" />
+    <Compile Include="V20180409\Models\ResultSummary.cs" />
+    <Compile Include="V20180409\Models\RunTaskRequest.cs" />
+    <Compile Include="V20180409\Models\RunTaskResponse.cs" />
+    <Compile Include="V20180409\Models\TaskAlarm.cs" />
+    <Compile Include="V20180409\Models\VerifyResultRequest.cs" />
+    <Compile Include="V20180409\Models\VerifyResultResponse.cs" />
+  </ItemGroup>
+</Project>

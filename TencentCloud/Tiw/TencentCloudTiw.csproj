@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{9F9DFE1A-9228-3902-AA87-2367ECF8DBFC}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTiwSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190919\TiwClient.cs" />
+    <Compile Include="V20190919\Models\Canvas.cs" />
+    <Compile Include="V20190919\Models\Concat.cs" />
+    <Compile Include="V20190919\Models\CreateTranscodeRequest.cs" />
+    <Compile Include="V20190919\Models\CreateTranscodeResponse.cs" />
+    <Compile Include="V20190919\Models\CreateVideoGenerationTaskRequest.cs" />
+    <Compile Include="V20190919\Models\CreateVideoGenerationTaskResponse.cs" />
+    <Compile Include="V20190919\Models\CustomLayout.cs" />
+    <Compile Include="V20190919\Models\DescribeOnlineRecordCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeOnlineRecordCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeOnlineRecordRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeTranscodeCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeTranscodeCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeTranscodeRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeTranscodeResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeVideoGenerationTaskCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeVideoGenerationTaskCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\DescribeVideoGenerationTaskRequest.cs" />
+    <Compile Include="V20190919\Models\DescribeVideoGenerationTaskResponse.cs" />
+    <Compile Include="V20190919\Models\LayoutParams.cs" />
+    <Compile Include="V20190919\Models\MixStream.cs" />
+    <Compile Include="V20190919\Models\OmittedDuration.cs" />
+    <Compile Include="V20190919\Models\PauseOnlineRecordRequest.cs" />
+    <Compile Include="V20190919\Models\PauseOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\RecordControl.cs" />
+    <Compile Include="V20190919\Models\ResumeOnlineRecordRequest.cs" />
+    <Compile Include="V20190919\Models\ResumeOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyRequest.cs" />
+    <Compile Include="V20190919\Models\SetOnlineRecordCallbackKeyResponse.cs" />
+    <Compile Include="V20190919\Models\SetOnlineRecordCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\SetOnlineRecordCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\SetTranscodeCallbackKeyRequest.cs" />
+    <Compile Include="V20190919\Models\SetTranscodeCallbackKeyResponse.cs" />
+    <Compile Include="V20190919\Models\SetTranscodeCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\SetTranscodeCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\SetVideoGenerationTaskCallbackKeyRequest.cs" />
+    <Compile Include="V20190919\Models\SetVideoGenerationTaskCallbackKeyResponse.cs" />
+    <Compile Include="V20190919\Models\SetVideoGenerationTaskCallbackRequest.cs" />
+    <Compile Include="V20190919\Models\SetVideoGenerationTaskCallbackResponse.cs" />
+    <Compile Include="V20190919\Models\StartOnlineRecordRequest.cs" />
+    <Compile Include="V20190919\Models\StartOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\StopOnlineRecordRequest.cs" />
+    <Compile Include="V20190919\Models\StopOnlineRecordResponse.cs" />
+    <Compile Include="V20190919\Models\StreamControl.cs" />
+    <Compile Include="V20190919\Models\StreamLayout.cs" />
+    <Compile Include="V20190919\Models\VideoInfo.cs" />
+    <Compile Include="V20190919\Models\Whiteboard.cs" />
+  </ItemGroup>
+</Project>

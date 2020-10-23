@@ -136,7 +136,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "TypeId", this.TypeId);

@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudAaSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200224\AaClient.cs" />
+    <Compile Include="V20200224\Models\AccountInfo.cs" />
+    <Compile Include="V20200224\Models\CrowdAntiRushInfo.cs" />
+    <Compile Include="V20200224\Models\InputActivityAntiRushAdvanced.cs" />
+    <Compile Include="V20200224\Models\InputDetails.cs" />
+    <Compile Include="V20200224\Models\InputManageMarketingRisk.cs" />
+    <Compile Include="V20200224\Models\ManageMarketingRiskRequest.cs" />
+    <Compile Include="V20200224\Models\ManageMarketingRiskResponse.cs" />
+    <Compile Include="V20200224\Models\OnlineScamInfo.cs" />
+    <Compile Include="V20200224\Models\OtherAccountInfo.cs" />
+    <Compile Include="V20200224\Models\OutputActivityAntiRushAdvanced.cs" />
+    <Compile Include="V20200224\Models\OutputActivityAntiRushAdvancedValue.cs" />
+    <Compile Include="V20200224\Models\OutputManageMarketingRisk.cs" />
+    <Compile Include="V20200224\Models\OutputManageMarketingRiskValue.cs" />
+    <Compile Include="V20200224\Models\QQAccountInfo.cs" />
+    <Compile Include="V20200224\Models\QueryActivityAntiRushAdvancedRequest.cs" />
+    <Compile Include="V20200224\Models\QueryActivityAntiRushAdvancedResponse.cs" />
+    <Compile Include="V20200224\Models\QueryActivityAntiRushRequest.cs" />
+    <Compile Include="V20200224\Models\QueryActivityAntiRushResponse.cs" />
+    <Compile Include="V20200224\Models\SponsorInfo.cs" />
+    <Compile Include="V20200224\Models\WeChatAccountInfo.cs" />
+  </ItemGroup>
+</Project>

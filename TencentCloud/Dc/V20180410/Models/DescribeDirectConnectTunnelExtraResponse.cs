@@ -40,7 +40,7 @@ namespace TencentCloud.Dc.V20180410.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "DirectConnectTunnelExtra.", this.DirectConnectTunnelExtra);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

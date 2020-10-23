@@ -46,7 +46,7 @@ namespace TencentCloud.Cds.V20180420.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SearchRegion", this.SearchRegion);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

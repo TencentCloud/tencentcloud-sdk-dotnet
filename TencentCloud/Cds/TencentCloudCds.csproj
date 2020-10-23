@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{549F08D0-2104-3983-822F-84655B246376}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCdsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180420\CdsClient.cs" />
+    <Compile Include="V20180420\Models\CdsAuditInstance.cs" />
+    <Compile Include="V20180420\Models\DbauditTypesInfo.cs" />
+    <Compile Include="V20180420\Models\DescribeDasbImageIdsRequest.cs" />
+    <Compile Include="V20180420\Models\DescribeDasbImageIdsResponse.cs" />
+    <Compile Include="V20180420\Models\DescribeDbauditInstanceTypeRequest.cs" />
+    <Compile Include="V20180420\Models\DescribeDbauditInstanceTypeResponse.cs" />
+    <Compile Include="V20180420\Models\DescribeDbauditInstancesRequest.cs" />
+    <Compile Include="V20180420\Models\DescribeDbauditInstancesResponse.cs" />
+    <Compile Include="V20180420\Models\DescribeDbauditUsedRegionsRequest.cs" />
+    <Compile Include="V20180420\Models\DescribeDbauditUsedRegionsResponse.cs" />
+    <Compile Include="V20180420\Models\InquiryPriceDbauditInstanceRequest.cs" />
+    <Compile Include="V20180420\Models\InquiryPriceDbauditInstanceResponse.cs" />
+    <Compile Include="V20180420\Models\ModifyDbauditInstancesRenewFlagRequest.cs" />
+    <Compile Include="V20180420\Models\ModifyDbauditInstancesRenewFlagResponse.cs" />
+    <Compile Include="V20180420\Models\RegionInfo.cs" />
+  </ItemGroup>
+</Project>

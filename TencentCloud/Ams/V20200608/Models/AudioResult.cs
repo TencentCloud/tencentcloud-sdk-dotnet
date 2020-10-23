@@ -112,7 +112,7 @@ namespace TencentCloud.Ams.V20200608.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "HitFlag", this.HitFlag);
             this.SetParamSimple(map, prefix + "Label", this.Label);

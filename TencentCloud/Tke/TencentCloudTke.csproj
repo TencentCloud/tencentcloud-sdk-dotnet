@@ -1,0 +1,137 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTkeSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180525\TkeClient.cs" />
+    <Compile Include="V20180525\Models\AcquireClusterAdminRoleRequest.cs" />
+    <Compile Include="V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
+    <Compile Include="V20180525\Models\AddExistedInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\AddExistedInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
+    <Compile Include="V20180525\Models\Cluster.cs" />
+    <Compile Include="V20180525\Models\ClusterAdvancedSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterAsGroup.cs" />
+    <Compile Include="V20180525\Models\ClusterAsGroupAttribute.cs" />
+    <Compile Include="V20180525\Models\ClusterAsGroupOption.cs" />
+    <Compile Include="V20180525\Models\ClusterBasicSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterCIDRSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
+    <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
+    <Compile Include="V20180525\Models\CreateClusterAsGroupRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterAsGroupResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterEndpointRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterEndpointResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterEndpointVipRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterEndpointVipResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterRouteRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterRouteResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterRouteTableRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusDashboardRequest.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusDashboardResponse.cs" />
+    <Compile Include="V20180525\Models\DataDisk.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterEndpointRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterEndpointResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterEndpointVipRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterEndpointVipResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterRouteRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterRouteResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterRouteTableRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterAsGroupsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointStatusRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointStatusResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterKubeconfigResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterRouteTablesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterRoutesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterRoutesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterSecurityRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAgentInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAgentInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\EnhancedService.cs" />
+    <Compile Include="V20180525\Models\ExistedInstance.cs" />
+    <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />
+    <Compile Include="V20180525\Models\ExistedInstancesPara.cs" />
+    <Compile Include="V20180525\Models\ExtensionAddon.cs" />
+    <Compile Include="V20180525\Models\Filter.cs" />
+    <Compile Include="V20180525\Models\ImageInstance.cs" />
+    <Compile Include="V20180525\Models\Instance.cs" />
+    <Compile Include="V20180525\Models\InstanceAdvancedSettings.cs" />
+    <Compile Include="V20180525\Models\InstanceDataDiskMountSetting.cs" />
+    <Compile Include="V20180525\Models\InstanceExtraArgs.cs" />
+    <Compile Include="V20180525\Models\Label.cs" />
+    <Compile Include="V20180525\Models\LoginSettings.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterAttributeRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterAttributeResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
+    <Compile Include="V20180525\Models\RegionInstance.cs" />
+    <Compile Include="V20180525\Models\ResourceDeleteOption.cs" />
+    <Compile Include="V20180525\Models\RouteInfo.cs" />
+    <Compile Include="V20180525\Models\RouteTableConflict.cs" />
+    <Compile Include="V20180525\Models\RouteTableInfo.cs" />
+    <Compile Include="V20180525\Models\RunInstancesForNode.cs" />
+    <Compile Include="V20180525\Models\RunMonitorServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\Tag.cs" />
+    <Compile Include="V20180525\Models\TagSpecification.cs" />
+  </ItemGroup>
+</Project>

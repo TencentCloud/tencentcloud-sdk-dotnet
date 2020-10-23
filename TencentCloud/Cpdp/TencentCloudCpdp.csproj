@@ -1,0 +1,240 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCpdpSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190820\CpdpClient.cs" />
+    <Compile Include="V20190820\Models\Acct.cs" />
+    <Compile Include="V20190820\Models\AgentTaxPayment.cs" />
+    <Compile Include="V20190820\Models\AgentTaxPaymentBatch.cs" />
+    <Compile Include="V20190820\Models\AnchorContractInfo.cs" />
+    <Compile Include="V20190820\Models\ApplyApplicationMaterialRequest.cs" />
+    <Compile Include="V20190820\Models\ApplyApplicationMaterialResponse.cs" />
+    <Compile Include="V20190820\Models\ApplyDeclareData.cs" />
+    <Compile Include="V20190820\Models\ApplyDeclareResult.cs" />
+    <Compile Include="V20190820\Models\ApplyOutwardOrderData.cs" />
+    <Compile Include="V20190820\Models\ApplyOutwardOrderRequest.cs" />
+    <Compile Include="V20190820\Models\ApplyOutwardOrderResponse.cs" />
+    <Compile Include="V20190820\Models\ApplyOutwardOrderResult.cs" />
+    <Compile Include="V20190820\Models\ApplyPayerInfoRequest.cs" />
+    <Compile Include="V20190820\Models\ApplyPayerInfoResponse.cs" />
+    <Compile Include="V20190820\Models\ApplyPayerinfoData.cs" />
+    <Compile Include="V20190820\Models\ApplyPayerinfoResult.cs" />
+    <Compile Include="V20190820\Models\ApplyReWithdrawalRequest.cs" />
+    <Compile Include="V20190820\Models\ApplyReWithdrawalResponse.cs" />
+    <Compile Include="V20190820\Models\ApplyTradeData.cs" />
+    <Compile Include="V20190820\Models\ApplyTradeRequest.cs" />
+    <Compile Include="V20190820\Models\ApplyTradeResponse.cs" />
+    <Compile Include="V20190820\Models\ApplyTradeResult.cs" />
+    <Compile Include="V20190820\Models\ApplyWithdrawalRequest.cs" />
+    <Compile Include="V20190820\Models\ApplyWithdrawalResponse.cs" />
+    <Compile Include="V20190820\Models\BankCardItem.cs" />
+    <Compile Include="V20190820\Models\BindAcctRequest.cs" />
+    <Compile Include="V20190820\Models\BindAcctResponse.cs" />
+    <Compile Include="V20190820\Models\BindRelateAccReUnionPayRequest.cs" />
+    <Compile Include="V20190820\Models\BindRelateAccReUnionPayResponse.cs" />
+    <Compile Include="V20190820\Models\BindRelateAcctSmallAmountRequest.cs" />
+    <Compile Include="V20190820\Models\BindRelateAcctSmallAmountResponse.cs" />
+    <Compile Include="V20190820\Models\BindRelateAcctUnionPayRequest.cs" />
+    <Compile Include="V20190820\Models\BindRelateAcctUnionPayResponse.cs" />
+    <Compile Include="V20190820\Models\CheckAcctRequest.cs" />
+    <Compile Include="V20190820\Models\CheckAcctResponse.cs" />
+    <Compile Include="V20190820\Models\CheckAmountRequest.cs" />
+    <Compile Include="V20190820\Models\CheckAmountResponse.cs" />
+    <Compile Include="V20190820\Models\ClearItem.cs" />
+    <Compile Include="V20190820\Models\CloseOrderRequest.cs" />
+    <Compile Include="V20190820\Models\CloseOrderResponse.cs" />
+    <Compile Include="V20190820\Models\CreateAcctRequest.cs" />
+    <Compile Include="V20190820\Models\CreateAcctResponse.cs" />
+    <Compile Include="V20190820\Models\CreateAgentTaxPaymentInfosRequest.cs" />
+    <Compile Include="V20190820\Models\CreateAgentTaxPaymentInfosResponse.cs" />
+    <Compile Include="V20190820\Models\CreateCustAcctIdRequest.cs" />
+    <Compile Include="V20190820\Models\CreateCustAcctIdResponse.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceItem.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceRequest.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceResponse.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceResult.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceResultData.cs" />
+    <Compile Include="V20190820\Models\CreateMerchantRequest.cs" />
+    <Compile Include="V20190820\Models\CreateMerchantResponse.cs" />
+    <Compile Include="V20190820\Models\CreateMerchantResult.cs" />
+    <Compile Include="V20190820\Models\CreateMerchantResultData.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceItem.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceRequest.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceResponse.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceResult.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceResultData.cs" />
+    <Compile Include="V20190820\Models\CreateSinglePayRequest.cs" />
+    <Compile Include="V20190820\Models\CreateSinglePayResponse.cs" />
+    <Compile Include="V20190820\Models\CreateSinglePayResult.cs" />
+    <Compile Include="V20190820\Models\CreateTransferBatchRequest.cs" />
+    <Compile Include="V20190820\Models\CreateTransferBatchResponse.cs" />
+    <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfoRequest.cs" />
+    <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfoResponse.cs" />
+    <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfosRequest.cs" />
+    <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfosResponse.cs" />
+    <Compile Include="V20190820\Models\DescribeChargeDetailRequest.cs" />
+    <Compile Include="V20190820\Models\DescribeChargeDetailResponse.cs" />
+    <Compile Include="V20190820\Models\DescribeOrderStatusRequest.cs" />
+    <Compile Include="V20190820\Models\DescribeOrderStatusResponse.cs" />
+    <Compile Include="V20190820\Models\DownloadBillRequest.cs" />
+    <Compile Include="V20190820\Models\DownloadBillResponse.cs" />
+    <Compile Include="V20190820\Models\ExecuteMemberTransactionRequest.cs" />
+    <Compile Include="V20190820\Models\ExecuteMemberTransactionResponse.cs" />
+    <Compile Include="V20190820\Models\FileItem.cs" />
+    <Compile Include="V20190820\Models\MerchantManagementList.cs" />
+    <Compile Include="V20190820\Models\MerchantManagementResult.cs" />
+    <Compile Include="V20190820\Models\MigrateOrderRefundQueryRequest.cs" />
+    <Compile Include="V20190820\Models\MigrateOrderRefundQueryResponse.cs" />
+    <Compile Include="V20190820\Models\MigrateOrderRefundRequest.cs" />
+    <Compile Include="V20190820\Models\MigrateOrderRefundResponse.cs" />
+    <Compile Include="V20190820\Models\ModifyAgentTaxPaymentInfoRequest.cs" />
+    <Compile Include="V20190820\Models\ModifyAgentTaxPaymentInfoResponse.cs" />
+    <Compile Include="V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
+    <Compile Include="V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
+    <Compile Include="V20190820\Models\Order.cs" />
+    <Compile Include="V20190820\Models\OrderItem.cs" />
+    <Compile Include="V20190820\Models\QueryAcctBindingRequest.cs" />
+    <Compile Include="V20190820\Models\QueryAcctBindingResponse.cs" />
+    <Compile Include="V20190820\Models\QueryAcctInfoListRequest.cs" />
+    <Compile Include="V20190820\Models\QueryAcctInfoListResponse.cs" />
+    <Compile Include="V20190820\Models\QueryAcctInfoRequest.cs" />
+    <Compile Include="V20190820\Models\QueryAcctInfoResponse.cs" />
+    <Compile Include="V20190820\Models\QueryAcctItem.cs" />
+    <Compile Include="V20190820\Models\QueryAgentStatementsRequest.cs" />
+    <Compile Include="V20190820\Models\QueryAgentStatementsResponse.cs" />
+    <Compile Include="V20190820\Models\QueryAgentTaxPaymentBatchRequest.cs" />
+    <Compile Include="V20190820\Models\QueryAgentTaxPaymentBatchResponse.cs" />
+    <Compile Include="V20190820\Models\QueryAnchorContractInfoRequest.cs" />
+    <Compile Include="V20190820\Models\QueryAnchorContractInfoResponse.cs" />
+    <Compile Include="V20190820\Models\QueryApplicationMaterialRequest.cs" />
+    <Compile Include="V20190820\Models\QueryApplicationMaterialResponse.cs" />
+    <Compile Include="V20190820\Models\QueryBalanceRequest.cs" />
+    <Compile Include="V20190820\Models\QueryBalanceResponse.cs" />
+    <Compile Include="V20190820\Models\QueryBankClearRequest.cs" />
+    <Compile Include="V20190820\Models\QueryBankClearResponse.cs" />
+    <Compile Include="V20190820\Models\QueryBankTransactionDetailsRequest.cs" />
+    <Compile Include="V20190820\Models\QueryBankTransactionDetailsResponse.cs" />
+    <Compile Include="V20190820\Models\QueryBankWithdrawCashDetailsRequest.cs" />
+    <Compile Include="V20190820\Models\QueryBankWithdrawCashDetailsResponse.cs" />
+    <Compile Include="V20190820\Models\QueryCommonTransferRechargeRequest.cs" />
+    <Compile Include="V20190820\Models\QueryCommonTransferRechargeResponse.cs" />
+    <Compile Include="V20190820\Models\QueryCustAcctIdBalanceRequest.cs" />
+    <Compile Include="V20190820\Models\QueryCustAcctIdBalanceResponse.cs" />
+    <Compile Include="V20190820\Models\QueryDeclareData.cs" />
+    <Compile Include="V20190820\Models\QueryDeclareResult.cs" />
+    <Compile Include="V20190820\Models\QueryExchangeRateRequest.cs" />
+    <Compile Include="V20190820\Models\QueryExchangeRateResponse.cs" />
+    <Compile Include="V20190820\Models\QueryExchangerateData.cs" />
+    <Compile Include="V20190820\Models\QueryExchangerateResult.cs" />
+    <Compile Include="V20190820\Models\QueryInvoiceRequest.cs" />
+    <Compile Include="V20190820\Models\QueryInvoiceResponse.cs" />
+    <Compile Include="V20190820\Models\QueryInvoiceResult.cs" />
+    <Compile Include="V20190820\Models\QueryInvoiceResultData.cs" />
+    <Compile Include="V20190820\Models\QueryItem.cs" />
+    <Compile Include="V20190820\Models\QueryMemberBindRequest.cs" />
+    <Compile Include="V20190820\Models\QueryMemberBindResponse.cs" />
+    <Compile Include="V20190820\Models\QueryMemberTransactionRequest.cs" />
+    <Compile Include="V20190820\Models\QueryMemberTransactionResponse.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantBalanceData.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantBalanceRequest.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantBalanceResponse.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantBalanceResult.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantInfoForManagementRequest.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantInfoForManagementResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOrderOutOrderList.cs" />
+    <Compile Include="V20190820\Models\QueryOrderOutSubOrderList.cs" />
+    <Compile Include="V20190820\Models\QueryOrderRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOrderResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOutwardOrderData.cs" />
+    <Compile Include="V20190820\Models\QueryOutwardOrderRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOutwardOrderResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOutwardOrderResult.cs" />
+    <Compile Include="V20190820\Models\QueryPayerInfoRequest.cs" />
+    <Compile Include="V20190820\Models\QueryPayerInfoResponse.cs" />
+    <Compile Include="V20190820\Models\QueryPayerinfoData.cs" />
+    <Compile Include="V20190820\Models\QueryPayerinfoResult.cs" />
+    <Compile Include="V20190820\Models\QueryReconciliationDocumentRequest.cs" />
+    <Compile Include="V20190820\Models\QueryReconciliationDocumentResponse.cs" />
+    <Compile Include="V20190820\Models\QueryRefundRequest.cs" />
+    <Compile Include="V20190820\Models\QueryRefundResponse.cs" />
+    <Compile Include="V20190820\Models\QuerySinglePayItem.cs" />
+    <Compile Include="V20190820\Models\QuerySinglePayRequest.cs" />
+    <Compile Include="V20190820\Models\QuerySinglePayResponse.cs" />
+    <Compile Include="V20190820\Models\QuerySinglePayResult.cs" />
+    <Compile Include="V20190820\Models\QuerySingleTransactionStatusRequest.cs" />
+    <Compile Include="V20190820\Models\QuerySingleTransactionStatusResponse.cs" />
+    <Compile Include="V20190820\Models\QuerySmallAmountTransferRequest.cs" />
+    <Compile Include="V20190820\Models\QuerySmallAmountTransferResponse.cs" />
+    <Compile Include="V20190820\Models\QueryTradeData.cs" />
+    <Compile Include="V20190820\Models\QueryTradeRequest.cs" />
+    <Compile Include="V20190820\Models\QueryTradeResponse.cs" />
+    <Compile Include="V20190820\Models\QueryTradeResult.cs" />
+    <Compile Include="V20190820\Models\QueryTransferBatchRequest.cs" />
+    <Compile Include="V20190820\Models\QueryTransferBatchResponse.cs" />
+    <Compile Include="V20190820\Models\QueryTransferDetailRequest.cs" />
+    <Compile Include="V20190820\Models\QueryTransferDetailResponse.cs" />
+    <Compile Include="V20190820\Models\RechargeByThirdPayRequest.cs" />
+    <Compile Include="V20190820\Models\RechargeByThirdPayResponse.cs" />
+    <Compile Include="V20190820\Models\RechargeMemberThirdPayRequest.cs" />
+    <Compile Include="V20190820\Models\RechargeMemberThirdPayResponse.cs" />
+    <Compile Include="V20190820\Models\RefundMemberTransactionRequest.cs" />
+    <Compile Include="V20190820\Models\RefundMemberTransactionResponse.cs" />
+    <Compile Include="V20190820\Models\RefundOutSubOrderRefundList.cs" />
+    <Compile Include="V20190820\Models\RefundRequest.cs" />
+    <Compile Include="V20190820\Models\RefundResponse.cs" />
+    <Compile Include="V20190820\Models\RegisterBillRequest.cs" />
+    <Compile Include="V20190820\Models\RegisterBillResponse.cs" />
+    <Compile Include="V20190820\Models\RegisterBillSupportWithdrawRequest.cs" />
+    <Compile Include="V20190820\Models\RegisterBillSupportWithdrawResponse.cs" />
+    <Compile Include="V20190820\Models\RevResigterBillSupportWithdrawRequest.cs" />
+    <Compile Include="V20190820\Models\RevResigterBillSupportWithdrawResponse.cs" />
+    <Compile Include="V20190820\Models\ReviseMbrPropertyRequest.cs" />
+    <Compile Include="V20190820\Models\ReviseMbrPropertyResponse.cs" />
+    <Compile Include="V20190820\Models\RevokeMemberRechargeThirdPayRequest.cs" />
+    <Compile Include="V20190820\Models\RevokeMemberRechargeThirdPayResponse.cs" />
+    <Compile Include="V20190820\Models\RevokeRechargeByThirdPayRequest.cs" />
+    <Compile Include="V20190820\Models\RevokeRechargeByThirdPayResponse.cs" />
+    <Compile Include="V20190820\Models\TranItem.cs" />
+    <Compile Include="V20190820\Models\TransactionItem.cs" />
+    <Compile Include="V20190820\Models\TransferDetailRequest.cs" />
+    <Compile Include="V20190820\Models\TransferDetailResponse.cs" />
+    <Compile Include="V20190820\Models\TransferItem.cs" />
+    <Compile Include="V20190820\Models\UnBindAcctRequest.cs" />
+    <Compile Include="V20190820\Models\UnBindAcctResponse.cs" />
+    <Compile Include="V20190820\Models\UnbindRelateAcctRequest.cs" />
+    <Compile Include="V20190820\Models\UnbindRelateAcctResponse.cs" />
+    <Compile Include="V20190820\Models\UnifiedOrderInSubOrderList.cs" />
+    <Compile Include="V20190820\Models\UnifiedOrderRequest.cs" />
+    <Compile Include="V20190820\Models\UnifiedOrderResponse.cs" />
+    <Compile Include="V20190820\Models\WithdrawBill.cs" />
+    <Compile Include="V20190820\Models\WithdrawCashMembershipRequest.cs" />
+    <Compile Include="V20190820\Models\WithdrawCashMembershipResponse.cs" />
+    <Compile Include="V20190820\Models\WithdrawItem.cs" />
+  </ItemGroup>
+</Project>

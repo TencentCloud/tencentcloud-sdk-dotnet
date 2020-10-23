@@ -47,7 +47,7 @@ namespace TencentCloud.Fmu.V20191213.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
             this.SetParamObj(map, prefix + "BeautifyVideoOutput.", this.BeautifyVideoOutput);

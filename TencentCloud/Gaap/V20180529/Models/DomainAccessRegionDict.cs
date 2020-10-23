@@ -64,7 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "NationCountryInnerList.", this.NationCountryInnerList);
             this.SetParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);

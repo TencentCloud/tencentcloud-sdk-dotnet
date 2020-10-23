@@ -1,0 +1,190 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTcrSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190924\TcrClient.cs" />
+    <Compile Include="V20190924\Models\AutoDelStrategyInfo.cs" />
+    <Compile Include="V20190924\Models\AutoDelStrategyInfoResp.cs" />
+    <Compile Include="V20190924\Models\BatchDeleteImagePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\BatchDeleteImagePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\BatchDeleteRepositoryPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\BatchDeleteRepositoryPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\CreateImageLifecyclePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceRequest.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceTokenRequest.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceTokenResponse.cs" />
+    <Compile Include="V20190924\Models\CreateNamespacePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\CreateNamespacePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateNamespaceRequest.cs" />
+    <Compile Include="V20190924\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="V20190924\Models\CreateRepositoryPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\CreateRepositoryPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateRepositoryRequest.cs" />
+    <Compile Include="V20190924\Models\CreateRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\CreateUserPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\CreateUserPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateWebhookTriggerRequest.cs" />
+    <Compile Include="V20190924\Models\CreateWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteImageLifecycleGlobalPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteImageLifecycleGlobalPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteImageLifecyclePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteImageLifecyclePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteImagePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteImagePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteImageRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteImageResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteInstanceTokenRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteInstanceTokenResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteNamespacePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteNamespacePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteNamespaceRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteNamespaceResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteRepositoryPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteRepositoryPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteRepositoryRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteWebhookTriggerRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeApplicationTriggerLogPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeApplicationTriggerLogPersonalResp.cs" />
+    <Compile Include="V20190924\Models\DescribeApplicationTriggerLogPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeApplicationTriggerPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeApplicationTriggerPersonalResp.cs" />
+    <Compile Include="V20190924\Models\DescribeApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeFavorRepositoryPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeFavorRepositoryPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImageFilterPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImageFilterPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImageLifecycleGlobalPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImageLifecycleGlobalPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImageLifecyclePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImageLifecyclePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImageManifestsRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImageManifestsResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImagePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImagePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImagesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceStatusRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceStatusResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceTokenRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceTokenResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeNamespacePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeNamespacePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeNamespacesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstancesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstancesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoriesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoriesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoryFilterPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoryFilterPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoryOwnerPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoryOwnerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoryPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeRepositoryPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeUserQuotaPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeUserQuotaPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeWebhookTriggerLogRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeWebhookTriggerLogResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeWebhookTriggerRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\DupImageTagResp.cs" />
+    <Compile Include="V20190924\Models\DuplicateImagePersonalRequest.cs" />
+    <Compile Include="V20190924\Models\DuplicateImagePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\FavorResp.cs" />
+    <Compile Include="V20190924\Models\Favors.cs" />
+    <Compile Include="V20190924\Models\Filter.cs" />
+    <Compile Include="V20190924\Models\Header.cs" />
+    <Compile Include="V20190924\Models\Limit.cs" />
+    <Compile Include="V20190924\Models\ManageImageLifecycleGlobalPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\ManageImageLifecycleGlobalPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyInstanceTokenRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyInstanceTokenResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyNamespaceRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyRepositoryAccessPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyRepositoryAccessPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyRepositoryInfoPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyRepositoryInfoPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyRepositoryRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyUserPasswordPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyUserPasswordPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyWebhookTriggerRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\NamespaceInfo.cs" />
+    <Compile Include="V20190924\Models\NamespaceInfoResp.cs" />
+    <Compile Include="V20190924\Models\NamespaceIsExistsResp.cs" />
+    <Compile Include="V20190924\Models\Registry.cs" />
+    <Compile Include="V20190924\Models\RegistryCondition.cs" />
+    <Compile Include="V20190924\Models\RegistryStatus.cs" />
+    <Compile Include="V20190924\Models\ReplicationRegistry.cs" />
+    <Compile Include="V20190924\Models\RepoInfo.cs" />
+    <Compile Include="V20190924\Models\RepoInfoResp.cs" />
+    <Compile Include="V20190924\Models\RepoIsExistResp.cs" />
+    <Compile Include="V20190924\Models\RepositoryInfoResp.cs" />
+    <Compile Include="V20190924\Models\RespLimit.cs" />
+    <Compile Include="V20190924\Models\SameImagesResp.cs" />
+    <Compile Include="V20190924\Models\SearchUserRepositoryResp.cs" />
+    <Compile Include="V20190924\Models\Tag.cs" />
+    <Compile Include="V20190924\Models\TagInfo.cs" />
+    <Compile Include="V20190924\Models\TagInfoResp.cs" />
+    <Compile Include="V20190924\Models\TagSpecification.cs" />
+    <Compile Include="V20190924\Models\TaskDetail.cs" />
+    <Compile Include="V20190924\Models\TcrImageInfo.cs" />
+    <Compile Include="V20190924\Models\TcrInstanceToken.cs" />
+    <Compile Include="V20190924\Models\TcrNamespaceInfo.cs" />
+    <Compile Include="V20190924\Models\TcrRepositoryInfo.cs" />
+    <Compile Include="V20190924\Models\TriggerInvokeCondition.cs" />
+    <Compile Include="V20190924\Models\TriggerInvokePara.cs" />
+    <Compile Include="V20190924\Models\TriggerInvokeResult.cs" />
+    <Compile Include="V20190924\Models\TriggerLogResp.cs" />
+    <Compile Include="V20190924\Models\TriggerResp.cs" />
+    <Compile Include="V20190924\Models\ValidateNamespaceExistPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\ValidateNamespaceExistPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ValidateRepositoryExistPersonalRequest.cs" />
+    <Compile Include="V20190924\Models\ValidateRepositoryExistPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\WebhookTarget.cs" />
+    <Compile Include="V20190924\Models\WebhookTrigger.cs" />
+    <Compile Include="V20190924\Models\WebhookTriggerLog.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,148 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{5957596A-4761-32F6-918E-ACCD48CB5DB3}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudIotSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180123\IotClient.cs" />
+    <Compile Include="V20180123\Models\Action.cs" />
+    <Compile Include="V20180123\Models\ActivateRuleRequest.cs" />
+    <Compile Include="V20180123\Models\ActivateRuleResponse.cs" />
+    <Compile Include="V20180123\Models\AddDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\AddDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\AddProductRequest.cs" />
+    <Compile Include="V20180123\Models\AddProductResponse.cs" />
+    <Compile Include="V20180123\Models\AddRuleRequest.cs" />
+    <Compile Include="V20180123\Models\AddRuleResponse.cs" />
+    <Compile Include="V20180123\Models\AddTopicRequest.cs" />
+    <Compile Include="V20180123\Models\AddTopicResponse.cs" />
+    <Compile Include="V20180123\Models\AppAddUserRequest.cs" />
+    <Compile Include="V20180123\Models\AppAddUserResponse.cs" />
+    <Compile Include="V20180123\Models\AppDeleteDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\AppDeleteDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\AppDevice.cs" />
+    <Compile Include="V20180123\Models\AppDeviceDetail.cs" />
+    <Compile Include="V20180123\Models\AppGetDeviceDataRequest.cs" />
+    <Compile Include="V20180123\Models\AppGetDeviceDataResponse.cs" />
+    <Compile Include="V20180123\Models\AppGetDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\AppGetDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\AppGetDeviceStatusesRequest.cs" />
+    <Compile Include="V20180123\Models\AppGetDeviceStatusesResponse.cs" />
+    <Compile Include="V20180123\Models\AppGetDevicesRequest.cs" />
+    <Compile Include="V20180123\Models\AppGetDevicesResponse.cs" />
+    <Compile Include="V20180123\Models\AppGetTokenRequest.cs" />
+    <Compile Include="V20180123\Models\AppGetTokenResponse.cs" />
+    <Compile Include="V20180123\Models\AppGetUserRequest.cs" />
+    <Compile Include="V20180123\Models\AppGetUserResponse.cs" />
+    <Compile Include="V20180123\Models\AppIssueDeviceControlRequest.cs" />
+    <Compile Include="V20180123\Models\AppIssueDeviceControlResponse.cs" />
+    <Compile Include="V20180123\Models\AppResetPasswordRequest.cs" />
+    <Compile Include="V20180123\Models\AppResetPasswordResponse.cs" />
+    <Compile Include="V20180123\Models\AppSecureAddDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\AppSecureAddDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\AppUpdateDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\AppUpdateDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\AppUpdateUserRequest.cs" />
+    <Compile Include="V20180123\Models\AppUpdateUserResponse.cs" />
+    <Compile Include="V20180123\Models\AppUser.cs" />
+    <Compile Include="V20180123\Models\AssociateSubDeviceToGatewayProductRequest.cs" />
+    <Compile Include="V20180123\Models\AssociateSubDeviceToGatewayProductResponse.cs" />
+    <Compile Include="V20180123\Models\BoolData.cs" />
+    <Compile Include="V20180123\Models\CkafkaAction.cs" />
+    <Compile Include="V20180123\Models\DataHistoryEntry.cs" />
+    <Compile Include="V20180123\Models\DataTemplate.cs" />
+    <Compile Include="V20180123\Models\DeactivateRuleRequest.cs" />
+    <Compile Include="V20180123\Models\DeactivateRuleResponse.cs" />
+    <Compile Include="V20180123\Models\DebugLogEntry.cs" />
+    <Compile Include="V20180123\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\DeleteProductRequest.cs" />
+    <Compile Include="V20180123\Models\DeleteProductResponse.cs" />
+    <Compile Include="V20180123\Models\DeleteRuleRequest.cs" />
+    <Compile Include="V20180123\Models\DeleteRuleResponse.cs" />
+    <Compile Include="V20180123\Models\DeleteTopicRequest.cs" />
+    <Compile Include="V20180123\Models\DeleteTopicResponse.cs" />
+    <Compile Include="V20180123\Models\Device.cs" />
+    <Compile Include="V20180123\Models\DeviceEntry.cs" />
+    <Compile Include="V20180123\Models\DeviceLogEntry.cs" />
+    <Compile Include="V20180123\Models\DeviceSignatureInfo.cs" />
+    <Compile Include="V20180123\Models\DeviceStatData.cs" />
+    <Compile Include="V20180123\Models\DeviceStatus.cs" />
+    <Compile Include="V20180123\Models\EnumData.cs" />
+    <Compile Include="V20180123\Models\GetDataHistoryRequest.cs" />
+    <Compile Include="V20180123\Models\GetDataHistoryResponse.cs" />
+    <Compile Include="V20180123\Models\GetDebugLogRequest.cs" />
+    <Compile Include="V20180123\Models\GetDebugLogResponse.cs" />
+    <Compile Include="V20180123\Models\GetDeviceDataRequest.cs" />
+    <Compile Include="V20180123\Models\GetDeviceDataResponse.cs" />
+    <Compile Include="V20180123\Models\GetDeviceLogRequest.cs" />
+    <Compile Include="V20180123\Models\GetDeviceLogResponse.cs" />
+    <Compile Include="V20180123\Models\GetDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\GetDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\GetDeviceSignaturesRequest.cs" />
+    <Compile Include="V20180123\Models\GetDeviceSignaturesResponse.cs" />
+    <Compile Include="V20180123\Models\GetDeviceStatisticsRequest.cs" />
+    <Compile Include="V20180123\Models\GetDeviceStatisticsResponse.cs" />
+    <Compile Include="V20180123\Models\GetDeviceStatusesRequest.cs" />
+    <Compile Include="V20180123\Models\GetDeviceStatusesResponse.cs" />
+    <Compile Include="V20180123\Models\GetDevicesRequest.cs" />
+    <Compile Include="V20180123\Models\GetDevicesResponse.cs" />
+    <Compile Include="V20180123\Models\GetProductRequest.cs" />
+    <Compile Include="V20180123\Models\GetProductResponse.cs" />
+    <Compile Include="V20180123\Models\GetProductsRequest.cs" />
+    <Compile Include="V20180123\Models\GetProductsResponse.cs" />
+    <Compile Include="V20180123\Models\GetRuleRequest.cs" />
+    <Compile Include="V20180123\Models\GetRuleResponse.cs" />
+    <Compile Include="V20180123\Models\GetRulesRequest.cs" />
+    <Compile Include="V20180123\Models\GetRulesResponse.cs" />
+    <Compile Include="V20180123\Models\GetTopicRequest.cs" />
+    <Compile Include="V20180123\Models\GetTopicResponse.cs" />
+    <Compile Include="V20180123\Models\GetTopicsRequest.cs" />
+    <Compile Include="V20180123\Models\GetTopicsResponse.cs" />
+    <Compile Include="V20180123\Models\IssueDeviceControlRequest.cs" />
+    <Compile Include="V20180123\Models\IssueDeviceControlResponse.cs" />
+    <Compile Include="V20180123\Models\NumberData.cs" />
+    <Compile Include="V20180123\Models\Product.cs" />
+    <Compile Include="V20180123\Models\ProductEntry.cs" />
+    <Compile Include="V20180123\Models\PublishMsgRequest.cs" />
+    <Compile Include="V20180123\Models\PublishMsgResponse.cs" />
+    <Compile Include="V20180123\Models\ResetDeviceRequest.cs" />
+    <Compile Include="V20180123\Models\ResetDeviceResponse.cs" />
+    <Compile Include="V20180123\Models\Rule.cs" />
+    <Compile Include="V20180123\Models\RuleQuery.cs" />
+    <Compile Include="V20180123\Models\ServiceAction.cs" />
+    <Compile Include="V20180123\Models\StringData.cs" />
+    <Compile Include="V20180123\Models\Topic.cs" />
+    <Compile Include="V20180123\Models\TopicAction.cs" />
+    <Compile Include="V20180123\Models\UnassociateSubDeviceFromGatewayProductRequest.cs" />
+    <Compile Include="V20180123\Models\UnassociateSubDeviceFromGatewayProductResponse.cs" />
+    <Compile Include="V20180123\Models\UpdateProductRequest.cs" />
+    <Compile Include="V20180123\Models\UpdateProductResponse.cs" />
+    <Compile Include="V20180123\Models\UpdateRuleRequest.cs" />
+    <Compile Include="V20180123\Models\UpdateRuleResponse.cs" />
+  </ItemGroup>
+</Project>

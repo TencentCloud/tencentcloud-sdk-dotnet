@@ -60,7 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

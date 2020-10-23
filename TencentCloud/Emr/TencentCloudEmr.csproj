@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudEmrSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190103\EmrClient.cs" />
+    <Compile Include="V20190103\Models\COSSettings.cs" />
+    <Compile Include="V20190103\Models\CdbInfo.cs" />
+    <Compile Include="V20190103\Models\ClusterInstancesInfo.cs" />
+    <Compile Include="V20190103\Models\CreateInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
+    <Compile Include="V20190103\Models\DescribeClusterNodesRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
+    <Compile Include="V20190103\Models\HostVolumeContext.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceRenewInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceRenewInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceScaleOutInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceScaleOutInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\LoginSettings.cs" />
+    <Compile Include="V20190103\Models\MultiDisk.cs" />
+    <Compile Include="V20190103\Models\MultiDiskMC.cs" />
+    <Compile Include="V20190103\Models\NewResourceSpec.cs" />
+    <Compile Include="V20190103\Models\NodeHardwareInfo.cs" />
+    <Compile Include="V20190103\Models\OutterResource.cs" />
+    <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
+    <Compile Include="V20190103\Models\Placement.cs" />
+    <Compile Include="V20190103\Models\PodSpec.cs" />
+    <Compile Include="V20190103\Models\PodVolume.cs" />
+    <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
+    <Compile Include="V20190103\Models\PriceResource.cs" />
+    <Compile Include="V20190103\Models\Resource.cs" />
+    <Compile Include="V20190103\Models\ScaleOutInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\ScaleOutInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\SearchItem.cs" />
+    <Compile Include="V20190103\Models\Tag.cs" />
+    <Compile Include="V20190103\Models\TerminateInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\TerminateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\TerminateTasksRequest.cs" />
+    <Compile Include="V20190103\Models\TerminateTasksResponse.cs" />
+    <Compile Include="V20190103\Models\UpdateInstanceSettings.cs" />
+    <Compile Include="V20190103\Models\VPCSettings.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{18B557D9-AC8D-37C8-A949-A506BBC8EA9A}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSolarSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20181011\SolarClient.cs" />
+    <Compile Include="V20181011\Models\ActivityInfo.cs" />
+    <Compile Include="V20181011\Models\CheckStaffChUserRequest.cs" />
+    <Compile Include="V20181011\Models\CheckStaffChUserResponse.cs" />
+    <Compile Include="V20181011\Models\CopyActivityChannelRequest.cs" />
+    <Compile Include="V20181011\Models\CopyActivityChannelResponse.cs" />
+    <Compile Include="V20181011\Models\CreateProjectRequest.cs" />
+    <Compile Include="V20181011\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20181011\Models\CreateSubProjectRequest.cs" />
+    <Compile Include="V20181011\Models\CreateSubProjectResponse.cs" />
+    <Compile Include="V20181011\Models\CustomerInfo.cs" />
+    <Compile Include="V20181011\Models\DeleteProjectRequest.cs" />
+    <Compile Include="V20181011\Models\DeleteProjectResponse.cs" />
+    <Compile Include="V20181011\Models\DescribeCustomerRequest.cs" />
+    <Compile Include="V20181011\Models\DescribeCustomerResponse.cs" />
+    <Compile Include="V20181011\Models\DescribeCustomersRequest.cs" />
+    <Compile Include="V20181011\Models\DescribeCustomersResponse.cs" />
+    <Compile Include="V20181011\Models\DescribeProjectRequest.cs" />
+    <Compile Include="V20181011\Models\DescribeProjectResponse.cs" />
+    <Compile Include="V20181011\Models\DescribeProjectStockRequest.cs" />
+    <Compile Include="V20181011\Models\DescribeProjectStockResponse.cs" />
+    <Compile Include="V20181011\Models\DescribeProjectsRequest.cs" />
+    <Compile Include="V20181011\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="V20181011\Models\DescribeResourceTemplateHeadersRequest.cs" />
+    <Compile Include="V20181011\Models\DescribeResourceTemplateHeadersResponse.cs" />
+    <Compile Include="V20181011\Models\DescribeSubProjectRequest.cs" />
+    <Compile Include="V20181011\Models\DescribeSubProjectResponse.cs" />
+    <Compile Include="V20181011\Models\ExpireFlowRequest.cs" />
+    <Compile Include="V20181011\Models\ExpireFlowResponse.cs" />
+    <Compile Include="V20181011\Models\Filters.cs" />
+    <Compile Include="V20181011\Models\ModifyProjectRequest.cs" />
+    <Compile Include="V20181011\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20181011\Models\OffLineProjectRequest.cs" />
+    <Compile Include="V20181011\Models\OffLineProjectResponse.cs" />
+    <Compile Include="V20181011\Models\ProductInfo.cs" />
+    <Compile Include="V20181011\Models\ProjectInfo.cs" />
+    <Compile Include="V20181011\Models\ProjectStock.cs" />
+    <Compile Include="V20181011\Models\ReplenishProjectStockRequest.cs" />
+    <Compile Include="V20181011\Models\ReplenishProjectStockResponse.cs" />
+    <Compile Include="V20181011\Models\ResourceTemplateHeader.cs" />
+    <Compile Include="V20181011\Models\SendWxTouchTaskRequest.cs" />
+    <Compile Include="V20181011\Models\SendWxTouchTaskResponse.cs" />
+    <Compile Include="V20181011\Models\SubProjectInfo.cs" />
+  </ItemGroup>
+</Project>

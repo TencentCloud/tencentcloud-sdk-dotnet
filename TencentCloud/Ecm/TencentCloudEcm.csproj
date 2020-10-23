@@ -1,0 +1,304 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{F313119E-D8EA-3E66-991F-7C89745C570F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudEcmSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190719\EcmClient.cs" />
+    <Compile Include="V20190719\Models\Address.cs" />
+    <Compile Include="V20190719\Models\AddressInfo.cs" />
+    <Compile Include="V20190719\Models\AddressTemplateSpecification.cs" />
+    <Compile Include="V20190719\Models\AllocateAddressesRequest.cs" />
+    <Compile Include="V20190719\Models\AllocateAddressesResponse.cs" />
+    <Compile Include="V20190719\Models\Area.cs" />
+    <Compile Include="V20190719\Models\AssignPrivateIpAddressesRequest.cs" />
+    <Compile Include="V20190719\Models\AssignPrivateIpAddressesResponse.cs" />
+    <Compile Include="V20190719\Models\AssistantCidr.cs" />
+    <Compile Include="V20190719\Models\AssociateAddressRequest.cs" />
+    <Compile Include="V20190719\Models\AssociateAddressResponse.cs" />
+    <Compile Include="V20190719\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20190719\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\AttachNetworkInterfaceRequest.cs" />
+    <Compile Include="V20190719\Models\AttachNetworkInterfaceResponse.cs" />
+    <Compile Include="V20190719\Models\Backend.cs" />
+    <Compile Include="V20190719\Models\BatchDeregisterTargetsRequest.cs" />
+    <Compile Include="V20190719\Models\BatchDeregisterTargetsResponse.cs" />
+    <Compile Include="V20190719\Models\BatchModifyTargetWeightRequest.cs" />
+    <Compile Include="V20190719\Models\BatchModifyTargetWeightResponse.cs" />
+    <Compile Include="V20190719\Models\BatchRegisterTargetsRequest.cs" />
+    <Compile Include="V20190719\Models\BatchRegisterTargetsResponse.cs" />
+    <Compile Include="V20190719\Models\BatchTarget.cs" />
+    <Compile Include="V20190719\Models\City.cs" />
+    <Compile Include="V20190719\Models\Country.cs" />
+    <Compile Include="V20190719\Models\CreateImageRequest.cs" />
+    <Compile Include="V20190719\Models\CreateImageResponse.cs" />
+    <Compile Include="V20190719\Models\CreateListenerRequest.cs" />
+    <Compile Include="V20190719\Models\CreateListenerResponse.cs" />
+    <Compile Include="V20190719\Models\CreateLoadBalancerRequest.cs" />
+    <Compile Include="V20190719\Models\CreateLoadBalancerResponse.cs" />
+    <Compile Include="V20190719\Models\CreateModuleRequest.cs" />
+    <Compile Include="V20190719\Models\CreateModuleResponse.cs" />
+    <Compile Include="V20190719\Models\CreateNetworkInterfaceRequest.cs" />
+    <Compile Include="V20190719\Models\CreateNetworkInterfaceResponse.cs" />
+    <Compile Include="V20190719\Models\CreateSecurityGroupPoliciesRequest.cs" />
+    <Compile Include="V20190719\Models\CreateSecurityGroupPoliciesResponse.cs" />
+    <Compile Include="V20190719\Models\CreateSecurityGroupRequest.cs" />
+    <Compile Include="V20190719\Models\CreateSecurityGroupResponse.cs" />
+    <Compile Include="V20190719\Models\CreateSubnetRequest.cs" />
+    <Compile Include="V20190719\Models\CreateSubnetResponse.cs" />
+    <Compile Include="V20190719\Models\CreateVpcRequest.cs" />
+    <Compile Include="V20190719\Models\CreateVpcResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteImageRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteImageResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteListenerRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteListenerResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteLoadBalancerListenersRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteLoadBalancerListenersResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteLoadBalancerRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteLoadBalancerResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteModuleRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteModuleResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteNetworkInterfaceRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteNetworkInterfaceResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteSecurityGroupPoliciesRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteSecurityGroupPoliciesResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteSecurityGroupRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteSecurityGroupResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteSubnetRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteSubnetResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteVpcRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteVpcResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeAddressQuotaRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeAddressQuotaResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeAddressesRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeAddressesResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeBaseOverviewRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeBaseOverviewResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeConfigRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeConfigResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeCustomImageTaskRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeCustomImageTaskResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeDefaultSubnetRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeDefaultSubnetResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeImageRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeImageResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeImportImageOsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeImportImageOsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeInstanceTypeConfigRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeInstanceTypeConfigResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeInstanceVncUrlRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeInstanceVncUrlResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeInstancesDeniedActionsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeInstancesDeniedActionsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeListenersRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeListenersResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeLoadBalanceTaskStatusRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeLoadBalanceTaskStatusResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeLoadBalancersRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeLoadBalancersResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeModuleDetailRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeModuleDetailResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeModuleRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeModuleResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeNetworkInterfacesRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeNetworkInterfacesResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeNodeRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeNodeResponse.cs" />
+    <Compile Include="V20190719\Models\DescribePeakBaseOverviewRequest.cs" />
+    <Compile Include="V20190719\Models\DescribePeakBaseOverviewResponse.cs" />
+    <Compile Include="V20190719\Models\DescribePeakNetworkOverviewRequest.cs" />
+    <Compile Include="V20190719\Models\DescribePeakNetworkOverviewResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupAssociationStatisticsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupAssociationStatisticsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupLimitsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupLimitsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupPoliciesRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupPoliciesResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeSecurityGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeSubnetsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeSubnetsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeTargetHealthRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeTargetHealthResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeTargetsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeTargetsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeTaskResultRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeTaskResultResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeVpcsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeVpcsResponse.cs" />
+    <Compile Include="V20190719\Models\DetachNetworkInterfaceRequest.cs" />
+    <Compile Include="V20190719\Models\DetachNetworkInterfaceResponse.cs" />
+    <Compile Include="V20190719\Models\DisassociateAddressRequest.cs" />
+    <Compile Include="V20190719\Models\DisassociateAddressResponse.cs" />
+    <Compile Include="V20190719\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20190719\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\DiskInfo.cs" />
+    <Compile Include="V20190719\Models\EipQuota.cs" />
+    <Compile Include="V20190719\Models\EnhancedService.cs" />
+    <Compile Include="V20190719\Models\Filter.cs" />
+    <Compile Include="V20190719\Models\HealthCheck.cs" />
+    <Compile Include="V20190719\Models\ISP.cs" />
+    <Compile Include="V20190719\Models\ISPCounter.cs" />
+    <Compile Include="V20190719\Models\Image.cs" />
+    <Compile Include="V20190719\Models\ImageOsList.cs" />
+    <Compile Include="V20190719\Models\ImageTask.cs" />
+    <Compile Include="V20190719\Models\ImageUrl.cs" />
+    <Compile Include="V20190719\Models\ImportCustomImageRequest.cs" />
+    <Compile Include="V20190719\Models\ImportCustomImageResponse.cs" />
+    <Compile Include="V20190719\Models\ImportImageRequest.cs" />
+    <Compile Include="V20190719\Models\ImportImageResponse.cs" />
+    <Compile Include="V20190719\Models\Instance.cs" />
+    <Compile Include="V20190719\Models\InstanceFamilyConfig.cs" />
+    <Compile Include="V20190719\Models\InstanceFamilyTypeConfig.cs" />
+    <Compile Include="V20190719\Models\InstanceNetworkInfo.cs" />
+    <Compile Include="V20190719\Models\InstanceOperator.cs" />
+    <Compile Include="V20190719\Models\InstanceStatistic.cs" />
+    <Compile Include="V20190719\Models\InstanceTypeConfig.cs" />
+    <Compile Include="V20190719\Models\Internet.cs" />
+    <Compile Include="V20190719\Models\Ipv6Address.cs" />
+    <Compile Include="V20190719\Models\Listener.cs" />
+    <Compile Include="V20190719\Models\ListenerBackend.cs" />
+    <Compile Include="V20190719\Models\ListenerHealth.cs" />
+    <Compile Include="V20190719\Models\LoadBalancer.cs" />
+    <Compile Include="V20190719\Models\LoadBalancerHealth.cs" />
+    <Compile Include="V20190719\Models\LoadBalancerInternetAccessible.cs" />
+    <Compile Include="V20190719\Models\MigrateNetworkInterfaceRequest.cs" />
+    <Compile Include="V20190719\Models\MigrateNetworkInterfaceResponse.cs" />
+    <Compile Include="V20190719\Models\MigratePrivateIpAddressRequest.cs" />
+    <Compile Include="V20190719\Models\MigratePrivateIpAddressResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyAddressAttributeRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyAddressAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyAddressesBandwidthRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyAddressesBandwidthResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyDefaultSubnetRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyDefaultSubnetResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyImageAttributeRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyImageAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyInstancesAttributeRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyInstancesAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyListenerRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyListenerResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyLoadBalancerAttributesRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyLoadBalancerAttributesResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleConfigRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleConfigResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleImageRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleImageResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleIpDirectRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleIpDirectResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleNameRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleNameResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleNetworkRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleNetworkResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleSecurityGroupsRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyModuleSecurityGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\ModifySecurityGroupAttributeRequest.cs" />
+    <Compile Include="V20190719\Models\ModifySecurityGroupAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\ModifySecurityGroupPoliciesRequest.cs" />
+    <Compile Include="V20190719\Models\ModifySecurityGroupPoliciesResponse.cs" />
+    <Compile Include="V20190719\Models\ModifySubnetAttributeRequest.cs" />
+    <Compile Include="V20190719\Models\ModifySubnetAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyTargetPortRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyTargetPortResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyTargetWeightRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyTargetWeightResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyVpcAttributeRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyVpcAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\Module.cs" />
+    <Compile Include="V20190719\Models\ModuleCounter.cs" />
+    <Compile Include="V20190719\Models\ModuleItem.cs" />
+    <Compile Include="V20190719\Models\NetworkInterface.cs" />
+    <Compile Include="V20190719\Models\NetworkInterfaceAttachment.cs" />
+    <Compile Include="V20190719\Models\NetworkStorageRange.cs" />
+    <Compile Include="V20190719\Models\Node.cs" />
+    <Compile Include="V20190719\Models\NodeInstanceNum.cs" />
+    <Compile Include="V20190719\Models\OperatorAction.cs" />
+    <Compile Include="V20190719\Models\OsVersion.cs" />
+    <Compile Include="V20190719\Models\PeakBase.cs" />
+    <Compile Include="V20190719\Models\PeakFamilyInfo.cs" />
+    <Compile Include="V20190719\Models\PeakNetwork.cs" />
+    <Compile Include="V20190719\Models\PeakNetworkRegionInfo.cs" />
+    <Compile Include="V20190719\Models\Position.cs" />
+    <Compile Include="V20190719\Models\PrivateIPAddressInfo.cs" />
+    <Compile Include="V20190719\Models\PrivateIpAddressSpecification.cs" />
+    <Compile Include="V20190719\Models\Province.cs" />
+    <Compile Include="V20190719\Models\PublicIPAddressInfo.cs" />
+    <Compile Include="V20190719\Models\RebootInstancesRequest.cs" />
+    <Compile Include="V20190719\Models\RebootInstancesResponse.cs" />
+    <Compile Include="V20190719\Models\RegionInfo.cs" />
+    <Compile Include="V20190719\Models\ReleaseAddressesRequest.cs" />
+    <Compile Include="V20190719\Models\ReleaseAddressesResponse.cs" />
+    <Compile Include="V20190719\Models\RemovePrivateIpAddressesRequest.cs" />
+    <Compile Include="V20190719\Models\RemovePrivateIpAddressesResponse.cs" />
+    <Compile Include="V20190719\Models\ReplaceSecurityGroupPolicyRequest.cs" />
+    <Compile Include="V20190719\Models\ReplaceSecurityGroupPolicyResponse.cs" />
+    <Compile Include="V20190719\Models\ResetInstancesMaxBandwidthRequest.cs" />
+    <Compile Include="V20190719\Models\ResetInstancesMaxBandwidthResponse.cs" />
+    <Compile Include="V20190719\Models\ResetInstancesPasswordRequest.cs" />
+    <Compile Include="V20190719\Models\ResetInstancesPasswordResponse.cs" />
+    <Compile Include="V20190719\Models\ResetInstancesRequest.cs" />
+    <Compile Include="V20190719\Models\ResetInstancesResponse.cs" />
+    <Compile Include="V20190719\Models\RuleHealth.cs" />
+    <Compile Include="V20190719\Models\RunEIPDirectServiceEnabled.cs" />
+    <Compile Include="V20190719\Models\RunInstancesRequest.cs" />
+    <Compile Include="V20190719\Models\RunInstancesResponse.cs" />
+    <Compile Include="V20190719\Models\RunMonitorServiceEnabled.cs" />
+    <Compile Include="V20190719\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20190719\Models\SecurityGroup.cs" />
+    <Compile Include="V20190719\Models\SecurityGroupAssociationStatistics.cs" />
+    <Compile Include="V20190719\Models\SecurityGroupLimitSet.cs" />
+    <Compile Include="V20190719\Models\SecurityGroupPolicy.cs" />
+    <Compile Include="V20190719\Models\SecurityGroupPolicySet.cs" />
+    <Compile Include="V20190719\Models\ServiceTemplateSpecification.cs" />
+    <Compile Include="V20190719\Models\SimpleModule.cs" />
+    <Compile Include="V20190719\Models\SrcImage.cs" />
+    <Compile Include="V20190719\Models\StartInstancesRequest.cs" />
+    <Compile Include="V20190719\Models\StartInstancesResponse.cs" />
+    <Compile Include="V20190719\Models\StopInstancesRequest.cs" />
+    <Compile Include="V20190719\Models\StopInstancesResponse.cs" />
+    <Compile Include="V20190719\Models\Subnet.cs" />
+    <Compile Include="V20190719\Models\Tag.cs" />
+    <Compile Include="V20190719\Models\TagInfo.cs" />
+    <Compile Include="V20190719\Models\TagSpecification.cs" />
+    <Compile Include="V20190719\Models\Target.cs" />
+    <Compile Include="V20190719\Models\TargetHealth.cs" />
+    <Compile Include="V20190719\Models\TargetsWeightRule.cs" />
+    <Compile Include="V20190719\Models\TaskInput.cs" />
+    <Compile Include="V20190719\Models\TaskOutput.cs" />
+    <Compile Include="V20190719\Models\TerminateInstancesRequest.cs" />
+    <Compile Include="V20190719\Models\TerminateInstancesResponse.cs" />
+    <Compile Include="V20190719\Models\VirtualPrivateCloud.cs" />
+    <Compile Include="V20190719\Models\VpcInfo.cs" />
+    <Compile Include="V20190719\Models\ZoneInfo.cs" />
+    <Compile Include="V20190719\Models\ZoneInstanceCountISP.cs" />
+    <Compile Include="V20190719\Models\ZoneInstanceInfo.cs" />
+  </ItemGroup>
+</Project>

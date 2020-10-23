@@ -66,7 +66,7 @@ namespace TencentCloud.Afc.V20200226.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Found", this.Found);
             this.SetParamSimple(map, prefix + "IdFound", this.IdFound);

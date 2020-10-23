@@ -64,7 +64,7 @@ namespace TencentCloud.As.V20180419.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ComparisonOperator", this.ComparisonOperator);
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);

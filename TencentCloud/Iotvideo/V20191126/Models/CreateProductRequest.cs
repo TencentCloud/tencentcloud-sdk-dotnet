@@ -80,11 +80,23 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("ProductCate")]
         public ulong? ProductCate{ get; set; }
 
+        /// <summary>
+        /// 接入模型，bit0是0：公版小程序未接入，bit0是1：公版小程序已接入
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public long? AccessMode{ get; set; }
+
+        /// <summary>
+        /// linux,android,liteos
+        /// </summary>
+        [JsonProperty("Os")]
+        public string Os{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductModel", this.ProductModel);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
@@ -94,6 +106,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "ChipId", this.ChipId);
             this.SetParamSimple(map, prefix + "ProductRegion", this.ProductRegion);
             this.SetParamSimple(map, prefix + "ProductCate", this.ProductCate);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
+            this.SetParamSimple(map, prefix + "Os", this.Os);
         }
     }
 }

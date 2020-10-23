@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{9BF26F77-42F6-32E5-A61F-ADB2B98DFDAF}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudNppSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190823\NppClient.cs" />
+    <Compile Include="V20190823\Models\CallBackCdr.cs" />
+    <Compile Include="V20190823\Models\CallBackPhoneCode.cs" />
+    <Compile Include="V20190823\Models\CreateCallBackRequest.cs" />
+    <Compile Include="V20190823\Models\CreateCallBackResponse.cs" />
+    <Compile Include="V20190823\Models\DelVirtualNumRequest.cs" />
+    <Compile Include="V20190823\Models\DelVirtualNumResponse.cs" />
+    <Compile Include="V20190823\Models\DeleteCallBackRequest.cs" />
+    <Compile Include="V20190823\Models\DeleteCallBackResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeCallBackCdrRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeCallBackCdrResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeCallBackStatusRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeCallBackStatusResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeCallerDisplayListRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeCallerDisplayListResponse.cs" />
+    <Compile Include="V20190823\Models\Get400CdrRequest.cs" />
+    <Compile Include="V20190823\Models\Get400CdrResponse.cs" />
+    <Compile Include="V20190823\Models\GetVirtualNumRequest.cs" />
+    <Compile Include="V20190823\Models\GetVirtualNumResponse.cs" />
+    <Compile Include="V20190823\Models\KeyList.cs" />
+    <Compile Include="V20190823\Models\RreCallerHandle.cs" />
+    <Compile Include="V20190823\Models\VirturalNumCdr.cs" />
+  </ItemGroup>
+</Project>

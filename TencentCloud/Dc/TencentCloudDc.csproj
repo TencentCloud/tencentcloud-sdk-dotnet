@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{BBBC34B7-D0CA-319D-B7F1-85119ED00512}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudDcSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180410\DcClient.cs" />
+    <Compile Include="V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
+    <Compile Include="V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
+    <Compile Include="V20180410\Models\AccessPoint.cs" />
+    <Compile Include="V20180410\Models\BFDInfo.cs" />
+    <Compile Include="V20180410\Models\BGPStatus.cs" />
+    <Compile Include="V20180410\Models\BgpPeer.cs" />
+    <Compile Include="V20180410\Models\CreateDirectConnectRequest.cs" />
+    <Compile Include="V20180410\Models\CreateDirectConnectResponse.cs" />
+    <Compile Include="V20180410\Models\CreateDirectConnectTunnelRequest.cs" />
+    <Compile Include="V20180410\Models\CreateDirectConnectTunnelResponse.cs" />
+    <Compile Include="V20180410\Models\DeleteDirectConnectRequest.cs" />
+    <Compile Include="V20180410\Models\DeleteDirectConnectResponse.cs" />
+    <Compile Include="V20180410\Models\DeleteDirectConnectTunnelRequest.cs" />
+    <Compile Include="V20180410\Models\DeleteDirectConnectTunnelResponse.cs" />
+    <Compile Include="V20180410\Models\DescribeAccessPointsRequest.cs" />
+    <Compile Include="V20180410\Models\DescribeAccessPointsResponse.cs" />
+    <Compile Include="V20180410\Models\DescribeDirectConnectTunnelExtraRequest.cs" />
+    <Compile Include="V20180410\Models\DescribeDirectConnectTunnelExtraResponse.cs" />
+    <Compile Include="V20180410\Models\DescribeDirectConnectTunnelsRequest.cs" />
+    <Compile Include="V20180410\Models\DescribeDirectConnectTunnelsResponse.cs" />
+    <Compile Include="V20180410\Models\DescribeDirectConnectsRequest.cs" />
+    <Compile Include="V20180410\Models\DescribeDirectConnectsResponse.cs" />
+    <Compile Include="V20180410\Models\DescribePublicDirectConnectTunnelRoutesRequest.cs" />
+    <Compile Include="V20180410\Models\DescribePublicDirectConnectTunnelRoutesResponse.cs" />
+    <Compile Include="V20180410\Models\DirectConnect.cs" />
+    <Compile Include="V20180410\Models\DirectConnectTunnel.cs" />
+    <Compile Include="V20180410\Models\DirectConnectTunnelExtra.cs" />
+    <Compile Include="V20180410\Models\DirectConnectTunnelRoute.cs" />
+    <Compile Include="V20180410\Models\Filter.cs" />
+    <Compile Include="V20180410\Models\ModifyDirectConnectAttributeRequest.cs" />
+    <Compile Include="V20180410\Models\ModifyDirectConnectAttributeResponse.cs" />
+    <Compile Include="V20180410\Models\ModifyDirectConnectTunnelAttributeRequest.cs" />
+    <Compile Include="V20180410\Models\ModifyDirectConnectTunnelAttributeResponse.cs" />
+    <Compile Include="V20180410\Models\ModifyDirectConnectTunnelExtraRequest.cs" />
+    <Compile Include="V20180410\Models\ModifyDirectConnectTunnelExtraResponse.cs" />
+    <Compile Include="V20180410\Models\NQAInfo.cs" />
+    <Compile Include="V20180410\Models\RejectDirectConnectTunnelRequest.cs" />
+    <Compile Include="V20180410\Models\RejectDirectConnectTunnelResponse.cs" />
+    <Compile Include="V20180410\Models\RouteFilterPrefix.cs" />
+    <Compile Include="V20180410\Models\Tag.cs" />
+  </ItemGroup>
+</Project>

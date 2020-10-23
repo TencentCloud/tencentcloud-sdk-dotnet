@@ -25,18 +25,6 @@ namespace TencentCloud.Tts.V20190823.Models
     {
         
         /// <summary>
-        /// base64编码的wav/mp3音频数据
-        /// </summary>
-        [JsonProperty("Audio")]
-        public string Audio{ get; set; }
-
-        /// <summary>
-        /// 一次请求对应一个SessionId
-        /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -46,10 +34,8 @@ namespace TencentCloud.Tts.V20190823.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Audio", this.Audio);
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

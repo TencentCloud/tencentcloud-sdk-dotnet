@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{2E555935-1AF9-3035-A549-EF9F2CEA0C32}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSsmSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190923\SsmClient.cs" />
+    <Compile Include="V20190923\Models\CreateSecretRequest.cs" />
+    <Compile Include="V20190923\Models\CreateSecretResponse.cs" />
+    <Compile Include="V20190923\Models\DeleteSecretRequest.cs" />
+    <Compile Include="V20190923\Models\DeleteSecretResponse.cs" />
+    <Compile Include="V20190923\Models\DeleteSecretVersionRequest.cs" />
+    <Compile Include="V20190923\Models\DeleteSecretVersionResponse.cs" />
+    <Compile Include="V20190923\Models\DescribeSecretRequest.cs" />
+    <Compile Include="V20190923\Models\DescribeSecretResponse.cs" />
+    <Compile Include="V20190923\Models\DisableSecretRequest.cs" />
+    <Compile Include="V20190923\Models\DisableSecretResponse.cs" />
+    <Compile Include="V20190923\Models\EnableSecretRequest.cs" />
+    <Compile Include="V20190923\Models\EnableSecretResponse.cs" />
+    <Compile Include="V20190923\Models\GetRegionsRequest.cs" />
+    <Compile Include="V20190923\Models\GetRegionsResponse.cs" />
+    <Compile Include="V20190923\Models\GetSecretValueRequest.cs" />
+    <Compile Include="V20190923\Models\GetSecretValueResponse.cs" />
+    <Compile Include="V20190923\Models\GetServiceStatusRequest.cs" />
+    <Compile Include="V20190923\Models\GetServiceStatusResponse.cs" />
+    <Compile Include="V20190923\Models\ListSecretVersionIdsRequest.cs" />
+    <Compile Include="V20190923\Models\ListSecretVersionIdsResponse.cs" />
+    <Compile Include="V20190923\Models\ListSecretsRequest.cs" />
+    <Compile Include="V20190923\Models\ListSecretsResponse.cs" />
+    <Compile Include="V20190923\Models\PutSecretValueRequest.cs" />
+    <Compile Include="V20190923\Models\PutSecretValueResponse.cs" />
+    <Compile Include="V20190923\Models\RestoreSecretRequest.cs" />
+    <Compile Include="V20190923\Models\RestoreSecretResponse.cs" />
+    <Compile Include="V20190923\Models\SecretMetadata.cs" />
+    <Compile Include="V20190923\Models\Tag.cs" />
+    <Compile Include="V20190923\Models\TagFilter.cs" />
+    <Compile Include="V20190923\Models\UpdateDescriptionRequest.cs" />
+    <Compile Include="V20190923\Models\UpdateDescriptionResponse.cs" />
+    <Compile Include="V20190923\Models\UpdateSecretRequest.cs" />
+    <Compile Include="V20190923\Models\UpdateSecretResponse.cs" />
+    <Compile Include="V20190923\Models\VersionInfo.cs" />
+  </ItemGroup>
+</Project>

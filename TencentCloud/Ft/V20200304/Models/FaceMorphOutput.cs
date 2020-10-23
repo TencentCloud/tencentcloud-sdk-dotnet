@@ -49,7 +49,7 @@ namespace TencentCloud.Ft.V20200304.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MorphUrl", this.MorphUrl);
             this.SetParamSimple(map, prefix + "MorphMd5", this.MorphMd5);

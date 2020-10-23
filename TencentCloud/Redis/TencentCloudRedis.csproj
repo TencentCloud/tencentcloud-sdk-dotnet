@@ -1,0 +1,188 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudRedisSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180412\RedisClient.cs" />
+    <Compile Include="V20180412\Models\Account.cs" />
+    <Compile Include="V20180412\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20180412\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\BigKeyInfo.cs" />
+    <Compile Include="V20180412\Models\BigKeyTypeInfo.cs" />
+    <Compile Include="V20180412\Models\CleanUpInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\CleanUpInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\ClearInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\ClearInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\CommandTake.cs" />
+    <Compile Include="V20180412\Models\CreateInstanceAccountRequest.cs" />
+    <Compile Include="V20180412\Models\CreateInstanceAccountResponse.cs" />
+    <Compile Include="V20180412\Models\CreateInstancesRequest.cs" />
+    <Compile Include="V20180412\Models\CreateInstancesResponse.cs" />
+    <Compile Include="V20180412\Models\DelayDistribution.cs" />
+    <Compile Include="V20180412\Models\DeleteInstanceAccountRequest.cs" />
+    <Compile Include="V20180412\Models\DeleteInstanceAccountResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeBackupUrlRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeBackupUrlResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceAccountRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceAccountResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceBackupsRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceBackupsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceDTSInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceDTSInfoResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceDTSInstanceInfo.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceDealDetailRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceDealDetailResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeyRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeyResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeySizeDistRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeySizeDistResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeyTypeDistRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorBigKeyTypeDistResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorHotKeyRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorHotKeyResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorSIPRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorSIPResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorTookDistRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorTookDistResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdTookRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceMonitorTopNCmdTookResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceNodeInfoResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceParamRecordsRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceParamRecordsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceParamsRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceParamsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceSecurityGroupRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceSecurityGroupResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceShardsRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstanceShardsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeProductInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeProductInfoResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeProjectSecurityGroupResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeProxySlowLogRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeProxySlowLogResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeSlowLogRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeSlowLogResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeTaskInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeTaskInfoResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeTaskListRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeTaskListResponse.cs" />
+    <Compile Include="V20180412\Models\DestroyPostpaidInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\DestroyPostpaidInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\DestroyPrepaidInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\DestroyPrepaidInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\DisableReplicaReadonlyRequest.cs" />
+    <Compile Include="V20180412\Models\DisableReplicaReadonlyResponse.cs" />
+    <Compile Include="V20180412\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20180412\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\EnableReplicaReadonlyRequest.cs" />
+    <Compile Include="V20180412\Models\EnableReplicaReadonlyResponse.cs" />
+    <Compile Include="V20180412\Models\HotKeyInfo.cs" />
+    <Compile Include="V20180412\Models\Inbound.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceCreateInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceCreateInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceRenewInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceRenewInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceUpgradeInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\InquiryPriceUpgradeInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\InstanceClusterNode.cs" />
+    <Compile Include="V20180412\Models\InstanceClusterShard.cs" />
+    <Compile Include="V20180412\Models\InstanceEnumParam.cs" />
+    <Compile Include="V20180412\Models\InstanceIntegerParam.cs" />
+    <Compile Include="V20180412\Models\InstanceMultiParam.cs" />
+    <Compile Include="V20180412\Models\InstanceNode.cs" />
+    <Compile Include="V20180412\Models\InstanceParam.cs" />
+    <Compile Include="V20180412\Models\InstanceParamHistory.cs" />
+    <Compile Include="V20180412\Models\InstanceProxySlowlogDetail.cs" />
+    <Compile Include="V20180412\Models\InstanceSecurityGroupDetail.cs" />
+    <Compile Include="V20180412\Models\InstanceSet.cs" />
+    <Compile Include="V20180412\Models\InstanceSlowlogDetail.cs" />
+    <Compile Include="V20180412\Models\InstanceTagInfo.cs" />
+    <Compile Include="V20180412\Models\InstanceTextParam.cs" />
+    <Compile Include="V20180412\Models\ManualBackupInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\ManualBackupInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\ModfiyInstancePasswordRequest.cs" />
+    <Compile Include="V20180412\Models\ModfiyInstancePasswordResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyAutoBackupConfigRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyAutoBackupConfigResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceAccountRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceAccountResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceParamsRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceParamsResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyMaintenanceWindowRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyNetworkConfigRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyNetworkConfigResponse.cs" />
+    <Compile Include="V20180412\Models\Outbound.cs" />
+    <Compile Include="V20180412\Models\ProductConf.cs" />
+    <Compile Include="V20180412\Models\ProxyNodes.cs" />
+    <Compile Include="V20180412\Models\RedisBackupSet.cs" />
+    <Compile Include="V20180412\Models\RedisNodes.cs" />
+    <Compile Include="V20180412\Models\RegionConf.cs" />
+    <Compile Include="V20180412\Models\RenewInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\RenewInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\ResetPasswordRequest.cs" />
+    <Compile Include="V20180412\Models\ResetPasswordResponse.cs" />
+    <Compile Include="V20180412\Models\RestoreInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\RestoreInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\SecurityGroup.cs" />
+    <Compile Include="V20180412\Models\SecurityGroupDetail.cs" />
+    <Compile Include="V20180412\Models\SecurityGroupsInboundAndOutbound.cs" />
+    <Compile Include="V20180412\Models\SourceCommand.cs" />
+    <Compile Include="V20180412\Models\SourceInfo.cs" />
+    <Compile Include="V20180412\Models\StartupInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\StartupInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\SwitchInstanceVipRequest.cs" />
+    <Compile Include="V20180412\Models\SwitchInstanceVipResponse.cs" />
+    <Compile Include="V20180412\Models\TaskInfoDetail.cs" />
+    <Compile Include="V20180412\Models\TendisNodes.cs" />
+    <Compile Include="V20180412\Models\TradeDealDetail.cs" />
+    <Compile Include="V20180412\Models\UpgradeInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\UpgradeInstanceVersionRequest.cs" />
+    <Compile Include="V20180412\Models\UpgradeInstanceVersionResponse.cs" />
+    <Compile Include="V20180412\Models\ZoneCapacityConf.cs" />
+  </ItemGroup>
+</Project>

@@ -41,7 +41,7 @@ namespace TencentCloud.Dts.V20180330.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "SubscribeIds.", this.SubscribeIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -1,0 +1,117 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudPostgresSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20170312\PostgresClient.cs" />
+    <Compile Include="V20170312\Models\AccountInfo.cs" />
+    <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\CreateDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\CreateServerlessDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\DBBackup.cs" />
+    <Compile Include="V20170312\Models\DBInstance.cs" />
+    <Compile Include="V20170312\Models\DBInstanceNetInfo.cs" />
+    <Compile Include="V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteServerlessDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBBackupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBBackupsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBErrlogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBErrlogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSlowlogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSlowlogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBXlogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBXlogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeProductConfigRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeProductConfigResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeServerlessDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeServerlessDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\DestroyDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ErrLogDetail.cs" />
+    <Compile Include="V20170312\Models\Filter.cs" />
+    <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\InitDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceCreateDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceCreateDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceUpgradeDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceUpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountRemarkRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
+    <Compile Include="V20170312\Models\NormalQueryItem.cs" />
+    <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\PgDeal.cs" />
+    <Compile Include="V20170312\Models\RegionInfo.cs" />
+    <Compile Include="V20170312\Models\RenewInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\RenewInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ResetAccountPasswordRequest.cs" />
+    <Compile Include="V20170312\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20170312\Models\RestartDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\RestartDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ServerlessDBAccount.cs" />
+    <Compile Include="V20170312\Models\ServerlessDBInstance.cs" />
+    <Compile Include="V20170312\Models\ServerlessDBInstanceNetInfo.cs" />
+    <Compile Include="V20170312\Models\SetAutoRenewFlagRequest.cs" />
+    <Compile Include="V20170312\Models\SetAutoRenewFlagResponse.cs" />
+    <Compile Include="V20170312\Models\SlowlogDetail.cs" />
+    <Compile Include="V20170312\Models\SpecInfo.cs" />
+    <Compile Include="V20170312\Models\SpecItemInfo.cs" />
+    <Compile Include="V20170312\Models\Tag.cs" />
+    <Compile Include="V20170312\Models\UpgradeDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\Xlog.cs" />
+    <Compile Include="V20170312\Models\ZoneInfo.cs" />
+  </ItemGroup>
+</Project>

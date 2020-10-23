@@ -90,7 +90,7 @@ namespace TencentCloud.Tbp.V20190627.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DialogStatus", this.DialogStatus);
             this.SetParamSimple(map, prefix + "BotName", this.BotName);

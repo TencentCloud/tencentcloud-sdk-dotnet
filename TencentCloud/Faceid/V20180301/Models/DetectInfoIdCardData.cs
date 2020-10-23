@@ -63,7 +63,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OcrFront", this.OcrFront);
             this.SetParamSimple(map, prefix + "OcrBack", this.OcrBack);

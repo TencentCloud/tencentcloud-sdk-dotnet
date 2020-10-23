@@ -58,7 +58,7 @@ namespace TencentCloud.Bmeip.V20180625.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AclId", this.AclId);
             this.SetParamSimple(map, prefix + "AclName", this.AclName);

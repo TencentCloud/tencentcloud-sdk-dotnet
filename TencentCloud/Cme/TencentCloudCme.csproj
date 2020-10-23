@@ -1,0 +1,139 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCmeSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20191029\CmeClient.cs" />
+    <Compile Include="V20191029\Models\AddMemberInfo.cs" />
+    <Compile Include="V20191029\Models\AddTeamMemberRequest.cs" />
+    <Compile Include="V20191029\Models\AddTeamMemberResponse.cs" />
+    <Compile Include="V20191029\Models\AudioMaterial.cs" />
+    <Compile Include="V20191029\Models\AudioStreamInfo.cs" />
+    <Compile Include="V20191029\Models\AuthorizationInfo.cs" />
+    <Compile Include="V20191029\Models\Authorizer.cs" />
+    <Compile Include="V20191029\Models\CMEExportInfo.cs" />
+    <Compile Include="V20191029\Models\ClassInfo.cs" />
+    <Compile Include="V20191029\Models\CreateClassRequest.cs" />
+    <Compile Include="V20191029\Models\CreateClassResponse.cs" />
+    <Compile Include="V20191029\Models\CreateLinkRequest.cs" />
+    <Compile Include="V20191029\Models\CreateLinkResponse.cs" />
+    <Compile Include="V20191029\Models\CreateProjectRequest.cs" />
+    <Compile Include="V20191029\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20191029\Models\CreateTeamRequest.cs" />
+    <Compile Include="V20191029\Models\CreateTeamResponse.cs" />
+    <Compile Include="V20191029\Models\DeleteClassRequest.cs" />
+    <Compile Include="V20191029\Models\DeleteClassResponse.cs" />
+    <Compile Include="V20191029\Models\DeleteLoginStatusRequest.cs" />
+    <Compile Include="V20191029\Models\DeleteLoginStatusResponse.cs" />
+    <Compile Include="V20191029\Models\DeleteMaterialRequest.cs" />
+    <Compile Include="V20191029\Models\DeleteMaterialResponse.cs" />
+    <Compile Include="V20191029\Models\DeleteProjectRequest.cs" />
+    <Compile Include="V20191029\Models\DeleteProjectResponse.cs" />
+    <Compile Include="V20191029\Models\DeleteTeamMembersRequest.cs" />
+    <Compile Include="V20191029\Models\DeleteTeamMembersResponse.cs" />
+    <Compile Include="V20191029\Models\DeleteTeamRequest.cs" />
+    <Compile Include="V20191029\Models\DeleteTeamResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeClassRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeClassResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeJoinTeamsRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeJoinTeamsResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeLoginStatusRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeLoginStatusResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeMaterialsRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeMaterialsResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeProjectsRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeResourceAuthorizationRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeResourceAuthorizationResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeSharedSpaceRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeSharedSpaceResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeTasksRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeTeamMembersRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeTeamMembersResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeTeamsRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeTeamsResponse.cs" />
+    <Compile Include="V20191029\Models\Entity.cs" />
+    <Compile Include="V20191029\Models\ExportVideoByEditorTrackDataRequest.cs" />
+    <Compile Include="V20191029\Models\ExportVideoByEditorTrackDataResponse.cs" />
+    <Compile Include="V20191029\Models\ExportVideoEditProjectRequest.cs" />
+    <Compile Include="V20191029\Models\ExportVideoEditProjectResponse.cs" />
+    <Compile Include="V20191029\Models\FlattenListMediaRequest.cs" />
+    <Compile Include="V20191029\Models\FlattenListMediaResponse.cs" />
+    <Compile Include="V20191029\Models\GrantResourceAuthorizationRequest.cs" />
+    <Compile Include="V20191029\Models\GrantResourceAuthorizationResponse.cs" />
+    <Compile Include="V20191029\Models\ImageMaterial.cs" />
+    <Compile Include="V20191029\Models\ImportMaterialRequest.cs" />
+    <Compile Include="V20191029\Models\ImportMaterialResponse.cs" />
+    <Compile Include="V20191029\Models\ImportMediaToProjectRequest.cs" />
+    <Compile Include="V20191029\Models\ImportMediaToProjectResponse.cs" />
+    <Compile Include="V20191029\Models\IntegerRange.cs" />
+    <Compile Include="V20191029\Models\JoinTeamInfo.cs" />
+    <Compile Include="V20191029\Models\LinkMaterial.cs" />
+    <Compile Include="V20191029\Models\LinkMaterialInfo.cs" />
+    <Compile Include="V20191029\Models\ListMediaRequest.cs" />
+    <Compile Include="V20191029\Models\ListMediaResponse.cs" />
+    <Compile Include="V20191029\Models\LoginStatusInfo.cs" />
+    <Compile Include="V20191029\Models\MaterialBasicInfo.cs" />
+    <Compile Include="V20191029\Models\MaterialInfo.cs" />
+    <Compile Include="V20191029\Models\MaterialStatus.cs" />
+    <Compile Include="V20191029\Models\MaterialTagInfo.cs" />
+    <Compile Include="V20191029\Models\MediaImageSpriteInfo.cs" />
+    <Compile Include="V20191029\Models\MediaMetaData.cs" />
+    <Compile Include="V20191029\Models\ModifyMaterialRequest.cs" />
+    <Compile Include="V20191029\Models\ModifyMaterialResponse.cs" />
+    <Compile Include="V20191029\Models\ModifyProjectRequest.cs" />
+    <Compile Include="V20191029\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20191029\Models\ModifyTeamMemberRequest.cs" />
+    <Compile Include="V20191029\Models\ModifyTeamMemberResponse.cs" />
+    <Compile Include="V20191029\Models\ModifyTeamRequest.cs" />
+    <Compile Include="V20191029\Models\ModifyTeamResponse.cs" />
+    <Compile Include="V20191029\Models\MoveClassRequest.cs" />
+    <Compile Include="V20191029\Models\MoveClassResponse.cs" />
+    <Compile Include="V20191029\Models\ProjectInfo.cs" />
+    <Compile Include="V20191029\Models\Resource.cs" />
+    <Compile Include="V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
+    <Compile Include="V20191029\Models\RevokeResourceAuthorizationResponse.cs" />
+    <Compile Include="V20191029\Models\SearchMaterialRequest.cs" />
+    <Compile Include="V20191029\Models\SearchMaterialResponse.cs" />
+    <Compile Include="V20191029\Models\SearchScope.cs" />
+    <Compile Include="V20191029\Models\SortBy.cs" />
+    <Compile Include="V20191029\Models\SwitcherPgmOutputConfig.cs" />
+    <Compile Include="V20191029\Models\SwitcherProjectInput.cs" />
+    <Compile Include="V20191029\Models\TaskBaseInfo.cs" />
+    <Compile Include="V20191029\Models\TeamInfo.cs" />
+    <Compile Include="V20191029\Models\TeamMemberInfo.cs" />
+    <Compile Include="V20191029\Models\TimeRange.cs" />
+    <Compile Include="V20191029\Models\VODExportInfo.cs" />
+    <Compile Include="V20191029\Models\VideoEditProjectOutput.cs" />
+    <Compile Include="V20191029\Models\VideoMaterial.cs" />
+    <Compile Include="V20191029\Models\VideoStreamInfo.cs" />
+  </ItemGroup>
+</Project>

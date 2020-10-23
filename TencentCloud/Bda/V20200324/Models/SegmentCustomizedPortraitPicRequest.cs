@@ -53,7 +53,7 @@ namespace TencentCloud.Bda.V20200324.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "SegmentationOptions.", this.SegmentationOptions);
             this.SetParamSimple(map, prefix + "Image", this.Image);

@@ -52,7 +52,7 @@ namespace TencentCloud.Hcm.V20181106.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Width", this.Width);

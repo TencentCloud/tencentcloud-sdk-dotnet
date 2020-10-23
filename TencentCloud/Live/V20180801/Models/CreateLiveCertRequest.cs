@@ -66,7 +66,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CertType", this.CertType);
             this.SetParamSimple(map, prefix + "CertName", this.CertName);

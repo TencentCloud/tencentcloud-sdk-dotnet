@@ -40,7 +40,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Series.", this.Series);
             this.SetParamArraySimple(map, prefix + "Timestamp.", this.Timestamp);

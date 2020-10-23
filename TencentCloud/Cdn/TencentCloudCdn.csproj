@@ -1,0 +1,254 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCdnSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180606\CdnClient.cs" />
+    <Compile Include="V20180606\Models\AccessControl.cs" />
+    <Compile Include="V20180606\Models\AccessControlRule.cs" />
+    <Compile Include="V20180606\Models\AddCdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\AddCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\AdvanceCacheRule.cs" />
+    <Compile Include="V20180606\Models\AdvancedCache.cs" />
+    <Compile Include="V20180606\Models\Authentication.cs" />
+    <Compile Include="V20180606\Models\AuthenticationTypeA.cs" />
+    <Compile Include="V20180606\Models\AuthenticationTypeB.cs" />
+    <Compile Include="V20180606\Models\AuthenticationTypeC.cs" />
+    <Compile Include="V20180606\Models\AuthenticationTypeD.cs" />
+    <Compile Include="V20180606\Models\AwsPrivateAccess.cs" />
+    <Compile Include="V20180606\Models\BandwidthAlert.cs" />
+    <Compile Include="V20180606\Models\BriefDomain.cs" />
+    <Compile Include="V20180606\Models\Cache.cs" />
+    <Compile Include="V20180606\Models\CacheConfigCache.cs" />
+    <Compile Include="V20180606\Models\CacheConfigFollowOrigin.cs" />
+    <Compile Include="V20180606\Models\CacheConfigNoCache.cs" />
+    <Compile Include="V20180606\Models\CacheKey.cs" />
+    <Compile Include="V20180606\Models\CacheOptResult.cs" />
+    <Compile Include="V20180606\Models\CacheTagKey.cs" />
+    <Compile Include="V20180606\Models\CappingRule.cs" />
+    <Compile Include="V20180606\Models\CdnData.cs" />
+    <Compile Include="V20180606\Models\CdnIp.cs" />
+    <Compile Include="V20180606\Models\CdnIpHistory.cs" />
+    <Compile Include="V20180606\Models\ClientCert.cs" />
+    <Compile Include="V20180606\Models\ClientInfo.cs" />
+    <Compile Include="V20180606\Models\ClsLogObject.cs" />
+    <Compile Include="V20180606\Models\ClsSearchLogs.cs" />
+    <Compile Include="V20180606\Models\Compatibility.cs" />
+    <Compile Include="V20180606\Models\Compression.cs" />
+    <Compile Include="V20180606\Models\CompressionRule.cs" />
+    <Compile Include="V20180606\Models\CookieKey.cs" />
+    <Compile Include="V20180606\Models\CreateClsLogTopicRequest.cs" />
+    <Compile Include="V20180606\Models\CreateClsLogTopicResponse.cs" />
+    <Compile Include="V20180606\Models\CreateDiagnoseUrlRequest.cs" />
+    <Compile Include="V20180606\Models\CreateDiagnoseUrlResponse.cs" />
+    <Compile Include="V20180606\Models\CreateScdnLogTaskRequest.cs" />
+    <Compile Include="V20180606\Models\CreateScdnLogTaskResponse.cs" />
+    <Compile Include="V20180606\Models\CreateVerifyRecordRequest.cs" />
+    <Compile Include="V20180606\Models\CreateVerifyRecordResponse.cs" />
+    <Compile Include="V20180606\Models\DeleteCdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\DeleteCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\DeleteClsLogTopicRequest.cs" />
+    <Compile Include="V20180606\Models\DeleteClsLogTopicResponse.cs" />
+    <Compile Include="V20180606\Models\DeleteScdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\DeleteScdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeBillingDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeBillingDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnDomainLogsRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnDomainLogsResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnIpRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeCdnIpResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeCertDomainsRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeCertDomainsResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeDiagnoseReportRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeDiagnoseReportResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeDistrictIspDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeDistrictIspDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeDomainsConfigRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeDomainsConfigResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeDomainsRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeImageConfigRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeImageConfigResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeIpStatusRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeIpStatusResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeIpVisitRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeIpVisitResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeMapInfoRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeMapInfoResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeOriginDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeOriginDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribePayTypeRequest.cs" />
+    <Compile Include="V20180606\Models\DescribePayTypeResponse.cs" />
+    <Compile Include="V20180606\Models\DescribePurgeQuotaRequest.cs" />
+    <Compile Include="V20180606\Models\DescribePurgeQuotaResponse.cs" />
+    <Compile Include="V20180606\Models\DescribePurgeTasksRequest.cs" />
+    <Compile Include="V20180606\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="V20180606\Models\DescribePushQuotaRequest.cs" />
+    <Compile Include="V20180606\Models\DescribePushQuotaResponse.cs" />
+    <Compile Include="V20180606\Models\DescribePushTasksRequest.cs" />
+    <Compile Include="V20180606\Models\DescribePushTasksResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeReportDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeReportDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeScdnTopDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeScdnTopDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeTrafficPackagesRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeTrafficPackagesResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeUrlViolationsRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeUrlViolationsResponse.cs" />
+    <Compile Include="V20180606\Models\DetailDomain.cs" />
+    <Compile Include="V20180606\Models\DiagnoseData.cs" />
+    <Compile Include="V20180606\Models\DiagnoseInfo.cs" />
+    <Compile Include="V20180606\Models\DiagnoseList.cs" />
+    <Compile Include="V20180606\Models\DiagnoseUnit.cs" />
+    <Compile Include="V20180606\Models\DisableCachesRequest.cs" />
+    <Compile Include="V20180606\Models\DisableCachesResponse.cs" />
+    <Compile Include="V20180606\Models\DisableClsLogTopicRequest.cs" />
+    <Compile Include="V20180606\Models\DisableClsLogTopicResponse.cs" />
+    <Compile Include="V20180606\Models\DistrictIspInfo.cs" />
+    <Compile Include="V20180606\Models\DomainAreaConfig.cs" />
+    <Compile Include="V20180606\Models\DomainFilter.cs" />
+    <Compile Include="V20180606\Models\DomainLog.cs" />
+    <Compile Include="V20180606\Models\DownstreamCapping.cs" />
+    <Compile Include="V20180606\Models\EnableCachesRequest.cs" />
+    <Compile Include="V20180606\Models\EnableCachesResponse.cs" />
+    <Compile Include="V20180606\Models\EnableClsLogTopicRequest.cs" />
+    <Compile Include="V20180606\Models\EnableClsLogTopicResponse.cs" />
+    <Compile Include="V20180606\Models\ErrorPage.cs" />
+    <Compile Include="V20180606\Models\ErrorPageRule.cs" />
+    <Compile Include="V20180606\Models\FollowRedirect.cs" />
+    <Compile Include="V20180606\Models\ForceRedirect.cs" />
+    <Compile Include="V20180606\Models\GetDisableRecordsRequest.cs" />
+    <Compile Include="V20180606\Models\GetDisableRecordsResponse.cs" />
+    <Compile Include="V20180606\Models\GuetzliAdapter.cs" />
+    <Compile Include="V20180606\Models\HeaderKey.cs" />
+    <Compile Include="V20180606\Models\Hsts.cs" />
+    <Compile Include="V20180606\Models\HttpHeaderPathRule.cs" />
+    <Compile Include="V20180606\Models\HttpHeaderRule.cs" />
+    <Compile Include="V20180606\Models\Https.cs" />
+    <Compile Include="V20180606\Models\ImageOptimization.cs" />
+    <Compile Include="V20180606\Models\IpFilter.cs" />
+    <Compile Include="V20180606\Models\IpFilterPathRule.cs" />
+    <Compile Include="V20180606\Models\IpFreqLimit.cs" />
+    <Compile Include="V20180606\Models\IpStatus.cs" />
+    <Compile Include="V20180606\Models\Ipv6.cs" />
+    <Compile Include="V20180606\Models\KeyRule.cs" />
+    <Compile Include="V20180606\Models\ListClsLogTopicsRequest.cs" />
+    <Compile Include="V20180606\Models\ListClsLogTopicsResponse.cs" />
+    <Compile Include="V20180606\Models\ListClsTopicDomainsRequest.cs" />
+    <Compile Include="V20180606\Models\ListClsTopicDomainsResponse.cs" />
+    <Compile Include="V20180606\Models\ListDiagnoseReportRequest.cs" />
+    <Compile Include="V20180606\Models\ListDiagnoseReportResponse.cs" />
+    <Compile Include="V20180606\Models\ListScdnLogTasksRequest.cs" />
+    <Compile Include="V20180606\Models\ListScdnLogTasksResponse.cs" />
+    <Compile Include="V20180606\Models\ListTopDataRequest.cs" />
+    <Compile Include="V20180606\Models\ListTopDataResponse.cs" />
+    <Compile Include="V20180606\Models\LogSetInfo.cs" />
+    <Compile Include="V20180606\Models\MainlandConfig.cs" />
+    <Compile Include="V20180606\Models\ManageClsTopicDomainsRequest.cs" />
+    <Compile Include="V20180606\Models\ManageClsTopicDomainsResponse.cs" />
+    <Compile Include="V20180606\Models\MapInfo.cs" />
+    <Compile Include="V20180606\Models\MaxAge.cs" />
+    <Compile Include="V20180606\Models\MaxAgeRule.cs" />
+    <Compile Include="V20180606\Models\Origin.cs" />
+    <Compile Include="V20180606\Models\OriginPullOptimization.cs" />
+    <Compile Include="V20180606\Models\OriginPullTimeout.cs" />
+    <Compile Include="V20180606\Models\OverseaConfig.cs" />
+    <Compile Include="V20180606\Models\PathRule.cs" />
+    <Compile Include="V20180606\Models\PurgePathCacheRequest.cs" />
+    <Compile Include="V20180606\Models\PurgePathCacheResponse.cs" />
+    <Compile Include="V20180606\Models\PurgeTask.cs" />
+    <Compile Include="V20180606\Models\PurgeUrlsCacheRequest.cs" />
+    <Compile Include="V20180606\Models\PurgeUrlsCacheResponse.cs" />
+    <Compile Include="V20180606\Models\PushTask.cs" />
+    <Compile Include="V20180606\Models\PushUrlsCacheRequest.cs" />
+    <Compile Include="V20180606\Models\PushUrlsCacheResponse.cs" />
+    <Compile Include="V20180606\Models\QueryStringKey.cs" />
+    <Compile Include="V20180606\Models\Quota.cs" />
+    <Compile Include="V20180606\Models\RangeOriginPull.cs" />
+    <Compile Include="V20180606\Models\Referer.cs" />
+    <Compile Include="V20180606\Models\RefererRule.cs" />
+    <Compile Include="V20180606\Models\RegionMapRelation.cs" />
+    <Compile Include="V20180606\Models\ReportData.cs" />
+    <Compile Include="V20180606\Models\RequestHeader.cs" />
+    <Compile Include="V20180606\Models\ResourceBillingData.cs" />
+    <Compile Include="V20180606\Models\ResourceData.cs" />
+    <Compile Include="V20180606\Models\ResourceOriginData.cs" />
+    <Compile Include="V20180606\Models\ResponseHeader.cs" />
+    <Compile Include="V20180606\Models\ResponseHeaderCache.cs" />
+    <Compile Include="V20180606\Models\Revalidate.cs" />
+    <Compile Include="V20180606\Models\RuleCache.cs" />
+    <Compile Include="V20180606\Models\RuleCacheConfig.cs" />
+    <Compile Include="V20180606\Models\RuleQueryString.cs" />
+    <Compile Include="V20180606\Models\ScdnLogTaskDetail.cs" />
+    <Compile Include="V20180606\Models\ScdnTopData.cs" />
+    <Compile Include="V20180606\Models\ScdnTopUrlData.cs" />
+    <Compile Include="V20180606\Models\ScdnTypeData.cs" />
+    <Compile Include="V20180606\Models\SchemeKey.cs" />
+    <Compile Include="V20180606\Models\SearchClsLogRequest.cs" />
+    <Compile Include="V20180606\Models\SearchClsLogResponse.cs" />
+    <Compile Include="V20180606\Models\SecurityConfig.cs" />
+    <Compile Include="V20180606\Models\Seo.cs" />
+    <Compile Include="V20180606\Models\ServerCert.cs" />
+    <Compile Include="V20180606\Models\SimpleCache.cs" />
+    <Compile Include="V20180606\Models\SimpleCacheRule.cs" />
+    <Compile Include="V20180606\Models\Sort.cs" />
+    <Compile Include="V20180606\Models\SpecificConfig.cs" />
+    <Compile Include="V20180606\Models\StartCdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\StartCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\StatusCodeCache.cs" />
+    <Compile Include="V20180606\Models\StatusCodeCacheRule.cs" />
+    <Compile Include="V20180606\Models\StopCdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\StopCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\SummarizedData.cs" />
+    <Compile Include="V20180606\Models\Tag.cs" />
+    <Compile Include="V20180606\Models\TimestampData.cs" />
+    <Compile Include="V20180606\Models\TopData.cs" />
+    <Compile Include="V20180606\Models\TopDetailData.cs" />
+    <Compile Include="V20180606\Models\TopicInfo.cs" />
+    <Compile Include="V20180606\Models\TpgAdapter.cs" />
+    <Compile Include="V20180606\Models\TrafficPackage.cs" />
+    <Compile Include="V20180606\Models\UpdateDomainConfigRequest.cs" />
+    <Compile Include="V20180606\Models\UpdateDomainConfigResponse.cs" />
+    <Compile Include="V20180606\Models\UpdateImageConfigRequest.cs" />
+    <Compile Include="V20180606\Models\UpdateImageConfigResponse.cs" />
+    <Compile Include="V20180606\Models\UpdatePayTypeRequest.cs" />
+    <Compile Include="V20180606\Models\UpdatePayTypeResponse.cs" />
+    <Compile Include="V20180606\Models\UrlRecord.cs" />
+    <Compile Include="V20180606\Models\UrlRedirect.cs" />
+    <Compile Include="V20180606\Models\UrlRedirectRule.cs" />
+    <Compile Include="V20180606\Models\UserAgentFilter.cs" />
+    <Compile Include="V20180606\Models\UserAgentFilterRule.cs" />
+    <Compile Include="V20180606\Models\VerifyDomainRecordRequest.cs" />
+    <Compile Include="V20180606\Models\VerifyDomainRecordResponse.cs" />
+    <Compile Include="V20180606\Models\VideoSeek.cs" />
+    <Compile Include="V20180606\Models\ViolationUrl.cs" />
+    <Compile Include="V20180606\Models\WebpAdapter.cs" />
+  </ItemGroup>
+</Project>

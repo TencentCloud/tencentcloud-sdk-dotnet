@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSslSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20191205\SslClient.cs" />
+    <Compile Include="V20191205\Models\ApplyCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\ApplyCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\CancelCertificateOrderRequest.cs" />
+    <Compile Include="V20191205\Models\CancelCertificateOrderResponse.cs" />
+    <Compile Include="V20191205\Models\CertificateExtra.cs" />
+    <Compile Include="V20191205\Models\Certificates.cs" />
+    <Compile Include="V20191205\Models\CheckCertificateChainRequest.cs" />
+    <Compile Include="V20191205\Models\CheckCertificateChainResponse.cs" />
+    <Compile Include="V20191205\Models\CommitCertificateInformationRequest.cs" />
+    <Compile Include="V20191205\Models\CommitCertificateInformationResponse.cs" />
+    <Compile Include="V20191205\Models\CompleteCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\CompleteCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\DeleteCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\DeleteCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateDetailRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateDetailResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateOperateLogsRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateOperateLogsResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificatesRequest.cs" />
+    <Compile Include="V20191205\Models\DescribeCertificatesResponse.cs" />
+    <Compile Include="V20191205\Models\DownloadCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\DownloadCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\DvAuthDetail.cs" />
+    <Compile Include="V20191205\Models\DvAuths.cs" />
+    <Compile Include="V20191205\Models\ModifyCertificateAliasRequest.cs" />
+    <Compile Include="V20191205\Models\ModifyCertificateAliasResponse.cs" />
+    <Compile Include="V20191205\Models\ModifyCertificateProjectRequest.cs" />
+    <Compile Include="V20191205\Models\ModifyCertificateProjectResponse.cs" />
+    <Compile Include="V20191205\Models\OperationLog.cs" />
+    <Compile Include="V20191205\Models\ProjectInfo.cs" />
+    <Compile Include="V20191205\Models\ReplaceCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\ReplaceCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
+    <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
+    <Compile Include="V20191205\Models\SubmittedData.cs" />
+    <Compile Include="V20191205\Models\UploadCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\UploadCertificateResponse.cs" />
+  </ItemGroup>
+</Project>

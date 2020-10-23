@@ -46,7 +46,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamObj(map, prefix + "Job.", this.Job);

@@ -133,6 +133,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// CreateDiagnoseUrl 用于添加域名诊断任务URL
+        /// </summary>
+        /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
+        /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
+        public async Task<CreateDiagnoseUrlResponse> CreateDiagnoseUrl(CreateDiagnoseUrlRequest req)
+        {
+             JsonResponseModel<CreateDiagnoseUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDiagnoseUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDiagnoseUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateDiagnoseUrl 用于添加域名诊断任务URL
+        /// </summary>
+        /// <param name="req"><see cref="CreateDiagnoseUrlRequest"/></param>
+        /// <returns><see cref="CreateDiagnoseUrlResponse"/></returns>
+        public CreateDiagnoseUrlResponse CreateDiagnoseUrlSync(CreateDiagnoseUrlRequest req)
+        {
+             JsonResponseModel<CreateDiagnoseUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDiagnoseUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDiagnoseUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// CreateScdnLogTask 用于创建事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>
@@ -544,6 +584,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCertDomains");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeDiagnoseReport 用于获取指定报告id的内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
+        /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
+        public async Task<DescribeDiagnoseReportResponse> DescribeDiagnoseReport(DescribeDiagnoseReportRequest req)
+        {
+             JsonResponseModel<DescribeDiagnoseReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiagnoseReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagnoseReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeDiagnoseReport 用于获取指定报告id的内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
+        /// <returns><see cref="DescribeDiagnoseReportResponse"/></returns>
+        public DescribeDiagnoseReportResponse DescribeDiagnoseReportSync(DescribeDiagnoseReportRequest req)
+        {
+             JsonResponseModel<DescribeDiagnoseReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiagnoseReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagnoseReportResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1536,6 +1616,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "ListClsTopicDomains");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListClsTopicDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
+        /// </summary>
+        /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
+        /// <returns><see cref="ListDiagnoseReportResponse"/></returns>
+        public async Task<ListDiagnoseReportResponse> ListDiagnoseReport(ListDiagnoseReportRequest req)
+        {
+             JsonResponseModel<ListDiagnoseReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListDiagnoseReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListDiagnoseReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
+        /// </summary>
+        /// <param name="req"><see cref="ListDiagnoseReportRequest"/></param>
+        /// <returns><see cref="ListDiagnoseReportResponse"/></returns>
+        public ListDiagnoseReportResponse ListDiagnoseReportSync(ListDiagnoseReportRequest req)
+        {
+             JsonResponseModel<ListDiagnoseReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListDiagnoseReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListDiagnoseReportResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

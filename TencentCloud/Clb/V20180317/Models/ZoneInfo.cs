@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);

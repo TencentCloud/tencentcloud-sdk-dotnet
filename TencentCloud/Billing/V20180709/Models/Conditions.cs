@@ -142,7 +142,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TimeRange", this.TimeRange);
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);

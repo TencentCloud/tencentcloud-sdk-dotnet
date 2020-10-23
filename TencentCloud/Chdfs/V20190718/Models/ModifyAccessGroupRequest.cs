@@ -46,7 +46,7 @@ namespace TencentCloud.Chdfs.V20190718.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccessGroupId", this.AccessGroupId);
             this.SetParamSimple(map, prefix + "AccessGroupName", this.AccessGroupName);

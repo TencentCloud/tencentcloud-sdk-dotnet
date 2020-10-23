@@ -64,7 +64,7 @@ namespace TencentCloud.Tci.V20190318.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "AudioResult.", this.AudioResult);
             this.SetParamObj(map, prefix + "ImageResult.", this.ImageResult);

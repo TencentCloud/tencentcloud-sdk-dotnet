@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{155BF728-D163-3DBE-85B3-CA22151A30C7}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudAmsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200608\AmsClient.cs" />
+    <Compile Include="V20200608\Models\AudioResult.cs" />
+    <Compile Include="V20200608\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="V20200608\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="V20200608\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="V20200608\Models\AudioSegments.cs" />
+    <Compile Include="V20200608\Models\BucketInfo.cs" />
+    <Compile Include="V20200608\Models\CancelTaskRequest.cs" />
+    <Compile Include="V20200608\Models\CancelTaskResponse.cs" />
+    <Compile Include="V20200608\Models\CreateAudioModerationTaskRequest.cs" />
+    <Compile Include="V20200608\Models\CreateAudioModerationTaskResponse.cs" />
+    <Compile Include="V20200608\Models\CreateBizConfigRequest.cs" />
+    <Compile Include="V20200608\Models\CreateBizConfigResponse.cs" />
+    <Compile Include="V20200608\Models\DescribeBizConfigRequest.cs" />
+    <Compile Include="V20200608\Models\DescribeBizConfigResponse.cs" />
+    <Compile Include="V20200608\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20200608\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="V20200608\Models\FileOutput.cs" />
+    <Compile Include="V20200608\Models\ImageResult.cs" />
+    <Compile Include="V20200608\Models\ImageResultResult.cs" />
+    <Compile Include="V20200608\Models\ImageResultsResultDetail.cs" />
+    <Compile Include="V20200608\Models\ImageResultsResultDetailLocation.cs" />
+    <Compile Include="V20200608\Models\ImageSegments.cs" />
+    <Compile Include="V20200608\Models\InputInfo.cs" />
+    <Compile Include="V20200608\Models\MediaInfo.cs" />
+    <Compile Include="V20200608\Models\MediaModerationConfig.cs" />
+    <Compile Include="V20200608\Models\StorageInfo.cs" />
+    <Compile Include="V20200608\Models\TaskInput.cs" />
+    <Compile Include="V20200608\Models\TaskLabel.cs" />
+    <Compile Include="V20200608\Models\TaskResult.cs" />
+  </ItemGroup>
+</Project>

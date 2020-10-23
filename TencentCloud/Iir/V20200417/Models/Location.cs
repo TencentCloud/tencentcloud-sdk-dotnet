@@ -52,7 +52,7 @@ namespace TencentCloud.Iir.V20200417.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "XMin", this.XMin);
             this.SetParamSimple(map, prefix + "YMin", this.YMin);

@@ -63,7 +63,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OriginalCost", this.OriginalCost);
             this.SetParamSimple(map, prefix + "DiscountCost", this.DiscountCost);

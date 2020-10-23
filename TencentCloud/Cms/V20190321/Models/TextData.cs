@@ -125,7 +125,7 @@ namespace TencentCloud.Cms.V20190321.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
             this.SetParamSimple(map, prefix + "EvilType", this.EvilType);

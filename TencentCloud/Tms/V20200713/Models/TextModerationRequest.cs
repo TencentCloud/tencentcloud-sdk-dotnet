@@ -58,7 +58,7 @@ namespace TencentCloud.Tms.V20200713.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "DataId", this.DataId);

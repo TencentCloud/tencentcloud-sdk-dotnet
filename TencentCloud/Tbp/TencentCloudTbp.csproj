@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{F58F200E-5788-3109-85BE-FCE7042B06CC}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTbpSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190627\TbpClient.cs" />
+    <Compile Include="V20190627\Models\Group.cs" />
+    <Compile Include="V20190627\Models\ResponseMessage.cs" />
+    <Compile Include="V20190627\Models\SlotInfo.cs" />
+    <Compile Include="V20190627\Models\TextProcessRequest.cs" />
+    <Compile Include="V20190627\Models\TextProcessResponse.cs" />
+    <Compile Include="V20190627\Models\TextResetRequest.cs" />
+    <Compile Include="V20190627\Models\TextResetResponse.cs" />
+    <Compile Include="V20190311\TbpClient.cs" />
+    <Compile Include="V20190311\Models\CreateBotRequest.cs" />
+    <Compile Include="V20190311\Models\CreateBotResponse.cs" />
+    <Compile Include="V20190311\Models\ResetRequest.cs" />
+    <Compile Include="V20190311\Models\ResetResponse.cs" />
+    <Compile Include="V20190311\Models\SlotInfo.cs" />
+    <Compile Include="V20190311\Models\TextProcessRequest.cs" />
+    <Compile Include="V20190311\Models\TextProcessResponse.cs" />
+    <Compile Include="V20190311\Models\TextResetRequest.cs" />
+    <Compile Include="V20190311\Models\TextResetResponse.cs" />
+  </ItemGroup>
+</Project>

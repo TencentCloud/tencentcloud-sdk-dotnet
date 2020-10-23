@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{C1FC19E1-F94A-33E4-A46A-21A713EF4E6D}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCloudauditSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190319\CloudauditClient.cs" />
+    <Compile Include="V20190319\Models\AttributeKeyDetail.cs" />
+    <Compile Include="V20190319\Models\AuditSummary.cs" />
+    <Compile Include="V20190319\Models\CmqRegionInfo.cs" />
+    <Compile Include="V20190319\Models\CosRegionInfo.cs" />
+    <Compile Include="V20190319\Models\CreateAuditRequest.cs" />
+    <Compile Include="V20190319\Models\CreateAuditResponse.cs" />
+    <Compile Include="V20190319\Models\DeleteAuditRequest.cs" />
+    <Compile Include="V20190319\Models\DeleteAuditResponse.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditRequest.cs" />
+    <Compile Include="V20190319\Models\DescribeAuditResponse.cs" />
+    <Compile Include="V20190319\Models\Event.cs" />
+    <Compile Include="V20190319\Models\GetAttributeKeyRequest.cs" />
+    <Compile Include="V20190319\Models\GetAttributeKeyResponse.cs" />
+    <Compile Include="V20190319\Models\InquireAuditCreditRequest.cs" />
+    <Compile Include="V20190319\Models\InquireAuditCreditResponse.cs" />
+    <Compile Include="V20190319\Models\KeyMetadata.cs" />
+    <Compile Include="V20190319\Models\ListAuditsRequest.cs" />
+    <Compile Include="V20190319\Models\ListAuditsResponse.cs" />
+    <Compile Include="V20190319\Models\ListCmqEnableRegionRequest.cs" />
+    <Compile Include="V20190319\Models\ListCmqEnableRegionResponse.cs" />
+    <Compile Include="V20190319\Models\ListCosEnableRegionRequest.cs" />
+    <Compile Include="V20190319\Models\ListCosEnableRegionResponse.cs" />
+    <Compile Include="V20190319\Models\ListKeyAliasByRegionRequest.cs" />
+    <Compile Include="V20190319\Models\ListKeyAliasByRegionResponse.cs" />
+    <Compile Include="V20190319\Models\LookUpEventsRequest.cs" />
+    <Compile Include="V20190319\Models\LookUpEventsResponse.cs" />
+    <Compile Include="V20190319\Models\LookupAttribute.cs" />
+    <Compile Include="V20190319\Models\Resource.cs" />
+    <Compile Include="V20190319\Models\StartLoggingRequest.cs" />
+    <Compile Include="V20190319\Models\StartLoggingResponse.cs" />
+    <Compile Include="V20190319\Models\StopLoggingRequest.cs" />
+    <Compile Include="V20190319\Models\StopLoggingResponse.cs" />
+    <Compile Include="V20190319\Models\UpdateAuditRequest.cs" />
+    <Compile Include="V20190319\Models\UpdateAuditResponse.cs" />
+  </ItemGroup>
+</Project>

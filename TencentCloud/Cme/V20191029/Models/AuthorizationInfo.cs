@@ -44,7 +44,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Authorizee.", this.Authorizee);
             this.SetParamArraySimple(map, prefix + "PermissionSet.", this.PermissionSet);

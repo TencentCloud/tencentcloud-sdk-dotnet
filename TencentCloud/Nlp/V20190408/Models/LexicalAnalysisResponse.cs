@@ -50,7 +50,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "NerTokens.", this.NerTokens);
             this.SetParamArrayObj(map, prefix + "PosTokens.", this.PosTokens);

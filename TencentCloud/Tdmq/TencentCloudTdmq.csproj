@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTdmqSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200217\TdmqClient.cs" />
+    <Compile Include="V20200217\Models\Connection.cs" />
+    <Compile Include="V20200217\Models\Consumer.cs" />
+    <Compile Include="V20200217\Models\ConsumersSchedule.cs" />
+    <Compile Include="V20200217\Models\CreateEnvironmentRequest.cs" />
+    <Compile Include="V20200217\Models\CreateEnvironmentResponse.cs" />
+    <Compile Include="V20200217\Models\CreateSubscriptionRequest.cs" />
+    <Compile Include="V20200217\Models\CreateSubscriptionResponse.cs" />
+    <Compile Include="V20200217\Models\CreateTopicRequest.cs" />
+    <Compile Include="V20200217\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteEnvironmentsRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteEnvironmentsResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteSubscriptionsRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteSubscriptionsResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteTopicsRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteTopicsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeEnvironmentAttributesRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeEnvironmentAttributesResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeEnvironmentRolesRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeEnvironmentRolesResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeEnvironmentsRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeEnvironmentsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeProducersRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeProducersResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeSubscriptionsRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeSubscriptionsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeTopicsRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeTopicsResponse.cs" />
+    <Compile Include="V20200217\Models\Environment.cs" />
+    <Compile Include="V20200217\Models\EnvironmentRole.cs" />
+    <Compile Include="V20200217\Models\FilterSubscription.cs" />
+    <Compile Include="V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
+    <Compile Include="V20200217\Models\ModifyTopicRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyTopicResponse.cs" />
+    <Compile Include="V20200217\Models\PartitionsTopic.cs" />
+    <Compile Include="V20200217\Models\Producer.cs" />
+    <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
+    <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
+    <Compile Include="V20200217\Models\Subscription.cs" />
+    <Compile Include="V20200217\Models\SubscriptionTopic.cs" />
+    <Compile Include="V20200217\Models\Topic.cs" />
+    <Compile Include="V20200217\Models\TopicRecord.cs" />
+  </ItemGroup>
+</Project>

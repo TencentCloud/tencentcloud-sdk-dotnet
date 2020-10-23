@@ -98,7 +98,7 @@ namespace TencentCloud.Domain.V20180808.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IsPremium", this.IsPremium);
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);

@@ -1,0 +1,122 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudScfSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180416\ScfClient.cs" />
+    <Compile Include="V20180416\Models\AccessInfo.cs" />
+    <Compile Include="V20180416\Models\Alias.cs" />
+    <Compile Include="V20180416\Models\CfsConfig.cs" />
+    <Compile Include="V20180416\Models\CfsInsInfo.cs" />
+    <Compile Include="V20180416\Models\Code.cs" />
+    <Compile Include="V20180416\Models\CopyFunctionRequest.cs" />
+    <Compile Include="V20180416\Models\CopyFunctionResponse.cs" />
+    <Compile Include="V20180416\Models\CreateAliasRequest.cs" />
+    <Compile Include="V20180416\Models\CreateAliasResponse.cs" />
+    <Compile Include="V20180416\Models\CreateFunctionRequest.cs" />
+    <Compile Include="V20180416\Models\CreateFunctionResponse.cs" />
+    <Compile Include="V20180416\Models\CreateNamespaceRequest.cs" />
+    <Compile Include="V20180416\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="V20180416\Models\CreateTriggerRequest.cs" />
+    <Compile Include="V20180416\Models\CreateTriggerResponse.cs" />
+    <Compile Include="V20180416\Models\DeadLetterConfig.cs" />
+    <Compile Include="V20180416\Models\DeleteAliasRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteAliasResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteFunctionRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteFunctionResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteLayerVersionRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteLayerVersionResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteNamespaceRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteNamespaceResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteTriggerRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteTriggerResponse.cs" />
+    <Compile Include="V20180416\Models\EipConfigIn.cs" />
+    <Compile Include="V20180416\Models\EipConfigOut.cs" />
+    <Compile Include="V20180416\Models\EipOutConfig.cs" />
+    <Compile Include="V20180416\Models\Environment.cs" />
+    <Compile Include="V20180416\Models\Filter.cs" />
+    <Compile Include="V20180416\Models\Function.cs" />
+    <Compile Include="V20180416\Models\FunctionLog.cs" />
+    <Compile Include="V20180416\Models\FunctionVersion.cs" />
+    <Compile Include="V20180416\Models\GetAliasRequest.cs" />
+    <Compile Include="V20180416\Models\GetAliasResponse.cs" />
+    <Compile Include="V20180416\Models\GetFunctionAddressRequest.cs" />
+    <Compile Include="V20180416\Models\GetFunctionAddressResponse.cs" />
+    <Compile Include="V20180416\Models\GetFunctionLogsRequest.cs" />
+    <Compile Include="V20180416\Models\GetFunctionLogsResponse.cs" />
+    <Compile Include="V20180416\Models\GetFunctionRequest.cs" />
+    <Compile Include="V20180416\Models\GetFunctionResponse.cs" />
+    <Compile Include="V20180416\Models\GetLayerVersionRequest.cs" />
+    <Compile Include="V20180416\Models\GetLayerVersionResponse.cs" />
+    <Compile Include="V20180416\Models\InvokeRequest.cs" />
+    <Compile Include="V20180416\Models\InvokeResponse.cs" />
+    <Compile Include="V20180416\Models\LayerVersionInfo.cs" />
+    <Compile Include="V20180416\Models\LayerVersionSimple.cs" />
+    <Compile Include="V20180416\Models\ListAliasesRequest.cs" />
+    <Compile Include="V20180416\Models\ListAliasesResponse.cs" />
+    <Compile Include="V20180416\Models\ListFunctionsRequest.cs" />
+    <Compile Include="V20180416\Models\ListFunctionsResponse.cs" />
+    <Compile Include="V20180416\Models\ListLayerVersionsRequest.cs" />
+    <Compile Include="V20180416\Models\ListLayerVersionsResponse.cs" />
+    <Compile Include="V20180416\Models\ListLayersRequest.cs" />
+    <Compile Include="V20180416\Models\ListLayersResponse.cs" />
+    <Compile Include="V20180416\Models\ListNamespacesRequest.cs" />
+    <Compile Include="V20180416\Models\ListNamespacesResponse.cs" />
+    <Compile Include="V20180416\Models\ListTriggersRequest.cs" />
+    <Compile Include="V20180416\Models\ListTriggersResponse.cs" />
+    <Compile Include="V20180416\Models\ListVersionByFunctionRequest.cs" />
+    <Compile Include="V20180416\Models\ListVersionByFunctionResponse.cs" />
+    <Compile Include="V20180416\Models\LogFilter.cs" />
+    <Compile Include="V20180416\Models\LogSearchContext.cs" />
+    <Compile Include="V20180416\Models\Namespace.cs" />
+    <Compile Include="V20180416\Models\PublicNetConfigIn.cs" />
+    <Compile Include="V20180416\Models\PublicNetConfigOut.cs" />
+    <Compile Include="V20180416\Models\PublishLayerVersionRequest.cs" />
+    <Compile Include="V20180416\Models\PublishLayerVersionResponse.cs" />
+    <Compile Include="V20180416\Models\PublishVersionRequest.cs" />
+    <Compile Include="V20180416\Models\PublishVersionResponse.cs" />
+    <Compile Include="V20180416\Models\Result.cs" />
+    <Compile Include="V20180416\Models\RoutingConfig.cs" />
+    <Compile Include="V20180416\Models\StatusReason.cs" />
+    <Compile Include="V20180416\Models\Tag.cs" />
+    <Compile Include="V20180416\Models\Trigger.cs" />
+    <Compile Include="V20180416\Models\TriggerInfo.cs" />
+    <Compile Include="V20180416\Models\UpdateAliasRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateAliasResponse.cs" />
+    <Compile Include="V20180416\Models\UpdateFunctionCodeRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateFunctionCodeResponse.cs" />
+    <Compile Include="V20180416\Models\UpdateFunctionConfigurationRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateFunctionConfigurationResponse.cs" />
+    <Compile Include="V20180416\Models\UpdateNamespaceRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateNamespaceResponse.cs" />
+    <Compile Include="V20180416\Models\Variable.cs" />
+    <Compile Include="V20180416\Models\VersionMatch.cs" />
+    <Compile Include="V20180416\Models\VersionWeight.cs" />
+    <Compile Include="V20180416\Models\VpcConfig.cs" />
+  </ItemGroup>
+</Project>

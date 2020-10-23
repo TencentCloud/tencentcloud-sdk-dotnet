@@ -1,0 +1,122 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudMonitorSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180724\MonitorClient.cs" />
+    <Compile Include="V20180724\Models\AlarmHistory.cs" />
+    <Compile Include="V20180724\Models\BindingPolicyObjectDimension.cs" />
+    <Compile Include="V20180724\Models\BindingPolicyObjectRequest.cs" />
+    <Compile Include="V20180724\Models\BindingPolicyObjectResponse.cs" />
+    <Compile Include="V20180724\Models\CommonNamespace.cs" />
+    <Compile Include="V20180724\Models\CreatePolicyGroupCondition.cs" />
+    <Compile Include="V20180724\Models\CreatePolicyGroupEventCondition.cs" />
+    <Compile Include="V20180724\Models\CreatePolicyGroupRequest.cs" />
+    <Compile Include="V20180724\Models\CreatePolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\DataPoint.cs" />
+    <Compile Include="V20180724\Models\DeletePolicyGroupRequest.cs" />
+    <Compile Include="V20180724\Models\DeletePolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAccidentEventListAlarms.cs" />
+    <Compile Include="V20180724\Models\DescribeAccidentEventListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAccidentEventListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmHistoriesRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmHistoriesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAllNamespacesRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAllNamespacesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeBaseMetricsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeBaseMetricsResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeBasicAlarmListAlarms.cs" />
+    <Compile Include="V20180724\Models\DescribeBasicAlarmListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeBasicAlarmListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListDimension.cs" />
+    <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListInstance.cs" />
+    <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListInstanceGroup.cs" />
+    <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListCondition.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListConfigManual.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListConfigManualCalcType.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListConfigManualCalcValue.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListConfigManualContinueTime.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListConfigManualPeriod.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListConfigManualPeriodNum.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListConfigManualStatType.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListEventMetric.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListMetric.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyConditionListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupInfoCallback.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupInfoCondition.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupInfoConditionTpl.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupInfoEventCondition.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupInfoReceiverInfo.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupInfoRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupInfoResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupListGroup.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupListGroupInstanceGroup.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePolicyGroupListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeProductEventListDimensions.cs" />
+    <Compile Include="V20180724\Models\DescribeProductEventListEvents.cs" />
+    <Compile Include="V20180724\Models\DescribeProductEventListEventsDimensions.cs" />
+    <Compile Include="V20180724\Models\DescribeProductEventListEventsGroupInfo.cs" />
+    <Compile Include="V20180724\Models\DescribeProductEventListOverView.cs" />
+    <Compile Include="V20180724\Models\DescribeProductEventListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeProductEventListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeProductListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeProductListResponse.cs" />
+    <Compile Include="V20180724\Models\Dimension.cs" />
+    <Compile Include="V20180724\Models\DimensionsDesc.cs" />
+    <Compile Include="V20180724\Models\GetMonitorDataRequest.cs" />
+    <Compile Include="V20180724\Models\GetMonitorDataResponse.cs" />
+    <Compile Include="V20180724\Models\Instance.cs" />
+    <Compile Include="V20180724\Models\InstanceGroup.cs" />
+    <Compile Include="V20180724\Models\InstanceGroups.cs" />
+    <Compile Include="V20180724\Models\MetricDatum.cs" />
+    <Compile Include="V20180724\Models\MetricObjectMeaning.cs" />
+    <Compile Include="V20180724\Models\MetricSet.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmReceiversRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmReceiversResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyPolicyGroupCondition.cs" />
+    <Compile Include="V20180724\Models\ModifyPolicyGroupEventCondition.cs" />
+    <Compile Include="V20180724\Models\ModifyPolicyGroupRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyPolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
+    <Compile Include="V20180724\Models\PeriodsSt.cs" />
+    <Compile Include="V20180724\Models\ProductSimple.cs" />
+    <Compile Include="V20180724\Models\PutMonitorDataRequest.cs" />
+    <Compile Include="V20180724\Models\PutMonitorDataResponse.cs" />
+    <Compile Include="V20180724\Models\ReceiverInfo.cs" />
+    <Compile Include="V20180724\Models\SendCustomAlarmMsgRequest.cs" />
+    <Compile Include="V20180724\Models\SendCustomAlarmMsgResponse.cs" />
+    <Compile Include="V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
+    <Compile Include="V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
+    <Compile Include="V20180724\Models\UnBindingPolicyObjectRequest.cs" />
+    <Compile Include="V20180724\Models\UnBindingPolicyObjectResponse.cs" />
+  </ItemGroup>
+</Project>

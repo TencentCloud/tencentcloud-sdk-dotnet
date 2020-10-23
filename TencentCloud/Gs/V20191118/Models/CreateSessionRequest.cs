@@ -124,7 +124,7 @@ namespace TencentCloud.Gs.V20191118.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClientSession", this.ClientSession);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);

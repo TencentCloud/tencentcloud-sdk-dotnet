@@ -50,7 +50,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Faces.", this.Faces);
             this.SetParamObj(map, prefix + "Threshold.", this.Threshold);

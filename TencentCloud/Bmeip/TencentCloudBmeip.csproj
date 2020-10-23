@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{6D175478-7FF6-3675-AEE6-AD0BA3FDB05F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudBmeipSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180625\BmeipClient.cs" />
+    <Compile Include="V20180625\Models\BindEipAclsRequest.cs" />
+    <Compile Include="V20180625\Models\BindEipAclsResponse.cs" />
+    <Compile Include="V20180625\Models\BindHostedRequest.cs" />
+    <Compile Include="V20180625\Models\BindHostedResponse.cs" />
+    <Compile Include="V20180625\Models\BindRsRequest.cs" />
+    <Compile Include="V20180625\Models\BindRsResponse.cs" />
+    <Compile Include="V20180625\Models\BindVpcIpRequest.cs" />
+    <Compile Include="V20180625\Models\BindVpcIpResponse.cs" />
+    <Compile Include="V20180625\Models\CreateEipAclRequest.cs" />
+    <Compile Include="V20180625\Models\CreateEipAclResponse.cs" />
+    <Compile Include="V20180625\Models\CreateEipRequest.cs" />
+    <Compile Include="V20180625\Models\CreateEipResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteEipAclRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteEipAclResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteEipRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteEipResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeEipAclsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeEipAclsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeEipQuotaRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeEipQuotaResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeEipTaskRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeEipTaskResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeEipsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeEipsResponse.cs" />
+    <Compile Include="V20180625\Models\EipAcl.cs" />
+    <Compile Include="V20180625\Models\EipAclMap.cs" />
+    <Compile Include="V20180625\Models\EipAclRule.cs" />
+    <Compile Include="V20180625\Models\EipInfo.cs" />
+    <Compile Include="V20180625\Models\EipRsMap.cs" />
+    <Compile Include="V20180625\Models\ModifyEipAclRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyEipAclResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyEipChargeRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyEipChargeResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyEipNameRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyEipNameResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindEipAclsRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindEipAclsResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindHostedRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindHostedResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindRsListRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindRsListResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindRsRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindRsResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindVpcIpRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindVpcIpResponse.cs" />
+  </ItemGroup>
+</Project>

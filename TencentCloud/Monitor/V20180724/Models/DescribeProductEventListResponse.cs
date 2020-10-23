@@ -54,7 +54,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Events.", this.Events);
             this.SetParamObj(map, prefix + "OverView.", this.OverView);

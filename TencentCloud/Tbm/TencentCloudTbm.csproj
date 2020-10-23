@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{DAB347D5-9531-3580-B696-C053EB0C0D9F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTbmSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180129\TbmClient.cs" />
+    <Compile Include="V20180129\Models\AgePortrait.cs" />
+    <Compile Include="V20180129\Models\AgePortraitInfo.cs" />
+    <Compile Include="V20180129\Models\BrandReportArticle.cs" />
+    <Compile Include="V20180129\Models\Comment.cs" />
+    <Compile Include="V20180129\Models\CommentInfo.cs" />
+    <Compile Include="V20180129\Models\DateCount.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandCommentCountRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandCommentCountResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandExposureRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandExposureResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandMediaReportRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandMediaReportResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandNegCommentsRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandNegCommentsResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandPosCommentsRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandPosCommentsResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandSocialOpinionRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandSocialOpinionResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandSocialReportRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeBrandSocialReportResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeIndustryNewsRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeIndustryNewsResponse.cs" />
+    <Compile Include="V20180129\Models\DescribeUserPortraitRequest.cs" />
+    <Compile Include="V20180129\Models\DescribeUserPortraitResponse.cs" />
+    <Compile Include="V20180129\Models\GenderPortrait.cs" />
+    <Compile Include="V20180129\Models\GenderPortraitInfo.cs" />
+    <Compile Include="V20180129\Models\IndustryNews.cs" />
+    <Compile Include="V20180129\Models\MoviePortrait.cs" />
+    <Compile Include="V20180129\Models\MoviePortraitInfo.cs" />
+    <Compile Include="V20180129\Models\ProvincePortrait.cs" />
+    <Compile Include="V20180129\Models\ProvincePortraitInfo.cs" />
+    <Compile Include="V20180129\Models\StarPortrait.cs" />
+    <Compile Include="V20180129\Models\StarPortraitInfo.cs" />
+  </ItemGroup>
+</Project>

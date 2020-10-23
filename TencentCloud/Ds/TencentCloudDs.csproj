@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{BD5ECF3F-47E8-3A8C-B8CF-96F14C2190A2}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudDsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180523\DsClient.cs" />
+    <Compile Include="V20180523\Models\CheckVcodeRequest.cs" />
+    <Compile Include="V20180523\Models\CheckVcodeResponse.cs" />
+    <Compile Include="V20180523\Models\CreateContractByUploadRequest.cs" />
+    <Compile Include="V20180523\Models\CreateContractByUploadResponse.cs" />
+    <Compile Include="V20180523\Models\CreateEnterpriseAccountRequest.cs" />
+    <Compile Include="V20180523\Models\CreateEnterpriseAccountResponse.cs" />
+    <Compile Include="V20180523\Models\CreatePersonalAccountRequest.cs" />
+    <Compile Include="V20180523\Models\CreatePersonalAccountResponse.cs" />
+    <Compile Include="V20180523\Models\CreateSealRequest.cs" />
+    <Compile Include="V20180523\Models\CreateSealResponse.cs" />
+    <Compile Include="V20180523\Models\DeleteAccountRequest.cs" />
+    <Compile Include="V20180523\Models\DeleteAccountResponse.cs" />
+    <Compile Include="V20180523\Models\DeleteSealRequest.cs" />
+    <Compile Include="V20180523\Models\DeleteSealResponse.cs" />
+    <Compile Include="V20180523\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="V20180523\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20180523\Models\DownloadContractRequest.cs" />
+    <Compile Include="V20180523\Models\DownloadContractResponse.cs" />
+    <Compile Include="V20180523\Models\SendVcodeRequest.cs" />
+    <Compile Include="V20180523\Models\SendVcodeResponse.cs" />
+    <Compile Include="V20180523\Models\SignContractByCoordinateRequest.cs" />
+    <Compile Include="V20180523\Models\SignContractByCoordinateResponse.cs" />
+    <Compile Include="V20180523\Models\SignContractByKeywordRequest.cs" />
+    <Compile Include="V20180523\Models\SignContractByKeywordResponse.cs" />
+    <Compile Include="V20180523\Models\SignInfo.cs" />
+    <Compile Include="V20180523\Models\SignKeyword.cs" />
+    <Compile Include="V20180523\Models\SignLocation.cs" />
+  </ItemGroup>
+</Project>

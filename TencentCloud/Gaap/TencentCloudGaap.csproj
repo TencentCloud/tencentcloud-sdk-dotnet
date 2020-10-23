@@ -1,0 +1,242 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{5B9686DD-A89E-35E1-B86C-A9051D571534}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudGaapSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180529\GaapClient.cs" />
+    <Compile Include="V20180529\Models\AccessConfiguration.cs" />
+    <Compile Include="V20180529\Models\AccessRegionDetial.cs" />
+    <Compile Include="V20180529\Models\AccessRegionDomainConf.cs" />
+    <Compile Include="V20180529\Models\AddRealServersRequest.cs" />
+    <Compile Include="V20180529\Models\AddRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\BandwidthPriceGradient.cs" />
+    <Compile Include="V20180529\Models\BindListenerRealServersRequest.cs" />
+    <Compile Include="V20180529\Models\BindListenerRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\BindRealServer.cs" />
+    <Compile Include="V20180529\Models\BindRealServerInfo.cs" />
+    <Compile Include="V20180529\Models\BindRuleRealServersRequest.cs" />
+    <Compile Include="V20180529\Models\BindRuleRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\Certificate.cs" />
+    <Compile Include="V20180529\Models\CertificateAliasInfo.cs" />
+    <Compile Include="V20180529\Models\CertificateDetail.cs" />
+    <Compile Include="V20180529\Models\CheckProxyCreateRequest.cs" />
+    <Compile Include="V20180529\Models\CheckProxyCreateResponse.cs" />
+    <Compile Include="V20180529\Models\CloseProxiesRequest.cs" />
+    <Compile Include="V20180529\Models\CloseProxiesResponse.cs" />
+    <Compile Include="V20180529\Models\CloseProxyGroupRequest.cs" />
+    <Compile Include="V20180529\Models\CloseProxyGroupResponse.cs" />
+    <Compile Include="V20180529\Models\CloseSecurityPolicyRequest.cs" />
+    <Compile Include="V20180529\Models\CloseSecurityPolicyResponse.cs" />
+    <Compile Include="V20180529\Models\CountryAreaMap.cs" />
+    <Compile Include="V20180529\Models\CreateCertificateRequest.cs" />
+    <Compile Include="V20180529\Models\CreateCertificateResponse.cs" />
+    <Compile Include="V20180529\Models\CreateDomainErrorPageInfoRequest.cs" />
+    <Compile Include="V20180529\Models\CreateDomainErrorPageInfoResponse.cs" />
+    <Compile Include="V20180529\Models\CreateDomainRequest.cs" />
+    <Compile Include="V20180529\Models\CreateDomainResponse.cs" />
+    <Compile Include="V20180529\Models\CreateHTTPListenerRequest.cs" />
+    <Compile Include="V20180529\Models\CreateHTTPListenerResponse.cs" />
+    <Compile Include="V20180529\Models\CreateHTTPSListenerRequest.cs" />
+    <Compile Include="V20180529\Models\CreateHTTPSListenerResponse.cs" />
+    <Compile Include="V20180529\Models\CreateProxyGroupDomainRequest.cs" />
+    <Compile Include="V20180529\Models\CreateProxyGroupDomainResponse.cs" />
+    <Compile Include="V20180529\Models\CreateProxyGroupRequest.cs" />
+    <Compile Include="V20180529\Models\CreateProxyGroupResponse.cs" />
+    <Compile Include="V20180529\Models\CreateProxyRequest.cs" />
+    <Compile Include="V20180529\Models\CreateProxyResponse.cs" />
+    <Compile Include="V20180529\Models\CreateRuleRequest.cs" />
+    <Compile Include="V20180529\Models\CreateRuleResponse.cs" />
+    <Compile Include="V20180529\Models\CreateSecurityPolicyRequest.cs" />
+    <Compile Include="V20180529\Models\CreateSecurityPolicyResponse.cs" />
+    <Compile Include="V20180529\Models\CreateSecurityRulesRequest.cs" />
+    <Compile Include="V20180529\Models\CreateSecurityRulesResponse.cs" />
+    <Compile Include="V20180529\Models\CreateTCPListenersRequest.cs" />
+    <Compile Include="V20180529\Models\CreateTCPListenersResponse.cs" />
+    <Compile Include="V20180529\Models\CreateUDPListenersRequest.cs" />
+    <Compile Include="V20180529\Models\CreateUDPListenersResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteCertificateRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteCertificateResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteDomainErrorPageInfoRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteDomainErrorPageInfoResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteDomainRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteDomainResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteListenersRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteListenersResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteProxyGroupRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteProxyGroupResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteRuleRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteRuleResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteSecurityPolicyRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteSecurityPolicyResponse.cs" />
+    <Compile Include="V20180529\Models\DeleteSecurityRulesRequest.cs" />
+    <Compile Include="V20180529\Models\DeleteSecurityRulesResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeAccessRegionsByDestRegionRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeAccessRegionsByDestRegionResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeAccessRegionsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeAccessRegionsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeCertificateDetailRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeCertificateDetailResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeCertificatesRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeCertificatesResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeCountryAreaMappingRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeCountryAreaMappingResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeDestRegionsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeDestRegionsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoByIdsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoByIdsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeDomainErrorPageInfoResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeGroupAndStatisticsProxyRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeGroupAndStatisticsProxyResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeGroupDomainConfigRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeGroupDomainConfigResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeHTTPListenersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeHTTPListenersResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeHTTPSListenersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeHTTPSListenersResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeListenerRealServersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeListenerRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeListenerStatisticsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeListenerStatisticsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxiesRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxiesResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxiesStatusRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxiesStatusResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyAndStatisticsListenersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyAndStatisticsListenersResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyDetailRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyDetailResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyGroupDetailsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyGroupDetailsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyGroupListRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyGroupListResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyGroupStatisticsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyGroupStatisticsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyStatisticsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeProxyStatisticsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeRealServerStatisticsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeRealServerStatisticsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeRealServersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeRealServersStatusRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeRealServersStatusResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeRegionAndPriceRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeRegionAndPriceResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeResourcesByTagRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeResourcesByTagResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeRuleRealServersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeRuleRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeRulesByRuleIdsRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeRulesByRuleIdsResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeRulesRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeRulesResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeSecurityPolicyDetailRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeSecurityPolicyDetailResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeSecurityRulesRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeSecurityRulesResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeTCPListenersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeTCPListenersResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeUDPListenersRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeUDPListenersResponse.cs" />
+    <Compile Include="V20180529\Models\DestroyProxiesRequest.cs" />
+    <Compile Include="V20180529\Models\DestroyProxiesResponse.cs" />
+    <Compile Include="V20180529\Models\DomainAccessRegionDict.cs" />
+    <Compile Include="V20180529\Models\DomainErrorPageInfo.cs" />
+    <Compile Include="V20180529\Models\DomainRuleSet.cs" />
+    <Compile Include="V20180529\Models\Filter.cs" />
+    <Compile Include="V20180529\Models\GroupStatisticsInfo.cs" />
+    <Compile Include="V20180529\Models\HTTPListener.cs" />
+    <Compile Include="V20180529\Models\HTTPSListener.cs" />
+    <Compile Include="V20180529\Models\HttpHeaderParam.cs" />
+    <Compile Include="V20180529\Models\InquiryPriceCreateProxyRequest.cs" />
+    <Compile Include="V20180529\Models\InquiryPriceCreateProxyResponse.cs" />
+    <Compile Include="V20180529\Models\ListenerInfo.cs" />
+    <Compile Include="V20180529\Models\MetricStatisticsInfo.cs" />
+    <Compile Include="V20180529\Models\ModifyCertificateAttributesRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyCertificateAttributesResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyCertificateRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyCertificateResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyDomainRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyDomainResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyGroupDomainConfigRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyGroupDomainConfigResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyHTTPListenerAttributeRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyHTTPListenerAttributeResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyHTTPSListenerAttributeRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyHTTPSListenerAttributeResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyProxiesAttributeRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyProxiesAttributeResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyProxiesProjectRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyProxiesProjectResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyProxyConfigurationRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyProxyConfigurationResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyProxyGroupAttributeRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyProxyGroupAttributeResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyRealServerNameRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyRealServerNameResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyRuleAttributeRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyRuleAttributeResponse.cs" />
+    <Compile Include="V20180529\Models\ModifySecurityRuleRequest.cs" />
+    <Compile Include="V20180529\Models\ModifySecurityRuleResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyTCPListenerAttributeRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyTCPListenerAttributeResponse.cs" />
+    <Compile Include="V20180529\Models\ModifyUDPListenerAttributeRequest.cs" />
+    <Compile Include="V20180529\Models\ModifyUDPListenerAttributeResponse.cs" />
+    <Compile Include="V20180529\Models\NationCountryInnerInfo.cs" />
+    <Compile Include="V20180529\Models\NewRealServer.cs" />
+    <Compile Include="V20180529\Models\OpenProxiesRequest.cs" />
+    <Compile Include="V20180529\Models\OpenProxiesResponse.cs" />
+    <Compile Include="V20180529\Models\OpenProxyGroupRequest.cs" />
+    <Compile Include="V20180529\Models\OpenProxyGroupResponse.cs" />
+    <Compile Include="V20180529\Models\OpenSecurityPolicyRequest.cs" />
+    <Compile Include="V20180529\Models\OpenSecurityPolicyResponse.cs" />
+    <Compile Include="V20180529\Models\ProxyGroupDetail.cs" />
+    <Compile Include="V20180529\Models\ProxyGroupInfo.cs" />
+    <Compile Include="V20180529\Models\ProxyIdDict.cs" />
+    <Compile Include="V20180529\Models\ProxyInfo.cs" />
+    <Compile Include="V20180529\Models\ProxySimpleInfo.cs" />
+    <Compile Include="V20180529\Models\ProxyStatus.cs" />
+    <Compile Include="V20180529\Models\RealServer.cs" />
+    <Compile Include="V20180529\Models\RealServerBindSetReq.cs" />
+    <Compile Include="V20180529\Models\RealServerStatus.cs" />
+    <Compile Include="V20180529\Models\RegionDetail.cs" />
+    <Compile Include="V20180529\Models\RemoveRealServersRequest.cs" />
+    <Compile Include="V20180529\Models\RemoveRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\RuleCheckParams.cs" />
+    <Compile Include="V20180529\Models\RuleInfo.cs" />
+    <Compile Include="V20180529\Models\SecurityPolicyRuleIn.cs" />
+    <Compile Include="V20180529\Models\SecurityPolicyRuleOut.cs" />
+    <Compile Include="V20180529\Models\SetAuthenticationRequest.cs" />
+    <Compile Include="V20180529\Models\SetAuthenticationResponse.cs" />
+    <Compile Include="V20180529\Models\StatisticsDataInfo.cs" />
+    <Compile Include="V20180529\Models\TCPListener.cs" />
+    <Compile Include="V20180529\Models\TagPair.cs" />
+    <Compile Include="V20180529\Models\TagResourceInfo.cs" />
+    <Compile Include="V20180529\Models\UDPListener.cs" />
+  </ItemGroup>
+</Project>

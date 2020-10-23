@@ -173,7 +173,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 安全验证码小程序插件分类查询数据接口（内测中），请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+        /// 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniDataResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 安全验证码小程序插件分类查询数据接口（内测中），请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
+        /// 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniDataResponse"/></returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 安全验证码小程序插件查询请求数据概况（内测中）
+        /// 安全验证码小程序插件查询请求数据概况
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniDataSumRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniDataSumResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 安全验证码小程序插件查询请求数据概况（内测中）
+        /// 安全验证码小程序插件查询请求数据概况
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniDataSumRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniDataSumResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 安全验证码小程序插件用户操作数据查询（内测中）
+        /// 安全验证码小程序插件用户操作数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniOperDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniOperDataResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 安全验证码小程序插件用户操作数据查询（内测中）
+        /// 安全验证码小程序插件用户操作数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniOperDataRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniOperDataResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码小程序插件票据结果（内测中）
+        /// 核查验证码小程序插件票据结果
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码小程序插件票据结果（内测中）
+        /// 核查验证码小程序插件票据结果
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>

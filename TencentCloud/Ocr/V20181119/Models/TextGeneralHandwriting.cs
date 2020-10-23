@@ -61,7 +61,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DetectedText", this.DetectedText);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);

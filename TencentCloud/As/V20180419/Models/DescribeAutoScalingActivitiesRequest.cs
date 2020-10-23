@@ -69,7 +69,7 @@ namespace TencentCloud.As.V20180419.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "ActivityIds.", this.ActivityIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);

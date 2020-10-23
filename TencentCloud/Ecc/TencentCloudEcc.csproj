@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{7CB3D1A4-E74A-37AE-98C2-6C01B53D8274}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudEccSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20181213\EccClient.cs" />
+    <Compile Include="V20181213\Models\Aspect.cs" />
+    <Compile Include="V20181213\Models\CompostionContext.cs" />
+    <Compile Include="V20181213\Models\CorrectData.cs" />
+    <Compile Include="V20181213\Models\CorrectMultiImageRequest.cs" />
+    <Compile Include="V20181213\Models\CorrectMultiImageResponse.cs" />
+    <Compile Include="V20181213\Models\DescribeTaskRequest.cs" />
+    <Compile Include="V20181213\Models\DescribeTaskResponse.cs" />
+    <Compile Include="V20181213\Models\ECCRequest.cs" />
+    <Compile Include="V20181213\Models\ECCResponse.cs" />
+    <Compile Include="V20181213\Models\EHOCRRequest.cs" />
+    <Compile Include="V20181213\Models\EHOCRResponse.cs" />
+    <Compile Include="V20181213\Models\ErrorCoordinate.cs" />
+    <Compile Include="V20181213\Models\ScoreCategory.cs" />
+    <Compile Include="V20181213\Models\SentenceCom.cs" />
+    <Compile Include="V20181213\Models\SentenceItem.cs" />
+    <Compile Include="V20181213\Models\SentenceSuggest.cs" />
+  </ItemGroup>
+</Project>

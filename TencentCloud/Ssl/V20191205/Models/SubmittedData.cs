@@ -203,7 +203,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CsrType", this.CsrType);
             this.SetParamSimple(map, prefix + "CsrContent", this.CsrContent);

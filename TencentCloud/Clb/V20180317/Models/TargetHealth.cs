@@ -58,7 +58,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IP", this.IP);
             this.SetParamSimple(map, prefix + "Port", this.Port);

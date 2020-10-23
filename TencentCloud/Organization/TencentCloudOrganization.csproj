@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudOrganizationSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20181225\OrganizationClient.cs" />
+    <Compile Include="V20181225\Models\AcceptOrganizationInvitationRequest.cs" />
+    <Compile Include="V20181225\Models\AcceptOrganizationInvitationResponse.cs" />
+    <Compile Include="V20181225\Models\AddOrganizationNodeRequest.cs" />
+    <Compile Include="V20181225\Models\AddOrganizationNodeResponse.cs" />
+    <Compile Include="V20181225\Models\CancelOrganizationInvitationRequest.cs" />
+    <Compile Include="V20181225\Models\CancelOrganizationInvitationResponse.cs" />
+    <Compile Include="V20181225\Models\CreateOrganizationRequest.cs" />
+    <Compile Include="V20181225\Models\CreateOrganizationResponse.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationMemberFromNodeRequest.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationMemberFromNodeResponse.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationMembersRequest.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationMembersResponse.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationNodesRequest.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationNodesResponse.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationRequest.cs" />
+    <Compile Include="V20181225\Models\DeleteOrganizationResponse.cs" />
+    <Compile Include="V20181225\Models\DenyOrganizationInvitationRequest.cs" />
+    <Compile Include="V20181225\Models\DenyOrganizationInvitationResponse.cs" />
+    <Compile Include="V20181225\Models\GetOrganizationMemberRequest.cs" />
+    <Compile Include="V20181225\Models\GetOrganizationMemberResponse.cs" />
+    <Compile Include="V20181225\Models\GetOrganizationRequest.cs" />
+    <Compile Include="V20181225\Models\GetOrganizationResponse.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationInvitationsRequest.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationInvitationsResponse.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationMembersRequest.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationMembersResponse.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationNodeMembersRequest.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationNodeMembersResponse.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationNodesRequest.cs" />
+    <Compile Include="V20181225\Models\ListOrganizationNodesResponse.cs" />
+    <Compile Include="V20181225\Models\MoveOrganizationMembersToNodeRequest.cs" />
+    <Compile Include="V20181225\Models\MoveOrganizationMembersToNodeResponse.cs" />
+    <Compile Include="V20181225\Models\OrgInvitation.cs" />
+    <Compile Include="V20181225\Models\OrgMember.cs" />
+    <Compile Include="V20181225\Models\OrgNode.cs" />
+    <Compile Include="V20181225\Models\QuitOrganizationRequest.cs" />
+    <Compile Include="V20181225\Models\QuitOrganizationResponse.cs" />
+    <Compile Include="V20181225\Models\SendOrganizationInvitationRequest.cs" />
+    <Compile Include="V20181225\Models\SendOrganizationInvitationResponse.cs" />
+    <Compile Include="V20181225\Models\UpdateOrganizationMemberRequest.cs" />
+    <Compile Include="V20181225\Models\UpdateOrganizationMemberResponse.cs" />
+    <Compile Include="V20181225\Models\UpdateOrganizationNodeRequest.cs" />
+    <Compile Include="V20181225\Models\UpdateOrganizationNodeResponse.cs" />
+  </ItemGroup>
+</Project>

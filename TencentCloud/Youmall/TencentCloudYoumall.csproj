@@ -1,0 +1,122 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{97A82449-CD3E-3A43-91BB-125A9C27DC1E}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudYoumallSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180228\YoumallClient.cs" />
+    <Compile Include="V20180228\Models\ArrivedMallInfo.cs" />
+    <Compile Include="V20180228\Models\CameraPersonInfo.cs" />
+    <Compile Include="V20180228\Models\CreateAccountRequest.cs" />
+    <Compile Include="V20180228\Models\CreateAccountResponse.cs" />
+    <Compile Include="V20180228\Models\CreateFacePictureRequest.cs" />
+    <Compile Include="V20180228\Models\CreateFacePictureResponse.cs" />
+    <Compile Include="V20180228\Models\DailyTracePoint.cs" />
+    <Compile Include="V20180228\Models\DeletePersonFeatureRequest.cs" />
+    <Compile Include="V20180228\Models\DeletePersonFeatureResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeCameraPersonRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeCameraPersonResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeClusterPersonArrivedMallRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeClusterPersonArrivedMallResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeClusterPersonTraceRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeClusterPersonTraceResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeFaceIdByTempIdRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeFaceIdByTempIdResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeHistoryNetworkInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeHistoryNetworkInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeNetworkInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeNetworkInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePersonArrivedMallRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePersonArrivedMallResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePersonInfoByFacePictureRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePersonInfoByFacePictureResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePersonInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePersonInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePersonRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePersonResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePersonTraceDetailRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePersonTraceDetailResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePersonTraceRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePersonTraceResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePersonVisitInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePersonVisitInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeShopHourTrafficInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeShopHourTrafficInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeShopInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeShopInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeShopTrafficInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeShopTrafficInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeTrajectoryDataRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeTrajectoryDataResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowAgeInfoByZoneIdRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowAgeInfoByZoneIdResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowAndStayTimeRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowAndStayTimeResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowDailyByZoneIdRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowDailyByZoneIdResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowGenderInfoByZoneIdRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowGenderInfoByZoneIdResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowHourlyByZoneIdRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneFlowHourlyByZoneIdResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneTrafficInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeZoneTrafficInfoResponse.cs" />
+    <Compile Include="V20180228\Models\GenderAgeTrafficDetail.cs" />
+    <Compile Include="V20180228\Models\HourTrafficInfoDetail.cs" />
+    <Compile Include="V20180228\Models\ModifyPersonFeatureInfoRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyPersonFeatureInfoResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyPersonTagInfoRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyPersonTagInfoResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyPersonTypeRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyPersonTypeResponse.cs" />
+    <Compile Include="V20180228\Models\NetworkAndShopInfo.cs" />
+    <Compile Include="V20180228\Models\NetworkHistoryInfo.cs" />
+    <Compile Include="V20180228\Models\NetworkInfo.cs" />
+    <Compile Include="V20180228\Models\NetworkLastInfo.cs" />
+    <Compile Include="V20180228\Models\PersonCoordinate.cs" />
+    <Compile Include="V20180228\Models\PersonInfo.cs" />
+    <Compile Include="V20180228\Models\PersonProfile.cs" />
+    <Compile Include="V20180228\Models\PersonTagInfo.cs" />
+    <Compile Include="V20180228\Models\PersonTracePoint.cs" />
+    <Compile Include="V20180228\Models\PersonTraceRoute.cs" />
+    <Compile Include="V20180228\Models\PersonVisitInfo.cs" />
+    <Compile Include="V20180228\Models\RegisterCallbackRequest.cs" />
+    <Compile Include="V20180228\Models\RegisterCallbackResponse.cs" />
+    <Compile Include="V20180228\Models\SceneInfo.cs" />
+    <Compile Include="V20180228\Models\ShopDayTrafficInfo.cs" />
+    <Compile Include="V20180228\Models\ShopHourTrafficInfo.cs" />
+    <Compile Include="V20180228\Models\ShopInfo.cs" />
+    <Compile Include="V20180228\Models\TrajectorySunData.cs" />
+    <Compile Include="V20180228\Models\ZoneAgeGroupAvrStayTime.cs" />
+    <Compile Include="V20180228\Models\ZoneDayFlow.cs" />
+    <Compile Include="V20180228\Models\ZoneFlowAndAvrStayTime.cs" />
+    <Compile Include="V20180228\Models\ZoneHourFlow.cs" />
+    <Compile Include="V20180228\Models\ZoneTrafficInfo.cs" />
+    <Compile Include="V20180228\Models\ZoneTrafficInfoDetail.cs" />
+  </ItemGroup>
+</Project>

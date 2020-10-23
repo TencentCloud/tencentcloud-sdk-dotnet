@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "AsrReviewInfo.", this.AsrReviewInfo);
             this.SetParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);

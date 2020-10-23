@@ -46,7 +46,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
             this.SetParamSimple(map, prefix + "Order", this.Order);

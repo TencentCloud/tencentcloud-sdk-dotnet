@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{39D5883D-7A4D-3B59-9517-0DFDD1B08F9C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCaptchaSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190722\CaptchaClient.cs" />
+    <Compile Include="V20190722\Models\CaptchaOperDataInterceptUnit.cs" />
+    <Compile Include="V20190722\Models\CaptchaOperDataLoadTimeUnit.cs" />
+    <Compile Include="V20190722\Models\CaptchaOperDataRes.cs" />
+    <Compile Include="V20190722\Models\CaptchaOperDataTryTimesDistributeUnit.cs" />
+    <Compile Include="V20190722\Models\CaptchaOperDataTryTimesUnit.cs" />
+    <Compile Include="V20190722\Models\CaptchaQueryData.cs" />
+    <Compile Include="V20190722\Models\CaptchaTicketDataRes.cs" />
+    <Compile Include="V20190722\Models\CaptchaUserAllAppId.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaAppIdInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaAppIdInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaDataSumRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaDataSumResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniDataSumRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniDataSumResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniOperDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniOperDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniResultRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniResultResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaOperDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaOperDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaResultRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaResultResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaTicketDataRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaTicketDataResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaUserAllAppIdRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaUserAllAppIdResponse.cs" />
+    <Compile Include="V20190722\Models\TicketAmountUnit.cs" />
+    <Compile Include="V20190722\Models\TicketInterceptUnit.cs" />
+    <Compile Include="V20190722\Models\TicketThroughUnit.cs" />
+    <Compile Include="V20190722\Models\UpdateCaptchaAppIdInfoRequest.cs" />
+    <Compile Include="V20190722\Models\UpdateCaptchaAppIdInfoResponse.cs" />
+  </ItemGroup>
+</Project>

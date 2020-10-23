@@ -72,7 +72,7 @@ namespace TencentCloud.Yunsou.V20191115.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CostTime", this.CostTime);
             this.SetParamSimple(map, prefix + "DisplayNum", this.DisplayNum);

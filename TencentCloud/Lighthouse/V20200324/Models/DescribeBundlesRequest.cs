@@ -60,7 +60,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "BundleIds.", this.BundleIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

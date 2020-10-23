@@ -32,21 +32,21 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Regex{ get; set; }
 
         /// <summary>
-        /// URL路径。
+        /// 匹配的URL路径。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 路径匹配时的回源源站。
+        /// 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// 路径匹配时的回源Host头部。
+        /// 路径匹配时回源的Host头部。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerName")]
@@ -60,14 +60,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string OriginArea{ get; set; }
 
         /// <summary>
-        /// 路径匹配时的回源URI路径。
+        /// 路径匹配时回源的URI路径。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForwardUri")]
         public string ForwardUri{ get; set; }
 
         /// <summary>
-        /// 路径匹配时的回源头部设置。
+        /// 路径匹配时回源的头部设置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RequestHeaders")]
@@ -77,7 +77,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Regex", this.Regex);
             this.SetParamSimple(map, prefix + "Path", this.Path);

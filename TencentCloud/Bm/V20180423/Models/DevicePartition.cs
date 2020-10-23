@@ -76,7 +76,7 @@ namespace TencentCloud.Bm.V20180423.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);
             this.SetParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);

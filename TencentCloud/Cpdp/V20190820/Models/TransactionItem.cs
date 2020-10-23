@@ -98,7 +98,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BookingFlag", this.BookingFlag);
             this.SetParamSimple(map, prefix + "TranStatus", this.TranStatus);

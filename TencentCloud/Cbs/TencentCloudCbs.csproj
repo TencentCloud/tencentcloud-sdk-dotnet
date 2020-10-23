@@ -1,0 +1,113 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{A6E782C7-FC94-3EC6-A8AC-DB20F13405F5}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCbsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20170312\CbsClient.cs" />
+    <Compile Include="V20170312\Models\ApplySnapshotRequest.cs" />
+    <Compile Include="V20170312\Models\ApplySnapshotResponse.cs" />
+    <Compile Include="V20170312\Models\AttachDetail.cs" />
+    <Compile Include="V20170312\Models\AttachDisksRequest.cs" />
+    <Compile Include="V20170312\Models\AttachDisksResponse.cs" />
+    <Compile Include="V20170312\Models\AutoSnapshotPolicy.cs" />
+    <Compile Include="V20170312\Models\BindAutoSnapshotPolicyRequest.cs" />
+    <Compile Include="V20170312\Models\BindAutoSnapshotPolicyResponse.cs" />
+    <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyRequest.cs" />
+    <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyResponse.cs" />
+    <Compile Include="V20170312\Models\CreateDisksRequest.cs" />
+    <Compile Include="V20170312\Models\CreateDisksResponse.cs" />
+    <Compile Include="V20170312\Models\CreateSnapshotRequest.cs" />
+    <Compile Include="V20170312\Models\CreateSnapshotResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteAutoSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteAutoSnapshotPoliciesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteSnapshotsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteSnapshotsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeAutoSnapshotPoliciesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAutoSnapshotPoliciesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskAssociatedAutoSnapshotPolicyRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskAssociatedAutoSnapshotPolicyResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskConfigQuotaRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskConfigQuotaResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskOperationLogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskOperationLogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDisksRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDisksResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesDiskNumRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesDiskNumResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotOperationLogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotOperationLogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotSharePermissionRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotSharePermissionResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSnapshotsResponse.cs" />
+    <Compile Include="V20170312\Models\DetachDisksRequest.cs" />
+    <Compile Include="V20170312\Models\DetachDisksResponse.cs" />
+    <Compile Include="V20170312\Models\Disk.cs" />
+    <Compile Include="V20170312\Models\DiskChargePrepaid.cs" />
+    <Compile Include="V20170312\Models\DiskConfig.cs" />
+    <Compile Include="V20170312\Models\DiskOperationLog.cs" />
+    <Compile Include="V20170312\Models\Filter.cs" />
+    <Compile Include="V20170312\Models\GetSnapOverviewRequest.cs" />
+    <Compile Include="V20170312\Models\GetSnapOverviewResponse.cs" />
+    <Compile Include="V20170312\Models\Image.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceCreateDisksRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceCreateDisksResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewDisksRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewDisksResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResizeDiskRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResizeDiskResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyAutoSnapshotPolicyAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyAutoSnapshotPolicyAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskAttributesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskAttributesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDisksChargeTypeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDisksChargeTypeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDisksRenewFlagRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDisksRenewFlagResponse.cs" />
+    <Compile Include="V20170312\Models\ModifySnapshotAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifySnapshotAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifySnapshotsSharePermissionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifySnapshotsSharePermissionResponse.cs" />
+    <Compile Include="V20170312\Models\Placement.cs" />
+    <Compile Include="V20170312\Models\Policy.cs" />
+    <Compile Include="V20170312\Models\PrepayPrice.cs" />
+    <Compile Include="V20170312\Models\Price.cs" />
+    <Compile Include="V20170312\Models\RenewDiskRequest.cs" />
+    <Compile Include="V20170312\Models\RenewDiskResponse.cs" />
+    <Compile Include="V20170312\Models\ResizeDiskRequest.cs" />
+    <Compile Include="V20170312\Models\ResizeDiskResponse.cs" />
+    <Compile Include="V20170312\Models\SharePermission.cs" />
+    <Compile Include="V20170312\Models\Snapshot.cs" />
+    <Compile Include="V20170312\Models\SnapshotOperationLog.cs" />
+    <Compile Include="V20170312\Models\Tag.cs" />
+    <Compile Include="V20170312\Models\TerminateDisksRequest.cs" />
+    <Compile Include="V20170312\Models\TerminateDisksResponse.cs" />
+    <Compile Include="V20170312\Models\UnbindAutoSnapshotPolicyRequest.cs" />
+    <Compile Include="V20170312\Models\UnbindAutoSnapshotPolicyResponse.cs" />
+  </ItemGroup>
+</Project>

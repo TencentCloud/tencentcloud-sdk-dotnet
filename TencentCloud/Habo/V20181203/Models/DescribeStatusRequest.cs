@@ -40,7 +40,7 @@ namespace TencentCloud.Habo.V20181203.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Pk", this.Pk);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);

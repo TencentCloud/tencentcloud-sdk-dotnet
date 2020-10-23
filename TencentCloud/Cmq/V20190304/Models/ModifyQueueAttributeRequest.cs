@@ -112,7 +112,7 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "MaxMsgHeapNum", this.MaxMsgHeapNum);

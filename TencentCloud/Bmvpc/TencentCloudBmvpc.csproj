@@ -1,0 +1,176 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{9354F021-6260-3A2C-A33C-9EB499DE7C05}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudBmvpcSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180625\BmvpcClient.cs" />
+    <Compile Include="V20180625\Models\AcceptVpcPeerConnectionRequest.cs" />
+    <Compile Include="V20180625\Models\AcceptVpcPeerConnectionResponse.cs" />
+    <Compile Include="V20180625\Models\AsyncRegisterIpsRequest.cs" />
+    <Compile Include="V20180625\Models\AsyncRegisterIpsResponse.cs" />
+    <Compile Include="V20180625\Models\BindEipsToNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\BindEipsToNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\BindIpsToNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\BindIpsToNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\BindSubnetsToNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\BindSubnetsToNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\CreateCustomerGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\CreateCustomerGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\CreateDockerSubnetWithVlanRequest.cs" />
+    <Compile Include="V20180625\Models\CreateDockerSubnetWithVlanResponse.cs" />
+    <Compile Include="V20180625\Models\CreateHostedInterfaceRequest.cs" />
+    <Compile Include="V20180625\Models\CreateHostedInterfaceResponse.cs" />
+    <Compile Include="V20180625\Models\CreateInterfacesRequest.cs" />
+    <Compile Include="V20180625\Models\CreateInterfacesResponse.cs" />
+    <Compile Include="V20180625\Models\CreateNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\CreateNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\CreateRoutePoliciesRequest.cs" />
+    <Compile Include="V20180625\Models\CreateRoutePoliciesResponse.cs" />
+    <Compile Include="V20180625\Models\CreateSubnetRequest.cs" />
+    <Compile Include="V20180625\Models\CreateSubnetResponse.cs" />
+    <Compile Include="V20180625\Models\CreateVirtualSubnetWithVlanRequest.cs" />
+    <Compile Include="V20180625\Models\CreateVirtualSubnetWithVlanResponse.cs" />
+    <Compile Include="V20180625\Models\CreateVpcPeerConnectionRequest.cs" />
+    <Compile Include="V20180625\Models\CreateVpcPeerConnectionResponse.cs" />
+    <Compile Include="V20180625\Models\CreateVpcRequest.cs" />
+    <Compile Include="V20180625\Models\CreateVpcResponse.cs" />
+    <Compile Include="V20180625\Models\CustomerGateway.cs" />
+    <Compile Include="V20180625\Models\DeleteCustomerGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteCustomerGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteHostedInterfaceRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteHostedInterfaceResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteHostedInterfacesRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteHostedInterfacesResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteInterfacesRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteInterfacesResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteRoutePolicyRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteRoutePolicyResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteSubnetRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteSubnetResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteVirtualIpRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteVirtualIpResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteVpcPeerConnectionRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteVpcPeerConnectionResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteVpcRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteVpcResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteVpnConnectionRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteVpnConnectionResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteVpnGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteVpnGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\DeregisterIpsRequest.cs" />
+    <Compile Include="V20180625\Models\DeregisterIpsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeCustomerGatewaysRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeCustomerGatewaysResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeNatGatewaysRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeNatGatewaysResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeNatSubnetsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeNatSubnetsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeRoutePoliciesRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeRoutePoliciesResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeRouteTablesRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeRouteTablesResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetAvailableIpsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetAvailableIpsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetByDeviceRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetByDeviceResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetByHostedDeviceRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetByHostedDeviceResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeSubnetsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcPeerConnectionsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcPeerConnectionsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcQuotaRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcQuotaResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcResourceRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcResourceResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcViewRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcViewResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeVpcsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeVpnConnectionsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeVpnConnectionsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeVpnGatewaysRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeVpnGatewaysResponse.cs" />
+    <Compile Include="V20180625\Models\DownloadCustomerGatewayConfigurationRequest.cs" />
+    <Compile Include="V20180625\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
+    <Compile Include="V20180625\Models\Filter.cs" />
+    <Compile Include="V20180625\Models\IKEOptionsSpecification.cs" />
+    <Compile Include="V20180625\Models\IPSECOptionsSpecification.cs" />
+    <Compile Include="V20180625\Models\IpInfo.cs" />
+    <Compile Include="V20180625\Models\ModifyCustomerGatewayAttributeRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyCustomerGatewayAttributeResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyRoutePolicyRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyRoutePolicyResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyRouteTableRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyRouteTableResponse.cs" />
+    <Compile Include="V20180625\Models\ModifySubnetAttributeRequest.cs" />
+    <Compile Include="V20180625\Models\ModifySubnetAttributeResponse.cs" />
+    <Compile Include="V20180625\Models\ModifySubnetDHCPRelayRequest.cs" />
+    <Compile Include="V20180625\Models\ModifySubnetDHCPRelayResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyVpcAttributeRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyVpcAttributeResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyVpcPeerConnectionRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyVpcPeerConnectionResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyVpnConnectionAttributeRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyVpnConnectionAttributeResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyVpnGatewayAttributeRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyVpnGatewayAttributeResponse.cs" />
+    <Compile Include="V20180625\Models\NatGatewayInfo.cs" />
+    <Compile Include="V20180625\Models\NatSubnetInfo.cs" />
+    <Compile Include="V20180625\Models\RejectVpcPeerConnectionRequest.cs" />
+    <Compile Include="V20180625\Models\RejectVpcPeerConnectionResponse.cs" />
+    <Compile Include="V20180625\Models\ResetVpnConnectionRequest.cs" />
+    <Compile Include="V20180625\Models\ResetVpnConnectionResponse.cs" />
+    <Compile Include="V20180625\Models\RoutePolicy.cs" />
+    <Compile Include="V20180625\Models\RouteTable.cs" />
+    <Compile Include="V20180625\Models\SecurityPolicyDatabase.cs" />
+    <Compile Include="V20180625\Models\SubnetCreateInputInfo.cs" />
+    <Compile Include="V20180625\Models\SubnetInfo.cs" />
+    <Compile Include="V20180625\Models\UnbindEipsFromNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindEipsFromNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindIpsFromNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindIpsFromNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindSubnetsFromNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindSubnetsFromNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\UpgradeNatGatewayRequest.cs" />
+    <Compile Include="V20180625\Models\UpgradeNatGatewayResponse.cs" />
+    <Compile Include="V20180625\Models\VpcInfo.cs" />
+    <Compile Include="V20180625\Models\VpcPeerConnection.cs" />
+    <Compile Include="V20180625\Models\VpcQuota.cs" />
+    <Compile Include="V20180625\Models\VpcResource.cs" />
+    <Compile Include="V20180625\Models\VpcSubnetCreateInfo.cs" />
+    <Compile Include="V20180625\Models\VpcSubnetViewInfo.cs" />
+    <Compile Include="V20180625\Models\VpcViewInfo.cs" />
+    <Compile Include="V20180625\Models\VpnConnection.cs" />
+    <Compile Include="V20180625\Models\VpnGateway.cs" />
+  </ItemGroup>
+</Project>

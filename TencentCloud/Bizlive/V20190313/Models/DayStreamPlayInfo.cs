@@ -58,7 +58,7 @@ namespace TencentCloud.Bizlive.V20190313.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "Flux", this.Flux);

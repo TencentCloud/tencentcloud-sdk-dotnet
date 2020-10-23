@@ -106,7 +106,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AuditName", this.AuditName);
             this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);

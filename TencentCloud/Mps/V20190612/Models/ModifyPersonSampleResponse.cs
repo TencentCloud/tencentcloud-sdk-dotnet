@@ -47,7 +47,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Person.", this.Person);
             this.SetParamArrayObj(map, prefix + "FailFaceInfoSet.", this.FailFaceInfoSet);

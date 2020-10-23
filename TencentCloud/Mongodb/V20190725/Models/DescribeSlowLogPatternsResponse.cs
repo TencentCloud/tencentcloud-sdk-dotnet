@@ -46,7 +46,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamArrayObj(map, prefix + "SlowLogPatterns.", this.SlowLogPatterns);

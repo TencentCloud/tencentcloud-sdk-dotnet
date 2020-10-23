@@ -76,7 +76,7 @@ namespace TencentCloud.Cws.V20180312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MonitorId", this.MonitorId);
             this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);

@@ -40,7 +40,7 @@ namespace TencentCloud.Ft.V20200304.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Tempo", this.Tempo);
             this.SetParamSimple(map, prefix + "MorphTime", this.MorphTime);

@@ -40,8 +40,10 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> ap-guangzhou-2（售罄）</li>
         /// <li> ap-guangzhou-3 </li>
         /// <li> ap-guangzhou-4 </li>
+        /// <li> ap-guangzhou-6 </li>
         /// <li> ap-tokyo-1 </li>
         /// <li> ap-singapore-1 </li>
+        /// <li> ap-singapore-2 </li>
         /// <li> ap-shanghai-fsi-1 </li>
         /// <li> ap-shanghai-fsi-2 </li>
         /// <li> ap-shanghai-fsi-3 </li>
@@ -50,6 +52,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> ap-shanghai-2 </li>
         /// <li> ap-shanghai-3 </li>
         /// <li> ap-shanghai-4 </li>
+        /// <li> ap-shanghai-5 </li>
         /// <li> ap-mumbai-1 </li>
         /// <li> ap-mumbai-2 </li>
         /// <li> eu-moscow-1 </li>
@@ -92,7 +95,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);

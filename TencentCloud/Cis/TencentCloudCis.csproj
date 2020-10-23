@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{59EA44DD-37F6-36AC-BDFB-101CC1FD193F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCisSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180408\CisClient.cs" />
+    <Compile Include="V20180408\Models\Container.cs" />
+    <Compile Include="V20180408\Models\ContainerInstance.cs" />
+    <Compile Include="V20180408\Models\ContainerLog.cs" />
+    <Compile Include="V20180408\Models\ContainerState.cs" />
+    <Compile Include="V20180408\Models\CreateContainerInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\CreateContainerInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\DeleteContainerInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\DeleteContainerInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerInstanceEventsRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerInstanceEventsResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerLogRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeContainerLogResponse.cs" />
+    <Compile Include="V20180408\Models\EnvironmentVar.cs" />
+    <Compile Include="V20180408\Models\Event.cs" />
+    <Compile Include="V20180408\Models\Filter.cs" />
+    <Compile Include="V20180408\Models\InquiryPriceCreateCisRequest.cs" />
+    <Compile Include="V20180408\Models\InquiryPriceCreateCisResponse.cs" />
+    <Compile Include="V20180408\Models\Price.cs" />
+  </ItemGroup>
+</Project>

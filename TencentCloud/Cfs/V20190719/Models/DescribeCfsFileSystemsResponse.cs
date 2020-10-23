@@ -46,7 +46,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -64,7 +64,7 @@ namespace TencentCloud.Chdfs.V20190718.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MountPointName", this.MountPointName);
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

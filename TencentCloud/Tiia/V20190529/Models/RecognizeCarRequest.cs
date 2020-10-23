@@ -49,7 +49,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);

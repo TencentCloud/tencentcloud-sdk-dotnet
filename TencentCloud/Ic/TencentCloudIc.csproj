@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{44E853F4-24B0-367B-BCBE-F8A2E4E5BC28}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudIcSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190307\IcClient.cs" />
+    <Compile Include="V20190307\Models\AppInfo.cs" />
+    <Compile Include="V20190307\Models\CardInfo.cs" />
+    <Compile Include="V20190307\Models\CardList.cs" />
+    <Compile Include="V20190307\Models\DescribeAppRequest.cs" />
+    <Compile Include="V20190307\Models\DescribeAppResponse.cs" />
+    <Compile Include="V20190307\Models\DescribeCardRequest.cs" />
+    <Compile Include="V20190307\Models\DescribeCardResponse.cs" />
+    <Compile Include="V20190307\Models\DescribeCardsRequest.cs" />
+    <Compile Include="V20190307\Models\DescribeCardsResponse.cs" />
+    <Compile Include="V20190307\Models\RenewCardsRequest.cs" />
+    <Compile Include="V20190307\Models\RenewCardsResponse.cs" />
+    <Compile Include="V20190307\Models\ResRenew.cs" />
+    <Compile Include="V20190307\Models\SendMultiSmsRequest.cs" />
+    <Compile Include="V20190307\Models\SendMultiSmsResponse.cs" />
+    <Compile Include="V20190307\Models\SendSmsRequest.cs" />
+    <Compile Include="V20190307\Models\SendSmsResponse.cs" />
+    <Compile Include="V20190307\Models\SmsRet.cs" />
+    <Compile Include="V20190307\Models\SmsSid.cs" />
+  </ItemGroup>
+</Project>

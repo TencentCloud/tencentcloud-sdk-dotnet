@@ -46,7 +46,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DateKey", this.DateKey);
             this.SetParamArraySimple(map, prefix + "CntPerPass.", this.CntPerPass);

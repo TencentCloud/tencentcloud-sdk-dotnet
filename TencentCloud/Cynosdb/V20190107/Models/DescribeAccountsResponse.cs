@@ -40,7 +40,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "AccountSet.", this.AccountSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

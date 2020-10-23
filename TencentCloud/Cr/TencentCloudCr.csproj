@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{64652818-FFAF-356D-BBE6-79A313C368C3}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCrSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180321\CrClient.cs" />
+    <Compile Include="V20180321\Models\ApplyBlackListRequest.cs" />
+    <Compile Include="V20180321\Models\ApplyBlackListResponse.cs" />
+    <Compile Include="V20180321\Models\ApplyCreditAuditRequest.cs" />
+    <Compile Include="V20180321\Models\ApplyCreditAuditResponse.cs" />
+    <Compile Include="V20180321\Models\DescribeCreditResultRequest.cs" />
+    <Compile Include="V20180321\Models\DescribeCreditResultResponse.cs" />
+    <Compile Include="V20180321\Models\DescribeRecordsRequest.cs" />
+    <Compile Include="V20180321\Models\DescribeRecordsResponse.cs" />
+    <Compile Include="V20180321\Models\DescribeTaskStatusRequest.cs" />
+    <Compile Include="V20180321\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="V20180321\Models\DownloadDialogueTextRequest.cs" />
+    <Compile Include="V20180321\Models\DownloadDialogueTextResponse.cs" />
+    <Compile Include="V20180321\Models\DownloadRecordListRequest.cs" />
+    <Compile Include="V20180321\Models\DownloadRecordListResponse.cs" />
+    <Compile Include="V20180321\Models\DownloadReportRequest.cs" />
+    <Compile Include="V20180321\Models\DownloadReportResponse.cs" />
+    <Compile Include="V20180321\Models\QueryInstantDataRequest.cs" />
+    <Compile Include="V20180321\Models\QueryInstantDataResponse.cs" />
+    <Compile Include="V20180321\Models\SingleBlackApply.cs" />
+    <Compile Include="V20180321\Models\SingleRecord.cs" />
+    <Compile Include="V20180321\Models\UploadDataFileRequest.cs" />
+    <Compile Include="V20180321\Models\UploadDataFileResponse.cs" />
+    <Compile Include="V20180321\Models\UploadDataJsonRequest.cs" />
+    <Compile Include="V20180321\Models\UploadDataJsonResponse.cs" />
+    <Compile Include="V20180321\Models\UploadFileRequest.cs" />
+    <Compile Include="V20180321\Models\UploadFileResponse.cs" />
+  </ItemGroup>
+</Project>

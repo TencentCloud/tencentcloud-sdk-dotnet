@@ -53,7 +53,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
             this.SetParamSimple(map, prefix + "Language", this.Language);

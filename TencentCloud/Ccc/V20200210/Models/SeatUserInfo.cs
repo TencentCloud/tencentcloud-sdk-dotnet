@@ -25,12 +25,6 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 坐席电话号码
-        /// </summary>
-        [JsonProperty("Phone")]
-        public string Phone{ get; set; }
-
-        /// <summary>
         /// 坐席名称
         /// </summary>
         [JsonProperty("Name")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
+
+        /// <summary>
+        /// 坐席电话号码
+        /// </summary>
+        [JsonProperty("Phone")]
+        public string Phone{ get; set; }
 
         /// <summary>
         /// 坐席昵称
@@ -61,18 +61,26 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupNameList")]
         public string[] SkillGroupNameList{ get; set; }
 
+        /// <summary>
+        /// 工号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StaffNumber")]
+        public string StaffNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Mail", this.Mail);
+            this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
+            this.SetParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
         }
     }
 }

@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{A764669A-3EE2-322E-891A-3164FCCE90A4}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCwsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180312\CwsClient.cs" />
+    <Compile Include="V20180312\Models\CreateMonitorsRequest.cs" />
+    <Compile Include="V20180312\Models\CreateMonitorsResponse.cs" />
+    <Compile Include="V20180312\Models\CreateSitesRequest.cs" />
+    <Compile Include="V20180312\Models\CreateSitesResponse.cs" />
+    <Compile Include="V20180312\Models\CreateSitesScansRequest.cs" />
+    <Compile Include="V20180312\Models\CreateSitesScansResponse.cs" />
+    <Compile Include="V20180312\Models\CreateVulsMisinformationRequest.cs" />
+    <Compile Include="V20180312\Models\CreateVulsMisinformationResponse.cs" />
+    <Compile Include="V20180312\Models\CreateVulsReportRequest.cs" />
+    <Compile Include="V20180312\Models\CreateVulsReportResponse.cs" />
+    <Compile Include="V20180312\Models\DeleteMonitorsRequest.cs" />
+    <Compile Include="V20180312\Models\DeleteMonitorsResponse.cs" />
+    <Compile Include="V20180312\Models\DeleteSitesRequest.cs" />
+    <Compile Include="V20180312\Models\DeleteSitesResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeConfigRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeConfigResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeMonitorsRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeMonitorsResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeSiteQuotaRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeSiteQuotaResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeSitesRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeSitesResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeSitesVerificationRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeSitesVerificationResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeVulsNumberRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeVulsNumberResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeVulsNumberTimelineRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeVulsNumberTimelineResponse.cs" />
+    <Compile Include="V20180312\Models\DescribeVulsRequest.cs" />
+    <Compile Include="V20180312\Models\DescribeVulsResponse.cs" />
+    <Compile Include="V20180312\Models\Filter.cs" />
+    <Compile Include="V20180312\Models\MiniSite.cs" />
+    <Compile Include="V20180312\Models\ModifyConfigAttributeRequest.cs" />
+    <Compile Include="V20180312\Models\ModifyConfigAttributeResponse.cs" />
+    <Compile Include="V20180312\Models\ModifyMonitorAttributeRequest.cs" />
+    <Compile Include="V20180312\Models\ModifyMonitorAttributeResponse.cs" />
+    <Compile Include="V20180312\Models\ModifySiteAttributeRequest.cs" />
+    <Compile Include="V20180312\Models\ModifySiteAttributeResponse.cs" />
+    <Compile Include="V20180312\Models\Monitor.cs" />
+    <Compile Include="V20180312\Models\MonitorMiniSite.cs" />
+    <Compile Include="V20180312\Models\MonitorsDetail.cs" />
+    <Compile Include="V20180312\Models\Site.cs" />
+    <Compile Include="V20180312\Models\SitesVerification.cs" />
+    <Compile Include="V20180312\Models\VerifySitesRequest.cs" />
+    <Compile Include="V20180312\Models\VerifySitesResponse.cs" />
+    <Compile Include="V20180312\Models\Vul.cs" />
+    <Compile Include="V20180312\Models\VulsTimeline.cs" />
+  </ItemGroup>
+</Project>

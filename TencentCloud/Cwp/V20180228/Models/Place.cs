@@ -46,7 +46,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CityId", this.CityId);
             this.SetParamSimple(map, prefix + "ProvinceId", this.ProvinceId);

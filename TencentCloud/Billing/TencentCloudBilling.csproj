@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudBillingSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180709\BillingClient.cs" />
+    <Compile Include="V20180709\Models\ActionSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\BillDetail.cs" />
+    <Compile Include="V20180709\Models\BillDetailComponent.cs" />
+    <Compile Include="V20180709\Models\BillResourceSummary.cs" />
+    <Compile Include="V20180709\Models\BillTagInfo.cs" />
+    <Compile Include="V20180709\Models\BillTransactionInfo.cs" />
+    <Compile Include="V20180709\Models\BusinessSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\BusinessSummaryTotal.cs" />
+    <Compile Include="V20180709\Models\ConditionBusiness.cs" />
+    <Compile Include="V20180709\Models\ConditionPayMode.cs" />
+    <Compile Include="V20180709\Models\ConditionProject.cs" />
+    <Compile Include="V20180709\Models\ConditionRegion.cs" />
+    <Compile Include="V20180709\Models\Conditions.cs" />
+    <Compile Include="V20180709\Models\ConsumptionBusinessSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionProjectSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionRegionSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionResourceSummaryConditionValue.cs" />
+    <Compile Include="V20180709\Models\ConsumptionResourceSummaryDataItem.cs" />
+    <Compile Include="V20180709\Models\ConsumptionSummaryTotal.cs" />
+    <Compile Include="V20180709\Models\ConsumptionSummaryTrend.cs" />
+    <Compile Include="V20180709\Models\CostComponentSet.cs" />
+    <Compile Include="V20180709\Models\CostDetail.cs" />
+    <Compile Include="V20180709\Models\Deal.cs" />
+    <Compile Include="V20180709\Models\DescribeAccountBalanceRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAccountBalanceResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillDetailRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillDetailResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillListRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillListResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillResourceSummaryRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillResourceSummaryResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByPayModeRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByPayModeResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByProductRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByProductResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByProjectRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByProjectResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByRegionRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByRegionResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByTagRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeBillSummaryByTagResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostDetailRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostDetailResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProductRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProductResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProjectRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByProjectResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByRegionRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByRegionResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByResourceRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeCostSummaryByResourceResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeDealsByCondRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeDealsByCondResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeDosageDetailByDateRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeDosageDetailByDateResponse.cs" />
+    <Compile Include="V20180709\Models\DetailPoint.cs" />
+    <Compile Include="V20180709\Models\DetailSet.cs" />
+    <Compile Include="V20180709\Models\PayDealsRequest.cs" />
+    <Compile Include="V20180709\Models\PayDealsResponse.cs" />
+    <Compile Include="V20180709\Models\PayModeSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\ProductInfo.cs" />
+    <Compile Include="V20180709\Models\ProjectSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\TagSummaryOverviewItem.cs" />
+  </ItemGroup>
+</Project>

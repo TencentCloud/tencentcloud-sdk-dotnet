@@ -1,0 +1,139 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudMariadbSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20170312\MariadbClient.cs" />
+    <Compile Include="V20170312\Models\CloneAccountRequest.cs" />
+    <Compile Include="V20170312\Models\CloneAccountResponse.cs" />
+    <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\ConstraintRange.cs" />
+    <Compile Include="V20170312\Models\CopyAccountPrivilegesRequest.cs" />
+    <Compile Include="V20170312\Models\CopyAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateAccountRequest.cs" />
+    <Compile Include="V20170312\Models\CreateAccountResponse.cs" />
+    <Compile Include="V20170312\Models\CreateDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\CreateDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\CreateTmpInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateTmpInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DBAccount.cs" />
+    <Compile Include="V20170312\Models\DBBackupTimeConfig.cs" />
+    <Compile Include="V20170312\Models\DBInstance.cs" />
+    <Compile Include="V20170312\Models\DBParamValue.cs" />
+    <Compile Include="V20170312\Models\Database.cs" />
+    <Compile Include="V20170312\Models\Deal.cs" />
+    <Compile Include="V20170312\Models\DeleteAccountRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteAccountResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeAccountPrivilegesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupTimeRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeBackupTimeResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceSpecsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceSpecsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBLogFilesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBLogFilesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBParametersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBPerformanceDetailsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBPerformanceDetailsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBPerformanceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBPerformanceResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBResourceUsageDetailsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBResourceUsageRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBResourceUsageResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSlowLogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSlowLogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeFlowRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePriceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePriceResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeRenewalPriceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeRenewalPriceResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSaleInfoRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSaleInfoResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSqlLogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSqlLogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeUpgradePriceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeUpgradePriceResponse.cs" />
+    <Compile Include="V20170312\Models\FlushBinlogRequest.cs" />
+    <Compile Include="V20170312\Models\FlushBinlogResponse.cs" />
+    <Compile Include="V20170312\Models\GrantAccountPrivilegesRequest.cs" />
+    <Compile Include="V20170312\Models\GrantAccountPrivilegesResponse.cs" />
+    <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\InitDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\InstanceSpec.cs" />
+    <Compile Include="V20170312\Models\LogFileInfo.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountDescriptionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyBackupTimeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyBackupTimeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBParametersRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBParametersResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="V20170312\Models\MonitorData.cs" />
+    <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
+    <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\ParamConstraint.cs" />
+    <Compile Include="V20170312\Models\ParamDesc.cs" />
+    <Compile Include="V20170312\Models\ParamModifyResult.cs" />
+    <Compile Include="V20170312\Models\PerformanceMonitorSet.cs" />
+    <Compile Include="V20170312\Models\RegionInfo.cs" />
+    <Compile Include="V20170312\Models\RenewDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\RenewDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ResetAccountPasswordRequest.cs" />
+    <Compile Include="V20170312\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20170312\Models\ResourceTag.cs" />
+    <Compile Include="V20170312\Models\ResourceUsageMonitorSet.cs" />
+    <Compile Include="V20170312\Models\RestartDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\RestartDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\SlowLogData.cs" />
+    <Compile Include="V20170312\Models\SpecConfigInfo.cs" />
+    <Compile Include="V20170312\Models\SqlLogItem.cs" />
+    <Compile Include="V20170312\Models\UpgradeDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ZoneChooseInfo.cs" />
+    <Compile Include="V20170312\Models\ZonesInfo.cs" />
+  </ItemGroup>
+</Project>

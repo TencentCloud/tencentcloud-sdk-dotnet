@@ -1,0 +1,169 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{F3F12BBE-443B-302A-AC88-4C2B66D242F5}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudBmSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180423\BmClient.cs" />
+    <Compile Include="V20180423\Models\AttachCamRoleRequest.cs" />
+    <Compile Include="V20180423\Models\AttachCamRoleResponse.cs" />
+    <Compile Include="V20180423\Models\BindPsaTagRequest.cs" />
+    <Compile Include="V20180423\Models\BindPsaTagResponse.cs" />
+    <Compile Include="V20180423\Models\BuyDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\BuyDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\CpuInfo.cs" />
+    <Compile Include="V20180423\Models\CreateCustomImageRequest.cs" />
+    <Compile Include="V20180423\Models\CreateCustomImageResponse.cs" />
+    <Compile Include="V20180423\Models\CreatePsaRegulationRequest.cs" />
+    <Compile Include="V20180423\Models\CreatePsaRegulationResponse.cs" />
+    <Compile Include="V20180423\Models\CreateSpotDeviceRequest.cs" />
+    <Compile Include="V20180423\Models\CreateSpotDeviceResponse.cs" />
+    <Compile Include="V20180423\Models\CreateUserCmdRequest.cs" />
+    <Compile Include="V20180423\Models\CreateUserCmdResponse.cs" />
+    <Compile Include="V20180423\Models\CustomImage.cs" />
+    <Compile Include="V20180423\Models\CustomImageProcess.cs" />
+    <Compile Include="V20180423\Models\DeleteCustomImagesRequest.cs" />
+    <Compile Include="V20180423\Models\DeleteCustomImagesResponse.cs" />
+    <Compile Include="V20180423\Models\DeletePsaRegulationRequest.cs" />
+    <Compile Include="V20180423\Models\DeletePsaRegulationResponse.cs" />
+    <Compile Include="V20180423\Models\DeleteUserCmdsRequest.cs" />
+    <Compile Include="V20180423\Models\DeleteUserCmdsResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeCustomImageProcessRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeCustomImageProcessResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeCustomImagesRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeCustomImagesResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceClassPartitionRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceClassPartitionResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceClassRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceClassResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceHardwareInfoRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceHardwareInfoResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceInventoryRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceInventoryResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceOperationLogRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDeviceOperationLogResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicePartitionRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicePartitionResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicePositionRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicePositionResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicePriceInfoRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicePriceInfoResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeHardwareSpecificationRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeHardwareSpecificationResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeHostedDeviceOutBandInfoRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeHostedDeviceOutBandInfoResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeOperationResultRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeOperationResultResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeOsInfoRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeOsInfoResponse.cs" />
+    <Compile Include="V20180423\Models\DescribePsaRegulationsRequest.cs" />
+    <Compile Include="V20180423\Models\DescribePsaRegulationsResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeRepairTaskConstantRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeRepairTaskConstantResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeTaskInfoRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeTaskInfoResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeTaskOperationLogRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeTaskOperationLogResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeUserCmdTaskInfoRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeUserCmdTaskInfoResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeUserCmdTasksRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeUserCmdTasksResponse.cs" />
+    <Compile Include="V20180423\Models\DescribeUserCmdsRequest.cs" />
+    <Compile Include="V20180423\Models\DescribeUserCmdsResponse.cs" />
+    <Compile Include="V20180423\Models\DetachCamRoleRequest.cs" />
+    <Compile Include="V20180423\Models\DetachCamRoleResponse.cs" />
+    <Compile Include="V20180423\Models\DeviceAlias.cs" />
+    <Compile Include="V20180423\Models\DeviceClass.cs" />
+    <Compile Include="V20180423\Models\DeviceClassPartitionInfo.cs" />
+    <Compile Include="V20180423\Models\DeviceDiskSizeInfo.cs" />
+    <Compile Include="V20180423\Models\DeviceHardwareInfo.cs" />
+    <Compile Include="V20180423\Models\DeviceInfo.cs" />
+    <Compile Include="V20180423\Models\DeviceOperationLog.cs" />
+    <Compile Include="V20180423\Models\DevicePartition.cs" />
+    <Compile Include="V20180423\Models\DevicePositionInfo.cs" />
+    <Compile Include="V20180423\Models\DevicePriceInfo.cs" />
+    <Compile Include="V20180423\Models\DiskInfo.cs" />
+    <Compile Include="V20180423\Models\FailedTaskInfo.cs" />
+    <Compile Include="V20180423\Models\HostedDeviceOutBandInfo.cs" />
+    <Compile Include="V20180423\Models\ModifyCustomImageAttributeRequest.cs" />
+    <Compile Include="V20180423\Models\ModifyCustomImageAttributeResponse.cs" />
+    <Compile Include="V20180423\Models\ModifyDeviceAliasesRequest.cs" />
+    <Compile Include="V20180423\Models\ModifyDeviceAliasesResponse.cs" />
+    <Compile Include="V20180423\Models\ModifyDeviceAutoRenewFlagRequest.cs" />
+    <Compile Include="V20180423\Models\ModifyDeviceAutoRenewFlagResponse.cs" />
+    <Compile Include="V20180423\Models\ModifyLanIpRequest.cs" />
+    <Compile Include="V20180423\Models\ModifyLanIpResponse.cs" />
+    <Compile Include="V20180423\Models\ModifyPayModePre2PostRequest.cs" />
+    <Compile Include="V20180423\Models\ModifyPayModePre2PostResponse.cs" />
+    <Compile Include="V20180423\Models\ModifyPsaRegulationRequest.cs" />
+    <Compile Include="V20180423\Models\ModifyPsaRegulationResponse.cs" />
+    <Compile Include="V20180423\Models\ModifyUserCmdRequest.cs" />
+    <Compile Include="V20180423\Models\ModifyUserCmdResponse.cs" />
+    <Compile Include="V20180423\Models\OfflineDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\OfflineDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\OsInfo.cs" />
+    <Compile Include="V20180423\Models\PartitionInfo.cs" />
+    <Compile Include="V20180423\Models\PsaRegulation.cs" />
+    <Compile Include="V20180423\Models\RebootDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\RebootDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\RecoverDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\RecoverDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\RegionInfo.cs" />
+    <Compile Include="V20180423\Models\ReloadDeviceOsRequest.cs" />
+    <Compile Include="V20180423\Models\ReloadDeviceOsResponse.cs" />
+    <Compile Include="V20180423\Models\RepairTaskControlRequest.cs" />
+    <Compile Include="V20180423\Models\RepairTaskControlResponse.cs" />
+    <Compile Include="V20180423\Models\ResetDevicePasswordRequest.cs" />
+    <Compile Include="V20180423\Models\ResetDevicePasswordResponse.cs" />
+    <Compile Include="V20180423\Models\ReturnDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\ReturnDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\RunUserCmdRequest.cs" />
+    <Compile Include="V20180423\Models\RunUserCmdResponse.cs" />
+    <Compile Include="V20180423\Models\SetOutBandVpnAuthPasswordRequest.cs" />
+    <Compile Include="V20180423\Models\SetOutBandVpnAuthPasswordResponse.cs" />
+    <Compile Include="V20180423\Models\ShutdownDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\ShutdownDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\StartDevicesRequest.cs" />
+    <Compile Include="V20180423\Models\StartDevicesResponse.cs" />
+    <Compile Include="V20180423\Models\SubtaskStatus.cs" />
+    <Compile Include="V20180423\Models\SuccessTaskInfo.cs" />
+    <Compile Include="V20180423\Models\Tag.cs" />
+    <Compile Include="V20180423\Models\TaskInfo.cs" />
+    <Compile Include="V20180423\Models\TaskOperationLog.cs" />
+    <Compile Include="V20180423\Models\TaskType.cs" />
+    <Compile Include="V20180423\Models\UnbindPsaTagRequest.cs" />
+    <Compile Include="V20180423\Models\UnbindPsaTagResponse.cs" />
+    <Compile Include="V20180423\Models\UserCmd.cs" />
+    <Compile Include="V20180423\Models\UserCmdTask.cs" />
+    <Compile Include="V20180423\Models\UserCmdTaskInfo.cs" />
+    <Compile Include="V20180423\Models\ZoneInfo.cs" />
+  </ItemGroup>
+</Project>

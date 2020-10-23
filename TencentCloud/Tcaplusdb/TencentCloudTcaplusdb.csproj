@@ -1,0 +1,122 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{F49E6596-6F57-3C30-A1DD-72E843D8E7E5}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTcaplusdbSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190823\TcaplusdbClient.cs" />
+    <Compile Include="V20190823\Models\ClearTablesRequest.cs" />
+    <Compile Include="V20190823\Models\ClearTablesResponse.cs" />
+    <Compile Include="V20190823\Models\ClusterInfo.cs" />
+    <Compile Include="V20190823\Models\CompareIdlFilesRequest.cs" />
+    <Compile Include="V20190823\Models\CompareIdlFilesResponse.cs" />
+    <Compile Include="V20190823\Models\CreateBackupRequest.cs" />
+    <Compile Include="V20190823\Models\CreateBackupResponse.cs" />
+    <Compile Include="V20190823\Models\CreateClusterRequest.cs" />
+    <Compile Include="V20190823\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20190823\Models\CreateTableGroupRequest.cs" />
+    <Compile Include="V20190823\Models\CreateTableGroupResponse.cs" />
+    <Compile Include="V20190823\Models\CreateTablesRequest.cs" />
+    <Compile Include="V20190823\Models\CreateTablesResponse.cs" />
+    <Compile Include="V20190823\Models\DeleteClusterRequest.cs" />
+    <Compile Include="V20190823\Models\DeleteClusterResponse.cs" />
+    <Compile Include="V20190823\Models\DeleteIdlFilesRequest.cs" />
+    <Compile Include="V20190823\Models\DeleteIdlFilesResponse.cs" />
+    <Compile Include="V20190823\Models\DeleteTableGroupRequest.cs" />
+    <Compile Include="V20190823\Models\DeleteTableGroupResponse.cs" />
+    <Compile Include="V20190823\Models\DeleteTableIndexRequest.cs" />
+    <Compile Include="V20190823\Models\DeleteTableIndexResponse.cs" />
+    <Compile Include="V20190823\Models\DeleteTablesRequest.cs" />
+    <Compile Include="V20190823\Models\DeleteTablesResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeClusterTagsRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeClusterTagsResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeIdlFileInfosRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeIdlFileInfosResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeTableGroupTagsRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeTableGroupTagsResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeTableGroupsRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeTableGroupsResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeTableTagsRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeTableTagsResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeTablesInRecycleRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeTablesInRecycleResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeTablesRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeTablesResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeTasksRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeUinInWhitelistRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeUinInWhitelistResponse.cs" />
+    <Compile Include="V20190823\Models\ErrorInfo.cs" />
+    <Compile Include="V20190823\Models\FieldInfo.cs" />
+    <Compile Include="V20190823\Models\Filter.cs" />
+    <Compile Include="V20190823\Models\IdlFileInfo.cs" />
+    <Compile Include="V20190823\Models\IdlFileInfoWithoutContent.cs" />
+    <Compile Include="V20190823\Models\ModifyClusterNameRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyClusterNameResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyClusterPasswordRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyClusterPasswordResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyClusterTagsRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyClusterTagsResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyTableGroupNameRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyTableGroupNameResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyTableGroupTagsRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyTableGroupTagsResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyTableMemosRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyTableMemosResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyTableQuotasRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyTableQuotasResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyTableTagsRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyTableTagsResponse.cs" />
+    <Compile Include="V20190823\Models\ModifyTablesRequest.cs" />
+    <Compile Include="V20190823\Models\ModifyTablesResponse.cs" />
+    <Compile Include="V20190823\Models\ParsedTableInfoNew.cs" />
+    <Compile Include="V20190823\Models\RecoverRecycleTablesRequest.cs" />
+    <Compile Include="V20190823\Models\RecoverRecycleTablesResponse.cs" />
+    <Compile Include="V20190823\Models\RegionInfo.cs" />
+    <Compile Include="V20190823\Models\RollbackTablesRequest.cs" />
+    <Compile Include="V20190823\Models\RollbackTablesResponse.cs" />
+    <Compile Include="V20190823\Models\SelectedTableInfoNew.cs" />
+    <Compile Include="V20190823\Models\SelectedTableWithField.cs" />
+    <Compile Include="V20190823\Models\SetTableIndexRequest.cs" />
+    <Compile Include="V20190823\Models\SetTableIndexResponse.cs" />
+    <Compile Include="V20190823\Models\TableGroupInfo.cs" />
+    <Compile Include="V20190823\Models\TableInfoNew.cs" />
+    <Compile Include="V20190823\Models\TableResultNew.cs" />
+    <Compile Include="V20190823\Models\TableRollbackResultNew.cs" />
+    <Compile Include="V20190823\Models\TagInfoUnit.cs" />
+    <Compile Include="V20190823\Models\TagsInfoOfCluster.cs" />
+    <Compile Include="V20190823\Models\TagsInfoOfTable.cs" />
+    <Compile Include="V20190823\Models\TagsInfoOfTableGroup.cs" />
+    <Compile Include="V20190823\Models\TaskInfoNew.cs" />
+    <Compile Include="V20190823\Models\VerifyIdlFilesRequest.cs" />
+    <Compile Include="V20190823\Models\VerifyIdlFilesResponse.cs" />
+  </ItemGroup>
+</Project>

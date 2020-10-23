@@ -58,7 +58,7 @@ namespace TencentCloud.Ft.V20200304.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "GenderInfos.", this.GenderInfos);
             this.SetParamSimple(map, prefix + "Image", this.Image);

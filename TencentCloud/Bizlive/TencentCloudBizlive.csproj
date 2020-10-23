@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{DD69E867-C5DE-3CB7-8AD3-331CB35EB7B0}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudBizliveSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190313\BizliveClient.cs" />
+    <Compile Include="V20190313\Models\CreateSessionRequest.cs" />
+    <Compile Include="V20190313\Models\CreateSessionResponse.cs" />
+    <Compile Include="V20190313\Models\DayStreamPlayInfo.cs" />
+    <Compile Include="V20190313\Models\DescribeStreamPlayInfoListRequest.cs" />
+    <Compile Include="V20190313\Models\DescribeStreamPlayInfoListResponse.cs" />
+    <Compile Include="V20190313\Models\DescribeWorkersRequest.cs" />
+    <Compile Include="V20190313\Models\DescribeWorkersResponse.cs" />
+    <Compile Include="V20190313\Models\ForbidLiveStreamRequest.cs" />
+    <Compile Include="V20190313\Models\ForbidLiveStreamResponse.cs" />
+    <Compile Include="V20190313\Models\RegisterIMRequest.cs" />
+    <Compile Include="V20190313\Models\RegisterIMResponse.cs" />
+    <Compile Include="V20190313\Models\StopGameRequest.cs" />
+    <Compile Include="V20190313\Models\StopGameResponse.cs" />
+    <Compile Include="V20190313\Models\WorkerRegionInfo.cs" />
+  </ItemGroup>
+</Project>

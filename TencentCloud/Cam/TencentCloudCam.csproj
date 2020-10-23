@@ -1,0 +1,169 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCamSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190116\CamClient.cs" />
+    <Compile Include="V20190116\Models\AccessKey.cs" />
+    <Compile Include="V20190116\Models\AddUserRequest.cs" />
+    <Compile Include="V20190116\Models\AddUserResponse.cs" />
+    <Compile Include="V20190116\Models\AddUserToGroupRequest.cs" />
+    <Compile Include="V20190116\Models\AddUserToGroupResponse.cs" />
+    <Compile Include="V20190116\Models\AttachEntityOfPolicy.cs" />
+    <Compile Include="V20190116\Models\AttachGroupPolicyRequest.cs" />
+    <Compile Include="V20190116\Models\AttachGroupPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\AttachPolicyInfo.cs" />
+    <Compile Include="V20190116\Models\AttachRolePolicyRequest.cs" />
+    <Compile Include="V20190116\Models\AttachRolePolicyResponse.cs" />
+    <Compile Include="V20190116\Models\AttachUserPolicyRequest.cs" />
+    <Compile Include="V20190116\Models\AttachUserPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\AttachedPolicyOfRole.cs" />
+    <Compile Include="V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
+    <Compile Include="V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
+    <Compile Include="V20190116\Models\CreateGroupRequest.cs" />
+    <Compile Include="V20190116\Models\CreateGroupResponse.cs" />
+    <Compile Include="V20190116\Models\CreatePolicyRequest.cs" />
+    <Compile Include="V20190116\Models\CreatePolicyResponse.cs" />
+    <Compile Include="V20190116\Models\CreatePolicyVersionRequest.cs" />
+    <Compile Include="V20190116\Models\CreatePolicyVersionResponse.cs" />
+    <Compile Include="V20190116\Models\CreateRoleRequest.cs" />
+    <Compile Include="V20190116\Models\CreateRoleResponse.cs" />
+    <Compile Include="V20190116\Models\CreateSAMLProviderRequest.cs" />
+    <Compile Include="V20190116\Models\CreateSAMLProviderResponse.cs" />
+    <Compile Include="V20190116\Models\CreateServiceLinkedRoleRequest.cs" />
+    <Compile Include="V20190116\Models\CreateServiceLinkedRoleResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteGroupRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20190116\Models\DeletePolicyRequest.cs" />
+    <Compile Include="V20190116\Models\DeletePolicyResponse.cs" />
+    <Compile Include="V20190116\Models\DeletePolicyVersionRequest.cs" />
+    <Compile Include="V20190116\Models\DeletePolicyVersionResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteRolePermissionsBoundaryRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteRolePermissionsBoundaryResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteRoleRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteRoleResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteSAMLProviderRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteSAMLProviderResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteServiceLinkedRoleRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteServiceLinkedRoleResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteUserPermissionsBoundaryRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteUserPermissionsBoundaryResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteUserRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20190116\Models\DescribeRoleListRequest.cs" />
+    <Compile Include="V20190116\Models\DescribeRoleListResponse.cs" />
+    <Compile Include="V20190116\Models\DescribeSafeAuthFlagCollRequest.cs" />
+    <Compile Include="V20190116\Models\DescribeSafeAuthFlagCollResponse.cs" />
+    <Compile Include="V20190116\Models\DescribeSafeAuthFlagRequest.cs" />
+    <Compile Include="V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
+    <Compile Include="V20190116\Models\DetachGroupPolicyRequest.cs" />
+    <Compile Include="V20190116\Models\DetachGroupPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\DetachRolePolicyRequest.cs" />
+    <Compile Include="V20190116\Models\DetachRolePolicyResponse.cs" />
+    <Compile Include="V20190116\Models\DetachUserPolicyRequest.cs" />
+    <Compile Include="V20190116\Models\DetachUserPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\GetCustomMFATokenInfoRequest.cs" />
+    <Compile Include="V20190116\Models\GetCustomMFATokenInfoResponse.cs" />
+    <Compile Include="V20190116\Models\GetGroupRequest.cs" />
+    <Compile Include="V20190116\Models\GetGroupResponse.cs" />
+    <Compile Include="V20190116\Models\GetPolicyRequest.cs" />
+    <Compile Include="V20190116\Models\GetPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\GetPolicyVersionRequest.cs" />
+    <Compile Include="V20190116\Models\GetPolicyVersionResponse.cs" />
+    <Compile Include="V20190116\Models\GetRoleRequest.cs" />
+    <Compile Include="V20190116\Models\GetRoleResponse.cs" />
+    <Compile Include="V20190116\Models\GetSAMLProviderRequest.cs" />
+    <Compile Include="V20190116\Models\GetSAMLProviderResponse.cs" />
+    <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
+    <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
+    <Compile Include="V20190116\Models\GetUserRequest.cs" />
+    <Compile Include="V20190116\Models\GetUserResponse.cs" />
+    <Compile Include="V20190116\Models\GroupIdOfUidInfo.cs" />
+    <Compile Include="V20190116\Models\GroupInfo.cs" />
+    <Compile Include="V20190116\Models\GroupMemberInfo.cs" />
+    <Compile Include="V20190116\Models\ListAccessKeysRequest.cs" />
+    <Compile Include="V20190116\Models\ListAccessKeysResponse.cs" />
+    <Compile Include="V20190116\Models\ListAttachedGroupPoliciesRequest.cs" />
+    <Compile Include="V20190116\Models\ListAttachedGroupPoliciesResponse.cs" />
+    <Compile Include="V20190116\Models\ListAttachedRolePoliciesRequest.cs" />
+    <Compile Include="V20190116\Models\ListAttachedRolePoliciesResponse.cs" />
+    <Compile Include="V20190116\Models\ListAttachedUserPoliciesRequest.cs" />
+    <Compile Include="V20190116\Models\ListAttachedUserPoliciesResponse.cs" />
+    <Compile Include="V20190116\Models\ListCollaboratorsRequest.cs" />
+    <Compile Include="V20190116\Models\ListCollaboratorsResponse.cs" />
+    <Compile Include="V20190116\Models\ListEntitiesForPolicyRequest.cs" />
+    <Compile Include="V20190116\Models\ListEntitiesForPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\ListGroupsForUserRequest.cs" />
+    <Compile Include="V20190116\Models\ListGroupsForUserResponse.cs" />
+    <Compile Include="V20190116\Models\ListGroupsRequest.cs" />
+    <Compile Include="V20190116\Models\ListGroupsResponse.cs" />
+    <Compile Include="V20190116\Models\ListPoliciesRequest.cs" />
+    <Compile Include="V20190116\Models\ListPoliciesResponse.cs" />
+    <Compile Include="V20190116\Models\ListPolicyVersionsRequest.cs" />
+    <Compile Include="V20190116\Models\ListPolicyVersionsResponse.cs" />
+    <Compile Include="V20190116\Models\ListSAMLProvidersRequest.cs" />
+    <Compile Include="V20190116\Models\ListSAMLProvidersResponse.cs" />
+    <Compile Include="V20190116\Models\ListUsersForGroupRequest.cs" />
+    <Compile Include="V20190116\Models\ListUsersForGroupResponse.cs" />
+    <Compile Include="V20190116\Models\ListUsersRequest.cs" />
+    <Compile Include="V20190116\Models\ListUsersResponse.cs" />
+    <Compile Include="V20190116\Models\LoginActionFlag.cs" />
+    <Compile Include="V20190116\Models\LoginActionMfaFlag.cs" />
+    <Compile Include="V20190116\Models\OffsiteFlag.cs" />
+    <Compile Include="V20190116\Models\PolicyVersionDetail.cs" />
+    <Compile Include="V20190116\Models\PolicyVersionItem.cs" />
+    <Compile Include="V20190116\Models\PutRolePermissionsBoundaryRequest.cs" />
+    <Compile Include="V20190116\Models\PutRolePermissionsBoundaryResponse.cs" />
+    <Compile Include="V20190116\Models\PutUserPermissionsBoundaryRequest.cs" />
+    <Compile Include="V20190116\Models\PutUserPermissionsBoundaryResponse.cs" />
+    <Compile Include="V20190116\Models\RemoveUserFromGroupRequest.cs" />
+    <Compile Include="V20190116\Models\RemoveUserFromGroupResponse.cs" />
+    <Compile Include="V20190116\Models\RoleInfo.cs" />
+    <Compile Include="V20190116\Models\SAMLProviderInfo.cs" />
+    <Compile Include="V20190116\Models\SetDefaultPolicyVersionRequest.cs" />
+    <Compile Include="V20190116\Models\SetDefaultPolicyVersionResponse.cs" />
+    <Compile Include="V20190116\Models\SetMfaFlagRequest.cs" />
+    <Compile Include="V20190116\Models\SetMfaFlagResponse.cs" />
+    <Compile Include="V20190116\Models\StrategyInfo.cs" />
+    <Compile Include="V20190116\Models\SubAccountInfo.cs" />
+    <Compile Include="V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateGroupRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateGroupResponse.cs" />
+    <Compile Include="V20190116\Models\UpdatePolicyRequest.cs" />
+    <Compile Include="V20190116\Models\UpdatePolicyResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateRoleConsoleLoginRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateRoleConsoleLoginResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateRoleDescriptionRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateRoleDescriptionResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateSAMLProviderRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateSAMLProviderResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateUserRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateUserResponse.cs" />
+  </ItemGroup>
+</Project>

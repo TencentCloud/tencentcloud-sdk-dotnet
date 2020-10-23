@@ -118,7 +118,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
             this.SetParamSimple(map, prefix + "MaxSystemDiskSize", this.MaxSystemDiskSize);

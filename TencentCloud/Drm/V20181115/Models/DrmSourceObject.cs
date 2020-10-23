@@ -40,7 +40,7 @@ namespace TencentCloud.Drm.V20181115.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BucketName", this.BucketName);
             this.SetParamSimple(map, prefix + "ObjectName", this.ObjectName);

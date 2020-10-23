@@ -1,0 +1,156 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{DF6825D5-FAEE-38FB-A622-37599AD65B25}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudAsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180419\AsClient.cs" />
+    <Compile Include="V20180419\Models\Activity.cs" />
+    <Compile Include="V20180419\Models\ActivtyRelatedInstance.cs" />
+    <Compile Include="V20180419\Models\AttachInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\AttachInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\AutoScalingGroup.cs" />
+    <Compile Include="V20180419\Models\AutoScalingGroupAbstract.cs" />
+    <Compile Include="V20180419\Models\AutoScalingNotification.cs" />
+    <Compile Include="V20180419\Models\CompleteLifecycleActionRequest.cs" />
+    <Compile Include="V20180419\Models\CompleteLifecycleActionResponse.cs" />
+    <Compile Include="V20180419\Models\CreateAutoScalingGroupFromInstanceRequest.cs" />
+    <Compile Include="V20180419\Models\CreateAutoScalingGroupFromInstanceResponse.cs" />
+    <Compile Include="V20180419\Models\CreateAutoScalingGroupRequest.cs" />
+    <Compile Include="V20180419\Models\CreateAutoScalingGroupResponse.cs" />
+    <Compile Include="V20180419\Models\CreateLaunchConfigurationRequest.cs" />
+    <Compile Include="V20180419\Models\CreateLaunchConfigurationResponse.cs" />
+    <Compile Include="V20180419\Models\CreateLifecycleHookRequest.cs" />
+    <Compile Include="V20180419\Models\CreateLifecycleHookResponse.cs" />
+    <Compile Include="V20180419\Models\CreateNotificationConfigurationRequest.cs" />
+    <Compile Include="V20180419\Models\CreateNotificationConfigurationResponse.cs" />
+    <Compile Include="V20180419\Models\CreatePaiInstanceRequest.cs" />
+    <Compile Include="V20180419\Models\CreatePaiInstanceResponse.cs" />
+    <Compile Include="V20180419\Models\CreateScalingPolicyRequest.cs" />
+    <Compile Include="V20180419\Models\CreateScalingPolicyResponse.cs" />
+    <Compile Include="V20180419\Models\CreateScheduledActionRequest.cs" />
+    <Compile Include="V20180419\Models\CreateScheduledActionResponse.cs" />
+    <Compile Include="V20180419\Models\DataDisk.cs" />
+    <Compile Include="V20180419\Models\DeleteAutoScalingGroupRequest.cs" />
+    <Compile Include="V20180419\Models\DeleteAutoScalingGroupResponse.cs" />
+    <Compile Include="V20180419\Models\DeleteLaunchConfigurationRequest.cs" />
+    <Compile Include="V20180419\Models\DeleteLaunchConfigurationResponse.cs" />
+    <Compile Include="V20180419\Models\DeleteLifecycleHookRequest.cs" />
+    <Compile Include="V20180419\Models\DeleteLifecycleHookResponse.cs" />
+    <Compile Include="V20180419\Models\DeleteNotificationConfigurationRequest.cs" />
+    <Compile Include="V20180419\Models\DeleteNotificationConfigurationResponse.cs" />
+    <Compile Include="V20180419\Models\DeleteScalingPolicyRequest.cs" />
+    <Compile Include="V20180419\Models\DeleteScalingPolicyResponse.cs" />
+    <Compile Include="V20180419\Models\DeleteScheduledActionRequest.cs" />
+    <Compile Include="V20180419\Models\DeleteScheduledActionResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeAccountLimitsRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeAccountLimitsResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingActivitiesRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingActivitiesResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingGroupLastActivitiesRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingGroupLastActivitiesResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingGroupsRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingGroupsResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeAutoScalingInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeLaunchConfigurationsRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeLaunchConfigurationsResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeLifecycleHooksRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeLifecycleHooksResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeNotificationConfigurationsRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeNotificationConfigurationsResponse.cs" />
+    <Compile Include="V20180419\Models\DescribePaiInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\DescribePaiInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeScalingPoliciesRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeScalingPoliciesResponse.cs" />
+    <Compile Include="V20180419\Models\DescribeScheduledActionsRequest.cs" />
+    <Compile Include="V20180419\Models\DescribeScheduledActionsResponse.cs" />
+    <Compile Include="V20180419\Models\DetachInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\DetachInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\DisableAutoScalingGroupRequest.cs" />
+    <Compile Include="V20180419\Models\DisableAutoScalingGroupResponse.cs" />
+    <Compile Include="V20180419\Models\EnableAutoScalingGroupRequest.cs" />
+    <Compile Include="V20180419\Models\EnableAutoScalingGroupResponse.cs" />
+    <Compile Include="V20180419\Models\EnhancedService.cs" />
+    <Compile Include="V20180419\Models\ExecuteScalingPolicyRequest.cs" />
+    <Compile Include="V20180419\Models\ExecuteScalingPolicyResponse.cs" />
+    <Compile Include="V20180419\Models\Filter.cs" />
+    <Compile Include="V20180419\Models\ForwardLoadBalancer.cs" />
+    <Compile Include="V20180419\Models\HostNameSettings.cs" />
+    <Compile Include="V20180419\Models\Instance.cs" />
+    <Compile Include="V20180419\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20180419\Models\InstanceMarketOptionsRequest.cs" />
+    <Compile Include="V20180419\Models\InstanceNameSettings.cs" />
+    <Compile Include="V20180419\Models\InstanceTag.cs" />
+    <Compile Include="V20180419\Models\InternetAccessible.cs" />
+    <Compile Include="V20180419\Models\LaunchConfiguration.cs" />
+    <Compile Include="V20180419\Models\LifecycleActionResultInfo.cs" />
+    <Compile Include="V20180419\Models\LifecycleHook.cs" />
+    <Compile Include="V20180419\Models\LimitedLoginSettings.cs" />
+    <Compile Include="V20180419\Models\LoginSettings.cs" />
+    <Compile Include="V20180419\Models\MetricAlarm.cs" />
+    <Compile Include="V20180419\Models\ModifyAutoScalingGroupRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyAutoScalingGroupResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyDesiredCapacityRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyDesiredCapacityResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyLaunchConfigurationAttributesRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyLaunchConfigurationAttributesResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyLoadBalancersRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyLoadBalancersResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyNotificationConfigurationRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyNotificationConfigurationResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyScalingPolicyRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyScalingPolicyResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyScheduledActionRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyScheduledActionResponse.cs" />
+    <Compile Include="V20180419\Models\NotificationTarget.cs" />
+    <Compile Include="V20180419\Models\PaiInstance.cs" />
+    <Compile Include="V20180419\Models\PreviewPaiDomainNameRequest.cs" />
+    <Compile Include="V20180419\Models\PreviewPaiDomainNameResponse.cs" />
+    <Compile Include="V20180419\Models\RemoveInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\RemoveInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\RunMonitorServiceEnabled.cs" />
+    <Compile Include="V20180419\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180419\Models\ScalingPolicy.cs" />
+    <Compile Include="V20180419\Models\ScheduledAction.cs" />
+    <Compile Include="V20180419\Models\ServiceSettings.cs" />
+    <Compile Include="V20180419\Models\SetInstancesProtectionRequest.cs" />
+    <Compile Include="V20180419\Models\SetInstancesProtectionResponse.cs" />
+    <Compile Include="V20180419\Models\SpotMarketOptions.cs" />
+    <Compile Include="V20180419\Models\StartAutoScalingInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\StartAutoScalingInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\StopAutoScalingInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\StopAutoScalingInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\SystemDisk.cs" />
+    <Compile Include="V20180419\Models\Tag.cs" />
+    <Compile Include="V20180419\Models\TargetAttribute.cs" />
+    <Compile Include="V20180419\Models\UpgradeLaunchConfigurationRequest.cs" />
+    <Compile Include="V20180419\Models\UpgradeLaunchConfigurationResponse.cs" />
+    <Compile Include="V20180419\Models\UpgradeLifecycleHookRequest.cs" />
+    <Compile Include="V20180419\Models\UpgradeLifecycleHookResponse.cs" />
+  </ItemGroup>
+</Project>

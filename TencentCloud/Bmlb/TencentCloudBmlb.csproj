@@ -1,0 +1,172 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{1B13A766-7680-3178-A229-9F16263BC16D}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudBmlbSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180625\BmlbClient.cs" />
+    <Compile Include="V20180625\Models\BindL4Backend.cs" />
+    <Compile Include="V20180625\Models\BindL4BackendsRequest.cs" />
+    <Compile Include="V20180625\Models\BindL4BackendsResponse.cs" />
+    <Compile Include="V20180625\Models\BindL7Backend.cs" />
+    <Compile Include="V20180625\Models\BindL7BackendsRequest.cs" />
+    <Compile Include="V20180625\Models\BindL7BackendsResponse.cs" />
+    <Compile Include="V20180625\Models\BindTrafficMirrorListenersRequest.cs" />
+    <Compile Include="V20180625\Models\BindTrafficMirrorListenersResponse.cs" />
+    <Compile Include="V20180625\Models\BindTrafficMirrorReceiver.cs" />
+    <Compile Include="V20180625\Models\BindTrafficMirrorReceiversRequest.cs" />
+    <Compile Include="V20180625\Models\BindTrafficMirrorReceiversResponse.cs" />
+    <Compile Include="V20180625\Models\CertDetailLoadBalancer.cs" />
+    <Compile Include="V20180625\Models\CreateL4Listener.cs" />
+    <Compile Include="V20180625\Models\CreateL4ListenersRequest.cs" />
+    <Compile Include="V20180625\Models\CreateL4ListenersResponse.cs" />
+    <Compile Include="V20180625\Models\CreateL7Listener.cs" />
+    <Compile Include="V20180625\Models\CreateL7ListenersRequest.cs" />
+    <Compile Include="V20180625\Models\CreateL7ListenersResponse.cs" />
+    <Compile Include="V20180625\Models\CreateL7Rule.cs" />
+    <Compile Include="V20180625\Models\CreateL7RulesRequest.cs" />
+    <Compile Include="V20180625\Models\CreateL7RulesResponse.cs" />
+    <Compile Include="V20180625\Models\CreateLoadBalancerBzConf.cs" />
+    <Compile Include="V20180625\Models\CreateLoadBalancersRequest.cs" />
+    <Compile Include="V20180625\Models\CreateLoadBalancersResponse.cs" />
+    <Compile Include="V20180625\Models\CreateTrafficMirrorRequest.cs" />
+    <Compile Include="V20180625\Models\CreateTrafficMirrorResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteL7DomainsRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteL7DomainsResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteL7RulesRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteL7RulesResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteListenersRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteListenersResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteLoadBalancerRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteLoadBalancerResponse.cs" />
+    <Compile Include="V20180625\Models\DeleteTrafficMirrorRequest.cs" />
+    <Compile Include="V20180625\Models\DeleteTrafficMirrorResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeCertDetailRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeCertDetailResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeDevicesBindInfoRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeDevicesBindInfoResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL4Backend.cs" />
+    <Compile Include="V20180625\Models\DescribeL4BackendsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL4BackendsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL4ListenerInfoRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL4ListenerInfoResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL4ListenersRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL4ListenersResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL7BackendsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL7BackendsResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL7ListenerInfoRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL7ListenerInfoResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL7ListenersExRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL7ListenersExResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL7ListenersRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL7ListenersResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeL7RulesRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeL7RulesResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeLoadBalancerPortInfoRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeLoadBalancerPortInfoResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeLoadBalancerTaskResultRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeLoadBalancerTaskResultResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeLoadBalancersRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeLoadBalancersResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorListenersRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorListenersResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorReceiver.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorReceiverHealthStatusRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorReceiverHealthStatusResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorReceiversRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorReceiversResponse.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorsRequest.cs" />
+    <Compile Include="V20180625\Models\DescribeTrafficMirrorsResponse.cs" />
+    <Compile Include="V20180625\Models\DevicesBindInfoBackend.cs" />
+    <Compile Include="V20180625\Models\DevicesBindInfoL4Listener.cs" />
+    <Compile Include="V20180625\Models\DevicesBindInfoL7Listener.cs" />
+    <Compile Include="V20180625\Models\DevicesBindInfoLoadBalancer.cs" />
+    <Compile Include="V20180625\Models\DevicesBindInfoLocation.cs" />
+    <Compile Include="V20180625\Models\DevicesBindInfoRule.cs" />
+    <Compile Include="V20180625\Models\Filter.cs" />
+    <Compile Include="V20180625\Models\L4Backend.cs" />
+    <Compile Include="V20180625\Models\L4Listener.cs" />
+    <Compile Include="V20180625\Models\L4ListenerInfo.cs" />
+    <Compile Include="V20180625\Models\L7Backend.cs" />
+    <Compile Include="V20180625\Models\L7ExListener.cs" />
+    <Compile Include="V20180625\Models\L7Listener.cs" />
+    <Compile Include="V20180625\Models\L7ListenerInfo.cs" />
+    <Compile Include="V20180625\Models\L7ListenerInfoBackend.cs" />
+    <Compile Include="V20180625\Models\L7ListenerInfoLocation.cs" />
+    <Compile Include="V20180625\Models\L7ListenerInfoRule.cs" />
+    <Compile Include="V20180625\Models\L7Rule.cs" />
+    <Compile Include="V20180625\Models\L7RulesLocation.cs" />
+    <Compile Include="V20180625\Models\LoadBalancer.cs" />
+    <Compile Include="V20180625\Models\LoadBalancerPortInfoListener.cs" />
+    <Compile Include="V20180625\Models\ModifyL4BackendPortRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL4BackendPortResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyL4BackendProbePortRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL4BackendProbePortResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyL4BackendWeightRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL4BackendWeightResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyL4ListenerRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL4ListenerResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyL7BackendPortRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL7BackendPortResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyL7BackendWeightRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL7BackendWeightResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyL7ListenerRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL7ListenerResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyL7LocationRule.cs" />
+    <Compile Include="V20180625\Models\ModifyL7LocationsRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyL7LocationsResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyLoadBalancerChargeModeListener.cs" />
+    <Compile Include="V20180625\Models\ModifyLoadBalancerChargeModeRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyLoadBalancerChargeModeResponse.cs" />
+    <Compile Include="V20180625\Models\ModifyLoadBalancerRequest.cs" />
+    <Compile Include="V20180625\Models\ModifyLoadBalancerResponse.cs" />
+    <Compile Include="V20180625\Models\ReplaceCertRequest.cs" />
+    <Compile Include="V20180625\Models\ReplaceCertResponse.cs" />
+    <Compile Include="V20180625\Models\SetTrafficMirrorAliasRequest.cs" />
+    <Compile Include="V20180625\Models\SetTrafficMirrorAliasResponse.cs" />
+    <Compile Include="V20180625\Models\SetTrafficMirrorHealthSwitchRequest.cs" />
+    <Compile Include="V20180625\Models\SetTrafficMirrorHealthSwitchResponse.cs" />
+    <Compile Include="V20180625\Models\TrafficMirror.cs" />
+    <Compile Include="V20180625\Models\TrafficMirrorListener.cs" />
+    <Compile Include="V20180625\Models\TrafficMirrorPortStatus.cs" />
+    <Compile Include="V20180625\Models\TrafficMirrorReceiver.cs" />
+    <Compile Include="V20180625\Models\TrafficMirrorReciversStatus.cs" />
+    <Compile Include="V20180625\Models\UnbindL4Backend.cs" />
+    <Compile Include="V20180625\Models\UnbindL4BackendsRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindL4BackendsResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindL7Backend.cs" />
+    <Compile Include="V20180625\Models\UnbindL7BackendsRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindL7BackendsResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindTrafficMirrorListenersRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindTrafficMirrorListenersResponse.cs" />
+    <Compile Include="V20180625\Models\UnbindTrafficMirrorReceiver.cs" />
+    <Compile Include="V20180625\Models\UnbindTrafficMirrorReceiversRequest.cs" />
+    <Compile Include="V20180625\Models\UnbindTrafficMirrorReceiversResponse.cs" />
+    <Compile Include="V20180625\Models\UploadCertRequest.cs" />
+    <Compile Include="V20180625\Models\UploadCertResponse.cs" />
+  </ItemGroup>
+</Project>

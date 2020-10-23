@@ -88,7 +88,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DetectInfo", this.DetectInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

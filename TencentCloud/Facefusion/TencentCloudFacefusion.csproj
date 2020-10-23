@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{A808BE71-F80B-3BBB-97FD-E80F636B04B2}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudFacefusionSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20181201\FacefusionClient.cs" />
+    <Compile Include="V20181201\Models\DescribeMaterialListRequest.cs" />
+    <Compile Include="V20181201\Models\DescribeMaterialListResponse.cs" />
+    <Compile Include="V20181201\Models\FaceFusionLiteRequest.cs" />
+    <Compile Include="V20181201\Models\FaceFusionLiteResponse.cs" />
+    <Compile Include="V20181201\Models\FaceFusionRequest.cs" />
+    <Compile Include="V20181201\Models\FaceFusionResponse.cs" />
+    <Compile Include="V20181201\Models\FaceInfo.cs" />
+    <Compile Include="V20181201\Models\FaceRect.cs" />
+    <Compile Include="V20181201\Models\FuseFaceRequest.cs" />
+    <Compile Include="V20181201\Models\FuseFaceResponse.cs" />
+    <Compile Include="V20181201\Models\FuseFaceReviewDetail.cs" />
+    <Compile Include="V20181201\Models\FuseFaceReviewResult.cs" />
+    <Compile Include="V20181201\Models\MaterialFaceList.cs" />
+    <Compile Include="V20181201\Models\MergeInfo.cs" />
+    <Compile Include="V20181201\Models\PublicMaterialInfos.cs" />
+  </ItemGroup>
+</Project>

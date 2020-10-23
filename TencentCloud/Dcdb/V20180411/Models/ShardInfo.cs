@@ -88,7 +88,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ShardInstanceId", this.ShardInstanceId);
             this.SetParamSimple(map, prefix + "ShardSerialId", this.ShardSerialId);

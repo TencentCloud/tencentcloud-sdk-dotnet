@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{5451259A-631D-33EF-A1C6-9932BD8DA8A7}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSmsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190711\SmsClient.cs" />
+    <Compile Include="V20190711\Models\AddSignStatus.cs" />
+    <Compile Include="V20190711\Models\AddSmsSignRequest.cs" />
+    <Compile Include="V20190711\Models\AddSmsSignResponse.cs" />
+    <Compile Include="V20190711\Models\AddSmsTemplateRequest.cs" />
+    <Compile Include="V20190711\Models\AddSmsTemplateResponse.cs" />
+    <Compile Include="V20190711\Models\AddTemplateStatus.cs" />
+    <Compile Include="V20190711\Models\CallbackStatusStatistics.cs" />
+    <Compile Include="V20190711\Models\CallbackStatusStatisticsRequest.cs" />
+    <Compile Include="V20190711\Models\CallbackStatusStatisticsResponse.cs" />
+    <Compile Include="V20190711\Models\DeleteSignStatus.cs" />
+    <Compile Include="V20190711\Models\DeleteSmsSignRequest.cs" />
+    <Compile Include="V20190711\Models\DeleteSmsSignResponse.cs" />
+    <Compile Include="V20190711\Models\DeleteSmsTemplateRequest.cs" />
+    <Compile Include="V20190711\Models\DeleteSmsTemplateResponse.cs" />
+    <Compile Include="V20190711\Models\DeleteTemplateStatus.cs" />
+    <Compile Include="V20190711\Models\DescribeSignListStatus.cs" />
+    <Compile Include="V20190711\Models\DescribeSmsSignListRequest.cs" />
+    <Compile Include="V20190711\Models\DescribeSmsSignListResponse.cs" />
+    <Compile Include="V20190711\Models\DescribeSmsTemplateListRequest.cs" />
+    <Compile Include="V20190711\Models\DescribeSmsTemplateListResponse.cs" />
+    <Compile Include="V20190711\Models\DescribeTemplateListStatus.cs" />
+    <Compile Include="V20190711\Models\ModifySignStatus.cs" />
+    <Compile Include="V20190711\Models\ModifySmsSignRequest.cs" />
+    <Compile Include="V20190711\Models\ModifySmsSignResponse.cs" />
+    <Compile Include="V20190711\Models\ModifySmsTemplateRequest.cs" />
+    <Compile Include="V20190711\Models\ModifySmsTemplateResponse.cs" />
+    <Compile Include="V20190711\Models\ModifyTemplateStatus.cs" />
+    <Compile Include="V20190711\Models\PullSmsReplyStatus.cs" />
+    <Compile Include="V20190711\Models\PullSmsReplyStatusByPhoneNumberRequest.cs" />
+    <Compile Include="V20190711\Models\PullSmsReplyStatusByPhoneNumberResponse.cs" />
+    <Compile Include="V20190711\Models\PullSmsReplyStatusRequest.cs" />
+    <Compile Include="V20190711\Models\PullSmsReplyStatusResponse.cs" />
+    <Compile Include="V20190711\Models\PullSmsSendStatus.cs" />
+    <Compile Include="V20190711\Models\PullSmsSendStatusByPhoneNumberRequest.cs" />
+    <Compile Include="V20190711\Models\PullSmsSendStatusByPhoneNumberResponse.cs" />
+    <Compile Include="V20190711\Models\PullSmsSendStatusRequest.cs" />
+    <Compile Include="V20190711\Models\PullSmsSendStatusResponse.cs" />
+    <Compile Include="V20190711\Models\SendSmsRequest.cs" />
+    <Compile Include="V20190711\Models\SendSmsResponse.cs" />
+    <Compile Include="V20190711\Models\SendStatus.cs" />
+    <Compile Include="V20190711\Models\SendStatusStatistics.cs" />
+    <Compile Include="V20190711\Models\SendStatusStatisticsRequest.cs" />
+    <Compile Include="V20190711\Models\SendStatusStatisticsResponse.cs" />
+    <Compile Include="V20190711\Models\SmsPackagesStatistics.cs" />
+    <Compile Include="V20190711\Models\SmsPackagesStatisticsRequest.cs" />
+    <Compile Include="V20190711\Models\SmsPackagesStatisticsResponse.cs" />
+  </ItemGroup>
+</Project>

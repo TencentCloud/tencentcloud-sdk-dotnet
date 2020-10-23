@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.164</VersionPrefix>
+    <VersionPrefix>3.0.165</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -26,13 +26,11 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="Pathoschild.Http.FluentClient" Version="3.2.0" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="Pathoschild.Http.FluentClient" Version="3.2.0" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
@@ -1848,6 +1846,7 @@
     <Compile Include="Cdn\V20180606\Models\CdnIp.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientCert.cs" />
+    <Compile Include="Cdn\V20180606\Models\ClientInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\ClsLogObject.cs" />
     <Compile Include="Cdn\V20180606\Models\ClsSearchLogs.cs" />
     <Compile Include="Cdn\V20180606\Models\Compatibility.cs" />
@@ -1856,6 +1855,8 @@
     <Compile Include="Cdn\V20180606\Models\CookieKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateDiagnoseUrlRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateDiagnoseUrlResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateVerifyRecordRequest.cs" />
@@ -1876,6 +1877,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribeCdnIpResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeDiagnoseReportRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeDiagnoseReportResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDistrictIspDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDistrictIspDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsConfigRequest.cs" />
@@ -1911,6 +1914,10 @@
     <Compile Include="Cdn\V20180606\Models\DescribeUrlViolationsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeUrlViolationsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DetailDomain.cs" />
+    <Compile Include="Cdn\V20180606\Models\DiagnoseData.cs" />
+    <Compile Include="Cdn\V20180606\Models\DiagnoseInfo.cs" />
+    <Compile Include="Cdn\V20180606\Models\DiagnoseList.cs" />
+    <Compile Include="Cdn\V20180606\Models\DiagnoseUnit.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableCachesRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableCachesResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DisableClsLogTopicRequest.cs" />
@@ -1947,6 +1954,8 @@
     <Compile Include="Cdn\V20180606\Models\ListClsLogTopicsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListDiagnoseReportRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListDiagnoseReportResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
@@ -8004,8 +8013,12 @@
     <Compile Include="Ssl\V20191205\Models\CancelCertificateOrderResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\CertificateExtra.cs" />
     <Compile Include="Ssl\V20191205\Models\Certificates.cs" />
+    <Compile Include="Ssl\V20191205\Models\CheckCertificateChainRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\CheckCertificateChainResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\CommitCertificateInformationRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\CommitCertificateInformationResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\CompleteCertificateRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\CompleteCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateDetailRequest.cs" />

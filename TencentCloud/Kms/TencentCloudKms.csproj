@@ -1,0 +1,134 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{89853174-2531-351C-A46F-51E64C5ADD8C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudKmsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190118\KmsClient.cs" />
+    <Compile Include="V20190118\Models\AlgorithmInfo.cs" />
+    <Compile Include="V20190118\Models\ArchiveKeyRequest.cs" />
+    <Compile Include="V20190118\Models\ArchiveKeyResponse.cs" />
+    <Compile Include="V20190118\Models\AsymmetricRsaDecryptRequest.cs" />
+    <Compile Include="V20190118\Models\AsymmetricRsaDecryptResponse.cs" />
+    <Compile Include="V20190118\Models\AsymmetricSm2DecryptRequest.cs" />
+    <Compile Include="V20190118\Models\AsymmetricSm2DecryptResponse.cs" />
+    <Compile Include="V20190118\Models\BindCloudResourceRequest.cs" />
+    <Compile Include="V20190118\Models\BindCloudResourceResponse.cs" />
+    <Compile Include="V20190118\Models\CancelKeyArchiveRequest.cs" />
+    <Compile Include="V20190118\Models\CancelKeyArchiveResponse.cs" />
+    <Compile Include="V20190118\Models\CancelKeyDeletionRequest.cs" />
+    <Compile Include="V20190118\Models\CancelKeyDeletionResponse.cs" />
+    <Compile Include="V20190118\Models\CreateKeyRequest.cs" />
+    <Compile Include="V20190118\Models\CreateKeyResponse.cs" />
+    <Compile Include="V20190118\Models\CreateWhiteBoxKeyRequest.cs" />
+    <Compile Include="V20190118\Models\CreateWhiteBoxKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DecryptRequest.cs" />
+    <Compile Include="V20190118\Models\DecryptResponse.cs" />
+    <Compile Include="V20190118\Models\DeleteImportedKeyMaterialRequest.cs" />
+    <Compile Include="V20190118\Models\DeleteImportedKeyMaterialResponse.cs" />
+    <Compile Include="V20190118\Models\DeleteWhiteBoxKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DeleteWhiteBoxKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeKeysRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeKeysResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxDecryptKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxDecryptKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxDeviceFingerprintsRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxDeviceFingerprintsResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxKeyDetailsRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxKeyDetailsResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxServiceStatusRequest.cs" />
+    <Compile Include="V20190118\Models\DescribeWhiteBoxServiceStatusResponse.cs" />
+    <Compile Include="V20190118\Models\DeviceFingerprint.cs" />
+    <Compile Include="V20190118\Models\DisableKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DisableKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DisableKeyRotationRequest.cs" />
+    <Compile Include="V20190118\Models\DisableKeyRotationResponse.cs" />
+    <Compile Include="V20190118\Models\DisableKeysRequest.cs" />
+    <Compile Include="V20190118\Models\DisableKeysResponse.cs" />
+    <Compile Include="V20190118\Models\DisableWhiteBoxKeyRequest.cs" />
+    <Compile Include="V20190118\Models\DisableWhiteBoxKeyResponse.cs" />
+    <Compile Include="V20190118\Models\DisableWhiteBoxKeysRequest.cs" />
+    <Compile Include="V20190118\Models\DisableWhiteBoxKeysResponse.cs" />
+    <Compile Include="V20190118\Models\EnableKeyRequest.cs" />
+    <Compile Include="V20190118\Models\EnableKeyResponse.cs" />
+    <Compile Include="V20190118\Models\EnableKeyRotationRequest.cs" />
+    <Compile Include="V20190118\Models\EnableKeyRotationResponse.cs" />
+    <Compile Include="V20190118\Models\EnableKeysRequest.cs" />
+    <Compile Include="V20190118\Models\EnableKeysResponse.cs" />
+    <Compile Include="V20190118\Models\EnableWhiteBoxKeyRequest.cs" />
+    <Compile Include="V20190118\Models\EnableWhiteBoxKeyResponse.cs" />
+    <Compile Include="V20190118\Models\EnableWhiteBoxKeysRequest.cs" />
+    <Compile Include="V20190118\Models\EnableWhiteBoxKeysResponse.cs" />
+    <Compile Include="V20190118\Models\EncryptByWhiteBoxRequest.cs" />
+    <Compile Include="V20190118\Models\EncryptByWhiteBoxResponse.cs" />
+    <Compile Include="V20190118\Models\EncryptRequest.cs" />
+    <Compile Include="V20190118\Models\EncryptResponse.cs" />
+    <Compile Include="V20190118\Models\GenerateDataKeyRequest.cs" />
+    <Compile Include="V20190118\Models\GenerateDataKeyResponse.cs" />
+    <Compile Include="V20190118\Models\GenerateRandomRequest.cs" />
+    <Compile Include="V20190118\Models\GenerateRandomResponse.cs" />
+    <Compile Include="V20190118\Models\GetKeyRotationStatusRequest.cs" />
+    <Compile Include="V20190118\Models\GetKeyRotationStatusResponse.cs" />
+    <Compile Include="V20190118\Models\GetParametersForImportRequest.cs" />
+    <Compile Include="V20190118\Models\GetParametersForImportResponse.cs" />
+    <Compile Include="V20190118\Models\GetPublicKeyRequest.cs" />
+    <Compile Include="V20190118\Models\GetPublicKeyResponse.cs" />
+    <Compile Include="V20190118\Models\GetRegionsRequest.cs" />
+    <Compile Include="V20190118\Models\GetRegionsResponse.cs" />
+    <Compile Include="V20190118\Models\GetServiceStatusRequest.cs" />
+    <Compile Include="V20190118\Models\GetServiceStatusResponse.cs" />
+    <Compile Include="V20190118\Models\ImportKeyMaterialRequest.cs" />
+    <Compile Include="V20190118\Models\ImportKeyMaterialResponse.cs" />
+    <Compile Include="V20190118\Models\Key.cs" />
+    <Compile Include="V20190118\Models\KeyMetadata.cs" />
+    <Compile Include="V20190118\Models\ListAlgorithmsRequest.cs" />
+    <Compile Include="V20190118\Models\ListAlgorithmsResponse.cs" />
+    <Compile Include="V20190118\Models\ListKeyDetailRequest.cs" />
+    <Compile Include="V20190118\Models\ListKeyDetailResponse.cs" />
+    <Compile Include="V20190118\Models\ListKeysRequest.cs" />
+    <Compile Include="V20190118\Models\ListKeysResponse.cs" />
+    <Compile Include="V20190118\Models\OverwriteWhiteBoxDeviceFingerprintsRequest.cs" />
+    <Compile Include="V20190118\Models\OverwriteWhiteBoxDeviceFingerprintsResponse.cs" />
+    <Compile Include="V20190118\Models\ReEncryptRequest.cs" />
+    <Compile Include="V20190118\Models\ReEncryptResponse.cs" />
+    <Compile Include="V20190118\Models\ScheduleKeyDeletionRequest.cs" />
+    <Compile Include="V20190118\Models\ScheduleKeyDeletionResponse.cs" />
+    <Compile Include="V20190118\Models\Tag.cs" />
+    <Compile Include="V20190118\Models\TagFilter.cs" />
+    <Compile Include="V20190118\Models\UnbindCloudResourceRequest.cs" />
+    <Compile Include="V20190118\Models\UnbindCloudResourceResponse.cs" />
+    <Compile Include="V20190118\Models\UpdateAliasRequest.cs" />
+    <Compile Include="V20190118\Models\UpdateAliasResponse.cs" />
+    <Compile Include="V20190118\Models\UpdateKeyDescriptionRequest.cs" />
+    <Compile Include="V20190118\Models\UpdateKeyDescriptionResponse.cs" />
+    <Compile Include="V20190118\Models\WhiteboxKeyInfo.cs" />
+  </ItemGroup>
+</Project>

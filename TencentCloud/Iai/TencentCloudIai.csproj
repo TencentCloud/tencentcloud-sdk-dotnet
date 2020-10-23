@@ -1,0 +1,242 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{834A72D7-C6C9-328D-BA87-F356292B5AB0}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudIaiSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200303\IaiClient.cs" />
+    <Compile Include="V20200303\Models\AnalyzeDenseLandmarksRequest.cs" />
+    <Compile Include="V20200303\Models\AnalyzeDenseLandmarksResponse.cs" />
+    <Compile Include="V20200303\Models\AnalyzeFaceRequest.cs" />
+    <Compile Include="V20200303\Models\AnalyzeFaceResponse.cs" />
+    <Compile Include="V20200303\Models\AttributeItem.cs" />
+    <Compile Include="V20200303\Models\Candidate.cs" />
+    <Compile Include="V20200303\Models\CheckSimilarPersonRequest.cs" />
+    <Compile Include="V20200303\Models\CheckSimilarPersonResponse.cs" />
+    <Compile Include="V20200303\Models\CompareFaceRequest.cs" />
+    <Compile Include="V20200303\Models\CompareFaceResponse.cs" />
+    <Compile Include="V20200303\Models\CopyPersonRequest.cs" />
+    <Compile Include="V20200303\Models\CopyPersonResponse.cs" />
+    <Compile Include="V20200303\Models\CreateFaceRequest.cs" />
+    <Compile Include="V20200303\Models\CreateFaceResponse.cs" />
+    <Compile Include="V20200303\Models\CreateGroupRequest.cs" />
+    <Compile Include="V20200303\Models\CreateGroupResponse.cs" />
+    <Compile Include="V20200303\Models\CreatePersonRequest.cs" />
+    <Compile Include="V20200303\Models\CreatePersonResponse.cs" />
+    <Compile Include="V20200303\Models\DeleteFaceRequest.cs" />
+    <Compile Include="V20200303\Models\DeleteFaceResponse.cs" />
+    <Compile Include="V20200303\Models\DeleteGroupRequest.cs" />
+    <Compile Include="V20200303\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20200303\Models\DeletePersonFromGroupRequest.cs" />
+    <Compile Include="V20200303\Models\DeletePersonFromGroupResponse.cs" />
+    <Compile Include="V20200303\Models\DeletePersonRequest.cs" />
+    <Compile Include="V20200303\Models\DeletePersonResponse.cs" />
+    <Compile Include="V20200303\Models\DenseFaceShape.cs" />
+    <Compile Include="V20200303\Models\DetectFaceAttributesRequest.cs" />
+    <Compile Include="V20200303\Models\DetectFaceAttributesResponse.cs" />
+    <Compile Include="V20200303\Models\DetectFaceRequest.cs" />
+    <Compile Include="V20200303\Models\DetectFaceResponse.cs" />
+    <Compile Include="V20200303\Models\DetectLiveFaceAccurateRequest.cs" />
+    <Compile Include="V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
+    <Compile Include="V20200303\Models\DetectLiveFaceRequest.cs" />
+    <Compile Include="V20200303\Models\DetectLiveFaceResponse.cs" />
+    <Compile Include="V20200303\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
+    <Compile Include="V20200303\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
+    <Compile Include="V20200303\Models\Eye.cs" />
+    <Compile Include="V20200303\Models\Eyebrow.cs" />
+    <Compile Include="V20200303\Models\FaceAttributesInfo.cs" />
+    <Compile Include="V20200303\Models\FaceDetailAttributesInfo.cs" />
+    <Compile Include="V20200303\Models\FaceDetailInfo.cs" />
+    <Compile Include="V20200303\Models\FaceHairAttributesInfo.cs" />
+    <Compile Include="V20200303\Models\FaceInfo.cs" />
+    <Compile Include="V20200303\Models\FaceQualityCompleteness.cs" />
+    <Compile Include="V20200303\Models\FaceQualityInfo.cs" />
+    <Compile Include="V20200303\Models\FaceRect.cs" />
+    <Compile Include="V20200303\Models\FaceShape.cs" />
+    <Compile Include="V20200303\Models\GetCheckSimilarPersonJobIdListRequest.cs" />
+    <Compile Include="V20200303\Models\GetCheckSimilarPersonJobIdListResponse.cs" />
+    <Compile Include="V20200303\Models\GetGroupInfoRequest.cs" />
+    <Compile Include="V20200303\Models\GetGroupInfoResponse.cs" />
+    <Compile Include="V20200303\Models\GetGroupListRequest.cs" />
+    <Compile Include="V20200303\Models\GetGroupListResponse.cs" />
+    <Compile Include="V20200303\Models\GetPersonBaseInfoRequest.cs" />
+    <Compile Include="V20200303\Models\GetPersonBaseInfoResponse.cs" />
+    <Compile Include="V20200303\Models\GetPersonGroupInfoRequest.cs" />
+    <Compile Include="V20200303\Models\GetPersonGroupInfoResponse.cs" />
+    <Compile Include="V20200303\Models\GetPersonListNumRequest.cs" />
+    <Compile Include="V20200303\Models\GetPersonListNumResponse.cs" />
+    <Compile Include="V20200303\Models\GetPersonListRequest.cs" />
+    <Compile Include="V20200303\Models\GetPersonListResponse.cs" />
+    <Compile Include="V20200303\Models\GetSimilarPersonResultRequest.cs" />
+    <Compile Include="V20200303\Models\GetSimilarPersonResultResponse.cs" />
+    <Compile Include="V20200303\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
+    <Compile Include="V20200303\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
+    <Compile Include="V20200303\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
+    <Compile Include="V20200303\Models\GetUpgradeGroupFaceModelVersionResultResponse.cs" />
+    <Compile Include="V20200303\Models\GroupCandidate.cs" />
+    <Compile Include="V20200303\Models\GroupExDescriptionInfo.cs" />
+    <Compile Include="V20200303\Models\GroupInfo.cs" />
+    <Compile Include="V20200303\Models\Hair.cs" />
+    <Compile Include="V20200303\Models\Hat.cs" />
+    <Compile Include="V20200303\Models\HeadPose.cs" />
+    <Compile Include="V20200303\Models\JobIdInfo.cs" />
+    <Compile Include="V20200303\Models\ModifyGroupRequest.cs" />
+    <Compile Include="V20200303\Models\ModifyGroupResponse.cs" />
+    <Compile Include="V20200303\Models\ModifyPersonBaseInfoRequest.cs" />
+    <Compile Include="V20200303\Models\ModifyPersonBaseInfoResponse.cs" />
+    <Compile Include="V20200303\Models\ModifyPersonGroupInfoRequest.cs" />
+    <Compile Include="V20200303\Models\ModifyPersonGroupInfoResponse.cs" />
+    <Compile Include="V20200303\Models\Mouth.cs" />
+    <Compile Include="V20200303\Models\PersonExDescriptionInfo.cs" />
+    <Compile Include="V20200303\Models\PersonGroupInfo.cs" />
+    <Compile Include="V20200303\Models\PersonInfo.cs" />
+    <Compile Include="V20200303\Models\Point.cs" />
+    <Compile Include="V20200303\Models\Result.cs" />
+    <Compile Include="V20200303\Models\ResultsReturnsByGroup.cs" />
+    <Compile Include="V20200303\Models\RevertGroupFaceModelVersionRequest.cs" />
+    <Compile Include="V20200303\Models\RevertGroupFaceModelVersionResponse.cs" />
+    <Compile Include="V20200303\Models\SearchFacesRequest.cs" />
+    <Compile Include="V20200303\Models\SearchFacesResponse.cs" />
+    <Compile Include="V20200303\Models\SearchFacesReturnsByGroupRequest.cs" />
+    <Compile Include="V20200303\Models\SearchFacesReturnsByGroupResponse.cs" />
+    <Compile Include="V20200303\Models\SearchPersonsRequest.cs" />
+    <Compile Include="V20200303\Models\SearchPersonsResponse.cs" />
+    <Compile Include="V20200303\Models\SearchPersonsReturnsByGroupRequest.cs" />
+    <Compile Include="V20200303\Models\SearchPersonsReturnsByGroupResponse.cs" />
+    <Compile Include="V20200303\Models\UpgradeGroupFaceModelVersionRequest.cs" />
+    <Compile Include="V20200303\Models\UpgradeGroupFaceModelVersionResponse.cs" />
+    <Compile Include="V20200303\Models\UpgradeJobInfo.cs" />
+    <Compile Include="V20200303\Models\VerifyFaceRequest.cs" />
+    <Compile Include="V20200303\Models\VerifyFaceResponse.cs" />
+    <Compile Include="V20200303\Models\VerifyPersonRequest.cs" />
+    <Compile Include="V20200303\Models\VerifyPersonResponse.cs" />
+    <Compile Include="V20180301\IaiClient.cs" />
+    <Compile Include="V20180301\Models\AnalyzeDenseLandmarksRequest.cs" />
+    <Compile Include="V20180301\Models\AnalyzeDenseLandmarksResponse.cs" />
+    <Compile Include="V20180301\Models\AnalyzeFaceRequest.cs" />
+    <Compile Include="V20180301\Models\AnalyzeFaceResponse.cs" />
+    <Compile Include="V20180301\Models\AttributeItem.cs" />
+    <Compile Include="V20180301\Models\Candidate.cs" />
+    <Compile Include="V20180301\Models\CheckSimilarPersonRequest.cs" />
+    <Compile Include="V20180301\Models\CheckSimilarPersonResponse.cs" />
+    <Compile Include="V20180301\Models\CompareFaceRequest.cs" />
+    <Compile Include="V20180301\Models\CompareFaceResponse.cs" />
+    <Compile Include="V20180301\Models\CopyPersonRequest.cs" />
+    <Compile Include="V20180301\Models\CopyPersonResponse.cs" />
+    <Compile Include="V20180301\Models\CreateFaceRequest.cs" />
+    <Compile Include="V20180301\Models\CreateFaceResponse.cs" />
+    <Compile Include="V20180301\Models\CreateGroupRequest.cs" />
+    <Compile Include="V20180301\Models\CreateGroupResponse.cs" />
+    <Compile Include="V20180301\Models\CreatePersonRequest.cs" />
+    <Compile Include="V20180301\Models\CreatePersonResponse.cs" />
+    <Compile Include="V20180301\Models\DeleteFaceRequest.cs" />
+    <Compile Include="V20180301\Models\DeleteFaceResponse.cs" />
+    <Compile Include="V20180301\Models\DeleteGroupRequest.cs" />
+    <Compile Include="V20180301\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20180301\Models\DeletePersonFromGroupRequest.cs" />
+    <Compile Include="V20180301\Models\DeletePersonFromGroupResponse.cs" />
+    <Compile Include="V20180301\Models\DeletePersonRequest.cs" />
+    <Compile Include="V20180301\Models\DeletePersonResponse.cs" />
+    <Compile Include="V20180301\Models\DenseFaceShape.cs" />
+    <Compile Include="V20180301\Models\DetectFaceAttributesRequest.cs" />
+    <Compile Include="V20180301\Models\DetectFaceAttributesResponse.cs" />
+    <Compile Include="V20180301\Models\DetectFaceRequest.cs" />
+    <Compile Include="V20180301\Models\DetectFaceResponse.cs" />
+    <Compile Include="V20180301\Models\DetectLiveFaceRequest.cs" />
+    <Compile Include="V20180301\Models\DetectLiveFaceResponse.cs" />
+    <Compile Include="V20180301\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
+    <Compile Include="V20180301\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
+    <Compile Include="V20180301\Models\Eye.cs" />
+    <Compile Include="V20180301\Models\Eyebrow.cs" />
+    <Compile Include="V20180301\Models\FaceAttributesInfo.cs" />
+    <Compile Include="V20180301\Models\FaceDetailAttributesInfo.cs" />
+    <Compile Include="V20180301\Models\FaceDetailInfo.cs" />
+    <Compile Include="V20180301\Models\FaceHairAttributesInfo.cs" />
+    <Compile Include="V20180301\Models\FaceInfo.cs" />
+    <Compile Include="V20180301\Models\FaceQualityCompleteness.cs" />
+    <Compile Include="V20180301\Models\FaceQualityInfo.cs" />
+    <Compile Include="V20180301\Models\FaceRect.cs" />
+    <Compile Include="V20180301\Models\FaceShape.cs" />
+    <Compile Include="V20180301\Models\GetCheckSimilarPersonJobIdListRequest.cs" />
+    <Compile Include="V20180301\Models\GetCheckSimilarPersonJobIdListResponse.cs" />
+    <Compile Include="V20180301\Models\GetGroupInfoRequest.cs" />
+    <Compile Include="V20180301\Models\GetGroupInfoResponse.cs" />
+    <Compile Include="V20180301\Models\GetGroupListRequest.cs" />
+    <Compile Include="V20180301\Models\GetGroupListResponse.cs" />
+    <Compile Include="V20180301\Models\GetPersonBaseInfoRequest.cs" />
+    <Compile Include="V20180301\Models\GetPersonBaseInfoResponse.cs" />
+    <Compile Include="V20180301\Models\GetPersonGroupInfoRequest.cs" />
+    <Compile Include="V20180301\Models\GetPersonGroupInfoResponse.cs" />
+    <Compile Include="V20180301\Models\GetPersonListNumRequest.cs" />
+    <Compile Include="V20180301\Models\GetPersonListNumResponse.cs" />
+    <Compile Include="V20180301\Models\GetPersonListRequest.cs" />
+    <Compile Include="V20180301\Models\GetPersonListResponse.cs" />
+    <Compile Include="V20180301\Models\GetSimilarPersonResultRequest.cs" />
+    <Compile Include="V20180301\Models\GetSimilarPersonResultResponse.cs" />
+    <Compile Include="V20180301\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
+    <Compile Include="V20180301\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
+    <Compile Include="V20180301\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
+    <Compile Include="V20180301\Models\GetUpgradeGroupFaceModelVersionResultResponse.cs" />
+    <Compile Include="V20180301\Models\GroupCandidate.cs" />
+    <Compile Include="V20180301\Models\GroupExDescriptionInfo.cs" />
+    <Compile Include="V20180301\Models\GroupInfo.cs" />
+    <Compile Include="V20180301\Models\Hair.cs" />
+    <Compile Include="V20180301\Models\Hat.cs" />
+    <Compile Include="V20180301\Models\HeadPose.cs" />
+    <Compile Include="V20180301\Models\JobIdInfo.cs" />
+    <Compile Include="V20180301\Models\ModifyGroupRequest.cs" />
+    <Compile Include="V20180301\Models\ModifyGroupResponse.cs" />
+    <Compile Include="V20180301\Models\ModifyPersonBaseInfoRequest.cs" />
+    <Compile Include="V20180301\Models\ModifyPersonBaseInfoResponse.cs" />
+    <Compile Include="V20180301\Models\ModifyPersonGroupInfoRequest.cs" />
+    <Compile Include="V20180301\Models\ModifyPersonGroupInfoResponse.cs" />
+    <Compile Include="V20180301\Models\Mouth.cs" />
+    <Compile Include="V20180301\Models\PersonExDescriptionInfo.cs" />
+    <Compile Include="V20180301\Models\PersonGroupInfo.cs" />
+    <Compile Include="V20180301\Models\PersonInfo.cs" />
+    <Compile Include="V20180301\Models\Point.cs" />
+    <Compile Include="V20180301\Models\Result.cs" />
+    <Compile Include="V20180301\Models\ResultsReturnsByGroup.cs" />
+    <Compile Include="V20180301\Models\RevertGroupFaceModelVersionRequest.cs" />
+    <Compile Include="V20180301\Models\RevertGroupFaceModelVersionResponse.cs" />
+    <Compile Include="V20180301\Models\SearchFacesRequest.cs" />
+    <Compile Include="V20180301\Models\SearchFacesResponse.cs" />
+    <Compile Include="V20180301\Models\SearchFacesReturnsByGroupRequest.cs" />
+    <Compile Include="V20180301\Models\SearchFacesReturnsByGroupResponse.cs" />
+    <Compile Include="V20180301\Models\SearchPersonsRequest.cs" />
+    <Compile Include="V20180301\Models\SearchPersonsResponse.cs" />
+    <Compile Include="V20180301\Models\SearchPersonsReturnsByGroupRequest.cs" />
+    <Compile Include="V20180301\Models\SearchPersonsReturnsByGroupResponse.cs" />
+    <Compile Include="V20180301\Models\UpgradeGroupFaceModelVersionRequest.cs" />
+    <Compile Include="V20180301\Models\UpgradeGroupFaceModelVersionResponse.cs" />
+    <Compile Include="V20180301\Models\UpgradeJobInfo.cs" />
+    <Compile Include="V20180301\Models\VerifyFaceRequest.cs" />
+    <Compile Include="V20180301\Models\VerifyFaceResponse.cs" />
+    <Compile Include="V20180301\Models\VerifyPersonRequest.cs" />
+    <Compile Include="V20180301\Models\VerifyPersonResponse.cs" />
+  </ItemGroup>
+</Project>

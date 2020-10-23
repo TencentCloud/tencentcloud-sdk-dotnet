@@ -52,7 +52,7 @@ namespace TencentCloud.Gme.V20180711.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamSimple(map, prefix + "StartDate", this.StartDate);

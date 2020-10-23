@@ -1,0 +1,106 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTcbSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180608\TcbClient.cs" />
+    <Compile Include="V20180608\Models\AuthDomain.cs" />
+    <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
+    <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
+    <Compile Include="V20180608\Models\CloudBaseCodeRepoDetail.cs" />
+    <Compile Include="V20180608\Models\CloudBaseCodeRepoName.cs" />
+    <Compile Include="V20180608\Models\CloudBaseRunImageInfo.cs" />
+    <Compile Include="V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
+    <Compile Include="V20180608\Models\CommonServiceAPIRequest.cs" />
+    <Compile Include="V20180608\Models\CommonServiceAPIResponse.cs" />
+    <Compile Include="V20180608\Models\CreateAuthDomainRequest.cs" />
+    <Compile Include="V20180608\Models\CreateAuthDomainResponse.cs" />
+    <Compile Include="V20180608\Models\CreateHostingDomainRequest.cs" />
+    <Compile Include="V20180608\Models\CreateHostingDomainResponse.cs" />
+    <Compile Include="V20180608\Models\CreatePostpayPackageRequest.cs" />
+    <Compile Include="V20180608\Models\CreatePostpayPackageResponse.cs" />
+    <Compile Include="V20180608\Models\CreateStaticStoreRequest.cs" />
+    <Compile Include="V20180608\Models\CreateStaticStoreResponse.cs" />
+    <Compile Include="V20180608\Models\DatabasesInfo.cs" />
+    <Compile Include="V20180608\Models\DeleteEndUserRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteEndUserResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeAuthDomainsRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeAuthDomainsResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeDatabaseACLRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeDatabaseACLResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeDownloadFileRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeDownloadFileResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEndUserLoginStatisticRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEndUserLoginStatisticResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEndUserStatisticRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEndUserStatisticResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEndUsersRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEndUsersResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvFreeQuotaRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvFreeQuotaResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvLimitRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvLimitResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvsRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvsResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeExtraPkgBillingInfoRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeExtraPkgBillingInfoResponse.cs" />
+    <Compile Include="V20180608\Models\DescribePostpayPackageFreeQuotasRequest.cs" />
+    <Compile Include="V20180608\Models\DescribePostpayPackageFreeQuotasResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeQuotaDataRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeQuotaDataResponse.cs" />
+    <Compile Include="V20180608\Models\DestroyEnvRequest.cs" />
+    <Compile Include="V20180608\Models\DestroyEnvResponse.cs" />
+    <Compile Include="V20180608\Models\DestroyStaticStoreRequest.cs" />
+    <Compile Include="V20180608\Models\DestroyStaticStoreResponse.cs" />
+    <Compile Include="V20180608\Models\EndUserInfo.cs" />
+    <Compile Include="V20180608\Models\EnvBillingInfoItem.cs" />
+    <Compile Include="V20180608\Models\EnvInfo.cs" />
+    <Compile Include="V20180608\Models\FunctionInfo.cs" />
+    <Compile Include="V20180608\Models\KVPair.cs" />
+    <Compile Include="V20180608\Models\LogServiceInfo.cs" />
+    <Compile Include="V20180608\Models\LoginStatistic.cs" />
+    <Compile Include="V20180608\Models\ModifyDatabaseACLRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyDatabaseACLResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyEndUserRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyEndUserResponse.cs" />
+    <Compile Include="V20180608\Models\ModifyEnvRequest.cs" />
+    <Compile Include="V20180608\Models\ModifyEnvResponse.cs" />
+    <Compile Include="V20180608\Models\OrderInfo.cs" />
+    <Compile Include="V20180608\Models\PackageFreeQuotaInfo.cs" />
+    <Compile Include="V20180608\Models\PlatformStatistic.cs" />
+    <Compile Include="V20180608\Models\PostpayEnvQuota.cs" />
+    <Compile Include="V20180608\Models\ReinstateEnvRequest.cs" />
+    <Compile Include="V20180608\Models\ReinstateEnvResponse.cs" />
+    <Compile Include="V20180608\Models\StaticStorageInfo.cs" />
+    <Compile Include="V20180608\Models\StorageInfo.cs" />
+  </ItemGroup>
+</Project>

@@ -52,7 +52,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
             this.SetParamSimple(map, prefix + "MaintainStartTime", this.MaintainStartTime);

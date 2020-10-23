@@ -1,0 +1,172 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{8FFE3E15-123A-33C5-9243-4ED1F57F31C5}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudTciSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190318\TciClient.cs" />
+    <Compile Include="V20190318\Models\AIAssistantRequest.cs" />
+    <Compile Include="V20190318\Models\AIAssistantResponse.cs" />
+    <Compile Include="V20190318\Models\ASRStat.cs" />
+    <Compile Include="V20190318\Models\AbsenceInfo.cs" />
+    <Compile Include="V20190318\Models\ActionCountStatistic.cs" />
+    <Compile Include="V20190318\Models\ActionDurationRatioStatistic.cs" />
+    <Compile Include="V20190318\Models\ActionDurationStatistic.cs" />
+    <Compile Include="V20190318\Models\ActionInfo.cs" />
+    <Compile Include="V20190318\Models\ActionStatistic.cs" />
+    <Compile Include="V20190318\Models\ActionType.cs" />
+    <Compile Include="V20190318\Models\AllMuteSlice.cs" />
+    <Compile Include="V20190318\Models\AttendanceInfo.cs" />
+    <Compile Include="V20190318\Models\BodyMovementResult.cs" />
+    <Compile Include="V20190318\Models\CancelTaskRequest.cs" />
+    <Compile Include="V20190318\Models\CancelTaskResponse.cs" />
+    <Compile Include="V20190318\Models\CheckFacePhotoRequest.cs" />
+    <Compile Include="V20190318\Models\CheckFacePhotoResponse.cs" />
+    <Compile Include="V20190318\Models\CreateFaceRequest.cs" />
+    <Compile Include="V20190318\Models\CreateFaceResponse.cs" />
+    <Compile Include="V20190318\Models\CreateLibraryRequest.cs" />
+    <Compile Include="V20190318\Models\CreateLibraryResponse.cs" />
+    <Compile Include="V20190318\Models\CreatePersonRequest.cs" />
+    <Compile Include="V20190318\Models\CreatePersonResponse.cs" />
+    <Compile Include="V20190318\Models\CreateVocabLibRequest.cs" />
+    <Compile Include="V20190318\Models\CreateVocabLibResponse.cs" />
+    <Compile Include="V20190318\Models\CreateVocabRequest.cs" />
+    <Compile Include="V20190318\Models\CreateVocabResponse.cs" />
+    <Compile Include="V20190318\Models\DeleteFaceRequest.cs" />
+    <Compile Include="V20190318\Models\DeleteFaceResponse.cs" />
+    <Compile Include="V20190318\Models\DeleteLibraryRequest.cs" />
+    <Compile Include="V20190318\Models\DeleteLibraryResponse.cs" />
+    <Compile Include="V20190318\Models\DeletePersonRequest.cs" />
+    <Compile Include="V20190318\Models\DeletePersonResponse.cs" />
+    <Compile Include="V20190318\Models\DeleteVocabLibRequest.cs" />
+    <Compile Include="V20190318\Models\DeleteVocabLibResponse.cs" />
+    <Compile Include="V20190318\Models\DeleteVocabRequest.cs" />
+    <Compile Include="V20190318\Models\DeleteVocabResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeAITaskResultRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeAITaskResultResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeAttendanceResultRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeAttendanceResultResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeAudioTaskRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeAudioTaskResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeConversationTaskRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeConversationTaskResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeHighlightResultRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeHighlightResultResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeImageTaskRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeImageTaskResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeImageTaskStatisticRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeImageTaskStatisticResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeLibrariesRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeLibrariesResponse.cs" />
+    <Compile Include="V20190318\Models\DescribePersonRequest.cs" />
+    <Compile Include="V20190318\Models\DescribePersonResponse.cs" />
+    <Compile Include="V20190318\Models\DescribePersonsRequest.cs" />
+    <Compile Include="V20190318\Models\DescribePersonsResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeVocabLibRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeVocabLibResponse.cs" />
+    <Compile Include="V20190318\Models\DescribeVocabRequest.cs" />
+    <Compile Include="V20190318\Models\DescribeVocabResponse.cs" />
+    <Compile Include="V20190318\Models\DetailInfo.cs" />
+    <Compile Include="V20190318\Models\DoubleVideoFunction.cs" />
+    <Compile Include="V20190318\Models\ExpressRatioStatistic.cs" />
+    <Compile Include="V20190318\Models\Face.cs" />
+    <Compile Include="V20190318\Models\FaceAttrResult.cs" />
+    <Compile Include="V20190318\Models\FaceDetectStatistic.cs" />
+    <Compile Include="V20190318\Models\FaceExpressStatistic.cs" />
+    <Compile Include="V20190318\Models\FaceExpressionResult.cs" />
+    <Compile Include="V20190318\Models\FaceIdentifyResult.cs" />
+    <Compile Include="V20190318\Models\FaceIdentifyStatistic.cs" />
+    <Compile Include="V20190318\Models\FaceInfo.cs" />
+    <Compile Include="V20190318\Models\FaceInfoResult.cs" />
+    <Compile Include="V20190318\Models\FacePoseResult.cs" />
+    <Compile Include="V20190318\Models\FrameInfo.cs" />
+    <Compile Include="V20190318\Models\Function.cs" />
+    <Compile Include="V20190318\Models\GestureResult.cs" />
+    <Compile Include="V20190318\Models\HLFunction.cs" />
+    <Compile Include="V20190318\Models\HandTrackingResult.cs" />
+    <Compile Include="V20190318\Models\HighlightsInfomation.cs" />
+    <Compile Include="V20190318\Models\ImageTaskFunction.cs" />
+    <Compile Include="V20190318\Models\ImageTaskResult.cs" />
+    <Compile Include="V20190318\Models\ImageTaskStatistic.cs" />
+    <Compile Include="V20190318\Models\Library.cs" />
+    <Compile Include="V20190318\Models\LightDistributionStatistic.cs" />
+    <Compile Include="V20190318\Models\LightLevelRatioStatistic.cs" />
+    <Compile Include="V20190318\Models\LightResult.cs" />
+    <Compile Include="V20190318\Models\LightStandard.cs" />
+    <Compile Include="V20190318\Models\LightStatistic.cs" />
+    <Compile Include="V20190318\Models\ModifyLibraryRequest.cs" />
+    <Compile Include="V20190318\Models\ModifyLibraryResponse.cs" />
+    <Compile Include="V20190318\Models\ModifyPersonRequest.cs" />
+    <Compile Include="V20190318\Models\ModifyPersonResponse.cs" />
+    <Compile Include="V20190318\Models\MuteSlice.cs" />
+    <Compile Include="V20190318\Models\Person.cs" />
+    <Compile Include="V20190318\Models\PersonInfo.cs" />
+    <Compile Include="V20190318\Models\StandardAudioResult.cs" />
+    <Compile Include="V20190318\Models\StandardImageResult.cs" />
+    <Compile Include="V20190318\Models\StandardVideoResult.cs" />
+    <Compile Include="V20190318\Models\StatInfo.cs" />
+    <Compile Include="V20190318\Models\StudentBodyMovementResult.cs" />
+    <Compile Include="V20190318\Models\SubmitAudioTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitAudioTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitCheckAttendanceTaskPlusRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitCheckAttendanceTaskPlusResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitCheckAttendanceTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitCheckAttendanceTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitConversationTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitConversationTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitDoubleVideoHighlightsRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitDoubleVideoHighlightsResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitFullBodyClassTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitFullBodyClassTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitHighlightsRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitHighlightsResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitImageTaskPlusRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitImageTaskPlusResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitImageTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitImageTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitOneByOneClassTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitOneByOneClassTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitOpenClassTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitOpenClassTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitPartialBodyClassTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitPartialBodyClassTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SubmitTraditionalClassTaskRequest.cs" />
+    <Compile Include="V20190318\Models\SubmitTraditionalClassTaskResponse.cs" />
+    <Compile Include="V20190318\Models\SuspectedInfo.cs" />
+    <Compile Include="V20190318\Models\TeacherOutScreenResult.cs" />
+    <Compile Include="V20190318\Models\TextItem.cs" />
+    <Compile Include="V20190318\Models\TimeInfoResult.cs" />
+    <Compile Include="V20190318\Models\TimeType.cs" />
+    <Compile Include="V20190318\Models\TransmitAudioStreamRequest.cs" />
+    <Compile Include="V20190318\Models\TransmitAudioStreamResponse.cs" />
+    <Compile Include="V20190318\Models\VocabDetailInfomation.cs" />
+    <Compile Include="V20190318\Models\VocabStatInfomation.cs" />
+    <Compile Include="V20190318\Models\WholeTextItem.cs" />
+    <Compile Include="V20190318\Models\Word.cs" />
+    <Compile Include="V20190318\Models\WordTimePair.cs" />
+  </ItemGroup>
+</Project>

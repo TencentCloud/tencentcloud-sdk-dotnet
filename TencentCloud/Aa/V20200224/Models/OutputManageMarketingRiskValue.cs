@@ -79,7 +79,7 @@ namespace TencentCloud.Aa.V20200224.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "PostTime", this.PostTime);

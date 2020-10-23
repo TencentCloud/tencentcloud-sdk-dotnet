@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{22A3B506-BD68-3DED-BEAD-BFF07ADD88E7}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudIeSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200304\IeClient.cs" />
+    <Compile Include="V20200304\Models\ArtifactReduction.cs" />
+    <Compile Include="V20200304\Models\AudioInfo.cs" />
+    <Compile Include="V20200304\Models\AudioInfoResultItem.cs" />
+    <Compile Include="V20200304\Models\CallbackInfo.cs" />
+    <Compile Include="V20200304\Models\ClassificationEditingInfo.cs" />
+    <Compile Include="V20200304\Models\ClassificationTaskResult.cs" />
+    <Compile Include="V20200304\Models\ClassificationTaskResultItem.cs" />
+    <Compile Include="V20200304\Models\ColorEnhance.cs" />
+    <Compile Include="V20200304\Models\CosAuthMode.cs" />
+    <Compile Include="V20200304\Models\CosInfo.cs" />
+    <Compile Include="V20200304\Models\CoverEditingInfo.cs" />
+    <Compile Include="V20200304\Models\CoverTaskResult.cs" />
+    <Compile Include="V20200304\Models\CoverTaskResultItem.cs" />
+    <Compile Include="V20200304\Models\CreateEditingTaskRequest.cs" />
+    <Compile Include="V20200304\Models\CreateEditingTaskResponse.cs" />
+    <Compile Include="V20200304\Models\CreateMediaQualityRestorationTaskRequest.cs" />
+    <Compile Include="V20200304\Models\CreateMediaQualityRestorationTaskResponse.cs" />
+    <Compile Include="V20200304\Models\CreateQualityControlTaskRequest.cs" />
+    <Compile Include="V20200304\Models\CreateQualityControlTaskResponse.cs" />
+    <Compile Include="V20200304\Models\DarInfo.cs" />
+    <Compile Include="V20200304\Models\Denoising.cs" />
+    <Compile Include="V20200304\Models\DescribeEditingTaskResultRequest.cs" />
+    <Compile Include="V20200304\Models\DescribeEditingTaskResultResponse.cs" />
+    <Compile Include="V20200304\Models\DescribeMediaQualityRestorationTaskRusultRequest.cs" />
+    <Compile Include="V20200304\Models\DescribeMediaQualityRestorationTaskRusultResponse.cs" />
+    <Compile Include="V20200304\Models\DescribeQualityControlTaskResultRequest.cs" />
+    <Compile Include="V20200304\Models\DescribeQualityControlTaskResultResponse.cs" />
+    <Compile Include="V20200304\Models\DownInfo.cs" />
+    <Compile Include="V20200304\Models\EditInfo.cs" />
+    <Compile Include="V20200304\Models\EditingInfo.cs" />
+    <Compile Include="V20200304\Models\EditingTaskResult.cs" />
+    <Compile Include="V20200304\Models\FaceProtect.cs" />
+    <Compile Include="V20200304\Models\FileInfo.cs" />
+    <Compile Include="V20200304\Models\HighlightsEditingInfo.cs" />
+    <Compile Include="V20200304\Models\HighlightsTaskResult.cs" />
+    <Compile Include="V20200304\Models\HighlightsTaskResultItem.cs" />
+    <Compile Include="V20200304\Models\HighlightsTaskResultItemSegment.cs" />
+    <Compile Include="V20200304\Models\LowLightEnhance.cs" />
+    <Compile Include="V20200304\Models\MediaQualityRestorationTaskResult.cs" />
+    <Compile Include="V20200304\Models\MuxInfo.cs" />
+    <Compile Include="V20200304\Models\OpeningEndingEditingInfo.cs" />
+    <Compile Include="V20200304\Models\OpeningEndingTaskResult.cs" />
+    <Compile Include="V20200304\Models\OpeningEndingTaskResultItem.cs" />
+    <Compile Include="V20200304\Models\PicMarkInfoItem.cs" />
+    <Compile Include="V20200304\Models\QualityControlInfo.cs" />
+    <Compile Include="V20200304\Models\QualityControlInfoTaskResult.cs" />
+    <Compile Include="V20200304\Models\QualityControlItem.cs" />
+    <Compile Include="V20200304\Models\QualityControlResultItems.cs" />
+    <Compile Include="V20200304\Models\SaveInfo.cs" />
+    <Compile Include="V20200304\Models\ScratchRepair.cs" />
+    <Compile Include="V20200304\Models\SegmentInfo.cs" />
+    <Compile Include="V20200304\Models\Sharp.cs" />
+    <Compile Include="V20200304\Models\StopMediaQualityRestorationTaskRequest.cs" />
+    <Compile Include="V20200304\Models\StopMediaQualityRestorationTaskResponse.cs" />
+    <Compile Include="V20200304\Models\StripEditingInfo.cs" />
+    <Compile Include="V20200304\Models\StripTaskResult.cs" />
+    <Compile Include="V20200304\Models\StripTaskResultItem.cs" />
+    <Compile Include="V20200304\Models\SubTaskResultItem.cs" />
+    <Compile Include="V20200304\Models\SubTaskTranscodeInfo.cs" />
+    <Compile Include="V20200304\Models\TagEditingInfo.cs" />
+    <Compile Include="V20200304\Models\TagTaskResult.cs" />
+    <Compile Include="V20200304\Models\TagTaskResultItem.cs" />
+    <Compile Include="V20200304\Models\TargetInfo.cs" />
+    <Compile Include="V20200304\Models\UrlInfo.cs" />
+    <Compile Include="V20200304\Models\VideoEnhance.cs" />
+    <Compile Include="V20200304\Models\VideoInfo.cs" />
+    <Compile Include="V20200304\Models\VideoInfoResultItem.cs" />
+  </ItemGroup>
+</Project>

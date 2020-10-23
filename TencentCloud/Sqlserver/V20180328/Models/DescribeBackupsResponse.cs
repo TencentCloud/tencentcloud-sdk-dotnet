@@ -46,7 +46,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Backups.", this.Backups);

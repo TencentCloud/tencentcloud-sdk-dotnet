@@ -116,7 +116,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "IntranetIp", this.IntranetIp);

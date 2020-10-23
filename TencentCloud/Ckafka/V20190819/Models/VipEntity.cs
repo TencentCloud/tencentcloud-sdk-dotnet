@@ -40,7 +40,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);

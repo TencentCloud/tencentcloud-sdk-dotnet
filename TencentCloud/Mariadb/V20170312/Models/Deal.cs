@@ -65,7 +65,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);

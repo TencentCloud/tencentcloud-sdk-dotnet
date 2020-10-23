@@ -48,7 +48,7 @@ namespace TencentCloud.Gse.V20191112.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "PlayerSessions.", this.PlayerSessions);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);

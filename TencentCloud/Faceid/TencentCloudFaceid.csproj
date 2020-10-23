@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{285E4D65-D854-3FAC-912D-5A63E6D8406B}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudFaceidSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180301\FaceidClient.cs" />
+    <Compile Include="V20180301\Models\BankCard2EVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\BankCard2EVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\BankCard4EVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\BankCard4EVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\BankCardVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\BankCardVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\CheckBankCardInformationRequest.cs" />
+    <Compile Include="V20180301\Models\CheckBankCardInformationResponse.cs" />
+    <Compile Include="V20180301\Models\CheckIdCardInformationRequest.cs" />
+    <Compile Include="V20180301\Models\CheckIdCardInformationResponse.cs" />
+    <Compile Include="V20180301\Models\DetectAuthRequest.cs" />
+    <Compile Include="V20180301\Models\DetectAuthResponse.cs" />
+    <Compile Include="V20180301\Models\DetectDetail.cs" />
+    <Compile Include="V20180301\Models\DetectInfoBestFrame.cs" />
+    <Compile Include="V20180301\Models\DetectInfoIdCardData.cs" />
+    <Compile Include="V20180301\Models\DetectInfoText.cs" />
+    <Compile Include="V20180301\Models\DetectInfoVideoData.cs" />
+    <Compile Include="V20180301\Models\GetActionSequenceRequest.cs" />
+    <Compile Include="V20180301\Models\GetActionSequenceResponse.cs" />
+    <Compile Include="V20180301\Models\GetDetectInfoEnhancedRequest.cs" />
+    <Compile Include="V20180301\Models\GetDetectInfoEnhancedResponse.cs" />
+    <Compile Include="V20180301\Models\GetDetectInfoRequest.cs" />
+    <Compile Include="V20180301\Models\GetDetectInfoResponse.cs" />
+    <Compile Include="V20180301\Models\GetFaceIdResultRequest.cs" />
+    <Compile Include="V20180301\Models\GetFaceIdResultResponse.cs" />
+    <Compile Include="V20180301\Models\GetFaceIdTokenRequest.cs" />
+    <Compile Include="V20180301\Models\GetFaceIdTokenResponse.cs" />
+    <Compile Include="V20180301\Models\GetLiveCodeRequest.cs" />
+    <Compile Include="V20180301\Models\GetLiveCodeResponse.cs" />
+    <Compile Include="V20180301\Models\IdCardOCRVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\IdCardOCRVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\IdCardVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\IdCardVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\ImageRecognitionRequest.cs" />
+    <Compile Include="V20180301\Models\ImageRecognitionResponse.cs" />
+    <Compile Include="V20180301\Models\LivenessCompareRequest.cs" />
+    <Compile Include="V20180301\Models\LivenessCompareResponse.cs" />
+    <Compile Include="V20180301\Models\LivenessRecognitionRequest.cs" />
+    <Compile Include="V20180301\Models\LivenessRecognitionResponse.cs" />
+    <Compile Include="V20180301\Models\LivenessRequest.cs" />
+    <Compile Include="V20180301\Models\LivenessResponse.cs" />
+    <Compile Include="V20180301\Models\MinorsVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\MinorsVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\MobileNetworkTimeVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\MobileNetworkTimeVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\MobileStatusRequest.cs" />
+    <Compile Include="V20180301\Models\MobileStatusResponse.cs" />
+    <Compile Include="V20180301\Models\PhoneVerificationRequest.cs" />
+    <Compile Include="V20180301\Models\PhoneVerificationResponse.cs" />
+  </ItemGroup>
+</Project>

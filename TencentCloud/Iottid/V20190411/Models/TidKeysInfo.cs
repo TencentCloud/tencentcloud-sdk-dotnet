@@ -64,7 +64,7 @@ namespace TencentCloud.Iottid.V20190411.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Tid", this.Tid);
             this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);

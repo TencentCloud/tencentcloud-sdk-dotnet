@@ -1,0 +1,133 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCkafkaSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190819\CkafkaClient.cs" />
+    <Compile Include="V20190819\Models\Acl.cs" />
+    <Compile Include="V20190819\Models\AclResponse.cs" />
+    <Compile Include="V20190819\Models\AppIdResponse.cs" />
+    <Compile Include="V20190819\Models\Assignment.cs" />
+    <Compile Include="V20190819\Models\Config.cs" />
+    <Compile Include="V20190819\Models\ConsumerGroup.cs" />
+    <Compile Include="V20190819\Models\ConsumerGroupResponse.cs" />
+    <Compile Include="V20190819\Models\ConsumerGroupTopic.cs" />
+    <Compile Include="V20190819\Models\CreateAclRequest.cs" />
+    <Compile Include="V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePreData.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePreRequest.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePreResponse.cs" />
+    <Compile Include="V20190819\Models\CreatePartitionRequest.cs" />
+    <Compile Include="V20190819\Models\CreatePartitionResponse.cs" />
+    <Compile Include="V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
+    <Compile Include="V20190819\Models\CreateTopicIpWhiteListResponse.cs" />
+    <Compile Include="V20190819\Models\CreateTopicRequest.cs" />
+    <Compile Include="V20190819\Models\CreateTopicResp.cs" />
+    <Compile Include="V20190819\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20190819\Models\CreateUserRequest.cs" />
+    <Compile Include="V20190819\Models\CreateUserResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteTopicIpWhiteListRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteTopicIpWhiteListResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteTopicRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteTopicResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteUserRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeACLRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeACLResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeAppInfoRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeAppInfoResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeConsumerGroupRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeConsumerGroupResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeGroup.cs" />
+    <Compile Include="V20190819\Models\DescribeGroupInfoRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeGroupInfoResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeGroupOffsetsRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeGroupOffsetsResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeGroupRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeGroupResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeInstanceAttributesRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeInstanceAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeInstancesDetailRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeInstancesDetailResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeRouteRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeRouteResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicAttributesRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicDetailRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicDetailResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20190819\Models\Filter.cs" />
+    <Compile Include="V20190819\Models\Group.cs" />
+    <Compile Include="V20190819\Models\GroupInfoMember.cs" />
+    <Compile Include="V20190819\Models\GroupInfoResponse.cs" />
+    <Compile Include="V20190819\Models\GroupInfoTopics.cs" />
+    <Compile Include="V20190819\Models\GroupOffsetPartition.cs" />
+    <Compile Include="V20190819\Models\GroupOffsetResponse.cs" />
+    <Compile Include="V20190819\Models\GroupOffsetTopic.cs" />
+    <Compile Include="V20190819\Models\GroupResponse.cs" />
+    <Compile Include="V20190819\Models\Instance.cs" />
+    <Compile Include="V20190819\Models\InstanceAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\InstanceConfigDO.cs" />
+    <Compile Include="V20190819\Models\InstanceDetail.cs" />
+    <Compile Include="V20190819\Models\InstanceDetailResponse.cs" />
+    <Compile Include="V20190819\Models\InstanceResponse.cs" />
+    <Compile Include="V20190819\Models\JgwOperateResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyGroupOffsetsRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyGroupOffsetsResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyInstanceAttributesConfig.cs" />
+    <Compile Include="V20190819\Models\ModifyInstanceAttributesRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyInstanceAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyPasswordRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyPasswordResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyTopicAttributesRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyTopicAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\OperateResponseData.cs" />
+    <Compile Include="V20190819\Models\Partition.cs" />
+    <Compile Include="V20190819\Models\PartitionOffset.cs" />
+    <Compile Include="V20190819\Models\Route.cs" />
+    <Compile Include="V20190819\Models\RouteResponse.cs" />
+    <Compile Include="V20190819\Models\SubscribedInfo.cs" />
+    <Compile Include="V20190819\Models\Tag.cs" />
+    <Compile Include="V20190819\Models\Topic.cs" />
+    <Compile Include="V20190819\Models\TopicAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\TopicDetail.cs" />
+    <Compile Include="V20190819\Models\TopicDetailResponse.cs" />
+    <Compile Include="V20190819\Models\TopicPartitionDO.cs" />
+    <Compile Include="V20190819\Models\TopicResult.cs" />
+    <Compile Include="V20190819\Models\User.cs" />
+    <Compile Include="V20190819\Models\UserResponse.cs" />
+    <Compile Include="V20190819\Models\VipEntity.cs" />
+  </ItemGroup>
+</Project>

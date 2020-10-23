@@ -46,7 +46,7 @@ namespace TencentCloud.Bmlb.V20180625.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);

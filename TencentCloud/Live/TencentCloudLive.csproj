@@ -1,0 +1,299 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudLiveSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180801\LiveClient.cs" />
+    <Compile Include="V20180801\Models\AddDelayLiveStreamRequest.cs" />
+    <Compile Include="V20180801\Models\AddDelayLiveStreamResponse.cs" />
+    <Compile Include="V20180801\Models\AddLiveDomainRequest.cs" />
+    <Compile Include="V20180801\Models\AddLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\AddLiveWatermarkRequest.cs" />
+    <Compile Include="V20180801\Models\AddLiveWatermarkResponse.cs" />
+    <Compile Include="V20180801\Models\BandwidthInfo.cs" />
+    <Compile Include="V20180801\Models\BillAreaInfo.cs" />
+    <Compile Include="V20180801\Models\BillCountryInfo.cs" />
+    <Compile Include="V20180801\Models\BillDataInfo.cs" />
+    <Compile Include="V20180801\Models\BindLiveDomainCertRequest.cs" />
+    <Compile Include="V20180801\Models\BindLiveDomainCertResponse.cs" />
+    <Compile Include="V20180801\Models\CallBackRuleInfo.cs" />
+    <Compile Include="V20180801\Models\CallBackTemplateInfo.cs" />
+    <Compile Include="V20180801\Models\CancelCommonMixStreamRequest.cs" />
+    <Compile Include="V20180801\Models\CancelCommonMixStreamResponse.cs" />
+    <Compile Include="V20180801\Models\CdnPlayStatData.cs" />
+    <Compile Include="V20180801\Models\CertInfo.cs" />
+    <Compile Include="V20180801\Models\ClientIpPlaySumInfo.cs" />
+    <Compile Include="V20180801\Models\CommonMixControlParams.cs" />
+    <Compile Include="V20180801\Models\CommonMixCropParams.cs" />
+    <Compile Include="V20180801\Models\CommonMixInputParam.cs" />
+    <Compile Include="V20180801\Models\CommonMixLayoutParams.cs" />
+    <Compile Include="V20180801\Models\CommonMixOutputParams.cs" />
+    <Compile Include="V20180801\Models\ConcurrentRecordStreamNum.cs" />
+    <Compile Include="V20180801\Models\CreateCommonMixStreamRequest.cs" />
+    <Compile Include="V20180801\Models\CreateCommonMixStreamResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCallbackRuleRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCallbackRuleResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCallbackTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCertRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveCertResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveRecordRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveRecordResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveRecordRuleRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveRecordRuleResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveRecordTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveRecordTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveSnapshotRuleRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveSnapshotRuleResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveSnapshotTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTranscodeRuleRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTranscodeRuleResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTranscodeTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveWatermarkRuleRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveWatermarkRuleResponse.cs" />
+    <Compile Include="V20180801\Models\CreatePullStreamConfigRequest.cs" />
+    <Compile Include="V20180801\Models\CreatePullStreamConfigResponse.cs" />
+    <Compile Include="V20180801\Models\CreateRecordTaskRequest.cs" />
+    <Compile Include="V20180801\Models\CreateRecordTaskResponse.cs" />
+    <Compile Include="V20180801\Models\DayStreamPlayInfo.cs" />
+    <Compile Include="V20180801\Models\DelayInfo.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveCallbackRuleRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveCallbackRuleResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveCertRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveCertResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveDomainRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveRecordRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveRecordResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveRecordRuleRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveRecordRuleResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveRecordTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveRecordTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveSnapshotRuleRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveSnapshotRuleResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveSnapshotTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTranscodeRuleRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTranscodeRuleResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTranscodeTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveWatermarkRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveWatermarkResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveWatermarkRuleRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveWatermarkRuleResponse.cs" />
+    <Compile Include="V20180801\Models\DeletePullStreamConfigRequest.cs" />
+    <Compile Include="V20180801\Models\DeletePullStreamConfigResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteRecordTaskRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteRecordTaskResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeAllStreamPlayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeAreaBillBandwidthAndFluxListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeAreaBillBandwidthAndFluxListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeBillBandwidthAndFluxListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeBillBandwidthAndFluxListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeConcurrentRecordStreamNumRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeConcurrentRecordStreamNumResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeDeliverBandwidthListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeDeliverBandwidthListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeGroupProIspPlayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeGroupProIspPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeHttpStatusInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeHttpStatusInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCallbackRulesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCallbackRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCallbackTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCallbackTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCallbackTemplatesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCallbackTemplatesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCertRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCertResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCertsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveCertsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDelayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDelayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainCertRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainCertResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainPlayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveDomainsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveForbidStreamListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveForbidStreamListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePackageInfoRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePackageInfoResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePushAuthKeyRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePushAuthKeyResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveRecordRulesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveRecordRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveRecordTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveRecordTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveRecordTemplatesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveRecordTemplatesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveSnapshotRulesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveSnapshotRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveSnapshotTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveSnapshotTemplatesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveSnapshotTemplatesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamEventListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamEventListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamOnlineListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamOnlineListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamPublishedListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamPublishedListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamPushInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamPushInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamStateRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveStreamStateResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeDetailInfoRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeDetailInfoResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeRulesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeTemplatesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveWatermarkRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveWatermarkResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveWatermarkRulesRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveWatermarkRulesResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveWatermarksRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveWatermarksResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLogDownloadListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLogDownloadListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribePlayErrorCodeDetailInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribePlayErrorCodeDetailInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribePlayErrorCodeSumInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribePlayErrorCodeSumInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeProIspPlaySumInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeProIspPlaySumInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeProvinceIspPlayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeProvinceIspPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribePullStreamConfigsRequest.cs" />
+    <Compile Include="V20180801\Models\DescribePullStreamConfigsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeScreenShotSheetNumListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeScreenShotSheetNumListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamDayPlayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamDayPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamPlayInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamPlayInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamPushInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeStreamPushInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeTopClientIpSumInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeVisitTopSumInfoListResponse.cs" />
+    <Compile Include="V20180801\Models\DomainCertInfo.cs" />
+    <Compile Include="V20180801\Models\DomainDetailInfo.cs" />
+    <Compile Include="V20180801\Models\DomainInfo.cs" />
+    <Compile Include="V20180801\Models\DomainInfoList.cs" />
+    <Compile Include="V20180801\Models\DropLiveStreamRequest.cs" />
+    <Compile Include="V20180801\Models\DropLiveStreamResponse.cs" />
+    <Compile Include="V20180801\Models\EnableLiveDomainRequest.cs" />
+    <Compile Include="V20180801\Models\EnableLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\ForbidLiveDomainRequest.cs" />
+    <Compile Include="V20180801\Models\ForbidLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\ForbidLiveStreamRequest.cs" />
+    <Compile Include="V20180801\Models\ForbidLiveStreamResponse.cs" />
+    <Compile Include="V20180801\Models\ForbidStreamInfo.cs" />
+    <Compile Include="V20180801\Models\GroupProIspDataInfo.cs" />
+    <Compile Include="V20180801\Models\HlsSpecialParam.cs" />
+    <Compile Include="V20180801\Models\HttpCodeInfo.cs" />
+    <Compile Include="V20180801\Models\HttpCodeValue.cs" />
+    <Compile Include="V20180801\Models\HttpStatusData.cs" />
+    <Compile Include="V20180801\Models\HttpStatusInfo.cs" />
+    <Compile Include="V20180801\Models\LivePackageInfo.cs" />
+    <Compile Include="V20180801\Models\LogInfo.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveCertRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveCertResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveDomainCertRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveDomainCertResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePlayDomainRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePlayDomainResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePushAuthKeyRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePushAuthKeyResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveRecordTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveRecordTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveSnapshotTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveSnapshotTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveTranscodeTemplateRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLiveTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyPullStreamConfigRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyPullStreamConfigResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyPullStreamStatusRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyPullStreamStatusResponse.cs" />
+    <Compile Include="V20180801\Models\MonitorStreamPlayInfo.cs" />
+    <Compile Include="V20180801\Models\PlayAuthKeyInfo.cs" />
+    <Compile Include="V20180801\Models\PlayCodeTotalInfo.cs" />
+    <Compile Include="V20180801\Models\PlayDataInfoByStream.cs" />
+    <Compile Include="V20180801\Models\PlayStatInfo.cs" />
+    <Compile Include="V20180801\Models\PlaySumStatInfo.cs" />
+    <Compile Include="V20180801\Models\ProIspPlayCodeDataInfo.cs" />
+    <Compile Include="V20180801\Models\ProIspPlaySumInfo.cs" />
+    <Compile Include="V20180801\Models\PublishTimeInfo.cs" />
+    <Compile Include="V20180801\Models\PullStreamConfig.cs" />
+    <Compile Include="V20180801\Models\PushAuthKeyInfo.cs" />
+    <Compile Include="V20180801\Models\PushDataInfo.cs" />
+    <Compile Include="V20180801\Models\PushQualityData.cs" />
+    <Compile Include="V20180801\Models\RecordParam.cs" />
+    <Compile Include="V20180801\Models\RecordTemplateInfo.cs" />
+    <Compile Include="V20180801\Models\ResumeDelayLiveStreamRequest.cs" />
+    <Compile Include="V20180801\Models\ResumeDelayLiveStreamResponse.cs" />
+    <Compile Include="V20180801\Models\ResumeLiveStreamRequest.cs" />
+    <Compile Include="V20180801\Models\ResumeLiveStreamResponse.cs" />
+    <Compile Include="V20180801\Models\RuleInfo.cs" />
+    <Compile Include="V20180801\Models\SnapshotTemplateInfo.cs" />
+    <Compile Include="V20180801\Models\StopLiveRecordRequest.cs" />
+    <Compile Include="V20180801\Models\StopLiveRecordResponse.cs" />
+    <Compile Include="V20180801\Models\StopRecordTaskRequest.cs" />
+    <Compile Include="V20180801\Models\StopRecordTaskResponse.cs" />
+    <Compile Include="V20180801\Models\StreamEventInfo.cs" />
+    <Compile Include="V20180801\Models\StreamNameInfo.cs" />
+    <Compile Include="V20180801\Models\StreamOnlineInfo.cs" />
+    <Compile Include="V20180801\Models\TemplateInfo.cs" />
+    <Compile Include="V20180801\Models\TimeValue.cs" />
+    <Compile Include="V20180801\Models\TranscodeDetailInfo.cs" />
+    <Compile Include="V20180801\Models\UnBindLiveDomainCertRequest.cs" />
+    <Compile Include="V20180801\Models\UnBindLiveDomainCertResponse.cs" />
+    <Compile Include="V20180801\Models\UpdateLiveWatermarkRequest.cs" />
+    <Compile Include="V20180801\Models\UpdateLiveWatermarkResponse.cs" />
+    <Compile Include="V20180801\Models\WatermarkInfo.cs" />
+  </ItemGroup>
+</Project>

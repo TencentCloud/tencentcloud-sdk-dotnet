@@ -70,7 +70,7 @@ namespace TencentCloud.Youmall.V20180228.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "Gender", this.Gender);

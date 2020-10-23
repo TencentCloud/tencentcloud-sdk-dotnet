@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudEsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180416\EsClient.cs" />
+    <Compile Include="V20180416\Models\CosBackup.cs" />
+    <Compile Include="V20180416\Models\CreateInstanceRequest.cs" />
+    <Compile Include="V20180416\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteInstanceRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeInstanceLogsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeInstanceLogsResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeInstanceOperationsRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeInstanceOperationsResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20180416\Models\DictInfo.cs" />
+    <Compile Include="V20180416\Models\EsAcl.cs" />
+    <Compile Include="V20180416\Models\EsDictionaryInfo.cs" />
+    <Compile Include="V20180416\Models\EsPublicAcl.cs" />
+    <Compile Include="V20180416\Models\InstanceInfo.cs" />
+    <Compile Include="V20180416\Models\InstanceLog.cs" />
+    <Compile Include="V20180416\Models\KeyValue.cs" />
+    <Compile Include="V20180416\Models\LocalDiskInfo.cs" />
+    <Compile Include="V20180416\Models\MasterNodeInfo.cs" />
+    <Compile Include="V20180416\Models\NodeInfo.cs" />
+    <Compile Include="V20180416\Models\Operation.cs" />
+    <Compile Include="V20180416\Models\OperationDetail.cs" />
+    <Compile Include="V20180416\Models\RestartInstanceRequest.cs" />
+    <Compile Include="V20180416\Models\RestartInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\RestartNodesRequest.cs" />
+    <Compile Include="V20180416\Models\RestartNodesResponse.cs" />
+    <Compile Include="V20180416\Models\SubTaskDetail.cs" />
+    <Compile Include="V20180416\Models\TagInfo.cs" />
+    <Compile Include="V20180416\Models\TaskDetail.cs" />
+    <Compile Include="V20180416\Models\UpdateInstanceRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\UpdatePluginsRequest.cs" />
+    <Compile Include="V20180416\Models\UpdatePluginsResponse.cs" />
+    <Compile Include="V20180416\Models\UpgradeInstanceRequest.cs" />
+    <Compile Include="V20180416\Models\UpgradeInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\UpgradeLicenseRequest.cs" />
+    <Compile Include="V20180416\Models\UpgradeLicenseResponse.cs" />
+    <Compile Include="V20180416\Models\ZoneDetail.cs" />
+  </ItemGroup>
+</Project>

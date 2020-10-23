@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "L4Clusters.", this.L4Clusters);
             this.SetParamArrayObj(map, prefix + "L7Clusters.", this.L7Clusters);

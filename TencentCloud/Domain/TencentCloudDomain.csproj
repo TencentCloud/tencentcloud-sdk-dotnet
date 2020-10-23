@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{B15FC666-859E-397F-91C6-A33130097096}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudDomainSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180808\DomainClient.cs" />
+    <Compile Include="V20180808\Models\BatchModifyDomainInfoRequest.cs" />
+    <Compile Include="V20180808\Models\BatchModifyDomainInfoResponse.cs" />
+    <Compile Include="V20180808\Models\BatchStatus.cs" />
+    <Compile Include="V20180808\Models\CertificateInfo.cs" />
+    <Compile Include="V20180808\Models\CheckBatchStatusRequest.cs" />
+    <Compile Include="V20180808\Models\CheckBatchStatusResponse.cs" />
+    <Compile Include="V20180808\Models\CheckDomainRequest.cs" />
+    <Compile Include="V20180808\Models\CheckDomainResponse.cs" />
+    <Compile Include="V20180808\Models\ContactInfo.cs" />
+    <Compile Include="V20180808\Models\CreateDomainBatchRequest.cs" />
+    <Compile Include="V20180808\Models\CreateDomainBatchResponse.cs" />
+    <Compile Include="V20180808\Models\CreateTemplateRequest.cs" />
+    <Compile Include="V20180808\Models\CreateTemplateResponse.cs" />
+    <Compile Include="V20180808\Models\DeleteTemplateRequest.cs" />
+    <Compile Include="V20180808\Models\DeleteTemplateResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeDomainBaseInfoRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeDomainBaseInfoResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeDomainNameListRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeDomainNameListResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeDomainPriceListRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeDomainPriceListResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeTemplateListRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeTemplateListResponse.cs" />
+    <Compile Include="V20180808\Models\DomainBaseInfo.cs" />
+    <Compile Include="V20180808\Models\DomainList.cs" />
+    <Compile Include="V20180808\Models\ModifyDomainDNSBatchRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyDomainDNSBatchResponse.cs" />
+    <Compile Include="V20180808\Models\ModifyDomainOwnerBatchRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyDomainOwnerBatchResponse.cs" />
+    <Compile Include="V20180808\Models\PriceInfo.cs" />
+    <Compile Include="V20180808\Models\RenewDomainBatchRequest.cs" />
+    <Compile Include="V20180808\Models\RenewDomainBatchResponse.cs" />
+    <Compile Include="V20180808\Models\SetDomainAutoRenewRequest.cs" />
+    <Compile Include="V20180808\Models\SetDomainAutoRenewResponse.cs" />
+    <Compile Include="V20180808\Models\TemplateInfo.cs" />
+    <Compile Include="V20180808\Models\TransferInDomainBatchRequest.cs" />
+    <Compile Include="V20180808\Models\TransferInDomainBatchResponse.cs" />
+    <Compile Include="V20180808\Models\TransferProhibitionBatchRequest.cs" />
+    <Compile Include="V20180808\Models\TransferProhibitionBatchResponse.cs" />
+    <Compile Include="V20180808\Models\UpdateProhibitionBatchRequest.cs" />
+    <Compile Include="V20180808\Models\UpdateProhibitionBatchResponse.cs" />
+    <Compile Include="V20180808\Models\UploadImageRequest.cs" />
+    <Compile Include="V20180808\Models\UploadImageResponse.cs" />
+  </ItemGroup>
+</Project>

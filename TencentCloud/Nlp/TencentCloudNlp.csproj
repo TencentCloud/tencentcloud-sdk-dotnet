@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{46495F04-57A1-3328-BD3F-406E6BB2D037}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudNlpSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190408\NlpClient.cs" />
+    <Compile Include="V20190408\Models\AutoSummarizationRequest.cs" />
+    <Compile Include="V20190408\Models\AutoSummarizationResponse.cs" />
+    <Compile Include="V20190408\Models\CCIToken.cs" />
+    <Compile Include="V20190408\Models\ChatBotRequest.cs" />
+    <Compile Include="V20190408\Models\ChatBotResponse.cs" />
+    <Compile Include="V20190408\Models\ClassificationResult.cs" />
+    <Compile Include="V20190408\Models\CreateDictRequest.cs" />
+    <Compile Include="V20190408\Models\CreateDictResponse.cs" />
+    <Compile Include="V20190408\Models\CreateWordItemsRequest.cs" />
+    <Compile Include="V20190408\Models\CreateWordItemsResponse.cs" />
+    <Compile Include="V20190408\Models\DeleteDictRequest.cs" />
+    <Compile Include="V20190408\Models\DeleteDictResponse.cs" />
+    <Compile Include="V20190408\Models\DeleteWordItemsRequest.cs" />
+    <Compile Include="V20190408\Models\DeleteWordItemsResponse.cs" />
+    <Compile Include="V20190408\Models\DependencyParsingRequest.cs" />
+    <Compile Include="V20190408\Models\DependencyParsingResponse.cs" />
+    <Compile Include="V20190408\Models\DescribeDictRequest.cs" />
+    <Compile Include="V20190408\Models\DescribeDictResponse.cs" />
+    <Compile Include="V20190408\Models\DescribeDictsRequest.cs" />
+    <Compile Include="V20190408\Models\DescribeDictsResponse.cs" />
+    <Compile Include="V20190408\Models\DescribeEntityRequest.cs" />
+    <Compile Include="V20190408\Models\DescribeEntityResponse.cs" />
+    <Compile Include="V20190408\Models\DescribeRelationRequest.cs" />
+    <Compile Include="V20190408\Models\DescribeRelationResponse.cs" />
+    <Compile Include="V20190408\Models\DescribeTripleRequest.cs" />
+    <Compile Include="V20190408\Models\DescribeTripleResponse.cs" />
+    <Compile Include="V20190408\Models\DescribeWordItemsRequest.cs" />
+    <Compile Include="V20190408\Models\DescribeWordItemsResponse.cs" />
+    <Compile Include="V20190408\Models\DictInfo.cs" />
+    <Compile Include="V20190408\Models\DpToken.cs" />
+    <Compile Include="V20190408\Models\EntityRelationContent.cs" />
+    <Compile Include="V20190408\Models\EntityRelationObject.cs" />
+    <Compile Include="V20190408\Models\EntityRelationSubject.cs" />
+    <Compile Include="V20190408\Models\Keyword.cs" />
+    <Compile Include="V20190408\Models\KeywordsExtractionRequest.cs" />
+    <Compile Include="V20190408\Models\KeywordsExtractionResponse.cs" />
+    <Compile Include="V20190408\Models\LexicalAnalysisRequest.cs" />
+    <Compile Include="V20190408\Models\LexicalAnalysisResponse.cs" />
+    <Compile Include="V20190408\Models\NerToken.cs" />
+    <Compile Include="V20190408\Models\PosToken.cs" />
+    <Compile Include="V20190408\Models\SearchResult.cs" />
+    <Compile Include="V20190408\Models\SearchWordItemsRequest.cs" />
+    <Compile Include="V20190408\Models\SearchWordItemsResponse.cs" />
+    <Compile Include="V20190408\Models\SentenceEmbeddingRequest.cs" />
+    <Compile Include="V20190408\Models\SentenceEmbeddingResponse.cs" />
+    <Compile Include="V20190408\Models\SentimentAnalysisRequest.cs" />
+    <Compile Include="V20190408\Models\SentimentAnalysisResponse.cs" />
+    <Compile Include="V20190408\Models\SimilarWordsRequest.cs" />
+    <Compile Include="V20190408\Models\SimilarWordsResponse.cs" />
+    <Compile Include="V20190408\Models\Similarity.cs" />
+    <Compile Include="V20190408\Models\TextClassificationRequest.cs" />
+    <Compile Include="V20190408\Models\TextClassificationResponse.cs" />
+    <Compile Include="V20190408\Models\TextCorrectionRequest.cs" />
+    <Compile Include="V20190408\Models\TextCorrectionResponse.cs" />
+    <Compile Include="V20190408\Models\TextSimilarityRequest.cs" />
+    <Compile Include="V20190408\Models\TextSimilarityResponse.cs" />
+    <Compile Include="V20190408\Models\TripleContent.cs" />
+    <Compile Include="V20190408\Models\UpdateDictRequest.cs" />
+    <Compile Include="V20190408\Models\UpdateDictResponse.cs" />
+    <Compile Include="V20190408\Models\WordEmbeddingRequest.cs" />
+    <Compile Include="V20190408\Models\WordEmbeddingResponse.cs" />
+    <Compile Include="V20190408\Models\WordItem.cs" />
+    <Compile Include="V20190408\Models\WordSimilarityRequest.cs" />
+    <Compile Include="V20190408\Models\WordSimilarityResponse.cs" />
+  </ItemGroup>
+</Project>

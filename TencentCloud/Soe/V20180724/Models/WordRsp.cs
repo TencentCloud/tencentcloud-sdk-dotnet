@@ -76,7 +76,7 @@ namespace TencentCloud.Soe.V20180724.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MemBeginTime", this.MemBeginTime);
             this.SetParamSimple(map, prefix + "MemEndTime", this.MemEndTime);

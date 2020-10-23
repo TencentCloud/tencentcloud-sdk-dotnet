@@ -1,0 +1,98 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCynosdbSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190107\CynosdbClient.cs" />
+    <Compile Include="V20190107\Models\Account.cs" />
+    <Compile Include="V20190107\Models\AddInstancesRequest.cs" />
+    <Compile Include="V20190107\Models\AddInstancesResponse.cs" />
+    <Compile Include="V20190107\Models\Addr.cs" />
+    <Compile Include="V20190107\Models\BackupFileInfo.cs" />
+    <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
+    <Compile Include="V20190107\Models\CreateClustersRequest.cs" />
+    <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
+    <Compile Include="V20190107\Models\CynosdbCluster.cs" />
+    <Compile Include="V20190107\Models\CynosdbClusterDetail.cs" />
+    <Compile Include="V20190107\Models\CynosdbInstance.cs" />
+    <Compile Include="V20190107\Models\CynosdbInstanceDetail.cs" />
+    <Compile Include="V20190107\Models\CynosdbInstanceGrp.cs" />
+    <Compile Include="V20190107\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupConfigRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupListRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupListResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterDetailRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterDetailResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterInstanceGrpsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterInstanceGrpsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceDetailRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceDetailResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceSpecsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceSpecsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeMaintainPeriodRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeMaintainPeriodResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeRollbackTimeRangeRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeRollbackTimeRangeResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeRollbackTimeValidityRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeRollbackTimeValidityResponse.cs" />
+    <Compile Include="V20190107\Models\InstanceSpec.cs" />
+    <Compile Include="V20190107\Models\IsolateClusterRequest.cs" />
+    <Compile Include="V20190107\Models\IsolateClusterResponse.cs" />
+    <Compile Include="V20190107\Models\IsolateInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\IsolateInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupConfigRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigResponse.cs" />
+    <Compile Include="V20190107\Models\ObjectTask.cs" />
+    <Compile Include="V20190107\Models\OfflineClusterRequest.cs" />
+    <Compile Include="V20190107\Models\OfflineClusterResponse.cs" />
+    <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\OfflineInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\PolicyRule.cs" />
+    <Compile Include="V20190107\Models\QueryFilter.cs" />
+    <Compile Include="V20190107\Models\SecurityGroup.cs" />
+    <Compile Include="V20190107\Models\SetRenewFlagRequest.cs" />
+    <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />
+    <Compile Include="V20190107\Models\Tag.cs" />
+    <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\UpgradeInstanceResponse.cs" />
+  </ItemGroup>
+</Project>

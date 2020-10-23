@@ -41,7 +41,7 @@ namespace TencentCloud.Rkp.V20191209.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RiskCode", this.RiskCode);
             this.SetParamSimple(map, prefix + "RiskCodeValue", this.RiskCodeValue);

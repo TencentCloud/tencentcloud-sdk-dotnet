@@ -76,7 +76,7 @@ namespace TencentCloud.Wss.V20180426.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ModuleType", this.ModuleType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

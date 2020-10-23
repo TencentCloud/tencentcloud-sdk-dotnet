@@ -52,7 +52,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "FileMD5", this.FileMD5);

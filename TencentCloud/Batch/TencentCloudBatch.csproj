@@ -1,0 +1,154 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{86FB3DAB-6BE3-33E4-AD1F-C670CEFC0E1D}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudBatchSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20170312\BatchClient.cs" />
+    <Compile Include="V20170312\Models\Activity.cs" />
+    <Compile Include="V20170312\Models\AgentRunningMode.cs" />
+    <Compile Include="V20170312\Models\AnonymousComputeEnv.cs" />
+    <Compile Include="V20170312\Models\Application.cs" />
+    <Compile Include="V20170312\Models\AttachInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\AttachInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\Authentication.cs" />
+    <Compile Include="V20170312\Models\ComputeEnvCreateInfo.cs" />
+    <Compile Include="V20170312\Models\ComputeEnvData.cs" />
+    <Compile Include="V20170312\Models\ComputeEnvView.cs" />
+    <Compile Include="V20170312\Models\ComputeNode.cs" />
+    <Compile Include="V20170312\Models\ComputeNodeMetrics.cs" />
+    <Compile Include="V20170312\Models\CpmVirtualPrivateCloud.cs" />
+    <Compile Include="V20170312\Models\CreateComputeEnvRequest.cs" />
+    <Compile Include="V20170312\Models\CreateComputeEnvResponse.cs" />
+    <Compile Include="V20170312\Models\CreateCpmComputeEnvRequest.cs" />
+    <Compile Include="V20170312\Models\CreateCpmComputeEnvResponse.cs" />
+    <Compile Include="V20170312\Models\CreateTaskTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\CreateTaskTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\DataDisk.cs" />
+    <Compile Include="V20170312\Models\DeleteComputeEnvRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteComputeEnvResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteJobRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteJobResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteTaskTemplatesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteTaskTemplatesResponse.cs" />
+    <Compile Include="V20170312\Models\Dependence.cs" />
+    <Compile Include="V20170312\Models\DescribeAvailableCvmInstanceTypesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeAvailableCvmInstanceTypesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvActivitiesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvActivitiesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvCreateInfoRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvCreateInfoResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvCreateInfosRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvCreateInfosResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeComputeEnvsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCpmOsInfoRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCpmOsInfoResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCvmZoneInstanceConfigInfosRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCvmZoneInstanceConfigInfosResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceCategoriesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceCategoriesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeJobRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeJobResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeJobSubmitInfoRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeJobSubmitInfoResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeJobsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeJobsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskLogsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskLogsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskTemplatesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTaskTemplatesResponse.cs" />
+    <Compile Include="V20170312\Models\DetachInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DetachInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\Docker.cs" />
+    <Compile Include="V20170312\Models\EnhancedService.cs" />
+    <Compile Include="V20170312\Models\EnvData.cs" />
+    <Compile Include="V20170312\Models\EnvDataCpm.cs" />
+    <Compile Include="V20170312\Models\EnvVar.cs" />
+    <Compile Include="V20170312\Models\EventConfig.cs" />
+    <Compile Include="V20170312\Models\EventVar.cs" />
+    <Compile Include="V20170312\Models\Externals.cs" />
+    <Compile Include="V20170312\Models\Filter.cs" />
+    <Compile Include="V20170312\Models\InputMapping.cs" />
+    <Compile Include="V20170312\Models\Instance.cs" />
+    <Compile Include="V20170312\Models\InstanceCategoryItem.cs" />
+    <Compile Include="V20170312\Models\InstanceMarketOptionsRequest.cs" />
+    <Compile Include="V20170312\Models\InstanceTypeConfig.cs" />
+    <Compile Include="V20170312\Models\InstanceTypeOptions.cs" />
+    <Compile Include="V20170312\Models\InstanceTypeQuotaItem.cs" />
+    <Compile Include="V20170312\Models\InternetAccessible.cs" />
+    <Compile Include="V20170312\Models\ItemPrice.cs" />
+    <Compile Include="V20170312\Models\Job.cs" />
+    <Compile Include="V20170312\Models\JobView.cs" />
+    <Compile Include="V20170312\Models\LocalDiskType.cs" />
+    <Compile Include="V20170312\Models\LoginSettings.cs" />
+    <Compile Include="V20170312\Models\ModifyComputeEnvRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyComputeEnvResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyTaskTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyTaskTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\MountDataDisk.cs" />
+    <Compile Include="V20170312\Models\NamedComputeEnv.cs" />
+    <Compile Include="V20170312\Models\NamedCpmComputeEnv.cs" />
+    <Compile Include="V20170312\Models\Notification.cs" />
+    <Compile Include="V20170312\Models\OsInfo.cs" />
+    <Compile Include="V20170312\Models\OutputMapping.cs" />
+    <Compile Include="V20170312\Models\OutputMappingConfig.cs" />
+    <Compile Include="V20170312\Models\Placement.cs" />
+    <Compile Include="V20170312\Models\RedirectInfo.cs" />
+    <Compile Include="V20170312\Models\RedirectLocalInfo.cs" />
+    <Compile Include="V20170312\Models\RetryJobsRequest.cs" />
+    <Compile Include="V20170312\Models\RetryJobsResponse.cs" />
+    <Compile Include="V20170312\Models\RunMonitorServiceEnabled.cs" />
+    <Compile Include="V20170312\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20170312\Models\SpotMarketOptions.cs" />
+    <Compile Include="V20170312\Models\StorageBlock.cs" />
+    <Compile Include="V20170312\Models\SubmitJobRequest.cs" />
+    <Compile Include="V20170312\Models\SubmitJobResponse.cs" />
+    <Compile Include="V20170312\Models\SystemDisk.cs" />
+    <Compile Include="V20170312\Models\Tag.cs" />
+    <Compile Include="V20170312\Models\Task.cs" />
+    <Compile Include="V20170312\Models\TaskInstanceLog.cs" />
+    <Compile Include="V20170312\Models\TaskInstanceMetrics.cs" />
+    <Compile Include="V20170312\Models\TaskInstanceView.cs" />
+    <Compile Include="V20170312\Models\TaskMetrics.cs" />
+    <Compile Include="V20170312\Models\TaskTemplateView.cs" />
+    <Compile Include="V20170312\Models\TaskView.cs" />
+    <Compile Include="V20170312\Models\TerminateComputeNodeRequest.cs" />
+    <Compile Include="V20170312\Models\TerminateComputeNodeResponse.cs" />
+    <Compile Include="V20170312\Models\TerminateComputeNodesRequest.cs" />
+    <Compile Include="V20170312\Models\TerminateComputeNodesResponse.cs" />
+    <Compile Include="V20170312\Models\TerminateJobRequest.cs" />
+    <Compile Include="V20170312\Models\TerminateJobResponse.cs" />
+    <Compile Include="V20170312\Models\TerminateTaskInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\TerminateTaskInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\VirtualPrivateCloud.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,217 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCvmSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20170312\CvmClient.cs" />
+    <Compile Include="V20170312\Models\ActionTimer.cs" />
+    <Compile Include="V20170312\Models\AllocateHostsRequest.cs" />
+    <Compile Include="V20170312\Models\AllocateHostsResponse.cs" />
+    <Compile Include="V20170312\Models\AssociateInstancesKeyPairsRequest.cs" />
+    <Compile Include="V20170312\Models\AssociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\ChargePrepaid.cs" />
+    <Compile Include="V20170312\Models\CreateDisasterRecoverGroupRequest.cs" />
+    <Compile Include="V20170312\Models\CreateDisasterRecoverGroupResponse.cs" />
+    <Compile Include="V20170312\Models\CreateImageRequest.cs" />
+    <Compile Include="V20170312\Models\CreateImageResponse.cs" />
+    <Compile Include="V20170312\Models\CreateKeyPairRequest.cs" />
+    <Compile Include="V20170312\Models\CreateKeyPairResponse.cs" />
+    <Compile Include="V20170312\Models\DataDisk.cs" />
+    <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteImagesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteImagesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteKeyPairsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeHostsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeHostsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeImageQuotaRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeImageQuotaResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeImageSharePermissionRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeImageSharePermissionResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeImagesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeImportImageOsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeImportImageOsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceFamilyConfigsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceFamilyConfigsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceInternetBandwidthConfigsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceInternetBandwidthConfigsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceTypeConfigsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceTypeConfigsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceVncUrlRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceVncUrlResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesOperationLimitRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesOperationLimitResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesStatusRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstancesStatusResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInternetChargeTypeConfigsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInternetChargeTypeConfigsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeKeyPairsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesConfigInfosRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesConfigInfosResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesOfferingsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeReservedInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeSpotTypeConfigRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeSpotTypeConfigResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeZoneInstanceConfigInfosResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeZonesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20170312\Models\DisassociateInstancesKeyPairsRequest.cs" />
+    <Compile Include="V20170312\Models\DisassociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DisasterRecoverGroup.cs" />
+    <Compile Include="V20170312\Models\EnhancedService.cs" />
+    <Compile Include="V20170312\Models\Externals.cs" />
+    <Compile Include="V20170312\Models\Filter.cs" />
+    <Compile Include="V20170312\Models\HostItem.cs" />
+    <Compile Include="V20170312\Models\HostResource.cs" />
+    <Compile Include="V20170312\Models\Image.cs" />
+    <Compile Include="V20170312\Models\ImageOsList.cs" />
+    <Compile Include="V20170312\Models\ImportImageRequest.cs" />
+    <Compile Include="V20170312\Models\ImportImageResponse.cs" />
+    <Compile Include="V20170312\Models\ImportKeyPairRequest.cs" />
+    <Compile Include="V20170312\Models\ImportKeyPairResponse.cs" />
+    <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingRequest.cs" />
+    <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceModifyInstancesChargeTypeRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceModifyInstancesChargeTypeResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResetInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResetInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResetInstancesInternetMaxBandwidthRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResetInstancesInternetMaxBandwidthResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResetInstancesTypeRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResetInstancesTypeResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResizeInstanceDisksRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceResizeInstanceDisksResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRunInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRunInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\Instance.cs" />
+    <Compile Include="V20170312\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20170312\Models\InstanceFamilyConfig.cs" />
+    <Compile Include="V20170312\Models\InstanceMarketOptionsRequest.cs" />
+    <Compile Include="V20170312\Models\InstanceStatus.cs" />
+    <Compile Include="V20170312\Models\InstanceTypeConfig.cs" />
+    <Compile Include="V20170312\Models\InstanceTypeQuotaItem.cs" />
+    <Compile Include="V20170312\Models\InternetAccessible.cs" />
+    <Compile Include="V20170312\Models\InternetBandwidthConfig.cs" />
+    <Compile Include="V20170312\Models\InternetChargeTypeConfig.cs" />
+    <Compile Include="V20170312\Models\ItemPrice.cs" />
+    <Compile Include="V20170312\Models\KeyPair.cs" />
+    <Compile Include="V20170312\Models\LocalDiskType.cs" />
+    <Compile Include="V20170312\Models\LoginSettings.cs" />
+    <Compile Include="V20170312\Models\ModifyDisasterRecoverGroupAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDisasterRecoverGroupAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyHostsAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyHostsAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyImageAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyImageAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyImageSharePermissionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyImageSharePermissionResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesChargeTypeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesChargeTypeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesProjectRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesProjectResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesRenewFlagRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesRenewFlagResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesVpcAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyInstancesVpcAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyKeyPairAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyKeyPairAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\OperationCountLimit.cs" />
+    <Compile Include="V20170312\Models\OsVersion.cs" />
+    <Compile Include="V20170312\Models\Placement.cs" />
+    <Compile Include="V20170312\Models\Price.cs" />
+    <Compile Include="V20170312\Models\PurchaseReservedInstancesOfferingRequest.cs" />
+    <Compile Include="V20170312\Models\PurchaseReservedInstancesOfferingResponse.cs" />
+    <Compile Include="V20170312\Models\RebootInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\RebootInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\RegionInfo.cs" />
+    <Compile Include="V20170312\Models\RenewHostsRequest.cs" />
+    <Compile Include="V20170312\Models\RenewHostsResponse.cs" />
+    <Compile Include="V20170312\Models\RenewInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\RenewInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\ReservedInstanceConfigInfoItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstanceFamilyItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstancePrice.cs" />
+    <Compile Include="V20170312\Models\ReservedInstancePriceItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstanceTypeItem.cs" />
+    <Compile Include="V20170312\Models\ReservedInstances.cs" />
+    <Compile Include="V20170312\Models\ReservedInstancesOffering.cs" />
+    <Compile Include="V20170312\Models\ResetInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\ResetInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ResetInstancesInternetMaxBandwidthRequest.cs" />
+    <Compile Include="V20170312\Models\ResetInstancesInternetMaxBandwidthResponse.cs" />
+    <Compile Include="V20170312\Models\ResetInstancesPasswordRequest.cs" />
+    <Compile Include="V20170312\Models\ResetInstancesPasswordResponse.cs" />
+    <Compile Include="V20170312\Models\ResetInstancesTypeRequest.cs" />
+    <Compile Include="V20170312\Models\ResetInstancesTypeResponse.cs" />
+    <Compile Include="V20170312\Models\ResizeInstanceDisksRequest.cs" />
+    <Compile Include="V20170312\Models\ResizeInstanceDisksResponse.cs" />
+    <Compile Include="V20170312\Models\RunInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\RunInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\RunMonitorServiceEnabled.cs" />
+    <Compile Include="V20170312\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20170312\Models\SharePermission.cs" />
+    <Compile Include="V20170312\Models\Snapshot.cs" />
+    <Compile Include="V20170312\Models\SpotMarketOptions.cs" />
+    <Compile Include="V20170312\Models\StartInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\StartInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\StopInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\StopInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\StorageBlock.cs" />
+    <Compile Include="V20170312\Models\SyncImagesRequest.cs" />
+    <Compile Include="V20170312\Models\SyncImagesResponse.cs" />
+    <Compile Include="V20170312\Models\SystemDisk.cs" />
+    <Compile Include="V20170312\Models\Tag.cs" />
+    <Compile Include="V20170312\Models\TagSpecification.cs" />
+    <Compile Include="V20170312\Models\TerminateInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\TerminateInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\VirtualPrivateCloud.cs" />
+    <Compile Include="V20170312\Models\ZoneInfo.cs" />
+  </ItemGroup>
+</Project>

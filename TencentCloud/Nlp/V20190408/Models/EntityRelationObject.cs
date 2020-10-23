@@ -46,7 +46,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
             this.SetParamArraySimple(map, prefix + "Name.", this.Name);

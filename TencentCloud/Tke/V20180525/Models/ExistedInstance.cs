@@ -126,7 +126,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Usable", this.Usable);
             this.SetParamSimple(map, prefix + "UnusableReason", this.UnusableReason);

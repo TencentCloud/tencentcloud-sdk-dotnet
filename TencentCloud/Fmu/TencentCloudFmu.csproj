@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{253ECC85-2427-38B4-B29C-26E83EA20D04}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudFmuSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20191213\FmuClient.cs" />
+    <Compile Include="V20191213\Models\BeautifyPicRequest.cs" />
+    <Compile Include="V20191213\Models\BeautifyPicResponse.cs" />
+    <Compile Include="V20191213\Models\BeautifyVideoOutput.cs" />
+    <Compile Include="V20191213\Models\BeautifyVideoRequest.cs" />
+    <Compile Include="V20191213\Models\BeautifyVideoResponse.cs" />
+    <Compile Include="V20191213\Models\BeautyParam.cs" />
+    <Compile Include="V20191213\Models\CancelBeautifyVideoJobRequest.cs" />
+    <Compile Include="V20191213\Models\CancelBeautifyVideoJobResponse.cs" />
+    <Compile Include="V20191213\Models\CreateModelRequest.cs" />
+    <Compile Include="V20191213\Models\CreateModelResponse.cs" />
+    <Compile Include="V20191213\Models\DeleteModelRequest.cs" />
+    <Compile Include="V20191213\Models\DeleteModelResponse.cs" />
+    <Compile Include="V20191213\Models\FaceRect.cs" />
+    <Compile Include="V20191213\Models\GetModelListRequest.cs" />
+    <Compile Include="V20191213\Models\GetModelListResponse.cs" />
+    <Compile Include="V20191213\Models\LipColorInfo.cs" />
+    <Compile Include="V20191213\Models\ModelInfo.cs" />
+    <Compile Include="V20191213\Models\QueryBeautifyVideoJobRequest.cs" />
+    <Compile Include="V20191213\Models\QueryBeautifyVideoJobResponse.cs" />
+    <Compile Include="V20191213\Models\RGBAInfo.cs" />
+    <Compile Include="V20191213\Models\TryLipstickPicRequest.cs" />
+    <Compile Include="V20191213\Models\TryLipstickPicResponse.cs" />
+  </ItemGroup>
+</Project>

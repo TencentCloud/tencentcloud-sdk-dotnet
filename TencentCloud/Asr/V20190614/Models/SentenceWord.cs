@@ -46,7 +46,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Word", this.Word);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

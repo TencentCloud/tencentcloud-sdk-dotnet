@@ -46,7 +46,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccessId", this.AccessId);
             this.SetParamArraySimple(map, prefix + "Tids.", this.Tids);

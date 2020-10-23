@@ -57,6 +57,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string KeyRegion{ get; set; }
 
         /// <summary>
+        /// 当前 CDB 后端服务使用的 KMS 服务的默认地域。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultKmsRegion")]
+        public string DefaultKmsRegion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -66,13 +73,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
+            this.SetParamSimple(map, prefix + "DefaultKmsRegion", this.DefaultKmsRegion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{01B0B03A-D868-351D-BB9D-D4D62CA9AE79}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudDrmSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20181115\DrmClient.cs" />
+    <Compile Include="V20181115\Models\AddFairPlayPemRequest.cs" />
+    <Compile Include="V20181115\Models\AddFairPlayPemResponse.cs" />
+    <Compile Include="V20181115\Models\CreateEncryptKeysRequest.cs" />
+    <Compile Include="V20181115\Models\CreateEncryptKeysResponse.cs" />
+    <Compile Include="V20181115\Models\CreateLicenseRequest.cs" />
+    <Compile Include="V20181115\Models\CreateLicenseResponse.cs" />
+    <Compile Include="V20181115\Models\DeleteFairPlayPemRequest.cs" />
+    <Compile Include="V20181115\Models\DeleteFairPlayPemResponse.cs" />
+    <Compile Include="V20181115\Models\DescribeAllKeysRequest.cs" />
+    <Compile Include="V20181115\Models\DescribeAllKeysResponse.cs" />
+    <Compile Include="V20181115\Models\DescribeFairPlayPemRequest.cs" />
+    <Compile Include="V20181115\Models\DescribeFairPlayPemResponse.cs" />
+    <Compile Include="V20181115\Models\DescribeKeysRequest.cs" />
+    <Compile Include="V20181115\Models\DescribeKeysResponse.cs" />
+    <Compile Include="V20181115\Models\DrmOutputObject.cs" />
+    <Compile Include="V20181115\Models\DrmOutputPara.cs" />
+    <Compile Include="V20181115\Models\DrmSourceObject.cs" />
+    <Compile Include="V20181115\Models\FairPlayPemDigestInfo.cs" />
+    <Compile Include="V20181115\Models\KeyInfo.cs" />
+    <Compile Include="V20181115\Models\KeyParam.cs" />
+    <Compile Include="V20181115\Models\ModifyFairPlayPemRequest.cs" />
+    <Compile Include="V20181115\Models\ModifyFairPlayPemResponse.cs" />
+    <Compile Include="V20181115\Models\PlaybackPolicy.cs" />
+    <Compile Include="V20181115\Models\StartEncryptionRequest.cs" />
+    <Compile Include="V20181115\Models\StartEncryptionResponse.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{DC1141E9-0B74-3CE2-9E64-93FCBF336932}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudStsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180813\StsClient.cs" />
+    <Compile Include="V20180813\Models\ApiKey.cs" />
+    <Compile Include="V20180813\Models\AssumeRoleRequest.cs" />
+    <Compile Include="V20180813\Models\AssumeRoleResponse.cs" />
+    <Compile Include="V20180813\Models\AssumeRoleWithSAMLRequest.cs" />
+    <Compile Include="V20180813\Models\AssumeRoleWithSAMLResponse.cs" />
+    <Compile Include="V20180813\Models\Credentials.cs" />
+    <Compile Include="V20180813\Models\GetFederationTokenRequest.cs" />
+    <Compile Include="V20180813\Models\GetFederationTokenResponse.cs" />
+    <Compile Include="V20180813\Models\QueryApiKeyRequest.cs" />
+    <Compile Include="V20180813\Models\QueryApiKeyResponse.cs" />
+  </ItemGroup>
+</Project>

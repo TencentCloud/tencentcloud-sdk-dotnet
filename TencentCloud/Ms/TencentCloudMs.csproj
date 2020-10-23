@@ -1,0 +1,88 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{688DC818-0211-3401-8C6A-72CF4B76DD80}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudMsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180408\MsClient.cs" />
+    <Compile Include="V20180408\Models\AdInfo.cs" />
+    <Compile Include="V20180408\Models\AppDetailInfo.cs" />
+    <Compile Include="V20180408\Models\AppInfo.cs" />
+    <Compile Include="V20180408\Models\AppScanSet.cs" />
+    <Compile Include="V20180408\Models\AppSetInfo.cs" />
+    <Compile Include="V20180408\Models\BindInfo.cs" />
+    <Compile Include="V20180408\Models\CreateBindInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\CreateBindInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\CreateCosSecKeyInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\CreateCosSecKeyInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\CreateResourceInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\CreateResourceInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\CreateScanInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\CreateScanInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\CreateShieldInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\CreateShieldInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\CreateShieldPlanInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\CreateShieldPlanInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\DeleteScanInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DeleteScanInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\DeleteShieldInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DeleteShieldInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeResourceInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeResourceInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeScanInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeScanInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeScanResultsRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeScanResultsResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeShieldInstancesRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeShieldInstancesResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeShieldPlanInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeShieldPlanInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeShieldResultRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeShieldResultResponse.cs" />
+    <Compile Include="V20180408\Models\DescribeUserBaseInfoInstanceRequest.cs" />
+    <Compile Include="V20180408\Models\DescribeUserBaseInfoInstanceResponse.cs" />
+    <Compile Include="V20180408\Models\Filter.cs" />
+    <Compile Include="V20180408\Models\PlanDetailInfo.cs" />
+    <Compile Include="V20180408\Models\PlanInfo.cs" />
+    <Compile Include="V20180408\Models\PluginInfo.cs" />
+    <Compile Include="V20180408\Models\ResourceInfo.cs" />
+    <Compile Include="V20180408\Models\ResourceServiceInfo.cs" />
+    <Compile Include="V20180408\Models\ScanInfo.cs" />
+    <Compile Include="V20180408\Models\ScanPermissionInfo.cs" />
+    <Compile Include="V20180408\Models\ScanPermissionList.cs" />
+    <Compile Include="V20180408\Models\ScanSensitiveInfo.cs" />
+    <Compile Include="V20180408\Models\ScanSensitiveList.cs" />
+    <Compile Include="V20180408\Models\ScanSetInfo.cs" />
+    <Compile Include="V20180408\Models\ServiceInfo.cs" />
+    <Compile Include="V20180408\Models\ShieldInfo.cs" />
+    <Compile Include="V20180408\Models\ShieldPlanInfo.cs" />
+    <Compile Include="V20180408\Models\SoInfo.cs" />
+    <Compile Include="V20180408\Models\VirusInfo.cs" />
+    <Compile Include="V20180408\Models\VulInfo.cs" />
+    <Compile Include="V20180408\Models\VulList.cs" />
+  </ItemGroup>
+</Project>

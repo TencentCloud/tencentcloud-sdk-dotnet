@@ -46,7 +46,7 @@ namespace TencentCloud.Aai.V20180522.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Audio", this.Audio);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

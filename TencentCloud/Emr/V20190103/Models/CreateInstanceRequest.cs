@@ -207,11 +207,17 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("MetaDBInfo")]
         public CustomMetaInfo MetaDBInfo{ get; set; }
 
+        /// <summary>
+        /// 自定义应用角色。
+        /// </summary>
+        [JsonProperty("ApplicationRole")]
+        public string ApplicationRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
@@ -239,6 +245,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
             this.SetParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
             this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
+            this.SetParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         }
     }
 }

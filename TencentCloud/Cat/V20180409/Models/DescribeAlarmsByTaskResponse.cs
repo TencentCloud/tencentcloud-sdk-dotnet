@@ -52,7 +52,7 @@ namespace TencentCloud.Cat.V20180409.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "AlarmInfos.", this.AlarmInfos);
             this.SetParamSimple(map, prefix + "FaultRatio", this.FaultRatio);

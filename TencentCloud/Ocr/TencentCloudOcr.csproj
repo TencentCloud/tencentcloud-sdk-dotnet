@@ -1,0 +1,201 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudOcrSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20181119\OcrClient.cs" />
+    <Compile Include="V20181119\Models\ArithmeticOCRRequest.cs" />
+    <Compile Include="V20181119\Models\ArithmeticOCRResponse.cs" />
+    <Compile Include="V20181119\Models\BankCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\BankCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\BizLicenseOCRRequest.cs" />
+    <Compile Include="V20181119\Models\BizLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\BizLicenseVerifyResult.cs" />
+    <Compile Include="V20181119\Models\BusInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\BusInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\BusInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\BusinessCardInfo.cs" />
+    <Compile Include="V20181119\Models\BusinessCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\BusinessCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\CandWord.cs" />
+    <Compile Include="V20181119\Models\CarInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\CarInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\CarInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ClassifyDetectInfo.cs" />
+    <Compile Include="V20181119\Models\ClassifyDetectOCRRequest.cs" />
+    <Compile Include="V20181119\Models\ClassifyDetectOCRResponse.cs" />
+    <Compile Include="V20181119\Models\Coord.cs" />
+    <Compile Include="V20181119\Models\DriverLicenseOCRRequest.cs" />
+    <Compile Include="V20181119\Models\DriverLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\DutyPaidProofInfo.cs" />
+    <Compile Include="V20181119\Models\DutyPaidProofOCRRequest.cs" />
+    <Compile Include="V20181119\Models\DutyPaidProofOCRResponse.cs" />
+    <Compile Include="V20181119\Models\EduPaperOCRRequest.cs" />
+    <Compile Include="V20181119\Models\EduPaperOCRResponse.cs" />
+    <Compile Include="V20181119\Models\EnglishOCRRequest.cs" />
+    <Compile Include="V20181119\Models\EnglishOCRResponse.cs" />
+    <Compile Include="V20181119\Models\EnterpriseLicenseInfo.cs" />
+    <Compile Include="V20181119\Models\EnterpriseLicenseOCRRequest.cs" />
+    <Compile Include="V20181119\Models\EnterpriseLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\EstateCertOCRRequest.cs" />
+    <Compile Include="V20181119\Models\EstateCertOCRResponse.cs" />
+    <Compile Include="V20181119\Models\FinanBillInfo.cs" />
+    <Compile Include="V20181119\Models\FinanBillOCRRequest.cs" />
+    <Compile Include="V20181119\Models\FinanBillOCRResponse.cs" />
+    <Compile Include="V20181119\Models\FinanBillSliceInfo.cs" />
+    <Compile Include="V20181119\Models\FinanBillSliceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\FinanBillSliceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\FlightInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\FlightInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\FlightInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\FormulaOCRRequest.cs" />
+    <Compile Include="V20181119\Models\FormulaOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralAccurateOCRRequest.cs" />
+    <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
+    <Compile Include="V20181119\Models\GeneralBasicOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralEfficientOCRRequest.cs" />
+    <Compile Include="V20181119\Models\GeneralEfficientOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralFastOCRRequest.cs" />
+    <Compile Include="V20181119\Models\GeneralFastOCRResponse.cs" />
+    <Compile Include="V20181119\Models\GeneralHandwritingOCRRequest.cs" />
+    <Compile Include="V20181119\Models\GeneralHandwritingOCRResponse.cs" />
+    <Compile Include="V20181119\Models\HKIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\HKIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\HmtResidentPermitOCRRequest.cs" />
+    <Compile Include="V20181119\Models\HmtResidentPermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\IDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\IDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\InstitutionOCRRequest.cs" />
+    <Compile Include="V20181119\Models\InstitutionOCRResponse.cs" />
+    <Compile Include="V20181119\Models\InsuranceBillInfo.cs" />
+    <Compile Include="V20181119\Models\InsuranceBillOCRRequest.cs" />
+    <Compile Include="V20181119\Models\InsuranceBillOCRResponse.cs" />
+    <Compile Include="V20181119\Models\InvoiceDetectInfo.cs" />
+    <Compile Include="V20181119\Models\InvoiceGeneralInfo.cs" />
+    <Compile Include="V20181119\Models\InvoiceGeneralOCRRequest.cs" />
+    <Compile Include="V20181119\Models\InvoiceGeneralOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ItemCoord.cs" />
+    <Compile Include="V20181119\Models\LicensePlateOCRRequest.cs" />
+    <Compile Include="V20181119\Models\LicensePlateOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MLIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\MLIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MLIDPassportOCRRequest.cs" />
+    <Compile Include="V20181119\Models\MLIDPassportOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MainlandPermitOCRRequest.cs" />
+    <Compile Include="V20181119\Models\MainlandPermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\MixedInvoiceDetectRequest.cs" />
+    <Compile Include="V20181119\Models\MixedInvoiceDetectResponse.cs" />
+    <Compile Include="V20181119\Models\MixedInvoiceItem.cs" />
+    <Compile Include="V20181119\Models\MixedInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\MixedInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\OrgCodeCertOCRRequest.cs" />
+    <Compile Include="V20181119\Models\OrgCodeCertOCRResponse.cs" />
+    <Compile Include="V20181119\Models\PassportOCRRequest.cs" />
+    <Compile Include="V20181119\Models\PassportOCRResponse.cs" />
+    <Compile Include="V20181119\Models\PermitOCRRequest.cs" />
+    <Compile Include="V20181119\Models\PermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\Polygon.cs" />
+    <Compile Include="V20181119\Models\ProductDataRecord.cs" />
+    <Compile Include="V20181119\Models\PropOwnerCertOCRRequest.cs" />
+    <Compile Include="V20181119\Models\PropOwnerCertOCRResponse.cs" />
+    <Compile Include="V20181119\Models\QrcodeImgSize.cs" />
+    <Compile Include="V20181119\Models\QrcodeOCRRequest.cs" />
+    <Compile Include="V20181119\Models\QrcodeOCRResponse.cs" />
+    <Compile Include="V20181119\Models\QrcodePositionObj.cs" />
+    <Compile Include="V20181119\Models\QrcodeResultsInfo.cs" />
+    <Compile Include="V20181119\Models\QueryBarCodeRequest.cs" />
+    <Compile Include="V20181119\Models\QueryBarCodeResponse.cs" />
+    <Compile Include="V20181119\Models\QuestionBlockObj.cs" />
+    <Compile Include="V20181119\Models\QuestionObj.cs" />
+    <Compile Include="V20181119\Models\QuotaInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
+    <Compile Include="V20181119\Models\Rect.cs" />
+    <Compile Include="V20181119\Models\ResidenceBookletOCRRequest.cs" />
+    <Compile Include="V20181119\Models\ResidenceBookletOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RideHailingDriverLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RideHailingTransportLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\SealOCRRequest.cs" />
+    <Compile Include="V20181119\Models\SealOCRResponse.cs" />
+    <Compile Include="V20181119\Models\ShipInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\ShipInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\ShipInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\SingleInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\TableOCRRequest.cs" />
+    <Compile Include="V20181119\Models\TableOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TaxiInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\TaxiInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TextArithmetic.cs" />
+    <Compile Include="V20181119\Models\TextDetectRequest.cs" />
+    <Compile Include="V20181119\Models\TextDetectResponse.cs" />
+    <Compile Include="V20181119\Models\TextDetection.cs" />
+    <Compile Include="V20181119\Models\TextDetectionEn.cs" />
+    <Compile Include="V20181119\Models\TextEduPaper.cs" />
+    <Compile Include="V20181119\Models\TextFormula.cs" />
+    <Compile Include="V20181119\Models\TextGeneralHandwriting.cs" />
+    <Compile Include="V20181119\Models\TextTable.cs" />
+    <Compile Include="V20181119\Models\TextVatInvoice.cs" />
+    <Compile Include="V20181119\Models\TextVehicleBack.cs" />
+    <Compile Include="V20181119\Models\TextVehicleFront.cs" />
+    <Compile Include="V20181119\Models\TextWaybill.cs" />
+    <Compile Include="V20181119\Models\TollInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\TollInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\TollInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\TrainTicketOCRRequest.cs" />
+    <Compile Include="V20181119\Models\TrainTicketOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VatInvoice.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceItem.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceVerifyRequest.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceVerifyResponse.cs" />
+    <Compile Include="V20181119\Models\VatRollInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\VatRollInvoiceOCRRequest.cs" />
+    <Compile Include="V20181119\Models\VatRollInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VehicleLicenseOCRRequest.cs" />
+    <Compile Include="V20181119\Models\VehicleLicenseOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VehicleRegCertInfo.cs" />
+    <Compile Include="V20181119\Models\VehicleRegCertOCRRequest.cs" />
+    <Compile Include="V20181119\Models\VehicleRegCertOCRResponse.cs" />
+    <Compile Include="V20181119\Models\VerifyBasicBizLicenseRequest.cs" />
+    <Compile Include="V20181119\Models\VerifyBasicBizLicenseResponse.cs" />
+    <Compile Include="V20181119\Models\VerifyBizLicenseRequest.cs" />
+    <Compile Include="V20181119\Models\VerifyBizLicenseResponse.cs" />
+    <Compile Include="V20181119\Models\VinOCRRequest.cs" />
+    <Compile Include="V20181119\Models\VinOCRResponse.cs" />
+    <Compile Include="V20181119\Models\WaybillOCRRequest.cs" />
+    <Compile Include="V20181119\Models\WaybillOCRResponse.cs" />
+    <Compile Include="V20181119\Models\WaybillObj.cs" />
+    <Compile Include="V20181119\Models\WordCoordPoint.cs" />
+    <Compile Include="V20181119\Models\Words.cs" />
+  </ItemGroup>
+</Project>

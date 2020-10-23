@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{BC6405B5-6B40-3410-9D43-1965C0DAEE4C}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudCfsSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190719\CfsClient.cs" />
+    <Compile Include="V20190719\Models\AvailableProtoStatus.cs" />
+    <Compile Include="V20190719\Models\AvailableRegion.cs" />
+    <Compile Include="V20190719\Models\AvailableType.cs" />
+    <Compile Include="V20190719\Models\AvailableZone.cs" />
+    <Compile Include="V20190719\Models\CreateCfsFileSystemRequest.cs" />
+    <Compile Include="V20190719\Models\CreateCfsFileSystemResponse.cs" />
+    <Compile Include="V20190719\Models\CreateCfsPGroupRequest.cs" />
+    <Compile Include="V20190719\Models\CreateCfsPGroupResponse.cs" />
+    <Compile Include="V20190719\Models\CreateCfsRuleRequest.cs" />
+    <Compile Include="V20190719\Models\CreateCfsRuleResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteCfsFileSystemRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteCfsFileSystemResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteCfsPGroupRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteCfsPGroupResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteCfsRuleRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteCfsRuleResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteMountTargetRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteMountTargetResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeAvailableZoneInfoRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeAvailableZoneInfoResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsFileSystemClientsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsFileSystemClientsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsFileSystemsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsFileSystemsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsPGroupsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsPGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsRulesRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsRulesResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsServiceStatusRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeCfsServiceStatusResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeMountTargetsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeMountTargetsResponse.cs" />
+    <Compile Include="V20190719\Models\FileSystemClient.cs" />
+    <Compile Include="V20190719\Models\FileSystemInfo.cs" />
+    <Compile Include="V20190719\Models\MountInfo.cs" />
+    <Compile Include="V20190719\Models\PGroup.cs" />
+    <Compile Include="V20190719\Models\PGroupInfo.cs" />
+    <Compile Include="V20190719\Models\PGroupRuleInfo.cs" />
+    <Compile Include="V20190719\Models\SignUpCfsServiceRequest.cs" />
+    <Compile Include="V20190719\Models\SignUpCfsServiceResponse.cs" />
+    <Compile Include="V20190719\Models\TagInfo.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsFileSystemNameRequest.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsFileSystemNameResponse.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsFileSystemPGroupRequest.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsFileSystemPGroupResponse.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsFileSystemSizeLimitRequest.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsFileSystemSizeLimitResponse.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsPGroupRequest.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsPGroupResponse.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsRuleRequest.cs" />
+    <Compile Include="V20190719\Models\UpdateCfsRuleResponse.cs" />
+  </ItemGroup>
+</Project>

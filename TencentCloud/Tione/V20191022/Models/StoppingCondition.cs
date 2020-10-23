@@ -42,7 +42,7 @@ namespace TencentCloud.Tione.V20191022.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MaxRuntimeInSeconds", this.MaxRuntimeInSeconds);
             this.SetParamSimple(map, prefix + "MaxWaitTimeInSeconds", this.MaxWaitTimeInSeconds);

@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>{D56E3EFD-C760-38D8-8424-8856F2207A21}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudAmeSDK</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190916\AmeClient.cs" />
+    <Compile Include="V20190916\Models\Album.cs" />
+    <Compile Include="V20190916\Models\Artist.cs" />
+    <Compile Include="V20190916\Models\DataInfo.cs" />
+    <Compile Include="V20190916\Models\DescribeItemByIdRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeItemByIdResponse.cs" />
+    <Compile Include="V20190916\Models\DescribeItemsRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeItemsResponse.cs" />
+    <Compile Include="V20190916\Models\DescribeLyricRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeLyricResponse.cs" />
+    <Compile Include="V20190916\Models\DescribeMusicRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeMusicResponse.cs" />
+    <Compile Include="V20190916\Models\DescribePackageItemsRequest.cs" />
+    <Compile Include="V20190916\Models\DescribePackageItemsResponse.cs" />
+    <Compile Include="V20190916\Models\DescribePackagesRequest.cs" />
+    <Compile Include="V20190916\Models\DescribePackagesResponse.cs" />
+    <Compile Include="V20190916\Models\DescribeStationsRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeStationsResponse.cs" />
+    <Compile Include="V20190916\Models\ImagePath.cs" />
+    <Compile Include="V20190916\Models\Item.cs" />
+    <Compile Include="V20190916\Models\Lyric.cs" />
+    <Compile Include="V20190916\Models\Music.cs" />
+    <Compile Include="V20190916\Models\Package.cs" />
+    <Compile Include="V20190916\Models\PackageItem.cs" />
+    <Compile Include="V20190916\Models\ReportDataRequest.cs" />
+    <Compile Include="V20190916\Models\ReportDataResponse.cs" />
+    <Compile Include="V20190916\Models\Station.cs" />
+    <Compile Include="V20190916\Models\UseRange.cs" />
+  </ItemGroup>
+</Project>

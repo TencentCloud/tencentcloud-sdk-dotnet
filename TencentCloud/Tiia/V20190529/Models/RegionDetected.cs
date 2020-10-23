@@ -47,7 +47,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "CategoryScore", this.CategoryScore);

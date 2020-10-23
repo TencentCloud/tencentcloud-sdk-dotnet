@@ -77,7 +77,7 @@ namespace TencentCloud.Gse.V20191112.Models
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
-        internal override void ToMap(Dictionary<string, string> map, string prefix)
+        public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Active", this.Active);
             this.SetParamSimple(map, prefix + "Desired", this.Desired);
