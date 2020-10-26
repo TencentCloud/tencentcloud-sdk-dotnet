@@ -313,6 +313,86 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOperationLogDetailsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOperationLogDetailsResponse"/></returns>
+        public async Task<DescribeBatchOperationLogDetailsResponse> DescribeBatchOperationLogDetails(DescribeBatchOperationLogDetailsRequest req)
+        {
+             JsonResponseModel<DescribeBatchOperationLogDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBatchOperationLogDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchOperationLogDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOperationLogDetailsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOperationLogDetailsResponse"/></returns>
+        public DescribeBatchOperationLogDetailsResponse DescribeBatchOperationLogDetailsSync(DescribeBatchOperationLogDetailsRequest req)
+        {
+             JsonResponseModel<DescribeBatchOperationLogDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBatchOperationLogDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchOperationLogDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( DescribeBatchOperationLogs ) 用于获取批量操作日志 。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOperationLogsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOperationLogsResponse"/></returns>
+        public async Task<DescribeBatchOperationLogsResponse> DescribeBatchOperationLogs(DescribeBatchOperationLogsRequest req)
+        {
+             JsonResponseModel<DescribeBatchOperationLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBatchOperationLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchOperationLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 ( DescribeBatchOperationLogs ) 用于获取批量操作日志 。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchOperationLogsRequest"/></param>
+        /// <returns><see cref="DescribeBatchOperationLogsResponse"/></returns>
+        public DescribeBatchOperationLogsResponse DescribeBatchOperationLogsSync(DescribeBatchOperationLogsRequest req)
+        {
+             JsonResponseModel<DescribeBatchOperationLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBatchOperationLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchOperationLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
         /// 
         /// 默认接口请求频率限制：20次/秒。
@@ -750,8 +830,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="UpdateProhibitionBatchRequest"/></param>
         /// <returns><see cref="UpdateProhibitionBatchResponse"/></returns>
@@ -772,8 +850,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="UpdateProhibitionBatchRequest"/></param>
         /// <returns><see cref="UpdateProhibitionBatchResponse"/></returns>

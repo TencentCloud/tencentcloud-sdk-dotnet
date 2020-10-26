@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.165</VersionPrefix>
+    <VersionPrefix>3.0.166</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -33,6 +33,11 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
   <ItemGroup>
     <Compile Include="Common\AbstractClient.cs" />
     <Compile Include="Common\AbstractModel.cs" />
@@ -3973,6 +3978,10 @@
     <Compile Include="Domain\V20180808\Models\CreateTemplateResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DeleteTemplateRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DeleteTemplateResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeBatchOperationLogDetailsRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeBatchOperationLogDetailsResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeBatchOperationLogsRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeBatchOperationLogsResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainBaseInfoRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainBaseInfoResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainNameListRequest.cs" />
@@ -3982,6 +3991,8 @@
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBaseInfo.cs" />
+    <Compile Include="Domain\V20180808\Models\DomainBatchDetailSet.cs" />
+    <Compile Include="Domain\V20180808\Models\DomainBatchLogSet.cs" />
     <Compile Include="Domain\V20180808\Models\DomainList.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainDNSBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainDNSBatchResponse.cs" />
@@ -8046,6 +8057,35 @@
     <Compile Include="Ssl\V20191205\Models\SubmittedData.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateResponse.cs" />
+    <Compile Include="Sslpod\V20190605\SslpodClient.cs" />
+    <Compile Include="Sslpod\V20190605\Models\CertInfo.cs" />
+    <Compile Include="Sslpod\V20190605\Models\ChartHistogram.cs" />
+    <Compile Include="Sslpod\V20190605\Models\ChartNameValue.cs" />
+    <Compile Include="Sslpod\V20190605\Models\CreateDomainRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\CreateDomainResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DashboardResult.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DeleteDomainRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DeleteDomainResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDashboardRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDomainCertsRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDomainCertsResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDomainTagsRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDomainTagsResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDomains.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDomainsRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeNoticeInfoRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DescribeNoticeInfoResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\DomainSiteInfo.cs" />
+    <Compile Include="Sslpod\V20190605\Models\LimitInfo.cs" />
+    <Compile Include="Sslpod\V20190605\Models\ModifyDomainTagsRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\ModifyDomainTagsResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\NoticeInfoResult.cs" />
+    <Compile Include="Sslpod\V20190605\Models\RefreshDomainRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\RefreshDomainResponse.cs" />
+    <Compile Include="Sslpod\V20190605\Models\ResolveDomainRequest.cs" />
+    <Compile Include="Sslpod\V20190605\Models\ResolveDomainResponse.cs" />
     <Compile Include="Ssm\V20190923\SsmClient.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretResponse.cs" />

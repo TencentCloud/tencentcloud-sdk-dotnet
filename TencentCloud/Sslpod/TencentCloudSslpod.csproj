@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{8C2E8AE3-0129-3536-9D5F-193A94B483CB}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Sslpod</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20190605\SslpodClient.cs" />
+    <Compile Include="V20190605\Models\CertInfo.cs" />
+    <Compile Include="V20190605\Models\ChartHistogram.cs" />
+    <Compile Include="V20190605\Models\ChartNameValue.cs" />
+    <Compile Include="V20190605\Models\CreateDomainRequest.cs" />
+    <Compile Include="V20190605\Models\CreateDomainResponse.cs" />
+    <Compile Include="V20190605\Models\DashboardResult.cs" />
+    <Compile Include="V20190605\Models\DeleteDomainRequest.cs" />
+    <Compile Include="V20190605\Models\DeleteDomainResponse.cs" />
+    <Compile Include="V20190605\Models\DescribeDashboardRequest.cs" />
+    <Compile Include="V20190605\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="V20190605\Models\DescribeDomainCertsRequest.cs" />
+    <Compile Include="V20190605\Models\DescribeDomainCertsResponse.cs" />
+    <Compile Include="V20190605\Models\DescribeDomainTagsRequest.cs" />
+    <Compile Include="V20190605\Models\DescribeDomainTagsResponse.cs" />
+    <Compile Include="V20190605\Models\DescribeDomains.cs" />
+    <Compile Include="V20190605\Models\DescribeDomainsRequest.cs" />
+    <Compile Include="V20190605\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20190605\Models\DescribeNoticeInfoRequest.cs" />
+    <Compile Include="V20190605\Models\DescribeNoticeInfoResponse.cs" />
+    <Compile Include="V20190605\Models\DomainSiteInfo.cs" />
+    <Compile Include="V20190605\Models\LimitInfo.cs" />
+    <Compile Include="V20190605\Models\ModifyDomainTagsRequest.cs" />
+    <Compile Include="V20190605\Models\ModifyDomainTagsResponse.cs" />
+    <Compile Include="V20190605\Models\NoticeInfoResult.cs" />
+    <Compile Include="V20190605\Models\RefreshDomainRequest.cs" />
+    <Compile Include="V20190605\Models\RefreshDomainResponse.cs" />
+    <Compile Include="V20190605\Models\ResolveDomainRequest.cs" />
+    <Compile Include="V20190605\Models\ResolveDomainResponse.cs" />
+  </ItemGroup>
+</Project>
