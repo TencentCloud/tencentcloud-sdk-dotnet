@@ -83,8 +83,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// 视频恒定码率控制因子，取值范围为[0, 51]。
-        /// 如果指定该参数，将使用 CRF 的码率控制方式做转码。取0值表示禁用 CRF 模式。
+        /// 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+        /// 如果没有特殊需求，不建议指定该参数。
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }

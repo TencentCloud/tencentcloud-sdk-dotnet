@@ -154,6 +154,20 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string SubnetCidrBlock{ get; set; }
 
         /// <summary>
+        /// 资源所关联的Tag
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public long? RenewFlag{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -185,6 +199,8 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "SubnetCidrBlock", this.SubnetCidrBlock);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -44,6 +44,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
 
+        /// <summary>
+        /// 是否移除视频流，取值范围：
+        /// <li>0：否，</li>
+        /// <li>1：是。</li>
+        /// </summary>
+        [JsonProperty("RemoveVideo")]
+        public ulong? RemoveVideo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Video.", this.Video);
             this.SetParamObj(map, prefix + "Audio.", this.Audio);
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
+            this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
         }
     }
 }

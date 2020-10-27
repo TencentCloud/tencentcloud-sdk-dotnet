@@ -130,6 +130,7 @@
     <Compile Include="V20191112\Models\DetachCcnInstancesResponse.cs" />
     <Compile Include="V20191112\Models\Event.cs" />
     <Compile Include="V20191112\Models\ExtraInfos.cs" />
+    <Compile Include="V20191112\Models\Filter.cs" />
     <Compile Include="V20191112\Models\FleetAttributes.cs" />
     <Compile Include="V20191112\Models\FleetCapacity.cs" />
     <Compile Include="V20191112\Models\FleetStatisticDetail.cs" />

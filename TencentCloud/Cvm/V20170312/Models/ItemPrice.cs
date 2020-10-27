@@ -53,7 +53,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// 折扣，如20.0代表2折
+        /// 折扣，如20.0代表2折。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Discount")]
@@ -94,6 +94,78 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("UnitPriceDiscountThirdStep")]
         public float? UnitPriceDiscountThirdStep{ get; set; }
 
+        /// <summary>
+        /// 预支三年合计费用的原价，预付费模式使用，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalPriceThreeYear")]
+        public float? OriginalPriceThreeYear{ get; set; }
+
+        /// <summary>
+        /// 预支三年合计费用的折扣价，预付费模式使用，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountPriceThreeYear")]
+        public float? DiscountPriceThreeYear{ get; set; }
+
+        /// <summary>
+        /// 预支三年应用的折扣，如20.0代表2折。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountThreeYear")]
+        public float? DiscountThreeYear{ get; set; }
+
+        /// <summary>
+        /// 预支五年合计费用的原价，预付费模式使用，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalPriceFiveYear")]
+        public float? OriginalPriceFiveYear{ get; set; }
+
+        /// <summary>
+        /// 预支五年合计费用的折扣价，预付费模式使用，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountPriceFiveYear")]
+        public float? DiscountPriceFiveYear{ get; set; }
+
+        /// <summary>
+        /// 预支五年应用的折扣，如20.0代表2折。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountFiveYear")]
+        public float? DiscountFiveYear{ get; set; }
+
+        /// <summary>
+        /// 预支一年合计费用的原价，预付费模式使用，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalPriceOneYear")]
+        public float? OriginalPriceOneYear{ get; set; }
+
+        /// <summary>
+        /// 预支一年合计费用的折扣价，预付费模式使用，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountPriceOneYear")]
+        public float? DiscountPriceOneYear{ get; set; }
+
+        /// <summary>
+        /// 预支一年应用的折扣，如20.0代表2折。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiscountOneYear")]
+        public float? DiscountOneYear{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +182,15 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "UnitPriceDiscountSecondStep", this.UnitPriceDiscountSecondStep);
             this.SetParamSimple(map, prefix + "UnitPriceThirdStep", this.UnitPriceThirdStep);
             this.SetParamSimple(map, prefix + "UnitPriceDiscountThirdStep", this.UnitPriceDiscountThirdStep);
+            this.SetParamSimple(map, prefix + "OriginalPriceThreeYear", this.OriginalPriceThreeYear);
+            this.SetParamSimple(map, prefix + "DiscountPriceThreeYear", this.DiscountPriceThreeYear);
+            this.SetParamSimple(map, prefix + "DiscountThreeYear", this.DiscountThreeYear);
+            this.SetParamSimple(map, prefix + "OriginalPriceFiveYear", this.OriginalPriceFiveYear);
+            this.SetParamSimple(map, prefix + "DiscountPriceFiveYear", this.DiscountPriceFiveYear);
+            this.SetParamSimple(map, prefix + "DiscountFiveYear", this.DiscountFiveYear);
+            this.SetParamSimple(map, prefix + "OriginalPriceOneYear", this.OriginalPriceOneYear);
+            this.SetParamSimple(map, prefix + "DiscountPriceOneYear", this.DiscountPriceOneYear);
+            this.SetParamSimple(map, prefix + "DiscountOneYear", this.DiscountOneYear);
         }
     }
 }

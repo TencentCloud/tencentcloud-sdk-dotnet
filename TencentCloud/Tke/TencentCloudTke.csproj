@@ -49,6 +49,8 @@
     <Compile Include="V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
     <Compile Include="V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\AddExistedInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\AddNodeToNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="V20180525\Models\Cluster.cs" />
     <Compile Include="V20180525\Models\ClusterAdvancedSettings.cs" />
@@ -67,6 +69,10 @@
     <Compile Include="V20180525\Models\CreateClusterEndpointVipResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterNodePoolFromExistingAsgRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterNodePoolFromExistingAsgResponse.cs" />
+    <Compile Include="V20180525\Models\CreateClusterNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\CreateClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteRequest.cs" />
@@ -84,6 +90,8 @@
     <Compile Include="V20180525\Models\DeleteClusterEndpointVipResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteRequest.cs" />
@@ -102,6 +110,10 @@
     <Compile Include="V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterKubeconfigResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterNodePoolDetailRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterNodePoolDetailResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterNodePoolsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterNodePoolsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRouteTablesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterRoutesRequest.cs" />
@@ -139,7 +151,11 @@
     <Compile Include="V20180525\Models\ModifyClusterAttributeResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
+    <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
+    <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ResourceDeleteOption.cs" />
     <Compile Include="V20180525\Models\RouteInfo.cs" />
     <Compile Include="V20180525\Models\RouteTableConflict.cs" />
@@ -149,5 +165,6 @@
     <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="V20180525\Models\Tag.cs" />
     <Compile Include="V20180525\Models\TagSpecification.cs" />
+    <Compile Include="V20180525\Models\Taint.cs" />
   </ItemGroup>
 </Project>

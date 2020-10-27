@@ -129,6 +129,20 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("ModifyTimes")]
         public ulong? ModifyTimes{ get; set; }
 
+        /// <summary>
+        /// 备注信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 版本发布的描述信息，需要国际化，可以为空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Contents")]
+        public Contents Contents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +164,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "UploadTime", this.UploadTime);
             this.SetParamSimple(map, prefix + "ModifyTimes", this.ModifyTimes);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamObj(map, prefix + "Contents.", this.Contents);
         }
     }
 }

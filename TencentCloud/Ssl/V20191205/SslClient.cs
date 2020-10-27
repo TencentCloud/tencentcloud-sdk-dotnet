@@ -253,6 +253,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 本接口（CreateCertificate）用于创建付费证书。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateRequest"/></param>
+        /// <returns><see cref="CreateCertificateResponse"/></returns>
+        public async Task<CreateCertificateResponse> CreateCertificate(CreateCertificateRequest req)
+        {
+             JsonResponseModel<CreateCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateCertificate）用于创建付费证书。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCertificateRequest"/></param>
+        /// <returns><see cref="CreateCertificateResponse"/></returns>
+        public CreateCertificateResponse CreateCertificateSync(CreateCertificateRequest req)
+        {
+             JsonResponseModel<CreateCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteCertificate）用于删除证书。
         /// </summary>
         /// <param name="req"><see cref="DeleteCertificateRequest"/></param>
@@ -613,6 +653,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 本接口（RevokeCertificate）用于吊销证书。
+        /// </summary>
+        /// <param name="req"><see cref="RevokeCertificateRequest"/></param>
+        /// <returns><see cref="RevokeCertificateResponse"/></returns>
+        public async Task<RevokeCertificateResponse> RevokeCertificate(RevokeCertificateRequest req)
+        {
+             JsonResponseModel<RevokeCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RevokeCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RevokeCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RevokeCertificate）用于吊销证书。
+        /// </summary>
+        /// <param name="req"><see cref="RevokeCertificateRequest"/></param>
+        /// <returns><see cref="RevokeCertificateResponse"/></returns>
+        public RevokeCertificateResponse RevokeCertificateSync(RevokeCertificateRequest req)
+        {
+             JsonResponseModel<RevokeCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RevokeCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RevokeCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提交证书资料。
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
@@ -684,6 +764,86 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "UploadCertificate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UploadConfirmLetter）用于上传证书确认函。
+        /// </summary>
+        /// <param name="req"><see cref="UploadConfirmLetterRequest"/></param>
+        /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
+        public async Task<UploadConfirmLetterResponse> UploadConfirmLetter(UploadConfirmLetterRequest req)
+        {
+             JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadConfirmLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadConfirmLetterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UploadConfirmLetter）用于上传证书确认函。
+        /// </summary>
+        /// <param name="req"><see cref="UploadConfirmLetterRequest"/></param>
+        /// <returns><see cref="UploadConfirmLetterResponse"/></returns>
+        public UploadConfirmLetterResponse UploadConfirmLetterSync(UploadConfirmLetterRequest req)
+        {
+             JsonResponseModel<UploadConfirmLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadConfirmLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadConfirmLetterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UploadRevokeLetter）用于上传证书吊销确认函。
+        /// </summary>
+        /// <param name="req"><see cref="UploadRevokeLetterRequest"/></param>
+        /// <returns><see cref="UploadRevokeLetterResponse"/></returns>
+        public async Task<UploadRevokeLetterResponse> UploadRevokeLetter(UploadRevokeLetterRequest req)
+        {
+             JsonResponseModel<UploadRevokeLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadRevokeLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadRevokeLetterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UploadRevokeLetter）用于上传证书吊销确认函。
+        /// </summary>
+        /// <param name="req"><see cref="UploadRevokeLetterRequest"/></param>
+        /// <returns><see cref="UploadRevokeLetterResponse"/></returns>
+        public UploadRevokeLetterResponse UploadRevokeLetterSync(UploadRevokeLetterRequest req)
+        {
+             JsonResponseModel<UploadRevokeLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadRevokeLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadRevokeLetterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

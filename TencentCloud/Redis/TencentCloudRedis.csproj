@@ -66,6 +66,8 @@
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlRequest.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeCommonDBInstancesRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeCommonDBInstancesResponse.cs" />
     <Compile Include="V20180412\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20180412\Models\DescribeInstanceAccountRequest.cs" />
@@ -175,6 +177,7 @@
     <Compile Include="V20180412\Models\ProductConf.cs" />
     <Compile Include="V20180412\Models\ProxyNodes.cs" />
     <Compile Include="V20180412\Models\RedisBackupSet.cs" />
+    <Compile Include="V20180412\Models\RedisCommonInstanceList.cs" />
     <Compile Include="V20180412\Models\RedisNodes.cs" />
     <Compile Include="V20180412\Models\RegionConf.cs" />
     <Compile Include="V20180412\Models\RenewInstanceRequest.cs" />

@@ -49,6 +49,7 @@
     <Compile Include="V20191126\Models\BindUsrInfo.cs" />
     <Compile Include="V20191126\Models\ClearDeviceActiveCodeRequest.cs" />
     <Compile Include="V20191126\Models\ClearDeviceActiveCodeResponse.cs" />
+    <Compile Include="V20191126\Models\Contents.cs" />
     <Compile Include="V20191126\Models\CreateAnonymousAccessTokenRequest.cs" />
     <Compile Include="V20191126\Models\CreateAnonymousAccessTokenResponse.cs" />
     <Compile Include="V20191126\Models\CreateAppUsrRequest.cs" />

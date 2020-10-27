@@ -57,6 +57,8 @@
     <Compile Include="V20191205\Models\CommitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\CompleteCertificateRequest.cs" />
     <Compile Include="V20191205\Models\CompleteCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\CreateCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\CreateCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateRequest.cs" />
     <Compile Include="V20191205\Models\DeleteCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DescribeCertificateDetailRequest.cs" />
@@ -79,10 +81,17 @@
     <Compile Include="V20191205\Models\ProjectInfo.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateRequest.cs" />
     <Compile Include="V20191205\Models\ReplaceCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\RevokeCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\RevokeCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\RevokeDomainValidateAuths.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="V20191205\Models\SubmittedData.cs" />
     <Compile Include="V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="V20191205\Models\UploadCertificateResponse.cs" />
+    <Compile Include="V20191205\Models\UploadConfirmLetterRequest.cs" />
+    <Compile Include="V20191205\Models\UploadConfirmLetterResponse.cs" />
+    <Compile Include="V20191205\Models\UploadRevokeLetterRequest.cs" />
+    <Compile Include="V20191205\Models\UploadRevokeLetterResponse.cs" />
   </ItemGroup>
 </Project>

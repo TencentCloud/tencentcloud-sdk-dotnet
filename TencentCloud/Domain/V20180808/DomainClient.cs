@@ -54,8 +54,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="BatchModifyDomainInfoRequest"/></param>
         /// <returns><see cref="BatchModifyDomainInfoResponse"/></returns>
@@ -76,8 +74,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="BatchModifyDomainInfoRequest"/></param>
         /// <returns><see cref="BatchModifyDomainInfoResponse"/></returns>
@@ -226,8 +222,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="CreateTemplateRequest"/></param>
         /// <returns><see cref="CreateTemplateResponse"/></returns>
@@ -248,8 +242,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="CreateTemplateRequest"/></param>
         /// <returns><see cref="CreateTemplateResponse"/></returns>
@@ -270,8 +262,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( DeleteTemplate ) 用于删除域名信息模板。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DeleteTemplateRequest"/></param>
         /// <returns><see cref="DeleteTemplateResponse"/></returns>
@@ -292,8 +282,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( DeleteTemplate ) 用于删除域名信息模板。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DeleteTemplateRequest"/></param>
         /// <returns><see cref="DeleteTemplateResponse"/></returns>
@@ -438,8 +426,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 (  DescribeDomainNameList ) 获取域名列表。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainNameListRequest"/></param>
         /// <returns><see cref="DescribeDomainNameListResponse"/></returns>
@@ -460,8 +446,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 (  DescribeDomainNameList ) 获取域名列表。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainNameListRequest"/></param>
         /// <returns><see cref="DescribeDomainNameListResponse"/></returns>
@@ -522,8 +506,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 (DescribeTemplateList) 用于获取模板列表。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateListRequest"/></param>
         /// <returns><see cref="DescribeTemplateListResponse"/></returns>
@@ -544,8 +526,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 (DescribeTemplateList) 用于获取模板列表。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateListRequest"/></param>
         /// <returns><see cref="DescribeTemplateListResponse"/></returns>
@@ -610,8 +590,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainOwnerBatchRequest"/></param>
         /// <returns><see cref="ModifyDomainOwnerBatchResponse"/></returns>
@@ -632,8 +610,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainOwnerBatchRequest"/></param>
         /// <returns><see cref="ModifyDomainOwnerBatchResponse"/></returns>
@@ -870,8 +846,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( UploadImage ) 用于上传资质照片 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="UploadImageRequest"/></param>
         /// <returns><see cref="UploadImageResponse"/></returns>
@@ -892,8 +866,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( UploadImage ) 用于上传资质照片 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="UploadImageRequest"/></param>
         /// <returns><see cref="UploadImageResponse"/></returns>

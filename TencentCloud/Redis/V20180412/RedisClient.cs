@@ -373,6 +373,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询Redis实例列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
+        public async Task<DescribeCommonDBInstancesResponse> DescribeCommonDBInstances(DescribeCommonDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCommonDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCommonDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Redis实例列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
+        public DescribeCommonDBInstancesResponse DescribeCommonDBInstancesSync(DescribeCommonDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCommonDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCommonDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>

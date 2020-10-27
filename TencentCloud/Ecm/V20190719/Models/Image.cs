@@ -114,6 +114,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("ImageSource")]
         public string ImageSource{ get; set; }
 
+        /// <summary>
+        /// 中间态和失败时候的任务ID
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "ImageSize", this.ImageSize);
             this.SetParamObj(map, prefix + "SrcImage.", this.SrcImage);
             this.SetParamSimple(map, prefix + "ImageSource", this.ImageSource);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

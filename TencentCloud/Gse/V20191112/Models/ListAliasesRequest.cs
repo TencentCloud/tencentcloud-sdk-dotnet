@@ -60,6 +60,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("OrderWay")]
         public string OrderWay{ get; set; }
 
+        /// <summary>
+        /// 资源过滤字段，可以按照资源名称和标签进行过滤- 资源名称过滤    - Key: 固定字符串 "resource:name"    - Values: 资源名称数组（舰队当前仅支持单个名称的过滤）- 标签过滤    - 通过标签键过滤        - Key: 固定字符串 "tag:key"        - Values 不传    - 通过标签键值过滤        - Key: 固定字符串 "tag:key-value"        - Values: 标签键值对数组，例如 ["key1:value1", "key1:value2", "key2:value2"]
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderWay", this.OrderWay);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

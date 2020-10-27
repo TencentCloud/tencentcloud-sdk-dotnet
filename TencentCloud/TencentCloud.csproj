@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.166</VersionPrefix>
+    <VersionPrefix>3.0.167</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2555,6 +2555,8 @@
     <Compile Include="Cloudhsm\V20191112\Models\ResourceInfo.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\SgUnit.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\Subnet.cs" />
+    <Compile Include="Cloudhsm\V20191112\Models\Tag.cs" />
+    <Compile Include="Cloudhsm\V20191112\Models\TagFilter.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\UsgPolicy.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\UsgRuleDetail.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\Vpc.cs" />
@@ -5020,6 +5022,7 @@
     <Compile Include="Gse\V20191112\Models\DetachCcnInstancesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\Event.cs" />
     <Compile Include="Gse\V20191112\Models\ExtraInfos.cs" />
+    <Compile Include="Gse\V20191112\Models\Filter.cs" />
     <Compile Include="Gse\V20191112\Models\FleetAttributes.cs" />
     <Compile Include="Gse\V20191112\Models\FleetCapacity.cs" />
     <Compile Include="Gse\V20191112\Models\FleetStatisticDetail.cs" />
@@ -5747,6 +5750,7 @@
     <Compile Include="Iotvideo\V20191126\Models\BindUsrInfo.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ClearDeviceActiveCodeRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ClearDeviceActiveCodeResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\Contents.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateAnonymousAccessTokenRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateAnonymousAccessTokenResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateAppUsrRequest.cs" />
@@ -7476,6 +7480,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeBackupUrlRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeBackupUrlResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeCommonDBInstancesRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeCommonDBInstancesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceAccountRequest.cs" />
@@ -7585,6 +7591,7 @@
     <Compile Include="Redis\V20180412\Models\ProductConf.cs" />
     <Compile Include="Redis\V20180412\Models\ProxyNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RedisBackupSet.cs" />
+    <Compile Include="Redis\V20180412\Models\RedisCommonInstanceList.cs" />
     <Compile Include="Redis\V20180412\Models\RedisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RegionConf.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceRequest.cs" />
@@ -8030,6 +8037,8 @@
     <Compile Include="Ssl\V20191205\Models\CommitCertificateInformationResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\CompleteCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\CompleteCertificateResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\CreateCertificateRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\CreateCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateDetailRequest.cs" />
@@ -8052,11 +8061,18 @@
     <Compile Include="Ssl\V20191205\Models\ProjectInfo.cs" />
     <Compile Include="Ssl\V20191205\Models\ReplaceCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\ReplaceCertificateResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\RevokeCertificateRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\RevokeCertificateResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\RevokeDomainValidateAuths.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmittedData.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\UploadConfirmLetterRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\UploadConfirmLetterResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\UploadRevokeLetterRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\UploadRevokeLetterResponse.cs" />
     <Compile Include="Sslpod\V20190605\SslpodClient.cs" />
     <Compile Include="Sslpod\V20190605\Models\CertInfo.cs" />
     <Compile Include="Sslpod\V20190605\Models\ChartHistogram.cs" />
@@ -9106,6 +9122,8 @@
     <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="Tke\V20180525\Models\Cluster.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterAdvancedSettings.cs" />
@@ -9124,6 +9142,10 @@
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointVipResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolFromExistingAsgRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolFromExistingAsgResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreateClusterNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteRequest.cs" />
@@ -9141,6 +9163,8 @@
     <Compile Include="Tke\V20180525\Models\DeleteClusterEndpointVipResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeleteClusterNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteClusterRouteRequest.cs" />
@@ -9159,6 +9183,10 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterKubeconfigResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolDetailRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolDetailResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterNodePoolsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRouteTablesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRouteTablesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterRoutesRequest.cs" />
@@ -9196,7 +9224,11 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\RegionInstance.cs" />
+    <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ResourceDeleteOption.cs" />
     <Compile Include="Tke\V20180525\Models\RouteInfo.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableConflict.cs" />
@@ -9206,6 +9238,7 @@
     <Compile Include="Tke\V20180525\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\Tag.cs" />
     <Compile Include="Tke\V20180525\Models\TagSpecification.cs" />
+    <Compile Include="Tke\V20180525\Models\Taint.cs" />
     <Compile Include="Tkgdq\V20190411\TkgdqClient.cs" />
     <Compile Include="Tkgdq\V20190411\Models\DescribeEntityRequest.cs" />
     <Compile Include="Tkgdq\V20190411\Models\DescribeEntityResponse.cs" />

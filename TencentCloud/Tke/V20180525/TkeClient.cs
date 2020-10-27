@@ -133,6 +133,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 将集群内节点移入节点池
+        /// </summary>
+        /// <param name="req"><see cref="AddNodeToNodePoolRequest"/></param>
+        /// <returns><see cref="AddNodeToNodePoolResponse"/></returns>
+        public async Task<AddNodeToNodePoolResponse> AddNodeToNodePool(AddNodeToNodePoolRequest req)
+        {
+             JsonResponseModel<AddNodeToNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddNodeToNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddNodeToNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将集群内节点移入节点池
+        /// </summary>
+        /// <param name="req"><see cref="AddNodeToNodePoolRequest"/></param>
+        /// <returns><see cref="AddNodeToNodePoolResponse"/></returns>
+        public AddNodeToNodePoolResponse AddNodeToNodePoolSync(AddNodeToNodePoolRequest req)
+        {
+             JsonResponseModel<AddNodeToNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddNodeToNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddNodeToNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建集群
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
@@ -324,6 +364,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "CreateClusterInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNodePoolRequest"/></param>
+        /// <returns><see cref="CreateClusterNodePoolResponse"/></returns>
+        public async Task<CreateClusterNodePoolResponse> CreateClusterNodePool(CreateClusterNodePoolRequest req)
+        {
+             JsonResponseModel<CreateClusterNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNodePoolRequest"/></param>
+        /// <returns><see cref="CreateClusterNodePoolResponse"/></returns>
+        public CreateClusterNodePoolResponse CreateClusterNodePoolSync(CreateClusterNodePoolRequest req)
+        {
+             JsonResponseModel<CreateClusterNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClusterNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从伸缩组创建节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNodePoolFromExistingAsgRequest"/></param>
+        /// <returns><see cref="CreateClusterNodePoolFromExistingAsgResponse"/></returns>
+        public async Task<CreateClusterNodePoolFromExistingAsgResponse> CreateClusterNodePoolFromExistingAsg(CreateClusterNodePoolFromExistingAsgRequest req)
+        {
+             JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateClusterNodePoolFromExistingAsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从伸缩组创建节点池
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterNodePoolFromExistingAsgRequest"/></param>
+        /// <returns><see cref="CreateClusterNodePoolFromExistingAsgResponse"/></returns>
+        public CreateClusterNodePoolFromExistingAsgResponse CreateClusterNodePoolFromExistingAsgSync(CreateClusterNodePoolFromExistingAsgRequest req)
+        {
+             JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateClusterNodePoolFromExistingAsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -653,6 +773,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 删除节点池
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterNodePoolRequest"/></param>
+        /// <returns><see cref="DeleteClusterNodePoolResponse"/></returns>
+        public async Task<DeleteClusterNodePoolResponse> DeleteClusterNodePool(DeleteClusterNodePoolRequest req)
+        {
+             JsonResponseModel<DeleteClusterNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteClusterNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除节点池
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterNodePoolRequest"/></param>
+        /// <returns><see cref="DeleteClusterNodePoolResponse"/></returns>
+        public DeleteClusterNodePoolResponse DeleteClusterNodePoolSync(DeleteClusterNodePoolRequest req)
+        {
+             JsonResponseModel<DeleteClusterNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteClusterNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除集群路由
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterRouteRequest"/></param>
@@ -964,6 +1124,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusterKubeconfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterKubeconfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询节点池详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodePoolDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodePoolDetailResponse"/></returns>
+        public async Task<DescribeClusterNodePoolDetailResponse> DescribeClusterNodePoolDetail(DescribeClusterNodePoolDetailRequest req)
+        {
+             JsonResponseModel<DescribeClusterNodePoolDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterNodePoolDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNodePoolDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询节点池详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodePoolDetailRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodePoolDetailResponse"/></returns>
+        public DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetailSync(DescribeClusterNodePoolDetailRequest req)
+        {
+             JsonResponseModel<DescribeClusterNodePoolDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterNodePoolDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNodePoolDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询节点池列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodePoolsRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodePoolsResponse"/></returns>
+        public async Task<DescribeClusterNodePoolsResponse> DescribeClusterNodePools(DescribeClusterNodePoolsRequest req)
+        {
+             JsonResponseModel<DescribeClusterNodePoolsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterNodePools");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNodePoolsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询节点池列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterNodePoolsRequest"/></param>
+        /// <returns><see cref="DescribeClusterNodePoolsResponse"/></returns>
+        public DescribeClusterNodePoolsResponse DescribeClusterNodePoolsSync(DescribeClusterNodePoolsRequest req)
+        {
+             JsonResponseModel<DescribeClusterNodePoolsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterNodePools");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterNodePoolsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1444,6 +1684,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterEndpointSP");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterEndpointSPResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑节点池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNodePoolRequest"/></param>
+        /// <returns><see cref="ModifyClusterNodePoolResponse"/></returns>
+        public async Task<ModifyClusterNodePoolResponse> ModifyClusterNodePool(ModifyClusterNodePoolRequest req)
+        {
+             JsonResponseModel<ModifyClusterNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑节点池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNodePoolRequest"/></param>
+        /// <returns><see cref="ModifyClusterNodePoolResponse"/></returns>
+        public ModifyClusterNodePoolResponse ModifyClusterNodePoolSync(ModifyClusterNodePoolRequest req)
+        {
+             JsonResponseModel<ModifyClusterNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移出节点池节点，但保留在集群内
+        /// </summary>
+        /// <param name="req"><see cref="RemoveNodeFromNodePoolRequest"/></param>
+        /// <returns><see cref="RemoveNodeFromNodePoolResponse"/></returns>
+        public async Task<RemoveNodeFromNodePoolResponse> RemoveNodeFromNodePool(RemoveNodeFromNodePoolRequest req)
+        {
+             JsonResponseModel<RemoveNodeFromNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveNodeFromNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNodeFromNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移出节点池节点，但保留在集群内
+        /// </summary>
+        /// <param name="req"><see cref="RemoveNodeFromNodePoolRequest"/></param>
+        /// <returns><see cref="RemoveNodeFromNodePoolResponse"/></returns>
+        public RemoveNodeFromNodePoolResponse RemoveNodeFromNodePoolSync(RemoveNodeFromNodePoolRequest req)
+        {
+             JsonResponseModel<RemoveNodeFromNodePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveNodeFromNodePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNodeFromNodePoolResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

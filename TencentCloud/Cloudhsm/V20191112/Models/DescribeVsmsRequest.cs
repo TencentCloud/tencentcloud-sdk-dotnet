@@ -42,6 +42,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
+        /// <summary>
+        /// 标签过滤条件
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public TagFilter[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

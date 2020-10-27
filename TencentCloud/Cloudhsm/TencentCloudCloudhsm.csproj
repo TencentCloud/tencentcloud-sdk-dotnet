@@ -68,6 +68,8 @@
     <Compile Include="V20191112\Models\ResourceInfo.cs" />
     <Compile Include="V20191112\Models\SgUnit.cs" />
     <Compile Include="V20191112\Models\Subnet.cs" />
+    <Compile Include="V20191112\Models\Tag.cs" />
+    <Compile Include="V20191112\Models\TagFilter.cs" />
     <Compile Include="V20191112\Models\UsgPolicy.cs" />
     <Compile Include="V20191112\Models\UsgRuleDetail.cs" />
     <Compile Include="V20191112\Models\Vpc.cs" />

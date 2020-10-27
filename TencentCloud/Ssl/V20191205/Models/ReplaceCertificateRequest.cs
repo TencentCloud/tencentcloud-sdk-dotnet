@@ -54,6 +54,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CsrkeyPassword")]
         public string CsrkeyPassword{ get; set; }
 
+        /// <summary>
+        /// 重颁发原因。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CsrType", this.CsrType);
             this.SetParamSimple(map, prefix + "CsrContent", this.CsrContent);
             this.SetParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }
