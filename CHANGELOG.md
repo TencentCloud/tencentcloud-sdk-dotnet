@@ -1,29 +1,10 @@
 # 本版本更新包含以下内容：
 
-## 批量计算(batch) 版本：2017-03-12
+## API网关(apigateway) 版本：2018-08-08
 
-### 第 34 次发布
+### 第 5 次发布
 
-发布时间：2020-10-27 08:02:00
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [ItemPrice](https://cloud.tencent.com/document/api/599/15912#ItemPrice)
-
-	* 新增成员：OriginalPriceThreeYear, DiscountPriceThreeYear, DiscountThreeYear, OriginalPriceFiveYear, DiscountPriceFiveYear, DiscountFiveYear, OriginalPriceOneYear, DiscountPriceOneYear, DiscountOneYear
-
-
-
-
-## 云加密机(cloudhsm) 版本：2019-11-12
-
-### 第 3 次发布
-
-发布时间：2020-10-27 08:09:14
+发布时间：2020-10-29 08:08:25
 
 本次发布包含了以下内容：
 
@@ -31,72 +12,95 @@
 
 修改接口：
 
-* [DescribeVsmAttributes](https://cloud.tencent.com/document/api/639/41444)
+* [CreateService](https://cloud.tencent.com/document/api/628/45201)
 
-	* 新增出参：Tags, RenewFlag
+	* 新增入参：Tags
 
-* [DescribeVsms](https://cloud.tencent.com/document/api/639/41443)
+	* <font color="#dd0000">**删除出参**：</font>ServiceId, ServiceName, ServiceDesc, OuterSubDomain, InnerSubDomain, CreatedTime, NetTypes, IpVersion
 
-	* 新增入参：TagFilters
+
+
+
+## 内容分发网络(cdn) 版本：2018-06-06
+
+### 第 42 次发布
+
+发布时间：2020-10-29 08:02:27
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [ListClsLogTopics](https://cloud.tencent.com/document/api/228/42194)
+
+	* <font color="#dd0000">**删除出参**：</font>Logset, Topics
+
+* [ListClsTopicDomains](https://cloud.tencent.com/document/api/228/42193)
+
+	* <font color="#dd0000">**删除出参**：</font>AppId, Channel, LogsetId, TopicId, DomainAreaConfigs, TopicName, UpdateTime
+
+* [SearchClsLog](https://cloud.tencent.com/document/api/228/42191)
+
+	* <font color="#dd0000">**删除出参**：</font>Logs
+
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* ClsLogObject
+* ClsSearchLogs
+* LogSetInfo
+* TopicInfo
+
+
+
+## 云 HDFS(chdfs) 版本：2019-07-18
+
+### 第 4 次发布
+
+发布时间：2020-10-29 08:02:46
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [CreateLifeCycleRules](https://cloud.tencent.com/document/api/1105/49517)
+* [CreateRestoreTasks](https://cloud.tencent.com/document/api/1105/49520)
+* [DeleteLifeCycleRules](https://cloud.tencent.com/document/api/1105/49516)
+* [DescribeLifeCycleRules](https://cloud.tencent.com/document/api/1105/49515)
+* [DescribeResourceTags](https://cloud.tencent.com/document/api/1105/49523)
+* [DescribeRestoreTasks](https://cloud.tencent.com/document/api/1105/49519)
+* [ModifyLifeCycleRules](https://cloud.tencent.com/document/api/1105/49514)
+* [ModifyResourceTags](https://cloud.tencent.com/document/api/1105/49522)
+
+修改接口：
+
+* [CreateMountPoint](https://cloud.tencent.com/document/api/1105/37376)
+
+	* <font color="#dd0000">**删除出参**：</font>MountPoint
+
+* [DescribeFileSystem](https://cloud.tencent.com/document/api/1105/37368)
+
+	* 新增出参：ArchiveCapacityUsed
 
 
 新增数据结构：
 
-* [Tag](https://cloud.tencent.com/document/api/639/41450#Tag)
-* [TagFilter](https://cloud.tencent.com/document/api/639/41450#TagFilter)
-
-修改数据结构：
-
-* [ResourceInfo](https://cloud.tencent.com/document/api/639/41450#ResourceInfo)
-
-	* 新增成员：CreateUin, RenewFlag, Tags
-
+* [LifeCycleRule](https://cloud.tencent.com/document/api/1105/37345#LifeCycleRule)
+* [RestoreTask](https://cloud.tencent.com/document/api/1105/37345#RestoreTask)
+* [Tag](https://cloud.tencent.com/document/api/1105/37345#Tag)
+* [Transition](https://cloud.tencent.com/document/api/1105/37345#Transition)
 
 
 
 ## 云服务器(cvm) 版本：2017-03-12
 
-### 第 50 次发布
+### 第 52 次发布
 
-发布时间：2020-10-27 08:03:29
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [ItemPrice](https://cloud.tencent.com/document/api/213/15753#ItemPrice)
-
-	* 新增成员：OriginalPriceThreeYear, DiscountPriceThreeYear, DiscountThreeYear, OriginalPriceFiveYear, DiscountPriceFiveYear, DiscountFiveYear, OriginalPriceOneYear, DiscountPriceOneYear, DiscountOneYear
-
-
-
-
-## 边缘计算机器(ecm) 版本：2019-07-19
-
-### 第 28 次发布
-
-发布时间：2020-10-27 08:00:29
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [Image](https://cloud.tencent.com/document/api/1108/42574#Image)
-
-	* 新增成员：TaskId
-
-
-
-
-## 游戏服务器引擎(gse) 版本：2019-11-12
-
-### 第 11 次发布
-
-发布时间：2020-10-27 08:01:14
+发布时间：2020-10-29 08:03:13
 
 本次发布包含了以下内容：
 
@@ -104,34 +108,138 @@
 
 修改接口：
 
-* [DescribeAssets](https://cloud.tencent.com/document/api/1165/48728)
+* [DescribeZones](https://cloud.tencent.com/document/api/213/15707)
 
-	* 新增入参：Filters
+	* <font color="#dd0000">**删除出参**：</font>TotalCount, ZoneSet
 
-* [DescribeGameServerSessionQueues](https://cloud.tencent.com/document/api/1165/44552)
 
-	* 新增入参：Filters
+<font color="#dd0000">**删除数据结构**：</font>
 
-* [ListAliases](https://cloud.tencent.com/document/api/1165/48741)
+* ZoneInfo
 
-	* 新增入参：Filters
 
-* [ListFleets](https://cloud.tencent.com/document/api/1165/48740)
 
-	* 新增入参：Filters
+## 数据库智能管家 DBbrain(dbbrain) 版本：2019-10-16
 
+### 第 4 次发布
+
+发布时间：2020-10-29 08:03:38
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeDBDiagHistory](https://cloud.tencent.com/document/api/1130/39559)
+
+	* <font color="#dd0000">**删除出参**：</font>Events
+
+* [DescribeSlowLogTimeSeriesStats](https://cloud.tencent.com/document/api/1130/39557)
+
+	* <font color="#dd0000">**删除出参**：</font>Period, TimeSeries, SeriesData
+
+* [DescribeSlowLogTopSqls](https://cloud.tencent.com/document/api/1130/39556)
+
+	* <font color="#dd0000">**删除出参**：</font>TotalCount, Rows
+
+* [DescribeTopSpaceTableTimeSeries](https://cloud.tencent.com/document/api/1130/46279)
+
+	* <font color="#dd0000">**删除出参**：</font>TopSpaceTableTimeSeries
+
+* [DescribeTopSpaceTables](https://cloud.tencent.com/document/api/1130/46046)
+
+	* <font color="#dd0000">**删除出参**：</font>TopSpaceTables
+
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* DiagHistoryEventItem
+* MonitorFloatMetric
+* MonitorFloatMetricSeriesData
+* MonitorMetric
+* MonitorMetricSeriesData
+* SlowLogTopSqlItem
+* TableSpaceData
+* TableSpaceTimeSeries
+* TimeSlice
+
+
+
+## 游戏玩家匹配(gpm) 版本：2020-08-20
+
+### 第 1 次发布
+
+发布时间：2020-10-28 16:03:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [CancelMatching](https://cloud.tencent.com/document/api/1294/49493)
+* [CreateMatch](https://cloud.tencent.com/document/api/1294/49489)
+* [CreateRule](https://cloud.tencent.com/document/api/1294/49488)
+* [DeleteMatch](https://cloud.tencent.com/document/api/1294/49487)
+* [DeleteRule](https://cloud.tencent.com/document/api/1294/49486)
+* [DescribeData](https://cloud.tencent.com/document/api/1294/49485)
+* [DescribeMatch](https://cloud.tencent.com/document/api/1294/49484)
+* [DescribeMatchCodes](https://cloud.tencent.com/document/api/1294/49483)
+* [DescribeMatches](https://cloud.tencent.com/document/api/1294/49482)
+* [DescribeMatchingProgress](https://cloud.tencent.com/document/api/1294/49492)
+* [DescribeRule](https://cloud.tencent.com/document/api/1294/49481)
+* [DescribeRules](https://cloud.tencent.com/document/api/1294/49480)
+* [ModifyMatch](https://cloud.tencent.com/document/api/1294/49479)
+* [ModifyRule](https://cloud.tencent.com/document/api/1294/49478)
+* [StartMatching](https://cloud.tencent.com/document/api/1294/49491)
 
 新增数据结构：
 
-* [Filter](https://cloud.tencent.com/document/api/1165/42074#Filter)
+* [AttributeMap](https://cloud.tencent.com/document/api/1294/49494#AttributeMap)
+* [MTicket](https://cloud.tencent.com/document/api/1294/49494#MTicket)
+* [MatchAttribute](https://cloud.tencent.com/document/api/1294/49494#MatchAttribute)
+* [MatchCodeAttr](https://cloud.tencent.com/document/api/1294/49494#MatchCodeAttr)
+* [MatchInfo](https://cloud.tencent.com/document/api/1294/49494#MatchInfo)
+* [MatchTicket](https://cloud.tencent.com/document/api/1294/49494#MatchTicket)
+* [Player](https://cloud.tencent.com/document/api/1294/49494#Player)
+* [RegionLatency](https://cloud.tencent.com/document/api/1294/49494#RegionLatency)
+* [ReportOverviewData](https://cloud.tencent.com/document/api/1294/49494#ReportOverviewData)
+* [ReportTrendData](https://cloud.tencent.com/document/api/1294/49494#ReportTrendData)
+* [RuleBriefInfo](https://cloud.tencent.com/document/api/1294/49494#RuleBriefInfo)
+* [RuleInfo](https://cloud.tencent.com/document/api/1294/49494#RuleInfo)
+* [StringKV](https://cloud.tencent.com/document/api/1294/49494#StringKV)
+* [Tag](https://cloud.tencent.com/document/api/1294/49494#Tag)
 
 
 
 ## 物联网智能视频服务(iotvideo) 版本：2019-11-26
 
-### 第 13 次发布
+### 第 14 次发布
 
-发布时间：2020-10-27 08:01:01
+发布时间：2020-10-29 08:00:46
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeOsList](https://cloud.tencent.com/document/api/1131/49511)
+* [ModifyVerContent](https://cloud.tencent.com/document/api/1131/49512)
+
+新增数据结构：
+
+* [OsData](https://cloud.tencent.com/document/api/1131/42400#OsData)
+* [SystemType](https://cloud.tencent.com/document/api/1131/42400#SystemType)
+
+
+
+## 密钥管理系统(kms) 版本：2019-01-18
+
+### 第 14 次发布
+
+发布时间：2020-10-29 08:04:45
 
 本次发布包含了以下内容：
 
@@ -139,33 +247,18 @@
 
 修改接口：
 
-* [RunOtaVersion](https://cloud.tencent.com/document/api/1131/42394)
+* [GetServiceStatus](https://cloud.tencent.com/document/api/573/34417)
 
-	* 新增入参：Remark, Contents
-
-* [RunTestOtaVersion](https://cloud.tencent.com/document/api/1131/42393)
-
-	* 新增入参：Remark
-
-
-新增数据结构：
-
-* [Contents](https://cloud.tencent.com/document/api/1131/42400#Contents)
-
-修改数据结构：
-
-* [VersionData](https://cloud.tencent.com/document/api/1131/42400#VersionData)
-
-	* 新增成员：Remark, Contents
+	* 新增出参：UserLevel, ProExpireTime, ProRenewFlag, ProResourceId
 
 
 
 
-## 云数据库 Redis(redis) 版本：2018-04-12
+## 文字识别(ocr) 版本：2018-11-19
 
-### 第 22 次发布
+### 第 37 次发布
 
-发布时间：2020-10-27 08:06:31
+发布时间：2020-10-29 08:05:33
 
 本次发布包含了以下内容：
 
@@ -173,19 +266,24 @@
 
 新增接口：
 
-* [DescribeCommonDBInstances](https://cloud.tencent.com/document/api/239/49428)
+* [AdvertiseOCR](https://cloud.tencent.com/document/api/866/49524)
+* [RecognizeTableOCR](https://cloud.tencent.com/document/api/866/49525)
 
 新增数据结构：
 
-* [RedisCommonInstanceList](https://cloud.tencent.com/document/api/239/20022#RedisCommonInstanceList)
+* [AdvertiseTextDetection](https://cloud.tencent.com/document/api/866/33527#AdvertiseTextDetection)
+* [CellContent](https://cloud.tencent.com/document/api/866/33527#CellContent)
+* [TableCell](https://cloud.tencent.com/document/api/866/33527#TableCell)
+* [TableDetectInfo](https://cloud.tencent.com/document/api/866/33527#TableDetectInfo)
+* [TableTitle](https://cloud.tencent.com/document/api/866/33527#TableTitle)
 
 
 
-## 证书(ssl) 版本：2019-12-05
+## 腾讯微服务平台 TSF(tsf) 版本：2018-03-26
 
-### 第 4 次发布
+### 第 33 次发布
 
-发布时间：2020-10-27 08:01:32
+发布时间：2020-10-29 08:06:53
 
 本次发布包含了以下内容：
 
@@ -193,67 +291,30 @@
 
 新增接口：
 
-* [CreateCertificate](https://cloud.tencent.com/document/api/400/49427)
-* [RevokeCertificate](https://cloud.tencent.com/document/api/400/49426)
-* [UploadConfirmLetter](https://cloud.tencent.com/document/api/400/49425)
-* [UploadRevokeLetter](https://cloud.tencent.com/document/api/400/49424)
-
-修改接口：
-
-* [ReplaceCertificate](https://cloud.tencent.com/document/api/400/41667)
-
-	* 新增入参：Reason
-
-
-新增数据结构：
-
-* [RevokeDomainValidateAuths](https://cloud.tencent.com/document/api/400/41679#RevokeDomainValidateAuths)
-
-
-
-## 容器服务(tke) 版本：2018-05-25
-
-### 第 30 次发布
-
-发布时间：2020-10-27 08:07:29
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [AddNodeToNodePool](https://cloud.tencent.com/document/api/457/49437)
-* [CreateClusterNodePool](https://cloud.tencent.com/document/api/457/49436)
-* [CreateClusterNodePoolFromExistingAsg](https://cloud.tencent.com/document/api/457/49435)
-* [DeleteClusterNodePool](https://cloud.tencent.com/document/api/457/49434)
-* [DescribeClusterNodePoolDetail](https://cloud.tencent.com/document/api/457/49433)
-* [DescribeClusterNodePools](https://cloud.tencent.com/document/api/457/49432)
-* [ModifyClusterNodePool](https://cloud.tencent.com/document/api/457/49431)
-* [RemoveNodeFromNodePool](https://cloud.tencent.com/document/api/457/49430)
-
-新增数据结构：
-
-* [Taint](https://cloud.tencent.com/document/api/457/31866#Taint)
+* [DescribeImageRepository](https://cloud.tencent.com/document/api/649/49526)
 
 
 
 ## 云点播(vod) 版本：2018-07-17
 
-### 第 60 次发布
+### 第 61 次发布
 
-发布时间：2020-10-27 08:08:33
+发布时间：2020-10-29 08:07:35
 
 本次发布包含了以下内容：
 
 改善已有的文档。
 
-修改数据结构：
+修改接口：
 
-* [AdaptiveStreamTemplate](https://cloud.tencent.com/document/api/266/31773#AdaptiveStreamTemplate)
+* [DescribeSubAppIds](https://cloud.tencent.com/document/api/266/36304)
 
-	* 新增成员：RemoveVideo
+	* 新增入参：Tags
 
+
+新增数据结构：
+
+* [ResourceTag](https://cloud.tencent.com/document/api/266/31773#ResourceTag)
 
 
 
@@ -721,6 +782,23 @@
 
 
 ## API网关(apigateway) 版本：2018-08-08
+
+### 第 5 次发布
+
+发布时间：2020-10-29 08:08:25
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateService](https://cloud.tencent.com/document/api/628/45201)
+
+	* 新增入参：Tags
+
+	* <font color="#dd0000">**删除出参**：</font>ServiceId, ServiceName, ServiceDesc, OuterSubDomain, InnerSubDomain, CreatedTime, NetTypes, IpVersion
+
 
 ### 第 4 次发布
 
@@ -6524,6 +6602,36 @@
 
 ## 内容分发网络(cdn) 版本：2018-06-06
 
+### 第 42 次发布
+
+发布时间：2020-10-29 08:02:27
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [ListClsLogTopics](https://cloud.tencent.com/document/api/228/42194)
+
+	* <font color="#dd0000">**删除出参**：</font>Logset, Topics
+
+* [ListClsTopicDomains](https://cloud.tencent.com/document/api/228/42193)
+
+	* <font color="#dd0000">**删除出参**：</font>AppId, Channel, LogsetId, TopicId, DomainAreaConfigs, TopicName, UpdateTime
+
+* [SearchClsLog](https://cloud.tencent.com/document/api/228/42191)
+
+	* <font color="#dd0000">**删除出参**：</font>Logs
+
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* ClsLogObject
+* ClsSearchLogs
+* LogSetInfo
+* TopicInfo
+
 ### 第 41 次发布
 
 发布时间：2020-10-23 08:03:22
@@ -7692,6 +7800,43 @@
 
 
 ## 云 HDFS(chdfs) 版本：2019-07-18
+
+### 第 4 次发布
+
+发布时间：2020-10-29 08:02:46
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[CreateLifeCycleRules](https://cloud.tencent.com/document/api/1105/49517)](https://cloud.tencent.com/document/api/#/#)
+* [[CreateRestoreTasks](https://cloud.tencent.com/document/api/1105/49520)](https://cloud.tencent.com/document/api/#/#)
+* [[DeleteLifeCycleRules](https://cloud.tencent.com/document/api/1105/49516)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeLifeCycleRules](https://cloud.tencent.com/document/api/1105/49515)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeResourceTags](https://cloud.tencent.com/document/api/1105/49523)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeRestoreTasks](https://cloud.tencent.com/document/api/1105/49519)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifyLifeCycleRules](https://cloud.tencent.com/document/api/1105/49514)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifyResourceTags](https://cloud.tencent.com/document/api/1105/49522)](https://cloud.tencent.com/document/api/#/#)
+
+修改接口：
+
+* [CreateMountPoint](https://cloud.tencent.com/document/api/1105/37376)
+
+	* <font color="#dd0000">**删除出参**：</font>MountPoint
+
+* [DescribeFileSystem](https://cloud.tencent.com/document/api/1105/37368)
+
+	* 新增出参：ArchiveCapacityUsed
+
+
+新增数据结构：
+
+* [[LifeCycleRule](https://cloud.tencent.com/document/api/1105/37345#LifeCycleRule)](https://cloud.tencent.com/document/api/1105/37345#[LifeCycleRule](https://cloud.tencent.com/document/api/1105/37345#LifeCycleRule))
+* [[RestoreTask](https://cloud.tencent.com/document/api/1105/37345#RestoreTask)](https://cloud.tencent.com/document/api/1105/37345#[RestoreTask](https://cloud.tencent.com/document/api/1105/37345#RestoreTask))
+* [[Tag](https://cloud.tencent.com/document/api/1105/37345#Tag)](https://cloud.tencent.com/document/api/1105/37345#[Tag](https://cloud.tencent.com/document/api/1105/37345#Tag))
+* [[Transition](https://cloud.tencent.com/document/api/1105/37345#Transition)](https://cloud.tencent.com/document/api/1105/37345#[Transition](https://cloud.tencent.com/document/api/1105/37345#Transition))
 
 ### 第 3 次发布
 
@@ -9066,8 +9211,8 @@
 
 新增数据结构：
 
-* [[Tag](https://cloud.tencent.com/document/api/639/41450#Tag)](https://cloud.tencent.com/document/api/639/41450#[Tag](https://cloud.tencent.com/document/api/639/41450#Tag))
-* [[TagFilter](https://cloud.tencent.com/document/api/639/41450#TagFilter)](https://cloud.tencent.com/document/api/639/41450#[TagFilter](https://cloud.tencent.com/document/api/639/41450#TagFilter))
+* [Tag](https://cloud.tencent.com/document/api/639/41450#Tag)
+* [TagFilter](https://cloud.tencent.com/document/api/639/41450#TagFilter)
 
 修改数据结构：
 
@@ -10844,6 +10989,40 @@
 
 
 ## 云服务器(cvm) 版本：2017-03-12
+
+### 第 52 次发布
+
+发布时间：2020-10-29 08:03:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeZones](https://cloud.tencent.com/document/api/213/15707)
+
+	* <font color="#dd0000">**删除出参**：</font>TotalCount, ZoneSet
+
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* ZoneInfo
+
+### 第 51 次发布
+
+发布时间：2020-10-28 08:02:49
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateImage](https://cloud.tencent.com/document/api/213/16726)
+
+	* <font color="#dd0000">**删除出参**：</font>ImageId
+
 
 ### 第 50 次发布
 
@@ -12797,6 +12976,49 @@
 
 
 ## 数据库智能管家 DBbrain(dbbrain) 版本：2019-10-16
+
+### 第 4 次发布
+
+发布时间：2020-10-29 08:03:38
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeDBDiagHistory](https://cloud.tencent.com/document/api/1130/39559)
+
+	* <font color="#dd0000">**删除出参**：</font>Events
+
+* [DescribeSlowLogTimeSeriesStats](https://cloud.tencent.com/document/api/1130/39557)
+
+	* <font color="#dd0000">**删除出参**：</font>Period, TimeSeries, SeriesData
+
+* [DescribeSlowLogTopSqls](https://cloud.tencent.com/document/api/1130/39556)
+
+	* <font color="#dd0000">**删除出参**：</font>TotalCount, Rows
+
+* [DescribeTopSpaceTableTimeSeries](https://cloud.tencent.com/document/api/1130/46279)
+
+	* <font color="#dd0000">**删除出参**：</font>TopSpaceTableTimeSeries
+
+* [DescribeTopSpaceTables](https://cloud.tencent.com/document/api/1130/46046)
+
+	* <font color="#dd0000">**删除出参**：</font>TopSpaceTables
+
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* DiagHistoryEventItem
+* MonitorFloatMetric
+* MonitorFloatMetricSeriesData
+* MonitorMetric
+* MonitorMetricSeriesData
+* SlowLogTopSqlItem
+* TableSpaceData
+* TableSpaceTimeSeries
+* TimeSlice
 
 ### 第 3 次发布
 
@@ -16887,6 +17109,54 @@
 
 
 
+## 游戏玩家匹配(gpm) 版本：2020-08-20
+
+### 第 1 次发布
+
+发布时间：2020-10-28 16:03:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[CancelMatching](https://cloud.tencent.com/document/api/1294/49493)](https://cloud.tencent.com/document/api/#/#)
+* [[CreateMatch](https://cloud.tencent.com/document/api/1294/49489)](https://cloud.tencent.com/document/api/#/#)
+* [[CreateRule](https://cloud.tencent.com/document/api/1294/49488)](https://cloud.tencent.com/document/api/#/#)
+* [[DeleteMatch](https://cloud.tencent.com/document/api/1294/49487)](https://cloud.tencent.com/document/api/#/#)
+* [[DeleteRule](https://cloud.tencent.com/document/api/1294/49486)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeData](https://cloud.tencent.com/document/api/1294/49485)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeMatch](https://cloud.tencent.com/document/api/1294/49484)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeMatchCodes](https://cloud.tencent.com/document/api/1294/49483)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeMatches](https://cloud.tencent.com/document/api/1294/49482)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeMatchingProgress](https://cloud.tencent.com/document/api/1294/49492)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeRule](https://cloud.tencent.com/document/api/1294/49481)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeRules](https://cloud.tencent.com/document/api/1294/49480)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifyMatch](https://cloud.tencent.com/document/api/1294/49479)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifyRule](https://cloud.tencent.com/document/api/1294/49478)](https://cloud.tencent.com/document/api/#/#)
+* [[StartMatching](https://cloud.tencent.com/document/api/1294/49491)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[AttributeMap](https://cloud.tencent.com/document/api/1294/49494#AttributeMap)](https://cloud.tencent.com/document/api/1294/49494#[AttributeMap](https://cloud.tencent.com/document/api/1294/49494#AttributeMap))
+* [[MTicket](https://cloud.tencent.com/document/api/1294/49494#MTicket)](https://cloud.tencent.com/document/api/1294/49494#[MTicket](https://cloud.tencent.com/document/api/1294/49494#MTicket))
+* [[MatchAttribute](https://cloud.tencent.com/document/api/1294/49494#MatchAttribute)](https://cloud.tencent.com/document/api/1294/49494#[MatchAttribute](https://cloud.tencent.com/document/api/1294/49494#MatchAttribute))
+* [[MatchCodeAttr](https://cloud.tencent.com/document/api/1294/49494#MatchCodeAttr)](https://cloud.tencent.com/document/api/1294/49494#[MatchCodeAttr](https://cloud.tencent.com/document/api/1294/49494#MatchCodeAttr))
+* [[MatchInfo](https://cloud.tencent.com/document/api/1294/49494#MatchInfo)](https://cloud.tencent.com/document/api/1294/49494#[MatchInfo](https://cloud.tencent.com/document/api/1294/49494#MatchInfo))
+* [[MatchTicket](https://cloud.tencent.com/document/api/1294/49494#MatchTicket)](https://cloud.tencent.com/document/api/1294/49494#[MatchTicket](https://cloud.tencent.com/document/api/1294/49494#MatchTicket))
+* [[Player](https://cloud.tencent.com/document/api/1294/49494#Player)](https://cloud.tencent.com/document/api/1294/49494#[Player](https://cloud.tencent.com/document/api/1294/49494#Player))
+* [[RegionLatency](https://cloud.tencent.com/document/api/1294/49494#RegionLatency)](https://cloud.tencent.com/document/api/1294/49494#[RegionLatency](https://cloud.tencent.com/document/api/1294/49494#RegionLatency))
+* [[ReportOverviewData](https://cloud.tencent.com/document/api/1294/49494#ReportOverviewData)](https://cloud.tencent.com/document/api/1294/49494#[ReportOverviewData](https://cloud.tencent.com/document/api/1294/49494#ReportOverviewData))
+* [[ReportTrendData](https://cloud.tencent.com/document/api/1294/49494#ReportTrendData)](https://cloud.tencent.com/document/api/1294/49494#[ReportTrendData](https://cloud.tencent.com/document/api/1294/49494#ReportTrendData))
+* [[RuleBriefInfo](https://cloud.tencent.com/document/api/1294/49494#RuleBriefInfo)](https://cloud.tencent.com/document/api/1294/49494#[RuleBriefInfo](https://cloud.tencent.com/document/api/1294/49494#RuleBriefInfo))
+* [[RuleInfo](https://cloud.tencent.com/document/api/1294/49494#RuleInfo)](https://cloud.tencent.com/document/api/1294/49494#[RuleInfo](https://cloud.tencent.com/document/api/1294/49494#RuleInfo))
+* [[StringKV](https://cloud.tencent.com/document/api/1294/49494#StringKV)](https://cloud.tencent.com/document/api/1294/49494#[StringKV](https://cloud.tencent.com/document/api/1294/49494#StringKV))
+* [[Tag](https://cloud.tencent.com/document/api/1294/49494#Tag)](https://cloud.tencent.com/document/api/1294/49494#[Tag](https://cloud.tencent.com/document/api/1294/49494#Tag))
+
+
+
+
 ## 云游戏解决方案(gs) 版本：2019-11-18
 
 ### 第 11 次发布
@@ -17108,7 +17378,7 @@
 
 新增数据结构：
 
-* [[Filter](https://cloud.tencent.com/document/api/1165/42074#Filter)](https://cloud.tencent.com/document/api/1165/42074#[Filter](https://cloud.tencent.com/document/api/1165/42074#Filter))
+* [Filter](https://cloud.tencent.com/document/api/1165/42074#Filter)
 
 ### 第 10 次发布
 
@@ -19484,6 +19754,24 @@
 
 ## 物联网智能视频服务(iotvideo) 版本：2019-11-26
 
+### 第 14 次发布
+
+发布时间：2020-10-29 08:00:46
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeOsList](https://cloud.tencent.com/document/api/1131/49511)](https://cloud.tencent.com/document/api/#/#)
+* [[ModifyVerContent](https://cloud.tencent.com/document/api/1131/49512)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[OsData](https://cloud.tencent.com/document/api/1131/42400#OsData)](https://cloud.tencent.com/document/api/1131/42400#[OsData](https://cloud.tencent.com/document/api/1131/42400#OsData))
+* [[SystemType](https://cloud.tencent.com/document/api/1131/42400#SystemType)](https://cloud.tencent.com/document/api/1131/42400#[SystemType](https://cloud.tencent.com/document/api/1131/42400#SystemType))
+
 ### 第 13 次发布
 
 发布时间：2020-10-27 08:01:01
@@ -19505,7 +19793,7 @@
 
 新增数据结构：
 
-* [[Contents](https://cloud.tencent.com/document/api/1131/42400#Contents)](https://cloud.tencent.com/document/api/1131/42400#[Contents](https://cloud.tencent.com/document/api/1131/42400#Contents))
+* [Contents](https://cloud.tencent.com/document/api/1131/42400#Contents)
 
 修改数据结构：
 
@@ -19789,6 +20077,21 @@
 
 
 ## 密钥管理系统(kms) 版本：2019-01-18
+
+### 第 14 次发布
+
+发布时间：2020-10-29 08:04:45
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [GetServiceStatus](https://cloud.tencent.com/document/api/573/34417)
+
+	* 新增出参：UserLevel, ProExpireTime, ProRenewFlag, ProResourceId
+
 
 ### 第 13 次发布
 
@@ -20081,6 +20384,21 @@
 
 
 ## 轻量应用服务器(lighthouse) 版本：2020-03-24
+
+### 第 7 次发布
+
+发布时间：2020-10-28 08:00:12
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [Bundle](https://cloud.tencent.com/document/api/1207/47576#Bundle)
+
+	* 新增成员：BundleType
+
 
 ### 第 6 次发布
 
@@ -23889,6 +24207,46 @@
 
 ## 文字识别(ocr) 版本：2018-11-19
 
+### 第 37 次发布
+
+发布时间：2020-10-29 08:05:33
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[AdvertiseOCR](https://cloud.tencent.com/document/api/866/49524)](https://cloud.tencent.com/document/api/#/#)
+* [[RecognizeTableOCR](https://cloud.tencent.com/document/api/866/49525)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[AdvertiseTextDetection](https://cloud.tencent.com/document/api/866/33527#AdvertiseTextDetection)](https://cloud.tencent.com/document/api/866/33527#[AdvertiseTextDetection](https://cloud.tencent.com/document/api/866/33527#AdvertiseTextDetection))
+* [[CellContent](https://cloud.tencent.com/document/api/866/33527#CellContent)](https://cloud.tencent.com/document/api/866/33527#[CellContent](https://cloud.tencent.com/document/api/866/33527#CellContent))
+* [[TableCell](https://cloud.tencent.com/document/api/866/33527#TableCell)](https://cloud.tencent.com/document/api/866/33527#[TableCell](https://cloud.tencent.com/document/api/866/33527#TableCell))
+* [[TableDetectInfo](https://cloud.tencent.com/document/api/866/33527#TableDetectInfo)](https://cloud.tencent.com/document/api/866/33527#[TableDetectInfo](https://cloud.tencent.com/document/api/866/33527#TableDetectInfo))
+* [[TableTitle](https://cloud.tencent.com/document/api/866/33527#TableTitle)](https://cloud.tencent.com/document/api/866/33527#[TableTitle](https://cloud.tencent.com/document/api/866/33527#TableTitle))
+
+### 第 36 次发布
+
+发布时间：2020-10-28 08:05:09
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [QueryBarCode](https://cloud.tencent.com/document/api/866/45513)
+
+	* <font color="#dd0000">**删除出参**：</font>BarCode, ProductDataRecords
+
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* ProductDataRecord
+
 ### 第 35 次发布
 
 发布时间：2020-09-17 08:05:27
@@ -25246,11 +25604,11 @@
 
 新增接口：
 
-* [[DescribeCommonDBInstances](https://cloud.tencent.com/document/api/239/49428)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeCommonDBInstances](https://cloud.tencent.com/document/api/239/49428)
 
 新增数据结构：
 
-* [[RedisCommonInstanceList](https://cloud.tencent.com/document/api/239/20022#RedisCommonInstanceList)](https://cloud.tencent.com/document/api/239/20022#[RedisCommonInstanceList](https://cloud.tencent.com/document/api/239/20022#RedisCommonInstanceList))
+* [RedisCommonInstanceList](https://cloud.tencent.com/document/api/239/20022#RedisCommonInstanceList)
 
 ### 第 21 次发布
 
@@ -27259,10 +27617,10 @@
 
 新增接口：
 
-* [[CreateCertificate](https://cloud.tencent.com/document/api/400/49427)](https://cloud.tencent.com/document/api/#/#)
-* [[RevokeCertificate](https://cloud.tencent.com/document/api/400/49426)](https://cloud.tencent.com/document/api/#/#)
-* [[UploadConfirmLetter](https://cloud.tencent.com/document/api/400/49425)](https://cloud.tencent.com/document/api/#/#)
-* [[UploadRevokeLetter](https://cloud.tencent.com/document/api/400/49424)](https://cloud.tencent.com/document/api/#/#)
+* [CreateCertificate](https://cloud.tencent.com/document/api/400/49427)
+* [RevokeCertificate](https://cloud.tencent.com/document/api/400/49426)
+* [UploadConfirmLetter](https://cloud.tencent.com/document/api/400/49425)
+* [UploadRevokeLetter](https://cloud.tencent.com/document/api/400/49424)
 
 修改接口：
 
@@ -27273,7 +27631,7 @@
 
 新增数据结构：
 
-* [[RevokeDomainValidateAuths](https://cloud.tencent.com/document/api/400/41679#RevokeDomainValidateAuths)](https://cloud.tencent.com/document/api/400/41679#[RevokeDomainValidateAuths](https://cloud.tencent.com/document/api/400/41679#RevokeDomainValidateAuths))
+* [RevokeDomainValidateAuths](https://cloud.tencent.com/document/api/400/41679#RevokeDomainValidateAuths)
 
 ### 第 3 次发布
 
@@ -30843,6 +31201,32 @@
 
 ## 容器服务(tke) 版本：2018-05-25
 
+### 第 31 次发布
+
+发布时间：2020-10-28 08:06:19
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeClusterNodePoolDetail](https://cloud.tencent.com/document/api/457/49433)
+
+	* 新增出参：NodePool
+
+* [DescribeClusterNodePools](https://cloud.tencent.com/document/api/457/49432)
+
+	* 新增出参：NodePoolSet, TotalCount
+
+
+新增数据结构：
+
+* [AutoscalingAdded](https://cloud.tencent.com/document/api/457/31866#AutoscalingAdded)
+* [ManuallyAdded](https://cloud.tencent.com/document/api/457/31866#ManuallyAdded)
+* [NodeCountSummary](https://cloud.tencent.com/document/api/457/31866#NodeCountSummary)
+* [NodePool](https://cloud.tencent.com/document/api/457/31866#NodePool)
+
 ### 第 30 次发布
 
 发布时间：2020-10-27 08:07:29
@@ -30853,18 +31237,18 @@
 
 新增接口：
 
-* [[AddNodeToNodePool](https://cloud.tencent.com/document/api/457/49437)](https://cloud.tencent.com/document/api/#/#)
-* [[CreateClusterNodePool](https://cloud.tencent.com/document/api/457/49436)](https://cloud.tencent.com/document/api/#/#)
-* [[CreateClusterNodePoolFromExistingAsg](https://cloud.tencent.com/document/api/457/49435)](https://cloud.tencent.com/document/api/#/#)
-* [[DeleteClusterNodePool](https://cloud.tencent.com/document/api/457/49434)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeClusterNodePoolDetail](https://cloud.tencent.com/document/api/457/49433)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeClusterNodePools](https://cloud.tencent.com/document/api/457/49432)](https://cloud.tencent.com/document/api/#/#)
-* [[ModifyClusterNodePool](https://cloud.tencent.com/document/api/457/49431)](https://cloud.tencent.com/document/api/#/#)
-* [[RemoveNodeFromNodePool](https://cloud.tencent.com/document/api/457/49430)](https://cloud.tencent.com/document/api/#/#)
+* [AddNodeToNodePool](https://cloud.tencent.com/document/api/457/49437)
+* [CreateClusterNodePool](https://cloud.tencent.com/document/api/457/49436)
+* [CreateClusterNodePoolFromExistingAsg](https://cloud.tencent.com/document/api/457/49435)
+* [DeleteClusterNodePool](https://cloud.tencent.com/document/api/457/49434)
+* [DescribeClusterNodePoolDetail](https://cloud.tencent.com/document/api/457/49433)
+* [DescribeClusterNodePools](https://cloud.tencent.com/document/api/457/49432)
+* [ModifyClusterNodePool](https://cloud.tencent.com/document/api/457/49431)
+* [RemoveNodeFromNodePool](https://cloud.tencent.com/document/api/457/49430)
 
 新增数据结构：
 
-* [[Taint](https://cloud.tencent.com/document/api/457/31866#Taint)](https://cloud.tencent.com/document/api/457/31866#[Taint](https://cloud.tencent.com/document/api/457/31866#Taint))
+* [Taint](https://cloud.tencent.com/document/api/457/31866#Taint)
 
 ### 第 29 次发布
 
@@ -31968,6 +32352,18 @@
 
 ## 腾讯微服务平台 TSF(tsf) 版本：2018-03-26
 
+### 第 33 次发布
+
+发布时间：2020-10-29 08:06:53
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeImageRepository](https://cloud.tencent.com/document/api/649/49526)](https://cloud.tencent.com/document/api/#/#)
+
 ### 第 32 次发布
 
 发布时间：2020-10-21 08:06:55
@@ -32926,6 +33322,25 @@
 
 
 ## 云点播(vod) 版本：2018-07-17
+
+### 第 61 次发布
+
+发布时间：2020-10-29 08:07:35
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeSubAppIds](https://cloud.tencent.com/document/api/266/36304)
+
+	* 新增入参：Tags
+
+
+新增数据结构：
+
+* [[ResourceTag](https://cloud.tencent.com/document/api/266/31773#ResourceTag)](https://cloud.tencent.com/document/api/266/31773#[ResourceTag](https://cloud.tencent.com/document/api/266/31773#ResourceTag))
 
 ### 第 60 次发布
 

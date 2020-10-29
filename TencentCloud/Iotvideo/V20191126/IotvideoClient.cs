@@ -1467,6 +1467,46 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
+        /// 查看操作系统支持的芯片列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOsListRequest"/></param>
+        /// <returns><see cref="DescribeOsListResponse"/></returns>
+        public async Task<DescribeOsListResponse> DescribeOsList(DescribeOsListRequest req)
+        {
+             JsonResponseModel<DescribeOsListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看操作系统支持的芯片列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOsListRequest"/></param>
+        /// <returns><see cref="DescribeOsListResponse"/></returns>
+        public DescribeOsListResponse DescribeOsListSync(DescribeOsListRequest req)
+        {
+             JsonResponseModel<DescribeOsListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeOtaVersions）用于查询固件版本信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeOtaVersionsRequest"/></param>
@@ -2082,6 +2122,46 @@ namespace TencentCloud.Iotvideo.V20191126
              {
                  var strResp = this.InternalRequestSync(req, "ModifyProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑版本描述信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVerContentRequest"/></param>
+        /// <returns><see cref="ModifyVerContentResponse"/></returns>
+        public async Task<ModifyVerContentResponse> ModifyVerContent(ModifyVerContentRequest req)
+        {
+             JsonResponseModel<ModifyVerContentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVerContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVerContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑版本描述信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVerContentRequest"/></param>
+        /// <returns><see cref="ModifyVerContentResponse"/></returns>
+        public ModifyVerContentResponse ModifyVerContentSync(ModifyVerContentRequest req)
+        {
+             JsonResponseModel<ModifyVerContentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVerContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVerContentResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

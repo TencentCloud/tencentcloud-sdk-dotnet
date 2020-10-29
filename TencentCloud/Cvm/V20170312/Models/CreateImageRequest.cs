@@ -50,7 +50,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ForcePoweroff{ get; set; }
 
         /// <summary>
-        /// 创建Windows镜像时是否启用Sysprep
+        /// 创建Windows镜像时是否启用Sysprep，关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)
         /// </summary>
         [JsonProperty("Sysprep")]
         public string Sysprep{ get; set; }

@@ -32,8 +32,10 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 子应用状态，取值范围：
-        /// <li>On：启用</li>
-        /// <li>Off：停用</li>
+        /// <li>On：启用。</li>
+        /// <li>Off：停用。</li>
+        /// <li>Destroyed：销毁。</li>
+        /// 当前状态如果是 Destoying ，不能进行启用操作，需要等待销毁完成后才能重新启用。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

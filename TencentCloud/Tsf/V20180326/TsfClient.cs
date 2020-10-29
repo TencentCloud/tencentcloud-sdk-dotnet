@@ -2097,6 +2097,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 镜像仓库列表 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRepositoryRequest"/></param>
+        /// <returns><see cref="DescribeImageRepositoryResponse"/></returns>
+        public async Task<DescribeImageRepositoryResponse> DescribeImageRepository(DescribeImageRepositoryRequest req)
+        {
+             JsonResponseModel<DescribeImageRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 镜像仓库列表 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageRepositoryRequest"/></param>
+        /// <returns><see cref="DescribeImageRepositoryResponse"/></returns>
+        public DescribeImageRepositoryResponse DescribeImageRepositorySync(DescribeImageRepositoryRequest req)
+        {
+             JsonResponseModel<DescribeImageRepositoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageRepository");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 镜像版本列表
         /// </summary>
         /// <param name="req"><see cref="DescribeImageTagsRequest"/></param>

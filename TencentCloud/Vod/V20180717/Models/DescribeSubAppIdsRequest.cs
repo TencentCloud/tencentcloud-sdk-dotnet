@@ -24,12 +24,19 @@ namespace TencentCloud.Vod.V20180717.Models
     public class DescribeSubAppIdsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 标签信息，查询指定标签的子应用列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public ResourceTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

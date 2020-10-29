@@ -53,6 +53,50 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持广告商品图片内文字的检测和识别，返回文本框位置与文字内容。
+        /// 
+        /// 产品优势：针对广告商品图片普遍存在较多繁体字、艺术字的特点，进行了识别能力的增强。支持中英文、横排、竖排以及倾斜场景文字识别。文字识别的召回率和准确率能达到96%以上。
+        /// </summary>
+        /// <param name="req"><see cref="AdvertiseOCRRequest"/></param>
+        /// <returns><see cref="AdvertiseOCRResponse"/></returns>
+        public async Task<AdvertiseOCRResponse> AdvertiseOCR(AdvertiseOCRRequest req)
+        {
+             JsonResponseModel<AdvertiseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AdvertiseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AdvertiseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持广告商品图片内文字的检测和识别，返回文本框位置与文字内容。
+        /// 
+        /// 产品优势：针对广告商品图片普遍存在较多繁体字、艺术字的特点，进行了识别能力的增强。支持中英文、横排、竖排以及倾斜场景文字识别。文字识别的召回率和准确率能达到96%以上。
+        /// </summary>
+        /// <param name="req"><see cref="AdvertiseOCRRequest"/></param>
+        /// <returns><see cref="AdvertiseOCRResponse"/></returns>
+        public AdvertiseOCRResponse AdvertiseOCRSync(AdvertiseOCRRequest req)
+        {
+             JsonResponseModel<AdvertiseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AdvertiseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AdvertiseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持作业算式题目的自动识别，目前覆盖 K12 学力范围内的 14 种题型，包括加减乘除四则运算、分数四则运算、竖式四则运算、脱式计算等。
         /// </summary>
         /// <param name="req"><see cref="ArithmeticOCRRequest"/></param>
@@ -2072,8 +2116,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持条形码和二维码的识别（包括 DataMatrix 和 PDF417）。
-        /// 
-        /// 本接口目前处于公测阶段，2020年10月7日公测结束后，接口价格会进行相应的变更，请留意站内信通知。
         /// </summary>
         /// <param name="req"><see cref="QrcodeOCRRequest"/></param>
         /// <returns><see cref="QrcodeOCRResponse"/></returns>
@@ -2094,8 +2136,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口支持条形码和二维码的识别（包括 DataMatrix 和 PDF417）。
-        /// 
-        /// 本接口目前处于公测阶段，2020年10月7日公测结束后，接口价格会进行相应的变更，请留意站内信通知。
         /// </summary>
         /// <param name="req"><see cref="QrcodeOCRRequest"/></param>
         /// <returns><see cref="QrcodeOCRResponse"/></returns>
@@ -2118,8 +2158,6 @@ namespace TencentCloud.Ocr.V20181119
         /// 本接口支持条形码备案信息查询，返回条形码查询结果的相关信息，包括产品名称、产品英文名称、品牌名称、规格型号、宽度、高度、深度、关键字、产品描述、厂家名称、厂家地址、企业社会信用代码13个字段信息。
         /// 
         /// 产品优势：直联中国物品编码中心，查询结果更加准确、可靠。
-        /// 
-        /// 本接口目前为内测阶段，如需使用服务，请<a href="https://cloud.tencent.com/act/event/connect-service" target="_blank">联系商务</a>开通。
         /// </summary>
         /// <param name="req"><see cref="QueryBarCodeRequest"/></param>
         /// <returns><see cref="QueryBarCodeResponse"/></returns>
@@ -2142,8 +2180,6 @@ namespace TencentCloud.Ocr.V20181119
         /// 本接口支持条形码备案信息查询，返回条形码查询结果的相关信息，包括产品名称、产品英文名称、品牌名称、规格型号、宽度、高度、深度、关键字、产品描述、厂家名称、厂家地址、企业社会信用代码13个字段信息。
         /// 
         /// 产品优势：直联中国物品编码中心，查询结果更加准确、可靠。
-        /// 
-        /// 本接口目前为内测阶段，如需使用服务，请<a href="https://cloud.tencent.com/act/event/connect-service" target="_blank">联系商务</a>开通。
         /// </summary>
         /// <param name="req"><see cref="QueryBarCodeRequest"/></param>
         /// <returns><see cref="QueryBarCodeResponse"/></returns>
@@ -2194,6 +2230,46 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "QuotaInvoiceOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QuotaInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持图片/ PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持对0度至180度旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableOCRResponse"/></returns>
+        public async Task<RecognizeTableOCRResponse> RecognizeTableOCR(RecognizeTableOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTableOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeTableOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持图片/ PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持对0度至180度旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTableOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTableOCRResponse"/></returns>
+        public RecognizeTableOCRResponse RecognizeTableOCRSync(RecognizeTableOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTableOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeTableOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTableOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2528,8 +2604,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
-        /// 
-        /// 本接口目前处于公测阶段，2020年10月7日公测结束后，接口价格会进行相应的变更，请留意站内信通知。
         /// </summary>
         /// <param name="req"><see cref="TextDetectRequest"/></param>
         /// <returns><see cref="TextDetectResponse"/></returns>
@@ -2550,8 +2624,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// 本接口通过检测图片中的文字信息特征，快速判断图片中有无文字并返回判断结果，帮助用户过滤无文字的图片。
-        /// 
-        /// 本接口目前处于公测阶段，2020年10月7日公测结束后，接口价格会进行相应的变更，请留意站内信通知。
         /// </summary>
         /// <param name="req"><see cref="TextDetectRequest"/></param>
         /// <returns><see cref="TextDetectResponse"/></returns>

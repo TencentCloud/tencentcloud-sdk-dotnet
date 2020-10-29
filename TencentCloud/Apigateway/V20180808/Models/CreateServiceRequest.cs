@@ -72,6 +72,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("AppIdType")]
         public string AppIdType{ get; set; }
 
+        /// <summary>
+        /// 标签。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
             this.SetParamSimple(map, prefix + "SetServerName", this.SetServerName);
             this.SetParamSimple(map, prefix + "AppIdType", this.AppIdType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 输入来源对象的类型，可以支持 COS 和 URL 两种。
+        /// 输入来源对象的类型，目前仅支持 COS。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -38,6 +38,8 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+        /// 
+        /// 目前尚不支持 URL 输入，该能力将于近期支持。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UrlInputInfo")]

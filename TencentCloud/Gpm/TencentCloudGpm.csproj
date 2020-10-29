@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{D3EBC592-1F15-3EF3-9DED-C1F2F9E69BB2}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.168</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Gpm</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200820\GpmClient.cs" />
+    <Compile Include="V20200820\Models\AttributeMap.cs" />
+    <Compile Include="V20200820\Models\CancelMatchingRequest.cs" />
+    <Compile Include="V20200820\Models\CancelMatchingResponse.cs" />
+    <Compile Include="V20200820\Models\CreateMatchRequest.cs" />
+    <Compile Include="V20200820\Models\CreateMatchResponse.cs" />
+    <Compile Include="V20200820\Models\CreateRuleRequest.cs" />
+    <Compile Include="V20200820\Models\CreateRuleResponse.cs" />
+    <Compile Include="V20200820\Models\DeleteMatchRequest.cs" />
+    <Compile Include="V20200820\Models\DeleteMatchResponse.cs" />
+    <Compile Include="V20200820\Models\DeleteRuleRequest.cs" />
+    <Compile Include="V20200820\Models\DeleteRuleResponse.cs" />
+    <Compile Include="V20200820\Models\DescribeDataRequest.cs" />
+    <Compile Include="V20200820\Models\DescribeDataResponse.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchCodesRequest.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchCodesResponse.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchRequest.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchResponse.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchesRequest.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchesResponse.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchingProgressRequest.cs" />
+    <Compile Include="V20200820\Models\DescribeMatchingProgressResponse.cs" />
+    <Compile Include="V20200820\Models\DescribeRuleRequest.cs" />
+    <Compile Include="V20200820\Models\DescribeRuleResponse.cs" />
+    <Compile Include="V20200820\Models\DescribeRulesRequest.cs" />
+    <Compile Include="V20200820\Models\DescribeRulesResponse.cs" />
+    <Compile Include="V20200820\Models\MTicket.cs" />
+    <Compile Include="V20200820\Models\MatchAttribute.cs" />
+    <Compile Include="V20200820\Models\MatchCodeAttr.cs" />
+    <Compile Include="V20200820\Models\MatchInfo.cs" />
+    <Compile Include="V20200820\Models\MatchTicket.cs" />
+    <Compile Include="V20200820\Models\ModifyMatchRequest.cs" />
+    <Compile Include="V20200820\Models\ModifyMatchResponse.cs" />
+    <Compile Include="V20200820\Models\ModifyRuleRequest.cs" />
+    <Compile Include="V20200820\Models\ModifyRuleResponse.cs" />
+    <Compile Include="V20200820\Models\Player.cs" />
+    <Compile Include="V20200820\Models\RegionLatency.cs" />
+    <Compile Include="V20200820\Models\ReportOverviewData.cs" />
+    <Compile Include="V20200820\Models\ReportTrendData.cs" />
+    <Compile Include="V20200820\Models\RuleBriefInfo.cs" />
+    <Compile Include="V20200820\Models\RuleInfo.cs" />
+    <Compile Include="V20200820\Models\StartMatchingRequest.cs" />
+    <Compile Include="V20200820\Models\StartMatchingResponse.cs" />
+    <Compile Include="V20200820\Models\StringKV.cs" />
+    <Compile Include="V20200820\Models\Tag.cs" />
+  </ItemGroup>
+</Project>

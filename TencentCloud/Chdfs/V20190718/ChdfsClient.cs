@@ -173,6 +173,46 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 批量创建生命周期规则，生命周期规则ID和创建时间无需填写。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="CreateLifeCycleRulesResponse"/></returns>
+        public async Task<CreateLifeCycleRulesResponse> CreateLifeCycleRules(CreateLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<CreateLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLifeCycleRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量创建生命周期规则，生命周期规则ID和创建时间无需填写。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="CreateLifeCycleRulesResponse"/></returns>
+        public CreateLifeCycleRulesResponse CreateLifeCycleRulesSync(CreateLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<CreateLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLifeCycleRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建文件系统挂载点，仅限于创建成功的文件系统。
         /// </summary>
         /// <param name="req"><see cref="CreateMountPointRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Chdfs.V20190718
              {
                  var strResp = this.InternalRequestSync(req, "CreateMountPoint");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMountPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量创建回热任务，回热任务ID、状态和创建时间无需填写。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRestoreTasksRequest"/></param>
+        /// <returns><see cref="CreateRestoreTasksResponse"/></returns>
+        public async Task<CreateRestoreTasksResponse> CreateRestoreTasks(CreateRestoreTasksRequest req)
+        {
+             JsonResponseModel<CreateRestoreTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRestoreTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRestoreTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量创建回热任务，回热任务ID、状态和创建时间无需填写。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRestoreTasksRequest"/></param>
+        /// <returns><see cref="CreateRestoreTasksResponse"/></returns>
+        public CreateRestoreTasksResponse CreateRestoreTasksSync(CreateRestoreTasksRequest req)
+        {
+             JsonResponseModel<CreateRestoreTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRestoreTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRestoreTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -324,6 +404,46 @@ namespace TencentCloud.Chdfs.V20190718
              {
                  var strResp = this.InternalRequestSync(req, "DeleteFileSystem");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFileSystemResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除生命周期规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="DeleteLifeCycleRulesResponse"/></returns>
+        public async Task<DeleteLifeCycleRulesResponse> DeleteLifeCycleRules(DeleteLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<DeleteLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLifeCycleRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除生命周期规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="DeleteLifeCycleRulesResponse"/></returns>
+        public DeleteLifeCycleRulesResponse DeleteLifeCycleRulesSync(DeleteLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<DeleteLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLifeCycleRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,6 +653,46 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 通过文件系统ID查看生命周期规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="DescribeLifeCycleRulesResponse"/></returns>
+        public async Task<DescribeLifeCycleRulesResponse> DescribeLifeCycleRules(DescribeLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<DescribeLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLifeCycleRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过文件系统ID查看生命周期规则列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="DescribeLifeCycleRulesResponse"/></returns>
+        public DescribeLifeCycleRulesResponse DescribeLifeCycleRulesSync(DescribeLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<DescribeLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLifeCycleRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看挂载点详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeMountPointRequest"/></param>
@@ -613,6 +773,86 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 通过文件系统ID查看资源标签列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
+        public async Task<DescribeResourceTagsResponse> DescribeResourceTags(DescribeResourceTagsRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过文件系统ID查看资源标签列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
+        /// <returns><see cref="DescribeResourceTagsResponse"/></returns>
+        public DescribeResourceTagsResponse DescribeResourceTagsSync(DescribeResourceTagsRequest req)
+        {
+             JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过文件系统ID查看回热任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTasksRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTasksResponse"/></returns>
+        public async Task<DescribeRestoreTasksResponse> DescribeRestoreTasks(DescribeRestoreTasksRequest req)
+        {
+             JsonResponseModel<DescribeRestoreTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRestoreTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRestoreTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过文件系统ID查看回热任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTasksRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTasksResponse"/></returns>
+        public DescribeRestoreTasksResponse DescribeRestoreTasksSync(DescribeRestoreTasksRequest req)
+        {
+             JsonResponseModel<DescribeRestoreTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRestoreTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRestoreTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改权限组属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessGroupRequest"/></param>
@@ -653,7 +893,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 批量修改权限规则属性，需要指定权限规则ID。
+        /// 批量修改权限规则属性，需要指定权限规则ID，支持修改权限规则地址、访问模式和优先级。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessRulesRequest"/></param>
         /// <returns><see cref="ModifyAccessRulesResponse"/></returns>
@@ -673,7 +913,7 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
-        /// 批量修改权限规则属性，需要指定权限规则ID。
+        /// 批量修改权限规则属性，需要指定权限规则ID，支持修改权限规则地址、访问模式和优先级。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessRulesRequest"/></param>
         /// <returns><see cref="ModifyAccessRulesResponse"/></returns>
@@ -733,6 +973,46 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 批量修改生命周期规则属性，需要指定生命周期规则ID，支持修改生命周期规则名称、路径、转换列表和状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="ModifyLifeCycleRulesResponse"/></returns>
+        public async Task<ModifyLifeCycleRulesResponse> ModifyLifeCycleRules(ModifyLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<ModifyLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifeCycleRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量修改生命周期规则属性，需要指定生命周期规则ID，支持修改生命周期规则名称、路径、转换列表和状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifeCycleRulesRequest"/></param>
+        /// <returns><see cref="ModifyLifeCycleRulesResponse"/></returns>
+        public ModifyLifeCycleRulesResponse ModifyLifeCycleRulesSync(ModifyLifeCycleRulesRequest req)
+        {
+             JsonResponseModel<ModifyLifeCycleRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLifeCycleRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifeCycleRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改挂载点属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyMountPointRequest"/></param>
@@ -764,6 +1044,46 @@ namespace TencentCloud.Chdfs.V20190718
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMountPoint");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMountPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改资源标签列表，全量覆盖。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>
+        /// <returns><see cref="ModifyResourceTagsResponse"/></returns>
+        public async Task<ModifyResourceTagsResponse> ModifyResourceTags(ModifyResourceTagsRequest req)
+        {
+             JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改资源标签列表，全量覆盖。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>
+        /// <returns><see cref="ModifyResourceTagsResponse"/></returns>
+        public ModifyResourceTagsResponse ModifyResourceTagsSync(ModifyResourceTagsRequest req)
+        {
+             JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourceTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceTagsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

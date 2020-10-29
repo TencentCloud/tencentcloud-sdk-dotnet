@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.167</VersionPrefix>
+    <VersionPrefix>3.0.168</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1852,8 +1852,6 @@
     <Compile Include="Cdn\V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientCert.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientInfo.cs" />
-    <Compile Include="Cdn\V20180606\Models\ClsLogObject.cs" />
-    <Compile Include="Cdn\V20180606\Models\ClsSearchLogs.cs" />
     <Compile Include="Cdn\V20180606\Models\Compatibility.cs" />
     <Compile Include="Cdn\V20180606\Models\Compression.cs" />
     <Compile Include="Cdn\V20180606\Models\CompressionRule.cs" />
@@ -1965,7 +1963,6 @@
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataResponse.cs" />
-    <Compile Include="Cdn\V20180606\Models\LogSetInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MainlandConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ManageClsTopicDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ManageClsTopicDomainsResponse.cs" />
@@ -2027,7 +2024,6 @@
     <Compile Include="Cdn\V20180606\Models\TimestampData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopDetailData.cs" />
-    <Compile Include="Cdn\V20180606\Models\TopicInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\TpgAdapter.cs" />
     <Compile Include="Cdn\V20180606\Models\TrafficPackage.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigRequest.cs" />
@@ -2162,14 +2158,20 @@
     <Compile Include="Chdfs\V20190718\Models\CreateAccessRulesResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\CreateFileSystemRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\CreateFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\CreateLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\CreateLifeCycleRulesResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\CreateMountPointRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\CreateMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\CreateRestoreTasksRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\CreateRestoreTasksResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteAccessGroupRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteAccessGroupResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteAccessRulesRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteAccessRulesResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteFileSystemRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DeleteLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DeleteLifeCycleRulesResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteMountPointRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\DeleteMountPointResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DescribeAccessGroupsRequest.cs" />
@@ -2180,21 +2182,35 @@
     <Compile Include="Chdfs\V20190718\Models\DescribeFileSystemResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DescribeFileSystemsRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\DescribeFileSystemsResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DescribeLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DescribeLifeCycleRulesResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DescribeMountPointRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\DescribeMountPointResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\DescribeMountPointsRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\DescribeMountPointsResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DescribeResourceTagsRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DescribeResourceTagsResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DescribeRestoreTasksRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\DescribeRestoreTasksResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\FileSystem.cs" />
     <Compile Include="Chdfs\V20190718\Models\Filter.cs" />
+    <Compile Include="Chdfs\V20190718\Models\LifeCycleRule.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyAccessGroupRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyAccessGroupResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyAccessRulesRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyAccessRulesResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyFileSystemRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\ModifyLifeCycleRulesRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\ModifyLifeCycleRulesResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyMountPointRequest.cs" />
     <Compile Include="Chdfs\V20190718\Models\ModifyMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20190718\Models\ModifyResourceTagsRequest.cs" />
+    <Compile Include="Chdfs\V20190718\Models\ModifyResourceTagsResponse.cs" />
     <Compile Include="Chdfs\V20190718\Models\MountPoint.cs" />
+    <Compile Include="Chdfs\V20190718\Models\RestoreTask.cs" />
+    <Compile Include="Chdfs\V20190718\Models\Tag.cs" />
+    <Compile Include="Chdfs\V20190718\Models\Transition.cs" />
     <Compile Include="Cim\V20190318\CimClient.cs" />
     <Compile Include="Cim\V20190318\Models\DescribeSdkAppidRequest.cs" />
     <Compile Include="Cim\V20190318\Models\DescribeSdkAppidResponse.cs" />
@@ -3180,7 +3196,6 @@
     <Compile Include="Cvm\V20170312\Models\TerminateInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\TerminateInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\VirtualPrivateCloud.cs" />
-    <Compile Include="Cvm\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Cwp\V20180228\CwpClient.cs" />
     <Compile Include="Cwp\V20180228\Models\Account.cs" />
     <Compile Include="Cwp\V20180228\Models\AccountStatistics.cs" />
@@ -3815,15 +3830,6 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetric.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetricSeriesData.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\MonitorMetric.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\MonitorMetricSeriesData.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\SlowLogTopSqlItem.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
-    <Compile Include="Dbbrain\V20191016\Models\TimeSlice.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
@@ -4929,6 +4935,51 @@
     <Compile Include="Gme\V20180711\Models\VoiceFilterStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceMessageConf.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceMessageStatisticsItem.cs" />
+    <Compile Include="Gpm\V20200820\GpmClient.cs" />
+    <Compile Include="Gpm\V20200820\Models\AttributeMap.cs" />
+    <Compile Include="Gpm\V20200820\Models\CancelMatchingRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\CancelMatchingResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\CreateRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DeleteRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeDataRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeDataResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchCodesRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchCodesResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchesRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchesResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchingProgressRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeMatchingProgressResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRulesRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeRulesResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\MTicket.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchAttribute.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchCodeAttr.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchInfo.cs" />
+    <Compile Include="Gpm\V20200820\Models\MatchTicket.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyMatchRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyMatchResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyRuleRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\Player.cs" />
+    <Compile Include="Gpm\V20200820\Models\RegionLatency.cs" />
+    <Compile Include="Gpm\V20200820\Models\ReportOverviewData.cs" />
+    <Compile Include="Gpm\V20200820\Models\ReportTrendData.cs" />
+    <Compile Include="Gpm\V20200820\Models\RuleBriefInfo.cs" />
+    <Compile Include="Gpm\V20200820\Models\RuleInfo.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\StringKV.cs" />
+    <Compile Include="Gpm\V20200820\Models\Tag.cs" />
     <Compile Include="Gs\V20191118\GsClient.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionRequest.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionResponse.cs" />
@@ -5819,6 +5870,8 @@
     <Compile Include="Iotvideo\V20191126\Models\DescribeMessageQueueResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeModelDataRetRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeModelDataRetResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DescribeOsListRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DescribeOsListResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeOtaVersionsRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeOtaVersionsResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeProductRequest.cs" />
@@ -5856,7 +5909,10 @@
     <Compile Include="Iotvideo\V20191126\Models\ModifyDevicePropertyResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ModifyProductRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ModifyProductResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\ModifyVerContentRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\ModifyVerContentResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\MsgQueueData.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\OsData.cs" />
     <Compile Include="Iotvideo\V20191126\Models\OtaPubHistory.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ProductBase.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ProductData.cs" />
@@ -5878,6 +5934,7 @@
     <Compile Include="Iotvideo\V20191126\Models\SetMessageQueueRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\SetMessageQueueResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\StorageOrder.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\SystemType.cs" />
     <Compile Include="Iotvideo\V20191126\Models\TraceStatus.cs" />
     <Compile Include="Iotvideo\V20191126\Models\UpgradeDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\UpgradeDeviceResponse.cs" />
@@ -7121,6 +7178,9 @@
     <Compile Include="Npp\V20190823\Models\RreCallerHandle.cs" />
     <Compile Include="Npp\V20190823\Models\VirturalNumCdr.cs" />
     <Compile Include="Ocr\V20181119\OcrClient.cs" />
+    <Compile Include="Ocr\V20181119\Models\AdvertiseOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\AdvertiseOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\AdvertiseTextDetection.cs" />
     <Compile Include="Ocr\V20181119\Models\ArithmeticOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ArithmeticOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\BankCardOCRRequest.cs" />
@@ -7138,6 +7198,7 @@
     <Compile Include="Ocr\V20181119\Models\CarInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\CarInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\CarInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\CellContent.cs" />
     <Compile Include="Ocr\V20181119\Models\ClassifyDetectInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\ClassifyDetectOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ClassifyDetectOCRResponse.cs" />
@@ -7213,7 +7274,6 @@
     <Compile Include="Ocr\V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\Polygon.cs" />
-    <Compile Include="Ocr\V20181119\Models\ProductDataRecord.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\QrcodeImgSize.cs" />
@@ -7227,6 +7287,8 @@
     <Compile Include="Ocr\V20181119\Models\QuestionObj.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeTableOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeTableOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeThaiIDCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\Rect.cs" />
@@ -7242,8 +7304,11 @@
     <Compile Include="Ocr\V20181119\Models\ShipInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\ShipInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\SingleInvoiceInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\TableCell.cs" />
+    <Compile Include="Ocr\V20181119\Models\TableDetectInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\TableOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TableOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\TableTitle.cs" />
     <Compile Include="Ocr\V20181119\Models\TaxiInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TaxiInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TextArithmetic.cs" />
@@ -9125,6 +9190,7 @@
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
+    <Compile Include="Tke\V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="Tke\V20180525\Models\Cluster.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterAdvancedSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterAsGroup.cs" />
@@ -9218,6 +9284,7 @@
     <Compile Include="Tke\V20180525\Models\InstanceExtraArgs.cs" />
     <Compile Include="Tke\V20180525\Models\Label.cs" />
     <Compile Include="Tke\V20180525\Models\LoginSettings.cs" />
+    <Compile Include="Tke\V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeRequest.cs" />
@@ -9226,6 +9293,8 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
+    <Compile Include="Tke\V20180525\Models\NodePool.cs" />
     <Compile Include="Tke\V20180525\Models\RegionInstance.cs" />
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
@@ -9437,6 +9506,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeImageRepositoryRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeImageRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeLaneRulesRequest.cs" />
@@ -10040,6 +10111,7 @@
     <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ResolutionNameInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\ResourceTag.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />

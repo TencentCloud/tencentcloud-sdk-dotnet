@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.168</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,8 +72,6 @@
     <Compile Include="V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="V20180606\Models\ClientCert.cs" />
     <Compile Include="V20180606\Models\ClientInfo.cs" />
-    <Compile Include="V20180606\Models\ClsLogObject.cs" />
-    <Compile Include="V20180606\Models\ClsSearchLogs.cs" />
     <Compile Include="V20180606\Models\Compatibility.cs" />
     <Compile Include="V20180606\Models\Compression.cs" />
     <Compile Include="V20180606\Models\CompressionRule.cs" />
@@ -185,7 +183,6 @@
     <Compile Include="V20180606\Models\ListScdnLogTasksResponse.cs" />
     <Compile Include="V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="V20180606\Models\ListTopDataResponse.cs" />
-    <Compile Include="V20180606\Models\LogSetInfo.cs" />
     <Compile Include="V20180606\Models\MainlandConfig.cs" />
     <Compile Include="V20180606\Models\ManageClsTopicDomainsRequest.cs" />
     <Compile Include="V20180606\Models\ManageClsTopicDomainsResponse.cs" />
@@ -247,7 +244,6 @@
     <Compile Include="V20180606\Models\TimestampData.cs" />
     <Compile Include="V20180606\Models\TopData.cs" />
     <Compile Include="V20180606\Models\TopDetailData.cs" />
-    <Compile Include="V20180606\Models\TopicInfo.cs" />
     <Compile Include="V20180606\Models\TpgAdapter.cs" />
     <Compile Include="V20180606\Models\TrafficPackage.cs" />
     <Compile Include="V20180606\Models\UpdateDomainConfigRequest.cs" />

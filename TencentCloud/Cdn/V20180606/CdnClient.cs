@@ -93,7 +93,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// CreatClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
+        /// CreateClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogTopicRequest"/></param>
         /// <returns><see cref="CreateClsLogTopicResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// CreatClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
+        /// CreateClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogTopicRequest"/></param>
         /// <returns><see cref="CreateClsLogTopicResponse"/></returns>

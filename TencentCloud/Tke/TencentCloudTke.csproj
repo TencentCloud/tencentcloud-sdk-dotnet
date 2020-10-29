@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.168</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20180525\Models\AddNodeToNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
+    <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="V20180525\Models\Cluster.cs" />
     <Compile Include="V20180525\Models\ClusterAdvancedSettings.cs" />
     <Compile Include="V20180525\Models\ClusterAsGroup.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="V20180525\Models\InstanceExtraArgs.cs" />
     <Compile Include="V20180525\Models\Label.cs" />
     <Compile Include="V20180525\Models\LoginSettings.cs" />
+    <Compile Include="V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAttributeRequest.cs" />
@@ -153,6 +155,8 @@
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\NodeCountSummary.cs" />
+    <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />

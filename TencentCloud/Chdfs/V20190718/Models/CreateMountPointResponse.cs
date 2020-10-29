@@ -25,12 +25,6 @@ namespace TencentCloud.Chdfs.V20190718.Models
     {
         
         /// <summary>
-        /// 挂载点
-        /// </summary>
-        [JsonProperty("MountPoint")]
-        public MountPoint MountPoint{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -42,7 +36,6 @@ namespace TencentCloud.Chdfs.V20190718.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "MountPoint.", this.MountPoint);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

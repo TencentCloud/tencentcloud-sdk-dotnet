@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.168</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,14 +59,5 @@
     <Compile Include="V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
-    <Compile Include="V20191016\Models\DiagHistoryEventItem.cs" />
-    <Compile Include="V20191016\Models\MonitorFloatMetric.cs" />
-    <Compile Include="V20191016\Models\MonitorFloatMetricSeriesData.cs" />
-    <Compile Include="V20191016\Models\MonitorMetric.cs" />
-    <Compile Include="V20191016\Models\MonitorMetricSeriesData.cs" />
-    <Compile Include="V20191016\Models\SlowLogTopSqlItem.cs" />
-    <Compile Include="V20191016\Models\TableSpaceData.cs" />
-    <Compile Include="V20191016\Models\TableSpaceTimeSeries.cs" />
-    <Compile Include="V20191016\Models\TimeSlice.cs" />
   </ItemGroup>
 </Project>

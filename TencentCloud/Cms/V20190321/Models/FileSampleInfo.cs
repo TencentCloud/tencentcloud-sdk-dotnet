@@ -82,8 +82,12 @@ namespace TencentCloud.Cms.V20190321.Models
 
         /// <summary>
         /// 任务状态
-        /// 1：已完成
-        /// 2：处理中
+        /// 1：添加完成
+        /// 2：添加处理中
+        /// 3：下载中
+        /// 4：下载完成
+        /// 5：上传完成
+        /// 6：步骤完成
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

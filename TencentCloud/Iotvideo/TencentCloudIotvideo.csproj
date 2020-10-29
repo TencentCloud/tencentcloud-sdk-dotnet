@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.168</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -118,6 +118,8 @@
     <Compile Include="V20191126\Models\DescribeMessageQueueResponse.cs" />
     <Compile Include="V20191126\Models\DescribeModelDataRetRequest.cs" />
     <Compile Include="V20191126\Models\DescribeModelDataRetResponse.cs" />
+    <Compile Include="V20191126\Models\DescribeOsListRequest.cs" />
+    <Compile Include="V20191126\Models\DescribeOsListResponse.cs" />
     <Compile Include="V20191126\Models\DescribeOtaVersionsRequest.cs" />
     <Compile Include="V20191126\Models\DescribeOtaVersionsResponse.cs" />
     <Compile Include="V20191126\Models\DescribeProductRequest.cs" />
@@ -155,7 +157,10 @@
     <Compile Include="V20191126\Models\ModifyDevicePropertyResponse.cs" />
     <Compile Include="V20191126\Models\ModifyProductRequest.cs" />
     <Compile Include="V20191126\Models\ModifyProductResponse.cs" />
+    <Compile Include="V20191126\Models\ModifyVerContentRequest.cs" />
+    <Compile Include="V20191126\Models\ModifyVerContentResponse.cs" />
     <Compile Include="V20191126\Models\MsgQueueData.cs" />
+    <Compile Include="V20191126\Models\OsData.cs" />
     <Compile Include="V20191126\Models\OtaPubHistory.cs" />
     <Compile Include="V20191126\Models\ProductBase.cs" />
     <Compile Include="V20191126\Models\ProductData.cs" />
@@ -177,6 +182,7 @@
     <Compile Include="V20191126\Models\SetMessageQueueRequest.cs" />
     <Compile Include="V20191126\Models\SetMessageQueueResponse.cs" />
     <Compile Include="V20191126\Models\StorageOrder.cs" />
+    <Compile Include="V20191126\Models\SystemType.cs" />
     <Compile Include="V20191126\Models\TraceStatus.cs" />
     <Compile Include="V20191126\Models\UpgradeDeviceRequest.cs" />
     <Compile Include="V20191126\Models\UpgradeDeviceResponse.cs" />

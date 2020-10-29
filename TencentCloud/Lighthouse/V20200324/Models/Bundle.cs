@@ -98,6 +98,14 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("BundleSalesState")]
         public string BundleSalesState{ get; set; }
 
+        /// <summary>
+        /// 套餐类型。
+        /// 取值范围：
+        /// <li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+        /// </summary>
+        [JsonProperty("BundleType")]
+        public string BundleType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +124,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
             this.SetParamSimple(map, prefix + "BundleSalesState", this.BundleSalesState);
+            this.SetParamSimple(map, prefix + "BundleType", this.BundleType);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间。
+        /// 开始时间，如“2019-09-10 12:13:14”。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 截止时间。
+        /// 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
