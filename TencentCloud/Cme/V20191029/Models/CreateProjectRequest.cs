@@ -70,6 +70,18 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("SwitcherProjectInput")]
         public SwitcherProjectInput SwitcherProjectInput{ get; set; }
 
+        /// <summary>
+        /// 直播剪辑信息，暂未开放，请勿使用。
+        /// </summary>
+        [JsonProperty("LiveStreamClipProjectInput")]
+        public LiveStreamClipProjectInput LiveStreamClipProjectInput{ get; set; }
+
+        /// <summary>
+        /// 视频编辑信息。
+        /// </summary>
+        [JsonProperty("VideoEditProjectInput")]
+        public VideoEditProjectInput VideoEditProjectInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +95,8 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
+            this.SetParamObj(map, prefix + "LiveStreamClipProjectInput.", this.LiveStreamClipProjectInput);
+            this.SetParamObj(map, prefix + "VideoEditProjectInput.", this.VideoEditProjectInput);
         }
     }
 }

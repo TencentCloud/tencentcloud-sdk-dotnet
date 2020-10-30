@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.168</VersionPrefix>
+    <VersionPrefix>3.0.169</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2582,6 +2582,7 @@
     <Compile Include="Cme\V20191029\Models\AddTeamMemberResponse.cs" />
     <Compile Include="Cme\V20191029\Models\AudioMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\AudioStreamInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\AudioTrackItem.cs" />
     <Compile Include="Cme\V20191029\Models\AuthorizationInfo.cs" />
     <Compile Include="Cme\V20191029\Models\Authorizer.cs" />
     <Compile Include="Cme\V20191029\Models\CMEExportInfo.cs" />
@@ -2628,6 +2629,7 @@
     <Compile Include="Cme\V20191029\Models\DescribeTeamMembersResponse.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeTeamsRequest.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeTeamsResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\EmptyTrackItem.cs" />
     <Compile Include="Cme\V20191029\Models\Entity.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataResponse.cs" />
@@ -2648,6 +2650,7 @@
     <Compile Include="Cme\V20191029\Models\LinkMaterialInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ListMediaRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ListMediaResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\LiveStreamClipProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\LoginStatusInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MaterialBasicInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MaterialInfo.cs" />
@@ -2655,6 +2658,8 @@
     <Compile Include="Cme\V20191029\Models\MaterialTagInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaImageSpriteInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaMetaData.cs" />
+    <Compile Include="Cme\V20191029\Models\MediaTrack.cs" />
+    <Compile Include="Cme\V20191029\Models\MediaTrackItem.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyMaterialRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyMaterialResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyProjectRequest.cs" />
@@ -2680,9 +2685,11 @@
     <Compile Include="Cme\V20191029\Models\TeamMemberInfo.cs" />
     <Compile Include="Cme\V20191029\Models\TimeRange.cs" />
     <Compile Include="Cme\V20191029\Models\VODExportInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\VideoEditProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\VideoEditProjectOutput.cs" />
     <Compile Include="Cme\V20191029\Models\VideoMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\VideoStreamInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\VideoTrackItem.cs" />
     <Compile Include="Cmq\V20190304\CmqClient.cs" />
     <Compile Include="Cmq\V20190304\Models\ClearQueueRequest.cs" />
     <Compile Include="Cmq\V20190304\Models\ClearQueueResponse.cs" />
@@ -6461,6 +6468,9 @@
     <Compile Include="Memcached\V20190318\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Memcached\V20190318\Models\InstanceListInfo.cs" />
     <Compile Include="Memcached\V20190318\Models\TagInfo.cs" />
+    <Compile Include="Mgobe\V20201014\MgobeClient.cs" />
+    <Compile Include="Mgobe\V20201014\Models\DismissRoomRequest.cs" />
+    <Compile Include="Mgobe\V20201014\Models\DismissRoomResponse.cs" />
     <Compile Include="Mgobe\V20190929\MgobeClient.cs" />
     <Compile Include="Mgobe\V20190929\Models\DismissRoomRequest.cs" />
     <Compile Include="Mgobe\V20190929\Models\DismissRoomResponse.cs" />
@@ -9363,6 +9373,8 @@
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeUserInformationRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeUserInformationResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\EncodeParams.cs" />
@@ -9575,6 +9587,8 @@
     <Compile Include="Tsf\V20180326\Models\GroupPodResult.cs" />
     <Compile Include="Tsf\V20180326\Models\HealthCheckSetting.cs" />
     <Compile Include="Tsf\V20180326\Models\HealthCheckSettings.cs" />
+    <Compile Include="Tsf\V20180326\Models\ImageRepository.cs" />
+    <Compile Include="Tsf\V20180326\Models\ImageRepositoryResult.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTag.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTagsResult.cs" />
     <Compile Include="Tsf\V20180326\Models\Instance.cs" />

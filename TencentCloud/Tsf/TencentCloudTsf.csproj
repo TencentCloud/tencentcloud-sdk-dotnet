@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.168</VersionPrefix>
+    <VersionPrefix>3.0.169</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -236,6 +236,8 @@
     <Compile Include="V20180326\Models\GroupPodResult.cs" />
     <Compile Include="V20180326\Models\HealthCheckSetting.cs" />
     <Compile Include="V20180326\Models\HealthCheckSettings.cs" />
+    <Compile Include="V20180326\Models\ImageRepository.cs" />
+    <Compile Include="V20180326\Models\ImageRepositoryResult.cs" />
     <Compile Include="V20180326\Models\ImageTag.cs" />
     <Compile Include="V20180326\Models\ImageTagsResult.cs" />
     <Compile Include="V20180326\Models\Instance.cs" />

@@ -25,96 +25,6 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 国家码
-        /// </summary>
-        [JsonProperty("Country")]
-        public string Country{ get; set; }
-
-        /// <summary>
-        /// 护照号
-        /// </summary>
-        [JsonProperty("PassportNo")]
-        public string PassportNo{ get; set; }
-
-        /// <summary>
-        /// 性别
-        /// </summary>
-        [JsonProperty("Sex")]
-        public string Sex{ get; set; }
-
-        /// <summary>
-        /// 国籍
-        /// </summary>
-        [JsonProperty("Nationality")]
-        public string Nationality{ get; set; }
-
-        /// <summary>
-        /// 出生日期
-        /// </summary>
-        [JsonProperty("BirthDate")]
-        public string BirthDate{ get; set; }
-
-        /// <summary>
-        /// 出生地点
-        /// </summary>
-        [JsonProperty("BirthPlace")]
-        public string BirthPlace{ get; set; }
-
-        /// <summary>
-        /// 签发日期
-        /// </summary>
-        [JsonProperty("IssueDate")]
-        public string IssueDate{ get; set; }
-
-        /// <summary>
-        /// 签发地点
-        /// </summary>
-        [JsonProperty("IssuePlace")]
-        public string IssuePlace{ get; set; }
-
-        /// <summary>
-        /// 有效期
-        /// </summary>
-        [JsonProperty("ExpiryDate")]
-        public string ExpiryDate{ get; set; }
-
-        /// <summary>
-        /// 持证人签名
-        /// </summary>
-        [JsonProperty("Signature")]
-        public string Signature{ get; set; }
-
-        /// <summary>
-        /// 最下方第一行 MRZ Code 序列
-        /// </summary>
-        [JsonProperty("CodeSet")]
-        public string CodeSet{ get; set; }
-
-        /// <summary>
-        /// 最下方第二行 MRZ Code 序列
-        /// </summary>
-        [JsonProperty("CodeCrc")]
-        public string CodeCrc{ get; set; }
-
-        /// <summary>
-        /// 姓名
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 姓
-        /// </summary>
-        [JsonProperty("FamilyName")]
-        public string FamilyName{ get; set; }
-
-        /// <summary>
-        /// 名
-        /// </summary>
-        [JsonProperty("FirstName")]
-        public string FirstName{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -126,21 +36,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Country", this.Country);
-            this.SetParamSimple(map, prefix + "PassportNo", this.PassportNo);
-            this.SetParamSimple(map, prefix + "Sex", this.Sex);
-            this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
-            this.SetParamSimple(map, prefix + "BirthDate", this.BirthDate);
-            this.SetParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
-            this.SetParamSimple(map, prefix + "IssueDate", this.IssueDate);
-            this.SetParamSimple(map, prefix + "IssuePlace", this.IssuePlace);
-            this.SetParamSimple(map, prefix + "ExpiryDate", this.ExpiryDate);
-            this.SetParamSimple(map, prefix + "Signature", this.Signature);
-            this.SetParamSimple(map, prefix + "CodeSet", this.CodeSet);
-            this.SetParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "FamilyName", this.FamilyName);
-            this.SetParamSimple(map, prefix + "FirstName", this.FirstName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

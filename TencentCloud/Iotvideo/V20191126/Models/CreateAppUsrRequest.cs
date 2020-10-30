@@ -30,6 +30,12 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("CunionId")]
         public string CunionId{ get; set; }
 
+        /// <summary>
+        /// 用于小程序关联手机号
+        /// </summary>
+        [JsonProperty("Mobile")]
+        public string Mobile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CunionId", this.CunionId);
+            this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
         }
     }
 }

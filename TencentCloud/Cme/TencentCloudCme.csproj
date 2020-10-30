@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.168</VersionPrefix>
+    <VersionPrefix>3.0.169</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20191029\Models\AddTeamMemberResponse.cs" />
     <Compile Include="V20191029\Models\AudioMaterial.cs" />
     <Compile Include="V20191029\Models\AudioStreamInfo.cs" />
+    <Compile Include="V20191029\Models\AudioTrackItem.cs" />
     <Compile Include="V20191029\Models\AuthorizationInfo.cs" />
     <Compile Include="V20191029\Models\Authorizer.cs" />
     <Compile Include="V20191029\Models\CMEExportInfo.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="V20191029\Models\DescribeTeamMembersResponse.cs" />
     <Compile Include="V20191029\Models\DescribeTeamsRequest.cs" />
     <Compile Include="V20191029\Models\DescribeTeamsResponse.cs" />
+    <Compile Include="V20191029\Models\EmptyTrackItem.cs" />
     <Compile Include="V20191029\Models\Entity.cs" />
     <Compile Include="V20191029\Models\ExportVideoByEditorTrackDataRequest.cs" />
     <Compile Include="V20191029\Models\ExportVideoByEditorTrackDataResponse.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="V20191029\Models\LinkMaterialInfo.cs" />
     <Compile Include="V20191029\Models\ListMediaRequest.cs" />
     <Compile Include="V20191029\Models\ListMediaResponse.cs" />
+    <Compile Include="V20191029\Models\LiveStreamClipProjectInput.cs" />
     <Compile Include="V20191029\Models\LoginStatusInfo.cs" />
     <Compile Include="V20191029\Models\MaterialBasicInfo.cs" />
     <Compile Include="V20191029\Models\MaterialInfo.cs" />
@@ -123,6 +126,8 @@
     <Compile Include="V20191029\Models\MaterialTagInfo.cs" />
     <Compile Include="V20191029\Models\MediaImageSpriteInfo.cs" />
     <Compile Include="V20191029\Models\MediaMetaData.cs" />
+    <Compile Include="V20191029\Models\MediaTrack.cs" />
+    <Compile Include="V20191029\Models\MediaTrackItem.cs" />
     <Compile Include="V20191029\Models\ModifyMaterialRequest.cs" />
     <Compile Include="V20191029\Models\ModifyMaterialResponse.cs" />
     <Compile Include="V20191029\Models\ModifyProjectRequest.cs" />
@@ -148,8 +153,10 @@
     <Compile Include="V20191029\Models\TeamMemberInfo.cs" />
     <Compile Include="V20191029\Models\TimeRange.cs" />
     <Compile Include="V20191029\Models\VODExportInfo.cs" />
+    <Compile Include="V20191029\Models\VideoEditProjectInput.cs" />
     <Compile Include="V20191029\Models\VideoEditProjectOutput.cs" />
     <Compile Include="V20191029\Models\VideoMaterial.cs" />
     <Compile Include="V20191029\Models\VideoStreamInfo.cs" />
+    <Compile Include="V20191029\Models\VideoTrackItem.cs" />
   </ItemGroup>
 </Project>

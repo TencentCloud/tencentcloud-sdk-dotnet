@@ -413,6 +413,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询指定时间内的用户列表，可查询14天内数据。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInformationRequest"/></param>
+        /// <returns><see cref="DescribeUserInformationResponse"/></returns>
+        public async Task<DescribeUserInformationResponse> DescribeUserInformation(DescribeUserInformationRequest req)
+        {
+             JsonResponseModel<DescribeUserInformationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserInformation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间内的用户列表，可查询14天内数据。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInformationRequest"/></param>
+        /// <returns><see cref="DescribeUserInformationResponse"/></returns>
+        public DescribeUserInformationResponse DescribeUserInformationSync(DescribeUserInformationRequest req)
+        {
+             JsonResponseModel<DescribeUserInformationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserInformation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>
