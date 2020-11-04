@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.169</VersionPrefix>
+    <VersionPrefix>3.0.170</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1930,6 +1930,8 @@
     <Compile Include="Cdn\V20180606\Models\DomainFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainLog.cs" />
     <Compile Include="Cdn\V20180606\Models\DownstreamCapping.cs" />
+    <Compile Include="Cdn\V20180606\Models\DuplicateDomainConfigRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DuplicateDomainConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\EnableCachesRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\EnableCachesResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\EnableClsLogTopicRequest.cs" />
@@ -3837,6 +3839,15 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetric.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetricSeriesData.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorMetric.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\MonitorMetricSeriesData.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\SlowLogTopSqlItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\TimeSlice.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
@@ -4234,6 +4245,7 @@
     <Compile Include="Ecdn\V20191012\Models\StartEcdnDomainResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\StopEcdnDomainRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\StopEcdnDomainResponse.cs" />
+    <Compile Include="Ecdn\V20191012\Models\Tag.cs" />
     <Compile Include="Ecdn\V20191012\Models\TimestampData.cs" />
     <Compile Include="Ecdn\V20191012\Models\UpdateDomainConfigRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\UpdateDomainConfigResponse.cs" />
@@ -4680,6 +4692,10 @@
     <Compile Include="Fmu\V20191213\Models\QueryBeautifyVideoJobRequest.cs" />
     <Compile Include="Fmu\V20191213\Models\QueryBeautifyVideoJobResponse.cs" />
     <Compile Include="Fmu\V20191213\Models\RGBAInfo.cs" />
+    <Compile Include="Fmu\V20191213\Models\StyleImageProRequest.cs" />
+    <Compile Include="Fmu\V20191213\Models\StyleImageProResponse.cs" />
+    <Compile Include="Fmu\V20191213\Models\StyleImageRequest.cs" />
+    <Compile Include="Fmu\V20191213\Models\StyleImageResponse.cs" />
     <Compile Include="Fmu\V20191213\Models\TryLipstickPicRequest.cs" />
     <Compile Include="Fmu\V20191213\Models\TryLipstickPicResponse.cs" />
     <Compile Include="Ft\V20200304\FtClient.cs" />
@@ -4968,6 +4984,8 @@
     <Compile Include="Gpm\V20200820\Models\DescribeRuleResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\DescribeRulesRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\DescribeRulesResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeTokenRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\DescribeTokenResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\MTicket.cs" />
     <Compile Include="Gpm\V20200820\Models\MatchAttribute.cs" />
     <Compile Include="Gpm\V20200820\Models\MatchCodeAttr.cs" />
@@ -4977,6 +4995,8 @@
     <Compile Include="Gpm\V20200820\Models\ModifyMatchResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\ModifyRuleRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\ModifyRuleResponse.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyTokenRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\ModifyTokenResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\Player.cs" />
     <Compile Include="Gpm\V20200820\Models\RegionLatency.cs" />
     <Compile Include="Gpm\V20200820\Models\ReportOverviewData.cs" />
@@ -6945,6 +6965,7 @@
     <Compile Include="Mps\V20190612\Models\OcrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\OcrWordsConfigureInfo.cs" />
     <Compile Include="Mps\V20190612\Models\OcrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="Mps\V20190612\Models\OverrideTranscodeParameter.cs" />
     <Compile Include="Mps\V20190612\Models\ParseLiveStreamProcessNotificationRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ParseLiveStreamProcessNotificationResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ParseNotificationRequest.cs" />
@@ -7650,6 +7671,8 @@
     <Compile Include="Redis\V20180412\Models\ModfiyInstancePasswordResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyAutoBackupConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyAutoBackupConfigResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyConnectionConfigRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyConnectionConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceAccountRequest.cs" />
@@ -7667,6 +7690,7 @@
     <Compile Include="Redis\V20180412\Models\ProxyNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RedisBackupSet.cs" />
     <Compile Include="Redis\V20180412\Models\RedisCommonInstanceList.cs" />
+    <Compile Include="Redis\V20180412\Models\RedisNodeInfo.cs" />
     <Compile Include="Redis\V20180412\Models\RedisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RegionConf.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceRequest.cs" />
@@ -8496,12 +8520,20 @@
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoDetail.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoName.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseEsInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateAuthDomainRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateAuthDomainResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateCloudBaseRunResourceRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateCloudBaseRunResourceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateCloudBaseRunServerVersionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateHostingDomainRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateHostingDomainResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreatePostpayPackageRequest.cs" />
@@ -8546,6 +8578,8 @@
     <Compile Include="Tcb\V20180608\Models\EndUserInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\EnvBillingInfoItem.cs" />
     <Compile Include="Tcb\V20180608\Models\EnvInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\FunctionInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\KVPair.cs" />
     <Compile Include="Tcb\V20180608\Models\LogServiceInfo.cs" />
@@ -10446,6 +10480,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeNetworkInterfaceLimitResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNetworkInterfacesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNetworkInterfacesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeProductQuotaRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeProductQuotaResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeRouteConflictsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeRouteConflictsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeRouteTablesRequest.cs" />
@@ -10641,6 +10677,7 @@
     <Compile Include="Vpc\V20170312\Models\NetworkInterfaceAttachment.cs" />
     <Compile Include="Vpc\V20170312\Models\Price.cs" />
     <Compile Include="Vpc\V20170312\Models\PrivateIpAddressSpecification.cs" />
+    <Compile Include="Vpc\V20170312\Models\ProductQuota.cs" />
     <Compile Include="Vpc\V20170312\Models\Quota.cs" />
     <Compile Include="Vpc\V20170312\Models\ReferredSecurityGroup.cs" />
     <Compile Include="Vpc\V20170312\Models\RejectAttachCcnInstancesRequest.cs" />

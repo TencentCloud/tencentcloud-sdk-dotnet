@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 1为通过检查，0为未通过检查。
+        /// true为通过检查，false为未通过检查。
         /// </summary>
         [JsonProperty("IsValid")]
         public bool? IsValid{ get; set; }
 
         /// <summary>
-        /// 1为可信CA，0为不可信CA。
+        /// true为可信CA，false为不可信CA。
         /// </summary>
         [JsonProperty("IsTrustedCA")]
         public bool? IsTrustedCA{ get; set; }

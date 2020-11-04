@@ -90,6 +90,12 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
+        /// <summary>
+        /// 域名绑定的标签
+        /// </summary>
+        [JsonProperty("Tag")]
+        public Tag[] Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
             this.SetParamObj(map, prefix + "Cache.", this.Cache);
             this.SetParamObj(map, prefix + "Https.", this.Https);
             this.SetParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }

@@ -25,24 +25,6 @@ namespace TencentCloud.Iai.V20180301.Models
     {
         
         /// <summary>
-        /// 给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。
-        /// </summary>
-        [JsonProperty("Score")]
-        public float? Score{ get; set; }
-
-        /// <summary>
-        /// 是否为同一人的判断。
-        /// </summary>
-        [JsonProperty("IsMatch")]
-        public bool? IsMatch{ get; set; }
-
-        /// <summary>
-        /// 人脸识别所用的算法模型版本。
-        /// </summary>
-        [JsonProperty("FaceModelVersion")]
-        public string FaceModelVersion{ get; set; }
-
-        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -54,9 +36,6 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Score", this.Score);
-            this.SetParamSimple(map, prefix + "IsMatch", this.IsMatch);
-            this.SetParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

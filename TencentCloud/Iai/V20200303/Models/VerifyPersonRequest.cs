@@ -25,6 +25,12 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
+        /// 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
+        /// </summary>
+        [JsonProperty("PersonId")]
+        public string PersonId{ get; set; }
+
+        /// <summary>
         /// 图片 base64 数据。
         /// jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
         /// 若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
@@ -44,12 +50,6 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
-
-        /// <summary>
-        /// 待验证的人员ID。人员ID具体信息请参考人员库管理相关接口。
-        /// </summary>
-        [JsonProperty("PersonId")]
-        public string PersonId{ get; set; }
 
         /// <summary>
         /// 图片质量控制。 
@@ -76,9 +76,9 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
             this.SetParamSimple(map, prefix + "QualityControl", this.QualityControl);
             this.SetParamSimple(map, prefix + "NeedRotateDetection", this.NeedRotateDetection);
         }

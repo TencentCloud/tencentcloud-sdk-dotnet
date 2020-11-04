@@ -1425,6 +1425,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 拷贝参考域名的配置至新域名。暂不支持自有证书以及定制化配置
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateDomainConfigRequest"/></param>
+        /// <returns><see cref="DuplicateDomainConfigResponse"/></returns>
+        public async Task<DuplicateDomainConfigResponse> DuplicateDomainConfig(DuplicateDomainConfigRequest req)
+        {
+             JsonResponseModel<DuplicateDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DuplicateDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DuplicateDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拷贝参考域名的配置至新域名。暂不支持自有证书以及定制化配置
+        /// </summary>
+        /// <param name="req"><see cref="DuplicateDomainConfigRequest"/></param>
+        /// <returns><see cref="DuplicateDomainConfigResponse"/></returns>
+        public DuplicateDomainConfigResponse DuplicateDomainConfigSync(DuplicateDomainConfigRequest req)
+        {
+             JsonResponseModel<DuplicateDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DuplicateDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DuplicateDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// EnableCaches 用于解禁手工封禁的 URL，解禁成功后，全网生效时间约 5~10 分钟。（接口尚在内测中，暂未全量开放使用）
         /// </summary>
         /// <param name="req"><see cref="EnableCachesRequest"/></param>

@@ -337,6 +337,86 @@ namespace TencentCloud.Fmu.V20191213
         }
 
         /// <summary>
+        /// 上传一张照片，输出滤镜处理后的图片。
+        /// </summary>
+        /// <param name="req"><see cref="StyleImageRequest"/></param>
+        /// <returns><see cref="StyleImageResponse"/></returns>
+        public async Task<StyleImageResponse> StyleImage(StyleImageRequest req)
+        {
+             JsonResponseModel<StyleImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StyleImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传一张照片，输出滤镜处理后的图片。
+        /// </summary>
+        /// <param name="req"><see cref="StyleImageRequest"/></param>
+        /// <returns><see cref="StyleImageResponse"/></returns>
+        public StyleImageResponse StyleImageSync(StyleImageRequest req)
+        {
+             JsonResponseModel<StyleImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StyleImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传一张照片，输出滤镜处理后的图片。
+        /// </summary>
+        /// <param name="req"><see cref="StyleImageProRequest"/></param>
+        /// <returns><see cref="StyleImageProResponse"/></returns>
+        public async Task<StyleImageProResponse> StyleImagePro(StyleImageProRequest req)
+        {
+             JsonResponseModel<StyleImageProResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StyleImagePro");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageProResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传一张照片，输出滤镜处理后的图片。
+        /// </summary>
+        /// <param name="req"><see cref="StyleImageProRequest"/></param>
+        /// <returns><see cref="StyleImageProResponse"/></returns>
+        public StyleImageProResponse StyleImageProSync(StyleImageProRequest req)
+        {
+             JsonResponseModel<StyleImageProResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StyleImagePro");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StyleImageProResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对图片中的人脸嘴唇进行着色，最多支持同时对一张图中的3张人脸进行试唇色。
         /// 
         /// 您可以通过事先注册在腾讯云的唇色素材（LUT文件）改变图片中的人脸唇色，也可以输入RGBA模型数值。

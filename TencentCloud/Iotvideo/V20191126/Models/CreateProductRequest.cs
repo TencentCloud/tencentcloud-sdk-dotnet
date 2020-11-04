@@ -87,7 +87,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         public long? AccessMode{ get; set; }
 
         /// <summary>
-        /// linux,android,liteos
+        /// Linux,Android,Liteos等系统
         /// </summary>
         [JsonProperty("Os")]
         public string Os{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 云主机实例ID。
+        /// 云服务器实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

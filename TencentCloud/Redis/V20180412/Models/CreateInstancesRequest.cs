@@ -135,6 +135,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
+        /// <summary>
+        /// 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
+        /// </summary>
+        [JsonProperty("NodeSet")]
+        public RedisNodeInfo[] NodeSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +165,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
+            this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         }
     }
 }

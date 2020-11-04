@@ -173,6 +173,86 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 开通容器托管的资源，包括集群创建，VPC配置，异步任务创建，镜像托管，Coding等，查看创建结果需要根据DescribeCloudBaseRunResource接口来查看
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudBaseRunResourceRequest"/></param>
+        /// <returns><see cref="CreateCloudBaseRunResourceResponse"/></returns>
+        public async Task<CreateCloudBaseRunResourceResponse> CreateCloudBaseRunResource(CreateCloudBaseRunResourceRequest req)
+        {
+             JsonResponseModel<CreateCloudBaseRunResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudBaseRunResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudBaseRunResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开通容器托管的资源，包括集群创建，VPC配置，异步任务创建，镜像托管，Coding等，查看创建结果需要根据DescribeCloudBaseRunResource接口来查看
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudBaseRunResourceRequest"/></param>
+        /// <returns><see cref="CreateCloudBaseRunResourceResponse"/></returns>
+        public CreateCloudBaseRunResourceResponse CreateCloudBaseRunResourceSync(CreateCloudBaseRunResourceRequest req)
+        {
+             JsonResponseModel<CreateCloudBaseRunResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudBaseRunResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudBaseRunResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建服务版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="CreateCloudBaseRunServerVersionResponse"/></returns>
+        public async Task<CreateCloudBaseRunServerVersionResponse> CreateCloudBaseRunServerVersion(CreateCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<CreateCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建服务版本
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="CreateCloudBaseRunServerVersionResponse"/></returns>
+        public CreateCloudBaseRunServerVersionResponse CreateCloudBaseRunServerVersionSync(CreateCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<CreateCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建托管域名
         /// </summary>
         /// <param name="req"><see cref="CreateHostingDomainRequest"/></param>
@@ -964,6 +1044,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DestroyStaticStore");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyStaticStoreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建云应用服务
+        /// </summary>
+        /// <param name="req"><see cref="EstablishCloudBaseRunServerRequest"/></param>
+        /// <returns><see cref="EstablishCloudBaseRunServerResponse"/></returns>
+        public async Task<EstablishCloudBaseRunServerResponse> EstablishCloudBaseRunServer(EstablishCloudBaseRunServerRequest req)
+        {
+             JsonResponseModel<EstablishCloudBaseRunServerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EstablishCloudBaseRunServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstablishCloudBaseRunServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建云应用服务
+        /// </summary>
+        /// <param name="req"><see cref="EstablishCloudBaseRunServerRequest"/></param>
+        /// <returns><see cref="EstablishCloudBaseRunServerResponse"/></returns>
+        public EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServerSync(EstablishCloudBaseRunServerRequest req)
+        {
+             JsonResponseModel<EstablishCloudBaseRunServerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EstablishCloudBaseRunServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstablishCloudBaseRunServerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

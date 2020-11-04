@@ -25,6 +25,18 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
+        /// 返回的Top表空间统计信息列表。
+        /// </summary>
+        [JsonProperty("TopSpaceTables")]
+        public TableSpaceData[] TopSpaceTables{ get; set; }
+
+        /// <summary>
+        /// 采集表空间数据的时间戳（秒）。
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public long? Timestamp{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "TopSpaceTables.", this.TopSpaceTables);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

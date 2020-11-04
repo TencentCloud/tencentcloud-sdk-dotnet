@@ -533,6 +533,46 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 查询匹配Token，Token用于push消息验证。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
+        /// <returns><see cref="DescribeTokenResponse"/></returns>
+        public async Task<DescribeTokenResponse> DescribeToken(DescribeTokenRequest req)
+        {
+             JsonResponseModel<DescribeTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询匹配Token，Token用于push消息验证。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
+        /// <returns><see cref="DescribeTokenResponse"/></returns>
+        public DescribeTokenResponse DescribeTokenSync(DescribeTokenRequest req)
+        {
+             JsonResponseModel<DescribeTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改匹配
         /// </summary>
         /// <param name="req"><see cref="ModifyMatchRequest"/></param>
@@ -604,6 +644,46 @@ namespace TencentCloud.Gpm.V20200820
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改匹配Token。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTokenRequest"/></param>
+        /// <returns><see cref="ModifyTokenResponse"/></returns>
+        public async Task<ModifyTokenResponse> ModifyToken(ModifyTokenRequest req)
+        {
+             JsonResponseModel<ModifyTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改匹配Token。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTokenRequest"/></param>
+        /// <returns><see cref="ModifyTokenResponse"/></returns>
+        public ModifyTokenResponse ModifyTokenSync(ModifyTokenRequest req)
+        {
+             JsonResponseModel<ModifyTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTokenResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -186,6 +186,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
+        /// <summary>
+        /// 参数模板id。
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public long? ParamTemplateId{ get; set; }
+
+        /// <summary>
+        /// 告警策略id数组。
+        /// </summary>
+        [JsonProperty("AlarmPolicyList")]
+        public long?[] AlarmPolicyList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +231,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+            this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
         }
     }
 }

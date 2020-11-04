@@ -39,6 +39,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawTranscodeParameter RawParameter{ get; set; }
 
         /// <summary>
+        /// 视频转码自定义参数，当 Definition 不填 0 时有效。
+        /// 当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
+        /// 该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OverrideParameter")]
+        public OverrideTranscodeParameter OverrideParameter{ get; set; }
+
+        /// <summary>
         /// 水印列表，支持多张图片或文字水印，最大可支持 10 张。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -85,6 +94,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
+            this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

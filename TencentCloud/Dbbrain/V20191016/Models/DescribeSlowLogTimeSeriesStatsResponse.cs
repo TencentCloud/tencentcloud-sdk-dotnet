@@ -25,6 +25,24 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
+        /// 柱间单位时间间隔，单位为秒。
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
+        /// <summary>
+        /// 单位时间间隔内慢日志数量统计。
+        /// </summary>
+        [JsonProperty("TimeSeries")]
+        public TimeSlice[] TimeSeries{ get; set; }
+
+        /// <summary>
+        /// 单位时间间隔内的实例 cpu 利用率监控数据。
+        /// </summary>
+        [JsonProperty("SeriesData")]
+        public MonitorMetricSeriesData SeriesData{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamArrayObj(map, prefix + "TimeSeries.", this.TimeSeries);
+            this.SetParamObj(map, prefix + "SeriesData.", this.SeriesData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

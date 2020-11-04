@@ -43,13 +43,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? OutPkg{ get; set; }
 
         /// <summary>
-        /// 入带宽，单位：`Byte`。
+        /// 入流量，单位：`Byte`。
         /// </summary>
         [JsonProperty("InTraffic")]
         public ulong? InTraffic{ get; set; }
 
         /// <summary>
-        /// 出带宽，单位：`Byte`。
+        /// 出流量，单位：`Byte`。
         /// </summary>
         [JsonProperty("OutTraffic")]
         public ulong? OutTraffic{ get; set; }

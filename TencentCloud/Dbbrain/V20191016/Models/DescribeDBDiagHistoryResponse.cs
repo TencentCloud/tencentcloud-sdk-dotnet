@@ -25,6 +25,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
+        /// 事件描述。
+        /// </summary>
+        [JsonProperty("Events")]
+        public DiagHistoryEventItem[] Events{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Events.", this.Events);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

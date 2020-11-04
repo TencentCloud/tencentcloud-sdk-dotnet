@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.169</VersionPrefix>
+    <VersionPrefix>3.0.170</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -161,6 +161,8 @@
     <Compile Include="V20180412\Models\ModfiyInstancePasswordResponse.cs" />
     <Compile Include="V20180412\Models\ModifyAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\ModifyAutoBackupConfigResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyConnectionConfigRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyConnectionConfigResponse.cs" />
     <Compile Include="V20180412\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceAccountRequest.cs" />
@@ -178,6 +180,7 @@
     <Compile Include="V20180412\Models\ProxyNodes.cs" />
     <Compile Include="V20180412\Models\RedisBackupSet.cs" />
     <Compile Include="V20180412\Models\RedisCommonInstanceList.cs" />
+    <Compile Include="V20180412\Models\RedisNodeInfo.cs" />
     <Compile Include="V20180412\Models\RedisNodes.cs" />
     <Compile Include="V20180412\Models\RegionConf.cs" />
     <Compile Include="V20180412\Models\RenewInstanceRequest.cs" />

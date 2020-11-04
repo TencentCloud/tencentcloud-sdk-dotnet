@@ -30,6 +30,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("KeyWords")]
         public string KeyWords{ get; set; }
 
+        /// <summary>
+        /// 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+        /// </summary>
+        [JsonProperty("DiagnoseLink")]
+        public string DiagnoseLink{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "KeyWords", this.KeyWords);
+            this.SetParamSimple(map, prefix + "DiagnoseLink", this.DiagnoseLink);
         }
     }
 }

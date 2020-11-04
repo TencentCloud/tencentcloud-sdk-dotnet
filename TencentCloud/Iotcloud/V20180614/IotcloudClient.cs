@@ -493,7 +493,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateTopicRule）用于创建一个规则
+        /// 本接口（CreateTopicRule）用于创建一个规则 
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRuleRequest"/></param>
         /// <returns><see cref="CreateTopicRuleResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（CreateTopicRule）用于创建一个规则
+        /// 本接口（CreateTopicRule）用于创建一个规则 
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRuleRequest"/></param>
         /// <returns><see cref="CreateTopicRuleResponse"/></returns>
@@ -1773,7 +1773,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（ReplaceTopicRule）用于修改替换规则
+        /// 本接口（ReplaceTopicRule）用于修改替换规则 
         /// </summary>
         /// <param name="req"><see cref="ReplaceTopicRuleRequest"/></param>
         /// <returns><see cref="ReplaceTopicRuleResponse"/></returns>
@@ -1793,7 +1793,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（ReplaceTopicRule）用于修改替换规则
+        /// 本接口（ReplaceTopicRule）用于修改替换规则 
         /// </summary>
         /// <param name="req"><see cref="ReplaceTopicRuleRequest"/></param>
         /// <returns><see cref="ReplaceTopicRuleResponse"/></returns>

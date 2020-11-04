@@ -1933,6 +1933,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 修改实例的连接配置，包括带宽和最大连接数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
+        /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>
+        public async Task<ModifyConnectionConfigResponse> ModifyConnectionConfig(ModifyConnectionConfigRequest req)
+        {
+             JsonResponseModel<ModifyConnectionConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyConnectionConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConnectionConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例的连接配置，包括带宽和最大连接数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
+        /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>
+        public ModifyConnectionConfigResponse ModifyConnectionConfigSync(ModifyConnectionConfigRequest req)
+        {
+             JsonResponseModel<ModifyConnectionConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyConnectionConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConnectionConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
