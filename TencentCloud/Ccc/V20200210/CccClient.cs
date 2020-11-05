@@ -93,6 +93,126 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建客服账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStaffRequest"/></param>
+        /// <returns><see cref="CreateStaffResponse"/></returns>
+        public async Task<CreateStaffResponse> CreateStaff(CreateStaffRequest req)
+        {
+             JsonResponseModel<CreateStaffResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStaff");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建客服账号。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStaffRequest"/></param>
+        /// <returns><see cref="CreateStaffResponse"/></returns>
+        public CreateStaffResponse CreateStaffSync(CreateStaffRequest req)
+        {
+             JsonResponseModel<CreateStaffResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStaff");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包括具体聊天内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChatMessagesRequest"/></param>
+        /// <returns><see cref="DescribeChatMessagesResponse"/></returns>
+        public async Task<DescribeChatMessagesResponse> DescribeChatMessages(DescribeChatMessagesRequest req)
+        {
+             JsonResponseModel<DescribeChatMessagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChatMessages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChatMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包括具体聊天内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChatMessagesRequest"/></param>
+        /// <returns><see cref="DescribeChatMessagesResponse"/></returns>
+        public DescribeChatMessagesResponse DescribeChatMessagesSync(DescribeChatMessagesRequest req)
+        {
+             JsonResponseModel<DescribeChatMessagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChatMessages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChatMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包括全媒体和文本两种类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIMCdrsRequest"/></param>
+        /// <returns><see cref="DescribeIMCdrsResponse"/></returns>
+        public async Task<DescribeIMCdrsResponse> DescribeIMCdrs(DescribeIMCdrsRequest req)
+        {
+             JsonResponseModel<DescribeIMCdrsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIMCdrs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIMCdrsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包括全媒体和文本两种类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIMCdrsRequest"/></param>
+        /// <returns><see cref="DescribeIMCdrsResponse"/></returns>
+        public DescribeIMCdrsResponse DescribeIMCdrsSync(DescribeIMCdrsRequest req)
+        {
+             JsonResponseModel<DescribeIMCdrsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIMCdrs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIMCdrsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取电话服务记录与录音
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCdrRequest"/></param>

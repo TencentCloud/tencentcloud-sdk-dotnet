@@ -25,6 +25,55 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
+        /// 服务唯一ID。
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
+
+        /// <summary>
+        /// 用户自定义服务名称。
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
+        /// <summary>
+        /// 用户自定义服务描述。
+        /// </summary>
+        [JsonProperty("ServiceDesc")]
+        public string ServiceDesc{ get; set; }
+
+        /// <summary>
+        /// 外网默认域名。
+        /// </summary>
+        [JsonProperty("OuterSubDomain")]
+        public string OuterSubDomain{ get; set; }
+
+        /// <summary>
+        /// vpc内网默认域名。
+        /// </summary>
+        [JsonProperty("InnerSubDomain")]
+        public string InnerSubDomain{ get; set; }
+
+        /// <summary>
+        /// 服务创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// 网络类型列表，INNER为内网访问，OUTER为外网访问。
+        /// </summary>
+        [JsonProperty("NetTypes")]
+        public string[] NetTypes{ get; set; }
+
+        /// <summary>
+        /// IP版本号。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpVersion")]
+        public string IpVersion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +85,14 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "ServiceDesc", this.ServiceDesc);
+            this.SetParamSimple(map, prefix + "OuterSubDomain", this.OuterSubDomain);
+            this.SetParamSimple(map, prefix + "InnerSubDomain", this.InnerSubDomain);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
+            this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

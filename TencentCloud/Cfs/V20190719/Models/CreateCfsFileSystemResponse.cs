@@ -25,6 +25,54 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
+        /// 文件系统创建时间
+        /// </summary>
+        [JsonProperty("CreationTime")]
+        public string CreationTime{ get; set; }
+
+        /// <summary>
+        /// 用户自定义文件系统名称
+        /// </summary>
+        [JsonProperty("CreationToken")]
+        public string CreationToken{ get; set; }
+
+        /// <summary>
+        /// 文件系统 ID
+        /// </summary>
+        [JsonProperty("FileSystemId")]
+        public string FileSystemId{ get; set; }
+
+        /// <summary>
+        /// 文件系统状态
+        /// </summary>
+        [JsonProperty("LifeCycleState")]
+        public string LifeCycleState{ get; set; }
+
+        /// <summary>
+        /// 文件系统已使用容量大小
+        /// </summary>
+        [JsonProperty("SizeByte")]
+        public ulong? SizeByte{ get; set; }
+
+        /// <summary>
+        /// 可用区 ID
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public ulong? ZoneId{ get; set; }
+
+        /// <summary>
+        /// 用户自定义文件系统名称
+        /// </summary>
+        [JsonProperty("FsName")]
+        public string FsName{ get; set; }
+
+        /// <summary>
+        /// 文件系统是否加密
+        /// </summary>
+        [JsonProperty("Encrypted")]
+        public bool? Encrypted{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +84,14 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
+            this.SetParamSimple(map, prefix + "CreationToken", this.CreationToken);
+            this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+            this.SetParamSimple(map, prefix + "LifeCycleState", this.LifeCycleState);
+            this.SetParamSimple(map, prefix + "SizeByte", this.SizeByte);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "FsName", this.FsName);
+            this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

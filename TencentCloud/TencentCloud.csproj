@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.170</VersionPrefix>
+    <VersionPrefix>3.0.171</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1541,8 +1541,17 @@
     <Compile Include="Ccc\V20200210\CccClient.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateStaffRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateStaffResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\IMCdrInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\Message.cs" />
+    <Compile Include="Ccc\V20200210\Models\MessageBody.cs" />
     <Compile Include="Ccc\V20200210\Models\SeatUserInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\TelCdrInfo.cs" />
     <Compile Include="Cdb\V20170320\CdbClient.cs" />
@@ -1852,6 +1861,8 @@
     <Compile Include="Cdn\V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientCert.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientInfo.cs" />
+    <Compile Include="Cdn\V20180606\Models\ClsLogObject.cs" />
+    <Compile Include="Cdn\V20180606\Models\ClsSearchLogs.cs" />
     <Compile Include="Cdn\V20180606\Models\Compatibility.cs" />
     <Compile Include="Cdn\V20180606\Models\Compression.cs" />
     <Compile Include="Cdn\V20180606\Models\CompressionRule.cs" />
@@ -1965,6 +1976,7 @@
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\LogSetInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MainlandConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ManageClsTopicDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ManageClsTopicDomainsResponse.cs" />
@@ -2026,6 +2038,7 @@
     <Compile Include="Cdn\V20180606\Models\TimestampData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopDetailData.cs" />
+    <Compile Include="Cdn\V20180606\Models\TopicInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\TpgAdapter.cs" />
     <Compile Include="Cdn\V20180606\Models\TrafficPackage.cs" />
     <Compile Include="Cdn\V20180606\Models\UpdateDomainConfigRequest.cs" />
@@ -3205,6 +3218,7 @@
     <Compile Include="Cvm\V20170312\Models\TerminateInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\TerminateInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\VirtualPrivateCloud.cs" />
+    <Compile Include="Cvm\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Cwp\V20180228\CwpClient.cs" />
     <Compile Include="Cwp\V20180228\Models\Account.cs" />
     <Compile Include="Cwp\V20180228\Models\AccountStatistics.cs" />
@@ -5496,6 +5510,20 @@
     <Compile Include="Iir\V20200417\Models\RecognizeProductRequest.cs" />
     <Compile Include="Iir\V20200417\Models\RecognizeProductResponse.cs" />
     <Compile Include="Iir\V20200417\Models\RegionDetected.cs" />
+    <Compile Include="Ims\V20200713\ImsClient.cs" />
+    <Compile Include="Ims\V20200713\Models\Device.cs" />
+    <Compile Include="Ims\V20200713\Models\ImageModerationRequest.cs" />
+    <Compile Include="Ims\V20200713\Models\ImageModerationResponse.cs" />
+    <Compile Include="Ims\V20200713\Models\LabelDetailItem.cs" />
+    <Compile Include="Ims\V20200713\Models\LabelResult.cs" />
+    <Compile Include="Ims\V20200713\Models\LibDetail.cs" />
+    <Compile Include="Ims\V20200713\Models\LibResult.cs" />
+    <Compile Include="Ims\V20200713\Models\Location.cs" />
+    <Compile Include="Ims\V20200713\Models\ObjectDetail.cs" />
+    <Compile Include="Ims\V20200713\Models\ObjectResult.cs" />
+    <Compile Include="Ims\V20200713\Models\OcrResult.cs" />
+    <Compile Include="Ims\V20200713\Models\OcrTextDetail.cs" />
+    <Compile Include="Ims\V20200713\Models\User.cs" />
     <Compile Include="Iot\V20180123\IotClient.cs" />
     <Compile Include="Iot\V20180123\Models\Action.cs" />
     <Compile Include="Iot\V20180123\Models\ActivateRuleRequest.cs" />
@@ -7305,6 +7333,7 @@
     <Compile Include="Ocr\V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PermitOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\Polygon.cs" />
+    <Compile Include="Ocr\V20181119\Models\ProductDataRecord.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\PropOwnerCertOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\QrcodeImgSize.cs" />
