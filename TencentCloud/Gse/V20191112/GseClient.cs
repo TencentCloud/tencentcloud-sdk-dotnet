@@ -199,6 +199,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（CreateAssetWithImage）用于创建生成包镜像信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetWithImageRequest"/></param>
+        /// <returns><see cref="CreateAssetWithImageResponse"/></returns>
+        public async Task<CreateAssetWithImageResponse> CreateAssetWithImage(CreateAssetWithImageRequest req)
+        {
+             JsonResponseModel<CreateAssetWithImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAssetWithImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssetWithImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateAssetWithImage）用于创建生成包镜像信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetWithImageRequest"/></param>
+        /// <returns><see cref="CreateAssetWithImageResponse"/></returns>
+        public CreateAssetWithImageResponse CreateAssetWithImageSync(CreateAssetWithImageRequest req)
+        {
+             JsonResponseModel<CreateAssetWithImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAssetWithImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAssetWithImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateFleet）用于创建服务器舰队。
         /// </summary>
         /// <param name="req"><see cref="CreateFleetRequest"/></param>

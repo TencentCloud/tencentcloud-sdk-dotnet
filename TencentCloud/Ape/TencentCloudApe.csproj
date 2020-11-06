@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{B2477989-4380-33AE-9304-109DD1FEFFDA}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.172</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Ape</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200513\ApeClient.cs" />
+    <Compile Include="V20200513\Models\AuthInfo.cs" />
+    <Compile Include="V20200513\Models\BatchDescribeOrderCertificateRequest.cs" />
+    <Compile Include="V20200513\Models\BatchDescribeOrderCertificateResponse.cs" />
+    <Compile Include="V20200513\Models\BatchDescribeOrderImageRequest.cs" />
+    <Compile Include="V20200513\Models\BatchDescribeOrderImageResponse.cs" />
+    <Compile Include="V20200513\Models\CreateOrderAndPayRequest.cs" />
+    <Compile Include="V20200513\Models\CreateOrderAndPayResponse.cs" />
+    <Compile Include="V20200513\Models\DescribeAuthUsersRequest.cs" />
+    <Compile Include="V20200513\Models\DescribeAuthUsersResponse.cs" />
+    <Compile Include="V20200513\Models\DescribeImageRequest.cs" />
+    <Compile Include="V20200513\Models\DescribeImageResponse.cs" />
+    <Compile Include="V20200513\Models\DescribeImagesRequest.cs" />
+    <Compile Include="V20200513\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20200513\Models\ImageItem.cs" />
+    <Compile Include="V20200513\Models\ImageMarshal.cs" />
+  </ItemGroup>
+</Project>

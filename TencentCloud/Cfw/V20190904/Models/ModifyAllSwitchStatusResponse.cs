@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 修改成功与否状态值
+        /// 开启或者关闭成功与否状态值
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 要修改名称的备份ID，可通过DescribeBackups 接口获取。
+        /// 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
         /// </summary>
         [JsonProperty("BackupId")]
         public ulong? BackupId{ get; set; }

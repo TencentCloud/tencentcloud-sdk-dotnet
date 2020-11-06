@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// 边ID
+        /// VPC间防火墙开关ID
         /// </summary>
         [JsonProperty("EdgeId")]
         public string EdgeId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9E9460D-61B2-3328-83C0-53F617E11D0C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.171</VersionPrefix>
+    <VersionPrefix>3.0.172</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20191112\Models\CreateAliasResponse.cs" />
     <Compile Include="V20191112\Models\CreateAssetRequest.cs" />
     <Compile Include="V20191112\Models\CreateAssetResponse.cs" />
+    <Compile Include="V20191112\Models\CreateAssetWithImageRequest.cs" />
+    <Compile Include="V20191112\Models\CreateAssetWithImageResponse.cs" />
     <Compile Include="V20191112\Models\CreateFleetRequest.cs" />
     <Compile Include="V20191112\Models\CreateFleetResponse.cs" />
     <Compile Include="V20191112\Models\CreateGameServerSessionQueueRequest.cs" />

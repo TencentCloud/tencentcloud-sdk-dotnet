@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 项目ID。
+        /// 项目ID，可通过控制台项目管理中查看
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

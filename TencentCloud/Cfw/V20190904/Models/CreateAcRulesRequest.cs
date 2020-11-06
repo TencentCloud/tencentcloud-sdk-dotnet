@@ -55,7 +55,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Overwrite{ get; set; }
 
         /// <summary>
-        /// NAT实例ID, Area存在的时候这个必传
+        /// NAT实例ID, 参数Area存在的时候这个必传
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

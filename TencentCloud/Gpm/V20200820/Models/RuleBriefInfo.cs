@@ -25,7 +25,7 @@ namespace TencentCloud.Gpm.V20200820.Models
     {
         
         /// <summary>
-        /// 规则名称
+        /// 规则名称 [a-zA-Z\d-\.]*
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

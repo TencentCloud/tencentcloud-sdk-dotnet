@@ -25,7 +25,7 @@ namespace TencentCloud.Gpm.V20200820.Models
     {
         
         /// <summary>
-        /// 玩家 PlayerId 长度 128
+        /// 玩家 PlayerId 长度 128 [a-zA-Z\d-\._]*
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Gpm.V20200820.Models
         public MatchAttribute[] MatchAttributes{ get; set; }
 
         /// <summary>
-        /// 队伍名，可以传递不同队伍名，长度 128
+        /// 队伍名，可以传递不同队伍名，长度 128 [a-zA-Z0-9-\.]*
         /// </summary>
         [JsonProperty("Team")]
         public string Team{ get; set; }

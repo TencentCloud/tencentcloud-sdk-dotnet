@@ -25,7 +25,7 @@ namespace TencentCloud.Gpm.V20200820.Models
     {
         
         /// <summary>
-        /// 属性字典 key
+        /// 属性字典 key [a-zA-Z0-9-\.]*
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

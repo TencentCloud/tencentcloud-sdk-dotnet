@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 状态值
+        /// 状态值，0: 关闭 ,1:开启
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Gpm.V20200820.Models
     {
         
         /// <summary>
-        /// 属性名 长度 128
+        /// 属性名 长度 128 [a-zA-Z0-9-\.]*
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 创建备份流程ID
+        /// 创建备份流程ID，可通过 [CreateBackup](https://cloud.tencent.com/document/product/238/19946) 接口获取
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

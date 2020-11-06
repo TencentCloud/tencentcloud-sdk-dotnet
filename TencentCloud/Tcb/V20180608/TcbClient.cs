@@ -493,6 +493,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunServerVersionResponse"/></returns>
+        public async Task<DescribeCloudBaseRunServerVersionResponse> DescribeCloudBaseRunServerVersion(DescribeCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunServerVersionResponse"/></returns>
+        public DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersionSync(DescribeCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询版本历史
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunVersionSnapshotRequest"/></param>
