@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.172</VersionPrefix>
+    <VersionPrefix>3.0.173</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,9 +54,13 @@
     <Compile Include="V20180724\Models\CreatePolicyGroupEventCondition.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupRequest.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\CreateServiceDiscoveryRequest.cs" />
+    <Compile Include="V20180724\Models\CreateServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DataPoint.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupRequest.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\DeleteServiceDiscoveryRequest.cs" />
+    <Compile Include="V20180724\Models\DeleteServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DescribeAccidentEventListAlarms.cs" />
     <Compile Include="V20180724\Models\DescribeAccidentEventListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeAccidentEventListResponse.cs" />
@@ -106,6 +110,8 @@
     <Compile Include="V20180724\Models\DescribeProductEventListResponse.cs" />
     <Compile Include="V20180724\Models\DescribeProductListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeProductListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeServiceDiscoveryRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\Dimension.cs" />
     <Compile Include="V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataRequest.cs" />
@@ -130,9 +136,12 @@
     <Compile Include="V20180724\Models\ReceiverInfo.cs" />
     <Compile Include="V20180724\Models\SendCustomAlarmMsgRequest.cs" />
     <Compile Include="V20180724\Models\SendCustomAlarmMsgResponse.cs" />
+    <Compile Include="V20180724\Models\ServiceDiscoveryItem.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
     <Compile Include="V20180724\Models\UnBindingPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingPolicyObjectResponse.cs" />
+    <Compile Include="V20180724\Models\UpdateServiceDiscoveryRequest.cs" />
+    <Compile Include="V20180724\Models\UpdateServiceDiscoveryResponse.cs" />
   </ItemGroup>
 </Project>

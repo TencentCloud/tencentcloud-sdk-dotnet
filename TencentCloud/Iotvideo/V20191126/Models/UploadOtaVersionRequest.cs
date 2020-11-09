@@ -60,6 +60,18 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
+        /// <summary>
+        /// 备注信息
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 版本发布的描述信息，需要国际化，可以为空
+        /// </summary>
+        [JsonProperty("Contents")]
+        public Contents Contents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamObj(map, prefix + "Contents.", this.Contents);
         }
     }
 }

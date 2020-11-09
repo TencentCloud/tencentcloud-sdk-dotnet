@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.172</VersionPrefix>
+    <VersionPrefix>3.0.173</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3887,6 +3887,7 @@
     <Compile Include="Dbbrain\V20191016\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetric.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetricSeriesData.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\SchemaItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
@@ -6662,9 +6663,13 @@
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupEventCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateServiceDiscoveryRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateServiceDiscoveryResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DataPoint.cs" />
     <Compile Include="Monitor\V20180724\Models\DeletePolicyGroupRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DeletePolicyGroupResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteServiceDiscoveryRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteServiceDiscoveryResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAccidentEventListAlarms.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAccidentEventListRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAccidentEventListResponse.cs" />
@@ -6714,6 +6719,8 @@
     <Compile Include="Monitor\V20180724\Models\DescribeProductEventListResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeProductListRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeProductListResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeServiceDiscoveryRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeServiceDiscoveryResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\Dimension.cs" />
     <Compile Include="Monitor\V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="Monitor\V20180724\Models\GetMonitorDataRequest.cs" />
@@ -6738,10 +6745,13 @@
     <Compile Include="Monitor\V20180724\Models\ReceiverInfo.cs" />
     <Compile Include="Monitor\V20180724\Models\SendCustomAlarmMsgRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\SendCustomAlarmMsgResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\ServiceDiscoveryItem.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingPolicyObjectResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\UpdateServiceDiscoveryRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\UpdateServiceDiscoveryResponse.cs" />
     <Compile Include="Mps\V20190612\MpsClient.cs" />
     <Compile Include="Mps\V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Mps\V20190612\Models\AIRecognitionTemplateItem.cs" />

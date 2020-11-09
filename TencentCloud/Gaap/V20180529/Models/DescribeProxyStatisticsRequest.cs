@@ -43,7 +43,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
+        /// 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }

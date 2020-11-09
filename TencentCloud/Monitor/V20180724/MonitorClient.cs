@@ -133,6 +133,50 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 在腾讯云容器服务下创建 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
+        public async Task<CreateServiceDiscoveryResponse> CreateServiceDiscovery(CreateServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<CreateServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在腾讯云容器服务下创建 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
+        public CreateServiceDiscoveryResponse CreateServiceDiscoverySync(CreateServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<CreateServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除告警策略组
         /// </summary>
         /// <param name="req"><see cref="DeletePolicyGroupRequest"/></param>
@@ -164,6 +208,50 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DeletePolicyGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePolicyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除在腾讯云容器服务下创建的 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="DeleteServiceDiscoveryResponse"/></returns>
+        public async Task<DeleteServiceDiscoveryResponse> DeleteServiceDiscovery(DeleteServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<DeleteServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除在腾讯云容器服务下创建的 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="DeleteServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="DeleteServiceDiscoveryResponse"/></returns>
+        public DeleteServiceDiscoveryResponse DeleteServiceDiscoverySync(DeleteServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<DeleteServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceDiscoveryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -613,6 +701,50 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
+        public async Task<DescribeServiceDiscoveryResponse> DescribeServiceDiscovery(DescribeServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<DescribeServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
+        public DescribeServiceDiscoveryResponse DescribeServiceDiscoverySync(DescribeServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<DescribeServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云产品的监控数据。传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
         /// 接口调用频率限制为：20次/秒，1200次/分钟。单请求最多可支持批量拉取10个实例的监控数据，单请求的数据点数限制为1440个。
         /// 若您需要调用的指标、对象较多，可能存在因限频出现拉取失败的情况，建议尽量将请求按时间维度均摊。
@@ -900,6 +1032,50 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "UnBindingPolicyObject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnBindingPolicyObjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在腾讯云容器服务下更新 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="UpdateServiceDiscoveryResponse"/></returns>
+        public async Task<UpdateServiceDiscoveryResponse> UpdateServiceDiscovery(UpdateServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<UpdateServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateServiceDiscoveryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在腾讯云容器服务下更新 Prometheus 服务发现。
+        /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
+        /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
+        /// </summary>
+        /// <param name="req"><see cref="UpdateServiceDiscoveryRequest"/></param>
+        /// <returns><see cref="UpdateServiceDiscoveryResponse"/></returns>
+        public UpdateServiceDiscoveryResponse UpdateServiceDiscoverySync(UpdateServiceDiscoveryRequest req)
+        {
+             JsonResponseModel<UpdateServiceDiscoveryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateServiceDiscovery");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateServiceDiscoveryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

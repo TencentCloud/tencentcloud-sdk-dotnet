@@ -66,6 +66,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 数据库名称数组。
+        /// </summary>
+        [JsonProperty("SchemaList")]
+        public SchemaItem[] SchemaList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "SchemaList.", this.SchemaList);
         }
     }
 }
