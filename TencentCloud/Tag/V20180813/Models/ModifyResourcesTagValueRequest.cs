@@ -25,7 +25,7 @@ namespace TencentCloud.Tag.V20180813.Models
     {
         
         /// <summary>
-        /// 资源所属业务名称
+        /// 资源所属业务名称（资源六段式中的第三段）
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tag.V20180813.Models
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// 资源所在地域，不区分地域的资源不需要传入该字段
+        /// 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// 资源前缀，cos存储桶不需要传入该字段
+        /// 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
         /// </summary>
         [JsonProperty("ResourcePrefix")]
         public string ResourcePrefix{ get; set; }

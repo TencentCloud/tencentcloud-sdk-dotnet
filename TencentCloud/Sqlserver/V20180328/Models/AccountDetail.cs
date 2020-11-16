@@ -72,6 +72,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Dbs")]
         public DBPrivilege[] Dbs{ get; set; }
 
+        /// <summary>
+        /// 是否为管理员账户
+        /// </summary>
+        [JsonProperty("IsAdmin")]
+        public bool? IsAdmin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "PassTime", this.PassTime);
             this.SetParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
             this.SetParamArrayObj(map, prefix + "Dbs.", this.Dbs);
+            this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         }
     }
 }

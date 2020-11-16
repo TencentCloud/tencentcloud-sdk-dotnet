@@ -37,6 +37,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
+        /// SDK 加载路径会随着 SDK 的发布而变动。
+        /// </summary>
+        [JsonProperty("SdkURL")]
+        public string SdkURL{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "SdkURL", this.SdkURL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

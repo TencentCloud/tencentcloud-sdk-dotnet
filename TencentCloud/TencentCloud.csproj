@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.174</VersionPrefix>
+    <VersionPrefix>3.0.175</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -712,6 +712,7 @@
     <Compile Include="Billing\V20180709\Models\ConsumptionResourceSummaryDataItem.cs" />
     <Compile Include="Billing\V20180709\Models\ConsumptionSummaryTotal.cs" />
     <Compile Include="Billing\V20180709\Models\ConsumptionSummaryTrend.cs" />
+    <Compile Include="Billing\V20180709\Models\CosDetailSets.cs" />
     <Compile Include="Billing\V20180709\Models\CostComponentSet.cs" />
     <Compile Include="Billing\V20180709\Models\CostDetail.cs" />
     <Compile Include="Billing\V20180709\Models\Deal.cs" />
@@ -745,6 +746,8 @@
     <Compile Include="Billing\V20180709\Models\DescribeCostSummaryByResourceResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDealsByCondRequest.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDealsByCondResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeDosageCosDetailByDateRequest.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeDosageCosDetailByDateResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDosageDetailByDateRequest.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDosageDetailByDateResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DetailPoint.cs" />
@@ -9488,6 +9491,7 @@
     <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
     <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
@@ -10538,6 +10542,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeIp6TranslatorQuotaResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIp6TranslatorsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIp6TranslatorsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationDatabaseUrlRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationDatabaseUrlResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaysRequest.cs" />

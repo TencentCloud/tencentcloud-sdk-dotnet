@@ -653,6 +653,46 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 获取COS产品用量明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDosageCosDetailByDateRequest"/></param>
+        /// <returns><see cref="DescribeDosageCosDetailByDateResponse"/></returns>
+        public async Task<DescribeDosageCosDetailByDateResponse> DescribeDosageCosDetailByDate(DescribeDosageCosDetailByDateRequest req)
+        {
+             JsonResponseModel<DescribeDosageCosDetailByDateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDosageCosDetailByDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取COS产品用量明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDosageCosDetailByDateRequest"/></param>
+        /// <returns><see cref="DescribeDosageCosDetailByDateResponse"/></returns>
+        public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDateSync(DescribeDosageCosDetailByDateRequest req)
+        {
+             JsonResponseModel<DescribeDosageCosDetailByDateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDosageCosDetailByDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按日期获取产品用量明细
         /// </summary>
         /// <param name="req"><see cref="DescribeDosageDetailByDateRequest"/></param>

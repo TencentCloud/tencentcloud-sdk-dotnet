@@ -192,6 +192,41 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DeployDesc")]
         public string DeployDesc{ get; set; }
 
+        /// <summary>
+        /// 滚动发布的更新方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateType")]
+        public ulong? UpdateType{ get; set; }
+
+        /// <summary>
+        /// 发布是否启用beta批次
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployBetaEnable")]
+        public bool? DeployBetaEnable{ get; set; }
+
+        /// <summary>
+        /// 滚动发布的批次比例列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployBatch")]
+        public float?[] DeployBatch{ get; set; }
+
+        /// <summary>
+        /// 滚动发布的批次执行方式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployExeMode")]
+        public string DeployExeMode{ get; set; }
+
+        /// <summary>
+        /// 滚动发布的每个批次的等待时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployWaitTime")]
+        public ulong? DeployWaitTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +257,11 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
+            this.SetParamSimple(map, prefix + "DeployBetaEnable", this.DeployBetaEnable);
+            this.SetParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
+            this.SetParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
+            this.SetParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
         }
     }
 }

@@ -154,6 +154,7 @@ namespace TencentCloud.Asr.V20190614
         /// <br>• 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
         /// <br>•   请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
         /// <br>•   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
+        /// <br>• 默认接口请求频率限制：20次/秒，如您有提高请求频率限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
         /// </summary>
         /// <param name="req"><see cref="CreateRecTaskRequest"/></param>
         /// <returns><see cref="CreateRecTaskResponse"/></returns>
@@ -184,6 +185,7 @@ namespace TencentCloud.Asr.V20190614
         /// <br>• 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
         /// <br>•   请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
         /// <br>•   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
+        /// <br>• 默认接口请求频率限制：20次/秒，如您有提高请求频率限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
         /// </summary>
         /// <param name="req"><see cref="CreateRecTaskRequest"/></param>
         /// <returns><see cref="CreateRecTaskResponse"/></returns>

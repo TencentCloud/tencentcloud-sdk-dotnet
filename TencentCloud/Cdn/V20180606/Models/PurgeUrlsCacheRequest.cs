@@ -40,6 +40,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 是否对中文字符进行编码后刷新
+        /// </summary>
+        [JsonProperty("UrlEncode")]
+        public bool? UrlEncode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +54,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
         }
     }
 }

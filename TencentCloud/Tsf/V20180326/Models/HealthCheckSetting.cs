@@ -94,6 +94,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Command")]
         public string[] Command{ get; set; }
 
+        /// <summary>
+        /// TSF_DEFAULT：tsf 默认就绪探针。K8S_NATIVE：k8s 原生探针。不填默认为 k8s 原生探针。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamArraySimple(map, prefix + "Command.", this.Command);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

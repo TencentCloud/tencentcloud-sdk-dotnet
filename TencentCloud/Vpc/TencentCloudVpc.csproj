@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.174</VersionPrefix>
+    <VersionPrefix>3.0.175</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -290,6 +290,8 @@
     <Compile Include="V20170312\Models\DescribeIp6TranslatorQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeIp6TranslatorsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeIp6TranslatorsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeIpGeolocationDatabaseUrlRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeIpGeolocationDatabaseUrlResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeNatGatewaysRequest.cs" />

@@ -25,7 +25,8 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 识别出的字段名称（关键字）。
+        /// 识别出的字段名称（关键字）。支持以下字段的识别：
+        /// 发票代码、发票号码、日期、金额、入口、出口、时间、发票消费类型、高速标志。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

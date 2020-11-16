@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.174</VersionPrefix>
+    <VersionPrefix>3.0.175</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,7 @@
     <Compile Include="V20180709\Models\ConsumptionResourceSummaryDataItem.cs" />
     <Compile Include="V20180709\Models\ConsumptionSummaryTotal.cs" />
     <Compile Include="V20180709\Models\ConsumptionSummaryTrend.cs" />
+    <Compile Include="V20180709\Models\CosDetailSets.cs" />
     <Compile Include="V20180709\Models\CostComponentSet.cs" />
     <Compile Include="V20180709\Models\CostDetail.cs" />
     <Compile Include="V20180709\Models\Deal.cs" />
@@ -98,6 +99,8 @@
     <Compile Include="V20180709\Models\DescribeCostSummaryByResourceResponse.cs" />
     <Compile Include="V20180709\Models\DescribeDealsByCondRequest.cs" />
     <Compile Include="V20180709\Models\DescribeDealsByCondResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateResponse.cs" />
     <Compile Include="V20180709\Models\DescribeDosageDetailByDateRequest.cs" />
     <Compile Include="V20180709\Models\DescribeDosageDetailByDateResponse.cs" />
     <Compile Include="V20180709\Models\DetailPoint.cs" />

@@ -67,6 +67,36 @@ namespace TencentCloud.Billing.V20180709.Models
         public float? DeductAmount{ get; set; }
 
         /// <summary>
+        /// 资金转入总额，单位（分）
+        /// </summary>
+        [JsonProperty("AgentInAmount")]
+        public float? AgentInAmount{ get; set; }
+
+        /// <summary>
+        /// 垫付充值总额，单位（分）
+        /// </summary>
+        [JsonProperty("AdvanceRechargeAmount")]
+        public float? AdvanceRechargeAmount{ get; set; }
+
+        /// <summary>
+        /// 提现扣减总额，单位（分）
+        /// </summary>
+        [JsonProperty("WithdrawAmount")]
+        public float? WithdrawAmount{ get; set; }
+
+        /// <summary>
+        /// 资金转出总额，单位（分）
+        /// </summary>
+        [JsonProperty("AgentOutAmount")]
+        public float? AgentOutAmount{ get; set; }
+
+        /// <summary>
+        /// 还垫付总额，单位（分）
+        /// </summary>
+        [JsonProperty("AdvancePayAmount")]
+        public float? AdvancePayAmount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +115,11 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BlockAmount", this.BlockAmount);
             this.SetParamSimple(map, prefix + "UnblockAmount", this.UnblockAmount);
             this.SetParamSimple(map, prefix + "DeductAmount", this.DeductAmount);
+            this.SetParamSimple(map, prefix + "AgentInAmount", this.AgentInAmount);
+            this.SetParamSimple(map, prefix + "AdvanceRechargeAmount", this.AdvanceRechargeAmount);
+            this.SetParamSimple(map, prefix + "WithdrawAmount", this.WithdrawAmount);
+            this.SetParamSimple(map, prefix + "AgentOutAmount", this.AgentOutAmount);
+            this.SetParamSimple(map, prefix + "AdvancePayAmount", this.AdvancePayAmount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

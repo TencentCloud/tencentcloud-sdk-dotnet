@@ -30,6 +30,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
+        /// <summary>
+        /// 是否启用统一域名
+        /// </summary>
+        [JsonProperty("EnableUnion")]
+        public bool? EnableUnion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
         }
     }
 }

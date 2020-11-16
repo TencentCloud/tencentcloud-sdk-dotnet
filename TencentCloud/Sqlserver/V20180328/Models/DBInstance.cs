@@ -145,7 +145,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例高可用， 1-双机高可用，2-单机
+        /// 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
         /// </summary>
         [JsonProperty("Model")]
         public long? Model{ get; set; }

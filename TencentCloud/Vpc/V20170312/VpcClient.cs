@@ -4713,6 +4713,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 该接口用于获取ip地理位置库下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpGeolocationDatabaseUrlRequest"/></param>
+        /// <returns><see cref="DescribeIpGeolocationDatabaseUrlResponse"/></returns>
+        public async Task<DescribeIpGeolocationDatabaseUrlResponse> DescribeIpGeolocationDatabaseUrl(DescribeIpGeolocationDatabaseUrlRequest req)
+        {
+             JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpGeolocationDatabaseUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于获取ip地理位置库下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpGeolocationDatabaseUrlRequest"/></param>
+        /// <returns><see cref="DescribeIpGeolocationDatabaseUrlResponse"/></returns>
+        public DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrlSync(DescribeIpGeolocationDatabaseUrlRequest req)
+        {
+             JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpGeolocationDatabaseUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查询NAT网关端口转发规则对象数组。
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>

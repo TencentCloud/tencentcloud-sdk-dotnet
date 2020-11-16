@@ -1927,7 +1927,6 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，支持指定加速区域预热。
         /// 默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 20 条。
-        /// 接口灰度中，暂未全量开放，敬请期待。
         /// </summary>
         /// <param name="req"><see cref="PushUrlsCacheRequest"/></param>
         /// <returns><see cref="PushUrlsCacheResponse"/></returns>
@@ -1949,7 +1948,6 @@ namespace TencentCloud.Cdn.V20180606
         /// <summary>
         /// PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，支持指定加速区域预热。
         /// 默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 20 条。
-        /// 接口灰度中，暂未全量开放，敬请期待。
         /// </summary>
         /// <param name="req"><see cref="PushUrlsCacheRequest"/></param>
         /// <returns><see cref="PushUrlsCacheResponse"/></returns>

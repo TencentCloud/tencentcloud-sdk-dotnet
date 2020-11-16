@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板。
+        /// 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
         /// </summary>
         [JsonProperty("Template")]
         public ulong? Template{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("MixVideoUids")]
         public string[] MixVideoUids{ get; set; }
 
+        /// <summary>
+        /// 自定义模板中有效，指定用户视频在混合画面中的位置。
+        /// </summary>
+        [JsonProperty("PresetLayoutConfig")]
+        public PresetLayoutConfig[] PresetLayoutConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
             this.SetParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
             this.SetParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
+            this.SetParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
         }
     }
 }
