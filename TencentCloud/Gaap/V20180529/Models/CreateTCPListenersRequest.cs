@@ -84,6 +84,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("RealServerPorts")]
         public ulong?[] RealServerPorts{ get; set; }
 
+        /// <summary>
+        /// 监听器获取客户端 IP 的方式，0表示 TOA, 1表示Proxy Protocol
+        /// </summary>
+        [JsonProperty("ClientIPMethod")]
+        public long? ClientIPMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
             this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
             this.SetParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
+            this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
         }
     }
 }

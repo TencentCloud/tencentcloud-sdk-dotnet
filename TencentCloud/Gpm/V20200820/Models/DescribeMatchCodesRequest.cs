@@ -25,7 +25,7 @@ namespace TencentCloud.Gpm.V20200820.Models
     {
         
         /// <summary>
-        /// 偏移量
+        /// 偏移量，页码
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

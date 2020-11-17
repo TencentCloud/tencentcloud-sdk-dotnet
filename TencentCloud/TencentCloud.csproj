@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.175</VersionPrefix>
+    <VersionPrefix>3.0.176</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -511,10 +511,14 @@
     <Compile Include="Asw\V20200722\Models\DescribeExecutionsResponse.cs" />
     <Compile Include="Asw\V20200722\Models\DescribeFlowServiceDetailRequest.cs" />
     <Compile Include="Asw\V20200722\Models\DescribeFlowServiceDetailResponse.cs" />
+    <Compile Include="Asw\V20200722\Models\DescribeFlowServicesRequest.cs" />
+    <Compile Include="Asw\V20200722\Models\DescribeFlowServicesResponse.cs" />
+    <Compile Include="Asw\V20200722\Models\Filter.cs" />
     <Compile Include="Asw\V20200722\Models\ModifyFlowServiceRequest.cs" />
     <Compile Include="Asw\V20200722\Models\ModifyFlowServiceResponse.cs" />
     <Compile Include="Asw\V20200722\Models\StartExecutionRequest.cs" />
     <Compile Include="Asw\V20200722\Models\StartExecutionResponse.cs" />
+    <Compile Include="Asw\V20200722\Models\StateMachine.cs" />
     <Compile Include="Batch\V20170312\BatchClient.cs" />
     <Compile Include="Batch\V20170312\Models\Activity.cs" />
     <Compile Include="Batch\V20170312\Models\AgentRunningMode.cs" />
@@ -1903,6 +1907,8 @@
     <Compile Include="Cdn\V20180606\Models\CreateClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateDiagnoseUrlRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateDiagnoseUrlResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateEdgePackTaskRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateEdgePackTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateVerifyRecordRequest.cs" />
@@ -6355,6 +6361,8 @@
     <Compile Include="Live\V20180801\Models\DescribeStreamPushInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeTopClientIpSumInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeTopClientIpSumInfoListResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeUploadStreamNumsRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeUploadStreamNumsResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeVisitTopSumInfoListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeVisitTopSumInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DomainCertInfo.cs" />
@@ -6690,6 +6698,8 @@
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListInstanceGroup.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeMonitorTypesRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeMonitorTypesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribePolicyConditionListCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribePolicyConditionListConfigManual.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribePolicyConditionListConfigManualCalcType.cs" />
@@ -8856,6 +8866,8 @@
     <Compile Include="Tcr\V20190924\Models\DeleteImagePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImageRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImageResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteInstanceRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespacePersonalRequest.cs" />
@@ -9480,24 +9492,40 @@
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcInteractiveTimeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcInteractiveTimeResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcMcuTranscodeTimeRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeTrtcMcuTranscodeTimeResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeUserInformationRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeUserInformationResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DismissRoomByStrRoomIdResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DismissRoomResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\EncodeParams.cs" />
     <Compile Include="Trtc\V20190722\Models\EventList.cs" />
     <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
+    <Compile Include="Trtc\V20190722\Models\OneSdkAppIdUsagesInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
     <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
+    <Compile Include="Trtc\V20190722\Models\RecordUsage.cs" />
+    <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\RoomState.cs" />
     <Compile Include="Trtc\V20190722\Models\ScaleInfomation.cs" />
+    <Compile Include="Trtc\V20190722\Models\SdkAppIdRecordUsage.cs" />
+    <Compile Include="Trtc\V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
+    <Compile Include="Trtc\V20190722\Models\SdkAppIdTrtcUsage.cs" />
     <Compile Include="Trtc\V20190722\Models\SmallVideoLayoutParams.cs" />
     <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\StartMCUMixTranscodeResponse.cs" />
@@ -11186,5 +11214,76 @@
     <Compile Include="Yunsou\V20180504\Models\DataManipulationResponse.cs" />
     <Compile Include="Yunsou\V20180504\Models\DataSearchRequest.cs" />
     <Compile Include="Yunsou\V20180504\Models\DataSearchResponse.cs" />
+    <Compile Include="Zj\V20190121\ZjClient.cs" />
+    <Compile Include="Zj\V20190121\Models\AddCrowdPackInfoRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\AddCrowdPackInfoResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\AddSmsSignRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\AddSmsSignResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\AddSmsTemplateDataStruct.cs" />
+    <Compile Include="Zj\V20190121\Models\AddSmsTemplateRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\AddSmsTemplateResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\CancelActivityData.cs" />
+    <Compile Include="Zj\V20190121\Models\CancelCampaignRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\CancelCampaignResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\CreateCampaignRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\CreateCampaignResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\CreateMmsInstanceItem.cs" />
+    <Compile Include="Zj\V20190121\Models\CreateMmsInstanceRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\CreateMmsInstanceResp.cs" />
+    <Compile Include="Zj\V20190121\Models\CreateMmsInstanceResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DelCrowdPackRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DelCrowdPackResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DelMmsInstanceData.cs" />
+    <Compile Include="Zj\V20190121\Models\DelTemplateRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DelTemplateResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DeleteMmsInstanceRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DeleteMmsInstanceResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeMmsInstanceInfoRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeMmsInstanceInfoResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeMmsInstanceListRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeMmsInstanceListResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsCampaignStatisticsRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsCampaignStatisticsResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsSignListDataStruct.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsSignListRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsSignListResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsTemplateListDataStruct.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsTemplateListRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\DescribeSmsTemplateListResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\GetCrowdPackListRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\GetCrowdPackListResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\GetCrowdUploadInfoRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\GetCrowdUploadInfoResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\GetSmsAmountInfoRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\GetSmsAmountInfoResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\GetSmsCampaignStatusRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\GetSmsCampaignStatusResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\MmsInstanceInfo.cs" />
+    <Compile Include="Zj\V20190121\Models\MmsInstanceInfoList.cs" />
+    <Compile Include="Zj\V20190121\Models\MmsInstanceStateInfo.cs" />
+    <Compile Include="Zj\V20190121\Models\ModifySmsTemplateDataStruct.cs" />
+    <Compile Include="Zj\V20190121\Models\ModifySmsTemplateRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\ModifySmsTemplateResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\PaasCreateSignResp.cs" />
+    <Compile Include="Zj\V20190121\Models\PaasSmsCampaignStatusResp.cs" />
+    <Compile Include="Zj\V20190121\Models\PaasStrategy.cs" />
+    <Compile Include="Zj\V20190121\Models\PaasStrategyItem.cs" />
+    <Compile Include="Zj\V20190121\Models\PushMmsContentRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\PushMmsContentResp.cs" />
+    <Compile Include="Zj\V20190121\Models\PushMmsContentResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\SendSmsPaasDataStruct.cs" />
+    <Compile Include="Zj\V20190121\Models\SendSmsRequest.cs" />
+    <Compile Include="Zj\V20190121\Models\SendSmsResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsAddCrowdPackInfoResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsAmountDataStruct.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsCampaignStatisticsCrowdData.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsCampaignStatisticsData.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsCampaignStatisticsTemplateData.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsCreateCampaignResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsGetCrowdPackList.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsGetCrowdPackListResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsGetCrowdUploadInfoResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\SmsSuccessResponse.cs" />
+    <Compile Include="Zj\V20190121\Models\UploadFansInfoCosInfo.cs" />
   </ItemGroup>
 </Project>

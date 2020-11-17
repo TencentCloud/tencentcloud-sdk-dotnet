@@ -733,6 +733,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 删除镜像仓库企业版实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
+        /// <returns><see cref="DeleteInstanceResponse"/></returns>
+        public async Task<DeleteInstanceResponse> DeleteInstance(DeleteInstanceRequest req)
+        {
+             JsonResponseModel<DeleteInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除镜像仓库企业版实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
+        /// <returns><see cref="DeleteInstanceResponse"/></returns>
+        public DeleteInstanceResponse DeleteInstanceSync(DeleteInstanceRequest req)
+        {
+             JsonResponseModel<DeleteInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除长期访问凭证
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceTokenRequest"/></param>

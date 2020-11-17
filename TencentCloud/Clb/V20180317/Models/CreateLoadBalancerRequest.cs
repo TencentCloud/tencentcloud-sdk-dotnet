@@ -124,6 +124,18 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
+        /// 是否支持绑定跨地域/跨Vpc绑定IP的功能。
+        /// </summary>
+        [JsonProperty("SnatPro")]
+        public bool? SnatPro{ get; set; }
+
+        /// <summary>
+        /// 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
+        /// </summary>
+        [JsonProperty("SnatIps")]
+        public SnatIp[] SnatIps{ get; set; }
+
+        /// <summary>
         /// Stgw独占集群的标签。
         /// </summary>
         [JsonProperty("ClusterTag")]
@@ -151,6 +163,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
+            this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         }
     }

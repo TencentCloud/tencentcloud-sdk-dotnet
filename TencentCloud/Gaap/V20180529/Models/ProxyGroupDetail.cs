@@ -108,6 +108,27 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 安全策略ID，当设置了安全策略时，存在该字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
+
+        /// <summary>
+        /// 通道组版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientIPMethod")]
+        public long?[] ClientIPMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +148,9 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "IsOldGroup", this.IsOldGroup);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         }
     }
 }

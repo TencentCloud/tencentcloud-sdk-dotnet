@@ -25,7 +25,7 @@ namespace TencentCloud.Sslpod.V20190605.Models
     {
         
         /// <summary>
-        /// 监控的服务器类型 Enums(0,1,2,3)
+        /// 监控的服务器类型（0：web，1：smtp，2：imap，3：pops）
         /// </summary>
         [JsonProperty("ServerType")]
         public long? ServerType{ get; set; }

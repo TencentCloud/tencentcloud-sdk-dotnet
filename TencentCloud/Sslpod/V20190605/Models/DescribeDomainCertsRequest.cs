@@ -25,7 +25,7 @@ namespace TencentCloud.Sslpod.V20190605.Models
     {
         
         /// <summary>
-        /// 域名ID
+        /// 域名ID，可通过搜索域名接口获得
         /// </summary>
         [JsonProperty("DomainId")]
         public long? DomainId{ get; set; }

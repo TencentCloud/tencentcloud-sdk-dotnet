@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，5天内。本地unix时间戳（1588031999s）
+        /// 查询开始时间，14天内。本地unix时间戳（1588031999s）
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }

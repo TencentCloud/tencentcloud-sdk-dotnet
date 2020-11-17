@@ -61,7 +61,7 @@ namespace TencentCloud.Gpm.V20200820.Models
         public string MatchDesc{ get; set; }
 
         /// <summary>
-        /// 只支持https协议
+        /// 只支持 http 和 https 协议
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }

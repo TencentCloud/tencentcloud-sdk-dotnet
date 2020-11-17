@@ -173,6 +173,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 动态打包任务提交接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgePackTaskRequest"/></param>
+        /// <returns><see cref="CreateEdgePackTaskResponse"/></returns>
+        public async Task<CreateEdgePackTaskResponse> CreateEdgePackTask(CreateEdgePackTaskRequest req)
+        {
+             JsonResponseModel<CreateEdgePackTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEdgePackTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEdgePackTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 动态打包任务提交接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgePackTaskRequest"/></param>
+        /// <returns><see cref="CreateEdgePackTaskResponse"/></returns>
+        public CreateEdgePackTaskResponse CreateEdgePackTaskSync(CreateEdgePackTaskRequest req)
+        {
+             JsonResponseModel<CreateEdgePackTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEdgePackTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEdgePackTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// CreateScdnLogTask 用于创建事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>

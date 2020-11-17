@@ -501,6 +501,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 云监控支持多种类型的监控，此接口列出支持的所有类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
+        /// <returns><see cref="DescribeMonitorTypesResponse"/></returns>
+        public async Task<DescribeMonitorTypesResponse> DescribeMonitorTypes(DescribeMonitorTypesRequest req)
+        {
+             JsonResponseModel<DescribeMonitorTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMonitorTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonitorTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云监控支持多种类型的监控，此接口列出支持的所有类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
+        /// <returns><see cref="DescribeMonitorTypesResponse"/></returns>
+        public DescribeMonitorTypesResponse DescribeMonitorTypesSync(DescribeMonitorTypesRequest req)
+        {
+             JsonResponseModel<DescribeMonitorTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMonitorTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonitorTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取基础告警策略条件
         /// </summary>
         /// <param name="req"><see cref="DescribePolicyConditionListRequest"/></param>

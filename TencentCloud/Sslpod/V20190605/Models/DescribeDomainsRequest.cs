@@ -43,7 +43,7 @@ namespace TencentCloud.Sslpod.V20190605.Models
         public string SearchType{ get; set; }
 
         /// <summary>
-        /// 标签
+        /// 标签，多个标签用逗号分隔
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

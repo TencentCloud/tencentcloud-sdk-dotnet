@@ -373,6 +373,56 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 查询云端录制计费时长。
+        /// 
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordStatisticRequest"/></param>
+        /// <returns><see cref="DescribeRecordStatisticResponse"/></returns>
+        public async Task<DescribeRecordStatisticResponse> DescribeRecordStatistic(DescribeRecordStatisticRequest req)
+        {
+             JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云端录制计费时长。
+        /// 
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordStatisticRequest"/></param>
+        /// <returns><see cref="DescribeRecordStatisticResponse"/></returns>
+        public DescribeRecordStatisticResponse DescribeRecordStatisticSync(DescribeRecordStatisticRequest req)
+        {
+             JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
@@ -404,6 +454,102 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRoomInformation");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询音视频互动计费时长。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
+        public async Task<DescribeTrtcInteractiveTimeResponse> DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrtcInteractiveTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询音视频互动计费时长。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
+        public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTimeSync(DescribeTrtcInteractiveTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrtcInteractiveTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询旁路转码计费时长。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcMcuTranscodeTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcMcuTranscodeTimeResponse"/></returns>
+        public async Task<DescribeTrtcMcuTranscodeTimeResponse> DescribeTrtcMcuTranscodeTime(DescribeTrtcMcuTranscodeTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrtcMcuTranscodeTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询旁路转码计费时长。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcMcuTranscodeTimeRequest"/></param>
+        /// <returns><see cref="DescribeTrtcMcuTranscodeTimeResponse"/></returns>
+        public DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTimeSync(DescribeTrtcMcuTranscodeTimeRequest req)
+        {
+             JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrtcMcuTranscodeTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,6 +639,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomByStrRoomIdRequest"/></param>
+        /// <returns><see cref="DismissRoomByStrRoomIdResponse"/></returns>
+        public async Task<DismissRoomByStrRoomIdResponse> DismissRoomByStrRoomId(DismissRoomByStrRoomIdRequest req)
+        {
+             JsonResponseModel<DismissRoomByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DismissRoomByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// </summary>
+        /// <param name="req"><see cref="DismissRoomByStrRoomIdRequest"/></param>
+        /// <returns><see cref="DismissRoomByStrRoomIdResponse"/></returns>
+        public DismissRoomByStrRoomIdResponse DismissRoomByStrRoomIdSync(DismissRoomByStrRoomIdRequest req)
+        {
+             JsonResponseModel<DismissRoomByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DismissRoomByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
         /// </summary>
         /// <param name="req"><see cref="RemoveUserRequest"/></param>
@@ -524,6 +710,46 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "RemoveUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserByStrRoomIdRequest"/></param>
+        /// <returns><see cref="RemoveUserByStrRoomIdResponse"/></returns>
+        public async Task<RemoveUserByStrRoomIdResponse> RemoveUserByStrRoomId(RemoveUserByStrRoomIdRequest req)
+        {
+             JsonResponseModel<RemoveUserByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveUserByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+        /// </summary>
+        /// <param name="req"><see cref="RemoveUserByStrRoomIdRequest"/></param>
+        /// <returns><see cref="RemoveUserByStrRoomIdResponse"/></returns>
+        public RemoveUserByStrRoomIdResponse RemoveUserByStrRoomIdSync(RemoveUserByStrRoomIdRequest req)
+        {
+             JsonResponseModel<RemoveUserByStrRoomIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveUserByStrRoomId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveUserByStrRoomIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -299,6 +299,8 @@ Project("{D2000F42-DED7-3D39-8FF3-6D6B6004E691}") = "TencentCloudYunjing", "Tenc
 EndProject
 Project("{2C846449-46BB-3252-994D-FCBB2457686F}") = "TencentCloudYunsou", "TencentCloud\Yunsou\TencentCloudYunsou.csproj", "{2C846449-46BB-3252-994D-FCBB2457686F}"
 EndProject
+Project("{F31B3D59-B742-3710-9616-2C7440C6CD8D}") = "TencentCloudZj", "TencentCloud\Zj\TencentCloudZj.csproj", "{F31B3D59-B742-3710-9616-2C7440C6CD8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -897,6 +899,10 @@ Global
 		{2C846449-46BB-3252-994D-FCBB2457686F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C846449-46BB-3252-994D-FCBB2457686F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C846449-46BB-3252-994D-FCBB2457686F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31B3D59-B742-3710-9616-2C7440C6CD8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31B3D59-B742-3710-9616-2C7440C6CD8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31B3D59-B742-3710-9616-2C7440C6CD8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31B3D59-B742-3710-9616-2C7440C6CD8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

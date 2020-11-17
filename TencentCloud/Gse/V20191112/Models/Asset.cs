@@ -90,6 +90,18 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("OsType")]
         public string OsType{ get; set; }
 
+        /// <summary>
+        /// 生成包资源类型，ASSET 或者 IMAGE；ASSET 代表是原有生成包类型，IMAGE 为扩充使用镜像类型
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// 镜像资源共享类型，当 ResourceType 为 IMAGE 时该字段有意义，SHARED 表示共享、SHARED_IMAGE 表示未共享；ResourceType 为 ASSET 时这里返回 UNKNOWN_SHARED 用于占位
+        /// </summary>
+        [JsonProperty("SharingStatus")]
+        public string SharingStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "AssetArn", this.AssetArn);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "OsType", this.OsType);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "SharingStatus", this.SharingStatus);
         }
     }
 }

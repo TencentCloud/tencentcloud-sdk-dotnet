@@ -213,6 +213,46 @@ namespace TencentCloud.Asw.V20200722
         }
 
         /// <summary>
+        /// 查询指定用户下所有状态机，以列表形式返回
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowServicesRequest"/></param>
+        /// <returns><see cref="DescribeFlowServicesResponse"/></returns>
+        public async Task<DescribeFlowServicesResponse> DescribeFlowServices(DescribeFlowServicesRequest req)
+        {
+             JsonResponseModel<DescribeFlowServicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowServices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowServicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定用户下所有状态机，以列表形式返回
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowServicesRequest"/></param>
+        /// <returns><see cref="DescribeFlowServicesResponse"/></returns>
+        public DescribeFlowServicesResponse DescribeFlowServicesSync(DescribeFlowServicesRequest req)
+        {
+             JsonResponseModel<DescribeFlowServicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowServices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowServicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于修改状态机
         /// </summary>
         /// <param name="req"><see cref="ModifyFlowServiceRequest"/></param>

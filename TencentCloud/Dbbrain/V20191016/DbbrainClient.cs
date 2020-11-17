@@ -173,7 +173,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// 获取慢日志统计柱状图
+        /// 获取慢日志统计柱状图。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogTimeSeriesStatsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogTimeSeriesStatsResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// 获取慢日志统计柱状图
+        /// 获取慢日志统计柱状图。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogTimeSeriesStatsRequest"/></param>
         /// <returns><see cref="DescribeSlowLogTimeSeriesStatsResponse"/></returns>

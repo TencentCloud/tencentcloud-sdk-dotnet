@@ -203,6 +203,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ProxyType")]
         public ulong? ProxyType{ get; set; }
 
+        /// <summary>
+        /// 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientIPMethod")]
+        public long?[] ClientIPMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -235,6 +242,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
             this.SetParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
+            this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         }
     }
 }

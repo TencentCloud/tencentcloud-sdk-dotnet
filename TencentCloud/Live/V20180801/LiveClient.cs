@@ -3517,6 +3517,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 直播上行路数查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
+        /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>
+        public async Task<DescribeUploadStreamNumsResponse> DescribeUploadStreamNums(DescribeUploadStreamNumsRequest req)
+        {
+             JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUploadStreamNums");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadStreamNumsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播上行路数查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>
+        /// <returns><see cref="DescribeUploadStreamNumsResponse"/></returns>
+        public DescribeUploadStreamNumsResponse DescribeUploadStreamNumsSync(DescribeUploadStreamNumsRequest req)
+        {
+             JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUploadStreamNums");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadStreamNumsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询某时间段top n的域名或流id信息（暂支持top 1000）。
         /// </summary>
         /// <param name="req"><see cref="DescribeVisitTopSumInfoListRequest"/></param>

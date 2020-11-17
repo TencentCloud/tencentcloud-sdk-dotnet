@@ -185,7 +185,7 @@ namespace TencentCloud.Gpm.V20200820.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在
+        /// 日志状态，0表示正常，1表示日志集不存在，2表示日志主题不存在，3表示日志集和日志主题都不存在。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogStatus")]
