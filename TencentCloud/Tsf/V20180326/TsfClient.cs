@@ -4341,6 +4341,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 更新健康检查配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateHealthCheckSettingsRequest"/></param>
+        /// <returns><see cref="UpdateHealthCheckSettingsResponse"/></returns>
+        public async Task<UpdateHealthCheckSettingsResponse> UpdateHealthCheckSettings(UpdateHealthCheckSettingsRequest req)
+        {
+             JsonResponseModel<UpdateHealthCheckSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateHealthCheckSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateHealthCheckSettingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新健康检查配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateHealthCheckSettingsRequest"/></param>
+        /// <returns><see cref="UpdateHealthCheckSettingsResponse"/></returns>
+        public UpdateHealthCheckSettingsResponse UpdateHealthCheckSettingsSync(UpdateHealthCheckSettingsRequest req)
+        {
+             JsonResponseModel<UpdateHealthCheckSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateHealthCheckSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateHealthCheckSettingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新仓库信息
         /// </summary>
         /// <param name="req"><see cref="UpdateRepositoryRequest"/></param>

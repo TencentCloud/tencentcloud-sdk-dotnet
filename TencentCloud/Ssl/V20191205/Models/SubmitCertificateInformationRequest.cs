@@ -55,7 +55,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// 私钥密码。
+        /// 私钥密码（非必填）。
         /// </summary>
         [JsonProperty("KeyPassword")]
         public string KeyPassword{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// 证书验证方式。
+        /// 证书验证方式。验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }

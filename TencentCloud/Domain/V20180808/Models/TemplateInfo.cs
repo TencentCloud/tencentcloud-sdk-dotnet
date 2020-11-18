@@ -31,7 +31,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 认证状态
+        /// 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
         /// </summary>
         [JsonProperty("AuditStatus")]
         public string AuditStatus{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string UserUin{ get; set; }
 
         /// <summary>
-        /// 是否是默认模板
+        /// 是否是默认模板: 是:yes，否:no
         /// </summary>
         [JsonProperty("IsDefault")]
         public string IsDefault{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] CertificateIds{ get; set; }
 
         /// <summary>
-        /// 子订单ID
+        /// 订单号列表
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }

@@ -221,60 +221,67 @@ namespace TencentCloud.Tsf.V20180326.Models
         public long? OperationState{ get; set; }
 
         /// <summary>
-        /// NamespaceId
+        /// NamespaceId Ns ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// InstanceZoneId
+        /// InstanceZoneId 可用区ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceZoneId")]
         public string InstanceZoneId{ get; set; }
 
         /// <summary>
-        /// InstanceImportMode
+        /// InstanceImportMode 导入模式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceImportMode")]
         public string InstanceImportMode{ get; set; }
 
         /// <summary>
-        /// ApplicationType
+        /// ApplicationType应用类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
-        /// ApplicationResourceType
+        /// ApplicationResourceType 资源类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationResourceType")]
         public string ApplicationResourceType{ get; set; }
 
         /// <summary>
-        /// ServiceSidecarStatus
+        /// sidecar状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceSidecarStatus")]
         public string ServiceSidecarStatus{ get; set; }
 
         /// <summary>
-        /// GroupName
+        /// 部署组名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// NamespaceName
+        /// NS名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
+
+        /// <summary>
+        /// 健康检查原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
 
         /// <summary>
@@ -318,6 +325,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ServiceSidecarStatus", this.ServiceSidecarStatus);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

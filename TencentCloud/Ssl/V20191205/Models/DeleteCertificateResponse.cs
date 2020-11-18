@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 删除结果。
+        /// 删除结果（true：删除成功，false：删除失败）
         /// </summary>
         [JsonProperty("DeleteResult")]
         public bool? DeleteResult{ get; set; }

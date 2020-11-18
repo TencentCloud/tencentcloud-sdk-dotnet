@@ -150,7 +150,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public string Readonly{ get; set; }
 
         /// <summary>
-        /// 域名标签
+        /// 域名标签。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]

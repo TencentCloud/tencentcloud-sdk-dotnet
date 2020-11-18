@@ -227,6 +227,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DeployWaitTime")]
         public ulong? DeployWaitTime{ get; set; }
 
+        /// <summary>
+        /// 是否开启了健康检查
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableHealthCheck")]
+        public bool? EnableHealthCheck{ get; set; }
+
+        /// <summary>
+        /// 健康检查配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthCheckSettings")]
+        public HealthCheckSettings HealthCheckSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +276,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
             this.SetParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
             this.SetParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
+            this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+            this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
         }
     }
 }

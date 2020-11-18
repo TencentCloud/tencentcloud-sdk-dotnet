@@ -213,7 +213,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（CompleteCertificate）用于主动触发证书验证。
+        /// 本接口（CompleteCertificate）用于主动触发证书验证。仅非DNSPod和Wotrus品牌证书支持使用此接口。
         /// </summary>
         /// <param name="req"><see cref="CompleteCertificateRequest"/></param>
         /// <returns><see cref="CompleteCertificateResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 本接口（CompleteCertificate）用于主动触发证书验证。
+        /// 本接口（CompleteCertificate）用于主动触发证书验证。仅非DNSPod和Wotrus品牌证书支持使用此接口。
         /// </summary>
         /// <param name="req"><see cref="CompleteCertificateRequest"/></param>
         /// <returns><see cref="CompleteCertificateResponse"/></returns>
@@ -693,7 +693,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 提交证书资料。
+        /// 提交证书资料。输入参数信息可以分多次提交，但提交的证书资料应最低限度保持完整。
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>
@@ -713,7 +713,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// 提交证书资料。
+        /// 提交证书资料。输入参数信息可以分多次提交，但提交的证书资料应最低限度保持完整。
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
         /// <returns><see cref="SubmitCertificateInformationResponse"/></returns>

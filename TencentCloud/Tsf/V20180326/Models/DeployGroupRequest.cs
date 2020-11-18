@@ -54,6 +54,48 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ForceStart")]
         public bool? ForceStart{ get; set; }
 
+        /// <summary>
+        /// 是否开启健康检查
+        /// </summary>
+        [JsonProperty("EnableHealthCheck")]
+        public bool? EnableHealthCheck{ get; set; }
+
+        /// <summary>
+        /// 开启健康检查时，配置健康检查
+        /// </summary>
+        [JsonProperty("HealthCheckSettings")]
+        public HealthCheckSettings HealthCheckSettings{ get; set; }
+
+        /// <summary>
+        /// 部署方式，0表示快速更新，1表示滚动更新
+        /// </summary>
+        [JsonProperty("UpdateType")]
+        public ulong? UpdateType{ get; set; }
+
+        /// <summary>
+        /// 是否启用beta批次
+        /// </summary>
+        [JsonProperty("DeployBetaEnable")]
+        public bool? DeployBetaEnable{ get; set; }
+
+        /// <summary>
+        /// 滚动发布每个批次参与的实例比率
+        /// </summary>
+        [JsonProperty("DeployBatch")]
+        public float?[] DeployBatch{ get; set; }
+
+        /// <summary>
+        /// 滚动发布的执行方式
+        /// </summary>
+        [JsonProperty("DeployExeMode")]
+        public string DeployExeMode{ get; set; }
+
+        /// <summary>
+        /// 滚动发布每个批次的时间间隔
+        /// </summary>
+        [JsonProperty("DeployWaitTime")]
+        public ulong? DeployWaitTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +107,13 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "StartupParameters", this.StartupParameters);
             this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
             this.SetParamSimple(map, prefix + "ForceStart", this.ForceStart);
+            this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+            this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+            this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
+            this.SetParamSimple(map, prefix + "DeployBetaEnable", this.DeployBetaEnable);
+            this.SetParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
+            this.SetParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
+            this.SetParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
         }
     }
 }

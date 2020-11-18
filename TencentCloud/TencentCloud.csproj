@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.176</VersionPrefix>
+    <VersionPrefix>3.0.177</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -519,6 +519,9 @@
     <Compile Include="Asw\V20200722\Models\StartExecutionRequest.cs" />
     <Compile Include="Asw\V20200722\Models\StartExecutionResponse.cs" />
     <Compile Include="Asw\V20200722\Models\StateMachine.cs" />
+    <Compile Include="Ba\V20200720\BaClient.cs" />
+    <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlRequest.cs" />
+    <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlResponse.cs" />
     <Compile Include="Batch\V20170312\BatchClient.cs" />
     <Compile Include="Batch\V20170312\Models\Activity.cs" />
     <Compile Include="Batch\V20170312\Models\AgentRunningMode.cs" />
@@ -4069,6 +4072,8 @@
     <Compile Include="Domain\V20180808\Models\DescribeDomainPriceListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeTemplateRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeTemplateResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBaseInfo.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBatchDetailSet.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBatchLogSet.cs" />
@@ -9822,6 +9827,8 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleApplication.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageVmGroup.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateHealthCheckSettingsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateHealthCheckSettingsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateRepositoryRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroup.cs" />

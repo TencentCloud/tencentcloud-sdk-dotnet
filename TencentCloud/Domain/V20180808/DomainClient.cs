@@ -505,6 +505,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口 (DescribeTemplate) 用于获取模板信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTemplateRequest"/></param>
+        /// <returns><see cref="DescribeTemplateResponse"/></returns>
+        public async Task<DescribeTemplateResponse> DescribeTemplate(DescribeTemplateRequest req)
+        {
+             JsonResponseModel<DescribeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeTemplate) 用于获取模板信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTemplateRequest"/></param>
+        /// <returns><see cref="DescribeTemplateResponse"/></returns>
+        public DescribeTemplateResponse DescribeTemplateSync(DescribeTemplateRequest req)
+        {
+             JsonResponseModel<DescribeTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeTemplateList) 用于获取模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateListRequest"/></param>
