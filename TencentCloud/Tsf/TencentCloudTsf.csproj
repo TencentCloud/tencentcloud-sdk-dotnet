@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.177</VersionPrefix>
+    <VersionPrefix>3.0.178</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,6 +94,8 @@
     <Compile Include="V20180326\Models\CreateRepositoryResponse.cs" />
     <Compile Include="V20180326\Models\CreateServerlessGroupRequest.cs" />
     <Compile Include="V20180326\Models\CreateServerlessGroupResponse.cs" />
+    <Compile Include="V20180326\Models\CreateTaskFlowRequest.cs" />
+    <Compile Include="V20180326\Models\CreateTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\CreateTaskRequest.cs" />
     <Compile Include="V20180326\Models\CreateTaskResponse.cs" />
     <Compile Include="V20180326\Models\DeleteApplicationRequest.cs" />
@@ -258,6 +260,8 @@
     <Compile Include="V20180326\Models\ModifyLaneRuleResponse.cs" />
     <Compile Include="V20180326\Models\ModifyMicroserviceRequest.cs" />
     <Compile Include="V20180326\Models\ModifyMicroserviceResponse.cs" />
+    <Compile Include="V20180326\Models\ModifyTaskRequest.cs" />
+    <Compile Include="V20180326\Models\ModifyTaskResponse.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoRequest.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoResponse.cs" />
     <Compile Include="V20180326\Models\MsApiArray.cs" />
@@ -273,6 +277,8 @@
     <Compile Include="V20180326\Models\ProtocolPort.cs" />
     <Compile Include="V20180326\Models\RedoTaskBatchRequest.cs" />
     <Compile Include="V20180326\Models\RedoTaskBatchResponse.cs" />
+    <Compile Include="V20180326\Models\RedoTaskExecuteRequest.cs" />
+    <Compile Include="V20180326\Models\RedoTaskExecuteResponse.cs" />
     <Compile Include="V20180326\Models\RedoTaskFlowBatchRequest.cs" />
     <Compile Include="V20180326\Models\RedoTaskFlowBatchResponse.cs" />
     <Compile Include="V20180326\Models\RedoTaskRequest.cs" />
@@ -314,6 +320,7 @@
     <Compile Include="V20180326\Models\StopTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\StopTaskExecuteRequest.cs" />
     <Compile Include="V20180326\Models\StopTaskExecuteResponse.cs" />
+    <Compile Include="V20180326\Models\TaskFlowEdge.cs" />
     <Compile Include="V20180326\Models\TaskFlowLastBatchState.cs" />
     <Compile Include="V20180326\Models\TaskIdInfo.cs" />
     <Compile Include="V20180326\Models\TaskLastExecuteStatus.cs" />

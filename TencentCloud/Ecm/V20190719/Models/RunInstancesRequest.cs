@@ -38,7 +38,9 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 公网出带宽上限，单位：Mbps。如果未传该参数或者传的值为0，则使用模块下的默认值
+        /// 公网出带宽上限，单位：Mbps。
+        /// 1.如果未传该参数或者传的值为0，则使用模块下的默认值。
+        /// 2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthIn的值
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
@@ -124,6 +126,14 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SystemDiskSize")]
         public ulong? SystemDiskSize{ get; set; }
 
+        /// <summary>
+        /// 公网入带宽上限，单位：Mbps。
+        /// 1.如果未传该参数或者传的值为0，则使用对应模块的默认值。
+        /// 2.如果未传该参数或者传的值为0且未指定模块，则使用InternetMaxBandwidthOut
+        /// </summary>
+        [JsonProperty("InternetMaxBandwidthIn")]
+        public long? InternetMaxBandwidthIn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +155,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidthIn", this.InternetMaxBandwidthIn);
         }
     }
 }

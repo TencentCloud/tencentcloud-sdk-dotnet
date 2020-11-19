@@ -1493,6 +1493,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询Tendis慢查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTendisSlowLogRequest"/></param>
+        /// <returns><see cref="DescribeTendisSlowLogResponse"/></returns>
+        public async Task<DescribeTendisSlowLogResponse> DescribeTendisSlowLog(DescribeTendisSlowLogRequest req)
+        {
+             JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTendisSlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTendisSlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Tendis慢查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTendisSlowLogRequest"/></param>
+        /// <returns><see cref="DescribeTendisSlowLogResponse"/></returns>
+        public DescribeTendisSlowLogResponse DescribeTendisSlowLogSync(DescribeTendisSlowLogRequest req)
+        {
+             JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTendisSlowLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTendisSlowLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按量计费实例销毁
         /// </summary>
         /// <param name="req"><see cref="DestroyPostpaidInstanceRequest"/></param>

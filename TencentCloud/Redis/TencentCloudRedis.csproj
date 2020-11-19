@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.177</VersionPrefix>
+    <VersionPrefix>3.0.178</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -123,6 +123,8 @@
     <Compile Include="V20180412\Models\DescribeTaskInfoResponse.cs" />
     <Compile Include="V20180412\Models\DescribeTaskListRequest.cs" />
     <Compile Include="V20180412\Models\DescribeTaskListResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeTendisSlowLogRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeTendisSlowLogResponse.cs" />
     <Compile Include="V20180412\Models\DestroyPostpaidInstanceRequest.cs" />
     <Compile Include="V20180412\Models\DestroyPostpaidInstanceResponse.cs" />
     <Compile Include="V20180412\Models\DestroyPrepaidInstanceRequest.cs" />
@@ -200,6 +202,7 @@
     <Compile Include="V20180412\Models\SwitchInstanceVipResponse.cs" />
     <Compile Include="V20180412\Models\TaskInfoDetail.cs" />
     <Compile Include="V20180412\Models\TendisNodes.cs" />
+    <Compile Include="V20180412\Models\TendisSlowLogDetail.cs" />
     <Compile Include="V20180412\Models\TradeDealDetail.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceResponse.cs" />

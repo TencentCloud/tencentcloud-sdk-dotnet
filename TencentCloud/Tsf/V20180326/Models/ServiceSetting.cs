@@ -36,7 +36,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProtocolPorts")]
-        public ProtocolPort ProtocolPorts{ get; set; }
+        public ProtocolPort[] ProtocolPorts{ get; set; }
 
         /// <summary>
         /// 子网ID
@@ -52,7 +52,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccessType", this.AccessType);
-            this.SetParamObj(map, prefix + "ProtocolPorts.", this.ProtocolPorts);
+            this.SetParamArrayObj(map, prefix + "ProtocolPorts.", this.ProtocolPorts);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }

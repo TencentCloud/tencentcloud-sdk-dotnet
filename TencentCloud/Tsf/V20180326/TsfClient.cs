@@ -693,6 +693,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建工作流
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFlowRequest"/></param>
+        /// <returns><see cref="CreateTaskFlowResponse"/></returns>
+        public async Task<CreateTaskFlowResponse> CreateTaskFlow(CreateTaskFlowRequest req)
+        {
+             JsonResponseModel<CreateTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建工作流
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFlowRequest"/></param>
+        /// <returns><see cref="CreateTaskFlowResponse"/></returns>
+        public CreateTaskFlowResponse CreateTaskFlowSync(CreateTaskFlowRequest req)
+        {
+             JsonResponseModel<CreateTaskFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTaskFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除应用
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
@@ -3579,6 +3619,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 修改任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskRequest"/></param>
+        /// <returns><see cref="ModifyTaskResponse"/></returns>
+        public async Task<ModifyTaskResponse> ModifyTask(ModifyTaskRequest req)
+        {
+             JsonResponseModel<ModifyTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskRequest"/></param>
+        /// <returns><see cref="ModifyTaskResponse"/></returns>
+        public ModifyTaskResponse ModifyTaskSync(ModifyTaskRequest req)
+        {
+             JsonResponseModel<ModifyTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
         /// 调用此接口完成后，才标志上传包流程结束。
         /// </summary>
@@ -3692,6 +3772,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "RedoTaskBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行在某个节点上执行任务。
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskExecuteRequest"/></param>
+        /// <returns><see cref="RedoTaskExecuteResponse"/></returns>
+        public async Task<RedoTaskExecuteResponse> RedoTaskExecute(RedoTaskExecuteRequest req)
+        {
+             JsonResponseModel<RedoTaskExecuteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RedoTaskExecute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskExecuteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新执行在某个节点上执行任务。
+        /// </summary>
+        /// <param name="req"><see cref="RedoTaskExecuteRequest"/></param>
+        /// <returns><see cref="RedoTaskExecuteResponse"/></returns>
+        public RedoTaskExecuteResponse RedoTaskExecuteSync(RedoTaskExecuteRequest req)
+        {
+             JsonResponseModel<RedoTaskExecuteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RedoTaskExecute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RedoTaskExecuteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
