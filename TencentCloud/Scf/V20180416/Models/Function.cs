@@ -61,7 +61,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 函数状态
+        /// 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -90,6 +90,26 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 函数状态失败原因
+        /// </summary>
+        [JsonProperty("StatusReasons")]
+        public StatusReason[] StatusReasons{ get; set; }
+
+        /// <summary>
+        /// 函数所有版本预置并发内存总和
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalProvisionedConcurrencyMem")]
+        public ulong? TotalProvisionedConcurrencyMem{ get; set; }
+
+        /// <summary>
+        /// 函数并发保留内存
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReservedConcurrencyMem")]
+        public ulong? ReservedConcurrencyMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +127,9 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+            this.SetParamSimple(map, prefix + "TotalProvisionedConcurrencyMem", this.TotalProvisionedConcurrencyMem);
+            this.SetParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
         }
     }
 }

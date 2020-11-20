@@ -80,6 +80,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 监听器的会话类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionType")]
+        public string SessionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
         }
     }
 }

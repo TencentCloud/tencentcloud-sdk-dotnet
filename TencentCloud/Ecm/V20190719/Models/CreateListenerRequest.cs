@@ -67,6 +67,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
+        /// <summary>
+        /// 会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+        /// </summary>
+        [JsonProperty("SessionType")]
+        public string SessionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
+            this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
         }
     }
 }

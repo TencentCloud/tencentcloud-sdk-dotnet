@@ -493,6 +493,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查看容器托管的集群状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunResourceRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunResourceResponse"/></returns>
+        public async Task<DescribeCloudBaseRunResourceResponse> DescribeCloudBaseRunResource(DescribeCloudBaseRunResourceRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看容器托管的集群状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunResourceRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunResourceResponse"/></returns>
+        public DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResourceSync(DescribeCloudBaseRunResourceRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunServerVersionRequest"/></param>

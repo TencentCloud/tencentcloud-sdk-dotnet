@@ -43,7 +43,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 有加密需求的用户，接入传入kms的CiphertextBlob
+        /// 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }

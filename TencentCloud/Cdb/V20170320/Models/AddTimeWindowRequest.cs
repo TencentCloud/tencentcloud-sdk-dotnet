@@ -31,43 +31,43 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
+        /// 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
         /// </summary>
         [JsonProperty("Monday")]
         public string[] Monday{ get; set; }
 
         /// <summary>
-        /// 星期二的可维护时间窗口。
+        /// 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
         /// </summary>
         [JsonProperty("Tuesday")]
         public string[] Tuesday{ get; set; }
 
         /// <summary>
-        /// 星期三的可维护时间窗口。
+        /// 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
         /// </summary>
         [JsonProperty("Wednesday")]
         public string[] Wednesday{ get; set; }
 
         /// <summary>
-        /// 星期四的可维护时间窗口。
+        /// 星期四的可维护时间窗口。 一周中应至少设置一天的时间窗。
         /// </summary>
         [JsonProperty("Thursday")]
         public string[] Thursday{ get; set; }
 
         /// <summary>
-        /// 星期五的可维护时间窗口。
+        /// 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
         /// </summary>
         [JsonProperty("Friday")]
         public string[] Friday{ get; set; }
 
         /// <summary>
-        /// 星期六的可维护时间窗口。
+        /// 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
         /// </summary>
         [JsonProperty("Saturday")]
         public string[] Saturday{ get; set; }
 
         /// <summary>
-        /// 星期日的可维护时间窗口。
+        /// 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
         /// </summary>
         [JsonProperty("Sunday")]
         public string[] Sunday{ get; set; }

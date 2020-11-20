@@ -85,7 +85,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public Code Code{ get; set; }
 
         /// <summary>
-        /// 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+        /// 代码来源方式，支持 ZipFile, Cos, Inline 之一
         /// </summary>
         [JsonProperty("CodeSource")]
         public string CodeSource{ get; set; }

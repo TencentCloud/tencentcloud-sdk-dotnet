@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.178</VersionPrefix>
+    <VersionPrefix>3.0.179</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -8616,6 +8616,7 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVolumeMount.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcSubnet.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIResponse.cs" />
@@ -8638,6 +8639,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />

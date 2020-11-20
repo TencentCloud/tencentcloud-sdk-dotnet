@@ -350,6 +350,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MixIpTarget")]
         public bool? MixIpTarget{ get; set; }
 
+        /// <summary>
+        /// 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -403,6 +410,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
             this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

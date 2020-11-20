@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Golang1 ， Java8和CustomRuntime
+        /// 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// 在更新时是否同步发布新版本，默认为：FALSE，不发布
+        /// 在更新时是否同步发布新版本，默认为：FALSE，不发布新版本
         /// </summary>
         [JsonProperty("Publish")]
         public string Publish{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public PublicNetConfigIn PublicNetConfig{ get; set; }
 
         /// <summary>
-        /// 文件系统配置入参，用于云函数绑定文件系统
+        /// 文件系统配置入参，用于云函数绑定CFS文件系统
         /// </summary>
         [JsonProperty("CfsConfig")]
         public CfsConfig CfsConfig{ get; set; }
