@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SecurityGroupPolicySet")]
         public SecurityGroupPolicySet SecurityGroupPolicySet{ get; set; }
 
+        /// <summary>
+        /// 旧的安全组规则集合对象，可选，日志记录用。
+        /// </summary>
+        [JsonProperty("OriginalSecurityGroupPolicySet")]
+        public SecurityGroupPolicySet OriginalSecurityGroupPolicySet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
             this.SetParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
+            this.SetParamObj(map, prefix + "OriginalSecurityGroupPolicySet.", this.OriginalSecurityGroupPolicySet);
         }
     }
 }

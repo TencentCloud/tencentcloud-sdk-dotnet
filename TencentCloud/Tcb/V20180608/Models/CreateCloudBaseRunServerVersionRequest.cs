@@ -204,6 +204,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("EnableUnion")]
         public bool? EnableUnion{ get; set; }
 
+        /// <summary>
+        /// 操作备注
+        /// </summary>
+        [JsonProperty("OperatorRemark")]
+        public string OperatorRemark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +246,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "AccessType", this.AccessType);
             this.SetParamObj(map, prefix + "EsInfo.", this.EsInfo);
             this.SetParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
+            this.SetParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
         }
     }
 }

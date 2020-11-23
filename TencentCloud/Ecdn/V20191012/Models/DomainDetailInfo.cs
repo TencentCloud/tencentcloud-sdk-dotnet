@@ -156,6 +156,13 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
+        /// <summary>
+        /// WebSocket配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebSocket")]
+        public WebSocket WebSocket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +189,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Readonly", this.Readonly);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
         }
     }
 }

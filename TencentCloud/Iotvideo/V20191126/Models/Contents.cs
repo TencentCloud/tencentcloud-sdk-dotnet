@@ -45,6 +45,13 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("Tc")]
         public string Tc{ get; set; }
 
+        /// <summary>
+        /// 默认语言，最多不超过300个字符
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Default")]
+        public string Default{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "En", this.En);
             this.SetParamSimple(map, prefix + "Cn", this.Cn);
             this.SetParamSimple(map, prefix + "Tc", this.Tc);
+            this.SetParamSimple(map, prefix + "Default", this.Default);
         }
     }
 }

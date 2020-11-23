@@ -90,6 +90,12 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// WebSocket配置
+        /// </summary>
+        [JsonProperty("WebSocket")]
+        public WebSocket WebSocket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
             this.SetParamObj(map, prefix + "Https.", this.Https);
             this.SetParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
         }
     }
 }

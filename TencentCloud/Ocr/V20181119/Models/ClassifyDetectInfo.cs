@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 分类名称
+        /// 分类名称，包括：身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

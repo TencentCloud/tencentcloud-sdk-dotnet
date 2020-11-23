@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.179</VersionPrefix>
+    <VersionPrefix>3.0.180</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20200210\Models\DescribeChatMessagesResponse.cs" />
     <Compile Include="V20200210\Models\DescribeIMCdrsRequest.cs" />
     <Compile Include="V20200210\Models\DescribeIMCdrsResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeTelCallInfoRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="V20200210\Models\DescribeTelCdrRequest.cs" />
     <Compile Include="V20200210\Models\DescribeTelCdrResponse.cs" />
     <Compile Include="V20200210\Models\IMCdrInfo.cs" />

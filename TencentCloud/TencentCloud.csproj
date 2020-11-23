@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.179</VersionPrefix>
+    <VersionPrefix>3.0.180</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1586,6 +1586,8 @@
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\IMCdrInfo.cs" />
@@ -3065,8 +3067,11 @@
     <Compile Include="Cr\V20180321\Models\DownloadRecordListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadReportRequest.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadReportResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\ProductQueryInfo.cs" />
     <Compile Include="Cr\V20180321\Models\QueryInstantDataRequest.cs" />
     <Compile Include="Cr\V20180321\Models\QueryInstantDataResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryProductsRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryProductsResponse.cs" />
     <Compile Include="Cr\V20180321\Models\SingleBlackApply.cs" />
     <Compile Include="Cr\V20180321\Models\SingleRecord.cs" />
     <Compile Include="Cr\V20180321\Models\UploadDataFileRequest.cs" />
@@ -4307,6 +4312,7 @@
     <Compile Include="Ecdn\V20191012\Models\TimestampData.cs" />
     <Compile Include="Ecdn\V20191012\Models\UpdateDomainConfigRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\UpdateDomainConfigResponse.cs" />
+    <Compile Include="Ecdn\V20191012\Models\WebSocket.cs" />
     <Compile Include="Ecm\V20190719\EcmClient.cs" />
     <Compile Include="Ecm\V20190719\Models\Address.cs" />
     <Compile Include="Ecm\V20190719\Models\AddressInfo.cs" />
@@ -4333,6 +4339,8 @@
     <Compile Include="Ecm\V20190719\Models\BatchTarget.cs" />
     <Compile Include="Ecm\V20190719\Models\City.cs" />
     <Compile Include="Ecm\V20190719\Models\Country.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateHaVipRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateHaVipResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateListenerRequest.cs" />
@@ -4343,6 +4351,10 @@
     <Compile Include="Ecm\V20190719\Models\CreateModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateNetworkInterfaceResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateRouteTableRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateRouteTableResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateRoutesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateRoutesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupPoliciesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupPoliciesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateSecurityGroupRequest.cs" />
@@ -4351,6 +4363,8 @@
     <Compile Include="Ecm\V20190719\Models\CreateSubnetResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateVpcRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateVpcResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteHaVipRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteHaVipResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteListenerRequest.cs" />
@@ -4363,6 +4377,10 @@
     <Compile Include="Ecm\V20190719\Models\DeleteModuleResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteNetworkInterfaceResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteRouteTableRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteRouteTableResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteRoutesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteRoutesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupPoliciesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupPoliciesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupRequest.cs" />
@@ -4383,6 +4401,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeCustomImageTaskResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeHaVipsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeHaVipsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImportImageOsRequest.cs" />
@@ -4413,6 +4433,10 @@
     <Compile Include="Ecm\V20190719\Models\DescribePeakBaseOverviewResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakNetworkOverviewRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakNetworkOverviewResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeRouteConflictsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeRouteConflictsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeRouteTablesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeRouteTablesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupAssociationStatisticsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupAssociationStatisticsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupLimitsRequest.cs" />
@@ -4435,12 +4459,16 @@
     <Compile Include="Ecm\V20190719\Models\DescribeVpcsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DisableRoutesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DisableRoutesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DiskInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\EipQuota.cs" />
+    <Compile Include="Ecm\V20190719\Models\EnableRoutesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\EnableRoutesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\EnhancedService.cs" />
     <Compile Include="Ecm\V20190719\Models\Filter.cs" />
     <Compile Include="Ecm\V20190719\Models\HealthCheck.cs" />
@@ -4479,6 +4507,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyAddressesBandwidthResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyDefaultSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyDefaultSubnetResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyHaVipAttributeRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyHaVipAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyImageAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeRequest.cs" />
@@ -4499,6 +4529,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyModuleNetworkResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleSecurityGroupsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleSecurityGroupsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyRouteTableAttributeRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyRouteTableAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifySecurityGroupPoliciesRequest.cs" />
@@ -4537,6 +4569,10 @@
     <Compile Include="Ecm\V20190719\Models\ReleaseAddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\RemovePrivateIpAddressesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\RemovePrivateIpAddressesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReplaceRouteTableAssociationRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReplaceRouteTableAssociationResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReplaceRoutesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReplaceRoutesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ReplaceSecurityGroupPolicyRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ReplaceSecurityGroupPolicyResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesMaxBandwidthRequest.cs" />
@@ -4545,6 +4581,12 @@
     <Compile Include="Ecm\V20190719\Models\ResetInstancesPasswordResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ResetInstancesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ResetRoutesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ResetRoutesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\Route.cs" />
+    <Compile Include="Ecm\V20190719\Models\RouteConflict.cs" />
+    <Compile Include="Ecm\V20190719\Models\RouteTable.cs" />
+    <Compile Include="Ecm\V20190719\Models\RouteTableAssociation.cs" />
     <Compile Include="Ecm\V20190719\Models\RuleHealth.cs" />
     <Compile Include="Ecm\V20190719\Models\RunEIPDirectServiceEnabled.cs" />
     <Compile Include="Ecm\V20190719\Models\RunInstancesRequest.cs" />

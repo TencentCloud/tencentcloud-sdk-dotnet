@@ -385,6 +385,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+        /// </summary>
+        /// <param name="req"><see cref="CreateHaVipRequest"/></param>
+        /// <returns><see cref="CreateHaVipResponse"/></returns>
+        public async Task<CreateHaVipResponse> CreateHaVip(CreateHaVipRequest req)
+        {
+             JsonResponseModel<CreateHaVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHaVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHaVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+        /// </summary>
+        /// <param name="req"><see cref="CreateHaVipRequest"/></param>
+        /// <returns><see cref="CreateHaVipResponse"/></returns>
+        public CreateHaVipResponse CreateHaVipSync(CreateHaVipRequest req)
+        {
+             JsonResponseModel<CreateHaVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHaVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHaVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
         /// </summary>
         /// <param name="req"><see cref="CreateImageRequest"/></param>
@@ -585,6 +625,86 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRouteTableRequest"/></param>
+        /// <returns><see cref="CreateRouteTableResponse"/></returns>
+        public async Task<CreateRouteTableResponse> CreateRouteTable(CreateRouteTableRequest req)
+        {
+             JsonResponseModel<CreateRouteTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRouteTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRouteTableRequest"/></param>
+        /// <returns><see cref="CreateRouteTableResponse"/></returns>
+        public CreateRouteTableResponse CreateRouteTableSync(CreateRouteTableRequest req)
+        {
+             JsonResponseModel<CreateRouteTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRouteTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建路由策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutesRequest"/></param>
+        /// <returns><see cref="CreateRoutesResponse"/></returns>
+        public async Task<CreateRoutesResponse> CreateRoutes(CreateRoutesRequest req)
+        {
+             JsonResponseModel<CreateRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建路由策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutesRequest"/></param>
+        /// <returns><see cref="CreateRoutesResponse"/></returns>
+        public CreateRoutesResponse CreateRoutesSync(CreateRoutesRequest req)
+        {
+             JsonResponseModel<CreateRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建安全组
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityGroupRequest"/></param>
@@ -758,6 +878,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "CreateVpc");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除高可用虚拟IP（HAVIP）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHaVipRequest"/></param>
+        /// <returns><see cref="DeleteHaVipResponse"/></returns>
+        public async Task<DeleteHaVipResponse> DeleteHaVip(DeleteHaVipRequest req)
+        {
+             JsonResponseModel<DeleteHaVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteHaVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHaVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除高可用虚拟IP（HAVIP）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHaVipRequest"/></param>
+        /// <returns><see cref="DeleteHaVipResponse"/></returns>
+        public DeleteHaVipResponse DeleteHaVipSync(DeleteHaVipRequest req)
+        {
+             JsonResponseModel<DeleteHaVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteHaVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHaVipResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -998,6 +1158,86 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNetworkInterface");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkInterfaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除路由表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteTableRequest"/></param>
+        /// <returns><see cref="DeleteRouteTableResponse"/></returns>
+        public async Task<DeleteRouteTableResponse> DeleteRouteTable(DeleteRouteTableRequest req)
+        {
+             JsonResponseModel<DeleteRouteTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRouteTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除路由表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteTableRequest"/></param>
+        /// <returns><see cref="DeleteRouteTableResponse"/></returns>
+        public DeleteRouteTableResponse DeleteRouteTableSync(DeleteRouteTableRequest req)
+        {
+             JsonResponseModel<DeleteRouteTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRouteTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对某个路由表批量删除路由策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutesRequest"/></param>
+        /// <returns><see cref="DeleteRoutesResponse"/></returns>
+        public async Task<DeleteRoutesResponse> DeleteRoutes(DeleteRoutesRequest req)
+        {
+             JsonResponseModel<DeleteRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对某个路由表批量删除路由策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutesRequest"/></param>
+        /// <returns><see cref="DeleteRoutesResponse"/></returns>
+        public DeleteRoutesResponse DeleteRoutesSync(DeleteRoutesRequest req)
+        {
+             JsonResponseModel<DeleteRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1402,6 +1642,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDefaultSubnet");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询高可用虚拟IP（HAVIP）列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHaVipsRequest"/></param>
+        /// <returns><see cref="DescribeHaVipsResponse"/></returns>
+        public async Task<DescribeHaVipsResponse> DescribeHaVips(DescribeHaVipsRequest req)
+        {
+             JsonResponseModel<DescribeHaVipsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHaVips");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHaVipsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询高可用虚拟IP（HAVIP）列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHaVipsRequest"/></param>
+        /// <returns><see cref="DescribeHaVipsResponse"/></returns>
+        public DescribeHaVipsResponse DescribeHaVipsSync(DescribeHaVipsRequest req)
+        {
+             JsonResponseModel<DescribeHaVipsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHaVips");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHaVipsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2011,6 +2291,86 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询自定义路由策略与云联网路由策略冲突列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteConflictsRequest"/></param>
+        /// <returns><see cref="DescribeRouteConflictsResponse"/></returns>
+        public async Task<DescribeRouteConflictsResponse> DescribeRouteConflicts(DescribeRouteConflictsRequest req)
+        {
+             JsonResponseModel<DescribeRouteConflictsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRouteConflicts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自定义路由策略与云联网路由策略冲突列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteConflictsRequest"/></param>
+        /// <returns><see cref="DescribeRouteConflictsResponse"/></returns>
+        public DescribeRouteConflictsResponse DescribeRouteConflictsSync(DescribeRouteConflictsRequest req)
+        {
+             JsonResponseModel<DescribeRouteConflictsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRouteConflicts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询路由表对象列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTablesResponse"/></returns>
+        public async Task<DescribeRouteTablesResponse> DescribeRouteTables(DescribeRouteTablesRequest req)
+        {
+             JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRouteTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询路由表对象列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRouteTablesRequest"/></param>
+        /// <returns><see cref="DescribeRouteTablesResponse"/></returns>
+        public DescribeRouteTablesResponse DescribeRouteTablesSync(DescribeRouteTablesRequest req)
+        {
+             JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRouteTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询安全组关联实例统计
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupAssociationStatisticsRequest"/></param>
@@ -2451,6 +2811,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 禁用已启用的子网路由
+        /// </summary>
+        /// <param name="req"><see cref="DisableRoutesRequest"/></param>
+        /// <returns><see cref="DisableRoutesResponse"/></returns>
+        public async Task<DisableRoutesResponse> DisableRoutes(DisableRoutesRequest req)
+        {
+             JsonResponseModel<DisableRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用已启用的子网路由
+        /// </summary>
+        /// <param name="req"><see cref="DisableRoutesRequest"/></param>
+        /// <returns><see cref="DisableRoutesResponse"/></returns>
+        public DisableRoutesResponse DisableRoutesSync(DisableRoutesRequest req)
+        {
+             JsonResponseModel<DisableRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑弹性公网IP（简称 EIP）
         /// 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
         /// EIP 如果被封堵，则不能进行解绑定操作。
@@ -2526,6 +2926,48 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用已禁用的子网路由。
+        /// 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+        /// </summary>
+        /// <param name="req"><see cref="EnableRoutesRequest"/></param>
+        /// <returns><see cref="EnableRoutesResponse"/></returns>
+        public async Task<EnableRoutesResponse> EnableRoutes(EnableRoutesRequest req)
+        {
+             JsonResponseModel<EnableRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用已禁用的子网路由。
+        /// 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+        /// </summary>
+        /// <param name="req"><see cref="EnableRoutesRequest"/></param>
+        /// <returns><see cref="EnableRoutesResponse"/></returns>
+        public EnableRoutesResponse EnableRoutesSync(EnableRoutesRequest req)
+        {
+             JsonResponseModel<EnableRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2810,6 +3252,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDefaultSubnet");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于修改高可用虚拟IP（HAVIP）属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHaVipAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHaVipAttributeResponse"/></returns>
+        public async Task<ModifyHaVipAttributeResponse> ModifyHaVipAttribute(ModifyHaVipAttributeRequest req)
+        {
+             JsonResponseModel<ModifyHaVipAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHaVipAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHaVipAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于修改高可用虚拟IP（HAVIP）属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHaVipAttributeRequest"/></param>
+        /// <returns><see cref="ModifyHaVipAttributeResponse"/></returns>
+        public ModifyHaVipAttributeResponse ModifyHaVipAttributeSync(ModifyHaVipAttributeRequest req)
+        {
+             JsonResponseModel<ModifyHaVipAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHaVipAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHaVipAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3219,6 +3701,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 修改路由表属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRouteTableAttributeRequest"/></param>
+        /// <returns><see cref="ModifyRouteTableAttributeResponse"/></returns>
+        public async Task<ModifyRouteTableAttributeResponse> ModifyRouteTableAttribute(ModifyRouteTableAttributeRequest req)
+        {
+             JsonResponseModel<ModifyRouteTableAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRouteTableAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRouteTableAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改路由表属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRouteTableAttributeRequest"/></param>
+        /// <returns><see cref="ModifyRouteTableAttributeResponse"/></returns>
+        public ModifyRouteTableAttributeResponse ModifyRouteTableAttributeSync(ModifyRouteTableAttributeRequest req)
+        {
+             JsonResponseModel<ModifyRouteTableAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRouteTableAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRouteTableAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改安全组属性
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityGroupAttributeRequest"/></param>
@@ -3585,6 +4107,86 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 修改子网关联的路由表，一个子网只能关联一个路由表。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRouteTableAssociationRequest"/></param>
+        /// <returns><see cref="ReplaceRouteTableAssociationResponse"/></returns>
+        public async Task<ReplaceRouteTableAssociationResponse> ReplaceRouteTableAssociation(ReplaceRouteTableAssociationRequest req)
+        {
+             JsonResponseModel<ReplaceRouteTableAssociationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceRouteTableAssociation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceRouteTableAssociationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改子网关联的路由表，一个子网只能关联一个路由表。
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRouteTableAssociationRequest"/></param>
+        /// <returns><see cref="ReplaceRouteTableAssociationResponse"/></returns>
+        public ReplaceRouteTableAssociationResponse ReplaceRouteTableAssociationSync(ReplaceRouteTableAssociationRequest req)
+        {
+             JsonResponseModel<ReplaceRouteTableAssociationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceRouteTableAssociation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceRouteTableAssociationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 替换路由策略
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutesRequest"/></param>
+        /// <returns><see cref="ReplaceRoutesResponse"/></returns>
+        public async Task<ReplaceRoutesResponse> ReplaceRoutes(ReplaceRoutesRequest req)
+        {
+             JsonResponseModel<ReplaceRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 替换路由策略
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutesRequest"/></param>
+        /// <returns><see cref="ReplaceRoutesResponse"/></returns>
+        public ReplaceRoutesResponse ReplaceRoutesSync(ReplaceRoutesRequest req)
+        {
+             JsonResponseModel<ReplaceRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 替换单条安全组路由规则, 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
         /// </summary>
         /// <param name="req"><see cref="ReplaceSecurityGroupPolicyRequest"/></param>
@@ -3736,6 +4338,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ResetInstancesPassword");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetInstancesPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对某个路由表名称和所有路由策略（Route）进行重新设置
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutesRequest"/></param>
+        /// <returns><see cref="ResetRoutesResponse"/></returns>
+        public async Task<ResetRoutesResponse> ResetRoutes(ResetRoutesRequest req)
+        {
+             JsonResponseModel<ResetRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对某个路由表名称和所有路由策略（Route）进行重新设置
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutesRequest"/></param>
+        /// <returns><see cref="ResetRoutesResponse"/></returns>
+        public ResetRoutesResponse ResetRoutesSync(ResetRoutesRequest req)
+        {
+             JsonResponseModel<ResetRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

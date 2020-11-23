@@ -213,6 +213,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 获取电话呼叫统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>
+        /// <returns><see cref="DescribeTelCallInfoResponse"/></returns>
+        public async Task<DescribeTelCallInfoResponse> DescribeTelCallInfo(DescribeTelCallInfoRequest req)
+        {
+             JsonResponseModel<DescribeTelCallInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTelCallInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTelCallInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取电话呼叫统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>
+        /// <returns><see cref="DescribeTelCallInfoResponse"/></returns>
+        public DescribeTelCallInfoResponse DescribeTelCallInfoSync(DescribeTelCallInfoRequest req)
+        {
+             JsonResponseModel<DescribeTelCallInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTelCallInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTelCallInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取电话服务记录与录音
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCdrRequest"/></param>

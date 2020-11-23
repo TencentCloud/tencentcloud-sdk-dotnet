@@ -415,6 +415,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 查询产品列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryProductsRequest"/></param>
+        /// <returns><see cref="QueryProductsResponse"/></returns>
+        public async Task<QueryProductsResponse> QueryProducts(QueryProductsRequest req)
+        {
+             JsonResponseModel<QueryProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询产品列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryProductsRequest"/></param>
+        /// <returns><see cref="QueryProductsResponse"/></returns>
+        public QueryProductsResponse QueryProductsSync(QueryProductsRequest req)
+        {
+             JsonResponseModel<QueryProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 上传文件，接口返回数据任务ID，支持xlsx、xls、csv、zip格式。
         /// </summary>
         /// <param name="req"><see cref="UploadDataFileRequest"/></param>

@@ -55,7 +55,7 @@ namespace TencentCloud.Asw.V20200722.Models
         public string FlowServiceChineseName{ get; set; }
 
         /// <summary>
-        /// 角色资源名
+        /// 角色资源名, 比如: qcs::cam::uin/20103392:roleName/SomeRoleForYourStateMachine
         /// </summary>
         [JsonProperty("RoleResource")]
         public string RoleResource{ get; set; }

@@ -66,6 +66,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
+        /// <summary>
+        /// 操作备注
+        /// </summary>
+        [JsonProperty("OperatorRemark")]
+        public string OperatorRemark{ get; set; }
+
+        /// <summary>
+        /// 来源方（默认值：qcloud，微信侧来源miniapp)
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamObj(map, prefix + "EsInfo.", this.EsInfo);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

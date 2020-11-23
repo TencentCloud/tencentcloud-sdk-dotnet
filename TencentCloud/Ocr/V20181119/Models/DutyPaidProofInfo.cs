@@ -25,7 +25,8 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 识别出的字段名称（关键字）。
+        /// 识别出的字段名称(关键字)，支持以下字段：
+        /// 税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

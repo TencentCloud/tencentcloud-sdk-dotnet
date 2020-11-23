@@ -193,6 +193,27 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
+        /// <summary>
+        /// 主实例信息，仅在实例为只读实例时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MasterDBInstanceId")]
+        public string MasterDBInstanceId{ get; set; }
+
+        /// <summary>
+        /// 只读实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReadOnlyInstanceNum")]
+        public long? ReadOnlyInstanceNum{ get; set; }
+
+        /// <summary>
+        /// 只读实例在只读组中的状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusInReadonlyGroup")]
+        public string StatusInReadonlyGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +248,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
+            this.SetParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
+            this.SetParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
         }
     }
 }
