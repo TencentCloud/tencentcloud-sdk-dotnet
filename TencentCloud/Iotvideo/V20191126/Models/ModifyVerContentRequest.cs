@@ -25,10 +25,10 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     {
         
         /// <summary>
-        /// 产品id,大于0的有符号长整型
+        /// 产品id
         /// </summary>
         [JsonProperty("ProductId")]
-        public long? ProductId{ get; set; }
+        public string ProductId{ get; set; }
 
         /// <summary>
         /// 需要修改的版本号

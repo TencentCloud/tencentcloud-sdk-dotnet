@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F6F05F51-C61F-3421-BC85-59D6329C476E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.180</VersionPrefix>
+    <VersionPrefix>3.0.181</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,11 +51,14 @@
     <Compile Include="V20200210\Models\EnhanceTaDegreeResponse.cs" />
     <Compile Include="V20200210\Models\InputKolBspData.cs" />
     <Compile Include="V20200210\Models\InputKolDataList.cs" />
+    <Compile Include="V20200210\Models\InputRecognizeEffectiveFlow.cs" />
     <Compile Include="V20200210\Models\InputRecognizeTargetAudience.cs" />
     <Compile Include="V20200210\Models\InputSendTrafficSecuritySmsMsg.cs" />
     <Compile Include="V20200210\Models\InputTaBspData.cs" />
     <Compile Include="V20200210\Models\OutputKolData.cs" />
     <Compile Include="V20200210\Models\OutputKolValue.cs" />
+    <Compile Include="V20200210\Models\OutputRecognizeEffectiveFlow.cs" />
+    <Compile Include="V20200210\Models\OutputRecognizeEffectiveFlowValue.cs" />
     <Compile Include="V20200210\Models\OutputRecognizeTargetAudience.cs" />
     <Compile Include="V20200210\Models\OutputRecognizeTargetAudienceValue.cs" />
     <Compile Include="V20200210\Models\OutputSendTrafficSecuritySmsMsg.cs" />
@@ -63,6 +66,8 @@
     <Compile Include="V20200210\Models\OutputTaValue.cs" />
     <Compile Include="V20200210\Models\RecognizeCustomizedAudienceRequest.cs" />
     <Compile Include="V20200210\Models\RecognizeCustomizedAudienceResponse.cs" />
+    <Compile Include="V20200210\Models\RecognizeEffectiveFlowRequest.cs" />
+    <Compile Include="V20200210\Models\RecognizeEffectiveFlowResponse.cs" />
     <Compile Include="V20200210\Models\RecognizePreciseTargetAudienceRequest.cs" />
     <Compile Include="V20200210\Models\RecognizePreciseTargetAudienceResponse.cs" />
     <Compile Include="V20200210\Models\RecognizeTargetAudienceRequest.cs" />

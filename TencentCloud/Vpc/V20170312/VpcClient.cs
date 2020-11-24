@@ -4753,6 +4753,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 该接口用于查询IP地址信息，包括地理位置信息和网络信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
+        /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>
+        public async Task<DescribeIpGeolocationInfosResponse> DescribeIpGeolocationInfos(DescribeIpGeolocationInfosRequest req)
+        {
+             JsonResponseModel<DescribeIpGeolocationInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpGeolocationInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpGeolocationInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询IP地址信息，包括地理位置信息和网络信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpGeolocationInfosRequest"/></param>
+        /// <returns><see cref="DescribeIpGeolocationInfosResponse"/></returns>
+        public DescribeIpGeolocationInfosResponse DescribeIpGeolocationInfosSync(DescribeIpGeolocationInfosRequest req)
+        {
+             JsonResponseModel<DescribeIpGeolocationInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpGeolocationInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpGeolocationInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查询NAT网关端口转发规则对象数组。
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest"/></param>

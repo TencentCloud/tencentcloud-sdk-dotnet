@@ -92,6 +92,12 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("Os")]
         public string Os{ get; set; }
 
+        /// <summary>
+        /// 芯片架构，只是针对操作系统为android的
+        /// </summary>
+        [JsonProperty("ChipArch")]
+        public string ChipArch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "ProductCate", this.ProductCate);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
             this.SetParamSimple(map, prefix + "Os", this.Os);
+            this.SetParamSimple(map, prefix + "ChipArch", this.ChipArch);
         }
     }
 }

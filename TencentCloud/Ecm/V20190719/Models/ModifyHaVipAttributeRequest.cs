@@ -24,12 +24,26 @@ namespace TencentCloud.Ecm.V20190719.Models
     public class ModifyHaVipAttributeRequest : AbstractModel
     {
         
+        /// <summary>
+        /// HAVIP唯一ID，形如：havip-9o233uri。
+        /// </summary>
+        [JsonProperty("HaVipId")]
+        public string HaVipId{ get; set; }
+
+        /// <summary>
+        /// HAVIP名称，可任意命名，但不得超过60个字符。
+        /// </summary>
+        [JsonProperty("HaVipName")]
+        public string HaVipName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "HaVipId", this.HaVipId);
+            this.SetParamSimple(map, prefix + "HaVipName", this.HaVipName);
         }
     }
 }

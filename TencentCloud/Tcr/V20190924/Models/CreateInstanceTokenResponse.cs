@@ -44,6 +44,13 @@ namespace TencentCloud.Tcr.V20190924.Models
         public long? ExpTime{ get; set; }
 
         /// <summary>
+        /// 长期凭证的TokenId，短期凭证没有TokenId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TokenId")]
+        public string TokenId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +65,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "ExpTime", this.ExpTime);
+            this.SetParamSimple(map, prefix + "TokenId", this.TokenId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

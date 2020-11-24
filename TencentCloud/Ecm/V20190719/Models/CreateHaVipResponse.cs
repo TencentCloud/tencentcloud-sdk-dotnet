@@ -25,6 +25,12 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
+        /// HAVIP对象。
+        /// </summary>
+        [JsonProperty("HaVip")]
+        public HaVip HaVip{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "HaVip.", this.HaVip);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

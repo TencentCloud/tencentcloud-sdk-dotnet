@@ -44,7 +44,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// 配置项（JSON格式字符串）
+        /// ES配置项（JSON格式字符串）
         /// </summary>
         [JsonProperty("EsConfig")]
         public string EsConfig{ get; set; }
@@ -168,6 +168,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SceneType")]
         public long? SceneType{ get; set; }
 
+        /// <summary>
+        /// Kibana配置项（JSON格式字符串）
+        /// </summary>
+        [JsonProperty("KibanaConfig")]
+        public string KibanaConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +203,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ScaleType", this.ScaleType);
             this.SetParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
+            this.SetParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
         }
     }
 }

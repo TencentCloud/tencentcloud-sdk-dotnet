@@ -24,12 +24,40 @@ namespace TencentCloud.Ecm.V20190719.Models
     public class CreateHaVipRequest : AbstractModel
     {
         
+        /// <summary>
+        /// HAVIP所在私有网络ID。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// HAVIP所在子网ID。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// HAVIP名称。
+        /// </summary>
+        [JsonProperty("HaVipName")]
+        public string HaVipName{ get; set; }
+
+        /// <summary>
+        /// 指定虚拟IP地址，必须在VPC网段内且未被占用。不指定则自动分配。
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "HaVipName", this.HaVipName);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
         }
     }
 }

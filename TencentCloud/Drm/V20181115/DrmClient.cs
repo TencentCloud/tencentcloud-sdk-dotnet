@@ -385,7 +385,8 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
-        /// 开发者调用该接口，启动一次内容文件的DRM加密工作流
+        /// 开发者调用该接口，启动一次内容文件的DRM加密工作流。
+        /// 注意：该接口已下线。
         /// </summary>
         /// <param name="req"><see cref="StartEncryptionRequest"/></param>
         /// <returns><see cref="StartEncryptionResponse"/></returns>
@@ -405,7 +406,8 @@ namespace TencentCloud.Drm.V20181115
         }
 
         /// <summary>
-        /// 开发者调用该接口，启动一次内容文件的DRM加密工作流
+        /// 开发者调用该接口，启动一次内容文件的DRM加密工作流。
+        /// 注意：该接口已下线。
         /// </summary>
         /// <param name="req"><see cref="StartEncryptionRequest"/></param>
         /// <returns><see cref="StartEncryptionResponse"/></returns>
