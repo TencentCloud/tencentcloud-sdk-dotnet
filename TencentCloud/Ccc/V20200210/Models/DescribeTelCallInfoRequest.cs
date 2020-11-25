@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// 结束时间戳，Unix 时间戳
+        /// 结束时间戳，Unix 时间戳，查询时间范围最大为90天
         /// </summary>
         [JsonProperty("EndTimeStamp")]
         public long? EndTimeStamp{ get; set; }

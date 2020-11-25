@@ -109,6 +109,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("PayModeStatus")]
         public string PayModeStatus{ get; set; }
 
+        /// <summary>
+        /// 产品类型，HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-基础版本型
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 跨可用区类型，MultiZones-只支持跨可用区，SameZones-只支持同可用区，ALL-支持所有
+        /// </summary>
+        [JsonProperty("MultiZonesStatus")]
+        public string MultiZonesStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +141,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamArraySimple(map, prefix + "PostPid.", this.PostPid);
             this.SetParamSimple(map, prefix + "PayModeStatus", this.PayModeStatus);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "MultiZonesStatus", this.MultiZonesStatus);
         }
     }
 }

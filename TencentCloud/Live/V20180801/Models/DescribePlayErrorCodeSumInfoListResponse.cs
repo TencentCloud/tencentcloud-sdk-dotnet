@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 分省份分运营商错误码为4或5开头的状态码数据信息。
+        /// 分省份分运营商错误码为2或3或4或5开头的状态码数据信息。
         /// </summary>
         [JsonProperty("ProIspInfoList")]
         public ProIspPlayCodeDataInfo[] ProIspInfoList{ get; set; }

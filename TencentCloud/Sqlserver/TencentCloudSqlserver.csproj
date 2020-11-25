@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.181</VersionPrefix>
+    <VersionPrefix>3.0.182</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -191,6 +191,8 @@
     <Compile Include="V20180328\Models\ReadOnlyInstanceWeightPair.cs" />
     <Compile Include="V20180328\Models\RecycleDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\RecycleDBInstanceResponse.cs" />
+    <Compile Include="V20180328\Models\RecycleReadOnlyGroupRequest.cs" />
+    <Compile Include="V20180328\Models\RecycleReadOnlyGroupResponse.cs" />
     <Compile Include="V20180328\Models\RegionInfo.cs" />
     <Compile Include="V20180328\Models\RemoveBackupsRequest.cs" />
     <Compile Include="V20180328\Models\RemoveBackupsResponse.cs" />

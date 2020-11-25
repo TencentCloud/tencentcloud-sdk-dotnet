@@ -213,7 +213,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 获取电话呼叫统计信息
+        /// 按实例获取电话消耗统计
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>
         /// <returns><see cref="DescribeTelCallInfoResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 获取电话呼叫统计信息
+        /// 按实例获取电话消耗统计
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>
         /// <returns><see cref="DescribeTelCallInfoResponse"/></returns>

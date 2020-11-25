@@ -2413,6 +2413,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（RecycleReadOnlyGroup）立即回收只读组的资源，只读组占用的vip等资源将立即释放且不可找回。
+        /// </summary>
+        /// <param name="req"><see cref="RecycleReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RecycleReadOnlyGroupResponse"/></returns>
+        public async Task<RecycleReadOnlyGroupResponse> RecycleReadOnlyGroup(RecycleReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<RecycleReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecycleReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecycleReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RecycleReadOnlyGroup）立即回收只读组的资源，只读组占用的vip等资源将立即释放且不可找回。
+        /// </summary>
+        /// <param name="req"><see cref="RecycleReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RecycleReadOnlyGroupResponse"/></returns>
+        public RecycleReadOnlyGroupResponse RecycleReadOnlyGroupSync(RecycleReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<RecycleReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecycleReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecycleReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（RemoveBackups）可以删除用户手动创建的备份文件。待删除的备份策略可以是实例备份，也可以是多库备份。
         /// </summary>
         /// <param name="req"><see cref="RemoveBackupsRequest"/></param>
@@ -2813,7 +2853,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(TerminateDBInstance)用于主动销毁按量计费实例。
+        /// 本接口(TerminateDBInstance)用于主动隔离实例，使得实例进入回收站。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDBInstanceResponse"/></returns>
@@ -2833,7 +2873,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(TerminateDBInstance)用于主动销毁按量计费实例。
+        /// 本接口(TerminateDBInstance)用于主动隔离实例，使得实例进入回收站。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstanceRequest"/></param>
         /// <returns><see cref="TerminateDBInstanceResponse"/></returns>

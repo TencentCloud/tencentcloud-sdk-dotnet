@@ -25,7 +25,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
     {
         
         /// <summary>
-        /// 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+        /// 产品Id ，创建产品时腾讯云为用户分配全局唯一的Id
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }

@@ -38,7 +38,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Forward{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+        /// 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。
         /// 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
         /// </summary>
         [JsonProperty("LoadBalancerName")]

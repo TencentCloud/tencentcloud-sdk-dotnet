@@ -53,7 +53,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（BindDevices）用于网关设备批量绑定子设备
+        /// 本接口（BindDevices）用于网关设备批量绑定子设备 
         /// </summary>
         /// <param name="req"><see cref="BindDevicesRequest"/></param>
         /// <returns><see cref="BindDevicesResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（BindDevices）用于网关设备批量绑定子设备
+        /// 本接口（BindDevices）用于网关设备批量绑定子设备 
         /// </summary>
         /// <param name="req"><see cref="BindDevicesRequest"/></param>
         /// <returns><see cref="BindDevicesResponse"/></returns>
@@ -773,7 +773,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
+        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次 
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceClientKeyRequest"/></param>
         /// <returns><see cref="DescribeDeviceClientKeyResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次
+        /// 获取证书认证类型设备的私钥，刚生成或者重置设备后仅可调用一次 
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceClientKeyRequest"/></param>
         /// <returns><see cref="DescribeDeviceClientKeyResponse"/></returns>
@@ -1893,7 +1893,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备
+        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备 
         /// </summary>
         /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
         /// <returns><see cref="UnbindDevicesResponse"/></returns>
@@ -1913,7 +1913,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备
+        /// 本接口（UnbindDevices）用于网关设备批量解绑子设备 
         /// </summary>
         /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
         /// <returns><see cref="UnbindDevicesResponse"/></returns>
@@ -1933,7 +1933,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 启用或者禁用设备
+        /// 启用或者禁用设备 
         /// </summary>
         /// <param name="req"><see cref="UpdateDeviceAvailableStateRequest"/></param>
         /// <returns><see cref="UpdateDeviceAvailableStateResponse"/></returns>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 启用或者禁用设备
+        /// 启用或者禁用设备 
         /// </summary>
         /// <param name="req"><see cref="UpdateDeviceAvailableStateRequest"/></param>
         /// <returns><see cref="UpdateDeviceAvailableStateResponse"/></returns>
