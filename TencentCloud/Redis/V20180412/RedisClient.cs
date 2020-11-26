@@ -1133,6 +1133,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询Redis节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
+        public async Task<DescribeInstanceZoneInfoResponse> DescribeInstanceZoneInfo(DescribeInstanceZoneInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceZoneInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceZoneInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceZoneInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Redis节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
+        public DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfoSync(DescribeInstanceZoneInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceZoneInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceZoneInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceZoneInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询Redis实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>

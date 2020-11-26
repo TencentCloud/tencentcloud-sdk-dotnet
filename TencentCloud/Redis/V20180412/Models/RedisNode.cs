@@ -15,34 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InsuranceBillInfo : AbstractModel
+    public class RedisNode : AbstractModel
     {
         
         /// <summary>
-        /// 识别出的字段名称(关键字)，支持以下字段：
-        /// 【病案首页】
-        /// 姓名、性别、出生日期、出院诊断、疾病编码、入院病情等。
-        /// 【费用清单】
-        /// 医疗参保人员类别、身份证号、入院方式、结账日期、项目、金额等。
-        /// 【结算单】
-        /// 名称、单价、数量、金额、医保内、医保外等。
-        /// 【医疗发票】
-        /// 姓名、性别、住院时间、收费项目、金额、合计等。
+        /// 节点key的个数
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Keys")]
+        public long? Keys{ get; set; }
 
         /// <summary>
-        /// 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
+        /// 节点slot分布
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Slot")]
+        public string Slot{ get; set; }
+
+        /// <summary>
+        /// 节点的序列ID
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
+
+        /// <summary>
+        /// 节点的状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -50,8 +54,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Keys", this.Keys);
+            this.SetParamSimple(map, prefix + "Slot", this.Slot);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

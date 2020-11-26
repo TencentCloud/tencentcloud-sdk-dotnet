@@ -33,6 +33,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 水印图片 URL。
+        /// URL中禁止包含的字符：
+        ///  ;(){}$>`#"\'|
         /// </summary>
         [JsonProperty("PictureUrl")]
         public string PictureUrl{ get; set; }

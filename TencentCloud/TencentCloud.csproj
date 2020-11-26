@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.182</VersionPrefix>
+    <VersionPrefix>3.0.183</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7767,6 +7767,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeInstanceSecurityGroupResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceShardsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstanceShardsResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeInstanceZoneInfoRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeInstanceZoneInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
@@ -7844,11 +7846,13 @@
     <Compile Include="Redis\V20180412\Models\ProxyNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RedisBackupSet.cs" />
     <Compile Include="Redis\V20180412\Models\RedisCommonInstanceList.cs" />
+    <Compile Include="Redis\V20180412\Models\RedisNode.cs" />
     <Compile Include="Redis\V20180412\Models\RedisNodeInfo.cs" />
     <Compile Include="Redis\V20180412\Models\RedisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RegionConf.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\ReplicaGroup.cs" />
     <Compile Include="Redis\V20180412\Models\ResetPasswordRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ResetPasswordResponse.cs" />
     <Compile Include="Redis\V20180412\Models\RestoreInstanceRequest.cs" />
@@ -8710,6 +8714,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />

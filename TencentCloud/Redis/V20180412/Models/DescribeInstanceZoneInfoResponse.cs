@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ocr.V20181119.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InsuranceBillInfo : AbstractModel
+    public class DescribeInstanceZoneInfoResponse : AbstractModel
     {
         
         /// <summary>
-        /// 识别出的字段名称(关键字)，支持以下字段：
-        /// 【病案首页】
-        /// 姓名、性别、出生日期、出院诊断、疾病编码、入院病情等。
-        /// 【费用清单】
-        /// 医疗参保人员类别、身份证号、入院方式、结账日期、项目、金额等。
-        /// 【结算单】
-        /// 名称、单价、数量、金额、医保内、医保外等。
-        /// 【医疗发票】
-        /// 姓名、性别、住院时间、收费项目、金额、合计等。
+        /// 实例节点组的个数
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
+        /// 实例节点组列表
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("ReplicaGroups")]
+        public ReplicaGroup[] ReplicaGroups{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,8 +48,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "ReplicaGroups.", this.ReplicaGroups);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

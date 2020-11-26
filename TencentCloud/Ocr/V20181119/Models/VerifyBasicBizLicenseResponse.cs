@@ -67,7 +67,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Zsopscope{ get; set; }
 
         /// <summary>
-        /// 状态信息
+        /// 查询的状态信息
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

@@ -533,6 +533,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查看容器托管的集群状态扩展使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunResourceForExtendRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunResourceForExtendResponse"/></returns>
+        public async Task<DescribeCloudBaseRunResourceForExtendResponse> DescribeCloudBaseRunResourceForExtend(DescribeCloudBaseRunResourceForExtendRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunResourceForExtendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunResourceForExtend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunResourceForExtendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看容器托管的集群状态扩展使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunResourceForExtendRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunResourceForExtendResponse"/></returns>
+        public DescribeCloudBaseRunResourceForExtendResponse DescribeCloudBaseRunResourceForExtendSync(DescribeCloudBaseRunResourceForExtendRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunResourceForExtendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunResourceForExtend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunResourceForExtendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunServerVersionRequest"/></param>
