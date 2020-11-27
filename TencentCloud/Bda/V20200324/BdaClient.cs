@@ -159,6 +159,46 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
+        /// 本接口为离线人像分割处理接口组中的提交任务接口，可以对提交的资源进行处理视频流/图片流识别视频作品中的人像区域，进行一键抠像、背景替换、人像虚化等后期处理。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSegmentationTaskRequest"/></param>
+        /// <returns><see cref="CreateSegmentationTaskResponse"/></returns>
+        public async Task<CreateSegmentationTaskResponse> CreateSegmentationTask(CreateSegmentationTaskRequest req)
+        {
+             JsonResponseModel<CreateSegmentationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSegmentationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSegmentationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口为离线人像分割处理接口组中的提交任务接口，可以对提交的资源进行处理视频流/图片流识别视频作品中的人像区域，进行一键抠像、背景替换、人像虚化等后期处理。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSegmentationTaskRequest"/></param>
+        /// <returns><see cref="CreateSegmentationTaskResponse"/></returns>
+        public CreateSegmentationTaskResponse CreateSegmentationTaskSync(CreateSegmentationTaskRequest req)
+        {
+             JsonResponseModel<CreateSegmentationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSegmentationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSegmentationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将一个人体轨迹添加到一个人员中。一个人员最多允许包含 5 个人体轨迹。同一人的人体轨迹越多，搜索识别效果越好。
         /// 
         /// >请注意：
@@ -284,6 +324,46 @@ namespace TencentCloud.Bda.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DeletePerson");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可以查看单条任务的处理情况，包括处理状态，处理结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSegmentationTaskRequest"/></param>
+        /// <returns><see cref="DescribeSegmentationTaskResponse"/></returns>
+        public async Task<DescribeSegmentationTaskResponse> DescribeSegmentationTask(DescribeSegmentationTaskRequest req)
+        {
+             JsonResponseModel<DescribeSegmentationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSegmentationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSegmentationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可以查看单条任务的处理情况，包括处理状态，处理结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSegmentationTaskRequest"/></param>
+        /// <returns><see cref="DescribeSegmentationTaskResponse"/></returns>
+        public DescribeSegmentationTaskResponse DescribeSegmentationTaskSync(DescribeSegmentationTaskRequest req)
+        {
+             JsonResponseModel<DescribeSegmentationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSegmentationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSegmentationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -658,6 +738,46 @@ namespace TencentCloud.Bda.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "SegmentPortraitPic");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SegmentPortraitPicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 终止指定视频人像分割处理任务
+        /// </summary>
+        /// <param name="req"><see cref="TerminateSegmentationTaskRequest"/></param>
+        /// <returns><see cref="TerminateSegmentationTaskResponse"/></returns>
+        public async Task<TerminateSegmentationTaskResponse> TerminateSegmentationTask(TerminateSegmentationTaskRequest req)
+        {
+             JsonResponseModel<TerminateSegmentationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateSegmentationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateSegmentationTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 终止指定视频人像分割处理任务
+        /// </summary>
+        /// <param name="req"><see cref="TerminateSegmentationTaskRequest"/></param>
+        /// <returns><see cref="TerminateSegmentationTaskResponse"/></returns>
+        public TerminateSegmentationTaskResponse TerminateSegmentationTaskSync(TerminateSegmentationTaskRequest req)
+        {
+             JsonResponseModel<TerminateSegmentationTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateSegmentationTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateSegmentationTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

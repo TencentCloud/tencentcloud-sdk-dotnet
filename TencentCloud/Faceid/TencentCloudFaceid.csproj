@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{285E4D65-D854-3FAC-912D-5A63E6D8406B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.183</VersionPrefix>
+    <VersionPrefix>3.0.184</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,8 @@
     <Compile Include="V20180301\Models\CheckBankCardInformationResponse.cs" />
     <Compile Include="V20180301\Models\CheckIdCardInformationRequest.cs" />
     <Compile Include="V20180301\Models\CheckIdCardInformationResponse.cs" />
+    <Compile Include="V20180301\Models\CheckPhoneAndNameRequest.cs" />
+    <Compile Include="V20180301\Models\CheckPhoneAndNameResponse.cs" />
     <Compile Include="V20180301\Models\DetectAuthRequest.cs" />
     <Compile Include="V20180301\Models\DetectAuthResponse.cs" />
     <Compile Include="V20180301\Models\DetectDetail.cs" />

@@ -6793,6 +6793,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribePriceCreateDirectConnectGateway）用于创建专线网关询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDirectConnectGatewayResponse"/></returns>
+        public async Task<InquirePriceCreateDirectConnectGatewayResponse> InquirePriceCreateDirectConnectGateway(InquirePriceCreateDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribePriceCreateDirectConnectGateway）用于创建专线网关询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDirectConnectGatewayRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDirectConnectGatewayResponse"/></returns>
+        public InquirePriceCreateDirectConnectGatewayResponse InquirePriceCreateDirectConnectGatewaySync(InquirePriceCreateDirectConnectGatewayRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateDirectConnectGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateVpnGatewayRequest"/></param>

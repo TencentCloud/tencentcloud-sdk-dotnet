@@ -15,21 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Bda.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSpotTypeConfigRequest : AbstractModel
+    public class TerminateSegmentationTaskRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 在提交分割任务成功时返回的任务标识ID。
+        /// </summary>
+        [JsonProperty("TaskID")]
+        public string TaskID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TaskID", this.TaskID);
         }
     }
 }

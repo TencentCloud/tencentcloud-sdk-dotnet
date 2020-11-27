@@ -253,6 +253,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 本接口用于校验手机号和姓名的真实性和一致性。
+        /// </summary>
+        /// <param name="req"><see cref="CheckPhoneAndNameRequest"/></param>
+        /// <returns><see cref="CheckPhoneAndNameResponse"/></returns>
+        public async Task<CheckPhoneAndNameResponse> CheckPhoneAndName(CheckPhoneAndNameRequest req)
+        {
+             JsonResponseModel<CheckPhoneAndNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckPhoneAndName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckPhoneAndNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验手机号和姓名的真实性和一致性。
+        /// </summary>
+        /// <param name="req"><see cref="CheckPhoneAndNameRequest"/></param>
+        /// <returns><see cref="CheckPhoneAndNameResponse"/></returns>
+        public CheckPhoneAndNameResponse CheckPhoneAndNameSync(CheckPhoneAndNameRequest req)
+        {
+             JsonResponseModel<CheckPhoneAndNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckPhoneAndName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckPhoneAndNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
         /// </summary>
         /// <param name="req"><see cref="DetectAuthRequest"/></param>

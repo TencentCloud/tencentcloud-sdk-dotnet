@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSpotTypeConfigResponse : AbstractModel
+    public class UpgradeClusterInstancesResponse : AbstractModel
     {
         
         /// <summary>

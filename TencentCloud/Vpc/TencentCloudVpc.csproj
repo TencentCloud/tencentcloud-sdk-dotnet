@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.183</VersionPrefix>
+    <VersionPrefix>3.0.184</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -402,6 +402,8 @@
     <Compile Include="V20170312\Models\HaVipDisassociateAddressIpResponse.cs" />
     <Compile Include="V20170312\Models\IKEOptionsSpecification.cs" />
     <Compile Include="V20170312\Models\IPSECOptionsSpecification.cs" />
+    <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayRequest.cs" />
+    <Compile Include="V20170312\Models\InquirePriceCreateDirectConnectGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewVpnGatewayRequest.cs" />

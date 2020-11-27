@@ -353,6 +353,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// API已发布的环境信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Environments")]
+        public string[] Environments{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -406,6 +413,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamObj(map, prefix + "ServiceTsfHealthCheckConf.", this.ServiceTsfHealthCheckConf);
             this.SetParamSimple(map, prefix + "EnableCORS", this.EnableCORS);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "Environments.", this.Environments);
         }
     }
 }

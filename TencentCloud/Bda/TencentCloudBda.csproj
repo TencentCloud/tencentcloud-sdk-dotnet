@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{591212AC-AE62-3F3C-841F-15B525F84E18}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.183</VersionPrefix>
+    <VersionPrefix>3.0.184</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,12 +58,16 @@
     <Compile Include="V20200324\Models\CreateGroupResponse.cs" />
     <Compile Include="V20200324\Models\CreatePersonRequest.cs" />
     <Compile Include="V20200324\Models\CreatePersonResponse.cs" />
+    <Compile Include="V20200324\Models\CreateSegmentationTaskRequest.cs" />
+    <Compile Include="V20200324\Models\CreateSegmentationTaskResponse.cs" />
     <Compile Include="V20200324\Models\CreateTraceRequest.cs" />
     <Compile Include="V20200324\Models\CreateTraceResponse.cs" />
     <Compile Include="V20200324\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20200324\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20200324\Models\DeletePersonRequest.cs" />
     <Compile Include="V20200324\Models\DeletePersonResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeSegmentationTaskRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeSegmentationTaskResponse.cs" />
     <Compile Include="V20200324\Models\DetectBodyJointsRequest.cs" />
     <Compile Include="V20200324\Models\DetectBodyJointsResponse.cs" />
     <Compile Include="V20200324\Models\DetectBodyRequest.cs" />
@@ -92,11 +96,14 @@
     <Compile Include="V20200324\Models\SegmentPortraitPicRequest.cs" />
     <Compile Include="V20200324\Models\SegmentPortraitPicResponse.cs" />
     <Compile Include="V20200324\Models\SegmentationOptions.cs" />
+    <Compile Include="V20200324\Models\TerminateSegmentationTaskRequest.cs" />
+    <Compile Include="V20200324\Models\TerminateSegmentationTaskResponse.cs" />
     <Compile Include="V20200324\Models\Trace.cs" />
     <Compile Include="V20200324\Models\TraceInfo.cs" />
     <Compile Include="V20200324\Models\UpperBodyCloth.cs" />
     <Compile Include="V20200324\Models\UpperBodyClothColor.cs" />
     <Compile Include="V20200324\Models\UpperBodyClothSleeve.cs" />
     <Compile Include="V20200324\Models\UpperBodyClothTexture.cs" />
+    <Compile Include="V20200324\Models\VideoBasicInformation.cs" />
   </ItemGroup>
 </Project>

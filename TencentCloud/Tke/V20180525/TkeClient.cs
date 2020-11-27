@@ -173,6 +173,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 检查给定节点列表中哪些是可升级的 
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>
+        /// <returns><see cref="CheckInstancesUpgradeAbleResponse"/></returns>
+        public async Task<CheckInstancesUpgradeAbleResponse> CheckInstancesUpgradeAble(CheckInstancesUpgradeAbleRequest req)
+        {
+             JsonResponseModel<CheckInstancesUpgradeAbleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckInstancesUpgradeAble");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstancesUpgradeAbleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 检查给定节点列表中哪些是可升级的 
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>
+        /// <returns><see cref="CheckInstancesUpgradeAbleResponse"/></returns>
+        public CheckInstancesUpgradeAbleResponse CheckInstancesUpgradeAbleSync(CheckInstancesUpgradeAbleRequest req)
+        {
+             JsonResponseModel<CheckInstancesUpgradeAbleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckInstancesUpgradeAble");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstancesUpgradeAbleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建集群
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
@@ -1764,6 +1804,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "RemoveNodeFromNodePool");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveNodeFromNodePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 给集群的一批work节点进行升级 
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterInstancesRequest"/></param>
+        /// <returns><see cref="UpgradeClusterInstancesResponse"/></returns>
+        public async Task<UpgradeClusterInstancesResponse> UpgradeClusterInstances(UpgradeClusterInstancesRequest req)
+        {
+             JsonResponseModel<UpgradeClusterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeClusterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 给集群的一批work节点进行升级 
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeClusterInstancesRequest"/></param>
+        /// <returns><see cref="UpgradeClusterInstancesResponse"/></returns>
+        public UpgradeClusterInstancesResponse UpgradeClusterInstancesSync(UpgradeClusterInstancesRequest req)
+        {
+             JsonResponseModel<UpgradeClusterInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeClusterInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeClusterInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -171,6 +171,17 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
+        /// <summary>
+        /// 本次流程最终比对库源类型。包括：
+        /// 公安商业库；
+        /// 业务方自有库（用户上传照片、客户的混合库、混合部署库）；
+        /// 二次验证库；
+        /// 人工审核库；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CompareLibType")]
+        public string CompareLibType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +209,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamArrayObj(map, prefix + "LivenessDetail.", this.LivenessDetail);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
         }
     }
 }
