@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.184</VersionPrefix>
+    <VersionPrefix>3.0.185</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,7 @@
     <Compile Include="V20170320\Models\BalanceRoGroupLoadRequest.cs" />
     <Compile Include="V20170320\Models\BalanceRoGroupLoadResponse.cs" />
     <Compile Include="V20170320\Models\BinlogInfo.cs" />
+    <Compile Include="V20170320\Models\CloneItem.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceRequest.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceResponse.cs" />
     <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="V20170320\Models\CreateAuditRuleResponse.cs" />
     <Compile Include="V20170320\Models\CreateBackupRequest.cs" />
     <Compile Include="V20170320\Models\CreateBackupResponse.cs" />
+    <Compile Include="V20170320\Models\CreateCloneInstanceRequest.cs" />
+    <Compile Include="V20170320\Models\CreateCloneInstanceResponse.cs" />
     <Compile Include="V20170320\Models\CreateDBImportJobRequest.cs" />
     <Compile Include="V20170320\Models\CreateDBImportJobResponse.cs" />
     <Compile Include="V20170320\Models\CreateDBInstanceHourRequest.cs" />
@@ -139,6 +142,8 @@
     <Compile Include="V20170320\Models\DescribeBinlogBackupOverviewResponse.cs" />
     <Compile Include="V20170320\Models\DescribeBinlogsRequest.cs" />
     <Compile Include="V20170320\Models\DescribeBinlogsResponse.cs" />
+    <Compile Include="V20170320\Models\DescribeCloneListRequest.cs" />
+    <Compile Include="V20170320\Models\DescribeCloneListResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBImportRecordsRequest.cs" />
     <Compile Include="V20170320\Models\DescribeDBImportRecordsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBInstanceCharsetRequest.cs" />
@@ -306,6 +311,8 @@
     <Compile Include="V20170320\Models\StartBatchRollbackResponse.cs" />
     <Compile Include="V20170320\Models\StopDBImportJobRequest.cs" />
     <Compile Include="V20170320\Models\StopDBImportJobResponse.cs" />
+    <Compile Include="V20170320\Models\StopRollbackRequest.cs" />
+    <Compile Include="V20170320\Models\StopRollbackResponse.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeResponse.cs" />
     <Compile Include="V20170320\Models\TableNameInfo.cs" />

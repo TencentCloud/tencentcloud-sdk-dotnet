@@ -79,7 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 一次性返回的记录数量，最大为400。
+        /// 一次性返回的记录数量，默认为100，最大为400。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

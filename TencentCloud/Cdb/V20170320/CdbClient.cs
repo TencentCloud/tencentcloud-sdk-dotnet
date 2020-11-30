@@ -413,6 +413,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(CreateCloneInstance) 用于从目标源实例创建一个克隆实例，可以指定克隆实例回档到源实例的指定物理备份文件或者指定的回档时间点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public async Task<CreateCloneInstanceResponse> CreateCloneInstance(CreateCloneInstanceRequest req)
+        {
+             JsonResponseModel<CreateCloneInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloneInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloneInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateCloneInstance) 用于从目标源实例创建一个克隆实例，可以指定克隆实例回档到源实例的指定物理备份文件或者指定的回档时间点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public CreateCloneInstanceResponse CreateCloneInstanceSync(CreateCloneInstanceRequest req)
+        {
+             JsonResponseModel<CreateCloneInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloneInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloneInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateDBImportJob)用于创建云数据库数据导入任务。
         /// 
         /// 注意，用户进行数据导入任务的文件，必须提前上传到腾讯云。用户须在控制台进行文件导入。
@@ -1608,6 +1648,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBinlogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneListRequest"/></param>
+        /// <returns><see cref="DescribeCloneListResponse"/></returns>
+        public async Task<DescribeCloneListResponse> DescribeCloneList(DescribeCloneListRequest req)
+        {
+             JsonResponseModel<DescribeCloneListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloneList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloneListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneListRequest"/></param>
+        /// <returns><see cref="DescribeCloneListResponse"/></returns>
+        public DescribeCloneListResponse DescribeCloneListSync(DescribeCloneListRequest req)
+        {
+             JsonResponseModel<DescribeCloneListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloneList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloneListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4158,6 +4238,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StopDBImportJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDBImportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(StopRollback) 用于撤销实例正在进行的回档任务，该接口返回一个异步任务id。 撤销结果可以通过 DescribeRequestResult 查询任务的执行情况。
+        /// </summary>
+        /// <param name="req"><see cref="StopRollbackRequest"/></param>
+        /// <returns><see cref="StopRollbackResponse"/></returns>
+        public async Task<StopRollbackResponse> StopRollback(StopRollbackRequest req)
+        {
+             JsonResponseModel<StopRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRollbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(StopRollback) 用于撤销实例正在进行的回档任务，该接口返回一个异步任务id。 撤销结果可以通过 DescribeRequestResult 查询任务的执行情况。
+        /// </summary>
+        /// <param name="req"><see cref="StopRollbackRequest"/></param>
+        /// <returns><see cref="StopRollbackResponse"/></returns>
+        public StopRollbackResponse StopRollbackSync(StopRollbackRequest req)
+        {
+             JsonResponseModel<StopRollbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopRollback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopRollbackResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

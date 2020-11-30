@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.184</VersionPrefix>
+    <VersionPrefix>3.0.185</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -167,6 +167,8 @@
     <Compile Include="V20180228\Models\DescribeReverseShellRulesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityDynamicsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityDynamicsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeSecurityEventsCntRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeSecurityEventsCntResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityTrendsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityTrendsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeTagMachinesRequest.cs" />
@@ -218,6 +220,7 @@
     <Compile Include="V20180228\Models\ExportReverseShellEventsRequest.cs" />
     <Compile Include="V20180228\Models\ExportReverseShellEventsResponse.cs" />
     <Compile Include="V20180228\Models\Filter.cs" />
+    <Compile Include="V20180228\Models\Filters.cs" />
     <Compile Include="V20180228\Models\HistoryAccount.cs" />
     <Compile Include="V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="V20180228\Models\IgnoreImpactedHostsResponse.cs" />
@@ -263,6 +266,7 @@
     <Compile Include="V20180228\Models\ReverseShell.cs" />
     <Compile Include="V20180228\Models\ReverseShellRule.cs" />
     <Compile Include="V20180228\Models\SecurityDynamic.cs" />
+    <Compile Include="V20180228\Models\SecurityEventInfo.cs" />
     <Compile Include="V20180228\Models\SecurityTrend.cs" />
     <Compile Include="V20180228\Models\SeparateMalwaresRequest.cs" />
     <Compile Include="V20180228\Models\SeparateMalwaresResponse.cs" />

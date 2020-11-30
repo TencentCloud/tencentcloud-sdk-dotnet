@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] KeyWords{ get; set; }
 
         /// <summary>
-        /// 分页的返回数量，最大为400。
+        /// 分页的返回数量，默认为100，最大为400。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

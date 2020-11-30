@@ -136,6 +136,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
+        /// <summary>
+        /// 实例状态 TERMINATED_PRO_VERSION 已销毁
+        /// </summary>
+        [JsonProperty("InstanceState")]
+        public string InstanceState{ get; set; }
+
+        /// <summary>
+        /// 授权状态 1 授权 0 未授权
+        /// </summary>
+        [JsonProperty("LicenseStatus")]
+        public ulong? LicenseStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +171,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
             this.SetParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
             this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
+            this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
+            this.SetParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
         }
     }
 }

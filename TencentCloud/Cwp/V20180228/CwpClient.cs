@@ -2293,6 +2293,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 概览页抽屉侧边弹窗：安全概览“立即处理”页面中的相关事件数统计接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityEventsCntRequest"/></param>
+        /// <returns><see cref="DescribeSecurityEventsCntResponse"/></returns>
+        public async Task<DescribeSecurityEventsCntResponse> DescribeSecurityEventsCnt(DescribeSecurityEventsCntRequest req)
+        {
+             JsonResponseModel<DescribeSecurityEventsCntResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityEventsCnt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityEventsCntResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 概览页抽屉侧边弹窗：安全概览“立即处理”页面中的相关事件数统计接口。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityEventsCntRequest"/></param>
+        /// <returns><see cref="DescribeSecurityEventsCntResponse"/></returns>
+        public DescribeSecurityEventsCntResponse DescribeSecurityEventsCntSync(DescribeSecurityEventsCntRequest req)
+        {
+             JsonResponseModel<DescribeSecurityEventsCntResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityEventsCnt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityEventsCntResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityTrendsRequest"/></param>

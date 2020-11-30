@@ -249,6 +249,54 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
+        /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
+        /// 
+        /// 戴口罩人脸比对接口可在查询照人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
+        /// 
+        /// 如图片人脸不存在戴口罩情况，建议使用人脸比对服务。
+        /// </summary>
+        /// <param name="req"><see cref="CompareMaskFaceRequest"/></param>
+        /// <returns><see cref="CompareMaskFaceResponse"/></returns>
+        public async Task<CompareMaskFaceResponse> CompareMaskFace(CompareMaskFaceRequest req)
+        {
+             JsonResponseModel<CompareMaskFaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CompareMaskFace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompareMaskFaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
+        /// 
+        /// 戴口罩人脸比对接口可在查询照人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
+        /// 
+        /// 如图片人脸不存在戴口罩情况，建议使用人脸比对服务。
+        /// </summary>
+        /// <param name="req"><see cref="CompareMaskFaceRequest"/></param>
+        /// <returns><see cref="CompareMaskFaceResponse"/></returns>
+        public CompareMaskFaceResponse CompareMaskFaceSync(CompareMaskFaceRequest req)
+        {
+             JsonResponseModel<CompareMaskFaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CompareMaskFace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CompareMaskFaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将已存在于某人员库的人员复制到其他人员库，该人员的描述信息不会被复制。单个人员最多只能同时存在100个人员库中。
         /// >     
         /// - 注：若该人员创建时算法模型版本为2.0，复制到非2.0算法模型版本的Group中时，复制操作将会失败。

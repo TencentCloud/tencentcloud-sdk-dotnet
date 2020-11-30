@@ -24,12 +24,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     public class ExportNonlocalLoginPlacesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；2：异地登录</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }
