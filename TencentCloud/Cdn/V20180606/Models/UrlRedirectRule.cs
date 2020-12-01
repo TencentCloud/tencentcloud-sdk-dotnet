@@ -31,13 +31,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? RedirectStatusCode{ get; set; }
 
         /// <summary>
-        /// 待匹配的Url模式，支持完全路径匹配和正则匹配，最大长度1024字符。
+        /// 待匹配的Url，仅支持Url路径，不支持参数。默认完全匹配，支持通配符 *，最多支持5个通配符，最大长度1024字符。
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// 目标URL，必须以“/”开头，最大长度1024字符。
+        /// 目标URL，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }

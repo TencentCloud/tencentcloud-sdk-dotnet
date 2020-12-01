@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 证书公钥。
+        /// 证书内容。
         /// </summary>
         [JsonProperty("CertificatePublicKey")]
         public string CertificatePublicKey{ get; set; }

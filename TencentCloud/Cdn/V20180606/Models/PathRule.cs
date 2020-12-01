@@ -32,35 +32,35 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Regex{ get; set; }
 
         /// <summary>
-        /// 匹配的URL路径。
+        /// 匹配的URL路径，仅支持Url路径，不支持参数。默认完全匹配，正则模式下支持通配符 *，最多支持5个通配符，最大长度1024字符。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 路径匹配时的回源源站。暂不支持开了私有读写的COS源。
+        /// 路径匹配时的回源源站。暂不支持开了私有读写的COS源。不填写时沿用默认源站。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// 路径匹配时回源的Host头部。
+        /// 路径匹配时回源的Host头部。不填写时沿用默认ServerName。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
 
         /// <summary>
-        /// 源站所属区域，支持CN，OV。分别表示国内或海外。
+        /// 源站所属区域，支持CN，OV。分别表示国内或海外。默认为CN。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginArea")]
         public string OriginArea{ get; set; }
 
         /// <summary>
-        /// 路径匹配时回源的URI路径。
+        /// 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度1024字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号，最多支持10个捕获值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForwardUri")]

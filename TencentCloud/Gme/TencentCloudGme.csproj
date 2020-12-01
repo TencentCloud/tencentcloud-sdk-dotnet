@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.185</VersionPrefix>
+    <VersionPrefix>3.0.186</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,9 @@
     <Compile Include="V20180711\Models\DescribeScanResult.cs" />
     <Compile Include="V20180711\Models\DescribeScanResultListRequest.cs" />
     <Compile Include="V20180711\Models\DescribeScanResultListResponse.cs" />
+    <Compile Include="V20180711\Models\DescribeUserInAndOutTimeRequest.cs" />
+    <Compile Include="V20180711\Models\DescribeUserInAndOutTimeResponse.cs" />
+    <Compile Include="V20180711\Models\InOutTimeInfo.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResponse.cs" />
     <Compile Include="V20180711\Models\RealTimeSpeechStatisticsItem.cs" />

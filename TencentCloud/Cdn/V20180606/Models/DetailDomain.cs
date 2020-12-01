@@ -262,7 +262,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// Ipv6 配置（功能灰度中，敬请期待）
+        /// Ipv6 回源配置（功能灰度中，敬请期待）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Ipv6")]
@@ -375,6 +375,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
+        /// <summary>
+        /// 时间戳防盗链高级配置，白名单功能
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvancedAuthentication")]
+        public AdvancedAuthentication AdvancedAuthentication{ get; set; }
+
+        /// <summary>
+        /// 回源鉴权高级配置，白名单功能
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginAuthentication")]
+        public OriginAuthentication OriginAuthentication{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -429,6 +443,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
             this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
+            this.SetParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
         }
     }
 }

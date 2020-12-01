@@ -30,6 +30,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// file：指定文件后缀生效
         /// directory：指定路径生效
         /// path：指定绝对路径生效
+        /// index: 指定主页生效
         /// </summary>
         [JsonProperty("MaxAgeType")]
         public string MaxAgeType{ get; set; }
@@ -40,6 +41,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// file 时填充后缀名，如 jpg、txt
         /// directory 时填充路径，如 /xxx/test/
         /// path 时填充绝对路径，如 /xxx/test.html
+        /// index 时填充 /
         /// </summary>
         [JsonProperty("MaxAgeContents")]
         public string[] MaxAgeContents{ get; set; }

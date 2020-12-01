@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 用户自定义的服务名称。如果没传，则系统自动生成一个唯一名称。
+        /// 用户自定义的服务名称。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }

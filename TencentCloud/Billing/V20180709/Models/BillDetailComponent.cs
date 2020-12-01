@@ -121,14 +121,14 @@ namespace TencentCloud.Billing.V20180709.Models
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// 组件类型代码（未开放的字段）
+        /// 组件类型代码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ItemCode")]
         public string ItemCode{ get; set; }
 
         /// <summary>
-        /// 组件名称代码（未开放的字段）
+        /// 组件名称代码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentCode")]

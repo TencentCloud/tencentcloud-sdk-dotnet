@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.185</VersionPrefix>
+    <VersionPrefix>3.0.186</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1894,6 +1894,13 @@
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvanceCacheRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedAuthentication.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeA.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeB.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeC.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeD.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeE.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeF.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Authentication.cs" />
     <Compile Include="Cdn\V20180606\Models\AuthenticationTypeA.cs" />
@@ -2041,6 +2048,8 @@
     <Compile Include="Cdn\V20180606\Models\MaxAge.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAgeRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Origin.cs" />
+    <Compile Include="Cdn\V20180606\Models\OriginAuthentication.cs" />
+    <Compile Include="Cdn\V20180606\Models\OriginAuthenticationTypeA.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullTimeout.cs" />
     <Compile Include="Cdn\V20180606\Models\OverseaConfig.cs" />
@@ -5060,6 +5069,9 @@
     <Compile Include="Gme\V20180711\Models\DescribeScanResult.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeScanResultListRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeScanResultListResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeUserInAndOutTimeRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeUserInAndOutTimeResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\InOutTimeInfo.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusResponse.cs" />
     <Compile Include="Gme\V20180711\Models\RealTimeSpeechStatisticsItem.cs" />

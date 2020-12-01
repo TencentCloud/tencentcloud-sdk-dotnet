@@ -255,6 +255,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 拉取用户在房间得进出时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInAndOutTimeRequest"/></param>
+        /// <returns><see cref="DescribeUserInAndOutTimeResponse"/></returns>
+        public async Task<DescribeUserInAndOutTimeResponse> DescribeUserInAndOutTime(DescribeUserInAndOutTimeRequest req)
+        {
+             JsonResponseModel<DescribeUserInAndOutTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserInAndOutTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInAndOutTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取用户在房间得进出时间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserInAndOutTimeRequest"/></param>
+        /// <returns><see cref="DescribeUserInAndOutTimeResponse"/></returns>
+        public DescribeUserInAndOutTimeResponse DescribeUserInAndOutTimeSync(DescribeUserInAndOutTimeRequest req)
+        {
+             JsonResponseModel<DescribeUserInAndOutTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserInAndOutTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInAndOutTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyAppStatus)用于修改应用总开关状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>

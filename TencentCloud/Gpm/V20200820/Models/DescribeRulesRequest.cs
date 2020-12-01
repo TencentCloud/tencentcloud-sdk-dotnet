@@ -25,13 +25,13 @@ namespace TencentCloud.Gpm.V20200820.Models
     {
         
         /// <summary>
-        /// 当前页号，不传则获取所有有权限的资源。
+        /// 当前页号，不传则返回第一页
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 单页大小，不传则获取所有有权限的资源。
+        /// 单页大小，最大 30，不填默认30
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

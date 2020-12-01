@@ -235,6 +235,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AccessPort")]
         public long?[] AccessPort{ get; set; }
 
+        /// <summary>
+        /// 时间戳防盗链高级版配置，白名单功能
+        /// </summary>
+        [JsonProperty("AdvancedAuthentication")]
+        public AdvancedAuthentication AdvancedAuthentication{ get; set; }
+
+        /// <summary>
+        /// 回源鉴权高级版配置，白名单功能
+        /// </summary>
+        [JsonProperty("OriginAuthentication")]
+        public OriginAuthentication OriginAuthentication{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +287,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "AccessControl.", this.AccessControl);
             this.SetParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
             this.SetParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
+            this.SetParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
+            this.SetParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
         }
     }
 }
