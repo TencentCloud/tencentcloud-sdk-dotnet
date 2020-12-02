@@ -25,23 +25,22 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 起始时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+        /// 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，需大于开始日期，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+        /// 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 查询时间间隔，有效值：
-        /// <li>Minute：每分钟一个统计数据。</li>
-        /// <li>Hour：每小时一个统计数据。</li>
-        /// <li>Day：每天一个统计数据。</li>
-        /// 默认按时间跨度决定，小于1小时按分钟，小于等于7天按小时，大于7天按天展示。
+        /// 统计时间粒度，有效值：
+        /// <li>Minute：以5分钟为粒度。</li>
+        /// <li>Day：以天为粒度。</li>
+        /// 默认按时间跨度决定，小于等于1天以5分钟为粒度，大于1天则以天为粒度。
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
@@ -63,6 +62,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
+        /// <summary>
+        /// 查询的存储区域，有效值：
+        /// <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+        /// <li>outside Chinese Mainland：中国境外。</li>
+        /// 默认值为 Chinese Mainland。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +82,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

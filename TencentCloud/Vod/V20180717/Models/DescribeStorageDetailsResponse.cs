@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 存储统计数据，每分钟/小时/天一条数据。
+        /// 存储统计数据，每5分钟或每天一条数据。
         /// </summary>
         [JsonProperty("Data")]
         public StatDataItem[] Data{ get; set; }

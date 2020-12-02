@@ -1809,6 +1809,52 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于查询点播域名的 CDN 带宽、流量等统计数据。
+        /// * 查询的起始时间和结束时间跨度不超过90天。
+        /// * 可以查询不同服务区域的数据。
+        /// * 中国境内的数据支持查询指定地区、运营商的统计数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDNStatDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCDNStatDetailsResponse"/></returns>
+        public async Task<DescribeCDNStatDetailsResponse> DescribeCDNStatDetails(DescribeCDNStatDetailsRequest req)
+        {
+             JsonResponseModel<DescribeCDNStatDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCDNStatDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDNStatDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询点播域名的 CDN 带宽、流量等统计数据。
+        /// * 查询的起始时间和结束时间跨度不超过90天。
+        /// * 可以查询不同服务区域的数据。
+        /// * 中国境内的数据支持查询指定地区、运营商的统计数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDNStatDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCDNStatDetailsResponse"/></returns>
+        public DescribeCDNStatDetailsResponse DescribeCDNStatDetailsSync(DescribeCDNStatDetailsRequest req)
+        {
+             JsonResponseModel<DescribeCDNStatDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCDNStatDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDNStatDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于查询点播 CDN 的流量、带宽等统计数据。
         ///    1. 可以查询最近365天内的 CDN 用量数据。
         ///    2.  查询时间跨度不超过90天。
@@ -2418,10 +2464,9 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 该接口返回查询时间范围内使用的点播存储空间，单位：字节。
-        ///    1. 可以查询最近365天内的存储空间数据；
-        ///    2. 查询时间跨度不超过90天；
-        ///    3. 分钟粒度查询跨度不超过5天；
-        ///    4. 小时粒度查询跨度不超过10天。
+        ///     1. 可以查询最近365天内的存储空间数据；
+        ///     2. 查询时间跨度不超过90天；
+        ///     3. 分钟粒度查询跨度不超过7天；
         /// </summary>
         /// <param name="req"><see cref="DescribeStorageDetailsRequest"/></param>
         /// <returns><see cref="DescribeStorageDetailsResponse"/></returns>
@@ -2442,10 +2487,9 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// 该接口返回查询时间范围内使用的点播存储空间，单位：字节。
-        ///    1. 可以查询最近365天内的存储空间数据；
-        ///    2. 查询时间跨度不超过90天；
-        ///    3. 分钟粒度查询跨度不超过5天；
-        ///    4. 小时粒度查询跨度不超过10天。
+        ///     1. 可以查询最近365天内的存储空间数据；
+        ///     2. 查询时间跨度不超过90天；
+        ///     3. 分钟粒度查询跨度不超过7天；
         /// </summary>
         /// <param name="req"><see cref="DescribeStorageDetailsRequest"/></param>
         /// <returns><see cref="DescribeStorageDetailsResponse"/></returns>

@@ -49,6 +49,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? StandardStorage{ get; set; }
 
         /// <summary>
+        /// 各计费区域的存储用量。
+        /// </summary>
+        [JsonProperty("StorageStat")]
+        public StorageStatData[] StorageStat{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
             this.SetParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
             this.SetParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+            this.SetParamArrayObj(map, prefix + "StorageStat.", this.StorageStat);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

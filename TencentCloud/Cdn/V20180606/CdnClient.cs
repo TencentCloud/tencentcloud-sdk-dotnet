@@ -593,6 +593,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：使用此接口需开启对应白名单）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
+        /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
+        public async Task<DescribeCdnOriginIpResponse> DescribeCdnOriginIp(DescribeCdnOriginIpRequest req)
+        {
+             JsonResponseModel<DescribeCdnOriginIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCdnOriginIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnOriginIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：使用此接口需开启对应白名单）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
+        /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
+        public DescribeCdnOriginIpResponse DescribeCdnOriginIpSync(DescribeCdnOriginIpRequest req)
+        {
+             JsonResponseModel<DescribeCdnOriginIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCdnOriginIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdnOriginIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertDomainsRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.186</VersionPrefix>
+    <VersionPrefix>3.0.187</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -260,6 +260,8 @@
     <Compile Include="V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeCDNStatDetailsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeCDNStatDetailsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCDNUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCDNUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsRequest.cs" />
@@ -495,6 +497,7 @@
     <Compile Include="V20180717\Models\SpecificationDataItem.cs" />
     <Compile Include="V20180717\Models\StatDataItem.cs" />
     <Compile Include="V20180717\Models\StickerTrackItem.cs" />
+    <Compile Include="V20180717\Models\StorageStatData.cs" />
     <Compile Include="V20180717\Models\SubAppIdInfo.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInputForUpdate.cs" />

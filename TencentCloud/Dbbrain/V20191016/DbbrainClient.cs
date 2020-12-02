@@ -53,6 +53,166 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 创建健康报告，并可以选择是否发送邮件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportTaskResponse"/></returns>
+        public async Task<CreateDBDiagReportTaskResponse> CreateDBDiagReportTask(CreateDBDiagReportTaskRequest req)
+        {
+             JsonResponseModel<CreateDBDiagReportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBDiagReportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBDiagReportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建健康报告，并可以选择是否发送邮件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportTaskResponse"/></returns>
+        public CreateDBDiagReportTaskResponse CreateDBDiagReportTaskSync(CreateDBDiagReportTaskRequest req)
+        {
+             JsonResponseModel<CreateDBDiagReportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBDiagReportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBDiagReportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成邮件配置）。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
+        /// <returns><see cref="CreateMailProfileResponse"/></returns>
+        public async Task<CreateMailProfileResponse> CreateMailProfile(CreateMailProfileRequest req)
+        {
+             JsonResponseModel<CreateMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成邮件配置）。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
+        /// <returns><see cref="CreateMailProfileResponse"/></returns>
+        public CreateMailProfileResponse CreateMailProfileSync(CreateMailProfileRequest req)
+        {
+             JsonResponseModel<CreateMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取邮件发送中联系人的相关信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllUserContactRequest"/></param>
+        /// <returns><see cref="DescribeAllUserContactResponse"/></returns>
+        public async Task<DescribeAllUserContactResponse> DescribeAllUserContact(DescribeAllUserContactRequest req)
+        {
+             JsonResponseModel<DescribeAllUserContactResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllUserContact");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllUserContactResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取邮件发送中联系人的相关信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllUserContactRequest"/></param>
+        /// <returns><see cref="DescribeAllUserContactResponse"/></returns>
+        public DescribeAllUserContactResponse DescribeAllUserContactSync(DescribeAllUserContactRequest req)
+        {
+             JsonResponseModel<DescribeAllUserContactResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllUserContact");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllUserContactResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取邮件发送联系组的相关信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllUserGroupRequest"/></param>
+        /// <returns><see cref="DescribeAllUserGroupResponse"/></returns>
+        public async Task<DescribeAllUserGroupResponse> DescribeAllUserGroup(DescribeAllUserGroupRequest req)
+        {
+             JsonResponseModel<DescribeAllUserGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllUserGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取邮件发送联系组的相关信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllUserGroupRequest"/></param>
+        /// <returns><see cref="DescribeAllUserGroupResponse"/></returns>
+        public DescribeAllUserGroupResponse DescribeAllUserGroupSync(DescribeAllUserGroupRequest req)
+        {
+             JsonResponseModel<DescribeAllUserGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllUserGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取实例异常诊断事件的详情信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBDiagEventRequest"/></param>
@@ -324,6 +484,46 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTopSpaceTables");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例巡检开关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
+        /// <returns><see cref="ModifyDiagDBInstanceConfResponse"/></returns>
+        public async Task<ModifyDiagDBInstanceConfResponse> ModifyDiagDBInstanceConf(ModifyDiagDBInstanceConfRequest req)
+        {
+             JsonResponseModel<ModifyDiagDBInstanceConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDiagDBInstanceConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiagDBInstanceConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改实例巡检开关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>
+        /// <returns><see cref="ModifyDiagDBInstanceConfResponse"/></returns>
+        public ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConfSync(ModifyDiagDBInstanceConfRequest req)
+        {
+             JsonResponseModel<ModifyDiagDBInstanceConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDiagDBInstanceConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiagDBInstanceConfResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
