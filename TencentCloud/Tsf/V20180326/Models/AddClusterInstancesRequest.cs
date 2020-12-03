@@ -78,6 +78,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
+        /// <summary>
+        /// 镜像特征ID列表
+        /// </summary>
+        [JsonProperty("FeatureIdList")]
+        public string[] FeatureIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "SgId", this.SgId);
             this.SetParamSimple(map, prefix + "InstanceImportMode", this.InstanceImportMode);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamArraySimple(map, prefix + "FeatureIdList.", this.FeatureIdList);
         }
     }
 }

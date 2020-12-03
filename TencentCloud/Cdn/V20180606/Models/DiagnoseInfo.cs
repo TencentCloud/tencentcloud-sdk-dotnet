@@ -66,6 +66,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ClientList")]
         public DiagnoseList[] ClientList{ get; set; }
 
+        /// <summary>
+        /// 域名加速区域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ExpireDate", this.ExpireDate);
             this.SetParamSimple(map, prefix + "VisitCount", this.VisitCount);
             this.SetParamArrayObj(map, prefix + "ClientList.", this.ClientList);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

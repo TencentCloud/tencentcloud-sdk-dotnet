@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{2C756D52-3E37-36F9-A8C5-555C3D9EFD92}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.188</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Tic</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201117\TicClient.cs" />
+    <Compile Include="V20201117\Models\ApplyStackRequest.cs" />
+    <Compile Include="V20201117\Models\ApplyStackResponse.cs" />
+    <Compile Include="V20201117\Models\CreateStackRequest.cs" />
+    <Compile Include="V20201117\Models\CreateStackResponse.cs" />
+    <Compile Include="V20201117\Models\CreateStackVersionRequest.cs" />
+    <Compile Include="V20201117\Models\CreateStackVersionResponse.cs" />
+    <Compile Include="V20201117\Models\DeleteStackRequest.cs" />
+    <Compile Include="V20201117\Models\DeleteStackResponse.cs" />
+    <Compile Include="V20201117\Models\DeleteStackVersionRequest.cs" />
+    <Compile Include="V20201117\Models\DeleteStackVersionResponse.cs" />
+    <Compile Include="V20201117\Models\DescribeStackEventRequest.cs" />
+    <Compile Include="V20201117\Models\DescribeStackEventResponse.cs" />
+    <Compile Include="V20201117\Models\DescribeStackEventsRequest.cs" />
+    <Compile Include="V20201117\Models\DescribeStackEventsResponse.cs" />
+    <Compile Include="V20201117\Models\DescribeStackVersionsRequest.cs" />
+    <Compile Include="V20201117\Models\DescribeStackVersionsResponse.cs" />
+    <Compile Include="V20201117\Models\DescribeStacksRequest.cs" />
+    <Compile Include="V20201117\Models\DescribeStacksResponse.cs" />
+    <Compile Include="V20201117\Models\DestroyStackRequest.cs" />
+    <Compile Include="V20201117\Models\DestroyStackResponse.cs" />
+    <Compile Include="V20201117\Models\EventInfo.cs" />
+    <Compile Include="V20201117\Models\Filter.cs" />
+    <Compile Include="V20201117\Models\PlanStackRequest.cs" />
+    <Compile Include="V20201117\Models\PlanStackResponse.cs" />
+    <Compile Include="V20201117\Models\StackInfo.cs" />
+    <Compile Include="V20201117\Models\UpdateStackRequest.cs" />
+    <Compile Include="V20201117\Models\UpdateStackResponse.cs" />
+    <Compile Include="V20201117\Models\UpdateStackVersionRequest.cs" />
+    <Compile Include="V20201117\Models\UpdateStackVersionResponse.cs" />
+    <Compile Include="V20201117\Models\VersionInfo.cs" />
+  </ItemGroup>
+</Project>

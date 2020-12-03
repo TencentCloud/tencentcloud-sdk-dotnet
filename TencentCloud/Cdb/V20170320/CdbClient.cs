@@ -3867,6 +3867,86 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 修改延迟只读实例的延迟复制时间。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoReplicationDelayRequest"/></param>
+        /// <returns><see cref="ModifyRoReplicationDelayResponse"/></returns>
+        public async Task<ModifyRoReplicationDelayResponse> ModifyRoReplicationDelay(ModifyRoReplicationDelayRequest req)
+        {
+             JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoReplicationDelay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoReplicationDelayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改延迟只读实例的延迟复制时间。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoReplicationDelayRequest"/></param>
+        /// <returns><see cref="ModifyRoReplicationDelayResponse"/></returns>
+        public ModifyRoReplicationDelayResponse ModifyRoReplicationDelaySync(ModifyRoReplicationDelayRequest req)
+        {
+             JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoReplicationDelay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoReplicationDelayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改只读实例类型，可以将普通只读实例变为延迟只读实例，或者将延迟只读实例变为普通只读实例。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
+        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
+        public async Task<ModifyRoTypeResponse> ModifyRoType(ModifyRoTypeRequest req)
+        {
+             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改只读实例类型，可以将普通只读实例变为延迟只读实例，或者将延迟只读实例变为普通只读实例。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
+        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
+        public ModifyRoTypeResponse ModifyRoTypeSync(ModifyRoTypeRequest req)
+        {
+             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
         /// </summary>
         /// <param name="req"><see cref="ModifyTimeWindowRequest"/></param>
@@ -4207,6 +4287,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 启动延迟只读实例的延迟复制。
+        /// </summary>
+        /// <param name="req"><see cref="StartDelayReplicationRequest"/></param>
+        /// <returns><see cref="StartDelayReplicationResponse"/></returns>
+        public async Task<StartDelayReplicationResponse> StartDelayReplication(StartDelayReplicationRequest req)
+        {
+             JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDelayReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启动延迟只读实例的延迟复制。
+        /// </summary>
+        /// <param name="req"><see cref="StartDelayReplicationRequest"/></param>
+        /// <returns><see cref="StartDelayReplicationResponse"/></returns>
+        public StartDelayReplicationResponse StartDelayReplicationSync(StartDelayReplicationRequest req)
+        {
+             JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartDelayReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(StopDBImportJob)用于终止数据导入任务。
         /// </summary>
         /// <param name="req"><see cref="StopDBImportJobRequest"/></param>
@@ -4238,6 +4358,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StopDBImportJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDBImportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止延迟只读实例的延迟复制。
+        /// </summary>
+        /// <param name="req"><see cref="StopDelayReplicationRequest"/></param>
+        /// <returns><see cref="StopDelayReplicationResponse"/></returns>
+        public async Task<StopDelayReplicationResponse> StopDelayReplication(StopDelayReplicationRequest req)
+        {
+             JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDelayReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止延迟只读实例的延迟复制。
+        /// </summary>
+        /// <param name="req"><see cref="StopDelayReplicationRequest"/></param>
+        /// <returns><see cref="StopDelayReplicationResponse"/></returns>
+        public StopDelayReplicationResponse StopDelayReplicationSync(StopDelayReplicationRequest req)
+        {
+             JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopDelayReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDelayReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

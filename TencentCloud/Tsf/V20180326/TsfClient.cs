@@ -133,6 +133,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 网关与API分组批量绑定
+        /// </summary>
+        /// <param name="req"><see cref="BindApiGroupRequest"/></param>
+        /// <returns><see cref="BindApiGroupResponse"/></returns>
+        public async Task<BindApiGroupResponse> BindApiGroup(BindApiGroupRequest req)
+        {
+             JsonResponseModel<BindApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 网关与API分组批量绑定
+        /// </summary>
+        /// <param name="req"><see cref="BindApiGroupRequest"/></param>
+        /// <returns><see cref="BindApiGroupResponse"/></returns>
+        public BindApiGroupResponse BindApiGroupSync(BindApiGroupRequest req)
+        {
+             JsonResponseModel<BindApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用或禁用API
+        /// </summary>
+        /// <param name="req"><see cref="ChangeApiUsableStatusRequest"/></param>
+        /// <returns><see cref="ChangeApiUsableStatusResponse"/></returns>
+        public async Task<ChangeApiUsableStatusResponse> ChangeApiUsableStatus(ChangeApiUsableStatusRequest req)
+        {
+             JsonResponseModel<ChangeApiUsableStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeApiUsableStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeApiUsableStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用或禁用API
+        /// </summary>
+        /// <param name="req"><see cref="ChangeApiUsableStatusRequest"/></param>
+        /// <returns><see cref="ChangeApiUsableStatusResponse"/></returns>
+        public ChangeApiUsableStatusResponse ChangeApiUsableStatusSync(ChangeApiUsableStatusRequest req)
+        {
+             JsonResponseModel<ChangeApiUsableStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeApiUsableStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeApiUsableStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对执行失败的任务批次执行续跑
         /// </summary>
         /// <param name="req"><see cref="ContinueRunFailedTaskBatchRequest"/></param>
@@ -164,6 +244,126 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "ContinueRunFailedTaskBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContinueRunFailedTaskBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 一键导入API分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllGatewayApiAsyncRequest"/></param>
+        /// <returns><see cref="CreateAllGatewayApiAsyncResponse"/></returns>
+        public async Task<CreateAllGatewayApiAsyncResponse> CreateAllGatewayApiAsync(CreateAllGatewayApiAsyncRequest req)
+        {
+             JsonResponseModel<CreateAllGatewayApiAsyncResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAllGatewayApiAsync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAllGatewayApiAsyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 一键导入API分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllGatewayApiAsyncRequest"/></param>
+        /// <returns><see cref="CreateAllGatewayApiAsyncResponse"/></returns>
+        public CreateAllGatewayApiAsyncResponse CreateAllGatewayApiAsyncSync(CreateAllGatewayApiAsyncRequest req)
+        {
+             JsonResponseModel<CreateAllGatewayApiAsyncResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAllGatewayApiAsync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAllGatewayApiAsyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建API分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiGroupRequest"/></param>
+        /// <returns><see cref="CreateApiGroupResponse"/></returns>
+        public async Task<CreateApiGroupResponse> CreateApiGroup(CreateApiGroupRequest req)
+        {
+             JsonResponseModel<CreateApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建API分组
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiGroupRequest"/></param>
+        /// <returns><see cref="CreateApiGroupResponse"/></returns>
+        public CreateApiGroupResponse CreateApiGroupSync(CreateApiGroupRequest req)
+        {
+             JsonResponseModel<CreateApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiRateLimitRuleRequest"/></param>
+        /// <returns><see cref="CreateApiRateLimitRuleResponse"/></returns>
+        public async Task<CreateApiRateLimitRuleResponse> CreateApiRateLimitRule(CreateApiRateLimitRuleRequest req)
+        {
+             JsonResponseModel<CreateApiRateLimitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApiRateLimitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiRateLimitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiRateLimitRuleRequest"/></param>
+        /// <returns><see cref="CreateApiRateLimitRuleResponse"/></returns>
+        public CreateApiRateLimitRuleResponse CreateApiRateLimitRuleSync(CreateApiRateLimitRuleRequest req)
+        {
+             JsonResponseModel<CreateApiRateLimitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApiRateLimitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiRateLimitRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -324,6 +524,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "CreateContainGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateContainGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量导入API至api分组(也支持新建API到分组)
+        /// </summary>
+        /// <param name="req"><see cref="CreateGatewayApiRequest"/></param>
+        /// <returns><see cref="CreateGatewayApiResponse"/></returns>
+        public async Task<CreateGatewayApiResponse> CreateGatewayApi(CreateGatewayApiRequest req)
+        {
+             JsonResponseModel<CreateGatewayApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGatewayApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGatewayApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量导入API至api分组(也支持新建API到分组)
+        /// </summary>
+        /// <param name="req"><see cref="CreateGatewayApiRequest"/></param>
+        /// <returns><see cref="CreateGatewayApiResponse"/></returns>
+        public CreateGatewayApiResponse CreateGatewayApiSync(CreateGatewayApiRequest req)
+        {
+             JsonResponseModel<CreateGatewayApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGatewayApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGatewayApiResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -724,6 +964,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "CreateTaskFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除Api分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiGroupRequest"/></param>
+        /// <returns><see cref="DeleteApiGroupResponse"/></returns>
+        public async Task<DeleteApiGroupResponse> DeleteApiGroup(DeleteApiGroupRequest req)
+        {
+             JsonResponseModel<DeleteApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除Api分组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiGroupRequest"/></param>
+        /// <returns><see cref="DeleteApiGroupResponse"/></returns>
+        public DeleteApiGroupResponse DeleteApiGroupSync(DeleteApiGroupRequest req)
+        {
+             JsonResponseModel<DeleteApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1415,6 +1695,166 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询API分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiGroupRequest"/></param>
+        /// <returns><see cref="DescribeApiGroupResponse"/></returns>
+        public async Task<DescribeApiGroupResponse> DescribeApiGroup(DescribeApiGroupRequest req)
+        {
+             JsonResponseModel<DescribeApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiGroupRequest"/></param>
+        /// <returns><see cref="DescribeApiGroupResponse"/></returns>
+        public DescribeApiGroupResponse DescribeApiGroupSync(DescribeApiGroupRequest req)
+        {
+             JsonResponseModel<DescribeApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API 分组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiGroupsRequest"/></param>
+        /// <returns><see cref="DescribeApiGroupsResponse"/></returns>
+        public async Task<DescribeApiGroupsResponse> DescribeApiGroups(DescribeApiGroupsRequest req)
+        {
+             JsonResponseModel<DescribeApiGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API 分组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiGroupsRequest"/></param>
+        /// <returns><see cref="DescribeApiGroupsResponse"/></returns>
+        public DescribeApiGroupsResponse DescribeApiGroupsSync(DescribeApiGroupsRequest req)
+        {
+             JsonResponseModel<DescribeApiGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiRateLimitRulesRequest"/></param>
+        /// <returns><see cref="DescribeApiRateLimitRulesResponse"/></returns>
+        public async Task<DescribeApiRateLimitRulesResponse> DescribeApiRateLimitRules(DescribeApiRateLimitRulesRequest req)
+        {
+             JsonResponseModel<DescribeApiRateLimitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiRateLimitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiRateLimitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiRateLimitRulesRequest"/></param>
+        /// <returns><see cref="DescribeApiRateLimitRulesResponse"/></returns>
+        public DescribeApiRateLimitRulesResponse DescribeApiRateLimitRulesSync(DescribeApiRateLimitRulesRequest req)
+        {
+             JsonResponseModel<DescribeApiRateLimitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiRateLimitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiRateLimitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关API监控明细数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiUseDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiUseDetailResponse"/></returns>
+        public async Task<DescribeApiUseDetailResponse> DescribeApiUseDetail(DescribeApiUseDetailRequest req)
+        {
+             JsonResponseModel<DescribeApiUseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiUseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiUseDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关API监控明细数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiUseDetailRequest"/></param>
+        /// <returns><see cref="DescribeApiUseDetailResponse"/></returns>
+        public DescribeApiUseDetailResponse DescribeApiUseDetailSync(DescribeApiUseDetailRequest req)
+        {
+             JsonResponseModel<DescribeApiUseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiUseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiUseDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询API 版本
         /// </summary>
         /// <param name="req"><see cref="DescribeApiVersionsRequest"/></param>
@@ -1935,6 +2375,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询一键导入API分组任务的状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateGatewayApiStatusRequest"/></param>
+        /// <returns><see cref="DescribeCreateGatewayApiStatusResponse"/></returns>
+        public async Task<DescribeCreateGatewayApiStatusResponse> DescribeCreateGatewayApiStatus(DescribeCreateGatewayApiStatusRequest req)
+        {
+             JsonResponseModel<DescribeCreateGatewayApiStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCreateGatewayApiStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCreateGatewayApiStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询一键导入API分组任务的状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCreateGatewayApiStatusRequest"/></param>
+        /// <returns><see cref="DescribeCreateGatewayApiStatusResponse"/></returns>
+        public DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatusSync(DescribeCreateGatewayApiStatusRequest req)
+        {
+             JsonResponseModel<DescribeCreateGatewayApiStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCreateGatewayApiStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCreateGatewayApiStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
         /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
         /// </summary>
@@ -2017,6 +2497,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询网关所有分组下Api列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayAllGroupApisRequest"/></param>
+        /// <returns><see cref="DescribeGatewayAllGroupApisResponse"/></returns>
+        public async Task<DescribeGatewayAllGroupApisResponse> DescribeGatewayAllGroupApis(DescribeGatewayAllGroupApisRequest req)
+        {
+             JsonResponseModel<DescribeGatewayAllGroupApisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewayAllGroupApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayAllGroupApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关所有分组下Api列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayAllGroupApisRequest"/></param>
+        /// <returns><see cref="DescribeGatewayAllGroupApisResponse"/></returns>
+        public DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApisSync(DescribeGatewayAllGroupApisRequest req)
+        {
+             JsonResponseModel<DescribeGatewayAllGroupApisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewayAllGroupApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayAllGroupApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关监控概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayMonitorOverviewRequest"/></param>
+        /// <returns><see cref="DescribeGatewayMonitorOverviewResponse"/></returns>
+        public async Task<DescribeGatewayMonitorOverviewResponse> DescribeGatewayMonitorOverview(DescribeGatewayMonitorOverviewRequest req)
+        {
+             JsonResponseModel<DescribeGatewayMonitorOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewayMonitorOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayMonitorOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关监控概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayMonitorOverviewRequest"/></param>
+        /// <returns><see cref="DescribeGatewayMonitorOverviewResponse"/></returns>
+        public DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverviewSync(DescribeGatewayMonitorOverviewRequest req)
+        {
+             JsonResponseModel<DescribeGatewayMonitorOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewayMonitorOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayMonitorOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询虚拟机部署组详情
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupRequest"/></param>
@@ -2057,6 +2617,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询某个API分组已绑定的网关部署组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupBindedGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeGroupBindedGatewaysResponse"/></returns>
+        public async Task<DescribeGroupBindedGatewaysResponse> DescribeGroupBindedGateways(DescribeGroupBindedGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeGroupBindedGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupBindedGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupBindedGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个API分组已绑定的网关部署组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupBindedGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeGroupBindedGatewaysResponse"/></returns>
+        public DescribeGroupBindedGatewaysResponse DescribeGroupBindedGatewaysSync(DescribeGroupBindedGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeGroupBindedGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupBindedGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupBindedGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个网关绑定的API 分组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeGroupGatewaysResponse"/></returns>
+        public async Task<DescribeGroupGatewaysResponse> DescribeGroupGateways(DescribeGroupGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeGroupGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个网关绑定的API 分组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeGroupGatewaysResponse"/></returns>
+        public DescribeGroupGatewaysResponse DescribeGroupGatewaysSync(DescribeGroupGatewaysRequest req)
+        {
+             JsonResponseModel<DescribeGroupGatewaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupGateways");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询虚拟机部署组云主机列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupInstancesRequest"/></param>
@@ -2088,6 +2728,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeGroupInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关分组监控明细数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupUseDetailRequest"/></param>
+        /// <returns><see cref="DescribeGroupUseDetailResponse"/></returns>
+        public async Task<DescribeGroupUseDetailResponse> DescribeGroupUseDetail(DescribeGroupUseDetailRequest req)
+        {
+             JsonResponseModel<DescribeGroupUseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupUseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupUseDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关分组监控明细数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupUseDetailRequest"/></param>
+        /// <returns><see cref="DescribeGroupUseDetailResponse"/></returns>
+        public DescribeGroupUseDetailResponse DescribeGroupUseDetailSync(DescribeGroupUseDetailRequest req)
+        {
+             JsonResponseModel<DescribeGroupUseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupUseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupUseDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3219,6 +3899,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 下线Api分组
+        /// </summary>
+        /// <param name="req"><see cref="DraftApiGroupRequest"/></param>
+        /// <returns><see cref="DraftApiGroupResponse"/></returns>
+        public async Task<DraftApiGroupResponse> DraftApiGroup(DraftApiGroupRequest req)
+        {
+             JsonResponseModel<DraftApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DraftApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DraftApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下线Api分组
+        /// </summary>
+        /// <param name="req"><see cref="DraftApiGroupRequest"/></param>
+        /// <returns><see cref="DraftApiGroupResponse"/></returns>
+        public DraftApiGroupResponse DraftApiGroupSync(DraftApiGroupRequest req)
+        {
+             JsonResponseModel<DraftApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DraftApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DraftApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启用任务
         /// </summary>
         /// <param name="req"><see cref="EnableTaskRequest"/></param>
@@ -3861,6 +4581,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 发布Api分组
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseApiGroupRequest"/></param>
+        /// <returns><see cref="ReleaseApiGroupResponse"/></returns>
+        public async Task<ReleaseApiGroupResponse> ReleaseApiGroup(ReleaseApiGroupRequest req)
+        {
+             JsonResponseModel<ReleaseApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布Api分组
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseApiGroupRequest"/></param>
+        /// <returns><see cref="ReleaseApiGroupResponse"/></returns>
+        public ReleaseApiGroupResponse ReleaseApiGroupSync(ReleaseApiGroupRequest req)
+        {
+             JsonResponseModel<ReleaseApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发布配置
         /// </summary>
         /// <param name="req"><see cref="ReleaseConfigRequest"/></param>
@@ -4452,6 +5212,206 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "TerminateTaskFlowBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateTaskFlowBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// API分组批量与网关解绑
+        /// </summary>
+        /// <param name="req"><see cref="UnbindApiGroupRequest"/></param>
+        /// <returns><see cref="UnbindApiGroupResponse"/></returns>
+        public async Task<UnbindApiGroupResponse> UnbindApiGroup(UnbindApiGroupRequest req)
+        {
+             JsonResponseModel<UnbindApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// API分组批量与网关解绑
+        /// </summary>
+        /// <param name="req"><see cref="UnbindApiGroupRequest"/></param>
+        /// <returns><see cref="UnbindApiGroupResponse"/></returns>
+        public UnbindApiGroupResponse UnbindApiGroupSync(UnbindApiGroupRequest req)
+        {
+             JsonResponseModel<UnbindApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新Api分组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiGroupRequest"/></param>
+        /// <returns><see cref="UpdateApiGroupResponse"/></returns>
+        public async Task<UpdateApiGroupResponse> UpdateApiGroup(UpdateApiGroupRequest req)
+        {
+             JsonResponseModel<UpdateApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新Api分组
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiGroupRequest"/></param>
+        /// <returns><see cref="UpdateApiGroupResponse"/></returns>
+        public UpdateApiGroupResponse UpdateApiGroupSync(UpdateApiGroupRequest req)
+        {
+             JsonResponseModel<UpdateApiGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateApiGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiRateLimitRuleRequest"/></param>
+        /// <returns><see cref="UpdateApiRateLimitRuleResponse"/></returns>
+        public async Task<UpdateApiRateLimitRuleResponse> UpdateApiRateLimitRule(UpdateApiRateLimitRuleRequest req)
+        {
+             JsonResponseModel<UpdateApiRateLimitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateApiRateLimitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiRateLimitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiRateLimitRuleRequest"/></param>
+        /// <returns><see cref="UpdateApiRateLimitRuleResponse"/></returns>
+        public UpdateApiRateLimitRuleResponse UpdateApiRateLimitRuleSync(UpdateApiRateLimitRuleRequest req)
+        {
+             JsonResponseModel<UpdateApiRateLimitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateApiRateLimitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiRateLimitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量更新API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiRateLimitRulesRequest"/></param>
+        /// <returns><see cref="UpdateApiRateLimitRulesResponse"/></returns>
+        public async Task<UpdateApiRateLimitRulesResponse> UpdateApiRateLimitRules(UpdateApiRateLimitRulesRequest req)
+        {
+             JsonResponseModel<UpdateApiRateLimitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateApiRateLimitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiRateLimitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量更新API限流规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiRateLimitRulesRequest"/></param>
+        /// <returns><see cref="UpdateApiRateLimitRulesResponse"/></returns>
+        public UpdateApiRateLimitRulesResponse UpdateApiRateLimitRulesSync(UpdateApiRateLimitRulesRequest req)
+        {
+             JsonResponseModel<UpdateApiRateLimitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateApiRateLimitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiRateLimitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新API
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGatewayApiRequest"/></param>
+        /// <returns><see cref="UpdateGatewayApiResponse"/></returns>
+        public async Task<UpdateGatewayApiResponse> UpdateGatewayApi(UpdateGatewayApiRequest req)
+        {
+             JsonResponseModel<UpdateGatewayApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGatewayApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGatewayApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新API
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGatewayApiRequest"/></param>
+        /// <returns><see cref="UpdateGatewayApiResponse"/></returns>
+        public UpdateGatewayApiResponse UpdateGatewayApiSync(UpdateGatewayApiRequest req)
+        {
+             JsonResponseModel<UpdateGatewayApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGatewayApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGatewayApiResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

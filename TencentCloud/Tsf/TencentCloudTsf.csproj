@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.187</VersionPrefix>
+    <VersionPrefix>3.0.188</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,12 +52,21 @@
     <Compile Include="V20180326\Models\AddInstancesResponse.cs" />
     <Compile Include="V20180326\Models\AdvanceSettings.cs" />
     <Compile Include="V20180326\Models\ApiDefinitionDescr.cs" />
+    <Compile Include="V20180326\Models\ApiDetailInfo.cs" />
     <Compile Include="V20180326\Models\ApiDetailResponse.cs" />
+    <Compile Include="V20180326\Models\ApiGroupInfo.cs" />
+    <Compile Include="V20180326\Models\ApiInfo.cs" />
+    <Compile Include="V20180326\Models\ApiRateLimitRule.cs" />
     <Compile Include="V20180326\Models\ApiRequestDescr.cs" />
     <Compile Include="V20180326\Models\ApiResponseDescr.cs" />
+    <Compile Include="V20180326\Models\ApiUseStatisticsEntity.cs" />
     <Compile Include="V20180326\Models\ApiVersionArray.cs" />
     <Compile Include="V20180326\Models\ApplicationAttribute.cs" />
     <Compile Include="V20180326\Models\ApplicationForPage.cs" />
+    <Compile Include="V20180326\Models\BindApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\BindApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\ChangeApiUsableStatusRequest.cs" />
+    <Compile Include="V20180326\Models\ChangeApiUsableStatusResponse.cs" />
     <Compile Include="V20180326\Models\Cluster.cs" />
     <Compile Include="V20180326\Models\Config.cs" />
     <Compile Include="V20180326\Models\ConfigRelease.cs" />
@@ -70,6 +79,12 @@
     <Compile Include="V20180326\Models\CosCredentials.cs" />
     <Compile Include="V20180326\Models\CosDownloadInfo.cs" />
     <Compile Include="V20180326\Models\CosUploadInfo.cs" />
+    <Compile Include="V20180326\Models\CreateAllGatewayApiAsyncRequest.cs" />
+    <Compile Include="V20180326\Models\CreateAllGatewayApiAsyncResponse.cs" />
+    <Compile Include="V20180326\Models\CreateApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\CreateApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\CreateApiRateLimitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\CreateApiRateLimitRuleResponse.cs" />
     <Compile Include="V20180326\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20180326\Models\CreateApplicationResponse.cs" />
     <Compile Include="V20180326\Models\CreateClusterRequest.cs" />
@@ -78,6 +93,8 @@
     <Compile Include="V20180326\Models\CreateConfigResponse.cs" />
     <Compile Include="V20180326\Models\CreateContainGroupRequest.cs" />
     <Compile Include="V20180326\Models\CreateContainGroupResponse.cs" />
+    <Compile Include="V20180326\Models\CreateGatewayApiRequest.cs" />
+    <Compile Include="V20180326\Models\CreateGatewayApiResponse.cs" />
     <Compile Include="V20180326\Models\CreateGroupRequest.cs" />
     <Compile Include="V20180326\Models\CreateGroupResponse.cs" />
     <Compile Include="V20180326\Models\CreateLaneRequest.cs" />
@@ -98,6 +115,8 @@
     <Compile Include="V20180326\Models\CreateTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\CreateTaskRequest.cs" />
     <Compile Include="V20180326\Models\CreateTaskResponse.cs" />
+    <Compile Include="V20180326\Models\DeleteApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\DeleteApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeleteApplicationRequest.cs" />
     <Compile Include="V20180326\Models\DeleteApplicationResponse.cs" />
     <Compile Include="V20180326\Models\DeleteConfigRequest.cs" />
@@ -133,6 +152,14 @@
     <Compile Include="V20180326\Models\DeployServerlessGroupResponse.cs" />
     <Compile Include="V20180326\Models\DescribeApiDetailRequest.cs" />
     <Compile Include="V20180326\Models\DescribeApiDetailResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeApiGroupsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeApiGroupsResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeApiRateLimitRulesRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeApiRateLimitRulesResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeApiUseDetailRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeApiUseDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeApiVersionsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeApiVersionsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeApplicationAttributeRequest.cs" />
@@ -159,14 +186,26 @@
     <Compile Include="V20180326\Models\DescribeContainerGroupDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupsResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeCreateGatewayApiStatusRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeCreateGatewayApiStatusResponse.cs" />
     <Compile Include="V20180326\Models\DescribeDownloadInfoRequest.cs" />
     <Compile Include="V20180326\Models\DescribeDownloadInfoResponse.cs" />
     <Compile Include="V20180326\Models\DescribeFlowLastBatchStateRequest.cs" />
     <Compile Include="V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGatewayMonitorOverviewRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGatewayMonitorOverviewResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupBindedGatewaysRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupBindedGatewaysResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupGatewaysRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupGatewaysResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupInstancesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGroupInstancesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGroupResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupUseDetailRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupUseDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGroupsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeImageRepositoryRequest.cs" />
@@ -223,6 +262,8 @@
     <Compile Include="V20180326\Models\DisableTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\DisableTaskRequest.cs" />
     <Compile Include="V20180326\Models\DisableTaskResponse.cs" />
+    <Compile Include="V20180326\Models\DraftApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\DraftApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowRequest.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskRequest.cs" />
@@ -234,8 +275,16 @@
     <Compile Include="V20180326\Models\ExecuteTaskResponse.cs" />
     <Compile Include="V20180326\Models\ExpandGroupRequest.cs" />
     <Compile Include="V20180326\Models\ExpandGroupResponse.cs" />
+    <Compile Include="V20180326\Models\GatewayApiGroupVo.cs" />
+    <Compile Include="V20180326\Models\GatewayDeployGroup.cs" />
+    <Compile Include="V20180326\Models\GatewayGroupApiVo.cs" />
+    <Compile Include="V20180326\Models\GatewayGroupIds.cs" />
+    <Compile Include="V20180326\Models\GatewayVo.cs" />
+    <Compile Include="V20180326\Models\GroupApiUseStatistics.cs" />
+    <Compile Include="V20180326\Models\GroupDailyUseStatistics.cs" />
     <Compile Include="V20180326\Models\GroupPod.cs" />
     <Compile Include="V20180326\Models\GroupPodResult.cs" />
+    <Compile Include="V20180326\Models\GroupUseStatisticsEntity.cs" />
     <Compile Include="V20180326\Models\HealthCheckSetting.cs" />
     <Compile Include="V20180326\Models\HealthCheckSettings.cs" />
     <Compile Include="V20180326\Models\ImageRepository.cs" />
@@ -264,6 +313,7 @@
     <Compile Include="V20180326\Models\ModifyTaskResponse.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoRequest.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoResponse.cs" />
+    <Compile Include="V20180326\Models\MonitorOverview.cs" />
     <Compile Include="V20180326\Models\MsApiArray.cs" />
     <Compile Include="V20180326\Models\MsInstance.cs" />
     <Compile Include="V20180326\Models\Namespace.cs" />
@@ -275,6 +325,7 @@
     <Compile Include="V20180326\Models\PkgList.cs" />
     <Compile Include="V20180326\Models\PropertyField.cs" />
     <Compile Include="V20180326\Models\ProtocolPort.cs" />
+    <Compile Include="V20180326\Models\QuantileEntity.cs" />
     <Compile Include="V20180326\Models\RedoTaskBatchRequest.cs" />
     <Compile Include="V20180326\Models\RedoTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\RedoTaskExecuteRequest.cs" />
@@ -283,6 +334,8 @@
     <Compile Include="V20180326\Models\RedoTaskFlowBatchResponse.cs" />
     <Compile Include="V20180326\Models\RedoTaskRequest.cs" />
     <Compile Include="V20180326\Models\RedoTaskResponse.cs" />
+    <Compile Include="V20180326\Models\ReleaseApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\ReleaseApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\ReleaseConfigRequest.cs" />
     <Compile Include="V20180326\Models\ReleaseConfigResponse.cs" />
     <Compile Include="V20180326\Models\ReleasePublicConfigRequest.cs" />
@@ -328,11 +381,13 @@
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
     <Compile Include="V20180326\Models\TsfApiListResponse.cs" />
+    <Compile Include="V20180326\Models\TsfPageApiGroupInfo.cs" />
     <Compile Include="V20180326\Models\TsfPageApplication.cs" />
     <Compile Include="V20180326\Models\TsfPageCluster.cs" />
     <Compile Include="V20180326\Models\TsfPageConfig.cs" />
     <Compile Include="V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="V20180326\Models\TsfPageConfigReleaseLog.cs" />
+    <Compile Include="V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="V20180326\Models\TsfPageInstance.cs" />
     <Compile Include="V20180326\Models\TsfPageMicroservice.cs" />
     <Compile Include="V20180326\Models\TsfPageMsInstance.cs" />
@@ -340,6 +395,16 @@
     <Compile Include="V20180326\Models\TsfPageSimpleApplication.cs" />
     <Compile Include="V20180326\Models\TsfPageSimpleGroup.cs" />
     <Compile Include="V20180326\Models\TsfPageVmGroup.cs" />
+    <Compile Include="V20180326\Models\UnbindApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\UnbindApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\UpdateApiGroupRequest.cs" />
+    <Compile Include="V20180326\Models\UpdateApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\UpdateApiRateLimitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\UpdateApiRateLimitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\UpdateApiRateLimitRulesRequest.cs" />
+    <Compile Include="V20180326\Models\UpdateApiRateLimitRulesResponse.cs" />
+    <Compile Include="V20180326\Models\UpdateGatewayApiRequest.cs" />
+    <Compile Include="V20180326\Models\UpdateGatewayApiResponse.cs" />
     <Compile Include="V20180326\Models\UpdateHealthCheckSettingsRequest.cs" />
     <Compile Include="V20180326\Models\UpdateHealthCheckSettingsResponse.cs" />
     <Compile Include="V20180326\Models\UpdateRepositoryRequest.cs" />

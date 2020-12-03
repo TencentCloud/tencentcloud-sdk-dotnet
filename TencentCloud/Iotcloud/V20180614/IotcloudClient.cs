@@ -933,7 +933,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 查询固件升级任务列表
+        /// 查询固件升级任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeFirmwareTaskRequest"/></param>
         /// <returns><see cref="DescribeFirmwareTaskResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
-        /// 查询固件升级任务列表
+        /// 查询固件升级任务详情
         /// </summary>
         /// <param name="req"><see cref="DescribeFirmwareTaskRequest"/></param>
         /// <returns><see cref="DescribeFirmwareTaskResponse"/></returns>
