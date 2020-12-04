@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cme.V20191029.Models
+namespace TencentCloud.Ump.V20200918.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VODExportInfo : AbstractModel
+    public class CreateCaptureResponse : AbstractModel
     {
         
         /// <summary>
-        /// 导出的媒资名称。
+        /// 原始应答报文
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("RspData")]
+        public string RspData{ get; set; }
 
         /// <summary>
-        /// 导出的媒资分类 Id。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ClassId")]
-        public ulong? ClassId{ get; set; }
-
-        /// <summary>
-        /// 第三方平台发布信息列表。
-        /// </summary>
-        [JsonProperty("ThirdPartyPublishInfos")]
-        public ThirdPartyPublishInfo[] ThirdPartyPublishInfos{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
-            this.SetParamArrayObj(map, prefix + "ThirdPartyPublishInfos.", this.ThirdPartyPublishInfos);
+            this.SetParamSimple(map, prefix + "RspData", this.RspData);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

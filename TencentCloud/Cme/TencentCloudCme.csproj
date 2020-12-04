@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.188</VersionPrefix>
+    <VersionPrefix>3.0.189</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,7 @@
     <Compile Include="V20191029\Models\ImportMediaToProjectResponse.cs" />
     <Compile Include="V20191029\Models\IntegerRange.cs" />
     <Compile Include="V20191029\Models\JoinTeamInfo.cs" />
+    <Compile Include="V20191029\Models\KuaishouPublishInfo.cs" />
     <Compile Include="V20191029\Models\LinkMaterial.cs" />
     <Compile Include="V20191029\Models\LinkMaterialInfo.cs" />
     <Compile Include="V20191029\Models\ListMediaRequest.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="V20191029\Models\ModifyTeamResponse.cs" />
     <Compile Include="V20191029\Models\MoveClassRequest.cs" />
     <Compile Include="V20191029\Models\MoveClassResponse.cs" />
+    <Compile Include="V20191029\Models\PenguinMediaPlatformPublishInfo.cs" />
     <Compile Include="V20191029\Models\ProjectInfo.cs" />
     <Compile Include="V20191029\Models\Resource.cs" />
     <Compile Include="V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="V20191029\Models\TaskBaseInfo.cs" />
     <Compile Include="V20191029\Models\TeamInfo.cs" />
     <Compile Include="V20191029\Models\TeamMemberInfo.cs" />
+    <Compile Include="V20191029\Models\ThirdPartyPublishInfo.cs" />
     <Compile Include="V20191029\Models\TimeRange.cs" />
     <Compile Include="V20191029\Models\VODExportInfo.cs" />
     <Compile Include="V20191029\Models\VideoEditProjectInput.cs" />
@@ -158,5 +161,6 @@
     <Compile Include="V20191029\Models\VideoMaterial.cs" />
     <Compile Include="V20191029\Models\VideoStreamInfo.cs" />
     <Compile Include="V20191029\Models\VideoTrackItem.cs" />
+    <Compile Include="V20191029\Models\WeiboPublishInfo.cs" />
   </ItemGroup>
 </Project>

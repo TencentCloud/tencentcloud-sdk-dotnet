@@ -65,7 +65,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 导播台信息，仅当项目类型为 SWITCHER 时有效。
+        /// 导播台信息，仅当项目类型为 SWITCHER 时必填。
         /// </summary>
         [JsonProperty("SwitcherProjectInput")]
         public SwitcherProjectInput SwitcherProjectInput{ get; set; }
@@ -77,7 +77,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public LiveStreamClipProjectInput LiveStreamClipProjectInput{ get; set; }
 
         /// <summary>
-        /// 视频编辑信息。
+        /// 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
         /// </summary>
         [JsonProperty("VideoEditProjectInput")]
         public VideoEditProjectInput VideoEditProjectInput{ get; set; }

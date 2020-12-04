@@ -95,6 +95,46 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 场内抓拍上报接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCaptureRequest"/></param>
+        /// <returns><see cref="CreateCaptureResponse"/></returns>
+        public async Task<CreateCaptureResponse> CreateCapture(CreateCaptureRequest req)
+        {
+             JsonResponseModel<CreateCaptureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCapture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCaptureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 场内抓拍上报接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCaptureRequest"/></param>
+        /// <returns><see cref="CreateCaptureResponse"/></returns>
+        public CreateCaptureResponse CreateCaptureSync(CreateCaptureRequest req)
+        {
+             JsonResponseModel<CreateCaptureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCapture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCaptureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 集团广场的多经点位告警
         /// </summary>
         /// <param name="req"><see cref="CreateMultiBizAlertRequest"/></param>

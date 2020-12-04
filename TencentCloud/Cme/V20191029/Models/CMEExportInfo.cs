@@ -54,6 +54,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 第三方平台发布信息列表。
+        /// </summary>
+        [JsonProperty("ThirdPartyPublishInfos")]
+        public ThirdPartyPublishInfo[] ThirdPartyPublishInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
             this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamArrayObj(map, prefix + "ThirdPartyPublishInfos.", this.ThirdPartyPublishInfos);
         }
     }
 }

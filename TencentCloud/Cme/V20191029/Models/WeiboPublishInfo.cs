@@ -21,26 +21,30 @@ namespace TencentCloud.Cme.V20191029.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VODExportInfo : AbstractModel
+    public class WeiboPublishInfo : AbstractModel
     {
         
         /// <summary>
-        /// 导出的媒资名称。
+        /// 视频发布标题。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
 
         /// <summary>
-        /// 导出的媒资分类 Id。
+        /// 视频发布描述信息。
         /// </summary>
-        [JsonProperty("ClassId")]
-        public ulong? ClassId{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
-        /// 第三方平台发布信息列表。
+        /// 微博可见性，可取值为：
+        /// <li>Public：公开，所有人可见；</li>
+        /// <li>Private：私有，仅自己可见。</li>
+        /// 
+        /// 默认为 Public，所有人可见。
         /// </summary>
-        [JsonProperty("ThirdPartyPublishInfos")]
-        public ThirdPartyPublishInfo[] ThirdPartyPublishInfos{ get; set; }
+        [JsonProperty("Visible")]
+        public string Visible{ get; set; }
 
 
         /// <summary>
@@ -48,9 +52,9 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
-            this.SetParamArrayObj(map, prefix + "ThirdPartyPublishInfos.", this.ThirdPartyPublishInfos);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Visible", this.Visible);
         }
     }
 }

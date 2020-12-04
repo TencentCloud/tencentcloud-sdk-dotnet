@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.188</VersionPrefix>
+    <VersionPrefix>3.0.189</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2738,6 +2738,7 @@
     <Compile Include="Cme\V20191029\Models\ImportMediaToProjectResponse.cs" />
     <Compile Include="Cme\V20191029\Models\IntegerRange.cs" />
     <Compile Include="Cme\V20191029\Models\JoinTeamInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\KuaishouPublishInfo.cs" />
     <Compile Include="Cme\V20191029\Models\LinkMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\LinkMaterialInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ListMediaRequest.cs" />
@@ -2762,6 +2763,7 @@
     <Compile Include="Cme\V20191029\Models\ModifyTeamResponse.cs" />
     <Compile Include="Cme\V20191029\Models\MoveClassRequest.cs" />
     <Compile Include="Cme\V20191029\Models\MoveClassResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\PenguinMediaPlatformPublishInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ProjectInfo.cs" />
     <Compile Include="Cme\V20191029\Models\Resource.cs" />
     <Compile Include="Cme\V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
@@ -2775,6 +2777,7 @@
     <Compile Include="Cme\V20191029\Models\TaskBaseInfo.cs" />
     <Compile Include="Cme\V20191029\Models\TeamInfo.cs" />
     <Compile Include="Cme\V20191029\Models\TeamMemberInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\ThirdPartyPublishInfo.cs" />
     <Compile Include="Cme\V20191029\Models\TimeRange.cs" />
     <Compile Include="Cme\V20191029\Models\VODExportInfo.cs" />
     <Compile Include="Cme\V20191029\Models\VideoEditProjectInput.cs" />
@@ -2782,6 +2785,7 @@
     <Compile Include="Cme\V20191029\Models\VideoMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\VideoStreamInfo.cs" />
     <Compile Include="Cme\V20191029\Models\VideoTrackItem.cs" />
+    <Compile Include="Cme\V20191029\Models\WeiboPublishInfo.cs" />
     <Compile Include="Cmq\V20190304\CmqClient.cs" />
     <Compile Include="Cmq\V20190304\Models\ClearQueueRequest.cs" />
     <Compile Include="Cmq\V20190304\Models\ClearQueueResponse.cs" />
@@ -10100,6 +10104,8 @@
     <Compile Include="Ump\V20200918\Models\CreateCameraAlertsMoveAlert.cs" />
     <Compile Include="Ump\V20200918\Models\CreateCameraAlertsRequest.cs" />
     <Compile Include="Ump\V20200918\Models\CreateCameraAlertsResponse.cs" />
+    <Compile Include="Ump\V20200918\Models\CreateCaptureRequest.cs" />
+    <Compile Include="Ump\V20200918\Models\CreateCaptureResponse.cs" />
     <Compile Include="Ump\V20200918\Models\CreateMultiBizAlertRequest.cs" />
     <Compile Include="Ump\V20200918\Models\CreateMultiBizAlertResponse.cs" />
     <Compile Include="Ump\V20200918\Models\CreateProgramStateRequest.cs" />

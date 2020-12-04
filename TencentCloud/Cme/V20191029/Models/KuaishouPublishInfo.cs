@@ -21,26 +21,14 @@ namespace TencentCloud.Cme.V20191029.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VODExportInfo : AbstractModel
+    public class KuaishouPublishInfo : AbstractModel
     {
         
         /// <summary>
-        /// 导出的媒资名称。
+        /// 视频发布标题，限30个字符。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 导出的媒资分类 Id。
-        /// </summary>
-        [JsonProperty("ClassId")]
-        public ulong? ClassId{ get; set; }
-
-        /// <summary>
-        /// 第三方平台发布信息列表。
-        /// </summary>
-        [JsonProperty("ThirdPartyPublishInfos")]
-        public ThirdPartyPublishInfo[] ThirdPartyPublishInfos{ get; set; }
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
-            this.SetParamArrayObj(map, prefix + "ThirdPartyPublishInfos.", this.ThirdPartyPublishInfos);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
         }
     }
 }

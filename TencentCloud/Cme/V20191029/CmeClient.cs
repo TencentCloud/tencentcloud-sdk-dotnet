@@ -177,7 +177,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑及导播台项目。
+        /// 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑、导播台项目以及视频拆条项目。
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
         /// <returns><see cref="CreateProjectResponse"/></returns>
@@ -197,7 +197,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑及导播台项目。
+        /// 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑、导播台项目以及视频拆条项目。
         /// </summary>
         /// <param name="req"><see cref="CreateProjectRequest"/></param>
         /// <returns><see cref="CreateProjectResponse"/></returns>

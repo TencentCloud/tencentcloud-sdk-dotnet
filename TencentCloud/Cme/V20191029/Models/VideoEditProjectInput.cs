@@ -25,7 +25,14 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息，其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+        /// 视频编辑模板 ID ，通过模板导入项目时填写。
+        /// </summary>
+        [JsonProperty("VideoEditTemplateId")]
+        public string VideoEditTemplateId{ get; set; }
+
+        /// <summary>
+        /// 输入的媒体轨道列表，包括视频、音频，等素材组成的多个轨道信息。其中：<li>输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐；</li><li>时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面，音频素材进行混音；</li><li>视频、音频，每一种类型的轨道最多支持10个。</li>
+        /// 注：当从模板导入项目时（即 VideoEditTemplateId 不为空时），该参数无效。
         /// </summary>
         [JsonProperty("InitTracks")]
         public MediaTrack[] InitTracks{ get; set; }
@@ -36,6 +43,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VideoEditTemplateId", this.VideoEditTemplateId);
             this.SetParamArrayObj(map, prefix + "InitTracks.", this.InitTracks);
         }
     }
