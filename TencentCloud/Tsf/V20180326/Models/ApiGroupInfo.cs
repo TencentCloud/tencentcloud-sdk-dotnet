@@ -46,7 +46,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string GroupContext{ get; set; }
 
         /// <summary>
-        /// 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+        /// 鉴权类型。 secret： 密钥鉴权； none:无鉴权
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthType")]

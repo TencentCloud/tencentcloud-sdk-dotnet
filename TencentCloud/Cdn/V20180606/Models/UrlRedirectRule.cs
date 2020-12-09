@@ -42,6 +42,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }
 
+        /// <summary>
+        /// 目标host，必须以http://或https://开头，并填写标准格式域名，如果不填写，默认为http:// + 当前域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RedirectHost")]
+        public string RedirectHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+            this.SetParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
         }
     }
 }

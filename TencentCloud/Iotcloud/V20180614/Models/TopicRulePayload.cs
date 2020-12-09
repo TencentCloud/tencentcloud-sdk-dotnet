@@ -40,7 +40,8 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         ///     },
         ///     {
         ///         "forward": {
-        ///             "api": "http://127.0.0.1:8080"
+        ///             "api": "http://127.0.0.1:8080",
+        ///             "token":"xxx"
         ///         }
         ///     },
         ///     {

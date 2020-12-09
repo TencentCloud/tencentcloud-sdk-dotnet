@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.189</VersionPrefix>
+    <VersionPrefix>3.0.190</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,6 +128,8 @@
     <Compile Include="V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancerListByCertIdResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeLoadBalancerTrafficRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeLoadBalancerTrafficResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersDetailRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersDetailResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLoadBalancersRequest.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="V20180317\Models\LoadBalancer.cs" />
     <Compile Include="V20180317\Models\LoadBalancerDetail.cs" />
     <Compile Include="V20180317\Models\LoadBalancerHealth.cs" />
+    <Compile Include="V20180317\Models\LoadBalancerTraffic.cs" />
     <Compile Include="V20180317\Models\ManualRewriteRequest.cs" />
     <Compile Include="V20180317\Models\ManualRewriteResponse.cs" />
     <Compile Include="V20180317\Models\ModifyBlockIPListRequest.cs" />

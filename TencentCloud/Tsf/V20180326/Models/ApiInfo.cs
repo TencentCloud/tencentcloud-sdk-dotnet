@@ -55,7 +55,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string PathMapping{ get; set; }
 
         /// <summary>
-        /// api所在服务host
+        /// api所在服务host,限定外部Api填写。格式: "http://127.0.0.1:8080"
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

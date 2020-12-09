@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.189</VersionPrefix>
+    <VersionPrefix>3.0.190</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20180606\Models\AuthenticationTypeD.cs" />
     <Compile Include="V20180606\Models\AwsPrivateAccess.cs" />
     <Compile Include="V20180606\Models\BandwidthAlert.cs" />
+    <Compile Include="V20180606\Models\BotCookie.cs" />
+    <Compile Include="V20180606\Models\BotJavaScript.cs" />
     <Compile Include="V20180606\Models\BriefDomain.cs" />
     <Compile Include="V20180606\Models\Cache.cs" />
     <Compile Include="V20180606\Models\CacheConfigCache.cs" />
@@ -238,10 +240,20 @@
     <Compile Include="V20180606\Models\RuleCache.cs" />
     <Compile Include="V20180606\Models\RuleCacheConfig.cs" />
     <Compile Include="V20180606\Models\RuleQueryString.cs" />
+    <Compile Include="V20180606\Models\ScdnAclConfig.cs" />
+    <Compile Include="V20180606\Models\ScdnAclGroup.cs" />
+    <Compile Include="V20180606\Models\ScdnAclRule.cs" />
+    <Compile Include="V20180606\Models\ScdnBotConfig.cs" />
+    <Compile Include="V20180606\Models\ScdnCCRules.cs" />
+    <Compile Include="V20180606\Models\ScdnConfig.cs" />
+    <Compile Include="V20180606\Models\ScdnDdosConfig.cs" />
+    <Compile Include="V20180606\Models\ScdnErrorPage.cs" />
     <Compile Include="V20180606\Models\ScdnLogTaskDetail.cs" />
     <Compile Include="V20180606\Models\ScdnTopData.cs" />
     <Compile Include="V20180606\Models\ScdnTopUrlData.cs" />
     <Compile Include="V20180606\Models\ScdnTypeData.cs" />
+    <Compile Include="V20180606\Models\ScdnWafConfig.cs" />
+    <Compile Include="V20180606\Models\ScdnWafRule.cs" />
     <Compile Include="V20180606\Models\SchemeKey.cs" />
     <Compile Include="V20180606\Models\SearchClsLogRequest.cs" />
     <Compile Include="V20180606\Models\SearchClsLogResponse.cs" />
@@ -272,6 +284,8 @@
     <Compile Include="V20180606\Models\UpdateImageConfigResponse.cs" />
     <Compile Include="V20180606\Models\UpdatePayTypeRequest.cs" />
     <Compile Include="V20180606\Models\UpdatePayTypeResponse.cs" />
+    <Compile Include="V20180606\Models\UpdateScdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\UpdateScdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\UrlRecord.cs" />
     <Compile Include="V20180606\Models\UrlRedirect.cs" />
     <Compile Include="V20180606\Models\UrlRedirectRule.cs" />

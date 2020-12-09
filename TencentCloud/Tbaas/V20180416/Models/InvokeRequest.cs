@@ -73,7 +73,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 被调用的函数参数列表
+        /// 被调用的函数参数列表，参数列表大小总和要求小于2M
         /// </summary>
         [JsonProperty("Args")]
         public string[] Args{ get; set; }

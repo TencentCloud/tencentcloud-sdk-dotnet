@@ -98,6 +98,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
 
+        /// <summary>
+        /// 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
+        /// 当填 0 或不填时，系统将自动设置 gop 长度。
+        /// </summary>
+        [JsonProperty("Gop")]
+        public ulong? Gop{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +119,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
+            this.SetParamSimple(map, prefix + "Gop", this.Gop);
         }
     }
 }

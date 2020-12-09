@@ -63,7 +63,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? Granularity{ get; set; }
 
         /// <summary>
-        /// 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，默认值是LVB。
+        /// 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }

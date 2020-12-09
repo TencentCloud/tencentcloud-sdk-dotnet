@@ -42,15 +42,24 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// directory 时填充路径，如 /xxx/test/
         /// path 时填充绝对路径，如 /xxx/test.html
         /// index 时填充 /
+        /// 注意：all规则不可删除，默认遵循源站，可修改。
         /// </summary>
         [JsonProperty("MaxAgeContents")]
         public string[] MaxAgeContents{ get; set; }
 
         /// <summary>
         /// MaxAge 时间设置，单位秒
+        /// 注意：时间为0，即不缓存。
         /// </summary>
         [JsonProperty("MaxAgeTime")]
         public long? MaxAgeTime{ get; set; }
+
+        /// <summary>
+        /// 是否遵循源站，on或off，开启时忽略时间设置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FollowOrigin")]
+        public string FollowOrigin{ get; set; }
 
 
         /// <summary>
@@ -61,6 +70,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "MaxAgeType", this.MaxAgeType);
             this.SetParamArraySimple(map, prefix + "MaxAgeContents.", this.MaxAgeContents);
             this.SetParamSimple(map, prefix + "MaxAgeTime", this.MaxAgeTime);
+            this.SetParamSimple(map, prefix + "FollowOrigin", this.FollowOrigin);
         }
     }
 }

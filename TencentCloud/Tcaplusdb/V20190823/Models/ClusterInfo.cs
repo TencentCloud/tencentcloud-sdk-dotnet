@@ -116,6 +116,55 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("ApiAccessIpv6")]
         public string ApiAccessIpv6{ get; set; }
 
+        /// <summary>
+        /// 集群类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public long? ClusterType{ get; set; }
+
+        /// <summary>
+        /// 集群状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public long? ClusterStatus{ get; set; }
+
+        /// <summary>
+        /// 读CU
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReadCapacityUnit")]
+        public long? ReadCapacityUnit{ get; set; }
+
+        /// <summary>
+        /// 写CU
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WriteCapacityUnit")]
+        public long? WriteCapacityUnit{ get; set; }
+
+        /// <summary>
+        /// 磁盘容量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskVolume")]
+        public long? DiskVolume{ get; set; }
+
+        /// <summary>
+        /// 独占server机器信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerList")]
+        public ServerDetailInfo[] ServerList{ get; set; }
+
+        /// <summary>
+        /// 独占proxy机器信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyList")]
+        public ProxyDetailInfo[] ProxyList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +186,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "ApiAccessPort", this.ApiAccessPort);
             this.SetParamSimple(map, prefix + "OldPasswordExpireTime", this.OldPasswordExpireTime);
             this.SetParamSimple(map, prefix + "ApiAccessIpv6", this.ApiAccessIpv6);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "ReadCapacityUnit", this.ReadCapacityUnit);
+            this.SetParamSimple(map, prefix + "WriteCapacityUnit", this.WriteCapacityUnit);
+            this.SetParamSimple(map, prefix + "DiskVolume", this.DiskVolume);
+            this.SetParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+            this.SetParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
         }
     }
 }

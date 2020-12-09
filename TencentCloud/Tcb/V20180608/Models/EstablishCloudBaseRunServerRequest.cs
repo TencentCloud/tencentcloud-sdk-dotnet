@@ -78,6 +78,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
+        /// <summary>
+        /// vpc信息
+        /// </summary>
+        [JsonProperty("VpcInfo")]
+        public CloudBaseRunVpcInfo VpcInfo{ get; set; }
+
+        /// <summary>
+        /// 0/1=允许公网访问;2=关闭公网访问
+        /// </summary>
+        [JsonProperty("PublicAccess")]
+        public long? PublicAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
+            this.SetParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
         }
     }
 }

@@ -1403,6 +1403,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询账号下高流量负载均衡，返回前10个负载均衡。如果是子账号登录，只返回子账号有权限的负载均衡。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerTrafficRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerTrafficResponse"/></returns>
+        public async Task<DescribeLoadBalancerTrafficResponse> DescribeLoadBalancerTraffic(DescribeLoadBalancerTrafficRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerTrafficResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoadBalancerTraffic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerTrafficResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询账号下高流量负载均衡，返回前10个负载均衡。如果是子账号登录，只返回子账号有权限的负载均衡。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoadBalancerTrafficRequest"/></param>
+        /// <returns><see cref="DescribeLoadBalancerTrafficResponse"/></returns>
+        public DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTrafficSync(DescribeLoadBalancerTrafficRequest req)
+        {
+             JsonResponseModel<DescribeLoadBalancerTrafficResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoadBalancerTraffic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoadBalancerTrafficResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询一个地域的负载均衡实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>

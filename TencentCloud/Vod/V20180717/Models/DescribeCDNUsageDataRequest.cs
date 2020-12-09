@@ -50,7 +50,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
         /// <li>1440：天粒度，返回指定查询时间内1天粒度的数据。</li>
         /// 默认值为1440，返回天粒度的数据。
-        /// 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
         /// </summary>
         [JsonProperty("DataInterval")]
         public ulong? DataInterval{ get; set; }

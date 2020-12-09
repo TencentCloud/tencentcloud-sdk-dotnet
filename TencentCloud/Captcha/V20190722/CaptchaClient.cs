@@ -333,6 +333,46 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
+        /// 核查验证码小程序插件票据接入风控结果(Beta)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniRiskResultRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniRiskResultResponse"/></returns>
+        public async Task<DescribeCaptchaMiniRiskResultResponse> DescribeCaptchaMiniRiskResult(DescribeCaptchaMiniRiskResultRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniRiskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCaptchaMiniRiskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniRiskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 核查验证码小程序插件票据接入风控结果(Beta)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCaptchaMiniRiskResultRequest"/></param>
+        /// <returns><see cref="DescribeCaptchaMiniRiskResultResponse"/></returns>
+        public DescribeCaptchaMiniRiskResultResponse DescribeCaptchaMiniRiskResultSync(DescribeCaptchaMiniRiskResultRequest req)
+        {
+             JsonResponseModel<DescribeCaptchaMiniRiskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCaptchaMiniRiskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCaptchaMiniRiskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 安全验证码用户操作数据查询，验证码加载耗时type = 1 、拦截情况type = 2、 一周通过平均尝试次数 type = 3、尝试次数分布 type = 4
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaOperDataRequest"/></param>

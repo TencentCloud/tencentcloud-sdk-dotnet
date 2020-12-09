@@ -1493,6 +1493,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 查询实例内网访问VPC链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternalEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInternalEndpointsResponse"/></returns>
+        public async Task<DescribeInternalEndpointsResponse> DescribeInternalEndpoints(DescribeInternalEndpointsRequest req)
+        {
+             JsonResponseModel<DescribeInternalEndpointsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternalEndpoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternalEndpointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例内网访问VPC链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternalEndpointsRequest"/></param>
+        /// <returns><see cref="DescribeInternalEndpointsResponse"/></returns>
+        public DescribeInternalEndpointsResponse DescribeInternalEndpointsSync(DescribeInternalEndpointsRequest req)
+        {
+             JsonResponseModel<DescribeInternalEndpointsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternalEndpoints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternalEndpointsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询个人版命名空间信息
         /// </summary>
         /// <param name="req"><see cref="DescribeNamespacePersonalRequest"/></param>
@@ -2004,6 +2044,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "ManageImageLifecycleGlobalPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageImageLifecycleGlobalPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 管理实例内网访问VPC链接
+        /// </summary>
+        /// <param name="req"><see cref="ManageInternalEndpointRequest"/></param>
+        /// <returns><see cref="ManageInternalEndpointResponse"/></returns>
+        public async Task<ManageInternalEndpointResponse> ManageInternalEndpoint(ManageInternalEndpointRequest req)
+        {
+             JsonResponseModel<ManageInternalEndpointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageInternalEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageInternalEndpointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 管理实例内网访问VPC链接
+        /// </summary>
+        /// <param name="req"><see cref="ManageInternalEndpointRequest"/></param>
+        /// <returns><see cref="ManageInternalEndpointResponse"/></returns>
+        public ManageInternalEndpointResponse ManageInternalEndpointSync(ManageInternalEndpointRequest req)
+        {
+             JsonResponseModel<ManageInternalEndpointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageInternalEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageInternalEndpointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

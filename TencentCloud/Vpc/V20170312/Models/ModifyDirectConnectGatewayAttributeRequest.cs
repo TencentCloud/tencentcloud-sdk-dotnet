@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnRouteType")]
         public string CcnRouteType{ get; set; }
 
+        /// <summary>
+        /// 云联网路由发布模式，可选值：`standard`（标准模式）、`exquisite`（精细模式）。只有云联网类型专线网关才支持修改`ModeType`。
+        /// </summary>
+        [JsonProperty("ModeType")]
+        public string ModeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
             this.SetParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
             this.SetParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
+            this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
         }
     }
 }

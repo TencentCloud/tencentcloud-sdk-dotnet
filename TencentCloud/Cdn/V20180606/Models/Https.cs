@@ -105,6 +105,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Hsts")]
         public Hsts Hsts{ get; set; }
 
+        /// <summary>
+        /// Tls版本设置，仅支持部分Advance域名，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TlsVersion")]
+        public string[] TlsVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Spdy", this.Spdy);
             this.SetParamSimple(map, prefix + "SslStatus", this.SslStatus);
             this.SetParamObj(map, prefix + "Hsts.", this.Hsts);
+            this.SetParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
         }
     }
 }

@@ -24,12 +24,26 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     public class RecycleReadOnlyGroupRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 主实例的ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 只读组的ID
+        /// </summary>
+        [JsonProperty("ReadOnlyGroupId")]
+        public string ReadOnlyGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ReadOnlyGroupId", this.ReadOnlyGroupId);
         }
     }
 }

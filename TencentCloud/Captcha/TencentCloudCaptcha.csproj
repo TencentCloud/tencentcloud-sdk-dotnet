@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{39D5883D-7A4D-3B59-9517-0DFDD1B08F9C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.189</VersionPrefix>
+    <VersionPrefix>3.0.190</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20190722\Models\DescribeCaptchaMiniOperDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaMiniResultRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaMiniResultResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniRiskResultRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaMiniRiskResultResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaOperDataRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaOperDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaResultRequest.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="V20190722\Models\DescribeCaptchaTicketDataResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaUserAllAppIdRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaUserAllAppIdResponse.cs" />
+    <Compile Include="V20190722\Models\OutputManageMarketingRiskValue.cs" />
     <Compile Include="V20190722\Models\TicketAmountUnit.cs" />
     <Compile Include="V20190722\Models\TicketInterceptUnit.cs" />
     <Compile Include="V20190722\Models\TicketThroughUnit.cs" />

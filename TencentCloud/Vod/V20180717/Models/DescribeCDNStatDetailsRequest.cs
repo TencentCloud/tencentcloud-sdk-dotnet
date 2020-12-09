@@ -99,7 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Guangdong：广东。</li>
         /// <li>Guangxi：广西。</li>
         /// <li>Hainan：海南。</li>
-        /// <li>Hongkong Macao And Taiwan：港澳台。</li>
+        /// <li>Hong Kong, Macao and Taiwan：港澳台。</li>
         /// <li>outside Chinese Mainland：海外。</li>
         /// <li>Other：其他 。</li>
         /// </summary>

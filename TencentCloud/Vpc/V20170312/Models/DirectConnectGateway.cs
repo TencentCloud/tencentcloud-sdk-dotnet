@@ -112,6 +112,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
+        /// <summary>
+        /// 专线网关是否支持VXLAN架构
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VXLANSupport")]
+        public bool?[] VXLANSupport{ get; set; }
+
+        /// <summary>
+        /// 云联网路由发布模式：`standard`（标准模式）、`exquisite`（精细模式）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModeType")]
+        public string ModeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +145,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
             this.SetParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+            this.SetParamArraySimple(map, prefix + "VXLANSupport.", this.VXLANSupport);
+            this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
         }
     }
 }

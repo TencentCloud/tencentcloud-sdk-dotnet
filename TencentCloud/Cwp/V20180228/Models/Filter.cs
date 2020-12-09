@@ -36,6 +36,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
+        /// <summary>
+        /// 模糊搜索
+        /// </summary>
+        [JsonProperty("ExactMatch")]
+        public bool? ExactMatch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
         }
     }
 }

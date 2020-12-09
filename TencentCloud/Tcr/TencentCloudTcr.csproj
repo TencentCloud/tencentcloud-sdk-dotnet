@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.189</VersionPrefix>
+    <VersionPrefix>3.0.190</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20190924\TcrClient.cs" />
+    <Compile Include="V20190924\Models\AccessVpc.cs" />
     <Compile Include="V20190924\Models\AutoDelStrategyInfo.cs" />
     <Compile Include="V20190924\Models\AutoDelStrategyInfoResp.cs" />
     <Compile Include="V20190924\Models\BatchDeleteImagePersonalRequest.cs" />
@@ -121,6 +122,8 @@
     <Compile Include="V20190924\Models\DescribeInstanceTokenResponse.cs" />
     <Compile Include="V20190924\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInternalEndpointsRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInternalEndpointsResponse.cs" />
     <Compile Include="V20190924\Models\DescribeNamespacePersonalRequest.cs" />
     <Compile Include="V20190924\Models\DescribeNamespacePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DescribeNamespacesRequest.cs" />
@@ -153,6 +156,8 @@
     <Compile Include="V20190924\Models\Limit.cs" />
     <Compile Include="V20190924\Models\ManageImageLifecycleGlobalPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ManageImageLifecycleGlobalPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ManageInternalEndpointRequest.cs" />
+    <Compile Include="V20190924\Models\ManageInternalEndpointResponse.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenRequest.cs" />

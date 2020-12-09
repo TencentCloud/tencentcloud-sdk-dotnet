@@ -613,6 +613,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 查询独占集群可以申请的剩余机器
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineRequest"/></param>
+        /// <returns><see cref="DescribeMachineResponse"/></returns>
+        public async Task<DescribeMachineResponse> DescribeMachine(DescribeMachineRequest req)
+        {
+             JsonResponseModel<DescribeMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询独占集群可以申请的剩余机器
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineRequest"/></param>
+        /// <returns><see cref="DescribeMachineResponse"/></returns>
+        public DescribeMachineResponse DescribeMachineSync(DescribeMachineRequest req)
+        {
+             JsonResponseModel<DescribeMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询TcaplusDB服务支持的地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
@@ -924,6 +964,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUinInWhitelist");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUinInWhitelistResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改独占集群机器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
+        /// <returns><see cref="ModifyClusterMachineResponse"/></returns>
+        public async Task<ModifyClusterMachineResponse> ModifyClusterMachine(ModifyClusterMachineRequest req)
+        {
+             JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterMachineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改独占集群机器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
+        /// <returns><see cref="ModifyClusterMachineResponse"/></returns>
+        public ModifyClusterMachineResponse ModifyClusterMachineSync(ModifyClusterMachineRequest req)
+        {
+             JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterMachine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterMachineResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

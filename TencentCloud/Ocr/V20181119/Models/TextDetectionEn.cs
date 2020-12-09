@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// 文本行坐标，以四个顶点坐标表示。
+        /// 文本行在原图中的四点坐标。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Polygon")]
@@ -50,7 +50,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// 单词在原图中的四点坐标。
+        /// 英文单词在原图中的四点坐标。
         /// </summary>
         [JsonProperty("WordCoordPoint")]
         public WordCoordPoint[] WordCoordPoint{ get; set; }

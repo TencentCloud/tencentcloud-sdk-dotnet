@@ -130,6 +130,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("RegistrarType")]
         public string RegistrarType{ get; set; }
 
+        /// <summary>
+        /// 域名绑定的ns
+        /// </summary>
+        [JsonProperty("NameServer")]
+        public string[] NameServer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +153,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamArraySimple(map, prefix + "DomainStatus.", this.DomainStatus);
             this.SetParamSimple(map, prefix + "BuyStatus", this.BuyStatus);
             this.SetParamSimple(map, prefix + "RegistrarType", this.RegistrarType);
+            this.SetParamArraySimple(map, prefix + "NameServer.", this.NameServer);
         }
     }
 }
