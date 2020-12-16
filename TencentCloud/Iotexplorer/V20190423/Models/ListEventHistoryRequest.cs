@@ -61,7 +61,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 单次获取的历史数据项目的最大数量
+        /// 单次获取的历史数据项目的最大数量, 缺省10
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

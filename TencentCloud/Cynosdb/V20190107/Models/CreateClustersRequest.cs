@@ -197,6 +197,41 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// Db类型
+        /// 当DbType为MYSQL时可选(默认NORMAL)：
+        /// <li>NORMAL</li>
+        /// <li>SERVERLESS</li>
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
+        /// 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// </summary>
+        [JsonProperty("MinCpu")]
+        public float? MinCpu{ get; set; }
+
+        /// <summary>
+        /// 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// </summary>
+        [JsonProperty("MaxCpu")]
+        public float? MaxCpu{ get; set; }
+
+        /// <summary>
+        /// 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+        /// <li>yes</li>
+        /// <li>no</li>
+        /// </summary>
+        [JsonProperty("AutoPause")]
+        public string AutoPause{ get; set; }
+
+        /// <summary>
+        /// 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+        /// </summary>
+        [JsonProperty("AutoPauseDelay")]
+        public long? AutoPauseDelay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -231,6 +266,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "HaCount", this.HaCount);
             this.SetParamSimple(map, prefix + "OrderSource", this.OrderSource);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
+            this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
+            this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+            this.SetParamSimple(map, prefix + "AutoPause", this.AutoPause);
+            this.SetParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
         }
     }
 }

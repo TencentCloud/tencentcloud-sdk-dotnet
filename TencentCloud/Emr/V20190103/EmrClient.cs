@@ -173,6 +173,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 查询流程任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobFlowRequest"/></param>
+        /// <returns><see cref="DescribeJobFlowResponse"/></returns>
+        public async Task<DescribeJobFlowResponse> DescribeJobFlow(DescribeJobFlowRequest req)
+        {
+             JsonResponseModel<DescribeJobFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeJobFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询流程任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobFlowRequest"/></param>
+        /// <returns><see cref="DescribeJobFlowResponse"/></returns>
+        public DescribeJobFlowResponse DescribeJobFlowSync(DescribeJobFlowRequest req)
+        {
+             JsonResponseModel<DescribeJobFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJobFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建实例询价
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceUpdateInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建流程作业
+        /// </summary>
+        /// <param name="req"><see cref="RunJobFlowRequest"/></param>
+        /// <returns><see cref="RunJobFlowResponse"/></returns>
+        public async Task<RunJobFlowResponse> RunJobFlow(RunJobFlowRequest req)
+        {
+             JsonResponseModel<RunJobFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RunJobFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunJobFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建流程作业
+        /// </summary>
+        /// <param name="req"><see cref="RunJobFlowRequest"/></param>
+        /// <returns><see cref="RunJobFlowResponse"/></returns>
+        public RunJobFlowResponse RunJobFlowSync(RunJobFlowRequest req)
+        {
+             JsonResponseModel<RunJobFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RunJobFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunJobFlowResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.190</VersionPrefix>
+    <VersionPrefix>3.0.191</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,8 @@
     <Compile Include="V20191126\Models\DeleteTraceIdsResponse.cs" />
     <Compile Include="V20191126\Models\DeliverStorageServiceRequest.cs" />
     <Compile Include="V20191126\Models\DeliverStorageServiceResponse.cs" />
+    <Compile Include="V20191126\Models\DescribeAccountBalanceRequest.cs" />
+    <Compile Include="V20191126\Models\DescribeAccountBalanceResponse.cs" />
     <Compile Include="V20191126\Models\DescribeBindDevRequest.cs" />
     <Compile Include="V20191126\Models\DescribeBindDevResponse.cs" />
     <Compile Include="V20191126\Models\DescribeBindUsrRequest.cs" />
@@ -128,6 +130,8 @@
     <Compile Include="V20191126\Models\DescribeProductsResponse.cs" />
     <Compile Include="V20191126\Models\DescribePubVersionsRequest.cs" />
     <Compile Include="V20191126\Models\DescribePubVersionsResponse.cs" />
+    <Compile Include="V20191126\Models\DescribeRechargeRecordsRequest.cs" />
+    <Compile Include="V20191126\Models\DescribeRechargeRecordsResponse.cs" />
     <Compile Include="V20191126\Models\DescribeRegistrationStatusRequest.cs" />
     <Compile Include="V20191126\Models\DescribeRegistrationStatusResponse.cs" />
     <Compile Include="V20191126\Models\DescribeRunLogRequest.cs" />
@@ -164,6 +168,7 @@
     <Compile Include="V20191126\Models\OtaPubHistory.cs" />
     <Compile Include="V20191126\Models\ProductBase.cs" />
     <Compile Include="V20191126\Models\ProductData.cs" />
+    <Compile Include="V20191126\Models\RechargeRecord.cs" />
     <Compile Include="V20191126\Models\RefundStorageServiceRequest.cs" />
     <Compile Include="V20191126\Models\RefundStorageServiceResponse.cs" />
     <Compile Include="V20191126\Models\RegisteredStatus.cs" />

@@ -227,6 +227,86 @@ namespace TencentCloud.Ams.V20200608
         }
 
         /// <summary>
+        /// 音频审核明细列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAmsListRequest"/></param>
+        /// <returns><see cref="DescribeAmsListResponse"/></returns>
+        public async Task<DescribeAmsListResponse> DescribeAmsList(DescribeAmsListRequest req)
+        {
+             JsonResponseModel<DescribeAmsListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAmsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAmsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 音频审核明细列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAmsListRequest"/></param>
+        /// <returns><see cref="DescribeAmsListResponse"/></returns>
+        public DescribeAmsListResponse DescribeAmsListSync(DescribeAmsListRequest req)
+        {
+             JsonResponseModel<DescribeAmsListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAmsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAmsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台识别统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAudioStatRequest"/></param>
+        /// <returns><see cref="DescribeAudioStatResponse"/></returns>
+        public async Task<DescribeAudioStatResponse> DescribeAudioStat(DescribeAudioStatRequest req)
+        {
+             JsonResponseModel<DescribeAudioStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAudioStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAudioStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台识别统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAudioStatRequest"/></param>
+        /// <returns><see cref="DescribeAudioStatResponse"/></returns>
+        public DescribeAudioStatResponse DescribeAudioStatSync(DescribeAudioStatRequest req)
+        {
+             JsonResponseModel<DescribeAudioStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAudioStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAudioStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看单个配置
         /// </summary>
         /// <param name="req"><see cref="DescribeBizConfigRequest"/></param>

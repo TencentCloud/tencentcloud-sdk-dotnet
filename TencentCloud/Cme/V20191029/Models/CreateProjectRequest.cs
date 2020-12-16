@@ -34,6 +34,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 项目类别，取值有：
         /// <li>VIDEO_EDIT：视频编辑。</li>
         /// <li>SWITCHER：导播台。</li>
+        /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
@@ -82,6 +83,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("VideoEditProjectInput")]
         public VideoEditProjectInput VideoEditProjectInput{ get; set; }
 
+        /// <summary>
+        /// 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+        /// </summary>
+        [JsonProperty("VideoSegmentationProjectInput")]
+        public VideoSegmentationProjectInput VideoSegmentationProjectInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +104,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
             this.SetParamObj(map, prefix + "LiveStreamClipProjectInput.", this.LiveStreamClipProjectInput);
             this.SetParamObj(map, prefix + "VideoEditProjectInput.", this.VideoEditProjectInput);
+            this.SetParamObj(map, prefix + "VideoSegmentationProjectInput.", this.VideoSegmentationProjectInput);
         }
     }
 }

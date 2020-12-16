@@ -53,6 +53,86 @@ namespace TencentCloud.Ims.V20200713
         }
 
         /// <summary>
+        /// 控制台识别统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageStatRequest"/></param>
+        /// <returns><see cref="DescribeImageStatResponse"/></returns>
+        public async Task<DescribeImageStatResponse> DescribeImageStat(DescribeImageStatRequest req)
+        {
+             JsonResponseModel<DescribeImageStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台识别统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageStatRequest"/></param>
+        /// <returns><see cref="DescribeImageStatResponse"/></returns>
+        public DescribeImageStatResponse DescribeImageStatSync(DescribeImageStatRequest req)
+        {
+             JsonResponseModel<DescribeImageStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 图片机器审核明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImsListRequest"/></param>
+        /// <returns><see cref="DescribeImsListResponse"/></returns>
+        public async Task<DescribeImsListResponse> DescribeImsList(DescribeImsListRequest req)
+        {
+             JsonResponseModel<DescribeImsListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 图片机器审核明细
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImsListRequest"/></param>
+        /// <returns><see cref="DescribeImsListResponse"/></returns>
+        public DescribeImsListResponse DescribeImsListSync(DescribeImsListRequest req)
+        {
+             JsonResponseModel<DescribeImsListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
         /// 
         /// <div class="rno-api-explorer" style="margin-bottom:20px">

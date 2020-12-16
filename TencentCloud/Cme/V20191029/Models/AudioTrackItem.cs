@@ -25,10 +25,11 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 音频素材来源类型。取值有：
+        /// 音频素材来源类型，取值有：
         /// <ul>
-        /// <li>VOD ：素材来源 VOD 。</li>
-        /// <li>CME ：视频来源 CME 。</li>
+        /// <li>VOD ：素材来源于云点播文件 ；</li>
+        /// <li>CME ：视频来源于制作云媒体文件 ；</li>
+        /// <li>EXTERNAL ：视频来源于媒资绑定。</li>
         /// </ul>
         /// </summary>
         [JsonProperty("SourceType")]
@@ -36,8 +37,11 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 音频片段的媒体素材来源，可以是：
-        /// <li>VOD 的媒体文件 ID 。</li>
-        /// <li>CME 的素材 ID 。</li>
+        /// <ul>
+        /// <li>当 SourceType 为 VOD 时，为云点播的媒体文件 ID ；</li>
+        /// <li>当 SourceType 为 CME 时，为制作云的媒体 ID；</li>
+        /// <li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }

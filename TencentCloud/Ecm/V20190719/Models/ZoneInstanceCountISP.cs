@@ -60,6 +60,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+        /// </summary>
+        [JsonProperty("Ipv6AddressCount")]
+        public long? Ipv6AddressCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+            this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
         }
     }
 }

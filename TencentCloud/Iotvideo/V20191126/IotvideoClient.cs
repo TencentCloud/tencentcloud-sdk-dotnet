@@ -1025,6 +1025,46 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
+        /// 客户可通过本接口获取账户余额信息, 默认接口请求频率限制：1次/秒
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
+        /// <returns><see cref="DescribeAccountBalanceResponse"/></returns>
+        public async Task<DescribeAccountBalanceResponse> DescribeAccountBalance(DescribeAccountBalanceRequest req)
+        {
+             JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 客户可通过本接口获取账户余额信息, 默认接口请求频率限制：1次/秒
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
+        /// <returns><see cref="DescribeAccountBalanceResponse"/></returns>
+        public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
+        {
+             JsonResponseModel<DescribeAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeBindDev）用于查询终端用户绑定的设备列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBindDevRequest"/></param>
@@ -1658,6 +1698,46 @@ namespace TencentCloud.Iotvideo.V20191126
              {
                  var strResp = this.InternalRequestSync(req, "DescribePubVersions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePubVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 客户可通过本接口获取充值记录信息, 一次最多返回50条记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRechargeRecordsRequest"/></param>
+        /// <returns><see cref="DescribeRechargeRecordsResponse"/></returns>
+        public async Task<DescribeRechargeRecordsResponse> DescribeRechargeRecords(DescribeRechargeRecordsRequest req)
+        {
+             JsonResponseModel<DescribeRechargeRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRechargeRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRechargeRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 客户可通过本接口获取充值记录信息, 一次最多返回50条记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRechargeRecordsRequest"/></param>
+        /// <returns><see cref="DescribeRechargeRecordsResponse"/></returns>
+        public DescribeRechargeRecordsResponse DescribeRechargeRecordsSync(DescribeRechargeRecordsRequest req)
+        {
+             JsonResponseModel<DescribeRechargeRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRechargeRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRechargeRecordsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,19 +25,23 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 视频素材来源类型。取值有：
+        /// 视频素材来源类型，取值有：
         /// <ul>
-        /// <li>VOD ：素材来源 VOD 。</li>
-        /// <li>CME ：视频来源 CME 。</li>
+        /// <li>VOD ：素材来源于云点播文件 。</li>
+        /// <li>CME ：视频来源制作云媒体文件。</li>
+        /// <li>EXTERNAL ：视频来源于媒资绑定。</li>
         /// </ul>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 视频片段的媒体素材来源，可以是：
-        /// <li>VOD 的媒体文件 ID 。</li>
-        /// <li>CME 的素材 ID 。</li>
+        /// 视频片段的媒体素材来源，取值为：
+        /// <ul>
+        /// <li>当 SourceType 为 VOD 时，为云点播的媒体文件 ID；</li>
+        /// <li>当 SourceType 为 CME 时，为制作云的媒体 ID；</li>
+        /// <li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
+        /// </ul>
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }
@@ -82,10 +86,10 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 视频片段的高度。支持 %、px 两种格式：
-        /// <li>当字符串以 % 结尾，表示视频片段 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%；
-        /// </li><li>当字符串以 px 结尾，表示视频片段 Height 单位为像素，如 100px 表示 Height 为100像素。</li>
-        /// <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
-        /// <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
+        /// <li>当字符串以 % 结尾，表示视频片段 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%；</li>
+        /// <li>当字符串以 px 结尾，表示视频片段 Height 单位为像素，如 100px 表示 Height 为100像素；</li>
+        /// <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height；</li>
+        /// <li>当 Width 为空，Height 非空，则 Width 按比例缩放；</li>
         /// <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
         /// </summary>
         [JsonProperty("Height")]
@@ -93,10 +97,10 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 视频片段的宽度。支持 %、px 两种格式：
-        /// <li>当字符串以 % 结尾，表示视频片段 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%。</li>
-        /// <li>当字符串以 px 结尾，表示视频片段 Width 单位为像素，如 100px 表示 Width 为100像素。</li>
-        /// <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
-        /// <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
+        /// <li>当字符串以 % 结尾，表示视频片段 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%；</li>
+        /// <li>当字符串以 px 结尾，表示视频片段 Width 单位为像素，如 100px 表示 Width 为100像素；</li>
+        /// <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height；</li>
+        /// <li>当 Width 为空，Height 非空，则 Width 按比例缩放；</li>
         /// <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
         /// </summary>
         [JsonProperty("Width")]

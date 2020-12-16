@@ -180,6 +180,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// Db类型(NORMAL, SERVERLESS)
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
+        /// 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+        /// resume
+        /// pause
+        /// </summary>
+        [JsonProperty("ServerlessStatus")]
+        public string ServerlessStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +226,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
+            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         }
     }
 }

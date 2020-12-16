@@ -93,6 +93,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（CopyFleet）用于复制服务器舰队。
+        /// </summary>
+        /// <param name="req"><see cref="CopyFleetRequest"/></param>
+        /// <returns><see cref="CopyFleetResponse"/></returns>
+        public async Task<CopyFleetResponse> CopyFleet(CopyFleetRequest req)
+        {
+             JsonResponseModel<CopyFleetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CopyFleet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyFleetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CopyFleet）用于复制服务器舰队。
+        /// </summary>
+        /// <param name="req"><see cref="CopyFleetRequest"/></param>
+        /// <returns><see cref="CopyFleetResponse"/></returns>
+        public CopyFleetResponse CopyFleetSync(CopyFleetRequest req)
+        {
+             JsonResponseModel<CopyFleetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CopyFleet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyFleetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateAlias）用于创建别名。
         /// </summary>
         /// <param name="req"><see cref="CreateAliasRequest"/></param>

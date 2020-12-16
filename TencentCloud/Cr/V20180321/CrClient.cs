@@ -133,6 +133,86 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 创建机器人任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateBotTaskRequest"/></param>
+        /// <returns><see cref="CreateBotTaskResponse"/></returns>
+        public async Task<CreateBotTaskResponse> CreateBotTask(CreateBotTaskRequest req)
+        {
+             JsonResponseModel<CreateBotTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBotTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBotTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建机器人任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateBotTaskRequest"/></param>
+        /// <returns><see cref="CreateBotTaskResponse"/></returns>
+        public CreateBotTaskResponse CreateBotTaskSync(CreateBotTaskRequest req)
+        {
+             JsonResponseModel<CreateBotTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBotTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBotTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询机器人对话流
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotFlowRequest"/></param>
+        /// <returns><see cref="DescribeBotFlowResponse"/></returns>
+        public async Task<DescribeBotFlowResponse> DescribeBotFlow(DescribeBotFlowRequest req)
+        {
+             JsonResponseModel<DescribeBotFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBotFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBotFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询机器人对话流
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBotFlowRequest"/></param>
+        /// <returns><see cref="DescribeBotFlowResponse"/></returns>
+        public DescribeBotFlowResponse DescribeBotFlowSync(DescribeBotFlowRequest req)
+        {
+             JsonResponseModel<DescribeBotFlowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBotFlow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBotFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据信审任务ID和请求日期，获取相关信审结果。
         /// </summary>
         /// <param name="req"><see cref="DescribeCreditResultRequest"/></param>
@@ -164,6 +244,46 @@ namespace TencentCloud.Cr.V20180321
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCreditResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCreditResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询机器人文件模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileModelRequest"/></param>
+        /// <returns><see cref="DescribeFileModelResponse"/></returns>
+        public async Task<DescribeFileModelResponse> DescribeFileModel(DescribeFileModelRequest req)
+        {
+             JsonResponseModel<DescribeFileModelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFileModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询机器人文件模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileModelRequest"/></param>
+        /// <returns><see cref="DescribeFileModelResponse"/></returns>
+        public DescribeFileModelResponse DescribeFileModelSync(DescribeFileModelRequest req)
+        {
+             JsonResponseModel<DescribeFileModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFileModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileModelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -446,6 +566,46 @@ namespace TencentCloud.Cr.V20180321
              {
                  var strResp = this.InternalRequestSync(req, "QueryProducts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传机器人文件
+        /// </summary>
+        /// <param name="req"><see cref="UploadBotFileRequest"/></param>
+        /// <returns><see cref="UploadBotFileResponse"/></returns>
+        public async Task<UploadBotFileResponse> UploadBotFile(UploadBotFileRequest req)
+        {
+             JsonResponseModel<UploadBotFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadBotFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadBotFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传机器人文件
+        /// </summary>
+        /// <param name="req"><see cref="UploadBotFileRequest"/></param>
+        /// <returns><see cref="UploadBotFileResponse"/></returns>
+        public UploadBotFileResponse UploadBotFileSync(UploadBotFileRequest req)
+        {
+             JsonResponseModel<UploadBotFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadBotFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadBotFileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

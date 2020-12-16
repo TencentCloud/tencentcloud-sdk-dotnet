@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{155BF728-D163-3DBE-85B3-CA22151A30C7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.190</VersionPrefix>
+    <VersionPrefix>3.0.191</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20200608\AmsClient.cs" />
+    <Compile Include="V20200608\Models\AmsDetailInfo.cs" />
     <Compile Include="V20200608\Models\AudioResult.cs" />
     <Compile Include="V20200608\Models\AudioResultDetailLanguageResult.cs" />
     <Compile Include="V20200608\Models\AudioResultDetailMoanResult.cs" />
@@ -57,11 +58,18 @@
     <Compile Include="V20200608\Models\CreateAudioModerationTaskResponse.cs" />
     <Compile Include="V20200608\Models\CreateBizConfigRequest.cs" />
     <Compile Include="V20200608\Models\CreateBizConfigResponse.cs" />
+    <Compile Include="V20200608\Models\DescribeAmsListRequest.cs" />
+    <Compile Include="V20200608\Models\DescribeAmsListResponse.cs" />
+    <Compile Include="V20200608\Models\DescribeAudioStatRequest.cs" />
+    <Compile Include="V20200608\Models\DescribeAudioStatResponse.cs" />
     <Compile Include="V20200608\Models\DescribeBizConfigRequest.cs" />
     <Compile Include="V20200608\Models\DescribeBizConfigResponse.cs" />
     <Compile Include="V20200608\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="V20200608\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="V20200608\Models\EvilCount.cs" />
     <Compile Include="V20200608\Models\FileOutput.cs" />
+    <Compile Include="V20200608\Models\Filter.cs" />
+    <Compile Include="V20200608\Models\Filters.cs" />
     <Compile Include="V20200608\Models\ImageResult.cs" />
     <Compile Include="V20200608\Models\ImageResultResult.cs" />
     <Compile Include="V20200608\Models\ImageResultsResultDetail.cs" />
@@ -70,9 +78,11 @@
     <Compile Include="V20200608\Models\InputInfo.cs" />
     <Compile Include="V20200608\Models\MediaInfo.cs" />
     <Compile Include="V20200608\Models\MediaModerationConfig.cs" />
+    <Compile Include="V20200608\Models\Overview.cs" />
     <Compile Include="V20200608\Models\StorageInfo.cs" />
     <Compile Include="V20200608\Models\TaskInput.cs" />
     <Compile Include="V20200608\Models\TaskLabel.cs" />
     <Compile Include="V20200608\Models\TaskResult.cs" />
+    <Compile Include="V20200608\Models\TrendCount.cs" />
   </ItemGroup>
 </Project>

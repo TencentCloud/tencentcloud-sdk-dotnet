@@ -38,6 +38,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("PrivateIPAddressInfo")]
         public PrivateIPAddressInfo PrivateIPAddressInfo{ get; set; }
 
+        /// <summary>
+        /// 实例的外网ipv6相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicIPv6AddressInfo")]
+        public PublicIPAddressInfo PublicIPv6AddressInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         {
             this.SetParamObj(map, prefix + "PublicIPAddressInfo.", this.PublicIPAddressInfo);
             this.SetParamObj(map, prefix + "PrivateIPAddressInfo.", this.PrivateIPAddressInfo);
+            this.SetParamObj(map, prefix + "PublicIPv6AddressInfo.", this.PublicIPv6AddressInfo);
         }
     }
 }

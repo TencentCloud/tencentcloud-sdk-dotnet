@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.190</VersionPrefix>
+    <VersionPrefix>3.0.191</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,9 +45,12 @@
 
   <ItemGroup>
     <Compile Include="V20190103\EmrClient.cs" />
+    <Compile Include="V20190103\Models\BootstrapAction.cs" />
     <Compile Include="V20190103\Models\COSSettings.cs" />
     <Compile Include="V20190103\Models\CdbInfo.cs" />
     <Compile Include="V20190103\Models\ClusterInstancesInfo.cs" />
+    <Compile Include="V20190103\Models\ClusterSetting.cs" />
+    <Compile Include="V20190103\Models\Configuration.cs" />
     <Compile Include="V20190103\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
@@ -55,7 +58,12 @@
     <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeJobFlowRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeJobFlowResponse.cs" />
+    <Compile Include="V20190103\Models\DiskGroup.cs" />
+    <Compile Include="V20190103\Models\DiskSpec.cs" />
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
+    <Compile Include="V20190103\Models\Execution.cs" />
     <Compile Include="V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
@@ -65,7 +73,12 @@
     <Compile Include="V20190103\Models\InquiryPriceScaleOutInstanceResponse.cs" />
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\InquiryPriceUpdateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20190103\Models\JobFlowResource.cs" />
+    <Compile Include="V20190103\Models\JobFlowResourceSpec.cs" />
+    <Compile Include="V20190103\Models\JobResult.cs" />
     <Compile Include="V20190103\Models\LoginSettings.cs" />
+    <Compile Include="V20190103\Models\MetaDbInfo.cs" />
     <Compile Include="V20190103\Models\MultiDisk.cs" />
     <Compile Include="V20190103\Models\MultiDiskMC.cs" />
     <Compile Include="V20190103\Models\NewResourceSpec.cs" />
@@ -78,9 +91,12 @@
     <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="V20190103\Models\PriceResource.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
+    <Compile Include="V20190103\Models\RunJobFlowRequest.cs" />
+    <Compile Include="V20190103\Models\RunJobFlowResponse.cs" />
     <Compile Include="V20190103\Models\ScaleOutInstanceRequest.cs" />
     <Compile Include="V20190103\Models\ScaleOutInstanceResponse.cs" />
     <Compile Include="V20190103\Models\SearchItem.cs" />
+    <Compile Include="V20190103\Models\Step.cs" />
     <Compile Include="V20190103\Models\Tag.cs" />
     <Compile Include="V20190103\Models\TerminateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\TerminateInstanceResponse.cs" />

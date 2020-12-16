@@ -61,7 +61,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string InitFlag{ get; set; }
 
         /// <summary>
-        /// 镜像描述，多层镜像按顺序传入
+        /// 镜像文件描述，多层镜像按顺序传入
         /// </summary>
         [JsonProperty("ImageUrls")]
         public ImageUrl[] ImageUrls{ get; set; }

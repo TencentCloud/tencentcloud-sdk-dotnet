@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.190</VersionPrefix>
+    <VersionPrefix>3.0.191</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -215,6 +215,9 @@
     <Compile Include="V20190820\Models\QueryTransferBatchResponse.cs" />
     <Compile Include="V20190820\Models\QueryTransferDetailRequest.cs" />
     <Compile Include="V20190820\Models\QueryTransferDetailResponse.cs" />
+    <Compile Include="V20190820\Models\QueryTransferResultData.cs" />
+    <Compile Include="V20190820\Models\QueryTransferResultRequest.cs" />
+    <Compile Include="V20190820\Models\QueryTransferResultResponse.cs" />
     <Compile Include="V20190820\Models\RechargeByThirdPayRequest.cs" />
     <Compile Include="V20190820\Models\RechargeByThirdPayResponse.cs" />
     <Compile Include="V20190820\Models\RechargeMemberThirdPayRequest.cs" />
@@ -241,6 +244,9 @@
     <Compile Include="V20190820\Models\TransferDetailRequest.cs" />
     <Compile Include="V20190820\Models\TransferDetailResponse.cs" />
     <Compile Include="V20190820\Models\TransferItem.cs" />
+    <Compile Include="V20190820\Models\TransferSinglePayData.cs" />
+    <Compile Include="V20190820\Models\TransferSinglePayRequest.cs" />
+    <Compile Include="V20190820\Models\TransferSinglePayResponse.cs" />
     <Compile Include="V20190820\Models\UnBindAcctRequest.cs" />
     <Compile Include="V20190820\Models\UnBindAcctResponse.cs" />
     <Compile Include="V20190820\Models\UnbindRelateAcctRequest.cs" />

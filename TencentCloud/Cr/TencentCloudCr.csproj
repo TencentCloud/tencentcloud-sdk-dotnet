@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{64652818-FFAF-356D-BBE6-79A313C368C3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.190</VersionPrefix>
+    <VersionPrefix>3.0.191</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,8 +49,17 @@
     <Compile Include="V20180321\Models\ApplyBlackListResponse.cs" />
     <Compile Include="V20180321\Models\ApplyCreditAuditRequest.cs" />
     <Compile Include="V20180321\Models\ApplyCreditAuditResponse.cs" />
+    <Compile Include="V20180321\Models\BotFlow.cs" />
+    <Compile Include="V20180321\Models\CallTimeDict.cs" />
+    <Compile Include="V20180321\Models\CallTimeInfo.cs" />
+    <Compile Include="V20180321\Models\CreateBotTaskRequest.cs" />
+    <Compile Include="V20180321\Models\CreateBotTaskResponse.cs" />
+    <Compile Include="V20180321\Models\DescribeBotFlowRequest.cs" />
+    <Compile Include="V20180321\Models\DescribeBotFlowResponse.cs" />
     <Compile Include="V20180321\Models\DescribeCreditResultRequest.cs" />
     <Compile Include="V20180321\Models\DescribeCreditResultResponse.cs" />
+    <Compile Include="V20180321\Models\DescribeFileModelRequest.cs" />
+    <Compile Include="V20180321\Models\DescribeFileModelResponse.cs" />
     <Compile Include="V20180321\Models\DescribeRecordsRequest.cs" />
     <Compile Include="V20180321\Models\DescribeRecordsResponse.cs" />
     <Compile Include="V20180321\Models\DescribeTaskStatusRequest.cs" />
@@ -61,6 +70,7 @@
     <Compile Include="V20180321\Models\DownloadRecordListResponse.cs" />
     <Compile Include="V20180321\Models\DownloadReportRequest.cs" />
     <Compile Include="V20180321\Models\DownloadReportResponse.cs" />
+    <Compile Include="V20180321\Models\PhonePool.cs" />
     <Compile Include="V20180321\Models\ProductQueryInfo.cs" />
     <Compile Include="V20180321\Models\QueryInstantDataRequest.cs" />
     <Compile Include="V20180321\Models\QueryInstantDataResponse.cs" />
@@ -68,6 +78,10 @@
     <Compile Include="V20180321\Models\QueryProductsResponse.cs" />
     <Compile Include="V20180321\Models\SingleBlackApply.cs" />
     <Compile Include="V20180321\Models\SingleRecord.cs" />
+    <Compile Include="V20180321\Models\SmsSign.cs" />
+    <Compile Include="V20180321\Models\SmsTemplate.cs" />
+    <Compile Include="V20180321\Models\UploadBotFileRequest.cs" />
+    <Compile Include="V20180321\Models\UploadBotFileResponse.cs" />
     <Compile Include="V20180321\Models\UploadDataFileRequest.cs" />
     <Compile Include="V20180321\Models\UploadDataFileResponse.cs" />
     <Compile Include="V20180321\Models\UploadDataJsonRequest.cs" />

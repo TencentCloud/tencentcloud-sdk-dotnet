@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? ProtectMode{ get; set; }
 
         /// <summary>
-        /// 部署策略，取值范围：HA-高可用版两节点，FE-金融版三节点；默认值根据数据复制方式决定，数据复制方式为强同步复制时默认值为FE，数据复制方式非强同步时默认值为HA。
+        /// 部署策略，取值范围：HA-高可用版
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

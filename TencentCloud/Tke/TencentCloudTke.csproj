@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.190</VersionPrefix>
+    <VersionPrefix>3.0.191</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,8 @@
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardResponse.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusTemplateRequest.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\DataDisk.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
@@ -101,6 +103,10 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusTemplateRequest.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusTemplateResponse.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
@@ -131,6 +137,18 @@
     <Compile Include="V20180525\Models\DescribeImagesResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAgentInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAgentInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAgentsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAgentsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAlertRuleRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusOverviewsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusOverviewsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusTargetsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusTargetsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusTemplateSyncRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusTemplateSyncResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusTemplatesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusTemplatesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
@@ -157,8 +175,23 @@
     <Compile Include="V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
+    <Compile Include="V20180525\Models\PrometheusAgentOverview.cs" />
+    <Compile Include="V20180525\Models\PrometheusAlertRule.cs" />
+    <Compile Include="V20180525\Models\PrometheusAlertRuleDetail.cs" />
+    <Compile Include="V20180525\Models\PrometheusConfigItem.cs" />
+    <Compile Include="V20180525\Models\PrometheusInstanceOverview.cs" />
+    <Compile Include="V20180525\Models\PrometheusJobTargets.cs" />
+    <Compile Include="V20180525\Models\PrometheusNotification.cs" />
+    <Compile Include="V20180525\Models\PrometheusTarget.cs" />
+    <Compile Include="V20180525\Models\PrometheusTemplate.cs" />
+    <Compile Include="V20180525\Models\PrometheusTemplateModify.cs" />
+    <Compile Include="V20180525\Models\PrometheusTemplateSyncTarget.cs" />
     <Compile Include="V20180525\Models\RegionInstance.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
@@ -169,6 +202,8 @@
     <Compile Include="V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\SyncPrometheusTemplateRequest.cs" />
+    <Compile Include="V20180525\Models\SyncPrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\Tag.cs" />
     <Compile Include="V20180525\Models\TagSpecification.cs" />
     <Compile Include="V20180525\Models\Taint.cs" />

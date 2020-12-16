@@ -315,6 +315,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("DcnDstNum")]
         public long? DcnDstNum{ get; set; }
 
+        /// <summary>
+        /// 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -368,6 +375,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
             this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
             this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

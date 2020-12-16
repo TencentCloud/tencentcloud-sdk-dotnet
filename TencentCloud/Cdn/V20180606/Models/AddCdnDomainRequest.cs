@@ -218,6 +218,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
+        /// <summary>
+        /// Ipv6 访问配置
+        /// </summary>
+        [JsonProperty("Ipv6Access")]
+        public Ipv6Access Ipv6Access{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -255,6 +261,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         }
     }
 }

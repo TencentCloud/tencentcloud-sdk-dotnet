@@ -93,6 +93,86 @@ namespace TencentCloud.Tms.V20200713
         }
 
         /// <summary>
+        /// 控制台获取用户词库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextLibRequest"/></param>
+        /// <returns><see cref="DescribeTextLibResponse"/></returns>
+        public async Task<DescribeTextLibResponse> DescribeTextLib(DescribeTextLibRequest req)
+        {
+             JsonResponseModel<DescribeTextLibResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTextLib");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextLibResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台获取用户词库列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextLibRequest"/></param>
+        /// <returns><see cref="DescribeTextLibResponse"/></returns>
+        public DescribeTextLibResponse DescribeTextLibSync(DescribeTextLibRequest req)
+        {
+             JsonResponseModel<DescribeTextLibResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTextLib");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextLibResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台识别统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextStatRequest"/></param>
+        /// <returns><see cref="DescribeTextStatResponse"/></returns>
+        public async Task<DescribeTextStatResponse> DescribeTextStat(DescribeTextStatRequest req)
+        {
+             JsonResponseModel<DescribeTextStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTextStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 控制台识别统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextStatRequest"/></param>
+        /// <returns><see cref="DescribeTextStatResponse"/></returns>
+        public DescribeTextStatResponse DescribeTextStatSync(DescribeTextStatRequest req)
+        {
+             JsonResponseModel<DescribeTextStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTextStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTextStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
         /// </summary>
         /// <param name="req"><see cref="TextModerationRequest"/></param>

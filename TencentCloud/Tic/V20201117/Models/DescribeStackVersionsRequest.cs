@@ -43,12 +43,16 @@ namespace TencentCloud.Tic.V20201117.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// # Name
-        /// 按照名称进行过滤，可选
+        /// <li>**Name**</li>
+        /// 按照【**版本名称**】进行过滤
         /// 类型：string
         /// 
-        /// # Status
-        /// 按照版本状态过滤，形如VERSION_EDITING，PLAN_IN_PROGRESS等，可选
+        /// <li>**Status**</li>
+        /// 按照【**版本状态**】过滤，形如`VERSION_EDITING`，`PLAN_IN_PROGRESS`等
+        /// 类型：string
+        /// 
+        /// <li>**StackId**</li>
+        /// 按照版本所属的【**资源栈ID**】进行过滤，形如`stk-xxxxxx`
         /// 类型：string
         /// </summary>
         [JsonProperty("Filters")]

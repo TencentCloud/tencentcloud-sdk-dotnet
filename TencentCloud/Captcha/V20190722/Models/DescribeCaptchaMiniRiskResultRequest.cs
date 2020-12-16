@@ -79,7 +79,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         public string Imei{ get; set; }
 
         /// <summary>
-        /// 验证场景：1 活动防刷场景，2 登陆保护场景，3 注册保护场景。根据需求选择场景参数。
+        /// 验证场景：1 活动防刷场景，2 登录保护场景，3 注册保护场景。根据需求选择场景参数。
         /// </summary>
         [JsonProperty("SceneCode")]
         public long? SceneCode{ get; set; }

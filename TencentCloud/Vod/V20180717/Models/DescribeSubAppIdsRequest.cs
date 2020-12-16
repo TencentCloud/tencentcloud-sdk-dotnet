@@ -25,6 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// 分页拉取的最大返回结果数。默认值：200；最大值：200。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页拉取的起始偏移量。默认值：0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
         /// 标签信息，查询指定标签的子应用列表。
         /// </summary>
         [JsonProperty("Tags")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

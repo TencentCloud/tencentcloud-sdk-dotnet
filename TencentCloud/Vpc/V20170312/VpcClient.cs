@@ -1003,6 +1003,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
+        /// </summary>
+        /// <param name="req"><see cref="CloneSecurityGroupRequest"/></param>
+        /// <returns><see cref="CloneSecurityGroupResponse"/></returns>
+        public async Task<CloneSecurityGroupResponse> CloneSecurityGroup(CloneSecurityGroupRequest req)
+        {
+             JsonResponseModel<CloneSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
+        /// </summary>
+        /// <param name="req"><see cref="CloneSecurityGroupRequest"/></param>
+        /// <returns><see cref="CloneSecurityGroupResponse"/></returns>
+        public CloneSecurityGroupResponse CloneSecurityGroupSync(CloneSecurityGroupRequest req)
+        {
+             JsonResponseModel<CloneSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateAddressTemplate）用于创建IP地址模版
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateRequest"/></param>

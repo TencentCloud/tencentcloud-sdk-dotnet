@@ -989,6 +989,46 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVideoByVideoSegmentationDataRequest"/></param>
+        /// <returns><see cref="ExportVideoByVideoSegmentationDataResponse"/></returns>
+        public async Task<ExportVideoByVideoSegmentationDataResponse> ExportVideoByVideoSegmentationData(ExportVideoByVideoSegmentationDataRequest req)
+        {
+             JsonResponseModel<ExportVideoByVideoSegmentationDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportVideoByVideoSegmentationData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVideoByVideoSegmentationDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVideoByVideoSegmentationDataRequest"/></param>
+        /// <returns><see cref="ExportVideoByVideoSegmentationDataResponse"/></returns>
+        public ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationDataSync(ExportVideoByVideoSegmentationDataRequest req)
+        {
+             JsonResponseModel<ExportVideoByVideoSegmentationDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportVideoByVideoSegmentationData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVideoByVideoSegmentationDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 导出视频编辑项目，支持指定输出的模板。
         /// </summary>
         /// <param name="req"><see cref="ExportVideoEditProjectRequest"/></param>
@@ -1060,6 +1100,46 @@ namespace TencentCloud.Cme.V20191029
              {
                  var strResp = this.InternalRequestSync(req, "FlattenListMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlattenListMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateVideoSegmentationSchemeByAiRequest"/></param>
+        /// <returns><see cref="GenerateVideoSegmentationSchemeByAiResponse"/></returns>
+        public async Task<GenerateVideoSegmentationSchemeByAiResponse> GenerateVideoSegmentationSchemeByAi(GenerateVideoSegmentationSchemeByAiRequest req)
+        {
+             JsonResponseModel<GenerateVideoSegmentationSchemeByAiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateVideoSegmentationSchemeByAi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateVideoSegmentationSchemeByAiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起视频智能拆条任务，支持智能生成和平精英集锦、王者荣耀集锦、足球集锦、篮球集锦 、人物集锦、新闻拆条等任务。
+        /// </summary>
+        /// <param name="req"><see cref="GenerateVideoSegmentationSchemeByAiRequest"/></param>
+        /// <returns><see cref="GenerateVideoSegmentationSchemeByAiResponse"/></returns>
+        public GenerateVideoSegmentationSchemeByAiResponse GenerateVideoSegmentationSchemeByAiSync(GenerateVideoSegmentationSchemeByAiRequest req)
+        {
+             JsonResponseModel<GenerateVideoSegmentationSchemeByAiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateVideoSegmentationSchemeByAi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateVideoSegmentationSchemeByAiResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
