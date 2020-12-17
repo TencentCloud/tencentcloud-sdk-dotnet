@@ -93,6 +93,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 本接口（AssignIpv6Addresses）用于弹性网卡申请IPv6地址。
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6AddressesRequest"/></param>
+        /// <returns><see cref="AssignIpv6AddressesResponse"/></returns>
+        public async Task<AssignIpv6AddressesResponse> AssignIpv6Addresses(AssignIpv6AddressesRequest req)
+        {
+             JsonResponseModel<AssignIpv6AddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssignIpv6Addresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6AddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssignIpv6Addresses）用于弹性网卡申请IPv6地址。
+        /// </summary>
+        /// <param name="req"><see cref="AssignIpv6AddressesRequest"/></param>
+        /// <returns><see cref="AssignIpv6AddressesResponse"/></returns>
+        public AssignIpv6AddressesResponse AssignIpv6AddressesSync(AssignIpv6AddressesRequest req)
+        {
+             JsonResponseModel<AssignIpv6AddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssignIpv6Addresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssignIpv6AddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 弹性网卡申请内网 IP
         /// </summary>
         /// <param name="req"><see cref="AssignPrivateIpAddressesRequest"/></param>
@@ -3381,6 +3421,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 本接口（ModifyIpv6AddressesAttribute）用于修改弹性网卡IPv6地址属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpv6AddressesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyIpv6AddressesAttributeResponse"/></returns>
+        public async Task<ModifyIpv6AddressesAttributeResponse> ModifyIpv6AddressesAttribute(ModifyIpv6AddressesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyIpv6AddressesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIpv6AddressesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIpv6AddressesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyIpv6AddressesAttribute）用于修改弹性网卡IPv6地址属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIpv6AddressesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyIpv6AddressesAttributeResponse"/></returns>
+        public ModifyIpv6AddressesAttributeResponse ModifyIpv6AddressesAttributeSync(ModifyIpv6AddressesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyIpv6AddressesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIpv6AddressesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIpv6AddressesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改负载均衡监听器属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyListenerRequest"/></param>
@@ -4056,6 +4136,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnassignIpv6Addresses）用于释放弹性网卡IPv6地址。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIpv6AddressesRequest"/></param>
+        /// <returns><see cref="ReleaseIpv6AddressesResponse"/></returns>
+        public async Task<ReleaseIpv6AddressesResponse> ReleaseIpv6Addresses(ReleaseIpv6AddressesRequest req)
+        {
+             JsonResponseModel<ReleaseIpv6AddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseIpv6Addresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIpv6AddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnassignIpv6Addresses）用于释放弹性网卡IPv6地址。
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIpv6AddressesRequest"/></param>
+        /// <returns><see cref="ReleaseIpv6AddressesResponse"/></returns>
+        public ReleaseIpv6AddressesResponse ReleaseIpv6AddressesSync(ReleaseIpv6AddressesRequest req)
+        {
+             JsonResponseModel<ReleaseIpv6AddressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseIpv6Addresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseIpv6AddressesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

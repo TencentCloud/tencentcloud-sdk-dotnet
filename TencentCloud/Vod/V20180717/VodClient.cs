@@ -4323,6 +4323,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 对点播视频进行拆条，生成多个新的点播视频。
+        /// </summary>
+        /// <param name="req"><see cref="SplitMediaRequest"/></param>
+        /// <returns><see cref="SplitMediaResponse"/></returns>
+        public async Task<SplitMediaResponse> SplitMedia(SplitMediaRequest req)
+        {
+             JsonResponseModel<SplitMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SplitMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SplitMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对点播视频进行拆条，生成多个新的点播视频。
+        /// </summary>
+        /// <param name="req"><see cref="SplitMediaRequest"/></param>
+        /// <returns><see cref="SplitMediaResponse"/></returns>
+        public SplitMediaResponse SplitMediaSync(SplitMediaRequest req)
+        {
+             JsonResponseModel<SplitMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SplitMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SplitMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将点播视频发布到微信小程序，供微信小程序播放器播放。
         /// </summary>
         /// <param name="req"><see cref="WeChatMiniProgramPublishRequest"/></param>

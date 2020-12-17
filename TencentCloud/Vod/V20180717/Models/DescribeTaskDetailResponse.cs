@@ -28,9 +28,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 任务类型，取值：
         /// <li>Procedure：视频处理任务；</li>
         /// <li>EditMedia：视频编辑任务；</li>
+        /// <li>SplitMedia：视频拆条任务；</li>
+        /// <li>ComposeMedia：制作媒体文件任务；</li>
         /// <li>WechatPublish：微信发布任务；</li>
         /// <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-        /// <li>ComposeMedia：制作媒体文件任务；</li>
         /// <li>PullUpload：拉取上传媒体文件任务。</li>
         /// 
         /// 兼容 2017 版的任务类型：
@@ -99,6 +100,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public ComposeMediaTask ComposeMediaTask{ get; set; }
 
         /// <summary>
+        /// 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SplitMediaTask")]
+        public SplitMediaTask SplitMediaTask{ get; set; }
+
+        /// <summary>
+        /// 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatMiniProgramPublishTask")]
+        public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
+
+        /// <summary>
         /// 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -111,13 +126,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTask2017 TranscodeTask{ get; set; }
-
-        /// <summary>
-        /// 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SnapshotByTimeOffsetTask")]
-        public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
@@ -141,11 +149,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+        /// 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("WechatMiniProgramPublishTask")]
-        public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
+        [JsonProperty("SnapshotByTimeOffsetTask")]
+        public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -168,13 +176,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
             this.SetParamObj(map, prefix + "WechatPublishTask.", this.WechatPublishTask);
             this.SetParamObj(map, prefix + "ComposeMediaTask.", this.ComposeMediaTask);
+            this.SetParamObj(map, prefix + "SplitMediaTask.", this.SplitMediaTask);
+            this.SetParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
             this.SetParamObj(map, prefix + "PullUploadTask.", this.PullUploadTask);
             this.SetParamObj(map, prefix + "TranscodeTask.", this.TranscodeTask);
-            this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamObj(map, prefix + "ConcatTask.", this.ConcatTask);
             this.SetParamObj(map, prefix + "ClipTask.", this.ClipTask);
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
-            this.SetParamObj(map, prefix + "WechatMiniProgramPublishTask.", this.WechatMiniProgramPublishTask);
+            this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

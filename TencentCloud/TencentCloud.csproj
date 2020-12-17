@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.191</VersionPrefix>
+    <VersionPrefix>3.0.192</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1606,6 +1606,8 @@
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribePSTNActiveSessionListRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribePSTNActiveSessionListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
@@ -1613,6 +1615,7 @@
     <Compile Include="Ccc\V20200210\Models\IMCdrInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\Message.cs" />
     <Compile Include="Ccc\V20200210\Models\MessageBody.cs" />
+    <Compile Include="Ccc\V20200210\Models\PSTNSessionInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\SeatUserInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\TelCdrInfo.cs" />
     <Compile Include="Cdb\V20170320\CdbClient.cs" />
@@ -2738,6 +2741,8 @@
     <Compile Include="Cme\V20191029\Models\DescribeLoginStatusResponse.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeMaterialsRequest.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeMaterialsResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\DescribePlatformsRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\DescribePlatformsResponse.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeProjectsRequest.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeProjectsResponse.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeResourceAuthorizationRequest.cs" />
@@ -2799,6 +2804,7 @@
     <Compile Include="Cme\V20191029\Models\MoveClassRequest.cs" />
     <Compile Include="Cme\V20191029\Models\MoveClassResponse.cs" />
     <Compile Include="Cme\V20191029\Models\PenguinMediaPlatformPublishInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\PlatformInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ProjectInfo.cs" />
     <Compile Include="Cme\V20191029\Models\Resource.cs" />
     <Compile Include="Cme\V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
@@ -4431,6 +4437,8 @@
     <Compile Include="Ecm\V20190719\Models\AllocateAddressesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AllocateAddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Area.cs" />
+    <Compile Include="Ecm\V20190719\Models\AssignIpv6AddressesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\AssignIpv6AddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\AssignPrivateIpAddressesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AssignPrivateIpAddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\AssistantCidr.cs" />
@@ -4625,6 +4633,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyInstancesAttributeResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyIpv6AddressesAttributeRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyIpv6AddressesAttributeResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyListenerRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyListenerResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyLoadBalancerAttributesRequest.cs" />
@@ -4679,6 +4689,8 @@
     <Compile Include="Ecm\V20190719\Models\RegionInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\ReleaseAddressesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ReleaseAddressesResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReleaseIpv6AddressesRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ReleaseIpv6AddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\RemovePrivateIpAddressesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\RemovePrivateIpAddressesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ReplaceRouteTableAssociationRequest.cs" />
@@ -8132,6 +8144,50 @@
     <Compile Include="Scf\V20180416\Models\VersionMatch.cs" />
     <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
     <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
+    <Compile Include="Ses\V20201002\SesClient.cs" />
+    <Compile Include="Ses\V20201002\Models\BlackEmailAddress.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DNSAttributes.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteBlackListRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteBlackListResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\EmailIdentity.cs" />
+    <Compile Include="Ses\V20201002\Models\EmailSender.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\GetEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\GetStatisticsReportRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\GetStatisticsReportResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListBlackEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListBlackEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailAddressRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailAddressResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailIdentitiesRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailIdentitiesResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailTemplatesRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListEmailTemplatesResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\SendEmailRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\SendEmailResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\Simple.cs" />
+    <Compile Include="Ses\V20201002\Models\Template.cs" />
+    <Compile Include="Ses\V20201002\Models\TemplateContent.cs" />
+    <Compile Include="Ses\V20201002\Models\TemplatesMetadata.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailTemplateRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\UpdateEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\Volume.cs" />
     <Compile Include="Smpn\V20190822\SmpnClient.cs" />
     <Compile Include="Smpn\V20190822\Models\CHPRequest.cs" />
     <Compile Include="Smpn\V20190822\Models\CHPResponse.cs" />
@@ -8873,6 +8929,8 @@
     <Compile Include="Tcb\V20180608\Models\CreateStaticStoreRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateStaticStoreResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DatabasesInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteEndUserRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteEndUserResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsRequest.cs" />
@@ -10746,6 +10804,13 @@
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SortBy.cs" />
     <Compile Include="Vod\V20180717\Models\SpecificationDataItem.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaOutputConfig.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaTask.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaTaskConfig.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\SplitMediaTaskSegmentInfo.cs" />
     <Compile Include="Vod\V20180717\Models\StatDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\StickerTrackItem.cs" />
     <Compile Include="Vod\V20180717\Models\StorageStatData.cs" />
@@ -10756,6 +10821,7 @@
     <Compile Include="Vod\V20180717\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TagConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\TaskOutputMediaInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TaskSimpleInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TaskStatData.cs" />
     <Compile Include="Vod\V20180717\Models\TaskStatDataItem.cs" />

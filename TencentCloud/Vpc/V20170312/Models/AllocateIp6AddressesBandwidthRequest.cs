@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
+        /// <summary>
+        /// 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
+        /// </summary>
+        [JsonProperty("BandwidthPackageId")]
+        public string BandwidthPackageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArraySimple(map, prefix + "Ip6Addresses.", this.Ip6Addresses);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         }
     }
 }

@@ -42,6 +42,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
+        /// <summary>
+        /// 域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

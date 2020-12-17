@@ -213,6 +213,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 获取 PSTN 活动会话列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePSTNActiveSessionListRequest"/></param>
+        /// <returns><see cref="DescribePSTNActiveSessionListResponse"/></returns>
+        public async Task<DescribePSTNActiveSessionListResponse> DescribePSTNActiveSessionList(DescribePSTNActiveSessionListRequest req)
+        {
+             JsonResponseModel<DescribePSTNActiveSessionListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePSTNActiveSessionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePSTNActiveSessionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取 PSTN 活动会话列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePSTNActiveSessionListRequest"/></param>
+        /// <returns><see cref="DescribePSTNActiveSessionListResponse"/></returns>
+        public DescribePSTNActiveSessionListResponse DescribePSTNActiveSessionListSync(DescribePSTNActiveSessionListRequest req)
+        {
+             JsonResponseModel<DescribePSTNActiveSessionListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePSTNActiveSessionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePSTNActiveSessionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按实例获取电话消耗统计
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>

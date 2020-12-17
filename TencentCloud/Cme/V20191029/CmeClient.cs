@@ -665,6 +665,50 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// <li>支持获取所创建的所有平台列表信息；</li>
+        /// <li>支持获取指定的平台列表信息。</li>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformsRequest"/></param>
+        /// <returns><see cref="DescribePlatformsResponse"/></returns>
+        public async Task<DescribePlatformsResponse> DescribePlatforms(DescribePlatformsRequest req)
+        {
+             JsonResponseModel<DescribePlatformsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePlatforms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlatformsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <li>支持获取所创建的所有平台列表信息；</li>
+        /// <li>支持获取指定的平台列表信息。</li>
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlatformsRequest"/></param>
+        /// <returns><see cref="DescribePlatformsResponse"/></returns>
+        public DescribePlatformsResponse DescribePlatformsSync(DescribePlatformsRequest req)
+        {
+             JsonResponseModel<DescribePlatformsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePlatforms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlatformsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支持根据多种条件过滤出项目列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectsRequest"/></param>

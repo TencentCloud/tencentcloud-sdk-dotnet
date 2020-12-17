@@ -55,10 +55,10 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Strategy{ get; set; }
 
         /// <summary>
-        /// 描述
+        /// 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
         /// </summary>
-        [JsonProperty("Detail")]
-        public string Detail{ get; set; }
+        [JsonProperty("SourceType")]
+        public ulong? SourceType{ get; set; }
 
         /// <summary>
         /// 方向，0：出站，1：入站
@@ -67,13 +67,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// 源类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+        /// 描述
         /// </summary>
-        [JsonProperty("SourceType")]
-        public ulong? SourceType{ get; set; }
+        [JsonProperty("Detail")]
+        public string Detail{ get; set; }
 
         /// <summary>
-        /// 目的类型,1是ip,2是域名,3是ip地址簿，4是ip组地址簿
+        /// 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
         /// </summary>
         [JsonProperty("TargetType")]
         public ulong? TargetType{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// log
+        /// 日志id，从告警处创建必传，其它为空
         /// </summary>
         [JsonProperty("LogId")]
         public string LogId{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Country{ get; set; }
 
         /// <summary>
-        /// 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
+        /// 云厂商，支持多个，以逗号分隔， 1:腾讯云（仅中国香港及海外）,2:阿里云,3:亚马逊云,4:华为云,5:微软云
         /// </summary>
         [JsonProperty("CloudCode")]
         public string CloudCode{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? IsRegion{ get; set; }
 
         /// <summary>
-        /// 地域名
+        /// 城市名
         /// </summary>
         [JsonProperty("CityName")]
         public string CityName{ get; set; }
 
         /// <summary>
-        /// 地域名
+        /// 国家名
         /// </summary>
         [JsonProperty("CountryName")]
         public string CountryName{ get; set; }
@@ -143,9 +143,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "TargetIp", this.TargetIp);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
-            this.SetParamSimple(map, prefix + "Detail", this.Detail);
-            this.SetParamSimple(map, prefix + "Direction", this.Direction);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
+            this.SetParamSimple(map, prefix + "Detail", this.Detail);
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Id", this.Id);

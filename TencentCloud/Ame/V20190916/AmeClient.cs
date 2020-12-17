@@ -333,7 +333,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 客户上报用户数据功能，为了更好的为用户提供优质服务
+        /// 客户上报用户数据功能，为了更好地为用户提供优质服务
         /// </summary>
         /// <param name="req"><see cref="ReportDataRequest"/></param>
         /// <returns><see cref="ReportDataResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 客户上报用户数据功能，为了更好的为用户提供优质服务
+        /// 客户上报用户数据功能，为了更好地为用户提供优质服务
         /// </summary>
         /// <param name="req"><see cref="ReportDataRequest"/></param>
         /// <returns><see cref="ReportDataResponse"/></returns>

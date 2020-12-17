@@ -373,6 +373,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 删除云项目
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseProjectLatestVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseProjectLatestVersionResponse"/></returns>
+        public async Task<DeleteCloudBaseProjectLatestVersionResponse> DeleteCloudBaseProjectLatestVersion(DeleteCloudBaseProjectLatestVersionRequest req)
+        {
+             JsonResponseModel<DeleteCloudBaseProjectLatestVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCloudBaseProjectLatestVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudBaseProjectLatestVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除云项目
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseProjectLatestVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseProjectLatestVersionResponse"/></returns>
+        public DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersionSync(DeleteCloudBaseProjectLatestVersionRequest req)
+        {
+             JsonResponseModel<DeleteCloudBaseProjectLatestVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCloudBaseProjectLatestVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudBaseProjectLatestVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除终端用户
         /// </summary>
         /// <param name="req"><see cref="DeleteEndUserRequest"/></param>

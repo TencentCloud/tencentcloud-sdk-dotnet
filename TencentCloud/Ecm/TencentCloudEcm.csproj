@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F313119E-D8EA-3E66-991F-7C89745C570F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.191</VersionPrefix>
+    <VersionPrefix>3.0.192</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20190719\Models\AllocateAddressesRequest.cs" />
     <Compile Include="V20190719\Models\AllocateAddressesResponse.cs" />
     <Compile Include="V20190719\Models\Area.cs" />
+    <Compile Include="V20190719\Models\AssignIpv6AddressesRequest.cs" />
+    <Compile Include="V20190719\Models\AssignIpv6AddressesResponse.cs" />
     <Compile Include="V20190719\Models\AssignPrivateIpAddressesRequest.cs" />
     <Compile Include="V20190719\Models\AssignPrivateIpAddressesResponse.cs" />
     <Compile Include="V20190719\Models\AssistantCidr.cs" />
@@ -245,6 +247,8 @@
     <Compile Include="V20190719\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="V20190719\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="V20190719\Models\ModifyInstancesAttributeResponse.cs" />
+    <Compile Include="V20190719\Models\ModifyIpv6AddressesAttributeRequest.cs" />
+    <Compile Include="V20190719\Models\ModifyIpv6AddressesAttributeResponse.cs" />
     <Compile Include="V20190719\Models\ModifyListenerRequest.cs" />
     <Compile Include="V20190719\Models\ModifyListenerResponse.cs" />
     <Compile Include="V20190719\Models\ModifyLoadBalancerAttributesRequest.cs" />
@@ -299,6 +303,8 @@
     <Compile Include="V20190719\Models\RegionInfo.cs" />
     <Compile Include="V20190719\Models\ReleaseAddressesRequest.cs" />
     <Compile Include="V20190719\Models\ReleaseAddressesResponse.cs" />
+    <Compile Include="V20190719\Models\ReleaseIpv6AddressesRequest.cs" />
+    <Compile Include="V20190719\Models\ReleaseIpv6AddressesResponse.cs" />
     <Compile Include="V20190719\Models\RemovePrivateIpAddressesRequest.cs" />
     <Compile Include="V20190719\Models\RemovePrivateIpAddressesResponse.cs" />
     <Compile Include="V20190719\Models\ReplaceRouteTableAssociationRequest.cs" />

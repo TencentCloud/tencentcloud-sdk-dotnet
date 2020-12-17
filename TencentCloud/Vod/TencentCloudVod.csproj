@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.191</VersionPrefix>
+    <VersionPrefix>3.0.192</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -498,6 +498,13 @@
     <Compile Include="V20180717\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="V20180717\Models\SortBy.cs" />
     <Compile Include="V20180717\Models\SpecificationDataItem.cs" />
+    <Compile Include="V20180717\Models\SplitMediaOutputConfig.cs" />
+    <Compile Include="V20180717\Models\SplitMediaRequest.cs" />
+    <Compile Include="V20180717\Models\SplitMediaResponse.cs" />
+    <Compile Include="V20180717\Models\SplitMediaTask.cs" />
+    <Compile Include="V20180717\Models\SplitMediaTaskConfig.cs" />
+    <Compile Include="V20180717\Models\SplitMediaTaskInput.cs" />
+    <Compile Include="V20180717\Models\SplitMediaTaskSegmentInfo.cs" />
     <Compile Include="V20180717\Models\StatDataItem.cs" />
     <Compile Include="V20180717\Models\StickerTrackItem.cs" />
     <Compile Include="V20180717\Models\StorageStatData.cs" />
@@ -508,6 +515,7 @@
     <Compile Include="V20180717\Models\TEHDConfigForUpdate.cs" />
     <Compile Include="V20180717\Models\TagConfigureInfo.cs" />
     <Compile Include="V20180717\Models\TagConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\TaskOutputMediaInfo.cs" />
     <Compile Include="V20180717\Models\TaskSimpleInfo.cs" />
     <Compile Include="V20180717\Models\TaskStatData.cs" />
     <Compile Include="V20180717\Models\TaskStatDataItem.cs" />

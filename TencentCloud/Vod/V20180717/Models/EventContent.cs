@@ -37,6 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>FileDeleted：视频删除完成；</li>
         /// <li>PullComplete：视频转拉完成；</li>
         /// <li>EditMediaComplete：视频编辑完成；</li>
+        /// <li>SplitMediaComplete：视频拆分完成；</li>
         /// <li>WechatPublishComplete：微信发布完成；</li>
         /// <li>ComposeMediaComplete：制作媒体文件完成；</li>
         /// <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
@@ -86,25 +87,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaTask EditMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+        /// 视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("WechatPublishCompleteEvent")]
-        public WechatPublishTask WechatPublishCompleteEvent{ get; set; }
+        [JsonProperty("SplitMediaCompleteEvent")]
+        public SplitMediaTask SplitMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+        /// 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TranscodeCompleteEvent")]
-        public TranscodeTask2017 TranscodeCompleteEvent{ get; set; }
-
-        /// <summary>
-        /// 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ConcatCompleteEvent")]
-        public ConcatTask2017 ConcatCompleteEvent{ get; set; }
+        [JsonProperty("ComposeMediaCompleteEvent")]
+        public ComposeMediaTask ComposeMediaCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
@@ -114,11 +108,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public ClipTask2017 ClipCompleteEvent{ get; set; }
 
         /// <summary>
+        /// 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TranscodeCompleteEvent")]
+        public TranscodeTask2017 TranscodeCompleteEvent{ get; set; }
+
+        /// <summary>
         /// 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateImageSpriteCompleteEvent")]
         public CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConcatCompleteEvent")]
+        public ConcatTask2017 ConcatCompleteEvent{ get; set; }
 
         /// <summary>
         /// 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
@@ -128,11 +136,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+        /// 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ComposeMediaCompleteEvent")]
-        public ComposeMediaTask ComposeMediaCompleteEvent{ get; set; }
+        [JsonProperty("WechatPublishCompleteEvent")]
+        public WechatPublishTask WechatPublishCompleteEvent{ get; set; }
 
         /// <summary>
         /// 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
@@ -154,13 +162,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "FileDeleteEvent.", this.FileDeleteEvent);
             this.SetParamObj(map, prefix + "PullCompleteEvent.", this.PullCompleteEvent);
             this.SetParamObj(map, prefix + "EditMediaCompleteEvent.", this.EditMediaCompleteEvent);
-            this.SetParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
-            this.SetParamObj(map, prefix + "TranscodeCompleteEvent.", this.TranscodeCompleteEvent);
-            this.SetParamObj(map, prefix + "ConcatCompleteEvent.", this.ConcatCompleteEvent);
-            this.SetParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);
-            this.SetParamObj(map, prefix + "CreateImageSpriteCompleteEvent.", this.CreateImageSpriteCompleteEvent);
-            this.SetParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
+            this.SetParamObj(map, prefix + "SplitMediaCompleteEvent.", this.SplitMediaCompleteEvent);
             this.SetParamObj(map, prefix + "ComposeMediaCompleteEvent.", this.ComposeMediaCompleteEvent);
+            this.SetParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);
+            this.SetParamObj(map, prefix + "TranscodeCompleteEvent.", this.TranscodeCompleteEvent);
+            this.SetParamObj(map, prefix + "CreateImageSpriteCompleteEvent.", this.CreateImageSpriteCompleteEvent);
+            this.SetParamObj(map, prefix + "ConcatCompleteEvent.", this.ConcatCompleteEvent);
+            this.SetParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
+            this.SetParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
             this.SetParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
         }
     }

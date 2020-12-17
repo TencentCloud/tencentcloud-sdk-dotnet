@@ -42,6 +42,15 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// 自动续费开关。有三个可选值：
+        /// 0 表示关闭，不自动续费
+        /// 1 表示开启，将自动续费
+        /// 2 表示不处理，保留域名原有状态（默认值）
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +60,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }
