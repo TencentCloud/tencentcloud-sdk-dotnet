@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.192</VersionPrefix>
+    <VersionPrefix>3.0.193</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2272,6 +2272,44 @@
     <Compile Include="Cfw\V20190904\Models\RunSyncAssetResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\SequenceData.cs" />
     <Compile Include="Cfw\V20190904\Models\SwitchListsData.cs" />
+    <Compile Include="Chdfs\V20201112\ChdfsClient.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AccessGroup.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AccessRule.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AssociateAccessGroupsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\AssociateAccessGroupsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateAccessGroupRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateAccessGroupResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateFileSystemRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateMountPointRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\CreateMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessGroupsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessRulesRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeAccessRulesResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeFileSystemsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DescribeMountPointsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DisassociateAccessGroupsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\DisassociateAccessGroupsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\FileSystem.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyAccessGroupRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyAccessGroupResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyFileSystemRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyFileSystemResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyMountPointRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyMountPointResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyResourceTagsRequest.cs" />
+    <Compile Include="Chdfs\V20201112\Models\ModifyResourceTagsResponse.cs" />
+    <Compile Include="Chdfs\V20201112\Models\MountPoint.cs" />
+    <Compile Include="Chdfs\V20201112\Models\Tag.cs" />
     <Compile Include="Chdfs\V20190718\ChdfsClient.cs" />
     <Compile Include="Chdfs\V20190718\Models\AccessGroup.cs" />
     <Compile Include="Chdfs\V20190718\Models\AccessRule.cs" />

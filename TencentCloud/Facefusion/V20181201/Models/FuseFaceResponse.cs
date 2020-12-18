@@ -31,7 +31,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string FusedImage{ get; set; }
 
         /// <summary>
-        /// 鉴政结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
+        /// 不适宜内容识别结果。该数组的顺序和请求中mergeinfo的顺序一致，一一对应
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReviewResultSet")]

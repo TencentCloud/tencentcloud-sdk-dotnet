@@ -73,7 +73,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// 部署组类型，精确过滤字段，M：service mesh, P：原生应用， M：网关应用
+        /// 部署组类型，精确过滤字段，M：service mesh, P：原生应用， G：网关应用
         /// </summary>
         [JsonProperty("AppMicroServiceType")]
         public string AppMicroServiceType{ get; set; }

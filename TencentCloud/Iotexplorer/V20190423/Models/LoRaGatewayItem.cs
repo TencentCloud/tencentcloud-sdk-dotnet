@@ -84,6 +84,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("LastSeenAt")]
         public string LastSeenAt{ get; set; }
 
+        /// <summary>
+        /// 频点ID
+        /// </summary>
+        [JsonProperty("FrequencyId")]
+        public string FrequencyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "LastSeenAt", this.LastSeenAt);
+            this.SetParamSimple(map, prefix + "FrequencyId", this.FrequencyId);
         }
     }
 }

@@ -31,19 +31,20 @@ namespace TencentCloud.Ims.V20200713.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+        /// 以及令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+        /// 仅当Label为Custom自定义关键词时有效，表示自定义库id
         /// </summary>
         [JsonProperty("LibId")]
         public string LibId{ get; set; }
 
         /// <summary>
-        /// 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+        /// 仅当Label为Custom自定义关键词时有效，表示自定义库名称
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }

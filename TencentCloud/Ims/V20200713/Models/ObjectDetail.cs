@@ -39,7 +39,6 @@ namespace TencentCloud.Ims.V20200713.Models
         /// <summary>
         /// 标签值，
         /// 当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
-        /// 当标签为人脸属性，表示属性值，如Name为Age时 Value为18
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

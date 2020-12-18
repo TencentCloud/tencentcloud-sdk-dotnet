@@ -123,6 +123,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("TencentBackupAddress")]
         public string TencentBackupAddress{ get; set; }
 
+        /// <summary>
+        /// 高速上云服务ID
+        /// </summary>
+        [JsonProperty("CloudAttachId")]
+        public string CloudAttachId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
             this.SetParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
             this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
+            this.SetParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
         }
     }
 }

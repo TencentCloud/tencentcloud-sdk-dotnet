@@ -66,6 +66,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("PositionDetails")]
         public string PositionDetails{ get; set; }
 
+        /// <summary>
+        /// 频点ID
+        /// </summary>
+        [JsonProperty("FrequencyId")]
+        public string FrequencyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "IsPublic", this.IsPublic);
             this.SetParamSimple(map, prefix + "Position", this.Position);
             this.SetParamSimple(map, prefix + "PositionDetails", this.PositionDetails);
+            this.SetParamSimple(map, prefix + "FrequencyId", this.FrequencyId);
         }
     }
 }

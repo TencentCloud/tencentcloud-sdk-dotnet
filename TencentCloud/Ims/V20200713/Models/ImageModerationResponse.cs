@@ -39,7 +39,8 @@ namespace TencentCloud.Ims.V20200713.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义图片。
+        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义图片。
+        /// 以及令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -58,21 +59,21 @@ namespace TencentCloud.Ims.V20200713.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 识别模型的审核结果，包括涉黄、性感、涉暴、违法违规、等审核结果。
+        /// 智能模型的识别结果，包括涉黄、广告等令人反感、不安全或不适宜的内容类型识别结果。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LabelResults")]
         public LabelResult[] LabelResults{ get; set; }
 
         /// <summary>
-        /// 物体检测模型的审核结果，包括涉政实体、广告台标/二维码等物体坐标信息与内容审核信息。
+        /// 物体检测模型的审核结果，包括实体、广告台标/二维码等物体坐标信息与内容审核信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObjectResults")]
         public ObjectResult[] ObjectResults{ get; set; }
 
         /// <summary>
-        /// OCR识别后的文本审核结果，包括文本所处图片的OCR坐标信息以及图片文本的审核结果。
+        /// OCR识别后的文本识别结果，包括文本所处图片的OCR坐标信息以及图片文本的识别结果。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcrResults")]
@@ -80,7 +81,7 @@ namespace TencentCloud.Ims.V20200713.Models
 
         /// <summary>
         /// 基于图片风险库识别的结果。
-        /// 风险库包括违规黑库与正常白库的结果。
+        /// 风险库包括不安全黑库与正常白库的结果。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibResults")]

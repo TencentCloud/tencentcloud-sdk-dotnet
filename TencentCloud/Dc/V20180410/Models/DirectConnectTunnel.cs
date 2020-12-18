@@ -218,6 +218,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
+        /// <summary>
+        /// 高速上云服务ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudAttachId")]
+        public string CloudAttachId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -253,6 +260,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
+            this.SetParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
         }
     }
 }

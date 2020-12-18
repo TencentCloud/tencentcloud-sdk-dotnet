@@ -48,6 +48,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }
 
+        /// <summary>
+        /// 多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
+        /// </summary>
+        [JsonProperty("NodeSet")]
+        public RedisNodeInfo[] NodeSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
             this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
+            this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         }
     }
 }
