@@ -25,15 +25,7 @@ namespace TencentCloud.Tms.V20200713.Models
     {
         
         /// <summary>
-        /// 违规类型：
-        /// Terror	24001
-        /// Porn	20002
-        /// Polity	20001
-        /// Ad	20105
-        /// Abuse	20007	
-        /// Illegal	20006	
-        /// Spam	25001	
-        /// Moan	26001
+        /// ----非必选，该参数功能暂未对外开放
         /// </summary>
         [JsonProperty("EvilType")]
         public string EvilType{ get; set; }

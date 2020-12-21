@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 发起内容审核次数。
+        /// 发起内容智能识别次数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 内容审核总时长。
+        /// 内容智能识别总时长。
         /// </summary>
         [JsonProperty("TotalDuration")]
         public long? TotalDuration{ get; set; }
 
         /// <summary>
-        /// 内容审核时长统计数据，每天一个数据。
+        /// 内容智能识别时长统计数据，每天一个数据。
         /// </summary>
         [JsonProperty("Data")]
         public StatDataItem[] Data{ get; set; }

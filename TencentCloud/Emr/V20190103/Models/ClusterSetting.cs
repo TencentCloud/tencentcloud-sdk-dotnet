@@ -57,7 +57,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// 实例登陆配置。
+        /// 实例登录配置。
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
@@ -105,7 +105,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? CbsEncryptFlag{ get; set; }
 
         /// <summary>
-        /// 是否使用远程登陆，默认为false。
+        /// 是否使用远程登录，默认为false。
         /// </summary>
         [JsonProperty("RemoteTcpDefaultPort")]
         public bool? RemoteTcpDefaultPort{ get; set; }

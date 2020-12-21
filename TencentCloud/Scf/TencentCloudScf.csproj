@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.193</VersionPrefix>
+    <VersionPrefix>3.0.194</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,10 @@
     <Compile Include="V20180416\Models\DeleteLayerVersionResponse.cs" />
     <Compile Include="V20180416\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="V20180416\Models\DeleteNamespaceResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteProvisionedConcurrencyConfigRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteReservedConcurrencyConfigRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerRequest.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerResponse.cs" />
     <Compile Include="V20180416\Models\EipConfigIn.cs" />
@@ -89,6 +93,10 @@
     <Compile Include="V20180416\Models\GetFunctionResponse.cs" />
     <Compile Include="V20180416\Models\GetLayerVersionRequest.cs" />
     <Compile Include="V20180416\Models\GetLayerVersionResponse.cs" />
+    <Compile Include="V20180416\Models\GetProvisionedConcurrencyConfigRequest.cs" />
+    <Compile Include="V20180416\Models\GetProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="V20180416\Models\GetReservedConcurrencyConfigRequest.cs" />
+    <Compile Include="V20180416\Models\GetReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\InvokeRequest.cs" />
     <Compile Include="V20180416\Models\InvokeResponse.cs" />
     <Compile Include="V20180416\Models\LayerVersionInfo.cs" />
@@ -116,6 +124,12 @@
     <Compile Include="V20180416\Models\PublishLayerVersionResponse.cs" />
     <Compile Include="V20180416\Models\PublishVersionRequest.cs" />
     <Compile Include="V20180416\Models\PublishVersionResponse.cs" />
+    <Compile Include="V20180416\Models\PutProvisionedConcurrencyConfigRequest.cs" />
+    <Compile Include="V20180416\Models\PutProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="V20180416\Models\PutReservedConcurrencyConfigRequest.cs" />
+    <Compile Include="V20180416\Models\PutReservedConcurrencyConfigResponse.cs" />
+    <Compile Include="V20180416\Models\PutTotalConcurrencyConfigRequest.cs" />
+    <Compile Include="V20180416\Models\PutTotalConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\Result.cs" />
     <Compile Include="V20180416\Models\RoutingConfig.cs" />
     <Compile Include="V20180416\Models\StatusReason.cs" />
@@ -132,6 +146,7 @@
     <Compile Include="V20180416\Models\UpdateNamespaceResponse.cs" />
     <Compile Include="V20180416\Models\Variable.cs" />
     <Compile Include="V20180416\Models\VersionMatch.cs" />
+    <Compile Include="V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="V20180416\Models\VersionWeight.cs" />
     <Compile Include="V20180416\Models\VpcConfig.cs" />
   </ItemGroup>

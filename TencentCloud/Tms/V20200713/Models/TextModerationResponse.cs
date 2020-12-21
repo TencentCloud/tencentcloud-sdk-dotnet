@@ -38,15 +38,15 @@ namespace TencentCloud.Tms.V20200713.Models
         public long? EvilFlag{ get; set; }
 
         /// <summary>
-        /// 机器识别后判断违规所属类型。
-        /// Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+        /// 以及令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
         /// 建议您拿到判断结果后的执行操作。
-        /// Block：建议打击，Review：建议复审，Normal：建议通过。
+        /// 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
@@ -88,6 +88,13 @@ namespace TencentCloud.Tms.V20200713.Models
         public string Extra{ get; set; }
 
         /// <summary>
+        /// 请求参数中的DataId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataId")]
+        public string DataId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -108,6 +115,7 @@ namespace TencentCloud.Tms.V20200713.Models
             this.SetParamArrayObj(map, prefix + "DetailResults.", this.DetailResults);
             this.SetParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

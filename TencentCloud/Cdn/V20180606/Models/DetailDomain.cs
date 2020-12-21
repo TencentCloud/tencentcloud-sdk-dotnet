@@ -396,6 +396,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Ipv6Access")]
         public Ipv6Access Ipv6Access{ get; set; }
 
+        /// <summary>
+        /// 高级配置集合。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvanceSet")]
+        public AdvanceConfig[] AdvanceSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -453,6 +460,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
             this.SetParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
             this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+            this.SetParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ams.V20200608.Models
     {
         
         /// <summary>
-        /// 返回列表数据
+        /// 返回列表数据----非必选，该参数暂未对外开放
         /// </summary>
         [JsonProperty("AmsDetailSet")]
         public AmsDetailInfo[] AmsDetailSet{ get; set; }

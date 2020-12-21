@@ -34,24 +34,16 @@ namespace TencentCloud.Ams.V20200608.Models
         public long? HitFlag{ get; set; }
 
         /// <summary>
-        /// 命中的标签
-        /// Porn 色情
-        /// Polity 政治
-        /// Illegal 违法
-        /// Abuse 谩骂
-        /// Terror 暴恐
-        /// Ad 广告
-        /// Moan 呻吟
+        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+        /// 以及令人反感、不安全或不适宜的内容类型。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 审核建议，可选值：
-        /// Pass 通过，
-        /// Review 建议人审，
-        /// Block 确认违规
+        /// 建议您拿到判断结果后的执行操作。
+        /// 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
@@ -91,19 +83,19 @@ namespace TencentCloud.Ams.V20200608.Models
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 文本审核结果
+        /// 文本识别结果
         /// </summary>
         [JsonProperty("TextResults")]
         public AudioResultDetailTextResult[] TextResults{ get; set; }
 
         /// <summary>
-        /// 音频呻吟审核结果
+        /// 音频呻吟检测结果
         /// </summary>
         [JsonProperty("MoanResults")]
         public AudioResultDetailMoanResult[] MoanResults{ get; set; }
 
         /// <summary>
-        /// 音频语种检测结果
+        /// 音频语言检测结果
         /// </summary>
         [JsonProperty("LanguageResults")]
         public AudioResultDetailLanguageResult[] LanguageResults{ get; set; }

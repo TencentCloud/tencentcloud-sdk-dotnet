@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 人物 ID。
+        /// 素材 ID。
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
@@ -43,16 +43,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 人物应用场景，可选值：
+        /// 素材应用场景，可选值：
         /// 1. Recognition：用于内容识别，等价于 Recognition.Face。
-        /// 2. Review：用于内容审核，等价于 Review.Face。
-        /// 3. All：用于内容识别、内容审核，等价于 1+2。
+        /// 2. Review：用于不适宜的内容识别，等价于 Review.Face。
+        /// 3. All：用于内容识别、不适宜的内容识别，等价于 1+2。
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// 人脸操作信息。
+        /// 五官操作信息。
         /// </summary>
         [JsonProperty("FaceOperationInfo")]
         public AiSampleFaceOperation FaceOperationInfo{ get; set; }

@@ -25,13 +25,15 @@ namespace TencentCloud.Tms.V20200713.Models
     {
         
         /// <summary>
-        /// 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+        /// 以及令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 建议值,Block：打击,Review：待复审,Pass：正常
+        /// 建议您拿到判断结果后的执行操作。
+        /// 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
@@ -52,21 +54,21 @@ namespace TencentCloud.Tms.V20200713.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 仅当Lable为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
+        /// 仅当Label为Custom自定义关键词时有效，表示自定义关键词库类型，1:黑白库，2：自定义库
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibType")]
         public long? LibType{ get; set; }
 
         /// <summary>
-        /// 仅当Lable为Custom自定义关键词时有效，表示自定义库id
+        /// 仅当Label为Custom自定义关键词时有效，表示自定义库id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibId")]
         public string LibId{ get; set; }
 
         /// <summary>
-        /// 仅当Lable为Custom自定义关键词时有效，表示自定义库名称
+        /// 仅当Labe为Custom自定义关键词时有效，表示自定义库名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibName")]

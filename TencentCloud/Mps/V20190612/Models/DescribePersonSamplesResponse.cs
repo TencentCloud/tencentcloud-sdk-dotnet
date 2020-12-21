@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 人物信息。
+        /// 素材信息。
         /// </summary>
         [JsonProperty("PersonSet")]
         public AiSamplePerson[] PersonSet{ get; set; }

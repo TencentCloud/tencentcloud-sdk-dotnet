@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 内容审核模板唯一标识过滤条件，数组长度限制：100。
+        /// 内容智能识别模板唯一标识过滤条件，数组长度限制：100。
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

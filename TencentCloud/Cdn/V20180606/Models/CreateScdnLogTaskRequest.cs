@@ -99,6 +99,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
+        /// <summary>
+        /// 指定攻击类型查询, 与 AttackType 参数同时有值时使用 AttackTypes 参数，不填默认查询全部攻击类型
+        /// </summary>
+        [JsonProperty("AttackTypes")]
+        public string[] AttackTypes{ get; set; }
+
+        /// <summary>
+        /// 查询条件
+        /// </summary>
+        [JsonProperty("Conditions")]
+        public ScdnEventLogConditions[] Conditions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +125,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "DefenceMode", this.DefenceMode);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamArraySimple(map, prefix + "AttackTypes.", this.AttackTypes);
+            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
         }
     }
 }

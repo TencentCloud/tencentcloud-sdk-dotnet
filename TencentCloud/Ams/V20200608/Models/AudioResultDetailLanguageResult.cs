@@ -25,7 +25,7 @@ namespace TencentCloud.Ams.V20200608.Models
     {
         
         /// <summary>
-        /// 语种
+        /// 语言信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]

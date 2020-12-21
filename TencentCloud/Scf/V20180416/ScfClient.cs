@@ -427,6 +427,86 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 删除函数版本的预置并发配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProvisionedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="DeleteProvisionedConcurrencyConfigResponse"/></returns>
+        public async Task<DeleteProvisionedConcurrencyConfigResponse> DeleteProvisionedConcurrencyConfig(DeleteProvisionedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteProvisionedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除函数版本的预置并发配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProvisionedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="DeleteProvisionedConcurrencyConfigResponse"/></returns>
+        public DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfigSync(DeleteProvisionedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteProvisionedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除函数的保留并发配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReservedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="DeleteReservedConcurrencyConfigResponse"/></returns>
+        public async Task<DeleteReservedConcurrencyConfigResponse> DeleteReservedConcurrencyConfig(DeleteReservedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<DeleteReservedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReservedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReservedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除函数的保留并发配置。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReservedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="DeleteReservedConcurrencyConfigResponse"/></returns>
+        public DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfigSync(DeleteReservedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<DeleteReservedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReservedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReservedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据参数传入删除已有的触发方式。
         /// </summary>
         /// <param name="req"><see cref="DeleteTriggerRequest"/></param>
@@ -658,6 +738,86 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "GetLayerVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLayerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取函数或函数某一版本的预置并发详情。
+        /// </summary>
+        /// <param name="req"><see cref="GetProvisionedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="GetProvisionedConcurrencyConfigResponse"/></returns>
+        public async Task<GetProvisionedConcurrencyConfigResponse> GetProvisionedConcurrencyConfig(GetProvisionedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<GetProvisionedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetProvisionedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取函数或函数某一版本的预置并发详情。
+        /// </summary>
+        /// <param name="req"><see cref="GetProvisionedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="GetProvisionedConcurrencyConfigResponse"/></returns>
+        public GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfigSync(GetProvisionedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<GetProvisionedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetProvisionedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取函数的保留并发详情。
+        /// </summary>
+        /// <param name="req"><see cref="GetReservedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="GetReservedConcurrencyConfigResponse"/></returns>
+        public async Task<GetReservedConcurrencyConfigResponse> GetReservedConcurrencyConfig(GetReservedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<GetReservedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetReservedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetReservedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取函数的保留并发详情。
+        /// </summary>
+        /// <param name="req"><see cref="GetReservedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="GetReservedConcurrencyConfigResponse"/></returns>
+        public GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfigSync(GetReservedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<GetReservedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetReservedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetReservedConcurrencyConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1058,6 +1218,126 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "PublishVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置函数某一非$LATEST版本的预置并发。
+        /// </summary>
+        /// <param name="req"><see cref="PutProvisionedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="PutProvisionedConcurrencyConfigResponse"/></returns>
+        public async Task<PutProvisionedConcurrencyConfigResponse> PutProvisionedConcurrencyConfig(PutProvisionedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<PutProvisionedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutProvisionedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutProvisionedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置函数某一非$LATEST版本的预置并发。
+        /// </summary>
+        /// <param name="req"><see cref="PutProvisionedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="PutProvisionedConcurrencyConfigResponse"/></returns>
+        public PutProvisionedConcurrencyConfigResponse PutProvisionedConcurrencyConfigSync(PutProvisionedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<PutProvisionedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutProvisionedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutProvisionedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置函数保留并发
+        /// </summary>
+        /// <param name="req"><see cref="PutReservedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="PutReservedConcurrencyConfigResponse"/></returns>
+        public async Task<PutReservedConcurrencyConfigResponse> PutReservedConcurrencyConfig(PutReservedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<PutReservedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutReservedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutReservedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置函数保留并发
+        /// </summary>
+        /// <param name="req"><see cref="PutReservedConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="PutReservedConcurrencyConfigResponse"/></returns>
+        public PutReservedConcurrencyConfigResponse PutReservedConcurrencyConfigSync(PutReservedConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<PutReservedConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutReservedConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutReservedConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号并发限制配额
+        /// </summary>
+        /// <param name="req"><see cref="PutTotalConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="PutTotalConcurrencyConfigResponse"/></returns>
+        public async Task<PutTotalConcurrencyConfigResponse> PutTotalConcurrencyConfig(PutTotalConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<PutTotalConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutTotalConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTotalConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号并发限制配额
+        /// </summary>
+        /// <param name="req"><see cref="PutTotalConcurrencyConfigRequest"/></param>
+        /// <returns><see cref="PutTotalConcurrencyConfigResponse"/></returns>
+        public PutTotalConcurrencyConfigResponse PutTotalConcurrencyConfigSync(PutTotalConcurrencyConfigRequest req)
+        {
+             JsonResponseModel<PutTotalConcurrencyConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutTotalConcurrencyConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTotalConcurrencyConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

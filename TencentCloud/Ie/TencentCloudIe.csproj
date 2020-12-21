@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{22A3B506-BD68-3DED-BEAD-BFF07ADD88E7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.193</VersionPrefix>
+    <VersionPrefix>3.0.194</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20200304\Models\CoverTaskResultItem.cs" />
     <Compile Include="V20200304\Models\CreateEditingTaskRequest.cs" />
     <Compile Include="V20200304\Models\CreateEditingTaskResponse.cs" />
+    <Compile Include="V20200304\Models\CreateMediaProcessTaskRequest.cs" />
+    <Compile Include="V20200304\Models\CreateMediaProcessTaskResponse.cs" />
     <Compile Include="V20200304\Models\CreateMediaQualityRestorationTaskRequest.cs" />
     <Compile Include="V20200304\Models\CreateMediaQualityRestorationTaskResponse.cs" />
     <Compile Include="V20200304\Models\CreateQualityControlTaskRequest.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="V20200304\Models\Denoising.cs" />
     <Compile Include="V20200304\Models\DescribeEditingTaskResultRequest.cs" />
     <Compile Include="V20200304\Models\DescribeEditingTaskResultResponse.cs" />
+    <Compile Include="V20200304\Models\DescribeMediaProcessTaskResultRequest.cs" />
+    <Compile Include="V20200304\Models\DescribeMediaProcessTaskResultResponse.cs" />
     <Compile Include="V20200304\Models\DescribeMediaQualityRestorationTaskRusultRequest.cs" />
     <Compile Include="V20200304\Models\DescribeMediaQualityRestorationTaskRusultResponse.cs" />
     <Compile Include="V20200304\Models\DescribeQualityControlTaskResultRequest.cs" />
@@ -82,8 +86,19 @@
     <Compile Include="V20200304\Models\HighlightsTaskResult.cs" />
     <Compile Include="V20200304\Models\HighlightsTaskResultItem.cs" />
     <Compile Include="V20200304\Models\HighlightsTaskResultItemSegment.cs" />
+    <Compile Include="V20200304\Models\IntervalTime.cs" />
     <Compile Include="V20200304\Models\LowLightEnhance.cs" />
+    <Compile Include="V20200304\Models\MediaCuttingInfo.cs" />
+    <Compile Include="V20200304\Models\MediaCuttingOutForm.cs" />
+    <Compile Include="V20200304\Models\MediaCuttingTaskResult.cs" />
+    <Compile Include="V20200304\Models\MediaCuttingTimeInfo.cs" />
+    <Compile Include="V20200304\Models\MediaJoiningInfo.cs" />
+    <Compile Include="V20200304\Models\MediaJoiningTaskResult.cs" />
+    <Compile Include="V20200304\Models\MediaProcessInfo.cs" />
+    <Compile Include="V20200304\Models\MediaProcessTaskResult.cs" />
     <Compile Include="V20200304\Models\MediaQualityRestorationTaskResult.cs" />
+    <Compile Include="V20200304\Models\MediaSourceInfo.cs" />
+    <Compile Include="V20200304\Models\MediaTargetInfo.cs" />
     <Compile Include="V20200304\Models\MuxInfo.cs" />
     <Compile Include="V20200304\Models\OpeningEndingEditingInfo.cs" />
     <Compile Include="V20200304\Models\OpeningEndingTaskResult.cs" />
@@ -95,8 +110,11 @@
     <Compile Include="V20200304\Models\QualityControlResultItems.cs" />
     <Compile Include="V20200304\Models\SaveInfo.cs" />
     <Compile Include="V20200304\Models\ScratchRepair.cs" />
+    <Compile Include="V20200304\Models\SectionTime.cs" />
     <Compile Include="V20200304\Models\SegmentInfo.cs" />
     <Compile Include="V20200304\Models\Sharp.cs" />
+    <Compile Include="V20200304\Models\StopMediaProcessTaskRequest.cs" />
+    <Compile Include="V20200304\Models\StopMediaProcessTaskResponse.cs" />
     <Compile Include="V20200304\Models\StopMediaQualityRestorationTaskRequest.cs" />
     <Compile Include="V20200304\Models\StopMediaQualityRestorationTaskResponse.cs" />
     <Compile Include="V20200304\Models\StripEditingInfo.cs" />
@@ -108,6 +126,8 @@
     <Compile Include="V20200304\Models\TagTaskResult.cs" />
     <Compile Include="V20200304\Models\TagTaskResultItem.cs" />
     <Compile Include="V20200304\Models\TargetInfo.cs" />
+    <Compile Include="V20200304\Models\TargetVideoInfo.cs" />
+    <Compile Include="V20200304\Models\TaskResultFile.cs" />
     <Compile Include="V20200304\Models\UrlInfo.cs" />
     <Compile Include="V20200304\Models\VideoEnhance.cs" />
     <Compile Include="V20200304\Models\VideoInfo.cs" />

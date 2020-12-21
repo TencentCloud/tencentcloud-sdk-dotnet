@@ -25,7 +25,7 @@ namespace TencentCloud.Ims.V20200713.Models
     {
         
         /// <summary>
-        /// 返回列表数据
+        /// 返回列表数据----非必选，该参数暂未对外开放
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImsDetailSet")]

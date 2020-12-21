@@ -93,6 +93,46 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
+        /// 用于创建编辑处理任务，如媒体截取、媒体编辑、媒体拼接、媒体字幕。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMediaProcessTaskRequest"/></param>
+        /// <returns><see cref="CreateMediaProcessTaskResponse"/></returns>
+        public async Task<CreateMediaProcessTaskResponse> CreateMediaProcessTask(CreateMediaProcessTaskRequest req)
+        {
+             JsonResponseModel<CreateMediaProcessTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMediaProcessTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaProcessTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建编辑处理任务，如媒体截取、媒体编辑、媒体拼接、媒体字幕。
+        /// </summary>
+        /// <param name="req"><see cref="CreateMediaProcessTaskRequest"/></param>
+        /// <returns><see cref="CreateMediaProcessTaskResponse"/></returns>
+        public CreateMediaProcessTaskResponse CreateMediaProcessTaskSync(CreateMediaProcessTaskRequest req)
+        {
+             JsonResponseModel<CreateMediaProcessTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMediaProcessTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMediaProcessTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建画质重生任务，对视频进行转码、去噪、去划痕、去毛刺、超分、细节增强和色彩增强。
         /// </summary>
         /// <param name="req"><see cref="CreateMediaQualityRestorationTaskRequest"/></param>
@@ -213,6 +253,46 @@ namespace TencentCloud.Ie.V20200304
         }
 
         /// <summary>
+        /// 用于获取编辑处理任务的结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaProcessTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeMediaProcessTaskResultResponse"/></returns>
+        public async Task<DescribeMediaProcessTaskResultResponse> DescribeMediaProcessTaskResult(DescribeMediaProcessTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeMediaProcessTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMediaProcessTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaProcessTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取编辑处理任务的结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMediaProcessTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeMediaProcessTaskResultResponse"/></returns>
+        public DescribeMediaProcessTaskResultResponse DescribeMediaProcessTaskResultSync(DescribeMediaProcessTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeMediaProcessTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMediaProcessTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMediaProcessTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取画质重生任务结果，查看结束后的文件信息
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaQualityRestorationTaskRusultRequest"/></param>
@@ -284,6 +364,46 @@ namespace TencentCloud.Ie.V20200304
              {
                  var strResp = this.InternalRequestSync(req, "DescribeQualityControlTaskResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityControlTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于停止正在进行中的编辑处理任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopMediaProcessTaskRequest"/></param>
+        /// <returns><see cref="StopMediaProcessTaskResponse"/></returns>
+        public async Task<StopMediaProcessTaskResponse> StopMediaProcessTask(StopMediaProcessTaskRequest req)
+        {
+             JsonResponseModel<StopMediaProcessTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopMediaProcessTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaProcessTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于停止正在进行中的编辑处理任务。
+        /// </summary>
+        /// <param name="req"><see cref="StopMediaProcessTaskRequest"/></param>
+        /// <returns><see cref="StopMediaProcessTaskResponse"/></returns>
+        public StopMediaProcessTaskResponse StopMediaProcessTaskSync(StopMediaProcessTaskRequest req)
+        {
+             JsonResponseModel<StopMediaProcessTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopMediaProcessTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMediaProcessTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

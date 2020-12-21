@@ -25,30 +25,30 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 拉取的人物类型，可选值：
-        /// <li>UserDefine：用户自定义人物库；</li>
-        /// <li>Default：系统默认人物库。</li>
+        /// 拉取的素材类型，可选值：
+        /// <li>UserDefine：用户自定义素材库；</li>
+        /// <li>Default：系统默认素材库。</li>
         /// 
-        /// 默认值：UserDefine，拉取用户自定义人物库人物。
-        /// 说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
+        /// 默认值：UserDefine，拉取用户自定义素材库素材。
+        /// 说明：如果是拉取系统默认素材库，只能使用素材名字或者素材 ID + 素材名字的方式进行拉取，且人脸图片只返回一张。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 人物 ID，数组长度限制：100。
+        /// 素材 ID，数组长度限制：100。
         /// </summary>
         [JsonProperty("PersonIds")]
         public string[] PersonIds{ get; set; }
 
         /// <summary>
-        /// 人物名称，数组长度限制：20。
+        /// 素材名称，数组长度限制：20。
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// 人物标签，数组长度限制：20。
+        /// 素材标签，数组长度限制：20。
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

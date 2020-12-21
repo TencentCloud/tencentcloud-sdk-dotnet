@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+        /// 智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
         /// <li>ON：是；</li>
         /// <li>OFF：否。</li>
         /// </summary>
@@ -33,31 +33,31 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ReviewWallSwitch{ get; set; }
 
         /// <summary>
-        /// 内容审核模板名称，长度限制：64 个字符。
+        /// 内容智能识别模板名称，长度限制：64 个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 内容审核模板描述信息，长度限制：256 个字符。
+        /// 内容智能识别模板描述信息，长度限制：256 个字符。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 鉴黄控制参数。
+        /// 令人反感的信息的控制参数。
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// 鉴恐控制参数。
+        /// 令人不安全的信息的控制参数。
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// 鉴政控制参数。
+        /// 令人不适宜的控制参数。
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// 用户自定义内容审核控制参数。
+        /// 用户自定义内容智能识别控制参数。
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }

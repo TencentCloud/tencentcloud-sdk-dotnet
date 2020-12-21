@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 内容审核模板详情列表。
+        /// 内容智能识别模板详情列表。
         /// </summary>
         [JsonProperty("ContentReviewTemplateSet")]
         public ContentReviewTemplateItem[] ContentReviewTemplateSet{ get; set; }
