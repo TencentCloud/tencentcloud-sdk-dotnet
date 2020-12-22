@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// IP地址库下载链接地址
+        /// IP地理位置库下载链接地址。
         /// </summary>
         [JsonProperty("DownLoadUrl")]
         public string DownLoadUrl{ get; set; }

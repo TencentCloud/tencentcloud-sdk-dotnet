@@ -150,6 +150,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// 策略是否存在 0=不存在 1=存在
+        /// </summary>
+        [JsonProperty("PolicyExists")]
+        public long? PolicyExists{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "AlarmType", this.AlarmType);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
         }
     }
 }

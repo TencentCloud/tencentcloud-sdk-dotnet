@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+        /// VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

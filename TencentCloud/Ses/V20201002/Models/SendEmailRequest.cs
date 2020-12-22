@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 发信邮件地址。比如：noreply@mail.qcloud.com。
+        /// 发信邮件地址。例如：noreply@mail.qcloud.com。
         /// </summary>
         [JsonProperty("FromEmailAddress")]
         public string FromEmailAddress{ get; set; }

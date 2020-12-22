@@ -2251,7 +2251,11 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
-        /// 退订已购买的云存服务
+        /// 本接口（RefundStorageService）用于退订已购买的云存服务。
+        /// 退订时，云存服务对应订单的处理方式 : 
+        /// 1. 未开始的订单自动回到已付费订单池
+        /// 2. 已开始的订单自动失效
+        /// 3. 购买云存接口,优先从已付费订单池中分配订单
         /// </summary>
         /// <param name="req"><see cref="RefundStorageServiceRequest"/></param>
         /// <returns><see cref="RefundStorageServiceResponse"/></returns>
@@ -2271,7 +2275,11 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
-        /// 退订已购买的云存服务
+        /// 本接口（RefundStorageService）用于退订已购买的云存服务。
+        /// 退订时，云存服务对应订单的处理方式 : 
+        /// 1. 未开始的订单自动回到已付费订单池
+        /// 2. 已开始的订单自动失效
+        /// 3. 购买云存接口,优先从已付费订单池中分配订单
         /// </summary>
         /// <param name="req"><see cref="RefundStorageServiceRequest"/></param>
         /// <returns><see cref="RefundStorageServiceResponse"/></returns>

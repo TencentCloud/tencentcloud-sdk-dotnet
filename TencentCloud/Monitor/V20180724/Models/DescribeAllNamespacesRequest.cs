@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控
+        /// 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控
         /// </summary>
         [JsonProperty("MonitorTypes")]
         public string[] MonitorTypes{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "MT_CUSTOM"=自定义监控 "MT_PROME"=prometheus监控
+        /// 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
         /// </summary>
         [JsonProperty("MonitorTypes")]
         public string[] MonitorTypes{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] AlarmStatus{ get; set; }
 
         /// <summary>
-        /// 根据项目ID过滤，-1=“-“项目 0=默认项目
+        /// 根据项目ID过滤，-1=无项目 0=默认项目
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }

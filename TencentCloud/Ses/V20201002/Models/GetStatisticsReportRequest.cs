@@ -43,7 +43,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 收件方邮箱类型，比如gmail.com
+        /// 收件方邮箱类型，例如gmail.com
         /// </summary>
         [JsonProperty("ReceivingMailboxType")]
         public string ReceivingMailboxType{ get; set; }

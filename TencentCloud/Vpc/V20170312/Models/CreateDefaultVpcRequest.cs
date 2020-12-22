@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 子网所在的可用区ID，不指定将随机选择可用区
+        /// 子网所在的可用区，该参数可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)接口获取，例如ap-guangzhou-1，不指定时将随机选择可用区。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 是否强制返回默认VPC
+        /// 是否强制返回默认VPC。
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

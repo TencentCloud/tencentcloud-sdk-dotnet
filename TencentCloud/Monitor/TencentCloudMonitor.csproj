@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.194</VersionPrefix>
+    <VersionPrefix>3.0.195</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,11 +45,24 @@
 
   <ItemGroup>
     <Compile Include="V20180724\MonitorClient.cs" />
+    <Compile Include="V20180724\Models\AlarmEvent.cs" />
     <Compile Include="V20180724\Models\AlarmHistory.cs" />
+    <Compile Include="V20180724\Models\AlarmNotice.cs" />
+    <Compile Include="V20180724\Models\AlarmPolicy.cs" />
+    <Compile Include="V20180724\Models\AlarmPolicyCondition.cs" />
+    <Compile Include="V20180724\Models\AlarmPolicyEventCondition.cs" />
+    <Compile Include="V20180724\Models\AlarmPolicyFilter.cs" />
+    <Compile Include="V20180724\Models\AlarmPolicyRule.cs" />
+    <Compile Include="V20180724\Models\AlarmPolicyTriggerTask.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectDimension.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectResponse.cs" />
     <Compile Include="V20180724\Models\CommonNamespace.cs" />
+    <Compile Include="V20180724\Models\ConditionsTemp.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmNoticeRequest.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmNoticeResponse.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmPolicyRequest.cs" />
+    <Compile Include="V20180724\Models\CreateAlarmPolicyResponse.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupCondition.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupEventCondition.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupRequest.cs" />
@@ -57,6 +70,10 @@
     <Compile Include="V20180724\Models\CreateServiceDiscoveryRequest.cs" />
     <Compile Include="V20180724\Models\CreateServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DataPoint.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmNoticesRequest.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmNoticesResponse.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmPolicyRequest.cs" />
+    <Compile Include="V20180724\Models\DeleteAlarmPolicyResponse.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupRequest.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupResponse.cs" />
     <Compile Include="V20180724\Models\DeleteServiceDiscoveryRequest.cs" />
@@ -64,8 +81,22 @@
     <Compile Include="V20180724\Models\DescribeAccidentEventListAlarms.cs" />
     <Compile Include="V20180724\Models\DescribeAccidentEventListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeAccidentEventListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmEventsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmEventsResponse.cs" />
     <Compile Include="V20180724\Models\DescribeAlarmHistoriesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeAlarmHistoriesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmMetricsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmMetricsResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmNoticeCallbacksRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmNoticeCallbacksResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmNoticeRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmNoticeResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmNoticesRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmNoticesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmPoliciesRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmPoliciesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmPolicyRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeAlarmPolicyResponse.cs" />
     <Compile Include="V20180724\Models\DescribeAllNamespacesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeAllNamespacesResponse.cs" />
     <Compile Include="V20180724\Models\DescribeBaseMetricsRequest.cs" />
@@ -121,9 +152,23 @@
     <Compile Include="V20180724\Models\Instance.cs" />
     <Compile Include="V20180724\Models\InstanceGroup.cs" />
     <Compile Include="V20180724\Models\InstanceGroups.cs" />
+    <Compile Include="V20180724\Models\Metric.cs" />
+    <Compile Include="V20180724\Models\MetricConfig.cs" />
     <Compile Include="V20180724\Models\MetricDatum.cs" />
     <Compile Include="V20180724\Models\MetricObjectMeaning.cs" />
     <Compile Include="V20180724\Models\MetricSet.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmNoticeRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmNoticeResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyConditionRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyConditionResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyInfoRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyInfoResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyNoticeRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyNoticeResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyStatusRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyStatusResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyTasksRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyAlarmPolicyTasksResponse.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmReceiversRequest.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmReceiversResponse.cs" />
     <Compile Include="V20180724\Models\ModifyPolicyGroupCondition.cs" />
@@ -139,11 +184,15 @@
     <Compile Include="V20180724\Models\SendCustomAlarmMsgRequest.cs" />
     <Compile Include="V20180724\Models\SendCustomAlarmMsgResponse.cs" />
     <Compile Include="V20180724\Models\ServiceDiscoveryItem.cs" />
+    <Compile Include="V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
+    <Compile Include="V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\URLNotice.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
     <Compile Include="V20180724\Models\UnBindingPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingPolicyObjectResponse.cs" />
     <Compile Include="V20180724\Models\UpdateServiceDiscoveryRequest.cs" />
     <Compile Include="V20180724\Models\UpdateServiceDiscoveryResponse.cs" />
+    <Compile Include="V20180724\Models\UserNotice.cs" />
   </ItemGroup>
 </Project>

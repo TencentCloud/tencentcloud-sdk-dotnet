@@ -25,13 +25,13 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
+        /// base64之后的Html代码。需要包含所有的代码信息，不要包含外部css，否则会导致显示格式错乱
         /// </summary>
         [JsonProperty("Html")]
         public string Html{ get; set; }
 
         /// <summary>
-        /// 纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
+        /// base64之后的纯文本信息，如果没有Html，邮件中会直接显示纯文本；如果有Html，它代表邮件的纯文本样式
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

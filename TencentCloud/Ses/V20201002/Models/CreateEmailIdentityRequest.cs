@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 您的发信域名，建议使用三级以上域名。比如：mail.qcloud.com。
+        /// 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
         /// </summary>
         [JsonProperty("EmailIdentity")]
         public string EmailIdentity{ get; set; }

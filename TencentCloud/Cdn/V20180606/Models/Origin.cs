@@ -109,7 +109,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string BasePath{ get; set; }
 
         /// <summary>
-        /// 分路径回源配置规则
+        /// 回源路径重写规则配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PathRules")]

@@ -32,6 +32,22 @@ namespace TencentCloud.Live.V20180801.Models
         public LivePackageInfo[] LivePackageInfoList{ get; set; }
 
         /// <summary>
+        /// 套餐包当前计费方式:
+        /// -1: 无计费方式或获取失败
+        /// 0: 无计费方式
+        /// 201: 月结带宽
+        /// 202: 月结流量
+        /// 203: 日结带宽
+        /// 204: 日结流量
+        /// 205: 日结时长
+        /// 206: 月结时长
+        /// 304: 日结流量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageBillMode")]
+        public long? PackageBillMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +60,7 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "LivePackageInfoList.", this.LivePackageInfoList);
+            this.SetParamSimple(map, prefix + "PackageBillMode", this.PackageBillMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

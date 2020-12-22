@@ -37,7 +37,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// 模板状态。1-审核中|0-已通过|其它-不可用
+        /// 模板状态。1-审核中|0-已通过|2-拒绝|其它-不可用
         /// </summary>
         [JsonProperty("TemplateStatus")]
         public long? TemplateStatus{ get; set; }
@@ -47,6 +47,12 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         [JsonProperty("TemplateID")]
         public ulong? TemplateID{ get; set; }
+
+        /// <summary>
+        /// 审核原因
+        /// </summary>
+        [JsonProperty("ReviewReason")]
+        public string ReviewReason{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
             this.SetParamSimple(map, prefix + "TemplateID", this.TemplateID);
+            this.SetParamSimple(map, prefix + "ReviewReason", this.ReviewReason);
         }
     }
 }

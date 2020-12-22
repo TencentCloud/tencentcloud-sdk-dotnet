@@ -25,16 +25,28 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 云产品的名字空间
+        /// 云产品的告警策略类型，已废弃
         /// </summary>
         [JsonProperty("QceNamespaces")]
         public CommonNamespace QceNamespaces{ get; set; }
 
         /// <summary>
-        /// 自定义监控的命名空间
+        /// 其他告警策略类型，已废弃
         /// </summary>
         [JsonProperty("CustomNamespaces")]
         public CommonNamespace CustomNamespaces{ get; set; }
+
+        /// <summary>
+        /// 云产品的告警策略类型
+        /// </summary>
+        [JsonProperty("QceNamespacesNew")]
+        public CommonNamespace[] QceNamespacesNew{ get; set; }
+
+        /// <summary>
+        /// 其他告警策略类型，暂不支持
+        /// </summary>
+        [JsonProperty("CustomNamespacesNew")]
+        public CommonNamespace[] CustomNamespacesNew{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +62,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamObj(map, prefix + "QceNamespaces.", this.QceNamespaces);
             this.SetParamObj(map, prefix + "CustomNamespaces.", this.CustomNamespaces);
+            this.SetParamArrayObj(map, prefix + "QceNamespacesNew.", this.QceNamespacesNew);
+            this.SetParamArrayObj(map, prefix + "CustomNamespacesNew.", this.CustomNamespacesNew);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

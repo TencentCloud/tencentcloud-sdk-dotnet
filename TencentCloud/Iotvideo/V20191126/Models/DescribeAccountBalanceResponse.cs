@@ -25,28 +25,28 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     {
         
         /// <summary>
-        /// 账户类型 1=设备接入;2=云存
+        /// 账户类型 1=设备接入;2=云存。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
-        /// 余额
+        /// 余额, 单位 : 分(人民币)。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Balance")]
         public long? Balance{ get; set; }
 
         /// <summary>
-        /// 账户状态，1=正常；8=冻结；9=销户
+        /// 账户状态，1=正常；8=冻结；9=销户。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
-        /// 最后修改时间，UTC值
+        /// 最后修改时间，UTC值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastUpdateTime")]

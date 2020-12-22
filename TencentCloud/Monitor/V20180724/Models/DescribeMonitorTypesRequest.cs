@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 固定值，为"monitor"
+        /// 模块名，固定值 monitor
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }

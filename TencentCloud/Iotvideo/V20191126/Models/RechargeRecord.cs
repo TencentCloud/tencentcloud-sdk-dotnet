@@ -25,28 +25,28 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     {
         
         /// <summary>
-        /// 流水记录号
+        /// 流水记录号。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WaterId")]
         public long? WaterId{ get; set; }
 
         /// <summary>
-        /// 充值前的余额
+        /// 充值前的余额，单位0.01元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BalanceBeforeRecharge")]
         public long? BalanceBeforeRecharge{ get; set; }
 
         /// <summary>
-        /// 充值金额
+        /// 充值金额，单位0.01元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Money")]
         public long? Money{ get; set; }
 
         /// <summary>
-        /// 充值时间, UTC值
+        /// 充值时间, UTC值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OperateTime")]

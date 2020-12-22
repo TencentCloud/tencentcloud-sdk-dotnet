@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+        /// vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EnableMulticast{ get; set; }
 
         /// <summary>
-        /// DNS地址，最多支持4个
+        /// DNS地址，最多支持4个。
         /// </summary>
         [JsonProperty("DnsServers")]
         public string[] DnsServers{ get; set; }
 
         /// <summary>
-        /// 域名
+        /// DHCP使用的域名。
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+        /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.194</VersionPrefix>
+    <VersionPrefix>3.0.195</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6959,11 +6959,24 @@
     <Compile Include="Mongodb\V20190725\Models\SpecificationInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\TagInfo.cs" />
     <Compile Include="Monitor\V20180724\MonitorClient.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmEvent.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmHistory.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmNotice.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmPolicy.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmPolicyCondition.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmPolicyEventCondition.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmPolicyFilter.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmPolicyRule.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmPolicyTriggerTask.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectDimension.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\CommonNamespace.cs" />
+    <Compile Include="Monitor\V20180724\Models\ConditionsTemp.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateAlarmPolicyRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateAlarmPolicyResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupEventCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupRequest.cs" />
@@ -6971,6 +6984,10 @@
     <Compile Include="Monitor\V20180724\Models\CreateServiceDiscoveryRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateServiceDiscoveryResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DataPoint.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteAlarmNoticesRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteAlarmNoticesResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteAlarmPolicyRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteAlarmPolicyResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DeletePolicyGroupRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DeletePolicyGroupResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DeleteServiceDiscoveryRequest.cs" />
@@ -6978,8 +6995,22 @@
     <Compile Include="Monitor\V20180724\Models\DescribeAccidentEventListAlarms.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAccidentEventListRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAccidentEventListResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmEventsRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmEventsResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAlarmHistoriesRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAlarmHistoriesResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmMetricsRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmMetricsResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmNoticeCallbacksRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmNoticeCallbacksResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmNoticeRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmNoticeResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmNoticesRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmNoticesResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmPoliciesRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmPoliciesResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmPolicyRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlarmPolicyResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAllNamespacesRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAllNamespacesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBaseMetricsRequest.cs" />
@@ -7035,9 +7066,23 @@
     <Compile Include="Monitor\V20180724\Models\Instance.cs" />
     <Compile Include="Monitor\V20180724\Models\InstanceGroup.cs" />
     <Compile Include="Monitor\V20180724\Models\InstanceGroups.cs" />
+    <Compile Include="Monitor\V20180724\Models\Metric.cs" />
+    <Compile Include="Monitor\V20180724\Models\MetricConfig.cs" />
     <Compile Include="Monitor\V20180724\Models\MetricDatum.cs" />
     <Compile Include="Monitor\V20180724\Models\MetricObjectMeaning.cs" />
     <Compile Include="Monitor\V20180724\Models\MetricSet.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmNoticeRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmNoticeResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyConditionRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyConditionResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyInfoRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyInfoResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyNoticeRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyNoticeResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyStatusRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyStatusResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyTasksRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyTasksResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmReceiversRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmReceiversResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyPolicyGroupCondition.cs" />
@@ -7053,12 +7098,16 @@
     <Compile Include="Monitor\V20180724\Models\SendCustomAlarmMsgRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\SendCustomAlarmMsgResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\ServiceDiscoveryItem.cs" />
+    <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\URLNotice.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingPolicyObjectResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\UpdateServiceDiscoveryRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UpdateServiceDiscoveryResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\UserNotice.cs" />
     <Compile Include="Mps\V20190612\MpsClient.cs" />
     <Compile Include="Mps\V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Mps\V20190612\Models\AIRecognitionTemplateItem.cs" />
@@ -9860,6 +9909,8 @@
     <Compile Include="Tke\V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupAttributeResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupOptionAttributeRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupOptionAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
@@ -9872,6 +9923,7 @@
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="Tke\V20180525\Models\NodePool.cs" />
+    <Compile Include="Tke\V20180525\Models\NodePoolOption.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAgentOverview.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRule.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRuleDetail.cs" />

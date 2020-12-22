@@ -28,6 +28,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 包类型，可选值：
         /// 0：流量包；
         /// 1：转码包。
+        /// 2: 连麦包。
         /// </summary>
         [JsonProperty("PackageType")]
         public long? PackageType{ get; set; }

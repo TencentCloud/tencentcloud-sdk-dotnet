@@ -2013,6 +2013,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 修改集群弹性伸缩属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAsGroupOptionAttributeRequest"/></param>
+        /// <returns><see cref="ModifyClusterAsGroupOptionAttributeResponse"/></returns>
+        public async Task<ModifyClusterAsGroupOptionAttributeResponse> ModifyClusterAsGroupOptionAttribute(ModifyClusterAsGroupOptionAttributeRequest req)
+        {
+             JsonResponseModel<ModifyClusterAsGroupOptionAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterAsGroupOptionAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAsGroupOptionAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群弹性伸缩属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAsGroupOptionAttributeRequest"/></param>
+        /// <returns><see cref="ModifyClusterAsGroupOptionAttributeResponse"/></returns>
+        public ModifyClusterAsGroupOptionAttributeResponse ModifyClusterAsGroupOptionAttributeSync(ModifyClusterAsGroupOptionAttributeRequest req)
+        {
+             JsonResponseModel<ModifyClusterAsGroupOptionAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterAsGroupOptionAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAsGroupOptionAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改集群属性
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterAttributeRequest"/></param>

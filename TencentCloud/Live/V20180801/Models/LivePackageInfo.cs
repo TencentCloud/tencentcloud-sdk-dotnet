@@ -42,6 +42,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 使用量。
         /// 注意：当为流量包时单位为字节。
         /// 当为转码包时单位为分钟。
+        /// 当为连麦包时单位为小时。
         /// </summary>
         [JsonProperty("Used")]
         public long? Used{ get; set; }
@@ -50,6 +51,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 剩余量。
         /// 注意：当为流量包时单位为字节。
         /// 当为转码包时单位为分钟。
+        /// 当为连麦包时单位为小时。
         /// </summary>
         [JsonProperty("Left")]
         public long? Left{ get; set; }
@@ -71,6 +73,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 0: 流量包。
         /// 1: 普通转码包。
         /// 2: 极速高清包。
+        /// 3: 连麦包。
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -80,6 +83,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// 0: 未使用。
         /// 1: 使用中。
         /// 2: 已过期。
+        /// 3: 已冻结。
+        /// 4: 已耗尽。
+        /// 5: 已退款
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

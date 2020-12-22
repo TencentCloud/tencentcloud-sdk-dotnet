@@ -72,6 +72,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("EnableAutoscale")]
         public bool? EnableAutoscale{ get; set; }
 
+        /// <summary>
+        /// 操作系统名称
+        /// </summary>
+        [JsonProperty("OsName")]
+        public string OsName{ get; set; }
+
+        /// <summary>
+        /// 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+        /// </summary>
+        [JsonProperty("OsCustomizeType")]
+        public string OsCustomizeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
+            this.SetParamSimple(map, prefix + "OsName", this.OsName);
+            this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         }
     }
 }
