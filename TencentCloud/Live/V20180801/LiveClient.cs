@@ -1623,6 +1623,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 回调事件查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallbackRecordsListRequest"/></param>
+        /// <returns><see cref="DescribeCallbackRecordsListResponse"/></returns>
+        public async Task<DescribeCallbackRecordsListResponse> DescribeCallbackRecordsList(DescribeCallbackRecordsListRequest req)
+        {
+             JsonResponseModel<DescribeCallbackRecordsListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCallbackRecordsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallbackRecordsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回调事件查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallbackRecordsListRequest"/></param>
+        /// <returns><see cref="DescribeCallbackRecordsListResponse"/></returns>
+        public DescribeCallbackRecordsListResponse DescribeCallbackRecordsListSync(DescribeCallbackRecordsListRequest req)
+        {
+             JsonResponseModel<DescribeCallbackRecordsListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCallbackRecordsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallbackRecordsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询并发录制路数，对慢直播和普通直播适用。
         /// </summary>
         /// <param name="req"><see cref="DescribeConcurrentRecordStreamNumRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.195</VersionPrefix>
+    <VersionPrefix>3.0.196</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -146,6 +146,8 @@
     <Compile Include="V20180606\Models\DescribePushTasksResponse.cs" />
     <Compile Include="V20180606\Models\DescribeReportDataRequest.cs" />
     <Compile Include="V20180606\Models\DescribeReportDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeScdnConfigRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeScdnConfigResponse.cs" />
     <Compile Include="V20180606\Models\DescribeScdnTopDataRequest.cs" />
     <Compile Include="V20180606\Models\DescribeScdnTopDataResponse.cs" />
     <Compile Include="V20180606\Models\DescribeTrafficPackagesRequest.cs" />
@@ -198,6 +200,8 @@
     <Compile Include="V20180606\Models\ListClsTopicDomainsResponse.cs" />
     <Compile Include="V20180606\Models\ListDiagnoseReportRequest.cs" />
     <Compile Include="V20180606\Models\ListDiagnoseReportResponse.cs" />
+    <Compile Include="V20180606\Models\ListScdnDomainsRequest.cs" />
+    <Compile Include="V20180606\Models\ListScdnDomainsResponse.cs" />
     <Compile Include="V20180606\Models\ListScdnLogTasksRequest.cs" />
     <Compile Include="V20180606\Models\ListScdnLogTasksResponse.cs" />
     <Compile Include="V20180606\Models\ListTopDataRequest.cs" />
@@ -249,6 +253,7 @@
     <Compile Include="V20180606\Models\ScdnCCRules.cs" />
     <Compile Include="V20180606\Models\ScdnConfig.cs" />
     <Compile Include="V20180606\Models\ScdnDdosConfig.cs" />
+    <Compile Include="V20180606\Models\ScdnDomain.cs" />
     <Compile Include="V20180606\Models\ScdnErrorPage.cs" />
     <Compile Include="V20180606\Models\ScdnEventLogConditions.cs" />
     <Compile Include="V20180606\Models\ScdnLogTaskDetail.cs" />
@@ -269,10 +274,14 @@
     <Compile Include="V20180606\Models\SpecificConfig.cs" />
     <Compile Include="V20180606\Models\StartCdnDomainRequest.cs" />
     <Compile Include="V20180606\Models\StartCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\StartScdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\StartScdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\StatusCodeCache.cs" />
     <Compile Include="V20180606\Models\StatusCodeCacheRule.cs" />
     <Compile Include="V20180606\Models\StopCdnDomainRequest.cs" />
     <Compile Include="V20180606\Models\StopCdnDomainResponse.cs" />
+    <Compile Include="V20180606\Models\StopScdnDomainRequest.cs" />
+    <Compile Include="V20180606\Models\StopScdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\SummarizedData.cs" />
     <Compile Include="V20180606\Models\Tag.cs" />
     <Compile Include="V20180606\Models\TimestampData.cs" />

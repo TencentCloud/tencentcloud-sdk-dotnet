@@ -1019,6 +1019,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口（DescribeUserTasks）用于拉取用户任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserTasksRequest"/></param>
+        /// <returns><see cref="DescribeUserTasksResponse"/></returns>
+        public async Task<DescribeUserTasksResponse> DescribeUserTasks(DescribeUserTasksRequest req)
+        {
+             JsonResponseModel<DescribeUserTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUserTasks）用于拉取用户任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserTasksRequest"/></param>
+        /// <returns><see cref="DescribeUserTasksResponse"/></returns>
+        public DescribeUserTasksResponse DescribeUserTasksSync(DescribeUserTasksRequest req)
+        {
+             JsonResponseModel<DescribeUserTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 相当于在所有分片的mysqld中执行flush logs，完成切分的binlog将展示在各个分片控制台binlog列表里。
         /// </summary>
         /// <param name="req"><see cref="FlushBinlogRequest"/></param>

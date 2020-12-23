@@ -37,13 +37,13 @@ namespace TencentCloud.Gs.V20191118.Models
         public string GameId{ get; set; }
 
         /// <summary>
-        /// 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等
+        /// 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
         /// </summary>
         [JsonProperty("GameRegion")]
         public string GameRegion{ get; set; }
 
         /// <summary>
-        /// 资源池编号，1表示共用，2表示测试
+        /// 【废弃】资源池编号
         /// </summary>
         [JsonProperty("SetNo")]
         public ulong? SetNo{ get; set; }

@@ -1303,6 +1303,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnConfigRequest"/></param>
+        /// <returns><see cref="DescribeScdnConfigResponse"/></returns>
+        public async Task<DescribeScdnConfigResponse> DescribeScdnConfig(DescribeScdnConfigRequest req)
+        {
+             JsonResponseModel<DescribeScdnConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScdnConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnConfigRequest"/></param>
+        /// <returns><see cref="DescribeScdnConfigResponse"/></returns>
+        public DescribeScdnConfigResponse DescribeScdnConfigSync(DescribeScdnConfigRequest req)
+        {
+             JsonResponseModel<DescribeScdnConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScdnConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取SCDN的Top数据
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>
@@ -1785,6 +1825,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ListScdnDomainsRequest"/></param>
+        /// <returns><see cref="ListScdnDomainsResponse"/></returns>
+        public async Task<ListScdnDomainsResponse> ListScdnDomains(ListScdnDomainsRequest req)
+        {
+             JsonResponseModel<ListScdnDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListScdnDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListScdnDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ListScdnDomainsRequest"/></param>
+        /// <returns><see cref="ListScdnDomainsResponse"/></returns>
+        public ListScdnDomainsResponse ListScdnDomainsSync(ListScdnDomainsRequest req)
+        {
+             JsonResponseModel<ListScdnDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListScdnDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListScdnDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
         /// </summary>
         /// <param name="req"><see cref="ListScdnLogTasksRequest"/></param>
@@ -2127,6 +2207,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// StartScdnDomain 用于开启域名的安全防护配置
+        /// </summary>
+        /// <param name="req"><see cref="StartScdnDomainRequest"/></param>
+        /// <returns><see cref="StartScdnDomainResponse"/></returns>
+        public async Task<StartScdnDomainResponse> StartScdnDomain(StartScdnDomainRequest req)
+        {
+             JsonResponseModel<StartScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// StartScdnDomain 用于开启域名的安全防护配置
+        /// </summary>
+        /// <param name="req"><see cref="StartScdnDomainRequest"/></param>
+        /// <returns><see cref="StartScdnDomainResponse"/></returns>
+        public StartScdnDomainResponse StartScdnDomainSync(StartScdnDomainRequest req)
+        {
+             JsonResponseModel<StartScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// StopCdnDomain 用于停止域名的加速服务。
         /// 注意：停止加速服务后，访问至加速节点的请求将会直接返回 404。为避免对您的业务造成影响，请在停止加速服务前将解析切走。
         /// </summary>
@@ -2160,6 +2280,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "StopCdnDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopCdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// StopScdnDomain 用于关闭域名的安全防护配置
+        /// </summary>
+        /// <param name="req"><see cref="StopScdnDomainRequest"/></param>
+        /// <returns><see cref="StopScdnDomainResponse"/></returns>
+        public async Task<StopScdnDomainResponse> StopScdnDomain(StopScdnDomainRequest req)
+        {
+             JsonResponseModel<StopScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// StopScdnDomain 用于关闭域名的安全防护配置
+        /// </summary>
+        /// <param name="req"><see cref="StopScdnDomainRequest"/></param>
+        /// <returns><see cref="StopScdnDomainResponse"/></returns>
+        public StopScdnDomainResponse StopScdnDomainSync(StopScdnDomainRequest req)
+        {
+             JsonResponseModel<StopScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopScdnDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

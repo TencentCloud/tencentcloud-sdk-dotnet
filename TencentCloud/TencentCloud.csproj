@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.195</VersionPrefix>
+    <VersionPrefix>3.0.196</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2014,6 +2014,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribePushTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnConfigRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeTrafficPackagesRequest.cs" />
@@ -2066,6 +2068,8 @@
     <Compile Include="Cdn\V20180606\Models\ListClsTopicDomainsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListDiagnoseReportRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListDiagnoseReportResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListScdnDomainsRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListScdnDomainsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
@@ -2117,6 +2121,7 @@
     <Compile Include="Cdn\V20180606\Models\ScdnCCRules.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnDdosConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnErrorPage.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnEventLogConditions.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnLogTaskDetail.cs" />
@@ -2137,10 +2142,14 @@
     <Compile Include="Cdn\V20180606\Models\SpecificConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\StartCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\StartCdnDomainResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\StartScdnDomainRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\StartScdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\StatusCodeCache.cs" />
     <Compile Include="Cdn\V20180606\Models\StatusCodeCacheRule.cs" />
     <Compile Include="Cdn\V20180606\Models\StopCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\StopCdnDomainResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\StopScdnDomainRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\StopScdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\SummarizedData.cs" />
     <Compile Include="Cdn\V20180606\Models\Tag.cs" />
     <Compile Include="Cdn\V20180606\Models\TimestampData.cs" />
@@ -4168,6 +4177,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeShardSpecResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeSqlLogsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeSqlLogsResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeUserTasksRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeUserTasksResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ExpandShardConfig.cs" />
     <Compile Include="Dcdb\V20180411\Models\FlushBinlogRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\FlushBinlogResponse.cs" />
@@ -4205,6 +4216,7 @@
     <Compile Include="Dcdb\V20180411\Models\TableColumn.cs" />
     <Compile Include="Dcdb\V20180411\Models\UpgradeDCDBInstanceRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\UpgradeDCDBInstanceResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\UserTaskInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ZonesInfo.cs" />
     <Compile Include="Domain\V20180808\DomainClient.cs" />
     <Compile Include="Domain\V20180808\Models\BatchModifyDomainInfoRequest.cs" />
@@ -6484,6 +6496,7 @@
     <Compile Include="Live\V20180801\Models\BindLiveDomainCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\CallBackRuleInfo.cs" />
     <Compile Include="Live\V20180801\Models\CallBackTemplateInfo.cs" />
+    <Compile Include="Live\V20180801\Models\CallbackEventInfo.cs" />
     <Compile Include="Live\V20180801\Models\CancelCommonMixStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\CancelCommonMixStreamResponse.cs" />
     <Compile Include="Live\V20180801\Models\CdnPlayStatData.cs" />
@@ -6561,6 +6574,8 @@
     <Compile Include="Live\V20180801\Models\DescribeAreaBillBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeBillBandwidthAndFluxListResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeCallbackRecordsListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeCallbackRecordsListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeConcurrentRecordStreamNumRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeConcurrentRecordStreamNumResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeDeliverBandwidthListRequest.cs" />

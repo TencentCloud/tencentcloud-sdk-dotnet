@@ -78,6 +78,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GroupResourceTypeList")]
         public string[] GroupResourceTypeList{ get; set; }
 
+        /// <summary>
+        /// 部署组状态过滤字段
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "GroupResourceTypeList.", this.GroupResourceTypeList);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

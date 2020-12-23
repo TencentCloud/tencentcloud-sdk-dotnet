@@ -31,7 +31,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用于多人游戏，游戏主机用户ID
+        /// 【多人游戏】游戏主机用户ID
         /// </summary>
         [JsonProperty("HostUserId")]
         public string HostUserId{ get; set; }

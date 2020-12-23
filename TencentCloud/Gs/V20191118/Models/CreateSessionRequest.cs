@@ -67,7 +67,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 【将废弃】资源池编号，比如1表示正式，2表示测试
+        /// 【废弃】资源池编号
         /// </summary>
         [JsonProperty("SetNo")]
         public ulong? SetNo{ get; set; }
