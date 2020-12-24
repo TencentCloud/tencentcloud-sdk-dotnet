@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{2D2665D3-3EFE-35CA-BBCD-325648942550}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.197</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Ssa</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180608\SsaClient.cs" />
+    <Compile Include="V20180608\Models\AggregationObj.cs" />
+    <Compile Include="V20180608\Models\Asset.cs" />
+    <Compile Include="V20180608\Models\AssetDetail.cs" />
+    <Compile Include="V20180608\Models\AssetList.cs" />
+    <Compile Include="V20180608\Models\Bucket.cs" />
+    <Compile Include="V20180608\Models\CheckAssetItem.cs" />
+    <Compile Include="V20180608\Models\CheckConfigDetail.cs" />
+    <Compile Include="V20180608\Models\ComplianceCheckDetail.cs" />
+    <Compile Include="V20180608\Models\DataAssetMapping.cs" />
+    <Compile Include="V20180608\Models\DataCheck.cs" />
+    <Compile Include="V20180608\Models\DataCompliance.cs" />
+    <Compile Include="V20180608\Models\DataEvent.cs" />
+    <Compile Include="V20180608\Models\DescribeAssetDetailRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeAssetDetailResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeAssetListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeAssetListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeAssetsMappingListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeAssetsMappingListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCheckConfigAssetListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCheckConfigAssetListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCheckConfigDetailRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCheckConfigDetailResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeComplianceDetailRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeComplianceDetailResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeComplianceListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeComplianceListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeConfigListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeConfigListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEventDetailRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEventDetailResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeLeakDetectionListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeLeakDetectionListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeSafetyEventListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeSafetyEventListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeVulListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeVulListResponse.cs" />
+    <Compile Include="V20180608\Models\Filter.cs" />
+    <Compile Include="V20180608\Models\SaDivulgeDataQueryPub.cs" />
+    <Compile Include="V20180608\Models\SaDivulgeDataQueryPubList.cs" />
+    <Compile Include="V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />
+    <Compile Include="V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
+    <Compile Include="V20180608\Models\Tag.cs" />
+    <Compile Include="V20180608\Models\VulItem.cs" />
+    <Compile Include="V20180608\Models\VulList.cs" />
+  </ItemGroup>
+</Project>

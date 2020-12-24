@@ -231,6 +231,8 @@ Project("{18B557D9-AC8D-37C8-A949-A506BBC8EA9A}") = "TencentCloudSolar", "Tencen
 EndProject
 Project("{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}") = "TencentCloudSqlserver", "TencentCloud\Sqlserver\TencentCloudSqlserver.csproj", "{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}"
 EndProject
+Project("{2D2665D3-3EFE-35CA-BBCD-325648942550}") = "TencentCloudSsa", "TencentCloud\Ssa\TencentCloudSsa.csproj", "{2D2665D3-3EFE-35CA-BBCD-325648942550}"
+EndProject
 Project("{6E5F67EE-DB08-3C18-905D-3312ECC2D894}") = "TencentCloudSsl", "TencentCloud\Ssl\TencentCloudSsl.csproj", "{6E5F67EE-DB08-3C18-905D-3312ECC2D894}"
 EndProject
 Project("{8C2E8AE3-0129-3536-9D5F-193A94B483CB}") = "TencentCloudSslpod", "TencentCloud\Sslpod\TencentCloudSslpod.csproj", "{8C2E8AE3-0129-3536-9D5F-193A94B483CB}"
@@ -771,6 +773,10 @@ Global
 		{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2665D3-3EFE-35CA-BBCD-325648942550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2665D3-3EFE-35CA-BBCD-325648942550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2665D3-3EFE-35CA-BBCD-325648942550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2665D3-3EFE-35CA-BBCD-325648942550}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6E5F67EE-DB08-3C18-905D-3312ECC2D894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6E5F67EE-DB08-3C18-905D-3312ECC2D894}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E5F67EE-DB08-3C18-905D-3312ECC2D894}.Release|Any CPU.ActiveCfg = Release|Any CPU

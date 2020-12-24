@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{22A3B506-BD68-3DED-BEAD-BFF07ADD88E7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.196</VersionPrefix>
+    <VersionPrefix>3.0.197</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,7 @@
     <Compile Include="V20200304\Models\CreateQualityControlTaskRequest.cs" />
     <Compile Include="V20200304\Models\CreateQualityControlTaskResponse.cs" />
     <Compile Include="V20200304\Models\DarInfo.cs" />
+    <Compile Include="V20200304\Models\Denoise.cs" />
     <Compile Include="V20200304\Models\Denoising.cs" />
     <Compile Include="V20200304\Models\DescribeEditingTaskResultRequest.cs" />
     <Compile Include="V20200304\Models\DescribeEditingTaskResultResponse.cs" />

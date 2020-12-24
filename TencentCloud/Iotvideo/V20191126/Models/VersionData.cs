@@ -143,6 +143,13 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("Contents")]
         public Contents Contents{ get; set; }
 
+        /// <summary>
+        /// 月活设备数，当月第一天开始有上线的设备数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AliveInMonthCnt")]
+        public ulong? AliveInMonthCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "ModifyTimes", this.ModifyTimes);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamObj(map, prefix + "Contents.", this.Contents);
+            this.SetParamSimple(map, prefix + "AliveInMonthCnt", this.AliveInMonthCnt);
         }
     }
 }

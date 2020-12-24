@@ -52,6 +52,12 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
+        /// <summary>
+        /// 音频降噪信息
+        /// </summary>
+        [JsonProperty("Denoise")]
+        public Denoise Denoise{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
+            this.SetParamObj(map, prefix + "Denoise.", this.Denoise);
         }
     }
 }

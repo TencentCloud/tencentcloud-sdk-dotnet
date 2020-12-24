@@ -255,7 +255,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// 查询sdkappid维度下每分钟实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeNetworkRequest"/></param>
         /// <returns><see cref="DescribeRealtimeNetworkResponse"/></returns>
@@ -275,7 +275,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid维度下实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// 查询sdkappid维度下每分钟实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeNetworkRequest"/></param>
         /// <returns><see cref="DescribeRealtimeNetworkResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid维度下实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// 查询sdkappid维度下每分钟实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeQualityRequest"/></param>
         /// <returns><see cref="DescribeRealtimeQualityResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid维度下实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不超过1个小时。
+        /// 查询sdkappid维度下每分钟实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeQualityRequest"/></param>
         /// <returns><see cref="DescribeRealtimeQualityResponse"/></returns>
@@ -335,7 +335,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid维度下实时规模，可查询24小时内数据，查询起止时间不超过1个小时。
+        ///  查询sdkappid维度下每分钟实时规模，可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeScaleRequest"/></param>
         /// <returns><see cref="DescribeRealtimeScaleResponse"/></returns>
@@ -355,7 +355,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询sdkappid维度下实时规模，可查询24小时内数据，查询起止时间不超过1个小时。
+        ///  查询sdkappid维度下每分钟实时规模，可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeScaleRequest"/></param>
         /// <returns><see cref="DescribeRealtimeScaleResponse"/></returns>

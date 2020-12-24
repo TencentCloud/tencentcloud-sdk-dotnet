@@ -53,6 +53,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Layer")]
         public string Layer{ get; set; }
 
+        /// <summary>
+        /// 是否递归解析m3u8文件中的ts分片预热
+        /// 注意事项：
+        /// 1. 该功能要求m3u8索引文件能直接请求获取
+        /// 2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
+        /// 3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热
+        /// </summary>
+        [JsonProperty("ParseM3U8")]
+        public bool? ParseM3U8{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +73,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "UserAgent", this.UserAgent);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Layer", this.Layer);
+            this.SetParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
         }
     }
 }

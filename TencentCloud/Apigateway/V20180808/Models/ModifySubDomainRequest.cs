@@ -66,6 +66,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
+        /// <summary>
+        /// 是否将HTTP请求强制跳转 HTTPS，默认为false。参数为 true时，API网关会将所有使用该自定义域名的 HTTP 协议的请求重定向至 HTTPS 协议进行转发。
+        /// </summary>
+        [JsonProperty("IsForcedHttps")]
+        public bool? IsForcedHttps{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArrayObj(map, prefix + "PathMappingSet.", this.PathMappingSet);
             this.SetParamSimple(map, prefix + "NetType", this.NetType);
+            this.SetParamSimple(map, prefix + "IsForcedHttps", this.IsForcedHttps);
         }
     }
 }

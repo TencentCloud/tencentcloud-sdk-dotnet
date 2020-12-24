@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.196</VersionPrefix>
+    <VersionPrefix>3.0.197</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4947,6 +4947,10 @@
     <Compile Include="Faceid\V20180301\Models\GetFaceIdTokenResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetLiveCodeRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetLiveCodeResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetRealNameAuthResultRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetRealNameAuthResultResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetRealNameAuthTokenRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetRealNameAuthTokenResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardOCRVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardOCRVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardVerificationRequest.cs" />
@@ -5750,6 +5754,7 @@
     <Compile Include="Ie\V20200304\Models\CreateQualityControlTaskRequest.cs" />
     <Compile Include="Ie\V20200304\Models\CreateQualityControlTaskResponse.cs" />
     <Compile Include="Ie\V20200304\Models\DarInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\Denoise.cs" />
     <Compile Include="Ie\V20200304\Models\Denoising.cs" />
     <Compile Include="Ie\V20200304\Models\DescribeEditingTaskResultRequest.cs" />
     <Compile Include="Ie\V20200304\Models\DescribeEditingTaskResultResponse.cs" />
@@ -7907,6 +7912,7 @@
     <Compile Include="Partners\V20180321\Models\DescribeSalesmansResponse.cs" />
     <Compile Include="Partners\V20180321\Models\ModifyClientRemarkRequest.cs" />
     <Compile Include="Partners\V20180321\Models\ModifyClientRemarkResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\ProductInfoElem.cs" />
     <Compile Include="Partners\V20180321\Models\RebateInfoElem.cs" />
     <Compile Include="Partners\V20180321\Models\RemovePayRelationForClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\RemovePayRelationForClientResponse.cs" />
@@ -8633,6 +8639,51 @@
     <Compile Include="Sqlserver\V20180328\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ZoneInfo.cs" />
+    <Compile Include="Ssa\V20180608\SsaClient.cs" />
+    <Compile Include="Ssa\V20180608\Models\AggregationObj.cs" />
+    <Compile Include="Ssa\V20180608\Models\Asset.cs" />
+    <Compile Include="Ssa\V20180608\Models\AssetDetail.cs" />
+    <Compile Include="Ssa\V20180608\Models\AssetList.cs" />
+    <Compile Include="Ssa\V20180608\Models\Bucket.cs" />
+    <Compile Include="Ssa\V20180608\Models\CheckAssetItem.cs" />
+    <Compile Include="Ssa\V20180608\Models\CheckConfigDetail.cs" />
+    <Compile Include="Ssa\V20180608\Models\ComplianceCheckDetail.cs" />
+    <Compile Include="Ssa\V20180608\Models\DataAssetMapping.cs" />
+    <Compile Include="Ssa\V20180608\Models\DataCheck.cs" />
+    <Compile Include="Ssa\V20180608\Models\DataCompliance.cs" />
+    <Compile Include="Ssa\V20180608\Models\DataEvent.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeAssetDetailRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeAssetDetailResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeAssetListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeAssetListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeAssetsMappingListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeAssetsMappingListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeCheckConfigAssetListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeCheckConfigAssetListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeCheckConfigDetailRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeCheckConfigDetailResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeComplianceDetailRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeComplianceDetailResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeComplianceListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeComplianceListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeConfigListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeConfigListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeEventDetailRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeEventDetailResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeLeakDetectionListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeLeakDetectionListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeVulListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeVulListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\Filter.cs" />
+    <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPub.cs" />
+    <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubList.cs" />
+    <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\Tag.cs" />
+    <Compile Include="Ssa\V20180608\Models\VulItem.cs" />
+    <Compile Include="Ssa\V20180608\Models\VulList.cs" />
     <Compile Include="Ssl\V20191205\SslClient.cs" />
     <Compile Include="Ssl\V20191205\Models\ApplyCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\ApplyCertificateResponse.cs" />

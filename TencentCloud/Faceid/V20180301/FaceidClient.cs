@@ -573,6 +573,86 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 获取微信实名认证结果
+        /// </summary>
+        /// <param name="req"><see cref="GetRealNameAuthResultRequest"/></param>
+        /// <returns><see cref="GetRealNameAuthResultResponse"/></returns>
+        public async Task<GetRealNameAuthResultResponse> GetRealNameAuthResult(GetRealNameAuthResultRequest req)
+        {
+             JsonResponseModel<GetRealNameAuthResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRealNameAuthResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取微信实名认证结果
+        /// </summary>
+        /// <param name="req"><see cref="GetRealNameAuthResultRequest"/></param>
+        /// <returns><see cref="GetRealNameAuthResultResponse"/></returns>
+        public GetRealNameAuthResultResponse GetRealNameAuthResultSync(GetRealNameAuthResultRequest req)
+        {
+             JsonResponseModel<GetRealNameAuthResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRealNameAuthResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 微信实名认证授权
+        /// </summary>
+        /// <param name="req"><see cref="GetRealNameAuthTokenRequest"/></param>
+        /// <returns><see cref="GetRealNameAuthTokenResponse"/></returns>
+        public async Task<GetRealNameAuthTokenResponse> GetRealNameAuthToken(GetRealNameAuthTokenRequest req)
+        {
+             JsonResponseModel<GetRealNameAuthTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRealNameAuthToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 微信实名认证授权
+        /// </summary>
+        /// <param name="req"><see cref="GetRealNameAuthTokenRequest"/></param>
+        /// <returns><see cref="GetRealNameAuthTokenResponse"/></returns>
+        public GetRealNameAuthTokenResponse GetRealNameAuthTokenSync(GetRealNameAuthTokenRequest req)
+        {
+             JsonResponseModel<GetRealNameAuthTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRealNameAuthToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRealNameAuthTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
         /// </summary>
         /// <param name="req"><see cref="IdCardOCRVerificationRequest"/></param>

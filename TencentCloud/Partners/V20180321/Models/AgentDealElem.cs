@@ -195,6 +195,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("OverdueTime")]
         public string OverdueTime{ get; set; }
 
+        /// <summary>
+        /// 产品详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductInfo")]
+        public ProductInfoElem[] ProductInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +233,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "PayerMode", this.PayerMode);
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "OverdueTime", this.OverdueTime);
+            this.SetParamArrayObj(map, prefix + "ProductInfo.", this.ProductInfo);
         }
     }
 }
