@@ -1932,7 +1932,6 @@ namespace TencentCloud.Mps.V20190612
 
         /// <summary>
         /// 对已发起的任务进行管理。
-        /// > 注意：目前仅支持终止执行中的直播流处理任务。
         /// </summary>
         /// <param name="req"><see cref="ManageTaskRequest"/></param>
         /// <returns><see cref="ManageTaskResponse"/></returns>
@@ -1953,7 +1952,6 @@ namespace TencentCloud.Mps.V20190612
 
         /// <summary>
         /// 对已发起的任务进行管理。
-        /// > 注意：目前仅支持终止执行中的直播流处理任务。
         /// </summary>
         /// <param name="req"><see cref="ManageTaskRequest"/></param>
         /// <returns><see cref="ManageTaskResponse"/></returns>

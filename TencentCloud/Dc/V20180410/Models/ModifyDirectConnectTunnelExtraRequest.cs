@@ -102,6 +102,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("NqaInfo")]
         public NQAInfo NqaInfo{ get; set; }
 
+        /// <summary>
+        /// 0：停用IPv6
+        /// 1: 启用IPv6
+        /// </summary>
+        [JsonProperty("IPv6Enable")]
+        public long? IPv6Enable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
             this.SetParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
             this.SetParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
+            this.SetParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
         }
     }
 }

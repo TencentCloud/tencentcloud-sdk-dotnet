@@ -253,6 +253,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 获取接收客户端请求的节点类型
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestTargetNodeTypesRequest"/></param>
+        /// <returns><see cref="GetRequestTargetNodeTypesResponse"/></returns>
+        public async Task<GetRequestTargetNodeTypesResponse> GetRequestTargetNodeTypes(GetRequestTargetNodeTypesRequest req)
+        {
+             JsonResponseModel<GetRequestTargetNodeTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRequestTargetNodeTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestTargetNodeTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取接收客户端请求的节点类型
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestTargetNodeTypesRequest"/></param>
+        /// <returns><see cref="GetRequestTargetNodeTypesResponse"/></returns>
+        public GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypesSync(GetRequestTargetNodeTypesRequest req)
+        {
+             JsonResponseModel<GetRequestTargetNodeTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRequestTargetNodeTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestTargetNodeTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重启ES集群实例(用于系统版本更新等操作) 
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
@@ -458,6 +498,46 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "UpdatePlugins");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新接收客户端请求的节点类型
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRequestTargetNodeTypesRequest"/></param>
+        /// <returns><see cref="UpdateRequestTargetNodeTypesResponse"/></returns>
+        public async Task<UpdateRequestTargetNodeTypesResponse> UpdateRequestTargetNodeTypes(UpdateRequestTargetNodeTypesRequest req)
+        {
+             JsonResponseModel<UpdateRequestTargetNodeTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRequestTargetNodeTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRequestTargetNodeTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新接收客户端请求的节点类型
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRequestTargetNodeTypesRequest"/></param>
+        /// <returns><see cref="UpdateRequestTargetNodeTypesResponse"/></returns>
+        public UpdateRequestTargetNodeTypesResponse UpdateRequestTargetNodeTypesSync(UpdateRequestTargetNodeTypesRequest req)
+        {
+             JsonResponseModel<UpdateRequestTargetNodeTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateRequestTargetNodeTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRequestTargetNodeTypesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

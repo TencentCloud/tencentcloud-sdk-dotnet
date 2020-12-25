@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A6E782C7-FC94-3EC6-A8AC-DB20F13405F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.197</VersionPrefix>
+    <VersionPrefix>3.0.198</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,8 @@
     <Compile Include="V20170312\Models\GetSnapOverviewRequest.cs" />
     <Compile Include="V20170312\Models\GetSnapOverviewResponse.cs" />
     <Compile Include="V20170312\Models\Image.cs" />
+    <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceRequest.cs" />
+    <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateDisksRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateDisksResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceRenewDisksRequest.cs" />
@@ -101,6 +103,8 @@
     <Compile Include="V20170312\Models\ModifyAutoSnapshotPolicyAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDiskAttributesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDiskAttributesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskExtraPerformanceRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskExtraPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDisksChargeTypeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDisksChargeTypeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDisksRenewFlagRequest.cs" />

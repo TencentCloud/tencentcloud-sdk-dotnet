@@ -232,6 +232,41 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("BgpStatus")]
         public BGPStatus BgpStatus{ get; set; }
 
+        /// <summary>
+        /// 是否开启IPv6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPv6Enable")]
+        public long? IPv6Enable{ get; set; }
+
+        /// <summary>
+        /// 腾讯侧互联IPv6地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TencentIPv6Address")]
+        public string TencentIPv6Address{ get; set; }
+
+        /// <summary>
+        /// 腾讯侧备用互联IPv6地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TencentBackupIPv6Address")]
+        public string TencentBackupIPv6Address{ get; set; }
+
+        /// <summary>
+        /// BGPv6状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BgpIPv6Status")]
+        public BGPStatus BgpIPv6Status{ get; set; }
+
+        /// <summary>
+        /// 用户侧互联IPv6地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomerIPv6Address")]
+        public string CustomerIPv6Address{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -271,6 +306,11 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
             this.SetParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
             this.SetParamObj(map, prefix + "BgpStatus.", this.BgpStatus);
+            this.SetParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
+            this.SetParamSimple(map, prefix + "TencentIPv6Address", this.TencentIPv6Address);
+            this.SetParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
+            this.SetParamObj(map, prefix + "BgpIPv6Status.", this.BgpIPv6Status);
+            this.SetParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
         }
     }
 }

@@ -93,6 +93,46 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// 申请互联网CIDR地址
+        /// </summary>
+        /// <param name="req"><see cref="ApplyInternetAddressRequest"/></param>
+        /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
+        public async Task<ApplyInternetAddressResponse> ApplyInternetAddress(ApplyInternetAddressRequest req)
+        {
+             JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 申请互联网CIDR地址
+        /// </summary>
+        /// <param name="req"><see cref="ApplyInternetAddressRequest"/></param>
+        /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
+        public ApplyInternetAddressResponse ApplyInternetAddressSync(ApplyInternetAddressRequest req)
+        {
+             JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 申请物理专线接入。
         /// 调用该接口时，请注意：
         /// 账号要进行实名认证，否则不允许申请物理专线；
@@ -421,6 +461,126 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
+        /// 获取用户互联网公网地址信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressResponse"/></returns>
+        public async Task<DescribeInternetAddressResponse> DescribeInternetAddress(DescribeInternetAddressRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户互联网公网地址信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressResponse"/></returns>
+        public DescribeInternetAddressResponse DescribeInternetAddressSync(DescribeInternetAddressRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户互联网公网地址配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressQuotaRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressQuotaResponse"/></returns>
+        public async Task<DescribeInternetAddressQuotaResponse> DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternetAddressQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户互联网公网地址配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressQuotaRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressQuotaResponse"/></returns>
+        public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuotaSync(DescribeInternetAddressQuotaRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddressQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户互联网公网地址分配统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressStatisticsResponse"/></returns>
+        public async Task<DescribeInternetAddressStatisticsResponse> DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternetAddressStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户互联网公网地址分配统计信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternetAddressStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeInternetAddressStatisticsResponse"/></returns>
+        public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatisticsSync(DescribeInternetAddressStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternetAddressStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribePublicDirectConnectTunnelRoutes）用于查询互联网通道路由列表
         /// </summary>
         /// <param name="req"><see cref="DescribePublicDirectConnectTunnelRoutesRequest"/></param>
@@ -452,6 +612,86 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = this.InternalRequestSync(req, "DescribePublicDirectConnectTunnelRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublicDirectConnectTunnelRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用用户申请的公网互联网地址
+        /// </summary>
+        /// <param name="req"><see cref="DisableInternetAddressRequest"/></param>
+        /// <returns><see cref="DisableInternetAddressResponse"/></returns>
+        public async Task<DisableInternetAddressResponse> DisableInternetAddress(DisableInternetAddressRequest req)
+        {
+             JsonResponseModel<DisableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用用户申请的公网互联网地址
+        /// </summary>
+        /// <param name="req"><see cref="DisableInternetAddressRequest"/></param>
+        /// <returns><see cref="DisableInternetAddressResponse"/></returns>
+        public DisableInternetAddressResponse DisableInternetAddressSync(DisableInternetAddressRequest req)
+        {
+             JsonResponseModel<DisableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用已停用的互联网公网地址
+        /// </summary>
+        /// <param name="req"><see cref="EnableInternetAddressRequest"/></param>
+        /// <returns><see cref="EnableInternetAddressResponse"/></returns>
+        public async Task<EnableInternetAddressResponse> EnableInternetAddress(EnableInternetAddressRequest req)
+        {
+             JsonResponseModel<EnableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用已停用的互联网公网地址
+        /// </summary>
+        /// <param name="req"><see cref="EnableInternetAddressRequest"/></param>
+        /// <returns><see cref="EnableInternetAddressResponse"/></returns>
+        public EnableInternetAddressResponse EnableInternetAddressSync(EnableInternetAddressRequest req)
+        {
+             JsonResponseModel<EnableInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInternetAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -612,6 +852,46 @@ namespace TencentCloud.Dc.V20180410
              {
                  var strResp = this.InternalRequestSync(req, "RejectDirectConnectTunnel");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RejectDirectConnectTunnelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 释放已申请的互联网地址
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseInternetAddressRequest"/></param>
+        /// <returns><see cref="ReleaseInternetAddressResponse"/></returns>
+        public async Task<ReleaseInternetAddressResponse> ReleaseInternetAddress(ReleaseInternetAddressRequest req)
+        {
+             JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseInternetAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 释放已申请的互联网地址
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseInternetAddressRequest"/></param>
+        /// <returns><see cref="ReleaseInternetAddressResponse"/></returns>
+        public ReleaseInternetAddressResponse ReleaseInternetAddressSync(ReleaseInternetAddressRequest req)
+        {
+             JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseInternetAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseInternetAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

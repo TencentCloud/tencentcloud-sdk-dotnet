@@ -93,7 +93,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警创建告警通知模板
+        /// 创建通知模板
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警创建告警通知模板
+        /// 创建通知模板
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -501,7 +501,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警历史列表
+        /// 查询告警历史
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmHistoriesRequest"/></param>
         /// <returns><see cref="DescribeAlarmHistoriesResponse"/></returns>
@@ -521,7 +521,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警历史列表
+        /// 查询告警历史
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmHistoriesRequest"/></param>
         /// <returns><see cref="DescribeAlarmHistoriesResponse"/></returns>
@@ -581,7 +581,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警获取告警通知模板详情
+        /// 查询单个通知模板的详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticeRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticeResponse"/></returns>
@@ -601,7 +601,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警获取告警通知模板详情
+        /// 查询单个通知模板的详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticeRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticeResponse"/></returns>
@@ -661,7 +661,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警查询告警通知模板列表
+        /// 查询通知模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
@@ -681,7 +681,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 云监控告警查询告警通知模板列表
+        /// 查询通知模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
@@ -701,7 +701,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警策略列表
+        /// 查询告警策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmPoliciesRequest"/></param>
         /// <returns><see cref="DescribeAlarmPoliciesResponse"/></returns>
@@ -721,7 +721,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警策略列表
+        /// 查询告警策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmPoliciesRequest"/></param>
         /// <returns><see cref="DescribeAlarmPoliciesResponse"/></returns>
@@ -741,7 +741,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警策略详情
+        /// 获取单个告警策略详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmPolicyRequest"/></param>
         /// <returns><see cref="DescribeAlarmPolicyResponse"/></returns>
@@ -761,7 +761,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 告警策略详情
+        /// 获取单个告警策略详情
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmPolicyRequest"/></param>
         /// <returns><see cref="DescribeAlarmPolicyResponse"/></returns>
@@ -781,7 +781,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 拉取所有名字空间
+        /// 查询所有名字空间
         /// </summary>
         /// <param name="req"><see cref="DescribeAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeAllNamespacesResponse"/></returns>
@@ -801,7 +801,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 拉取所有名字空间
+        /// 查询所有名字空间
         /// </summary>
         /// <param name="req"><see cref="DescribeAllNamespacesRequest"/></param>
         /// <returns><see cref="DescribeAllNamespacesResponse"/></returns>
@@ -1429,7 +1429,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 修改告警策略的启停状态
+        /// 启停告警策略
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyStatusRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyStatusResponse"/></returns>
@@ -1449,7 +1449,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 修改告警策略的启停状态
+        /// 启停告警策略
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyStatusRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyStatusResponse"/></returns>

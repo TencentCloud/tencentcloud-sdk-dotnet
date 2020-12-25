@@ -3085,6 +3085,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 对已发起的任务进行管理。
+        /// </summary>
+        /// <param name="req"><see cref="ManageTaskRequest"/></param>
+        /// <returns><see cref="ManageTaskResponse"/></returns>
+        public async Task<ManageTaskResponse> ManageTask(ManageTaskRequest req)
+        {
+             JsonResponseModel<ManageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对已发起的任务进行管理。
+        /// </summary>
+        /// <param name="req"><see cref="ManageTaskRequest"/></param>
+        /// <returns><see cref="ManageTaskResponse"/></returns>
+        public ManageTaskResponse ManageTaskSync(ManageTaskRequest req)
+        {
+             JsonResponseModel<ManageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改用户自定义视频内容分析模板。
         /// 
         /// 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。

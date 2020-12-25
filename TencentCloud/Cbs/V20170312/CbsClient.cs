@@ -899,6 +899,46 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口（InquirePriceModifyDiskExtraPerformance）用于调整云硬盘额外性能询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDiskExtraPerformanceResponse"/></returns>
+        public async Task<InquirePriceModifyDiskExtraPerformanceResponse> InquirePriceModifyDiskExtraPerformance(InquirePriceModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquirePriceModifyDiskExtraPerformance）用于调整云硬盘额外性能询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyDiskExtraPerformanceResponse"/></returns>
+        public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformanceSync(InquirePriceModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（InquiryPriceCreateDisks）用于创建云硬盘询价。
         /// 
         /// * 支持查询创建多块云硬盘的价格，此时返回结果为总价格。
@@ -1116,6 +1156,50 @@ namespace TencentCloud.Cbs.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDiskAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDiskExtraPerformance）用于调整云硬盘额外的性能。
+        /// 
+        /// * 目前仅支持极速型SSD云硬盘（CLOUD_TSSD）和高性能SSD云硬盘(CLOUD_HSSD)。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="ModifyDiskExtraPerformanceResponse"/></returns>
+        public async Task<ModifyDiskExtraPerformanceResponse> ModifyDiskExtraPerformance(ModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskExtraPerformanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDiskExtraPerformance）用于调整云硬盘额外的性能。
+        /// 
+        /// * 目前仅支持极速型SSD云硬盘（CLOUD_TSSD）和高性能SSD云硬盘(CLOUD_HSSD)。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDiskExtraPerformanceRequest"/></param>
+        /// <returns><see cref="ModifyDiskExtraPerformanceResponse"/></returns>
+        public ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformanceSync(ModifyDiskExtraPerformanceRequest req)
+        {
+             JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDiskExtraPerformance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDiskExtraPerformanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

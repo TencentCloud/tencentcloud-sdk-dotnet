@@ -57,28 +57,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Cpu核数
+        /// 所属项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 普通实例Cpu核数
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// 普通实例内存
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
-
-        /// <summary>
-        /// 存储上限，单位GB
-        /// </summary>
-        [JsonProperty("StorageLimit")]
-        public long? StorageLimit{ get; set; }
-
-        /// <summary>
-        /// 所属项目ID
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public long? ProjectId{ get; set; }
 
         /// <summary>
         /// 存储
@@ -150,6 +144,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? ExpectTimeThresh{ get; set; }
 
         /// <summary>
+        /// 普通实例存储上限，单位GB
+        /// </summary>
+        [JsonProperty("StorageLimit")]
+        public long? StorageLimit{ get; set; }
+
+        /// <summary>
         /// 实例数量
         /// </summary>
         [JsonProperty("InstanceCount")]
@@ -207,13 +207,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时的cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// 当DbMode为SEVERLESS时必填
+        /// cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时的cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
+        /// 当DbMode为SEVERLESS时必填：
+        /// cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
@@ -222,12 +224,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
         /// <li>yes</li>
         /// <li>no</li>
+        /// 默认值:yes
         /// </summary>
         [JsonProperty("AutoPause")]
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，可选范围[60,INF]
+        /// 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+        /// 默认值:600
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
@@ -243,10 +247,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
-            this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
@@ -258,6 +261,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OriginalClusterId", this.OriginalClusterId);
             this.SetParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
             this.SetParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
+            this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);

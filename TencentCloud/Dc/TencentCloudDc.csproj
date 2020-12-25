@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BBBC34B7-D0CA-319D-B7F1-85119ED00512}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.197</VersionPrefix>
+    <VersionPrefix>3.0.198</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
     <Compile Include="V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
     <Compile Include="V20180410\Models\AccessPoint.cs" />
+    <Compile Include="V20180410\Models\ApplyInternetAddressRequest.cs" />
+    <Compile Include="V20180410\Models\ApplyInternetAddressResponse.cs" />
     <Compile Include="V20180410\Models\BFDInfo.cs" />
     <Compile Include="V20180410\Models\BGPStatus.cs" />
     <Compile Include="V20180410\Models\BgpPeer.cs" />
@@ -67,13 +69,25 @@
     <Compile Include="V20180410\Models\DescribeDirectConnectTunnelsResponse.cs" />
     <Compile Include="V20180410\Models\DescribeDirectConnectsRequest.cs" />
     <Compile Include="V20180410\Models\DescribeDirectConnectsResponse.cs" />
+    <Compile Include="V20180410\Models\DescribeInternetAddressQuotaRequest.cs" />
+    <Compile Include="V20180410\Models\DescribeInternetAddressQuotaResponse.cs" />
+    <Compile Include="V20180410\Models\DescribeInternetAddressRequest.cs" />
+    <Compile Include="V20180410\Models\DescribeInternetAddressResponse.cs" />
+    <Compile Include="V20180410\Models\DescribeInternetAddressStatisticsRequest.cs" />
+    <Compile Include="V20180410\Models\DescribeInternetAddressStatisticsResponse.cs" />
     <Compile Include="V20180410\Models\DescribePublicDirectConnectTunnelRoutesRequest.cs" />
     <Compile Include="V20180410\Models\DescribePublicDirectConnectTunnelRoutesResponse.cs" />
     <Compile Include="V20180410\Models\DirectConnect.cs" />
     <Compile Include="V20180410\Models\DirectConnectTunnel.cs" />
     <Compile Include="V20180410\Models\DirectConnectTunnelExtra.cs" />
     <Compile Include="V20180410\Models\DirectConnectTunnelRoute.cs" />
+    <Compile Include="V20180410\Models\DisableInternetAddressRequest.cs" />
+    <Compile Include="V20180410\Models\DisableInternetAddressResponse.cs" />
+    <Compile Include="V20180410\Models\EnableInternetAddressRequest.cs" />
+    <Compile Include="V20180410\Models\EnableInternetAddressResponse.cs" />
     <Compile Include="V20180410\Models\Filter.cs" />
+    <Compile Include="V20180410\Models\InternetAddressDetail.cs" />
+    <Compile Include="V20180410\Models\InternetAddressStatistics.cs" />
     <Compile Include="V20180410\Models\ModifyDirectConnectAttributeRequest.cs" />
     <Compile Include="V20180410\Models\ModifyDirectConnectAttributeResponse.cs" />
     <Compile Include="V20180410\Models\ModifyDirectConnectTunnelAttributeRequest.cs" />
@@ -83,6 +97,8 @@
     <Compile Include="V20180410\Models\NQAInfo.cs" />
     <Compile Include="V20180410\Models\RejectDirectConnectTunnelRequest.cs" />
     <Compile Include="V20180410\Models\RejectDirectConnectTunnelResponse.cs" />
+    <Compile Include="V20180410\Models\ReleaseInternetAddressRequest.cs" />
+    <Compile Include="V20180410\Models\ReleaseInternetAddressResponse.cs" />
     <Compile Include="V20180410\Models\RouteFilterPrefix.cs" />
     <Compile Include="V20180410\Models\Tag.cs" />
   </ItemGroup>
