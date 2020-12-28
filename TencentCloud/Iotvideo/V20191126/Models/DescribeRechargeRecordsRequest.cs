@@ -25,19 +25,19 @@ namespace TencentCloud.Iotvideo.V20191126.Models
     {
         
         /// <summary>
-        /// 账户类型 1:设备接入 2:云存
+        /// 账户类型 1:设备接入 2:云存。
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
-        /// 从第几条记录开始显示
+        /// 从第几条记录开始显示, 默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 总共查询多少条记录
+        /// 总共查询多少条记录，默认为值50。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

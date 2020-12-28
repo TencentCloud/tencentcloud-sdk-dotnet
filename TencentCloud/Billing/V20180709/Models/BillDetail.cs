@@ -167,6 +167,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
+        /// <summary>
+        /// 项目ID:资源所属项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -196,6 +202,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

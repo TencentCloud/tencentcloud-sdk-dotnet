@@ -359,6 +359,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SceneType")]
         public long? SceneType{ get; set; }
 
+        /// <summary>
+        /// Kibana配置项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KibanaConfig")]
+        public string KibanaConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -418,6 +425,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
+            this.SetParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
         }
     }
 }

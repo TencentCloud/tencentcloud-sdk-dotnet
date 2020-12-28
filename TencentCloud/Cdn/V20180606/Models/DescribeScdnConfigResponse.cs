@@ -55,6 +55,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ScdnBotConfig Bot{ get; set; }
 
         /// <summary>
+        /// 当前状态，取值online | offline
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +78,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "CC.", this.CC);
             this.SetParamObj(map, prefix + "Ddos.", this.Ddos);
             this.SetParamObj(map, prefix + "Bot.", this.Bot);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

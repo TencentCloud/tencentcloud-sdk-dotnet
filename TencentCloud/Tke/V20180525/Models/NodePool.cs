@@ -106,6 +106,27 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("DesiredNodesNum")]
         public long? DesiredNodesNum{ get; set; }
 
+        /// <summary>
+        /// 节点池osName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodePoolOs")]
+        public string NodePoolOs{ get; set; }
+
+        /// <summary>
+        /// 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OsCustomizeType")]
+        public string OsCustomizeType{ get; set; }
+
+        /// <summary>
+        /// 镜像id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +146,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
             this.SetParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
             this.SetParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+            this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
+            this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
         }
     }
 }

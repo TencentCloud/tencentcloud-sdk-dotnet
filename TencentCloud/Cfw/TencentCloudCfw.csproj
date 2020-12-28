@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.198</VersionPrefix>
+    <VersionPrefix>3.0.199</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,18 +46,29 @@
   <ItemGroup>
     <Compile Include="V20190904\CfwClient.cs" />
     <Compile Include="V20190904\Models\AcListsData.cs" />
+    <Compile Include="V20190904\Models\AssociatedInstanceInfo.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesResponse.cs" />
+    <Compile Include="V20190904\Models\CreateSecurityGroupApiRulesRequest.cs" />
+    <Compile Include="V20190904\Models\CreateSecurityGroupApiRulesResponse.cs" />
     <Compile Include="V20190904\Models\DeleteAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\DeleteAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\DeleteAllAccessControlRuleRequest.cs" />
     <Compile Include="V20190904\Models\DeleteAllAccessControlRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteSecurityGroupAllRuleRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteSecurityGroupAllRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteSecurityGroupRuleRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteSecurityGroupRuleResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeAssociatedInstanceListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatRuleOverviewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatRuleOverviewResponse.cs" />
     <Compile Include="V20190904\Models\DescribeRuleOverviewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeRuleOverviewResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeSecurityGroupListRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeSecurityGroupListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSyncAssetStatusRequest.cs" />
@@ -74,6 +85,8 @@
     <Compile Include="V20190904\Models\ModifyAllSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyItemSwitchStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyItemSwitchStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupAllRuleStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupAllRuleStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifySequenceRulesRequest.cs" />
     <Compile Include="V20190904\Models\ModifySequenceRulesResponse.cs" />
     <Compile Include="V20190904\Models\ModifyTableStatusRequest.cs" />
@@ -81,6 +94,8 @@
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetRequest.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetResponse.cs" />
+    <Compile Include="V20190904\Models\SecurityGroupApiRuleData.cs" />
+    <Compile Include="V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="V20190904\Models\SequenceData.cs" />
     <Compile Include="V20190904\Models\SwitchListsData.cs" />
   </ItemGroup>

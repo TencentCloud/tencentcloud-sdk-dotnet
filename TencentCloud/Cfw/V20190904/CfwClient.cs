@@ -93,6 +93,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 创建安全组API规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupApiRulesRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupApiRulesResponse"/></returns>
+        public async Task<CreateSecurityGroupApiRulesResponse> CreateSecurityGroupApiRules(CreateSecurityGroupApiRulesRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupApiRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSecurityGroupApiRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupApiRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建安全组API规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityGroupApiRulesRequest"/></param>
+        /// <returns><see cref="CreateSecurityGroupApiRulesResponse"/></returns>
+        public CreateSecurityGroupApiRulesResponse CreateSecurityGroupApiRulesSync(CreateSecurityGroupApiRulesRequest req)
+        {
+             JsonResponseModel<CreateSecurityGroupApiRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecurityGroupApiRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityGroupApiRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteAcRuleRequest"/></param>
@@ -173,6 +213,86 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 删除全部规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupAllRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupAllRuleResponse"/></returns>
+        public async Task<DeleteSecurityGroupAllRuleResponse> DeleteSecurityGroupAllRule(DeleteSecurityGroupAllRuleRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupAllRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSecurityGroupAllRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupAllRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除全部规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupAllRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupAllRuleResponse"/></returns>
+        public DeleteSecurityGroupAllRuleResponse DeleteSecurityGroupAllRuleSync(DeleteSecurityGroupAllRuleRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupAllRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecurityGroupAllRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupAllRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupRuleResponse"/></returns>
+        public async Task<DeleteSecurityGroupRuleResponse> DeleteSecurityGroupRule(DeleteSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityGroupRuleResponse"/></returns>
+        public DeleteSecurityGroupRuleResponse DeleteSecurityGroupRuleSync(DeleteSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<DeleteSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 访问控制列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAcListsRequest"/></param>
@@ -204,6 +324,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAcLists");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAcListsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取安全组关联实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssociatedInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAssociatedInstanceListResponse"/></returns>
+        public async Task<DescribeAssociatedInstanceListResponse> DescribeAssociatedInstanceList(DescribeAssociatedInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeAssociatedInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAssociatedInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssociatedInstanceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取安全组关联实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssociatedInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAssociatedInstanceListResponse"/></returns>
+        public DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceListSync(DescribeAssociatedInstanceListRequest req)
+        {
+             JsonResponseModel<DescribeAssociatedInstanceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAssociatedInstanceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssociatedInstanceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -284,6 +444,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRuleOverview");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRuleOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全组规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupListRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupListResponse"/></returns>
+        public async Task<DescribeSecurityGroupListResponse> DescribeSecurityGroupList(DescribeSecurityGroupListRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全组规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupListRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupListResponse"/></returns>
+        public DescribeSecurityGroupListResponse DescribeSecurityGroupListSync(DescribeSecurityGroupListRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -604,6 +804,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyItemSwitchStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyItemSwitchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用停用全部规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupAllRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupAllRuleStatusResponse"/></returns>
+        public async Task<ModifySecurityGroupAllRuleStatusResponse> ModifySecurityGroupAllRuleStatus(ModifySecurityGroupAllRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifySecurityGroupAllRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySecurityGroupAllRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityGroupAllRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用停用全部规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityGroupAllRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifySecurityGroupAllRuleStatusResponse"/></returns>
+        public ModifySecurityGroupAllRuleStatusResponse ModifySecurityGroupAllRuleStatusSync(ModifySecurityGroupAllRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifySecurityGroupAllRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySecurityGroupAllRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityGroupAllRuleStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
