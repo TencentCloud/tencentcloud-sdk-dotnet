@@ -30,6 +30,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// 偏移量，默认为0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 返回数量，默认为20，最大值为1000。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

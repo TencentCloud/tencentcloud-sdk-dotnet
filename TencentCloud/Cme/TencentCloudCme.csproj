@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.199</VersionPrefix>
+    <VersionPrefix>3.0.200</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -107,6 +107,7 @@
     <Compile Include="V20191029\Models\ExportVideoByVideoSegmentationDataResponse.cs" />
     <Compile Include="V20191029\Models\ExportVideoEditProjectRequest.cs" />
     <Compile Include="V20191029\Models\ExportVideoEditProjectResponse.cs" />
+    <Compile Include="V20191029\Models\ExternalMediaInfo.cs" />
     <Compile Include="V20191029\Models\FlattenListMediaRequest.cs" />
     <Compile Include="V20191029\Models\FlattenListMediaResponse.cs" />
     <Compile Include="V20191029\Models\GenerateVideoSegmentationSchemeByAiRequest.cs" />

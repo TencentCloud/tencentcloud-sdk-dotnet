@@ -953,7 +953,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 获取指定团队的信息。
+        /// 获取指定团队的信息，拉取团队信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamsRequest"/></param>
         /// <returns><see cref="DescribeTeamsResponse"/></returns>
@@ -973,7 +973,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 获取指定团队的信息。
+        /// 获取指定团队的信息，拉取团队信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamsRequest"/></param>
         /// <returns><see cref="DescribeTeamsResponse"/></returns>
@@ -1233,7 +1233,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 将云点播媒资文件导入到云剪素材库。
+        /// 将云点播媒资文件导入到云剪媒体资源库。
         /// </summary>
         /// <param name="req"><see cref="ImportMaterialRequest"/></param>
         /// <returns><see cref="ImportMaterialResponse"/></returns>
@@ -1253,7 +1253,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 将云点播媒资文件导入到云剪素材库。
+        /// 将云点播媒资文件导入到云剪媒体资源库。
         /// </summary>
         /// <param name="req"><see cref="ImportMaterialRequest"/></param>
         /// <returns><see cref="ImportMaterialResponse"/></returns>
@@ -1273,7 +1273,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 将云点播中的媒资添加到素材库中，供后续视频编辑使用。
+        /// 将云点播中的媒资或者用户自有媒资文件添加到媒体库中，供后续视频编辑使用。
         /// </summary>
         /// <param name="req"><see cref="ImportMediaToProjectRequest"/></param>
         /// <returns><see cref="ImportMediaToProjectResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 将云点播中的媒资添加到素材库中，供后续视频编辑使用。
+        /// 将云点播中的媒资或者用户自有媒资文件添加到媒体库中，供后续视频编辑使用。
         /// </summary>
         /// <param name="req"><see cref="ImportMediaToProjectRequest"/></param>
         /// <returns><see cref="ImportMediaToProjectResponse"/></returns>

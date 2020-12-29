@@ -37,19 +37,34 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 云点播媒资 FileId。
+        /// 导入媒资类型，取值：
+        /// <li>VOD：云点播文件；</li>
+        /// <li>EXTERNAL：媒资绑定。</li>
+        /// 注意：如果不填默认为云点播文件。
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
         /// </summary>
         [JsonProperty("VodFileId")]
         public string VodFileId{ get; set; }
 
         /// <summary>
-        /// 素材名称，不能超过30个字符。
+        /// 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+        /// </summary>
+        [JsonProperty("ExternalMediaInfo")]
+        public ExternalMediaInfo ExternalMediaInfo{ get; set; }
+
+        /// <summary>
+        /// 媒体名称，不能超过30个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 素材预处理任务模板 ID，取值：
+        /// 媒体预处理任务模板 ID，取值：
         /// <li>10：进行编辑预处理。</li>
         /// 注意：如果填0则不进行处理。
         /// </summary>
@@ -64,7 +79,9 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "VodFileId", this.VodFileId);
+            this.SetParamObj(map, prefix + "ExternalMediaInfo.", this.ExternalMediaInfo);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
         }

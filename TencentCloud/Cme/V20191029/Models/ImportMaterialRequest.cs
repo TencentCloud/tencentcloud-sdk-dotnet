@@ -31,31 +31,46 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 云点播媒资 FileId。
-        /// </summary>
-        [JsonProperty("VodFileId")]
-        public string VodFileId{ get; set; }
-
-        /// <summary>
-        /// 素材归属者。
+        /// 媒体归属者，团队或个人。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
         /// <summary>
-        /// 素材名称，不能超过30个字符。
+        /// 媒体名称，不能超过30个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 素材分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
+        /// 导入媒资类型，取值：
+        /// <li>VOD：云点播文件；</li>
+        /// <li>EXTERNAL：媒资绑定。</li>
+        /// 注意：如果不填默认为云点播文件。
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
+        /// 云点播媒资 FileId，仅当 SourceType 为 VOD 时有效。
+        /// </summary>
+        [JsonProperty("VodFileId")]
+        public string VodFileId{ get; set; }
+
+        /// <summary>
+        /// 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
+        /// </summary>
+        [JsonProperty("ExternalMediaInfo")]
+        public ExternalMediaInfo ExternalMediaInfo{ get; set; }
+
+        /// <summary>
+        /// 媒体分类路径，形如："/a/b"，层级数不能超过10，每个层级长度不能超过15字符。若不填则默认为根路径。
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 素材预处理任务模板 ID。取值：
+        /// 媒体预处理任务模板 ID。取值：
         /// <li>10：进行编辑预处理。</li>
         /// </summary>
         [JsonProperty("PreProcessDefinition")]
@@ -74,9 +89,11 @@ namespace TencentCloud.Cme.V20191029.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
-            this.SetParamSimple(map, prefix + "VodFileId", this.VodFileId);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "VodFileId", this.VodFileId);
+            this.SetParamObj(map, prefix + "ExternalMediaInfo.", this.ExternalMediaInfo);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
             this.SetParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);

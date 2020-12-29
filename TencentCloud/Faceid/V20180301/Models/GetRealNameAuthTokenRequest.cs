@@ -37,7 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string IDCard{ get; set; }
 
         /// <summary>
-        /// 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方
+        /// 回调地址。实名认证完成后，将会重定向到这个地址通知认证发起方。仅支持http或https协议。
         /// </summary>
         [JsonProperty("CallbackURL")]
         public string CallbackURL{ get; set; }

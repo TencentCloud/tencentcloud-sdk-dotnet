@@ -25,6 +25,12 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
+        /// 符合条件的记录总数。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// 团队列表。
         /// </summary>
         [JsonProperty("TeamSet")]
@@ -42,6 +48,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "TeamSet.", this.TeamSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

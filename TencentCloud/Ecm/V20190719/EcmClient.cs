@@ -3581,6 +3581,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 修改模块是否禁止分配外网ip的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleDisableWanIpRequest"/></param>
+        /// <returns><see cref="ModifyModuleDisableWanIpResponse"/></returns>
+        public async Task<ModifyModuleDisableWanIpResponse> ModifyModuleDisableWanIp(ModifyModuleDisableWanIpRequest req)
+        {
+             JsonResponseModel<ModifyModuleDisableWanIpResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyModuleDisableWanIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleDisableWanIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模块是否禁止分配外网ip的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyModuleDisableWanIpRequest"/></param>
+        /// <returns><see cref="ModifyModuleDisableWanIpResponse"/></returns>
+        public ModifyModuleDisableWanIpResponse ModifyModuleDisableWanIpSync(ModifyModuleDisableWanIpRequest req)
+        {
+             JsonResponseModel<ModifyModuleDisableWanIpResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyModuleDisableWanIp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyModuleDisableWanIpResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改模块的默认镜像
         /// </summary>
         /// <param name="req"><see cref="ModifyModuleImageRequest"/></param>

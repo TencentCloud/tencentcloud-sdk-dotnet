@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.199</VersionPrefix>
+    <VersionPrefix>3.0.200</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2833,6 +2833,7 @@
     <Compile Include="Cme\V20191029\Models\ExportVideoByVideoSegmentationDataResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoEditProjectRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoEditProjectResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\ExternalMediaInfo.cs" />
     <Compile Include="Cme\V20191029\Models\FlattenListMediaRequest.cs" />
     <Compile Include="Cme\V20191029\Models\FlattenListMediaResponse.cs" />
     <Compile Include="Cme\V20191029\Models\GenerateVideoSegmentationSchemeByAiRequest.cs" />
@@ -4728,6 +4729,8 @@
     <Compile Include="Ecm\V20190719\Models\ModifyLoadBalancerAttributesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleConfigRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleConfigResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleDisableWanIpRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\ModifyModuleDisableWanIpResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleImageResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\ModifyModuleIpDirectRequest.cs" />
@@ -10582,6 +10585,12 @@
     <Compile Include="Ump\V20200918\Models\TaskContent.cs" />
     <Compile Include="Ump\V20200918\Models\ZoneArea.cs" />
     <Compile Include="Ump\V20200918\Models\ZoneConfig.cs" />
+    <Compile Include="Vms\V20200902\VmsClient.cs" />
+    <Compile Include="Vms\V20200902\Models\SendCodeVoiceRequest.cs" />
+    <Compile Include="Vms\V20200902\Models\SendCodeVoiceResponse.cs" />
+    <Compile Include="Vms\V20200902\Models\SendStatus.cs" />
+    <Compile Include="Vms\V20200902\Models\SendTtsVoiceRequest.cs" />
+    <Compile Include="Vms\V20200902\Models\SendTtsVoiceResponse.cs" />
     <Compile Include="Vod\V20180717\VodClient.cs" />
     <Compile Include="Vod\V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Vod\V20180717\Models\AIRecognitionTemplateItem.cs" />

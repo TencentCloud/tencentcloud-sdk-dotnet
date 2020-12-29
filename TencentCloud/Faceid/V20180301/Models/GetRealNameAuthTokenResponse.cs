@@ -31,7 +31,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string AuthToken{ get; set; }
 
         /// <summary>
-        /// 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权
+        /// 实名认证授权地址，认证发起方需要重定向到这个地址获取认证用户的授权，仅能在微信环境下打开。
         /// </summary>
         [JsonProperty("RedirectURL")]
         public string RedirectURL{ get; set; }

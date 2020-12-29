@@ -36,6 +36,14 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 团队成员角色，不填则默认添加普通成员。可选值：
+        /// <li>Admin：团队管理员；</li>
+        /// <li>Member：普通成员。</li>
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +52,7 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "MemberId", this.MemberId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

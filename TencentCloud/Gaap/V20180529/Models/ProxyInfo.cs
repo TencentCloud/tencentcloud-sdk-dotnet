@@ -197,7 +197,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? ModifyConfigTime{ get; set; }
 
         /// <summary>
-        /// 通道类型
+        /// 通道类型，104表示新的银牌质量通道类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyType")]

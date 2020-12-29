@@ -36,6 +36,18 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("TeamIds")]
         public string[] TeamIds{ get; set; }
 
+        /// <summary>
+        /// 分页偏移量，默认值：0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 返回记录条数，默认值：20，最大值：30。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamArraySimple(map, prefix + "TeamIds.", this.TeamIds);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

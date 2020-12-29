@@ -61,6 +61,27 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// 源站服务失败统计频率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedCountInter")]
+        public ulong? FailedCountInter{ get; set; }
+
+        /// <summary>
+        /// 源站健康性检查阀值，超过该阀值会屏蔽服务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedThreshold")]
+        public ulong? FailedThreshold{ get; set; }
+
+        /// <summary>
+        /// 源站健康性检测超出阀值后，屏蔽的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BlockInter")]
+        public ulong? BlockInter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +94,9 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamArraySimple(map, prefix + "StatusCode.", this.StatusCode);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
+            this.SetParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
+            this.SetParamSimple(map, prefix + "BlockInter", this.BlockInter);
         }
     }
 }

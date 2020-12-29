@@ -86,6 +86,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DefaultBandWidthIn")]
         public long? DefaultBandWidthIn{ get; set; }
 
+        /// <summary>
+        /// 是否禁止分配外网IP
+        /// </summary>
+        [JsonProperty("DisableWanIp")]
+        public bool? DisableWanIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
             this.SetParamSimple(map, prefix + "DefaultBandWidthIn", this.DefaultBandWidthIn);
+            this.SetParamSimple(map, prefix + "DisableWanIp", this.DisableWanIp);
         }
     }
 }
