@@ -61,6 +61,24 @@ namespace TencentCloud.Mps.V20190612.Models
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
+        /// 转码后的视频的起始时间偏移，单位：秒。
+        /// <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
+        /// <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
+        /// <li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+        /// </summary>
+        [JsonProperty("StartTimeOffset")]
+        public float? StartTimeOffset{ get; set; }
+
+        /// <summary>
+        /// 转码后视频的终止时间偏移，单位：秒。
+        /// <li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
+        /// <li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
+        /// <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+        /// </summary>
+        [JsonProperty("EndTimeOffset")]
+        public float? EndTimeOffset{ get; set; }
+
+        /// <summary>
         /// 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -97,6 +115,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+            this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);

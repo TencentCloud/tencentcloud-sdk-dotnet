@@ -15,33 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRecordStatisticRequest : AbstractModel
+    public class PathBasedOriginRule : AbstractModel
     {
         
         /// <summary>
-        /// 查询开始日期，格式为YYYY-MM-DD。
+        /// 规则类型：
+        /// file：指定文件后缀生效
+        /// directory：指定路径生效
+        /// path：指定绝对路径生效
+        /// index: 指定主页生效
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
 
         /// <summary>
-        /// 查询结束日期，格式为YYYY-MM-DD。
-        /// 单次查询统计区间最多不能超过31天。
+        /// RuleType 对应类型下的匹配内容：
+        /// file 时填充后缀名，如 jpg、txt
+        /// directory 时填充路径，如 /xxx/test/
+        /// path 时填充绝对路径，如 /xxx/test.html
+        /// index 时填充 /
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// 应用ID，可不传。传应用ID时返回的是该应用的用量，不传时返回多个应用的合计值。
+        /// 源站列表，支持域名或ipv4地址
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("Origin")]
+        public string[] Origin{ get; set; }
 
 
         /// <summary>
@@ -49,9 +56,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+            this.SetParamArraySimple(map, prefix + "Origin.", this.Origin);
         }
     }
 }

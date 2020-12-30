@@ -67,10 +67,22 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? ZOrder{ get; set; }
 
         /// <summary>
-        /// 该画面在输出时的显示模式：0为裁剪，1为缩放，不填默认为0。
+        /// 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
         /// </summary>
         [JsonProperty("RenderMode")]
         public ulong? RenderMode{ get; set; }
+
+        /// <summary>
+        /// 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
+        /// </summary>
+        [JsonProperty("MixInputType")]
+        public ulong? MixInputType{ get; set; }
+
+        /// <summary>
+        /// 占位图ID。实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+        /// </summary>
+        [JsonProperty("PlaceImageId")]
+        public ulong? PlaceImageId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "LocationY", this.LocationY);
             this.SetParamSimple(map, prefix + "ZOrder", this.ZOrder);
             this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
+            this.SetParamSimple(map, prefix + "MixInputType", this.MixInputType);
+            this.SetParamSimple(map, prefix + "PlaceImageId", this.PlaceImageId);
         }
     }
 }

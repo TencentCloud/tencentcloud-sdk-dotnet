@@ -66,6 +66,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PresetLayoutConfig")]
         public PresetLayoutConfig[] PresetLayoutConfig{ get; set; }
 
+        /// <summary>
+        /// 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+        /// </summary>
+        [JsonProperty("PlaceHolderMode")]
+        public ulong? PlaceHolderMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
             this.SetParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
             this.SetParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
+            this.SetParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
         }
     }
 }

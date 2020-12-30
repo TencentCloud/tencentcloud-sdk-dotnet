@@ -115,6 +115,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("PathRules")]
         public PathRule[] PathRules{ get; set; }
 
+        /// <summary>
+        /// 分路径回源配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PathBasedOrigin")]
+        public PathBasedOriginRule[] PathBasedOrigin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +138,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
             this.SetParamSimple(map, prefix + "BasePath", this.BasePath);
             this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
+            this.SetParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
         }
     }
 }
