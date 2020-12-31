@@ -31,7 +31,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过30天。当开始与结束间隔不超过2天时返回5分钟粒度的数据，否则返回1小时粒度的数据。
+        /// 结束时间（xxxx-xx-xx）如2019-08-14，默认为昨天，不应与当前日期间隔超过30天。当开始与结束间隔不超过1天时会返回1分钟粒度的数据，不超过7天时返回5分钟粒度的数据，否则返回1小时粒度的数据。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

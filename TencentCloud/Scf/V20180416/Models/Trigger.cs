@@ -90,6 +90,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TriggerAttribute")]
         public string TriggerAttribute{ get; set; }
 
+        /// <summary>
+        /// 触发器绑定的别名或版本
+        /// </summary>
+        [JsonProperty("Qualifier")]
+        public string Qualifier{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
+            this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
         }
     }
 }

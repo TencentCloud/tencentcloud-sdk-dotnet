@@ -25,7 +25,7 @@ namespace TencentCloud.Af.V20200226.Models
     {
         
         /// <summary>
-        /// 风险码
+        /// 风险码 参数详细定义请加微信：TYXGJ-01
         /// </summary>
         [JsonProperty("RiskCode")]
         public ulong? RiskCode{ get; set; }

@@ -101,42 +101,36 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// <summary>
         /// 辅助CIDR
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AssistantCidrSet")]
         public AssistantCidr[] AssistantCidrSet{ get; set; }
 
         /// <summary>
         /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// 描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// 地域中文名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
         /// 包含子网数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubnetCount")]
         public ulong? SubnetCount{ get; set; }
 
         /// <summary>
         /// 包含实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
