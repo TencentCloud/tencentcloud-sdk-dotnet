@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.202</VersionPrefix>
+    <VersionPrefix>3.0.203</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3211,6 +3211,7 @@
     <Compile Include="Cr\V20180321\Models\ApplyBlackListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyCreditAuditRequest.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyCreditAuditResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\BotFileData.cs" />
     <Compile Include="Cr\V20180321\Models\BotFlow.cs" />
     <Compile Include="Cr\V20180321\Models\CallTimeDict.cs" />
     <Compile Include="Cr\V20180321\Models\CallTimeInfo.cs" />
@@ -3232,6 +3233,8 @@
     <Compile Include="Cr\V20180321\Models\DownloadRecordListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadReportRequest.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadReportResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\ExportBotDataRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\ExportBotDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\PhonePool.cs" />
     <Compile Include="Cr\V20180321\Models\ProductQueryInfo.cs" />
     <Compile Include="Cr\V20180321\Models\QueryInstantDataRequest.cs" />
@@ -9196,6 +9199,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribePostpayFreeQuotasRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribePostpayFreeQuotasResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribePostpayPackageFreeQuotasRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribePostpayPackageFreeQuotasResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataRequest.cs" />
@@ -9209,6 +9214,7 @@
     <Compile Include="Tcb\V20180608\Models\EnvInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\FreequotaInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FunctionInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\KVPair.cs" />
     <Compile Include="Tcb\V20180608\Models\LogServiceInfo.cs" />

@@ -1053,6 +1053,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询后付费资源免费量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostpayFreeQuotasRequest"/></param>
+        /// <returns><see cref="DescribePostpayFreeQuotasResponse"/></returns>
+        public async Task<DescribePostpayFreeQuotasResponse> DescribePostpayFreeQuotas(DescribePostpayFreeQuotasRequest req)
+        {
+             JsonResponseModel<DescribePostpayFreeQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePostpayFreeQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePostpayFreeQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询后付费资源免费量
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostpayFreeQuotasRequest"/></param>
+        /// <returns><see cref="DescribePostpayFreeQuotasResponse"/></returns>
+        public DescribePostpayFreeQuotasResponse DescribePostpayFreeQuotasSync(DescribePostpayFreeQuotasRequest req)
+        {
+             JsonResponseModel<DescribePostpayFreeQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePostpayFreeQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePostpayFreeQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取后付费免费额度
         /// </summary>
         /// <param name="req"><see cref="DescribePostpayPackageFreeQuotasRequest"/></param>

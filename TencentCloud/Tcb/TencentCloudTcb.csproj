@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.202</VersionPrefix>
+    <VersionPrefix>3.0.203</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -107,6 +107,8 @@
     <Compile Include="V20180608\Models\DescribeEnvsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeExtraPkgBillingInfoRequest.cs" />
     <Compile Include="V20180608\Models\DescribeExtraPkgBillingInfoResponse.cs" />
+    <Compile Include="V20180608\Models\DescribePostpayFreeQuotasRequest.cs" />
+    <Compile Include="V20180608\Models\DescribePostpayFreeQuotasResponse.cs" />
     <Compile Include="V20180608\Models\DescribePostpayPackageFreeQuotasRequest.cs" />
     <Compile Include="V20180608\Models\DescribePostpayPackageFreeQuotasResponse.cs" />
     <Compile Include="V20180608\Models\DescribeQuotaDataRequest.cs" />
@@ -120,6 +122,7 @@
     <Compile Include="V20180608\Models\EnvInfo.cs" />
     <Compile Include="V20180608\Models\EstablishCloudBaseRunServerRequest.cs" />
     <Compile Include="V20180608\Models\EstablishCloudBaseRunServerResponse.cs" />
+    <Compile Include="V20180608\Models\FreequotaInfo.cs" />
     <Compile Include="V20180608\Models\FunctionInfo.cs" />
     <Compile Include="V20180608\Models\KVPair.cs" />
     <Compile Include="V20180608\Models\LogServiceInfo.cs" />

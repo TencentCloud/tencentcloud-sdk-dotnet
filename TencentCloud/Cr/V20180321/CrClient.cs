@@ -495,6 +495,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 导出机器人数据
+        /// </summary>
+        /// <param name="req"><see cref="ExportBotDataRequest"/></param>
+        /// <returns><see cref="ExportBotDataResponse"/></returns>
+        public async Task<ExportBotDataResponse> ExportBotData(ExportBotDataRequest req)
+        {
+             JsonResponseModel<ExportBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出机器人数据
+        /// </summary>
+        /// <param name="req"><see cref="ExportBotDataRequest"/></param>
+        /// <returns><see cref="ExportBotDataResponse"/></returns>
+        public ExportBotDataResponse ExportBotDataSync(ExportBotDataRequest req)
+        {
+             JsonResponseModel<ExportBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 实时数据查询
         /// </summary>
         /// <param name="req"><see cref="QueryInstantDataRequest"/></param>

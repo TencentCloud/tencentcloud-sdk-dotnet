@@ -127,7 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ParamInfo[] ParamList{ get; set; }
 
         /// <summary>
-        /// 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+        /// 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }
