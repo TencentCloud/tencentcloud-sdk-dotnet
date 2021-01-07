@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public RuleInfoData[] Data{ get; set; }
 
         /// <summary>
-        /// 0：添加，1：插入
+        /// 0：添加（默认），1：插入
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

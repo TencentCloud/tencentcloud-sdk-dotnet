@@ -54,6 +54,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("Qos")]
         public ulong? Qos{ get; set; }
 
+        /// <summary>
+        /// Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+        /// </summary>
+        [JsonProperty("PayloadEncoding")]
+        public string PayloadEncoding{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Qos", this.Qos);
+            this.SetParamSimple(map, prefix + "PayloadEncoding", this.PayloadEncoding);
         }
     }
 }

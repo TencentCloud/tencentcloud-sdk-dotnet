@@ -36,6 +36,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("ProjectDesc")]
         public string ProjectDesc{ get; set; }
 
+        /// <summary>
+        /// 实例ID，不带实例ID，默认为公共实例
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         {
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "ProjectDesc", this.ProjectDesc);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

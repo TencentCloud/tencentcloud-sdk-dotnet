@@ -36,6 +36,7 @@ namespace TencentCloud.Ie.V20200304.Models
         /// MediaEditing：视频编辑（待上线）；
         /// MediaCutting：视频剪切；
         /// MediaJoining：视频拼接。
+        /// MediaRecognition：媒体识别；
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
@@ -87,6 +88,13 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("MediaJoiningTaskResult")]
         public MediaJoiningTaskResult MediaJoiningTaskResult{ get; set; }
 
+        /// <summary>
+        /// 媒体识别任务处理结果，当Type=MediaRecognition时才有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MediaRecognitionTaskResult")]
+        public MediaRecognitionTaskResult MediaRecognitionTaskResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +109,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
             this.SetParamObj(map, prefix + "MediaCuttingTaskResult.", this.MediaCuttingTaskResult);
             this.SetParamObj(map, prefix + "MediaJoiningTaskResult.", this.MediaJoiningTaskResult);
+            this.SetParamObj(map, prefix + "MediaRecognitionTaskResult.", this.MediaRecognitionTaskResult);
         }
     }
 }

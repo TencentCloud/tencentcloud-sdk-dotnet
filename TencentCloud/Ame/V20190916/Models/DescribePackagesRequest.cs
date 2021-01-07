@@ -25,7 +25,7 @@ namespace TencentCloud.Ame.V20190916.Models
     {
         
         /// <summary>
-        /// 默认0
+        /// 默认0，Offset=Offset+Length
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

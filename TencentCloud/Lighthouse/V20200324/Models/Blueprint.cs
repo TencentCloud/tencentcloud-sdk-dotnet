@@ -79,13 +79,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 镜像所需系统盘大小
+        /// 镜像所需系统盘大小。
         /// </summary>
         [JsonProperty("RequiredSystemDiskSize")]
         public long? RequiredSystemDiskSize{ get; set; }
 
         /// <summary>
-        /// 镜像状态，取值：ONLINE、OFFLINE
+        /// 镜像状态。
         /// </summary>
         [JsonProperty("BlueprintState")]
         public string BlueprintState{ get; set; }

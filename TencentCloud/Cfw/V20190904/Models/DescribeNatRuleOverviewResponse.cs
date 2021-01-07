@@ -55,7 +55,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? TotalNum{ get; set; }
 
         /// <summary>
-        /// 访问规则剩余条数
+        /// 访问控制规则剩余配额
         /// </summary>
         [JsonProperty("RemainNum")]
         public long? RemainNum{ get; set; }

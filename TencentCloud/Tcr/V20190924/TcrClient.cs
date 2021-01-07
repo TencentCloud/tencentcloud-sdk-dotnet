@@ -2413,6 +2413,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 预付费实例续费，同时支持按量计费转包年包月
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public async Task<RenewInstanceResponse> RenewInstance(RenewInstanceRequest req)
+        {
+             JsonResponseModel<RenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 预付费实例续费，同时支持按量计费转包年包月
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
+        {
+             JsonResponseModel<RenewInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询个人版用户命名空间是否存在
         /// </summary>
         /// <param name="req"><see cref="ValidateNamespaceExistPersonalRequest"/></param>

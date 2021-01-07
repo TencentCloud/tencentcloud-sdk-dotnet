@@ -25,23 +25,48 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 图片的 Base64 值。
-        /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+        /// 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
         /// 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 地址。
-        /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
-        /// 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-        /// 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+        /// 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+        /// 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
+
+        /// <summary>
+        /// 是否返回预处理（精确剪裁对齐）后的银行卡图片数据，默认false。
+        /// </summary>
+        [JsonProperty("RetBorderCutImage")]
+        public bool? RetBorderCutImage{ get; set; }
+
+        /// <summary>
+        /// 是否返回卡号的切图图片数据，默认false。
+        /// </summary>
+        [JsonProperty("RetCardNoImage")]
+        public bool? RetCardNoImage{ get; set; }
+
+        /// <summary>
+        /// 复印件检测开关，如果输入的图片是银行卡复印件图片则返回告警，默认false。
+        /// </summary>
+        [JsonProperty("EnableCopyCheck")]
+        public bool? EnableCopyCheck{ get; set; }
+
+        /// <summary>
+        /// 翻拍检测开关，如果输入的图片是银行卡翻拍图片则返回告警，默认false。
+        /// </summary>
+        [JsonProperty("EnableReshootCheck")]
+        public bool? EnableReshootCheck{ get; set; }
+
+        /// <summary>
+        /// 边框遮挡检测开关，如果输入的图片是银行卡边框被遮挡则返回告警，默认false。
+        /// </summary>
+        [JsonProperty("EnableBorderCheck")]
+        public bool? EnableBorderCheck{ get; set; }
 
 
         /// <summary>
@@ -51,6 +76,11 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "RetBorderCutImage", this.RetBorderCutImage);
+            this.SetParamSimple(map, prefix + "RetCardNoImage", this.RetCardNoImage);
+            this.SetParamSimple(map, prefix + "EnableCopyCheck", this.EnableCopyCheck);
+            this.SetParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
+            this.SetParamSimple(map, prefix + "EnableBorderCheck", this.EnableBorderCheck);
         }
     }
 }

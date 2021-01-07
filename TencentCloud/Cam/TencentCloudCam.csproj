@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.203</VersionPrefix>
+    <VersionPrefix>3.0.204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -148,6 +148,8 @@
     <Compile Include="V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="V20190116\Models\ListUsersResponse.cs" />
+    <Compile Include="V20190116\Models\ListWeChatWorkSubAccountsRequest.cs" />
+    <Compile Include="V20190116\Models\ListWeChatWorkSubAccountsResponse.cs" />
     <Compile Include="V20190116\Models\LoginActionFlag.cs" />
     <Compile Include="V20190116\Models\LoginActionMfaFlag.cs" />
     <Compile Include="V20190116\Models\OffsiteFlag.cs" />
@@ -181,5 +183,6 @@
     <Compile Include="V20190116\Models\UpdateSAMLProviderResponse.cs" />
     <Compile Include="V20190116\Models\UpdateUserRequest.cs" />
     <Compile Include="V20190116\Models\UpdateUserResponse.cs" />
+    <Compile Include="V20190116\Models\WeChatWorkSubAccount.cs" />
   </ItemGroup>
 </Project>

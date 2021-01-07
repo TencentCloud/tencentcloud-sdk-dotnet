@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string TrafficPackageId{ get; set; }
 
         /// <summary>
-        /// 流量包生效周期内的总流量，单位字节。
+        /// 流量包生效周期内已使用流量，单位字节。
         /// </summary>
         [JsonProperty("TrafficUsed")]
         public long? TrafficUsed{ get; set; }

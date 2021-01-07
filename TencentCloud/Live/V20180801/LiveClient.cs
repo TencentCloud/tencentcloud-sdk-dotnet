@@ -140,6 +140,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 添加水印，成功返回水印 ID 后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印 ID 绑定到流使用。
+        /// 水印数量上限 100，超过后需要先删除，再添加。
         /// </summary>
         /// <param name="req"><see cref="AddLiveWatermarkRequest"/></param>
         /// <returns><see cref="AddLiveWatermarkResponse"/></returns>
@@ -160,6 +161,7 @@ namespace TencentCloud.Live.V20180801
 
         /// <summary>
         /// 添加水印，成功返回水印 ID 后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印 ID 绑定到流使用。
+        /// 水印数量上限 100，超过后需要先删除，再添加。
         /// </summary>
         /// <param name="req"><see cref="AddLiveWatermarkRequest"/></param>
         /// <returns><see cref="AddLiveWatermarkResponse"/></returns>

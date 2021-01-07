@@ -25,25 +25,25 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// EdgeId值
+        /// EdgeId值两个vpc间的边id vpc填Edgeid，不要填Area；
         /// </summary>
         [JsonProperty("EdgeId")]
         public string EdgeId{ get; set; }
 
         /// <summary>
-        /// 状态值，0：检查表的状态
+        /// 状态值，0：检查表的状态 确实只有一个默认值
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Nat所在地域
+        /// Nat所在地域 NAT填Area，不要填Edgeid；
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 方向，0：出站，1：入站
+        /// 方向，0：出站，1：入站 默认值为 0
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }

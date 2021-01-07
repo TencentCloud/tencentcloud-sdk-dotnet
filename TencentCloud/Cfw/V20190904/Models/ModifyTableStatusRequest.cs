@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// EdgeId值
+        /// EdgeId值两个vpc间的边id
         /// </summary>
         [JsonProperty("EdgeId")]
         public string EdgeId{ get; set; }

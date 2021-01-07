@@ -43,7 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// 0：出向，1：入向
+        /// 方向，0：出向，1：入向
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }

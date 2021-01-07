@@ -108,6 +108,12 @@ namespace TencentCloud.Ams.V20200608.Models
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
+        /// <summary>
+        /// 音频机审状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ams.V20200608.Models
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "DetailCount", this.DetailCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

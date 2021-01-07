@@ -25,7 +25,7 @@ namespace TencentCloud.Ame.V20190916.Models
     {
         
         /// <summary>
-        /// 已购曲库包数组
+        /// 已购曲库包列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Packages")]

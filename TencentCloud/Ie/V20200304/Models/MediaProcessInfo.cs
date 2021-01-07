@@ -29,6 +29,7 @@ namespace TencentCloud.Ie.V20200304.Models
         /// MediaEditing：媒体编辑（待上线）；
         /// MediaCutting：媒体剪切；
         /// MediaJoining：媒体拼接。
+        /// MediaRecognition: 媒体识别。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -45,6 +46,12 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("MediaJoiningInfo")]
         public MediaJoiningInfo MediaJoiningInfo{ get; set; }
 
+        /// <summary>
+        /// 媒体识别任务参数，Type=MediaRecognition时必选
+        /// </summary>
+        [JsonProperty("MediaRecognitionInfo")]
+        public MediaRecognitionInfo MediaRecognitionInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "MediaCuttingInfo.", this.MediaCuttingInfo);
             this.SetParamObj(map, prefix + "MediaJoiningInfo.", this.MediaJoiningInfo);
+            this.SetParamObj(map, prefix + "MediaRecognitionInfo.", this.MediaRecognitionInfo);
         }
     }
 }

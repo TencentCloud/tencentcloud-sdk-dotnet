@@ -37,10 +37,49 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string BankInfo{ get; set; }
 
         /// <summary>
-        /// 有效期
+        /// 有效期，格式如：07/2023
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }
+
+        /// <summary>
+        /// 卡类型
+        /// </summary>
+        [JsonProperty("CardType")]
+        public string CardType{ get; set; }
+
+        /// <summary>
+        /// 卡名字
+        /// </summary>
+        [JsonProperty("CardName")]
+        public string CardName{ get; set; }
+
+        /// <summary>
+        /// 切片图片数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BorderCutImage")]
+        public string BorderCutImage{ get; set; }
+
+        /// <summary>
+        /// 卡号图片数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CardNoImage")]
+        public string CardNoImage{ get; set; }
+
+        /// <summary>
+        /// WarningCode 告警码列表和释义：
+        /// -9110:银行卡日期无效; 
+        /// -9111:银行卡边框不完整; 
+        /// -9112:银行卡图片反光;
+        /// -9113:银行卡复印件;
+        /// -9114:银行卡翻拍件
+        /// （告警码可以同时存在多个）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarningCode")]
+        public long?[] WarningCode{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -57,6 +96,11 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CardNo", this.CardNo);
             this.SetParamSimple(map, prefix + "BankInfo", this.BankInfo);
             this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
+            this.SetParamSimple(map, prefix + "CardType", this.CardType);
+            this.SetParamSimple(map, prefix + "CardName", this.CardName);
+            this.SetParamSimple(map, prefix + "BorderCutImage", this.BorderCutImage);
+            this.SetParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
+            this.SetParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

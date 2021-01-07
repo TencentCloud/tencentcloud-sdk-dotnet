@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 状态，0：全部停用，1：全部启用
+        /// 列表规则状态，0：全部停用，1：全部启用
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

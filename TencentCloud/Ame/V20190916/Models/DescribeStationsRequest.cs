@@ -31,7 +31,7 @@ namespace TencentCloud.Ame.V20190916.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// offset (Default = 0)，(当前页-1) * Limit
+        /// offset (Default = 0)，Offset=Offset+Limit
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

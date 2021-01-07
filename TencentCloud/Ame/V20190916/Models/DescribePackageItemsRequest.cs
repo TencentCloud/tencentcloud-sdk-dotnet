@@ -25,13 +25,13 @@ namespace TencentCloud.Ame.V20190916.Models
     {
         
         /// <summary>
-        /// 订单id
+        /// 订单id，从获取已购曲库包列表中获取
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// 默认0
+        /// 默认0，Offset=Offset+Length
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

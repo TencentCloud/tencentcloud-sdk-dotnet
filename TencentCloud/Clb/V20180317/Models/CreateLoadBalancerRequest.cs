@@ -147,6 +147,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ClusterTag")]
         public string ClusterTag{ get; set; }
 
+        /// <summary>
+        /// EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+        /// </summary>
+        [JsonProperty("EipAddressId")]
+        public string EipAddressId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+            this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         }
     }
 }

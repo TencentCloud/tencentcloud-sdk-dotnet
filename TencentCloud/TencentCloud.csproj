@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.203</VersionPrefix>
+    <VersionPrefix>3.0.204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,7 +90,14 @@
     <Compile Include="Ame\V20190916\AmeClient.cs" />
     <Compile Include="Ame\V20190916\Models\Album.cs" />
     <Compile Include="Ame\V20190916\Models\Artist.cs" />
+    <Compile Include="Ame\V20190916\Models\AuthInfo.cs" />
     <Compile Include="Ame\V20190916\Models\DataInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeAuthInfoRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeAuthInfoResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeCloudMusicPurchasedRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeCloudMusicPurchasedResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeCloudMusicRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeCloudMusicResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeItemByIdRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeItemByIdResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeItemsRequest.cs" />
@@ -109,6 +116,7 @@
     <Compile Include="Ame\V20190916\Models\Item.cs" />
     <Compile Include="Ame\V20190916\Models\Lyric.cs" />
     <Compile Include="Ame\V20190916\Models\Music.cs" />
+    <Compile Include="Ame\V20190916\Models\MusicOpenDetail.cs" />
     <Compile Include="Ame\V20190916\Models\Package.cs" />
     <Compile Include="Ame\V20190916\Models\PackageItem.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataRequest.cs" />
@@ -1374,6 +1382,8 @@
     <Compile Include="Cam\V20190116\Models\ListUsersForGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListUsersResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListWeChatWorkSubAccountsRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ListWeChatWorkSubAccountsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\LoginActionFlag.cs" />
     <Compile Include="Cam\V20190116\Models\LoginActionMfaFlag.cs" />
     <Compile Include="Cam\V20190116\Models\OffsiteFlag.cs" />
@@ -1407,6 +1417,7 @@
     <Compile Include="Cam\V20190116\Models\UpdateSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateUserResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\WeChatWorkSubAccount.cs" />
     <Compile Include="Captcha\V20190722\CaptchaClient.cs" />
     <Compile Include="Captcha\V20190722\Models\CaptchaOperDataInterceptUnit.cs" />
     <Compile Include="Captcha\V20190722\Models\CaptchaOperDataLoadTimeUnit.cs" />
@@ -2085,9 +2096,11 @@
     <Compile Include="Cdn\V20180606\Models\MapInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAge.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAgeRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\OfflineCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Origin.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginAuthentication.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginAuthenticationTypeA.cs" />
+    <Compile Include="Cdn\V20180606\Models\OriginCombine.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginIp.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullTimeout.cs" />
@@ -3106,6 +3119,9 @@
     <Compile Include="Cpdp\V20190820\Models\QueryBankTransactionDetailsResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBankWithdrawCashDetailsRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBankWithdrawCashDetailsResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryBillDownloadURLData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryBillDownloadURLRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryBillDownloadURLResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryCommonTransferRechargeRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryCommonTransferRechargeResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryCustAcctIdBalanceRequest.cs" />
@@ -4158,6 +4174,8 @@
     <Compile Include="Dc\V20180410\Models\Tag.cs" />
     <Compile Include="Dcdb\V20180411\DcdbClient.cs" />
     <Compile Include="Dcdb\V20180411\Models\AddShardConfig.cs" />
+    <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloseDBExtranetAccessRequest.cs" />
@@ -4189,6 +4207,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDBLogFilesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstancesRequest.cs" />
@@ -4211,6 +4231,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeOrdersRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeShardSpecRequest.cs" />
@@ -4219,6 +4241,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeUserTasksRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeUserTasksResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ExpandShardConfig.cs" />
     <Compile Include="Dcdb\V20180411\Models\FlushBinlogRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\FlushBinlogResponse.cs" />
@@ -4229,6 +4253,8 @@
     <Compile Include="Dcdb\V20180411\Models\LogFileInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBParametersRequest.cs" />
@@ -4247,6 +4273,8 @@
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ResourceTag.cs" />
+    <Compile Include="Dcdb\V20180411\Models\SecurityGroup.cs" />
+    <Compile Include="Dcdb\V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardZoneChooseInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\SpecConfig.cs" />
@@ -5359,8 +5387,12 @@
     <Compile Include="Gs\V20191118\GsClient.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionRequest.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionResponse.cs" />
+    <Compile Include="Gs\V20191118\Models\SaveGameArchiveRequest.cs" />
+    <Compile Include="Gs\V20191118\Models\SaveGameArchiveResponse.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameRequest.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameResponse.cs" />
+    <Compile Include="Gs\V20191118\Models\SwitchGameArchiveRequest.cs" />
+    <Compile Include="Gs\V20191118\Models\SwitchGameArchiveResponse.cs" />
     <Compile Include="Gs\V20191118\Models\TrylockWorkerRequest.cs" />
     <Compile Include="Gs\V20191118\Models\TrylockWorkerResponse.cs" />
     <Compile Include="Gse\V20191112\GseClient.cs" />
@@ -5816,6 +5848,9 @@
     <Compile Include="Ie\V20200304\Models\EditingTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\FaceProtect.cs" />
     <Compile Include="Ie\V20200304\Models\FileInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\FrameTagItem.cs" />
+    <Compile Include="Ie\V20200304\Models\FrameTagRec.cs" />
+    <Compile Include="Ie\V20200304\Models\FrameTagResult.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsEditingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsTaskResultItem.cs" />
@@ -5831,6 +5866,8 @@
     <Compile Include="Ie\V20200304\Models\MediaProcessInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MediaProcessTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\MediaQualityRestorationTaskResult.cs" />
+    <Compile Include="Ie\V20200304\Models\MediaRecognitionInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\MediaRecognitionTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\MediaSourceInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MediaTargetInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MuxInfo.cs" />
@@ -5856,7 +5893,11 @@
     <Compile Include="Ie\V20200304\Models\StripTaskResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\SubTaskResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\SubTaskTranscodeInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\SubtitleItem.cs" />
+    <Compile Include="Ie\V20200304\Models\SubtitleRec.cs" />
+    <Compile Include="Ie\V20200304\Models\SubtitleResult.cs" />
     <Compile Include="Ie\V20200304\Models\TagEditingInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\TagItem.cs" />
     <Compile Include="Ie\V20200304\Models\TagTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\TagTaskResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\TargetInfo.cs" />
@@ -6808,6 +6849,8 @@
     <Compile Include="Lp\V20200224\Models\QueryLoginProtectionRequest.cs" />
     <Compile Include="Lp\V20200224\Models\QueryLoginProtectionResponse.cs" />
     <Compile Include="Mariadb\V20170312\MariadbClient.cs" />
+    <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
@@ -6851,6 +6894,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesRequest.cs" />
@@ -6863,6 +6908,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribePriceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribePriceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeRenewalPriceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeRenewalPriceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeSaleInfoRequest.cs" />
@@ -6871,6 +6918,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeUpgradePriceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeUpgradePriceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\FlushBinlogRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\FlushBinlogResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesRequest.cs" />
@@ -6885,6 +6934,8 @@
     <Compile Include="Mariadb\V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBParametersRequest.cs" />
@@ -6907,6 +6958,8 @@
     <Compile Include="Mariadb\V20170312\Models\ResourceUsageMonitorSet.cs" />
     <Compile Include="Mariadb\V20170312\Models\RestartDBInstancesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\RestartDBInstancesResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\SecurityGroup.cs" />
+    <Compile Include="Mariadb\V20170312\Models\SecurityGroupBound.cs" />
     <Compile Include="Mariadb\V20170312\Models\SlowLogData.cs" />
     <Compile Include="Mariadb\V20170312\Models\SpecConfigInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\SqlLogItem.cs" />
@@ -9513,8 +9566,11 @@
     <Compile Include="Tcr\V20190924\Models\NamespaceInfoResp.cs" />
     <Compile Include="Tcr\V20190924\Models\NamespaceIsExistsResp.cs" />
     <Compile Include="Tcr\V20190924\Models\Registry.cs" />
+    <Compile Include="Tcr\V20190924\Models\RegistryChargePrepaid.cs" />
     <Compile Include="Tcr\V20190924\Models\RegistryCondition.cs" />
     <Compile Include="Tcr\V20190924\Models\RegistryStatus.cs" />
+    <Compile Include="Tcr\V20190924\Models\RenewInstanceRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\RenewInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ReplicationRegistry.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoInfoResp.cs" />

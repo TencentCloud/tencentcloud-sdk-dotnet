@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 边id
+        /// EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
         /// </summary>
         [JsonProperty("EdgeId")]
         public string EdgeId{ get; set; }

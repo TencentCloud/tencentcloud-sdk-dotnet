@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.203</VersionPrefix>
+    <VersionPrefix>3.0.204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="V20180411\DcdbClient.cs" />
     <Compile Include="V20180411\Models\AddShardConfig.cs" />
+    <Compile Include="V20180411\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20180411\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="V20180411\Models\CloseDBExtranetAccessRequest.cs" />
@@ -77,6 +79,8 @@
     <Compile Include="V20180411\Models\DescribeDBLogFilesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBParametersRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDBSyncModeResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDCDBInstancesRequest.cs" />
@@ -99,6 +103,8 @@
     <Compile Include="V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20180411\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectsRequest.cs" />
     <Compile Include="V20180411\Models\DescribeProjectsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeShardSpecRequest.cs" />
@@ -107,6 +113,8 @@
     <Compile Include="V20180411\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeUserTasksRequest.cs" />
     <Compile Include="V20180411\Models\DescribeUserTasksResponse.cs" />
+    <Compile Include="V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\ExpandShardConfig.cs" />
     <Compile Include="V20180411\Models\FlushBinlogRequest.cs" />
     <Compile Include="V20180411\Models\FlushBinlogResponse.cs" />
@@ -117,6 +125,8 @@
     <Compile Include="V20180411\Models\LogFileInfo.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20180411\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="V20180411\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20180411\Models\ModifyDBParametersRequest.cs" />
@@ -135,6 +145,8 @@
     <Compile Include="V20180411\Models\ResetAccountPasswordRequest.cs" />
     <Compile Include="V20180411\Models\ResetAccountPasswordResponse.cs" />
     <Compile Include="V20180411\Models\ResourceTag.cs" />
+    <Compile Include="V20180411\Models\SecurityGroup.cs" />
+    <Compile Include="V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="V20180411\Models\ShardInfo.cs" />
     <Compile Include="V20180411\Models\ShardZoneChooseInfo.cs" />
     <Compile Include="V20180411\Models\SpecConfig.cs" />

@@ -42,6 +42,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }
 
+        /// <summary>
+        /// 实例计费类型，0表示按量计费，1表示预付费，当前版本只支持后付费，默认为按量计费
+        /// </summary>
+        [JsonProperty("RegistryChargeType")]
+        public long? RegistryChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryName", this.RegistryName);
             this.SetParamSimple(map, prefix + "RegistryType", this.RegistryType);
             this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
         }
     }
 }

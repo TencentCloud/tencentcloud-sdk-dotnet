@@ -53,6 +53,126 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 获取授权项目信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthInfoRequest"/></param>
+        /// <returns><see cref="DescribeAuthInfoResponse"/></returns>
+        public async Task<DescribeAuthInfoResponse> DescribeAuthInfo(DescribeAuthInfoRequest req)
+        {
+             JsonResponseModel<DescribeAuthInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuthInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取授权项目信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuthInfoRequest"/></param>
+        /// <returns><see cref="DescribeAuthInfoResponse"/></returns>
+        public DescribeAuthInfoResponse DescribeAuthInfoSync(DescribeAuthInfoRequest req)
+        {
+             JsonResponseModel<DescribeAuthInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuthInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云音乐播放信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudMusicRequest"/></param>
+        /// <returns><see cref="DescribeCloudMusicResponse"/></returns>
+        public async Task<DescribeCloudMusicResponse> DescribeCloudMusic(DescribeCloudMusicRequest req)
+        {
+             JsonResponseModel<DescribeCloudMusicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudMusic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudMusicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云音乐播放信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudMusicRequest"/></param>
+        /// <returns><see cref="DescribeCloudMusicResponse"/></returns>
+        public DescribeCloudMusicResponse DescribeCloudMusicSync(DescribeCloudMusicRequest req)
+        {
+             JsonResponseModel<DescribeCloudMusicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudMusic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudMusicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取授权项目下已购云音乐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudMusicPurchasedRequest"/></param>
+        /// <returns><see cref="DescribeCloudMusicPurchasedResponse"/></returns>
+        public async Task<DescribeCloudMusicPurchasedResponse> DescribeCloudMusicPurchased(DescribeCloudMusicPurchasedRequest req)
+        {
+             JsonResponseModel<DescribeCloudMusicPurchasedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudMusicPurchased");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudMusicPurchasedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取授权项目下已购云音乐列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudMusicPurchasedRequest"/></param>
+        /// <returns><see cref="DescribeCloudMusicPurchasedResponse"/></returns>
+        public DescribeCloudMusicPurchasedResponse DescribeCloudMusicPurchasedSync(DescribeCloudMusicPurchasedRequest req)
+        {
+             JsonResponseModel<DescribeCloudMusicPurchasedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudMusicPurchased");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudMusicPurchasedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据歌曲ID查询歌曲信息
         /// </summary>
         /// <param name="req"><see cref="DescribeItemByIdRequest"/></param>
@@ -93,7 +213,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 分类内容下歌曲列表获取，根据CategoryID或CategoryCode
+        /// 该服务后续会停用，不再建议使用
         /// </summary>
         /// <param name="req"><see cref="DescribeItemsRequest"/></param>
         /// <returns><see cref="DescribeItemsResponse"/></returns>
@@ -113,7 +233,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 分类内容下歌曲列表获取，根据CategoryID或CategoryCode
+        /// 该服务后续会停用，不再建议使用
         /// </summary>
         /// <param name="req"><see cref="DescribeItemsRequest"/></param>
         /// <returns><see cref="DescribeItemsResponse"/></returns>
@@ -173,7 +293,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 根据接口的模式及歌曲ID来取得对应权限的歌曲播放地址等信息。
+        /// 获取曲库包歌曲播放信息接口
         /// </summary>
         /// <param name="req"><see cref="DescribeMusicRequest"/></param>
         /// <returns><see cref="DescribeMusicResponse"/></returns>
@@ -193,7 +313,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 根据接口的模式及歌曲ID来取得对应权限的歌曲播放地址等信息。
+        /// 获取曲库包歌曲播放信息接口
         /// </summary>
         /// <param name="req"><see cref="DescribeMusicRequest"/></param>
         /// <returns><see cref="DescribeMusicResponse"/></returns>
@@ -213,7 +333,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 查询曲库包已核验歌曲列表接口
+        /// 获取曲库包下已核销歌曲列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribePackageItemsRequest"/></param>
         /// <returns><see cref="DescribePackageItemsResponse"/></returns>
@@ -233,7 +353,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 查询曲库包已核验歌曲列表接口
+        /// 获取曲库包下已核销歌曲列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribePackageItemsRequest"/></param>
         /// <returns><see cref="DescribePackageItemsResponse"/></returns>
@@ -253,7 +373,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 查询已购曲库包列表接口
+        /// 获取已购曲库包列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribePackagesRequest"/></param>
         /// <returns><see cref="DescribePackagesResponse"/></returns>
@@ -273,7 +393,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 查询已购曲库包列表接口
+        /// 获取已购曲库包列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribePackagesRequest"/></param>
         /// <returns><see cref="DescribePackagesResponse"/></returns>
@@ -293,7 +413,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 获取素材库列表时使用
+        /// 该服务后续会停用，不再建议使用
         /// </summary>
         /// <param name="req"><see cref="DescribeStationsRequest"/></param>
         /// <returns><see cref="DescribeStationsResponse"/></returns>
@@ -313,7 +433,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 获取素材库列表时使用
+        /// 该服务后续会停用，不再建议使用
         /// </summary>
         /// <param name="req"><see cref="DescribeStationsRequest"/></param>
         /// <returns><see cref="DescribeStationsResponse"/></returns>

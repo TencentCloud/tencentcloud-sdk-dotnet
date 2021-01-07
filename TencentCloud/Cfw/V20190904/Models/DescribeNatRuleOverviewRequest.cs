@@ -25,13 +25,28 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 方向，0：出站，1：入站
+        /// 方向，0：出站，1：入站 默认值：0
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// NAT地域
+        /// NAT地域  这个是必填项，填入相关的英文，'ap-beijing-fsi': '北京金融',
+        ///         'ap-beijing': '北京',
+        ///         'ap-changsha-ec': '长沙EC',
+        ///         'ap-chengdu': '成都',
+        ///         'ap-chongqing': '重庆',
+        ///         'ap-fuzhou-ec': '福州EC',
+        ///         'ap-guangzhou-open': '广州Open',
+        ///         'ap-guangzhou': '广州',
+        ///         'ap-hangzhou-ec': '杭州EC',
+        ///         'ap-jinan-ec': '济南EC',
+        ///         'ap-nanjing': '南京',
+        ///         'ap-shanghai-fsi': '上海金融',
+        ///         'ap-shanghai': '上海',
+        ///         'ap-shenzhen-fsi': '深圳金融',
+        ///         'ap-shenzhen': '深圳',
+        ///         'ap-wuhan-ec': '武汉EC'
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

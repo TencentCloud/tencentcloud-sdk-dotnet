@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.203</VersionPrefix>
+    <VersionPrefix>3.0.204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20170312\MariadbClient.cs" />
+    <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
@@ -88,6 +90,8 @@
     <Compile Include="V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBResourceUsageRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBResourceUsageResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDatabasesRequest.cs" />
@@ -100,6 +104,8 @@
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20170312\Models\DescribePriceRequest.cs" />
     <Compile Include="V20170312\Models\DescribePriceResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRenewalPriceRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRenewalPriceResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSaleInfoRequest.cs" />
@@ -108,6 +114,8 @@
     <Compile Include="V20170312\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeUpgradePriceRequest.cs" />
     <Compile Include="V20170312\Models\DescribeUpgradePriceResponse.cs" />
+    <Compile Include="V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\FlushBinlogRequest.cs" />
     <Compile Include="V20170312\Models\FlushBinlogResponse.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesRequest.cs" />
@@ -122,6 +130,8 @@
     <Compile Include="V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBParametersRequest.cs" />
@@ -144,6 +154,8 @@
     <Compile Include="V20170312\Models\ResourceUsageMonitorSet.cs" />
     <Compile Include="V20170312\Models\RestartDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\RestartDBInstancesResponse.cs" />
+    <Compile Include="V20170312\Models\SecurityGroup.cs" />
+    <Compile Include="V20170312\Models\SecurityGroupBound.cs" />
     <Compile Include="V20170312\Models\SlowLogData.cs" />
     <Compile Include="V20170312\Models\SpecConfigInfo.cs" />
     <Compile Include="V20170312\Models\SqlLogItem.cs" />

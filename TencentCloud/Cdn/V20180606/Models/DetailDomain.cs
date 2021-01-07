@@ -403,6 +403,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AdvanceSet")]
         public AdvanceConfig[] AdvanceSet{ get; set; }
 
+        /// <summary>
+        /// 离线缓存
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OfflineCache")]
+        public OfflineCache OfflineCache{ get; set; }
+
+        /// <summary>
+        /// 合并回源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginCombine")]
+        public OriginCombine OriginCombine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -461,6 +475,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
             this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
             this.SetParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
+            this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+            this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         }
     }
 }

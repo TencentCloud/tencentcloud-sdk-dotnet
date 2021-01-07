@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string DealId{ get; set; }
 
         /// <summary>
-        /// 实例ID(该字段灰度中，部分地域不可见)
+        /// 实例ID
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

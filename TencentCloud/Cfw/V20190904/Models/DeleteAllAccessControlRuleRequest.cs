@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 方向，0：出站，1：入站
+        /// 方向，0：出站，1：入站  默认值是 0
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// VPC间防火墙开关ID
+        /// VPC间防火墙开关ID  全部删除 EdgeId和Area只填写一个，不填写则不删除vpc间防火墙开关 ，默认值为‘’
         /// </summary>
         [JsonProperty("EdgeId")]
         public string EdgeId{ get; set; }
 
         /// <summary>
-        /// nat地域
+        /// nat地域 全部删除 EdgeId和Area只填写一个，不填写则不删除nat防火墙开关 默认值为‘’
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

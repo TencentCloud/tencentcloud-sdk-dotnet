@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 0: 边界防火墙开关，1：vpc防火墙开关
+        /// 0: 互联网边界防火墙开关，1：vpc防火墙开关
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

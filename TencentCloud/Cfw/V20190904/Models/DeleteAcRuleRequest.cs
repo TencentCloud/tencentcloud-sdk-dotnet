@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// id值
+        /// 删除规则对应的id值 669872
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 出站还是入站
+        /// 方向，0：出站，1：入站
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// EdgeId值
+        /// EdgeId值两个vpc间的边id
         /// </summary>
         [JsonProperty("EdgeId")]
         public string EdgeId{ get; set; }

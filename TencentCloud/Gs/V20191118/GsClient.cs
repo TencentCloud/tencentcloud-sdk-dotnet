@@ -93,6 +93,46 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 保存游戏存档
+        /// </summary>
+        /// <param name="req"><see cref="SaveGameArchiveRequest"/></param>
+        /// <returns><see cref="SaveGameArchiveResponse"/></returns>
+        public async Task<SaveGameArchiveResponse> SaveGameArchive(SaveGameArchiveRequest req)
+        {
+             JsonResponseModel<SaveGameArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SaveGameArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaveGameArchiveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 保存游戏存档
+        /// </summary>
+        /// <param name="req"><see cref="SaveGameArchiveRequest"/></param>
+        /// <returns><see cref="SaveGameArchiveResponse"/></returns>
+        public SaveGameArchiveResponse SaveGameArchiveSync(SaveGameArchiveRequest req)
+        {
+             JsonResponseModel<SaveGameArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SaveGameArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaveGameArchiveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 强制退出游戏
         /// </summary>
         /// <param name="req"><see cref="StopGameRequest"/></param>
@@ -124,6 +164,46 @@ namespace TencentCloud.Gs.V20191118
              {
                  var strResp = this.InternalRequestSync(req, "StopGame");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopGameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换游戏存档
+        /// </summary>
+        /// <param name="req"><see cref="SwitchGameArchiveRequest"/></param>
+        /// <returns><see cref="SwitchGameArchiveResponse"/></returns>
+        public async Task<SwitchGameArchiveResponse> SwitchGameArchive(SwitchGameArchiveRequest req)
+        {
+             JsonResponseModel<SwitchGameArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchGameArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchGameArchiveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换游戏存档
+        /// </summary>
+        /// <param name="req"><see cref="SwitchGameArchiveRequest"/></param>
+        /// <returns><see cref="SwitchGameArchiveResponse"/></returns>
+        public SwitchGameArchiveResponse SwitchGameArchiveSync(SwitchGameArchiveRequest req)
+        {
+             JsonResponseModel<SwitchGameArchiveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchGameArchive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchGameArchiveResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

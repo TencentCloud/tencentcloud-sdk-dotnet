@@ -1973,6 +1973,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 获取企业微信子用户列表
+        /// </summary>
+        /// <param name="req"><see cref="ListWeChatWorkSubAccountsRequest"/></param>
+        /// <returns><see cref="ListWeChatWorkSubAccountsResponse"/></returns>
+        public async Task<ListWeChatWorkSubAccountsResponse> ListWeChatWorkSubAccounts(ListWeChatWorkSubAccountsRequest req)
+        {
+             JsonResponseModel<ListWeChatWorkSubAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListWeChatWorkSubAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListWeChatWorkSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取企业微信子用户列表
+        /// </summary>
+        /// <param name="req"><see cref="ListWeChatWorkSubAccountsRequest"/></param>
+        /// <returns><see cref="ListWeChatWorkSubAccountsResponse"/></returns>
+        public ListWeChatWorkSubAccountsResponse ListWeChatWorkSubAccountsSync(ListWeChatWorkSubAccountsRequest req)
+        {
+             JsonResponseModel<ListWeChatWorkSubAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListWeChatWorkSubAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListWeChatWorkSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置角色权限边界
         /// </summary>
         /// <param name="req"><see cref="PutRolePermissionsBoundaryRequest"/></param>

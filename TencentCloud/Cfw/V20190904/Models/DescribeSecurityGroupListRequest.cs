@@ -31,7 +31,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// 腾讯云地域的英文简写
+        /// 地域代码（例: ap-guangzhou),支持腾讯云全部地域
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

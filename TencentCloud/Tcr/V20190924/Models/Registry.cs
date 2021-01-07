@@ -97,6 +97,27 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }
 
+        /// <summary>
+        /// 实例过期时间（预付费）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpiredAt")]
+        public string ExpiredAt{ get; set; }
+
+        /// <summary>
+        /// 实例付费类型，0表示后付费，1表示预付费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMod")]
+        public long? PayMod{ get; set; }
+
+        /// <summary>
+        /// 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public long? RenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +136,9 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "TokenValidTime", this.TokenValidTime);
             this.SetParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
             this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
+            this.SetParamSimple(map, prefix + "PayMod", this.PayMod);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

@@ -32,7 +32,6 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// HAVIP名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HaVipName")]
         public string HaVipName{ get; set; }
@@ -63,14 +62,12 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 被绑定的实例ID。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 绑定EIP。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AddressIp")]
         public string AddressIp{ get; set; }
@@ -91,7 +88,6 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 使用havip的业务标识。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }

@@ -27,8 +27,8 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 目标文件名，不能带特殊字符（如/等），无需后缀名，最长200字符。
         /// 
-        /// 注1：部分子服务支持站位符，形式为： {parameter}
-        /// 预设parameter：
+        /// 注1：部分子服务支持占位符，形式为： {parameter}
+        /// 预设parameter有：
         /// index：序号；
         /// </summary>
         [JsonProperty("FileName")]

@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 总条数
+        /// 列表当前规则总条数
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

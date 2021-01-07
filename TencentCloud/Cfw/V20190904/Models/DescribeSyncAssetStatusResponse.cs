@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 0：同步成功，1：资产更新中，2：后台同步调用失败
+        /// 1-更新中 2-更新完成 3、4-更新失败
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

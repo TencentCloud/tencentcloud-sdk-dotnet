@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{22A3B506-BD68-3DED-BEAD-BFF07ADD88E7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.203</VersionPrefix>
+    <VersionPrefix>3.0.204</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,9 @@
     <Compile Include="V20200304\Models\EditingTaskResult.cs" />
     <Compile Include="V20200304\Models\FaceProtect.cs" />
     <Compile Include="V20200304\Models\FileInfo.cs" />
+    <Compile Include="V20200304\Models\FrameTagItem.cs" />
+    <Compile Include="V20200304\Models\FrameTagRec.cs" />
+    <Compile Include="V20200304\Models\FrameTagResult.cs" />
     <Compile Include="V20200304\Models\HighlightsEditingInfo.cs" />
     <Compile Include="V20200304\Models\HighlightsTaskResult.cs" />
     <Compile Include="V20200304\Models\HighlightsTaskResultItem.cs" />
@@ -98,6 +101,8 @@
     <Compile Include="V20200304\Models\MediaProcessInfo.cs" />
     <Compile Include="V20200304\Models\MediaProcessTaskResult.cs" />
     <Compile Include="V20200304\Models\MediaQualityRestorationTaskResult.cs" />
+    <Compile Include="V20200304\Models\MediaRecognitionInfo.cs" />
+    <Compile Include="V20200304\Models\MediaRecognitionTaskResult.cs" />
     <Compile Include="V20200304\Models\MediaSourceInfo.cs" />
     <Compile Include="V20200304\Models\MediaTargetInfo.cs" />
     <Compile Include="V20200304\Models\MuxInfo.cs" />
@@ -123,7 +128,11 @@
     <Compile Include="V20200304\Models\StripTaskResultItem.cs" />
     <Compile Include="V20200304\Models\SubTaskResultItem.cs" />
     <Compile Include="V20200304\Models\SubTaskTranscodeInfo.cs" />
+    <Compile Include="V20200304\Models\SubtitleItem.cs" />
+    <Compile Include="V20200304\Models\SubtitleRec.cs" />
+    <Compile Include="V20200304\Models\SubtitleResult.cs" />
     <Compile Include="V20200304\Models\TagEditingInfo.cs" />
+    <Compile Include="V20200304\Models\TagItem.cs" />
     <Compile Include="V20200304\Models\TagTaskResult.cs" />
     <Compile Include="V20200304\Models\TagTaskResultItem.cs" />
     <Compile Include="V20200304\Models\TargetInfo.cs" />
