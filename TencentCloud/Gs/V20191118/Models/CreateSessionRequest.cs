@@ -120,6 +120,12 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
+        /// <summary>
+        /// 游戏相关参数
+        /// </summary>
+        [JsonProperty("GameContext")]
+        public string GameContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "Optimization", this.Optimization);
             this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "GameContext", this.GameContext);
         }
     }
 }

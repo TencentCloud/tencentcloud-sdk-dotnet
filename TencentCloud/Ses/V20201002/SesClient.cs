@@ -415,6 +415,46 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// 获取邮件发送状态。仅支持查询90天之内的数据
+        /// </summary>
+        /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
+        /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
+        public async Task<GetSendEmailStatusResponse> GetSendEmailStatus(GetSendEmailStatusRequest req)
+        {
+             JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSendEmailStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSendEmailStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取邮件发送状态。仅支持查询90天之内的数据
+        /// </summary>
+        /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
+        /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
+        public GetSendEmailStatusResponse GetSendEmailStatusSync(GetSendEmailStatusRequest req)
+        {
+             JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSendEmailStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSendEmailStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。最大跨度为14天。
         /// </summary>
         /// <param name="req"><see cref="GetStatisticsReportRequest"/></param>
