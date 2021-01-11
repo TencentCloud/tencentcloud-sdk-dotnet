@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.205</VersionPrefix>
+    <VersionPrefix>3.0.206</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7178,6 +7178,8 @@
     <Compile Include="Monitor\V20180724\Models\DescribeProductListResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeServiceDiscoveryRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeServiceDiscoveryResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeStatisticDataRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeStatisticDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\Dimension.cs" />
     <Compile Include="Monitor\V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="Monitor\V20180724\Models\GetMonitorDataRequest.cs" />
@@ -7187,9 +7189,12 @@
     <Compile Include="Monitor\V20180724\Models\InstanceGroups.cs" />
     <Compile Include="Monitor\V20180724\Models\Metric.cs" />
     <Compile Include="Monitor\V20180724\Models\MetricConfig.cs" />
+    <Compile Include="Monitor\V20180724\Models\MetricData.cs" />
+    <Compile Include="Monitor\V20180724\Models\MetricDataPoint.cs" />
     <Compile Include="Monitor\V20180724\Models\MetricDatum.cs" />
     <Compile Include="Monitor\V20180724\Models\MetricObjectMeaning.cs" />
     <Compile Include="Monitor\V20180724\Models\MetricSet.cs" />
+    <Compile Include="Monitor\V20180724\Models\MidQueryCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmNoticeRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\ModifyAlarmPolicyConditionRequest.cs" />
@@ -7210,6 +7215,7 @@
     <Compile Include="Monitor\V20180724\Models\ModifyPolicyGroupResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
+    <Compile Include="Monitor\V20180724\Models\Point.cs" />
     <Compile Include="Monitor\V20180724\Models\ProductSimple.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataResponse.cs" />
@@ -10212,6 +10218,7 @@
     <Compile Include="Trtc\V20190722\Models\OneSdkAppIdUsagesInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
+    <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
     <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
     <Compile Include="Trtc\V20190722\Models\RecordUsage.cs" />

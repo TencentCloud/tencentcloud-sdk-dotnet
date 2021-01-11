@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime，默认ModTime
+        /// 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

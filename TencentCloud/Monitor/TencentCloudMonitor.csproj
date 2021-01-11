@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.205</VersionPrefix>
+    <VersionPrefix>3.0.206</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -145,6 +145,8 @@
     <Compile Include="V20180724\Models\DescribeProductListResponse.cs" />
     <Compile Include="V20180724\Models\DescribeServiceDiscoveryRequest.cs" />
     <Compile Include="V20180724\Models\DescribeServiceDiscoveryResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeStatisticDataRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeStatisticDataResponse.cs" />
     <Compile Include="V20180724\Models\Dimension.cs" />
     <Compile Include="V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataRequest.cs" />
@@ -154,9 +156,12 @@
     <Compile Include="V20180724\Models\InstanceGroups.cs" />
     <Compile Include="V20180724\Models\Metric.cs" />
     <Compile Include="V20180724\Models\MetricConfig.cs" />
+    <Compile Include="V20180724\Models\MetricData.cs" />
+    <Compile Include="V20180724\Models\MetricDataPoint.cs" />
     <Compile Include="V20180724\Models\MetricDatum.cs" />
     <Compile Include="V20180724\Models\MetricObjectMeaning.cs" />
     <Compile Include="V20180724\Models\MetricSet.cs" />
+    <Compile Include="V20180724\Models\MidQueryCondition.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmNoticeRequest.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="V20180724\Models\ModifyAlarmPolicyConditionRequest.cs" />
@@ -177,6 +182,7 @@
     <Compile Include="V20180724\Models\ModifyPolicyGroupResponse.cs" />
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\PeriodsSt.cs" />
+    <Compile Include="V20180724\Models\Point.cs" />
     <Compile Include="V20180724\Models\ProductSimple.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataResponse.cs" />
