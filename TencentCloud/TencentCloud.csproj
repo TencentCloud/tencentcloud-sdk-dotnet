@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.206</VersionPrefix>
+    <VersionPrefix>3.0.207</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3229,6 +3229,7 @@
     <Compile Include="Cr\V20180321\Models\ApplyCreditAuditResponse.cs" />
     <Compile Include="Cr\V20180321\Models\BotFileData.cs" />
     <Compile Include="Cr\V20180321\Models\BotFlow.cs" />
+    <Compile Include="Cr\V20180321\Models\BotInfo.cs" />
     <Compile Include="Cr\V20180321\Models\CallTimeDict.cs" />
     <Compile Include="Cr\V20180321\Models\CallTimeInfo.cs" />
     <Compile Include="Cr\V20180321\Models\CreateBotTaskRequest.cs" />
@@ -3253,14 +3254,21 @@
     <Compile Include="Cr\V20180321\Models\ExportBotDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\PhonePool.cs" />
     <Compile Include="Cr\V20180321\Models\ProductQueryInfo.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryBotListRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryBotListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\QueryInstantDataRequest.cs" />
     <Compile Include="Cr\V20180321\Models\QueryInstantDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\QueryProductsRequest.cs" />
     <Compile Include="Cr\V20180321\Models\QueryProductsResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryRecordListRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryRecordListResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\RecordInfo.cs" />
     <Compile Include="Cr\V20180321\Models\SingleBlackApply.cs" />
     <Compile Include="Cr\V20180321\Models\SingleRecord.cs" />
     <Compile Include="Cr\V20180321\Models\SmsSign.cs" />
     <Compile Include="Cr\V20180321\Models\SmsTemplate.cs" />
+    <Compile Include="Cr\V20180321\Models\UploadBotDataRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\UploadBotDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\UploadBotFileRequest.cs" />
     <Compile Include="Cr\V20180321\Models\UploadBotFileResponse.cs" />
     <Compile Include="Cr\V20180321\Models\UploadDataFileRequest.cs" />
@@ -10145,6 +10153,13 @@
     <Compile Include="Tkgdq\V20190411\Models\EntityRelationObject.cs" />
     <Compile Include="Tkgdq\V20190411\Models\EntityRelationSubject.cs" />
     <Compile Include="Tkgdq\V20190411\Models\TripleContent.cs" />
+    <Compile Include="Tms\V20201229\TmsClient.cs" />
+    <Compile Include="Tms\V20201229\Models\DetailResults.cs" />
+    <Compile Include="Tms\V20201229\Models\Device.cs" />
+    <Compile Include="Tms\V20201229\Models\RiskDetails.cs" />
+    <Compile Include="Tms\V20201229\Models\TextModerationRequest.cs" />
+    <Compile Include="Tms\V20201229\Models\TextModerationResponse.cs" />
+    <Compile Include="Tms\V20201229\Models\User.cs" />
     <Compile Include="Tms\V20200713\TmsClient.cs" />
     <Compile Include="Tms\V20200713\Models\AccountTipoffAccessRequest.cs" />
     <Compile Include="Tms\V20200713\Models\AccountTipoffAccessResponse.cs" />
@@ -10658,6 +10673,68 @@
     <Compile Include="Ump\V20200918\Models\TaskContent.cs" />
     <Compile Include="Ump\V20200918\Models\ZoneArea.cs" />
     <Compile Include="Ump\V20200918\Models\ZoneConfig.cs" />
+    <Compile Include="Vm\V20201229\VmClient.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="Vm\V20201229\Models\AudioSegments.cs" />
+    <Compile Include="Vm\V20201229\Models\BucketInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\CancelTaskRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\CancelTaskResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\CreateVideoModerationTaskRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\CreateVideoModerationTaskResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTasksRequest.cs" />
+    <Compile Include="Vm\V20201229\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResult.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResultResult.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResultsResultDetail.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageResultsResultDetailLocation.cs" />
+    <Compile Include="Vm\V20201229\Models\ImageSegments.cs" />
+    <Compile Include="Vm\V20201229\Models\InputInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\MediaInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\StorageInfo.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskData.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskFilter.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskInput.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskLabel.cs" />
+    <Compile Include="Vm\V20201229\Models\TaskResult.cs" />
+    <Compile Include="Vm\V20200709\VmClient.cs" />
+    <Compile Include="Vm\V20200709\Models\AudioResult.cs" />
+    <Compile Include="Vm\V20200709\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="Vm\V20200709\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="Vm\V20200709\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="Vm\V20200709\Models\AudioSegments.cs" />
+    <Compile Include="Vm\V20200709\Models\BucketInfo.cs" />
+    <Compile Include="Vm\V20200709\Models\CancelTaskRequest.cs" />
+    <Compile Include="Vm\V20200709\Models\CancelTaskResponse.cs" />
+    <Compile Include="Vm\V20200709\Models\CreateBizConfigRequest.cs" />
+    <Compile Include="Vm\V20200709\Models\CreateBizConfigResponse.cs" />
+    <Compile Include="Vm\V20200709\Models\CreateVideoModerationTaskRequest.cs" />
+    <Compile Include="Vm\V20200709\Models\CreateVideoModerationTaskResponse.cs" />
+    <Compile Include="Vm\V20200709\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Vm\V20200709\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="Vm\V20200709\Models\DescribeVideoStatRequest.cs" />
+    <Compile Include="Vm\V20200709\Models\DescribeVideoStatResponse.cs" />
+    <Compile Include="Vm\V20200709\Models\EvilCount.cs" />
+    <Compile Include="Vm\V20200709\Models\FileOutput.cs" />
+    <Compile Include="Vm\V20200709\Models\Filters.cs" />
+    <Compile Include="Vm\V20200709\Models\ImageResult.cs" />
+    <Compile Include="Vm\V20200709\Models\ImageResultResult.cs" />
+    <Compile Include="Vm\V20200709\Models\ImageResultsResultDetail.cs" />
+    <Compile Include="Vm\V20200709\Models\ImageResultsResultDetailLocation.cs" />
+    <Compile Include="Vm\V20200709\Models\ImageSegments.cs" />
+    <Compile Include="Vm\V20200709\Models\InputInfo.cs" />
+    <Compile Include="Vm\V20200709\Models\MediaInfo.cs" />
+    <Compile Include="Vm\V20200709\Models\MediaModerationConfig.cs" />
+    <Compile Include="Vm\V20200709\Models\Overview.cs" />
+    <Compile Include="Vm\V20200709\Models\StorageInfo.cs" />
+    <Compile Include="Vm\V20200709\Models\TaskInput.cs" />
+    <Compile Include="Vm\V20200709\Models\TaskLabel.cs" />
+    <Compile Include="Vm\V20200709\Models\TaskResult.cs" />
+    <Compile Include="Vm\V20200709\Models\TrendCount.cs" />
     <Compile Include="Vms\V20200902\VmsClient.cs" />
     <Compile Include="Vms\V20200902\Models\SendCodeVoiceRequest.cs" />
     <Compile Include="Vms\V20200902\Models\SendCodeVoiceResponse.cs" />

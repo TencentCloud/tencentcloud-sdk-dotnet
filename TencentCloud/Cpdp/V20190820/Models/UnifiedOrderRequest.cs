@@ -180,6 +180,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("WxSubAppId")]
         public string WxSubAppId{ get; set; }
 
+        /// <summary>
+        /// 支付通知地址
+        /// </summary>
+        [JsonProperty("PaymentNotifyUrl")]
+        public string PaymentNotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -211,6 +217,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
             this.SetParamSimple(map, prefix + "WxAppId", this.WxAppId);
             this.SetParamSimple(map, prefix + "WxSubAppId", this.WxSubAppId);
+            this.SetParamSimple(map, prefix + "PaymentNotifyUrl", this.PaymentNotifyUrl);
         }
     }
 }

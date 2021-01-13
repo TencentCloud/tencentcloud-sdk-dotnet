@@ -535,6 +535,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 查询机器人任务状态列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryBotListRequest"/></param>
+        /// <returns><see cref="QueryBotListResponse"/></returns>
+        public async Task<QueryBotListResponse> QueryBotList(QueryBotListRequest req)
+        {
+             JsonResponseModel<QueryBotListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryBotList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBotListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询机器人任务状态列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryBotListRequest"/></param>
+        /// <returns><see cref="QueryBotListResponse"/></returns>
+        public QueryBotListResponse QueryBotListSync(QueryBotListRequest req)
+        {
+             JsonResponseModel<QueryBotListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryBotList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBotListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 实时数据查询
         /// </summary>
         /// <param name="req"><see cref="QueryInstantDataRequest"/></param>
@@ -606,6 +646,86 @@ namespace TencentCloud.Cr.V20180321
              {
                  var strResp = this.InternalRequestSync(req, "QueryProducts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录音列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryRecordListRequest"/></param>
+        /// <returns><see cref="QueryRecordListResponse"/></returns>
+        public async Task<QueryRecordListResponse> QueryRecordList(QueryRecordListRequest req)
+        {
+             JsonResponseModel<QueryRecordListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryRecordList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryRecordListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询录音列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryRecordListRequest"/></param>
+        /// <returns><see cref="QueryRecordListResponse"/></returns>
+        public QueryRecordListResponse QueryRecordListSync(QueryRecordListRequest req)
+        {
+             JsonResponseModel<QueryRecordListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryRecordList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryRecordListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传机器人任务数据
+        /// </summary>
+        /// <param name="req"><see cref="UploadBotDataRequest"/></param>
+        /// <returns><see cref="UploadBotDataResponse"/></returns>
+        public async Task<UploadBotDataResponse> UploadBotData(UploadBotDataRequest req)
+        {
+             JsonResponseModel<UploadBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传机器人任务数据
+        /// </summary>
+        /// <param name="req"><see cref="UploadBotDataRequest"/></param>
+        /// <returns><see cref="UploadBotDataResponse"/></returns>
+        public UploadBotDataResponse UploadBotDataSync(UploadBotDataRequest req)
+        {
+             JsonResponseModel<UploadBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadBotDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -37,19 +37,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 子机ID
+        /// 子机ID。表示绑定主网卡主IP
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 弹性网卡ip
+        /// 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
         /// <summary>
-        /// 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+        /// 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

@@ -33,7 +33,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// 收信人邮箱地址
+        /// 收信人邮箱地址，最多支持群发50人。
         /// </summary>
         [JsonProperty("Destination")]
         public string[] Destination{ get; set; }

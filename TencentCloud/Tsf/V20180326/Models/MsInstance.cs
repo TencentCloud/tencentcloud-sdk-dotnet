@@ -190,7 +190,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegistrationId")]
-        public long? RegistrationId{ get; set; }
+        public string RegistrationId{ get; set; }
 
         /// <summary>
         /// 屏蔽状态，hidden 为屏蔽，unhidden 为未屏蔽
