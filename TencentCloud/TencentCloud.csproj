@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.207</VersionPrefix>
+    <VersionPrefix>3.0.208</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6981,8 +6981,19 @@
     <Compile Include="Memcached\V20190318\Models\InstanceListInfo.cs" />
     <Compile Include="Memcached\V20190318\Models\TagInfo.cs" />
     <Compile Include="Mgobe\V20201014\MgobeClient.cs" />
+    <Compile Include="Mgobe\V20201014\Models\ChangeRoomPlayerProfileRequest.cs" />
+    <Compile Include="Mgobe\V20201014\Models\ChangeRoomPlayerProfileResponse.cs" />
+    <Compile Include="Mgobe\V20201014\Models\ChangeRoomPlayerStatusRequest.cs" />
+    <Compile Include="Mgobe\V20201014\Models\ChangeRoomPlayerStatusResponse.cs" />
     <Compile Include="Mgobe\V20201014\Models\DismissRoomRequest.cs" />
     <Compile Include="Mgobe\V20201014\Models\DismissRoomResponse.cs" />
+    <Compile Include="Mgobe\V20201014\Models\ModifyRoomRequest.cs" />
+    <Compile Include="Mgobe\V20201014\Models\ModifyRoomResponse.cs" />
+    <Compile Include="Mgobe\V20201014\Models\Player.cs" />
+    <Compile Include="Mgobe\V20201014\Models\RemoveRoomPlayerRequest.cs" />
+    <Compile Include="Mgobe\V20201014\Models\RemoveRoomPlayerResponse.cs" />
+    <Compile Include="Mgobe\V20201014\Models\Room.cs" />
+    <Compile Include="Mgobe\V20201014\Models\Team.cs" />
     <Compile Include="Mgobe\V20190929\MgobeClient.cs" />
     <Compile Include="Mgobe\V20190929\Models\DismissRoomRequest.cs" />
     <Compile Include="Mgobe\V20190929\Models\DismissRoomResponse.cs" />
@@ -8778,6 +8789,8 @@
     <Compile Include="Ssa\V20180608\Models\DescribeCheckConfigAssetListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeCheckConfigDetailRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeCheckConfigDetailResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeComplianceAssetListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeComplianceAssetListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeComplianceDetailRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeComplianceDetailResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeComplianceListRequest.cs" />
@@ -8790,6 +8803,8 @@
     <Compile Include="Ssa\V20180608\Models\DescribeLeakDetectionListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeVulDetailRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeVulDetailResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeVulListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeVulListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\Filter.cs" />

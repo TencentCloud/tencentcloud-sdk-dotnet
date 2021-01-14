@@ -27,7 +27,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 点播存储的计费区域，可能值：
         /// <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-        /// <li>outside Chinese Mainland：中国境外。</li>
+        /// <li>Outside Chinese Mainland：中国境外。</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

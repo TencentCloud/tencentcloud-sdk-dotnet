@@ -57,6 +57,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Operations")]
         public ImageOperation[] Operations{ get; set; }
 
+        /// <summary>
+        /// 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamArrayObj(map, prefix + "Operations.", this.Operations);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

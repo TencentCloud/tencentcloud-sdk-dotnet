@@ -128,6 +128,13 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("AssetTotal")]
         public long? AssetTotal{ get; set; }
 
+        /// <summary>
+        /// 忽略内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remarks")]
+        public string Remarks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "IsIgnored", this.IsIgnored);
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamSimple(map, prefix + "AssetTotal", this.AssetTotal);
+            this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
         }
     }
 }

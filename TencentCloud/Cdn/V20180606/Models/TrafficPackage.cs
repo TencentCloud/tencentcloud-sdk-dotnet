@@ -93,6 +93,30 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
+        /// <summary>
+        /// 流量包生效区域，目前仅支持mainland
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// 流量包生命周期月数
+        /// </summary>
+        [JsonProperty("LifeTimeMonth")]
+        public long? LifeTimeMonth{ get; set; }
+
+        /// <summary>
+        /// 流量包是否支持续订
+        /// </summary>
+        [JsonProperty("ExtensionAvailable")]
+        public bool? ExtensionAvailable{ get; set; }
+
+        /// <summary>
+        /// 流量包是否支持退费
+        /// </summary>
+        [JsonProperty("RefundAvailable")]
+        public bool? RefundAvailable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +134,10 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ContractExtension", this.ContractExtension);
             this.SetParamSimple(map, prefix + "AutoExtension", this.AutoExtension);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "LifeTimeMonth", this.LifeTimeMonth);
+            this.SetParamSimple(map, prefix + "ExtensionAvailable", this.ExtensionAvailable);
+            this.SetParamSimple(map, prefix + "RefundAvailable", this.RefundAvailable);
         }
     }
 }

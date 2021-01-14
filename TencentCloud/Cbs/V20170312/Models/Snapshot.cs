@@ -127,10 +127,16 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotType{ get; set; }
 
         /// <summary>
-        /// 快照当前被共享数
+        /// 快照当前被共享数。
         /// </summary>
         [JsonProperty("ShareReference")]
         public ulong? ShareReference{ get; set; }
+
+        /// <summary>
+        /// 快照开始共享的时间。
+        /// </summary>
+        [JsonProperty("TimeStartShare")]
+        public string TimeStartShare{ get; set; }
 
 
         /// <summary>
@@ -156,6 +162,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "ImageCount", this.ImageCount);
             this.SetParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
             this.SetParamSimple(map, prefix + "ShareReference", this.ShareReference);
+            this.SetParamSimple(map, prefix + "TimeStartShare", this.TimeStartShare);
         }
     }
 }

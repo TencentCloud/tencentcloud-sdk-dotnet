@@ -49,13 +49,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Address{ get; set; }
 
         /// <summary>
-        /// 出生日期
+        /// 出生日期（YYYY-MM-DD）
         /// </summary>
         [JsonProperty("DateOfBirth")]
         public string DateOfBirth{ get; set; }
 
         /// <summary>
-        /// 初次领证日期
+        /// 初次领证日期（YYYY-MM-DD）
         /// </summary>
         [JsonProperty("DateOfFirstIssue")]
         public string DateOfFirstIssue{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Class{ get; set; }
 
         /// <summary>
-        /// 有效期开始时间
+        /// 有效期开始时间（YYYY-MM-DD）
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 有效期截止时间
+        /// 有效期截止时间（YYYY-MM-DD）
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
@@ -117,6 +117,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string[] RecognizeWarnMsg{ get; set; }
 
         /// <summary>
+        /// 发证单位
+        /// </summary>
+        [JsonProperty("IssuingAuthority")]
+        public string IssuingAuthority{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -142,6 +148,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Record", this.Record);
             this.SetParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
             this.SetParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
+            this.SetParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

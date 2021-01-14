@@ -84,6 +84,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+        /// </summary>
+        [JsonProperty("InstType")]
+        public string InstType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "InstType", this.InstType);
         }
     }
 }

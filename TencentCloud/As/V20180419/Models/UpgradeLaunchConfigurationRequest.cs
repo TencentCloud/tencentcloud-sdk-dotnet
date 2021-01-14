@@ -64,6 +64,7 @@ namespace TencentCloud.As.V20180419.Models
         /// 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
         /// <br><li>POSTPAID_BY_HOUR：按小时后付费
         /// <br><li>SPOTPAID：竞价付费
+        /// <br><li>PREPAID：预付费，即包年包月
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

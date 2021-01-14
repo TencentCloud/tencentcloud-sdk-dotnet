@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2D2665D3-3EFE-35CA-BBCD-325648942550}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.207</VersionPrefix>
+    <VersionPrefix>3.0.208</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20180608\Models\DescribeCheckConfigAssetListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCheckConfigDetailRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCheckConfigDetailResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeComplianceAssetListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeComplianceAssetListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeComplianceDetailRequest.cs" />
     <Compile Include="V20180608\Models\DescribeComplianceDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeComplianceListRequest.cs" />
@@ -79,6 +81,8 @@
     <Compile Include="V20180608\Models\DescribeLeakDetectionListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSafetyEventListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSafetyEventListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeVulDetailRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeVulDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeVulListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeVulListResponse.cs" />
     <Compile Include="V20180608\Models\Filter.cs" />

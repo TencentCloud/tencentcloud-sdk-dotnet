@@ -38,6 +38,8 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// ye1y3d ：事件3天存储年套餐。
         /// ye1y7d ：事件7天存储年套餐。
         /// ye1y30d ：事件30天存储年套餐。
+        /// yc1w7d : 全时7天存储周套餐。
+        /// ye1w7d : 事件7天存储周套餐。
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
@@ -55,7 +57,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         public long? OrderCount{ get; set; }
 
         /// <summary>
-        /// 云存服务所在的区域,如ap-guangzhou,ap-singapore
+        /// 云存服务所在的区域,如ap-guangzhou,ap-singapore, na-siliconvalley, eu-frankfurt
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }

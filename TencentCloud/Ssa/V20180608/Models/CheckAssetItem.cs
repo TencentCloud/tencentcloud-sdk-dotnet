@@ -97,6 +97,12 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("Detail")]
         public string Detail{ get; set; }
 
+        /// <summary>
+        /// 备注内容
+        /// </summary>
+        [JsonProperty("Remarks")]
+        public string Remarks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "AssetInfo", this.AssetInfo);
             this.SetParamSimple(map, prefix + "AssetId", this.AssetId);
             this.SetParamSimple(map, prefix + "Detail", this.Detail);
+            this.SetParamSimple(map, prefix + "Remarks", this.Remarks);
         }
     }
 }

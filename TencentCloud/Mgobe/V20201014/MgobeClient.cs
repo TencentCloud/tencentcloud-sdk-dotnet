@@ -53,6 +53,86 @@ namespace TencentCloud.Mgobe.V20201014
         }
 
         /// <summary>
+        /// 修改房间玩家自定义属性
+        /// </summary>
+        /// <param name="req"><see cref="ChangeRoomPlayerProfileRequest"/></param>
+        /// <returns><see cref="ChangeRoomPlayerProfileResponse"/></returns>
+        public async Task<ChangeRoomPlayerProfileResponse> ChangeRoomPlayerProfile(ChangeRoomPlayerProfileRequest req)
+        {
+             JsonResponseModel<ChangeRoomPlayerProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeRoomPlayerProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeRoomPlayerProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改房间玩家自定义属性
+        /// </summary>
+        /// <param name="req"><see cref="ChangeRoomPlayerProfileRequest"/></param>
+        /// <returns><see cref="ChangeRoomPlayerProfileResponse"/></returns>
+        public ChangeRoomPlayerProfileResponse ChangeRoomPlayerProfileSync(ChangeRoomPlayerProfileRequest req)
+        {
+             JsonResponseModel<ChangeRoomPlayerProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeRoomPlayerProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeRoomPlayerProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改玩家自定义状态
+        /// </summary>
+        /// <param name="req"><see cref="ChangeRoomPlayerStatusRequest"/></param>
+        /// <returns><see cref="ChangeRoomPlayerStatusResponse"/></returns>
+        public async Task<ChangeRoomPlayerStatusResponse> ChangeRoomPlayerStatus(ChangeRoomPlayerStatusRequest req)
+        {
+             JsonResponseModel<ChangeRoomPlayerStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeRoomPlayerStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeRoomPlayerStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改玩家自定义状态
+        /// </summary>
+        /// <param name="req"><see cref="ChangeRoomPlayerStatusRequest"/></param>
+        /// <returns><see cref="ChangeRoomPlayerStatusResponse"/></returns>
+        public ChangeRoomPlayerStatusResponse ChangeRoomPlayerStatusSync(ChangeRoomPlayerStatusRequest req)
+        {
+             JsonResponseModel<ChangeRoomPlayerStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeRoomPlayerStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeRoomPlayerStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过game_id、room_id解散房间
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>
@@ -84,6 +164,86 @@ namespace TencentCloud.Mgobe.V20201014
              {
                  var strResp = this.InternalRequestSync(req, "DismissRoom");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改房间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomRequest"/></param>
+        /// <returns><see cref="ModifyRoomResponse"/></returns>
+        public async Task<ModifyRoomResponse> ModifyRoom(ModifyRoomRequest req)
+        {
+             JsonResponseModel<ModifyRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改房间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomRequest"/></param>
+        /// <returns><see cref="ModifyRoomResponse"/></returns>
+        public ModifyRoomResponse ModifyRoomSync(ModifyRoomRequest req)
+        {
+             JsonResponseModel<ModifyRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 踢出房间玩家
+        /// </summary>
+        /// <param name="req"><see cref="RemoveRoomPlayerRequest"/></param>
+        /// <returns><see cref="RemoveRoomPlayerResponse"/></returns>
+        public async Task<RemoveRoomPlayerResponse> RemoveRoomPlayer(RemoveRoomPlayerRequest req)
+        {
+             JsonResponseModel<RemoveRoomPlayerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveRoomPlayer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveRoomPlayerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 踢出房间玩家
+        /// </summary>
+        /// <param name="req"><see cref="RemoveRoomPlayerRequest"/></param>
+        /// <returns><see cref="RemoveRoomPlayerResponse"/></returns>
+        public RemoveRoomPlayerResponse RemoveRoomPlayerSync(RemoveRoomPlayerRequest req)
+        {
+             JsonResponseModel<RemoveRoomPlayerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveRoomPlayer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveRoomPlayerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -65,7 +65,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 查询的存储区域，有效值：
         /// <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
-        /// <li>outside Chinese Mainland：中国境外。</li>
+        /// <li>Outside Chinese Mainland：中国境外。</li>
         /// 默认值为 Chinese Mainland。
         /// </summary>
         [JsonProperty("Area")]

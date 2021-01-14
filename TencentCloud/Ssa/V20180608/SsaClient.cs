@@ -253,6 +253,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 合规管理-资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceAssetListRequest"/></param>
+        /// <returns><see cref="DescribeComplianceAssetListResponse"/></returns>
+        public async Task<DescribeComplianceAssetListResponse> DescribeComplianceAssetList(DescribeComplianceAssetListRequest req)
+        {
+             JsonResponseModel<DescribeComplianceAssetListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeComplianceAssetList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComplianceAssetListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 合规管理-资产列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeComplianceAssetListRequest"/></param>
+        /// <returns><see cref="DescribeComplianceAssetListResponse"/></returns>
+        public DescribeComplianceAssetListResponse DescribeComplianceAssetListSync(DescribeComplianceAssetListRequest req)
+        {
+             JsonResponseModel<DescribeComplianceAssetListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeComplianceAssetList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeComplianceAssetListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 合规管理检查项详情
         /// </summary>
         /// <param name="req"><see cref="DescribeComplianceDetailRequest"/></param>
@@ -484,6 +524,46 @@ namespace TencentCloud.Ssa.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSafetyEventList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSafetyEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 漏洞列表页，获取漏洞详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulDetailResponse"/></returns>
+        public async Task<DescribeVulDetailResponse> DescribeVulDetail(DescribeVulDetailRequest req)
+        {
+             JsonResponseModel<DescribeVulDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVulDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 漏洞列表页，获取漏洞详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulDetailResponse"/></returns>
+        public DescribeVulDetailResponse DescribeVulDetailSync(DescribeVulDetailRequest req)
+        {
+             JsonResponseModel<DescribeVulDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVulDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
