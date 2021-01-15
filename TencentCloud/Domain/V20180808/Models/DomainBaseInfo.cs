@@ -136,6 +136,19 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("NameServer")]
         public string[] NameServer{ get; set; }
 
+        /// <summary>
+        /// true：开启锁定
+        /// false：关闭锁定
+        /// </summary>
+        [JsonProperty("LockTransfer")]
+        public bool? LockTransfer{ get; set; }
+
+        /// <summary>
+        /// 锁定结束时间
+        /// </summary>
+        [JsonProperty("LockEndTime")]
+        public string LockEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +167,8 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "BuyStatus", this.BuyStatus);
             this.SetParamSimple(map, prefix + "RegistrarType", this.RegistrarType);
             this.SetParamArraySimple(map, prefix + "NameServer.", this.NameServer);
+            this.SetParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
+            this.SetParamSimple(map, prefix + "LockEndTime", this.LockEndTime);
         }
     }
 }

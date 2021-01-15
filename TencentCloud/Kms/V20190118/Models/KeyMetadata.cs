@@ -55,7 +55,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyState{ get; set; }
 
         /// <summary>
-        /// CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2
+        /// CMK用途，取值为: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }

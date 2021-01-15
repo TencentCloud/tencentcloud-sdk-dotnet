@@ -1,0 +1,110 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Asr.V20190614.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CreateAsyncRecognitionTaskRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 引擎模型类型。
+        /// • 16k_zh：16k 中文普通话通用；
+        /// • 16k_zh_video：16k 音视频领域；
+        /// • 16k_en：16k 英语；
+        /// • 16k_ca：16k 粤语；
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
+        /// <summary>
+        /// 语音流地址，支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// 支持HTTP和HTTPS协议，用于接收识别结果，您需要自行搭建公网可调用的服务。回调格式&内容详见：[语音流异步识别回调说明](https://github.com/yunjianfei/qcloud-documents/blob/master/product/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8EAI/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%20API%202017/%E8%AF%AD%E9%9F%B3%E6%B5%81%E5%BC%82%E6%AD%A5%E8%AF%86%E5%88%AB%E5%9B%9E%E8%B0%83%E8%AF%B4%E6%98%8E.md)
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// 用于生成回调通知中的签名
+        /// </summary>
+        [JsonProperty("SignToken")]
+        public string SignToken{ get; set; }
+
+        /// <summary>
+        /// 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0
+        /// </summary>
+        [JsonProperty("FilterDirty")]
+        public long? FilterDirty{ get; set; }
+
+        /// <summary>
+        /// 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
+        /// </summary>
+        [JsonProperty("FilterModal")]
+        public long? FilterModal{ get; set; }
+
+        /// <summary>
+        /// 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0
+        /// </summary>
+        [JsonProperty("FilterPunc")]
+        public long? FilterPunc{ get; set; }
+
+        /// <summary>
+        /// 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
+        /// </summary>
+        [JsonProperty("ConvertNumMode")]
+        public long? ConvertNumMode{ get; set; }
+
+        /// <summary>
+        /// 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认为0
+        /// </summary>
+        [JsonProperty("WordInfo")]
+        public long? WordInfo{ get; set; }
+
+        /// <summary>
+        /// 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+        /// </summary>
+        [JsonProperty("HotwordId")]
+        public string HotwordId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "SignToken", this.SignToken);
+            this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+            this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
+            this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
+            this.SetParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
+            this.SetParamSimple(map, prefix + "WordInfo", this.WordInfo);
+            this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
+        }
+    }
+}
+

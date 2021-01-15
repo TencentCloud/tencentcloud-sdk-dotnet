@@ -103,6 +103,56 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
+        /// 本接口用于对语音流进行准实时识别，通过异步回调来返回识别结果。
+        /// <br>• 支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+        /// <br>• 音频流时长无限制，服务会自动拉取音频流数据，若连续10分钟拉不到流数据时，服务会终止识别任务
+        /// <br>• 服务通过回调的方式来提供识别结果，用户需要提供CallbackUrl
+        /// <br>• 签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
+        /// <br>• 默认单账号限制并发数为20路，如您有提高并发限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsyncRecognitionTaskRequest"/></param>
+        /// <returns><see cref="CreateAsyncRecognitionTaskResponse"/></returns>
+        public async Task<CreateAsyncRecognitionTaskResponse> CreateAsyncRecognitionTask(CreateAsyncRecognitionTaskRequest req)
+        {
+             JsonResponseModel<CreateAsyncRecognitionTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAsyncRecognitionTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAsyncRecognitionTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于对语音流进行准实时识别，通过异步回调来返回识别结果。
+        /// <br>• 支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+        /// <br>• 音频流时长无限制，服务会自动拉取音频流数据，若连续10分钟拉不到流数据时，服务会终止识别任务
+        /// <br>• 服务通过回调的方式来提供识别结果，用户需要提供CallbackUrl
+        /// <br>• 签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
+        /// <br>• 默认单账号限制并发数为20路，如您有提高并发限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsyncRecognitionTaskRequest"/></param>
+        /// <returns><see cref="CreateAsyncRecognitionTaskResponse"/></returns>
+        public CreateAsyncRecognitionTaskResponse CreateAsyncRecognitionTaskSync(CreateAsyncRecognitionTaskRequest req)
+        {
+             JsonResponseModel<CreateAsyncRecognitionTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAsyncRecognitionTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAsyncRecognitionTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户使用该接口可以创建自学习模型，以供识别调用
         /// </summary>
         /// <param name="req"><see cref="CreateCustomizationRequest"/></param>
@@ -276,6 +326,48 @@ namespace TencentCloud.Asr.V20190614
              {
                  var strResp = this.InternalRequestSync(req, "DeleteCustomization");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询当前在运行的语音流异步识别任务列表。
+        /// <br>•   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRecognitionTasksRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRecognitionTasksResponse"/></returns>
+        public async Task<DescribeAsyncRecognitionTasksResponse> DescribeAsyncRecognitionTasks(DescribeAsyncRecognitionTasksRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRecognitionTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAsyncRecognitionTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRecognitionTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询当前在运行的语音流异步识别任务列表。
+        /// <br>•   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRecognitionTasksRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRecognitionTasksResponse"/></returns>
+        public DescribeAsyncRecognitionTasksResponse DescribeAsyncRecognitionTasksSync(DescribeAsyncRecognitionTasksRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRecognitionTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAsyncRecognitionTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRecognitionTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

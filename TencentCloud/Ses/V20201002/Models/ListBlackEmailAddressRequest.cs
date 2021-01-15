@@ -25,13 +25,13 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 开始日期
+        /// 开始日期，格式为YYYY-MM-DD
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 结束日期
+        /// 结束日期，格式为YYYY-MM-DD
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 规范，配合Limit使用
+        /// 规范，配合Limit使用，Limit最大取值为100
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略组id
+        /// 策略组id，如传入PolicyId则该字段可传入任意值
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
+        /// <summary>
+        /// 告警策略ID，使用此字段时GroupId可传入任意值
+        /// </summary>
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArraySimple(map, prefix + "UniqueId.", this.UniqueId);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

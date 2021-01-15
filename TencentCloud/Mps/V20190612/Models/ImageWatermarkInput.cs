@@ -48,6 +48,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
+        /// <summary>
+        /// 水印重复类型。使用场景：水印为动态图像。取值范围：
+        /// <li>once：动态水印播放完后，不再出现；</li>
+        /// <li>repeat_last_frame：水印播放完后，停留在最后一帧；</li>
+        /// <li>repeat：水印循环播放，直到视频结束（默认值）。</li>
+        /// </summary>
+        [JsonProperty("RepeatType")]
+        public string RepeatType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +66,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ImageContent", this.ImageContent);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "RepeatType", this.RepeatType);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 接受消息时生成的消息的唯一标识符。
+        /// 接受消息生成的唯一消息标识符。
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }

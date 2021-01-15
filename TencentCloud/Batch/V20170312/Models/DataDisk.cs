@@ -80,6 +80,13 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
+        /// <summary>
+        /// 云硬盘性能，单位：MB/s
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public long? ThroughputPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

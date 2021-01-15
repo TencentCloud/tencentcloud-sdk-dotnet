@@ -52,6 +52,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PdfPageNumber")]
         public ulong? PdfPageNumber{ get; set; }
 
+        /// <summary>
+        /// 语言，zh：中英文（默认）jap：日文
+        /// </summary>
+        [JsonProperty("TableLanguage")]
+        public string TableLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +68,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+            this.SetParamSimple(map, prefix + "TableLanguage", this.TableLanguage);
         }
     }
 }

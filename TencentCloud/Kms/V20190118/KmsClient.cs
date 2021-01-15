@@ -1815,6 +1815,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// 非对称密钥签名。
+        /// 注意：只有成功创建了KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2 的密钥才可以使用签名功能
+        /// </summary>
+        /// <param name="req"><see cref="SignByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>
+        public async Task<SignByAsymmetricKeyResponse> SignByAsymmetricKey(SignByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SignByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignByAsymmetricKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 非对称密钥签名。
+        /// 注意：只有成功创建了KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2 的密钥才可以使用签名功能
+        /// </summary>
+        /// <param name="req"><see cref="SignByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="SignByAsymmetricKeyResponse"/></returns>
+        public SignByAsymmetricKeyResponse SignByAsymmetricKeySync(SignByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SignByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SignByAsymmetricKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除指定（key, 资源，云产品）的记录，以表明：指定的云产品的资源已不再使用当前的key。
         /// </summary>
         /// <param name="req"><see cref="UnbindCloudResourceRequest"/></param>
@@ -1926,6 +1968,46 @@ namespace TencentCloud.Kms.V20190118
              {
                  var strResp = this.InternalRequestSync(req, "UpdateKeyDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateKeyDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用非对称密钥验签
+        /// </summary>
+        /// <param name="req"><see cref="VerifyByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="VerifyByAsymmetricKeyResponse"/></returns>
+        public async Task<VerifyByAsymmetricKeyResponse> VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyByAsymmetricKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用非对称密钥验签
+        /// </summary>
+        /// <param name="req"><see cref="VerifyByAsymmetricKeyRequest"/></param>
+        /// <returns><see cref="VerifyByAsymmetricKeyResponse"/></returns>
+        public VerifyByAsymmetricKeyResponse VerifyByAsymmetricKeySync(VerifyByAsymmetricKeyRequest req)
+        {
+             JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyByAsymmetricKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyByAsymmetricKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

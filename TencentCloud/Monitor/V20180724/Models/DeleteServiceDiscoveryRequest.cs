@@ -47,6 +47,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// 服务发现类型，取值如下：
         /// <li> 1 = ServiceMonitor</li>
         /// <li> 2 = PodMonitor</li>
+        /// <li> 3 = PodMonitor</li>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

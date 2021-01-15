@@ -733,6 +733,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 发起一个白板推流任务
+        /// </summary>
+        /// <param name="req"><see cref="StartWhiteboardPushRequest"/></param>
+        /// <returns><see cref="StartWhiteboardPushResponse"/></returns>
+        public async Task<StartWhiteboardPushResponse> StartWhiteboardPush(StartWhiteboardPushRequest req)
+        {
+             JsonResponseModel<StartWhiteboardPushResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartWhiteboardPush");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartWhiteboardPushResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起一个白板推流任务
+        /// </summary>
+        /// <param name="req"><see cref="StartWhiteboardPushRequest"/></param>
+        /// <returns><see cref="StartWhiteboardPushResponse"/></returns>
+        public StartWhiteboardPushResponse StartWhiteboardPushSync(StartWhiteboardPushRequest req)
+        {
+             JsonResponseModel<StartWhiteboardPushResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartWhiteboardPush");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartWhiteboardPushResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 停止实时录制
         /// </summary>
         /// <param name="req"><see cref="StopOnlineRecordRequest"/></param>
@@ -764,6 +804,46 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "StopOnlineRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopOnlineRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止白板推流任务
+        /// </summary>
+        /// <param name="req"><see cref="StopWhiteboardPushRequest"/></param>
+        /// <returns><see cref="StopWhiteboardPushResponse"/></returns>
+        public async Task<StopWhiteboardPushResponse> StopWhiteboardPush(StopWhiteboardPushRequest req)
+        {
+             JsonResponseModel<StopWhiteboardPushResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopWhiteboardPush");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopWhiteboardPushResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止白板推流任务
+        /// </summary>
+        /// <param name="req"><see cref="StopWhiteboardPushRequest"/></param>
+        /// <returns><see cref="StopWhiteboardPushResponse"/></returns>
+        public StopWhiteboardPushResponse StopWhiteboardPushSync(StopWhiteboardPushRequest req)
+        {
+             JsonResponseModel<StopWhiteboardPushResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopWhiteboardPush");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopWhiteboardPushResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

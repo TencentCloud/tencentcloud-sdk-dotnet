@@ -67,7 +67,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Origin{ get; set; }
 
         /// <summary>
-        /// 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
+        /// 根据CMK的KeyUsage筛选，ALL表示筛选全部，可使用的参数为：ALL 或 ENCRYPT_DECRYPT 或 ASYMMETRIC_DECRYPT_RSA_2048 或 ASYMMETRIC_DECRYPT_SM2 或 ASYMMETRIC_SIGN_VERIFY_SM2，为空则默认筛选ENCRYPT_DECRYPT类型
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }

@@ -43,6 +43,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? PdfPageSize{ get; set; }
 
         /// <summary>
+        /// 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+        /// </summary>
+        [JsonProperty("Angle")]
+        public float? Angle{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "VatInvoiceInfos.", this.VatInvoiceInfos);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
+            this.SetParamSimple(map, prefix + "Angle", this.Angle);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

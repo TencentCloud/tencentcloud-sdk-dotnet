@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{89853174-2531-351C-A46F-51E64C5ADD8C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.208</VersionPrefix>
+    <VersionPrefix>3.0.209</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -137,6 +137,8 @@
     <Compile Include="V20190118\Models\ReEncryptResponse.cs" />
     <Compile Include="V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="V20190118\Models\ScheduleKeyDeletionResponse.cs" />
+    <Compile Include="V20190118\Models\SignByAsymmetricKeyRequest.cs" />
+    <Compile Include="V20190118\Models\SignByAsymmetricKeyResponse.cs" />
     <Compile Include="V20190118\Models\Tag.cs" />
     <Compile Include="V20190118\Models\TagFilter.cs" />
     <Compile Include="V20190118\Models\UnbindCloudResourceRequest.cs" />
@@ -145,6 +147,8 @@
     <Compile Include="V20190118\Models\UpdateAliasResponse.cs" />
     <Compile Include="V20190118\Models\UpdateKeyDescriptionRequest.cs" />
     <Compile Include="V20190118\Models\UpdateKeyDescriptionResponse.cs" />
+    <Compile Include="V20190118\Models\VerifyByAsymmetricKeyRequest.cs" />
+    <Compile Include="V20190118\Models\VerifyByAsymmetricKeyResponse.cs" />
     <Compile Include="V20190118\Models\WhiteboxKeyInfo.cs" />
   </ItemGroup>
 </Project>

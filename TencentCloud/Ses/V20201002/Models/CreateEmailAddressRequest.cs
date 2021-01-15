@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 您的发信地址，上限为10个
+        /// 您的发信地址（发信地址总数上限为10个）
         /// </summary>
         [JsonProperty("EmailAddress")]
         public string EmailAddress{ get; set; }

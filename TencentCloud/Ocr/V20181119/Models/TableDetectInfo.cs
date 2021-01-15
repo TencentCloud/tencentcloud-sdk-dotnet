@@ -38,6 +38,23 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Titles")]
         public TableTitle[] Titles{ get; set; }
 
+        /// <summary>
+        /// 图像中的文本块类型，0 为非表格文本，
+        /// 1 为有线表格，2 为无线表格
+        /// （接口暂不支持日文无线表格识别，若传入日文无线表格，返回0）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
+        /// 表格主体四个顶点坐标（依次为左上角，
+        /// 右上角，右下角，左下角）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableCoordPoint")]
+        public Coord[] TableCoordPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +63,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamArrayObj(map, prefix + "Cells.", this.Cells);
             this.SetParamArrayObj(map, prefix + "Titles.", this.Titles);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "TableCoordPoint.", this.TableCoordPoint);
         }
     }
 }

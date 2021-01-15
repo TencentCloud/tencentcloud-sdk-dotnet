@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.208</VersionPrefix>
+    <VersionPrefix>3.0.209</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -163,6 +163,32 @@
     <Compile Include="Ams\V20200608\Models\TaskLabel.cs" />
     <Compile Include="Ams\V20200608\Models\TaskResult.cs" />
     <Compile Include="Ams\V20200608\Models\TrendCount.cs" />
+    <Compile Include="Apcas\V20201127\ApcasClient.cs" />
+    <Compile Include="Apcas\V20201127\Models\CallDetailItem.cs" />
+    <Compile Include="Apcas\V20201127\Models\CallDetails.cs" />
+    <Compile Include="Apcas\V20201127\Models\CallStatItem.cs" />
+    <Compile Include="Apcas\V20201127\Models\GeneralStat.cs" />
+    <Compile Include="Apcas\V20201127\Models\GetTaskDetailRequest.cs" />
+    <Compile Include="Apcas\V20201127\Models\GetTaskDetailResponse.cs" />
+    <Compile Include="Apcas\V20201127\Models\GetTaskListRequest.cs" />
+    <Compile Include="Apcas\V20201127\Models\GetTaskListResponse.cs" />
+    <Compile Include="Apcas\V20201127\Models\LabelDetailData.cs" />
+    <Compile Include="Apcas\V20201127\Models\LabelValue.cs" />
+    <Compile Include="Apcas\V20201127\Models\ListModel.cs" />
+    <Compile Include="Apcas\V20201127\Models\PredictRatingRequest.cs" />
+    <Compile Include="Apcas\V20201127\Models\PredictRatingResponse.cs" />
+    <Compile Include="Apcas\V20201127\Models\QueryCallDetailsRequest.cs" />
+    <Compile Include="Apcas\V20201127\Models\QueryCallDetailsResponse.cs" />
+    <Compile Include="Apcas\V20201127\Models\QueryCallStatRequest.cs" />
+    <Compile Include="Apcas\V20201127\Models\QueryCallStatResponse.cs" />
+    <Compile Include="Apcas\V20201127\Models\QueryGeneralStatRequest.cs" />
+    <Compile Include="Apcas\V20201127\Models\QueryGeneralStatResponse.cs" />
+    <Compile Include="Apcas\V20201127\Models\RatingData.cs" />
+    <Compile Include="Apcas\V20201127\Models\TaskData.cs" />
+    <Compile Include="Apcas\V20201127\Models\TaskDetailData.cs" />
+    <Compile Include="Apcas\V20201127\Models\TaskListData.cs" />
+    <Compile Include="Apcas\V20201127\Models\UploadIdRequest.cs" />
+    <Compile Include="Apcas\V20201127\Models\UploadIdResponse.cs" />
     <Compile Include="Ape\V20200513\ApeClient.cs" />
     <Compile Include="Ape\V20200513\Models\AuthInfo.cs" />
     <Compile Include="Ape\V20200513\Models\BatchDescribeOrderCertificateRequest.cs" />
@@ -480,8 +506,12 @@
     <Compile Include="As\V20180419\Models\UpgradeLifecycleHookRequest.cs" />
     <Compile Include="As\V20180419\Models\UpgradeLifecycleHookResponse.cs" />
     <Compile Include="Asr\V20190614\AsrClient.cs" />
+    <Compile Include="Asr\V20190614\Models\AsyncRecognitionTaskInfo.cs" />
+    <Compile Include="Asr\V20190614\Models\AsyncRecognitionTasks.cs" />
     <Compile Include="Asr\V20190614\Models\CreateAsrVocabRequest.cs" />
     <Compile Include="Asr\V20190614\Models\CreateAsrVocabResponse.cs" />
+    <Compile Include="Asr\V20190614\Models\CreateAsyncRecognitionTaskRequest.cs" />
+    <Compile Include="Asr\V20190614\Models\CreateAsyncRecognitionTaskResponse.cs" />
     <Compile Include="Asr\V20190614\Models\CreateCustomizationRequest.cs" />
     <Compile Include="Asr\V20190614\Models\CreateCustomizationResponse.cs" />
     <Compile Include="Asr\V20190614\Models\CreateRecTaskRequest.cs" />
@@ -490,6 +520,8 @@
     <Compile Include="Asr\V20190614\Models\DeleteAsrVocabResponse.cs" />
     <Compile Include="Asr\V20190614\Models\DeleteCustomizationRequest.cs" />
     <Compile Include="Asr\V20190614\Models\DeleteCustomizationResponse.cs" />
+    <Compile Include="Asr\V20190614\Models\DescribeAsyncRecognitionTasksRequest.cs" />
+    <Compile Include="Asr\V20190614\Models\DescribeAsyncRecognitionTasksResponse.cs" />
     <Compile Include="Asr\V20190614\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="Asr\V20190614\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="Asr\V20190614\Models\DownloadAsrVocabRequest.cs" />
@@ -3244,6 +3276,8 @@
     <Compile Include="Cr\V20180321\Models\DescribeRecordsResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="Cr\V20180321\Models\DescribeTaskStatusResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\DownloadBotRecordRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\DownloadBotRecordResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadDialogueTextRequest.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadDialogueTextResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DownloadRecordListRequest.cs" />
@@ -6536,6 +6570,8 @@
     <Compile Include="Kms\V20190118\Models\ReEncryptResponse.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\ScheduleKeyDeletionResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\SignByAsymmetricKeyRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\SignByAsymmetricKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\Tag.cs" />
     <Compile Include="Kms\V20190118\Models\TagFilter.cs" />
     <Compile Include="Kms\V20190118\Models\UnbindCloudResourceRequest.cs" />
@@ -6544,6 +6580,8 @@
     <Compile Include="Kms\V20190118\Models\UpdateAliasResponse.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionRequest.cs" />
     <Compile Include="Kms\V20190118\Models\UpdateKeyDescriptionResponse.cs" />
+    <Compile Include="Kms\V20190118\Models\VerifyByAsymmetricKeyRequest.cs" />
+    <Compile Include="Kms\V20190118\Models\VerifyByAsymmetricKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\WhiteboxKeyInfo.cs" />
     <Compile Include="Lighthouse\V20200324\LighthouseClient.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Blueprint.cs" />
@@ -7777,6 +7815,34 @@
     <Compile Include="Npp\V20190823\Models\KeyList.cs" />
     <Compile Include="Npp\V20190823\Models\RreCallerHandle.cs" />
     <Compile Include="Npp\V20190823\Models\VirturalNumCdr.cs" />
+    <Compile Include="Oceanus\V20190422\OceanusClient.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateJobConfigRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateJobConfigResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateJobRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateJobResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateResourceConfigRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateResourceConfigResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateResourceRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CreateResourceResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DeleteTableConfigRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DeleteTableConfigResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeJobsRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeJobsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeSystemResourcesRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeSystemResourcesResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\Filter.cs" />
+    <Compile Include="Oceanus\V20190422\Models\JobV1.cs" />
+    <Compile Include="Oceanus\V20190422\Models\Property.cs" />
+    <Compile Include="Oceanus\V20190422\Models\ResourceLoc.cs" />
+    <Compile Include="Oceanus\V20190422\Models\ResourceLocParam.cs" />
+    <Compile Include="Oceanus\V20190422\Models\ResourceRef.cs" />
+    <Compile Include="Oceanus\V20190422\Models\RunJobDescription.cs" />
+    <Compile Include="Oceanus\V20190422\Models\RunJobsRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\RunJobsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\StopJobDescription.cs" />
+    <Compile Include="Oceanus\V20190422\Models\StopJobsRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\StopJobsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\SystemResourceItem.cs" />
     <Compile Include="Ocr\V20181119\OcrClient.cs" />
     <Compile Include="Ocr\V20181119\Models\AdvertiseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\AdvertiseOCRResponse.cs" />
@@ -8414,6 +8480,7 @@
     <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
     <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
     <Compile Include="Ses\V20201002\SesClient.cs" />
+    <Compile Include="Ses\V20201002\Models\Attachment.cs" />
     <Compile Include="Ses\V20201002\Models\BlackEmailAddress.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailAddressRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailAddressResponse.cs" />
@@ -8481,6 +8548,10 @@
     <Compile Include="Smpn\V20190822\Models\MHMResponse.cs" />
     <Compile Include="Smpn\V20190822\Models\MRLRequest.cs" />
     <Compile Include="Smpn\V20190822\Models\MRLResponse.cs" />
+    <Compile Include="Sms\V20210111\SmsClient.cs" />
+    <Compile Include="Sms\V20210111\Models\DescribeSmsTemplateListRequest.cs" />
+    <Compile Include="Sms\V20210111\Models\DescribeSmsTemplateListResponse.cs" />
+    <Compile Include="Sms\V20210111\Models\DescribeTemplateListStatus.cs" />
     <Compile Include="Sms\V20190711\SmsClient.cs" />
     <Compile Include="Sms\V20190711\Models\AddSignStatus.cs" />
     <Compile Include="Sms\V20190711\Models\AddSmsSignRequest.cs" />
@@ -9981,12 +10052,17 @@
     <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\StartWhiteboardPushRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\StartWhiteboardPushResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StopOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\StopOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\StopWhiteboardPushRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\StopWhiteboardPushResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StreamControl.cs" />
     <Compile Include="Tiw\V20190919\Models\StreamLayout.cs" />
     <Compile Include="Tiw\V20190919\Models\VideoInfo.cs" />
     <Compile Include="Tiw\V20190919\Models\Whiteboard.cs" />
+    <Compile Include="Tiw\V20190919\Models\WhiteboardPushBackupParam.cs" />
     <Compile Include="Tke\V20180525\TkeClient.cs" />
     <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleResponse.cs" />

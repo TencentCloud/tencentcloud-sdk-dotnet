@@ -373,6 +373,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 下载任务录音与文本，第二天12点后可使用此接口获取对应的录音与文本
+        /// </summary>
+        /// <param name="req"><see cref="DownloadBotRecordRequest"/></param>
+        /// <returns><see cref="DownloadBotRecordResponse"/></returns>
+        public async Task<DownloadBotRecordResponse> DownloadBotRecord(DownloadBotRecordRequest req)
+        {
+             JsonResponseModel<DownloadBotRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadBotRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadBotRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下载任务录音与文本，第二天12点后可使用此接口获取对应的录音与文本
+        /// </summary>
+        /// <param name="req"><see cref="DownloadBotRecordRequest"/></param>
+        /// <returns><see cref="DownloadBotRecordResponse"/></returns>
+        public DownloadBotRecordResponse DownloadBotRecordSync(DownloadBotRecordRequest req)
+        {
+             JsonResponseModel<DownloadBotRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadBotRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadBotRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取指定案件的对话文本内容，次日早上8:00后可查询前日对话文本内容。
         /// </summary>
         /// <param name="req"><see cref="DownloadDialogueTextRequest"/></param>

@@ -49,7 +49,7 @@ namespace TencentCloud.Tag.V20180813.Models
         public string ResourcePrefix{ get; set; }
 
         /// <summary>
-        /// 资源唯一标识
+        /// 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

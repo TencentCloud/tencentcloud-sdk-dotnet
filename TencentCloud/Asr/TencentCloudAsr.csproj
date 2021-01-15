@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BA913269-C9C8-3169-85ED-FED2E392A18E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.208</VersionPrefix>
+    <VersionPrefix>3.0.209</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,8 +45,12 @@
 
   <ItemGroup>
     <Compile Include="V20190614\AsrClient.cs" />
+    <Compile Include="V20190614\Models\AsyncRecognitionTaskInfo.cs" />
+    <Compile Include="V20190614\Models\AsyncRecognitionTasks.cs" />
     <Compile Include="V20190614\Models\CreateAsrVocabRequest.cs" />
     <Compile Include="V20190614\Models\CreateAsrVocabResponse.cs" />
+    <Compile Include="V20190614\Models\CreateAsyncRecognitionTaskRequest.cs" />
+    <Compile Include="V20190614\Models\CreateAsyncRecognitionTaskResponse.cs" />
     <Compile Include="V20190614\Models\CreateCustomizationRequest.cs" />
     <Compile Include="V20190614\Models\CreateCustomizationResponse.cs" />
     <Compile Include="V20190614\Models\CreateRecTaskRequest.cs" />
@@ -55,6 +59,8 @@
     <Compile Include="V20190614\Models\DeleteAsrVocabResponse.cs" />
     <Compile Include="V20190614\Models\DeleteCustomizationRequest.cs" />
     <Compile Include="V20190614\Models\DeleteCustomizationResponse.cs" />
+    <Compile Include="V20190614\Models\DescribeAsyncRecognitionTasksRequest.cs" />
+    <Compile Include="V20190614\Models\DescribeAsyncRecognitionTasksResponse.cs" />
     <Compile Include="V20190614\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="V20190614\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="V20190614\Models\DownloadAsrVocabRequest.cs" />

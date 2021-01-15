@@ -33,7 +33,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// 收信人邮箱地址，最多支持群发50人。
+        /// 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
         /// </summary>
         [JsonProperty("Destination")]
         public string[] Destination{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string Subject{ get; set; }
 
         /// <summary>
-        /// 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+        /// 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
@@ -62,6 +62,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
 
+        /// <summary>
+        /// 需要发送附件时，填写附件相关参数。
+        /// </summary>
+        [JsonProperty("Attachments")]
+        public Attachment[] Attachments{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
             this.SetParamObj(map, prefix + "Template.", this.Template);
             this.SetParamObj(map, prefix + "Simple.", this.Simple);
+            this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         }
     }
 }

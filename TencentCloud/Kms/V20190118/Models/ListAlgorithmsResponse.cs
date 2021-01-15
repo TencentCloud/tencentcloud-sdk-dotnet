@@ -37,6 +37,12 @@ namespace TencentCloud.Kms.V20190118.Models
         public AlgorithmInfo[] AsymmetricAlgorithms{ get; set; }
 
         /// <summary>
+        /// 本地区支持的非对称签名验签算法
+        /// </summary>
+        [JsonProperty("AsymmetricSignVerifyAlgorithms")]
+        public AlgorithmInfo[] AsymmetricSignVerifyAlgorithms{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Kms.V20190118.Models
         {
             this.SetParamArrayObj(map, prefix + "SymmetricAlgorithms.", this.SymmetricAlgorithms);
             this.SetParamArrayObj(map, prefix + "AsymmetricAlgorithms.", this.AsymmetricAlgorithms);
+            this.SetParamArrayObj(map, prefix + "AsymmetricSignVerifyAlgorithms.", this.AsymmetricSignVerifyAlgorithms);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

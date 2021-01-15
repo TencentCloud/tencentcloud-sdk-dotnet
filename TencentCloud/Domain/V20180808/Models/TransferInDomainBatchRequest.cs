@@ -56,6 +56,14 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// true： 开启60天内禁止转移注册商锁定
+        /// false：关闭60天内禁止转移注册商锁定
+        /// 默认 true
+        /// </summary>
+        [JsonProperty("LockTransfer")]
+        public bool? LockTransfer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +75,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
         }
     }
 }
