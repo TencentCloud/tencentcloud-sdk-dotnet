@@ -613,6 +613,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 根据计费订单id查询资源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesByDealNameRequest"/></param>
+        /// <returns><see cref="DescribeResourcesByDealNameResponse"/></returns>
+        public async Task<DescribeResourcesByDealNameResponse> DescribeResourcesByDealName(DescribeResourcesByDealNameRequest req)
+        {
+             JsonResponseModel<DescribeResourcesByDealNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourcesByDealName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesByDealNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据计费订单id查询资源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesByDealNameRequest"/></param>
+        /// <returns><see cref="DescribeResourcesByDealNameResponse"/></returns>
+        public DescribeResourcesByDealNameResponse DescribeResourcesByDealNameSync(DescribeResourcesByDealNameRequest req)
+        {
+             JsonResponseModel<DescribeResourcesByDealNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourcesByDealName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesByDealNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询指定集群有效回滚时间范围
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTimeRangeRequest"/></param>

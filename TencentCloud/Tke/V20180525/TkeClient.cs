@@ -1053,6 +1053,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取集群可以升级的所有版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableClusterVersionRequest"/></param>
+        /// <returns><see cref="DescribeAvailableClusterVersionResponse"/></returns>
+        public async Task<DescribeAvailableClusterVersionResponse> DescribeAvailableClusterVersion(DescribeAvailableClusterVersionRequest req)
+        {
+             JsonResponseModel<DescribeAvailableClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAvailableClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群可以升级的所有版本
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableClusterVersionRequest"/></param>
+        /// <returns><see cref="DescribeAvailableClusterVersionResponse"/></returns>
+        public DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersionSync(DescribeAvailableClusterVersionRequest req)
+        {
+             JsonResponseModel<DescribeAvailableClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAvailableClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailableClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 集群弹性伸缩配置
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterAsGroupOptionRequest"/></param>
@@ -1973,6 +2013,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获得节点升级当前的进度 
+        /// </summary>
+        /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
+        /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
+        public async Task<GetUpgradeInstanceProgressResponse> GetUpgradeInstanceProgress(GetUpgradeInstanceProgressRequest req)
+        {
+             JsonResponseModel<GetUpgradeInstanceProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetUpgradeInstanceProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUpgradeInstanceProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获得节点升级当前的进度 
+        /// </summary>
+        /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>
+        /// <returns><see cref="GetUpgradeInstanceProgressResponse"/></returns>
+        public GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgressSync(GetUpgradeInstanceProgressRequest req)
+        {
+             JsonResponseModel<GetUpgradeInstanceProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetUpgradeInstanceProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUpgradeInstanceProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改集群伸缩组属性
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterAsGroupAttributeRequest"/></param>
@@ -2324,6 +2404,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "SyncPrometheusTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncPrometheusTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级集群 Master 组件到指定版本
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterVersionRequest"/></param>
+        /// <returns><see cref="UpdateClusterVersionResponse"/></returns>
+        public async Task<UpdateClusterVersionResponse> UpdateClusterVersion(UpdateClusterVersionRequest req)
+        {
+             JsonResponseModel<UpdateClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级集群 Master 组件到指定版本
+        /// </summary>
+        /// <param name="req"><see cref="UpdateClusterVersionRequest"/></param>
+        /// <returns><see cref="UpdateClusterVersionResponse"/></returns>
+        public UpdateClusterVersionResponse UpdateClusterVersionSync(UpdateClusterVersionRequest req)
+        {
+             JsonResponseModel<UpdateClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

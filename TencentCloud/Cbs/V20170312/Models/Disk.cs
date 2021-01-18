@@ -79,7 +79,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskState{ get; set; }
 
         /// <summary>
-        /// 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+        /// 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -233,6 +233,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("BackupDisk")]
         public bool? BackupDisk{ get; set; }
 
+        /// <summary>
+        /// 云硬盘额外性能值，单位MB/s。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public ulong? ThroughputPerformance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -272,6 +279,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
             this.SetParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
             this.SetParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

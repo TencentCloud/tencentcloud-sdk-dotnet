@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.209</VersionPrefix>
+    <VersionPrefix>3.0.210</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -508,6 +508,8 @@
     <Compile Include="Asr\V20190614\AsrClient.cs" />
     <Compile Include="Asr\V20190614\Models\AsyncRecognitionTaskInfo.cs" />
     <Compile Include="Asr\V20190614\Models\AsyncRecognitionTasks.cs" />
+    <Compile Include="Asr\V20190614\Models\CloseAsyncRecognitionTaskRequest.cs" />
+    <Compile Include="Asr\V20190614\Models\CloseAsyncRecognitionTaskResponse.cs" />
     <Compile Include="Asr\V20190614\Models\CreateAsrVocabRequest.cs" />
     <Compile Include="Asr\V20190614\Models\CreateAsrVocabResponse.cs" />
     <Compile Include="Asr\V20190614\Models\CreateAsyncRecognitionTaskRequest.cs" />
@@ -3795,6 +3797,7 @@
     <Compile Include="Cynosdb\V20190107\Models\AddInstancesResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\Addr.cs" />
     <Compile Include="Cynosdb\V20190107\Models\BackupFileInfo.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\BillingResourceInfo.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ClusterInstanceDetail.cs" />
     <Compile Include="Cynosdb\V20190107\Models\CreateClustersRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\CreateClustersResponse.cs" />
@@ -3827,6 +3830,8 @@
     <Compile Include="Cynosdb\V20190107\Models\DescribeMaintainPeriodResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeResourcesByDealNameRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\DescribeResourcesByDealNameResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeRollbackTimeRangeRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeRollbackTimeRangeResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\DescribeRollbackTimeValidityRequest.cs" />
@@ -8100,12 +8105,15 @@
     <Compile Include="Partners\V20180321\Models\DescribeRebateInfosResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeSalesmansRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeSalesmansResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeUnbindClientListRequest.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeUnbindClientListResponse.cs" />
     <Compile Include="Partners\V20180321\Models\ModifyClientRemarkRequest.cs" />
     <Compile Include="Partners\V20180321\Models\ModifyClientRemarkResponse.cs" />
     <Compile Include="Partners\V20180321\Models\ProductInfoElem.cs" />
     <Compile Include="Partners\V20180321\Models\RebateInfoElem.cs" />
     <Compile Include="Partners\V20180321\Models\RemovePayRelationForClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\RemovePayRelationForClientResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\UnbindClientElem.cs" />
     <Compile Include="Postgres\V20170312\PostgresClient.cs" />
     <Compile Include="Postgres\V20170312\Models\AccountInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
@@ -9302,6 +9310,7 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunSideSpec.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcSubnet.cs" />
@@ -10083,6 +10092,7 @@
     <Compile Include="Tke\V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterNetworkSettings.cs" />
+    <Compile Include="Tke\V20180525\Models\ClusterVersion.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointRequest.cs" />
@@ -10126,6 +10136,8 @@
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateSyncResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeAvailableClusterVersionRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeAvailableClusterVersionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
@@ -10178,11 +10190,17 @@
     <Compile Include="Tke\V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="Tke\V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="Tke\V20180525\Models\Filter.cs" />
+    <Compile Include="Tke\V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ImageInstance.cs" />
     <Compile Include="Tke\V20180525\Models\Instance.cs" />
     <Compile Include="Tke\V20180525\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="Tke\V20180525\Models\InstanceDataDiskMountSetting.cs" />
     <Compile Include="Tke\V20180525\Models\InstanceExtraArgs.cs" />
+    <Compile Include="Tke\V20180525\Models\InstanceUpgradeClusterStatus.cs" />
+    <Compile Include="Tke\V20180525\Models\InstanceUpgradePreCheckResult.cs" />
+    <Compile Include="Tke\V20180525\Models\InstanceUpgradePreCheckResultItem.cs" />
+    <Compile Include="Tke\V20180525\Models\InstanceUpgradeProgressItem.cs" />
     <Compile Include="Tke\V20180525\Models\Label.cs" />
     <Compile Include="Tke\V20180525\Models\LoginSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ManuallyAdded.cs" />
@@ -10229,6 +10247,9 @@
     <Compile Include="Tke\V20180525\Models\Tag.cs" />
     <Compile Include="Tke\V20180525\Models\TagSpecification.cs" />
     <Compile Include="Tke\V20180525\Models\Taint.cs" />
+    <Compile Include="Tke\V20180525\Models\TaskStepInfo.cs" />
+    <Compile Include="Tke\V20180525\Models\UpdateClusterVersionRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\UpdateClusterVersionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeAbleInstancesItem.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesResponse.cs" />

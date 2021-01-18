@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.209</VersionPrefix>
+    <VersionPrefix>3.0.210</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,7 @@
     <Compile Include="V20180525\Models\ClusterCIDRSettings.cs" />
     <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterEndpointRequest.cs" />
@@ -107,6 +108,8 @@
     <Compile Include="V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeAvailableClusterVersionRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeAvailableClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
@@ -159,11 +162,17 @@
     <Compile Include="V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="V20180525\Models\Filter.cs" />
+    <Compile Include="V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
+    <Compile Include="V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
     <Compile Include="V20180525\Models\ImageInstance.cs" />
     <Compile Include="V20180525\Models\Instance.cs" />
     <Compile Include="V20180525\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="V20180525\Models\InstanceDataDiskMountSetting.cs" />
     <Compile Include="V20180525\Models\InstanceExtraArgs.cs" />
+    <Compile Include="V20180525\Models\InstanceUpgradeClusterStatus.cs" />
+    <Compile Include="V20180525\Models\InstanceUpgradePreCheckResult.cs" />
+    <Compile Include="V20180525\Models\InstanceUpgradePreCheckResultItem.cs" />
+    <Compile Include="V20180525\Models\InstanceUpgradeProgressItem.cs" />
     <Compile Include="V20180525\Models\Label.cs" />
     <Compile Include="V20180525\Models\LoginSettings.cs" />
     <Compile Include="V20180525\Models\ManuallyAdded.cs" />
@@ -210,6 +219,9 @@
     <Compile Include="V20180525\Models\Tag.cs" />
     <Compile Include="V20180525\Models\TagSpecification.cs" />
     <Compile Include="V20180525\Models\Taint.cs" />
+    <Compile Include="V20180525\Models\TaskStepInfo.cs" />
+    <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />
+    <Compile Include="V20180525\Models\UpdateClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />

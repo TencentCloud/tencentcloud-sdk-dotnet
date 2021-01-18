@@ -53,6 +53,46 @@ namespace TencentCloud.Asr.V20190614
         }
 
         /// <summary>
+        /// 本接口用于关闭语音流异步识别任务。
+        /// </summary>
+        /// <param name="req"><see cref="CloseAsyncRecognitionTaskRequest"/></param>
+        /// <returns><see cref="CloseAsyncRecognitionTaskResponse"/></returns>
+        public async Task<CloseAsyncRecognitionTaskResponse> CloseAsyncRecognitionTask(CloseAsyncRecognitionTaskRequest req)
+        {
+             JsonResponseModel<CloseAsyncRecognitionTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseAsyncRecognitionTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAsyncRecognitionTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于关闭语音流异步识别任务。
+        /// </summary>
+        /// <param name="req"><see cref="CloseAsyncRecognitionTaskRequest"/></param>
+        /// <returns><see cref="CloseAsyncRecognitionTaskResponse"/></returns>
+        public CloseAsyncRecognitionTaskResponse CloseAsyncRecognitionTaskSync(CloseAsyncRecognitionTaskRequest req)
+        {
+             JsonResponseModel<CloseAsyncRecognitionTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseAsyncRecognitionTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseAsyncRecognitionTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户通过本接口进行热词表的创建。
         /// <br>•   默认最多可创建30个热词表。
         /// <br>•   每个热词表最多可添加128个词，每个词最长10个字，不能超出限制。

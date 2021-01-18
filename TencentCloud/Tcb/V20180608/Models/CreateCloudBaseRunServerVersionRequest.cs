@@ -216,6 +216,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ServerPath")]
         public string ServerPath{ get; set; }
 
+        /// <summary>
+        /// 镜像复用的key
+        /// </summary>
+        [JsonProperty("ImageReuseKey")]
+        public string ImageReuseKey{ get; set; }
+
+        /// <summary>
+        /// 容器的描述文件
+        /// </summary>
+        [JsonProperty("SidecarSpecs")]
+        public CloudBaseRunSideSpec[] SidecarSpecs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +266,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
             this.SetParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
             this.SetParamSimple(map, prefix + "ServerPath", this.ServerPath);
+            this.SetParamSimple(map, prefix + "ImageReuseKey", this.ImageReuseKey);
+            this.SetParamArrayObj(map, prefix + "SidecarSpecs.", this.SidecarSpecs);
         }
     }
 }

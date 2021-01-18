@@ -25,7 +25,7 @@ namespace TencentCloud.Apcas.V20201127.Models
     {
         
         /// <summary>
-        /// 请求类型:1,人群特征洞察统计 2购车意向预测统计
+        /// 请求类型 1:人群特征洞察统计 2:购车意向预测统计
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Apcas.V20201127.Models
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间戳(毫秒）
+        /// 结束时间戳（毫秒）
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

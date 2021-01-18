@@ -613,6 +613,46 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
+        /// 代理商名下客户解绑记录查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnbindClientListRequest"/></param>
+        /// <returns><see cref="DescribeUnbindClientListResponse"/></returns>
+        public async Task<DescribeUnbindClientListResponse> DescribeUnbindClientList(DescribeUnbindClientListRequest req)
+        {
+             JsonResponseModel<DescribeUnbindClientListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUnbindClientList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnbindClientListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 代理商名下客户解绑记录查询接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnbindClientListRequest"/></param>
+        /// <returns><see cref="DescribeUnbindClientListResponse"/></returns>
+        public DescribeUnbindClientListResponse DescribeUnbindClientListSync(DescribeUnbindClientListRequest req)
+        {
+             JsonResponseModel<DescribeUnbindClientListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUnbindClientList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnbindClientListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 代理商可以对名下客户添加备注、修改备注
         /// </summary>
         /// <param name="req"><see cref="ModifyClientRemarkRequest"/></param>
