@@ -53,8 +53,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         /// <li> StaticFsFluxPkgDay: 当日静态托管流量 </li>
         /// <li> StaticFsFluxPkg: 当月静态托管流量</li>
         /// <li> StaticFsSizePkg: 当月静态托管容量 </li>
-        /// <li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核 </li>
-        /// <li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB </li>
+        /// <li> TkeCpuUsedPkg: 当月容器托管CPU使用量，单位核*秒 </li>
+        /// <li> TkeCpuUsedPkgDay: 当天容器托管CPU使用量，单位核*秒 </li>
+        /// <li> TkeMemUsedPkg: 当月容器托管内存使用量，单位MB*秒 </li>
+        /// <li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
+        /// <li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
+        /// <li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

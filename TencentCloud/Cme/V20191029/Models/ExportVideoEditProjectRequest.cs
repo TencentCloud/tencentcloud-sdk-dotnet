@@ -47,14 +47,14 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 导出目标。
-        /// <li>CME：云剪，即导出为云剪素材；</li>
+        /// <li>CME：云剪，即导出为云剪媒体；</li>
         /// <li>VOD：云点播，即导出为云点播媒资。</li>
         /// </summary>
         [JsonProperty("ExportDestination")]
         public string ExportDestination{ get; set; }
 
         /// <summary>
-        /// 导出的云剪素材信息。指定 ExportDestination = CME 时有效。
+        /// 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
         /// </summary>
         [JsonProperty("CMEExportInfo")]
         public CMEExportInfo CMEExportInfo{ get; set; }
@@ -64,6 +64,12 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         [JsonProperty("VODExportInfo")]
         public VODExportInfo VODExportInfo{ get; set; }
+
+        /// <summary>
+        /// 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
 
         /// <summary>
@@ -77,6 +83,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "ExportDestination", this.ExportDestination);
             this.SetParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
             this.SetParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

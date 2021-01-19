@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.210</VersionPrefix>
+    <VersionPrefix>3.0.211</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1944,6 +1944,8 @@
     <Compile Include="Cdb\V20170320\Models\StopDelayReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchForUpgradeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\TableNameInfo.cs" />
@@ -5596,6 +5598,7 @@
     <Compile Include="Gse\V20191112\Models\StopFleetActionsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementRequest.cs" />
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\Tag.cs" />
     <Compile Include="Gse\V20191112\Models\TargetConfiguration.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateAliasRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateAliasResponse.cs" />
@@ -7298,6 +7301,7 @@
     <Compile Include="Mps\V20190612\MpsClient.cs" />
     <Compile Include="Mps\V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Mps\V20190612\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="Mps\V20190612\Models\ActionConfigInfo.cs" />
     <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="Mps\V20190612\Models\AdaptiveDynamicStreamingTemplate.cs" />
@@ -7493,6 +7497,7 @@
     <Compile Include="Mps\V20190612\Models\EnableWorkflowResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ExecuteFunctionResponse.cs" />
+    <Compile Include="Mps\V20190612\Models\ExpressionConfigInfo.cs" />
     <Compile Include="Mps\V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="Mps\V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="Mps\V20190612\Models\FrameTagConfigureInfo.cs" />
@@ -7611,6 +7616,8 @@
     <Compile Include="Mps\V20190612\Models\RawImageWatermarkInput.cs" />
     <Compile Include="Mps\V20190612\Models\RawTranscodeParameter.cs" />
     <Compile Include="Mps\V20190612\Models\RawWatermarkParameter.cs" />
+    <Compile Include="Mps\V20190612\Models\RecognizeMediaForZhiXueRequest.cs" />
+    <Compile Include="Mps\V20190612\Models\RecognizeMediaForZhiXueResponse.cs" />
     <Compile Include="Mps\V20190612\Models\ResetWorkflowRequest.cs" />
     <Compile Include="Mps\V20190612\Models\ResetWorkflowResponse.cs" />
     <Compile Include="Mps\V20190612\Models\SampleSnapshotTaskInput.cs" />

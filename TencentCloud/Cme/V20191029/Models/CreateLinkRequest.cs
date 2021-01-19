@@ -33,7 +33,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 链接类型，取值有:
         /// <li>CLASS: 分类链接；</li>
-        /// <li> MATERIAL：素材链接。</li>
+        /// <li> MATERIAL：媒体文件链接。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -45,14 +45,14 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 链接归属实体。
+        /// 链接归属者。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
         /// <summary>
         /// 目标资源Id。取值：
-        /// <li>当 Type 为 MATERIAL 时填素材 ID；</li>
+        /// <li>当 Type 为 MATERIAL 时填媒体 ID；</li>
         /// <li>当 Type 为 CLASS 时填写分类路径。</li>
         /// </summary>
         [JsonProperty("DestinationId")]

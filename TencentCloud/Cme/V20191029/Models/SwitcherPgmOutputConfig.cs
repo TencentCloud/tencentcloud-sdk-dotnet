@@ -34,25 +34,25 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 导播台输出宽。
+        /// 导播台输出宽，单位：像素。
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 导播台输出高。
+        /// 导播台输出高，单位：像素。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 导播台输出帧率。
+        /// 导播台输出帧率，单位：帧/秒
         /// </summary>
         [JsonProperty("Fps")]
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// 导播台输出码率。
+        /// 导播台输出码率， 单位：bit/s。
         /// </summary>
         [JsonProperty("BitRate")]
         public ulong? BitRate{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Dc.V20180410.Models
         public BgpPeer BgpPeer{ get; set; }
 
         /// <summary>
-        /// 用户侧网段地址
+        /// 用户侧过滤网段地址
         /// </summary>
         [JsonProperty("RouteFilterPrefixes")]
         public RouteFilterPrefix RouteFilterPrefixes{ get; set; }
@@ -109,6 +109,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("IPv6Enable")]
         public long? IPv6Enable{ get; set; }
 
+        /// <summary>
+        /// 去往用户侧的路由信息
+        /// </summary>
+        [JsonProperty("CustomerIDCRoutes")]
+        public RouteFilterPrefix[] CustomerIDCRoutes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +135,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
             this.SetParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
             this.SetParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
+            this.SetParamArrayObj(map, prefix + "CustomerIDCRoutes.", this.CustomerIDCRoutes);
         }
     }
 }

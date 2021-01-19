@@ -114,6 +114,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IPSECOptionsSpecification")]
         public IPSECOptionsSpecification IPSECOptionsSpecification{ get; set; }
 
+        /// <summary>
+        /// 是否支持健康状态探测
+        /// </summary>
+        [JsonProperty("EnableHealthCheck")]
+        public bool? EnableHealthCheck{ get; set; }
+
+        /// <summary>
+        /// 本端探测ip
+        /// </summary>
+        [JsonProperty("HealthCheckLocalIp")]
+        public string HealthCheckLocalIp{ get; set; }
+
+        /// <summary>
+        /// 对端探测ip
+        /// </summary>
+        [JsonProperty("HealthCheckRemoteIp")]
+        public string HealthCheckRemoteIp{ get; set; }
+
+        /// <summary>
+        /// 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
+        /// </summary>
+        [JsonProperty("HealthCheckStatus")]
+        public string HealthCheckStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +159,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "SecurityPolicyDatabaseSet.", this.SecurityPolicyDatabaseSet);
             this.SetParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
             this.SetParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
+            this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+            this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+            this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+            this.SetParamSimple(map, prefix + "HealthCheckStatus", this.HealthCheckStatus);
         }
     }
 }

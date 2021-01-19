@@ -2647,6 +2647,46 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMediaForZhiXueRequest"/></param>
+        /// <returns><see cref="RecognizeMediaForZhiXueResponse"/></returns>
+        public async Task<RecognizeMediaForZhiXueResponse> RecognizeMediaForZhiXue(RecognizeMediaForZhiXueRequest req)
+        {
+             JsonResponseModel<RecognizeMediaForZhiXueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeMediaForZhiXue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeMediaForZhiXueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMediaForZhiXueRequest"/></param>
+        /// <returns><see cref="RecognizeMediaForZhiXueResponse"/></returns>
+        public RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXueSync(RecognizeMediaForZhiXueRequest req)
+        {
+             JsonResponseModel<RecognizeMediaForZhiXueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeMediaForZhiXue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeMediaForZhiXueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重新设置一个已经存在且处于禁用状态的工作流。
         /// </summary>
         /// <param name="req"><see cref="ResetWorkflowRequest"/></param>

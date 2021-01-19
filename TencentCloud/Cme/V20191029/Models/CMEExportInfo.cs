@@ -25,37 +25,37 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 导出的归属者。
+        /// 导出媒体归属，个人或团队。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
         /// <summary>
-        /// 导出的素材名称，不得超过30个字符。
+        /// 导出的媒体名称，不得超过30个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 导出的素材信息，不得超过50个字符。
+        /// 导出的媒体信息，不得超过50个字符。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 导出的素材分类路径，长度不能超过15字符。
+        /// 导出的媒体分类路径，长度不能超过15字符。
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 导出的素材标签，单个标签不得超过10个字符。
+        /// 导出的媒体标签，单个标签不得超过10个字符。
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// 第三方平台发布信息列表。
+        /// 第三方平台发布信息列表。暂未正式对外，请勿使用。
         /// </summary>
         [JsonProperty("ThirdPartyPublishInfos")]
         public ThirdPartyPublishInfo[] ThirdPartyPublishInfos{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 导播台停止时间。
+        /// 导播台停止时间，格式按照 ISO 8601 标准表示。若不填，该值默认为当前时间加七天。
         /// </summary>
         [JsonProperty("StopTime")]
         public string StopTime{ get; set; }
 
         /// <summary>
-        /// 导播台主监输出配置信息。
+        /// 导播台主监输出配置信息。若不填，默认输出 720P。
         /// </summary>
         [JsonProperty("PgmOutputConfig")]
         public SwitcherPgmOutputConfig PgmOutputConfig{ get; set; }

@@ -46,18 +46,19 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 画布宽高比，取值有：
-        /// <li>16:9；</li>
-        /// <li>9:16。</li>
-        /// </summary>
-        [JsonProperty("AspectRatio")]
-        public string AspectRatio{ get; set; }
-
-        /// <summary>
-        /// 归属者。
+        /// 项目归属者。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
+
+        /// <summary>
+        /// 画布宽高比，取值有：
+        /// <li>16:9；</li>
+        /// <li>9:16。</li>
+        /// 该字段即将废弃，当项目类型为 VIDEO_EDIT 时，请在 VideoEditProjectInput 信息中填写该值；当项目类型为 VIDEO_SEGMENTATION 时，请在VideoSegmentationProjectInput 中填写该值。其他项目类型可不填。
+        /// </summary>
+        [JsonProperty("AspectRatio")]
+        public string AspectRatio{ get; set; }
 
         /// <summary>
         /// 项目描述信息。
@@ -98,8 +99,8 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
+            this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);
             this.SetParamObj(map, prefix + "LiveStreamClipProjectInput.", this.LiveStreamClipProjectInput);

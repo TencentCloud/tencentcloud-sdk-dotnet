@@ -46,7 +46,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 云点播媒资文件Id，当 SourceType 取值 VOD 或者缺省的时候必填。
+        /// 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
         /// </summary>
         [JsonProperty("VodFileId")]
         public string VodFileId{ get; set; }
@@ -71,6 +71,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("PreProcessDefinition")]
         public long? PreProcessDefinition{ get; set; }
 
+        /// <summary>
+        /// 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "ExternalMediaInfo.", this.ExternalMediaInfo);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "PreProcessDefinition", this.PreProcessDefinition);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

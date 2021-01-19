@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 音频素材来源类型，取值有：
+        /// 音频媒体来源类型，取值有：
         /// <ul>
         /// <li>VOD ：素材来源于云点播文件 ；</li>
         /// <li>CME ：视频来源于制作云媒体文件 ；</li>
@@ -36,10 +36,10 @@ namespace TencentCloud.Cme.V20191029.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 音频片段的媒体素材来源，可以是：
+        /// 音频片段的媒体来源，可以是：
         /// <ul>
-        /// <li>当 SourceType 为 VOD 时，为云点播的媒体文件 ID ；</li>
-        /// <li>当 SourceType 为 CME 时，为制作云的媒体 ID；</li>
+        /// <li>当 SourceType 为 VOD 时，为云点播的媒体文件 FileId ，会默认将该 FileId 导入到项目中 ；</li>
+        /// <li>当 SourceType 为 CME 时，为制作云的媒体 ID，项目归属者必须对该云媒资有访问权限；</li>
         /// <li>当 SourceType 为 EXTERNAL 时，为媒资绑定的 Definition 与 MediaKey 中间用冒号分隔合并后的字符串，格式为 Definition:MediaKey 。</li>
         /// </ul>
         /// </summary>
@@ -47,13 +47,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public string SourceMedia{ get; set; }
 
         /// <summary>
-        /// 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
+        /// 音频片段取自媒体文件的起始时间，单位为秒。0 表示从媒体开始位置截取。默认为0。
         /// </summary>
         [JsonProperty("SourceMediaStartTime")]
         public float? SourceMediaStartTime{ get; set; }
 
         /// <summary>
-        /// 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
+        /// 音频片段的时长，单位为秒。默认和媒体本身长度一致，表示截取全部媒体。
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }

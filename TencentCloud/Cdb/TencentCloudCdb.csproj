@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.210</VersionPrefix>
+    <VersionPrefix>3.0.211</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -321,6 +321,8 @@
     <Compile Include="V20170320\Models\StopDelayReplicationResponse.cs" />
     <Compile Include="V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="V20170320\Models\StopRollbackResponse.cs" />
+    <Compile Include="V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />
+    <Compile Include="V20170320\Models\SwitchDBInstanceMasterSlaveResponse.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="V20170320\Models\SwitchForUpgradeResponse.cs" />
     <Compile Include="V20170320\Models\TableNameInfo.cs" />

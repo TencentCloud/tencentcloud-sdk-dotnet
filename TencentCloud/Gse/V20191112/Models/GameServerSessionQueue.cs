@@ -56,6 +56,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("TimeoutInSeconds")]
         public ulong? TimeoutInSeconds{ get; set; }
 
+        /// <summary>
+        /// 标签列表，最大长度50组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +74,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);
             this.SetParamArrayObj(map, prefix + "PlayerLatencyPolicies.", this.PlayerLatencyPolicies);
             this.SetParamSimple(map, prefix + "TimeoutInSeconds", this.TimeoutInSeconds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -133,6 +133,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("BillingStatus")]
         public string BillingStatus{ get; set; }
 
+        /// <summary>
+        /// 标签列表，最大长度50组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +162,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "TerminationTime", this.TerminationTime);
             this.SetParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
             this.SetParamSimple(map, prefix + "BillingStatus", this.BillingStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

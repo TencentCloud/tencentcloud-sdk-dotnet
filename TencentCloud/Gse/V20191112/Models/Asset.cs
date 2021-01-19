@@ -102,6 +102,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("SharingStatus")]
         public string SharingStatus{ get; set; }
 
+        /// <summary>
+        /// 标签列表，最大长度50组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "OsType", this.OsType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "SharingStatus", this.SharingStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

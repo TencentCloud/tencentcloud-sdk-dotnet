@@ -66,7 +66,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public VODExportInfo VODExportInfo{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。填写用户的 Id，用于标识调用者及校验导出操作权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

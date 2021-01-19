@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 新建链接的素材 Id。
+        /// 新建链接的媒体 Id。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }

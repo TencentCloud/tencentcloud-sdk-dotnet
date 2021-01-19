@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 素材 Id。
+        /// 媒体 Id。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 素材预处理任务 ID，如果未指定发起预处理任务则为空。
+        /// 媒体预处理任务 ID，如果未指定发起预处理任务则为空。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

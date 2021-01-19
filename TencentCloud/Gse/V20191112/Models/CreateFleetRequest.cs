@@ -96,6 +96,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("GameServerSessionProtectionTimeLimit")]
         public long? GameServerSessionProtectionTimeLimit{ get; set; }
 
+        /// <summary>
+        /// 标签列表，最大长度50组
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamObj(map, prefix + "RuntimeConfiguration.", this.RuntimeConfiguration);
             this.SetParamSimple(map, prefix + "SubNetId", this.SubNetId);
             this.SetParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

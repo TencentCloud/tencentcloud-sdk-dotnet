@@ -60,6 +60,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
+        /// <summary>
+        /// 标签列表，最大长度50组
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "AssetRegion", this.AssetRegion);
             this.SetParamSimple(map, prefix + "OperateSystem", this.OperateSystem);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

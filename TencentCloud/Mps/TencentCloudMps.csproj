@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.210</VersionPrefix>
+    <VersionPrefix>3.0.211</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,7 @@
     <Compile Include="V20190612\MpsClient.cs" />
     <Compile Include="V20190612\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20190612\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="V20190612\Models\ActionConfigInfo.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTemplate.cs" />
@@ -242,6 +243,7 @@
     <Compile Include="V20190612\Models\EnableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionResponse.cs" />
+    <Compile Include="V20190612\Models\ExpressionConfigInfo.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfo.cs" />
@@ -360,6 +362,8 @@
     <Compile Include="V20190612\Models\RawImageWatermarkInput.cs" />
     <Compile Include="V20190612\Models\RawTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\RawWatermarkParameter.cs" />
+    <Compile Include="V20190612\Models\RecognizeMediaForZhiXueRequest.cs" />
+    <Compile Include="V20190612\Models\RecognizeMediaForZhiXueResponse.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTaskInput.cs" />

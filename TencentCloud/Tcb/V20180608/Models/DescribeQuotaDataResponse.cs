@@ -37,6 +37,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public long? Value{ get; set; }
 
         /// <summary>
+        /// 指标的附加值信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubValue")]
+        public string SubValue{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "SubValue", this.SubValue);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -108,6 +108,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("SelectedCcnType")]
         public string SelectedCcnType{ get; set; }
 
+        /// <summary>
+        /// 标签列表，最大长度50组
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
             this.SetParamSimple(map, prefix + "SelectedScalingType", this.SelectedScalingType);
             this.SetParamSimple(map, prefix + "SelectedCcnType", this.SelectedCcnType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

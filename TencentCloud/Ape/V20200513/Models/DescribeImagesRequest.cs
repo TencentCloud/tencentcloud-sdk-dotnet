@@ -54,6 +54,12 @@ namespace TencentCloud.Ape.V20200513.Models
         [JsonProperty("ImageSenseType")]
         public string ImageSenseType{ get; set; }
 
+        /// <summary>
+        /// 分层图库id数组，可选以下数值：1(基础)，2(精选)，3(高级)
+        /// </summary>
+        [JsonProperty("LayeredGalleryIds")]
+        public long?[] LayeredGalleryIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ape.V20200513.Models
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
             this.SetParamSimple(map, prefix + "Orientation", this.Orientation);
             this.SetParamSimple(map, prefix + "ImageSenseType", this.ImageSenseType);
+            this.SetParamArraySimple(map, prefix + "LayeredGalleryIds.", this.LayeredGalleryIds);
         }
     }
 }

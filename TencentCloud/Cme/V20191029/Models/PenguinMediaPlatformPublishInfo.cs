@@ -43,7 +43,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 视频分类，详见企鹅号官网视频分类。
+        /// 视频分类，详见[企鹅号官网](https://open.om.qq.com/resources/resourcesCenter)视频分类。
         /// </summary>
         [JsonProperty("Category")]
         public long? Category{ get; set; }

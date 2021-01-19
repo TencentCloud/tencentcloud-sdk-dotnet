@@ -67,6 +67,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("LastUpdatedTime")]
         public string LastUpdatedTime{ get; set; }
 
+        /// <summary>
+        /// 标签列表，最大长度50组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +87,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamObj(map, prefix + "RoutingStrategy.", this.RoutingStrategy);
             this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
             this.SetParamSimple(map, prefix + "LastUpdatedTime", this.LastUpdatedTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

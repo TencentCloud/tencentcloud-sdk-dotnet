@@ -4447,6 +4447,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 该接口 (SwitchDBInstanceMasterSlave) 支持用户主动切换实例主从角色。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceMasterSlaveRequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceMasterSlaveResponse"/></returns>
+        public async Task<SwitchDBInstanceMasterSlaveResponse> SwitchDBInstanceMasterSlave(SwitchDBInstanceMasterSlaveRequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceMasterSlaveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDBInstanceMasterSlave");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceMasterSlaveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口 (SwitchDBInstanceMasterSlave) 支持用户主动切换实例主从角色。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceMasterSlaveRequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceMasterSlaveResponse"/></returns>
+        public SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlaveSync(SwitchDBInstanceMasterSlaveRequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceMasterSlaveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDBInstanceMasterSlave");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceMasterSlaveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(SwitchForUpgrade)用于切换访问新实例，针对主升级中的实例处于待切换状态时，用户可主动发起该流程。
         /// </summary>
         /// <param name="req"><see cref="SwitchForUpgradeRequest"/></param>

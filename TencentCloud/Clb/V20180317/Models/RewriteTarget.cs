@@ -40,6 +40,27 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetLocationId")]
         public string TargetLocationId{ get; set; }
 
+        /// <summary>
+        /// 重定向状态码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RewriteCode")]
+        public long? RewriteCode{ get; set; }
+
+        /// <summary>
+        /// 重定向是否携带匹配的url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TakeUrl")]
+        public bool? TakeUrl{ get; set; }
+
+        /// <summary>
+        /// 重定向类型，Manual: 手动重定向，Auto:  自动重定向
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RewriteType")]
+        public string RewriteType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -48,6 +69,9 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "TargetListenerId", this.TargetListenerId);
             this.SetParamSimple(map, prefix + "TargetLocationId", this.TargetLocationId);
+            this.SetParamSimple(map, prefix + "RewriteCode", this.RewriteCode);
+            this.SetParamSimple(map, prefix + "TakeUrl", this.TakeUrl);
+            this.SetParamSimple(map, prefix + "RewriteType", this.RewriteType);
         }
     }
 }

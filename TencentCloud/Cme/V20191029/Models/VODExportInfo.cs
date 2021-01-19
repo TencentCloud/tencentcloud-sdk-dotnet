@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? ClassId{ get; set; }
 
         /// <summary>
-        /// 第三方平台发布信息列表。
+        /// 第三方平台发布信息列表。暂未正式对外，请勿使用。
         /// </summary>
         [JsonProperty("ThirdPartyPublishInfos")]
         public ThirdPartyPublishInfo[] ThirdPartyPublishInfos{ get; set; }
