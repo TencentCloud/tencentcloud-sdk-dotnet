@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// IP地理位置库协议类型，目前支持"ipv4"和"ipv6"。
+        /// IP地理位置库协议类型，目前仅支持"ipv4"。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

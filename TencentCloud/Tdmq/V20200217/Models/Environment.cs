@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 环境（命名空间）名称
+        /// 命名空间名称
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
@@ -54,6 +54,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 命名空间ID
+        /// </summary>
+        [JsonProperty("NamespaceId")]
+        public string NamespaceId{ get; set; }
+
+        /// <summary>
+        /// 命名空间名称
+        /// </summary>
+        [JsonProperty("NamespaceName")]
+        public string NamespaceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+            this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         }
     }
 }

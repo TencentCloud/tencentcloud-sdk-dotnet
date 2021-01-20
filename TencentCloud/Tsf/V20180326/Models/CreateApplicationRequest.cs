@@ -66,6 +66,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationRuntimeType")]
         public string ApplicationRuntimeType{ get; set; }
 
+        /// <summary>
+        /// 需要绑定的数据集ID
+        /// </summary>
+        [JsonProperty("ProgramId")]
+        public string ProgramId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationLogConfig", this.ApplicationLogConfig);
             this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
             this.SetParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
+            this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
         }
     }
 }

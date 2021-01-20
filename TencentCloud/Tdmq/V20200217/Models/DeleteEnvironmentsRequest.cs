@@ -30,6 +30,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("EnvironmentIds")]
         public string[] EnvironmentIds{ get; set; }
 
+        /// <summary>
+        /// Pulsar 集群的ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "EnvironmentIds.", this.EnvironmentIds);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

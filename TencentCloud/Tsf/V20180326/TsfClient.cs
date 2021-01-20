@@ -773,6 +773,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建路径重写
+        /// </summary>
+        /// <param name="req"><see cref="CreatePathRewritesRequest"/></param>
+        /// <returns><see cref="CreatePathRewritesResponse"/></returns>
+        public async Task<CreatePathRewritesResponse> CreatePathRewrites(CreatePathRewritesRequest req)
+        {
+             JsonResponseModel<CreatePathRewritesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePathRewrites");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePathRewritesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建路径重写
+        /// </summary>
+        /// <param name="req"><see cref="CreatePathRewritesRequest"/></param>
+        /// <returns><see cref="CreatePathRewritesResponse"/></returns>
+        public CreatePathRewritesResponse CreatePathRewritesSync(CreatePathRewritesRequest req)
+        {
+             JsonResponseModel<CreatePathRewritesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePathRewrites");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePathRewritesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建公共配置项
         /// </summary>
         /// <param name="req"><see cref="CreatePublicConfigRequest"/></param>
@@ -1324,6 +1364,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNamespace");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除路径重写
+        /// </summary>
+        /// <param name="req"><see cref="DeletePathRewritesRequest"/></param>
+        /// <returns><see cref="DeletePathRewritesResponse"/></returns>
+        public async Task<DeletePathRewritesResponse> DeletePathRewrites(DeletePathRewritesRequest req)
+        {
+             JsonResponseModel<DeletePathRewritesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePathRewrites");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePathRewritesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除路径重写
+        /// </summary>
+        /// <param name="req"><see cref="DeletePathRewritesRequest"/></param>
+        /// <returns><see cref="DeletePathRewritesResponse"/></returns>
+        public DeletePathRewritesResponse DeletePathRewritesSync(DeletePathRewritesRequest req)
+        {
+             JsonResponseModel<DeletePathRewritesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePathRewrites");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePathRewritesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3097,6 +3177,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询路径重写
+        /// </summary>
+        /// <param name="req"><see cref="DescribePathRewriteRequest"/></param>
+        /// <returns><see cref="DescribePathRewriteResponse"/></returns>
+        public async Task<DescribePathRewriteResponse> DescribePathRewrite(DescribePathRewriteRequest req)
+        {
+             JsonResponseModel<DescribePathRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePathRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePathRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询路径重写
+        /// </summary>
+        /// <param name="req"><see cref="DescribePathRewriteRequest"/></param>
+        /// <returns><see cref="DescribePathRewriteResponse"/></returns>
+        public DescribePathRewriteResponse DescribePathRewriteSync(DescribePathRewriteRequest req)
+        {
+             JsonResponseModel<DescribePathRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePathRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePathRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询路径重写列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePathRewritesRequest"/></param>
+        /// <returns><see cref="DescribePathRewritesResponse"/></returns>
+        public async Task<DescribePathRewritesResponse> DescribePathRewrites(DescribePathRewritesRequest req)
+        {
+             JsonResponseModel<DescribePathRewritesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePathRewrites");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePathRewritesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询路径重写列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePathRewritesRequest"/></param>
+        /// <returns><see cref="DescribePathRewritesResponse"/></returns>
+        public DescribePathRewritesResponse DescribePathRewritesSync(DescribePathRewritesRequest req)
+        {
+             JsonResponseModel<DescribePathRewritesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePathRewrites");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePathRewritesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 无
         /// </summary>
         /// <param name="req"><see cref="DescribePkgsRequest"/></param>
@@ -4330,6 +4490,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMicroservice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMicroserviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改路径重写
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPathRewriteRequest"/></param>
+        /// <returns><see cref="ModifyPathRewriteResponse"/></returns>
+        public async Task<ModifyPathRewriteResponse> ModifyPathRewrite(ModifyPathRewriteRequest req)
+        {
+             JsonResponseModel<ModifyPathRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPathRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPathRewriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改路径重写
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPathRewriteRequest"/></param>
+        /// <returns><see cref="ModifyPathRewriteResponse"/></returns>
+        public ModifyPathRewriteResponse ModifyPathRewriteSync(ModifyPathRewriteRequest req)
+        {
+             JsonResponseModel<ModifyPathRewriteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPathRewrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPathRewriteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

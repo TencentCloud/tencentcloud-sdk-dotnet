@@ -84,6 +84,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("FeatureIdList")]
         public string[] FeatureIdList{ get; set; }
 
+        /// <summary>
+        /// 实例额外需要设置参数信息
+        /// </summary>
+        [JsonProperty("InstanceAdvancedSettings")]
+        public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
+
+        /// <summary>
+        /// 部署组ID
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "InstanceImportMode", this.InstanceImportMode);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamArraySimple(map, prefix + "FeatureIdList.", this.FeatureIdList);
+            this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

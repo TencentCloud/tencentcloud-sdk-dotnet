@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.211</VersionPrefix>
+    <VersionPrefix>3.0.212</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -9559,6 +9559,8 @@
     <Compile Include="Tcr\V20190924\Models\BatchDeleteImagePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\BatchDeleteRepositoryPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\BatchDeleteRepositoryPersonalResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CheckInstanceNameRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CheckInstanceNameResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateApplicationTriggerPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
@@ -9720,21 +9722,35 @@
     <Compile Include="Tcr\V20190924\Models\WebhookTrigger.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTriggerLog.cs" />
     <Compile Include="Tdmq\V20200217\TdmqClient.cs" />
+    <Compile Include="Tdmq\V20200217\Models\BindCluster.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Cluster.cs" />
     <Compile Include="Tdmq\V20200217\Models\Connection.cs" />
     <Compile Include="Tdmq\V20200217\Models\Consumer.cs" />
     <Compile Include="Tdmq\V20200217\Models\ConsumersSchedule.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateClusterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateClusterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateTopicRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateTopicResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteClusterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteClusterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteTopicsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteTopicsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeBindClustersRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeBindClustersResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeBindVpcsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeBindVpcsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeClusterDetailRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeClusterDetailResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeClustersRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeClustersResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentRolesRequest.cs" />
@@ -9750,6 +9766,8 @@
     <Compile Include="Tdmq\V20200217\Models\Environment.cs" />
     <Compile Include="Tdmq\V20200217\Models\EnvironmentRole.cs" />
     <Compile Include="Tdmq\V20200217\Models\FilterSubscription.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyClusterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyClusterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyTopicRequest.cs" />
@@ -9760,8 +9778,10 @@
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\Subscription.cs" />
     <Compile Include="Tdmq\V20200217\Models\SubscriptionTopic.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Tag.cs" />
     <Compile Include="Tdmq\V20200217\Models\Topic.cs" />
     <Compile Include="Tdmq\V20200217\Models\TopicRecord.cs" />
+    <Compile Include="Tdmq\V20200217\Models\VpcBindRecord.cs" />
     <Compile Include="Tia\V20180226\TiaClient.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobRequest.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobResponse.cs" />
@@ -10437,6 +10457,8 @@
     <Compile Include="Tsf\V20180326\Models\CreateMicroserviceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateNamespaceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreatePathRewritesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreatePathRewritesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreatePublicConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreatePublicConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateRepositoryRequest.cs" />
@@ -10466,6 +10488,8 @@
     <Compile Include="Tsf\V20180326\Models\DeleteMicroserviceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteNamespaceResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeletePathRewritesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeletePathRewritesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeletePkgsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeletePkgsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeletePublicConfigRequest.cs" />
@@ -10554,6 +10578,10 @@
     <Compile Include="Tsf\V20180326\Models\DescribeMicroservicesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeMsApiListRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeMsApiListResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribePathRewriteRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribePathRewriteResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribePathRewritesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribePathRewritesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePkgsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePkgsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePodInstancesRequest.cs" />
@@ -10624,6 +10652,7 @@
     <Compile Include="Tsf\V20180326\Models\ImageTag.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTagsResult.cs" />
     <Compile Include="Tsf\V20180326\Models\Instance.cs" />
+    <Compile Include="Tsf\V20180326\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneInfos.cs" />
@@ -10641,6 +10670,8 @@
     <Compile Include="Tsf\V20180326\Models\ModifyLaneRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyMicroserviceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyMicroserviceResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ModifyPathRewriteRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\ModifyPathRewriteResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyTaskRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyTaskResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyUploadInfoRequest.cs" />
@@ -10652,6 +10683,9 @@
     <Compile Include="Tsf\V20180326\Models\OperationInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfoDetail.cs" />
     <Compile Include="Tsf\V20180326\Models\OverviewBasicResourceUsage.cs" />
+    <Compile Include="Tsf\V20180326\Models\PathRewrite.cs" />
+    <Compile Include="Tsf\V20180326\Models\PathRewriteCreateObject.cs" />
+    <Compile Include="Tsf\V20180326\Models\PathRewritePage.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgBind.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgList.cs" />

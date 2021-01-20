@@ -234,6 +234,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Isolation")]
         public ulong? Isolation{ get; set; }
 
+        /// <summary>
+        /// 负载均衡绑定的安全组列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string[] SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// 负载均衡安全组上移特性是否开启标识。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public ulong? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +284,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetPort", this.TargetPort);
             this.SetParamSimple(map, prefix + "TargetWeight", this.TargetWeight);
             this.SetParamSimple(map, prefix + "Isolation", this.Isolation);
+            this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

@@ -60,6 +60,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("IPSECOptionsSpecification")]
         public IPSECOptionsSpecification IPSECOptionsSpecification{ get; set; }
 
+        /// <summary>
+        /// 是否启用通道健康检查
+        /// </summary>
+        [JsonProperty("EnableHealthCheck")]
+        public bool? EnableHealthCheck{ get; set; }
+
+        /// <summary>
+        /// 本端通道探测ip
+        /// </summary>
+        [JsonProperty("HealthCheckLocalIp")]
+        public string HealthCheckLocalIp{ get; set; }
+
+        /// <summary>
+        /// 对端通道探测ip
+        /// </summary>
+        [JsonProperty("HealthCheckRemoteIp")]
+        public string HealthCheckRemoteIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "SecurityPolicyDatabases.", this.SecurityPolicyDatabases);
             this.SetParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
             this.SetParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
+            this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+            this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+            this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
         }
     }
 }

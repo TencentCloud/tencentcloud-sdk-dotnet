@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+        /// 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? BandwidthPackageCount{ get; set; }
 
         /// <summary>
-        /// 带宽包限速大小。单位：Mbps，-1表示不限速。
+        /// 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
         /// </summary>
         [JsonProperty("InternetMaxBandwidth")]
         public long? InternetMaxBandwidth{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.211</VersionPrefix>
+    <VersionPrefix>3.0.212</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,21 +45,35 @@
 
   <ItemGroup>
     <Compile Include="V20200217\TdmqClient.cs" />
+    <Compile Include="V20200217\Models\BindCluster.cs" />
+    <Compile Include="V20200217\Models\Cluster.cs" />
     <Compile Include="V20200217\Models\Connection.cs" />
     <Compile Include="V20200217\Models\Consumer.cs" />
     <Compile Include="V20200217\Models\ConsumersSchedule.cs" />
+    <Compile Include="V20200217\Models\CreateClusterRequest.cs" />
+    <Compile Include="V20200217\Models\CreateClusterResponse.cs" />
     <Compile Include="V20200217\Models\CreateEnvironmentRequest.cs" />
     <Compile Include="V20200217\Models\CreateEnvironmentResponse.cs" />
     <Compile Include="V20200217\Models\CreateSubscriptionRequest.cs" />
     <Compile Include="V20200217\Models\CreateSubscriptionResponse.cs" />
     <Compile Include="V20200217\Models\CreateTopicRequest.cs" />
     <Compile Include="V20200217\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteClusterRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteClusterResponse.cs" />
     <Compile Include="V20200217\Models\DeleteEnvironmentsRequest.cs" />
     <Compile Include="V20200217\Models\DeleteEnvironmentsResponse.cs" />
     <Compile Include="V20200217\Models\DeleteSubscriptionsRequest.cs" />
     <Compile Include="V20200217\Models\DeleteSubscriptionsResponse.cs" />
     <Compile Include="V20200217\Models\DeleteTopicsRequest.cs" />
     <Compile Include="V20200217\Models\DeleteTopicsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeBindClustersRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeBindClustersResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeBindVpcsRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeBindVpcsResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeClusterDetailRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeClusterDetailResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentAttributesRequest.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentAttributesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentRolesRequest.cs" />
@@ -75,6 +89,8 @@
     <Compile Include="V20200217\Models\Environment.cs" />
     <Compile Include="V20200217\Models\EnvironmentRole.cs" />
     <Compile Include="V20200217\Models\FilterSubscription.cs" />
+    <Compile Include="V20200217\Models\ModifyClusterRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyClusterResponse.cs" />
     <Compile Include="V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
     <Compile Include="V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
     <Compile Include="V20200217\Models\ModifyTopicRequest.cs" />
@@ -85,7 +101,9 @@
     <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
     <Compile Include="V20200217\Models\Subscription.cs" />
     <Compile Include="V20200217\Models\SubscriptionTopic.cs" />
+    <Compile Include="V20200217\Models\Tag.cs" />
     <Compile Include="V20200217\Models\Topic.cs" />
     <Compile Include="V20200217\Models\TopicRecord.cs" />
+    <Compile Include="V20200217\Models\VpcBindRecord.cs" />
   </ItemGroup>
 </Project>

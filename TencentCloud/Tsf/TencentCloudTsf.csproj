@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.211</VersionPrefix>
+    <VersionPrefix>3.0.212</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -105,6 +105,8 @@
     <Compile Include="V20180326\Models\CreateMicroserviceResponse.cs" />
     <Compile Include="V20180326\Models\CreateNamespaceRequest.cs" />
     <Compile Include="V20180326\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="V20180326\Models\CreatePathRewritesRequest.cs" />
+    <Compile Include="V20180326\Models\CreatePathRewritesResponse.cs" />
     <Compile Include="V20180326\Models\CreatePublicConfigRequest.cs" />
     <Compile Include="V20180326\Models\CreatePublicConfigResponse.cs" />
     <Compile Include="V20180326\Models\CreateRepositoryRequest.cs" />
@@ -134,6 +136,8 @@
     <Compile Include="V20180326\Models\DeleteMicroserviceResponse.cs" />
     <Compile Include="V20180326\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="V20180326\Models\DeleteNamespaceResponse.cs" />
+    <Compile Include="V20180326\Models\DeletePathRewritesRequest.cs" />
+    <Compile Include="V20180326\Models\DeletePathRewritesResponse.cs" />
     <Compile Include="V20180326\Models\DeletePkgsRequest.cs" />
     <Compile Include="V20180326\Models\DeletePkgsResponse.cs" />
     <Compile Include="V20180326\Models\DeletePublicConfigRequest.cs" />
@@ -222,6 +226,10 @@
     <Compile Include="V20180326\Models\DescribeMicroservicesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeMsApiListRequest.cs" />
     <Compile Include="V20180326\Models\DescribeMsApiListResponse.cs" />
+    <Compile Include="V20180326\Models\DescribePathRewriteRequest.cs" />
+    <Compile Include="V20180326\Models\DescribePathRewriteResponse.cs" />
+    <Compile Include="V20180326\Models\DescribePathRewritesRequest.cs" />
+    <Compile Include="V20180326\Models\DescribePathRewritesResponse.cs" />
     <Compile Include="V20180326\Models\DescribePkgsRequest.cs" />
     <Compile Include="V20180326\Models\DescribePkgsResponse.cs" />
     <Compile Include="V20180326\Models\DescribePodInstancesRequest.cs" />
@@ -292,6 +300,7 @@
     <Compile Include="V20180326\Models\ImageTag.cs" />
     <Compile Include="V20180326\Models\ImageTagsResult.cs" />
     <Compile Include="V20180326\Models\Instance.cs" />
+    <Compile Include="V20180326\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="V20180326\Models\LaneGroup.cs" />
     <Compile Include="V20180326\Models\LaneInfo.cs" />
     <Compile Include="V20180326\Models\LaneInfos.cs" />
@@ -309,6 +318,8 @@
     <Compile Include="V20180326\Models\ModifyLaneRuleResponse.cs" />
     <Compile Include="V20180326\Models\ModifyMicroserviceRequest.cs" />
     <Compile Include="V20180326\Models\ModifyMicroserviceResponse.cs" />
+    <Compile Include="V20180326\Models\ModifyPathRewriteRequest.cs" />
+    <Compile Include="V20180326\Models\ModifyPathRewriteResponse.cs" />
     <Compile Include="V20180326\Models\ModifyTaskRequest.cs" />
     <Compile Include="V20180326\Models\ModifyTaskResponse.cs" />
     <Compile Include="V20180326\Models\ModifyUploadInfoRequest.cs" />
@@ -320,6 +331,9 @@
     <Compile Include="V20180326\Models\OperationInfo.cs" />
     <Compile Include="V20180326\Models\OperationInfoDetail.cs" />
     <Compile Include="V20180326\Models\OverviewBasicResourceUsage.cs" />
+    <Compile Include="V20180326\Models\PathRewrite.cs" />
+    <Compile Include="V20180326\Models\PathRewriteCreateObject.cs" />
+    <Compile Include="V20180326\Models\PathRewritePage.cs" />
     <Compile Include="V20180326\Models\PkgBind.cs" />
     <Compile Include="V20180326\Models\PkgInfo.cs" />
     <Compile Include="V20180326\Models\PkgList.cs" />

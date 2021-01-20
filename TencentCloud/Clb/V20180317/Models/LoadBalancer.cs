@@ -357,6 +357,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
+        /// <summary>
+        /// CLB是否为NFV，空：不是，l7nfv：七层是NFV。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NfvInfo")]
+        public string NfvInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -411,6 +418,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
             this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
         }
     }
 }

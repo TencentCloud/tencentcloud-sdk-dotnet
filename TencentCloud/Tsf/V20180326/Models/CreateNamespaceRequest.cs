@@ -66,6 +66,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("IsHaEnable")]
         public string IsHaEnable{ get; set; }
 
+        /// <summary>
+        /// 需要绑定的数据集ID
+        /// </summary>
+        [JsonProperty("ProgramId")]
+        public string ProgramId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "NamespaceType", this.NamespaceType);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "IsHaEnable", this.IsHaEnable);
+            this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
         }
     }
 }

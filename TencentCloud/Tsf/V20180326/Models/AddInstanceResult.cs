@@ -45,6 +45,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("TimeoutInstanceIds")]
         public string[] TimeoutInstanceIds{ get; set; }
 
+        /// <summary>
+        /// 失败的节点的失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedReasons")]
+        public string[] FailedReasons{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
             this.SetParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
             this.SetParamArraySimple(map, prefix + "TimeoutInstanceIds.", this.TimeoutInstanceIds);
+            this.SetParamArraySimple(map, prefix + "FailedReasons.", this.FailedReasons);
         }
     }
 }

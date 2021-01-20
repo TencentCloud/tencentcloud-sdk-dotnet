@@ -30,6 +30,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TopicSets")]
         public TopicRecord[] TopicSets{ get; set; }
 
+        /// <summary>
+        /// pulsar集群Id。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 环境（命名空间）名称。
+        /// </summary>
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "TopicSets.", this.TopicSets);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         }
     }
 }

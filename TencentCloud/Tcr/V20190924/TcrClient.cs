@@ -133,6 +133,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 检查待创建的实例名称是否符合规范
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstanceNameRequest"/></param>
+        /// <returns><see cref="CheckInstanceNameResponse"/></returns>
+        public async Task<CheckInstanceNameResponse> CheckInstanceName(CheckInstanceNameRequest req)
+        {
+             JsonResponseModel<CheckInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 检查待创建的实例名称是否符合规范
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstanceNameRequest"/></param>
+        /// <returns><see cref="CheckInstanceNameResponse"/></returns>
+        public CheckInstanceNameResponse CheckInstanceNameSync(CheckInstanceNameRequest req)
+        {
+             JsonResponseModel<CheckInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于创建应用更新触发器
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationTriggerPersonalRequest"/></param>

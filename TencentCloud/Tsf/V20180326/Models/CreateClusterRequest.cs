@@ -78,6 +78,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
+        /// <summary>
+        /// 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+        /// </summary>
+        [JsonProperty("MaxNodePodNum")]
+        public ulong? MaxNodePodNum{ get; set; }
+
+        /// <summary>
+        /// 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
+        /// </summary>
+        [JsonProperty("MaxClusterServiceNum")]
+        public ulong? MaxClusterServiceNum{ get; set; }
+
+        /// <summary>
+        /// 需要绑定的数据集ID
+        /// </summary>
+        [JsonProperty("ProgramId")]
+        public string ProgramId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "TsfZoneId", this.TsfZoneId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+            this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
+            this.SetParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
+            this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
         }
     }
 }
