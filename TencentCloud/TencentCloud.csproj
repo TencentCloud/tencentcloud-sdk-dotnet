@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.212</VersionPrefix>
+    <VersionPrefix>3.0.213</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -216,6 +216,7 @@
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlanSet.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApisStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindIPStrategyRequest.cs" />
@@ -8009,9 +8010,11 @@
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoice.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoiceGoodsInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceItem.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VatInvoiceUserInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceVerifyRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceVerifyResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceInfo.cs" />
@@ -8026,6 +8029,8 @@
     <Compile Include="Ocr\V20181119\Models\VerifyBasicBizLicenseResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VerifyBizLicenseRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VerifyBizLicenseResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VerifyOfdVatInvoiceOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\VerifyOfdVatInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VinOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VinOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\WaybillOCRRequest.cs" />
@@ -10066,6 +10071,10 @@
     <Compile Include="Tiw\V20190919\Models\DescribeVideoGenerationTaskCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeVideoGenerationTaskRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeVideoGenerationTaskResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeWhiteboardPushCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeWhiteboardPushCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeWhiteboardPushRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeWhiteboardPushResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\LayoutParams.cs" />
     <Compile Include="Tiw\V20190919\Models\MixStream.cs" />
     <Compile Include="Tiw\V20190919\Models\OmittedDuration.cs" />
@@ -10086,6 +10095,10 @@
     <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackKeyResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\SetVideoGenerationTaskCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetWhiteboardPushCallbackKeyRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetWhiteboardPushCallbackKeyResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetWhiteboardPushCallbackRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\SetWhiteboardPushCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StartWhiteboardPushRequest.cs" />

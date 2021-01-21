@@ -294,6 +294,24 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ResponseErrorCodes")]
         public ResponseErrorCodeReq[] ResponseErrorCodes{ get; set; }
 
+        /// <summary>
+        /// 是否开启Base64编码，只有后端为scf时才会生效。
+        /// </summary>
+        [JsonProperty("IsBase64Encoded")]
+        public bool? IsBase64Encoded{ get; set; }
+
+        /// <summary>
+        /// 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+        /// </summary>
+        [JsonProperty("IsBase64Trigger")]
+        public bool? IsBase64Trigger{ get; set; }
+
+        /// <summary>
+        /// Header触发规则，总规则数不能超过10。
+        /// </summary>
+        [JsonProperty("Base64EncodedTriggerRules")]
+        public Base64EncodedTriggerRule[] Base64EncodedTriggerRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -345,6 +363,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamArrayObj(map, prefix + "ServiceParameters.", this.ServiceParameters);
             this.SetParamObj(map, prefix + "OauthConfig.", this.OauthConfig);
             this.SetParamArrayObj(map, prefix + "ResponseErrorCodes.", this.ResponseErrorCodes);
+            this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+            this.SetParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
+            this.SetParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
         }
     }
 }

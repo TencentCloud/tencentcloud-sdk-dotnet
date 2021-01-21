@@ -55,22 +55,28 @@ namespace TencentCloud.Tke.V20180525.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
-        /// </summary>
-        [JsonProperty("SecurityGroupIds")]
-        public string[] SecurityGroupIds{ get; set; }
-
-        /// <summary>
         /// 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
+        /// 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
         /// 节点池选项
         /// </summary>
         [JsonProperty("NodePool")]
         public NodePoolOption NodePool{ get; set; }
+
+        /// <summary>
+        /// 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+        /// </summary>
+        [JsonProperty("SkipValidateOptions")]
+        public string[] SkipValidateOptions{ get; set; }
 
 
         /// <summary>
@@ -83,9 +89,10 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
-            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamObj(map, prefix + "NodePool.", this.NodePool);
+            this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
         }
     }
 }

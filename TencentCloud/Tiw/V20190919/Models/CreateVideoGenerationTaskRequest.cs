@@ -68,6 +68,12 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("RecordControl")]
         public RecordControl RecordControl{ get; set; }
 
+        /// <summary>
+        /// 内部参数
+        /// </summary>
+        [JsonProperty("ExtraData")]
+        public string ExtraData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "Concat.", this.Concat);
             this.SetParamObj(map, prefix + "MixStream.", this.MixStream);
             this.SetParamObj(map, prefix + "RecordControl.", this.RecordControl);
+            this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
         }
     }
 }

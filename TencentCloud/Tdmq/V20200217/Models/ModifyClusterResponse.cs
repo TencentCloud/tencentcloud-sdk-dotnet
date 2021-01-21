@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 集群的ID
+        /// Pulsar 集群的ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

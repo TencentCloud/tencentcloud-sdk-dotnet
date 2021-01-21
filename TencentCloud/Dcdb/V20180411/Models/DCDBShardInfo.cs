@@ -171,6 +171,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
+        /// <summary>
+        /// 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
+        /// </summary>
+        [JsonProperty("Range")]
+        public string Range{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -201,6 +207,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
             this.SetParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Range", this.Range);
         }
     }
 }

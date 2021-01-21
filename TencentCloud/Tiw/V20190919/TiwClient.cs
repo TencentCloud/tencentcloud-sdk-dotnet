@@ -373,6 +373,86 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 查询推流任务状态与结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteboardPushRequest"/></param>
+        /// <returns><see cref="DescribeWhiteboardPushResponse"/></returns>
+        public async Task<DescribeWhiteboardPushResponse> DescribeWhiteboardPush(DescribeWhiteboardPushRequest req)
+        {
+             JsonResponseModel<DescribeWhiteboardPushResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteboardPush");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteboardPushResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询推流任务状态与结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteboardPushRequest"/></param>
+        /// <returns><see cref="DescribeWhiteboardPushResponse"/></returns>
+        public DescribeWhiteboardPushResponse DescribeWhiteboardPushSync(DescribeWhiteboardPushRequest req)
+        {
+             JsonResponseModel<DescribeWhiteboardPushResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteboardPush");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteboardPushResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询白板推流回调地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteboardPushCallbackRequest"/></param>
+        /// <returns><see cref="DescribeWhiteboardPushCallbackResponse"/></returns>
+        public async Task<DescribeWhiteboardPushCallbackResponse> DescribeWhiteboardPushCallback(DescribeWhiteboardPushCallbackRequest req)
+        {
+             JsonResponseModel<DescribeWhiteboardPushCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWhiteboardPushCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteboardPushCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询白板推流回调地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWhiteboardPushCallbackRequest"/></param>
+        /// <returns><see cref="DescribeWhiteboardPushCallbackResponse"/></returns>
+        public DescribeWhiteboardPushCallbackResponse DescribeWhiteboardPushCallbackSync(DescribeWhiteboardPushCallbackRequest req)
+        {
+             JsonResponseModel<DescribeWhiteboardPushCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWhiteboardPushCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWhiteboardPushCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 暂停实时录制
         /// </summary>
         /// <param name="req"><see cref="PauseOnlineRecordRequest"/></param>
@@ -684,6 +764,86 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "SetVideoGenerationTaskCallbackKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetVideoGenerationTaskCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置白板推流回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+        /// </summary>
+        /// <param name="req"><see cref="SetWhiteboardPushCallbackRequest"/></param>
+        /// <returns><see cref="SetWhiteboardPushCallbackResponse"/></returns>
+        public async Task<SetWhiteboardPushCallbackResponse> SetWhiteboardPushCallback(SetWhiteboardPushCallbackRequest req)
+        {
+             JsonResponseModel<SetWhiteboardPushCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetWhiteboardPushCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWhiteboardPushCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置白板推流回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+        /// </summary>
+        /// <param name="req"><see cref="SetWhiteboardPushCallbackRequest"/></param>
+        /// <returns><see cref="SetWhiteboardPushCallbackResponse"/></returns>
+        public SetWhiteboardPushCallbackResponse SetWhiteboardPushCallbackSync(SetWhiteboardPushCallbackRequest req)
+        {
+             JsonResponseModel<SetWhiteboardPushCallbackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetWhiteboardPushCallback");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWhiteboardPushCallbackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置白板推流回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+        /// </summary>
+        /// <param name="req"><see cref="SetWhiteboardPushCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetWhiteboardPushCallbackKeyResponse"/></returns>
+        public async Task<SetWhiteboardPushCallbackKeyResponse> SetWhiteboardPushCallbackKey(SetWhiteboardPushCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetWhiteboardPushCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetWhiteboardPushCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWhiteboardPushCallbackKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置白板推流回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
+        /// </summary>
+        /// <param name="req"><see cref="SetWhiteboardPushCallbackKeyRequest"/></param>
+        /// <returns><see cref="SetWhiteboardPushCallbackKeyResponse"/></returns>
+        public SetWhiteboardPushCallbackKeyResponse SetWhiteboardPushCallbackKeySync(SetWhiteboardPushCallbackKeyRequest req)
+        {
+             JsonResponseModel<SetWhiteboardPushCallbackKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetWhiteboardPushCallbackKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetWhiteboardPushCallbackKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

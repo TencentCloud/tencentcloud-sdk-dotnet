@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
+        /// 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
         /// </summary>
         [JsonProperty("BindClusterId")]
         public ulong? BindClusterId{ get; set; }

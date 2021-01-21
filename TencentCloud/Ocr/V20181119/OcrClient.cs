@@ -3033,6 +3033,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持OFD格式的增值税电子普通发票和增值税电子专用发票的识别，返回发票代码、发票号码、开票日期、验证码、机器编号、密码区，购买方和销售方信息，包括名称、纳税人识别号、地址电话、开户行及账号，以及价税合计、开票人、收款人、复核人、税额、不含税金额等字段信息。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyOfdVatInvoiceOCRRequest"/></param>
+        /// <returns><see cref="VerifyOfdVatInvoiceOCRResponse"/></returns>
+        public async Task<VerifyOfdVatInvoiceOCRResponse> VerifyOfdVatInvoiceOCR(VerifyOfdVatInvoiceOCRRequest req)
+        {
+             JsonResponseModel<VerifyOfdVatInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyOfdVatInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyOfdVatInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持OFD格式的增值税电子普通发票和增值税电子专用发票的识别，返回发票代码、发票号码、开票日期、验证码、机器编号、密码区，购买方和销售方信息，包括名称、纳税人识别号、地址电话、开户行及账号，以及价税合计、开票人、收款人、复核人、税额、不含税金额等字段信息。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyOfdVatInvoiceOCRRequest"/></param>
+        /// <returns><see cref="VerifyOfdVatInvoiceOCRResponse"/></returns>
+        public VerifyOfdVatInvoiceOCRResponse VerifyOfdVatInvoiceOCRSync(VerifyOfdVatInvoiceOCRRequest req)
+        {
+             JsonResponseModel<VerifyOfdVatInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyOfdVatInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyOfdVatInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持图片内车辆识别代号（VIN）的检测和识别。
         /// </summary>
         /// <param name="req"><see cref="VinOCRRequest"/></param>

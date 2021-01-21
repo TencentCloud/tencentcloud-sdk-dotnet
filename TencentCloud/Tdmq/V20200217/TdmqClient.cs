@@ -93,7 +93,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 用于在用户账户下创建消息队列 Tdmq环境（命名空间）
+        /// 用于在用户账户下创建消息队列 Tdmq 命名空间
         /// </summary>
         /// <param name="req"><see cref="CreateEnvironmentRequest"/></param>
         /// <returns><see cref="CreateEnvironmentResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 用于在用户账户下创建消息队列 Tdmq环境（命名空间）
+        /// 用于在用户账户下创建消息队列 Tdmq 命名空间
         /// </summary>
         /// <param name="req"><see cref="CreateEnvironmentRequest"/></param>
         /// <returns><see cref="CreateEnvironmentResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 批量删除租户下的环境
+        /// 批量删除租户下的命名空间
         /// </summary>
         /// <param name="req"><see cref="DeleteEnvironmentsRequest"/></param>
         /// <returns><see cref="DeleteEnvironmentsResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 批量删除租户下的环境
+        /// 批量删除租户下的命名空间
         /// </summary>
         /// <param name="req"><see cref="DeleteEnvironmentsRequest"/></param>
         /// <returns><see cref="DeleteEnvironmentsResponse"/></returns>
@@ -533,7 +533,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取指定环境的属性
+        /// 获取指定命名空间的属性
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentAttributesRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentAttributesResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取指定环境的属性
+        /// 获取指定命名空间的属性
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentAttributesRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentAttributesResponse"/></returns>
@@ -573,7 +573,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取环境角色列表
+        /// 获取命名空间角色列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentRolesRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentRolesResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取环境角色列表
+        /// 获取命名空间角色列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentRolesRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentRolesResponse"/></returns>
@@ -613,7 +613,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取租户下环境列表
+        /// 获取租户下命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
@@ -633,7 +633,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取租户下环境列表
+        /// 获取租户下命名空间列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
@@ -813,7 +813,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 修改指定环境的属性值
+        /// 修改指定命名空间的属性值
         /// </summary>
         /// <param name="req"><see cref="ModifyEnvironmentAttributesRequest"/></param>
         /// <returns><see cref="ModifyEnvironmentAttributesResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 修改指定环境的属性值
+        /// 修改指定命名空间的属性值
         /// </summary>
         /// <param name="req"><see cref="ModifyEnvironmentAttributesRequest"/></param>
         /// <returns><see cref="ModifyEnvironmentAttributesResponse"/></returns>

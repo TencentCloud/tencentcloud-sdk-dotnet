@@ -294,6 +294,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
+        /// <summary>
+        /// 是否打开Base64编码，只有后端是scf时才会生效。
+        /// </summary>
+        [JsonProperty("IsBase64Encoded")]
+        public bool? IsBase64Encoded{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -345,6 +351,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamArrayObj(map, prefix + "ResponseErrorCodes.", this.ResponseErrorCodes);
             this.SetParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
         }
     }
 }

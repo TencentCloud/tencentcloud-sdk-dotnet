@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 环境角色集合。
+        /// 命名空间角色集合。
         /// </summary>
         [JsonProperty("EnvironmentRoleSets")]
         public EnvironmentRole[] EnvironmentRoleSets{ get; set; }

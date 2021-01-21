@@ -66,6 +66,12 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("CompressFileType")]
         public string CompressFileType{ get; set; }
 
+        /// <summary>
+        /// 内部参数
+        /// </summary>
+        [JsonProperty("ExtraData")]
+        public string ExtraData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "MinResolution", this.MinResolution);
             this.SetParamSimple(map, prefix + "ThumbnailResolution", this.ThumbnailResolution);
             this.SetParamSimple(map, prefix + "CompressFileType", this.CompressFileType);
+            this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
         }
     }
 }

@@ -360,6 +360,27 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Environments")]
         public string[] Environments{ get; set; }
 
+        /// <summary>
+        /// 是否开启Base64编码，只有后端为scf时才会生效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsBase64Encoded")]
+        public bool? IsBase64Encoded{ get; set; }
+
+        /// <summary>
+        /// 是否开启Base64编码的header触发，只有后端为scf时才会生效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsBase64Trigger")]
+        public bool? IsBase64Trigger{ get; set; }
+
+        /// <summary>
+        /// Header触发规则，总规则数量不超过10。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Base64EncodedTriggerRules")]
+        public Base64EncodedTriggerRule[] Base64EncodedTriggerRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -414,6 +435,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "EnableCORS", this.EnableCORS);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArraySimple(map, prefix + "Environments.", this.Environments);
+            this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+            this.SetParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
+            this.SetParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
         }
     }
 }

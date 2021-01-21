@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 环境（命名空间）名称。
+        /// 命名空间名称。
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Pulsar 集群的ID
+        /// 集群ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
