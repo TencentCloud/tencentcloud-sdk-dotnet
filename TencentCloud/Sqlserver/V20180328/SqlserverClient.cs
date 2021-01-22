@@ -1973,6 +1973,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（ModifyDBInstanceNetwork）用于修改运行中实例的网络，仅支持从VPC网络到VPC网络的转换
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNetworkResponse"/></returns>
+        public async Task<ModifyDBInstanceNetworkResponse> ModifyDBInstanceNetwork(ModifyDBInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceNetwork）用于修改运行中实例的网络，仅支持从VPC网络到VPC网络的转换
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNetworkResponse"/></returns>
+        public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetworkSync(ModifyDBInstanceNetworkRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceProject）用于修改数据库实例所属项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceProjectRequest"/></param>

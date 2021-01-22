@@ -573,6 +573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建弹性集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateEKSClusterRequest"/></param>
+        /// <returns><see cref="CreateEKSClusterResponse"/></returns>
+        public async Task<CreateEKSClusterResponse> CreateEKSCluster(CreateEKSClusterRequest req)
+        {
+             JsonResponseModel<CreateEKSClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEKSCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEKSClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建弹性集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateEKSClusterRequest"/></param>
+        /// <returns><see cref="CreateEKSClusterResponse"/></returns>
+        public CreateEKSClusterResponse CreateEKSClusterSync(CreateEKSClusterRequest req)
+        {
+             JsonResponseModel<CreateEKSClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEKSCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEKSClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建grafana监控面板
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusDashboardRequest"/></param>
@@ -964,6 +1004,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeleteClusterRouteTable");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterRouteTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除弹性集群(yunapiv3)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEKSClusterRequest"/></param>
+        /// <returns><see cref="DeleteEKSClusterResponse"/></returns>
+        public async Task<DeleteEKSClusterResponse> DeleteEKSCluster(DeleteEKSClusterRequest req)
+        {
+             JsonResponseModel<DeleteEKSClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEKSCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEKSClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除弹性集群(yunapiv3)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEKSClusterRequest"/></param>
+        /// <returns><see cref="DeleteEKSClusterResponse"/></returns>
+        public DeleteEKSClusterResponse DeleteEKSClusterSync(DeleteEKSClusterRequest req)
+        {
+             JsonResponseModel<DeleteEKSClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEKSCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEKSClusterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1564,6 +1644,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusters");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取弹性容器集群的接入认证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSClusterCredentialRequest"/></param>
+        /// <returns><see cref="DescribeEKSClusterCredentialResponse"/></returns>
+        public async Task<DescribeEKSClusterCredentialResponse> DescribeEKSClusterCredential(DescribeEKSClusterCredentialRequest req)
+        {
+             JsonResponseModel<DescribeEKSClusterCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEKSClusterCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSClusterCredentialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取弹性容器集群的接入认证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSClusterCredentialRequest"/></param>
+        /// <returns><see cref="DescribeEKSClusterCredentialResponse"/></returns>
+        public DescribeEKSClusterCredentialResponse DescribeEKSClusterCredentialSync(DescribeEKSClusterCredentialRequest req)
+        {
+             JsonResponseModel<DescribeEKSClusterCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEKSClusterCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSClusterCredentialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询弹性集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSClustersRequest"/></param>
+        /// <returns><see cref="DescribeEKSClustersResponse"/></returns>
+        public async Task<DescribeEKSClustersResponse> DescribeEKSClusters(DescribeEKSClustersRequest req)
+        {
+             JsonResponseModel<DescribeEKSClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEKSClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询弹性集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSClustersRequest"/></param>
+        /// <returns><see cref="DescribeEKSClustersResponse"/></returns>
+        public DescribeEKSClustersResponse DescribeEKSClustersSync(DescribeEKSClustersRequest req)
+        {
+             JsonResponseModel<DescribeEKSClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEKSClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSClustersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2444,6 +2604,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UpdateClusterVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改弹性集群名称等属性 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEKSClusterRequest"/></param>
+        /// <returns><see cref="UpdateEKSClusterResponse"/></returns>
+        public async Task<UpdateEKSClusterResponse> UpdateEKSCluster(UpdateEKSClusterRequest req)
+        {
+             JsonResponseModel<UpdateEKSClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateEKSCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEKSClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改弹性集群名称等属性 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEKSClusterRequest"/></param>
+        /// <returns><see cref="UpdateEKSClusterResponse"/></returns>
+        public UpdateEKSClusterResponse UpdateEKSClusterSync(UpdateEKSClusterRequest req)
+        {
+             JsonResponseModel<UpdateEKSClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateEKSCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEKSClusterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

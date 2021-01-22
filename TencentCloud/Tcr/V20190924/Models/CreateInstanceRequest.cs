@@ -31,7 +31,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RegistryName{ get; set; }
 
         /// <summary>
-        /// 企业版实例类型
+        /// 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }

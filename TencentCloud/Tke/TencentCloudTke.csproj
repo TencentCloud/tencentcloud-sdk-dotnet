@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.213</VersionPrefix>
+    <VersionPrefix>3.0.214</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,8 +62,11 @@
     <Compile Include="V20180525\Models\ClusterAsGroupOption.cs" />
     <Compile Include="V20180525\Models\ClusterBasicSettings.cs" />
     <Compile Include="V20180525\Models\ClusterCIDRSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterCredential.cs" />
     <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
+    <Compile Include="V20180525\Models\ClusterInternalLB.cs" />
     <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterPublicLB.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupResponse.cs" />
@@ -83,6 +86,8 @@
     <Compile Include="V20180525\Models\CreateClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\CreateEKSClusterRequest.cs" />
+    <Compile Include="V20180525\Models\CreateEKSClusterResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateRequest.cs" />
@@ -104,6 +109,8 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteEKSClusterRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteEKSClusterResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
@@ -134,6 +141,10 @@
     <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSClusterCredentialRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSClusterCredentialResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSClustersRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSClustersResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
@@ -156,6 +167,8 @@
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\DnsServerConf.cs" />
+    <Compile Include="V20180525\Models\EksCluster.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />
     <Compile Include="V20180525\Models\ExistedInstance.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />
@@ -164,6 +177,7 @@
     <Compile Include="V20180525\Models\Filter.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
+    <Compile Include="V20180525\Models\IPAddress.cs" />
     <Compile Include="V20180525\Models\ImageInstance.cs" />
     <Compile Include="V20180525\Models\Instance.cs" />
     <Compile Include="V20180525\Models\InstanceAdvancedSettings.cs" />
@@ -222,6 +236,8 @@
     <Compile Include="V20180525\Models\TaskStepInfo.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionResponse.cs" />
+    <Compile Include="V20180525\Models\UpdateEKSClusterRequest.cs" />
+    <Compile Include="V20180525\Models\UpdateEKSClusterResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />

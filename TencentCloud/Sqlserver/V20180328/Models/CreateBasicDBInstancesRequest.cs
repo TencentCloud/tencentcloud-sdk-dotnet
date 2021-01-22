@@ -138,6 +138,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Span")]
         public long? Span{ get; set; }
 
+        /// <summary>
+        /// 新建实例绑定的标签集合
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "Weekly.", this.Weekly);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Span", this.Span);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

@@ -60,6 +60,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
+        /// <summary>
+        /// 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
+        /// </summary>
+        [JsonProperty("DBVersion")]
+        public string DBVersion{ get; set; }
+
+        /// <summary>
+        /// 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
+        /// </summary>
+        [JsonProperty("HAType")]
+        public string HAType{ get; set; }
+
+        /// <summary>
+        /// 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+        /// </summary>
+        [JsonProperty("MultiZones")]
+        public string MultiZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
+            this.SetParamSimple(map, prefix + "HAType", this.HAType);
+            this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
         }
     }
 }

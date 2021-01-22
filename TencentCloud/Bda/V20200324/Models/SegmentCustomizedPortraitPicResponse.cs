@@ -37,6 +37,13 @@ namespace TencentCloud.Bda.V20200324.Models
         public string MaskImage{ get; set; }
 
         /// <summary>
+        /// 坐标信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageRects")]
+        public ImageRect[] ImageRects{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Bda.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
             this.SetParamSimple(map, prefix + "MaskImage", this.MaskImage);
+            this.SetParamArrayObj(map, prefix + "ImageRects.", this.ImageRects);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
