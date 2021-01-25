@@ -211,7 +211,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string OperatorRemark{ get; set; }
 
         /// <summary>
-        /// 服务路劲
+        /// 服务路径
         /// </summary>
         [JsonProperty("ServerPath")]
         public string ServerPath{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("InternetChargeInfo")]
         public LoadBalancerInternetAccessible InternetChargeInfo{ get; set; }
 
+        /// <summary>
+        /// Target是否放通来自ELB的流量。开启放通（true）：只验证ELB上的安全组；不开启放通（false）：需同时验证ELB和后端实例上的安全组。
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

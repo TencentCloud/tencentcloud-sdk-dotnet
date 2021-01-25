@@ -25,12 +25,6 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
-        /// </summary>
-        [JsonProperty("NetworkAclIds")]
-        public string[] NetworkAclIds{ get; set; }
-
-        /// <summary>
         /// 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
         /// <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
         /// <li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
@@ -38,6 +32,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
+        /// </summary>
+        [JsonProperty("NetworkAclIds")]
+        public string[] NetworkAclIds{ get; set; }
 
         /// <summary>
         /// 偏移量，默认为0。
@@ -57,8 +57,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "NetworkAclIds.", this.NetworkAclIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "NetworkAclIds.", this.NetworkAclIds);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

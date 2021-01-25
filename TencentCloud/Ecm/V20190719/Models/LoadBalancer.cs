@@ -116,6 +116,20 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("NetworkAttributes")]
         public LoadBalancerInternetAccessible NetworkAttributes{ get; set; }
 
+        /// <summary>
+        /// 安全组。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecureGroups")]
+        public string[] SecureGroups{ get; set; }
+
+        /// <summary>
+        /// 后端机器是否放通来自ELB的流量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +149,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
             this.SetParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
+            this.SetParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

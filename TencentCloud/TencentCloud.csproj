@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.214</VersionPrefix>
+    <VersionPrefix>3.0.215</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4925,6 +4925,10 @@
     <Compile Include="Ecm\V20190719\Models\SecurityGroupPolicy.cs" />
     <Compile Include="Ecm\V20190719\Models\SecurityGroupPolicySet.cs" />
     <Compile Include="Ecm\V20190719\Models\ServiceTemplateSpecification.cs" />
+    <Compile Include="Ecm\V20190719\Models\SetLoadBalancerSecurityGroupsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\SetLoadBalancerSecurityGroupsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\SetSecurityGroupForLoadbalancersResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\SimpleModule.cs" />
     <Compile Include="Ecm\V20190719\Models\SrcImage.cs" />
     <Compile Include="Ecm\V20190719\Models\StartInstancesRequest.cs" />
@@ -5382,10 +5386,13 @@
     <Compile Include="Gaap\V20180529\Models\UDPListener.cs" />
     <Compile Include="Gme\V20180711\GmeClient.cs" />
     <Compile Include="Gme\V20180711\Models\AppStatisticsItem.cs" />
+    <Compile Include="Gme\V20180711\Models\ApplicationDataStatistics.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppRequest.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeApplicationDataRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeApplicationDataResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultListRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultListResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultRequest.cs" />
@@ -5405,6 +5412,7 @@
     <Compile Include="Gme\V20180711\Models\ScanVoiceRequest.cs" />
     <Compile Include="Gme\V20180711\Models\ScanVoiceResponse.cs" />
     <Compile Include="Gme\V20180711\Models\ScanVoiceResult.cs" />
+    <Compile Include="Gme\V20180711\Models\StatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\Tag.cs" />
     <Compile Include="Gme\V20180711\Models\Task.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilter.cs" />
@@ -8982,6 +8990,7 @@
     <Compile Include="Ssl\V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmittedData.cs" />
+    <Compile Include="Ssl\V20191205\Models\Tags.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadConfirmLetterRequest.cs" />
@@ -9415,6 +9424,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribePostpayPackageFreeQuotasResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeSmsQuotasRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeSmsQuotasResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyStaticStoreRequest.cs" />
@@ -9441,6 +9452,7 @@
     <Compile Include="Tcb\V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\SmsFreeQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\StorageInfo.cs" />
     <Compile Include="Tcex\V20200727\TcexClient.cs" />

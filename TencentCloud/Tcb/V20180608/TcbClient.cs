@@ -1173,6 +1173,52 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询后付费短信资源量
+        /// 1 有免费包的返回SmsFreeQuota结构所有字段
+        /// 2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
+        /// 3 都没有返回为空数组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmsQuotasRequest"/></param>
+        /// <returns><see cref="DescribeSmsQuotasResponse"/></returns>
+        public async Task<DescribeSmsQuotasResponse> DescribeSmsQuotas(DescribeSmsQuotasRequest req)
+        {
+             JsonResponseModel<DescribeSmsQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSmsQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询后付费短信资源量
+        /// 1 有免费包的返回SmsFreeQuota结构所有字段
+        /// 2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
+        /// 3 都没有返回为空数组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmsQuotasRequest"/></param>
+        /// <returns><see cref="DescribeSmsQuotasResponse"/></returns>
+        public DescribeSmsQuotasResponse DescribeSmsQuotasSync(DescribeSmsQuotasRequest req)
+        {
+             JsonResponseModel<DescribeSmsQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSmsQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 销毁环境
         /// </summary>
         /// <param name="req"><see cref="DestroyEnvRequest"/></param>

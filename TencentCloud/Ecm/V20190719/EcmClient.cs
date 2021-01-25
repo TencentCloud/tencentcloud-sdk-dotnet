@@ -4587,6 +4587,86 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 设置负载均衡实例的安全组。
+        /// </summary>
+        /// <param name="req"><see cref="SetLoadBalancerSecurityGroupsRequest"/></param>
+        /// <returns><see cref="SetLoadBalancerSecurityGroupsResponse"/></returns>
+        public async Task<SetLoadBalancerSecurityGroupsResponse> SetLoadBalancerSecurityGroups(SetLoadBalancerSecurityGroupsRequest req)
+        {
+             JsonResponseModel<SetLoadBalancerSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetLoadBalancerSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置负载均衡实例的安全组。
+        /// </summary>
+        /// <param name="req"><see cref="SetLoadBalancerSecurityGroupsRequest"/></param>
+        /// <returns><see cref="SetLoadBalancerSecurityGroupsResponse"/></returns>
+        public SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroupsSync(SetLoadBalancerSecurityGroupsRequest req)
+        {
+             JsonResponseModel<SetLoadBalancerSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetLoadBalancerSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetLoadBalancerSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定或解绑一个安全组到多个负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="SetSecurityGroupForLoadbalancersRequest"/></param>
+        /// <returns><see cref="SetSecurityGroupForLoadbalancersResponse"/></returns>
+        public async Task<SetSecurityGroupForLoadbalancersResponse> SetSecurityGroupForLoadbalancers(SetSecurityGroupForLoadbalancersRequest req)
+        {
+             JsonResponseModel<SetSecurityGroupForLoadbalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetSecurityGroupForLoadbalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetSecurityGroupForLoadbalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定或解绑一个安全组到多个负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="SetSecurityGroupForLoadbalancersRequest"/></param>
+        /// <returns><see cref="SetSecurityGroupForLoadbalancersResponse"/></returns>
+        public SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancersSync(SetSecurityGroupForLoadbalancersRequest req)
+        {
+             JsonResponseModel<SetSecurityGroupForLoadbalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetSecurityGroupForLoadbalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetSecurityGroupForLoadbalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。
         /// </summary>
         /// <param name="req"><see cref="StartInstancesRequest"/></param>

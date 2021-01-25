@@ -57,6 +57,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("QuestionSubquestion")]
         public string QuestionSubquestion{ get; set; }
 
+        /// <summary>
+        /// 示意图检测框在的图片中的像素坐标
+        /// </summary>
+        [JsonProperty("QuestionImageCoords")]
+        public Rect[] QuestionImageCoords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "QuestionText", this.QuestionText);
             this.SetParamSimple(map, prefix + "QuestionOptions", this.QuestionOptions);
             this.SetParamSimple(map, prefix + "QuestionSubquestion", this.QuestionSubquestion);
+            this.SetParamArrayObj(map, prefix + "QuestionImageCoords.", this.QuestionImageCoords);
         }
     }
 }

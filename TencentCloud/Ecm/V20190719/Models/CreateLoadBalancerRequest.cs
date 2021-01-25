@@ -25,7 +25,7 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 区域。
+        /// ECM区域，形如ap-xian-ecm。
         /// </summary>
         [JsonProperty("EcmRegion")]
         public string EcmRegion{ get; set; }
@@ -73,6 +73,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
+        /// <summary>
+        /// 安全组。
+        /// </summary>
+        [JsonProperty("SecurityGroups")]
+        public string[] SecurityGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         }
     }
 }

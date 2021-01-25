@@ -242,6 +242,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? Deployable{ get; set; }
 
         /// <summary>
+        /// 标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -284,6 +291,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "RenewAble", this.RenewAble);
             this.SetParamObj(map, prefix + "SubmittedData.", this.SubmittedData);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -86,6 +86,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 安全组。
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "WithBackend", this.WithBackend);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         }
     }
 }

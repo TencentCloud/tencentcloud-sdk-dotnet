@@ -206,6 +206,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("SchedulerType")]
         public long? SchedulerType{ get; set; }
 
+        /// <summary>
+        /// 作业所在集群状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public long? ClusterStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +245,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
             this.SetParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         }
     }
 }

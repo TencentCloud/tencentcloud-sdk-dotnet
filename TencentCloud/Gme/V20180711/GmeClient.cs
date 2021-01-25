@@ -133,6 +133,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationDataRequest"/></param>
+        /// <returns><see cref="DescribeApplicationDataResponse"/></returns>
+        public async Task<DescribeApplicationDataResponse> DescribeApplicationData(DescribeApplicationDataRequest req)
+        {
+             JsonResponseModel<DescribeApplicationDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationDataRequest"/></param>
+        /// <returns><see cref="DescribeApplicationDataResponse"/></returns>
+        public DescribeApplicationDataResponse DescribeApplicationDataSync(DescribeApplicationDataRequest req)
+        {
+             JsonResponseModel<DescribeApplicationDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据应用ID和文件ID查询识别结果
         /// </summary>
         /// <param name="req"><see cref="DescribeFilterResultRequest"/></param>

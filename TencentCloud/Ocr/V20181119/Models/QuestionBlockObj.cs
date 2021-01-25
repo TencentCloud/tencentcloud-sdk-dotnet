@@ -30,6 +30,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("QuestionArr")]
         public QuestionObj[] QuestionArr{ get; set; }
 
+        /// <summary>
+        /// 题目主体区域检测框在图片中的像素坐标
+        /// </summary>
+        [JsonProperty("QuestionBboxCoord")]
+        public Rect QuestionBboxCoord{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "QuestionArr.", this.QuestionArr);
+            this.SetParamObj(map, prefix + "QuestionBboxCoord.", this.QuestionBboxCoord);
         }
     }
 }
