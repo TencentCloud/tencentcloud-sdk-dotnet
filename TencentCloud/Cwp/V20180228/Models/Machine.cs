@@ -148,6 +148,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("LicenseStatus")]
         public ulong? LicenseStatus{ get; set; }
 
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +179,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
             this.SetParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

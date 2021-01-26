@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.215</VersionPrefix>
+    <VersionPrefix>3.0.216</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -272,6 +272,8 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeIPStrategysStatusResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeLogSearchRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeLogSearchResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginsRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentListRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentListResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentReleaseHistoryRequest.cs" />
@@ -337,6 +339,8 @@
     <Compile Include="Apigateway\V20180808\Models\ModifyUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\OauthConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\PathMapping.cs" />
+    <Compile Include="Apigateway\V20180808\Models\Plugin.cs" />
+    <Compile Include="Apigateway\V20180808\Models\PluginSummary.cs" />
     <Compile Include="Apigateway\V20180808\Models\ReleaseService.cs" />
     <Compile Include="Apigateway\V20180808\Models\ReleaseServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ReleaseServiceResponse.cs" />
@@ -3537,6 +3541,7 @@
     <Compile Include="Cwp\V20180228\Models\AddMachineTagRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\AddMachineTagResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\AgentVul.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetFilters.cs" />
     <Compile Include="Cwp\V20180228\Models\BashEvent.cs" />
     <Compile Include="Cwp\V20180228\Models\BashRule.cs" />
     <Compile Include="Cwp\V20180228\Models\BruteAttack.cs" />
@@ -3610,6 +3615,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeComponentStatisticsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeHistoryAccountsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeHistoryAccountsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImpactedHostsRequest.cs" />
@@ -3618,10 +3625,14 @@
     <Compile Include="Cwp\V20180228\Models\DescribeLoginWhiteListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMachineInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMachineInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMachineListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMachineListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMachinesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMachinesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMaliciousRequestsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMaliciousRequestsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMalwareInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMalwareInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwaresRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwaresResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeNonlocalLoginPlacesRequest.cs" />
@@ -3650,6 +3661,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeReverseShellEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeReverseShellRulesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeReverseShellRulesResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanMalwareScheduleRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanMalwareScheduleResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityDynamicsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityDynamicsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityEventsCntRequest.cs" />
@@ -3704,6 +3717,8 @@
     <Compile Include="Cwp\V20180228\Models\ExportPrivilegeEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportReverseShellEventsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportReverseShellEventsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportTasksRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportTasksResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\Filter.cs" />
     <Compile Include="Cwp\V20180228\Models\Filters.cs" />
     <Compile Include="Cwp\V20180228\Models\HistoryAccount.cs" />
@@ -3718,6 +3733,7 @@
     <Compile Include="Cwp\V20180228\Models\MachineTag.cs" />
     <Compile Include="Cwp\V20180228\Models\MaliciousRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\Malware.cs" />
+    <Compile Include="Cwp\V20180228\Models\MalwareInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\MisAlarmNonlocalLoginPlacesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\MisAlarmNonlocalLoginPlacesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyAlarmAttributeRequest.cs" />
@@ -3726,6 +3742,8 @@
     <Compile Include="Cwp\V20180228\Models\ModifyAutoOpenProVersionConfigResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyLoginWhiteListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyLoginWhiteListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ModifyMalwareTimingScanSettingsRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\NonLocalLoginPlace.cs" />
@@ -7070,6 +7088,10 @@
     <Compile Include="Mgobe\V20201014\Models\ChangeRoomPlayerProfileResponse.cs" />
     <Compile Include="Mgobe\V20201014\Models\ChangeRoomPlayerStatusRequest.cs" />
     <Compile Include="Mgobe\V20201014\Models\ChangeRoomPlayerStatusResponse.cs" />
+    <Compile Include="Mgobe\V20201014\Models\DescribePlayerRequest.cs" />
+    <Compile Include="Mgobe\V20201014\Models\DescribePlayerResponse.cs" />
+    <Compile Include="Mgobe\V20201014\Models\DescribeRoomRequest.cs" />
+    <Compile Include="Mgobe\V20201014\Models\DescribeRoomResponse.cs" />
     <Compile Include="Mgobe\V20201014\Models\DismissRoomRequest.cs" />
     <Compile Include="Mgobe\V20201014\Models\DismissRoomResponse.cs" />
     <Compile Include="Mgobe\V20201014\Models\ModifyRoomRequest.cs" />
@@ -8435,6 +8457,7 @@
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
+    <Compile Include="Scf\V20180416\Models\AsyncEvent.cs" />
     <Compile Include="Scf\V20180416\Models\CfsConfig.cs" />
     <Compile Include="Scf\V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Code.cs" />
@@ -8491,6 +8514,8 @@
     <Compile Include="Scf\V20180416\Models\LayerVersionSimple.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\ListAsyncEventsRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\ListAsyncEventsResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListFunctionsResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListLayerVersionsRequest.cs" />
@@ -8522,6 +8547,9 @@
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
     <Compile Include="Scf\V20180416\Models\StatusReason.cs" />
     <Compile Include="Scf\V20180416\Models\Tag.cs" />
+    <Compile Include="Scf\V20180416\Models\TerminateAsyncEventRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\TerminateAsyncEventResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\TimeInterval.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasRequest.cs" />
@@ -9302,6 +9330,10 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTasksResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeUinInWhitelistRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeUinInWhitelistResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DisableRestProxyRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DisableRestProxyResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\EnableRestProxyRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\EnableRestProxyResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ErrorInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\FieldInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\Filter.cs" />

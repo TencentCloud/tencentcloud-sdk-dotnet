@@ -133,6 +133,86 @@ namespace TencentCloud.Mgobe.V20201014
         }
 
         /// <summary>
+        /// 该接口用于查询玩家信息。支持两种用法，当OpenId不传的时候，PlayerId必传，传入PlayerId可以查询当前PlayerId的玩家信息，当OpenId传入的时候，PlayerId可不传，按照OpenId查询玩家信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlayerRequest"/></param>
+        /// <returns><see cref="DescribePlayerResponse"/></returns>
+        public async Task<DescribePlayerResponse> DescribePlayer(DescribePlayerRequest req)
+        {
+             JsonResponseModel<DescribePlayerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePlayer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlayerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询玩家信息。支持两种用法，当OpenId不传的时候，PlayerId必传，传入PlayerId可以查询当前PlayerId的玩家信息，当OpenId传入的时候，PlayerId可不传，按照OpenId查询玩家信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlayerRequest"/></param>
+        /// <returns><see cref="DescribePlayerResponse"/></returns>
+        public DescribePlayerResponse DescribePlayerSync(DescribePlayerRequest req)
+        {
+             JsonResponseModel<DescribePlayerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePlayer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePlayerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询房间信息。支持两种用法，当房间Id不传的时候，玩家Id必传，传入玩家Id可以查询当前玩家所在的房间信息，当房间Id传入的时候，玩家Id可不传，按照房间Id查询房间信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomRequest"/></param>
+        /// <returns><see cref="DescribeRoomResponse"/></returns>
+        public async Task<DescribeRoomResponse> DescribeRoom(DescribeRoomRequest req)
+        {
+             JsonResponseModel<DescribeRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询房间信息。支持两种用法，当房间Id不传的时候，玩家Id必传，传入玩家Id可以查询当前玩家所在的房间信息，当房间Id传入的时候，玩家Id可不传，按照房间Id查询房间信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomRequest"/></param>
+        /// <returns><see cref="DescribeRoomResponse"/></returns>
+        public DescribeRoomResponse DescribeRoomSync(DescribeRoomRequest req)
+        {
+             JsonResponseModel<DescribeRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过game_id、room_id解散房间
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>

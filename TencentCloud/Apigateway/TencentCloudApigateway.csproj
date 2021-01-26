@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E0BB529-7C6E-3A1A-A84E-7231EAFCBAB2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.215</VersionPrefix>
+    <VersionPrefix>3.0.216</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,6 +111,8 @@
     <Compile Include="V20180808\Models\DescribeIPStrategysStatusResponse.cs" />
     <Compile Include="V20180808\Models\DescribeLogSearchRequest.cs" />
     <Compile Include="V20180808\Models\DescribeLogSearchResponse.cs" />
+    <Compile Include="V20180808\Models\DescribePluginsRequest.cs" />
+    <Compile Include="V20180808\Models\DescribePluginsResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentListRequest.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentListResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentReleaseHistoryRequest.cs" />
@@ -176,6 +178,8 @@
     <Compile Include="V20180808\Models\ModifyUsagePlanResponse.cs" />
     <Compile Include="V20180808\Models\OauthConfig.cs" />
     <Compile Include="V20180808\Models\PathMapping.cs" />
+    <Compile Include="V20180808\Models\Plugin.cs" />
+    <Compile Include="V20180808\Models\PluginSummary.cs" />
     <Compile Include="V20180808\Models\ReleaseService.cs" />
     <Compile Include="V20180808\Models\ReleaseServiceRequest.cs" />
     <Compile Include="V20180808\Models\ReleaseServiceResponse.cs" />

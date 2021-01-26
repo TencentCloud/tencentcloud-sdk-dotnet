@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.215</VersionPrefix>
+    <VersionPrefix>3.0.216</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20180228\Models\AddMachineTagRequest.cs" />
     <Compile Include="V20180228\Models\AddMachineTagResponse.cs" />
     <Compile Include="V20180228\Models\AgentVul.cs" />
+    <Compile Include="V20180228\Models\AssetFilters.cs" />
     <Compile Include="V20180228\Models\BashEvent.cs" />
     <Compile Include="V20180228\Models\BashRule.cs" />
     <Compile Include="V20180228\Models\BruteAttack.cs" />
@@ -125,6 +126,8 @@
     <Compile Include="V20180228\Models\DescribeComponentStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeComponentsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeComponentsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeExportMachinesRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeExportMachinesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeHistoryAccountsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeHistoryAccountsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeImpactedHostsRequest.cs" />
@@ -133,10 +136,14 @@
     <Compile Include="V20180228\Models\DescribeLoginWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachineInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMachineInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeMachineListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeMachineListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachinesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMachinesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMaliciousRequestsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMaliciousRequestsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeMalwareInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeMalwareInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMalwaresRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMalwaresResponse.cs" />
     <Compile Include="V20180228\Models\DescribeNonlocalLoginPlacesRequest.cs" />
@@ -165,6 +172,8 @@
     <Compile Include="V20180228\Models\DescribeReverseShellEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeScanMalwareScheduleRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeScanMalwareScheduleResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityDynamicsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityDynamicsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityEventsCntRequest.cs" />
@@ -219,6 +228,8 @@
     <Compile Include="V20180228\Models\ExportPrivilegeEventsResponse.cs" />
     <Compile Include="V20180228\Models\ExportReverseShellEventsRequest.cs" />
     <Compile Include="V20180228\Models\ExportReverseShellEventsResponse.cs" />
+    <Compile Include="V20180228\Models\ExportTasksRequest.cs" />
+    <Compile Include="V20180228\Models\ExportTasksResponse.cs" />
     <Compile Include="V20180228\Models\Filter.cs" />
     <Compile Include="V20180228\Models\Filters.cs" />
     <Compile Include="V20180228\Models\HistoryAccount.cs" />
@@ -233,6 +244,7 @@
     <Compile Include="V20180228\Models\MachineTag.cs" />
     <Compile Include="V20180228\Models\MaliciousRequest.cs" />
     <Compile Include="V20180228\Models\Malware.cs" />
+    <Compile Include="V20180228\Models\MalwareInfo.cs" />
     <Compile Include="V20180228\Models\MisAlarmNonlocalLoginPlacesRequest.cs" />
     <Compile Include="V20180228\Models\MisAlarmNonlocalLoginPlacesResponse.cs" />
     <Compile Include="V20180228\Models\ModifyAlarmAttributeRequest.cs" />
@@ -241,6 +253,8 @@
     <Compile Include="V20180228\Models\ModifyAutoOpenProVersionConfigResponse.cs" />
     <Compile Include="V20180228\Models\ModifyLoginWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\ModifyLoginWhiteListResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
     <Compile Include="V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
     <Compile Include="V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
     <Compile Include="V20180228\Models\NonLocalLoginPlace.cs" />

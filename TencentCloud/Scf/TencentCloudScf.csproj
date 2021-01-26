@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.215</VersionPrefix>
+    <VersionPrefix>3.0.216</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,7 @@
     <Compile Include="V20180416\ScfClient.cs" />
     <Compile Include="V20180416\Models\AccessInfo.cs" />
     <Compile Include="V20180416\Models\Alias.cs" />
+    <Compile Include="V20180416\Models\AsyncEvent.cs" />
     <Compile Include="V20180416\Models\CfsConfig.cs" />
     <Compile Include="V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="V20180416\Models\Code.cs" />
@@ -103,6 +104,8 @@
     <Compile Include="V20180416\Models\LayerVersionSimple.cs" />
     <Compile Include="V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="V20180416\Models\ListAliasesResponse.cs" />
+    <Compile Include="V20180416\Models\ListAsyncEventsRequest.cs" />
+    <Compile Include="V20180416\Models\ListAsyncEventsResponse.cs" />
     <Compile Include="V20180416\Models\ListFunctionsRequest.cs" />
     <Compile Include="V20180416\Models\ListFunctionsResponse.cs" />
     <Compile Include="V20180416\Models\ListLayerVersionsRequest.cs" />
@@ -134,6 +137,9 @@
     <Compile Include="V20180416\Models\RoutingConfig.cs" />
     <Compile Include="V20180416\Models\StatusReason.cs" />
     <Compile Include="V20180416\Models\Tag.cs" />
+    <Compile Include="V20180416\Models\TerminateAsyncEventRequest.cs" />
+    <Compile Include="V20180416\Models\TerminateAsyncEventResponse.cs" />
+    <Compile Include="V20180416\Models\TimeInterval.cs" />
     <Compile Include="V20180416\Models\Trigger.cs" />
     <Compile Include="V20180416\Models\TriggerInfo.cs" />
     <Compile Include="V20180416\Models\UpdateAliasRequest.cs" />

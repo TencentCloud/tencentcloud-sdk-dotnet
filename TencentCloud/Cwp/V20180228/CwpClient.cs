@@ -1453,6 +1453,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 本接口 (DescribeExportMachines) 用于导出区域主机列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportMachinesRequest"/></param>
+        /// <returns><see cref="DescribeExportMachinesResponse"/></returns>
+        public async Task<DescribeExportMachinesResponse> DescribeExportMachines(DescribeExportMachinesRequest req)
+        {
+             JsonResponseModel<DescribeExportMachinesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExportMachines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExportMachinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeExportMachines) 用于导出区域主机列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportMachinesRequest"/></param>
+        /// <returns><see cref="DescribeExportMachinesResponse"/></returns>
+        public DescribeExportMachinesResponse DescribeExportMachinesSync(DescribeExportMachinesRequest req)
+        {
+             JsonResponseModel<DescribeExportMachinesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExportMachines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExportMachinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryAccountsRequest"/></param>
@@ -1613,6 +1653,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 本接口 (DescribeMachineList) 用于网页防篡改获取区域主机列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineListRequest"/></param>
+        /// <returns><see cref="DescribeMachineListResponse"/></returns>
+        public async Task<DescribeMachineListResponse> DescribeMachineList(DescribeMachineListRequest req)
+        {
+             JsonResponseModel<DescribeMachineListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMachineList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeMachineList) 用于网页防篡改获取区域主机列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineListRequest"/></param>
+        /// <returns><see cref="DescribeMachineListResponse"/></returns>
+        public DescribeMachineListResponse DescribeMachineListSync(DescribeMachineListRequest req)
+        {
+             JsonResponseModel<DescribeMachineListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMachineList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeMachines) 用于获取区域主机列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>
@@ -1684,6 +1764,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMaliciousRequests");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMaliciousRequestsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看恶意文件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMalwareInfoRequest"/></param>
+        /// <returns><see cref="DescribeMalwareInfoResponse"/></returns>
+        public async Task<DescribeMalwareInfoResponse> DescribeMalwareInfo(DescribeMalwareInfoRequest req)
+        {
+             JsonResponseModel<DescribeMalwareInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMalwareInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMalwareInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看恶意文件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMalwareInfoRequest"/></param>
+        /// <returns><see cref="DescribeMalwareInfoResponse"/></returns>
+        public DescribeMalwareInfoResponse DescribeMalwareInfoSync(DescribeMalwareInfoRequest req)
+        {
+             JsonResponseModel<DescribeMalwareInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMalwareInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMalwareInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2244,6 +2364,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DescribeReverseShellRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReverseShellRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询木马扫描进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanMalwareScheduleRequest"/></param>
+        /// <returns><see cref="DescribeScanMalwareScheduleResponse"/></returns>
+        public async Task<DescribeScanMalwareScheduleResponse> DescribeScanMalwareSchedule(DescribeScanMalwareScheduleRequest req)
+        {
+             JsonResponseModel<DescribeScanMalwareScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScanMalwareSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanMalwareScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询木马扫描进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScanMalwareScheduleRequest"/></param>
+        /// <returns><see cref="DescribeScanMalwareScheduleResponse"/></returns>
+        public DescribeScanMalwareScheduleResponse DescribeScanMalwareScheduleSync(DescribeScanMalwareScheduleRequest req)
+        {
+             JsonResponseModel<DescribeScanMalwareScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScanMalwareSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScanMalwareScheduleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3333,6 +3493,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 用于异步导出数据量大的日志文件
+        /// </summary>
+        /// <param name="req"><see cref="ExportTasksRequest"/></param>
+        /// <returns><see cref="ExportTasksResponse"/></returns>
+        public async Task<ExportTasksResponse> ExportTasks(ExportTasksRequest req)
+        {
+             JsonResponseModel<ExportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于异步导出数据量大的日志文件
+        /// </summary>
+        /// <param name="req"><see cref="ExportTasksRequest"/></param>
+        /// <returns><see cref="ExportTasksResponse"/></returns>
+        public ExportTasksResponse ExportTasksSync(ExportTasksRequest req)
+        {
+             JsonResponseModel<ExportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
         /// </summary>
         /// <param name="req"><see cref="IgnoreImpactedHostsRequest"/></param>
@@ -3564,6 +3764,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLoginWhiteList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoginWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 定时扫描设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMalwareTimingScanSettingsRequest"/></param>
+        /// <returns><see cref="ModifyMalwareTimingScanSettingsResponse"/></returns>
+        public async Task<ModifyMalwareTimingScanSettingsResponse> ModifyMalwareTimingScanSettings(ModifyMalwareTimingScanSettingsRequest req)
+        {
+             JsonResponseModel<ModifyMalwareTimingScanSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMalwareTimingScanSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMalwareTimingScanSettingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 定时扫描设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMalwareTimingScanSettingsRequest"/></param>
+        /// <returns><see cref="ModifyMalwareTimingScanSettingsResponse"/></returns>
+        public ModifyMalwareTimingScanSettingsResponse ModifyMalwareTimingScanSettingsSync(ModifyMalwareTimingScanSettingsRequest req)
+        {
+             JsonResponseModel<ModifyMalwareTimingScanSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMalwareTimingScanSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMalwareTimingScanSettingsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

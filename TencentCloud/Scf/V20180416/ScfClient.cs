@@ -907,6 +907,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 拉取函数异步事件列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAsyncEventsRequest"/></param>
+        /// <returns><see cref="ListAsyncEventsResponse"/></returns>
+        public async Task<ListAsyncEventsResponse> ListAsyncEvents(ListAsyncEventsRequest req)
+        {
+             JsonResponseModel<ListAsyncEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAsyncEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAsyncEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取函数异步事件列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAsyncEventsRequest"/></param>
+        /// <returns><see cref="ListAsyncEventsResponse"/></returns>
+        public ListAsyncEventsResponse ListAsyncEventsSync(ListAsyncEventsRequest req)
+        {
+             JsonResponseModel<ListAsyncEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAsyncEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAsyncEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据传入的查询参数返回相关函数信息。
         /// </summary>
         /// <param name="req"><see cref="ListFunctionsRequest"/></param>
@@ -1338,6 +1378,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "PutTotalConcurrencyConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTotalConcurrencyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 终止正在运行中的函数异步事件
+        /// </summary>
+        /// <param name="req"><see cref="TerminateAsyncEventRequest"/></param>
+        /// <returns><see cref="TerminateAsyncEventResponse"/></returns>
+        public async Task<TerminateAsyncEventResponse> TerminateAsyncEvent(TerminateAsyncEventRequest req)
+        {
+             JsonResponseModel<TerminateAsyncEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateAsyncEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateAsyncEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 终止正在运行中的函数异步事件
+        /// </summary>
+        /// <param name="req"><see cref="TerminateAsyncEventRequest"/></param>
+        /// <returns><see cref="TerminateAsyncEventResponse"/></returns>
+        public TerminateAsyncEventResponse TerminateAsyncEventSync(TerminateAsyncEventRequest req)
+        {
+             JsonResponseModel<TerminateAsyncEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateAsyncEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateAsyncEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

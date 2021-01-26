@@ -973,6 +973,86 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 当restful api为关闭状态时，可以通过此接口关闭restful api
+        /// </summary>
+        /// <param name="req"><see cref="DisableRestProxyRequest"/></param>
+        /// <returns><see cref="DisableRestProxyResponse"/></returns>
+        public async Task<DisableRestProxyResponse> DisableRestProxy(DisableRestProxyRequest req)
+        {
+             JsonResponseModel<DisableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当restful api为关闭状态时，可以通过此接口关闭restful api
+        /// </summary>
+        /// <param name="req"><see cref="DisableRestProxyRequest"/></param>
+        /// <returns><see cref="DisableRestProxyResponse"/></returns>
+        public DisableRestProxyResponse DisableRestProxySync(DisableRestProxyRequest req)
+        {
+             JsonResponseModel<DisableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当restful api为关闭状态时，可以通过此接口开启restful apu
+        /// </summary>
+        /// <param name="req"><see cref="EnableRestProxyRequest"/></param>
+        /// <returns><see cref="EnableRestProxyResponse"/></returns>
+        public async Task<EnableRestProxyResponse> EnableRestProxy(EnableRestProxyRequest req)
+        {
+             JsonResponseModel<EnableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当restful api为关闭状态时，可以通过此接口开启restful apu
+        /// </summary>
+        /// <param name="req"><see cref="EnableRestProxyRequest"/></param>
+        /// <returns><see cref="EnableRestProxyResponse"/></returns>
+        public EnableRestProxyResponse EnableRestProxySync(EnableRestProxyRequest req)
+        {
+             JsonResponseModel<EnableRestProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableRestProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRestProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改独占集群机器
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>

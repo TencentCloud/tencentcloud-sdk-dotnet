@@ -241,7 +241,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string StoreNo{ get; set; }
 
         /// <summary>
-        /// 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道
+        /// 开票渠道。0：APP渠道，1：线下渠道，2：小程序渠道。不填默认为APP渠道
         /// </summary>
         [JsonProperty("InvoiceChannel")]
         public long? InvoiceChannel{ get; set; }

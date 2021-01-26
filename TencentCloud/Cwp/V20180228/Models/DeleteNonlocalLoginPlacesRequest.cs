@@ -25,10 +25,22 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 异地登录事件ID数组。
+        /// 删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids
+        /// </summary>
+        [JsonProperty("DelType")]
+        public string DelType{ get; set; }
+
+        /// <summary>
+        /// 异地登录事件ID数组。DelType为Ids或DelType未填时此项必填
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }
+
+        /// <summary>
+        /// 异地登录事件的Ip。DelType为Ip时必填
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string[] Ip{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DelType", this.DelType);
             this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamArraySimple(map, prefix + "Ip.", this.Ip);
         }
     }
 }
