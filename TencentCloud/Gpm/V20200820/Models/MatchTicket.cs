@@ -25,7 +25,7 @@ namespace TencentCloud.Gpm.V20200820.Models
     {
         
         /// <summary>
-        /// MatchTicketId 长度 128 [a-zA-Z0-9-\.]*
+        /// 匹配票据 ID长度 128 [a-zA-Z0-9-\.]*
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

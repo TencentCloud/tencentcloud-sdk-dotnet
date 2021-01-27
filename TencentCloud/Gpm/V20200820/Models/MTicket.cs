@@ -31,7 +31,7 @@ namespace TencentCloud.Gpm.V20200820.Models
         public string MatchCode{ get; set; }
 
         /// <summary>
-        /// 请求TicketId
+        /// 匹配票据 ID
         /// </summary>
         [JsonProperty("MatchTicketId")]
         public string MatchTicketId{ get; set; }

@@ -31,12 +31,6 @@ namespace TencentCloud.Vms.V20200902.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 模板参数，若模板没有参数，请提供为空数组。
-        /// </summary>
-        [JsonProperty("TemplateParamSet")]
-        public string[] TemplateParamSet{ get; set; }
-
-        /// <summary>
         /// 被叫手机号码，采用 e.164 标准，格式为+[国家或地区码][用户号码]。
         /// 例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
         /// </summary>
@@ -48,6 +42,12 @@ namespace TencentCloud.Vms.V20200902.Models
         /// </summary>
         [JsonProperty("VoiceSdkAppid")]
         public string VoiceSdkAppid{ get; set; }
+
+        /// <summary>
+        /// 模板参数，若模板没有参数，请提供为空数组。
+        /// </summary>
+        [JsonProperty("TemplateParamSet")]
+        public string[] TemplateParamSet{ get; set; }
 
         /// <summary>
         /// 播放次数，可选，最多3次，默认2次。
@@ -68,9 +68,9 @@ namespace TencentCloud.Vms.V20200902.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamArraySimple(map, prefix + "TemplateParamSet.", this.TemplateParamSet);
             this.SetParamSimple(map, prefix + "CalledNumber", this.CalledNumber);
             this.SetParamSimple(map, prefix + "VoiceSdkAppid", this.VoiceSdkAppid);
+            this.SetParamArraySimple(map, prefix + "TemplateParamSet.", this.TemplateParamSet);
             this.SetParamSimple(map, prefix + "PlayTimes", this.PlayTimes);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }

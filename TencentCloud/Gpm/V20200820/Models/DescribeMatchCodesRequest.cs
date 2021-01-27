@@ -36,6 +36,12 @@ namespace TencentCloud.Gpm.V20200820.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 搜索的字符串
+        /// </summary>
+        [JsonProperty("MatchCode")]
+        public string MatchCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gpm.V20200820.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "MatchCode", this.MatchCode);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Gpm.V20200820.Models
         public float? NumberValue{ get; set; }
 
         /// <summary>
-        /// 字符串属性值 长度 1024 默认 ""
+        /// 字符串属性值 长度 128 默认 ""
         /// </summary>
         [JsonProperty("StringValue")]
         public string StringValue{ get; set; }

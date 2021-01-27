@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.216</VersionPrefix>
+    <VersionPrefix>3.0.217</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -8271,6 +8271,19 @@
     <Compile Include="Postgres\V20170312\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\Xlog.cs" />
     <Compile Include="Postgres\V20170312\Models\ZoneInfo.cs" />
+    <Compile Include="Rce\V20201103\RceClient.cs" />
+    <Compile Include="Rce\V20201103\Models\AccountInfo.cs" />
+    <Compile Include="Rce\V20201103\Models\InputDetails.cs" />
+    <Compile Include="Rce\V20201103\Models\InputManageMarketingRisk.cs" />
+    <Compile Include="Rce\V20201103\Models\ManageMarketingRiskRequest.cs" />
+    <Compile Include="Rce\V20201103\Models\ManageMarketingRiskResponse.cs" />
+    <Compile Include="Rce\V20201103\Models\OnlineScamInfo.cs" />
+    <Compile Include="Rce\V20201103\Models\OtherAccountInfo.cs" />
+    <Compile Include="Rce\V20201103\Models\OutputManageMarketingRisk.cs" />
+    <Compile Include="Rce\V20201103\Models\OutputManageMarketingRiskValue.cs" />
+    <Compile Include="Rce\V20201103\Models\QQAccountInfo.cs" />
+    <Compile Include="Rce\V20201103\Models\SponsorInfo.cs" />
+    <Compile Include="Rce\V20201103\Models\WeChatAccountInfo.cs" />
     <Compile Include="Redis\V20180412\RedisClient.cs" />
     <Compile Include="Redis\V20180412\Models\Account.cs" />
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsRequest.cs" />
