@@ -276,6 +276,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MaxUnavailable")]
         public string MaxUnavailable{ get; set; }
 
+        /// <summary>
+        /// 部署组健康检查设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthCheckSettings")]
+        public HealthCheckSettings HealthCheckSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -318,6 +325,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
             this.SetParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
+            this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
         }
     }
 }

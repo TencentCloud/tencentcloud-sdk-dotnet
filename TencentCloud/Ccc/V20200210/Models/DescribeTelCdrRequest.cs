@@ -37,28 +37,40 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? EndTimeStamp{ get; set; }
 
         /// <summary>
-        /// 返回记录条数，上限 100
+        /// 返回数据条数，上限（deprecated）
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移（deprecated）
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 实例 ID
+        /// 实例 ID（deprecated）
         /// </summary>
         [JsonProperty("InstanceId")]
         public long? InstanceId{ get; set; }
 
         /// <summary>
-        /// 应用ID。
+        /// 应用 ID
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 分页尺寸，上限 100
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 分页页码，从 0 开始
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
         }
     }
 }

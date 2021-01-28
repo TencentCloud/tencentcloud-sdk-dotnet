@@ -73,7 +73,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? EndStatus{ get; set; }
 
         /// <summary>
-        /// 技能组
+        /// 技能组名称
         /// </summary>
         [JsonProperty("SkillGroup")]
         public string SkillGroup{ get; set; }
@@ -83,6 +83,104 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("CallerLocation")]
         public string CallerLocation{ get; set; }
+
+        /// <summary>
+        /// IVR 阶段耗时
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IVRDuration")]
+        public long? IVRDuration{ get; set; }
+
+        /// <summary>
+        /// 振铃时间戳，UNIX 秒级时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RingTimestamp")]
+        public long? RingTimestamp{ get; set; }
+
+        /// <summary>
+        /// 接听时间戳，UNIX 秒级时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AcceptTimestamp")]
+        public long? AcceptTimestamp{ get; set; }
+
+        /// <summary>
+        /// 结束时间戳，UNIX 秒级时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndedTimestamp")]
+        public long? EndedTimestamp{ get; set; }
+
+        /// <summary>
+        /// IVR 按键信息 ，e.g. ["1","2","3"]
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IVRKeyPressed")]
+        public string[] IVRKeyPressed{ get; set; }
+
+        /// <summary>
+        /// 挂机方 seat 坐席 user 用户
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HungUpSide")]
+        public string HungUpSide{ get; set; }
+
+        /// <summary>
+        /// 服务参与者列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServeParticipants")]
+        public ServeParticipant[] ServeParticipants{ get; set; }
+
+        /// <summary>
+        /// 技能组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SkillGroupId")]
+        public long? SkillGroupId{ get; set; }
+
+        /// <summary>
+        /// ok 正常结束 
+        /// unconnected	未接通
+        /// seatGiveUp	坐席未接
+        /// seatForward	坐席转接
+        /// ivrGiveUp	IVR期间用户放弃
+        /// waitingGiveUp	会话排队期间用户放弃
+        /// ringingGiveUp	会话振铃期间用户放弃
+        /// error	系统错误
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndStatusString")]
+        public string EndStatusString{ get; set; }
+
+        /// <summary>
+        /// 会话开始时间戳，UNIX 秒级时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTimestamp")]
+        public long? StartTimestamp{ get; set; }
+
+        /// <summary>
+        /// 进入排队时间，Unix 秒级时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueuedTimestamp")]
+        public long? QueuedTimestamp{ get; set; }
+
+        /// <summary>
+        /// 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PostIVRKeyPressed")]
+        public IVRKeyPressedElement[] PostIVRKeyPressed{ get; set; }
+
+        /// <summary>
+        /// 排队技能组Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QueuedSkillGroupId")]
+        public long? QueuedSkillGroupId{ get; set; }
 
 
         /// <summary>
@@ -100,6 +198,19 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "EndStatus", this.EndStatus);
             this.SetParamSimple(map, prefix + "SkillGroup", this.SkillGroup);
             this.SetParamSimple(map, prefix + "CallerLocation", this.CallerLocation);
+            this.SetParamSimple(map, prefix + "IVRDuration", this.IVRDuration);
+            this.SetParamSimple(map, prefix + "RingTimestamp", this.RingTimestamp);
+            this.SetParamSimple(map, prefix + "AcceptTimestamp", this.AcceptTimestamp);
+            this.SetParamSimple(map, prefix + "EndedTimestamp", this.EndedTimestamp);
+            this.SetParamArraySimple(map, prefix + "IVRKeyPressed.", this.IVRKeyPressed);
+            this.SetParamSimple(map, prefix + "HungUpSide", this.HungUpSide);
+            this.SetParamArrayObj(map, prefix + "ServeParticipants.", this.ServeParticipants);
+            this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
+            this.SetParamSimple(map, prefix + "EndStatusString", this.EndStatusString);
+            this.SetParamSimple(map, prefix + "StartTimestamp", this.StartTimestamp);
+            this.SetParamSimple(map, prefix + "QueuedTimestamp", this.QueuedTimestamp);
+            this.SetParamArrayObj(map, prefix + "PostIVRKeyPressed.", this.PostIVRKeyPressed);
+            this.SetParamSimple(map, prefix + "QueuedSkillGroupId", this.QueuedSkillGroupId);
         }
     }
 }

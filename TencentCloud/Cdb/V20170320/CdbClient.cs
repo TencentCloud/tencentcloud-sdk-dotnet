@@ -4487,6 +4487,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDrInstanceToMasterRequest"/></param>
+        /// <returns><see cref="SwitchDrInstanceToMasterResponse"/></returns>
+        public async Task<SwitchDrInstanceToMasterResponse> SwitchDrInstanceToMaster(SwitchDrInstanceToMasterRequest req)
+        {
+             JsonResponseModel<SwitchDrInstanceToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDrInstanceToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrInstanceToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDrInstanceToMasterRequest"/></param>
+        /// <returns><see cref="SwitchDrInstanceToMasterResponse"/></returns>
+        public SwitchDrInstanceToMasterResponse SwitchDrInstanceToMasterSync(SwitchDrInstanceToMasterRequest req)
+        {
+             JsonResponseModel<SwitchDrInstanceToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDrInstanceToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrInstanceToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(SwitchForUpgrade)用于切换访问新实例，针对主升级中的实例处于待切换状态时，用户可主动发起该流程。
         /// </summary>
         /// <param name="req"><see cref="SwitchForUpgradeRequest"/></param>

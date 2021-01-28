@@ -93,6 +93,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（CloneDB）用于克隆数据库，只支持克隆到本实例，克隆时必须指定新库名称。
+        /// </summary>
+        /// <param name="req"><see cref="CloneDBRequest"/></param>
+        /// <returns><see cref="CloneDBResponse"/></returns>
+        public async Task<CloneDBResponse> CloneDB(CloneDBRequest req)
+        {
+             JsonResponseModel<CloneDBResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneDB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneDBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloneDB）用于克隆数据库，只支持克隆到本实例，克隆时必须指定新库名称。
+        /// </summary>
+        /// <param name="req"><see cref="CloneDBRequest"/></param>
+        /// <returns><see cref="CloneDBResponse"/></returns>
+        public CloneDBResponse CloneDBSync(CloneDBRequest req)
+        {
+             JsonResponseModel<CloneDBResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneDB");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneDBResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
         /// </summary>
         /// <param name="req"><see cref="CompleteExpansionRequest"/></param>

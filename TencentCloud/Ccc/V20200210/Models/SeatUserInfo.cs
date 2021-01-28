@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Mail{ get; set; }
 
         /// <summary>
-        /// 坐席电话号码
+        /// 坐席电话号码（带0086前缀）
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }

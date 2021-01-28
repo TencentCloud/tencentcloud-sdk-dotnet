@@ -32,7 +32,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string OldName{ get; set; }
 
         /// <summary>
-        /// 库的新名字，如果不填则按照系统默认方式命名恢复的库。在用于离线迁移任务时，不填则按照OldName命名，OldName和NewName不能同时不填。
+        /// 库的新名字，在用于离线迁移时，不填则按照OldName命名，OldName和NewName不能同时不填。在用于克隆数据库时，OldName和NewName都必须填写，且不能重复
         /// </summary>
         [JsonProperty("NewName")]
         public string NewName{ get; set; }

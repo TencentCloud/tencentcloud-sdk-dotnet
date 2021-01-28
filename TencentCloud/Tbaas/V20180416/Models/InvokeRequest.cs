@@ -55,7 +55,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+        /// 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称及其所属组织名称
         /// </summary>
         [JsonProperty("Peers")]
         public PeerSet[] Peers{ get; set; }

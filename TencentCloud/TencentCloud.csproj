@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.217</VersionPrefix>
+    <VersionPrefix>3.0.218</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1663,15 +1663,19 @@
     <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribePSTNActiveSessionListRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribePSTNActiveSessionListResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeSeatUserListRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeSeatUserListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\IMCdrInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\IVRKeyPressedElement.cs" />
     <Compile Include="Ccc\V20200210\Models\Message.cs" />
     <Compile Include="Ccc\V20200210\Models\MessageBody.cs" />
     <Compile Include="Ccc\V20200210\Models\PSTNSessionInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\SeatUserInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\ServeParticipant.cs" />
     <Compile Include="Ccc\V20200210\Models\TelCdrInfo.cs" />
     <Compile Include="Cdb\V20170320\CdbClient.cs" />
     <Compile Include="Cdb\V20170320\Models\Account.cs" />
@@ -1952,6 +1956,8 @@
     <Compile Include="Cdb\V20170320\Models\StopRollbackResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\SwitchDrInstanceToMasterRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\SwitchDrInstanceToMasterResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchForUpgradeRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchForUpgradeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\TableNameInfo.cs" />
@@ -4222,6 +4228,7 @@
     <Compile Include="Dc\V20180410\Models\BFDInfo.cs" />
     <Compile Include="Dc\V20180410\Models\BGPStatus.cs" />
     <Compile Include="Dc\V20180410\Models\BgpPeer.cs" />
+    <Compile Include="Dc\V20180410\Models\Coordinate.cs" />
     <Compile Include="Dc\V20180410\Models\CreateDirectConnectRequest.cs" />
     <Compile Include="Dc\V20180410\Models\CreateDirectConnectResponse.cs" />
     <Compile Include="Dc\V20180410\Models\CreateDirectConnectTunnelRequest.cs" />
@@ -8765,6 +8772,8 @@
     <Compile Include="Sqlserver\V20180328\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\Backup.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CloneDBRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CloneDBResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteMigrationRequest.cs" />
