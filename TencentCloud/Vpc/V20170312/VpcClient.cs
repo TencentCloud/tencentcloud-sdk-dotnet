@@ -1761,6 +1761,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口(CreateNatGatewaySourceIpTranslationNatRule)用于创建NAT网关SNAT规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public async Task<CreateNatGatewaySourceIpTranslationNatRuleResponse> CreateNatGatewaySourceIpTranslationNatRule(CreateNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateNatGatewaySourceIpTranslationNatRule)用于创建NAT网关SNAT规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="CreateNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public CreateNatGatewaySourceIpTranslationNatRuleResponse CreateNatGatewaySourceIpTranslationNatRuleSync(CreateNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateNetDetect)用于创建网络探测。
         /// </summary>
         /// <param name="req"><see cref="CreateNetDetectRequest"/></param>
@@ -3036,6 +3076,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNatGatewaySourceIpTranslationNatRule）用于删除NAT网关端口SNAT转发规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeleteNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public async Task<DeleteNatGatewaySourceIpTranslationNatRuleResponse> DeleteNatGatewaySourceIpTranslationNatRule(DeleteNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNatGatewaySourceIpTranslationNatRule）用于删除NAT网关端口SNAT转发规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="DeleteNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRuleSync(DeleteNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4864,6 +4944,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNatGatewayDestinationIpPortTranslationNatRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNatGatewaySourceIpTranslationNatRules）用于查询NAT网关SNAT转发规则对象数组。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewaySourceIpTranslationNatRulesResponse"/></returns>
+        public async Task<DescribeNatGatewaySourceIpTranslationNatRulesResponse> DescribeNatGatewaySourceIpTranslationNatRules(DescribeNatGatewaySourceIpTranslationNatRulesRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatGatewaySourceIpTranslationNatRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNatGatewaySourceIpTranslationNatRules）用于查询NAT网关SNAT转发规则对象数组。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewaySourceIpTranslationNatRulesResponse"/></returns>
+        public DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRulesSync(DescribeNatGatewaySourceIpTranslationNatRulesRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNatGatewaySourceIpTranslationNatRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7923,6 +8043,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyNatGatewaySourceIpTranslationNatRule）用于修改NAT网关SNAT转发规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public async Task<ModifyNatGatewaySourceIpTranslationNatRuleResponse> ModifyNatGatewaySourceIpTranslationNatRule(ModifyNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyNatGatewaySourceIpTranslationNatRule）用于修改NAT网关SNAT转发规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNatGatewaySourceIpTranslationNatRuleRequest"/></param>
+        /// <returns><see cref="ModifyNatGatewaySourceIpTranslationNatRuleResponse"/></returns>
+        public ModifyNatGatewaySourceIpTranslationNatRuleResponse ModifyNatGatewaySourceIpTranslationNatRuleSync(ModifyNatGatewaySourceIpTranslationNatRuleRequest req)
+        {
+             JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNatGatewaySourceIpTranslationNatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyNetDetect)用于修改网络探测参数。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetDetectRequest"/></param>
@@ -8548,6 +8708,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyVpnGatewayCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 路由表列表页操作增加“发布到云联网”，用于发布路由到云联网。
+        /// </summary>
+        /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
+        /// <returns><see cref="NotifyRoutesResponse"/></returns>
+        public async Task<NotifyRoutesResponse> NotifyRoutes(NotifyRoutesRequest req)
+        {
+             JsonResponseModel<NotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "NotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<NotifyRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 路由表列表页操作增加“发布到云联网”，用于发布路由到云联网。
+        /// </summary>
+        /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
+        /// <returns><see cref="NotifyRoutesResponse"/></returns>
+        public NotifyRoutesResponse NotifyRoutesSync(NotifyRoutesRequest req)
+        {
+             JsonResponseModel<NotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "NotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<NotifyRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -9450,6 +9650,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "UnassignPrivateIpAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnassignPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 路由表列表页操作增加“从云联网撤销”，用于撤销已发布到云联网的路由。
+        /// </summary>
+        /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
+        /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
+        public async Task<WithdrawNotifyRoutesResponse> WithdrawNotifyRoutes(WithdrawNotifyRoutesRequest req)
+        {
+             JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "WithdrawNotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawNotifyRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 路由表列表页操作增加“从云联网撤销”，用于撤销已发布到云联网的路由。
+        /// </summary>
+        /// <param name="req"><see cref="WithdrawNotifyRoutesRequest"/></param>
+        /// <returns><see cref="WithdrawNotifyRoutesResponse"/></returns>
+        public WithdrawNotifyRoutesResponse WithdrawNotifyRoutesSync(WithdrawNotifyRoutesRequest req)
+        {
+             JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "WithdrawNotifyRoutes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<WithdrawNotifyRoutesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -53,6 +53,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（AddDBInstanceToReadOnlyGroup）用于添加只读实例到只读组
+        /// </summary>
+        /// <param name="req"><see cref="AddDBInstanceToReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="AddDBInstanceToReadOnlyGroupResponse"/></returns>
+        public async Task<AddDBInstanceToReadOnlyGroupResponse> AddDBInstanceToReadOnlyGroup(AddDBInstanceToReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddDBInstanceToReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AddDBInstanceToReadOnlyGroup）用于添加只读实例到只读组
+        /// </summary>
+        /// <param name="req"><see cref="AddDBInstanceToReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="AddDBInstanceToReadOnlyGroupResponse"/></returns>
+        public AddDBInstanceToReadOnlyGroupResponse AddDBInstanceToReadOnlyGroupSync(AddDBInstanceToReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddDBInstanceToReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CloseDBExtranetAccess）用于关闭实例外网链接。
         /// </summary>
         /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
@@ -173,6 +213,86 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口(CreateReadOnlyDBInstance)用于创建只读实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyDBInstanceResponse"/></returns>
+        public async Task<CreateReadOnlyDBInstanceResponse> CreateReadOnlyDBInstance(CreateReadOnlyDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateReadOnlyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReadOnlyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReadOnlyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateReadOnlyDBInstance)用于创建只读实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyDBInstanceResponse"/></returns>
+        public CreateReadOnlyDBInstanceResponse CreateReadOnlyDBInstanceSync(CreateReadOnlyDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateReadOnlyDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReadOnlyDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReadOnlyDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateReadOnlyGroup）用于创建只读组
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyGroupResponse"/></returns>
+        public async Task<CreateReadOnlyGroupResponse> CreateReadOnlyGroup(CreateReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<CreateReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateReadOnlyGroup）用于创建只读组
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyGroupResponse"/></returns>
+        public CreateReadOnlyGroupResponse CreateReadOnlyGroupSync(CreateReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<CreateReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
         /// </summary>
         /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
@@ -204,6 +324,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateServerlessDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServerlessDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteReadOnlyGroup)用于删除指定的只读组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="DeleteReadOnlyGroupResponse"/></returns>
+        public async Task<DeleteReadOnlyGroupResponse> DeleteReadOnlyGroup(DeleteReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<DeleteReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteReadOnlyGroup)用于删除指定的只读组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="DeleteReadOnlyGroupResponse"/></returns>
+        public DeleteReadOnlyGroupResponse DeleteReadOnlyGroupSync(DeleteReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<DeleteReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReadOnlyGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -653,6 +813,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeReadOnlyGroups)用于查询用户输入指定实例的只读组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupsRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupsResponse"/></returns>
+        public async Task<DescribeReadOnlyGroupsResponse> DescribeReadOnlyGroups(DescribeReadOnlyGroupsRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReadOnlyGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeReadOnlyGroups)用于查询用户输入指定实例的只读组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupsRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupsResponse"/></returns>
+        public DescribeReadOnlyGroupsResponse DescribeReadOnlyGroupsSync(DescribeReadOnlyGroupsRequest req)
+        {
+             JsonResponseModel<DescribeReadOnlyGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReadOnlyGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReadOnlyGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeRegions) 用于查询售卖地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
@@ -773,7 +973,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。
+        /// 本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。当前仅适用于按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -793,7 +993,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。
+        /// 本接口 (DestroyDBInstance) 用于销毁指定DBInstanceId对应的实例。当前仅适用于按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -1053,6 +1253,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyDBInstanceReadOnlyGroup）用于修改实例所属的只读组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceReadOnlyGroupResponse"/></returns>
+        public async Task<ModifyDBInstanceReadOnlyGroupResponse> ModifyDBInstanceReadOnlyGroup(ModifyDBInstanceReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceReadOnlyGroup）用于修改实例所属的只读组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceReadOnlyGroupResponse"/></returns>
+        public ModifyDBInstanceReadOnlyGroupResponse ModifyDBInstanceReadOnlyGroupSync(ModifyDBInstanceReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>
@@ -1084,6 +1324,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstancesProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstancesProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyReadOnlyGroupConfig)用于更新只读组配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyGroupConfigRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyGroupConfigResponse"/></returns>
+        public async Task<ModifyReadOnlyGroupConfigResponse> ModifyReadOnlyGroupConfig(ModifyReadOnlyGroupConfigRequest req)
+        {
+             JsonResponseModel<ModifyReadOnlyGroupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyReadOnlyGroupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReadOnlyGroupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyReadOnlyGroupConfig)用于更新只读组配置信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyGroupConfigRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyGroupConfigResponse"/></returns>
+        public ModifyReadOnlyGroupConfigResponse ModifyReadOnlyGroupConfigSync(ModifyReadOnlyGroupConfigRequest req)
+        {
+             JsonResponseModel<ModifyReadOnlyGroupConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyReadOnlyGroupConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReadOnlyGroupConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1164,6 +1444,86 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "OpenServerlessDBExtranetAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenServerlessDBExtranetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(RebalanceReadOnlyGroup)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
+        /// </summary>
+        /// <param name="req"><see cref="RebalanceReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RebalanceReadOnlyGroupResponse"/></returns>
+        public async Task<RebalanceReadOnlyGroupResponse> RebalanceReadOnlyGroup(RebalanceReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<RebalanceReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RebalanceReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebalanceReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(RebalanceReadOnlyGroup)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
+        /// </summary>
+        /// <param name="req"><see cref="RebalanceReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RebalanceReadOnlyGroupResponse"/></returns>
+        public RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroupSync(RebalanceReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<RebalanceReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RebalanceReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebalanceReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RemoveDBInstanceFromReadOnlyGroup）用户将只读实例从只读组中移除
+        /// </summary>
+        /// <param name="req"><see cref="RemoveDBInstanceFromReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RemoveDBInstanceFromReadOnlyGroupResponse"/></returns>
+        public async Task<RemoveDBInstanceFromReadOnlyGroupResponse> RemoveDBInstanceFromReadOnlyGroup(RemoveDBInstanceFromReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveDBInstanceFromReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（RemoveDBInstanceFromReadOnlyGroup）用户将只读实例从只读组中移除
+        /// </summary>
+        /// <param name="req"><see cref="RemoveDBInstanceFromReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RemoveDBInstanceFromReadOnlyGroupResponse"/></returns>
+        public RemoveDBInstanceFromReadOnlyGroupResponse RemoveDBInstanceFromReadOnlyGroupSync(RemoveDBInstanceFromReadOnlyGroupRequest req)
+        {
+             JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveDBInstanceFromReadOnlyGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

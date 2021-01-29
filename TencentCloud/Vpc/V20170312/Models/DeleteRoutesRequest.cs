@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// 路由策略对象。
+        /// 路由策略对象，删除路由策略时，仅需使用Route的RouteId字段。
         /// </summary>
         [JsonProperty("Routes")]
         public Route[] Routes{ get; set; }

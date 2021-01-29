@@ -31,6 +31,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public TextArithmetic[] TextDetections{ get; set; }
 
         /// <summary>
+        /// 图片横屏的角度(90度或270度)
+        /// </summary>
+        [JsonProperty("Angle")]
+        public float? Angle{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
+            this.SetParamSimple(map, prefix + "Angle", this.Angle);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

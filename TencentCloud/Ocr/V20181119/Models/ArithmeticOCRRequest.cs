@@ -43,6 +43,42 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 用于选择是否支持横屏拍摄。打开则支持横屏拍摄图片角度判断，角度信息在返回参数的angle中，默认值为true
+        /// </summary>
+        [JsonProperty("SupportHorizontalImage")]
+        public bool? SupportHorizontalImage{ get; set; }
+
+        /// <summary>
+        /// 是否拒绝非速算图，打开则拒绝非速算图(注：非速算图是指风景人物等明显不是速算图片的图片)，默认值为false
+        /// </summary>
+        [JsonProperty("RejectNonArithmeticPic")]
+        public bool? RejectNonArithmeticPic{ get; set; }
+
+        /// <summary>
+        /// 是否展开耦合算式中的竖式计算，默认值为false
+        /// </summary>
+        [JsonProperty("EnableDispRelatedVertical")]
+        public bool? EnableDispRelatedVertical{ get; set; }
+
+        /// <summary>
+        /// 是否展示竖式算式的中间结果和格式控制字符，默认值为false
+        /// </summary>
+        [JsonProperty("EnableDispMidResult")]
+        public bool? EnableDispMidResult{ get; set; }
+
+        /// <summary>
+        /// 是否开启pdf识别，默认值为true
+        /// </summary>
+        [JsonProperty("EnablePdfRecognize")]
+        public bool? EnablePdfRecognize{ get; set; }
+
+        /// <summary>
+        /// pdf页码，从0开始，默认为0
+        /// </summary>
+        [JsonProperty("PdfPageIndex")]
+        public long? PdfPageIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +87,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "SupportHorizontalImage", this.SupportHorizontalImage);
+            this.SetParamSimple(map, prefix + "RejectNonArithmeticPic", this.RejectNonArithmeticPic);
+            this.SetParamSimple(map, prefix + "EnableDispRelatedVertical", this.EnableDispRelatedVertical);
+            this.SetParamSimple(map, prefix + "EnableDispMidResult", this.EnableDispMidResult);
+            this.SetParamSimple(map, prefix + "EnablePdfRecognize", this.EnablePdfRecognize);
+            this.SetParamSimple(map, prefix + "PdfPageIndex", this.PdfPageIndex);
         }
     }
 }

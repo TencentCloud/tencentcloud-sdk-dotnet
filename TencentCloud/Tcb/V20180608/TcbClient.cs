@@ -133,6 +133,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 创建云开发项目
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndDeployCloudBaseProjectRequest"/></param>
+        /// <returns><see cref="CreateAndDeployCloudBaseProjectResponse"/></returns>
+        public async Task<CreateAndDeployCloudBaseProjectResponse> CreateAndDeployCloudBaseProject(CreateAndDeployCloudBaseProjectRequest req)
+        {
+             JsonResponseModel<CreateAndDeployCloudBaseProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAndDeployCloudBaseProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAndDeployCloudBaseProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建云开发项目
+        /// </summary>
+        /// <param name="req"><see cref="CreateAndDeployCloudBaseProjectRequest"/></param>
+        /// <returns><see cref="CreateAndDeployCloudBaseProjectResponse"/></returns>
+        public CreateAndDeployCloudBaseProjectResponse CreateAndDeployCloudBaseProjectSync(CreateAndDeployCloudBaseProjectRequest req)
+        {
+             JsonResponseModel<CreateAndDeployCloudBaseProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAndDeployCloudBaseProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAndDeployCloudBaseProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 增加安全域名
         /// </summary>
         /// <param name="req"><see cref="CreateAuthDomainRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCloudBaseBuildService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseBuildServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云开发项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseProjectLatestVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseProjectLatestVersionListResponse"/></returns>
+        public async Task<DescribeCloudBaseProjectLatestVersionListResponse> DescribeCloudBaseProjectLatestVersionList(DescribeCloudBaseProjectLatestVersionListRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseProjectLatestVersionListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseProjectLatestVersionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseProjectLatestVersionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云开发项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseProjectLatestVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseProjectLatestVersionListResponse"/></returns>
+        public DescribeCloudBaseProjectLatestVersionListResponse DescribeCloudBaseProjectLatestVersionListSync(DescribeCloudBaseProjectLatestVersionListRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseProjectLatestVersionListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseProjectLatestVersionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseProjectLatestVersionListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

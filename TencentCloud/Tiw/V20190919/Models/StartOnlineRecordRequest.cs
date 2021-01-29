@@ -114,7 +114,15 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string ChatGroupId{ get; set; }
 
         /// <summary>
-        /// 内部参数
+        /// 自动停止录制超时时间，单位秒，取值范围[300, 86400], 默认值为300秒。
+        /// 
+        /// 当超过设定时间房间内没有音视频上行且没有白板操作的时候，录制服务会自动停止当前录制任务。
+        /// </summary>
+        [JsonProperty("AutoStopTimeout")]
+        public long? AutoStopTimeout{ get; set; }
+
+        /// <summary>
+        /// 内部参数，可忽略
         /// </summary>
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
@@ -138,6 +146,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "RecordControl.", this.RecordControl);
             this.SetParamSimple(map, prefix + "RecordMode", this.RecordMode);
             this.SetParamSimple(map, prefix + "ChatGroupId", this.ChatGroupId);
+            this.SetParamSimple(map, prefix + "AutoStopTimeout", this.AutoStopTimeout);
             this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
         }
     }

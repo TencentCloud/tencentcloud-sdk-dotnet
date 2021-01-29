@@ -98,6 +98,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteItemId")]
         public string RouteItemId{ get; set; }
 
+        /// <summary>
+        /// 路由策略是否发布到云联网。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublishedToVbc")]
+        public bool? PublishedToVbc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
             this.SetParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
             this.SetParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
+            this.SetParamSimple(map, prefix + "PublishedToVbc", this.PublishedToVbc);
         }
     }
 }

@@ -31,19 +31,19 @@ namespace TencentCloud.Captcha.V20190722.Models
         public long? CaptchaAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间
+        /// 查询开始时间 例如：2019112900
         /// </summary>
         [JsonProperty("Start")]
         public long? Start{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// 查询结束时间 例如：2019112902
         /// </summary>
         [JsonProperty("End")]
         public long? End{ get; set; }
 
         /// <summary>
-        /// 查询类型
+        /// 查询类型 安全验证码小程序插件分类查询数据接口，请求量type=0、通过量type=1、验证量type=2、拦截量type=3 小时级查询（五小时左右延迟）
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

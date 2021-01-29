@@ -31,7 +31,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string DetectedText{ get; set; }
 
         /// <summary>
-        /// 算式运算结果
+        /// 算式运算结果，true-正确   false-错误或非法参数
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ExpressionType")]
         public string ExpressionType{ get; set; }
 
+        /// <summary>
+        /// 错题推荐答案，算式运算结果正确返回为""，算式运算结果错误返回推荐答案 (注：暂不支持多个关系运算符（如1<10<7）、无关系运算符（如frac(1,2)+frac(2,3)）、单位换算（如1元=100角）错题的推荐答案返回)
+        /// </summary>
+        [JsonProperty("Answer")]
+        public string Answer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +97,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamObj(map, prefix + "ItemCoord.", this.ItemCoord);
             this.SetParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
+            this.SetParamSimple(map, prefix + "Answer", this.Answer);
         }
     }
 }

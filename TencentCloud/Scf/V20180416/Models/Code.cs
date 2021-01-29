@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 对象存储桶名称
+        /// 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }

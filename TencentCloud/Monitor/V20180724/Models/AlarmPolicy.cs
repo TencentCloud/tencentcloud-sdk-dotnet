@@ -223,6 +223,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagInstances")]
+        public TagInstance[] TagInstances{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -257,6 +264,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "InstanceGroupName", this.InstanceGroupName);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
+            this.SetParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
         }
     }
 }

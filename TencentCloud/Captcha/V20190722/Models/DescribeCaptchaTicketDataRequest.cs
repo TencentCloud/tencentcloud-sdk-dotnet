@@ -31,7 +31,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         public long? CaptchaAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间
+        /// 查询开始时间 例如：20200909
         /// </summary>
         [JsonProperty("Start")]
         public long? Start{ get; set; }

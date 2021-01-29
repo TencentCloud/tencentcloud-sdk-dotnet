@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页序号，从0开始。
+        /// 数据偏移量，从0开始。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

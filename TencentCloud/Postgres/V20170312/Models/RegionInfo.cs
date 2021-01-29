@@ -48,6 +48,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("RegionState")]
         public string RegionState{ get; set; }
 
+        /// <summary>
+        /// 该地域是否支持国际站售卖，0：不支持，1：支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SupportInternational")]
+        public ulong? SupportInternational{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "RegionState", this.RegionState);
+            this.SetParamSimple(map, prefix + "SupportInternational", this.SupportInternational);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{84400F10-9E05-36FF-873D-21C952C381E6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.218</VersionPrefix>
+    <VersionPrefix>3.0.219</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,10 @@
     <Compile Include="V20180416\Models\Block.cs" />
     <Compile Include="V20180416\Models\BlockByNumberHandlerRequest.cs" />
     <Compile Include="V20180416\Models\BlockByNumberHandlerResponse.cs" />
+    <Compile Include="V20180416\Models\ChannelDetailForUser.cs" />
+    <Compile Include="V20180416\Models\ClusterDetailForUser.cs" />
+    <Compile Include="V20180416\Models\CreateChaincodeAndInstallForUserRequest.cs" />
+    <Compile Include="V20180416\Models\CreateChaincodeAndInstallForUserResponse.cs" />
     <Compile Include="V20180416\Models\DeployDynamicContractHandlerRequest.cs" />
     <Compile Include="V20180416\Models\DeployDynamicContractHandlerResponse.cs" />
     <Compile Include="V20180416\Models\DownloadUserCertRequest.cs" />
@@ -63,20 +67,37 @@
     <Compile Include="V20180416\Models\GetBlockListResponse.cs" />
     <Compile Include="V20180416\Models\GetBlockTransactionListForUserRequest.cs" />
     <Compile Include="V20180416\Models\GetBlockTransactionListForUserResponse.cs" />
+    <Compile Include="V20180416\Models\GetChaincodeCompileLogForUserRequest.cs" />
+    <Compile Include="V20180416\Models\GetChaincodeCompileLogForUserResponse.cs" />
+    <Compile Include="V20180416\Models\GetChaincodeInitializeResultForUserRequest.cs" />
+    <Compile Include="V20180416\Models\GetChaincodeInitializeResultForUserResponse.cs" />
+    <Compile Include="V20180416\Models\GetChaincodeLogForUserRequest.cs" />
+    <Compile Include="V20180416\Models\GetChaincodeLogForUserResponse.cs" />
+    <Compile Include="V20180416\Models\GetChannelListForUserRequest.cs" />
+    <Compile Include="V20180416\Models\GetChannelListForUserResponse.cs" />
+    <Compile Include="V20180416\Models\GetClusterListForUserRequest.cs" />
+    <Compile Include="V20180416\Models\GetClusterListForUserResponse.cs" />
     <Compile Include="V20180416\Models\GetClusterSummaryRequest.cs" />
     <Compile Include="V20180416\Models\GetClusterSummaryResponse.cs" />
     <Compile Include="V20180416\Models\GetInvokeTxRequest.cs" />
     <Compile Include="V20180416\Models\GetInvokeTxResponse.cs" />
     <Compile Include="V20180416\Models\GetLatesdTransactionListRequest.cs" />
     <Compile Include="V20180416\Models\GetLatesdTransactionListResponse.cs" />
+    <Compile Include="V20180416\Models\GetPeerLogForUserRequest.cs" />
+    <Compile Include="V20180416\Models\GetPeerLogForUserResponse.cs" />
     <Compile Include="V20180416\Models\GetTransByHashHandlerRequest.cs" />
     <Compile Include="V20180416\Models\GetTransByHashHandlerResponse.cs" />
     <Compile Include="V20180416\Models\GetTransListHandlerRequest.cs" />
     <Compile Include="V20180416\Models\GetTransListHandlerResponse.cs" />
     <Compile Include="V20180416\Models\GetTransactionDetailForUserRequest.cs" />
     <Compile Include="V20180416\Models\GetTransactionDetailForUserResponse.cs" />
+    <Compile Include="V20180416\Models\GroupDetailForUser.cs" />
+    <Compile Include="V20180416\Models\InitializeChaincodeForUserRequest.cs" />
+    <Compile Include="V20180416\Models\InitializeChaincodeForUserResponse.cs" />
     <Compile Include="V20180416\Models\InvokeRequest.cs" />
     <Compile Include="V20180416\Models\InvokeResponse.cs" />
+    <Compile Include="V20180416\Models\LogDetailForUser.cs" />
+    <Compile Include="V20180416\Models\PeerDetailForUser.cs" />
     <Compile Include="V20180416\Models\PeerSet.cs" />
     <Compile Include="V20180416\Models\QueryRequest.cs" />
     <Compile Include="V20180416\Models\QueryResponse.cs" />

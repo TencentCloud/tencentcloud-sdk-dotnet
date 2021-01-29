@@ -96,6 +96,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("EnableVpcCoreDNS")]
         public bool? EnableVpcCoreDNS{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "DnsServers.", this.DnsServers);
             this.SetParamSimple(map, prefix + "NeedDeleteCbs", this.NeedDeleteCbs);
             this.SetParamSimple(map, prefix + "EnableVpcCoreDNS", this.EnableVpcCoreDNS);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

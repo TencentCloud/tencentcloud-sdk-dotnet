@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.218</VersionPrefix>
+    <VersionPrefix>3.0.219</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7358,6 +7358,7 @@
     <Compile Include="Monitor\V20180724\Models\ServiceDiscoveryItem.cs" />
     <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\TagInstance.cs" />
     <Compile Include="Monitor\V20180724\Models\URLNotice.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
@@ -8195,17 +8196,25 @@
     <Compile Include="Partners\V20180321\Models\UnbindClientElem.cs" />
     <Compile Include="Postgres\V20170312\PostgresClient.cs" />
     <Compile Include="Postgres\V20170312\Models\AccountInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyDBInstanceRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyDBInstanceResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DBBackup.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstance.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstanceNetInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsRequest.cs" />
@@ -8228,6 +8237,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeProductConfigResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeReadOnlyGroupsRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeReadOnlyGroupsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeServerlessDBInstancesRequest.cs" />
@@ -8250,15 +8261,24 @@
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\PgDeal.cs" />
+    <Compile Include="Postgres\V20170312\Models\ReadOnlyGroup.cs" />
+    <Compile Include="Postgres\V20170312\Models\RebalanceReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\RebalanceReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\RegionInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\RemoveDBInstanceFromReadOnlyGroupRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\RemoveDBInstanceFromReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\RenewInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\RenewInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ResetAccountPasswordRequest.cs" />
@@ -9217,6 +9237,10 @@
     <Compile Include="Tbaas\V20180416\Models\Block.cs" />
     <Compile Include="Tbaas\V20180416\Models\BlockByNumberHandlerRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\BlockByNumberHandlerResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\ChannelDetailForUser.cs" />
+    <Compile Include="Tbaas\V20180416\Models\ClusterDetailForUser.cs" />
+    <Compile Include="Tbaas\V20180416\Models\CreateChaincodeAndInstallForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\CreateChaincodeAndInstallForUserResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\DeployDynamicContractHandlerRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\DeployDynamicContractHandlerResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\DownloadUserCertRequest.cs" />
@@ -9228,20 +9252,37 @@
     <Compile Include="Tbaas\V20180416\Models\GetBlockListResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetBlockTransactionListForUserRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetBlockTransactionListForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChaincodeCompileLogForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChaincodeCompileLogForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChaincodeInitializeResultForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChaincodeInitializeResultForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChaincodeLogForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChaincodeLogForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChannelListForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetChannelListForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetClusterListForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetClusterListForUserResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetClusterSummaryRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetClusterSummaryResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetInvokeTxRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetInvokeTxResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetLatesdTransactionListRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetLatesdTransactionListResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetPeerLogForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetPeerLogForUserResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetTransByHashHandlerRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetTransByHashHandlerResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetTransListHandlerRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetTransListHandlerResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetTransactionDetailForUserRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetTransactionDetailForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GroupDetailForUser.cs" />
+    <Compile Include="Tbaas\V20180416\Models\InitializeChaincodeForUserRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\InitializeChaincodeForUserResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\InvokeRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\InvokeResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\LogDetailForUser.cs" />
+    <Compile Include="Tbaas\V20180416\Models\PeerDetailForUser.cs" />
     <Compile Include="Tbaas\V20180416\Models\PeerSet.cs" />
     <Compile Include="Tbaas\V20180416\Models\QueryRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\QueryResponse.cs" />
@@ -9415,6 +9456,7 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoDetail.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoName.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseEsInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseProjectVersion.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
@@ -9423,8 +9465,11 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcSubnet.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
+    <Compile Include="Tcb\V20180608\Models\CodeSource.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateAndDeployCloudBaseProjectRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateAndDeployCloudBaseProjectResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateAuthDomainRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateAuthDomainResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateCloudBaseRunResourceRequest.cs" />
@@ -9446,6 +9491,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectLatestVersionListRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectLatestVersionListResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
@@ -11595,6 +11642,7 @@
     <Compile Include="Vpc\V20170312\Models\CheckDefaultSubnetResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CheckNetDetectStateRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CheckNetDetectStateResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CidrForCcn.cs" />
     <Compile Include="Vpc\V20170312\Models\ClassicLinkInstance.cs" />
     <Compile Include="Vpc\V20170312\Models\CloneSecurityGroupRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CloneSecurityGroupResponse.cs" />
@@ -11634,6 +11682,8 @@
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetDetectRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetDetectResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNetworkAclRequest.cs" />
@@ -11697,6 +11747,8 @@
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteNatGatewaySourceIpTranslationNatRuleRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetDetectRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetDetectResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNetworkAclRequest.cs" />
@@ -11787,6 +11839,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationInfosResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaysRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaysResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNetDetectStatesRequest.cs" />
@@ -11957,6 +12011,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyNatGatewaySourceIpTranslationNatRuleRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyNatGatewaySourceIpTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetDetectRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetDetectResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNetworkAclAttributeRequest.cs" />
@@ -11998,6 +12054,8 @@
     <Compile Include="Vpc\V20170312\Models\NetworkAclEntrySet.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkInterface.cs" />
     <Compile Include="Vpc\V20170312\Models\NetworkInterfaceAttachment.cs" />
+    <Compile Include="Vpc\V20170312\Models\NotifyRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\NotifyRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Price.cs" />
     <Compile Include="Vpc\V20170312\Models\PrivateIpAddressSpecification.cs" />
     <Compile Include="Vpc\V20170312\Models\ProductQuota.cs" />
@@ -12052,6 +12110,7 @@
     <Compile Include="Vpc\V20170312\Models\ServiceTemplateSpecification.cs" />
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\SourceIpTranslationNatRule.cs" />
     <Compile Include="Vpc\V20170312\Models\Subnet.cs" />
     <Compile Include="Vpc\V20170312\Models\SubnetInput.cs" />
     <Compile Include="Vpc\V20170312\Models\Tag.cs" />
@@ -12074,6 +12133,8 @@
     <Compile Include="Vpc\V20170312\Models\VpnGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGatewayQuota.cs" />
     <Compile Include="Vpc\V20170312\Models\VpngwCcnRoutes.cs" />
+    <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesResponse.cs" />
     <Compile Include="Wss\V20180426\WssClient.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertRequest.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertResponse.cs" />

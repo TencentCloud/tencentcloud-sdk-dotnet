@@ -133,6 +133,46 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 创建并安装合约
+        /// </summary>
+        /// <param name="req"><see cref="CreateChaincodeAndInstallForUserRequest"/></param>
+        /// <returns><see cref="CreateChaincodeAndInstallForUserResponse"/></returns>
+        public async Task<CreateChaincodeAndInstallForUserResponse> CreateChaincodeAndInstallForUser(CreateChaincodeAndInstallForUserRequest req)
+        {
+             JsonResponseModel<CreateChaincodeAndInstallForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateChaincodeAndInstallForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChaincodeAndInstallForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建并安装合约
+        /// </summary>
+        /// <param name="req"><see cref="CreateChaincodeAndInstallForUserRequest"/></param>
+        /// <returns><see cref="CreateChaincodeAndInstallForUserResponse"/></returns>
+        public CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUserSync(CreateChaincodeAndInstallForUserRequest req)
+        {
+             JsonResponseModel<CreateChaincodeAndInstallForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateChaincodeAndInstallForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChaincodeAndInstallForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 动态部署合约
         /// </summary>
         /// <param name="req"><see cref="DeployDynamicContractHandlerRequest"/></param>
@@ -333,6 +373,206 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 获取合约编译日志
+        /// </summary>
+        /// <param name="req"><see cref="GetChaincodeCompileLogForUserRequest"/></param>
+        /// <returns><see cref="GetChaincodeCompileLogForUserResponse"/></returns>
+        public async Task<GetChaincodeCompileLogForUserResponse> GetChaincodeCompileLogForUser(GetChaincodeCompileLogForUserRequest req)
+        {
+             JsonResponseModel<GetChaincodeCompileLogForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetChaincodeCompileLogForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChaincodeCompileLogForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取合约编译日志
+        /// </summary>
+        /// <param name="req"><see cref="GetChaincodeCompileLogForUserRequest"/></param>
+        /// <returns><see cref="GetChaincodeCompileLogForUserResponse"/></returns>
+        public GetChaincodeCompileLogForUserResponse GetChaincodeCompileLogForUserSync(GetChaincodeCompileLogForUserRequest req)
+        {
+             JsonResponseModel<GetChaincodeCompileLogForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetChaincodeCompileLogForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChaincodeCompileLogForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例化结果查询
+        /// </summary>
+        /// <param name="req"><see cref="GetChaincodeInitializeResultForUserRequest"/></param>
+        /// <returns><see cref="GetChaincodeInitializeResultForUserResponse"/></returns>
+        public async Task<GetChaincodeInitializeResultForUserResponse> GetChaincodeInitializeResultForUser(GetChaincodeInitializeResultForUserRequest req)
+        {
+             JsonResponseModel<GetChaincodeInitializeResultForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetChaincodeInitializeResultForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChaincodeInitializeResultForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例化结果查询
+        /// </summary>
+        /// <param name="req"><see cref="GetChaincodeInitializeResultForUserRequest"/></param>
+        /// <returns><see cref="GetChaincodeInitializeResultForUserResponse"/></returns>
+        public GetChaincodeInitializeResultForUserResponse GetChaincodeInitializeResultForUserSync(GetChaincodeInitializeResultForUserRequest req)
+        {
+             JsonResponseModel<GetChaincodeInitializeResultForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetChaincodeInitializeResultForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChaincodeInitializeResultForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取合约容器日志
+        /// </summary>
+        /// <param name="req"><see cref="GetChaincodeLogForUserRequest"/></param>
+        /// <returns><see cref="GetChaincodeLogForUserResponse"/></returns>
+        public async Task<GetChaincodeLogForUserResponse> GetChaincodeLogForUser(GetChaincodeLogForUserRequest req)
+        {
+             JsonResponseModel<GetChaincodeLogForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetChaincodeLogForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChaincodeLogForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取合约容器日志
+        /// </summary>
+        /// <param name="req"><see cref="GetChaincodeLogForUserRequest"/></param>
+        /// <returns><see cref="GetChaincodeLogForUserResponse"/></returns>
+        public GetChaincodeLogForUserResponse GetChaincodeLogForUserSync(GetChaincodeLogForUserRequest req)
+        {
+             JsonResponseModel<GetChaincodeLogForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetChaincodeLogForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChaincodeLogForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取通道列表
+        /// </summary>
+        /// <param name="req"><see cref="GetChannelListForUserRequest"/></param>
+        /// <returns><see cref="GetChannelListForUserResponse"/></returns>
+        public async Task<GetChannelListForUserResponse> GetChannelListForUser(GetChannelListForUserRequest req)
+        {
+             JsonResponseModel<GetChannelListForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetChannelListForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChannelListForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取通道列表
+        /// </summary>
+        /// <param name="req"><see cref="GetChannelListForUserRequest"/></param>
+        /// <returns><see cref="GetChannelListForUserResponse"/></returns>
+        public GetChannelListForUserResponse GetChannelListForUserSync(GetChannelListForUserRequest req)
+        {
+             JsonResponseModel<GetChannelListForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetChannelListForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetChannelListForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetClusterListForUserRequest"/></param>
+        /// <returns><see cref="GetClusterListForUserResponse"/></returns>
+        public async Task<GetClusterListForUserResponse> GetClusterListForUser(GetClusterListForUserRequest req)
+        {
+             JsonResponseModel<GetClusterListForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetClusterListForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetClusterListForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetClusterListForUserRequest"/></param>
+        /// <returns><see cref="GetClusterListForUserResponse"/></returns>
+        public GetClusterListForUserResponse GetClusterListForUserSync(GetClusterListForUserRequest req)
+        {
+             JsonResponseModel<GetClusterListForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetClusterListForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetClusterListForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取区块链网络概要
         /// </summary>
         /// <param name="req"><see cref="GetClusterSummaryRequest"/></param>
@@ -453,6 +693,46 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 获取节点日志
+        /// </summary>
+        /// <param name="req"><see cref="GetPeerLogForUserRequest"/></param>
+        /// <returns><see cref="GetPeerLogForUserResponse"/></returns>
+        public async Task<GetPeerLogForUserResponse> GetPeerLogForUser(GetPeerLogForUserRequest req)
+        {
+             JsonResponseModel<GetPeerLogForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPeerLogForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPeerLogForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取节点日志
+        /// </summary>
+        /// <param name="req"><see cref="GetPeerLogForUserRequest"/></param>
+        /// <returns><see cref="GetPeerLogForUserResponse"/></returns>
+        public GetPeerLogForUserResponse GetPeerLogForUserSync(GetPeerLogForUserRequest req)
+        {
+             JsonResponseModel<GetPeerLogForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPeerLogForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPeerLogForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// Bcos根据交易哈希查看交易详细信息
         /// </summary>
         /// <param name="req"><see cref="GetTransByHashHandlerRequest"/></param>
@@ -564,6 +844,46 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "GetTransactionDetailForUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransactionDetailForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例化合约
+        /// </summary>
+        /// <param name="req"><see cref="InitializeChaincodeForUserRequest"/></param>
+        /// <returns><see cref="InitializeChaincodeForUserResponse"/></returns>
+        public async Task<InitializeChaincodeForUserResponse> InitializeChaincodeForUser(InitializeChaincodeForUserRequest req)
+        {
+             JsonResponseModel<InitializeChaincodeForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InitializeChaincodeForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitializeChaincodeForUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例化合约
+        /// </summary>
+        /// <param name="req"><see cref="InitializeChaincodeForUserRequest"/></param>
+        /// <returns><see cref="InitializeChaincodeForUserResponse"/></returns>
+        public InitializeChaincodeForUserResponse InitializeChaincodeForUserSync(InitializeChaincodeForUserRequest req)
+        {
+             JsonResponseModel<InitializeChaincodeForUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InitializeChaincodeForUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitializeChaincodeForUserResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

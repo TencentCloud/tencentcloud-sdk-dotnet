@@ -164,6 +164,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("GroupInfo")]
         public DescribeProductEventListEventsGroupInfo[] GroupInfo{ get; set; }
 
+        /// <summary>
+        /// 显示名称ViewName
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ViewName")]
+        public string ViewName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +197,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "AdditionMsg.", this.AdditionMsg);
             this.SetParamSimple(map, prefix + "IsAlarmConfig", this.IsAlarmConfig);
             this.SetParamArrayObj(map, prefix + "GroupInfo.", this.GroupInfo);
+            this.SetParamSimple(map, prefix + "ViewName", this.ViewName);
         }
     }
 }

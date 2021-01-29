@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 需要禁用的 URL 列表
+        /// 禁用的 URL 列表（分协议生效，必须包含http://或https://）
         /// 每次最多可提交 100 条，每日最多可提交 3000 条
         /// </summary>
         [JsonProperty("Urls")]
