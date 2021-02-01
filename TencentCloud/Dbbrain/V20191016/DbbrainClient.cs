@@ -133,6 +133,86 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 创建安全审计日志导出任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAuditLogExportTaskRequest"/></param>
+        /// <returns><see cref="CreateSecurityAuditLogExportTaskResponse"/></returns>
+        public async Task<CreateSecurityAuditLogExportTaskResponse> CreateSecurityAuditLogExportTask(CreateSecurityAuditLogExportTaskRequest req)
+        {
+             JsonResponseModel<CreateSecurityAuditLogExportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSecurityAuditLogExportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityAuditLogExportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建安全审计日志导出任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAuditLogExportTaskRequest"/></param>
+        /// <returns><see cref="CreateSecurityAuditLogExportTaskResponse"/></returns>
+        public CreateSecurityAuditLogExportTaskResponse CreateSecurityAuditLogExportTaskSync(CreateSecurityAuditLogExportTaskRequest req)
+        {
+             JsonResponseModel<CreateSecurityAuditLogExportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecurityAuditLogExportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityAuditLogExportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除安全审计日志导出任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAuditLogExportTasksRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAuditLogExportTasksResponse"/></returns>
+        public async Task<DeleteSecurityAuditLogExportTasksResponse> DeleteSecurityAuditLogExportTasks(DeleteSecurityAuditLogExportTasksRequest req)
+        {
+             JsonResponseModel<DeleteSecurityAuditLogExportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSecurityAuditLogExportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityAuditLogExportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除安全审计日志导出任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAuditLogExportTasksRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAuditLogExportTasksResponse"/></returns>
+        public DeleteSecurityAuditLogExportTasksResponse DeleteSecurityAuditLogExportTasksSync(DeleteSecurityAuditLogExportTasksRequest req)
+        {
+             JsonResponseModel<DeleteSecurityAuditLogExportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecurityAuditLogExportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityAuditLogExportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取邮件发送中联系人的相关信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAllUserContactRequest"/></param>
@@ -324,6 +404,86 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBSpaceStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSpaceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAuditLogDownloadUrlsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAuditLogDownloadUrlsResponse"/></returns>
+        public async Task<DescribeSecurityAuditLogDownloadUrlsResponse> DescribeSecurityAuditLogDownloadUrls(DescribeSecurityAuditLogDownloadUrlsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityAuditLogDownloadUrlsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityAuditLogDownloadUrls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityAuditLogDownloadUrlsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAuditLogDownloadUrlsRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAuditLogDownloadUrlsResponse"/></returns>
+        public DescribeSecurityAuditLogDownloadUrlsResponse DescribeSecurityAuditLogDownloadUrlsSync(DescribeSecurityAuditLogDownloadUrlsRequest req)
+        {
+             JsonResponseModel<DescribeSecurityAuditLogDownloadUrlsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityAuditLogDownloadUrls");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityAuditLogDownloadUrlsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全审计日志导出任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAuditLogExportTasksRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAuditLogExportTasksResponse"/></returns>
+        public async Task<DescribeSecurityAuditLogExportTasksResponse> DescribeSecurityAuditLogExportTasks(DescribeSecurityAuditLogExportTasksRequest req)
+        {
+             JsonResponseModel<DescribeSecurityAuditLogExportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityAuditLogExportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityAuditLogExportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询安全审计日志导出任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAuditLogExportTasksRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAuditLogExportTasksResponse"/></returns>
+        public DescribeSecurityAuditLogExportTasksResponse DescribeSecurityAuditLogExportTasksSync(DescribeSecurityAuditLogExportTasksRequest req)
+        {
+             JsonResponseModel<DescribeSecurityAuditLogExportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityAuditLogExportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityAuditLogExportTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

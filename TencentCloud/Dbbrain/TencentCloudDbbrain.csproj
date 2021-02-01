@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.219</VersionPrefix>
+    <VersionPrefix>3.0.220</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,10 @@
     <Compile Include="V20191016\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="V20191016\Models\CreateMailProfileRequest.cs" />
     <Compile Include="V20191016\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="V20191016\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
+    <Compile Include="V20191016\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
+    <Compile Include="V20191016\Models\DeleteSecurityAuditLogExportTasksRequest.cs" />
+    <Compile Include="V20191016\Models\DeleteSecurityAuditLogExportTasksResponse.cs" />
     <Compile Include="V20191016\Models\DescribeAllUserContactRequest.cs" />
     <Compile Include="V20191016\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="V20191016\Models\DescribeAllUserGroupRequest.cs" />
@@ -60,6 +64,10 @@
     <Compile Include="V20191016\Models\DescribeDBDiagHistoryResponse.cs" />
     <Compile Include="V20191016\Models\DescribeDBSpaceStatusRequest.cs" />
     <Compile Include="V20191016\Models\DescribeDBSpaceStatusResponse.cs" />
+    <Compile Include="V20191016\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
+    <Compile Include="V20191016\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
+    <Compile Include="V20191016\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
+    <Compile Include="V20191016\Models\DescribeSecurityAuditLogExportTasksResponse.cs" />
     <Compile Include="V20191016\Models\DescribeSlowLogTimeSeriesStatsRequest.cs" />
     <Compile Include="V20191016\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
     <Compile Include="V20191016\Models\DescribeSlowLogTopSqlsRequest.cs" />
@@ -80,6 +88,7 @@
     <Compile Include="V20191016\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="V20191016\Models\ProfileInfo.cs" />
     <Compile Include="V20191016\Models\SchemaItem.cs" />
+    <Compile Include="V20191016\Models\SecLogExportTaskInfo.cs" />
     <Compile Include="V20191016\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="V20191016\Models\TableSpaceData.cs" />
     <Compile Include="V20191016\Models\TableSpaceTimeSeries.cs" />

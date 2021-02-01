@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string K8SVersion{ get; set; }
 
         /// <summary>
-        /// 集群状态
+        /// 集群状态(running运行中，initializing 初始化中，failed异常)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -73,6 +73,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
+        /// <summary>
+        /// 安全特性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Security")]
+        public CloudBaseSecurityContext Security{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "InitialDelaySeconds", this.InitialDelaySeconds);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Mem", this.Mem);
+            this.SetParamObj(map, prefix + "Security.", this.Security);
         }
     }
 }

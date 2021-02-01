@@ -49,34 +49,34 @@ namespace TencentCloud.Cr.V20180321.Models
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// 产品拨打时间集合
-        /// </summary>
-        [JsonProperty("CallTimeCollection")]
-        public CallTimeDict CallTimeCollection{ get; set; }
-
-        /// <summary>
-        /// 是否禁止拨打
+        /// 是否禁止拨打，默认Y
         /// </summary>
         [JsonProperty("BanCall")]
         public string BanCall{ get; set; }
-
-        /// <summary>
-        /// 禁止拨打起始时间
-        /// </summary>
-        [JsonProperty("StartTimeBan")]
-        public string StartTimeBan{ get; set; }
-
-        /// <summary>
-        /// 禁止拨打结束时间
-        /// </summary>
-        [JsonProperty("EndTimeBan")]
-        public string EndTimeBan{ get; set; }
 
         /// <summary>
         /// 拨打线路集合
         /// </summary>
         [JsonProperty("PhoneCollection")]
         public string PhoneCollection{ get; set; }
+
+        /// <summary>
+        /// 产品拨打时间集合
+        /// </summary>
+        [JsonProperty("CallTimeCollection")]
+        public CallTimeDict CallTimeCollection{ get; set; }
+
+        /// <summary>
+        /// 禁止拨打起始时间。默认130000
+        /// </summary>
+        [JsonProperty("StartTimeBan")]
+        public string StartTimeBan{ get; set; }
+
+        /// <summary>
+        /// 禁止拨打结束时间。默认140000
+        /// </summary>
+        [JsonProperty("EndTimeBan")]
+        public string EndTimeBan{ get; set; }
 
         /// <summary>
         /// 重播方式，NON：未接通、LABEL：意向分级，可多选，用竖线分隔：NON|LABEL
@@ -114,6 +114,24 @@ namespace TencentCloud.Cr.V20180321.Models
         [JsonProperty("SmsTemplateId")]
         public string SmsTemplateId{ get; set; }
 
+        /// <summary>
+        /// 拨打方式。NORMAL - 正常拨打；TIMER - 定时拨打
+        /// </summary>
+        [JsonProperty("CallType")]
+        public string CallType{ get; set; }
+
+        /// <summary>
+        /// 拨打开始日期。CallType=TIMER时有值，yyyy-MM-dd
+        /// </summary>
+        [JsonProperty("CallStartDate")]
+        public string CallStartDate{ get; set; }
+
+        /// <summary>
+        /// 拨打结束日期。CallType=PERIOD 时有值，yyyy-MM-dd
+        /// </summary>
+        [JsonProperty("CallEndDate")]
+        public string CallEndDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,17 +142,20 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "BotName", this.BotName);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamObj(map, prefix + "CallTimeCollection.", this.CallTimeCollection);
             this.SetParamSimple(map, prefix + "BanCall", this.BanCall);
+            this.SetParamSimple(map, prefix + "PhoneCollection", this.PhoneCollection);
+            this.SetParamObj(map, prefix + "CallTimeCollection.", this.CallTimeCollection);
             this.SetParamSimple(map, prefix + "StartTimeBan", this.StartTimeBan);
             this.SetParamSimple(map, prefix + "EndTimeBan", this.EndTimeBan);
-            this.SetParamSimple(map, prefix + "PhoneCollection", this.PhoneCollection);
             this.SetParamSimple(map, prefix + "CodeType", this.CodeType);
             this.SetParamSimple(map, prefix + "CodeCollection", this.CodeCollection);
             this.SetParamSimple(map, prefix + "CallCount", this.CallCount);
             this.SetParamSimple(map, prefix + "CallInterval", this.CallInterval);
             this.SetParamSimple(map, prefix + "SmsSignId", this.SmsSignId);
             this.SetParamSimple(map, prefix + "SmsTemplateId", this.SmsTemplateId);
+            this.SetParamSimple(map, prefix + "CallType", this.CallType);
+            this.SetParamSimple(map, prefix + "CallStartDate", this.CallStartDate);
+            this.SetParamSimple(map, prefix + "CallEndDate", this.CallEndDate);
         }
     }
 }

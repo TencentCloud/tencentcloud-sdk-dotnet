@@ -228,6 +228,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("SidecarSpecs")]
         public CloudBaseRunSideSpec[] SidecarSpecs{ get; set; }
 
+        /// <summary>
+        /// 安全特性
+        /// </summary>
+        [JsonProperty("Security")]
+        public CloudBaseSecurityContext Security{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -268,6 +274,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "ServerPath", this.ServerPath);
             this.SetParamSimple(map, prefix + "ImageReuseKey", this.ImageReuseKey);
             this.SetParamArrayObj(map, prefix + "SidecarSpecs.", this.SidecarSpecs);
+            this.SetParamObj(map, prefix + "Security.", this.Security);
         }
     }
 }

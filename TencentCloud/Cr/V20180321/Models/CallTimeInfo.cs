@@ -25,13 +25,13 @@ namespace TencentCloud.Cr.V20180321.Models
     {
         
         /// <summary>
-        /// 产品开始拨打时间，HHmmss格式
+        /// 产品开始拨打时间，HHmmss格式,默认090000
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 产品结束拨打时间，HHmmss格式
+        /// 产品结束拨打时间，HHmmss格式.默认200000
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

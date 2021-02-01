@@ -42,6 +42,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("CIBusiness")]
         public string CIBusiness{ get; set; }
 
+        /// <summary>
+        /// 服务版本
+        /// </summary>
+        [JsonProperty("ServiceVersion")]
+        public string ServiceVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "CIBusiness", this.CIBusiness);
+            this.SetParamSimple(map, prefix + "ServiceVersion", this.ServiceVersion);
         }
     }
 }

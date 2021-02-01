@@ -42,6 +42,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
+        /// <summary>
+        /// secret名称
+        /// </summary>
+        [JsonProperty("SecretName")]
+        public string SecretName{ get; set; }
+
+        /// <summary>
+        /// 临时目录
+        /// </summary>
+        [JsonProperty("EnableEmptyDirVolume")]
+        public bool? EnableEmptyDirVolume{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+            this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "EnableEmptyDirVolume", this.EnableEmptyDirVolume);
         }
     }
 }

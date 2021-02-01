@@ -31,7 +31,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UploadUrl{ get; set; }
 
         /// <summary>
-        /// heder
+        /// 上传heder
         /// </summary>
         [JsonProperty("UploadHeaders")]
         public KVPair[] UploadHeaders{ get; set; }
@@ -49,6 +49,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string PackageVersion{ get; set; }
 
         /// <summary>
+        /// 下载链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DownloadUrl")]
+        public string DownloadUrl{ get; set; }
+
+        /// <summary>
+        /// 下载Httpheader
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DownloadHeaders")]
+        public KVPair[] DownloadHeaders{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +78,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "UploadHeaders.", this.UploadHeaders);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
             this.SetParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
+            this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+            this.SetParamArrayObj(map, prefix + "DownloadHeaders.", this.DownloadHeaders);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

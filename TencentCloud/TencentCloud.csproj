@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.219</VersionPrefix>
+    <VersionPrefix>3.0.220</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -123,6 +123,29 @@
     <Compile Include="Ame\V20190916\Models\ReportDataResponse.cs" />
     <Compile Include="Ame\V20190916\Models\Station.cs" />
     <Compile Include="Ame\V20190916\Models\UseRange.cs" />
+    <Compile Include="Ams\V20201229\AmsClient.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResultDetailLanguageResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioResultDetailTextResult.cs" />
+    <Compile Include="Ams\V20201229\Models\AudioSegments.cs" />
+    <Compile Include="Ams\V20201229\Models\BucketInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\CancelTaskRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\CancelTaskResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\CreateAudioModerationTaskRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\CreateAudioModerationTaskResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTasksRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\InputInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\MediaInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\StorageInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskData.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskFilter.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskInput.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskLabel.cs" />
+    <Compile Include="Ams\V20201229\Models\TaskResult.cs" />
     <Compile Include="Ams\V20200608\AmsClient.cs" />
     <Compile Include="Ams\V20200608\Models\AmsDetailInfo.cs" />
     <Compile Include="Ams\V20200608\Models\AudioResult.cs" />
@@ -3300,15 +3323,23 @@
     <Compile Include="Cpdp\V20190820\Models\WithdrawCashMembershipResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\WithdrawItem.cs" />
     <Compile Include="Cr\V20180321\CrClient.cs" />
+    <Compile Include="Cr\V20180321\Models\ApplyBlackListDataRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\ApplyBlackListDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyBlackListRequest.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyBlackListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyCreditAuditRequest.cs" />
     <Compile Include="Cr\V20180321\Models\ApplyCreditAuditResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\BlackListData.cs" />
     <Compile Include="Cr\V20180321\Models\BotFileData.cs" />
     <Compile Include="Cr\V20180321\Models\BotFlow.cs" />
     <Compile Include="Cr\V20180321\Models\BotInfo.cs" />
+    <Compile Include="Cr\V20180321\Models\CallInfo.cs" />
     <Compile Include="Cr\V20180321\Models\CallTimeDict.cs" />
     <Compile Include="Cr\V20180321\Models\CallTimeInfo.cs" />
+    <Compile Include="Cr\V20180321\Models\ChangeBotCallStatusRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\ChangeBotCallStatusResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\ChangeBotTaskStatusRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\ChangeBotTaskStatusResponse.cs" />
     <Compile Include="Cr\V20180321\Models\CreateBotTaskRequest.cs" />
     <Compile Include="Cr\V20180321\Models\CreateBotTaskResponse.cs" />
     <Compile Include="Cr\V20180321\Models\DescribeBotFlowRequest.cs" />
@@ -3335,6 +3366,8 @@
     <Compile Include="Cr\V20180321\Models\ProductQueryInfo.cs" />
     <Compile Include="Cr\V20180321\Models\QueryBotListRequest.cs" />
     <Compile Include="Cr\V20180321\Models\QueryBotListResponse.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryCallListRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryCallListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\QueryInstantDataRequest.cs" />
     <Compile Include="Cr\V20180321\Models\QueryInstantDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\QueryProductsRequest.cs" />
@@ -3346,6 +3379,8 @@
     <Compile Include="Cr\V20180321\Models\SingleRecord.cs" />
     <Compile Include="Cr\V20180321\Models\SmsSign.cs" />
     <Compile Include="Cr\V20180321\Models\SmsTemplate.cs" />
+    <Compile Include="Cr\V20180321\Models\UpdateBotTaskRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\UpdateBotTaskResponse.cs" />
     <Compile Include="Cr\V20180321\Models\UploadBotDataRequest.cs" />
     <Compile Include="Cr\V20180321\Models\UploadBotDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\UploadBotFileRequest.cs" />
@@ -4185,6 +4220,10 @@
     <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DeleteSecurityAuditLogExportTasksRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DeleteSecurityAuditLogExportTasksResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeAllUserContactRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeAllUserGroupRequest.cs" />
@@ -4195,6 +4234,10 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagHistoryResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeSecurityAuditLogExportTasksResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsRequest.cs" />
@@ -4215,6 +4258,7 @@
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ProfileInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SchemaItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\SecLogExportTaskInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
@@ -5668,6 +5712,10 @@
     <Compile Include="Gse\V20191112\Models\UpdateAliasResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateAssetRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateAssetResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateBucketAccelerateOptRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateBucketAccelerateOptResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateBucketCORSOptRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\UpdateBucketCORSOptResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetAttributesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetAttributesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateFleetCapacityRequest.cs" />
@@ -9453,6 +9501,7 @@
     <Compile Include="Tcb\V20180608\Models\AuthDomain.cs" />
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseCapabilities.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoDetail.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoName.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseEsInfo.cs" />
@@ -9464,6 +9513,7 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcSubnet.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseSecurityContext.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
     <Compile Include="Tcb\V20180608\Models\CodeSource.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIRequest.cs" />

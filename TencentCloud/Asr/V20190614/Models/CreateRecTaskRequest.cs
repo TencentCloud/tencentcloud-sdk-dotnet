@@ -36,6 +36,10 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_ca：16k 粤语；
         /// • 16k_ja：16k 日语；
         /// • 16k_wuu-SH：16k 上海话方言；
+        /// • 16k_zh_edu 中文教育；
+        /// • 16k_en_edu 英文教育；
+        /// • 16k_zh_medical  医疗；
+        /// • 16k_th 泰语；
         /// </summary>
         [JsonProperty("EngineModelType")]
         public string EngineModelType{ get; set; }
@@ -72,7 +76,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? SpeakerNumber{ get; set; }
 
         /// <summary>
-        /// 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://github.com/yunjianfei/qcloud-documents/blob/master/product/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B8%8EAI/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%20API%202017/%E5%BD%95%E9%9F%B3%E8%AF%86%E5%88%AB%E5%9B%9E%E8%B0%83%E8%AF%B4%E6%98%8E.md)
+        /// 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。回调格式&内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
@@ -114,7 +118,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? FilterModal{ get; set; }
 
         /// <summary>
-        /// 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为 1。
+        /// 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
         /// </summary>
         [JsonProperty("ConvertNumMode")]
         public long? ConvertNumMode{ get; set; }

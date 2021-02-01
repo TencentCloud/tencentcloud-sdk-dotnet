@@ -2599,6 +2599,86 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketAccelerateOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketAccelerateOptResponse"/></returns>
+        public async Task<UpdateBucketAccelerateOptResponse> UpdateBucketAccelerateOpt(UpdateBucketAccelerateOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateBucketAccelerateOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketAccelerateOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketAccelerateOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketAccelerateOptResponse"/></returns>
+        public UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOptSync(UpdateBucketAccelerateOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateBucketAccelerateOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketAccelerateOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketCORSOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketCORSOptResponse"/></returns>
+        public async Task<UpdateBucketCORSOptResponse> UpdateBucketCORSOpt(UpdateBucketCORSOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateBucketCORSOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketCORSOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateBucketCORSOptRequest"/></param>
+        /// <returns><see cref="UpdateBucketCORSOptResponse"/></returns>
+        public UpdateBucketCORSOptResponse UpdateBucketCORSOptSync(UpdateBucketCORSOptRequest req)
+        {
+             JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateBucketCORSOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateBucketCORSOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UpdateFleetAttributes）用于更新服务器舰队属性。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetAttributesRequest"/></param>

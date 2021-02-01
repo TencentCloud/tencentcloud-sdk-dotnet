@@ -72,6 +72,12 @@ namespace TencentCloud.Cr.V20180321.Models
         [JsonProperty("DialogueLog")]
         public string DialogueLog{ get; set; }
 
+        /// <summary>
+        /// 录音文件名
+        /// </summary>
+        [JsonProperty("CosFileName")]
+        public string CosFileName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Cr.V20180321.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "CosUrl", this.CosUrl);
             this.SetParamSimple(map, prefix + "DialogueLog", this.DialogueLog);
+            this.SetParamSimple(map, prefix + "CosFileName", this.CosFileName);
         }
     }
 }
