@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.220</VersionPrefix>
+    <VersionPrefix>3.0.221</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5585,6 +5585,8 @@
     <Compile Include="Gse\V20191112\Models\DeleteGameServerSessionQueueResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DeleteScalingPolicyRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DeleteScalingPolicyResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DeleteTimerScalingPolicyRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DeleteTimerScalingPolicyResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAliasRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAliasResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeAssetRequest.cs" />
@@ -5633,6 +5635,8 @@
     <Compile Include="Gse\V20191112\Models\DescribeRuntimeConfigurationResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeScalingPoliciesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeScalingPoliciesResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeTimerScalingPoliciesRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeTimerScalingPoliciesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeUserQuotaRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeUserQuotaResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeUserQuotasRequest.cs" />
@@ -5640,6 +5644,7 @@
     <Compile Include="Gse\V20191112\Models\DesiredPlayerSession.cs" />
     <Compile Include="Gse\V20191112\Models\DetachCcnInstancesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DetachCcnInstancesResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DiskInfo.cs" />
     <Compile Include="Gse\V20191112\Models\Event.cs" />
     <Compile Include="Gse\V20191112\Models\ExtraInfos.cs" />
     <Compile Include="Gse\V20191112\Models\Filter.cs" />
@@ -5686,6 +5691,8 @@
     <Compile Include="Gse\V20191112\Models\PlayerSession.cs" />
     <Compile Include="Gse\V20191112\Models\PutScalingPolicyRequest.cs" />
     <Compile Include="Gse\V20191112\Models\PutScalingPolicyResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\PutTimerScalingPolicyRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\PutTimerScalingPolicyResponse.cs" />
     <Compile Include="Gse\V20191112\Models\QuotaResource.cs" />
     <Compile Include="Gse\V20191112\Models\ResolveAliasRequest.cs" />
     <Compile Include="Gse\V20191112\Models\ResolveAliasResponse.cs" />
@@ -5696,6 +5703,8 @@
     <Compile Include="Gse\V20191112\Models\SearchGameServerSessionsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\SearchGameServerSessionsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\ServerProcesse.cs" />
+    <Compile Include="Gse\V20191112\Models\SetServerReservedRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\SetServerReservedResponse.cs" />
     <Compile Include="Gse\V20191112\Models\SetServerWeightRequest.cs" />
     <Compile Include="Gse\V20191112\Models\SetServerWeightResponse.cs" />
     <Compile Include="Gse\V20191112\Models\StartFleetActionsRequest.cs" />
@@ -5708,6 +5717,10 @@
     <Compile Include="Gse\V20191112\Models\StopGameServerSessionPlacementResponse.cs" />
     <Compile Include="Gse\V20191112\Models\Tag.cs" />
     <Compile Include="Gse\V20191112\Models\TargetConfiguration.cs" />
+    <Compile Include="Gse\V20191112\Models\TimerConfiguration.cs" />
+    <Compile Include="Gse\V20191112\Models\TimerFleetCapacity.cs" />
+    <Compile Include="Gse\V20191112\Models\TimerScalingPolicy.cs" />
+    <Compile Include="Gse\V20191112\Models\TimerValue.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateAliasRequest.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateAliasResponse.cs" />
     <Compile Include="Gse\V20191112\Models\UpdateAssetRequest.cs" />
@@ -6075,6 +6088,22 @@
     <Compile Include="Iir\V20200417\Models\RecognizeProductRequest.cs" />
     <Compile Include="Iir\V20200417\Models\RecognizeProductResponse.cs" />
     <Compile Include="Iir\V20200417\Models\RegionDetected.cs" />
+    <Compile Include="Ims\V20201229\ImsClient.cs" />
+    <Compile Include="Ims\V20201229\Models\Device.cs" />
+    <Compile Include="Ims\V20201229\Models\ImageModerationRequest.cs" />
+    <Compile Include="Ims\V20201229\Models\ImageModerationResponse.cs" />
+    <Compile Include="Ims\V20201229\Models\ImageRecognitionRequest.cs" />
+    <Compile Include="Ims\V20201229\Models\ImageRecognitionResponse.cs" />
+    <Compile Include="Ims\V20201229\Models\LabelDetailItem.cs" />
+    <Compile Include="Ims\V20201229\Models\LabelResult.cs" />
+    <Compile Include="Ims\V20201229\Models\LibDetail.cs" />
+    <Compile Include="Ims\V20201229\Models\LibResult.cs" />
+    <Compile Include="Ims\V20201229\Models\Location.cs" />
+    <Compile Include="Ims\V20201229\Models\ObjectDetail.cs" />
+    <Compile Include="Ims\V20201229\Models\ObjectResult.cs" />
+    <Compile Include="Ims\V20201229\Models\OcrResult.cs" />
+    <Compile Include="Ims\V20201229\Models\OcrTextDetail.cs" />
+    <Compile Include="Ims\V20201229\Models\User.cs" />
     <Compile Include="Ims\V20200713\ImsClient.cs" />
     <Compile Include="Ims\V20200713\Models\DescribeImageStatRequest.cs" />
     <Compile Include="Ims\V20200713\Models\DescribeImageStatResponse.cs" />
@@ -9076,12 +9105,15 @@
     <Compile Include="Ssl\V20191205\Models\CheckCertificateChainResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\CommitCertificateInformationRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\CommitCertificateInformationResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\CompanyInfo.cs" />
     <Compile Include="Ssl\V20191205\Models\CompleteCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\CompleteCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\CreateCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\CreateCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteCertificateResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\DeleteManagerRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\DeleteManagerResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateDetailResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateOperateLogsRequest.cs" />
@@ -9090,10 +9122,15 @@
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificatesRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificatesResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\DescribeManagerDetailRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\DescribeManagerDetailResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\DescribeManagersRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\DescribeManagersResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DownloadCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DownloadCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="Ssl\V20191205\Models\DvAuths.cs" />
+    <Compile Include="Ssl\V20191205\Models\ManagerInfo.cs" />
     <Compile Include="Ssl\V20191205\Models\ModifyCertificateAliasRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\ModifyCertificateAliasResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\ModifyCertificateProjectRequest.cs" />
@@ -9105,6 +9142,8 @@
     <Compile Include="Ssl\V20191205\Models\RevokeCertificateRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\RevokeCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\RevokeDomainValidateAuths.cs" />
+    <Compile Include="Ssl\V20191205\Models\SubmitAuditManagerRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\SubmitAuditManagerResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmitCertificateInformationRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmitCertificateInformationResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\SubmittedData.cs" />
@@ -9115,6 +9154,8 @@
     <Compile Include="Ssl\V20191205\Models\UploadConfirmLetterResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadRevokeLetterRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\UploadRevokeLetterResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\VerifyManagerRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\VerifyManagerResponse.cs" />
     <Compile Include="Sslpod\V20190605\SslpodClient.cs" />
     <Compile Include="Sslpod\V20190605\Models\CertInfo.cs" />
     <Compile Include="Sslpod\V20190605\Models\ChartHistogram.cs" />
@@ -9268,6 +9309,36 @@
     <Compile Include="Tag\V20180813\Models\TagWithDelete.cs" />
     <Compile Include="Tag\V20180813\Models\UpdateResourceTagValueRequest.cs" />
     <Compile Include="Tag\V20180813\Models\UpdateResourceTagValueResponse.cs" />
+    <Compile Include="Tat\V20201028\TatClient.cs" />
+    <Compile Include="Tat\V20201028\Models\AutomationAgentInfo.cs" />
+    <Compile Include="Tat\V20201028\Models\Command.cs" />
+    <Compile Include="Tat\V20201028\Models\CommandDocument.cs" />
+    <Compile Include="Tat\V20201028\Models\CreateCommandRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\CreateCommandResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\DeleteCommandRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\DeleteCommandResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeAutomationAgentStatusRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeAutomationAgentStatusResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeCommandsRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeCommandsResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeInvocationTasksRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeInvocationTasksResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeInvocationsRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeInvocationsResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\Filter.cs" />
+    <Compile Include="Tat\V20201028\Models\Invocation.cs" />
+    <Compile Include="Tat\V20201028\Models\InvocationTask.cs" />
+    <Compile Include="Tat\V20201028\Models\InvocationTaskBasicInfo.cs" />
+    <Compile Include="Tat\V20201028\Models\InvokeCommandRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\InvokeCommandResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\ModifyCommandRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\ModifyCommandResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\RegionInfo.cs" />
+    <Compile Include="Tat\V20201028\Models\RunCommandRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\RunCommandResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\TaskResult.cs" />
     <Compile Include="Tav\V20190118\TavClient.cs" />
     <Compile Include="Tav\V20190118\Models\GetLocalEngineRequest.cs" />
     <Compile Include="Tav\V20190118\Models\GetLocalEngineResponse.cs" />

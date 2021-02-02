@@ -603,6 +603,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（DeleteTimerScalingPolicy）用于删除fleet下的定时器。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteTimerScalingPolicyResponse"/></returns>
+        public async Task<DeleteTimerScalingPolicyResponse> DeleteTimerScalingPolicy(DeleteTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteTimerScalingPolicy）用于删除fleet下的定时器。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="DeleteTimerScalingPolicyResponse"/></returns>
+        public DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicySync(DeleteTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeAlias）用于获取别名详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasRequest"/></param>
@@ -1563,6 +1603,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（DescribeTimerScalingPolicies）用于查询fleet下的定时器列表。可以通过fleetid，定时器名称分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimerScalingPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeTimerScalingPoliciesResponse"/></returns>
+        public async Task<DescribeTimerScalingPoliciesResponse> DescribeTimerScalingPolicies(DescribeTimerScalingPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimerScalingPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTimerScalingPolicies）用于查询fleet下的定时器列表。可以通过fleetid，定时器名称分页查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimerScalingPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeTimerScalingPoliciesResponse"/></returns>
+        public DescribeTimerScalingPoliciesResponse DescribeTimerScalingPoliciesSync(DescribeTimerScalingPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimerScalingPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeUserQuota）获取用户单个模块配额。
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
@@ -2239,6 +2319,50 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（PutTimerScalingPolicy）用于给fleet创建或更新定时器。
+        /// 
+        /// 填写字段timer_id，表示更新；不填字段timer_id表示新增。
+        /// </summary>
+        /// <param name="req"><see cref="PutTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="PutTimerScalingPolicyResponse"/></returns>
+        public async Task<PutTimerScalingPolicyResponse> PutTimerScalingPolicy(PutTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（PutTimerScalingPolicy）用于给fleet创建或更新定时器。
+        /// 
+        /// 填写字段timer_id，表示更新；不填字段timer_id表示新增。
+        /// </summary>
+        /// <param name="req"><see cref="PutTimerScalingPolicyRequest"/></param>
+        /// <returns><see cref="PutTimerScalingPolicyResponse"/></returns>
+        public PutTimerScalingPolicyResponse PutTimerScalingPolicySync(PutTimerScalingPolicyRequest req)
+        {
+             JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutTimerScalingPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutTimerScalingPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ResolveAlias）用于获取别名当前指向的fleetId。
         /// </summary>
         /// <param name="req"><see cref="ResolveAliasRequest"/></param>
@@ -2310,6 +2434,50 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "SearchGameServerSessions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchGameServerSessionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SetServerReserved）用于将异常的实例标记为保留，用于问题排查。
+        /// 
+        /// 字段ReserveValue：0默认值，不保留；1 保留
+        /// </summary>
+        /// <param name="req"><see cref="SetServerReservedRequest"/></param>
+        /// <returns><see cref="SetServerReservedResponse"/></returns>
+        public async Task<SetServerReservedResponse> SetServerReserved(SetServerReservedRequest req)
+        {
+             JsonResponseModel<SetServerReservedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetServerReserved");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetServerReservedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（SetServerReserved）用于将异常的实例标记为保留，用于问题排查。
+        /// 
+        /// 字段ReserveValue：0默认值，不保留；1 保留
+        /// </summary>
+        /// <param name="req"><see cref="SetServerReservedRequest"/></param>
+        /// <returns><see cref="SetServerReservedResponse"/></returns>
+        public SetServerReservedResponse SetServerReservedSync(SetServerReservedRequest req)
+        {
+             JsonResponseModel<SetServerReservedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetServerReserved");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetServerReservedResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

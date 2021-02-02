@@ -33,6 +33,32 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PackageType")]
         public long? PackageType{ get; set; }
 
+        /// <summary>
+        /// 排序规则:
+        /// 1. BuyTimeDesc： 最新购买的排在最前面
+        /// 2. BuyTimeAsc： 最老购买的排在最前面
+        /// 3. ExpireTimeDesc： 最后过期的排在最前面
+        /// 4. ExpireTimeAsc：最先过期的排在最前面
+        /// 
+        /// 注意：
+        /// 1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 取得第几页的数据，和 PageSize 同时传递才会生效。
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
+        /// <summary>
+        /// 分页大小，和 PageNum 同时传递才会生效。
+        /// 取值：10 ～ 100 之间的任意整数
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -40,6 +66,9 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

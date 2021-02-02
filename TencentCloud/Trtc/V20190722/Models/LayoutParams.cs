@@ -72,6 +72,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PlaceHolderMode")]
         public ulong? PlaceHolderMode{ get; set; }
 
+        /// <summary>
+        /// 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。
+        /// </summary>
+        [JsonProperty("PureAudioHoldPlaceMode")]
+        public ulong? PureAudioHoldPlaceMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
             this.SetParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
             this.SetParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
+            this.SetParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
         }
     }
 }

@@ -306,6 +306,34 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
+        /// <summary>
+        /// 客户端最大连接数可设置的最小值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientLimitMin")]
+        public long? ClientLimitMin{ get; set; }
+
+        /// <summary>
+        /// 客户端最大连接数可设置的最大值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientLimitMax")]
+        public long? ClientLimitMax{ get; set; }
+
+        /// <summary>
+        /// 实例的节点详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeSet")]
+        public RedisNodeInfo[] NodeSet{ get; set; }
+
+        /// <summary>
+        /// 实例所在的地域信息，比如ap-guangzhou
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -357,6 +385,10 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+            this.SetParamSimple(map, prefix + "ClientLimitMin", this.ClientLimitMin);
+            this.SetParamSimple(map, prefix + "ClientLimitMax", this.ClientLimitMax);
+            this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

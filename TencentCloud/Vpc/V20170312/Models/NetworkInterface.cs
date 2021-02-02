@@ -126,6 +126,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EniType")]
         public ulong? EniType{ get; set; }
 
+        /// <summary>
+        /// 网卡绑定的子机类型：cvm，eks。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +155,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
         }
     }
 }

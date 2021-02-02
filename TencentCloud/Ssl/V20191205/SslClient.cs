@@ -333,6 +333,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 删除管理人
+        /// </summary>
+        /// <param name="req"><see cref="DeleteManagerRequest"/></param>
+        /// <returns><see cref="DeleteManagerResponse"/></returns>
+        public async Task<DeleteManagerResponse> DeleteManager(DeleteManagerRequest req)
+        {
+             JsonResponseModel<DeleteManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除管理人
+        /// </summary>
+        /// <param name="req"><see cref="DeleteManagerRequest"/></param>
+        /// <returns><see cref="DeleteManagerResponse"/></returns>
+        public DeleteManagerResponse DeleteManagerSync(DeleteManagerRequest req)
+        {
+             JsonResponseModel<DeleteManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeCertificate）用于获取证书信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateRequest"/></param>
@@ -484,6 +524,86 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCertificates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCertificatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询管理人详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManagerDetailRequest"/></param>
+        /// <returns><see cref="DescribeManagerDetailResponse"/></returns>
+        public async Task<DescribeManagerDetailResponse> DescribeManagerDetail(DescribeManagerDetailRequest req)
+        {
+             JsonResponseModel<DescribeManagerDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeManagerDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeManagerDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询管理人详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManagerDetailRequest"/></param>
+        /// <returns><see cref="DescribeManagerDetailResponse"/></returns>
+        public DescribeManagerDetailResponse DescribeManagerDetailSync(DescribeManagerDetailRequest req)
+        {
+             JsonResponseModel<DescribeManagerDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeManagerDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeManagerDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询管理人列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManagersRequest"/></param>
+        /// <returns><see cref="DescribeManagersResponse"/></returns>
+        public async Task<DescribeManagersResponse> DescribeManagers(DescribeManagersRequest req)
+        {
+             JsonResponseModel<DescribeManagersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeManagers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeManagersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询管理人列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManagersRequest"/></param>
+        /// <returns><see cref="DescribeManagersResponse"/></returns>
+        public DescribeManagersResponse DescribeManagersSync(DescribeManagersRequest req)
+        {
+             JsonResponseModel<DescribeManagersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeManagers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeManagersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -693,6 +813,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 重新提交审核管理人
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAuditManagerRequest"/></param>
+        /// <returns><see cref="SubmitAuditManagerResponse"/></returns>
+        public async Task<SubmitAuditManagerResponse> SubmitAuditManager(SubmitAuditManagerRequest req)
+        {
+             JsonResponseModel<SubmitAuditManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SubmitAuditManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitAuditManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新提交审核管理人
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAuditManagerRequest"/></param>
+        /// <returns><see cref="SubmitAuditManagerResponse"/></returns>
+        public SubmitAuditManagerResponse SubmitAuditManagerSync(SubmitAuditManagerRequest req)
+        {
+             JsonResponseModel<SubmitAuditManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SubmitAuditManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitAuditManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提交证书资料。输入参数信息可以分多次提交，但提交的证书资料应最低限度保持完整。
         /// </summary>
         /// <param name="req"><see cref="SubmitCertificateInformationRequest"/></param>
@@ -844,6 +1004,46 @@ namespace TencentCloud.Ssl.V20191205
              {
                  var strResp = this.InternalRequestSync(req, "UploadRevokeLetter");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadRevokeLetterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新核验管理人
+        /// </summary>
+        /// <param name="req"><see cref="VerifyManagerRequest"/></param>
+        /// <returns><see cref="VerifyManagerResponse"/></returns>
+        public async Task<VerifyManagerResponse> VerifyManager(VerifyManagerRequest req)
+        {
+             JsonResponseModel<VerifyManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新核验管理人
+        /// </summary>
+        /// <param name="req"><see cref="VerifyManagerRequest"/></param>
+        /// <returns><see cref="VerifyManagerResponse"/></returns>
+        public VerifyManagerResponse VerifyManagerSync(VerifyManagerRequest req)
+        {
+             JsonResponseModel<VerifyManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyManagerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

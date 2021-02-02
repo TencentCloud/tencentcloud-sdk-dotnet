@@ -48,6 +48,34 @@ namespace TencentCloud.Live.V20180801.Models
         public long? PackageBillMode{ get; set; }
 
         /// <summary>
+        /// 总页数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalPage")]
+        public long? TotalPage{ get; set; }
+
+        /// <summary>
+        /// 数据总条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalNum")]
+        public long? TotalNum{ get; set; }
+
+        /// <summary>
+        /// 当前页数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
+        /// <summary>
+        /// 当前每页数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -61,6 +89,10 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamArrayObj(map, prefix + "LivePackageInfoList.", this.LivePackageInfoList);
             this.SetParamSimple(map, prefix + "PackageBillMode", this.PackageBillMode);
+            this.SetParamSimple(map, prefix + "TotalPage", this.TotalPage);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

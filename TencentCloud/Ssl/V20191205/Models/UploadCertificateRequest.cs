@@ -54,6 +54,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 证书用途/证书来源。“CLB，CDN，WAF，LIVE，DDOS”
+        /// </summary>
+        [JsonProperty("CertificateUse")]
+        public string CertificateUse{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CertificateType", this.CertificateType);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
         }
     }
 }

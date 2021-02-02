@@ -59,6 +59,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
+        /// <summary>
+        /// 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
         }
     }
 }

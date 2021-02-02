@@ -140,6 +140,20 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 数据盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-32000GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，10-32000GB；容量以10为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataDiskInfo")]
+        public DiskInfo[] DataDiskInfo{ get; set; }
+
+        /// <summary>
+        /// 系统盘，储存类型为 SSD 云硬盘（CLOUD_SSD）时，100-500GB；储存类型为高性能云硬盘（CLOUD_PREMIUM）时，50-500GB；容量以1为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SystemDiskInfo")]
+        public DiskInfo SystemDiskInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +177,8 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "GameServerSessionProtectionTimeLimit", this.GameServerSessionProtectionTimeLimit);
             this.SetParamSimple(map, prefix + "BillingStatus", this.BillingStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
+            this.SetParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
         }
     }
 }

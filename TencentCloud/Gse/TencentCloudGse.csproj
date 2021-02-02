@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9E9460D-61B2-3328-83C0-53F617E11D0C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.220</VersionPrefix>
+    <VersionPrefix>3.0.221</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,6 +77,8 @@
     <Compile Include="V20191112\Models\DeleteGameServerSessionQueueResponse.cs" />
     <Compile Include="V20191112\Models\DeleteScalingPolicyRequest.cs" />
     <Compile Include="V20191112\Models\DeleteScalingPolicyResponse.cs" />
+    <Compile Include="V20191112\Models\DeleteTimerScalingPolicyRequest.cs" />
+    <Compile Include="V20191112\Models\DeleteTimerScalingPolicyResponse.cs" />
     <Compile Include="V20191112\Models\DescribeAliasRequest.cs" />
     <Compile Include="V20191112\Models\DescribeAliasResponse.cs" />
     <Compile Include="V20191112\Models\DescribeAssetRequest.cs" />
@@ -125,6 +127,8 @@
     <Compile Include="V20191112\Models\DescribeRuntimeConfigurationResponse.cs" />
     <Compile Include="V20191112\Models\DescribeScalingPoliciesRequest.cs" />
     <Compile Include="V20191112\Models\DescribeScalingPoliciesResponse.cs" />
+    <Compile Include="V20191112\Models\DescribeTimerScalingPoliciesRequest.cs" />
+    <Compile Include="V20191112\Models\DescribeTimerScalingPoliciesResponse.cs" />
     <Compile Include="V20191112\Models\DescribeUserQuotaRequest.cs" />
     <Compile Include="V20191112\Models\DescribeUserQuotaResponse.cs" />
     <Compile Include="V20191112\Models\DescribeUserQuotasRequest.cs" />
@@ -132,6 +136,7 @@
     <Compile Include="V20191112\Models\DesiredPlayerSession.cs" />
     <Compile Include="V20191112\Models\DetachCcnInstancesRequest.cs" />
     <Compile Include="V20191112\Models\DetachCcnInstancesResponse.cs" />
+    <Compile Include="V20191112\Models\DiskInfo.cs" />
     <Compile Include="V20191112\Models\Event.cs" />
     <Compile Include="V20191112\Models\ExtraInfos.cs" />
     <Compile Include="V20191112\Models\Filter.cs" />
@@ -178,6 +183,8 @@
     <Compile Include="V20191112\Models\PlayerSession.cs" />
     <Compile Include="V20191112\Models\PutScalingPolicyRequest.cs" />
     <Compile Include="V20191112\Models\PutScalingPolicyResponse.cs" />
+    <Compile Include="V20191112\Models\PutTimerScalingPolicyRequest.cs" />
+    <Compile Include="V20191112\Models\PutTimerScalingPolicyResponse.cs" />
     <Compile Include="V20191112\Models\QuotaResource.cs" />
     <Compile Include="V20191112\Models\ResolveAliasRequest.cs" />
     <Compile Include="V20191112\Models\ResolveAliasResponse.cs" />
@@ -188,6 +195,8 @@
     <Compile Include="V20191112\Models\SearchGameServerSessionsRequest.cs" />
     <Compile Include="V20191112\Models\SearchGameServerSessionsResponse.cs" />
     <Compile Include="V20191112\Models\ServerProcesse.cs" />
+    <Compile Include="V20191112\Models\SetServerReservedRequest.cs" />
+    <Compile Include="V20191112\Models\SetServerReservedResponse.cs" />
     <Compile Include="V20191112\Models\SetServerWeightRequest.cs" />
     <Compile Include="V20191112\Models\SetServerWeightResponse.cs" />
     <Compile Include="V20191112\Models\StartFleetActionsRequest.cs" />
@@ -200,6 +209,10 @@
     <Compile Include="V20191112\Models\StopGameServerSessionPlacementResponse.cs" />
     <Compile Include="V20191112\Models\Tag.cs" />
     <Compile Include="V20191112\Models\TargetConfiguration.cs" />
+    <Compile Include="V20191112\Models\TimerConfiguration.cs" />
+    <Compile Include="V20191112\Models\TimerFleetCapacity.cs" />
+    <Compile Include="V20191112\Models\TimerScalingPolicy.cs" />
+    <Compile Include="V20191112\Models\TimerValue.cs" />
     <Compile Include="V20191112\Models\UpdateAliasRequest.cs" />
     <Compile Include="V20191112\Models\UpdateAliasResponse.cs" />
     <Compile Include="V20191112\Models\UpdateAssetRequest.cs" />

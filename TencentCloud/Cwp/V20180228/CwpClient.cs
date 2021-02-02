@@ -53,7 +53,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口（AddLoginWhiteList）用于添加白名单规则
+        /// 本接口用于新增异地登录白名单规则。
         /// </summary>
         /// <param name="req"><see cref="AddLoginWhiteListRequest"/></param>
         /// <returns><see cref="AddLoginWhiteListResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口（AddLoginWhiteList）用于添加白名单规则
+        /// 本接口用于新增异地登录白名单规则。
         /// </summary>
         /// <param name="req"><see cref="AddLoginWhiteListRequest"/></param>
         /// <returns><see cref="AddLoginWhiteListResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 删除白名单规则
+        /// 本接口用于删除异地登录白名单规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginWhiteListRequest"/></param>
         /// <returns><see cref="DeleteLoginWhiteListResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 删除白名单规则
+        /// 本接口用于删除异地登录白名单规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginWhiteListRequest"/></param>
         /// <returns><see cref="DeleteLoginWhiteListResponse"/></returns>
@@ -3733,7 +3733,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 编辑白名单规则
+        /// 本接口用于编辑异地登录白名单规则。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoginWhiteListRequest"/></param>
         /// <returns><see cref="ModifyLoginWhiteListResponse"/></returns>
@@ -3753,7 +3753,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 编辑白名单规则
+        /// 本接口用于编辑异地登录白名单规则。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoginWhiteListRequest"/></param>
         /// <returns><see cref="ModifyLoginWhiteListResponse"/></returns>

@@ -54,6 +54,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
+        /// <summary>
+        /// 设备是否启用，0禁用状态1启用状态，默认不区分
+        /// </summary>
+        [JsonProperty("EnableState")]
+        public ulong? EnableState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "FirmwareVersion", this.FirmwareVersion);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "EnableState", this.EnableState);
         }
     }
 }
