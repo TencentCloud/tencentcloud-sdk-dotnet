@@ -96,6 +96,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅
+        /// </summary>
+        [JsonProperty("SubscribeVersion")]
+        public string SubscribeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         }
     }
 }

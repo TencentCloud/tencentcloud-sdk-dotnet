@@ -25,25 +25,25 @@ namespace TencentCloud.Hcm.V20181106.Models
     {
         
         /// <summary>
-        /// 识别的算式是否正确
+        /// 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
         /// </summary>
         [JsonProperty("Item")]
         public string Item{ get; set; }
 
         /// <summary>
-        /// 识别的算式
+        /// 识别出的算式，识别出的文本行字符串
         /// </summary>
         [JsonProperty("ItemString")]
         public string ItemString{ get; set; }
 
         /// <summary>
-        /// 识别的算式在图片上的位置信息
+        /// 识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
         /// </summary>
         [JsonProperty("ItemCoord")]
         public ItemCoord ItemCoord{ get; set; }
 
         /// <summary>
-        /// 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+        /// 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
         /// </summary>
         [JsonProperty("Answer")]
         public string Answer{ get; set; }
@@ -62,6 +62,13 @@ namespace TencentCloud.Hcm.V20181106.Models
         [JsonProperty("ItemConf")]
         public float? ItemConf{ get; set; }
 
+        /// <summary>
+        /// 用于标识题目 id，如果有若干算式属于同一 题，则其对应的 id 相同。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuestionId")]
+        public string QuestionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +81,7 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "Answer", this.Answer);
             this.SetParamSimple(map, prefix + "ExpressionType", this.ExpressionType);
             this.SetParamSimple(map, prefix + "ItemConf", this.ItemConf);
+            this.SetParamSimple(map, prefix + "QuestionId", this.QuestionId);
         }
     }
 }

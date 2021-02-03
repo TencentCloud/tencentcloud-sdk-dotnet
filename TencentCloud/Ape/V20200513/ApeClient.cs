@@ -133,6 +133,46 @@ namespace TencentCloud.Ape.V20200513
         }
 
         /// <summary>
+        /// 核销图片，获取原图URL地址
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrderAndDownloadsRequest"/></param>
+        /// <returns><see cref="CreateOrderAndDownloadsResponse"/></returns>
+        public async Task<CreateOrderAndDownloadsResponse> CreateOrderAndDownloads(CreateOrderAndDownloadsRequest req)
+        {
+             JsonResponseModel<CreateOrderAndDownloadsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrderAndDownloads");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrderAndDownloadsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 核销图片，获取原图URL地址
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrderAndDownloadsRequest"/></param>
+        /// <returns><see cref="CreateOrderAndDownloadsResponse"/></returns>
+        public CreateOrderAndDownloadsResponse CreateOrderAndDownloadsSync(CreateOrderAndDownloadsRequest req)
+        {
+             JsonResponseModel<CreateOrderAndDownloadsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrderAndDownloads");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrderAndDownloadsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 购买一张图片并且支付
         /// </summary>
         /// <param name="req"><see cref="CreateOrderAndPayRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Ape.V20200513
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAuthUsers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAuthUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户图片下载记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDownloadInfosRequest"/></param>
+        /// <returns><see cref="DescribeDownloadInfosResponse"/></returns>
+        public async Task<DescribeDownloadInfosResponse> DescribeDownloadInfos(DescribeDownloadInfosRequest req)
+        {
+             JsonResponseModel<DescribeDownloadInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDownloadInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDownloadInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户图片下载记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDownloadInfosRequest"/></param>
+        /// <returns><see cref="DescribeDownloadInfosResponse"/></returns>
+        public DescribeDownloadInfosResponse DescribeDownloadInfosSync(DescribeDownloadInfosRequest req)
+        {
+             JsonResponseModel<DescribeDownloadInfosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDownloadInfos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDownloadInfosResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

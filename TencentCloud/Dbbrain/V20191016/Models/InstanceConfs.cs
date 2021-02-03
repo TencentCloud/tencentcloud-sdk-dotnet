@@ -30,6 +30,12 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         [JsonProperty("DailyInspection")]
         public string DailyInspection{ get; set; }
 
+        /// <summary>
+        /// 实例概览开关，Yes/No。
+        /// </summary>
+        [JsonProperty("OverviewDisplay")]
+        public string OverviewDisplay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+            this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
         }
     }
 }

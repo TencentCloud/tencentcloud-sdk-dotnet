@@ -93,6 +93,46 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 获取实例总数和运行数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesCountRequest"/></param>
+        /// <returns><see cref="DescribeInstancesCountResponse"/></returns>
+        public async Task<DescribeInstancesCountResponse> DescribeInstancesCount(DescribeInstancesCountRequest req)
+        {
+             JsonResponseModel<DescribeInstancesCountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例总数和运行数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesCountRequest"/></param>
+        /// <returns><see cref="DescribeInstancesCountResponse"/></returns>
+        public DescribeInstancesCountResponse DescribeInstancesCountSync(DescribeInstancesCountRequest req)
+        {
+             JsonResponseModel<DescribeInstancesCountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 保存游戏存档
         /// </summary>
         /// <param name="req"><see cref="SaveGameArchiveRequest"/></param>

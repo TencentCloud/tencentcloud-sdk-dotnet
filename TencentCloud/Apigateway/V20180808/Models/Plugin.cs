@@ -67,6 +67,20 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ModifiedTime")]
         public string ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// 插件绑定的API总数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachedApiTotalCount")]
+        public long? AttachedApiTotalCount{ get; set; }
+
+        /// <summary>
+        /// 插件绑定的API信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachedApis")]
+        public AttachedApiInfo[] AttachedApis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +94,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "AttachedApiTotalCount", this.AttachedApiTotalCount);
+            this.SetParamArrayObj(map, prefix + "AttachedApis.", this.AttachedApis);
         }
     }
 }

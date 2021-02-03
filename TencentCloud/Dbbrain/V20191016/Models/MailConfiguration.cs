@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public long? SendMail{ get; set; }
 
         /// <summary>
-        /// 地域配置, 如["ap-guangzhou", "ap-shanghai"]。
+        /// 地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模版，配置需要发送巡检邮件的地域；订阅的邮件发送模版，配置当前订阅实例的所属地域。
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }

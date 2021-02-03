@@ -72,6 +72,24 @@ namespace TencentCloud.Ape.V20200513.Models
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
 
+        /// <summary>
+        /// 授权范围id
+        /// </summary>
+        [JsonProperty("LicenseScopeId")]
+        public long? LicenseScopeId{ get; set; }
+
+        /// <summary>
+        /// 尺寸
+        /// </summary>
+        [JsonProperty("DimensionsName")]
+        public string DimensionsName{ get; set; }
+
+        /// <summary>
+        /// 尺寸id
+        /// </summary>
+        [JsonProperty("DimensionsNameId")]
+        public long? DimensionsNameId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Ape.V20200513.Models
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "LicenseScope", this.LicenseScope);
             this.SetParamSimple(map, prefix + "IsVip", this.IsVip);
+            this.SetParamSimple(map, prefix + "LicenseScopeId", this.LicenseScopeId);
+            this.SetParamSimple(map, prefix + "DimensionsName", this.DimensionsName);
+            this.SetParamSimple(map, prefix + "DimensionsNameId", this.DimensionsNameId);
         }
     }
 }

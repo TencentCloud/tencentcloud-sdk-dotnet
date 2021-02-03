@@ -78,6 +78,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("COSBucket")]
         public string COSBucket{ get; set; }
 
+        /// <summary>
+        /// 是否采集作业日志
+        /// </summary>
+        [JsonProperty("LogCollect")]
+        public bool? LogCollect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
             this.SetParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
             this.SetParamSimple(map, prefix + "COSBucket", this.COSBucket);
+            this.SetParamSimple(map, prefix + "LogCollect", this.LogCollect);
         }
     }
 }

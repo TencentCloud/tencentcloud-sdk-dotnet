@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.221</VersionPrefix>
+    <VersionPrefix>3.0.222</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -218,14 +218,20 @@
     <Compile Include="Ape\V20200513\Models\BatchDescribeOrderCertificateResponse.cs" />
     <Compile Include="Ape\V20200513\Models\BatchDescribeOrderImageRequest.cs" />
     <Compile Include="Ape\V20200513\Models\BatchDescribeOrderImageResponse.cs" />
+    <Compile Include="Ape\V20200513\Models\CreateOrderAndDownloadsRequest.cs" />
+    <Compile Include="Ape\V20200513\Models\CreateOrderAndDownloadsResponse.cs" />
     <Compile Include="Ape\V20200513\Models\CreateOrderAndPayRequest.cs" />
     <Compile Include="Ape\V20200513\Models\CreateOrderAndPayResponse.cs" />
     <Compile Include="Ape\V20200513\Models\DescribeAuthUsersRequest.cs" />
     <Compile Include="Ape\V20200513\Models\DescribeAuthUsersResponse.cs" />
+    <Compile Include="Ape\V20200513\Models\DescribeDownloadInfosRequest.cs" />
+    <Compile Include="Ape\V20200513\Models\DescribeDownloadInfosResponse.cs" />
     <Compile Include="Ape\V20200513\Models\DescribeImageRequest.cs" />
     <Compile Include="Ape\V20200513\Models\DescribeImageResponse.cs" />
     <Compile Include="Ape\V20200513\Models\DescribeImagesRequest.cs" />
     <Compile Include="Ape\V20200513\Models\DescribeImagesResponse.cs" />
+    <Compile Include="Ape\V20200513\Models\DownloadInfo.cs" />
+    <Compile Include="Ape\V20200513\Models\ImageInfo.cs" />
     <Compile Include="Ape\V20200513\Models\ImageItem.cs" />
     <Compile Include="Ape\V20200513\Models\ImageMarshal.cs" />
     <Compile Include="Apigateway\V20180808\ApigatewayClient.cs" />
@@ -239,6 +245,7 @@
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlanSet.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApisStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachedApiInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentResponse.cs" />
@@ -4215,11 +4222,15 @@
     <Compile Include="Dayu\V20180709\Models\WaterPrintKey.cs" />
     <Compile Include="Dayu\V20180709\Models\WaterPrintPolicy.cs" />
     <Compile Include="Dbbrain\V20191016\DbbrainClient.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\AddUserContactRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\AddUserContactResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ContactItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportTaskRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateSchedulerMailProfileRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DeleteSecurityAuditLogExportTasksRequest.cs" />
@@ -4234,6 +4245,12 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagHistoryResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDiagDBInstancesRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDiagDBInstancesResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeHealthScoreRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeHealthScoreResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeMailProfileRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
@@ -4247,8 +4264,12 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\EventInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\GroupItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\HealthScoreInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\InstanceConfs.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\InstanceInfo.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\IssueTypeInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\MailConfiguration.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ModifyDiagDBInstanceConfRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ModifyDiagDBInstanceConfResponse.cs" />
@@ -4263,6 +4284,7 @@
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TimeSlice.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\UserProfile.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
@@ -5544,6 +5566,8 @@
     <Compile Include="Gs\V20191118\GsClient.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionRequest.cs" />
     <Compile Include="Gs\V20191118\Models\CreateSessionResponse.cs" />
+    <Compile Include="Gs\V20191118\Models\DescribeInstancesCountRequest.cs" />
+    <Compile Include="Gs\V20191118\Models\DescribeInstancesCountResponse.cs" />
     <Compile Include="Gs\V20191118\Models\SaveGameArchiveRequest.cs" />
     <Compile Include="Gs\V20191118\Models\SaveGameArchiveResponse.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameRequest.cs" />

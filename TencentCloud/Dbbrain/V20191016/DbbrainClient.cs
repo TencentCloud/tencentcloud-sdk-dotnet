@@ -53,6 +53,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 添加邮件接收联系人的姓名， 邮件地址，返回值为添加成功的联系人id。Region统一选择广州。
+        /// </summary>
+        /// <param name="req"><see cref="AddUserContactRequest"/></param>
+        /// <returns><see cref="AddUserContactResponse"/></returns>
+        public async Task<AddUserContactResponse> AddUserContact(AddUserContactRequest req)
+        {
+             JsonResponseModel<AddUserContactResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddUserContact");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUserContactResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加邮件接收联系人的姓名， 邮件地址，返回值为添加成功的联系人id。Region统一选择广州。
+        /// </summary>
+        /// <param name="req"><see cref="AddUserContactRequest"/></param>
+        /// <returns><see cref="AddUserContactResponse"/></returns>
+        public AddUserContactResponse AddUserContactSync(AddUserContactRequest req)
+        {
+             JsonResponseModel<AddUserContactResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddUserContact");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUserContactResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建健康报告，并可以选择是否发送邮件。
         /// </summary>
         /// <param name="req"><see cref="CreateDBDiagReportTaskRequest"/></param>
@@ -93,7 +133,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成邮件配置）。
+        /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
         /// <returns><see cref="CreateMailProfileResponse"/></returns>
@@ -113,7 +153,7 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
-        /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成邮件配置）。
+        /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
         /// <returns><see cref="CreateMailProfileResponse"/></returns>
@@ -124,6 +164,46 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "CreateMailProfile");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于创建定期生成健康报告并邮件发送的配置，将健康报告的定期生成时间作为参数传入（周一至周日），用于设置健康报告的定期生成时间，同时保存相应的定期邮件发送的配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSchedulerMailProfileRequest"/></param>
+        /// <returns><see cref="CreateSchedulerMailProfileResponse"/></returns>
+        public async Task<CreateSchedulerMailProfileResponse> CreateSchedulerMailProfile(CreateSchedulerMailProfileRequest req)
+        {
+             JsonResponseModel<CreateSchedulerMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSchedulerMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSchedulerMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于创建定期生成健康报告并邮件发送的配置，将健康报告的定期生成时间作为参数传入（周一至周日），用于设置健康报告的定期生成时间，同时保存相应的定期邮件发送的配置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateSchedulerMailProfileRequest"/></param>
+        /// <returns><see cref="CreateSchedulerMailProfileResponse"/></returns>
+        public CreateSchedulerMailProfileResponse CreateSchedulerMailProfileSync(CreateSchedulerMailProfileRequest req)
+        {
+             JsonResponseModel<CreateSchedulerMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSchedulerMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSchedulerMailProfileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -404,6 +484,126 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBSpaceStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSpaceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例信息列表。Region统一选择广州。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDiagDBInstancesResponse"/></returns>
+        public async Task<DescribeDiagDBInstancesResponse> DescribeDiagDBInstances(DescribeDiagDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDiagDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiagDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例信息列表。Region统一选择广州。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiagDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDiagDBInstancesResponse"/></returns>
+        public DescribeDiagDBInstancesResponse DescribeDiagDBInstancesSync(DescribeDiagDBInstancesRequest req)
+        {
+             JsonResponseModel<DescribeDiagDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiagDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiagDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthScoreRequest"/></param>
+        /// <returns><see cref="DescribeHealthScoreResponse"/></returns>
+        public async Task<DescribeHealthScoreResponse> DescribeHealthScore(DescribeHealthScoreRequest req)
+        {
+             JsonResponseModel<DescribeHealthScoreResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHealthScore");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHealthScoreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHealthScoreRequest"/></param>
+        /// <returns><see cref="DescribeHealthScoreResponse"/></returns>
+        public DescribeHealthScoreResponse DescribeHealthScoreSync(DescribeHealthScoreRequest req)
+        {
+             JsonResponseModel<DescribeHealthScoreResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHealthScore");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHealthScoreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。Region统一选择广州。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMailProfileRequest"/></param>
+        /// <returns><see cref="DescribeMailProfileResponse"/></returns>
+        public async Task<DescribeMailProfileResponse> DescribeMailProfile(DescribeMailProfileRequest req)
+        {
+             JsonResponseModel<DescribeMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。Region统一选择广州。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMailProfileRequest"/></param>
+        /// <returns><see cref="DescribeMailProfileResponse"/></returns>
+        public DescribeMailProfileResponse DescribeMailProfileSync(DescribeMailProfileRequest req)
+        {
+             JsonResponseModel<DescribeMailProfileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMailProfile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMailProfileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -27,29 +27,29 @@ namespace TencentCloud.Bda.V20200324.Models
         /// <summary>
         /// 人体图片 Base64 数据。
         /// 图片 base64 编码后大小不可超过5M。
-        /// 图片分辨率不得超过 2048*2048。
+        /// 图片分辨率不得超过 1920 * 1080 。
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
+        /// 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
+        /// </summary>
+        [JsonProperty("MaxBodyNum")]
+        public ulong? MaxBodyNum{ get; set; }
+
+        /// <summary>
         /// 人体图片 Url 。
         /// Url、Image必须提供一个，如果都提供，只使用 Url。
         /// 图片 base64 编码后大小不可超过5M。 
-        /// 图片分辨率不得超过 2048*2048。
+        /// 图片分辨率不得超过 1920 * 1080 。
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。 
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
-
-        /// <summary>
-        /// 最多检测的人体数目，默认值为1（仅检测图片中面积最大的那个人体）； 最大值10 ，检测图片中面积最大的10个人体。
-        /// </summary>
-        [JsonProperty("MaxBodyNum")]
-        public ulong? MaxBodyNum{ get; set; }
 
         /// <summary>
         /// 是否返回年龄、性别、朝向等属性。 
@@ -69,8 +69,8 @@ namespace TencentCloud.Bda.V20200324.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Image", this.Image);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "MaxBodyNum", this.MaxBodyNum);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamObj(map, prefix + "AttributesOptions.", this.AttributesOptions);
         }
     }

@@ -164,6 +164,13 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubscribeVersion")]
+        public string SubscribeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +200,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "SdkConsumedTime", this.SdkConsumedTime);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         }
     }
 }

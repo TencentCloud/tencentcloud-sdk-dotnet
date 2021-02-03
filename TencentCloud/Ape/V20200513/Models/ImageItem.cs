@@ -66,6 +66,18 @@ namespace TencentCloud.Ape.V20200513.Models
         [JsonProperty("Keywords")]
         public string Keywords{ get; set; }
 
+        /// <summary>
+        /// 宽
+        /// </summary>
+        [JsonProperty("Width")]
+        public long? Width{ get; set; }
+
+        /// <summary>
+        /// 高
+        /// </summary>
+        [JsonProperty("Height")]
+        public long? Height{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Ape.V20200513.Models
             this.SetParamSimple(map, prefix + "ThumbUrl", this.ThumbUrl);
             this.SetParamSimple(map, prefix + "Vendor", this.Vendor);
             this.SetParamSimple(map, prefix + "Keywords", this.Keywords);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
         }
     }
 }

@@ -96,6 +96,12 @@ namespace TencentCloud.Hcm.V20181106.Models
         [JsonProperty("LaTex")]
         public long? LaTex{ get; set; }
 
+        /// <summary>
+        /// 用于选择是否拒绝模糊题 目。打开则丢弃模糊题目， 不进行后续的判题返回结 果。
+        /// </summary>
+        [JsonProperty("RejectVagueArithmetic")]
+        public bool? RejectVagueArithmetic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Hcm.V20181106.Models
             this.SetParamSimple(map, prefix + "EnablePdfRecognize", this.EnablePdfRecognize);
             this.SetParamSimple(map, prefix + "PdfPageIndex", this.PdfPageIndex);
             this.SetParamSimple(map, prefix + "LaTex", this.LaTex);
+            this.SetParamSimple(map, prefix + "RejectVagueArithmetic", this.RejectVagueArithmetic);
         }
     }
 }
