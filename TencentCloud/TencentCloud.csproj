@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.222</VersionPrefix>
+    <VersionPrefix>3.0.223</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2523,6 +2523,15 @@
     <Compile Include="Chdfs\V20190718\Models\RestoreTask.cs" />
     <Compile Include="Chdfs\V20190718\Models\Tag.cs" />
     <Compile Include="Chdfs\V20190718\Models\Transition.cs" />
+    <Compile Include="Cii\V20201210\CiiClient.cs" />
+    <Compile Include="Cii\V20201210\Models\CompareMetricsData.cs" />
+    <Compile Include="Cii\V20201210\Models\CreateStructureTaskRequest.cs" />
+    <Compile Include="Cii\V20201210\Models\CreateStructureTaskResponse.cs" />
+    <Compile Include="Cii\V20201210\Models\DescribeStructCompareDataRequest.cs" />
+    <Compile Include="Cii\V20201210\Models\DescribeStructCompareDataResponse.cs" />
+    <Compile Include="Cii\V20201210\Models\DescribeStructureTaskResultRequest.cs" />
+    <Compile Include="Cii\V20201210\Models\DescribeStructureTaskResultResponse.cs" />
+    <Compile Include="Cii\V20201210\Models\ResultObject.cs" />
     <Compile Include="Cim\V20190318\CimClient.cs" />
     <Compile Include="Cim\V20190318\Models\DescribeSdkAppidRequest.cs" />
     <Compile Include="Cim\V20190318\Models\DescribeSdkAppidResponse.cs" />
@@ -9610,6 +9619,7 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcSubnet.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseSecurityContext.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudRunServiceVolume.cs" />
     <Compile Include="Tcb\V20180608\Models\CodeSource.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIResponse.cs" />
@@ -11097,6 +11107,10 @@
     <Compile Include="Tsf\V20180326\Models\UpdateRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroupSimple.cs" />
+    <Compile Include="Tsw\V20200924\TswClient.cs" />
+    <Compile Include="Tsw\V20200924\Models\AgentShell.cs" />
+    <Compile Include="Tsw\V20200924\Models\DescribeAgentShellRequest.cs" />
+    <Compile Include="Tsw\V20200924\Models\DescribeAgentShellResponse.cs" />
     <Compile Include="Tts\V20190823\TtsClient.cs" />
     <Compile Include="Tts\V20190823\Models\TextToVoiceRequest.cs" />
     <Compile Include="Tts\V20190823\Models\TextToVoiceResponse.cs" />

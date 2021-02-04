@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
     {
         
         /// <summary>
-        /// 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
+        /// 服务产品类型，固定值：mysql。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

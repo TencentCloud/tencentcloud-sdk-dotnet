@@ -37,7 +37,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 资源状态
+        /// 资源状态，1表示资源为正常，2表示资源处于隔离状态
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string Model{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
         /// </summary>
         [JsonProperty("VsmType")]
         public long? VsmType{ get; set; }
 
         /// <summary>
-        /// 地域Id
+        /// 地域Id，返回腾讯云地域代码，如广州为1，北京为8
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 区域Id
+        /// 区域Id，返回腾讯云每个地域的可用区代码
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }

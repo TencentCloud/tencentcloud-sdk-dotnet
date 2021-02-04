@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 总金额
+        /// 原始总金额
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCost")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 原始总金额
+        /// 应付总金额
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalCost")]

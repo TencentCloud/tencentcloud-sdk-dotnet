@@ -73,6 +73,20 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
+        /// <summary>
+        /// GPU卡数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Vgpu")]
+        public float? Vgpu{ get; set; }
+
+        /// <summary>
+        /// GPU型号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GpuModelName")]
+        public string GpuModelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +101,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "CpuModelName", this.CpuModelName);
             this.SetParamObj(map, prefix + "InstanceFamilyTypeConfig.", this.InstanceFamilyTypeConfig);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+            this.SetParamSimple(map, prefix + "Vgpu", this.Vgpu);
+            this.SetParamSimple(map, prefix + "GpuModelName", this.GpuModelName);
         }
     }
 }

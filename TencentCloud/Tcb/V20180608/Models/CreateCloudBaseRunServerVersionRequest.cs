@@ -234,6 +234,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Security")]
         public CloudBaseSecurityContext Security{ get; set; }
 
+        /// <summary>
+        /// 服务磁盘挂载
+        /// </summary>
+        [JsonProperty("ServiceVolumes")]
+        public CloudRunServiceVolume[] ServiceVolumes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +281,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "ImageReuseKey", this.ImageReuseKey);
             this.SetParamArrayObj(map, prefix + "SidecarSpecs.", this.SidecarSpecs);
             this.SetParamObj(map, prefix + "Security.", this.Security);
+            this.SetParamArrayObj(map, prefix + "ServiceVolumes.", this.ServiceVolumes);
         }
     }
 }

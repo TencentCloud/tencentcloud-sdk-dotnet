@@ -43,7 +43,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string TimeSpan{ get; set; }
 
         /// <summary>
-        /// 商品的时间单位
+        /// 商品的时间单位，m表示月，y表示年
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

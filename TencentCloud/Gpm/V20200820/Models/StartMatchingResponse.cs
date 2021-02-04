@@ -31,7 +31,7 @@ namespace TencentCloud.Gpm.V20200820.Models
         public ulong? ErrCode{ get; set; }
 
         /// <summary>
-        /// 请求 id 长度 128。
+        /// 匹配票据 ID长度 128。
         /// </summary>
         [JsonProperty("MatchTicketId")]
         public string MatchTicketId{ get; set; }
