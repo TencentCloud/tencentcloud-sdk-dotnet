@@ -31,7 +31,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string ModuleId{ get; set; }
 
         /// <summary>
-        /// 是否禁止分配外网ip
+        /// 是否禁止分配外网ip,true：统一分配外网ip，false：禁止分配外网ip.
         /// </summary>
         [JsonProperty("DisableWanIp")]
         public bool? DisableWanIp{ get; set; }

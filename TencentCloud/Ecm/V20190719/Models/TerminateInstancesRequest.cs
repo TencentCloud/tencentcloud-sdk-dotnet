@@ -42,6 +42,14 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("TerminateTime")]
         public string TerminateTime{ get; set; }
 
+        /// <summary>
+        /// 是否关联删除已绑定的弹性网卡和弹性IP，默认为true。
+        /// 当为true时，一并删除弹性网卡和弹性IP；
+        /// 当为false时，只销毁主机，保留弹性网卡和弹性IP。
+        /// </summary>
+        [JsonProperty("AssociatedResourceDestroy")]
+        public bool? AssociatedResourceDestroy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
             this.SetParamSimple(map, prefix + "TerminateDelay", this.TerminateDelay);
             this.SetParamSimple(map, prefix + "TerminateTime", this.TerminateTime);
+            this.SetParamSimple(map, prefix + "AssociatedResourceDestroy", this.AssociatedResourceDestroy);
         }
     }
 }

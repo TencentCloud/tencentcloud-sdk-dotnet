@@ -37,7 +37,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ECM 地域
+        /// ECM 地域，形如ap-xian-ecm。
         /// </summary>
         [JsonProperty("EcmRegion")]
         public string EcmRegion{ get; set; }

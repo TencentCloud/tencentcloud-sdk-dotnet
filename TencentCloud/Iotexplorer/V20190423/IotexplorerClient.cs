@@ -213,6 +213,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 创建 LoRa 自定义频点
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="CreateLoRaFrequencyResponse"/></returns>
+        public async Task<CreateLoRaFrequencyResponse> CreateLoRaFrequency(CreateLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<CreateLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoRaFrequencyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 LoRa 自定义频点
+        /// </summary>
+        /// <param name="req"><see cref="CreateLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="CreateLoRaFrequencyResponse"/></returns>
+        public CreateLoRaFrequencyResponse CreateLoRaFrequencySync(CreateLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<CreateLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoRaFrequencyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建新 LoRa 网关设备接口
         /// </summary>
         /// <param name="req"><see cref="CreateLoRaGatewayRequest"/></param>
@@ -404,6 +444,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供删除LoRa自定义频点的能力
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="DeleteLoRaFrequencyResponse"/></returns>
+        public async Task<DeleteLoRaFrequencyResponse> DeleteLoRaFrequency(DeleteLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<DeleteLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoRaFrequencyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供删除LoRa自定义频点的能力
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="DeleteLoRaFrequencyResponse"/></returns>
+        public DeleteLoRaFrequencyResponse DeleteLoRaFrequencySync(DeleteLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<DeleteLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoRaFrequencyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -684,6 +764,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDeviceDataHistory");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceDataHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供查询LoRa自定义频点详情的能力
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="DescribeLoRaFrequencyResponse"/></returns>
+        public async Task<DescribeLoRaFrequencyResponse> DescribeLoRaFrequency(DescribeLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<DescribeLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoRaFrequencyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供查询LoRa自定义频点详情的能力
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="DescribeLoRaFrequencyResponse"/></returns>
+        public DescribeLoRaFrequencyResponse DescribeLoRaFrequencySync(DescribeLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<DescribeLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLoRaFrequencyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1164,6 +1284,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "ListEventHistory");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEventHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改LoRa自定义频点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="ModifyLoRaFrequencyResponse"/></returns>
+        public async Task<ModifyLoRaFrequencyResponse> ModifyLoRaFrequency(ModifyLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<ModifyLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoRaFrequencyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改LoRa自定义频点
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoRaFrequencyRequest"/></param>
+        /// <returns><see cref="ModifyLoRaFrequencyResponse"/></returns>
+        public ModifyLoRaFrequencyResponse ModifyLoRaFrequencySync(ModifyLoRaFrequencyRequest req)
+        {
+             JsonResponseModel<ModifyLoRaFrequencyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoRaFrequency");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoRaFrequencyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

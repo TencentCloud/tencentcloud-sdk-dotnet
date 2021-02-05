@@ -3821,6 +3821,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 用于修改弹性网卡内网IP属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateIpAddressesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyPrivateIpAddressesAttributeResponse"/></returns>
+        public async Task<ModifyPrivateIpAddressesAttributeResponse> ModifyPrivateIpAddressesAttribute(ModifyPrivateIpAddressesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyPrivateIpAddressesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPrivateIpAddressesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrivateIpAddressesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于修改弹性网卡内网IP属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrivateIpAddressesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyPrivateIpAddressesAttributeResponse"/></returns>
+        public ModifyPrivateIpAddressesAttributeResponse ModifyPrivateIpAddressesAttributeSync(ModifyPrivateIpAddressesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyPrivateIpAddressesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPrivateIpAddressesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrivateIpAddressesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改路由表属性
         /// </summary>
         /// <param name="req"><see cref="ModifyRouteTableAttributeRequest"/></param>
