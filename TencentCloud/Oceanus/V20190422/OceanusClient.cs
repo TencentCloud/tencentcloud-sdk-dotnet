@@ -253,6 +253,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 查询作业配置列表，一次最多查询100个
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobConfigsRequest"/></param>
+        /// <returns><see cref="DescribeJobConfigsResponse"/></returns>
+        public async Task<DescribeJobConfigsResponse> DescribeJobConfigs(DescribeJobConfigsRequest req)
+        {
+             JsonResponseModel<DescribeJobConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeJobConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询作业配置列表，一次最多查询100个
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobConfigsRequest"/></param>
+        /// <returns><see cref="DescribeJobConfigsResponse"/></returns>
+        public DescribeJobConfigsResponse DescribeJobConfigsSync(DescribeJobConfigsRequest req)
+        {
+             JsonResponseModel<DescribeJobConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJobConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询作业
         /// </summary>
         /// <param name="req"><see cref="DescribeJobsRequest"/></param>

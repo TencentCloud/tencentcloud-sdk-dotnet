@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.224</VersionPrefix>
+    <VersionPrefix>3.0.225</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2618,6 +2618,7 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DynamicRetentionTime.cs" />
     <Compile Include="Ckafka\V20190819\Models\Filter.cs" />
     <Compile Include="Ckafka\V20190819\Models\Group.cs" />
     <Compile Include="Ckafka\V20190819\Models\GroupInfoMember.cs" />
@@ -2656,6 +2657,7 @@
     <Compile Include="Ckafka\V20190819\Models\TopicDetailResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\TopicPartitionDO.cs" />
     <Compile Include="Ckafka\V20190819\Models\TopicResult.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicRetentionTimeConfigRsp.cs" />
     <Compile Include="Ckafka\V20190819\Models\User.cs" />
     <Compile Include="Ckafka\V20190819\Models\UserResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\VipEntity.cs" />
@@ -4906,6 +4908,7 @@
     <Compile Include="Ecm\V20190719\Models\InstanceFamilyConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceFamilyTypeConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceNetworkInfo.cs" />
+    <Compile Include="Ecm\V20190719\Models\InstanceNetworkLimitConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceOperator.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceStatistic.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceTypeConfig.cs" />
@@ -6670,6 +6673,70 @@
     <Compile Include="Iotvideo\V20191126\Models\UploadOtaVersionRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\UploadOtaVersionResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\VersionData.cs" />
+    <Compile Include="Iotvideo\V20201215\IotvideoClient.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ActionHistory.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CheckForwardAuthRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CheckForwardAuthResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateBatchRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateBatchResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateForwardRuleRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateForwardRuleResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateProductRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateProductResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteForwardRuleRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteForwardRuleResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteProductRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteProductResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBatchRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBatchResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBatchsRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBatchsResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeCategoryRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeCategoryResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceActionHistoryRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceActionHistoryResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceCommLogRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceCommLogResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceDataHistoryRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceDataHistoryResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceDataRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceDataResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceEventHistoryRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceEventHistoryResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeForwardRuleRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeForwardRuleResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeModelDefinitionRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeModelDefinitionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeProductRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeProductResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeProductsRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeProductsResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeviceCommLogItem.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeviceDataHistoryItem.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeviceInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\EventHistoryItem.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ImportModelDefinitionRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ImportModelDefinitionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyForwardRuleRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyForwardRuleResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyModelDefinitionRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyModelDefinitionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyProductRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyProductResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ProductModelDefinition.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ProductTemplate.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\VideoBatch.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\VideoProduct.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
     <Compile Include="Kms\V20190118\Models\AlgorithmInfo.cs" />
     <Compile Include="Kms\V20190118\Models\ArchiveKeyRequest.cs" />
@@ -8028,16 +8095,20 @@
     <Compile Include="Oceanus\V20190422\Models\CreateResourceResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DeleteTableConfigRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DeleteTableConfigResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeJobConfigsRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeJobConfigsResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobsResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeSystemResourcesRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeSystemResourcesResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\Filter.cs" />
+    <Compile Include="Oceanus\V20190422\Models\JobConfig.cs" />
     <Compile Include="Oceanus\V20190422\Models\JobV1.cs" />
     <Compile Include="Oceanus\V20190422\Models\Property.cs" />
     <Compile Include="Oceanus\V20190422\Models\ResourceLoc.cs" />
     <Compile Include="Oceanus\V20190422\Models\ResourceLocParam.cs" />
     <Compile Include="Oceanus\V20190422\Models\ResourceRef.cs" />
+    <Compile Include="Oceanus\V20190422\Models\ResourceRefDetail.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobDescription.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobsResponse.cs" />

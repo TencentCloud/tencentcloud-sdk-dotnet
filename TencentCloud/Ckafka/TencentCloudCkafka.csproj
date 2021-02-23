@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.224</VersionPrefix>
+    <VersionPrefix>3.0.225</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,7 @@
     <Compile Include="V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20190819\Models\DynamicRetentionTime.cs" />
     <Compile Include="V20190819\Models\Filter.cs" />
     <Compile Include="V20190819\Models\Group.cs" />
     <Compile Include="V20190819\Models\GroupInfoMember.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="V20190819\Models\TopicDetailResponse.cs" />
     <Compile Include="V20190819\Models\TopicPartitionDO.cs" />
     <Compile Include="V20190819\Models\TopicResult.cs" />
+    <Compile Include="V20190819\Models\TopicRetentionTimeConfigRsp.cs" />
     <Compile Include="V20190819\Models\User.cs" />
     <Compile Include="V20190819\Models\UserResponse.cs" />
     <Compile Include="V20190819\Models\VipEntity.cs" />

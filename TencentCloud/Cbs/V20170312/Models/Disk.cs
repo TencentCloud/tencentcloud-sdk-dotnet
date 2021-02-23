@@ -228,7 +228,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? SnapshotSize{ get; set; }
 
         /// <summary>
-        /// 云盘因欠费销毁或者期销毁时， 是否使用快照备份数据的标识。True， 销毁时创建快照进行数据备份。False 表示直接销毁，不进行数据备份。
+        /// 云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
         /// </summary>
         [JsonProperty("BackupDisk")]
         public bool? BackupDisk{ get; set; }

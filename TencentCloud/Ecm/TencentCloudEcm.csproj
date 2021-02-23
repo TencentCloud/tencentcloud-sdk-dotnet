@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F313119E-D8EA-3E66-991F-7C89745C570F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.224</VersionPrefix>
+    <VersionPrefix>3.0.225</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -220,6 +220,7 @@
     <Compile Include="V20190719\Models\InstanceFamilyConfig.cs" />
     <Compile Include="V20190719\Models\InstanceFamilyTypeConfig.cs" />
     <Compile Include="V20190719\Models\InstanceNetworkInfo.cs" />
+    <Compile Include="V20190719\Models\InstanceNetworkLimitConfig.cs" />
     <Compile Include="V20190719\Models\InstanceOperator.cs" />
     <Compile Include="V20190719\Models\InstanceStatistic.cs" />
     <Compile Include="V20190719\Models\InstanceTypeConfig.cs" />

@@ -81,6 +81,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("City")]
         public string City{ get; set; }
 
+        /// <summary>
+        /// 接入点地域名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
             this.SetParamObj(map, prefix + "Coordinate.", this.Coordinate);
             this.SetParamSimple(map, prefix + "City", this.City);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

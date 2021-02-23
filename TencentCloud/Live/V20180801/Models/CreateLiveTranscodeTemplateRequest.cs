@@ -70,18 +70,18 @@ namespace TencentCloud.Live.V20180801.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 是否保留视频，0：否，1：是。默认1。
+        /// </summary>
+        [JsonProperty("NeedVideo")]
+        public long? NeedVideo{ get; set; }
+
+        /// <summary>
         /// 宽，默认0。
         /// 范围[0-3000]
         /// 数值必须是2的倍数，0是原始宽度
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
-
-        /// <summary>
-        /// 是否保留视频，0：否，1：是。默认1。
-        /// </summary>
-        [JsonProperty("NeedVideo")]
-        public long? NeedVideo{ get; set; }
 
         /// <summary>
         /// 是否保留音频，0：否，1：是。默认1。
@@ -92,7 +92,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 高，默认0。
         /// 范围[0-3000]
-        /// 数值必须是2的倍数，0是原始宽度
+        /// 数值必须是2的倍数，0是原始高度。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
@@ -183,8 +183,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
             this.SetParamSimple(map, prefix + "Vcodec", this.Vcodec);
             this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "NeedVideo", this.NeedVideo);
+            this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "NeedAudio", this.NeedAudio);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);

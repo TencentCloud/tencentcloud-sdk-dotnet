@@ -48,6 +48,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Config")]
         public ModifyInstanceAttributesConfig Config{ get; set; }
 
+        /// <summary>
+        /// 动态消息保留策略配置
+        /// </summary>
+        [JsonProperty("DynamicRetentionConfig")]
+        public DynamicRetentionTime DynamicRetentionConfig{ get; set; }
+
+        /// <summary>
+        /// 修改升配置rebalance时间
+        /// </summary>
+        [JsonProperty("RebalanceTime")]
+        public long? RebalanceTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamObj(map, prefix + "Config.", this.Config);
+            this.SetParamObj(map, prefix + "DynamicRetentionConfig.", this.DynamicRetentionConfig);
+            this.SetParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
         }
     }
 }

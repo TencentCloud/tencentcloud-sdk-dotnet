@@ -180,7 +180,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? MaxGroupNum{ get; set; }
 
         /// <summary>
-        /// 售卖类型
+        /// 售卖类型,0:标准版,1:专业版
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cvm")]
@@ -199,6 +199,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
+
+        /// <summary>
+        /// 动态消息保留策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetentionTimeConfig")]
+        public DynamicRetentionTime RetentionTimeConfig{ get; set; }
 
 
         /// <summary>
@@ -234,6 +241,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamArraySimple(map, prefix + "Features.", this.Features);
+            this.SetParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
         }
     }
 }

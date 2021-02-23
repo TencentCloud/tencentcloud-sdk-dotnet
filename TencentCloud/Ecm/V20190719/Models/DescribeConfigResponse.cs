@@ -31,11 +31,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         public NetworkStorageRange NetworkStorageRange{ get; set; }
 
         /// <summary>
-        /// 镜像操作系统白名单
+        /// 镜像操作系统白名单。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageWhiteSet")]
         public string[] ImageWhiteSet{ get; set; }
+
+        /// <summary>
+        /// 网络限额信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceNetworkLimitConfigs")]
+        public InstanceNetworkLimitConfig[] InstanceNetworkLimitConfigs{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,6 +58,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         {
             this.SetParamObj(map, prefix + "NetworkStorageRange.", this.NetworkStorageRange);
             this.SetParamArraySimple(map, prefix + "ImageWhiteSet.", this.ImageWhiteSet);
+            this.SetParamArrayObj(map, prefix + "InstanceNetworkLimitConfigs.", this.InstanceNetworkLimitConfigs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

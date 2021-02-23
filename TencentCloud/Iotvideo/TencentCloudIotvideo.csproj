@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.224</VersionPrefix>
+    <VersionPrefix>3.0.225</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -194,5 +194,69 @@
     <Compile Include="V20191126\Models\UploadOtaVersionRequest.cs" />
     <Compile Include="V20191126\Models\UploadOtaVersionResponse.cs" />
     <Compile Include="V20191126\Models\VersionData.cs" />
+    <Compile Include="V20201215\IotvideoClient.cs" />
+    <Compile Include="V20201215\Models\ActionHistory.cs" />
+    <Compile Include="V20201215\Models\CheckForwardAuthRequest.cs" />
+    <Compile Include="V20201215\Models\CheckForwardAuthResponse.cs" />
+    <Compile Include="V20201215\Models\CreateBatchRequest.cs" />
+    <Compile Include="V20201215\Models\CreateBatchResponse.cs" />
+    <Compile Include="V20201215\Models\CreateForwardRuleRequest.cs" />
+    <Compile Include="V20201215\Models\CreateForwardRuleResponse.cs" />
+    <Compile Include="V20201215\Models\CreateProductRequest.cs" />
+    <Compile Include="V20201215\Models\CreateProductResponse.cs" />
+    <Compile Include="V20201215\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="V20201215\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20201215\Models\DeleteForwardRuleRequest.cs" />
+    <Compile Include="V20201215\Models\DeleteForwardRuleResponse.cs" />
+    <Compile Include="V20201215\Models\DeleteProductRequest.cs" />
+    <Compile Include="V20201215\Models\DeleteProductResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeBatchRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeBatchResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeBatchsRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeBatchsResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeCategoryRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeCategoryResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceActionHistoryRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceActionHistoryResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceCommLogRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceCommLogResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceDataHistoryRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceDataHistoryResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceDataRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceDataResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceEventHistoryRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceEventHistoryResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeDeviceResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeForwardRuleRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeForwardRuleResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeModelDefinitionRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeModelDefinitionResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeProductRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeProductResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeProductsRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeProductsResponse.cs" />
+    <Compile Include="V20201215\Models\DeviceCommLogItem.cs" />
+    <Compile Include="V20201215\Models\DeviceDataHistoryItem.cs" />
+    <Compile Include="V20201215\Models\DeviceInfo.cs" />
+    <Compile Include="V20201215\Models\EventHistoryItem.cs" />
+    <Compile Include="V20201215\Models\ImportModelDefinitionRequest.cs" />
+    <Compile Include="V20201215\Models\ImportModelDefinitionResponse.cs" />
+    <Compile Include="V20201215\Models\ModifyDeviceRequest.cs" />
+    <Compile Include="V20201215\Models\ModifyDeviceResponse.cs" />
+    <Compile Include="V20201215\Models\ModifyForwardRuleRequest.cs" />
+    <Compile Include="V20201215\Models\ModifyForwardRuleResponse.cs" />
+    <Compile Include="V20201215\Models\ModifyModelDefinitionRequest.cs" />
+    <Compile Include="V20201215\Models\ModifyModelDefinitionResponse.cs" />
+    <Compile Include="V20201215\Models\ModifyProductRequest.cs" />
+    <Compile Include="V20201215\Models\ModifyProductResponse.cs" />
+    <Compile Include="V20201215\Models\ProductModelDefinition.cs" />
+    <Compile Include="V20201215\Models\ProductTemplate.cs" />
+    <Compile Include="V20201215\Models\SetForwardAuthRequest.cs" />
+    <Compile Include="V20201215\Models\SetForwardAuthResponse.cs" />
+    <Compile Include="V20201215\Models\VideoBatch.cs" />
+    <Compile Include="V20201215\Models\VideoProduct.cs" />
   </ItemGroup>
 </Project>

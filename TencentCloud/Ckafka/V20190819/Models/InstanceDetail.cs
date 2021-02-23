@@ -159,6 +159,41 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
+        /// <summary>
+        /// ckafka实例类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 磁盘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
+        /// <summary>
+        /// 当前规格最大Topic数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxTopicNumber")]
+        public long? MaxTopicNumber{ get; set; }
+
+        /// <summary>
+        /// 当前规格最大Partition数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxPartitionNumber")]
+        public long? MaxPartitionNumber{ get; set; }
+
+        /// <summary>
+        /// 计划升级配置时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RebalanceTime")]
+        public string RebalanceTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +222,11 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "Cvm", this.Cvm);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "MaxTopicNumber", this.MaxTopicNumber);
+            this.SetParamSimple(map, prefix + "MaxPartitionNumber", this.MaxPartitionNumber);
+            this.SetParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 删除规则对应的id值 669872
+        /// 删除规则对应的id值, 对应获取规则列表接口的Id 值
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string EdgeId{ get; set; }
 
         /// <summary>
-        /// NAT地域
+        /// NAT地域， 如ap-shanghai/ap-guangzhou/ap-chongqing等
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

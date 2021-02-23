@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.224</VersionPrefix>
+    <VersionPrefix>3.0.225</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,16 +55,20 @@
     <Compile Include="V20190422\Models\CreateResourceResponse.cs" />
     <Compile Include="V20190422\Models\DeleteTableConfigRequest.cs" />
     <Compile Include="V20190422\Models\DeleteTableConfigResponse.cs" />
+    <Compile Include="V20190422\Models\DescribeJobConfigsRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeJobConfigsResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobsRequest.cs" />
     <Compile Include="V20190422\Models\DescribeJobsResponse.cs" />
     <Compile Include="V20190422\Models\DescribeSystemResourcesRequest.cs" />
     <Compile Include="V20190422\Models\DescribeSystemResourcesResponse.cs" />
     <Compile Include="V20190422\Models\Filter.cs" />
+    <Compile Include="V20190422\Models\JobConfig.cs" />
     <Compile Include="V20190422\Models\JobV1.cs" />
     <Compile Include="V20190422\Models\Property.cs" />
     <Compile Include="V20190422\Models\ResourceLoc.cs" />
     <Compile Include="V20190422\Models\ResourceLocParam.cs" />
     <Compile Include="V20190422\Models\ResourceRef.cs" />
+    <Compile Include="V20190422\Models\ResourceRefDetail.cs" />
     <Compile Include="V20190422\Models\RunJobDescription.cs" />
     <Compile Include="V20190422\Models\RunJobsRequest.cs" />
     <Compile Include="V20190422\Models\RunJobsResponse.cs" />
