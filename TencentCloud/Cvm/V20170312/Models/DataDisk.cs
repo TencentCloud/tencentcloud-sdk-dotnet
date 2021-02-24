@@ -87,6 +87,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ThroughputPerformance")]
         public long? ThroughputPerformance{ get; set; }
 
+        /// <summary>
+        /// 所属的独享集群ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

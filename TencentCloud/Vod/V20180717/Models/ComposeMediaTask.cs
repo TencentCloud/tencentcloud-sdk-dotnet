@@ -66,6 +66,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Output")]
         public ComposeMediaTaskOutput Output{ get; set; }
 
+        /// <summary>
+        /// 原始视频的元信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
         }
     }
 }

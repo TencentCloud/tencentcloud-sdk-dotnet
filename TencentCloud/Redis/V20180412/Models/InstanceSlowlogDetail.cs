@@ -54,6 +54,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ExecuteTime")]
         public string ExecuteTime{ get; set; }
 
+        /// <summary>
+        /// 节点ID
+        /// </summary>
+        [JsonProperty("Node")]
+        public string Node{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "CommandLine", this.CommandLine);
             this.SetParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
+            this.SetParamSimple(map, prefix + "Node", this.Node);
         }
     }
 }

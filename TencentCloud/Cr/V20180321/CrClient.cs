@@ -695,6 +695,46 @@ namespace TencentCloud.Cr.V20180321
         }
 
         /// <summary>
+        /// 查看黑名单数据列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryBlackListDataRequest"/></param>
+        /// <returns><see cref="QueryBlackListDataResponse"/></returns>
+        public async Task<QueryBlackListDataResponse> QueryBlackListData(QueryBlackListDataRequest req)
+        {
+             JsonResponseModel<QueryBlackListDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryBlackListData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBlackListDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看黑名单数据列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryBlackListDataRequest"/></param>
+        /// <returns><see cref="QueryBlackListDataResponse"/></returns>
+        public QueryBlackListDataResponse QueryBlackListDataSync(QueryBlackListDataRequest req)
+        {
+             JsonResponseModel<QueryBlackListDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryBlackListData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryBlackListDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询机器人任务状态列表
         /// </summary>
         /// <param name="req"><see cref="QueryBotListRequest"/></param>

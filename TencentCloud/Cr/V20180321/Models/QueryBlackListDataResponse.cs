@@ -15,27 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Cr.V20180321.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSecurityGroupsResponse : AbstractModel
+    public class QueryBlackListDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// 安全组对象。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("SecurityGroupSet")]
-        public SecurityGroup[] SecurityGroupSet{ get; set; }
-
-        /// <summary>
-        /// 符合条件的实例数量。
+        /// 总数。
         /// </summary>
         [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 黑名单列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Data")]
+        public BlackListData[] Data{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,8 +49,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

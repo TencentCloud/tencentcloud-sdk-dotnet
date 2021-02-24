@@ -67,6 +67,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaBasicInfo MediaBasicInfo{ get; set; }
 
         /// <summary>
+        /// 原始视频的元信息。
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
+
+        /// <summary>
         /// 转拉上传完成后生成的播放地址。
         /// </summary>
         [JsonProperty("FileUrl")]
@@ -102,6 +108,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
+            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);

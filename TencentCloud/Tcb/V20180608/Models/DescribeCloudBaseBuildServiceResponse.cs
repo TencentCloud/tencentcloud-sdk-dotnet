@@ -63,6 +63,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public KVPair[] DownloadHeaders{ get; set; }
 
         /// <summary>
+        /// 下载链接是否过期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutDate")]
+        public bool? OutDate{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -80,6 +87,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
             this.SetParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
             this.SetParamArrayObj(map, prefix + "DownloadHeaders.", this.DownloadHeaders);
+            this.SetParamSimple(map, prefix + "OutDate", this.OutDate);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

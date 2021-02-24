@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.225</VersionPrefix>
+    <VersionPrefix>3.0.226</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3382,6 +3382,8 @@
     <Compile Include="Cr\V20180321\Models\ExportBotDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\PhonePool.cs" />
     <Compile Include="Cr\V20180321\Models\ProductQueryInfo.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryBlackListDataRequest.cs" />
+    <Compile Include="Cr\V20180321\Models\QueryBlackListDataResponse.cs" />
     <Compile Include="Cr\V20180321\Models\QueryBotListRequest.cs" />
     <Compile Include="Cr\V20180321\Models\QueryBotListResponse.cs" />
     <Compile Include="Cr\V20180321\Models\QueryCallListRequest.cs" />
