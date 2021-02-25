@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.226</VersionPrefix>
+    <VersionPrefix>3.0.227</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20190924\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20190924\Models\CreateInstanceTokenRequest.cs" />
     <Compile Include="V20190924\Models\CreateInstanceTokenResponse.cs" />
+    <Compile Include="V20190924\Models\CreateInternalEndpointDnsRequest.cs" />
+    <Compile Include="V20190924\Models\CreateInternalEndpointDnsResponse.cs" />
     <Compile Include="V20190924\Models\CreateNamespacePersonalRequest.cs" />
     <Compile Include="V20190924\Models\CreateNamespacePersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateNamespaceRequest.cs" />
@@ -88,6 +90,8 @@
     <Compile Include="V20190924\Models\DeleteInstanceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceTokenRequest.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceTokenResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteInternalEndpointDnsRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteInternalEndpointDnsResponse.cs" />
     <Compile Include="V20190924\Models\DeleteNamespacePersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteNamespacePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteNamespaceRequest.cs" />
@@ -124,6 +128,8 @@
     <Compile Include="V20190924\Models\DescribeInstanceTokenResponse.cs" />
     <Compile Include="V20190924\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInternalEndpointDnsStatusRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInternalEndpointDnsStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeInternalEndpointsRequest.cs" />
     <Compile Include="V20190924\Models\DescribeInternalEndpointsResponse.cs" />
     <Compile Include="V20190924\Models\DescribeNamespacePersonalRequest.cs" />
@@ -211,6 +217,8 @@
     <Compile Include="V20190924\Models\ValidateNamespaceExistPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ValidateRepositoryExistPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ValidateRepositoryExistPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\VpcAndDomainInfo.cs" />
+    <Compile Include="V20190924\Models\VpcPrivateDomainStatus.cs" />
     <Compile Include="V20190924\Models\WebhookTarget.cs" />
     <Compile Include="V20190924\Models\WebhookTrigger.cs" />
     <Compile Include="V20190924\Models\WebhookTriggerLog.cs" />

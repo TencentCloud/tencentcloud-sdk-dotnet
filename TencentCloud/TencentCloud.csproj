@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.226</VersionPrefix>
+    <VersionPrefix>3.0.227</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3678,6 +3678,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeComponentsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeGeneralStatRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeGeneralStatResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeHistoryAccountsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeHistoryAccountsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImpactedHostsRequest.cs" />
@@ -6559,6 +6561,7 @@
     <Compile Include="Iotvideo\V20191126\Models\CreateUploadPathResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateUsrTokenRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\CreateUsrTokenResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\Data.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DeleteAppUsrRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DeleteAppUsrResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DeleteBindingRequest.cs" />
@@ -6619,6 +6622,8 @@
     <Compile Include="Iotvideo\V20191126\Models\DescribeRunLogResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeStorageServiceRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeStorageServiceResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DescribeStreamRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\DescribeStreamResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeTraceIdsRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeTraceIdsResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\DescribeTraceStatusRequest.cs" />
@@ -9959,6 +9964,8 @@
     <Compile Include="Tcr\V20190924\Models\CreateInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateInstanceTokenRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateInstanceTokenResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateInternalEndpointDnsRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateInternalEndpointDnsResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespacePersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespacePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespaceRequest.cs" />
@@ -9985,6 +9992,8 @@
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteInternalEndpointDnsRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteInternalEndpointDnsResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespacePersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespacePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespaceRequest.cs" />
@@ -10021,6 +10030,8 @@
     <Compile Include="Tcr\V20190924\Models\DescribeInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeInternalEndpointDnsStatusRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeInternalEndpointDnsStatusResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeInternalEndpointsRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeInternalEndpointsResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeNamespacePersonalRequest.cs" />
@@ -10108,6 +10119,8 @@
     <Compile Include="Tcr\V20190924\Models\ValidateNamespaceExistPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ValidateRepositoryExistPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ValidateRepositoryExistPersonalResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\VpcAndDomainInfo.cs" />
+    <Compile Include="Tcr\V20190924\Models\VpcPrivateDomainStatus.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTarget.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTrigger.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTriggerLog.cs" />
@@ -11201,6 +11214,7 @@
     <Compile Include="Ump\V20200918\UmpClient.cs" />
     <Compile Include="Ump\V20200918\Models\BunkZone.cs" />
     <Compile Include="Ump\V20200918\Models\CameraConfig.cs" />
+    <Compile Include="Ump\V20200918\Models\CameraState.cs" />
     <Compile Include="Ump\V20200918\Models\CameraZones.cs" />
     <Compile Include="Ump\V20200918\Models\Config.cs" />
     <Compile Include="Ump\V20200918\Models\CreateCameraAlertAlert.cs" />
@@ -11208,6 +11222,8 @@
     <Compile Include="Ump\V20200918\Models\CreateCameraAlertsMoveAlert.cs" />
     <Compile Include="Ump\V20200918\Models\CreateCameraAlertsRequest.cs" />
     <Compile Include="Ump\V20200918\Models\CreateCameraAlertsResponse.cs" />
+    <Compile Include="Ump\V20200918\Models\CreateCameraStateRequest.cs" />
+    <Compile Include="Ump\V20200918\Models\CreateCameraStateResponse.cs" />
     <Compile Include="Ump\V20200918\Models\CreateCaptureRequest.cs" />
     <Compile Include="Ump\V20200918\Models\CreateCaptureResponse.cs" />
     <Compile Include="Ump\V20200918\Models\CreateMultiBizAlertRequest.cs" />
@@ -11233,13 +11249,20 @@
     <Compile Include="Ump\V20200918\Models\DescribeZonesRequest.cs" />
     <Compile Include="Ump\V20200918\Models\DescribeZonesResponse.cs" />
     <Compile Include="Ump\V20200918\Models\DiskInfo.cs" />
+    <Compile Include="Ump\V20200918\Models\ModifyMultiBizConfigRequest.cs" />
+    <Compile Include="Ump\V20200918\Models\ModifyMultiBizConfigResponse.cs" />
+    <Compile Include="Ump\V20200918\Models\MultiBizWarning.cs" />
+    <Compile Include="Ump\V20200918\Models\MultiBizWarningInfo.cs" />
     <Compile Include="Ump\V20200918\Models\Point.cs" />
     <Compile Include="Ump\V20200918\Models\Polygon.cs" />
     <Compile Include="Ump\V20200918\Models\ProgramStateItem.cs" />
+    <Compile Include="Ump\V20200918\Models\ReportServiceRegisterRequest.cs" />
+    <Compile Include="Ump\V20200918\Models\ReportServiceRegisterResponse.cs" />
     <Compile Include="Ump\V20200918\Models\SearchImageRequest.cs" />
     <Compile Include="Ump\V20200918\Models\SearchImageResponse.cs" />
     <Compile Include="Ump\V20200918\Models\SearchResult.cs" />
     <Compile Include="Ump\V20200918\Models\ServerStateItem.cs" />
+    <Compile Include="Ump\V20200918\Models\ServiceRegisterInfo.cs" />
     <Compile Include="Ump\V20200918\Models\Task.cs" />
     <Compile Include="Ump\V20200918\Models\TaskContent.cs" />
     <Compile Include="Ump\V20200918\Models\ZoneArea.cs" />

@@ -1493,6 +1493,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取主机安全相关统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralStatRequest"/></param>
+        /// <returns><see cref="DescribeGeneralStatResponse"/></returns>
+        public async Task<DescribeGeneralStatResponse> DescribeGeneralStat(DescribeGeneralStatRequest req)
+        {
+             JsonResponseModel<DescribeGeneralStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGeneralStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取主机安全相关统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralStatRequest"/></param>
+        /// <returns><see cref="DescribeGeneralStatResponse"/></returns>
+        public DescribeGeneralStatResponse DescribeGeneralStatSync(DescribeGeneralStatRequest req)
+        {
+             JsonResponseModel<DescribeGeneralStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGeneralStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryAccountsRequest"/></param>

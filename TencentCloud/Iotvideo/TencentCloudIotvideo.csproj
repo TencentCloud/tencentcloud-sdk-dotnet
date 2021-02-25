@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.226</VersionPrefix>
+    <VersionPrefix>3.0.227</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,7 @@
     <Compile Include="V20191126\Models\CreateUploadPathResponse.cs" />
     <Compile Include="V20191126\Models\CreateUsrTokenRequest.cs" />
     <Compile Include="V20191126\Models\CreateUsrTokenResponse.cs" />
+    <Compile Include="V20191126\Models\Data.cs" />
     <Compile Include="V20191126\Models\DeleteAppUsrRequest.cs" />
     <Compile Include="V20191126\Models\DeleteAppUsrResponse.cs" />
     <Compile Include="V20191126\Models\DeleteBindingRequest.cs" />
@@ -138,6 +139,8 @@
     <Compile Include="V20191126\Models\DescribeRunLogResponse.cs" />
     <Compile Include="V20191126\Models\DescribeStorageServiceRequest.cs" />
     <Compile Include="V20191126\Models\DescribeStorageServiceResponse.cs" />
+    <Compile Include="V20191126\Models\DescribeStreamRequest.cs" />
+    <Compile Include="V20191126\Models\DescribeStreamResponse.cs" />
     <Compile Include="V20191126\Models\DescribeTraceIdsRequest.cs" />
     <Compile Include="V20191126\Models\DescribeTraceIdsResponse.cs" />
     <Compile Include="V20191126\Models\DescribeTraceStatusRequest.cs" />

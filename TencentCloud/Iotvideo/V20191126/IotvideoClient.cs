@@ -1867,6 +1867,46 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
+        /// 请求设备直播流地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamRequest"/></param>
+        /// <returns><see cref="DescribeStreamResponse"/></returns>
+        public async Task<DescribeStreamResponse> DescribeStream(DescribeStreamRequest req)
+        {
+             JsonResponseModel<DescribeStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 请求设备直播流地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamRequest"/></param>
+        /// <returns><see cref="DescribeStreamResponse"/></returns>
+        public DescribeStreamResponse DescribeStreamSync(DescribeStreamRequest req)
+        {
+             JsonResponseModel<DescribeStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeTraceIds）用于查询设备日志跟踪白名单。
         /// </summary>
         /// <param name="req"><see cref="DescribeTraceIdsRequest"/></param>

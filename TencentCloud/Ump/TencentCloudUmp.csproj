@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4E0E5791-B6B9-33D7-ACC2-4DC22377E977}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.226</VersionPrefix>
+    <VersionPrefix>3.0.227</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,7 @@
     <Compile Include="V20200918\UmpClient.cs" />
     <Compile Include="V20200918\Models\BunkZone.cs" />
     <Compile Include="V20200918\Models\CameraConfig.cs" />
+    <Compile Include="V20200918\Models\CameraState.cs" />
     <Compile Include="V20200918\Models\CameraZones.cs" />
     <Compile Include="V20200918\Models\Config.cs" />
     <Compile Include="V20200918\Models\CreateCameraAlertAlert.cs" />
@@ -54,6 +55,8 @@
     <Compile Include="V20200918\Models\CreateCameraAlertsMoveAlert.cs" />
     <Compile Include="V20200918\Models\CreateCameraAlertsRequest.cs" />
     <Compile Include="V20200918\Models\CreateCameraAlertsResponse.cs" />
+    <Compile Include="V20200918\Models\CreateCameraStateRequest.cs" />
+    <Compile Include="V20200918\Models\CreateCameraStateResponse.cs" />
     <Compile Include="V20200918\Models\CreateCaptureRequest.cs" />
     <Compile Include="V20200918\Models\CreateCaptureResponse.cs" />
     <Compile Include="V20200918\Models\CreateMultiBizAlertRequest.cs" />
@@ -79,13 +82,20 @@
     <Compile Include="V20200918\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20200918\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20200918\Models\DiskInfo.cs" />
+    <Compile Include="V20200918\Models\ModifyMultiBizConfigRequest.cs" />
+    <Compile Include="V20200918\Models\ModifyMultiBizConfigResponse.cs" />
+    <Compile Include="V20200918\Models\MultiBizWarning.cs" />
+    <Compile Include="V20200918\Models\MultiBizWarningInfo.cs" />
     <Compile Include="V20200918\Models\Point.cs" />
     <Compile Include="V20200918\Models\Polygon.cs" />
     <Compile Include="V20200918\Models\ProgramStateItem.cs" />
+    <Compile Include="V20200918\Models\ReportServiceRegisterRequest.cs" />
+    <Compile Include="V20200918\Models\ReportServiceRegisterResponse.cs" />
     <Compile Include="V20200918\Models\SearchImageRequest.cs" />
     <Compile Include="V20200918\Models\SearchImageResponse.cs" />
     <Compile Include="V20200918\Models\SearchResult.cs" />
     <Compile Include="V20200918\Models\ServerStateItem.cs" />
+    <Compile Include="V20200918\Models\ServiceRegisterInfo.cs" />
     <Compile Include="V20200918\Models\Task.cs" />
     <Compile Include="V20200918\Models\TaskContent.cs" />
     <Compile Include="V20200918\Models\ZoneArea.cs" />

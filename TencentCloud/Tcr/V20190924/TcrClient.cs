@@ -333,6 +333,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 创建tcr内网私有域名解析
+        /// </summary>
+        /// <param name="req"><see cref="CreateInternalEndpointDnsRequest"/></param>
+        /// <returns><see cref="CreateInternalEndpointDnsResponse"/></returns>
+        public async Task<CreateInternalEndpointDnsResponse> CreateInternalEndpointDns(CreateInternalEndpointDnsRequest req)
+        {
+             JsonResponseModel<CreateInternalEndpointDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInternalEndpointDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInternalEndpointDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建tcr内网私有域名解析
+        /// </summary>
+        /// <param name="req"><see cref="CreateInternalEndpointDnsRequest"/></param>
+        /// <returns><see cref="CreateInternalEndpointDnsResponse"/></returns>
+        public CreateInternalEndpointDnsResponse CreateInternalEndpointDnsSync(CreateInternalEndpointDnsRequest req)
+        {
+             JsonResponseModel<CreateInternalEndpointDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInternalEndpointDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInternalEndpointDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于在企业版中创建命名空间
         /// </summary>
         /// <param name="req"><see cref="CreateNamespaceRequest"/></param>
@@ -844,6 +884,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInstanceToken");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除tcr内网私有域名解析
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInternalEndpointDnsRequest"/></param>
+        /// <returns><see cref="DeleteInternalEndpointDnsResponse"/></returns>
+        public async Task<DeleteInternalEndpointDnsResponse> DeleteInternalEndpointDns(DeleteInternalEndpointDnsRequest req)
+        {
+             JsonResponseModel<DeleteInternalEndpointDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInternalEndpointDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInternalEndpointDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除tcr内网私有域名解析
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInternalEndpointDnsRequest"/></param>
+        /// <returns><see cref="DeleteInternalEndpointDnsResponse"/></returns>
+        public DeleteInternalEndpointDnsResponse DeleteInternalEndpointDnsSync(DeleteInternalEndpointDnsRequest req)
+        {
+             JsonResponseModel<DeleteInternalEndpointDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteInternalEndpointDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInternalEndpointDnsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1524,6 +1604,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量查询vpc是否已经添加私有域名解析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternalEndpointDnsStatusRequest"/></param>
+        /// <returns><see cref="DescribeInternalEndpointDnsStatusResponse"/></returns>
+        public async Task<DescribeInternalEndpointDnsStatusResponse> DescribeInternalEndpointDnsStatus(DescribeInternalEndpointDnsStatusRequest req)
+        {
+             JsonResponseModel<DescribeInternalEndpointDnsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInternalEndpointDnsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternalEndpointDnsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量查询vpc是否已经添加私有域名解析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInternalEndpointDnsStatusRequest"/></param>
+        /// <returns><see cref="DescribeInternalEndpointDnsStatusResponse"/></returns>
+        public DescribeInternalEndpointDnsStatusResponse DescribeInternalEndpointDnsStatusSync(DescribeInternalEndpointDnsStatusRequest req)
+        {
+             JsonResponseModel<DescribeInternalEndpointDnsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInternalEndpointDnsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInternalEndpointDnsStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

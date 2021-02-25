@@ -52,8 +52,15 @@ namespace TencentCloud.Ump.V20200918.Models
 
         /// <summary>
         /// 摄像头状态:
-        /// 0: 异常
-        /// 1: 正常
+        /// 0: 异常 (不再使用)
+        /// 1: 正常 (不再使用)
+        /// 10: 初始化
+        /// 11: 未知状态 (因服务内部错误产生)
+        /// 12: 网络异常
+        /// 13: 未授权
+        /// 14: 相机App异常
+        /// 15: 相机取流异常
+        /// 16: 正常
         /// </summary>
         [JsonProperty("CameraState")]
         public long? CameraState{ get; set; }
@@ -73,6 +80,13 @@ namespace TencentCloud.Ump.V20200918.Models
         [JsonProperty("Pixel")]
         public string Pixel{ get; set; }
 
+        /// <summary>
+        /// 相机Rtsp地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RTSP")]
+        public string RTSP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +100,7 @@ namespace TencentCloud.Ump.V20200918.Models
             this.SetParamSimple(map, prefix + "CameraState", this.CameraState);
             this.SetParamArrayObj(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "Pixel", this.Pixel);
+            this.SetParamSimple(map, prefix + "RTSP", this.RTSP);
         }
     }
 }

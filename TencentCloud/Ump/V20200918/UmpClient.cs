@@ -95,6 +95,46 @@ namespace TencentCloud.Ump.V20200918
         }
 
         /// <summary>
+        /// 上报当前场内所有相机的当前状态
+        /// </summary>
+        /// <param name="req"><see cref="CreateCameraStateRequest"/></param>
+        /// <returns><see cref="CreateCameraStateResponse"/></returns>
+        public async Task<CreateCameraStateResponse> CreateCameraState(CreateCameraStateRequest req)
+        {
+             JsonResponseModel<CreateCameraStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCameraState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCameraStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报当前场内所有相机的当前状态
+        /// </summary>
+        /// <param name="req"><see cref="CreateCameraStateRequest"/></param>
+        /// <returns><see cref="CreateCameraStateResponse"/></returns>
+        public CreateCameraStateResponse CreateCameraStateSync(CreateCameraStateRequest req)
+        {
+             JsonResponseModel<CreateCameraStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCameraState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCameraStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 场内抓拍上报接口
         /// </summary>
         /// <param name="req"><see cref="CreateCaptureRequest"/></param>
@@ -570,6 +610,86 @@ namespace TencentCloud.Ump.V20200918
              {
                  var strResp = this.InternalRequestSync(req, "DescribeZones");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集团广场的多经点位配置更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiBizConfigRequest"/></param>
+        /// <returns><see cref="ModifyMultiBizConfigResponse"/></returns>
+        public async Task<ModifyMultiBizConfigResponse> ModifyMultiBizConfig(ModifyMultiBizConfigRequest req)
+        {
+             JsonResponseModel<ModifyMultiBizConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMultiBizConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMultiBizConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集团广场的多经点位配置更新
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiBizConfigRequest"/></param>
+        /// <returns><see cref="ModifyMultiBizConfigResponse"/></returns>
+        public ModifyMultiBizConfigResponse ModifyMultiBizConfigSync(ModifyMultiBizConfigRequest req)
+        {
+             JsonResponseModel<ModifyMultiBizConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMultiBizConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMultiBizConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报服务注册自身的服务地址作为回调地址, 用于信息回传。
+        /// </summary>
+        /// <param name="req"><see cref="ReportServiceRegisterRequest"/></param>
+        /// <returns><see cref="ReportServiceRegisterResponse"/></returns>
+        public async Task<ReportServiceRegisterResponse> ReportServiceRegister(ReportServiceRegisterRequest req)
+        {
+             JsonResponseModel<ReportServiceRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportServiceRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportServiceRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报服务注册自身的服务地址作为回调地址, 用于信息回传。
+        /// </summary>
+        /// <param name="req"><see cref="ReportServiceRegisterRequest"/></param>
+        /// <returns><see cref="ReportServiceRegisterResponse"/></returns>
+        public ReportServiceRegisterResponse ReportServiceRegisterSync(ReportServiceRegisterRequest req)
+        {
+             JsonResponseModel<ReportServiceRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportServiceRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportServiceRegisterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -92,6 +92,12 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
 
+        /// <summary>
+        /// TRTC高级权限控制参数，如果在实时音视频开启了高级权限控制功能，必须提供PrivateMapKey才能保证正常推流。
+        /// </summary>
+        [JsonProperty("PrivateMapKey")]
+        public string PrivateMapKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamObj(map, prefix + "Backup.", this.Backup);
             this.SetParamSimple(map, prefix + "AutoRecord", this.AutoRecord);
             this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
+            this.SetParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
         }
     }
 }

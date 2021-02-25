@@ -69,6 +69,12 @@ namespace TencentCloud.Ump.V20200918.Models
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
+        /// <summary>
+        /// 告警列表
+        /// </summary>
+        [JsonProperty("Warnings")]
+        public MultiBizWarning[] Warnings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Ump.V20200918.Models
             this.SetParamSimple(map, prefix + "CaptureTime", this.CaptureTime);
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "Image", this.Image);
+            this.SetParamArrayObj(map, prefix + "Warnings.", this.Warnings);
         }
     }
 }

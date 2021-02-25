@@ -114,6 +114,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RuntimeVersion")]
         public string RuntimeVersion{ get; set; }
 
+        /// <summary>
+        /// 是否开节点podCIDR大小的自定义模式
+        /// </summary>
+        [JsonProperty("EnableCustomizedPodCIDR")]
+        public bool? EnableCustomizedPodCIDR{ get; set; }
+
+        /// <summary>
+        /// 自定义模式下的基础pod数量
+        /// </summary>
+        [JsonProperty("BasePodNumber")]
+        public long? BasePodNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +146,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
             this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+            this.SetParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
+            this.SetParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
         }
     }
 }
