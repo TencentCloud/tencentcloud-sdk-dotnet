@@ -293,6 +293,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（CreateBackupMigration）用于创建备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupMigrationRequest"/></param>
+        /// <returns><see cref="CreateBackupMigrationResponse"/></returns>
+        public async Task<CreateBackupMigrationResponse> CreateBackupMigration(CreateBackupMigrationRequest req)
+        {
+             JsonResponseModel<CreateBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateBackupMigration）用于创建备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupMigrationRequest"/></param>
+        /// <returns><see cref="CreateBackupMigrationResponse"/></returns>
+        public CreateBackupMigrationResponse CreateBackupMigrationSync(CreateBackupMigrationRequest req)
+        {
+             JsonResponseModel<CreateBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateBasicDBInstances）用于创建SQL server基础版实例。
         /// </summary>
         /// <param name="req"><see cref="CreateBasicDBInstancesRequest"/></param>
@@ -404,6 +444,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "CreateDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateIncrementalMigration）用于创建增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="CreateIncrementalMigrationResponse"/></returns>
+        public async Task<CreateIncrementalMigrationResponse> CreateIncrementalMigration(CreateIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<CreateIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateIncrementalMigration）用于创建增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="CreateIncrementalMigrationResponse"/></returns>
+        public CreateIncrementalMigrationResponse CreateIncrementalMigrationSync(CreateIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<CreateIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,6 +653,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DeleteBackupMigration）用于删除备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupMigrationRequest"/></param>
+        /// <returns><see cref="DeleteBackupMigrationResponse"/></returns>
+        public async Task<DeleteBackupMigrationResponse> DeleteBackupMigration(DeleteBackupMigrationRequest req)
+        {
+             JsonResponseModel<DeleteBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteBackupMigration）用于删除备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupMigrationRequest"/></param>
+        /// <returns><see cref="DeleteBackupMigrationResponse"/></returns>
+        public DeleteBackupMigrationResponse DeleteBackupMigrationSync(DeleteBackupMigrationRequest req)
+        {
+             JsonResponseModel<DeleteBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteDB)用于删除数据库。
         /// </summary>
         /// <param name="req"><see cref="DeleteDBRequest"/></param>
@@ -644,6 +764,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDBInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteIncrementalMigration）用于删除增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DeleteIncrementalMigrationResponse"/></returns>
+        public async Task<DeleteIncrementalMigrationResponse> DeleteIncrementalMigration(DeleteIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DeleteIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteIncrementalMigration）用于删除增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DeleteIncrementalMigrationResponse"/></returns>
+        public DeleteIncrementalMigrationResponse DeleteIncrementalMigrationSync(DeleteIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DeleteIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -804,6 +964,126 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupByFlowId");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupByFlowIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupCommand）用于查询以规范的格式创建备份的命令。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupCommandRequest"/></param>
+        /// <returns><see cref="DescribeBackupCommandResponse"/></returns>
+        public async Task<DescribeBackupCommandResponse> DescribeBackupCommand(DescribeBackupCommandRequest req)
+        {
+             JsonResponseModel<DescribeBackupCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupCommand）用于查询以规范的格式创建备份的命令。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupCommandRequest"/></param>
+        /// <returns><see cref="DescribeBackupCommandResponse"/></returns>
+        public DescribeBackupCommandResponse DescribeBackupCommandSync(DescribeBackupCommandRequest req)
+        {
+             JsonResponseModel<DescribeBackupCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupMigration）用于创建增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupMigrationRequest"/></param>
+        /// <returns><see cref="DescribeBackupMigrationResponse"/></returns>
+        public async Task<DescribeBackupMigrationResponse> DescribeBackupMigration(DescribeBackupMigrationRequest req)
+        {
+             JsonResponseModel<DescribeBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupMigration）用于创建增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupMigrationRequest"/></param>
+        /// <returns><see cref="DescribeBackupMigrationResponse"/></returns>
+        public DescribeBackupMigrationResponse DescribeBackupMigrationSync(DescribeBackupMigrationRequest req)
+        {
+             JsonResponseModel<DescribeBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupUploadSize）用于查询上传的备份文件大小。在备份上传类型是COS_UPLOAD(备份放在业务的对象存储上)时有效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupUploadSizeRequest"/></param>
+        /// <returns><see cref="DescribeBackupUploadSizeResponse"/></returns>
+        public async Task<DescribeBackupUploadSizeResponse> DescribeBackupUploadSize(DescribeBackupUploadSizeRequest req)
+        {
+             JsonResponseModel<DescribeBackupUploadSizeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupUploadSize");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUploadSizeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBackupUploadSize）用于查询上传的备份文件大小。在备份上传类型是COS_UPLOAD(备份放在业务的对象存储上)时有效。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupUploadSizeRequest"/></param>
+        /// <returns><see cref="DescribeBackupUploadSizeResponse"/></returns>
+        public DescribeBackupUploadSizeResponse DescribeBackupUploadSizeSync(DescribeBackupUploadSizeRequest req)
+        {
+             JsonResponseModel<DescribeBackupUploadSizeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupUploadSize");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupUploadSizeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1044,6 +1324,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlowStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DescribeIncrementalMigrationResponse"/></returns>
+        public async Task<DescribeIncrementalMigrationResponse> DescribeIncrementalMigration(DescribeIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DescribeIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="DescribeIncrementalMigrationResponse"/></returns>
+        public DescribeIncrementalMigrationResponse DescribeIncrementalMigrationSync(DescribeIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<DescribeIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1613,6 +1933,86 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DescribeUploadBackupInfo）用于查询备份上传权限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadBackupInfoResponse"/></returns>
+        public async Task<DescribeUploadBackupInfoResponse> DescribeUploadBackupInfo(DescribeUploadBackupInfoRequest req)
+        {
+             JsonResponseModel<DescribeUploadBackupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUploadBackupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadBackupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUploadBackupInfo）用于查询备份上传权限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadBackupInfoResponse"/></returns>
+        public DescribeUploadBackupInfoResponse DescribeUploadBackupInfoSync(DescribeUploadBackupInfoRequest req)
+        {
+             JsonResponseModel<DescribeUploadBackupInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUploadBackupInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadBackupInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUploadIncrementalInfo）用于查询增量备份上传权限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadIncrementalInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadIncrementalInfoResponse"/></returns>
+        public async Task<DescribeUploadIncrementalInfoResponse> DescribeUploadIncrementalInfo(DescribeUploadIncrementalInfoRequest req)
+        {
+             JsonResponseModel<DescribeUploadIncrementalInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUploadIncrementalInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadIncrementalInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeUploadIncrementalInfo）用于查询增量备份上传权限。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadIncrementalInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadIncrementalInfoResponse"/></returns>
+        public DescribeUploadIncrementalInfoResponse DescribeUploadIncrementalInfoSync(DescribeUploadIncrementalInfoRequest req)
+        {
+             JsonResponseModel<DescribeUploadIncrementalInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUploadIncrementalInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadIncrementalInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
@@ -1884,6 +2284,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyBackupMigration）用于修改备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupMigrationRequest"/></param>
+        /// <returns><see cref="ModifyBackupMigrationResponse"/></returns>
+        public async Task<ModifyBackupMigrationResponse> ModifyBackupMigration(ModifyBackupMigrationRequest req)
+        {
+             JsonResponseModel<ModifyBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyBackupMigration）用于修改备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupMigrationRequest"/></param>
+        /// <returns><see cref="ModifyBackupMigrationResponse"/></returns>
+        public ModifyBackupMigrationResponse ModifyBackupMigrationSync(ModifyBackupMigrationRequest req)
+        {
+             JsonResponseModel<ModifyBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2244,6 +2684,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyIncrementalMigration）用于修改增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="ModifyIncrementalMigrationResponse"/></returns>
+        public async Task<ModifyIncrementalMigrationResponse> ModifyIncrementalMigration(ModifyIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<ModifyIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyIncrementalMigration）用于修改增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="ModifyIncrementalMigrationResponse"/></returns>
+        public ModifyIncrementalMigrationResponse ModifyIncrementalMigrationSync(ModifyIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<ModifyIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2844,6 +3324,86 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "RunMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（StartBackupMigration）用于启动备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartBackupMigrationRequest"/></param>
+        /// <returns><see cref="StartBackupMigrationResponse"/></returns>
+        public async Task<StartBackupMigrationResponse> StartBackupMigration(StartBackupMigrationRequest req)
+        {
+             JsonResponseModel<StartBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（StartBackupMigration）用于启动备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartBackupMigrationRequest"/></param>
+        /// <returns><see cref="StartBackupMigrationResponse"/></returns>
+        public StartBackupMigrationResponse StartBackupMigrationSync(StartBackupMigrationRequest req)
+        {
+             JsonResponseModel<StartBackupMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartBackupMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（StartIncrementalMigration）用于启动增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="StartIncrementalMigrationResponse"/></returns>
+        public async Task<StartIncrementalMigrationResponse> StartIncrementalMigration(StartIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<StartIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（StartIncrementalMigration）用于启动增量备份导入任务。
+        /// </summary>
+        /// <param name="req"><see cref="StartIncrementalMigrationRequest"/></param>
+        /// <returns><see cref="StartIncrementalMigrationResponse"/></returns>
+        public StartIncrementalMigrationResponse StartIncrementalMigrationSync(StartIncrementalMigrationRequest req)
+        {
+             JsonResponseModel<StartIncrementalMigrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartIncrementalMigration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartIncrementalMigrationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

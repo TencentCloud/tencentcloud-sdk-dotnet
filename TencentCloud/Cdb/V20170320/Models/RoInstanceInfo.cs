@@ -145,7 +145,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+        /// RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }

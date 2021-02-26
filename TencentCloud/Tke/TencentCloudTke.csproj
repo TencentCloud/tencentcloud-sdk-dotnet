@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.227</VersionPrefix>
+    <VersionPrefix>3.0.228</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -153,6 +153,8 @@
     <Compile Include="V20180525\Models\DescribePrometheusAgentInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAgentsRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAgentsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAlertHistoryRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusAlertHistoryResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusOverviewsRequest.cs" />
@@ -208,6 +210,7 @@
     <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
     <Compile Include="V20180525\Models\PrometheusAgentOverview.cs" />
+    <Compile Include="V20180525\Models\PrometheusAlertHistoryItem.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertRule.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertRuleDetail.cs" />
     <Compile Include="V20180525\Models\PrometheusConfigItem.cs" />

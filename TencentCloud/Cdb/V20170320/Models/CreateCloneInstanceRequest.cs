@@ -115,10 +115,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupZone{ get; set; }
 
         /// <summary>
-        /// 克隆实例类型。支持值包括： "HA" - 高可用版实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为高可用版。
+        /// 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+        /// </summary>
+        [JsonProperty("InstanceNodes")]
+        public long? InstanceNodes{ get; set; }
 
 
         /// <summary>
@@ -142,6 +148,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
             this.SetParamSimple(map, prefix + "BackupZone", this.BackupZone);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         }
     }
 }

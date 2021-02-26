@@ -1893,6 +1893,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取告警历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertHistoryRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertHistoryResponse"/></returns>
+        public async Task<DescribePrometheusAlertHistoryResponse> DescribePrometheusAlertHistory(DescribePrometheusAlertHistoryRequest req)
+        {
+             JsonResponseModel<DescribePrometheusAlertHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusAlertHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusAlertHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取告警历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertHistoryRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertHistoryResponse"/></returns>
+        public DescribePrometheusAlertHistoryResponse DescribePrometheusAlertHistorySync(DescribePrometheusAlertHistoryRequest req)
+        {
+             JsonResponseModel<DescribePrometheusAlertHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusAlertHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusAlertHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取告警规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusAlertRuleRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.227</VersionPrefix>
+    <VersionPrefix>3.0.228</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -8997,8 +8997,11 @@
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CosUploadBackupFile.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateAccountRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateAccountResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateBackupMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateBackupMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateBackupRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateBackupResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateBasicDBInstancesRequest.cs" />
@@ -9007,6 +9010,8 @@
     <Compile Include="Sqlserver\V20180328\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateDBRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateDBResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateIncrementalMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\CreateIncrementalMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreateMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CreatePublishSubscribeRequest.cs" />
@@ -9025,10 +9030,14 @@
     <Compile Include="Sqlserver\V20180328\Models\DealInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteAccountRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteAccountResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeleteBackupMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeleteBackupMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteDBInstanceRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteDBInstanceResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteDBRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteDBResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeleteIncrementalMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DeleteIncrementalMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeletePublishSubscribeRequest.cs" />
@@ -9037,6 +9046,12 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupByFlowIdRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupByFlowIdResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupCommandRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupCommandResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupUploadSizeRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupUploadSizeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeCrossRegionZoneRequest.cs" />
@@ -9049,6 +9064,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeIncrementalMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeIncrementalMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMaintenanceSpanRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMaintenanceSpanResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeMigrationDatabasesRequest.cs" />
@@ -9077,6 +9094,10 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeRollbackTimeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeSlowlogsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeSlowlogsResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeUploadBackupInfoRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeUploadBackupInfoResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeUploadIncrementalInfoRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeUploadIncrementalInfoResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeZonesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeZonesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DisassociateSecurityGroupsRequest.cs" />
@@ -9094,10 +9115,16 @@
     <Compile Include="Sqlserver\V20180328\Models\MigrateSource.cs" />
     <Compile Include="Sqlserver\V20180328\Models\MigrateTarget.cs" />
     <Compile Include="Sqlserver\V20180328\Models\MigrateTask.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\Migration.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\MigrationAction.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\MigrationDetail.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\MigrationStep.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountPrivilegeRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountPrivilegeResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyBackupMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyBackupNameRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyBackupNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyBackupStrategyRequest.cs" />
@@ -9116,6 +9143,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyIncrementalMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyIncrementalMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMaintenanceSpanRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMaintenanceSpanResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMigrationRequest.cs" />
@@ -9157,6 +9186,10 @@
     <Compile Include="Sqlserver\V20180328\Models\SecurityGroupPolicy.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\SpecInfo.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StartBackupMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StartBackupMigrationResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StartIncrementalMigrationRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\StartIncrementalMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\StartMigrationCheckRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\StartMigrationCheckResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\StepDetail.cs" />
@@ -10619,6 +10652,8 @@
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAgentInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAgentsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAgentsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertHistoryRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertHistoryResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusOverviewsRequest.cs" />
@@ -10674,6 +10709,7 @@
     <Compile Include="Tke\V20180525\Models\NodePool.cs" />
     <Compile Include="Tke\V20180525\Models\NodePoolOption.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAgentOverview.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusAlertHistoryItem.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRule.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRuleDetail.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusConfigItem.cs" />

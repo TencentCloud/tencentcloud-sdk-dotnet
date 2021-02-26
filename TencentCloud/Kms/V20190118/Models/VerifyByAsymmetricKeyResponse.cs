@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// 签名是否有效
+        /// 签名是否有效。true：签名有效，false：签名无效。
         /// </summary>
         [JsonProperty("SignatureValid")]
         public bool? SignatureValid{ get; set; }

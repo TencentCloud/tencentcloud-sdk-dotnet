@@ -37,13 +37,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string SignatureValue{ get; set; }
 
         /// <summary>
-        /// 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，SM2签名算法的消息摘要长度（Base64编码前的长度）必须等于32字节
+        /// 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 签名算法，支持的算法：SM2DSA
+        /// 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }

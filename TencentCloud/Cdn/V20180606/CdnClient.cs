@@ -593,7 +593,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：使用此接口需开启对应白名单）
+        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：此接口即将下线，不再进行维护，请通过DescribeIpStatus 接口进行查询）
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -613,7 +613,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：使用此接口需开启对应白名单）
+        /// 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：此接口即将下线，不再进行维护，请通过DescribeIpStatus 接口进行查询）
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>

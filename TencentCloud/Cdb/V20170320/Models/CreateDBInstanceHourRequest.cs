@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+        /// MySQL 版本，值包括：5.5、5.6 、5.7 、8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -175,7 +175,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 实例类型。支持值包括： "HA" - 高可用版实例， "BASIC" - 基础版实例。 不指定则默认为高可用版。
+        /// 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -191,6 +191,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public long?[] AlarmPolicyList{ get; set; }
+
+        /// <summary>
+        /// 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
+        /// </summary>
+        [JsonProperty("InstanceNodes")]
+        public long? InstanceNodes{ get; set; }
+
+        /// <summary>
+        /// 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
 
 
         /// <summary>
@@ -226,6 +238,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
+            this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

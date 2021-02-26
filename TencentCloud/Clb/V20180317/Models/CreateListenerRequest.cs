@@ -97,6 +97,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
 
+        /// <summary>
+        /// 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
+        /// </summary>
+        [JsonProperty("EndPort")]
+        public ulong? EndPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +121,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+            this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
         }
     }
 }
