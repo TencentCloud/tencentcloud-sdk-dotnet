@@ -25,6 +25,16 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
+        /// 画布宽高比，取值有：
+        /// <li>16:9；</li>
+        /// <li>9:16；</li>
+        /// <li>2:1。</li>
+        /// 默认值 16:9 。
+        /// </summary>
+        [JsonProperty("AspectRatio")]
+        public string AspectRatio{ get; set; }
+
+        /// <summary>
         /// 视频编辑模板媒体 ID ，通过模板媒体导入项目轨道数据时填写。
         /// </summary>
         [JsonProperty("VideoEditTemplateId")]
@@ -43,6 +53,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "VideoEditTemplateId", this.VideoEditTemplateId);
             this.SetParamArrayObj(map, prefix + "InitTracks.", this.InitTracks);
         }

@@ -15,33 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Ie.V20200304.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SearchMediaResponse : AbstractModel
+    public class HiddenMarkInfo : AbstractModel
     {
         
         /// <summary>
-        /// 符合搜索条件的记录总数。
-        /// <li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+        /// 数字水印路径,，如果不从Cos拉取水印，则必填
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
         /// <summary>
-        /// 媒体文件信息列表。
+        /// 数字水印频率，可选值：[1,256]，默认值为30
         /// </summary>
-        [JsonProperty("MediaInfoSet")]
-        public MediaInfo[] MediaInfoSet{ get; set; }
+        [JsonProperty("Frequency")]
+        public long? Frequency{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 数字水印强度，可选值：[32,128]，默认值为64
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Strength")]
+        public long? Strength{ get; set; }
+
+        /// <summary>
+        /// 数字水印的Cos 信息，从Cos上拉取图片水印时必填。
+        /// </summary>
+        [JsonProperty("CosInfo")]
+        public CosInfo CosInfo{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "MediaInfoSet.", this.MediaInfoSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
+            this.SetParamSimple(map, prefix + "Strength", this.Strength);
+            this.SetParamObj(map, prefix + "CosInfo.", this.CosInfo);
         }
     }
 }

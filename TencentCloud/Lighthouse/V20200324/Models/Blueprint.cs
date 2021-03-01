@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 镜像 ID  ，是 blueprint 的唯一标识。
+        /// 镜像 ID  ，是 Blueprint 的唯一标识。
         /// </summary>
         [JsonProperty("BlueprintId")]
         public string BlueprintId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string PlatformType{ get; set; }
 
         /// <summary>
-        /// 镜像类型，如 APP_OS、PURE_OS。
+        /// 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
         /// </summary>
         [JsonProperty("BlueprintType")]
         public string BlueprintType{ get; set; }
@@ -90,6 +90,26 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("BlueprintState")]
         public string BlueprintState{ get; set; }
 
+        /// <summary>
+        /// 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+        /// 格式为： YYYY-MM-DDThh:mm:ssZ。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// 镜像名称。
+        /// </summary>
+        [JsonProperty("BlueprintName")]
+        public string BlueprintName{ get; set; }
+
+        /// <summary>
+        /// 镜像是否支持自动化助手。
+        /// </summary>
+        [JsonProperty("SupportAutomationTools")]
+        public bool? SupportAutomationTools{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +127,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "RequiredSystemDiskSize", this.RequiredSystemDiskSize);
             this.SetParamSimple(map, prefix + "BlueprintState", this.BlueprintState);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
+            this.SetParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
         }
     }
 }

@@ -118,14 +118,16 @@ namespace TencentCloud.Vm.V20201229.Models
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 图片结果
+        /// 视频中截帧审核的结果。
+        /// 数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSegments")]
         public ImageSegments[] ImageSegments{ get; set; }
 
         /// <summary>
-        /// 音频结果
+        /// 视频中音频审核的结果。
+        /// 数据有效期为24小时，如需要储存更长时间请在已配置的COS储存桶中设置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioSegments")]

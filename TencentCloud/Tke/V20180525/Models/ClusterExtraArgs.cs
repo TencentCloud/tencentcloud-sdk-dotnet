@@ -45,6 +45,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("KubeScheduler")]
         public string[] KubeScheduler{ get; set; }
 
+        /// <summary>
+        /// etcd自定义参数，只支持独立集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Etcd")]
+        public string[] Etcd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "KubeAPIServer.", this.KubeAPIServer);
             this.SetParamArraySimple(map, prefix + "KubeControllerManager.", this.KubeControllerManager);
             this.SetParamArraySimple(map, prefix + "KubeScheduler.", this.KubeScheduler);
+            this.SetParamArraySimple(map, prefix + "Etcd.", this.Etcd);
         }
     }
 }

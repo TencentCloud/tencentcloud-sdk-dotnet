@@ -127,6 +127,12 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("VideoEnhance")]
         public VideoEnhance VideoEnhance{ get; set; }
 
+        /// <summary>
+        /// 数字水印参数信息。
+        /// </summary>
+        [JsonProperty("HiddenMarkInfo")]
+        public HiddenMarkInfo HiddenMarkInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +151,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamObj(map, prefix + "DarInfo.", this.DarInfo);
             this.SetParamSimple(map, prefix + "Hdr", this.Hdr);
             this.SetParamObj(map, prefix + "VideoEnhance.", this.VideoEnhance);
+            this.SetParamObj(map, prefix + "HiddenMarkInfo.", this.HiddenMarkInfo);
         }
     }
 }

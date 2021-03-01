@@ -25,58 +25,6 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 标签集合，匹配集合中任意元素。
-        /// <li>单个标签长度限制：8个字符。</li>
-        /// <li>数组长度限制：10。</li>
-        /// </summary>
-        [JsonProperty("Tags")]
-        public string[] Tags{ get; set; }
-
-        /// <summary>
-        /// 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
-        /// <li>数组长度限制：10。</li>
-        /// </summary>
-        [JsonProperty("ClassIds")]
-        public long?[] ClassIds{ get; set; }
-
-        /// <summary>
-        /// 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
-        /// <li>数组长度限制：10。</li>
-        /// </summary>
-        [JsonProperty("StreamIds")]
-        public string[] StreamIds{ get; set; }
-
-        /// <summary>
-        /// 直播录制文件的唯一标识。匹配集合中的任意元素。
-        /// <li>数组长度限制：10。</li>
-        /// </summary>
-        [JsonProperty("Vids")]
-        public string[] Vids{ get; set; }
-
-        /// <summary>
-        /// 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-        /// <li>数组长度限制：10。</li>
-        /// </summary>
-        [JsonProperty("SourceTypes")]
-        public string[] SourceTypes{ get; set; }
-
-        /// <summary>
-        /// 文件类型。匹配集合中的任意元素：
-        /// <li>Video: 视频文件</li>
-        /// <li>Audio: 音频文件</li>
-        /// <li>Image: 图片文件</li>
-        /// </summary>
-        [JsonProperty("Categories")]
-        public string[] Categories{ get; set; }
-
-        /// <summary>
-        /// 匹配创建时间在此时间段内的文件。
-        /// <li>包含所指定的头尾时间点。</li>
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public TimeRange CreateTime{ get; set; }
-
-        /// <summary>
         /// 文件 ID 集合，匹配集合中的任意元素。
         /// <li>数组长度限制：10。</li>
         /// <li>单个 ID 长度限制：40个字符。</li>
@@ -101,12 +49,64 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] NamePrefixes{ get; set; }
 
         /// <summary>
-        /// 文件描述集合，匹配集合中的任意元素。
+        /// 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
         /// <li>单个描述长度限制：100个字符。</li>
         /// <li>数组长度限制：10。</li>
         /// </summary>
         [JsonProperty("Descriptions")]
         public string[] Descriptions{ get; set; }
+
+        /// <summary>
+        /// 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("ClassIds")]
+        public long?[] ClassIds{ get; set; }
+
+        /// <summary>
+        /// 标签集合，匹配集合中任意元素。
+        /// <li>单个标签长度限制：8个字符。</li>
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string[] Tags{ get; set; }
+
+        /// <summary>
+        /// 文件类型。匹配集合中的任意元素：
+        /// <li>Video: 视频文件</li>
+        /// <li>Audio: 音频文件</li>
+        /// <li>Image: 图片文件</li>
+        /// </summary>
+        [JsonProperty("Categories")]
+        public string[] Categories{ get; set; }
+
+        /// <summary>
+        /// 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("SourceTypes")]
+        public string[] SourceTypes{ get; set; }
+
+        /// <summary>
+        /// 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("StreamIds")]
+        public string[] StreamIds{ get; set; }
+
+        /// <summary>
+        /// 直播录制文件的唯一标识。匹配集合中的任意元素。
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("Vids")]
+        public string[] Vids{ get; set; }
+
+        /// <summary>
+        /// 匹配创建时间在此时间段内的文件。
+        /// <li>包含所指定的头尾时间点。</li>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public TimeRange CreateTime{ get; set; }
 
         /// <summary>
         /// 排序方式。
@@ -153,6 +153,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
+        /// （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
+        /// 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
+        /// <summary>
+        /// （不推荐：应使用 SourceTypes 替代）
+        /// 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
+        /// <summary>
         /// （不推荐：应使用 StreamIds 替代）
         /// 推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
         /// </summary>
@@ -165,13 +179,6 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("Vid")]
         public string Vid{ get; set; }
-
-        /// <summary>
-        /// （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
-        /// 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
-        /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
 
         /// <summary>
         /// （不推荐：应使用 CreateTime 替代）
@@ -193,41 +200,34 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
-        /// <summary>
-        /// （不推荐：应使用 SourceTypes 替代）
-        /// 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
-        /// </summary>
-        [JsonProperty("SourceType")]
-        public string SourceType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
-            this.SetParamArraySimple(map, prefix + "ClassIds.", this.ClassIds);
-            this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
-            this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
-            this.SetParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
-            this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
-            this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamArraySimple(map, prefix + "NamePrefixes.", this.NamePrefixes);
             this.SetParamArraySimple(map, prefix + "Descriptions.", this.Descriptions);
+            this.SetParamArraySimple(map, prefix + "ClassIds.", this.ClassIds);
+            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
+            this.SetParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
+            this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
+            this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
+            this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
-            this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }
     }
 }
