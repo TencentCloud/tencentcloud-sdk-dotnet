@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Dir")]
         public string Dir{ get; set; }
 
+        /// <summary>
+        /// 规则描述
+        /// </summary>
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "PortRange", this.PortRange);
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
             this.SetParamSimple(map, prefix + "Dir", this.Dir);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
         }
     }
 }

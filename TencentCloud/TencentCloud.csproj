@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.229</VersionPrefix>
+    <VersionPrefix>3.0.230</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1695,6 +1695,10 @@
     <Compile Include="Ccc\V20200210\Models\DescribePSTNActiveSessionListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeSeatUserListRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeSeatUserListResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeSkillGroupInfoListRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeSkillGroupInfoListResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeStaffInfoListRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeStaffInfoListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
@@ -1706,6 +1710,9 @@
     <Compile Include="Ccc\V20200210\Models\PSTNSessionInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\SeatUserInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\ServeParticipant.cs" />
+    <Compile Include="Ccc\V20200210\Models\SkillGroupInfoItem.cs" />
+    <Compile Include="Ccc\V20200210\Models\SkillGroupItem.cs" />
+    <Compile Include="Ccc\V20200210\Models\StaffInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\TelCdrInfo.cs" />
     <Compile Include="Cdb\V20170320\CdbClient.cs" />
     <Compile Include="Cdb\V20170320\Models\Account.cs" />
@@ -11544,6 +11551,7 @@
     <Compile Include="Vod\V20180717\Models\CreateWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateWordSamplesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateWordSamplesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DailyPlayStatInfo.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteAIAnalysisTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteAIAnalysisTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteAIRecognitionTemplateRequest.cs" />
@@ -11596,6 +11604,10 @@
     <Compile Include="Vod\V20180717\Models\DescribeCdnLogsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDailyMediaPlayStatRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDailyMediaPlayStatResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDailyMostPlayedStatRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDailyMostPlayedStatResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeEventsStateRequest.cs" />

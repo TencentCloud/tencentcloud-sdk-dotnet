@@ -42,6 +42,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("PeakOutNetwork")]
         public string PeakOutNetwork{ get; set; }
 
+        /// <summary>
+        /// 计费带宽。单位bps
+        /// </summary>
+        [JsonProperty("ChargeNetwork")]
+        public string ChargeNetwork{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "RecordTime", this.RecordTime);
             this.SetParamSimple(map, prefix + "PeakInNetwork", this.PeakInNetwork);
             this.SetParamSimple(map, prefix + "PeakOutNetwork", this.PeakOutNetwork);
+            this.SetParamSimple(map, prefix + "ChargeNetwork", this.ChargeNetwork);
         }
     }
 }

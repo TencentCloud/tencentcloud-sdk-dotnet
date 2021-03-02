@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.229</VersionPrefix>
+    <VersionPrefix>3.0.230</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -216,6 +216,7 @@
     <Compile Include="V20180717\Models\CreateWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateWordSamplesRequest.cs" />
     <Compile Include="V20180717\Models\CreateWordSamplesResponse.cs" />
+    <Compile Include="V20180717\Models\DailyPlayStatInfo.cs" />
     <Compile Include="V20180717\Models\DeleteAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteAIAnalysisTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteAIRecognitionTemplateRequest.cs" />
@@ -268,6 +269,10 @@
     <Compile Include="V20180717\Models\DescribeCdnLogsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMediaPlayStatRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMediaPlayStatResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMostPlayedStatRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMostPlayedStatResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="V20180717\Models\DescribeEventsStateRequest.cs" />

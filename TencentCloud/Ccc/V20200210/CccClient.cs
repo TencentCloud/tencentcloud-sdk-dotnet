@@ -293,6 +293,86 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 获取技能组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillGroupInfoListRequest"/></param>
+        /// <returns><see cref="DescribeSkillGroupInfoListResponse"/></returns>
+        public async Task<DescribeSkillGroupInfoListResponse> DescribeSkillGroupInfoList(DescribeSkillGroupInfoListRequest req)
+        {
+             JsonResponseModel<DescribeSkillGroupInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSkillGroupInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSkillGroupInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取技能组信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillGroupInfoListRequest"/></param>
+        /// <returns><see cref="DescribeSkillGroupInfoListResponse"/></returns>
+        public DescribeSkillGroupInfoListResponse DescribeSkillGroupInfoListSync(DescribeSkillGroupInfoListRequest req)
+        {
+             JsonResponseModel<DescribeSkillGroupInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSkillGroupInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSkillGroupInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取坐席信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStaffInfoListResponse"/></returns>
+        public async Task<DescribeStaffInfoListResponse> DescribeStaffInfoList(DescribeStaffInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStaffInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStaffInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStaffInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取坐席信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffInfoListRequest"/></param>
+        /// <returns><see cref="DescribeStaffInfoListResponse"/></returns>
+        public DescribeStaffInfoListResponse DescribeStaffInfoListSync(DescribeStaffInfoListRequest req)
+        {
+             JsonResponseModel<DescribeStaffInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStaffInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStaffInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 按实例获取电话消耗统计
         /// </summary>
         /// <param name="req"><see cref="DescribeTelCallInfoRequest"/></param>

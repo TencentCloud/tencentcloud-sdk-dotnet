@@ -97,7 +97,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string SuccessOperator{ get; set; }
 
         /// <summary>
-        /// 判断任务成功率的阈值，如99.99
+        /// 判断任务成功率的阈值，如100
         /// </summary>
         [JsonProperty("SuccessRatio")]
         public string SuccessRatio{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.229</VersionPrefix>
+    <VersionPrefix>3.0.230</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,10 @@
     <Compile Include="V20200210\Models\DescribePSTNActiveSessionListResponse.cs" />
     <Compile Include="V20200210\Models\DescribeSeatUserListRequest.cs" />
     <Compile Include="V20200210\Models\DescribeSeatUserListResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeSkillGroupInfoListRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeSkillGroupInfoListResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeStaffInfoListRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeStaffInfoListResponse.cs" />
     <Compile Include="V20200210\Models\DescribeTelCallInfoRequest.cs" />
     <Compile Include="V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="V20200210\Models\DescribeTelCdrRequest.cs" />
@@ -68,6 +72,9 @@
     <Compile Include="V20200210\Models\PSTNSessionInfo.cs" />
     <Compile Include="V20200210\Models\SeatUserInfo.cs" />
     <Compile Include="V20200210\Models\ServeParticipant.cs" />
+    <Compile Include="V20200210\Models\SkillGroupInfoItem.cs" />
+    <Compile Include="V20200210\Models\SkillGroupItem.cs" />
+    <Compile Include="V20200210\Models\StaffInfo.cs" />
     <Compile Include="V20200210\Models\TelCdrInfo.cs" />
   </ItemGroup>
 </Project>

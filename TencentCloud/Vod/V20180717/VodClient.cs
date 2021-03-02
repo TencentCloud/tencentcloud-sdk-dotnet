@@ -1989,6 +1989,98 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于查询指定日期范围内每天的播放统计数据。
+        /// * 可以查询最近30天的播放统计数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDailyMediaPlayStatRequest"/></param>
+        /// <returns><see cref="DescribeDailyMediaPlayStatResponse"/></returns>
+        public async Task<DescribeDailyMediaPlayStatResponse> DescribeDailyMediaPlayStat(DescribeDailyMediaPlayStatRequest req)
+        {
+             JsonResponseModel<DescribeDailyMediaPlayStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDailyMediaPlayStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDailyMediaPlayStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询指定日期范围内每天的播放统计数据。
+        /// * 可以查询最近30天的播放统计数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDailyMediaPlayStatRequest"/></param>
+        /// <returns><see cref="DescribeDailyMediaPlayStatResponse"/></returns>
+        public DescribeDailyMediaPlayStatResponse DescribeDailyMediaPlayStatSync(DescribeDailyMediaPlayStatRequest req)
+        {
+             JsonResponseModel<DescribeDailyMediaPlayStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDailyMediaPlayStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDailyMediaPlayStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询每日播放Top100 的媒体文件的播放统计数据。
+        /// * 可以查询最近30天的播放统计数据。
+        /// * 可以按播放次数或者播放流量查询。
+        /// * 播放次数统计说明：
+        ///     1. HLS 文件：访问 M3U8 文件时统计播放次数；访问 TS 文件不统计播放次数。
+        ///     2. 其它文件（如 MP4 文件）：播放请求带有 range 参数且 range 的 start 参数不等于0时不统计播放次数，其它情况统计播放次数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDailyMostPlayedStatRequest"/></param>
+        /// <returns><see cref="DescribeDailyMostPlayedStatResponse"/></returns>
+        public async Task<DescribeDailyMostPlayedStatResponse> DescribeDailyMostPlayedStat(DescribeDailyMostPlayedStatRequest req)
+        {
+             JsonResponseModel<DescribeDailyMostPlayedStatResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDailyMostPlayedStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDailyMostPlayedStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询每日播放Top100 的媒体文件的播放统计数据。
+        /// * 可以查询最近30天的播放统计数据。
+        /// * 可以按播放次数或者播放流量查询。
+        /// * 播放次数统计说明：
+        ///     1. HLS 文件：访问 M3U8 文件时统计播放次数；访问 TS 文件不统计播放次数。
+        ///     2. 其它文件（如 MP4 文件）：播放请求带有 range 参数且 range 的 start 参数不等于0时不统计播放次数，其它情况统计播放次数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDailyMostPlayedStatRequest"/></param>
+        /// <returns><see cref="DescribeDailyMostPlayedStatResponse"/></returns>
+        public DescribeDailyMostPlayedStatResponse DescribeDailyMostPlayedStatSync(DescribeDailyMostPlayedStatRequest req)
+        {
+             JsonResponseModel<DescribeDailyMostPlayedStatResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDailyMostPlayedStat");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDailyMostPlayedStatResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于查询播放统计文件的下载地址。
         /// * 可以查询最近30天的播放统计文件下载地址。
         /// * 云点播每天对前一天的 CDN 请求日志进行分析处理，生成播放统计文件。
