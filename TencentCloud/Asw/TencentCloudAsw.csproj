@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BB22DE13-CC44-3F86-8EE8-8D29FC7ADF34}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.230</VersionPrefix>
+    <VersionPrefix>3.0.231</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,8 @@
     <Compile Include="V20200722\AswClient.cs" />
     <Compile Include="V20200722\Models\CreateFlowServiceRequest.cs" />
     <Compile Include="V20200722\Models\CreateFlowServiceResponse.cs" />
+    <Compile Include="V20200722\Models\DescribeExecutionHistoryRequest.cs" />
+    <Compile Include="V20200722\Models\DescribeExecutionHistoryResponse.cs" />
     <Compile Include="V20200722\Models\DescribeExecutionRequest.cs" />
     <Compile Include="V20200722\Models\DescribeExecutionResponse.cs" />
     <Compile Include="V20200722\Models\DescribeExecutionsRequest.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="V20200722\Models\DescribeFlowServiceDetailResponse.cs" />
     <Compile Include="V20200722\Models\DescribeFlowServicesRequest.cs" />
     <Compile Include="V20200722\Models\DescribeFlowServicesResponse.cs" />
+    <Compile Include="V20200722\Models\ExecutionEvent.cs" />
     <Compile Include="V20200722\Models\Filter.cs" />
     <Compile Include="V20200722\Models\ModifyFlowServiceRequest.cs" />
     <Compile Include="V20200722\Models\ModifyFlowServiceResponse.cs" />

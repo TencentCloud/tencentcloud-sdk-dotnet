@@ -60,6 +60,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "SlowMS", this.SlowMS);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
         }
     }
 }

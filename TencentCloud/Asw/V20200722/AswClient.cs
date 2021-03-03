@@ -133,6 +133,46 @@ namespace TencentCloud.Asw.V20200722
         }
 
         /// <summary>
+        /// 一次执行会有很多步骤，经过很多节点，这个接口描述某一次执行的事件的历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExecutionHistoryRequest"/></param>
+        /// <returns><see cref="DescribeExecutionHistoryResponse"/></returns>
+        public async Task<DescribeExecutionHistoryResponse> DescribeExecutionHistory(DescribeExecutionHistoryRequest req)
+        {
+             JsonResponseModel<DescribeExecutionHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExecutionHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExecutionHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 一次执行会有很多步骤，经过很多节点，这个接口描述某一次执行的事件的历史
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExecutionHistoryRequest"/></param>
+        /// <returns><see cref="DescribeExecutionHistoryResponse"/></returns>
+        public DescribeExecutionHistoryResponse DescribeExecutionHistorySync(DescribeExecutionHistoryRequest req)
+        {
+             JsonResponseModel<DescribeExecutionHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExecutionHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExecutionHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对状态机的执行历史进行描述.
         /// </summary>
         /// <param name="req"><see cref="DescribeExecutionsRequest"/></param>

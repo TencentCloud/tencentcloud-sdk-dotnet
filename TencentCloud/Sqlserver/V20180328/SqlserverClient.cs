@@ -1173,6 +1173,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DescribeDBCharsets）用于查询实例支持的数据库字符集。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public async Task<DescribeDBCharsetsResponse> DescribeDBCharsets(DescribeDBCharsetsRequest req)
+        {
+             JsonResponseModel<DescribeDBCharsetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBCharsets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBCharsetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBCharsets）用于查询实例支持的数据库字符集。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public DescribeDBCharsetsResponse DescribeDBCharsetsSync(DescribeDBCharsetsRequest req)
+        {
+             JsonResponseModel<DescribeDBCharsetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBCharsets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBCharsetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeDBInstances)用于查询实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>

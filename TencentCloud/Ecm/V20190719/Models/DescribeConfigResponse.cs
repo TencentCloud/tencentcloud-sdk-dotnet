@@ -45,6 +45,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         public InstanceNetworkLimitConfig[] InstanceNetworkLimitConfigs{ get; set; }
 
         /// <summary>
+        /// 镜像限额信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageLimits")]
+        public ImageLimitConfig ImageLimits{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -59,6 +66,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "NetworkStorageRange.", this.NetworkStorageRange);
             this.SetParamArraySimple(map, prefix + "ImageWhiteSet.", this.ImageWhiteSet);
             this.SetParamArrayObj(map, prefix + "InstanceNetworkLimitConfigs.", this.InstanceNetworkLimitConfigs);
+            this.SetParamObj(map, prefix + "ImageLimits.", this.ImageLimits);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

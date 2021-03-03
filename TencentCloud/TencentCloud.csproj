@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.230</VersionPrefix>
+    <VersionPrefix>3.0.231</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -592,6 +592,8 @@
     <Compile Include="Asw\V20200722\AswClient.cs" />
     <Compile Include="Asw\V20200722\Models\CreateFlowServiceRequest.cs" />
     <Compile Include="Asw\V20200722\Models\CreateFlowServiceResponse.cs" />
+    <Compile Include="Asw\V20200722\Models\DescribeExecutionHistoryRequest.cs" />
+    <Compile Include="Asw\V20200722\Models\DescribeExecutionHistoryResponse.cs" />
     <Compile Include="Asw\V20200722\Models\DescribeExecutionRequest.cs" />
     <Compile Include="Asw\V20200722\Models\DescribeExecutionResponse.cs" />
     <Compile Include="Asw\V20200722\Models\DescribeExecutionsRequest.cs" />
@@ -600,6 +602,7 @@
     <Compile Include="Asw\V20200722\Models\DescribeFlowServiceDetailResponse.cs" />
     <Compile Include="Asw\V20200722\Models\DescribeFlowServicesRequest.cs" />
     <Compile Include="Asw\V20200722\Models\DescribeFlowServicesResponse.cs" />
+    <Compile Include="Asw\V20200722\Models\ExecutionEvent.cs" />
     <Compile Include="Asw\V20200722\Models\Filter.cs" />
     <Compile Include="Asw\V20200722\Models\ModifyFlowServiceRequest.cs" />
     <Compile Include="Asw\V20200722\Models\ModifyFlowServiceResponse.cs" />
@@ -2192,6 +2195,7 @@
     <Compile Include="Cdn\V20180606\Models\OverseaConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\PathBasedOriginRule.cs" />
     <Compile Include="Cdn\V20180606\Models\PathRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\PostSize.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgePathCacheResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\PurgeTask.cs" />
@@ -2201,6 +2205,7 @@
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\QueryStringKey.cs" />
+    <Compile Include="Cdn\V20180606\Models\Quic.cs" />
     <Compile Include="Cdn\V20180606\Models\Quota.cs" />
     <Compile Include="Cdn\V20180606\Models\RangeOriginPull.cs" />
     <Compile Include="Cdn\V20180606\Models\Referer.cs" />
@@ -3671,6 +3676,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAttackVulTypeListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAttackVulTypeListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashEventsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashRulesRequest.cs" />
@@ -4908,6 +4915,7 @@
     <Compile Include="Ecm\V20190719\Models\ISP.cs" />
     <Compile Include="Ecm\V20190719\Models\ISPCounter.cs" />
     <Compile Include="Ecm\V20190719\Models\Image.cs" />
+    <Compile Include="Ecm\V20190719\Models\ImageLimitConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\ImageOsList.cs" />
     <Compile Include="Ecm\V20190719\Models\ImageTask.cs" />
     <Compile Include="Ecm\V20190719\Models\ImageUrl.cs" />
@@ -5209,6 +5217,7 @@
     <Compile Include="Faceid\V20180301\Models\DetectInfoIdCardData.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectInfoText.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectInfoVideoData.cs" />
+    <Compile Include="Faceid\V20180301\Models\Encryption.cs" />
     <Compile Include="Faceid\V20180301\Models\GetActionSequenceRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetActionSequenceResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoEnhancedRequest.cs" />
@@ -9064,6 +9073,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeCrossRegionZoneRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeCrossRegionZoneResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBCharsetsRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBCharsetsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBSecurityGroupsRequest.cs" />

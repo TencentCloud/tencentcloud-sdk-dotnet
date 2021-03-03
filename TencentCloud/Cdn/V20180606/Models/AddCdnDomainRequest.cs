@@ -230,6 +230,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }
 
+        /// <summary>
+        /// QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+        /// </summary>
+        [JsonProperty("Quic")]
+        public Quic Quic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -269,6 +275,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
             this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+            this.SetParamObj(map, prefix + "Quic.", this.Quic);
         }
     }
 }

@@ -1213,6 +1213,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取网络攻击威胁类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackVulTypeListRequest"/></param>
+        /// <returns><see cref="DescribeAttackVulTypeListResponse"/></returns>
+        public async Task<DescribeAttackVulTypeListResponse> DescribeAttackVulTypeList(DescribeAttackVulTypeListRequest req)
+        {
+             JsonResponseModel<DescribeAttackVulTypeListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAttackVulTypeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackVulTypeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取网络攻击威胁类型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackVulTypeListRequest"/></param>
+        /// <returns><see cref="DescribeAttackVulTypeListResponse"/></returns>
+        public DescribeAttackVulTypeListResponse DescribeAttackVulTypeListSync(DescribeAttackVulTypeListRequest req)
+        {
+             JsonResponseModel<DescribeAttackVulTypeListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAttackVulTypeList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAttackVulTypeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取高危命令列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBashEventsRequest"/></param>
