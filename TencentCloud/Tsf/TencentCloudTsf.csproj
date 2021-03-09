@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.234</VersionPrefix>
+    <VersionPrefix>3.0.235</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -262,6 +262,8 @@
     <Compile Include="V20180326\Models\DescribeSimpleGroupsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleNamespacesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleNamespacesResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeTaskLastStatusRequest.cs" />
     <Compile Include="V20180326\Models\DescribeTaskLastStatusResponse.cs" />
     <Compile Include="V20180326\Models\DescribeUploadInfoRequest.cs" />
@@ -391,6 +393,7 @@
     <Compile Include="V20180326\Models\TaskFlowLastBatchState.cs" />
     <Compile Include="V20180326\Models\TaskIdInfo.cs" />
     <Compile Include="V20180326\Models\TaskLastExecuteStatus.cs" />
+    <Compile Include="V20180326\Models\TaskRecord.cs" />
     <Compile Include="V20180326\Models\TaskRule.cs" />
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchResponse.cs" />

@@ -547,6 +547,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 获取账户信息
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountRequest"/></param>
+        /// <returns><see cref="GetAccountResponse"/></returns>
+        public async Task<GetAccountResponse> GetAccount(GetAccountRequest req)
+        {
+             JsonResponseModel<GetAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取账户信息
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountRequest"/></param>
+        /// <returns><see cref="GetAccountResponse"/></returns>
+        public GetAccountResponse GetAccountSync(GetAccountRequest req)
+        {
+             JsonResponseModel<GetAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取别名的详细信息，包括名称、描述、版本、路由信息等。
         /// </summary>
         /// <param name="req"><see cref="GetAliasRequest"/></param>

@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public TagInfo[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 实例Cpu核数，需要不低于克隆源实例。
+        /// 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

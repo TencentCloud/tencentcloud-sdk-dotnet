@@ -3897,6 +3897,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
+        public async Task<DescribeTaskDetailResponse> DescribeTaskDetail(DescribeTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
+        public DescribeTaskDetailResponse DescribeTaskDetailSync(DescribeTaskDetailRequest req)
+        {
+             JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询任务最近一次执行状态
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskLastStatusRequest"/></param>

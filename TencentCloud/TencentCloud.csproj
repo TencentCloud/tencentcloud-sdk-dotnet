@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.234</VersionPrefix>
+    <VersionPrefix>3.0.235</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -8750,6 +8750,8 @@
     <Compile Include="Scf\V20180416\Models\Function.cs" />
     <Compile Include="Scf\V20180416\Models\FunctionLog.cs" />
     <Compile Include="Scf\V20180416\Models\FunctionVersion.cs" />
+    <Compile Include="Scf\V20180416\Models\GetAccountRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\GetAccountResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetAliasRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetAliasResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetFunctionAddressRequest.cs" />
@@ -8768,6 +8770,7 @@
     <Compile Include="Scf\V20180416\Models\InvokeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\LayerVersionInfo.cs" />
     <Compile Include="Scf\V20180416\Models\LayerVersionSimple.cs" />
+    <Compile Include="Scf\V20180416\Models\LimitsInfo.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="Scf\V20180416\Models\ListAliasesResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ListAsyncEventsRequest.cs" />
@@ -8787,6 +8790,8 @@
     <Compile Include="Scf\V20180416\Models\LogFilter.cs" />
     <Compile Include="Scf\V20180416\Models\LogSearchContext.cs" />
     <Compile Include="Scf\V20180416\Models\Namespace.cs" />
+    <Compile Include="Scf\V20180416\Models\NamespaceLimit.cs" />
+    <Compile Include="Scf\V20180416\Models\NamespaceUsage.cs" />
     <Compile Include="Scf\V20180416\Models\PublicNetConfigIn.cs" />
     <Compile Include="Scf\V20180416\Models\PublicNetConfigOut.cs" />
     <Compile Include="Scf\V20180416\Models\PublishLayerVersionRequest.cs" />
@@ -8807,6 +8812,7 @@
     <Compile Include="Scf\V20180416\Models\TerminateAsyncEventResponse.cs" />
     <Compile Include="Scf\V20180416\Models\TimeInterval.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
+    <Compile Include="Scf\V20180416\Models\TriggerCount.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasResponse.cs" />
@@ -8816,6 +8822,7 @@
     <Compile Include="Scf\V20180416\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceRequest.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateNamespaceResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\UsageInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Variable.cs" />
     <Compile Include="Scf\V20180416\Models\VersionMatch.cs" />
     <Compile Include="Scf\V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
@@ -9795,6 +9802,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLRequest.cs" />
@@ -10231,6 +10240,10 @@
     <Compile Include="Tdmq\V20200217\Models\Producer.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendBatchMessagesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendBatchMessagesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendMessagesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendMessagesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\Subscription.cs" />
     <Compile Include="Tdmq\V20200217\Models\SubscriptionTopic.cs" />
     <Compile Include="Tdmq\V20200217\Models\Tag.cs" />
@@ -11096,6 +11109,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleGroupsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleNamespacesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleNamespacesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUploadInfoRequest.cs" />
@@ -11225,6 +11240,7 @@
     <Compile Include="Tsf\V20180326\Models\TaskFlowLastBatchState.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskIdInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskLastExecuteStatus.cs" />
+    <Compile Include="Tsf\V20180326\Models\TaskRecord.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskRule.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
@@ -11696,6 +11712,7 @@
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\LiveRealTimeClipMediaSegmentInfo.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ManageTaskRequest.cs" />

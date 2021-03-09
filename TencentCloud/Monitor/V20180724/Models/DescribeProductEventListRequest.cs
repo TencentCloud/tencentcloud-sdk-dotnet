@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] EventName{ get; set; }
 
         /// <summary>
-        /// 影响对象，比如ins-19708ino
+        /// 影响对象，比如"ins-19708ino"
         /// </summary>
         [JsonProperty("InstanceId")]
         public string[] InstanceId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public DescribeProductEventListDimensions[] Dimensions{ get; set; }
 
         /// <summary>
-        /// 地域过滤，比如gz
+        /// 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
         /// </summary>
         [JsonProperty("RegionList")]
         public string[] RegionList{ get; set; }

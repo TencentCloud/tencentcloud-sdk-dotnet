@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.234</VersionPrefix>
+    <VersionPrefix>3.0.235</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -84,6 +84,8 @@
     <Compile Include="V20180416\Models\Function.cs" />
     <Compile Include="V20180416\Models\FunctionLog.cs" />
     <Compile Include="V20180416\Models\FunctionVersion.cs" />
+    <Compile Include="V20180416\Models\GetAccountRequest.cs" />
+    <Compile Include="V20180416\Models\GetAccountResponse.cs" />
     <Compile Include="V20180416\Models\GetAliasRequest.cs" />
     <Compile Include="V20180416\Models\GetAliasResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionAddressRequest.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="V20180416\Models\InvokeResponse.cs" />
     <Compile Include="V20180416\Models\LayerVersionInfo.cs" />
     <Compile Include="V20180416\Models\LayerVersionSimple.cs" />
+    <Compile Include="V20180416\Models\LimitsInfo.cs" />
     <Compile Include="V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="V20180416\Models\ListAliasesResponse.cs" />
     <Compile Include="V20180416\Models\ListAsyncEventsRequest.cs" />
@@ -121,6 +124,8 @@
     <Compile Include="V20180416\Models\LogFilter.cs" />
     <Compile Include="V20180416\Models\LogSearchContext.cs" />
     <Compile Include="V20180416\Models\Namespace.cs" />
+    <Compile Include="V20180416\Models\NamespaceLimit.cs" />
+    <Compile Include="V20180416\Models\NamespaceUsage.cs" />
     <Compile Include="V20180416\Models\PublicNetConfigIn.cs" />
     <Compile Include="V20180416\Models\PublicNetConfigOut.cs" />
     <Compile Include="V20180416\Models\PublishLayerVersionRequest.cs" />
@@ -141,6 +146,7 @@
     <Compile Include="V20180416\Models\TerminateAsyncEventResponse.cs" />
     <Compile Include="V20180416\Models\TimeInterval.cs" />
     <Compile Include="V20180416\Models\Trigger.cs" />
+    <Compile Include="V20180416\Models\TriggerCount.cs" />
     <Compile Include="V20180416\Models\TriggerInfo.cs" />
     <Compile Include="V20180416\Models\UpdateAliasRequest.cs" />
     <Compile Include="V20180416\Models\UpdateAliasResponse.cs" />
@@ -150,6 +156,7 @@
     <Compile Include="V20180416\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="V20180416\Models\UpdateNamespaceRequest.cs" />
     <Compile Include="V20180416\Models\UpdateNamespaceResponse.cs" />
+    <Compile Include="V20180416\Models\UsageInfo.cs" />
     <Compile Include="V20180416\Models\Variable.cs" />
     <Compile Include="V20180416\Models\VersionMatch.cs" />
     <Compile Include="V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />

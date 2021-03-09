@@ -1,0 +1,276 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tcb.V20180608.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeCloudBaseRunVersionResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// 版本名称
+        /// </summary>
+        [JsonProperty("VersionName")]
+        public string VersionName{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// Dockefile的路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DockerfilePath")]
+        public string DockerfilePath{ get; set; }
+
+        /// <summary>
+        /// DockerBuild的目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BuildDir")]
+        public string BuildDir{ get; set; }
+
+        /// <summary>
+        /// 副本最小值
+        /// </summary>
+        [JsonProperty("MinNum")]
+        public long? MinNum{ get; set; }
+
+        /// <summary>
+        /// 副本最大值
+        /// </summary>
+        [JsonProperty("MaxNum")]
+        public long? MaxNum{ get; set; }
+
+        /// <summary>
+        /// 策略类型
+        /// </summary>
+        [JsonProperty("PolicyType")]
+        public string PolicyType{ get; set; }
+
+        /// <summary>
+        /// 策略阈值
+        /// </summary>
+        [JsonProperty("PolicyThreshold")]
+        public float? PolicyThreshold{ get; set; }
+
+        /// <summary>
+        /// 环境变量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnvParams")]
+        public string EnvParams{ get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// 更新时间
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
+        /// <summary>
+        /// 版本的IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionIP")]
+        public string VersionIP{ get; set; }
+
+        /// <summary>
+        /// 版本的端口号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionPort")]
+        public long? VersionPort{ get; set; }
+
+        /// <summary>
+        /// 版本状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 代码包的名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageName")]
+        public string PackageName{ get; set; }
+
+        /// <summary>
+        /// 代码版本的名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageVersion")]
+        public string PackageVersion{ get; set; }
+
+        /// <summary>
+        /// 枚举（package/repository/image)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UploadType")]
+        public string UploadType{ get; set; }
+
+        /// <summary>
+        /// Repo的类型(coding/gitlab/github/coding)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepoType")]
+        public string RepoType{ get; set; }
+
+        /// <summary>
+        /// 地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Repo")]
+        public string Repo{ get; set; }
+
+        /// <summary>
+        /// 分支
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Branch")]
+        public string Branch{ get; set; }
+
+        /// <summary>
+        /// 服务名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerName")]
+        public string ServerName{ get; set; }
+
+        /// <summary>
+        /// 是否对于外网开放
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsPublic")]
+        public bool? IsPublic{ get; set; }
+
+        /// <summary>
+        /// vpc id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 子网实例id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubnetIds")]
+        public string[] SubnetIds{ get; set; }
+
+        /// <summary>
+        /// 日志采集路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomLogs")]
+        public string CustomLogs{ get; set; }
+
+        /// <summary>
+        /// 监听端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerPort")]
+        public long? ContainerPort{ get; set; }
+
+        /// <summary>
+        /// 延迟多长时间开始健康检查（单位s）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InitialDelaySeconds")]
+        public long? InitialDelaySeconds{ get; set; }
+
+        /// <summary>
+        /// 镜像地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageUrl")]
+        public string ImageUrl{ get; set; }
+
+        /// <summary>
+        /// CPU 大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuSize")]
+        public float? CpuSize{ get; set; }
+
+        /// <summary>
+        /// MEM 大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemSize")]
+        public float? MemSize{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "VersionName", this.VersionName);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "DockerfilePath", this.DockerfilePath);
+            this.SetParamSimple(map, prefix + "BuildDir", this.BuildDir);
+            this.SetParamSimple(map, prefix + "MinNum", this.MinNum);
+            this.SetParamSimple(map, prefix + "MaxNum", this.MaxNum);
+            this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
+            this.SetParamSimple(map, prefix + "PolicyThreshold", this.PolicyThreshold);
+            this.SetParamSimple(map, prefix + "EnvParams", this.EnvParams);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+            this.SetParamSimple(map, prefix + "VersionIP", this.VersionIP);
+            this.SetParamSimple(map, prefix + "VersionPort", this.VersionPort);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
+            this.SetParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
+            this.SetParamSimple(map, prefix + "UploadType", this.UploadType);
+            this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
+            this.SetParamSimple(map, prefix + "Repo", this.Repo);
+            this.SetParamSimple(map, prefix + "Branch", this.Branch);
+            this.SetParamSimple(map, prefix + "ServerName", this.ServerName);
+            this.SetParamSimple(map, prefix + "IsPublic", this.IsPublic);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
+            this.SetParamSimple(map, prefix + "CustomLogs", this.CustomLogs);
+            this.SetParamSimple(map, prefix + "ContainerPort", this.ContainerPort);
+            this.SetParamSimple(map, prefix + "InitialDelaySeconds", this.InitialDelaySeconds);
+            this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "CpuSize", this.CpuSize);
+            this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

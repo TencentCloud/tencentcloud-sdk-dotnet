@@ -37,7 +37,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// 维度信息
+        /// 实例的维度信息，格式为
+        /// {"unInstanceId":"ins-00jvv9mo"}。不同云产品的维度信息不同，详见
+        /// [产品策略类型和命名空间](https://cloud.tencent.com/document/product/248/50397)
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }

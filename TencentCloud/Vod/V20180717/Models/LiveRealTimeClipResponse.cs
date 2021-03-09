@@ -50,6 +50,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
+        /// <span id="p_segmentset">剪辑后的视频片段信息。</span>
+        /// </summary>
+        [JsonProperty("SegmentSet")]
+        public LiveRealTimeClipMediaSegmentInfo[] SegmentSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "VodTaskId", this.VodTaskId);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
+            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

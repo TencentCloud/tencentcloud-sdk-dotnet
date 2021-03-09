@@ -25,7 +25,7 @@ namespace TencentCloud.Tsf.V20180326.Models
     {
         
         /// <summary>
-        /// 分片参数 KEY，整形
+        /// 分片参数 KEY，整形, 范围 [1,1000]
         /// </summary>
         [JsonProperty("ShardKey")]
         public ulong? ShardKey{ get; set; }

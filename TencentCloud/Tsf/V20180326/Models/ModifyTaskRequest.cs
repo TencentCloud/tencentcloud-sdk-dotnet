@@ -82,7 +82,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// 分片参数
         /// </summary>
         [JsonProperty("ShardArguments")]
-        public ShardArgument ShardArguments{ get; set; }
+        public ShardArgument[] ShardArguments{ get; set; }
 
         /// <summary>
         /// 高级设置
@@ -135,7 +135,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "TimeOut", this.TimeOut);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "ShardCount", this.ShardCount);
-            this.SetParamObj(map, prefix + "ShardArguments.", this.ShardArguments);
+            this.SetParamArrayObj(map, prefix + "ShardArguments.", this.ShardArguments);
             this.SetParamObj(map, prefix + "AdvanceSettings.", this.AdvanceSettings);
             this.SetParamSimple(map, prefix + "SuccessOperator", this.SuccessOperator);
             this.SetParamSimple(map, prefix + "SuccessRatio", this.SuccessRatio);

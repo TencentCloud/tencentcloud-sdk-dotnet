@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页查询时的偏移量。
+        /// 分页查询时的偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询时的每页条目数。
+        /// 分页查询时的每页条目数，默认值为20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

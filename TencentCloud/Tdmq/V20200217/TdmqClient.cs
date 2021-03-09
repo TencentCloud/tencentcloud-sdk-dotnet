@@ -932,5 +932,85 @@ namespace TencentCloud.Tdmq.V20200217
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 批量发送消息
+        /// </summary>
+        /// <param name="req"><see cref="SendBatchMessagesRequest"/></param>
+        /// <returns><see cref="SendBatchMessagesResponse"/></returns>
+        public async Task<SendBatchMessagesResponse> SendBatchMessages(SendBatchMessagesRequest req)
+        {
+             JsonResponseModel<SendBatchMessagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendBatchMessages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendBatchMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量发送消息
+        /// </summary>
+        /// <param name="req"><see cref="SendBatchMessagesRequest"/></param>
+        /// <returns><see cref="SendBatchMessagesResponse"/></returns>
+        public SendBatchMessagesResponse SendBatchMessagesSync(SendBatchMessagesRequest req)
+        {
+             JsonResponseModel<SendBatchMessagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendBatchMessages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendBatchMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送单条消息
+        /// </summary>
+        /// <param name="req"><see cref="SendMessagesRequest"/></param>
+        /// <returns><see cref="SendMessagesResponse"/></returns>
+        public async Task<SendMessagesResponse> SendMessages(SendMessagesRequest req)
+        {
+             JsonResponseModel<SendMessagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendMessages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送单条消息
+        /// </summary>
+        /// <param name="req"><see cref="SendMessagesRequest"/></param>
+        /// <returns><see cref="SendMessagesResponse"/></returns>
+        public SendMessagesResponse SendMessagesSync(SendMessagesRequest req)
+        {
+             JsonResponseModel<SendMessagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendMessages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

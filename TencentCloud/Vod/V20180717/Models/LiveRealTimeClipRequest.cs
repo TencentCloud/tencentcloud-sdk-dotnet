@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? MetaDataRequired{ get; set; }
 
         /// <summary>
-        /// 即时剪辑使用的域名，必须在直播侧开通时移。
+        /// 云点播中添加的用于时移播放的域名，必须在云直播已经[关联录制模板和开通时移服务](https://cloud.tencent.com/document/product/266/52220#.E6.AD.A5.E9.AA.A43.EF.BC.9A.E5.85.B3.E8.81.94.E5.BD.95.E5.88.B6.E6.A8.A1.E6.9D.BF.3Ca-id.3D.22step3.22.3E.3C.2Fa.3E)。**如果本接口的首次调用时间在 2021-01-01T00:00:00Z 之后，则此字段为必选字段。**
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

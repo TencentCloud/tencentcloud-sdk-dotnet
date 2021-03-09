@@ -733,6 +733,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询服务版本详情(新)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunVersionResponse"/></returns>
+        public async Task<DescribeCloudBaseRunVersionResponse> DescribeCloudBaseRunVersion(DescribeCloudBaseRunVersionRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务版本详情(新)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunVersionResponse"/></returns>
+        public DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersionSync(DescribeCloudBaseRunVersionRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询版本历史
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunVersionSnapshotRequest"/></param>

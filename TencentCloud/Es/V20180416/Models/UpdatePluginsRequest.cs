@@ -48,6 +48,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
+        /// <summary>
+        /// 是否重新安装
+        /// </summary>
+        [JsonProperty("ForceUpdate")]
+        public bool? ForceUpdate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArraySimple(map, prefix + "InstallPluginList.", this.InstallPluginList);
             this.SetParamArraySimple(map, prefix + "RemovePluginList.", this.RemovePluginList);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+            this.SetParamSimple(map, prefix + "ForceUpdate", this.ForceUpdate);
         }
     }
 }
